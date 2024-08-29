@@ -36,9 +36,11 @@
 #include "Rte_EcuM.h"
 #include "Rte_Os_OsCore0_swc.h"
 #include "SchM_BswM.h"
+#include "SchM_Dio.h"
 #include "SchM_EcuM.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"
+#include "SchM_Port.h"
 
 #include "Rte_Hook.h"
 
@@ -92,6 +94,70 @@ volatile VAR(uint8, RTE_VAR_ZERO_INIT) Rte_StartTiming_InitState = RTE_STATE_UNI
 
 #define RTE_STOP_SEC_VAR_ZERO_INIT_8BIT
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#define RTE_START_SEC_CODE
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
+
+#define RTE_STOP_SEC_CODE
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define RTE_START_SEC_CODE
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ * Helper functions for mode management
+ *********************************************************************************************************************/
+FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 ret;
+
+  if (mode == 0U)
+  {
+    ret = 3U;
+  }
+  else if (mode == 1U)
+  {
+    ret = 1U;
+  }
+  else if (mode == 2U)
+  {
+    ret = 0U;
+  }
+  else if (mode == 3U)
+  {
+    ret = 4U;
+  }
+  else if (mode == 4U)
+  {
+    ret = 2U;
+  }
+  else
+  {
+    ret = 5U;
+  }
+
+  return ret;
+} /* PRQA S 6080 */ /* MD_MSR_STMIF */
+
+#define RTE_STOP_SEC_CODE
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define RTE_START_SEC_VAR_NOINIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ * Data structures for mode management
+ *********************************************************************************************************************/
+
+VAR(BswM_ESH_Mode, RTE_VAR_NOINIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode; /* PRQA S 3408 */ /* MD_Rte_3408 */
+
+#define RTE_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 
 
 /**********************************************************************************************************************
@@ -153,6 +219,10 @@ FUNC(void, RTE_CODE) SchM_StartTiming(void)
 
 FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
 {
+  /* mode management initialization part 1 */
+
+  Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_BswM_ESH_Mode_STARTUP;
+
   Rte_StartTiming_InitState = RTE_STATE_INIT;
   Rte_InitState = RTE_STATE_INIT;
 
@@ -184,6 +254,39 @@ FUNC(void, RTE_CODE) Rte_InitMemory(void)
 
 
 /**********************************************************************************************************************
+ * Internal/External Rx connections
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_ESH_PostRunRequest_0_requestedMode(P2VAR(BswM_ESH_RunRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  *data = 0U;
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_ESH_PostRunRequest_1_requestedMode(P2VAR(BswM_ESH_RunRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  *data = 0U;
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_ESH_RunRequest_0_requestedMode(P2VAR(BswM_ESH_RunRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  *data = 0U;
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_ESH_RunRequest_1_requestedMode(P2VAR(BswM_ESH_RunRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  *data = 0U;
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+
+/**********************************************************************************************************************
  * Exclusive area access
  *********************************************************************************************************************/
 
@@ -212,6 +315,52 @@ FUNC(void, RTE_CODE) SchM_Exit_Mcu_TomTgcReg(void)
   ResumeAllInterrupts();
 }
 
+
+
+/**********************************************************************************************************************
+ * Mode Switch API (Rte_Switch)
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode(BswM_ESH_Mode nextMode) /* PRQA S 1505 */ /* MD_MSR_Rule8.7 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  uint8 internalIndexNextMode = Rte_GetInternalModeIndex_BswM_ESH_Mode(nextMode);
+  uint8 internalIndexCurrentMode;
+  BswM_ESH_Mode currentMode;
+  SuspendOSInterrupts();
+  currentMode = Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode;
+  internalIndexCurrentMode = Rte_GetInternalModeIndex_BswM_ESH_Mode(currentMode);
+  if (internalIndexNextMode >= 5U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else if (internalIndexCurrentMode >= 5U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else
+  {
+    Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = nextMode;
+    ResumeOSInterrupts();
+  }
+
+  return ret;
+} /* PRQA S 6050 */ /* MD_MSR_STCAL */
+
+
+/**********************************************************************************************************************
+ * Mode reading API (Rte_Mode)
+ *********************************************************************************************************************/
+
+FUNC(BswM_ESH_Mode, RTE_CODE) Rte_Mode_BswM_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode(void) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  BswM_ESH_Mode curMode;
+  curMode = Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode;
+  return curMode;
+}
 
 
 /**********************************************************************************************************************
@@ -252,6 +401,11 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
    MD_Rte_2987:  MISRA rule: Rule2.2
      Reason:     Used to simplify code generation.
      Risk:       No functional risk. There is no side effect.
+     Prevention: Not required.
+
+   MD_Rte_3206:  MISRA rule: Rule2.7
+     Reason:     The parameter are not used by the code in all possible code variants.
+     Risk:       No functional risk.
      Prevention: Not required.
 
    MD_Rte_3408:  MISRA rule: Rule8.4

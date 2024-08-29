@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Cfg.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-08-29 16:34:06
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -38,10 +38,10 @@
  *********************************************************************************************************************/
 /* pre-compile switches for EcuM configuration and services */
 #ifndef ECUM_DEV_ERROR_DETECT
-#define ECUM_DEV_ERROR_DETECT STD_ON
+#define ECUM_DEV_ERROR_DETECT STD_OFF
 #endif
 #ifndef ECUM_DEV_ERROR_REPORT
-#define ECUM_DEV_ERROR_REPORT STD_ON
+#define ECUM_DEV_ERROR_REPORT STD_OFF
 #endif
 
 # define ECUM_SCHM_START_INITIALIZATION                               (STD_ON)

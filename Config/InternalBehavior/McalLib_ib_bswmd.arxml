@@ -7,28 +7,28 @@
         <AR-PACKAGE UUID="7e118c10-0a18-49f2-9978-33759fe5e7c2">
           <SHORT-NAME>EcucDefs</SHORT-NAME>
           <AR-PACKAGES>
-            <AR-PACKAGE UUID="7f16360a-71c1-4c71-b5e5-5be24150dd86">
+            <AR-PACKAGE UUID="3820b447-9d5a-44a3-b04b-6dd5fc13df94">
               <SHORT-NAME>McalLib_ib_bswmd</SHORT-NAME>
               <AR-PACKAGES>
-                <AR-PACKAGE UUID="4b12dc18-4d78-4265-9b75-00718e82dfa7">
+                <AR-PACKAGE UUID="20897541-136d-4970-a64c-ce3e7bb6c07c">
                   <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
                   <ELEMENTS>
-                    <BSW-MODULE-DESCRIPTION UUID="ca637db0-1cd3-4aa2-b203-61a0c10f9c24">
+                    <BSW-MODULE-DESCRIPTION UUID="3e9f09ae-0757-40b3-867a-4bcbf366e4bb">
                       <SHORT-NAME>McalLib</SHORT-NAME>
                       <INTERNAL-BEHAVIORS>
-                        <BSW-INTERNAL-BEHAVIOR UUID="745ae900-0af6-4aaa-af38-3910701b6628">
+                        <BSW-INTERNAL-BEHAVIOR UUID="82832bf9-da18-4379-9afd-ceaa2b04121b">
                           <SHORT-NAME>McalLibBehavior</SHORT-NAME>
                           <EXCLUSIVE-AREAS>
-                            <EXCLUSIVE-AREA UUID="5b0ec608-4f3f-499b-be81-182915c839a3">
+                            <EXCLUSIVE-AREA UUID="f0fa7dce-8be1-4a2d-a6ac-c217c0c942ef">
                               <SHORT-NAME>PeripheralEndInit</SHORT-NAME>
                             </EXCLUSIVE-AREA>
-                            <EXCLUSIVE-AREA UUID="c461545e-61ff-4b71-b7a7-c561ebb4f489">
+                            <EXCLUSIVE-AREA UUID="315a09e1-5c7c-4c00-95e9-e0746567ae6b">
                               <SHORT-NAME>SafetyEndInit</SHORT-NAME>
                             </EXCLUSIVE-AREA>
-                            <EXCLUSIVE-AREA UUID="e2ca08d9-dd01-4db1-a41c-84a7e35e473d">
+                            <EXCLUSIVE-AREA UUID="6ca1038e-8291-4532-aab1-8d8324b27efd">
                               <SHORT-NAME>CpuEndInit</SHORT-NAME>
                             </EXCLUSIVE-AREA>
-                            <EXCLUSIVE-AREA UUID="929cb2bf-a22b-4e53-b656-83091afb8a9f">
+                            <EXCLUSIVE-AREA UUID="9a4fd883-6c91-4773-823c-c5cbbfd23ba0">
                               <SHORT-NAME>StmTimerResolution</SHORT-NAME>
                             </EXCLUSIVE-AREA>
                           </EXCLUSIVE-AREAS>

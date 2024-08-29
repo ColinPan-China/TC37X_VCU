@@ -59,9 +59,6 @@
         <Splitter File=".\Config\ECUC\TC37X_VCU_vLinkGen_vLinkGen_ecuc.arxml">
             <Module Name="vLinkGen"/>
         </Splitter>
-        <Splitter File=".\Config\ECUC\TC37X_VCU_Mcu_Mcu_ecuc.arxml">
-            <Module Name="Mcu"/>
-        </Splitter>
         <Splitter File=".\Config\ECUC\TC37X_VCU_vBRS_vBRS_ecuc.arxml">
             <Module Name="vBRS"/>
         </Splitter>
@@ -70,12 +67,6 @@
         </Splitter>
         <Splitter File=".\Config\ECUC\TC37X_VCU_EcuM_EcuM_ecuc.arxml">
             <Module Name="EcuM"/>
-        </Splitter>
-        <Splitter File=".\Config\ECUC\TC37X_VCU_McalLib_McalLib_ecuc.arxml">
-            <Module Name="McalLib"/>
-        </Splitter>
-        <Splitter File=".\Config\ECUC\TC37X_VCU_ResourceM_ResourceM_ecuc.arxml">
-            <Module Name="ResourceM"/>
         </Splitter>
         <Splitter File=".\Config\ECUC\TC37X_VCU_Rte_Rte_ecuc.arxml">
             <Module Name="Rte"/>
@@ -94,6 +85,21 @@
         </Splitter>
         <Splitter File=".\Config\ECUC\TC37X_VCU_vBaseEnv_vBaseEnv_ecuc.arxml">
             <Module Name="vBaseEnv"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Dio_Dio_ecuc.arxml">
+            <Module Name="Dio"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Port_Port_ecuc.arxml">
+            <Module Name="Port"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_ResourceM_ResourceM_ecuc.arxml">
+            <Module Name="ResourceM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_McalLib_McalLib_ecuc.arxml">
+            <Module Name="McalLib"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Mcu_Mcu_ecuc.arxml">
+            <Module Name="Mcu"/>
         </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>

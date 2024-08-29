@@ -28,6 +28,14 @@
  *
  * Not configured:
  *
+ *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_0_requestedMode_Return
+ *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_0_requestedMode_Start
+ *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_1_requestedMode_Return
+ *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_1_requestedMode_Start
+ *  Rte_ReadHook_BswM_Request_ESH_RunRequest_0_requestedMode_Return
+ *  Rte_ReadHook_BswM_Request_ESH_RunRequest_0_requestedMode_Start
+ *  Rte_ReadHook_BswM_Request_ESH_RunRequest_1_requestedMode_Return
+ *  Rte_ReadHook_BswM_Request_ESH_RunRequest_1_requestedMode_Start
  *  Rte_Runnable_BswM_BswM_MainFunction_Return
  *  Rte_Runnable_BswM_BswM_MainFunction_Start
  *  Rte_Runnable_EcuM_EcuM_MainFunction_Return
@@ -50,6 +58,8 @@
  *  Rte_Runnable_Os_OsCore0_swc_GetCounterValue_Start
  *  Rte_Runnable_Os_OsCore0_swc_GetElapsedValue_Return
  *  Rte_Runnable_Os_OsCore0_swc_GetElapsedValue_Start
+ *  Rte_SwitchHook_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode_Return
+ *  Rte_SwitchHook_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode_Start
  *  Rte_Task_Dispatch
  *  Rte_Task_Terminate
  *  SchM_EnterHook_BswM_BSWM_EXCLUSIVE_AREA_0_Return

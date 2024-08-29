@@ -26,12 +26,24 @@
 # define RTE_TYPE_H
 
 # include "Rte.h"
+# ifdef RTE_CORE
+/**********************************************************************************************************************
+ * Type definitions for mode management
+ *********************************************************************************************************************/
+typedef uint8 Rte_EventMaskType;
+# endif /* defined(RTE_CORE) */
 
 /* PRQA S 1039 EOF */ /* MD_Rte_1039 */
 
 /**********************************************************************************************************************
  * Data type definitions
  *********************************************************************************************************************/
+
+# define Rte_TypeDef_BswM_ESH_Mode
+typedef uint8 BswM_ESH_Mode;
+
+# define Rte_TypeDef_BswM_ESH_RunRequest
+typedef uint8 BswM_ESH_RunRequest;
 
 # define Rte_TypeDef_EcuM_BootTargetType
 typedef uint8 EcuM_BootTargetType;

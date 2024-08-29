@@ -7,25 +7,17 @@
         <AR-PACKAGE UUID="7e118c10-0a18-49f2-9978-33759fe5e7c2">
           <SHORT-NAME>EcucDefs</SHORT-NAME>
           <AR-PACKAGES>
-            <AR-PACKAGE UUID="f112c098-e5f6-4953-8e8b-f0d8b57e7ce6">
-              <SHORT-NAME>Mcu_ib_bswmd</SHORT-NAME>
+            <AR-PACKAGE UUID="8fff5735-c08c-4550-8d86-1d9ae3beb7c3">
+              <SHORT-NAME>Port_ib_bswmd</SHORT-NAME>
               <AR-PACKAGES>
-                <AR-PACKAGE UUID="65690604-7634-4505-a79d-8774d7cd99e8">
+                <AR-PACKAGE UUID="cc97d764-918d-48f4-94a7-aab49025878c">
                   <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
                   <ELEMENTS>
-                    <BSW-MODULE-DESCRIPTION UUID="f1426020-7f39-4817-bc1f-8f854d6ea12f">
-                      <SHORT-NAME>Mcu</SHORT-NAME>
+                    <BSW-MODULE-DESCRIPTION UUID="edd4923f-fa6f-4b2c-81de-bb07568e578a">
+                      <SHORT-NAME>Port</SHORT-NAME>
                       <INTERNAL-BEHAVIORS>
-                        <BSW-INTERNAL-BEHAVIOR UUID="e67ee58c-4224-49a1-a1eb-8aacb2a3b2c2">
-                          <SHORT-NAME>McuBehavior</SHORT-NAME>
-                          <EXCLUSIVE-AREAS>
-                            <EXCLUSIVE-AREA UUID="0ed3250f-d079-4618-a450-805374cff689">
-                              <SHORT-NAME>TomTgcReg</SHORT-NAME>
-                            </EXCLUSIVE-AREA>
-                            <EXCLUSIVE-AREA UUID="f24d61d0-5cf7-44cb-a99b-0001dea49600">
-                              <SHORT-NAME>AtomAgcReg</SHORT-NAME>
-                            </EXCLUSIVE-AREA>
-                          </EXCLUSIVE-AREAS>
+                        <BSW-INTERNAL-BEHAVIOR UUID="bacf1fda-ae3c-493c-a98a-9a9410f65c68">
+                          <SHORT-NAME>PortBehavior</SHORT-NAME>
                         </BSW-INTERNAL-BEHAVIOR>
                       </INTERNAL-BEHAVIORS>
                     </BSW-MODULE-DESCRIPTION>

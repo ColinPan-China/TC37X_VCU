@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_PrivateCfg.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-08-29 16:34:06
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -44,7 +44,6 @@
 
 # include "Os.h"
 # include "Mcu.h"
-# include "Det.h"
 
 /**********************************************************************************************************************
  *  GLOBAL CONSTANT MACROS
@@ -80,12 +79,12 @@
 #define EcuM_GetDefaultShutdownModeOfPCConfig()                       0u  /**< Default Shutdown Mode - Depending on target it its either a Sleep Mode or Reset Mode. */
 #define EcuM_GetDefaultShutdownTargetOfPCConfig()                     ECUM_STATE_OFF  /**< Default Shutdown Target */
 #define EcuM_GetDriverInitOneOfPCConfig()                             EcuM_DriverInitOne  /**< the pointer to EcuM_DriverInitOne */
-#define EcuM_GetEcuM_CRCHash_LowerOfPCConfig()                        0x0C7742E0u
-#define EcuM_GetEcuM_CRCHash_UpperOfPCConfig()                        0x07F538C6u
+#define EcuM_GetEcuM_CRCHash_LowerOfPCConfig()                        0x485DBF0Bu
+#define EcuM_GetEcuM_CRCHash_UpperOfPCConfig()                        0xCE39D9E0u
 #define EcuM_GetGeneratorCompatibilityVersionOfPCConfig()             2816u
 #define EcuM_GetMaxWakeupSourceCountOfPCConfig()                      5u  /**< Max Wakeup source count. */
 #define EcuM_GetModuleStateOfPCConfig()                               (&(EcuM_ModuleState))  /**< the pointer to EcuM_ModuleState */
-#define EcuM_GetNormalMcuModeOfPCConfig()                             McuConf_McuModeSettingConf_McuModeSettingConf  /**< EcuMNormalMcuModeRef id of the Mcu module */
+#define EcuM_GetNormalMcuModeOfPCConfig()                             McuConf_McuModeSettingConf_McuModeSettingConf_0  /**< EcuMNormalMcuModeRef id of the Mcu module */
 #define EcuM_GetSizeOfDriverInitOneOfPCConfig()                       1u  /**< the number of accomplishable value elements in EcuM_DriverInitOne */
 /** 
   \}
