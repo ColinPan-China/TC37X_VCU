@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2024-08-29 16:27:26
+ *   Generation Time: 2024-08-29 16:46:14
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -49,10 +49,10 @@
     &&&~ GENERAL DEFINES
  ----------------------------------------------------------------------------- */
 #ifndef BSWM_DEV_ERROR_DETECT
-#define BSWM_DEV_ERROR_DETECT STD_ON
+#define BSWM_DEV_ERROR_DETECT STD_OFF
 #endif
 #ifndef BSWM_DEV_ERROR_REPORT
-#define BSWM_DEV_ERROR_REPORT STD_ON
+#define BSWM_DEV_ERROR_REPORT STD_OFF
 #endif
 #ifndef BSWM_USE_DUMMY_STATEMENT
 #define BSWM_USE_DUMMY_STATEMENT STD_OFF /* /MICROSAR/vSet/vSetGeneral/vSetDummyStatementKind */
