@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Private_Cfg.h
- *   Generation Time: 2024-08-29 16:27:27
+ *   Generation Time: 2024-09-02 15:18:11
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -40,9 +40,6 @@
 #include "BswM_Cfg.h"
 #include "Rte_BswM.h" 
 #include "EcuM.h" 
-#include "Mcu.h" 
-#include "Port.h" 
-#include "Rte_Main.h" 
 
 
 

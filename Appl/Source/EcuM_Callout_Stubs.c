@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-09-02 15:18:11
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -66,6 +66,10 @@
 /**********************************************************************************************************************
  *  Additional configured User includes
  *********************************************************************************************************************/
+#include "BswM.h" 
+#include "Rte_Main.h" 
+#include "Port.h" 
+#include "Mcu.h" 
 
 
 /**********************************************************************************************************************
@@ -222,6 +226,8 @@ FUNC(void, ECUM_CODE) EcuM_AL_Reset(EcuM_ResetType Reset) /* PRQA S 3206 */ /* M
 **********************************************************************************************************************/
 FUNC(void, ECUM_CODE) EcuM_AL_DriverInitZero(void) 
 {
+  BswM_InitMemory();
+  Rte_InitMemory();
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_AL_DriverInitZero>                 DO NOT CHANGE THIS COMMENT!
@@ -239,6 +245,10 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverInitZero(void)
 **********************************************************************************************************************/
 FUNC(void, ECUM_CODE) EcuM_AL_DriverInitOne(void) 
 {
+  Port_Init( &Port_Config );
+  Mcu_Init( &Mcu_Config );
+  Mcu_InitClock(0);while (MCU_PLL_LOCKED != Mcu_GetPllStatus());Mcu_DistributePllClock();
+  BswM_PreInit( BswM_Config_Ptr );
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_AL_DriverInitOne>                  DO NOT CHANGE THIS COMMENT!

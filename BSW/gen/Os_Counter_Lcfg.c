@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Counter_Lcfg.c
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-09-02 15:10:11
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -78,7 +78,7 @@
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /*! Dynamic counter data: SystemTimer */
-OS_LOCAL VAR(Os_TimerSwType, OS_VAR_NOINIT) OsCfg_Counter_SystemTimer_Dyn;
+OS_LOCAL VAR(Os_TimerPfrtType, OS_VAR_NOINIT) OsCfg_Counter_SystemTimer_Dyn;
 OS_LOCAL VAR(Os_PriorityQueueType, OS_VAR_NOINIT) OsCfg_Counter_SystemTimer_JobQueue_Dyn;
 OS_LOCAL VAR(Os_PriorityQueueNodeType, OS_VAR_NOINIT)
   OsCfg_Counter_SystemTimer_JobQueueNodes_Dyn[OS_CFG_NUM_COUNTER_SYSTEMTIMER_JOBS + 1u];
@@ -100,17 +100,17 @@ OS_LOCAL VAR(Os_PriorityQueueNodeType, OS_VAR_NOINIT)
 
 
 /*! Counter configuration data: SystemTimer */
-CONST(Os_TimerPitConfigType, OS_CONST) OsCfg_Counter_SystemTimer =
+CONST(Os_TimerPfrtConfigType, OS_CONST) OsCfg_Counter_SystemTimer =
 {
-  /* .SwCounter = */
+  /* .SwCounter            = */
   {
   /* .Counter = */
   {
     /* .Characteristics       = */
     {
       /* .MaxAllowedValue      = */ OSMAXALLOWEDVALUE_SystemTimer,
-      /* .MaxCountingValue     = */ OS_TIMERPIT_GETMAXCOUNTINGVALUE(OSMAXALLOWEDVALUE_SystemTimer),
-      /* .MaxDifferentialValue = */ OS_TIMERPIT_GETMAXDIFFERENTIALVALUE(OSMAXALLOWEDVALUE_SystemTimer),
+      /* .MaxCountingValue     = */ OS_TIMERPFRT_GETMAXCOUNTINGVALUE(OSMAXALLOWEDVALUE_SystemTimer),
+      /* .MaxDifferentialValue = */ OS_TIMERPFRT_GETMAXDIFFERENTIALVALUE(OSMAXALLOWEDVALUE_SystemTimer),
       /* .MinCycle             = */ OSMINCYCLE_SystemTimer,
       /* .TicksPerBase         = */ OSTICKSPERBASE_SystemTimer
     },
@@ -120,14 +120,17 @@ CONST(Os_TimerPitConfigType, OS_CONST) OsCfg_Counter_SystemTimer =
       /* .Dyn       = */ &OsCfg_Counter_SystemTimer_JobQueue_Dyn,
       /* .QueueSize = */ (Os_PriorityQueueNodeIdxType)OS_CFG_NUM_COUNTER_SYSTEMTIMER_JOBS
     },
-    /* .DriverType            = */ OS_TIMERTYPE_PERIODIC_TICK,
+    /* .DriverType            = */ OS_TIMERTYPE_PERIODIC_FREE_RUNNING_TIMER,
     /* .Core                  = */ &OsCfg_Core_OsCore0,
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore0,
     /* .AccessingApplications = */ OS_APPID2MASK(SystemApplication_OsCore0)  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
   },
-  /* .Dyn     = */ &OsCfg_Counter_SystemTimer_Dyn
-},
-  /* .HwConfig  = */ &OsCfg_Hal_TimerPit_SystemTimer
+  /* .Dyn     = */ OS_ISR_CASTDYN_TIMERSW_2_TIMERPFRT(OsCfg_Counter_SystemTimer_Dyn)
+  },
+  /* .Period               = */ 12500UL,
+  /* .MaxDifferentialValue = */ OS_TIMERPFRT_HARDWAREGETMAXDIFFERENTIALVALUE(1073741823UL),
+  /* .MaxCountingValue     = */ OS_TIMERPFRT_HARDWAREGETMAXCOUNTINGVALUE(1073741823UL),
+  /* .HwConfig             = */ &OsCfg_Hal_TimerFrt_SystemTimer
 };
 
 #define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
@@ -140,7 +143,7 @@ CONST(Os_TimerPitConfigType, OS_CONST) OsCfg_Counter_SystemTimer =
 /*! Object reference table for counters. */
 CONSTP2CONST(Os_CounterConfigType, OS_CONST, OS_CONST) OsCfg_CounterRefs[OS_COUNTERID_COUNT + 1u] =            /* PRQA S 4521 */ /* MD_Os_Rule10.1_4521 */
 {
-  OS_COUNTER_CASTCONFIG_TIMERPIT_2_COUNTER(OsCfg_Counter_SystemTimer),
+  OS_COUNTER_CASTCONFIG_TIMERPFRT_2_COUNTER(OsCfg_Counter_SystemTimer),
   NULL_PTR
 };
 

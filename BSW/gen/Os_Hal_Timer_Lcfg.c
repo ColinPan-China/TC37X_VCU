@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Timer_Lcfg.c
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-09-02 15:10:11
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -79,17 +79,21 @@
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /*! HAL timer configuration data: SystemTimer */
-CONST(Os_Hal_TimerPitConfigType, OS_CONST) OsCfg_Hal_TimerPit_SystemTimer =
+CONST(Os_Hal_TimerFrtConfigType, OS_CONST) OsCfg_Hal_TimerFrt_SystemTimer =
+
 {
-  /* CounterRegisterAddress            = */ OS_HAL_TIMER_GPT_BASE + OS_HAL_TIMER_GPT_T3_OFFSET,
-  /* CounterConfRegisterAddress        = */ OS_HAL_TIMER_GPT_BASE + OS_HAL_TIMER_GPT_T3CON_OFFSET,
-  /* CounterConfRegisterValue          = */ OS_HAL_TIMER_GPT_T3CON_COUNTING_DOWN | OS_HAL_TIMER_GPT_T3CON_T3R,  /* set the timer to counting down and start it. T3 is running at F(GPT)/8 */
-  /* ReloadRegisterAddress             = */ OS_HAL_TIMER_GPT_BASE + OS_HAL_TIMER_GPT_T2_OFFSET,
-  /* ReloadConfRegisterAddress         = */ OS_HAL_TIMER_GPT_BASE + OS_HAL_TIMER_GPT_T2CON_OFFSET,
-  /* ReloadConfRegisterValue           = */ OS_HAL_TIMER_GPT_T2CON_USE_AS_RELOAD,
-  /* ReloadValue                       = */ 12500,
-  /* InterruptSRCRegisterAddress       = */ OS_HAL_INT_SRC_BASE + OS_HAL_INT_SRC_GPT_CH0_OFFSET,
-};
+  /* CounterRegisterAddress            = */ OS_HAL_TIMER_STM0_BASE + OS_HAL_TIMER_STM_TIM0_OFFSET,
+  /* CompareRegisterAddress            = */ OS_HAL_TIMER_STM0_BASE + OS_HAL_TIMER_STM_CMP0_OFFSET,
+  /* CMCONRegisterAddress              = */ OS_HAL_TIMER_STM0_BASE + OS_HAL_TIMER_STM_CMCON_OFFSET,
+  /* CMCONMask                         = */ OS_HAL_TIMER_STM_CMCON_USE_CMP0_MASK,
+  /* CMCONValue                        = */ OS_HAL_TIMER_STM_CMCON_USE_CMP0_VALUE,
+  /* InterruptSRCRegisterAddress       = */ OS_HAL_INT_SRC_BASE + OS_HAL_INT_SRC_STM0_CH0_OFFSET,
+  /* ICRRegisterAddress                = */ OS_HAL_TIMER_STM0_BASE + OS_HAL_TIMER_STM_ICR_OFFSET,
+  /* ICRMask                           = */ OS_HAL_TIMER_STM_ICR_USE_CMP0_MASK,
+  /* ICRValue                          = */ OS_HAL_TIMER_STM_ICR_USE_CMP0_VALUE,
+  /* ReloadValue                       = */ 0
+} 
+;
 
 #define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

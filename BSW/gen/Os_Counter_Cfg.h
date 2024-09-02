@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Counter_Cfg.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-09-02 15:10:11
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -48,13 +48,13 @@
 # define OS_CFG_COUNTER_SW_USED                  (STD_OFF)
 
 /*! Defines whether any counter uses PIT (STD_ON) or not (STD_OFF) */
-# define OS_CFG_COUNTER_PIT_USED                 (STD_ON)
+# define OS_CFG_COUNTER_PIT_USED                 (STD_OFF)
 
 /*! Defines whether any counter uses High Resolution (STD_ON) or not (STD_OFF) */
 # define OS_CFG_COUNTER_HRT_USED                 (STD_OFF)
 
 /*! Defines whether any counter uses FRT as PIT (STD_ON) or not (STD_OFF) */
-# define OS_CFG_COUNTER_PFRT_USED                (STD_OFF)
+# define OS_CFG_COUNTER_PFRT_USED                (STD_ON)
 
 /*! Number of counter jobs: SystemTimer */
 # define OS_CFG_NUM_COUNTER_SYSTEMTIMER_JOBS     (1uL)
