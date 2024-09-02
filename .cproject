@@ -29,6 +29,7 @@
 								</option>
 								<option id="com.tasking.ctc.cc.includePaths.187766907" name="Include paths" superClass="com.tasking.ctc.cc.includePaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Appl/Source/SWC1}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Appl/Include}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/.git}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Appl}&quot;"/>
@@ -117,7 +118,11 @@
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 			<storageModule moduleId="com.tasking.flash.settings"/>
 			<storageModule moduleId="com.tasking.toolInfo">
+				<toolInfo>TASKING VX-toolset for TriCore: control program v6.3r1 Build 19041558</toolInfo>
+				<toolInfo>TASKING VX-toolset for TriCore: C compiler v6.3r1 Build 21092262</toolInfo>
+				<toolInfo>TASKING VX-toolset for TriCore: assembler v6.3r1 Build 19041558</toolInfo>
 				<toolInfo>TASKING program builder v6.3r1 Build 19041558</toolInfo>
+				<toolInfo>TASKING VX-toolset for TriCore: object linker v6.3r1 Build 21092262</toolInfo>
 			</storageModule>
 		</cconfiguration>
 		<cconfiguration id="com.tasking.config.ctc.abs.release.1494793495">

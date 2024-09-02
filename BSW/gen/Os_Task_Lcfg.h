@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Task_Lcfg.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-09-02 17:07:28
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -71,6 +71,12 @@
 
 # define OS_START_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Task configuration data: AswTask */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_AswTask;
+
+/*! Task configuration data: Asw_Init */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Asw_Init;
 
 /*! Task configuration data: Bsw_Task */
 extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Bsw_Task;

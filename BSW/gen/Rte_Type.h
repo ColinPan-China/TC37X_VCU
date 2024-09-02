@@ -110,6 +110,18 @@ typedef unsigned int Rte_BitType;
 
 # ifdef RTE_CORE
 
+/**********************************************************************************************************************
+ * Buffers for unqueued S/R
+ *********************************************************************************************************************/
+
+#  define RTE_START_SEC_VAR_NOINIT_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(BswM_ESH_RunRequest, RTE_VAR_NOINIT) Rte_SWC1_Request_ESH_RunRequest_0_requestedMode; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
+
+#  define RTE_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 
 # endif /* defined(RTE_CORE) */
 
@@ -123,6 +135,12 @@ typedef unsigned int Rte_BitType;
    MD_Rte_1039:  MISRA rule: Rule1.2
      Reason:     Same macro and function names are required to meet AUTOSAR spec.
      Risk:       No functional risk. Macro will be undefined before function definition.
+     Prevention: Not required.
+
+   MD_Rte_3408:  MISRA rule: Rule8.4
+     Reason:     For the purpose of monitoring during calibration or debugging it is necessary to use non-static declarations.
+                 This is covered in the MISRA C compliance section of the Rte specification.
+     Risk:       No functional risk.
      Prevention: Not required.
 
 */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Link_Core0.lsl
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-09-02 17:07:28
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -72,6 +72,38 @@ else
 #endif
 
 #if defined ( OS_LINK_CALLOUT_CODE )
+if (exists(".text.OS_AswTask_CODE"))
+{
+  group OS_AswTask_CODE_GROUP(align=8)
+  {
+    select "[.]text.OS_AswTask_CODE";
+  }
+  "_OS_AswTask_CODE_START" = "_lc_gb_OS_AswTask_CODE_GROUP";
+  "_OS_AswTask_CODE_END" = "_lc_ge_OS_AswTask_CODE_GROUP" - 1;
+  "_OS_AswTask_CODE_LIMIT" = "_lc_ge_OS_AswTask_CODE_GROUP";
+}
+else
+{
+  "_OS_AswTask_CODE_START" = 0;
+  "_OS_AswTask_CODE_END" = 0;
+  "_OS_AswTask_CODE_LIMIT" = 0;
+}
+if (exists(".text.OS_Asw_Init_CODE"))
+{
+  group OS_Asw_Init_CODE_GROUP(align=8)
+  {
+    select "[.]text.OS_Asw_Init_CODE";
+  }
+  "_OS_Asw_Init_CODE_START" = "_lc_gb_OS_Asw_Init_CODE_GROUP";
+  "_OS_Asw_Init_CODE_END" = "_lc_ge_OS_Asw_Init_CODE_GROUP" - 1;
+  "_OS_Asw_Init_CODE_LIMIT" = "_lc_ge_OS_Asw_Init_CODE_GROUP";
+}
+else
+{
+  "_OS_Asw_Init_CODE_START" = 0;
+  "_OS_Asw_Init_CODE_END" = 0;
+  "_OS_Asw_Init_CODE_LIMIT" = 0;
+}
 if (exists(".text.OS_Bsw_Task_CODE"))
 {
   group OS_Bsw_Task_CODE_GROUP(align=8)
@@ -362,6 +394,150 @@ else
 
 #ifdef OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0_INIT
 # undef OS_LINK_CONST_APP_SYSTEMAPPLICATION_OSCORE0_INIT
+#endif
+
+
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_ASWTASK ) || defined ( OS_LINK_CONST_TASK_ASWTASK_FAR )
+if (exists(".rodata.OS_AswTask_CONST"))
+{
+  group OS_AswTask_CONST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]rodata.OS_AswTask_CONST";
+  }
+  "_OS_AswTask_CONST_START" = "_lc_gb_OS_AswTask_CONST_GROUP";
+  "_OS_AswTask_CONST_END" = "_lc_ge_OS_AswTask_CONST_GROUP" - 1;
+  "_OS_AswTask_CONST_LIMIT" = "_lc_ge_OS_AswTask_CONST_GROUP";
+}
+else
+{
+  "_OS_AswTask_CONST_START" = 0;
+  "_OS_AswTask_CONST_END" = 0;
+  "_OS_AswTask_CONST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_ASWTASK ) || defined ( OS_LINK_CONST_TASK_ASWTASK_NEAR )
+if (exists(".zrodata.OS_AswTask_CONST_FAST"))
+{
+  group OS_AswTask_CONST_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]zrodata.OS_AswTask_CONST_FAST";
+  }
+  "_OS_AswTask_CONST_FAST_START" = "_lc_gb_OS_AswTask_CONST_FAST_GROUP";
+  "_OS_AswTask_CONST_FAST_END" = "_lc_ge_OS_AswTask_CONST_FAST_GROUP" - 1;
+  "_OS_AswTask_CONST_FAST_LIMIT" = "_lc_ge_OS_AswTask_CONST_FAST_GROUP";
+}
+else
+{
+  "_OS_AswTask_CONST_FAST_START" = 0;
+  "_OS_AswTask_CONST_FAST_END" = 0;
+  "_OS_AswTask_CONST_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_ASWTASK ) || defined ( OS_LINK_CONST_TASK_ASWTASK_INIT )
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+#ifdef OS_LINK_CONST_TASK_ASWTASK
+# undef OS_LINK_CONST_TASK_ASWTASK
+#endif
+
+#ifdef OS_LINK_CONST_TASK_ASWTASK_FAR
+# undef OS_LINK_CONST_TASK_ASWTASK_FAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_ASWTASK_NEAR
+# undef OS_LINK_CONST_TASK_ASWTASK_NEAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_ASWTASK_INIT
+# undef OS_LINK_CONST_TASK_ASWTASK_INIT
+#endif
+
+
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_ASW_INIT ) || defined ( OS_LINK_CONST_TASK_ASW_INIT_FAR )
+if (exists(".rodata.OS_Asw_Init_CONST"))
+{
+  group OS_Asw_Init_CONST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]rodata.OS_Asw_Init_CONST";
+  }
+  "_OS_Asw_Init_CONST_START" = "_lc_gb_OS_Asw_Init_CONST_GROUP";
+  "_OS_Asw_Init_CONST_END" = "_lc_ge_OS_Asw_Init_CONST_GROUP" - 1;
+  "_OS_Asw_Init_CONST_LIMIT" = "_lc_ge_OS_Asw_Init_CONST_GROUP";
+}
+else
+{
+  "_OS_Asw_Init_CONST_START" = 0;
+  "_OS_Asw_Init_CONST_END" = 0;
+  "_OS_Asw_Init_CONST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_ASW_INIT ) || defined ( OS_LINK_CONST_TASK_ASW_INIT_NEAR )
+if (exists(".zrodata.OS_Asw_Init_CONST_FAST"))
+{
+  group OS_Asw_Init_CONST_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]zrodata.OS_Asw_Init_CONST_FAST";
+  }
+  "_OS_Asw_Init_CONST_FAST_START" = "_lc_gb_OS_Asw_Init_CONST_FAST_GROUP";
+  "_OS_Asw_Init_CONST_FAST_END" = "_lc_ge_OS_Asw_Init_CONST_FAST_GROUP" - 1;
+  "_OS_Asw_Init_CONST_FAST_LIMIT" = "_lc_ge_OS_Asw_Init_CONST_FAST_GROUP";
+}
+else
+{
+  "_OS_Asw_Init_CONST_FAST_START" = 0;
+  "_OS_Asw_Init_CONST_FAST_END" = 0;
+  "_OS_Asw_Init_CONST_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_ASW_INIT ) || defined ( OS_LINK_CONST_TASK_ASW_INIT_INIT )
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+#ifdef OS_LINK_CONST_TASK_ASW_INIT
+# undef OS_LINK_CONST_TASK_ASW_INIT
+#endif
+
+#ifdef OS_LINK_CONST_TASK_ASW_INIT_FAR
+# undef OS_LINK_CONST_TASK_ASW_INIT_FAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_ASW_INIT_NEAR
+# undef OS_LINK_CONST_TASK_ASW_INIT_NEAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_ASW_INIT_INIT
+# undef OS_LINK_CONST_TASK_ASW_INIT_INIT
 #endif
 
 
@@ -1822,6 +1998,742 @@ else
 
 #ifdef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE_ZERO_INIT
 # undef OS_LINK_VAR_APP_SYSTEMAPPLICATION_OSCORE0_NEAR_NOCACHE_ZERO_INIT
+#endif
+
+
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK
+group OS_AswTask_VAR_ALL_GROUP(ordered, contiguous, fill, align=8)
+{
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE_INIT )
+if (exists(".data.OS_AswTask_VAR"))
+{
+  group OS_AswTask_VAR_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_AswTask_VAR_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_AswTask_VAR";
+    }
+    reserved ".pad.OS_AswTask_VAR" (size=16);
+  }
+  "_OS_AswTask_VAR_START" = "_lc_gb_OS_AswTask_VAR_GROUP";
+  "_OS_AswTask_VAR_END" = "_lc_ub__pad_OS_AswTask_VAR" - 1;
+  "_OS_AswTask_VAR_LIMIT" = "_lc_ub__pad_OS_AswTask_VAR";
+}
+else
+{
+  "_OS_AswTask_VAR_START" = 0;
+  "_OS_AswTask_VAR_END" = 0;
+  "_OS_AswTask_VAR_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE_NOINIT )
+if (exists(".bss.OS_AswTask_VAR_NOINIT"))
+{
+  group OS_AswTask_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_AswTask_VAR_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_AswTask_VAR_NOINIT";
+    }
+    reserved ".pad.OS_AswTask_VAR_NOINIT" (size=16);
+  }
+  "_OS_AswTask_VAR_NOINIT_START" = "_lc_gb_OS_AswTask_VAR_NOINIT_GROUP";
+  "_OS_AswTask_VAR_NOINIT_END" = "_lc_ub__pad_OS_AswTask_VAR_NOINIT" - 1;
+  "_OS_AswTask_VAR_NOINIT_LIMIT" = "_lc_ub__pad_OS_AswTask_VAR_NOINIT";
+}
+else
+{
+  "_OS_AswTask_VAR_NOINIT_START" = 0;
+  "_OS_AswTask_VAR_NOINIT_END" = 0;
+  "_OS_AswTask_VAR_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE_ZERO_INIT )
+if (exists(".bss.OS_AswTask_VAR_ZERO_INIT_bss") || exists(".data.OS_AswTask_VAR_ZERO_INIT"))
+{
+  group OS_AswTask_VAR_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_AswTask_VAR_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_AswTask_VAR_ZERO_INIT_bss";
+      select "[.]data.OS_AswTask_VAR_ZERO_INIT";
+    }
+    reserved ".pad.OS_AswTask_VAR_ZERO_INIT" (size=16);
+  }
+  "_OS_AswTask_VAR_ZERO_INIT_START" = "_lc_gb_OS_AswTask_VAR_ZERO_INIT_GROUP";
+  "_OS_AswTask_VAR_ZERO_INIT_END" = "_lc_ub__pad_OS_AswTask_VAR_ZERO_INIT" - 1;
+  "_OS_AswTask_VAR_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_AswTask_VAR_ZERO_INIT";
+}
+else
+{
+  "_OS_AswTask_VAR_ZERO_INIT_START" = 0;
+  "_OS_AswTask_VAR_ZERO_INIT_END" = 0;
+  "_OS_AswTask_VAR_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE_INIT )
+if (exists(".zdata.OS_AswTask_VAR_FAST"))
+{
+  group OS_AswTask_VAR_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_AswTask_VAR_FAST_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_AswTask_VAR_FAST";
+    }
+    reserved ".pad.OS_AswTask_VAR_FAST" (size=16);
+  }
+  "_OS_AswTask_VAR_FAST_START" = "_lc_gb_OS_AswTask_VAR_FAST_GROUP";
+  "_OS_AswTask_VAR_FAST_END" = "_lc_ub__pad_OS_AswTask_VAR_FAST" - 1;
+  "_OS_AswTask_VAR_FAST_LIMIT" = "_lc_ub__pad_OS_AswTask_VAR_FAST";
+}
+else
+{
+  "_OS_AswTask_VAR_FAST_START" = 0;
+  "_OS_AswTask_VAR_FAST_END" = 0;
+  "_OS_AswTask_VAR_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE_NOINIT )
+if (exists(".zbss.OS_AswTask_VAR_FAST_NOINIT"))
+{
+  group OS_AswTask_VAR_FAST_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_AswTask_VAR_FAST_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_AswTask_VAR_FAST_NOINIT";
+    }
+    reserved ".pad.OS_AswTask_VAR_FAST_NOINIT" (size=16);
+  }
+  "_OS_AswTask_VAR_FAST_NOINIT_START" = "_lc_gb_OS_AswTask_VAR_FAST_NOINIT_GROUP";
+  "_OS_AswTask_VAR_FAST_NOINIT_END" = "_lc_ub__pad_OS_AswTask_VAR_FAST_NOINIT" - 1;
+  "_OS_AswTask_VAR_FAST_NOINIT_LIMIT" = "_lc_ub__pad_OS_AswTask_VAR_FAST_NOINIT";
+}
+else
+{
+  "_OS_AswTask_VAR_FAST_NOINIT_START" = 0;
+  "_OS_AswTask_VAR_FAST_NOINIT_END" = 0;
+  "_OS_AswTask_VAR_FAST_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE_ZERO_INIT )
+if (exists(".zbss.OS_AswTask_VAR_FAST_ZERO_INIT_bss") || exists(".zdata.OS_AswTask_VAR_FAST_ZERO_INIT"))
+{
+  group OS_AswTask_VAR_FAST_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_AswTask_VAR_FAST_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_AswTask_VAR_FAST_ZERO_INIT_bss";
+      select "[.]zdata.OS_AswTask_VAR_FAST_ZERO_INIT";
+    }
+    reserved ".pad.OS_AswTask_VAR_FAST_ZERO_INIT" (size=16);
+  }
+  "_OS_AswTask_VAR_FAST_ZERO_INIT_START" = "_lc_gb_OS_AswTask_VAR_FAST_ZERO_INIT_GROUP";
+  "_OS_AswTask_VAR_FAST_ZERO_INIT_END" = "_lc_ub__pad_OS_AswTask_VAR_FAST_ZERO_INIT" - 1;
+  "_OS_AswTask_VAR_FAST_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_AswTask_VAR_FAST_ZERO_INIT";
+}
+else
+{
+  "_OS_AswTask_VAR_FAST_ZERO_INIT_START" = 0;
+  "_OS_AswTask_VAR_FAST_ZERO_INIT_END" = 0;
+  "_OS_AswTask_VAR_FAST_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE_INIT )
+if (exists(".data.OS_AswTask_VAR_NOCACHE"))
+{
+  group OS_AswTask_VAR_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_AswTask_VAR_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_AswTask_VAR_NOCACHE";
+    }
+    reserved ".pad.OS_AswTask_VAR_NOCACHE" (size=16);
+  }
+  "_OS_AswTask_VAR_NOCACHE_START" = "_lc_gb_OS_AswTask_VAR_NOCACHE_GROUP";
+  "_OS_AswTask_VAR_NOCACHE_END" = "_lc_ub__pad_OS_AswTask_VAR_NOCACHE" - 1;
+  "_OS_AswTask_VAR_NOCACHE_LIMIT" = "_lc_ub__pad_OS_AswTask_VAR_NOCACHE";
+}
+else
+{
+  "_OS_AswTask_VAR_NOCACHE_START" = 0;
+  "_OS_AswTask_VAR_NOCACHE_END" = 0;
+  "_OS_AswTask_VAR_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE_NOINIT )
+if (exists(".bss.OS_AswTask_VAR_NOCACHE_NOINIT"))
+{
+  group OS_AswTask_VAR_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_AswTask_VAR_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_AswTask_VAR_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_AswTask_VAR_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_AswTask_VAR_NOCACHE_NOINIT_START" = "_lc_gb_OS_AswTask_VAR_NOCACHE_NOINIT_GROUP";
+  "_OS_AswTask_VAR_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_AswTask_VAR_NOCACHE_NOINIT" - 1;
+  "_OS_AswTask_VAR_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_AswTask_VAR_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_AswTask_VAR_NOCACHE_NOINIT_START" = 0;
+  "_OS_AswTask_VAR_NOCACHE_NOINIT_END" = 0;
+  "_OS_AswTask_VAR_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE_ZERO_INIT )
+if (exists(".bss.OS_AswTask_VAR_NOCACHE_ZERO_INIT_bss") || exists(".data.OS_AswTask_VAR_NOCACHE_ZERO_INIT"))
+{
+  group OS_AswTask_VAR_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_AswTask_VAR_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_AswTask_VAR_NOCACHE_ZERO_INIT_bss";
+      select "[.]data.OS_AswTask_VAR_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_AswTask_VAR_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_AswTask_VAR_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_AswTask_VAR_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_AswTask_VAR_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_AswTask_VAR_NOCACHE_ZERO_INIT" - 1;
+  "_OS_AswTask_VAR_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_AswTask_VAR_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_AswTask_VAR_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_AswTask_VAR_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_AswTask_VAR_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE_INIT )
+if (exists(".zdata.OS_AswTask_VAR_FAST_NOCACHE"))
+{
+  group OS_AswTask_VAR_FAST_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_AswTask_VAR_FAST_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_AswTask_VAR_FAST_NOCACHE";
+    }
+    reserved ".pad.OS_AswTask_VAR_FAST_NOCACHE" (size=16);
+  }
+  "_OS_AswTask_VAR_FAST_NOCACHE_START" = "_lc_gb_OS_AswTask_VAR_FAST_NOCACHE_GROUP";
+  "_OS_AswTask_VAR_FAST_NOCACHE_END" = "_lc_ub__pad_OS_AswTask_VAR_FAST_NOCACHE" - 1;
+  "_OS_AswTask_VAR_FAST_NOCACHE_LIMIT" = "_lc_ub__pad_OS_AswTask_VAR_FAST_NOCACHE";
+}
+else
+{
+  "_OS_AswTask_VAR_FAST_NOCACHE_START" = 0;
+  "_OS_AswTask_VAR_FAST_NOCACHE_END" = 0;
+  "_OS_AswTask_VAR_FAST_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE_NOINIT )
+if (exists(".zbss.OS_AswTask_VAR_FAST_NOCACHE_NOINIT"))
+{
+  group OS_AswTask_VAR_FAST_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_AswTask_VAR_FAST_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_AswTask_VAR_FAST_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_AswTask_VAR_FAST_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_AswTask_VAR_FAST_NOCACHE_NOINIT_START" = "_lc_gb_OS_AswTask_VAR_FAST_NOCACHE_NOINIT_GROUP";
+  "_OS_AswTask_VAR_FAST_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_AswTask_VAR_FAST_NOCACHE_NOINIT" - 1;
+  "_OS_AswTask_VAR_FAST_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_AswTask_VAR_FAST_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_AswTask_VAR_FAST_NOCACHE_NOINIT_START" = 0;
+  "_OS_AswTask_VAR_FAST_NOCACHE_NOINIT_END" = 0;
+  "_OS_AswTask_VAR_FAST_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE_ZERO_INIT )
+if (exists(".zbss.OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT_bss") || exists(".zdata.OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT"))
+{
+  group OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT_bss";
+      select "[.]zdata.OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT" - 1;
+  "_OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_AswTask_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK
+} /* OS_AswTask_VAR_ALL_GROUP */
+"_OS_AswTask_VAR_ALL_START" = "_lc_gb_OS_AswTask_VAR_ALL_GROUP";
+"_OS_AswTask_VAR_ALL_END" = "_lc_ge_OS_AswTask_VAR_ALL_GROUP" - 1;
+"_OS_AswTask_VAR_ALL_LIMIT" = "_lc_ge_OS_AswTask_VAR_ALL_GROUP";
+
+# undef OS_LINK_VAR_TASK_ASWTASK
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_FAR
+# undef OS_LINK_VAR_TASK_ASWTASK_FAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE
+# undef OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_ASWTASK_FAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE
+# undef OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_ASWTASK_FAR_NOCACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_NEAR
+# undef OS_LINK_VAR_TASK_ASWTASK_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE
+# undef OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_ASWTASK_NEAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE
+# undef OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_ASWTASK_NEAR_NOCACHE_ZERO_INIT
+#endif
+
+
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT
+group OS_Asw_Init_VAR_ALL_GROUP(ordered, contiguous, fill, align=8)
+{
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASW_INIT ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE_INIT )
+if (exists(".data.OS_Asw_Init_VAR"))
+{
+  group OS_Asw_Init_VAR_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_Asw_Init_VAR_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_Asw_Init_VAR";
+    }
+    reserved ".pad.OS_Asw_Init_VAR" (size=16);
+  }
+  "_OS_Asw_Init_VAR_START" = "_lc_gb_OS_Asw_Init_VAR_GROUP";
+  "_OS_Asw_Init_VAR_END" = "_lc_ub__pad_OS_Asw_Init_VAR" - 1;
+  "_OS_Asw_Init_VAR_LIMIT" = "_lc_ub__pad_OS_Asw_Init_VAR";
+}
+else
+{
+  "_OS_Asw_Init_VAR_START" = 0;
+  "_OS_Asw_Init_VAR_END" = 0;
+  "_OS_Asw_Init_VAR_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASW_INIT ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE_NOINIT )
+if (exists(".bss.OS_Asw_Init_VAR_NOINIT"))
+{
+  group OS_Asw_Init_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_Asw_Init_VAR_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_Asw_Init_VAR_NOINIT";
+    }
+    reserved ".pad.OS_Asw_Init_VAR_NOINIT" (size=16);
+  }
+  "_OS_Asw_Init_VAR_NOINIT_START" = "_lc_gb_OS_Asw_Init_VAR_NOINIT_GROUP";
+  "_OS_Asw_Init_VAR_NOINIT_END" = "_lc_ub__pad_OS_Asw_Init_VAR_NOINIT" - 1;
+  "_OS_Asw_Init_VAR_NOINIT_LIMIT" = "_lc_ub__pad_OS_Asw_Init_VAR_NOINIT";
+}
+else
+{
+  "_OS_Asw_Init_VAR_NOINIT_START" = 0;
+  "_OS_Asw_Init_VAR_NOINIT_END" = 0;
+  "_OS_Asw_Init_VAR_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASW_INIT ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE_ZERO_INIT )
+if (exists(".bss.OS_Asw_Init_VAR_ZERO_INIT_bss") || exists(".data.OS_Asw_Init_VAR_ZERO_INIT"))
+{
+  group OS_Asw_Init_VAR_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_Asw_Init_VAR_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_Asw_Init_VAR_ZERO_INIT_bss";
+      select "[.]data.OS_Asw_Init_VAR_ZERO_INIT";
+    }
+    reserved ".pad.OS_Asw_Init_VAR_ZERO_INIT" (size=16);
+  }
+  "_OS_Asw_Init_VAR_ZERO_INIT_START" = "_lc_gb_OS_Asw_Init_VAR_ZERO_INIT_GROUP";
+  "_OS_Asw_Init_VAR_ZERO_INIT_END" = "_lc_ub__pad_OS_Asw_Init_VAR_ZERO_INIT" - 1;
+  "_OS_Asw_Init_VAR_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_Asw_Init_VAR_ZERO_INIT";
+}
+else
+{
+  "_OS_Asw_Init_VAR_ZERO_INIT_START" = 0;
+  "_OS_Asw_Init_VAR_ZERO_INIT_END" = 0;
+  "_OS_Asw_Init_VAR_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASW_INIT ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE_INIT )
+if (exists(".zdata.OS_Asw_Init_VAR_FAST"))
+{
+  group OS_Asw_Init_VAR_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_Asw_Init_VAR_FAST_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_Asw_Init_VAR_FAST";
+    }
+    reserved ".pad.OS_Asw_Init_VAR_FAST" (size=16);
+  }
+  "_OS_Asw_Init_VAR_FAST_START" = "_lc_gb_OS_Asw_Init_VAR_FAST_GROUP";
+  "_OS_Asw_Init_VAR_FAST_END" = "_lc_ub__pad_OS_Asw_Init_VAR_FAST" - 1;
+  "_OS_Asw_Init_VAR_FAST_LIMIT" = "_lc_ub__pad_OS_Asw_Init_VAR_FAST";
+}
+else
+{
+  "_OS_Asw_Init_VAR_FAST_START" = 0;
+  "_OS_Asw_Init_VAR_FAST_END" = 0;
+  "_OS_Asw_Init_VAR_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASW_INIT ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE_NOINIT )
+if (exists(".zbss.OS_Asw_Init_VAR_FAST_NOINIT"))
+{
+  group OS_Asw_Init_VAR_FAST_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_Asw_Init_VAR_FAST_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_Asw_Init_VAR_FAST_NOINIT";
+    }
+    reserved ".pad.OS_Asw_Init_VAR_FAST_NOINIT" (size=16);
+  }
+  "_OS_Asw_Init_VAR_FAST_NOINIT_START" = "_lc_gb_OS_Asw_Init_VAR_FAST_NOINIT_GROUP";
+  "_OS_Asw_Init_VAR_FAST_NOINIT_END" = "_lc_ub__pad_OS_Asw_Init_VAR_FAST_NOINIT" - 1;
+  "_OS_Asw_Init_VAR_FAST_NOINIT_LIMIT" = "_lc_ub__pad_OS_Asw_Init_VAR_FAST_NOINIT";
+}
+else
+{
+  "_OS_Asw_Init_VAR_FAST_NOINIT_START" = 0;
+  "_OS_Asw_Init_VAR_FAST_NOINIT_END" = 0;
+  "_OS_Asw_Init_VAR_FAST_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASW_INIT ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE_ZERO_INIT )
+if (exists(".zbss.OS_Asw_Init_VAR_FAST_ZERO_INIT_bss") || exists(".zdata.OS_Asw_Init_VAR_FAST_ZERO_INIT"))
+{
+  group OS_Asw_Init_VAR_FAST_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_Asw_Init_VAR_FAST_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_Asw_Init_VAR_FAST_ZERO_INIT_bss";
+      select "[.]zdata.OS_Asw_Init_VAR_FAST_ZERO_INIT";
+    }
+    reserved ".pad.OS_Asw_Init_VAR_FAST_ZERO_INIT" (size=16);
+  }
+  "_OS_Asw_Init_VAR_FAST_ZERO_INIT_START" = "_lc_gb_OS_Asw_Init_VAR_FAST_ZERO_INIT_GROUP";
+  "_OS_Asw_Init_VAR_FAST_ZERO_INIT_END" = "_lc_ub__pad_OS_Asw_Init_VAR_FAST_ZERO_INIT" - 1;
+  "_OS_Asw_Init_VAR_FAST_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_Asw_Init_VAR_FAST_ZERO_INIT";
+}
+else
+{
+  "_OS_Asw_Init_VAR_FAST_ZERO_INIT_START" = 0;
+  "_OS_Asw_Init_VAR_FAST_ZERO_INIT_END" = 0;
+  "_OS_Asw_Init_VAR_FAST_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASW_INIT ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE_INIT )
+if (exists(".data.OS_Asw_Init_VAR_NOCACHE"))
+{
+  group OS_Asw_Init_VAR_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_Asw_Init_VAR_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_Asw_Init_VAR_NOCACHE";
+    }
+    reserved ".pad.OS_Asw_Init_VAR_NOCACHE" (size=16);
+  }
+  "_OS_Asw_Init_VAR_NOCACHE_START" = "_lc_gb_OS_Asw_Init_VAR_NOCACHE_GROUP";
+  "_OS_Asw_Init_VAR_NOCACHE_END" = "_lc_ub__pad_OS_Asw_Init_VAR_NOCACHE" - 1;
+  "_OS_Asw_Init_VAR_NOCACHE_LIMIT" = "_lc_ub__pad_OS_Asw_Init_VAR_NOCACHE";
+}
+else
+{
+  "_OS_Asw_Init_VAR_NOCACHE_START" = 0;
+  "_OS_Asw_Init_VAR_NOCACHE_END" = 0;
+  "_OS_Asw_Init_VAR_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASW_INIT ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE_NOINIT )
+if (exists(".bss.OS_Asw_Init_VAR_NOCACHE_NOINIT"))
+{
+  group OS_Asw_Init_VAR_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_Asw_Init_VAR_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_Asw_Init_VAR_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_Asw_Init_VAR_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_Asw_Init_VAR_NOCACHE_NOINIT_START" = "_lc_gb_OS_Asw_Init_VAR_NOCACHE_NOINIT_GROUP";
+  "_OS_Asw_Init_VAR_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_Asw_Init_VAR_NOCACHE_NOINIT" - 1;
+  "_OS_Asw_Init_VAR_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_Asw_Init_VAR_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_Asw_Init_VAR_NOCACHE_NOINIT_START" = 0;
+  "_OS_Asw_Init_VAR_NOCACHE_NOINIT_END" = 0;
+  "_OS_Asw_Init_VAR_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASW_INIT ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE_ZERO_INIT )
+if (exists(".bss.OS_Asw_Init_VAR_NOCACHE_ZERO_INIT_bss") || exists(".data.OS_Asw_Init_VAR_NOCACHE_ZERO_INIT"))
+{
+  group OS_Asw_Init_VAR_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_Asw_Init_VAR_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_Asw_Init_VAR_NOCACHE_ZERO_INIT_bss";
+      select "[.]data.OS_Asw_Init_VAR_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_Asw_Init_VAR_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_Asw_Init_VAR_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_Asw_Init_VAR_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_Asw_Init_VAR_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_Asw_Init_VAR_NOCACHE_ZERO_INIT" - 1;
+  "_OS_Asw_Init_VAR_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_Asw_Init_VAR_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_Asw_Init_VAR_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_Asw_Init_VAR_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_Asw_Init_VAR_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASW_INIT ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE_INIT )
+if (exists(".zdata.OS_Asw_Init_VAR_FAST_NOCACHE"))
+{
+  group OS_Asw_Init_VAR_FAST_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_Asw_Init_VAR_FAST_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_Asw_Init_VAR_FAST_NOCACHE";
+    }
+    reserved ".pad.OS_Asw_Init_VAR_FAST_NOCACHE" (size=16);
+  }
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_START" = "_lc_gb_OS_Asw_Init_VAR_FAST_NOCACHE_GROUP";
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_END" = "_lc_ub__pad_OS_Asw_Init_VAR_FAST_NOCACHE" - 1;
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_LIMIT" = "_lc_ub__pad_OS_Asw_Init_VAR_FAST_NOCACHE";
+}
+else
+{
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_START" = 0;
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_END" = 0;
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASW_INIT ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE_NOINIT )
+if (exists(".zbss.OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT"))
+{
+  group OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT_START" = "_lc_gb_OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT_GROUP";
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT" - 1;
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT_START" = 0;
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT_END" = 0;
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_ASW_INIT ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE_ZERO_INIT )
+if (exists(".zbss.OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT_bss") || exists(".zdata.OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT"))
+{
+  group OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT_bss";
+      select "[.]zdata.OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT" - 1;
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_Asw_Init_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT
+} /* OS_Asw_Init_VAR_ALL_GROUP */
+"_OS_Asw_Init_VAR_ALL_START" = "_lc_gb_OS_Asw_Init_VAR_ALL_GROUP";
+"_OS_Asw_Init_VAR_ALL_END" = "_lc_ge_OS_Asw_Init_VAR_ALL_GROUP" - 1;
+"_OS_Asw_Init_VAR_ALL_LIMIT" = "_lc_ge_OS_Asw_Init_VAR_ALL_GROUP";
+
+# undef OS_LINK_VAR_TASK_ASW_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_FAR
+# undef OS_LINK_VAR_TASK_ASW_INIT_FAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE
+# undef OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_ASW_INIT_FAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE
+# undef OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_ASW_INIT_FAR_NOCACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_NEAR
+# undef OS_LINK_VAR_TASK_ASW_INIT_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE
+# undef OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_ASW_INIT_NEAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE
+# undef OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_ASW_INIT_NEAR_NOCACHE_ZERO_INIT
 #endif
 
 

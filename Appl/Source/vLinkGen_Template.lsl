@@ -1216,6 +1216,8 @@ section_layout mpe:vtc:linear
     {
       section "OS_USER_CODE_SEC" (fill, blocksize = 2, attributes = rx)
       {
+        select "[.]text.OS_Asw_Init_CODE";
+        select "[.]text.OS_AswTask_CODE";
         select "[.]text.OS_Bsw_Task_CODE";
         select "[.]text.OS_Default_Init_Task_CODE";
         select "[.]text.OS_Default_Init_Task_Trusted_CODE";

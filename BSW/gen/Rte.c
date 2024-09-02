@@ -35,6 +35,7 @@
 #include "Rte_BswM.h"
 #include "Rte_EcuM.h"
 #include "Rte_Os_OsCore0_swc.h"
+#include "Rte_SWC1.h"
 #include "SchM_BswM.h"
 #include "SchM_Dio.h"
 #include "SchM_EcuM.h"
@@ -93,6 +94,21 @@ volatile VAR(uint8, RTE_VAR_ZERO_INIT) Rte_InitState = RTE_STATE_UNINIT; /* PRQA
 volatile VAR(uint8, RTE_VAR_ZERO_INIT) Rte_StartTiming_InitState = RTE_STATE_UNINIT; /* PRQA S 0850, 3408, 1514 */ /* MD_MSR_MacroArgumentEmpty, MD_Rte_3408, MD_Rte_1514 */
 
 #define RTE_STOP_SEC_VAR_ZERO_INIT_8BIT
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+/**********************************************************************************************************************
+ * Buffers for unqueued S/R
+ *********************************************************************************************************************/
+
+#define RTE_START_SEC_VAR_NOINIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
+VAR(BswM_ESH_RunRequest, RTE_VAR_NOINIT) Rte_SWC1_Request_ESH_RunRequest_0_requestedMode;
+/* PRQA L:L1 */
+
+#define RTE_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 #define RTE_START_SEC_CODE
@@ -219,9 +235,18 @@ FUNC(void, RTE_CODE) SchM_StartTiming(void)
 
 FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
 {
+  /* set default values for internal data */
+  Rte_SWC1_Request_ESH_RunRequest_0_requestedMode = 0U;
+
   /* mode management initialization part 1 */
 
   Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_BswM_ESH_Mode_STARTUP;
+
+  /* activate the tasks */
+  (void)ActivateTask(Asw_Init); /* PRQA S 3417 */ /* MD_Rte_Os */
+
+  /* activate the alarms used for TimingEvents */
+  (void)SetRelAlarm(Rte_Al_TE_SWC1_SWC1_Runnable10ms, RTE_MSEC_SystemTimer(0) + (TickType)1, RTE_MSEC_SystemTimer(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
 
   Rte_StartTiming_InitState = RTE_STATE_INIT;
   Rte_InitState = RTE_STATE_INIT;
@@ -232,6 +257,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
 FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void)
 {
   Rte_StartTiming_InitState = RTE_STATE_UNINIT;
+  /* deactivate alarms */
+  (void)CancelAlarm(Rte_Al_TE_SWC1_SWC1_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+
   Rte_InitState = RTE_STATE_SCHM_INIT;
 
   return RTE_E_OK;
@@ -273,9 +301,11 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_ESH_PostRunRequest_1_reques
 
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_ESH_RunRequest_0_requestedMode(P2VAR(BswM_ESH_RunRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
 {
-  *data = 0U;
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
-  return RTE_E_UNCONNECTED;
+  *(data) = Rte_SWC1_Request_ESH_RunRequest_0_requestedMode; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+
+  return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_ESH_RunRequest_1_requestedMode(P2VAR(BswM_ESH_RunRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
@@ -368,6 +398,35 @@ FUNC(BswM_ESH_Mode, RTE_CODE) Rte_Mode_BswM_Notification_ESH_ModeNotification_Bs
  *********************************************************************************************************************/
 
 /**********************************************************************************************************************
+ * Task:     AswTask
+ * Priority: 0
+ * Schedule: FULL
+ * Alarm:    Cycle Time 0.01 s Alarm Offset 0 s
+ *********************************************************************************************************************/
+TASK(AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
+{
+
+  /* call runnable */
+  SWC1_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+  (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+/**********************************************************************************************************************
+ * Task:     Asw_Init
+ * Priority: 0
+ * Schedule: FULL
+ *********************************************************************************************************************/
+TASK(Asw_Init) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
+{
+
+  /* call runnable */
+  SWC1_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+  (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+/**********************************************************************************************************************
  * Task:     Bsw_Task
  * Priority: 0
  * Schedule: FULL
@@ -393,8 +452,18 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
  *********************************************************************************************************************/
 
 /* module specific MISRA deviations:
+   MD_Rte_1339:  MISRA rule: Rule17.8
+     Reason:     Passing elements by pointer is a well known concept.
+     Risk:       No functional risk. Data flow is handled with care.
+     Prevention: Not required.
+
    MD_Rte_1514:  MISRA rule: Rule8.9
      Reason:     Because of external definition, misra does not see the call.
+     Risk:       No functional risk. There is no side effect.
+     Prevention: Not required.
+
+   MD_Rte_2982:  MISRA rule: Rule2.2
+     Reason:     Used to simplify code generation.
      Risk:       No functional risk. There is no side effect.
      Prevention: Not required.
 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Alarm_Lcfg.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-09-02 17:07:28
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -76,6 +76,9 @@
 
 /*! Alarm configuration data: Rte_Al_TE2_Bsw_Task_0_10ms */
 extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_Bsw_Task_0_10ms;
+
+/*! Alarm configuration data: Rte_Al_TE_SWC1_SWC1_Runnable10ms */
+extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_SWC1_SWC1_Runnable10ms;
 
 # define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

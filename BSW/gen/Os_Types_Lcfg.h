@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-09-02 17:07:28
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -60,6 +60,8 @@
 /* Fast trusted function identifiers. */
 
 /* Task identifiers. */
+#define AswTask AswTask
+#define Asw_Init Asw_Init
 #define Bsw_Task Bsw_Task
 #define Default_Init_Task Default_Init_Task
 #define Default_Init_Task_Trusted Default_Init_Task_Trusted
@@ -70,6 +72,7 @@
 
 /* Alarm identifiers. */
 #define Rte_Al_TE2_Bsw_Task_0_10ms Rte_Al_TE2_Bsw_Task_0_10ms
+#define Rte_Al_TE_SWC1_SWC1_Runnable10ms Rte_Al_TE_SWC1_SWC1_Runnable10ms
 
 /* Counter identifiers. */
 #define SystemTimer SystemTimer
@@ -128,11 +131,13 @@ typedef enum
 /*! Task identifiers. */
 typedef enum
 {
-  Bsw_Task = 0,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Default_Init_Task = 1,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Default_Init_Task_Trusted = 2,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  IdleTask_OsCore0 = 3,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_TASKID_COUNT = 4,
+  AswTask = 0,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Asw_Init = 1,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Bsw_Task = 2,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task = 3,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task_Trusted = 4,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  IdleTask_OsCore0 = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_TASKID_COUNT = 6,
   INVALID_TASK = OS_TASKID_COUNT
 } TaskType;
 
@@ -148,7 +153,8 @@ typedef enum
 typedef enum
 {
   Rte_Al_TE2_Bsw_Task_0_10ms = 0,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ALARMID_COUNT = 1
+  Rte_Al_TE_SWC1_SWC1_Runnable10ms = 1,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ALARMID_COUNT = 2
 } AlarmType;
 
 /*! Counter identifiers. */

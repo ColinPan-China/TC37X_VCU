@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Compiler_Cfg.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-09-02 17:07:28
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -36,6 +36,8 @@
  *  OS USER CALLOUT CODE SECTIONS
  *********************************************************************************************************************/
 
+# define OS_ASWTASK_CODE
+# define OS_ASW_INIT_CODE
 # define OS_BSW_TASK_CODE
 # define OS_DEFAULT_INIT_TASK_CODE
 # define OS_DEFAULT_INIT_TASK_TRUSTED_CODE

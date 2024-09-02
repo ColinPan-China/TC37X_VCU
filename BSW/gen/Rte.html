@@ -119,9 +119,11 @@ Contents
 Rte_BswM.h<br>
 Rte_EcuM.h<br>
 Rte_Os_OsCore0_swc.h<br>
+Rte_SWC1.h<br>
 Rte_BswM_Type.h<br>
 Rte_EcuM_Type.h<br>
 Rte_Os_OsCore0_swc_Type.h<br>
+Rte_SWC1_Type.h<br>
 Rte_Main.h<br>
 Rte_Type.h<br>
 Rte_DataHandleType.h<br>
@@ -133,6 +135,7 @@ Rte_Cbk.h<br>
 BswM_MemMap.h<br>
 EcuM_MemMap.h<br>
 Os_OsCore0_swc_MemMap.h<br>
+SWC1_MemMap.h<br>
 Rte_Compiler_Cfg.h<br>
 Rte.c<br>
 Rte_cfg.mak<br>
@@ -160,7 +163,7 @@ Rte_Needs.ecuc.arxml<br>
 Note: This resource usage calculation assumes that the "Boolean" data type is based on uint8 base type.<br>
       Further on padding bytes for structs are not considered, which depends on the compiler settings.<br>
 <br>
-RAM   Size: 2 Bytes<br>
+RAM   Size: 3 Bytes<br>
 CONST Size: 0 Bytes<br>
 <br>
 <P ALIGN=LEFT>
@@ -172,6 +175,18 @@ CONST Size: 0 Bytes<br>
 <TD><B>Type</B></TD>
 <TD><B>Schedule</B></TD>
 <TD><B>Priority</B></TD>
+</TR>
+<TR>
+<TD>AswTask</TD>
+<TD>Basic</TD>
+<TD>FULL</TD>
+<TD>0</TD>
+</TR>
+<TR>
+<TD>Asw_Init</TD>
+<TD>Basic</TD>
+<TD>FULL</TD>
+<TD>0</TD>
 </TR>
 <TR>
 <TD>Bsw_Task</TD>
@@ -268,6 +283,20 @@ CONST Size: 0 Bytes<br>
 <TD>n/a</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>InitEvent</B></TD>
+<TD>SWC1_Init</TD>
+<TD>Asw_Init</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>SWC1_Runnable10ms</TD>
+<TD>AswTask</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE_SWC1_SWC1_Runnable10ms</TD>
 </TR>
 </TABLE>
 <br>
