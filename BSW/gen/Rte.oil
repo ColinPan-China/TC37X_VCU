@@ -30,7 +30,7 @@
 
    TASK AswTask {
       ACTIVATION = 1:"@RO@";
-      PRIORITY = 0:"@RO@";
+      PRIORITY = 64:"@RO@";
       SCHEDULE = FULL:"@RO@";
 // TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
       AUTOSTART = FALSE:"@RO@";
@@ -47,7 +47,7 @@
 
    TASK Asw_Init {
       ACTIVATION = 1:"@RO@";
-      PRIORITY = 0:"@RO@";
+      PRIORITY = 63:"@RO@";
       SCHEDULE = FULL:"@RO@";
 // TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
       AUTOSTART = FALSE:"@RO@";
@@ -55,7 +55,7 @@
 
    TASK Bsw_Task {
       ACTIVATION = 1:"@RO@";
-      PRIORITY = 0:"@RO@";
+      PRIORITY = 65:"@RO@";
       SCHEDULE = FULL:"@RO@";
 // TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
       AUTOSTART = FALSE:"@RO@";
