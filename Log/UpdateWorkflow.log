@@ -1,0 +1,105 @@
+2024-09-04 - 16:11:55
+16:11:55 - Workflow Step 'Update workflow' started.
+Using DaVinci Configurator  5.24.40 SP2 (x86_64).
+16:11:55 - Workflow Step 'Validate workflow environment' started.
+16:11:55 - Workflow Step 'Validate dpa file' started.
+16:11:55 - Workflow Step 'Validate dpa file' finished.
+16:11:55 - Workflow Step 'SLP conformance check' started.
+16:11:55 - Workflow Step 'SLP conformance check' finished.
+16:11:55 - Workflow Step 'Validate workflow environment' finished.
+16:11:55 - Workflow Step 'Input File Pre-Processing' started.
+16:11:55 - Workflow Step 'Converting legacy file(s) to AUTOSAR files' started.
+Legacy Converter finished successfully.
+Convert legacy file(s) to System Description
+Used executable: C:\Vector\CBD2100764_D00\Misc\LegacyDb2SystemDescrConverter\Application\LegacyDb2SystemDescrConverter.exe
+Arguments: D:\TC377_Development\821_demo\20240829\TC37X_VCU\DBC\VCU_CAN00.dbc -o "C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\LegacyConverterResults\1725437515484-0\ConvertedLegacy" -r 00048 -e -v 19
+Vector Legacy Database Converter
+Version: 1.8.62.0
+Copyright (c) 2018 Vector Informatik GmbH.
+SIP License found as C:\Vector\CBD2100764_D00\DaVinciConfigurator\ComponentLicense_DaVinciConfigurator.lic
+Command line: C:\Vector\CBD2100764_D00\Misc\LegacyDb2SystemDescrConverter\Application\LegacyDb2SystemDescrConverter.exe D:\TC377_Development\821_demo\20240829\TC37X_VCU\DBC\VCU_CAN00.dbc -o "C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\LegacyConverterResults\1725437515484-0\ConvertedLegacy" -r 00048 -e -v 19
+Converting DBC file D:\TC377_Development\821_demo\20240829\TC37X_VCU\DBC\VCU_CAN00.dbc
+Writing System Description...
+Writing 2 ECU Extracts...
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\LegacyConverterResults\1725437515484-0\ConvertedLegacy.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\LegacyConverterResults\1725437515484-0\ConvertedLegacy_GWM.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\LegacyConverterResults\1725437515484-0\ConvertedLegacy_VCU.arxml
+Elapsed time: 0.567 seconds
+0 Errors
+0 Warnings
+16:11:56 - Workflow Step 'Converting legacy file(s) to AUTOSAR files' finished.
+16:11:56 - Workflow Step 'Load arxml file after preprocessing' started.
+Load arxml file from path: C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\LegacyConverterResults\1725437515484-0\ConvertedLegacy_VCU.arxml
+16:11:56 - Workflow Step 'Load arxml file after preprocessing' finished.
+16:11:56 - Workflow Step 'Evaluate system extract paths' started.
+16:11:56 - Workflow Step 'Evaluate system extract paths' finished.
+Checking if the file preprocessing result is a valid ECU extract...
+Input File Pre-Processing finished sucessfully.
+16:11:56 - Workflow Step 'Input File Pre-Processing' finished.
+16:11:56 - Workflow Step 'Create copy of the Project' started.
+Copy project 'D:\TC377_Development\821_demo\20240829\TC37X_VCU' to 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0'...
+Adjusting DPA file of copied project...
+16:11:56 - Workflow Step 'Create copy of the Project' finished.
+16:11:56 - Workflow Step 'Analyse Bswmd's of the current project' started.
+16:11:56 - Workflow Step 'Analyse Bswmd's of the current project' finished.
+16:11:56 - Workflow Step 'Close Project' started.
+16:11:56 - Workflow Step 'Close Project' finished.
+16:12:02 - Workflow Step 'Prepare DaVinci Developer update data' started.
+16:12:02 - Workflow Step 'Prepare DaVinci Developer update data' finished.
+16:12:02 - Workflow Step 'Prepare System Extract' started.
+16:12:02 - Workflow Step 'Preprocessing System Extract' started.
+16:12:02 - Workflow Step 'Preprocessing System Extract' finished.
+16:12:02 - Workflow Step 'Create OEM Communication Extract' started.
+16:12:02 - Workflow Step 'Create OEM Communication Extract' finished.
+16:12:02 - Workflow Step 'Prepare System Extract' finished.
+16:12:02 - Workflow Step 'Updating the project' started.
+16:12:03 - Workflow Step 'Create ECU configuration' started.
+16:12:07 - Workflow Step 'Create ECU configuration' finished.
+16:12:07 - Workflow Step 'Update ECU configuration' started.
+No Package path available for module configuration: com.vector.cfg.workflow.ecucupdater.model.internal.ModuleKey@1fec0f60. Default /ActiveEcuC is used instead.
+No Package path available for module configuration: com.vector.cfg.workflow.ecucupdater.model.internal.ModuleKey@ef5f8d8c. Default /ActiveEcuC is used instead.
+16:12:12 - Workflow Step 'Update ECU configuration' finished.
+16:12:12 - Workflow Step 'Updating the project' finished.
+16:12:12 - Workflow Step 'Generate update report' started.
+16:12:21 - Workflow Step 'Generate update report' finished.
+16:12:21 - Workflow Step 'Execute Solving Actions' started.
+Executing Auto-Solving-Actions...
+Auto-Solving-Actions done.
+Executing update specific Preferred-Solving-Actions...
+Update specific Preferred-Solving-Actions done.
+16:12:24 - Workflow Step 'Execute Solving Actions' finished.
+16:12:24 - Workflow Step 'Update DaVinci Developer Workspace' started.
+Opening workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.dcf'...
+Loading file PlatformTypes_AR4.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\AUTOSAR\PlatformTypes_AR4.arxml)
+Loading file BswM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\ServiceComponents\BswM_swc.arxml)
+Loading file ComM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\ServiceComponents\ComM_swc.arxml)
+Loading file Det_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\ServiceComponents\Det_swc.arxml)
+Loading file EcuM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\ServiceComponents\EcuM_swc.arxml)
+Loading file Os_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\ServiceComponents\Os_swc.arxml)
+Loading file Communication.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Update\DevData\Communication.arxml)
+Loading file DataTypes.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\DataTypes.arxml)
+Loading file Packages.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\Packages.arxml)
+Loading file PortInterfaces.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\PortInterfaces.arxml)
+Loading file SWC1.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\SWC1.arxml)
+Loading file TC37X_VCU.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.arxml)
+Opened workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.dcf' successfully.
+Start import
+Importing file (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\System\SystemExtract.arxml).
+Merging imported data
+Finished import
+Saving workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.dcf'...
+Saving file DataTypes.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\DataTypes.arxml)
+Saved workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.dcf' successfully.
+Closing workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.dcf'...
+Closed workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.dcf' successfully.
+Result of DaVinci Developer workspace update.
+              OK
+16:12:30 - Workflow Step 'Update DaVinci Developer Workspace' finished.
+16:12:30 - Workflow Step 'Update RTE configuration' started.
+16:12:31 - Workflow Step 'Update RTE configuration' finished.
+16:12:31 - Workflow Step 'Align differences after successful update' started.
+16:12:31 - Workflow Step 'Align differences after successful update' finished.
+16:12:31 - Workflow Step 'Clean up update data' started.
+16:12:31 - Workflow Step 'Clean up update data' finished.
+Update workflow finished sucessfully.
+16:12:37 - Workflow Step 'Update workflow' finished.

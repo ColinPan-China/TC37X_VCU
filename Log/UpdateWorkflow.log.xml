@@ -1,0 +1,729 @@
+<?xml version="1.0" ?>
+<UpdateWorkflowReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./UpdateWorkflow_V1.0.log.xsd">
+  <StartTime>2024-09-04T16:11:55.042+08:00[Asia/Shanghai]</StartTime>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:55.042+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDWORKFLOW">Update workflow</WorkflowStep>
+    <MessageID>UPDWORKFLOW99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Update workflow' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:55.047+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDWORKFLOW">Update workflow</WorkflowStep>
+    <MessageID>UPDWORKFLOW00001</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Using DaVinci Configurator  5.24.40 SP2 (x86_64).</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:55.047+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="VALIDWORKFLOW">Validate workflow environment</WorkflowStep>
+    <MessageID>VALIDWORKFLOW99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Validate workflow environment' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:55.047+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="VALIDDPA">Validate dpa file</WorkflowStep>
+    <MessageID>VALIDDPA99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Validate dpa file' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:55.404+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="VALIDDPA">Validate dpa file</WorkflowStep>
+    <MessageID>VALIDDPA99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Validate dpa file' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:55.404+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="SLPCHECK">SLP conformance check</WorkflowStep>
+    <MessageID>SLPCHECK99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'SLP conformance check' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:55.426+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="SLPCHECK">SLP conformance check</WorkflowStep>
+    <MessageID>SLPCHECK99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'SLP conformance check' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:55.426+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="VALIDWORKFLOW">Validate workflow environment</WorkflowStep>
+    <MessageID>VALIDWORKFLOW99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Validate workflow environment' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:55.427+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="FILEPREPROC">Input File Pre-Processing</WorkflowStep>
+    <MessageID>FILEPREPROC99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Input File Pre-Processing' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:55.431+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Converting legacy file(s) to AUTOSAR files' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.091+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY00000</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Legacy Converter finished successfully.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Convert legacy file(s) to System Description</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Used executable: C:\Vector\CBD2100764_D00\Misc\LegacyDb2SystemDescrConverter\Application\LegacyDb2SystemDescrConverter.exe</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Arguments: D:\TC377_Development\821_demo\20240829\TC37X_VCU\DBC\VCU_CAN00.dbc -o "C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\LegacyConverterResults\1725437515484-0\ConvertedLegacy" -r 00048 -e -v 19</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Vector Legacy Database Converter</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Version: 1.8.62.0</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Copyright (c) 2018 Vector Informatik GmbH.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>SIP License found as C:\Vector\CBD2100764_D00\DaVinciConfigurator\ComponentLicense_DaVinciConfigurator.lic</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Command line: C:\Vector\CBD2100764_D00\Misc\LegacyDb2SystemDescrConverter\Application\LegacyDb2SystemDescrConverter.exe D:\TC377_Development\821_demo\20240829\TC37X_VCU\DBC\VCU_CAN00.dbc -o "C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\LegacyConverterResults\1725437515484-0\ConvertedLegacy" -r 00048 -e -v 19</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Converting DBC file D:\TC377_Development\821_demo\20240829\TC37X_VCU\DBC\VCU_CAN00.dbc</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Writing System Description...</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Writing 2 ECU Extracts...</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\LegacyConverterResults\1725437515484-0\ConvertedLegacy.arxml</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\LegacyConverterResults\1725437515484-0\ConvertedLegacy_GWM.arxml</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\LegacyConverterResults\1725437515484-0\ConvertedLegacy_VCU.arxml</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Elapsed time: 0.567 seconds</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>0 Errors</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>0 Warnings</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.092+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COMMLEGACY">Converting legacy file(s) to AUTOSAR files</WorkflowStep>
+    <MessageID>COMMLEGACY99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Converting legacy file(s) to AUTOSAR files' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.093+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="LOADARXML">Load arxml file after preprocessing</WorkflowStep>
+    <MessageID>LOADARXML99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Load arxml file after preprocessing' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.097+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="LOADARXML">Load arxml file after preprocessing</WorkflowStep>
+    <MessageID>LOADARXML00000</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Load arxml file from path: C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\LegacyConverterResults\1725437515484-0\ConvertedLegacy_VCU.arxml</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.347+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="LOADARXML">Load arxml file after preprocessing</WorkflowStep>
+    <MessageID>LOADARXML99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Load arxml file after preprocessing' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.347+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="MERGEPATH">Evaluate system extract paths</WorkflowStep>
+    <MessageID>MERGEPATH99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Evaluate system extract paths' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.348+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="MERGEPATH">Evaluate system extract paths</WorkflowStep>
+    <MessageID>MERGEPATH99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Evaluate system extract paths' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.354+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="FILEPREPROC">Input File Pre-Processing</WorkflowStep>
+    <MessageID>FILEPREPROC99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Checking if the file preprocessing result is a valid ECU extract...</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.374+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="FILEPREPROC">Input File Pre-Processing</WorkflowStep>
+    <MessageID>FILEPREPROC99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Input File Pre-Processing finished sucessfully.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.374+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="FILEPREPROC">Input File Pre-Processing</WorkflowStep>
+    <MessageID>FILEPREPROC99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Input File Pre-Processing' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.514+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COPYPRJ">Create copy of the Project</WorkflowStep>
+    <MessageID>COPYPRJ99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Create copy of the Project' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.514+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COPYPRJ">Create copy of the Project</WorkflowStep>
+    <MessageID>COPYPRJ00001</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Copy project 'D:\TC377_Development\821_demo\20240829\TC37X_VCU' to 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0'...</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.566+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COPYPRJ">Create copy of the Project</WorkflowStep>
+    <MessageID>COPYPRJ00002</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Adjusting DPA file of copied project...</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.581+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="COPYPRJ">Create copy of the Project</WorkflowStep>
+    <MessageID>COPYPRJ99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Create copy of the Project' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.581+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="BSWMDCHECK">Analyse Bswmd's of the current project</WorkflowStep>
+    <MessageID>BSWMDCHECK99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Analyse Bswmd's of the current project' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.582+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="BSWMDCHECK">Analyse Bswmd's of the current project</WorkflowStep>
+    <MessageID>BSWMDCHECK99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Analyse Bswmd's of the current project' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.582+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="CLOSE">Close Project</WorkflowStep>
+    <MessageID>CLOSE99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Close Project' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:11:56.761+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="CLOSE">Close Project</WorkflowStep>
+    <MessageID>CLOSE99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Close Project' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:02.055+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="DEVUPDPREP">Prepare DaVinci Developer update data</WorkflowStep>
+    <MessageID>DEVUPDPREP99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Prepare DaVinci Developer update data' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:02.062+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="DEVUPDPREP">Prepare DaVinci Developer update data</WorkflowStep>
+    <MessageID>DEVUPDPREP99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Prepare DaVinci Developer update data' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:02.062+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="PREPSYSEXTRACT">Prepare System Extract</WorkflowStep>
+    <MessageID>PREPSYSEXTRACT99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Prepare System Extract' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:02.229+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="PREPROCSYSEXTRACT">Preprocessing System Extract</WorkflowStep>
+    <MessageID>PREPROCSYSEXTRACT99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Preprocessing System Extract' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:02.229+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="PREPROCSYSEXTRACT">Preprocessing System Extract</WorkflowStep>
+    <MessageID>PREPROCSYSEXTRACT99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Preprocessing System Extract' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:02.229+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="EXTRACTOEMCOMM">Create OEM Communication Extract</WorkflowStep>
+    <MessageID>EXTRACTOEMCOMM99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Create OEM Communication Extract' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:02.401+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="EXTRACTOEMCOMM">Create OEM Communication Extract</WorkflowStep>
+    <MessageID>EXTRACTOEMCOMM99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Create OEM Communication Extract' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:02.404+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="PREPSYSEXTRACT">Prepare System Extract</WorkflowStep>
+    <MessageID>PREPSYSEXTRACT99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Prepare System Extract' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:02.404+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDPROJECT">Updating the project</WorkflowStep>
+    <MessageID>UPDPROJECT99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Updating the project' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:03.995+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="BASEECUC">Create ECU configuration</WorkflowStep>
+    <MessageID>BASEECUC99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Create ECU configuration' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:07.327+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="BASEECUC">Create ECU configuration</WorkflowStep>
+    <MessageID>BASEECUC99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Create ECU configuration' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:07.328+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDECUC">Update ECU configuration</WorkflowStep>
+    <MessageID>UPDECUC99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Update ECU configuration' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:11.818+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDECUC">Update ECU configuration</WorkflowStep>
+    <MessageID>UPDECUC05000</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>No Package path available for module configuration: com.vector.cfg.workflow.ecucupdater.model.internal.ModuleKey@1fec0f60. Default /ActiveEcuC is used instead.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:11.822+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDECUC">Update ECU configuration</WorkflowStep>
+    <MessageID>UPDECUC05000</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>No Package path available for module configuration: com.vector.cfg.workflow.ecucupdater.model.internal.ModuleKey@ef5f8d8c. Default /ActiveEcuC is used instead.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:12.611+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDECUC">Update ECU configuration</WorkflowStep>
+    <MessageID>UPDECUC99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Update ECU configuration' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:12.612+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDPROJECT">Updating the project</WorkflowStep>
+    <MessageID>UPDPROJECT99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Updating the project' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:12.614+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="GENUPDREPORT">Generate update report</WorkflowStep>
+    <MessageID>GENUPDREPORT99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Generate update report' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:21.207+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="GENUPDREPORT">Generate update report</WorkflowStep>
+    <MessageID>GENUPDREPORT99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Generate update report' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:21.208+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="SOLVEACTION">Execute Solving Actions</WorkflowStep>
+    <MessageID>SOLVEACTION99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Execute Solving Actions' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:21.782+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="SOLVEACTION">Execute Solving Actions</WorkflowStep>
+    <MessageID>SOLVEACTION99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Executing Auto-Solving-Actions...</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:23.321+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="SOLVEACTION">Execute Solving Actions</WorkflowStep>
+    <MessageID>SOLVEACTION99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Auto-Solving-Actions done.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:23.321+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="SOLVEACTION">Execute Solving Actions</WorkflowStep>
+    <MessageID>SOLVEACTION99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Executing update specific Preferred-Solving-Actions...</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:23.726+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="SOLVEACTION">Execute Solving Actions</WorkflowStep>
+    <MessageID>SOLVEACTION99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Update specific Preferred-Solving-Actions done.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:24.088+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="SOLVEACTION">Execute Solving Actions</WorkflowStep>
+    <MessageID>SOLVEACTION99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Execute Solving Actions' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:24.089+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Update DaVinci Developer Workspace' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Opening workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.dcf'...</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Loading file PlatformTypes_AR4.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\AUTOSAR\PlatformTypes_AR4.arxml)</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Loading file BswM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\ServiceComponents\BswM_swc.arxml)</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Loading file ComM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\ServiceComponents\ComM_swc.arxml)</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Loading file Det_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\ServiceComponents\Det_swc.arxml)</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Loading file EcuM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\ServiceComponents\EcuM_swc.arxml)</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Loading file Os_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\ServiceComponents\Os_swc.arxml)</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Loading file Communication.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Update\DevData\Communication.arxml)</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Loading file DataTypes.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\DataTypes.arxml)</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Loading file Packages.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\Packages.arxml)</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Loading file PortInterfaces.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\PortInterfaces.arxml)</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Loading file SWC1.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\SWC1.arxml)</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Loading file TC37X_VCU.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.arxml)</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Opened workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.dcf' successfully.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Start import</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Importing file (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\System\SystemExtract.arxml).</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Merging imported data</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Finished import</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Saving workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.dcf'...</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Saving file DataTypes.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\DataTypes.arxml)</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Saved workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.dcf' successfully.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Closing workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.dcf'...</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Closed workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-6317708\Workflow\1725437516511-0\Config\Developer\TC37X_VCU.dcf' successfully.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.597+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99998</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Result of DaVinci Developer workspace update.</ShortDescription>
+    <DetailedDescription>
+      <MixedTextPart type="String">OK</MixedTextPart>
+    </DetailedDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.849+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDDEV">Update DaVinci Developer Workspace</WorkflowStep>
+    <MessageID>UPDDEV99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Update DaVinci Developer Workspace' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:30.849+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDRTECONF">Update RTE configuration</WorkflowStep>
+    <MessageID>UPDRTECONF99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Update RTE configuration' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:31.295+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDRTECONF">Update RTE configuration</WorkflowStep>
+    <MessageID>UPDRTECONF99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Update RTE configuration' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:31.325+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="ALIGNDIFF">Align differences after successful update</WorkflowStep>
+    <MessageID>ALIGNDIFF99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Align differences after successful update' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:31.396+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="ALIGNDIFF">Align differences after successful update</WorkflowStep>
+    <MessageID>ALIGNDIFF99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Align differences after successful update' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:31.397+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="CLEAN">Clean up update data</WorkflowStep>
+    <MessageID>CLEAN99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Clean up update data' started.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:31.398+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="CLEAN">Clean up update data</WorkflowStep>
+    <MessageID>CLEAN99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Clean up update data' finished.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:37.448+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDWORKFLOW">Update workflow</WorkflowStep>
+    <MessageID>UPDWORKFLOW99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Update workflow finished sucessfully.</ShortDescription>
+  </WorkflowMessage>
+  <WorkflowMessage>
+    <LogTime>2024-09-04T16:12:37.448+08:00[Asia/Shanghai]</LogTime>
+    <WorkflowStep shortName="UPDWORKFLOW">Update workflow</WorkflowStep>
+    <MessageID>UPDWORKFLOW99999</MessageID>
+    <ErrorLevel>INFO</ErrorLevel>
+    <ShortDescription>Workflow Step 'Update workflow' finished.</ShortDescription>
+  </WorkflowMessage>
+  <EndTime>2024-09-04T16:13:03.153+08:00[Asia/Shanghai]</EndTime>
+</UpdateWorkflowReport>

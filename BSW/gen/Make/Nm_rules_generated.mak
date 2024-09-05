@@ -1,0 +1,3 @@
+
+GENERATED_SOURCE_FILES  += $(GENDATA_DIR)\Nm_Cfg.c $(GENDATA_DIR)\Nm_Lcfg.c
+

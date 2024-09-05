@@ -1,0 +1,3 @@
+
+GENERATED_SOURCE_FILES  += $(GENDATA_DIR)\ComM_Lcfg.c
+
