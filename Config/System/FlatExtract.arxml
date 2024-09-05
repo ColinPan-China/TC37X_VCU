@@ -22,6 +22,107 @@
                             <SYSTEM UUID="fc4604e8-c272-49f9-87c4-e9772ecf6401">
                               <SHORT-NAME>SYSTEM</SHORT-NAME>
                               <CATEGORY>ECU_EXTRACT</CATEGORY>
+                              <FIBEX-ELEMENTS>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="ECU-INSTANCE">/ECU/VCU</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="NM-CONFIG">/NM/NmConfig</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-CLUSTER">/Cluster/TC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oTC37X_VCU_CAN00_Rx</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oTC37X_VCU_CAN00_Tx</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Rx_500h_NM_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuRxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuTxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuTxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="NM-PDU">/PDU/VCU_Rx_500h_NM_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="NM-PDU">/PDU/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg1_Sig0_oVcuTxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg1_Sig1_oVcuTxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg1_Sig2_oVcuTxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg1_Sig3_oVcuTxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg2_Sig0_oVcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg2_Sig1_oVcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg2_Sig2_oVcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg2_Sig3_oVcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                              </FIBEX-ELEMENTS>
                               <MAPPINGS>
                                 <SYSTEM-MAPPING UUID="19079e91-2a91-4fa6-9093-7c1b6ba64cfd">
                                   <SHORT-NAME>MAPPINGS</SHORT-NAME>
@@ -76,6 +177,14 @@
                                     </ANNOTATION>
                                   </ANNOTATIONS>
                                   <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/SWC1</TYPE-TREF>
+                                </SW-COMPONENT-PROTOTYPE>
+                                <SW-COMPONENT-PROTOTYPE UUID="274f233c-196e-4efd-8537-a049df7a976a">
+                                  <SHORT-NAME>ComM</SHORT-NAME>
+                                  <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM</TYPE-TREF>
+                                </SW-COMPONENT-PROTOTYPE>
+                                <SW-COMPONENT-PROTOTYPE UUID="01f4b825-4bbf-4a9a-a46e-a0cb045099f6">
+                                  <SHORT-NAME>Det</SHORT-NAME>
+                                  <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/MICROSAR/Det_swc/ComponentTypes/Det</TYPE-TREF>
                                 </SW-COMPONENT-PROTOTYPE>
                               </COMPONENTS>
                               <CONNECTORS>
@@ -141,7 +250,6 @@
                                     <SD GID="3976e9f4-1667-4e85-89f1-31f8167f45a7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EcuM</SD>
                                     <SD GID="a3c529ec-93af-4763-9e8e-fc9e2e1f0773">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Os_OsCore0_swc</SD>
                                     <SD GID="905f0a6c-c4e3-4618-98f4-e4a4659c1740">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</SD>
-                                    <SD GID="7038d1f8-509a-461d-8b9c-7f2e03ccb174">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1_Request_ESH_RunRequest_0_BswM_Request_ESH_RunRequest_0</SD>
                                     <SD GID="3dd85ab4-5b87-4ae8-b37a-bd9c7fcb011b">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/FLATMAP</SD>
                                     <SD GID="fc4604e8-c272-49f9-87c4-e9772ecf6401">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM</SD>
                                     <SD GID="305b1449-26cf-4075-9b6a-d48b38b7a5fe">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</SD>
@@ -188,6 +296,25 @@
                                     <SD GID="e8734859-8ae4-4a9e-9db3-e8ba6cffb1cc">/MICROSAR/BswM_swc/Interfaces/BswM_MSI_ESH_RunRequest/BswM_MDGP_ESH_RunRequest</SD>
                                     <SD GID="255c5012-5426-484c-a853-7cf1dd229a94">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest</SD>
                                     <SD GID="4d5ec514-e820-47f8-8518-f3dbf0905dae">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest/requestedMode</SD>
+                                    <SD GID="fb79ec68-77a2-4ceb-8c84-693270e59cb5">/MICROSAR/CanIf_ib_bswmd/XcpEvents</SD>
+                                    <SD GID="b6388a02-1181-4fc5-81dd-6b6f37ce1778">/MICROSAR/CanNm_ib_bswmd/XcpEvents</SD>
+                                    <SD GID="4b152e4a-350c-408e-8dfc-9169fdf65ba3">/MICROSAR/CanSM_ib_bswmd/XcpEvents</SD>
+                                    <SD GID="286acd74-9364-4129-90e0-c82bcd4b6f93">/MICROSAR/ComM_ib_bswmd/XcpEvents</SD>
+                                    <SD GID="23456fdc-f7ad-49c1-9c3b-598ac832089c">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
+                                    <SD GID="5e890fa0-13ec-43cb-bf41-1c6645ad4a73">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
+                                    <SD GID="21e2617c-9710-4c9d-8d72-16d64d4fc480">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
+                                    <SD GID="8bf1c7f1-6ee3-442d-aaac-4d290efda5ac">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
+                                    <SD GID="2669447e-1154-419a-aa58-2b9bd1cd6009">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
+                                    <SD GID="29c05688-a08e-49c6-ba26-a39635214f50">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
+                                    <SD GID="cf9247b4-21f0-4476-a171-834c6032e746">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
+                                    <SD GID="a79c2142-00a2-4471-ae46-c0bca0868254">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
+                                    <SD GID="67ce1ed5-0cd8-4659-8ac8-43f5140ba846">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionRx_ComMainFunctionRx</SD>
+                                    <SD GID="f0154cf3-78b1-439c-8e4f-9030105fdde1">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionRx_ComMainFunctionRxTimingEvent0</SD>
+                                    <SD GID="6449745c-0c85-4010-bbca-08969bfc9cab">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionTx_ComMainFunctionTx</SD>
+                                    <SD GID="f35ebbbc-9d1a-4c28-b0de-53108e73cdf7">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionTx_ComMainFunctionTxTimingEvent0</SD>
+                                    <SD GID="4c325f36-593b-4e1e-b263-0b96315ce07a">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionRx_ComMainFunctionRx</SD>
+                                    <SD GID="f5bd1688-517d-4525-85af-af4822b87d0d">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionTx_ComMainFunctionTx</SD>
+                                    <SD GID="7012ba36-60c1-46f8-90d4-fb00cdcddc86">/MICROSAR/Com_ib_bswmd/XcpEvents</SD>
                                     <SD GID="97f2e389-d121-45e7-9335-b72665694b74">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior</SD>
                                     <SD GID="fea9ede6-aa28-41e1-bf4b-0b610752e58b">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/ECUM_EXCLUSIVE_AREA_0</SD>
                                     <SD GID="c116e7eb-d56f-4ff2-8293-52f207ac569b">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/ECUM_EXCLUSIVE_AREA_1</SD>
@@ -243,6 +370,7 @@
                                     <SD GID="ab6724f2-233d-4efc-b339-45113e943406">/MICROSAR/EcuM_swc/Interfaces/EcuM_ShutdownTarget/GetShutdownTarget</SD>
                                     <SD GID="e7c22ce1-d64e-4624-88fd-ac40aa00a019">/MICROSAR/EcuM_swc/Interfaces/EcuM_ShutdownTarget/SelectShutdownCause</SD>
                                     <SD GID="ee49ae00-b939-4dab-9b44-80ab167fb987">/MICROSAR/EcuM_swc/Interfaces/EcuM_ShutdownTarget/SelectShutdownTarget</SD>
+                                    <SD GID="adb1f73e-9c1e-4587-b5ce-81a17b481d0f">/MICROSAR/Nm_ib_bswmd/XcpEvents</SD>
                                     <SD GID="52e653a4-3069-4ee7-921a-050bfce5ce35">/MICROSAR/Os_ib_bswmd/SwAddrMethods/GLOBALSHARED_CONST</SD>
                                     <SD GID="e7eb8bbe-d430-41e4-8562-710a06ae90c5">/MICROSAR/Os_ib_bswmd/SwAddrMethods/GLOBALSHARED_CONST_FAST</SD>
                                     <SD GID="f1c8bcdd-83bf-4589-92de-69a11d70120c">/MICROSAR/Os_ib_bswmd/SwAddrMethods/GLOBALSHARED_VAR_CLEARED</SD>
@@ -294,6 +422,9 @@
                                     <SD GID="b314f5de-c86a-4f1e-8146-f1ad8a78aa7f">/MICROSAR/Os_swc/Interfaces/Os_Service/GetCounterValue</SD>
                                     <SD GID="db93d87b-1671-4d58-a797-1e8345c71b15">/MICROSAR/Os_swc/Interfaces/Os_Service/GetElapsedValue</SD>
                                     <SD GID="e014756e-6299-42dc-9bc6-2db672ce6835">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte/RteBehavior</SD>
+                                    <SD GID="0fff2c26-5dfb-414f-850e-a8d6abcf7853">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte/RteBehavior/Rte_ComSendSignalProxyPeriodic</SD>
+                                    <SD GID="aeaffa7c-9dac-4c22-891b-0c5327d4d0fb">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte/RteBehavior/Rte_ComSendSignalProxyPeriodicTimingEvent0</SD>
+                                    <SD GID="a5b642f7-15bc-414b-bc91-6bfb2bfc507f">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte_ComSendSignalProxyPeriodic</SD>
                                     <SD GID="{AF35D1D4-4362-4055-B014-780FA6F9E75B}">/Predefined_DEV/CompuMethods/Dem_UdsStatusByteType</SD>
                                     <SD GID="F2570AA0-D6E5-4217-80F7-5F60B8778133">/Predefined_DEV/CompuMethods/NvM_RequestResultType</SD>
                                     <SD GID="007B24D3-5C46-4986-B3CA-31D71FEDD510">/Predefined_DEV/CompuMethods/NvM_ServiceIdType</SD>
@@ -340,7 +471,7 @@
                                     <SD GID="29D8C45D-AD65-4ADB-A8C0-9051D3BA8EB3">/Predefined_DEV/PortInterfaces/NvSWC_NvMService_AC3_SRBS_DS_Defs/E_NOT_OK</SD>
                                     <SD GID="B0DF499C-5446-40C9-BA84-69FE6BBA9AFA">/Predefined_DEV/PortInterfaces/NvSWC_NvMService_AC3_SRBS_Defs/E_NOT_OK</SD>
                                     <SD GID="6C11D3FD-1F97-4F18-9F28-AEBD06095420">/Predefined_DEV/PortInterfaces/NvSWC_NvMService_SRBS/E_NOT_OK</SD>
-                                    <SD GID="E6FF58E5-F6B9-478A-BECA-DAB2EAADEAA0">/Systems/TC37X_VCU/EcuSwComposition</SD>
+                                    <SD GID="E6FF58E5-F6B9-478A-BECA-DAB2EAADEAA0">/VehicleProject/System/EcuSwComposition</SD>
                                   </SDG>
                                 </SDGS>
                               </ADMIN-DATA>

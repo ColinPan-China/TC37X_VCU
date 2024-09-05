@@ -97,6 +97,7 @@ section_layout mpe:vtc:linear
     {
       section "OS_STACKS_CORE0_VAR_NOINIT_SEC" (blocksize = 2, attributes = rw)
       {
+        select "[.]bss.OS_STACK_BSW_TASK_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_ERROR_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_INIT_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_ISR_CORE_VAR_NOINIT";
@@ -106,7 +107,6 @@ section_layout mpe:vtc:linear
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO50_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO63_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO64_VAR_NOINIT";
-        select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO65_VAR_NOINIT";
       }
     }
     group OS_STACKS_CORE0_VAR_NOINIT_PAD (align = 1)
@@ -1221,6 +1221,7 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_Asw_Init_CODE";
         select "[.]text.OS_AswTask_CODE";
         select "[.]text.OS_Bsw_Task_CODE";
+        select "[.]text.OS_CanIsr_0_CODE";
         select "[.]text.OS_Default_Init_Task_CODE";
         select "[.]text.OS_Default_Init_Task_Trusted_CODE";
         select "[.]text.OS_ERRORHOOK_CODE";

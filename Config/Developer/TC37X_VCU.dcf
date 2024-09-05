@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <DCF ARSCHEMA="440_DEV">
 	<Version>1.0</Version>
 	<PROFILESETTINGS>ProfileSettings.xml</PROFILESETTINGS>
 	<ADMINDATATEMPLATES>AdminDataTemplates.xml</ADMINDATATEMPLATES>
-	<PROJECTASSISTANT>../../TC37X_VCU.dpa</PROJECTASSISTANT>
+	<PROJECTASSISTANT>..\..\TC37X_VCU.dpa</PROJECTASSISTANT>
 	<FILEREF>
 		<ARXML>Packages.arxml</ARXML>
 	</FILEREF>
@@ -14,11 +14,11 @@
 		<ARXML>PortInterfaces.arxml</ARXML>
 	</FILEREF>
 	<FILEREF>
-		<ARXML>ECUProjects/TC37X_VCU.arxml</ARXML>
-		<DVG>ECUProjects/TC37X_VCU.dvg</DVG>
+		<ARXML>ECUProjects\TC37X_VCU.arxml</ARXML>
+		<DVG>ECUProjects\TC37X_VCU.dvg</DVG>
 	</FILEREF>
 	<FILEREF>
-		<ARXML>ComponentTypes/SWC1.arxml</ARXML>
-		<DVG>ComponentTypes/SWC1.dvg</DVG>
+		<ARXML>ComponentTypes\SWC1.arxml</ARXML>
+		<DVG>ComponentTypes\SWC1.dvg</DVG>
 	</FILEREF>
 </DCF>

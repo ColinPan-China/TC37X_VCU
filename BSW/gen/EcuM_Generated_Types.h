@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Generated_Types.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-09-04 17:27:55
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -53,16 +53,18 @@
 #define EcuMConf_EcuMWakeupSource_ECUM_WKSOURCE_INTERNAL_RESET (2uL) 
 #define EcuMConf_EcuMWakeupSource_ECUM_WKSOURCE_INTERNAL_WDG   (3uL) 
 #define EcuMConf_EcuMWakeupSource_ECUM_WKSOURCE_EXTERNAL_WDG   (4uL) 
+#define EcuMConf_EcuMWakeupSource_CN_TC37X_VCU_CAN00_07b6c9c8  (5uL) 
 
  
 /* ------------------------------------- Range of EcuM_WakeupSourceType -------------------------------------------- */
-#define ECUM_WKSOURCE_NONE           (EcuM_WakeupSourceType)(0x00000000uL) 
-#define ECUM_WKSOURCE_ALL_SOURCES    (EcuM_WakeupSourceType)(~((EcuM_WakeupSourceType)0x00UL)) 
-#define ECUM_WKSOURCE_POWER          (EcuM_WakeupSourceType)(1uL) 
-#define ECUM_WKSOURCE_RESET          (EcuM_WakeupSourceType)(2uL) 
-#define ECUM_WKSOURCE_INTERNAL_RESET (EcuM_WakeupSourceType)(4uL) 
-#define ECUM_WKSOURCE_INTERNAL_WDG   (EcuM_WakeupSourceType)(8uL) 
-#define ECUM_WKSOURCE_EXTERNAL_WDG   (EcuM_WakeupSourceType)(16uL) 
+#define ECUM_WKSOURCE_NONE                        (EcuM_WakeupSourceType)(0x00000000uL) 
+#define ECUM_WKSOURCE_ALL_SOURCES                 (EcuM_WakeupSourceType)(~((EcuM_WakeupSourceType)0x00UL)) 
+#define ECUM_WKSOURCE_POWER                       (EcuM_WakeupSourceType)(1uL) 
+#define ECUM_WKSOURCE_RESET                       (EcuM_WakeupSourceType)(2uL) 
+#define ECUM_WKSOURCE_INTERNAL_RESET              (EcuM_WakeupSourceType)(4uL) 
+#define ECUM_WKSOURCE_INTERNAL_WDG                (EcuM_WakeupSourceType)(8uL) 
+#define ECUM_WKSOURCE_EXTERNAL_WDG                (EcuM_WakeupSourceType)(16uL) 
+#define ECUM_WKSOURCE_CN_TC37X_VCU_CAN00_07b6c9c8 (EcuM_WakeupSourceType)(32uL) 
 
 
 

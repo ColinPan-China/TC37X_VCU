@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Cfg.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-09-04 17:27:55
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -108,9 +108,11 @@
 # define OS_APPMODE_ANY     ((AppModeType)255)
 
 /*! Defines whether EVENT is active (STD_ON) or not (STD_OFF). */
-# define OS_CFG_EVENT                            (STD_OFF)
+# define OS_CFG_EVENT                            (STD_ON)
 
 /* Event masks */
+# define Rte_Ev_Cyclic2_Bsw_Task_0_10ms     ((EventMaskType)1uLL)
+# define Rte_Ev_Cyclic2_Bsw_Task_0_20ms     ((EventMaskType)2uLL)
 
 /* Software counter timing macros */
 

@@ -117,10 +117,14 @@ Contents
 <A HREF="#refBack"><FONT SIZE=4 FACE="Verdana, Arial, Helvetica" COLOR="#B70032">Back</FONT></A><br>
 <H2><A NAME="refGeneratedFiles"><FONT SIZE=5 FACE="Verdana, Arial, Helvetica">2 Generated Files</FONT></A></H2>
 Rte_BswM.h<br>
+Rte_ComM.h<br>
+Rte_Det.h<br>
 Rte_EcuM.h<br>
 Rte_Os_OsCore0_swc.h<br>
 Rte_SWC1.h<br>
 Rte_BswM_Type.h<br>
+Rte_ComM_Type.h<br>
+Rte_Det_Type.h<br>
 Rte_EcuM_Type.h<br>
 Rte_Os_OsCore0_swc_Type.h<br>
 Rte_SWC1_Type.h<br>
@@ -133,6 +137,7 @@ Rte_Cfg.h<br>
 Rte.h<br>
 Rte_Cbk.h<br>
 BswM_MemMap.h<br>
+ComM_MemMap.h<br>
 EcuM_MemMap.h<br>
 Os_OsCore0_swc_MemMap.h<br>
 SWC1_MemMap.h<br>
@@ -143,16 +148,34 @@ Rte_check.mak<br>
 Rte_defs.mak<br>
 Rte_rules.mak<br>
 SchM_BswM.h<br>
+SchM_Can.h<br>
+SchM_CanIf.h<br>
+SchM_CanNm.h<br>
+SchM_CanSM.h<br>
+SchM_Com.h<br>
+SchM_ComM.h<br>
+SchM_Det.h<br>
 SchM_Dio.h<br>
 SchM_EcuM.h<br>
 SchM_McalLib.h<br>
 SchM_Mcu.h<br>
+SchM_Nm.h<br>
+SchM_PduR.h<br>
 SchM_Port.h<br>
 SchM_BswM_Type.h<br>
+SchM_Can_Type.h<br>
+SchM_CanIf_Type.h<br>
+SchM_CanNm_Type.h<br>
+SchM_CanSM_Type.h<br>
+SchM_Com_Type.h<br>
+SchM_ComM_Type.h<br>
+SchM_Det_Type.h<br>
 SchM_Dio_Type.h<br>
 SchM_EcuM_Type.h<br>
 SchM_McalLib_Type.h<br>
 SchM_Mcu_Type.h<br>
+SchM_Nm_Type.h<br>
+SchM_PduR_Type.h<br>
 SchM_Port_Type.h<br>
 Rte.oil<br>
 Rte_Needs.ecuc.arxml<br>
@@ -163,7 +186,7 @@ Rte_Needs.ecuc.arxml<br>
 Note: This resource usage calculation assumes that the "Boolean" data type is based on uint8 base type.<br>
       Further on padding bytes for structs are not considered, which depends on the compiler settings.<br>
 <br>
-RAM   Size: 3 Bytes<br>
+RAM   Size: 2 Bytes<br>
 CONST Size: 0 Bytes<br>
 <br>
 <P ALIGN=LEFT>
@@ -190,7 +213,7 @@ CONST Size: 0 Bytes<br>
 </TR>
 <TR>
 <TD>Bsw_Task</TD>
-<TD>Basic</TD>
+<TD>Extended</TD>
 <TD>FULL</TD>
 <TD>65</TD>
 </TR>
@@ -211,14 +234,105 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>BswM_MainFunction</TD>
 <TD>Bsw_Task</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
 <TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 20ms</TD>
+<TD>ComM_MainFunction_0</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_CN_TC37X_VCU_CAN00_b1b4f272::GetCurrentComMode</TD>
+<TD>GetCurrentComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::CL_CN_TC37X_VCU_CAN00_07b6c9c8::GetInhibitionStatus</TD>
+<TD>GetInhibitionStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::CW_CN_TC37X_VCU_CAN00_07b6c9c8::GetInhibitionStatus</TD>
+<TD>GetInhibitionStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_CN_TC37X_VCU_CAN00_b1b4f272::GetMaxComMode</TD>
+<TD>GetMaxComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_CN_TC37X_VCU_CAN00_b1b4f272::GetRequestedComMode</TD>
+<TD>GetRequestedComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::CL_CN_TC37X_VCU_CAN00_07b6c9c8::LimitChannelToNoComMode</TD>
+<TD>LimitChannelToNoComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::modeLimitation::LimitECUToNoComMode</TD>
+<TD>LimitECUToNoComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::CW_CN_TC37X_VCU_CAN00_07b6c9c8::PreventWakeUp</TD>
+<TD>PreventWakeUp</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::modeLimitation::ReadInhibitCounter</TD>
+<TD>ReadInhibitCounter</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_CN_TC37X_VCU_CAN00_b1b4f272::RequestComMode</TD>
+<TD>RequestComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::modeLimitation::ResetInhibitCounter</TD>
+<TD>ResetInhibitCounter</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::modeLimitation::SetECUGroupClassification</TD>
+<TD>SetECUGroupClassification</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>EcuM_MainFunction</TD>
 <TD>Bsw_Task</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
 <TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
 </TR>
 <TR>
@@ -312,14 +426,70 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>BswM_MainFunction</TD>
 <TD>Bsw_Task</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
 <TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>Can_MainFunction_BusOff</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>Can_MainFunction_Mode</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>Can_MainFunction_Wakeup</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>CanNm_MainFunction</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>CanSM_MainFunction</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>Com_MainFunctionRx_ComMainFunctionRx</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>Com_MainFunctionTx_ComMainFunctionTx</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 20ms</TD>
+<TD>ComM_MainFunction_0</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>EcuM_MainFunction</TD>
 <TD>Bsw_Task</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
 <TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
 </TR>
 </TABLE>

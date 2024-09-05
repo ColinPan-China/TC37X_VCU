@@ -2,6 +2,23 @@
 <!--This file was saved with a tool from Vector Informatik GmbH-->
 <AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00046.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <AR-PACKAGES>
+    <AR-PACKAGE UUID="D1ABC929-6BEE-465F-9EE1-D797407B10AF">
+      <SHORT-NAME>AUTOSAR_Platform</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="AA749B46-B2D5-42F3-89DB-A1984630EEC9">
+          <SHORT-NAME>BaseTypes</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="87A25E9A-D24C-4409-8F06-7FF881E12F23">
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="989B0D27-6F1E-4621-9C4F-A223C89B2B27">
+          <SHORT-NAME>DataConstrs</SHORT-NAME>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="0265DE03-341A-4312-93AE-DD8DEE014172">
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
     <AR-PACKAGE UUID="E4E244CE-049A-41CA-BDBB-0535F000045C">
       <SHORT-NAME>Predefined_DEV</SHORT-NAME>
       <AR-PACKAGES>
@@ -319,15 +336,29 @@
         </AR-PACKAGE>
       </AR-PACKAGES>
     </AR-PACKAGE>
-    <AR-PACKAGE UUID="D1ABC929-6BEE-465F-9EE1-D797407B10AF">
-      <SHORT-NAME>AUTOSAR_Platform</SHORT-NAME>
+    <AR-PACKAGE UUID="D1409AD5-31FE-4A1A-B838-73FF1096220F">
+      <SHORT-NAME>DataType</SHORT-NAME>
+      <ELEMENTS>
+        <SW-BASE-TYPE UUID="8E30FDB3-733B-4B85-9A81-28CD00C95471">
+          <SHORT-NAME>sint16</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV_SDG">
+                <SD GID="DV_ReadOnly">1</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
+          <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
+        </SW-BASE-TYPE>
+      </ELEMENTS>
       <AR-PACKAGES>
-        <AR-PACKAGE UUID="AA749B46-B2D5-42F3-89DB-A1984630EEC9">
-          <SHORT-NAME>BaseTypes</SHORT-NAME>
+        <AR-PACKAGE UUID="F803B517-CFFA-4CBA-A2BC-B6F2F4B47D61">
+          <SHORT-NAME>Constraint</SHORT-NAME>
           <ELEMENTS>
-            <SW-BASE-TYPE UUID="9908C481-93E6-43E3-8A8E-AB3FA8ECB628">
-              <SHORT-NAME>boolean</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+            <DATA-CONSTR UUID="B00D4347-25AE-4735-A133-6AB62C5CA0D2">
+              <SHORT-NAME>DC_VcuRxMsg1_Sig0</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -335,13 +366,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>BOOLEAN</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>boolean</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="22C47679-C510-4841-99C0-9C90217295FD">
-              <SHORT-NAME>dtRef_const_VOID</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="EB98C015-33E1-4B57-9B97-87EAD46382B6">
+              <SHORT-NAME>DC_VcuRxMsg1_Sig1</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -349,13 +384,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>1</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>VOID</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>void</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="530EA421-CA4B-4B2E-B62D-D7671EF2B6FC">
-              <SHORT-NAME>dtRef_VOID</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="122280D8-C616-43AE-9854-1FA0C578CEAA">
+              <SHORT-NAME>DC_VcuRxMsg1_Sig2</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -363,13 +402,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>1</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>VOID</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>void</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="332768AA-6AE1-4D1C-81B9-1BECFE79F2B7">
-              <SHORT-NAME>uint8</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="9E287DAD-7C06-4607-B322-0725CF9AA6D6">
+              <SHORT-NAME>DC_VcuRxMsg1_Sig3</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -377,13 +420,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>uint8</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="F3CA342C-70AF-47AA-8061-323683739955">
-              <SHORT-NAME>float32</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="C2C020A8-E0B6-45DE-906A-99E00A39BF9E">
+              <SHORT-NAME>DC_VcuRxMsg2_Sig0</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -391,13 +438,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>IEEE754</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>float32</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="FAB47182-E5C3-4C09-A2B4-6B99DDA77A86">
-              <SHORT-NAME>float64</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="E0DA9ED5-B1BC-4E56-A9CD-A114CB987CBB">
+              <SHORT-NAME>DC_VcuRxMsg2_Sig1</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -405,13 +456,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>64</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>IEEE754</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>float64</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="D24211BD-E797-4078-B003-0CBF9580AE2E">
-              <SHORT-NAME>sint16</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="1D38143E-23EA-407A-B82A-CEEECCDCA50B">
+              <SHORT-NAME>DC_VcuRxMsg2_Sig2</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -419,13 +474,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>sint16</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="E5039A34-0767-4C09-998D-C4F2161DC3AD">
-              <SHORT-NAME>sint16_least</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="187408B1-EE3F-4AE8-9F5C-CD10E79A4EB6">
+              <SHORT-NAME>DC_VcuRxMsg2_Sig3</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -433,13 +492,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>64</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>sint16_least</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="29F5AD58-1E01-45D2-B8AC-0B4E797E8703">
-              <SHORT-NAME>sint32</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="40D492E7-7D90-4E5D-AAF2-9E0F740EB994">
+              <SHORT-NAME>DC_VcuTxMsg1_Sig0</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -447,13 +510,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>sint32</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="5ACFA42C-EED1-4186-A8D7-3B24A010FC09">
-              <SHORT-NAME>sint32_least</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="2D06BFDF-AFF0-41AE-80D5-C83E559E1EC1">
+              <SHORT-NAME>DC_VcuTxMsg1_Sig1</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -461,13 +528,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>64</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>sint32_least</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="BE002E8D-46AD-495E-BB81-F4944A93B43F">
-              <SHORT-NAME>sint64</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="8B65787E-ECE4-49A0-B136-6875F237F9D6">
+              <SHORT-NAME>DC_VcuTxMsg1_Sig2</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -475,13 +546,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>64</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>sint64</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="7176C255-FAC5-43A3-85FF-466A6AC22C13">
-              <SHORT-NAME>sint8</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="FBF21A8A-F0F2-401A-968F-1711CE562B89">
+              <SHORT-NAME>DC_VcuTxMsg1_Sig3</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -489,13 +564,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>sint8</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="EB160FDD-1ABE-462C-B021-84F6CA1A5FC4">
-              <SHORT-NAME>sint8_least</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="87FF41F8-71F0-4A36-92F3-E208CFE27E4E">
+              <SHORT-NAME>DC_VcuTxMsg2_Sig0</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -503,13 +582,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>64</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>sint8_least</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="A44273AA-2AA7-42CF-8726-C25817EC3EF4">
-              <SHORT-NAME>uint16</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="71885C74-6B6D-4084-BBA4-745B20E1A335">
+              <SHORT-NAME>DC_VcuTxMsg2_Sig1</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -517,13 +600,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>uint16</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="D3426AB8-7FF6-464D-8855-FCB8F9F3207C">
-              <SHORT-NAME>uint16_least</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="136D2349-966C-44CC-9E02-B048AC6D0B31">
+              <SHORT-NAME>DC_VcuTxMsg2_Sig2</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -531,13 +618,17 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>64</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>uint16_least</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="7559F5A6-AC20-4258-A853-8545E98DDB50">
-              <SHORT-NAME>uint32</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="07FE23B9-83DC-47FB-A5F8-EAC2236725D0">
+              <SHORT-NAME>DC_VcuTxMsg2_Sig3</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -545,60 +636,23 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>uint32</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="F0C135DE-739F-4A21-A1D0-0A5F70F311EB">
-              <SHORT-NAME>uint32_least</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <BASE-TYPE-SIZE>64</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>uint32_least</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="E1177C50-F5A8-4CE8-8DE8-260D7346BD1D">
-              <SHORT-NAME>uint64</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <BASE-TYPE-SIZE>64</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>uint64</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
-            <SW-BASE-TYPE UUID="A7A53044-C7F7-4C66-BB89-3B28DD8D4B60">
-              <SHORT-NAME>uint8_least</SHORT-NAME>
-              <CATEGORY>FIXED_LENGTH</CATEGORY>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <BASE-TYPE-SIZE>64</BASE-TYPE-SIZE>
-              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
-              <NATIVE-DECLARATION>uint8_least</NATIVE-DECLARATION>
-            </SW-BASE-TYPE>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
           </ELEMENTS>
         </AR-PACKAGE>
-        <AR-PACKAGE UUID="87A25E9A-D24C-4409-8F06-7FF881E12F23">
-          <SHORT-NAME>CompuMethods</SHORT-NAME>
+        <AR-PACKAGE UUID="1D6C4D34-E8C8-4F0E-9E70-B8021C94BE2E">
+          <SHORT-NAME>Semantics</SHORT-NAME>
           <ELEMENTS>
-            <COMPU-METHOD UUID="F56F8E55-ABC8-4EFB-9CAC-A763EB674AD2">
-              <SHORT-NAME>boolean_CompuMethod</SHORT-NAME>
-              <CATEGORY>TEXTTABLE</CATEGORY>
+            <COMPU-METHOD UUID="0ACC573F-4D87-4DA5-A7E5-EE21E743949C">
+              <SHORT-NAME>CM_VcuRxMsg1_Sig0</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -606,39 +660,10 @@
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <COMPU-INTERNAL-TO-PHYS>
-                <COMPU-SCALES>
-                  <COMPU-SCALE>
-                    <SHORT-LABEL>FALSE</SHORT-LABEL>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
-                    <COMPU-CONST>
-                      <VT>FALSE</VT>
-                    </COMPU-CONST>
-                  </COMPU-SCALE>
-                  <COMPU-SCALE>
-                    <SHORT-LABEL>TRUE</SHORT-LABEL>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
-                    <COMPU-CONST>
-                      <VT>TRUE</VT>
-                    </COMPU-CONST>
-                  </COMPU-SCALE>
-                </COMPU-SCALES>
-              </COMPU-INTERNAL-TO-PHYS>
             </COMPU-METHOD>
-          </ELEMENTS>
-        </AR-PACKAGE>
-        <AR-PACKAGE UUID="0265DE03-341A-4312-93AE-DD8DEE014172">
-          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
-          <ELEMENTS>
-            <IMPLEMENTATION-DATA-TYPE UUID="FEF4D7C0-E8EA-455F-A3FA-ADA00023215B">
-              <SHORT-NAME>boolean</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">boolean has the value space required to support the mathematical concept of 
-binary-valued logic: {true, false}.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
+            <COMPU-METHOD UUID="0221277A-3C00-4537-BBCE-01E6D06560F0">
+              <SHORT-NAME>CM_VcuRxMsg1_Sig1</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -646,21 +671,10 @@ binary-valued logic: {true, false}.</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/boolean</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_Platform/CompuMethods/boolean_CompuMethod</COMPU-METHOD-REF>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/boolean_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="4D2A3EEE-3FC9-4207-808B-2EFE6633594E">
-              <SHORT-NAME>dtRef_const_VOID</SHORT-NAME>
-              <CATEGORY>DATA_REFERENCE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="34972C39-A510-4448-8E61-6D10B7BA8B59">
+              <SHORT-NAME>CM_VcuRxMsg1_Sig2</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -668,27 +682,10 @@ binary-valued logic: {true, false}.</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <SW-POINTER-TARGET-PROPS>
-                      <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
-                      <SW-DATA-DEF-PROPS>
-                        <SW-DATA-DEF-PROPS-VARIANTS>
-                          <SW-DATA-DEF-PROPS-CONDITIONAL>
-                            <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/dtRef_const_VOID</BASE-TYPE-REF>
-                            <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
-                          </SW-DATA-DEF-PROPS-CONDITIONAL>
-                        </SW-DATA-DEF-PROPS-VARIANTS>
-                      </SW-DATA-DEF-PROPS>
-                    </SW-POINTER-TARGET-PROPS>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="8913CAFC-5CA7-4FDE-95C1-3AE8EA965A88">
-              <SHORT-NAME>dtRef_VOID</SHORT-NAME>
-              <CATEGORY>DATA_REFERENCE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="C1FFC315-6324-489E-8F94-B3C58D16E99B">
+              <SHORT-NAME>CM_VcuRxMsg1_Sig3</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -696,34 +693,10 @@ binary-valued logic: {true, false}.</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <SW-POINTER-TARGET-PROPS>
-                      <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
-                      <SW-DATA-DEF-PROPS>
-                        <SW-DATA-DEF-PROPS-VARIANTS>
-                          <SW-DATA-DEF-PROPS-CONDITIONAL>
-                            <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/dtRef_VOID</BASE-TYPE-REF>
-                          </SW-DATA-DEF-PROPS-CONDITIONAL>
-                        </SW-DATA-DEF-PROPS-VARIANTS>
-                      </SW-DATA-DEF-PROPS>
-                    </SW-POINTER-TARGET-PROPS>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="EC43DFC3-0DEF-417C-80BC-32DA9692F4B4">
-              <SHORT-NAME>uint8</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">uint8 represents integers with a minimum value of 0 and a maximum value of 255.
-The order-relation on uint8 is: x &lt; y if y - x is positive.
-uint8 has a lexical representation consisting of a finite-length sequence 
-of decimal digits (#x30-#x39).
-
-For example: 1, 0, 126, +10.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="1E8E0B2A-50D0-4FF0-8A23-F08D1B132833">
+              <SHORT-NAME>CM_VcuRxMsg2_Sig0</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -731,45 +704,10 @@ For example: 1, 0, 126, +10.</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/uint8</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/uint8_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="7EF705D5-0817-4B70-8546-0AC6F0939936">
-              <SHORT-NAME>float32</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">float32 corresponds to the IEEE single-precision 32-bit floating point type
-[IEEE 754-1985]. The basic value space of float32 consists of the values 
-m * 2^e, where m is an integer whose absolute value is less than 2^24, 
-and e is an integer between -149 and 104, inclusive. In addition to the basic
-value space described above, the value space of float32 also contains the 
-following special values: positive and negative zero, positive and negative 
-infinity and not-a-number. The order-relation on float32 is: 
-x &lt; y if y - x is positive. Positive zero is greater than negative zero.
-Not-a-number equals itself and is greater than all float values including positive infinity. 
-
-float32 values have a lexical representation consisting of a mantissa followed, 
-optionally, by the character "E" or "e", followed by an exponent. The exponent
-must be an integer. The mantissa must be a decimal number. The representations
-for exponent and mantissa must follow the lexical rules for integer and decimal.
-If the "E" or "e" and the following exponent are omitted, an exponent value 
-of 0 is assumed. 
-
-The special values positive and negative zero, positive and negative infinity
-and not-a-number have lexical representations 0, -0, INF, -INF and NaN, 
-respectively. 
-
-For example, -1E4, 1267.43233E12, 12.78e-2, 12 and INF are all legal literals
-for float32.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="E423A096-2491-4B56-AE14-4ACE43924AF8">
+              <SHORT-NAME>CM_VcuRxMsg2_Sig1</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -777,46 +715,10 @@ for float32.</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/float32</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/float32_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="4B1B93B6-39A4-40A3-90BF-FEF8E22FFB76">
-              <SHORT-NAME>float64</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">The float64 datatype corresponds to IEEE float64-precision 64-bit floating point
-type [IEEE 754-1985]. The basic value space of float64 consists of the values
-m * 2^e, where m is an integer whose absolute value is less than 2^53, and e is
- an integer between -1075 and 970, inclusive. In addition to the basic value 
-space described above, the value space of float64 also contains the following 
-special values: positive and negative zero, positive and negative infinity 
-and not-a-number. 
-The order-relation on float64 is: x &lt; y if y - x is positive. 
-Positive zero is greater than negative zero. Not-a-number equals itself and 
-is greater than all float64 values including positive infinity. 
-                    
-float64 values have a lexical representation consisting of a mantissa followed,
-optionally, by the character "E" or "e", followed by an exponent. 
-The exponent must be an integer. The mantissa must be a decimal number.
-The representations for exponent and mantissa must follow the lexical rules 
-for integer and decimal. If the "E" or "e" and the following exponent are 
-omitted, an exponent value of 0 is assumed. 
-
-The special values positive and negative zero, positive and negative infinity
-and not-a-number have lexical representations 0, -0, INF, -INF and NaN, 
-respectively. 
-
-For example, -1E4, 1267.43233E12, 12.78e-2, 12 and INF are all 
-legal literals for float64.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="D00F5B86-D53B-4CF6-B853-B6425AE668E1">
+              <SHORT-NAME>CM_VcuRxMsg2_Sig2</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -824,29 +726,10 @@ legal literals for float64.</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/float64</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/float64_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="CB70AAA8-FD5A-47D8-9A10-05408CB8552F">
-              <SHORT-NAME>sint16</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">SInt16 represents integers with a minimum value of -32768 and a maximum value 
-of 32767. The order-relation on sint16 is: x &lt; y if y - x is positive.
-sint16 has a lexical representation consisting of an optional sign followed
-by a finite-length sequence of decimal digits (#x30-#x39). If the sign is
-omitted, "+" is assumed. 
-
-For example: -1, 0, -12678, +10000, 2500</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="D27CFE67-D176-4089-B7E8-14C4B2787217">
+              <SHORT-NAME>CM_VcuRxMsg2_Sig3</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -854,23 +737,10 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/sint16</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/sint16_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="15FD9D98-3CA4-4035-865B-61C8DE6987A3">
-              <SHORT-NAME>sint16_least</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">sint16_least represents a signed integer with values defined by at least 16 bit.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="9F598311-0638-48A4-8755-F9512F9D3982">
+              <SHORT-NAME>CM_VcuTxMsg1_Sig0</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -878,29 +748,10 @@ For example: -1, 0, -12678, +10000, 2500</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/sint16_least</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/sint16_least_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="61C8DA43-2B9B-492D-9514-BF05E1C3B4A1">
-              <SHORT-NAME>sint32</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">sint32 represents integers with a minimum value of -2147483648 and a maximum 
-value of 2147483647. The order-relation on sint32 is: x &lt; y if y - x is
-positive. sint32 has a lexical representation consisting of an optional sign 
-allowed by a finite-length sequence of decimal digits (#x30-#x39). If the 
-sign is omitted, "+" is assumed. 
-
-For example: -1, 0, -12688778, +10000, 250098675.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="CDE59DF3-0416-4D34-B226-FA43599E8B32">
+              <SHORT-NAME>CM_VcuTxMsg1_Sig1</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -908,23 +759,10 @@ For example: -1, 0, -12688778, +10000, 250098675.</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/sint32</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/sint32_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="1D834AEF-7BEC-4F09-8466-79199B636E9B">
-              <SHORT-NAME>sint32_least</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">sint32_least represents a signed integer with values defined by at least 32 bit.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="8F30D12C-DE1F-4D8C-9625-56F9E31A5609">
+              <SHORT-NAME>CM_VcuTxMsg1_Sig2</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -932,29 +770,10 @@ For example: -1, 0, -12688778, +10000, 250098675.</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/sint32_least</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/sint32_least_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="7FFCF490-E653-46DC-A60F-1840BF5BF488">
-              <SHORT-NAME>sint64</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">sint64 represents integers with a minimum value of -9223372036854775808 and a maximum 
-value of 9223372036854775807. The order-relation on sint64 is: x &lt; y if y - x is
-positive. sint64 has a lexical representation consisting of an optional sign 
-allowed by a finite-length sequence of decimal digits (#x30-#x39). If the 
-sign is omitted, "+" is assumed. 
-
-For example: -1, 0, -12688778, +10000, 250098675.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="A0034341-5E9A-487D-A22A-D94154E37953">
+              <SHORT-NAME>CM_VcuTxMsg1_Sig3</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -962,29 +781,10 @@ For example: -1, 0, -12688778, +10000, 250098675.</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/sint64</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/sint64_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="1173D3CA-8E7D-4EEF-A904-D7FB40ED2174">
-              <SHORT-NAME>sint8</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">sint8 represents integers with a minimum value of -128 and a maximum value of 127.
-The order-relation on sint8 is: x &lt; y if y - x is positive.
-sint8 has a lexical representation consisting of an optional sign followed 
-by a finite-length sequence of decimal digits (#x30-#x39). If the sign is 
-omitted, "+" is assumed. 
-
-For example: -1, 0, 12678, +10000.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="CEA07AA4-CF59-4FC2-A438-D1F782B8CE47">
+              <SHORT-NAME>CM_VcuTxMsg2_Sig0</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -992,23 +792,10 @@ For example: -1, 0, 12678, +10000.</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/sint8</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/sint8_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="7E0A3740-1717-433D-9323-018EAE52BA1C">
-              <SHORT-NAME>sint8_least</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">sint8_least represents a signed integer with values defined by at least 8 bit.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="D954B423-D3B0-4B55-BE85-1B7ABD40B594">
+              <SHORT-NAME>CM_VcuTxMsg2_Sig1</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -1016,28 +803,10 @@ For example: -1, 0, 12678, +10000.</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/sint8_least</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/sint8_least_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="18B10119-B5F8-4EB0-A3AC-AC62691CC6BF">
-              <SHORT-NAME>uint16</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
-The order-relation on uint16 is: x &lt; y if y - x is positive.
-uint16 has a lexical representation consisting of a finite-length sequence 
-of decimal digits (#x30-#x39).
-
-For example: 1, 0, 1267, +10000.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="4708F9A6-6CAE-4C5F-B528-77C9229CE9A5">
+              <SHORT-NAME>CM_VcuTxMsg2_Sig2</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -1045,23 +814,10 @@ For example: 1, 0, 1267, +10000.</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/uint16</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/uint16_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="8F52F1AC-965E-44D6-BBBC-DB345EBE6252">
-              <SHORT-NAME>uint16_least</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">uint16_least represents an unsigned integer with values defined by at least 16 bit.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="D9272CB3-73BE-426E-A8F3-EAEB8472000F">
+              <SHORT-NAME>CM_VcuTxMsg2_Sig3</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV_SDG">
@@ -1069,434 +825,7 @@ For example: 1, 0, 1267, +10000.</L-2>
                   </SDG>
                 </SDGS>
               </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/uint16_least</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/uint16_least_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="2584EAFE-C823-4ABD-BE59-4872A719CEC0">
-              <SHORT-NAME>uint32</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">uint32 represents integers with a minimum value of 0 and a maximum value 
-of 4294967295. The order-relation on uint32 is: x &lt; y if y - x is positive.
-uint32 has a lexical representation consisting of a finite-length sequence 
-of decimal digits (#x30-#x39). 
-
-For example: 1, 0, 12234567, 104400.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/uint32</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/uint32_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="DA4ADA18-5371-4B22-9F2A-6A05B786789E">
-              <SHORT-NAME>uint32_least</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">uint32_least represents an unsigned integer with values defined by at least 32 bit.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/uint32_least</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/uint32_least_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="2845628A-0180-4FD1-B822-99E8B7D17B25">
-              <SHORT-NAME>uint64</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">uint64 represents integers with a minimum value of 0 and a maximum value 
-of 18446744073709551615. The order-relation on uint64 is: x &lt; y if y - x is positive.
-uint64 has a lexical representation consisting of a finite-length sequence 
-of decimal digits (#x30-#x39). 
-
-For example: 1, 0, 12234567, 104400.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/uint64</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/uint64_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-            <IMPLEMENTATION-DATA-TYPE UUID="74F7315E-3EBE-4DC1-B9AD-36E96BB21D59">
-              <SHORT-NAME>uint8_least</SHORT-NAME>
-              <DESC>
-                <L-2 L="FOR-ALL">uint8_least represents an unsigned integer with values defined by at least 8 bit.</L-2>
-              </DESC>
-              <CATEGORY>VALUE</CATEGORY>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <SW-DATA-DEF-PROPS>
-                <SW-DATA-DEF-PROPS-VARIANTS>
-                  <SW-DATA-DEF-PROPS-CONDITIONAL>
-                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/AUTOSAR_Platform/BaseTypes/uint8_least</BASE-TYPE-REF>
-                    <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
-                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/AUTOSAR_Platform/DataConstrs/uint8_least_DataConstr</DATA-CONSTR-REF>
-                  </SW-DATA-DEF-PROPS-CONDITIONAL>
-                </SW-DATA-DEF-PROPS-VARIANTS>
-              </SW-DATA-DEF-PROPS>
-              <TYPE-EMITTER>Platform_Type</TYPE-EMITTER>
-            </IMPLEMENTATION-DATA-TYPE>
-          </ELEMENTS>
-        </AR-PACKAGE>
-        <AR-PACKAGE UUID="989B0D27-6F1E-4621-9C4F-A223C89B2B27">
-          <SHORT-NAME>DataConstrs</SHORT-NAME>
-          <ELEMENTS>
-            <DATA-CONSTR UUID="026DFBAA-AEB3-4912-9904-24B61D43B49E">
-              <SHORT-NAME>boolean_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="AD300FA9-69AD-4D57-9B6A-7182C39BEA40">
-              <SHORT-NAME>float32_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="OPEN">-INF</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="OPEN">INF</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="782B6FA5-D2C6-437A-912F-82B3AAB844A2">
-              <SHORT-NAME>float64_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="OPEN">-INF</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="OPEN">INF</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="5456B245-E341-4728-9A05-23D0C9F08EF3">
-              <SHORT-NAME>sint16_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="2F0C2034-9F50-48BA-BC0A-7EBD11B12592">
-              <SHORT-NAME>sint16_least_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="6A3C1919-4BEC-48A9-8D16-F3FE8C13DF87">
-              <SHORT-NAME>sint32_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-2147483648</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2147483647</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="7579440A-C1FC-47CE-9AA7-8EFA4A08C6BA">
-              <SHORT-NAME>sint32_least_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-2147483648</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2147483647</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="E33E0292-9068-47D4-9C42-E65BB924BB2A">
-              <SHORT-NAME>sint64_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-9223372036854775808</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">9223372036854775807</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="CC7DD233-7BC7-4325-ACF3-1BB25F81C339">
-              <SHORT-NAME>sint8_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-128</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">127</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="0A3B2F6C-9D50-4C29-9378-4B887A74969F">
-              <SHORT-NAME>sint8_least_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-128</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">127</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="E8962D15-502C-45AE-B767-3EEDD720FE20">
-              <SHORT-NAME>uint16_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">65535</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="9C526ACC-5B2D-4F03-B78F-B090C5BBFFF5">
-              <SHORT-NAME>uint16_least_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">65535</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="190AA237-D726-4EEF-BD69-C3ADA9A88A83">
-              <SHORT-NAME>uint32_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4294967295</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="0995C8EA-C151-46FC-B401-5F4E0EDD61CF">
-              <SHORT-NAME>uint32_least_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4294967295</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="94BA4EB4-90CB-4D88-B9FD-F43627DD1735">
-              <SHORT-NAME>uint64_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">18446744073709551615</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="516D2A83-B854-4F6A-8949-E23D1C199CE6">
-              <SHORT-NAME>uint8_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
-            <DATA-CONSTR UUID="04DF68CC-ABDA-4BCB-A0F7-6CC91BC16A75">
-              <SHORT-NAME>uint8_least_DataConstr</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV_SDG">
-                    <SD GID="DV_ReadOnly">1</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <DATA-CONSTR-RULES>
-                <DATA-CONSTR-RULE>
-                  <INTERNAL-CONSTRS>
-                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
-                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
-                  </INTERNAL-CONSTRS>
-                </DATA-CONSTR-RULE>
-              </DATA-CONSTR-RULES>
-            </DATA-CONSTR>
+            </COMPU-METHOD>
           </ELEMENTS>
         </AR-PACKAGE>
       </AR-PACKAGES>

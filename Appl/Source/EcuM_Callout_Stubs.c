@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2024-09-02 15:18:11
+ *   Generation Time: 2024-09-04 17:27:55
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -54,13 +54,14 @@
  *  All configured EcuM Wakeup Sources (as bitmasks) for usage in Callouts
  *********************************************************************************************************************/
 /*
- * ECUM_WKSOURCE_NONE           (EcuM_WakeupSourceType)(0x00000000uL) 
- * ECUM_WKSOURCE_ALL_SOURCES    (EcuM_WakeupSourceType)(~((EcuM_WakeupSourceType)0x00UL)) 
- * ECUM_WKSOURCE_POWER          (EcuM_WakeupSourceType)(1uL) 
- * ECUM_WKSOURCE_RESET          (EcuM_WakeupSourceType)(2uL) 
- * ECUM_WKSOURCE_INTERNAL_RESET (EcuM_WakeupSourceType)(4uL) 
- * ECUM_WKSOURCE_INTERNAL_WDG   (EcuM_WakeupSourceType)(8uL) 
- * ECUM_WKSOURCE_EXTERNAL_WDG   (EcuM_WakeupSourceType)(16uL) 
+ * ECUM_WKSOURCE_NONE                        (EcuM_WakeupSourceType)(0x00000000uL) 
+ * ECUM_WKSOURCE_ALL_SOURCES                 (EcuM_WakeupSourceType)(~((EcuM_WakeupSourceType)0x00UL)) 
+ * ECUM_WKSOURCE_POWER                       (EcuM_WakeupSourceType)(1uL) 
+ * ECUM_WKSOURCE_RESET                       (EcuM_WakeupSourceType)(2uL) 
+ * ECUM_WKSOURCE_INTERNAL_RESET              (EcuM_WakeupSourceType)(4uL) 
+ * ECUM_WKSOURCE_INTERNAL_WDG                (EcuM_WakeupSourceType)(8uL) 
+ * ECUM_WKSOURCE_EXTERNAL_WDG                (EcuM_WakeupSourceType)(16uL) 
+ * ECUM_WKSOURCE_CN_TC37X_VCU_CAN00_07b6c9c8 (EcuM_WakeupSourceType)(32uL) 
  */
 
 /**********************************************************************************************************************
@@ -261,11 +262,13 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverInitOne(void)
  *********************************************************************************************************************/
 }
 
+#if (ECUM_SLEEPMODELIST == STD_ON)
 /**********************************************************************************************************************
 * EcuM_AL_DriverRestartList
 **********************************************************************************************************************/
 FUNC(void, ECUM_CODE) EcuM_AL_DriverRestartList(void) 
 {
+  /* DriverRestartList will not be called () because no sleepmode is configured - So don't use this function! */
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_AL_DriverRestartList>              DO NOT CHANGE THIS COMMENT!
@@ -277,6 +280,7 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverRestartList(void)
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 }
+#endif
 
 
 

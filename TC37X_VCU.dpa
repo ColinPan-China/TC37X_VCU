@@ -40,8 +40,11 @@
     </Folders>
     <Tools>
         <DEV>C:\Program Files (x86)\Vector DaVinci Developer 4.4 (SP2)\Bin\DaVinciDEV.exe</DEV>
+        <LegacyConverter Version="1.8.62.0"/>
+        <DDM Version="20.3.0.9"/>
     </Tools>
     <Input>
+        <ECUEX>Config\System\SystemExtract.arxml</ECUEX>
         <Options>
             <IgnoreUuidsSystemDescriptionFiles>false</IgnoreUuidsSystemDescriptionFiles>
             <IgnoreUuidsStandardConfigurationFiles>false</IgnoreUuidsStandardConfigurationFiles>
@@ -51,11 +54,13 @@
     </Input>
     <References>
         <DVWorkspace>.\Config\Developer\TC37X_VCU.dcf</DVWorkspace>
-        <FlatMap>.\Config\System\FlatMap.arxml</FlatMap>
-        <FlatECUEX>.\Config\System\FlatExtract.arxml</FlatECUEX>
+        <FlatMap>Config\System\FlatMap.arxml</FlatMap>
+        <FlatECUEX>Config\System\FlatExtract.arxml</FlatECUEX>
+        <OEMCommunicationExtract>Config\System\Communication.arxml</OEMCommunicationExtract>
+        <EcucFileReferences/>
     </References>
     <EcucSplitter>
-        <Configuration>.\Config\ECUC\TC37X_VCU.ecuc.arxml</Configuration>
+        <Configuration>Config\ECUC\TC37X_VCU.ecuc.arxml</Configuration>
         <Splitter File=".\Config\ECUC\TC37X_VCU_vLinkGen_vLinkGen_ecuc.arxml">
             <Module Name="vLinkGen"/>
         </Splitter>
@@ -101,11 +106,49 @@
         <Splitter File=".\Config\ECUC\TC37X_VCU_Mcu_Mcu_ecuc.arxml">
             <Module Name="Mcu"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_PduR_PduR_ecuc.arxml">
+            <Module Name="PduR"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_CanIf_CanIf_ecuc.arxml">
+            <Module Name="CanIf"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Can_Can_ecuc.arxml">
+            <Module Name="Can"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Det_Det_ecuc.arxml">
+            <Module Name="Det"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Com_Com_ecuc.arxml">
+            <Module Name="Com"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_ComM_ComM_ecuc.arxml">
+            <Module Name="ComM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_CanSM_CanSM_ecuc.arxml">
+            <Module Name="CanSM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_CanNm_CanNm_ecuc.arxml">
+            <Module Name="CanNm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Nm_Nm_ecuc.arxml">
+            <Module Name="Nm"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>
+    <Display LastVersion="5.24.40 SP2">
+        <FileSet Id="" CS="576aaa58">
+            <File Order="0" EcuInstance="VCU" Hash="c1779f3dd00220deed91c8a9b9bbf5cf" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\VCU_CAN00.dbc</File>
+        </FileSet>
+        <Merge>
+            <Path Id="ECU-INSTANCE" ARPath="/ECU/VCU"/>
+            <Path Id="SYSTEM" ARPath="/VehicleProject/System"/>
+        </Merge>
+        <SelectiveUpdate Active="false" CS="ecd6502d"/>
+    </Display>
     <ECUC>
-        <Active RootPackageName="/ActiveEcuC/ActiveEcuC">.\Config\ECUC\TC37X_VCU.ecuc.arxml</Active>
+        <Active RootPackageName="/ActiveEcuC/ActiveEcuC">Config\ECUC\TC37X_VCU.ecuc.arxml</Active>
+        <Derived RootPackageName="/InitialEcuC/InitialEcuC">Config\ECUC\TC37X_VCU.ecuc.Initial.arxml</Derived>
     </ECUC>
     <PostBuildLoadable RTEDataFreezeChecksum="" CurrentConfigurationPhase="PRE_COMPILE"/>
     <DEVSettings>

@@ -30,7 +30,7 @@
 /**********************************************************************************************************************
  * Type definitions for mode management
  *********************************************************************************************************************/
-typedef uint8 Rte_EventMaskType;
+typedef EventMaskType Rte_EventMaskType;
 # endif /* defined(RTE_CORE) */
 
 /* PRQA S 1039 EOF */ /* MD_Rte_1039 */
@@ -44,6 +44,15 @@ typedef uint8 BswM_ESH_Mode;
 
 # define Rte_TypeDef_BswM_ESH_RunRequest
 typedef uint8 BswM_ESH_RunRequest;
+
+# define Rte_TypeDef_ComM_InhibitionStatusType
+typedef uint8 ComM_InhibitionStatusType;
+
+# define Rte_TypeDef_ComM_ModeType
+typedef uint8 ComM_ModeType;
+
+# define Rte_TypeDef_ComM_UserHandleType
+typedef uint16 ComM_UserHandleType;
 
 # define Rte_TypeDef_EcuM_BootTargetType
 typedef uint8 EcuM_BootTargetType;

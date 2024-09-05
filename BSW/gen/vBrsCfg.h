@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: .\vBrsCfg.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-09-05 09:54:26
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -97,6 +97,22 @@
 /* Peripheral Clock (Hz) */
 #define BRS_PERIPH_CLOCK 12500000
 
+/* CAN Clock (Hz) */
+#define BRS_CAN_CLOCK 12500000
+
+/*******************************************************************************
+ BRS software modules
+*******************************************************************************/
+#define BRS_ENABLE_WATCHDOG
+#define BRS_ENABLE_PLLCLOCKS
+
+/*******************************************************************************
+ BRS communication interface configuration
+*******************************************************************************/
+#define BRS_ENABLE_CAN_SUPPORT
+
+#define BRS_ENABLE_CAN_CHANNEL_0
+
 /*******************************************************************************
  Tested Derivative: Infineon Aurix 2G TC37x Family
 *******************************************************************************/
@@ -116,6 +132,11 @@
  CPU Core Amount (number of cores)
 *******************************************************************************/
 #define BRS_CPU_CORE_AMOUNT 3
+
+/*******************************************************************************
+ Evaluation Board: Toggle Port Group 33 Port 4  for LED support
+*******************************************************************************/
+#define BRS_EVA_BOARD_TRIBOARD_TC3x7
 
 /*******************************************************************************
  Derivative Group
@@ -149,6 +170,13 @@
 #define BRS_INIT_PATTERN_HARDRESET_BLOCKS (0x0UL)
 #define BRS_INIT_PATTERN_AREAS (0x0UL)
 #define BRS_INIT_PATTERN_HARDRESET_AREAS (0x0UL)
+
+/*******************************************************************************
+ DrvCan Handling
+*******************************************************************************/
+#define BRS_DRVCAN_HEADER_FILENAME "Can.h"
+#define BRS_DRVCAN_EXCLUSIVE_AREA_INFIX(a, b) void SchM_##a##_Can_CAN_##b(void)
+#define BRS_DRVCAN_ControllerInterrupts_INFIX(a) Can_##a##ControllerInterrupts
 
 #endif /*_VBRSCFG_H_*/
 
