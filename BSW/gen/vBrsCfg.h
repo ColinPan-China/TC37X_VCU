@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: .\vBrsCfg.h
- *   Generation Time: 2024-09-05 09:54:26
+ *   Generation Time: 2024-09-05 15:06:31
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -94,11 +94,11 @@
 /* Timebase Clock (MHz) */
 #define BRS_TIMEBASE_CLOCK 100
 
-/* Peripheral Clock (Hz) */
-#define BRS_PERIPH_CLOCK 12500000
+/* Peripheral Clock (MHz) */
+#define BRS_PERIPH_CLOCK 100
 
-/* CAN Clock (Hz) */
-#define BRS_CAN_CLOCK 12500000
+/* CAN Clock (MHz) */
+#define BRS_CAN_CLOCK 100
 
 /*******************************************************************************
  BRS software modules

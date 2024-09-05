@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Counter_Lcfg.c
- *   Generation Time: 2024-09-02 15:10:11
+ *   Generation Time: 2024-09-05 15:06:31
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -127,7 +127,7 @@ CONST(Os_TimerPfrtConfigType, OS_CONST) OsCfg_Counter_SystemTimer =
   },
   /* .Dyn     = */ OS_ISR_CASTDYN_TIMERSW_2_TIMERPFRT(OsCfg_Counter_SystemTimer_Dyn)
   },
-  /* .Period               = */ 12500UL,
+  /* .Period               = */ 100000UL,
   /* .MaxDifferentialValue = */ OS_TIMERPFRT_HARDWAREGETMAXDIFFERENTIALVALUE(1073741823UL),
   /* .MaxCountingValue     = */ OS_TIMERPFRT_HARDWAREGETMAXCOUNTINGVALUE(1073741823UL),
   /* .HwConfig             = */ &OsCfg_Hal_TimerFrt_SystemTimer
