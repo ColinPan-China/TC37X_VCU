@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Appl_Cbk.h
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2024-09-06 15:26:32
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -66,6 +66,8 @@
 #include "MemMap.h"
 
 /* Configurable notification interface prototypes */
+FUNC(void, COM_APPL_CODE) Com_Msg200h_Timeout_Notification(void);
+FUNC(void, COM_APPL_CODE) Com_Msg201h_Timeout_Notification(void);
 
 
 #define COM_STOP_SEC_APPL_CODE

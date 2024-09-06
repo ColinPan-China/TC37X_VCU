@@ -30,6 +30,38 @@
  *
  *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode_Return
  *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode_Start
+ *  Rte_ComHookRxTOut_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx
+ *  Rte_ComHookRxTOut_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx
+ *  Rte_ComHookRxTOut_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx
+ *  Rte_ComHookRxTOut_VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx
+ *  Rte_ComHookRxTOut_VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx
+ *  Rte_ComHookRxTOut_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx
+ *  Rte_ComHookRxTOut_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx
+ *  Rte_ComHookRxTOut_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx
+ *  Rte_ComHookRx_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx
+ *  Rte_ComHookRx_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx
+ *  Rte_ComHookRx_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx
+ *  Rte_ComHookRx_VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx
+ *  Rte_ComHookRx_VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx
+ *  Rte_ComHookRx_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx
+ *  Rte_ComHookRx_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx
+ *  Rte_ComHookRx_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx
+ *  Rte_ComHook_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx_SigRx
+ *  Rte_ComHook_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx_SigRx
+ *  Rte_ComHook_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx_SigRx
+ *  Rte_ComHook_VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx_SigRx
+ *  Rte_ComHook_VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx_SigRx
+ *  Rte_ComHook_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx_SigRx
+ *  Rte_ComHook_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx_SigRx
+ *  Rte_ComHook_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx_SigRx
+ *  Rte_ComHook_VcuTxMsg1_Sig0_oVcuTxMsg1_oTC37X_VCU_CAN00_8243b9a9_Tx_SigTx
+ *  Rte_ComHook_VcuTxMsg1_Sig1_oVcuTxMsg1_oTC37X_VCU_CAN00_e144608d_Tx_SigTx
+ *  Rte_ComHook_VcuTxMsg1_Sig2_oVcuTxMsg1_oTC37X_VCU_CAN00_444c0be1_Tx_SigTx
+ *  Rte_ComHook_VcuTxMsg1_Sig3_oVcuTxMsg1_oTC37X_VCU_CAN00_274bd2c5_Tx_SigTx
+ *  Rte_ComHook_VcuTxMsg2_Sig0_oVcuTxMsg2_oTC37X_VCU_CAN00_05439791_Tx_SigTx
+ *  Rte_ComHook_VcuTxMsg2_Sig1_oVcuTxMsg2_oTC37X_VCU_CAN00_66444eb5_Tx_SigTx
+ *  Rte_ComHook_VcuTxMsg2_Sig2_oVcuTxMsg2_oTC37X_VCU_CAN00_c34c25d9_Tx_SigTx
+ *  Rte_ComHook_VcuTxMsg2_Sig3_oVcuTxMsg2_oTC37X_VCU_CAN00_a04bfcfd_Tx_SigTx
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_0_requestedMode_Return
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_0_requestedMode_Start
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_1_requestedMode_Return
@@ -38,6 +70,22 @@
  *  Rte_ReadHook_BswM_Request_ESH_RunRequest_0_requestedMode_Start
  *  Rte_ReadHook_BswM_Request_ESH_RunRequest_1_requestedMode_Return
  *  Rte_ReadHook_BswM_Request_ESH_RunRequest_1_requestedMode_Start
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0_Return
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0_Start
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1_Return
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1_Start
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2_Return
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2_Start
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg1_Sig3_VcuRxMsg1_Sig3_Return
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg1_Sig3_VcuRxMsg1_Sig3_Start
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0_Return
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0_Start
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig1_VcuRxMsg2_Sig1_Return
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig1_VcuRxMsg2_Sig1_Start
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2_Return
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2_Start
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3_Return
+ *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3_Start
  *  Rte_Runnable_BswM_BswM_MainFunction_Return
  *  Rte_Runnable_BswM_BswM_MainFunction_Start
  *  Rte_Runnable_ComM_ComM_MainFunction_0_Return
@@ -64,6 +112,12 @@
  *  Rte_Runnable_ComM_ResetInhibitCounter_Start
  *  Rte_Runnable_ComM_SetECUGroupClassification_Return
  *  Rte_Runnable_ComM_SetECUGroupClassification_Start
+ *  Rte_Runnable_Com_SWC_Com_Runnable_2ms_Return
+ *  Rte_Runnable_Com_SWC_Com_Runnable_2ms_Start
+ *  Rte_Runnable_Com_SWC_Rte_Msg200h_Rx_Notification_Return
+ *  Rte_Runnable_Com_SWC_Rte_Msg200h_Rx_Notification_Start
+ *  Rte_Runnable_Com_SWC_Rte_Msg201h_Rx_Notification_Return
+ *  Rte_Runnable_Com_SWC_Rte_Msg201h_Rx_Notification_Start
  *  Rte_Runnable_EcuM_EcuM_MainFunction_Return
  *  Rte_Runnable_EcuM_EcuM_MainFunction_Start
  *  Rte_Runnable_EcuM_GetBootTarget_Return
@@ -96,9 +150,26 @@
  *  Rte_SwitchHook_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode_Start
  *  Rte_Task_Activate
  *  Rte_Task_Dispatch
+ *  Rte_Task_SetEvent
  *  Rte_Task_Terminate
  *  Rte_Task_WaitEvent
  *  Rte_Task_WaitEventRet
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0_Return
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0_Start
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1_Return
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1_Start
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2_Return
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2_Start
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig3_VcuTxMsg1_Sig3_Return
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig3_VcuTxMsg1_Sig3_Start
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig0_VcuTxMsg2_Sig0_Return
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig0_VcuTxMsg2_Sig0_Start
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig1_VcuTxMsg2_Sig1_Return
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig1_VcuTxMsg2_Sig1_Start
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig2_VcuTxMsg2_Sig2_Return
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig2_VcuTxMsg2_Sig2_Start
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3_Return
+ *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3_Start
  *  Rte_WriteHook_SWC1_Request_ESH_RunRequest_0_requestedMode_Return
  *  Rte_WriteHook_SWC1_Request_ESH_RunRequest_0_requestedMode_Start
  *  SchM_EnterHook_BswM_BSWM_EXCLUSIVE_AREA_0_Return

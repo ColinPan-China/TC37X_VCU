@@ -25,4 +25,39 @@
 #ifndef RTE_CBK_H
 # define RTE_CBK_H
 
+# include "Com.h"
+
+
+# define RTE_START_SEC_CODE
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ * COM Callbacks for Rx Indication
+ *********************************************************************************************************************/
+
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx(void);
+
+/**********************************************************************************************************************
+ * COM Callbacks for Rx Timeout Notification
+ *********************************************************************************************************************/
+
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx(void);
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx(void);
+
+# define RTE_STOP_SEC_CODE
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 #endif /* RTE_CBK_H */

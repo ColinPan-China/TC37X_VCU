@@ -126,6 +126,136 @@
                               <MAPPINGS>
                                 <SYSTEM-MAPPING UUID="19079e91-2a91-4fa6-9093-7c1b6ba64cfd">
                                   <SHORT-NAME>MAPPINGS</SHORT-NAME>
+                                  <DATA-MAPPINGS>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig0</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig0/VcuRxMsg1_Sig0</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg1_Sig0</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig2</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig2/VcuRxMsg1_Sig2</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg1_Sig2</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig1</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig1/VcuRxMsg1_Sig1</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg1_Sig1</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig3</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig3/VcuRxMsg2_Sig3</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg2_Sig3</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig3</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig3/VcuRxMsg1_Sig3</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg1_Sig3</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig0</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig0/VcuRxMsg2_Sig0</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg2_Sig0</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig2</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig2/VcuRxMsg2_Sig2</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg2_Sig2</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig1</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig1/VcuRxMsg2_Sig1</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg2_Sig1</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig1</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig1/VcuTxMsg1_Sig1</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg1_Sig1</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig1</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig1/VcuTxMsg2_Sig1</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg2_Sig1</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig2</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig2/VcuTxMsg2_Sig2</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg2_Sig2</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig3</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig3/VcuTxMsg1_Sig3</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg1_Sig3</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig0</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig0/VcuTxMsg2_Sig0</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg2_Sig0</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig3</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig3/VcuTxMsg2_Sig3</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg2_Sig3</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig2</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig2/VcuTxMsg1_Sig2</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg1_Sig2</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig0</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig0/VcuTxMsg1_Sig0</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg1_Sig0</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                  </DATA-MAPPINGS>
                                 </SYSTEM-MAPPING>
                               </MAPPINGS>
                               <ROOT-SOFTWARE-COMPOSITIONS>
@@ -149,6 +279,432 @@
                                   <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
                                 </ANNOTATION>
                               </ANNOTATIONS>
+                              <PORTS>
+                                <R-PORT-PROTOTYPE UUID="f21847bf-315f-4194-96b6-4f2ae6b238e6">
+                                  <SHORT-NAME>VcuRxMsg1_Sig0</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <REQUIRED-COM-SPECS>
+                                    <NONQUEUED-RECEIVER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig0/VcuRxMsg1_Sig0</DATA-ELEMENT-REF>
+                                      <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-RECEIVER-COM-SPEC>
+                                  </REQUIRED-COM-SPECS>
+                                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuRxMsg1_Sig0</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                                <R-PORT-PROTOTYPE UUID="2f4c4893-85a1-4aad-8281-ce05233624e7">
+                                  <SHORT-NAME>VcuRxMsg1_Sig2</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <REQUIRED-COM-SPECS>
+                                    <NONQUEUED-RECEIVER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig2/VcuRxMsg1_Sig2</DATA-ELEMENT-REF>
+                                      <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-RECEIVER-COM-SPEC>
+                                  </REQUIRED-COM-SPECS>
+                                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuRxMsg1_Sig2</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                                <R-PORT-PROTOTYPE UUID="04d957d0-91ee-4e91-9304-4c6829d3bf8c">
+                                  <SHORT-NAME>VcuRxMsg1_Sig1</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <REQUIRED-COM-SPECS>
+                                    <NONQUEUED-RECEIVER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig1/VcuRxMsg1_Sig1</DATA-ELEMENT-REF>
+                                      <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-RECEIVER-COM-SPEC>
+                                  </REQUIRED-COM-SPECS>
+                                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuRxMsg1_Sig1</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                                <R-PORT-PROTOTYPE UUID="5dbe06bf-50bd-432f-9af1-52f0f047f8df">
+                                  <SHORT-NAME>VcuRxMsg2_Sig3</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <REQUIRED-COM-SPECS>
+                                    <NONQUEUED-RECEIVER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig3/VcuRxMsg2_Sig3</DATA-ELEMENT-REF>
+                                      <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-RECEIVER-COM-SPEC>
+                                  </REQUIRED-COM-SPECS>
+                                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuRxMsg2_Sig3</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                                <R-PORT-PROTOTYPE UUID="72b008ed-c830-4b44-81f4-1be92ca49075">
+                                  <SHORT-NAME>VcuRxMsg1_Sig3</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <REQUIRED-COM-SPECS>
+                                    <NONQUEUED-RECEIVER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig3/VcuRxMsg1_Sig3</DATA-ELEMENT-REF>
+                                      <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-RECEIVER-COM-SPEC>
+                                  </REQUIRED-COM-SPECS>
+                                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuRxMsg1_Sig3</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                                <R-PORT-PROTOTYPE UUID="9abf8448-d15f-423a-902f-a4d0c31a108e">
+                                  <SHORT-NAME>VcuRxMsg2_Sig0</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <REQUIRED-COM-SPECS>
+                                    <NONQUEUED-RECEIVER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig0/VcuRxMsg2_Sig0</DATA-ELEMENT-REF>
+                                      <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-RECEIVER-COM-SPEC>
+                                  </REQUIRED-COM-SPECS>
+                                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuRxMsg2_Sig0</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                                <R-PORT-PROTOTYPE UUID="ac58ba0a-d646-47a6-be33-6456930f1683">
+                                  <SHORT-NAME>VcuRxMsg2_Sig2</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <REQUIRED-COM-SPECS>
+                                    <NONQUEUED-RECEIVER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig2/VcuRxMsg2_Sig2</DATA-ELEMENT-REF>
+                                      <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-RECEIVER-COM-SPEC>
+                                  </REQUIRED-COM-SPECS>
+                                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuRxMsg2_Sig2</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                                <R-PORT-PROTOTYPE UUID="b03ed3a0-1ce3-4b5b-9389-c2c79c702599">
+                                  <SHORT-NAME>VcuRxMsg2_Sig1</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <REQUIRED-COM-SPECS>
+                                    <NONQUEUED-RECEIVER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig1/VcuRxMsg2_Sig1</DATA-ELEMENT-REF>
+                                      <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-RECEIVER-COM-SPEC>
+                                  </REQUIRED-COM-SPECS>
+                                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuRxMsg2_Sig1</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="4615e8a7-6ca7-4dec-b41b-e9c76dc6577d">
+                                  <SHORT-NAME>VcuTxMsg1_Sig1</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig1/VcuTxMsg1_Sig1</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuTxMsg1_Sig1</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="0d71a630-a80b-4074-a496-0c448bc11a3d">
+                                  <SHORT-NAME>VcuTxMsg2_Sig1</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig1/VcuTxMsg2_Sig1</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuTxMsg2_Sig1</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="23edd352-d4ef-4970-83ec-2db24aec1bc6">
+                                  <SHORT-NAME>VcuTxMsg2_Sig2</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig2/VcuTxMsg2_Sig2</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuTxMsg2_Sig2</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="123ca753-3f37-4e55-b6bf-7602876637e7">
+                                  <SHORT-NAME>VcuTxMsg1_Sig3</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig3/VcuTxMsg1_Sig3</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuTxMsg1_Sig3</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="fe5ace28-e596-4536-8bae-75971d6d4466">
+                                  <SHORT-NAME>VcuTxMsg2_Sig0</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig0/VcuTxMsg2_Sig0</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuTxMsg2_Sig0</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="576850e0-e870-4307-b1f1-7130a789c80b">
+                                  <SHORT-NAME>VcuTxMsg2_Sig3</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig3/VcuTxMsg2_Sig3</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuTxMsg2_Sig3</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="1c735b4d-bbba-40ba-8f03-de0822aa3b73">
+                                  <SHORT-NAME>VcuTxMsg1_Sig2</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig2/VcuTxMsg1_Sig2</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuTxMsg1_Sig2</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="0ff1641a-fbe9-4699-a138-9a98dae566f1">
+                                  <SHORT-NAME>VcuTxMsg1_Sig0</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig0/VcuTxMsg1_Sig0</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/VcuTxMsg1_Sig0</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                              </PORTS>
                               <COMPONENTS>
                                 <SW-COMPONENT-PROTOTYPE UUID="b0560f92-2d31-4daa-896f-70e823156344">
                                   <SHORT-NAME>BswM</SHORT-NAME>
@@ -202,6 +758,22 @@
                                   </ANNOTATIONS>
                                   <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/PowerMng_SWC</TYPE-TREF>
                                 </SW-COMPONENT-PROTOTYPE>
+                                <SW-COMPONENT-PROTOTYPE UUID="d6107833-7ec4-46b6-bd77-dc484cc238be">
+                                  <SHORT-NAME>Com_SWC</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/Com_SWC</TYPE-TREF>
+                                </SW-COMPONENT-PROTOTYPE>
                               </COMPONENTS>
                               <CONNECTORS>
                                 <ASSEMBLY-SW-CONNECTOR UUID="162bee59-e8a0-4697-a1b1-31e18c5b0ff5">
@@ -237,6 +809,342 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_TC37X_VCU_CAN00_b1b4f272</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="85182bfd-0dc5-4c10-a089-95d6c7451fbf">
+                                  <SHORT-NAME>VcuRxMsg1_Sig0_Com_SWC_VcuRxMsg1_Sig0</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuRxMsg1_Sig0</TARGET-R-PORT-REF>
+                                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig0</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="8af86356-8e64-4352-ae76-d0f748f21e85">
+                                  <SHORT-NAME>VcuRxMsg1_Sig2_Com_SWC_VcuRxMsg1_Sig2</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuRxMsg1_Sig2</TARGET-R-PORT-REF>
+                                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig2</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="ad4a64d0-0ee7-4c45-b89f-144f3b1b342a">
+                                  <SHORT-NAME>VcuRxMsg1_Sig1_Com_SWC_VcuRxMsg1_Sig1</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuRxMsg1_Sig1</TARGET-R-PORT-REF>
+                                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig1</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="dc5af995-8129-45d8-a991-4c5dc7e3c1ac">
+                                  <SHORT-NAME>VcuRxMsg2_Sig3_Com_SWC_VcuRxMsg2_Sig3</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuRxMsg2_Sig3</TARGET-R-PORT-REF>
+                                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig3</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="5ab58265-7036-4d7d-9066-35471fa5ea1e">
+                                  <SHORT-NAME>VcuRxMsg1_Sig3_Com_SWC_VcuRxMsg1_Sig3</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuRxMsg1_Sig3</TARGET-R-PORT-REF>
+                                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig3</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="7caf400e-e0f9-478d-81f6-bb814e2d6003">
+                                  <SHORT-NAME>VcuRxMsg2_Sig0_Com_SWC_VcuRxMsg2_Sig0</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuRxMsg2_Sig0</TARGET-R-PORT-REF>
+                                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig0</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="c3ea3235-9dd0-4860-b6fc-f56ccc30b795">
+                                  <SHORT-NAME>VcuRxMsg2_Sig2_Com_SWC_VcuRxMsg2_Sig2</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuRxMsg2_Sig2</TARGET-R-PORT-REF>
+                                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig2</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="084c44e0-7cd7-46c2-8cd7-2b58a030bcd7">
+                                  <SHORT-NAME>VcuRxMsg2_Sig1_Com_SWC_VcuRxMsg2_Sig1</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuRxMsg2_Sig1</TARGET-R-PORT-REF>
+                                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig1</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="90e1272c-ec96-4cbc-96d7-61edc744dd4b">
+                                  <SHORT-NAME>Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuTxMsg1_Sig1</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig1</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="547c6758-5505-4a3b-b079-8b5b87fa5e4e">
+                                  <SHORT-NAME>Com_SWC_VcuTxMsg2_Sig1_VcuTxMsg2_Sig1</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuTxMsg2_Sig1</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig1</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="94a6fa9a-7183-4e14-b77b-770a2f88b372">
+                                  <SHORT-NAME>Com_SWC_VcuTxMsg2_Sig2_VcuTxMsg2_Sig2</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuTxMsg2_Sig2</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig2</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="5d8d6650-b9ab-401f-ae03-259a3cd482b5">
+                                  <SHORT-NAME>Com_SWC_VcuTxMsg1_Sig3_VcuTxMsg1_Sig3</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuTxMsg1_Sig3</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig3</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="2f1c44b0-2521-4d1f-afd8-b35bab5a4e4a">
+                                  <SHORT-NAME>Com_SWC_VcuTxMsg2_Sig0_VcuTxMsg2_Sig0</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuTxMsg2_Sig0</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig0</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="b859210a-d8cb-4978-bec3-f0b55d425da2">
+                                  <SHORT-NAME>Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuTxMsg2_Sig3</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig3</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="5f784efb-f79d-49f2-82b8-21e63c0768c5">
+                                  <SHORT-NAME>Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuTxMsg1_Sig2</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig2</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="b6bf2041-efb3-41eb-a980-f8fc432fcbf8">
+                                  <SHORT-NAME>Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/VcuTxMsg1_Sig0</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig0</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -276,13 +1184,51 @@
                                     <SD GID="b0560f92-2d31-4daa-896f-70e823156344">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/BswM</SD>
                                     <SD GID="274f233c-196e-4efd-8537-a049df7a976a">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</SD>
                                     <SD GID="2ff06897-3419-41ff-918e-dcb198635394">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_TC37X_VCU_CAN00_b1b4f272_SWC1_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
+                                    <SD GID="d6107833-7ec4-46b6-bd77-dc484cc238be">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</SD>
                                     <SD GID="3976e9f4-1667-4e85-89f1-31f8167f45a7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EcuM</SD>
                                     <SD GID="a3c529ec-93af-4763-9e8e-fc9e2e1f0773">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Os_OsCore0_swc</SD>
                                     <SD GID="119e04d4-6f68-4049-aba2-5fe9bff177dd">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/PowerMng_SWC</SD>
                                     <SD GID="905f0a6c-c4e3-4618-98f4-e4a4659c1740">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</SD>
+                                    <SD GID="f21847bf-315f-4194-96b6-4f2ae6b238e6">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig0</SD>
+                                    <SD GID="04d957d0-91ee-4e91-9304-4c6829d3bf8c">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig1</SD>
+                                    <SD GID="2f4c4893-85a1-4aad-8281-ce05233624e7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig2</SD>
+                                    <SD GID="72b008ed-c830-4b44-81f4-1be92ca49075">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig3</SD>
+                                    <SD GID="9abf8448-d15f-423a-902f-a4d0c31a108e">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig0</SD>
+                                    <SD GID="b03ed3a0-1ce3-4b5b-9389-c2c79c702599">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig1</SD>
+                                    <SD GID="ac58ba0a-d646-47a6-be33-6456930f1683">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig2</SD>
+                                    <SD GID="5dbe06bf-50bd-432f-9af1-52f0f047f8df">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig3</SD>
+                                    <SD GID="0ff1641a-fbe9-4699-a138-9a98dae566f1">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig0</SD>
+                                    <SD GID="4615e8a7-6ca7-4dec-b41b-e9c76dc6577d">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig1</SD>
+                                    <SD GID="1c735b4d-bbba-40ba-8f03-de0822aa3b73">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig2</SD>
+                                    <SD GID="123ca753-3f37-4e55-b6bf-7602876637e7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig3</SD>
+                                    <SD GID="fe5ace28-e596-4536-8bae-75971d6d4466">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig0</SD>
+                                    <SD GID="0d71a630-a80b-4074-a496-0c448bc11a3d">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig1</SD>
+                                    <SD GID="23edd352-d4ef-4970-83ec-2db24aec1bc6">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig2</SD>
+                                    <SD GID="576850e0-e870-4307-b1f1-7130a789c80b">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig3</SD>
                                     <SD GID="3dd85ab4-5b87-4ae8-b37a-bd9c7fcb011b">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/FLATMAP</SD>
                                     <SD GID="fc4604e8-c272-49f9-87c4-e9772ecf6401">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM</SD>
                                     <SD GID="305b1449-26cf-4075-9b6a-d48b38b7a5fe">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</SD>
+                                    <SD GID="B0B3BBD8-627F-420D-97B3-AF512CEDE6E2">/ComponentTypes/Com_SWC</SD>
+                                    <SD GID="18984354-BF8F-45C4-965A-3B02BE16E306">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/DRT_Rte_Msg200h_Rx_Notification_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0</SD>
+                                    <SD GID="B745682D-5619-4AEA-8D86-22D3FB6C8B51">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/DRT_Rte_Msg201h_Rx_Notification_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0</SD>
+                                    <SD GID="7B4FE19D-2362-4205-878E-EA969B8AAAE0">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/TMT_Com_Runnable_2ms</SD>
+                                    <SD GID="2B38A963-B12A-4B3B-99F1-761F2BA00419">/ComponentTypes/Com_SWC/VcuRxMsg1_Sig0</SD>
+                                    <SD GID="F7EA310B-9838-4D38-9F19-715F9C7EA0D7">/ComponentTypes/Com_SWC/VcuRxMsg1_Sig1</SD>
+                                    <SD GID="E57B5C9C-FA03-409E-AB77-E95E730373B9">/ComponentTypes/Com_SWC/VcuRxMsg1_Sig2</SD>
+                                    <SD GID="5AB67BA5-D765-4DE9-8C99-F6339BA8EF9E">/ComponentTypes/Com_SWC/VcuRxMsg1_Sig3</SD>
+                                    <SD GID="F391129D-CA1A-436E-845C-71344A0B674A">/ComponentTypes/Com_SWC/VcuRxMsg2_Sig0</SD>
+                                    <SD GID="C1D91E70-8ADD-461B-B878-9E7185E82076">/ComponentTypes/Com_SWC/VcuRxMsg2_Sig1</SD>
+                                    <SD GID="EA6FD17D-240A-4BAA-90B5-EE8F981151F7">/ComponentTypes/Com_SWC/VcuRxMsg2_Sig2</SD>
+                                    <SD GID="3524CE94-8BAF-49B9-8158-1003CF2CF518">/ComponentTypes/Com_SWC/VcuRxMsg2_Sig3</SD>
+                                    <SD GID="DF78DAF7-A33F-4098-8CBE-7BC550A8BB11">/ComponentTypes/Com_SWC/VcuTxMsg1_Sig0</SD>
+                                    <SD GID="C30F50B3-28E0-4C28-8715-6145CC0FC7D1">/ComponentTypes/Com_SWC/VcuTxMsg1_Sig1</SD>
+                                    <SD GID="4D14EC48-4580-42CB-AA2E-AEAABBD04AE6">/ComponentTypes/Com_SWC/VcuTxMsg1_Sig2</SD>
+                                    <SD GID="030C91B1-8A2A-41A3-9143-97D344A6120F">/ComponentTypes/Com_SWC/VcuTxMsg1_Sig3</SD>
+                                    <SD GID="CECE36FA-A1FF-4551-9210-E89EE436DB2C">/ComponentTypes/Com_SWC/VcuTxMsg2_Sig0</SD>
+                                    <SD GID="DF4C2FDD-955A-4711-888E-805EF1EDD7F6">/ComponentTypes/Com_SWC/VcuTxMsg2_Sig1</SD>
+                                    <SD GID="07939212-9963-4D90-B4EF-C7D13D3F1D1C">/ComponentTypes/Com_SWC/VcuTxMsg2_Sig2</SD>
+                                    <SD GID="C27F2ED1-7BB1-4B4A-9B16-81C74A78A00D">/ComponentTypes/Com_SWC/VcuTxMsg2_Sig3</SD>
+                                    <SD GID="BBB3B39C-C392-468F-9EF1-FC5D0A60A072">/ComponentTypes/Com_SWC_Implementation</SD>
                                     <SD GID="29235893-9986-4707-871E-62CD9E51F0C7">/ComponentTypes/PowerMng_SWC</SD>
                                     <SD GID="2801EB6A-BAF6-4448-966E-BF88295D9430">/ComponentTypes/PowerMng_SWC/PowerMng_SWC_InternalBehavior/PowerMng_SWC_InitEvent</SD>
                                     <SD GID="7E22F765-3FB7-43BD-9BAB-30BFABBFCC35">/ComponentTypes/PowerMng_SWC/PowerMng_SWC_InternalBehavior/TMT_Led_Runnable1000ms</SD>
@@ -294,8 +1240,25 @@
                                     <SD GID="778A86CE-142A-46BD-8700-54AB1F8839D8">/ComponentTypes/SWC1/UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="66263F43-3F17-4564-9D9F-6367B86E68F2">/ComponentTypes/SWC1_Implementation</SD>
                                     <SD GID="83E5C50F-A163-4FAE-8F88-D29CE937AFED">/ECUCompositionTypes/ECU_Composition</SD>
+                                    <SD GID="9D6277BB-1E37-4BB9-B185-1DD2BA210E54">/ECUCompositionTypes/ECU_Composition/Com_SWC</SD>
                                     <SD GID="7077C59A-EDFF-4EBD-992B-AD0A5D0AD472">/ECUCompositionTypes/ECU_Composition/PowerMng_SWC</SD>
                                     <SD GID="45326E4B-4115-4A85-8FF4-E06F7BAE2F7C">/ECUCompositionTypes/ECU_Composition/SWC1</SD>
+                                    <SD GID="CCA9B82C-DD01-490F-A421-2766B59E79A5">/ECUCompositionTypes/ECU_Composition/VcuRxMsg1_Sig0</SD>
+                                    <SD GID="64C125A9-FFAC-4390-817D-5ED013E75B7A">/ECUCompositionTypes/ECU_Composition/VcuRxMsg1_Sig1</SD>
+                                    <SD GID="49315A56-2DAB-44C4-919B-10F8D28C3864">/ECUCompositionTypes/ECU_Composition/VcuRxMsg1_Sig2</SD>
+                                    <SD GID="0A4D9F9A-5794-4877-B7C7-50F32AAA2561">/ECUCompositionTypes/ECU_Composition/VcuRxMsg1_Sig3</SD>
+                                    <SD GID="D44A29E6-C10A-4154-85BB-C8098D4DD422">/ECUCompositionTypes/ECU_Composition/VcuRxMsg2_Sig0</SD>
+                                    <SD GID="3CEFEDC1-012C-4387-948D-4D5756D89CFC">/ECUCompositionTypes/ECU_Composition/VcuRxMsg2_Sig1</SD>
+                                    <SD GID="D2E4152B-1237-479C-89E8-FC33C76DDE5E">/ECUCompositionTypes/ECU_Composition/VcuRxMsg2_Sig2</SD>
+                                    <SD GID="E55AFAC4-238E-4187-9412-395F5A2A3035">/ECUCompositionTypes/ECU_Composition/VcuRxMsg2_Sig3</SD>
+                                    <SD GID="47EFB13A-9242-4804-8EE3-3C0451C9AC32">/ECUCompositionTypes/ECU_Composition/VcuTxMsg1_Sig0</SD>
+                                    <SD GID="B43F11D3-088C-4EC7-A40F-E7B1CEB1DD1B">/ECUCompositionTypes/ECU_Composition/VcuTxMsg1_Sig1</SD>
+                                    <SD GID="AEFF0DF7-33E1-412D-8772-73519F1C0A88">/ECUCompositionTypes/ECU_Composition/VcuTxMsg1_Sig2</SD>
+                                    <SD GID="2E7A9917-1485-4366-930C-E1EA60039ED6">/ECUCompositionTypes/ECU_Composition/VcuTxMsg1_Sig3</SD>
+                                    <SD GID="CEE5F2A7-55CE-49B1-B19E-78E46FD07840">/ECUCompositionTypes/ECU_Composition/VcuTxMsg2_Sig0</SD>
+                                    <SD GID="6ECA40B2-7D2F-49B9-A1D2-69B4A0D71C75">/ECUCompositionTypes/ECU_Composition/VcuTxMsg2_Sig1</SD>
+                                    <SD GID="4256A3AB-FE8B-4F53-95AD-B0CB1C8F6F4D">/ECUCompositionTypes/ECU_Composition/VcuTxMsg2_Sig2</SD>
+                                    <SD GID="09DBD232-679B-4F47-B048-2A6ED1601C86">/ECUCompositionTypes/ECU_Composition/VcuTxMsg2_Sig3</SD>
                                     <SD GID="9dc56e5f-8feb-4e00-a64f-ce6a14257cc4">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior</SD>
                                     <SD GID="134ddf31-5a5b-49d6-9d4e-ab18f2cb0112">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BSWM_EXCLUSIVE_AREA_0</SD>
                                     <SD GID="100cfe33-58ed-4dcb-b870-86e07a3a734b">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BswM_MainFunction</SD>
@@ -462,6 +1425,38 @@
                                     <SD GID="0fff2c26-5dfb-414f-850e-a8d6abcf7853">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte/RteBehavior/Rte_ComSendSignalProxyPeriodic</SD>
                                     <SD GID="aeaffa7c-9dac-4c22-891b-0c5327d4d0fb">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte/RteBehavior/Rte_ComSendSignalProxyPeriodicTimingEvent0</SD>
                                     <SD GID="a5b642f7-15bc-414b-bc91-6bfb2bfc507f">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte_ComSendSignalProxyPeriodic</SD>
+                                    <SD GID="C4F4B726-402E-46AD-8CC8-B98CBDBB242F">/PortInterfaces/VcuRxMsg1_Sig0</SD>
+                                    <SD GID="7AA69DA4-77A3-4A49-B0A5-D1304B0FC31D">/PortInterfaces/VcuRxMsg1_Sig0/VcuRxMsg1_Sig0</SD>
+                                    <SD GID="7F54F57D-E7B9-43B7-A530-EFA73672D6EB">/PortInterfaces/VcuRxMsg1_Sig1</SD>
+                                    <SD GID="68658E2A-66E5-4A10-8240-6B0A4C306937">/PortInterfaces/VcuRxMsg1_Sig1/VcuRxMsg1_Sig1</SD>
+                                    <SD GID="D7EA0B59-DC30-4102-95A5-947638168300">/PortInterfaces/VcuRxMsg1_Sig2</SD>
+                                    <SD GID="D5375617-E419-4964-B34D-5741F397FB69">/PortInterfaces/VcuRxMsg1_Sig2/VcuRxMsg1_Sig2</SD>
+                                    <SD GID="8F201838-1BB8-4B1A-83C7-CECF899EBE01">/PortInterfaces/VcuRxMsg1_Sig3</SD>
+                                    <SD GID="89520935-5CB9-4CD3-BCB1-31AFC414F7A2">/PortInterfaces/VcuRxMsg1_Sig3/VcuRxMsg1_Sig3</SD>
+                                    <SD GID="BC8C6678-AF2A-4D7F-BD34-14AABD8956FE">/PortInterfaces/VcuRxMsg2_Sig0</SD>
+                                    <SD GID="8DB34D17-1AE2-4544-80CA-6C2BC0DAD42B">/PortInterfaces/VcuRxMsg2_Sig0/VcuRxMsg2_Sig0</SD>
+                                    <SD GID="FCE9D675-62E7-4C36-AFD5-CE49D51C40FA">/PortInterfaces/VcuRxMsg2_Sig1</SD>
+                                    <SD GID="679B3D8E-0D61-4EE4-B004-F350D9101C2F">/PortInterfaces/VcuRxMsg2_Sig1/VcuRxMsg2_Sig1</SD>
+                                    <SD GID="EC0C8292-0A80-41F3-B5E8-702F4F926D15">/PortInterfaces/VcuRxMsg2_Sig2</SD>
+                                    <SD GID="9964665A-0C7D-402F-A4BD-6A9EDDEF5A33">/PortInterfaces/VcuRxMsg2_Sig2/VcuRxMsg2_Sig2</SD>
+                                    <SD GID="0EB1D880-F264-4FB9-A7EB-08700110632F">/PortInterfaces/VcuRxMsg2_Sig3</SD>
+                                    <SD GID="B2206546-E48A-4579-9DA2-DE5953CC7099">/PortInterfaces/VcuRxMsg2_Sig3/VcuRxMsg2_Sig3</SD>
+                                    <SD GID="C2A09A07-B37D-4D81-BADF-742B621E8DCF">/PortInterfaces/VcuTxMsg1_Sig0</SD>
+                                    <SD GID="3F15BB0A-ADAA-4C47-8AE5-AF784D79809A">/PortInterfaces/VcuTxMsg1_Sig0/VcuTxMsg1_Sig0</SD>
+                                    <SD GID="06EC584E-35A2-459D-863E-B83CBDB8D166">/PortInterfaces/VcuTxMsg1_Sig1</SD>
+                                    <SD GID="FD6B88FA-9238-4B9A-B722-3BF372AD1C4A">/PortInterfaces/VcuTxMsg1_Sig1/VcuTxMsg1_Sig1</SD>
+                                    <SD GID="8F7B54AC-95DF-43B6-84A8-11E75047D95F">/PortInterfaces/VcuTxMsg1_Sig2</SD>
+                                    <SD GID="264170F6-BDCE-4987-9077-AC29A155A9BF">/PortInterfaces/VcuTxMsg1_Sig2/VcuTxMsg1_Sig2</SD>
+                                    <SD GID="6ABA5EAE-31F0-4FDB-8E3C-8529DB97BDE0">/PortInterfaces/VcuTxMsg1_Sig3</SD>
+                                    <SD GID="6DE411F5-90A6-4C82-B0FD-BF060EE40CEB">/PortInterfaces/VcuTxMsg1_Sig3/VcuTxMsg1_Sig3</SD>
+                                    <SD GID="3D0D0E6E-A7C4-4FDE-807C-94A1EBF96D37">/PortInterfaces/VcuTxMsg2_Sig0</SD>
+                                    <SD GID="2F59337E-8344-45DC-8088-CFDF83C87AE8">/PortInterfaces/VcuTxMsg2_Sig0/VcuTxMsg2_Sig0</SD>
+                                    <SD GID="B98C2EC4-34D5-4EE5-A980-C6647E67B968">/PortInterfaces/VcuTxMsg2_Sig1</SD>
+                                    <SD GID="25A6A833-AF82-46BF-9452-0B1FC6CEC447">/PortInterfaces/VcuTxMsg2_Sig1/VcuTxMsg2_Sig1</SD>
+                                    <SD GID="B407E97B-AB73-41A8-A3E0-96DAB2B14540">/PortInterfaces/VcuTxMsg2_Sig2</SD>
+                                    <SD GID="6FC0BDDE-4D59-4189-BADE-23544BDD6FEE">/PortInterfaces/VcuTxMsg2_Sig2/VcuTxMsg2_Sig2</SD>
+                                    <SD GID="4C2E8905-224E-4137-9B85-487ACBF6CD50">/PortInterfaces/VcuTxMsg2_Sig3</SD>
+                                    <SD GID="AF41A9C7-5795-415F-A8A1-78252F138286">/PortInterfaces/VcuTxMsg2_Sig3/VcuTxMsg2_Sig3</SD>
                                     <SD GID="{AF35D1D4-4362-4055-B014-780FA6F9E75B}">/Predefined_DEV/CompuMethods/Dem_UdsStatusByteType</SD>
                                     <SD GID="F2570AA0-D6E5-4217-80F7-5F60B8778133">/Predefined_DEV/CompuMethods/NvM_RequestResultType</SD>
                                     <SD GID="007B24D3-5C46-4986-B3CA-31D71FEDD510">/Predefined_DEV/CompuMethods/NvM_ServiceIdType</SD>

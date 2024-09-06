@@ -34,6 +34,7 @@
 
 #include "Rte_BswM.h"
 #include "Rte_ComM.h"
+#include "Rte_Com_SWC.h"
 #include "Rte_Det.h"
 #include "Rte_EcuM.h"
 #include "Rte_Os_OsCore0_swc.h"
@@ -56,6 +57,13 @@
 #include "SchM_Port.h"
 
 #include "Rte_Hook.h"
+
+#include "Com.h"
+#if defined(IL_ASRCOM_VERSION)
+# define RTE_USE_COM_TXSIGNAL_RDACCESS
+#endif
+
+#include "Rte_Cbk.h"
 
 /* AUTOSAR 3.x compatibility */
 #if !defined (RTE_LOCAL)
@@ -95,6 +103,19 @@
 # define Rte_EnableOSInterrupts() ResumeOSInterrupts()   /* AUTOSAR OS */
 #endif
 
+/**********************************************************************************************************************
+ * Rte Init State Variable
+ *********************************************************************************************************************/
+
+#define RTE_START_SEC_VAR_ZERO_INIT_8BIT
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+volatile VAR(uint8, RTE_VAR_ZERO_INIT) Rte_InitState = RTE_STATE_UNINIT; /* PRQA S 3408 */ /* MD_Rte_3408 */
+volatile VAR(uint8, RTE_VAR_ZERO_INIT) Rte_StartTiming_InitState = RTE_STATE_UNINIT; /* PRQA S 0850, 3408, 1514 */ /* MD_MSR_MacroArgumentEmpty, MD_Rte_3408, MD_Rte_1514 */
+
+#define RTE_STOP_SEC_VAR_ZERO_INIT_8BIT
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 
 /**********************************************************************************************************************
  * Buffers for unqueued S/R
@@ -110,9 +131,35 @@ VAR(BswM_ESH_RunRequest, RTE_VAR_NOINIT) Rte_SWC1_Request_ESH_RunRequest_0_reque
 #define RTE_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+
+/**********************************************************************************************************************
+ * Timeout Flags for each external Rx Signals with aliveTimeout != 0
+ *********************************************************************************************************************/
+
+#define RTE_START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+VAR(Rte_RxTimeoutFlagsType, RTE_VAR_ZERO_INIT) Rte_RxTimeoutFlags = {
+  0U,
+  0U,
+  0U,
+  0U,
+  0U,
+  0U,
+  0U,
+  0U
+};
+
+#define RTE_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define Rte_RxTimeoutFlagsInit() (Rte_MemClr(&Rte_RxTimeoutFlags, sizeof(Rte_RxTimeoutFlagsType)))
+
 #define RTE_START_SEC_CODE
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+FUNC(void, RTE_CODE) Rte_MemClr(P2VAR(void, AUTOMATIC, RTE_VAR_NOINIT) ptr, uint32_least num);
 FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
 
 #define RTE_STOP_SEC_CODE
@@ -199,6 +246,7 @@ VAR(BswM_ESH_Mode, RTE_VAR_NOINIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_Bs
 
 #define RTE_CONST_MSEC_SystemTimer_0 (0UL)
 #define RTE_CONST_MSEC_SystemTimer_10 (10UL)
+#define RTE_CONST_MSEC_SystemTimer_2 (2UL)
 #define RTE_CONST_MSEC_SystemTimer_20 (20UL)
 
 #define RTE_CONST_SEC_SystemTimer_0 (0UL)
@@ -219,8 +267,19 @@ VAR(BswM_ESH_Mode, RTE_VAR_NOINIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_Bs
 #define RTE_START_SEC_CODE
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+FUNC(void, RTE_CODE) Rte_MemClr(P2VAR(void, AUTOMATIC, RTE_VAR_NOINIT) ptr, uint32_least num)
+{
+  P2VAR(uint8, AUTOMATIC, RTE_VAR_NOINIT) dst = (P2VAR(uint8, AUTOMATIC, RTE_VAR_NOINIT))ptr; /* PRQA S 0316 */ /* MD_Rte_0316 */
+  uint32_least i;
+  for (i = 0; i < num; i++)
+  {
+    dst[i] = 0;
+  }
+}
+
 FUNC(void, RTE_CODE) SchM_Start(void)
 {
+  Rte_InitState = RTE_STATE_SCHM_START;
 }
 
 FUNC(void, RTE_CODE) SchM_Init(void)
@@ -228,6 +287,7 @@ FUNC(void, RTE_CODE) SchM_Init(void)
   /* activate the tasks */
   (void)ActivateTask(Bsw_Task); /* PRQA S 3417 */ /* MD_Rte_Os */
 
+  Rte_InitState = RTE_STATE_SCHM_INIT;
 }
 
 FUNC(void, RTE_CODE) SchM_StartTiming(void)
@@ -252,17 +312,25 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
   (void)ActivateTask(Asw_Init); /* PRQA S 3417 */ /* MD_Rte_Os */
 
   /* activate the alarms used for TimingEvents */
+  (void)SetRelAlarm(Rte_Al_TE_Com_SWC_Com_Runnable_2ms, RTE_MSEC_SystemTimer(0) + (TickType)1, RTE_MSEC_SystemTimer(2)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
   (void)SetRelAlarm(Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms, RTE_SEC_SystemTimer(0) + (TickType)1, RTE_SEC_SystemTimer(1)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
   (void)SetRelAlarm(Rte_Al_TE_SWC1_SWC1_Runnable10ms, RTE_MSEC_SystemTimer(0) + (TickType)1, RTE_MSEC_SystemTimer(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+
+  Rte_StartTiming_InitState = RTE_STATE_INIT;
+  Rte_InitState = RTE_STATE_INIT;
 
   return RTE_E_OK;
 } /* PRQA S 6050 */ /* MD_MSR_STCAL */
 
 FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void)
 {
+  Rte_StartTiming_InitState = RTE_STATE_UNINIT;
   /* deactivate alarms */
+  (void)CancelAlarm(Rte_Al_TE_Com_SWC_Com_Runnable_2ms); /* PRQA S 3417 */ /* MD_Rte_Os */
   (void)CancelAlarm(Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms); /* PRQA S 3417 */ /* MD_Rte_Os */
   (void)CancelAlarm(Rte_Al_TE_SWC1_SWC1_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+
+  Rte_InitState = RTE_STATE_SCHM_INIT;
 
   return RTE_E_OK;
 }
@@ -273,11 +341,95 @@ FUNC(void, RTE_CODE) SchM_Deinit(void)
   (void)CancelAlarm(Rte_Al_TE2_Bsw_Task_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
   (void)CancelAlarm(Rte_Al_TE2_Bsw_Task_0_20ms); /* PRQA S 3417 */ /* MD_Rte_Os */
 
+  Rte_InitState = RTE_STATE_UNINIT;
 }
 
 FUNC(void, RTE_CODE) Rte_InitMemory(void)
 {
+  Rte_InitState = RTE_STATE_UNINIT;
+  Rte_StartTiming_InitState = RTE_STATE_UNINIT;
+
+  /* reset Rx Timeout Flags */
+  Rte_RxTimeoutFlagsInit(); /* PRQA S 0315 */ /* MD_Rte_0315 */
+
 }
+
+
+/**********************************************************************************************************************
+ * Internal/External Tx connections
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0(VcuTxMsg1_Sig0 data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  ret |= Com_SendSignal(ComConf_ComSignal_VcuTxMsg1_Sig0_oVcuTxMsg1_oTC37X_VCU_CAN00_8243b9a9_Tx, (&data)); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1(VcuTxMsg1_Sig1 data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  ret |= Com_SendSignal(ComConf_ComSignal_VcuTxMsg1_Sig1_oVcuTxMsg1_oTC37X_VCU_CAN00_e144608d_Tx, (&data)); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2(VcuTxMsg1_Sig2 data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  ret |= Com_SendSignal(ComConf_ComSignal_VcuTxMsg1_Sig2_oVcuTxMsg1_oTC37X_VCU_CAN00_444c0be1_Tx, (&data)); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig3_VcuTxMsg1_Sig3(VcuTxMsg1_Sig3 data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  ret |= Com_SendSignal(ComConf_ComSignal_VcuTxMsg1_Sig3_oVcuTxMsg1_oTC37X_VCU_CAN00_274bd2c5_Tx, (&data)); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig0_VcuTxMsg2_Sig0(VcuTxMsg2_Sig0 data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  ret |= Com_SendSignal(ComConf_ComSignal_VcuTxMsg2_Sig0_oVcuTxMsg2_oTC37X_VCU_CAN00_05439791_Tx, (&data)); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig1_VcuTxMsg2_Sig1(VcuTxMsg2_Sig1 data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  ret |= Com_SendSignal(ComConf_ComSignal_VcuTxMsg2_Sig1_oVcuTxMsg2_oTC37X_VCU_CAN00_66444eb5_Tx, (&data)); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig2_VcuTxMsg2_Sig2(VcuTxMsg2_Sig2 data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  ret |= Com_SendSignal(ComConf_ComSignal_VcuTxMsg2_Sig2_oVcuTxMsg2_oTC37X_VCU_CAN00_c34c25d9_Tx, (&data)); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(VcuTxMsg2_Sig3 data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  ret |= Com_SendSignal(ComConf_ComSignal_VcuTxMsg2_Sig3_oVcuTxMsg2_oTC37X_VCU_CAN00_a04bfcfd_Tx, (&data)); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
 
 
 /**********************************************************************************************************************
@@ -312,6 +464,142 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_ESH_RunRequest_1_requestedM
   *data = 0U;
 
   return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0(P2VAR(VcuRxMsg1_Sig0, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  {
+    VcuRxMsg1_Sig0 localVcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx;
+    ret = Com_ReceiveSignal(ComConf_ComSignal_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx, &localVcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+    *((data)) = localVcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx;
+  }
+  if (Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx != 0U)
+  {
+    ret |= RTE_E_MAX_AGE_EXCEEDED; /* PRQA S 2986 */ /* MD_Rte_2986 */
+  }
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1(P2VAR(VcuRxMsg1_Sig1, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  {
+    VcuRxMsg1_Sig1 localVcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx;
+    ret = Com_ReceiveSignal(ComConf_ComSignal_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx, &localVcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+    *((data)) = localVcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx;
+  }
+  if (Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx != 0U)
+  {
+    ret |= RTE_E_MAX_AGE_EXCEEDED; /* PRQA S 2986 */ /* MD_Rte_2986 */
+  }
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2(P2VAR(VcuRxMsg1_Sig2, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  {
+    VcuRxMsg1_Sig2 localVcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx;
+    ret = Com_ReceiveSignal(ComConf_ComSignal_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx, &localVcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+    *((data)) = localVcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx;
+  }
+  if (Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx != 0U)
+  {
+    ret |= RTE_E_MAX_AGE_EXCEEDED; /* PRQA S 2986 */ /* MD_Rte_2986 */
+  }
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg1_Sig3_VcuRxMsg1_Sig3(P2VAR(VcuRxMsg1_Sig3, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  {
+    VcuRxMsg1_Sig3 localVcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx;
+    ret = Com_ReceiveSignal(ComConf_ComSignal_VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx, &localVcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+    *((data)) = localVcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx;
+  }
+  if (Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx != 0U)
+  {
+    ret |= RTE_E_MAX_AGE_EXCEEDED; /* PRQA S 2986 */ /* MD_Rte_2986 */
+  }
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0(P2VAR(VcuRxMsg2_Sig0, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  {
+    VcuRxMsg2_Sig0 localVcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx;
+    ret = Com_ReceiveSignal(ComConf_ComSignal_VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx, &localVcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+    *((data)) = localVcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx;
+  }
+  if (Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx != 0U)
+  {
+    ret |= RTE_E_MAX_AGE_EXCEEDED; /* PRQA S 2986 */ /* MD_Rte_2986 */
+  }
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig1_VcuRxMsg2_Sig1(P2VAR(VcuRxMsg2_Sig1, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  {
+    VcuRxMsg2_Sig1 localVcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx;
+    ret = Com_ReceiveSignal(ComConf_ComSignal_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx, &localVcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+    *((data)) = localVcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx;
+  }
+  if (Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx != 0U)
+  {
+    ret |= RTE_E_MAX_AGE_EXCEEDED; /* PRQA S 2986 */ /* MD_Rte_2986 */
+  }
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2(P2VAR(VcuRxMsg2_Sig2, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  {
+    VcuRxMsg2_Sig2 localVcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx;
+    ret = Com_ReceiveSignal(ComConf_ComSignal_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx, &localVcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+    *((data)) = localVcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx;
+  }
+  if (Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx != 0U)
+  {
+    ret |= RTE_E_MAX_AGE_EXCEEDED; /* PRQA S 2986 */ /* MD_Rte_2986 */
+  }
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3(P2VAR(VcuRxMsg2_Sig3, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  {
+    VcuRxMsg2_Sig3 localVcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx;
+    ret = Com_ReceiveSignal(ComConf_ComSignal_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx, &localVcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+    *((data)) = localVcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx;
+  }
+  if (Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx != 0U)
+  {
+    ret |= RTE_E_MAX_AGE_EXCEEDED; /* PRQA S 2986 */ /* MD_Rte_2986 */
+  }
+
+  return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 
@@ -393,6 +681,172 @@ FUNC(BswM_ESH_Mode, RTE_CODE) Rte_Mode_BswM_Notification_ESH_ModeNotification_Bs
 
 
 /**********************************************************************************************************************
+ * COM-Callbacks for DataReceivedEvent triggered runnables, inter-ECU client/server communication, for queued com. and for Rx timeout / Rx inv. flag (reset)
+ *********************************************************************************************************************/
+
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx(void)
+{
+
+  if (Rte_InitState == RTE_STATE_INIT)
+  {
+    Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx = 0U;
+    Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    /* scheduled trigger for runnables: Rte_Msg200h_Rx_Notification */
+    (void)SetEvent(AswTask, Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification); /* PRQA S 3417 */ /* MD_Rte_Os */
+  }
+} /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
+
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx(void)
+{
+
+  if (Rte_InitState == RTE_STATE_INIT)
+  {
+    Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx = 0U;
+    Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  }
+} /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
+
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx(void)
+{
+
+  if (Rte_InitState == RTE_STATE_INIT)
+  {
+    Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx = 0U;
+    Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  }
+} /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
+
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx(void)
+{
+
+  if (Rte_InitState == RTE_STATE_INIT)
+  {
+    Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx = 0U;
+    Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  }
+} /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
+
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx(void)
+{
+
+  if (Rte_InitState == RTE_STATE_INIT)
+  {
+    Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx = 0U;
+    Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    /* scheduled trigger for runnables: Rte_Msg201h_Rx_Notification */
+    (void)SetEvent(AswTask, Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification); /* PRQA S 3417 */ /* MD_Rte_Os */
+  }
+} /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
+
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx(void)
+{
+
+  if (Rte_InitState == RTE_STATE_INIT)
+  {
+    Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx = 0U;
+    Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  }
+} /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
+
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx(void)
+{
+
+  if (Rte_InitState == RTE_STATE_INIT)
+  {
+    Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx = 0U;
+    Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  }
+} /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
+
+FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx(void)
+{
+
+  if (Rte_InitState == RTE_STATE_INIT)
+  {
+    Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx = 0U;
+    Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  }
+} /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
+
+
+/**********************************************************************************************************************
+ * COM Callbacks for Rx Timeout Notification
+ *********************************************************************************************************************/
+
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx(void)
+{
+
+  Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx = 1U;
+  Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+}
+
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx(void)
+{
+
+  Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx = 1U;
+  Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+}
+
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx(void)
+{
+
+  Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx = 1U;
+  Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+}
+
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx(void)
+{
+
+  Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx = 1U;
+  Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+}
+
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx(void)
+{
+
+  Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx = 1U;
+  Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+}
+
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx(void)
+{
+
+  Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx = 1U;
+  Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+}
+
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx(void)
+{
+
+  Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx = 1U;
+  Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+}
+
+FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx(void)
+{
+
+  Rte_DisableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  Rte_RxTimeoutFlags.Rte_RxTimeout_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx = 1U;
+  Rte_EnableAllInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+}
+
+
+/**********************************************************************************************************************
  * Task bodies for RTE controlled tasks
  *********************************************************************************************************************/
 
@@ -407,9 +861,9 @@ TASK(AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 
   for(;;)
   {
-    (void)WaitEvent(Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)WaitEvent(Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)GetEvent(AswTask, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     if ((ev & Rte_Ev_Run_SWC1_SWC1_Runnable10ms) != (EventMaskType)0)
     {
@@ -421,6 +875,24 @@ TASK(AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
     {
       /* call runnable */
       Led_Runnable1000ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Run_Com_SWC_Com_Runnable_2ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      Com_Runnable_2ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification) != (EventMaskType)0)
+    {
+      /* call runnable */
+      Rte_Msg200h_Rx_Notification(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification) != (EventMaskType)0)
+    {
+      /* call runnable */
+      Rte_Msg201h_Rx_Notification(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -506,7 +978,22 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
  *********************************************************************************************************************/
 
 /* module specific MISRA deviations:
+   MD_Rte_0315:  MISRA rule: Dir1.1
+     Reason:     Pointer cast to void because generic access is necessary.
+     Risk:       No functional risk. Only a cast to uint8* is performed.
+     Prevention: Not required.
+
+   MD_Rte_0316:  MISRA rule: Dir1.1
+     Reason:     Pointer cast to uint8* because a direct byte access is necessary.
+     Risk:       No functional risk. Only a cast to uint8* is performed.
+     Prevention: Not required.
+
    MD_Rte_1339:  MISRA rule: Rule17.8
+     Reason:     Passing elements by pointer is a well known concept.
+     Risk:       No functional risk. Data flow is handled with care.
+     Prevention: Not required.
+
+   MD_Rte_1340:  MISRA rule: Rule17.8
      Reason:     Passing elements by pointer is a well known concept.
      Risk:       No functional risk. Data flow is handled with care.
      Prevention: Not required.
@@ -517,6 +1004,11 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
      Prevention: Not required.
 
    MD_Rte_2982:  MISRA rule: Rule2.2
+     Reason:     Used to simplify code generation.
+     Risk:       No functional risk. There is no side effect.
+     Prevention: Not required.
+
+   MD_Rte_2986:  MISRA rule: Rule2.2
      Reason:     Used to simplify code generation.
      Risk:       No functional risk. There is no side effect.
      Prevention: Not required.
