@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <DCF ARSCHEMA="440_DEV">
 	<Version>1.0</Version>
 	<PROFILESETTINGS>ProfileSettings.xml</PROFILESETTINGS>
@@ -20,5 +20,9 @@
 	<FILEREF>
 		<ARXML>ComponentTypes\SWC1.arxml</ARXML>
 		<DVG>ComponentTypes\SWC1.dvg</DVG>
+	</FILEREF>
+	<FILEREF>
+		<ARXML>ComponentTypes/PowerMng_SWC.arxml</ARXML>
+		<DVG>ComponentTypes/PowerMng_SWC.dvg</DVG>
 	</FILEREF>
 </DCF>

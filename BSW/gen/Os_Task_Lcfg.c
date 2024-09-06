@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Task_Lcfg.c
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2024-09-06 13:53:53
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -125,7 +125,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_AswTask =
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_AswTask,
     /* .Context               = */ &OsCfg_Hal_Context_AswTask_Dyn,
-    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Task_Prio64,
+    /* .Stack                 = */ &OsCfg_Stack_AswTask,
     /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_AswTask_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
     /* .Core                  = */ &OsCfg_Core_OsCore0,
@@ -148,7 +148,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_AswTask =
     /* .AccessingApplications = */ (OS_APPID2MASK(OsApplication) | OS_APPID2MASK(SystemApplication_OsCore0)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
   /* .NumSchEventsRoundRobin = */ 0uL,
   /* .RoundRobinEnabled      = */ FALSE,
-  /* .IsExtended             = */ (boolean)FALSE,
+  /* .IsExtended             = */ (boolean)TRUE,
   /* .StackSharing           = */ OS_TASKSCHEDULE_ALLOWED
 };
 

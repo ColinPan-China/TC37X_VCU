@@ -97,6 +97,7 @@ section_layout mpe:vtc:linear
     {
       section "OS_STACKS_CORE0_VAR_NOINIT_SEC" (blocksize = 2, attributes = rw)
       {
+        select "[.]bss.OS_STACK_ASWTASK_VAR_NOINIT";
         select "[.]bss.OS_STACK_BSW_TASK_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_ERROR_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_INIT_VAR_NOINIT";
@@ -106,7 +107,6 @@ section_layout mpe:vtc:linear
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO49_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO50_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO63_VAR_NOINIT";
-        select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO64_VAR_NOINIT";
       }
     }
     group OS_STACKS_CORE0_VAR_NOINIT_PAD (align = 1)

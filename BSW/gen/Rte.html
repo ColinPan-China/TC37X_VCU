@@ -121,12 +121,14 @@ Rte_ComM.h<br>
 Rte_Det.h<br>
 Rte_EcuM.h<br>
 Rte_Os_OsCore0_swc.h<br>
+Rte_PowerMng_SWC.h<br>
 Rte_SWC1.h<br>
 Rte_BswM_Type.h<br>
 Rte_ComM_Type.h<br>
 Rte_Det_Type.h<br>
 Rte_EcuM_Type.h<br>
 Rte_Os_OsCore0_swc_Type.h<br>
+Rte_PowerMng_SWC_Type.h<br>
 Rte_SWC1_Type.h<br>
 Rte_Main.h<br>
 Rte_Type.h<br>
@@ -140,6 +142,7 @@ BswM_MemMap.h<br>
 ComM_MemMap.h<br>
 EcuM_MemMap.h<br>
 Os_OsCore0_swc_MemMap.h<br>
+PowerMng_SWC_MemMap.h<br>
 SWC1_MemMap.h<br>
 Rte_Compiler_Cfg.h<br>
 Rte.c<br>
@@ -201,7 +204,7 @@ CONST Size: 0 Bytes<br>
 </TR>
 <TR>
 <TD>AswTask</TD>
-<TD>Basic</TD>
+<TD>Extended</TD>
 <TD>FULL</TD>
 <TD>64</TD>
 </TR>
@@ -399,6 +402,20 @@ CONST Size: 0 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>TimingEvent</B> Cyclic 1s</TD>
+<TD>Led_Runnable1000ms</TD>
+<TD>AswTask</TD>
+<TD>Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms</TD>
+<TD>Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms</TD>
+</TR>
+<TR>
+<TD><B>InitEvent</B></TD>
+<TD>PowerMng_SWC_Init</TD>
+<TD>Asw_Init</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>InitEvent</B></TD>
 <TD>SWC1_Init</TD>
 <TD>Asw_Init</TD>
@@ -409,7 +426,7 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>SWC1_Runnable10ms</TD>
 <TD>AswTask</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Run_SWC1_SWC1_Runnable10ms</TD>
 <TD>Rte_Al_TE_SWC1_SWC1_Runnable10ms</TD>
 </TR>
 </TABLE>

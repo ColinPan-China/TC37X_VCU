@@ -176,19 +176,6 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: SWC1_Runnable10ms
  *********************************************************************************************************************/
- #if 0
-  uint8 ret1 = 0;
-  uint8 ret2 = 0;
-  uint8 ret3 = 0;
-  ComM_ModeType mode1 = 0xFF;
-
-  Nm_StateType sts1 = 0xFF;
-  Nm_ModeType sts2 = 0xFF;
-  Rte_Write_Request_ESH_RunRequest_0_requestedMode(1);
-  ret1 = ComM_RequestComMode(0,2);
-  ret2 = ComM_GetCurrentComMode(0,&mode1);
-  ret3 = CanNm_GetState(0,sts1,sts2);
-#endif
 	Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

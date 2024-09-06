@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Lcfg.c
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2024-09-06 13:53:53
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -172,6 +172,7 @@ OS_LOCAL CONST(Os_ResourceConfigRefType, OS_CONST) OsCfg_Core_OsCore0_ResourceRe
 /*! Object reference table for core stacks: OsCore0 */
 OS_LOCAL CONST(Os_StackConfigRefType, OS_CONST) OsCfg_Core_OsCore0_StackRefs[OS_CFG_NUM_CORE_OSCORE0_STACKS + 1u] =
 {
+  (Os_StackConfigRefType) &OsCfg_Stack_AswTask,
   (Os_StackConfigRefType) &OsCfg_Stack_Bsw_Task,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Error,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Init,
@@ -181,7 +182,6 @@ OS_LOCAL CONST(Os_StackConfigRefType, OS_CONST) OsCfg_Core_OsCore0_StackRefs[OS_
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio49,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio50,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio63,
-  (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio64,
   NULL_PTR
 };
 

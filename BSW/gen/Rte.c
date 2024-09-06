@@ -37,6 +37,7 @@
 #include "Rte_Det.h"
 #include "Rte_EcuM.h"
 #include "Rte_Os_OsCore0_swc.h"
+#include "Rte_PowerMng_SWC.h"
 #include "Rte_SWC1.h"
 #include "SchM_BswM.h"
 #include "SchM_Can.h"
@@ -200,6 +201,9 @@ VAR(BswM_ESH_Mode, RTE_VAR_NOINIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_Bs
 #define RTE_CONST_MSEC_SystemTimer_10 (10UL)
 #define RTE_CONST_MSEC_SystemTimer_20 (20UL)
 
+#define RTE_CONST_SEC_SystemTimer_0 (0UL)
+#define RTE_CONST_SEC_SystemTimer_1 (1000UL)
+
 
 /**********************************************************************************************************************
  * Internal definitions
@@ -244,9 +248,11 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
   Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_BswM_ESH_Mode_STARTUP;
 
   /* activate the tasks */
+  (void)ActivateTask(AswTask); /* PRQA S 3417 */ /* MD_Rte_Os */
   (void)ActivateTask(Asw_Init); /* PRQA S 3417 */ /* MD_Rte_Os */
 
   /* activate the alarms used for TimingEvents */
+  (void)SetRelAlarm(Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms, RTE_SEC_SystemTimer(0) + (TickType)1, RTE_SEC_SystemTimer(1)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
   (void)SetRelAlarm(Rte_Al_TE_SWC1_SWC1_Runnable10ms, RTE_MSEC_SystemTimer(0) + (TickType)1, RTE_MSEC_SystemTimer(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
 
   return RTE_E_OK;
@@ -255,6 +261,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
 FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void)
 {
   /* deactivate alarms */
+  (void)CancelAlarm(Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms); /* PRQA S 3417 */ /* MD_Rte_Os */
   (void)CancelAlarm(Rte_Al_TE_SWC1_SWC1_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
 
   return RTE_E_OK;
@@ -393,15 +400,29 @@ FUNC(BswM_ESH_Mode, RTE_CODE) Rte_Mode_BswM_Notification_ESH_ModeNotification_Bs
  * Task:     AswTask
  * Priority: 64
  * Schedule: FULL
- * Alarm:    Cycle Time 0.01 s Alarm Offset 0 s
  *********************************************************************************************************************/
 TASK(AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 {
+  EventMaskType ev;
 
-  /* call runnable */
-  SWC1_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+  for(;;)
+  {
+    (void)WaitEvent(Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)GetEvent(AswTask, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
-  (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
+    if ((ev & Rte_Ev_Run_SWC1_SWC1_Runnable10ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      SWC1_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      Led_Runnable1000ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+  }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 /**********************************************************************************************************************
@@ -414,6 +435,9 @@ TASK(Asw_Init) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 
   /* call runnable */
   SWC1_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+  /* call runnable */
+  PowerMng_SWC_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
   (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

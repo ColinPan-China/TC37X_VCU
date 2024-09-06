@@ -84,6 +84,10 @@
  *  Rte_Runnable_Os_OsCore0_swc_GetCounterValue_Start
  *  Rte_Runnable_Os_OsCore0_swc_GetElapsedValue_Return
  *  Rte_Runnable_Os_OsCore0_swc_GetElapsedValue_Start
+ *  Rte_Runnable_PowerMng_SWC_Led_Runnable1000ms_Return
+ *  Rte_Runnable_PowerMng_SWC_Led_Runnable1000ms_Start
+ *  Rte_Runnable_PowerMng_SWC_PowerMng_SWC_Init_Return
+ *  Rte_Runnable_PowerMng_SWC_PowerMng_SWC_Init_Start
  *  Rte_Runnable_SWC1_SWC1_Init_Return
  *  Rte_Runnable_SWC1_SWC1_Init_Start
  *  Rte_Runnable_SWC1_SWC1_Runnable10ms_Return

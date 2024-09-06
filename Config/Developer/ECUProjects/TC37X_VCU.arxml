@@ -2,6 +2,20 @@
 <!--This file was saved with a tool from Vector Informatik GmbH-->
 <AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00046.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <AR-PACKAGES>
+    <AR-PACKAGE UUID="B9BAD034-52EC-4382-95D5-3998D3235C5C">
+      <SHORT-NAME>VehicleProject</SHORT-NAME>
+      <ELEMENTS>
+        <SYSTEM UUID="ECD63373-8DFE-48AF-843F-08D6A244503D">
+          <SHORT-NAME>System</SHORT-NAME>
+          <ROOT-SOFTWARE-COMPOSITIONS>
+            <ROOT-SW-COMPOSITION-PROTOTYPE UUID="E6FF58E5-F6B9-478A-BECA-DAB2EAADEAA0">
+              <SHORT-NAME>EcuSwComposition</SHORT-NAME>
+              <SOFTWARE-COMPOSITION-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/ECUCompositionTypes/ECU_Composition</SOFTWARE-COMPOSITION-TREF>
+            </ROOT-SW-COMPOSITION-PROTOTYPE>
+          </ROOT-SOFTWARE-COMPOSITIONS>
+        </SYSTEM>
+      </ELEMENTS>
+    </AR-PACKAGE>
     <AR-PACKAGE UUID="D830BB91-650E-44E5-A186-F9DE29FA25DE">
       <SHORT-NAME>ECUCompositionTypes</SHORT-NAME>
       <ELEMENTS>
@@ -19,6 +33,17 @@
               </ADMIN-DATA>
               <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/SWC1</TYPE-TREF>
             </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="7077C59A-EDFF-4EBD-992B-AD0A5D0AD472">
+              <SHORT-NAME>PowerMng_SWC</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/PowerMng_SWC</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
           </COMPONENTS>
         </COMPOSITION-SW-COMPONENT-TYPE>
       </ELEMENTS>
@@ -33,20 +58,6 @@
     </AR-PACKAGE>
     <AR-PACKAGE UUID="A06F2AC9-E42C-423C-9349-D10A3D0DDB9A">
       <SHORT-NAME>Systems</SHORT-NAME>
-    </AR-PACKAGE>
-    <AR-PACKAGE UUID="B9BAD034-52EC-4382-95D5-3998D3235C5C">
-      <SHORT-NAME>VehicleProject</SHORT-NAME>
-      <ELEMENTS>
-        <SYSTEM UUID="ECD63373-8DFE-48AF-843F-08D6A244503D">
-          <SHORT-NAME>System</SHORT-NAME>
-          <ROOT-SOFTWARE-COMPOSITIONS>
-            <ROOT-SW-COMPOSITION-PROTOTYPE UUID="E6FF58E5-F6B9-478A-BECA-DAB2EAADEAA0">
-              <SHORT-NAME>EcuSwComposition</SHORT-NAME>
-              <SOFTWARE-COMPOSITION-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/ECUCompositionTypes/ECU_Composition</SOFTWARE-COMPOSITION-TREF>
-            </ROOT-SW-COMPOSITION-PROTOTYPE>
-          </ROOT-SOFTWARE-COMPOSITIONS>
-        </SYSTEM>
-      </ELEMENTS>
     </AR-PACKAGE>
   </AR-PACKAGES>
 </AUTOSAR>
