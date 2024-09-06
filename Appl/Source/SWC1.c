@@ -51,6 +51,14 @@
  *      
  *      For example: 1, 0, 126, +10.
  *
+ * ComM_ModeType
+ *   uint8 represents integers with a minimum value of 0 and a maximum value of 255.
+ *      The order-relation on uint8 is: x < y if y - x is positive.
+ *      uint8 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 126, +10.
+ *
  *********************************************************************************************************************/
 
 #include "Rte_SWC1.h"
@@ -81,6 +89,10 @@
  * BswM_ESH_RunRequest: Enumeration of integer in interval [0...255] with enumerators
  *   RELEASED (0U)
  *   REQUESTED (1U)
+ * ComM_ModeType: Enumeration of integer in interval [0...3] with enumerators
+ *   COMM_NO_COMMUNICATION (0U)
+ *   COMM_SILENT_COMMUNICATION (1U)
+ *   COMM_FULL_COMMUNICATION (2U)
  *
  *********************************************************************************************************************/
 
@@ -137,6 +149,16 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  * Executed if at least one of the following trigger conditions occurred:
  *   - triggered on TimingEvent every 10ms
  *
+ **********************************************************************************************************************
+ *
+ * Service Calls:
+ * ==============
+ *   Service Invocation:
+ *   -------------------
+ *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode(ComM_ModeType ComMode)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
+ *
  *********************************************************************************************************************/
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
@@ -147,8 +169,7 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
-//#include "ComM.h"
-//#include "CanNm.h"
+
 FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
 {
 /**********************************************************************************************************************
@@ -168,6 +189,7 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
   ret2 = ComM_GetCurrentComMode(0,&mode1);
   ret3 = CanNm_GetState(0,sts1,sts2);
 #endif
+	Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

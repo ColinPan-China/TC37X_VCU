@@ -395,16 +395,12 @@ FUNC(BswM_ESH_Mode, RTE_CODE) Rte_Mode_BswM_Notification_ESH_ModeNotification_Bs
  * Schedule: FULL
  * Alarm:    Cycle Time 0.01 s Alarm Offset 0 s
  *********************************************************************************************************************/
-uint8 flg = 0x00U;
 TASK(AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 {
+
   /* call runnable */
   SWC1_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-  ComM_RequestComMode(0,2);
-  if( flg == 0x01 )
-  {
-    ComM_RequestComMode(0,0);
-  }
+
   (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 

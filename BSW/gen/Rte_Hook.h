@@ -28,6 +28,8 @@
  *
  * Not configured:
  *
+ *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode_Return
+ *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode_Start
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_0_requestedMode_Return
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_0_requestedMode_Start
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_1_requestedMode_Return

@@ -210,6 +210,17 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Request_ESH_RunRequest_0</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="2ff06897-3419-41ff-918e-dcb198635394">
+                                  <SHORT-NAME>ComM_UR_CN_TC37X_VCU_CAN00_b1b4f272_SWC1_UR_CN_TC37X_VCU_CAN00_b1b4f272</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_TC37X_VCU_CAN00_b1b4f272</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_TC37X_VCU_CAN00_b1b4f272</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -247,6 +258,8 @@
                                     <SD GID="bacf1fda-ae3c-493c-a98a-9a9410f65c68">/AURIX2G/EcucDefs/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior</SD>
                                     <SD GID="39242ab4-cb01-4a20-913a-bba37be83fbb">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE</SD>
                                     <SD GID="b0560f92-2d31-4daa-896f-70e823156344">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/BswM</SD>
+                                    <SD GID="274f233c-196e-4efd-8537-a049df7a976a">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</SD>
+                                    <SD GID="2ff06897-3419-41ff-918e-dcb198635394">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_TC37X_VCU_CAN00_b1b4f272_SWC1_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="3976e9f4-1667-4e85-89f1-31f8167f45a7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EcuM</SD>
                                     <SD GID="a3c529ec-93af-4763-9e8e-fc9e2e1f0773">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Os_OsCore0_swc</SD>
                                     <SD GID="905f0a6c-c4e3-4618-98f4-e4a4659c1740">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</SD>
@@ -257,6 +270,7 @@
                                     <SD GID="8C60CFAE-3BA3-41EE-B535-FF2A2B6A82D2">/ComponentTypes/SWC1/Request_ESH_RunRequest_0</SD>
                                     <SD GID="02DBAA78-6849-4155-8578-6FE38CB45AFA">/ComponentTypes/SWC1/SWC1_InternalBehavior/SWC1_InitEvent</SD>
                                     <SD GID="BB44E199-3151-4FAA-9617-E16CE2BFB43B">/ComponentTypes/SWC1/SWC1_InternalBehavior/TMT_SWC1_Runnable10ms</SD>
+                                    <SD GID="778A86CE-142A-46BD-8700-54AB1F8839D8">/ComponentTypes/SWC1/UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="66263F43-3F17-4564-9D9F-6367B86E68F2">/ComponentTypes/SWC1_Implementation</SD>
                                     <SD GID="83E5C50F-A163-4FAE-8F88-D29CE937AFED">/ECUCompositionTypes/ECU_Composition</SD>
                                     <SD GID="45326E4B-4115-4A85-8FF4-E06F7BAE2F7C">/ECUCompositionTypes/ECU_Composition/SWC1</SD>
@@ -308,6 +322,7 @@
                                     <SD GID="29c05688-a08e-49c6-ba26-a39635214f50">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="cf9247b4-21f0-4476-a171-834c6032e746">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="a79c2142-00a2-4471-ae46-c0bca0868254">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
+                                    <SD GID="ab1e5b41-3baa-4fcf-aec5-44c99b7466d5">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="67ce1ed5-0cd8-4659-8ac8-43f5140ba846">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionRx_ComMainFunctionRx</SD>
                                     <SD GID="f0154cf3-78b1-439c-8e4f-9030105fdde1">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionRx_ComMainFunctionRxTimingEvent0</SD>
                                     <SD GID="6449745c-0c85-4010-bbca-08969bfc9cab">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionTx_ComMainFunctionTx</SD>
