@@ -133,6 +133,18 @@
         <Splitter File=".\Config\ECUC\TC37X_VCU_Nm_Nm_ecuc.arxml">
             <Module Name="Nm"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Fls_Fls_ecuc.arxml">
+            <Module Name="Fls"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Fee_Fee_ecuc.arxml">
+            <Module Name="Fee"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_MemIf_MemIf_ecuc.arxml">
+            <Module Name="MemIf"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_NvM_NvM_ecuc.arxml">
+            <Module Name="NvM"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>

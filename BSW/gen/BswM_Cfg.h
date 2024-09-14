@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2024-09-14 13:53:48
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -41,6 +41,7 @@
 #include "BswM_ComM.h"
 #include "BswM_CanSM.h"
 #include "BswM_EcuM.h"
+#include "BswM_NvM.h"
 #include "BswM_Nm.h"
 #include "Rte_BswM_Type.h"
 
@@ -121,7 +122,7 @@
 #define BSWM_ENABLE_ETHSM                    STD_OFF
 #define BSWM_ENABLE_LINTP                    STD_OFF
 #define BSWM_ENABLE_DCM                      STD_OFF
-#define BSWM_ENABLE_NVM                      STD_OFF
+#define BSWM_ENABLE_NVM                      STD_ON
 #define BSWM_ENABLE_ECUM                     STD_ON
 #define BSWM_ENABLE_COMM                     STD_ON
 #define BSWM_ENABLE_J1939DCM                 STD_OFF
@@ -1490,6 +1491,7 @@ extern FUNC(void, BSWM_CODE) BswM_ESH_OnEnterRun(void);
 extern FUNC(void, BSWM_CODE) BswM_ESH_OnEnterShutdown(void);
 extern FUNC(void, BSWM_CODE) BswM_ESH_OnEnterWaitForNvm(void);
 extern FUNC(void, BSWM_CODE) BswM_ESH_OnEnterWakeup(void);
+extern FUNC(void, BSWM_CODE) BswM_INIT_NvMReadAll(void);
 extern FUNC(void, BSWM_CODE) ESH_ComM_CheckPendingRequests(void);
 /* PRQA L:CALLOUTDECLARATIONS */
 

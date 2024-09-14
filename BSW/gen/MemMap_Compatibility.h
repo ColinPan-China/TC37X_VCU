@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: MemMap_Compatibility.h
- *   Generation Time: 2024-09-06 15:26:32
+ *   Generation Time: 2024-09-14 13:44:01
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -516,6 +516,35 @@
 # pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
 
 # undef RTE_STOP_SEC_COM_SWC_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_NVM_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_NVM_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_NVM_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_NVM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_NVM_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_NVM_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_NVM_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_NVM_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_NVM_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_NVM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
 
 /* -------------------------------------------------------------------------------- */
@@ -6687,6 +6716,430 @@
 
 # undef Det_STOP_SEC_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined NVM_START_SEC_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using NVM_START_SEC_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define NVM_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_START_SEC_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined NVM_STOP_SEC_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using NVM_STOP_SEC_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef NVM_CODE_OPEN
+#  error Using NVM_STOP_SEC_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef NVM_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_STOP_SEC_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined NVM_START_SEC_CONST_16
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using NVM_START_SEC_CONST_16 is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define NVM_CONST_16_OPEN
+
+# pragma section farrom "MSR_CONST" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearrom "MSR_CONST_FAST" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_START_SEC_CONST_16 /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined NVM_STOP_SEC_CONST_16
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using NVM_STOP_SEC_CONST_16 is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef NVM_CONST_16_OPEN
+#  error Using NVM_STOP_SEC_CONST_16 is not possible as the corresponding memory section has not been opened.
+# endif
+# undef NVM_CONST_16_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section farrom restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearrom restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_STOP_SEC_CONST_16 /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined NVM_START_SEC_CONST_UNSPECIFIED
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using NVM_START_SEC_CONST_UNSPECIFIED is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define NVM_CONST_UNSPECIFIED_OPEN
+
+# pragma section farrom "MSR_CONST" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearrom "MSR_CONST_FAST" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_START_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined NVM_STOP_SEC_CONST_UNSPECIFIED
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using NVM_STOP_SEC_CONST_UNSPECIFIED is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef NVM_CONST_UNSPECIFIED_OPEN
+#  error Using NVM_STOP_SEC_CONST_UNSPECIFIED is not possible as the corresponding memory section has not been opened.
+# endif
+# undef NVM_CONST_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section farrom restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearrom restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_STOP_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined NVM_START_SEC_VAR_NO_INIT_8
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using NVM_START_SEC_VAR_NO_INIT_8 is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define NVM_VAR_NO_INIT_8_OPEN
+
+# pragma section farnoclear "MSR_VAR_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "MSR_VAR_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata "MSR_VAR_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear "MSR_VAR_FAST_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss "MSR_VAR_FAST_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata "MSR_VAR_FAST_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_START_SEC_VAR_NO_INIT_8 /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined NVM_STOP_SEC_VAR_NO_INIT_8
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using NVM_STOP_SEC_VAR_NO_INIT_8 is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef NVM_VAR_NO_INIT_8_OPEN
+#  error Using NVM_STOP_SEC_VAR_NO_INIT_8 is not possible as the corresponding memory section has not been opened.
+# endif
+# undef NVM_VAR_NO_INIT_8_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_STOP_SEC_VAR_NO_INIT_8 /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined NVM_START_SEC_VAR_NO_INIT_UNSPECIFIED
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using NVM_START_SEC_VAR_NO_INIT_UNSPECIFIED is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define NVM_VAR_NO_INIT_UNSPECIFIED_OPEN
+
+# pragma section farnoclear "MSR_VAR_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "MSR_VAR_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata "MSR_VAR_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear "MSR_VAR_FAST_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss "MSR_VAR_FAST_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata "MSR_VAR_FAST_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_START_SEC_VAR_NO_INIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined NVM_STOP_SEC_VAR_NO_INIT_UNSPECIFIED
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using NVM_STOP_SEC_VAR_NO_INIT_UNSPECIFIED is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef NVM_VAR_NO_INIT_UNSPECIFIED_OPEN
+#  error Using NVM_STOP_SEC_VAR_NO_INIT_UNSPECIFIED is not possible as the corresponding memory section has not been opened.
+# endif
+# undef NVM_VAR_NO_INIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_STOP_SEC_VAR_NO_INIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined NVM_START_SEC_VAR_CLEARED_UNSPECIFIED
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using NVM_START_SEC_VAR_CLEARED_UNSPECIFIED is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define NVM_VAR_CLEARED_UNSPECIFIED_OPEN
+
+# pragma section farnoclear "MSR_VAR_CLEARED" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "MSR_VAR_CLEARED" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata "MSR_VAR_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear "MSR_VAR_FAST_CLEARED" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss "MSR_VAR_FAST_CLEARED" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata "MSR_VAR_FAST_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_START_SEC_VAR_CLEARED_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined NVM_STOP_SEC_VAR_CLEARED_UNSPECIFIED
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using NVM_STOP_SEC_VAR_CLEARED_UNSPECIFIED is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef NVM_VAR_CLEARED_UNSPECIFIED_OPEN
+#  error Using NVM_STOP_SEC_VAR_CLEARED_UNSPECIFIED is not possible as the corresponding memory section has not been opened.
+# endif
+# undef NVM_VAR_CLEARED_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_STOP_SEC_VAR_CLEARED_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined NVM_START_SEC_VAR_FAST_NO_INIT_8
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using NVM_START_SEC_VAR_FAST_NO_INIT_8 is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define NVM_VAR_FAST_NO_INIT_8_OPEN
+
+# pragma section farnoclear "MSR_VAR_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "MSR_VAR_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata "MSR_VAR_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear "MSR_VAR_FAST_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss "MSR_VAR_FAST_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata "MSR_VAR_FAST_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_START_SEC_VAR_FAST_NO_INIT_8 /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined NVM_STOP_SEC_VAR_FAST_NO_INIT_8
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using NVM_STOP_SEC_VAR_FAST_NO_INIT_8 is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef NVM_VAR_FAST_NO_INIT_8_OPEN
+#  error Using NVM_STOP_SEC_VAR_FAST_NO_INIT_8 is not possible as the corresponding memory section has not been opened.
+# endif
+# undef NVM_VAR_FAST_NO_INIT_8_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NVM_STOP_SEC_VAR_FAST_NO_INIT_8 /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined NvM_START_SEC_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using NvM_START_SEC_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define NvM_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NvM_START_SEC_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined NvM_STOP_SEC_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using NvM_STOP_SEC_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef NvM_CODE_OPEN
+#  error Using NvM_STOP_SEC_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef NvM_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NvM_STOP_SEC_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined NvM_START_SEC_CONST_UNSPECIFIED
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using NvM_START_SEC_CONST_UNSPECIFIED is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define NvM_CONST_UNSPECIFIED_OPEN
+
+# pragma section farrom "MSR_CONST" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearrom "MSR_CONST_FAST" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NvM_START_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined NvM_STOP_SEC_CONST_UNSPECIFIED
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using NvM_STOP_SEC_CONST_UNSPECIFIED is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef NvM_CONST_UNSPECIFIED_OPEN
+#  error Using NvM_STOP_SEC_CONST_UNSPECIFIED is not possible as the corresponding memory section has not been opened.
+# endif
+# undef NvM_CONST_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section farrom restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearrom restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NvM_STOP_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined NvM_START_SEC_VAR_NOINIT_UNSPECIFIED
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using NvM_START_SEC_VAR_NOINIT_UNSPECIFIED is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define NvM_VAR_NOINIT_UNSPECIFIED_OPEN
+
+# pragma section farnoclear "MSR_VAR_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "MSR_VAR_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata "MSR_VAR_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear "MSR_VAR_FAST_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss "MSR_VAR_FAST_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata "MSR_VAR_FAST_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NvM_START_SEC_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined NvM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using NvM_STOP_SEC_VAR_NOINIT_UNSPECIFIED is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef NvM_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Using NvM_STOP_SEC_VAR_NOINIT_UNSPECIFIED is not possible as the corresponding memory section has not been opened.
+# endif
+# undef NvM_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NvM_STOP_SEC_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined NvM_START_SEC_VAR_INIT_UNSPECIFIED
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using NvM_START_SEC_VAR_INIT_UNSPECIFIED is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define NvM_VAR_INIT_UNSPECIFIED_OPEN
+
+# pragma section farnoclear "MSR_VAR_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "MSR_VAR_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata "MSR_VAR_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear "MSR_VAR_FAST_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss "MSR_VAR_FAST_NO_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata "MSR_VAR_FAST_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NvM_START_SEC_VAR_INIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined NvM_STOP_SEC_VAR_INIT_UNSPECIFIED
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using NvM_STOP_SEC_VAR_INIT_UNSPECIFIED is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef NvM_VAR_INIT_UNSPECIFIED_OPEN
+#  error Using NvM_STOP_SEC_VAR_INIT_UNSPECIFIED is not possible as the corresponding memory section has not been opened.
+# endif
+# undef NvM_VAR_INIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NvM_STOP_SEC_VAR_INIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined NvM_START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using NvM_START_SEC_VAR_ZERO_INIT_UNSPECIFIED is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define NvM_VAR_ZERO_INIT_UNSPECIFIED_OPEN
+
+# pragma section farnoclear "MSR_VAR_CLEARED" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "MSR_VAR_CLEARED" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata "MSR_VAR_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear "MSR_VAR_FAST_CLEARED" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss "MSR_VAR_FAST_CLEARED" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata "MSR_VAR_FAST_INIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NvM_START_SEC_VAR_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined NvM_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using NvM_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef NvM_VAR_ZERO_INIT_UNSPECIFIED_OPEN
+#  error Using NvM_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED is not possible as the corresponding memory section has not been opened.
+# endif
+# undef NvM_VAR_ZERO_INIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section fardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section neardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef NvM_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
 #endif
 
 /* -------------------------------------------------------------------------------- */
@@ -6785,6 +7238,12 @@
 #endif
 #ifdef RTE_STOP_SEC_COM_SWC_APPL_CODE
 # error Using RTE_STOP_SEC_COM_SWC_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_NVM_APPL_CODE
+# error Using RTE_START_SEC_NVM_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_NVM_APPL_CODE
+# error Using RTE_STOP_SEC_NVM_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
 #endif
 #ifdef PDUR_START_SEC_BUFFER_VAR_FAST_CLEARED_8
 # error Using PDUR_START_SEC_BUFFER_VAR_FAST_CLEARED_8 is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
@@ -7769,6 +8228,78 @@
 #endif
 #ifdef Det_STOP_SEC_CODE
 # error Using Det_STOP_SEC_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_START_SEC_CODE
+# error Using NVM_START_SEC_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_STOP_SEC_CODE
+# error Using NVM_STOP_SEC_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_START_SEC_CONST_16
+# error Using NVM_START_SEC_CONST_16 is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_STOP_SEC_CONST_16
+# error Using NVM_STOP_SEC_CONST_16 is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_START_SEC_CONST_UNSPECIFIED
+# error Using NVM_START_SEC_CONST_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_STOP_SEC_CONST_UNSPECIFIED
+# error Using NVM_STOP_SEC_CONST_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_START_SEC_VAR_NO_INIT_8
+# error Using NVM_START_SEC_VAR_NO_INIT_8 is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_STOP_SEC_VAR_NO_INIT_8
+# error Using NVM_STOP_SEC_VAR_NO_INIT_8 is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_START_SEC_VAR_NO_INIT_UNSPECIFIED
+# error Using NVM_START_SEC_VAR_NO_INIT_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_STOP_SEC_VAR_NO_INIT_UNSPECIFIED
+# error Using NVM_STOP_SEC_VAR_NO_INIT_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_START_SEC_VAR_CLEARED_UNSPECIFIED
+# error Using NVM_START_SEC_VAR_CLEARED_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_STOP_SEC_VAR_CLEARED_UNSPECIFIED
+# error Using NVM_STOP_SEC_VAR_CLEARED_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_START_SEC_VAR_FAST_NO_INIT_8
+# error Using NVM_START_SEC_VAR_FAST_NO_INIT_8 is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NVM_STOP_SEC_VAR_FAST_NO_INIT_8
+# error Using NVM_STOP_SEC_VAR_FAST_NO_INIT_8 is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NvM_START_SEC_CODE
+# error Using NvM_START_SEC_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NvM_STOP_SEC_CODE
+# error Using NvM_STOP_SEC_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NvM_START_SEC_CONST_UNSPECIFIED
+# error Using NvM_START_SEC_CONST_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NvM_STOP_SEC_CONST_UNSPECIFIED
+# error Using NvM_STOP_SEC_CONST_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NvM_START_SEC_VAR_NOINIT_UNSPECIFIED
+# error Using NvM_START_SEC_VAR_NOINIT_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NvM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+# error Using NvM_STOP_SEC_VAR_NOINIT_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NvM_START_SEC_VAR_INIT_UNSPECIFIED
+# error Using NvM_START_SEC_VAR_INIT_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NvM_STOP_SEC_VAR_INIT_UNSPECIFIED
+# error Using NvM_STOP_SEC_VAR_INIT_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NvM_START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# error Using NvM_START_SEC_VAR_ZERO_INIT_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef NvM_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# error Using NvM_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
 #endif
 
 

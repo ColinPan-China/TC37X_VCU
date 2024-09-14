@@ -42,7 +42,8 @@
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 #include "Dio.h"
-
+#include "Nvm.h"
+#include "vstdlib.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -84,7 +85,9 @@ void LED_LightFunc()
   }
   index++;
 }
-
+uint8 CmdNvm = 0;
+uint8 BuffRd[16];
+uint8 BuffWr[16];
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -96,7 +99,18 @@ FUNC(void, PowerMng_SWC_CODE) Led_Runnable1000ms(void) /* PRQA S 0624, 3206 */ /
  * Symbol: Led_Runnable1000ms
  *********************************************************************************************************************/
 LED_LightFunc();
-
+if(CmdNvm == 1)
+{
+  VStdMemSet(BuffWr,0xAA,sizeof(BuffWr));
+  NvM_WriteBlock(NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0,BuffWr);
+  CmdNvm = 0;
+}
+if(CmdNvm == 2)
+{
+  VStdMemSet(BuffRd,0xFF,sizeof(BuffRd));
+  NvM_ReadBlock(NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0,BuffRd);
+    CmdNvm = 0;
+}
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

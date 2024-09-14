@@ -138,6 +138,9 @@ typedef const void * dtRef_const_VOID;
 #  define Rte_TypeDef_Dem_UdsStatusByteType
 typedef uint8 Dem_UdsStatusByteType;
 
+#  define Rte_TypeDef_NvM_BlockIdType
+typedef uint16 NvM_BlockIdType;
+
 #  define Rte_TypeDef_NvM_RequestResultType
 typedef uint8 NvM_RequestResultType;
 

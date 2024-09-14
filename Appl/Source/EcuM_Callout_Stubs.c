@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2024-09-14 13:53:48
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -71,6 +71,7 @@
 #include "Rte_Main.h" 
 #include "Port.h" 
 #include "Mcu.h" 
+#include "Fls_17_Dmu.h" 
 
 
 /**********************************************************************************************************************
@@ -250,6 +251,7 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverInitOne(void)
   Mcu_Init( &Mcu_Config );
   Mcu_InitClock(0);while (MCU_PLL_LOCKED != Mcu_GetPllStatus());Mcu_DistributePllClock();
   BswM_PreInit( BswM_Config_Ptr );
+  Fls_17_Dmu_Init( &Fls_17_Dmu_Config );
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_AL_DriverInitOne>                  DO NOT CHANGE THIS COMMENT!

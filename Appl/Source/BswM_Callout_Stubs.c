@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Callout_Stubs.c
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2024-09-14 13:53:48
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -167,6 +167,29 @@ FUNC(void, BSWM_CODE) BswM_ESH_OnEnterWakeup(void)
  *********************************************************************************************************************/
 
 } /* End of BswM_ESH_OnEnterWakeup */
+
+
+FUNC(void, BSWM_CODE) BswM_INIT_NvMReadAll(void)
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           <USERBLOCK BswM_INIT_NvMReadAll>                   DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+  NvM_RequestResultType BlockStatus;
+  /*NVM ReadAll*/
+  NvM_ReadAll();
+  do
+  {
+    Fls_17_Dmu_MainFunction();
+    Fee_MainFunction();
+    NvM_MainFunction();
+
+    NvM_GetErrorStatus(NvMConf___MultiBlockRequest,&BlockStatus);
+  } while ( NVM_REQ_PENDING == BlockStatus );
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+} /* End of BswM_INIT_NvMReadAll */
 
 
 FUNC(void, BSWM_CODE) ESH_ComM_CheckPendingRequests(void)

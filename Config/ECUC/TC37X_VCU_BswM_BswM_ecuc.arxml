@@ -72,7 +72,7 @@
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMGeneral/BswMNvMEnabled</DEFINITION-REF>
-                  <VALUE>false</VALUE>
+                  <VALUE>true</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMGeneral/BswMPduREnabled</DEFINITION-REF>
@@ -203,11 +203,76 @@
                               </SDG>
                             </SDG>
                           </SDG>
+                          <SDG GID="DV:ESH">
+                            <SD GID="DV:Version">19.03.00.02</SD>
+                            <SDG GID="DV:Feature:ECU_State_Machine">
+                              <SD GID="DV:Name">ECU State Machine</SD>
+                              <SD GID="DV:Value">TRUE</SD>
+                              <SDG GID="DV:Param:Self_Run_Request_Timeout">
+                                <SD GID="DV:Name">Self Run Request Timeout</SD>
+                                <SD GID="DV:Default">0.1</SD>
+                                <SD GID="DV:Value">0.1</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:Run_User">
+                                <SD GID="DV:Name">Number of Run Request User</SD>
+                                <SD GID="DV:Default">0</SD>
+                                <SD GID="DV:Value">2</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:PostRun_User">
+                                <SD GID="DV:Name">Number of PostRun Request User</SD>
+                                <SD GID="DV:Default">0</SD>
+                                <SD GID="DV:Value">2</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:Kill_All_Run_Request_Port">
+                                <SD GID="DV:Name">Kill All Run Request Port</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:Dem_Handling">
+                                <SD GID="DV:Name">Dem Handling</SD>
+                                <SD GID="DV:Value">FALSE</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:Support_ComM">
+                                <SD GID="DV:Name">Support ComM</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                                <SDG GID="DV:Feature:CN_TC37X_VCU_CAN00_07b6c9c8">
+                                  <SD GID="DV:Name">CN_TC37X_VCU_CAN00_07b6c9c8</SD>
+                                  <SD GID="DV:Value">TRUE</SD>
+                                </SDG>
+                              </SDG>
+                              <SDG GID="DV:Feature:NvM_Handling">
+                                <SD GID="DV:Name">NvM Handling</SD>
+                                <SD GID="DV:Value">FALSE</SD>
+                                <SDG GID="DV:Param:NvM_Write_All_Timeout">
+                                  <SD GID="DV:Name">NvM Write All Timeout</SD>
+                                  <SD GID="DV:Default">60</SD>
+                                  <SD GID="DV:Value">60</SD>
+                                </SDG>
+                                <SDG GID="DV:Param:NvM_Cancel_Write_All_Timeout">
+                                  <SD GID="DV:Name">NvM Cancel Write All Timeout</SD>
+                                  <SD GID="DV:Default">60</SD>
+                                  <SD GID="DV:Value">60</SD>
+                                </SDG>
+                              </SDG>
+                              <SDG GID="DV:Feature:Rte_Mode_Synchronization">
+                                <SD GID="DV:Name">Rte Mode Synchronization</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:Enable_Callouts">
+                                <SD GID="DV:Name">Enable Callouts</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:EcuM_Mode_Handling">
+                                <SD GID="DV:Name">EcuM Mode Handling</SD>
+                                <SD GID="DV:Value">FALSE</SD>
+                              </SDG>
+                            </SDG>
+                          </SDG>
                           <SDG GID="DV:INIT">
                             <SD GID="DV:Version">19.03.00.02</SD>
                             <SDG GID="DV:Feature:NvMReadAll">
                               <SD GID="DV:Name">Execute NvM ReadAll</SD>
-                              <SD GID="DV:Value">FALSE</SD>
+                              <SD GID="DV:Value">TRUE</SD>
                             </SDG>
                             <SDG GID="DV:Feature:EnableInterrupts">
                               <SD GID="DV:Name">Enable Interrupts</SD>
@@ -288,6 +353,20 @@
                                     <SD GID="DV:Value">ComM.h</SD>
                                   </SDG>
                                 </SDG>
+                                <SDG GID="DV:Feature:Fls_17_Dmu_Init">
+                                  <SD GID="DV:Name">Fls_17_Dmu_Init</SD>
+                                  <SD GID="DV:Value">FALSE</SD>
+                                  <SDG GID="DV:Param:Fls_17_Dmu_Init_Function">
+                                    <SD GID="DV:Name">Fls_17_Dmu_Init Function</SD>
+                                    <SD GID="DV:Default">Fls_17_Dmu_Init(&amp;Fls_17_Dmu_Config)</SD>
+                                    <SD GID="DV:Value">Fls_17_Dmu_Init(&amp;Fls_17_Dmu_Config)</SD>
+                                  </SDG>
+                                  <SDG GID="DV:Param:Fls_17_Dmu_Init_Header">
+                                    <SD GID="DV:Name">Fls_17_Dmu_Init Header</SD>
+                                    <SD GID="DV:Default">Fls_17_Dmu.h</SD>
+                                    <SD GID="DV:Value">Fls_17_Dmu.h</SD>
+                                  </SDG>
+                                </SDG>
                                 <SDG GID="DV:Feature:Nm_PreInit">
                                   <SD GID="DV:Name">Nm_PreInit</SD>
                                   <SD GID="DV:Value">TRUE</SD>
@@ -314,6 +393,24 @@
                                     <SD GID="DV:Name">PduR_PreInit Header</SD>
                                     <SD GID="DV:Default">PduR.h</SD>
                                     <SD GID="DV:Value">PduR.h</SD>
+                                  </SDG>
+                                </SDG>
+                              </SDG>
+                              <SDG GID="DV:Feature:INIT_ONE_LATE">
+                                <SD GID="DV:Name">InitPhase: INIT_ONE_LATE</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                                <SDG GID="DV:Feature:Fee_Init">
+                                  <SD GID="DV:Name">Fee_Init</SD>
+                                  <SD GID="DV:Value">TRUE</SD>
+                                  <SDG GID="DV:Param:Fee_Init_Function">
+                                    <SD GID="DV:Name">Fee_Init Function</SD>
+                                    <SD GID="DV:Default">Fee_Init(&amp;Fee_Config)</SD>
+                                    <SD GID="DV:Value">Fee_Init(&amp;Fee_Config)</SD>
+                                  </SDG>
+                                  <SDG GID="DV:Param:Fee_Init_Header">
+                                    <SD GID="DV:Name">Fee_Init Header</SD>
+                                    <SD GID="DV:Default">Fee.h</SD>
+                                    <SD GID="DV:Value">Fee.h</SD>
                                   </SDG>
                                 </SDG>
                               </SDG>
@@ -435,6 +532,24 @@
                                   </SDG>
                                 </SDG>
                               </SDG>
+                              <SDG GID="DV:Feature:INIT_TWO_SYS">
+                                <SD GID="DV:Name">InitPhase: INIT_TWO_SYS</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                                <SDG GID="DV:Feature:NvM_Init">
+                                  <SD GID="DV:Name">NvM_Init</SD>
+                                  <SD GID="DV:Value">TRUE</SD>
+                                  <SDG GID="DV:Param:NvM_Init_Function">
+                                    <SD GID="DV:Name">NvM_Init Function</SD>
+                                    <SD GID="DV:Default">NvM_Init()</SD>
+                                    <SD GID="DV:Value">NvM_Init()</SD>
+                                  </SDG>
+                                  <SDG GID="DV:Param:NvM_Init_Header">
+                                    <SD GID="DV:Name">NvM_Init Header</SD>
+                                    <SD GID="DV:Default">NvM.h</SD>
+                                    <SD GID="DV:Value">NvM.h</SD>
+                                  </SDG>
+                                </SDG>
+                              </SDG>
                               <SDG GID="DV:Feature:INIT_TWO_POST_NVMREADALL">
                                 <SD GID="DV:Name">InitPhase: INIT_TWO_POST_NVMREADALL</SD>
                                 <SD GID="DV:Value">TRUE</SD>
@@ -530,71 +645,6 @@
                                   <SD GID="DV:Default">ResourceM.h</SD>
                                   <SD GID="DV:Value">ResourceM.h</SD>
                                 </SDG>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                          <SDG GID="DV:ESH">
-                            <SD GID="DV:Version">19.03.00.02</SD>
-                            <SDG GID="DV:Feature:ECU_State_Machine">
-                              <SD GID="DV:Name">ECU State Machine</SD>
-                              <SD GID="DV:Value">TRUE</SD>
-                              <SDG GID="DV:Param:Self_Run_Request_Timeout">
-                                <SD GID="DV:Name">Self Run Request Timeout</SD>
-                                <SD GID="DV:Default">0.1</SD>
-                                <SD GID="DV:Value">0.1</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:Run_User">
-                                <SD GID="DV:Name">Number of Run Request User</SD>
-                                <SD GID="DV:Default">0</SD>
-                                <SD GID="DV:Value">2</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:PostRun_User">
-                                <SD GID="DV:Name">Number of PostRun Request User</SD>
-                                <SD GID="DV:Default">0</SD>
-                                <SD GID="DV:Value">2</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:Kill_All_Run_Request_Port">
-                                <SD GID="DV:Name">Kill All Run Request Port</SD>
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:Dem_Handling">
-                                <SD GID="DV:Name">Dem Handling</SD>
-                                <SD GID="DV:Value">FALSE</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:Support_ComM">
-                                <SD GID="DV:Name">Support ComM</SD>
-                                <SD GID="DV:Value">TRUE</SD>
-                                <SDG GID="DV:Feature:CN_TC37X_VCU_CAN00_07b6c9c8">
-                                  <SD GID="DV:Name">CN_TC37X_VCU_CAN00_07b6c9c8</SD>
-                                  <SD GID="DV:Value">TRUE</SD>
-                                </SDG>
-                              </SDG>
-                              <SDG GID="DV:Feature:NvM_Handling">
-                                <SD GID="DV:Name">NvM Handling</SD>
-                                <SD GID="DV:Value">FALSE</SD>
-                                <SDG GID="DV:Param:NvM_Write_All_Timeout">
-                                  <SD GID="DV:Name">NvM Write All Timeout</SD>
-                                  <SD GID="DV:Default">60</SD>
-                                  <SD GID="DV:Value">60</SD>
-                                </SDG>
-                                <SDG GID="DV:Param:NvM_Cancel_Write_All_Timeout">
-                                  <SD GID="DV:Name">NvM Cancel Write All Timeout</SD>
-                                  <SD GID="DV:Default">60</SD>
-                                  <SD GID="DV:Value">60</SD>
-                                </SDG>
-                              </SDG>
-                              <SDG GID="DV:Feature:Rte_Mode_Synchronization">
-                                <SD GID="DV:Name">Rte Mode Synchronization</SD>
-                                <SD GID="DV:Value">TRUE</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:Enable_Callouts">
-                                <SD GID="DV:Name">Enable Callouts</SD>
-                                <SD GID="DV:Value">TRUE</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:EcuM_Mode_Handling">
-                                <SD GID="DV:Name">EcuM Mode Handling</SD>
-                                <SD GID="DV:Value">FALSE</SD>
                               </SDG>
                             </SDG>
                           </SDG>
@@ -6677,7 +6727,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>10</VALUE>
+                              <VALUE>13</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -6801,7 +6851,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>3</VALUE>
+                              <VALUE>4</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -6832,7 +6882,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>4</VALUE>
+                              <VALUE>5</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -6863,7 +6913,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>5</VALUE>
+                              <VALUE>6</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -6894,7 +6944,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>6</VALUE>
+                              <VALUE>7</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -6925,7 +6975,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>7</VALUE>
+                              <VALUE>8</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -6956,7 +7006,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>8</VALUE>
+                              <VALUE>9</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -6987,7 +7037,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>9</VALUE>
+                              <VALUE>10</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -7018,7 +7068,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>11</VALUE>
+                              <VALUE>14</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -7049,7 +7099,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>12</VALUE>
+                              <VALUE>15</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -7080,7 +7130,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>13</VALUE>
+                              <VALUE>16</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -7111,13 +7161,106 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>14</VALUE>
+                              <VALUE>17</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
                             <ECUC-REFERENCE-VALUE>
                               <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
                               <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/INIT_Action_Rte_Start</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="be7c120b-c8d0-4867-ad13-cd0956f89235">
+                          <SHORT-NAME>INIT_Action_Fee_Init</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="DV:BswM">
+                                <SDG GID="DV:Statemachines">
+                                  <SDG GID="DV:INIT">
+                                    <SD GID="NAME">INIT_Action_Fee_Init</SD>
+                                  </SDG>
+                                </SDG>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMAbortOnFail</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
+                              <VALUE>3</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/INIT_Action_Fee_Init</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="1a356ea9-2fe8-4013-a7ea-95d6d9a8358b">
+                          <SHORT-NAME>INIT_Action_NvM_Init</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="DV:BswM">
+                                <SDG GID="DV:Statemachines">
+                                  <SDG GID="DV:INIT">
+                                    <SD GID="NAME">INIT_Action_NvM_Init</SD>
+                                  </SDG>
+                                </SDG>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMAbortOnFail</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
+                              <VALUE>11</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/INIT_Action_NvM_Init</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="5e4e7503-ee2d-42e9-98dc-129454586190">
+                          <SHORT-NAME>INIT_Action_NvMReadAll</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="DV:BswM">
+                                <SDG GID="DV:Statemachines">
+                                  <SDG GID="DV:INIT">
+                                    <SD GID="NAME">INIT_Action_NvMReadAll</SD>
+                                  </SDG>
+                                </SDG>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMAbortOnFail</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
+                              <VALUE>12</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/INIT_Action_NvMReadAll</VALUE-REF>
                             </ECUC-REFERENCE-VALUE>
                           </REFERENCE-VALUES>
                         </ECUC-CONTAINER-VALUE>
@@ -9300,6 +9443,125 @@ else&#13;
                                   <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserIncludeFile</DEFINITION-REF>
                                   <VALUE>Rte_Main.h</VALUE>
                                 </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="cdf4ee87-9958-40c7-84f4-4d654bce5e9d">
+                      <SHORT-NAME>INIT_Action_Fee_Init</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:BswM">
+                            <SDG GID="DV:Statemachines">
+                              <SDG GID="DV:INIT">
+                                <SD GID="NAME">INIT_Action_Fee_Init</SD>
+                              </SDG>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="8877529c-6b0a-421f-a5de-83631e505d94">
+                          <SHORT-NAME>BswMAvailableActions</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="075e25e1-4391-4d05-8bdf-1d6d280ad87e">
+                              <SHORT-NAME>BswMUserCallout</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserCalloutFunction</DEFINITION-REF>
+                                  <VALUE>Fee_Init(&amp;Fee_Config)</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMCreateCallout</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserIncludeFile</DEFINITION-REF>
+                                  <VALUE>Fee.h</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="c0bd06a2-afdd-4831-8d18-9cd64bed0a20">
+                      <SHORT-NAME>INIT_Action_NvM_Init</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:BswM">
+                            <SDG GID="DV:Statemachines">
+                              <SDG GID="DV:INIT">
+                                <SD GID="NAME">INIT_Action_NvM_Init</SD>
+                              </SDG>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="deddec0f-6f2a-4de4-86ad-6ae30cd5eac4">
+                          <SHORT-NAME>BswMAvailableActions</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="160cd025-c18a-46d5-b466-3139b08e1ead">
+                              <SHORT-NAME>BswMUserCallout</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserCalloutFunction</DEFINITION-REF>
+                                  <VALUE>NvM_Init()</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMCreateCallout</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserIncludeFile</DEFINITION-REF>
+                                  <VALUE>NvM.h</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="6aa17bf0-c940-4fff-959c-53708556a30a">
+                      <SHORT-NAME>INIT_Action_NvMReadAll</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:BswM">
+                            <SDG GID="DV:Statemachines">
+                              <SDG GID="DV:INIT">
+                                <SD GID="NAME">INIT_Action_NvMReadAll</SD>
+                              </SDG>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="f49f4458-a0b3-49fc-a5a6-e23ac1df3118">
+                          <SHORT-NAME>BswMAvailableActions</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="74ccb6ab-16d0-4ca3-b2d7-40718c7708a1">
+                              <SHORT-NAME>BswMUserCallout</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserCalloutFunction</DEFINITION-REF>
+                                  <VALUE>BswM_INIT_NvMReadAll()</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMCreateCallout</DEFINITION-REF>
+                                  <VALUE>true</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
                               </PARAMETER-VALUES>
                             </ECUC-CONTAINER-VALUE>
                           </SUB-CONTAINERS>

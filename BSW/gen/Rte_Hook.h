@@ -134,6 +134,8 @@
  *  Rte_Runnable_EcuM_SelectShutdownCause_Start
  *  Rte_Runnable_EcuM_SelectShutdownTarget_Return
  *  Rte_Runnable_EcuM_SelectShutdownTarget_Start
+ *  Rte_Runnable_NvM_NvM_MainFunction_Return
+ *  Rte_Runnable_NvM_NvM_MainFunction_Start
  *  Rte_Runnable_Os_OsCore0_swc_GetCounterValue_Return
  *  Rte_Runnable_Os_OsCore0_swc_GetCounterValue_Start
  *  Rte_Runnable_Os_OsCore0_swc_GetElapsedValue_Return
@@ -264,6 +266,18 @@
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_2_Start
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Return
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Start
+ *  SchM_EnterHook_Fls_17_Dmu_Erase_Return
+ *  SchM_EnterHook_Fls_17_Dmu_Erase_Start
+ *  SchM_EnterHook_Fls_17_Dmu_Init_Return
+ *  SchM_EnterHook_Fls_17_Dmu_Init_Start
+ *  SchM_EnterHook_Fls_17_Dmu_Main_Return
+ *  SchM_EnterHook_Fls_17_Dmu_Main_Start
+ *  SchM_EnterHook_Fls_17_Dmu_ResumeErase_Return
+ *  SchM_EnterHook_Fls_17_Dmu_ResumeErase_Start
+ *  SchM_EnterHook_Fls_17_Dmu_UserContentCount_Return
+ *  SchM_EnterHook_Fls_17_Dmu_UserContentCount_Start
+ *  SchM_EnterHook_Fls_17_Dmu_Write_Return
+ *  SchM_EnterHook_Fls_17_Dmu_Write_Start
  *  SchM_EnterHook_McalLib_CpuEndInit_Return
  *  SchM_EnterHook_McalLib_CpuEndInit_Start
  *  SchM_EnterHook_McalLib_PeripheralEndInit_Return
@@ -284,6 +298,8 @@
  *  SchM_EnterHook_Nm_NM_EXCLUSIVE_AREA_2_Start
  *  SchM_EnterHook_Nm_NM_EXCLUSIVE_AREA_3_Return
  *  SchM_EnterHook_Nm_NM_EXCLUSIVE_AREA_3_Start
+ *  SchM_EnterHook_NvM_NVM_EXCLUSIVE_AREA_0_Return
+ *  SchM_EnterHook_NvM_NVM_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_PduR_PDUR_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_PduR_PDUR_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_BswM_BSWM_EXCLUSIVE_AREA_0_Return
@@ -378,6 +394,18 @@
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_2_Start
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Return
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Start
+ *  SchM_ExitHook_Fls_17_Dmu_Erase_Return
+ *  SchM_ExitHook_Fls_17_Dmu_Erase_Start
+ *  SchM_ExitHook_Fls_17_Dmu_Init_Return
+ *  SchM_ExitHook_Fls_17_Dmu_Init_Start
+ *  SchM_ExitHook_Fls_17_Dmu_Main_Return
+ *  SchM_ExitHook_Fls_17_Dmu_Main_Start
+ *  SchM_ExitHook_Fls_17_Dmu_ResumeErase_Return
+ *  SchM_ExitHook_Fls_17_Dmu_ResumeErase_Start
+ *  SchM_ExitHook_Fls_17_Dmu_UserContentCount_Return
+ *  SchM_ExitHook_Fls_17_Dmu_UserContentCount_Start
+ *  SchM_ExitHook_Fls_17_Dmu_Write_Return
+ *  SchM_ExitHook_Fls_17_Dmu_Write_Start
  *  SchM_ExitHook_McalLib_CpuEndInit_Return
  *  SchM_ExitHook_McalLib_CpuEndInit_Start
  *  SchM_ExitHook_McalLib_PeripheralEndInit_Return
@@ -398,6 +426,8 @@
  *  SchM_ExitHook_Nm_NM_EXCLUSIVE_AREA_2_Start
  *  SchM_ExitHook_Nm_NM_EXCLUSIVE_AREA_3_Return
  *  SchM_ExitHook_Nm_NM_EXCLUSIVE_AREA_3_Start
+ *  SchM_ExitHook_NvM_NVM_EXCLUSIVE_AREA_0_Return
+ *  SchM_ExitHook_NvM_NVM_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_PduR_PDUR_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_PduR_PDUR_EXCLUSIVE_AREA_0_Start
  *  SchM_Schedulable_BswM_BswM_MainFunction_Return
@@ -420,6 +450,12 @@
  *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_Start
  *  SchM_Schedulable_EcuM_EcuM_MainFunction_Return
  *  SchM_Schedulable_EcuM_EcuM_MainFunction_Start
+ *  SchM_Schedulable_Fee_Fee_MainFunction_Return
+ *  SchM_Schedulable_Fee_Fee_MainFunction_Start
+ *  SchM_Schedulable_Fls_17_Dmu_Fls_17_Dmu_MainFunction_Return
+ *  SchM_Schedulable_Fls_17_Dmu_Fls_17_Dmu_MainFunction_Start
+ *  SchM_Schedulable_NvM_NvM_MainFunction_Return
+ *  SchM_Schedulable_NvM_NvM_MainFunction_Start
  *
  *********************************************************************************************************************/
 
