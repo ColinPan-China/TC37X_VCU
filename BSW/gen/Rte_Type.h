@@ -87,6 +87,9 @@ typedef sint16 VcuTxMsg2_Sig2;
 # define Rte_TypeDef_VcuTxMsg2_Sig3
 typedef sint16 VcuTxMsg2_Sig3;
 
+# define Rte_TypeDef_NvM_Array10Bytes
+typedef uint8 NvM_Array10Bytes[10];
+
 # define Rte_TypeDef_BswM_ESH_Mode
 typedef uint8 BswM_ESH_Mode;
 
@@ -120,6 +123,12 @@ typedef uint32 EcuM_TimeType;
 # define Rte_TypeDef_EcuM_UserType
 typedef uint8 EcuM_UserType;
 
+# define Rte_TypeDef_NvM_RequestResultType
+typedef uint8 NvM_RequestResultType;
+
+# define Rte_TypeDef_NvM_ServiceIdType
+typedef uint8 NvM_ServiceIdType;
+
 # define Rte_TypeDef_TimeInMicrosecondsType
 typedef uint32 TimeInMicrosecondsType;
 
@@ -141,14 +150,38 @@ typedef uint8 Dem_UdsStatusByteType;
 #  define Rte_TypeDef_NvM_BlockIdType
 typedef uint16 NvM_BlockIdType;
 
-#  define Rte_TypeDef_NvM_RequestResultType
-typedef uint8 NvM_RequestResultType;
+# endif
 
-#  define Rte_TypeDef_NvM_ServiceIdType
-typedef uint8 NvM_ServiceIdType;
+
+/**********************************************************************************************************************
+ * Constant value definitions
+ *********************************************************************************************************************/
+
+# define RTE_START_SEC_CONST_UNSPECIFIED
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern CONST(NvM_Array10Bytes, RTE_CONST) Rte_C_NvM_Array10Bytes_0;
+
+# define RTE_STOP_SEC_CONST_UNSPECIFIED
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+# include "Rte_DataHandleType.h"
+
+# ifdef RTE_MICROSAR_PIM_EXPORT
+
+
+/**********************************************************************************************************************
+ * Calibration component and SW-C local calibration parameters
+ *********************************************************************************************************************/
+
+#  define RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1;
+
+#  define RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 # endif
-# include "Rte_DataHandleType.h"
 
 /**********************************************************************************************************************
  *  LOCAL DATA TYPES AND STRUCTURES
@@ -171,12 +204,25 @@ typedef unsigned int Rte_BitType;
 # ifdef RTE_CORE
 
 /**********************************************************************************************************************
+ * Calibration Parameters (SW-C local and calibration component calibration parameters)
+ *********************************************************************************************************************/
+
+#  define RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1; /* PRQA S 3408 */ /* MD_Rte_3408 */
+
+#  define RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
  * Buffers for unqueued S/R
  *********************************************************************************************************************/
 
 #  define RTE_START_SEC_VAR_NOINIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+extern VAR(NvM_Array10Bytes, RTE_VAR_NOINIT) Rte_NvM_SWC_NVBlockDescriptor_UserData1; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(BswM_ESH_RunRequest, RTE_VAR_NOINIT) Rte_SWC1_Request_ESH_RunRequest_0_requestedMode; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 
 #  define RTE_STOP_SEC_VAR_NOINIT_UNSPECIFIED

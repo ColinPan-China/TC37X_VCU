@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00046.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="A8ACCE0E-642F-4E81-9CF7-4CBA9B812966">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <NV-BLOCK-SW-COMPONENT-TYPE UUID="F46DC447-48FA-40AC-B556-211DADA7BA16">
+          <SHORT-NAME>NvM_SWC</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="B584EEA2-12EE-48A0-A8EC-93E7BC307D19">
+              <SHORT-NAME>NvM_Data_IF_UserData1_Send</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NV-PROVIDE-COM-SPEC>
+                  <RAM-BLOCK-INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </RAM-BLOCK-INIT-VALUE>
+                  <ROM-BLOCK-INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </ROM-BLOCK-INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/NvM_Data_IF_UserData1/Element_UserData1</VARIABLE-REF>
+                </NV-PROVIDE-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/NvM_Data_IF_UserData1</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="C23168BC-2D21-4F16-9D1E-B520CE1A3DD8">
+              <SHORT-NAME>NvM_Data_IF_UserData1_Recv</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <REQUIRED-COM-SPECS>
+                <NV-REQUIRE-COM-SPEC>
+                  <INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/NvM_Data_IF_UserData1/Element_UserData1</VARIABLE-REF>
+                </NV-REQUIRE-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/NvM_Data_IF_UserData1</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6F7C58FE-AE31-477A-8E98-BC3EC5AFA5D4">
+              <SHORT-NAME>NvSWC_NvMNotifyJobFinished_NVBlockDescriptor_UserData1</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Predefined_DEV/PortInterfaces/NvSWC_NvMNotifyJobFinished/JobFinished</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Predefined_DEV/PortInterfaces/NvSWC_NvMNotifyJobFinished</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="CE47D585-5A8F-4888-B926-461C9680C216">
+              <SHORT-NAME>NvM_SWC_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <DATA-RECEIVED-EVENT UUID="782B4409-59FE-4C85-9498-024A069B5EBD">
+                  <SHORT-NAME>DRT_NvM_SWC_Runnable_NvM_Data_IF_UserData1_Recv_Element_UserData1</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/NvM_SWC/NvM_SWC_InternalBehavior/NvM_SWC_Runnable</START-ON-EVENT-REF>
+                  <DATA-IREF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData1_Recv</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/NvM_Data_IF_UserData1/Element_UserData1</TARGET-DATA-ELEMENT-REF>
+                  </DATA-IREF>
+                </DATA-RECEIVED-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="5D2358F2-EA03-4C43-B064-10654FAEE509">
+                  <SHORT-NAME>NvM_SWC_Runnable</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+          <NV-BLOCK-DESCRIPTORS>
+            <NV-BLOCK-DESCRIPTOR UUID="5E1541CE-CA73-4331-B1E5-015754C9C331">
+              <SHORT-NAME>NVBlockDescriptor_UserData1</SHORT-NAME>
+              <CLIENT-SERVER-PORTS>
+                <ROLE-BASED-PORT-ASSIGNMENT>
+                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/NvM_SWC/NvSWC_NvMNotifyJobFinished_NVBlockDescriptor_UserData1</PORT-PROTOTYPE-REF>
+                  <ROLE>NvMNotifyJobFinished</ROLE>
+                </ROLE-BASED-PORT-ASSIGNMENT>
+              </CLIENT-SERVER-PORTS>
+              <NV-BLOCK-DATA-MAPPINGS>
+                <NV-BLOCK-DATA-MAPPING>
+                  <NV-RAM-BLOCK-ELEMENT>
+                    <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData1/RAM_NVBlockDescriptor_UserData1</LOCAL-VARIABLE-REF>
+                  </NV-RAM-BLOCK-ELEMENT>
+                  <WRITTEN-NV-DATA>
+                    <AUTOSAR-VARIABLE-IREF>
+                      <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData1_Recv</PORT-PROTOTYPE-REF>
+                      <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/NvM_Data_IF_UserData1/Element_UserData1</TARGET-DATA-PROTOTYPE-REF>
+                    </AUTOSAR-VARIABLE-IREF>
+                  </WRITTEN-NV-DATA>
+                </NV-BLOCK-DATA-MAPPING>
+                <NV-BLOCK-DATA-MAPPING>
+                  <NV-RAM-BLOCK-ELEMENT>
+                    <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData1/RAM_NVBlockDescriptor_UserData1</LOCAL-VARIABLE-REF>
+                  </NV-RAM-BLOCK-ELEMENT>
+                  <READ-NV-DATA>
+                    <AUTOSAR-VARIABLE-IREF>
+                      <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData1_Send</PORT-PROTOTYPE-REF>
+                      <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/NvM_Data_IF_UserData1/Element_UserData1</TARGET-DATA-PROTOTYPE-REF>
+                    </AUTOSAR-VARIABLE-IREF>
+                  </READ-NV-DATA>
+                </NV-BLOCK-DATA-MAPPING>
+              </NV-BLOCK-DATA-MAPPINGS>
+              <NV-BLOCK-NEEDS UUID="6114BF8C-B602-4D6C-8D36-8F70345AAD6D">
+                <SHORT-NAME>NVNeed_NVBlockDescriptor_UserData1</SHORT-NAME>
+                <ADMIN-DATA>
+                  <SDGS>
+                    <SDG GID="DV_SDG">
+                      <SD GID="AutoServiceNeedNameHdlg">1</SD>
+                    </SDG>
+                  </SDGS>
+                </ADMIN-DATA>
+                <CALC-RAM-BLOCK-CRC>false</CALC-RAM-BLOCK-CRC>
+                <CHECK-STATIC-BLOCK-ID>false</CHECK-STATIC-BLOCK-ID>
+                <N-DATA-SETS>1</N-DATA-SETS>
+                <N-ROM-BLOCKS>1</N-ROM-BLOCKS>
+                <RAM-BLOCK-STATUS-CONTROL>API</RAM-BLOCK-STATUS-CONTROL>
+                <READONLY>false</READONLY>
+                <RELIABILITY>ERROR-DETECTION</RELIABILITY>
+                <RESISTANT-TO-CHANGED-SW>true</RESISTANT-TO-CHANGED-SW>
+                <RESTORE-AT-START>true</RESTORE-AT-START>
+                <STORE-AT-SHUTDOWN>true</STORE-AT-SHUTDOWN>
+                <STORE-CYCLIC>false</STORE-CYCLIC>
+                <STORE-EMERGENCY>false</STORE-EMERGENCY>
+                <STORE-IMMEDIATE>false</STORE-IMMEDIATE>
+                <USE-AUTO-VALIDATION-AT-SHUT-DOWN>false</USE-AUTO-VALIDATION-AT-SHUT-DOWN>
+                <USE-CRC-COMP-MECHANISM>false</USE-CRC-COMP-MECHANISM>
+                <WRITE-ONLY-ONCE>false</WRITE-ONLY-ONCE>
+                <WRITE-VERIFICATION>false</WRITE-VERIFICATION>
+              </NV-BLOCK-NEEDS>
+              <RAM-BLOCK UUID="6C7289E7-8E3D-48B2-A33D-9AF0F5FCDDF7">
+                <SHORT-NAME>RAM_NVBlockDescriptor_UserData1</SHORT-NAME>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/NvM_Array10Bytes</TYPE-TREF>
+                <INIT-VALUE>
+                  <ARRAY-VALUE-SPECIFICATION>
+                    <ELEMENTS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </ELEMENTS>
+                  </ARRAY-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </RAM-BLOCK>
+              <ROM-BLOCK UUID="71763EC0-49E9-47E0-BB46-EADFC9FCADA9">
+                <SHORT-NAME>ROM_NVBlockDescriptor_UserData1</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/NvM_Array10Bytes</TYPE-TREF>
+                <INIT-VALUE>
+                  <ARRAY-VALUE-SPECIFICATION>
+                    <ELEMENTS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </ELEMENTS>
+                  </ARRAY-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </ROM-BLOCK>
+            </NV-BLOCK-DESCRIPTOR>
+          </NV-BLOCK-DESCRIPTORS>
+        </NV-BLOCK-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="E2C1BA17-BBB8-4735-ACC2-357596FFE3C0">
+          <SHORT-NAME>NvM_SWC_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/NvM_SWC/NvM_SWC_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

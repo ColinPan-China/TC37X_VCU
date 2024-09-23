@@ -520,6 +520,17 @@
               </ADMIN-DATA>
               <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/Com_SWC</TYPE-TREF>
             </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="1C873E85-20CE-48A0-A60A-BB516A3AF1EE">
+              <SHORT-NAME>NvM_SWC</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <TYPE-TREF DEST="NV-BLOCK-SW-COMPONENT-TYPE">/ComponentTypes/NvM_SWC</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
           </COMPONENTS>
           <CONNECTORS>
             <DELEGATION-SW-CONNECTOR UUID="1943E245-FA8B-4FAB-9649-5449AB24B87B">
@@ -682,6 +693,39 @@
               </INNER-PORT-IREF>
               <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuTxMsg1_Sig0</OUTER-PORT-REF>
             </DELEGATION-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="A4C77821-320C-4E22-A444-1B64B445C26F">
+              <SHORT-NAME>NvM_SWC_NvM_Data_IF_UserData1_Send_SWC1_NvM_Data_IF_UserData1_Recv</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/NvM_SWC</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData1_Send</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/SWC1</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/NvM_Data_IF_UserData1_Recv</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="A0860CE8-528A-4823-BEFF-461266DCA164">
+              <SHORT-NAME>SWC1_NvSWC_NvMNotifyJobFinished_UserData1_NvM_SWC_NvSWC_NvMNotifyJobFinished_NVBlockDescriptor_UserData1</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/SWC1</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/SWC1/NvSWC_NvMNotifyJobFinished_UserData1</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/NvM_SWC</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/NvM_SWC/NvSWC_NvMNotifyJobFinished_NVBlockDescriptor_UserData1</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="BF771679-A63F-429B-B52A-E664DC4D56E5">
+              <SHORT-NAME>SWC1_NvM_Data_IF_UserData1_Send_NvM_SWC_NvM_Data_IF_UserData1_Recv</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/SWC1</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/SWC1/NvM_Data_IF_UserData1_Send</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/NvM_SWC</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData1_Recv</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
           </CONNECTORS>
         </COMPOSITION-SW-COMPONENT-TYPE>
       </ELEMENTS>

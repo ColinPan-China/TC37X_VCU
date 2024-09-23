@@ -1017,6 +1017,22 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="7bf1b61a-3b61-4cff-a26a-182e65fb394b">
+                  <SHORT-NAME>OIT_NvSWC_NvMNotifyJobFinished_UserData1_JobFinished_NvSWC_NvMNotifyJobFinished_UserData1_JobFinished</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
+                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/SWC1/SWC1_InternalBehavior/OIT_NvSWC_NvMNotifyJobFinished_UserData1_JobFinished_NvSWC_NvMNotifyJobFinished_UserData1_JobFinished</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
               </SUB-CONTAINERS>
             </ECUC-CONTAINER-VALUE>
             <ECUC-CONTAINER-VALUE UUID="05d14343-b6d6-4a3d-a322-1179406e1f49">
@@ -3104,6 +3120,104 @@
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Rte_Al_TE2_Bsw_Task_0_10ms</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="5ea75910-6351-4869-a570-077c35382e00">
+              <SHORT-NAME>NvM_SWC_EcuSwComposition</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance</DEFINITION-REF>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteSoftwareComponentInstanceRef</DEFINITION-REF>
+                  <VALUE-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM_SWC</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="fc25d821-4e5f-455b-a4bb-f8bbb29ec75e">
+                  <SHORT-NAME>NvmBlock_NvM_SWC_NVNeed_NVBlockDescriptor_UserData1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteNvRamAllocation</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteNvRamAllocation/RteNvmRomBlockLocationSymbol</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE>Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteNvRamAllocation/RteNvmBlockRef</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                        <ANNOTATION>
+                          <LABEL>
+                            <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                          </LABEL>
+                          <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/NvM_SWC_NVBlockDescriptor_UserData1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteNvRamAllocation/RteSwNvBlockDescriptorRef</DEFINITION-REF>
+                      <VALUE-REF DEST="NV-BLOCK-DESCRIPTOR">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="842af319-a2b9-45ca-b6a4-ab18e7f8e764">
+                  <SHORT-NAME>DRT_NvM_SWC_Runnable_NvM_Data_IF_UserData1_Recv_Element_UserData1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RtePositionInTask</DEFINITION-REF>
+                      <VALUE>5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
+                      <VALUE-REF DEST="DATA-RECEIVED-EVENT">/ComponentTypes/NvM_SWC/NvM_SWC_InternalBehavior/DRT_NvM_SWC_Runnable_NvM_Data_IF_UserData1_Recv_Element_UserData1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteMappedToTaskRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/AswTask</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="cd5b9bab-d866-4f75-94aa-bd46144ee157">
+              <SHORT-NAME>NvM_SWC</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentType</DEFINITION-REF>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentType/RteComponentTypeRef</DEFINITION-REF>
+                  <VALUE-REF DEST="NV-BLOCK-SW-COMPONENT-TYPE">/ComponentTypes/NvM_SWC</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentType/RteImplementationRef</DEFINITION-REF>
+                  <VALUE-REF DEST="SWC-IMPLEMENTATION">/ComponentTypes/NvM_SWC_Implementation</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="eeeae5cf-d89e-447a-8579-74fbf7209a5f">
+                  <SHORT-NAME>ComponentTypeCalibration</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentType/RteComponentTypeCalibration</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentType/RteComponentTypeCalibration/RteCalibrationSupportEnabled</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
                 </ECUC-CONTAINER-VALUE>
               </SUB-CONTAINERS>
             </ECUC-CONTAINER-VALUE>

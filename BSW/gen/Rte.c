@@ -129,10 +129,47 @@ volatile VAR(uint8, RTE_VAR_ZERO_INIT) Rte_StartTiming_InitState = RTE_STATE_UNI
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
+VAR(NvM_Array10Bytes, RTE_VAR_NOINIT) Rte_NvM_SWC_NVBlockDescriptor_UserData1;
+/* PRQA L:L1 */
+/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(BswM_ESH_RunRequest, RTE_VAR_NOINIT) Rte_SWC1_Request_ESH_RunRequest_0_requestedMode;
 /* PRQA L:L1 */
 
 #define RTE_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+/**********************************************************************************************************************
+ * Constants
+ *********************************************************************************************************************/
+
+#define RTE_START_SEC_CONST_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/* PRQA S 1514, 1533 L1 */ /* MD_Rte_1514, MD_Rte_1533 */
+CONST(NvM_Array10Bytes, RTE_CONST) Rte_C_NvM_Array10Bytes_0 = {
+  0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U
+};
+/* PRQA L:L1 */
+
+#define RTE_STOP_SEC_CONST_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+/**********************************************************************************************************************
+ * Calibration Parameters (SW-C local and calibration component calibration parameters)
+ *********************************************************************************************************************/
+
+#define RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/* PRQA S 3408, 1514, 1533 L1 */ /* MD_Rte_3408, MD_Rte_1514, MD_Rte_1533 */
+CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1 = {
+  0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U
+};
+/* PRQA L:L1 */
+
+#define RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -160,10 +197,25 @@ VAR(Rte_RxTimeoutFlagsType, RTE_VAR_ZERO_INIT) Rte_RxTimeoutFlags = {
 
 #define Rte_RxTimeoutFlagsInit() (Rte_MemClr(&Rte_RxTimeoutFlags, sizeof(Rte_RxTimeoutFlagsType)))
 
+
+/**********************************************************************************************************************
+ * Prototypes for Runnable Entities of Nv Block Components
+ *********************************************************************************************************************/
+
+#define RTE_START_SEC_CODE
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+RTE_LOCAL FUNC(void, RTE_CODE) Rte_NvM_SWC_NvM_SWC_Runnable_NvM_SWC_Runnable(void);
+
+#define RTE_STOP_SEC_CODE
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 #define RTE_START_SEC_CODE
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 FUNC(void, RTE_CODE) Rte_MemClr(P2VAR(void, AUTOMATIC, RTE_VAR_NOINIT) ptr, uint32_least num);
+FUNC(void, RTE_CODE) Rte_MemCpy(P2VAR(void, AUTOMATIC, RTE_APPL_VAR) destination, P2CONST(void, AUTOMATIC, RTE_APPL_DATA) source, uint32_least num); /* PRQA S 1505, 3408 */ /* MD_MSR_Rule8.7, MD_Rte_3408 */
+FUNC(void, RTE_CODE) Rte_MemCpy32(P2VAR(void, AUTOMATIC, RTE_APPL_VAR) destination, P2CONST(void, AUTOMATIC, RTE_APPL_DATA) source, uint32_least num); /* PRQA S 1505, 3408 */ /* MD_MSR_Rule8.7, MD_Rte_3408 */
 FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
 
 #define RTE_STOP_SEC_CODE
@@ -271,6 +323,79 @@ VAR(BswM_ESH_Mode, RTE_VAR_NOINIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_Bs
 #define RTE_START_SEC_CODE
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+FUNC(void, RTE_CODE) Rte_MemCpy(P2VAR(void, AUTOMATIC, RTE_APPL_VAR) destination, P2CONST(void, AUTOMATIC, RTE_APPL_DATA) source, uint32_least num) /* PRQA S 3408, 1505 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
+{
+  P2CONST(uint8, AUTOMATIC, RTE_APPL_DATA) src = (P2CONST(uint8, AUTOMATIC, RTE_APPL_DATA)) source; /* PRQA S 0316 */ /* MD_Rte_0316 */
+  P2VAR(uint8, AUTOMATIC, RTE_APPL_VAR) dst = (P2VAR(uint8, AUTOMATIC, RTE_APPL_VAR)) destination; /* PRQA S 0316 */ /* MD_Rte_0316 */
+  uint32_least i;
+  for (i = 0; i < num; i++)
+  {
+    dst[i] = src[i];
+  }
+}
+
+#define RTE_MEMCPY32ALIGN (sizeof(uint32) - 1U)
+
+FUNC(void, RTE_CODE) Rte_MemCpy32(P2VAR(void, AUTOMATIC, RTE_APPL_VAR) destination, P2CONST(void, AUTOMATIC, RTE_APPL_DATA) source, uint32_least num)
+{
+  P2CONST(uint32, AUTOMATIC, RTE_APPL_DATA) asrc = (P2CONST(uint32, AUTOMATIC, RTE_APPL_DATA)) source; /* PRQA S 0316 */ /* MD_Rte_0316 */
+  P2VAR(uint32, AUTOMATIC, RTE_APPL_VAR) adst = (P2VAR(uint32, AUTOMATIC, RTE_APPL_VAR)) destination; /* PRQA S 0316 */ /* MD_Rte_0316 */
+  P2CONST(uint8, AUTOMATIC, RTE_APPL_DATA) src = (P2CONST(uint8, AUTOMATIC, RTE_APPL_DATA)) source; /* PRQA S 0316 */ /* MD_Rte_0316 */
+  P2VAR(uint8, AUTOMATIC, RTE_APPL_VAR) dst = (P2VAR(uint8, AUTOMATIC, RTE_APPL_VAR)) destination; /* PRQA S 0316 */ /* MD_Rte_0316 */
+  uint32_least i = 0;
+
+  if (num >= 16U)
+  {
+    if (((((uint32)src) & RTE_MEMCPY32ALIGN) == 0U) && ((((uint32)dst) & RTE_MEMCPY32ALIGN) == 0U)) /* PRQA S 0306 */ /* MD_Rte_0306 */
+    {
+      uint32_least asize = num / sizeof(uint32);
+      uint32_least rem = num & RTE_MEMCPY32ALIGN;
+      for (i = 0; i < (asize - 3U); i += 4U)
+      {
+        adst[i] = asrc[i];
+        adst[i+1U] = asrc[i+1U];
+        adst[i+2U] = asrc[i+2U];
+        adst[i+3U] = asrc[i+3U];
+      }
+
+      while (i < asize)
+      {
+        adst[i] = asrc[i];
+        ++i;
+      }
+      i = num - rem;
+    }
+    else
+    {
+      for (i = 0; (i + 15U) < num; i += 16U)
+      {
+        dst[i] = src[i];
+        dst[i+1U] = src[i+1U];
+        dst[i+2U] = src[i+2U];
+        dst[i+3U] = src[i+3U];
+        dst[i+4U] = src[i+4U];
+        dst[i+5U] = src[i+5U];
+        dst[i+6U] = src[i+6U];
+        dst[i+7U] = src[i+7U];
+        dst[i+8U] = src[i+8U];
+        dst[i+9U] = src[i+9U];
+        dst[i+10U] = src[i+10U];
+        dst[i+11U] = src[i+11U];
+        dst[i+12U] = src[i+12U];
+        dst[i+13U] = src[i+13U];
+        dst[i+14U] = src[i+14U];
+        dst[i+15U] = src[i+15U];
+      }
+    }
+
+  }
+  while (i < num)
+  {
+    dst[i] = src[i];
+    ++i;
+  }
+}
+
 FUNC(void, RTE_CODE) Rte_MemClr(P2VAR(void, AUTOMATIC, RTE_VAR_NOINIT) ptr, uint32_least num)
 {
   P2VAR(uint8, AUTOMATIC, RTE_VAR_NOINIT) dst = (P2VAR(uint8, AUTOMATIC, RTE_VAR_NOINIT))ptr; /* PRQA S 0316 */ /* MD_Rte_0316 */
@@ -283,6 +408,9 @@ FUNC(void, RTE_CODE) Rte_MemClr(P2VAR(void, AUTOMATIC, RTE_VAR_NOINIT) ptr, uint
 
 FUNC(void, RTE_CODE) SchM_Start(void)
 {
+  /* initialize the NvBlock mirror buffers */
+  Rte_MemCpy(Rte_NvM_SWC_NVBlockDescriptor_UserData1, Rte_C_NvM_Array10Bytes_0, sizeof(NvM_Array10Bytes)); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
+
   Rte_InitState = RTE_STATE_SCHM_START;
 }
 
@@ -304,6 +432,8 @@ FUNC(void, RTE_CODE) SchM_StartTiming(void)
 
 FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
 {
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
   /* set default values for internal data */
   Rte_SWC1_Request_ESH_RunRequest_0_requestedMode = 0U;
 
@@ -323,8 +453,8 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
   Rte_StartTiming_InitState = RTE_STATE_INIT;
   Rte_InitState = RTE_STATE_INIT;
 
-  return RTE_E_OK;
-} /* PRQA S 6050 */ /* MD_MSR_STCAL */
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
 
 FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void)
 {
@@ -431,6 +561,19 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
   ret |= Com_SendSignal(ComConf_ComSignal_VcuTxMsg2_Sig3_oVcuTxMsg2_oTC37X_VCU_CAN00_a04bfcfd_Tx, (&data)); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_SWC1_NvM_Data_IF_UserData1_Send_Element_UserData1(P2CONST(uint8, AUTOMATIC, RTE_SWC1_APPL_DATA) data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  Rte_MemCpy(Rte_NvM_SWC_NVBlockDescriptor_UserData1, data, sizeof(NvM_Array10Bytes)); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
+  /* scheduled trigger for runnables: Rte_NvM_SWC_NvM_SWC_Runnable_NvM_SWC_Runnable */
+  (void)SetEvent(AswTask, Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable); /* PRQA S 3417 */ /* MD_Rte_Os */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -602,6 +745,17 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3(P2
   {
     ret |= RTE_E_MAX_AGE_EXCEEDED; /* PRQA S 2986 */ /* MD_Rte_2986 */
   }
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_SWC1_NvM_Data_IF_UserData1_Recv_Element_UserData1(P2VAR(uint8, AUTOMATIC, RTE_SWC1_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  Rte_MemCpy(data, Rte_NvM_SWC_NVBlockDescriptor_UserData1, sizeof(NvM_Array10Bytes)); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -929,6 +1083,82 @@ FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00
 
 
 /**********************************************************************************************************************
+ * NvM-Callback for synchronous copying of the mirror buffer from the NvM
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_SetMirror_NvM_SWC_NVBlockDescriptor_UserData1(P2CONST(void, AUTOMATIC, RTE_APPL_DATA) NVMBuffer) /* PRQA S 3112 */ /* MD_Rte_3112 */
+{
+  Std_ReturnType ret = E_NOT_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+  CONST(uint16_least, RTE_CONST) size = sizeof(NvM_Array10Bytes);
+
+  if (size <= 10U) /* PRQA S 2991, 2995 */ /* MD_Rte_2991, MD_Rte_2995 */ /* COV_RTE_NVMBUFFER_SIZE */
+  {
+    Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    Rte_MemCpy(Rte_NvM_SWC_NVBlockDescriptor_UserData1, NVMBuffer, size); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
+    Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
+    ret = E_OK;
+  }
+  return ret;
+}
+
+
+/**********************************************************************************************************************
+ * NvM-Callback for synchronous copying of the mirror buffer to the NvM
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_GetMirror_NvM_SWC_NVBlockDescriptor_UserData1(P2VAR(void, AUTOMATIC, RTE_APPL_VAR) NVMBuffer) /* PRQA S 3112 */ /* MD_Rte_3112 */
+{
+  Std_ReturnType ret = E_NOT_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+  CONST(uint16_least, RTE_CONST) size = sizeof(NvM_Array10Bytes);
+
+  if (size <= 10U) /* PRQA S 2991, 2995 */ /* MD_Rte_2991, MD_Rte_2995 */ /* COV_RTE_NVMBUFFER_SIZE */
+  {
+    Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    Rte_MemCpy(NVMBuffer, Rte_NvM_SWC_NVBlockDescriptor_UserData1, size); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
+    Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
+    ret = E_OK;
+  }
+  return ret;
+}
+
+
+/**********************************************************************************************************************
+ * NvM-Callbacks for forwarding Job Finished notifications from the NvM to the SW-Cs
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_NvMNotifyJobFinished_NvM_SWC_NVBlockDescriptor_UserData1(uint8 ServiceId, NvM_RequestResultType JobResult)
+{
+  if (Rte_InitState == RTE_STATE_INIT)
+  {
+    (void)NvSWC_NvMNotifyJobFinished_UserData1_JobFinished(ServiceId, JobResult);
+  }
+  return E_OK;
+}
+
+/**********************************************************************************************************************
+ * Runnable Entities for Nv Block Components
+ *********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: NvM_SWC_Runnable
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered on DataReceivedEvent for DataElementPrototype <Element_UserData1> of PortPrototype <NvM_Data_IF_UserData1_Recv>
+ *
+ *********************************************************************************************************************/
+
+RTE_LOCAL FUNC(void, RTE_CODE) Rte_NvM_SWC_NvM_SWC_Runnable_NvM_SWC_Runnable(void)
+{
+  /* dirty flag not configured */
+
+}
+
+
+
+/**********************************************************************************************************************
  * Task bodies for RTE controlled tasks
  *********************************************************************************************************************/
 
@@ -940,12 +1170,13 @@ FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00
 TASK(AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 {
   EventMaskType ev;
+  EventMaskType evRun;
 
   for(;;)
   {
-    (void)WaitEvent(Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)WaitEvent(Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)GetEvent(AswTask, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     if ((ev & Rte_Ev_Run_SWC1_SWC1_Runnable10ms) != (EventMaskType)0)
     {
@@ -975,6 +1206,15 @@ TASK(AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
     {
       /* call runnable */
       Rte_Msg201h_Rx_Notification(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    (void)GetEvent(AswTask, &evRun); /* PRQA S 3417 */ /* MD_Rte_Os */
+    if (((ev & Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable) != (EventMaskType)0) || ((evRun & Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable) != (EventMaskType)0))
+    {
+      (void)ClearEvent(Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable); /* PRQA S 3417 */ /* MD_Rte_Os */
+
+      /* call runnable */
+      Rte_NvM_SWC_NvM_SWC_Runnable_NvM_SWC_Runnable(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -1069,6 +1309,16 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
  *********************************************************************************************************************/
 
 /* module specific MISRA deviations:
+   MD_Rte_0306:  MISRA rule: Rule11.4
+     Reason:     An optimized copy algorithm can be used for aligned data. To check if pointers are aligned, pointers need to be casted to an integer type.
+     Risk:       No functional risk. Only the lower 8 bits of the address are checked, therefore all integer types are sufficient.
+     Prevention: Not required.
+
+   MD_Rte_0314:  MISRA rule: Dir1.1
+     Reason:     Pointer cast to void because a direct byte access is necessary.
+     Risk:       No functional risk. Only a cast to void is performed.
+     Prevention: Not required.
+
    MD_Rte_0315:  MISRA rule: Dir1.1
      Reason:     Pointer cast to void because generic access is necessary.
      Risk:       No functional risk. Only a cast to uint8* is performed.
@@ -1094,8 +1344,18 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
      Risk:       No functional risk. There is no side effect.
      Prevention: Not required.
 
+   MD_Rte_1533:  MISRA rule: Rule8.9
+     Reason:     Object is referenced by more than one function in different configurations.
+     Risk:       No functional risk.
+     Prevention: Not required.
+
    MD_Rte_2982:  MISRA rule: Rule2.2
      Reason:     Used to simplify code generation.
+     Risk:       No functional risk. There is no side effect.
+     Prevention: Not required.
+
+   MD_Rte_2983:  MISRA rule: Rule2.2
+     Reason:     For generated code it is difficult to check the usage of each object.
      Risk:       No functional risk. There is no side effect.
      Prevention: Not required.
 
@@ -1105,6 +1365,22 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
      Prevention: Not required.
 
    MD_Rte_2987:  MISRA rule: Rule2.2
+     Reason:     Used to simplify code generation.
+     Risk:       No functional risk. There is no side effect.
+     Prevention: Not required.
+
+   MD_Rte_2991:  MISRA rule: Rule14.3
+     Reason:     Used for type checking related with (boolean)
+     Risk:       No functional risk.
+     Prevention: Not required.
+
+   MD_Rte_2995:  MISRA rule: Rule2.2
+     Reason:     The result of the evaluation depends on the compiler specific alignment.
+                 This control expression has been added for safety reasons.
+     Risk:       No functional risk.
+     Prevention: Not required.
+
+   MD_Rte_3112:  MISRA rule: Rule2.2
      Reason:     Used to simplify code generation.
      Risk:       No functional risk. There is no side effect.
      Prevention: Not required.
@@ -1127,3 +1403,19 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
      Prevention: Not required.
 
 */
+
+/**********************************************************************************************************************
+ Code coverage justifications
+ *********************************************************************************************************************/
+
+/* COV_JUSTIFICATION_BEGIN
+   \ID COV_RTE_NVMBUFFER_SIZE
+     \ACCEPT TX
+     \REASON The condition checks that the NVMBuffer is large enough to store the data. The size of the NVMBuffer is
+             generated as magic number and is compared to the result of the sizeof()-Expression. Additionally, RTE Analyzer
+             verifies that the NVMBuffer is at least "size"-elements long.
+             As the sizeof()-Expression returns the expected (calculated) size, the condition cannot be false unless a
+             wrong configuration is used. In case of a wrong configuration RTE Analyzer would detect the difference between
+             the expected value and the actual size of the NVMBuffer.
+
+COV_JUSTIFICATION_END */

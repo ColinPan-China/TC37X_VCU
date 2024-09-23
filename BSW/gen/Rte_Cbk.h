@@ -28,6 +28,8 @@
 # include "Com.h"
 
 
+# include "Rte_Type.h"
+
 # define RTE_START_SEC_CODE
 # include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -57,7 +59,34 @@ FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00
 FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx(void);
 FUNC(void, RTE_CODE) Rte_COMCbkRxTOut_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx(void);
 
+/**********************************************************************************************************************
+ * NvM-Callback for synchronous copying of the mirror buffer to and from the NvM
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_SetMirror_NvM_SWC_NVBlockDescriptor_UserData1(P2CONST(void, AUTOMATIC, RTE_APPL_DATA) NVMBuffer); /* PRQA S 3112 */ /* MD_Rte_3112 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_GetMirror_NvM_SWC_NVBlockDescriptor_UserData1(P2VAR(void, AUTOMATIC, RTE_APPL_VAR) NVMBuffer);
+
+
+/**********************************************************************************************************************
+ * NvM-Callbacks for forwarding notifications from the NvM to the SW-Cs
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_NvMNotifyJobFinished_NvM_SWC_NVBlockDescriptor_UserData1(uint8 ServiceId, NvM_RequestResultType JobResult);
+
+
 # define RTE_STOP_SEC_CODE
 # include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 #endif /* RTE_CBK_H */
+
+/**********************************************************************************************************************
+ MISRA 2012 violations and justifications
+ *********************************************************************************************************************/
+
+/* module specific MISRA deviations:
+   MD_Rte_3112:  MISRA rule: Rule2.2
+     Reason:     Used to simplify code generation.
+     Risk:       No functional risk. There is no side effect.
+     Prevention: Not required.
+
+*/

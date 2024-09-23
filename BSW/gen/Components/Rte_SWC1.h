@@ -61,11 +61,31 @@ extern VAR(BswM_ESH_RunRequest, RTE_VAR_NOINIT) Rte_SWC1_Request_ESH_RunRequest_
 # endif /* !defined(RTE_CORE) */
 
 
+# define RTE_START_SEC_CODE
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ * API prototypes
+ *********************************************************************************************************************/
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_SWC1_NvM_Data_IF_UserData1_Recv_Element_UserData1(P2VAR(uint8, AUTOMATIC, RTE_SWC1_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_SWC1_NvM_Data_IF_UserData1_Send_Element_UserData1(P2CONST(uint8, AUTOMATIC, RTE_SWC1_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+
+# define RTE_STOP_SEC_CODE
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
 # ifndef RTE_CORE
+
+/**********************************************************************************************************************
+ * Rte_Read_<p>_<d> (explicit S/R communication with isQueued = false)
+ *********************************************************************************************************************/
+#  define Rte_Read_NvM_Data_IF_UserData1_Recv_Element_UserData1 Rte_Read_SWC1_NvM_Data_IF_UserData1_Recv_Element_UserData1
+
 
 /**********************************************************************************************************************
  * Rte_Write_<p>_<d> (explicit S/R communication with isQueued = false)
  *********************************************************************************************************************/
+#  define Rte_Write_NvM_Data_IF_UserData1_Send_Element_UserData1 Rte_Write_SWC1_NvM_Data_IF_UserData1_Send_Element_UserData1
 #  define Rte_Write_Request_ESH_RunRequest_0_requestedMode Rte_Write_SWC1_Request_ESH_RunRequest_0_requestedMode
 #  define Rte_Write_SWC1_Request_ESH_RunRequest_0_requestedMode(data) (Rte_SWC1_Request_ESH_RunRequest_0_requestedMode = (data), ((Std_ReturnType)RTE_E_OK))
 
@@ -94,10 +114,12 @@ FUNC(Std_ReturnType, RTE_COMM_APPL_CODE) ComM_RequestComMode(ComM_UserHandleType
  *********************************************************************************************************************/
 
 # ifndef RTE_CORE
+#  define RTE_RUNNABLE_NvSWC_NvMNotifyJobFinished_UserData1_JobFinished NvSWC_NvMNotifyJobFinished_UserData1_JobFinished
 #  define RTE_RUNNABLE_SWC1_Init SWC1_Init
 #  define RTE_RUNNABLE_SWC1_Runnable10ms SWC1_Runnable10ms
 # endif
 
+FUNC(void, SWC1_CODE) NvSWC_NvMNotifyJobFinished_UserData1_JobFinished(NvM_ServiceIdType ServiceId, NvM_RequestResultType JobResult); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(void, SWC1_CODE) SWC1_Init(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 

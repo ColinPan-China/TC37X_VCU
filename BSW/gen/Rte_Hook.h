@@ -86,6 +86,8 @@
  *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2_Start
  *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3_Return
  *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3_Start
+ *  Rte_ReadHook_SWC1_NvM_Data_IF_UserData1_Recv_Element_UserData1_Return
+ *  Rte_ReadHook_SWC1_NvM_Data_IF_UserData1_Recv_Element_UserData1_Start
  *  Rte_Runnable_BswM_BswM_MainFunction_Return
  *  Rte_Runnable_BswM_BswM_MainFunction_Start
  *  Rte_Runnable_ComM_ComM_MainFunction_0_Return
@@ -136,6 +138,8 @@
  *  Rte_Runnable_EcuM_SelectShutdownTarget_Start
  *  Rte_Runnable_NvM_NvM_MainFunction_Return
  *  Rte_Runnable_NvM_NvM_MainFunction_Start
+ *  Rte_Runnable_NvM_SWC_NvM_SWC_Runnable_Return
+ *  Rte_Runnable_NvM_SWC_NvM_SWC_Runnable_Start
  *  Rte_Runnable_Os_OsCore0_swc_GetCounterValue_Return
  *  Rte_Runnable_Os_OsCore0_swc_GetCounterValue_Start
  *  Rte_Runnable_Os_OsCore0_swc_GetElapsedValue_Return
@@ -144,6 +148,8 @@
  *  Rte_Runnable_PowerMng_SWC_Led_Runnable1000ms_Start
  *  Rte_Runnable_PowerMng_SWC_PowerMng_SWC_Init_Return
  *  Rte_Runnable_PowerMng_SWC_PowerMng_SWC_Init_Start
+ *  Rte_Runnable_SWC1_NvSWC_NvMNotifyJobFinished_UserData1_JobFinished_Return
+ *  Rte_Runnable_SWC1_NvSWC_NvMNotifyJobFinished_UserData1_JobFinished_Start
  *  Rte_Runnable_SWC1_SWC1_Init_Return
  *  Rte_Runnable_SWC1_SWC1_Init_Start
  *  Rte_Runnable_SWC1_SWC1_Runnable10ms_Return
@@ -172,6 +178,8 @@
  *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig2_VcuTxMsg2_Sig2_Start
  *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3_Return
  *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3_Start
+ *  Rte_WriteHook_SWC1_NvM_Data_IF_UserData1_Send_Element_UserData1_Return
+ *  Rte_WriteHook_SWC1_NvM_Data_IF_UserData1_Send_Element_UserData1_Start
  *  Rte_WriteHook_SWC1_Request_ESH_RunRequest_0_requestedMode_Return
  *  Rte_WriteHook_SWC1_Request_ESH_RunRequest_0_requestedMode_Start
  *  SchM_EnterHook_BswM_BSWM_EXCLUSIVE_AREA_0_Return

@@ -739,6 +739,28 @@
                             </SUB-CONTAINERS>
                         </ECUC-CONTAINER-VALUE>
                         <ECUC-CONTAINER-VALUE>
+                            <SHORT-NAME>NvM_SWC_EcuSwComposition</SHORT-NAME>
+                            <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance</DEFINITION-REF>
+                            <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                    <SHORT-NAME>NvmBlock_NvM_SWC_NVNeed_NVBlockDescriptor_UserData1</SHORT-NAME>
+                                    <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteNvRamAllocation</DEFINITION-REF>
+                                    <PARAMETER-VALUES>
+                                        <ECUC-TEXTUAL-PARAM-VALUE>
+                                            <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteNvRamAllocation/RteNvmRomBlockLocationSymbol</DEFINITION-REF>
+                                            <VALUE>Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1</VALUE>
+                                        </ECUC-TEXTUAL-PARAM-VALUE>
+                                    </PARAMETER-VALUES>
+                                    <REFERENCE-VALUES>
+                                        <ECUC-REFERENCE-VALUE>
+                                            <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteNvRamAllocation/RteNvmBlockRef</DEFINITION-REF>
+                                            <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/DaVinci_Project/NvM/NvM_SWC_NVBlockDescriptor_UserData1</VALUE-REF>
+                                        </ECUC-REFERENCE-VALUE>
+                                    </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                            </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
                             <SHORT-NAME>RteOsInteraction</SHORT-NAME>
                             <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteOsInteraction</DEFINITION-REF>
                             <SUB-CONTAINERS>
@@ -850,6 +872,63 @@
                     <SHORT-NAME>NvM</SHORT-NAME>
                     <DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/NvM</DEFINITION-REF>
                     <CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                            <SHORT-NAME>NvMCommonVendorParams</SHORT-NAME>
+                            <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/NvM/NvMCommonVendorParams</DEFINITION-REF>
+                            <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                    <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMCommonVendorParams/NvMCfgCbkIncludeList</DEFINITION-REF>
+                                    <VALUE>Rte_Cbk.h</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                            </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                            <SHORT-NAME>NvM_SWC_NVBlockDescriptor_UserData1</SHORT-NAME>
+                            <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/NvM/NvMBlockDescriptor</DEFINITION-REF>
+                            <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                    <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMNvBlockLength</DEFINITION-REF>
+                                    <ANNOTATIONS>
+                                        <ANNOTATION>
+                                            <ANNOTATION-ORIGIN>NeedSolvingAction</ANNOTATION-ORIGIN>
+                                        </ANNOTATION>
+                                    </ANNOTATIONS>
+                                    <VALUE>10</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                    <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMRomBlockDataAddress</DEFINITION-REF>
+                                    <VALUE>Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                    <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMBlockUseSyncMechanism</DEFINITION-REF>
+                                    <VALUE>true</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                    <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMWriteRamBlockToNvCallback</DEFINITION-REF>
+                                    <VALUE>Rte_GetMirror_NvM_SWC_NVBlockDescriptor_UserData1</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                    <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMReadRamBlockFromNvCallback</DEFINITION-REF>
+                                    <VALUE>Rte_SetMirror_NvM_SWC_NVBlockDescriptor_UserData1</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                    <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMUseJobendCallback</DEFINITION-REF>
+                                    <VALUE>true</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                    <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMSingleBlockCallback</DEFINITION-REF>
+                                    <VALUE>Rte_NvMNotifyJobFinished_NvM_SWC_NVBlockDescriptor_UserData1</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                    <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMInitBlockCallback</DEFINITION-REF>
+                                    <VALUE>NULL_PTR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                    <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMUseServicePorts</DEFINITION-REF>
+                                    <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                            </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
                     </CONTAINERS>
                 </ECUC-MODULE-CONFIGURATION-VALUES>
                 <ECUC-MODULE-CONFIGURATION-VALUES>
@@ -885,6 +964,10 @@
                                 <ECUC-REFERENCE-VALUE>
                                     <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsTask/OsTaskEventRef</DEFINITION-REF>
                                     <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/DaVinci_Project/Os/Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                    <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsTask/OsTaskEventRef</DEFINITION-REF>
+                                    <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/DaVinci_Project/Os/Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable</VALUE-REF>
                                 </ECUC-REFERENCE-VALUE>
                                 <ECUC-REFERENCE-VALUE>
                                     <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsTask/OsTaskEventRef</DEFINITION-REF>
@@ -1122,6 +1205,10 @@
                         </ECUC-CONTAINER-VALUE>
                         <ECUC-CONTAINER-VALUE>
                             <SHORT-NAME>Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification</SHORT-NAME>
+                            <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsEvent</DEFINITION-REF>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                            <SHORT-NAME>Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable</SHORT-NAME>
                             <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsEvent</DEFINITION-REF>
                         </ECUC-CONTAINER-VALUE>
                         <ECUC-CONTAINER-VALUE>

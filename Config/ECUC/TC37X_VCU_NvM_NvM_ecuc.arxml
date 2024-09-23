@@ -196,6 +196,17 @@
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMCommon/NvMSetRamBlockStatusApi</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
                   <VALUE>true</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
@@ -240,6 +251,15 @@
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMCommonVendorParams/NvMKillWriteAllApi</DEFINITION-REF>
                   <VALUE>true</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/NvM/NvMCommonVendorParams/NvMCfgCbkIncludeList</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>Rte_Cbk.h</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
               </PARAMETER-VALUES>
             </ECUC-CONTAINER-VALUE>
             <ECUC-CONTAINER-VALUE UUID="7723054f-0f77-47a6-9299-10cc78239db8">
@@ -371,6 +391,367 @@
                         <ECUC-REFERENCE-VALUE>
                           <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMTargetBlockReference/NvMFeeRef/NvMNameOfFeeBlock</DEFINITION-REF>
                           <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Fee/Fee/FeeBlockConfiguration_UserData0</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="f0b82631-441f-4ad8-8f5f-5a52fb126f70">
+              <SHORT-NAME>NvM_SWC_NVBlockDescriptor_UserData1</SHORT-NAME>
+              <ANNOTATIONS>
+                <ANNOTATION>
+                  <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                </ANNOTATION>
+                <ANNOTATION>
+                  <LABEL>
+                    <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                  </LABEL>
+                  <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                </ANNOTATION>
+              </ANNOTATIONS>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/NvM/NvMBlockDescriptor</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMBlockCrcType</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>NVM_CRC16</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMBlockManagementType</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>NVM_BLOCK_NATIVE</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMInitBlockCallback</DEFINITION-REF>
+                  <VALUE>NULL_PTR</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMResistantToChangedSw</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMSelectBlockForReadAll</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMSelectBlockForWriteAll</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMUseInitCallback</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMUseJobendCallback</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMSingleBlockCallback</DEFINITION-REF>
+                  <VALUE>Rte_NvMNotifyJobFinished_NvM_SWC_NVBlockDescriptor_UserData1</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMBswMBlockStatusInformation</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMBlockUseCrc</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMBlockUseSyncMechanism</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMCalcRamBlockCrc</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMBlockJobPriority</DEFINITION-REF>
+                  <VALUE>127</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMBlockWriteProt</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMNvBlockLength</DEFINITION-REF>
+                  <VALUE>10</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMNvBlockNum</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMNvramBlockIdentifier</DEFINITION-REF>
+                  <VALUE>3</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMWriteBlockOnce</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMBlockUseCRCCompMechanism</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMBlockUseSetRamBlockStatus</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMInvokeCallbacksForReadAll</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMInvokeCallbacksForWriteAll</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMCheckLossOfRedundancy</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMRomBlockNum</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMStaticBlockIDCheck</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMWriteVerification</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                    <ANNOTATION>
+                      <LABEL>
+                        <L-4 L="FOR-ALL">UC:Derived from NvBlockNeeds</L-4>
+                      </LABEL>
+                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMReadRamBlockFromNvCallback</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>Rte_SetMirror_NvM_SWC_NVBlockDescriptor_UserData1</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMWriteRamBlockToNvCallback</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>Rte_GetMirror_NvM_SWC_NVBlockDescriptor_UserData1</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMUseServicePorts</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMRomBlockDataAddress</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE>Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="2d32ef79-bd6e-4b11-b8da-e89060d78e53">
+                  <SHORT-NAME>NvMTargetBlockReference</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMTargetBlockReference</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="0e9f27bc-af80-47ff-8ef7-fd4e15b9413d">
+                      <SHORT-NAME>NvMFeeRef</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMTargetBlockReference/NvMFeeRef</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/NvM/NvMBlockDescriptor/NvMTargetBlockReference/NvMFeeRef/NvMNameOfFeeBlock</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Fee/Fee/Fee_SWC_NVBlockDescriptor_UserData1</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>

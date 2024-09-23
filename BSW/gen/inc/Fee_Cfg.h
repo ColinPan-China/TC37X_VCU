@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 8.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2024-09-14, 13:53:45    !!!IGNORE-LINE !!!                **
+**  DATE, TIME: 2024-09-23, 14:00:19    !!!IGNORE-LINE !!!                **
 **                                                                            **
 **  GENERATOR : Build b180321-0610                                          **
 **                                                                            **
@@ -243,6 +243,37 @@ naming convention, hence it goes beyond 32 characters.*/
 naming convention, hence it goes beyond 32 characters.*/
 #define FeeConf_FeeBlockConfiguration_FeeBlockConfiguration_UserData0 ((uint16)32)
 #endif /* #ifdef FeeConf_FeeBlockConfiguration_FeeBlockConfiguration_UserData0 */
+
+/*MISRA2012_RULE_5_1_JUSTIFICATION:Memmap Macros are defined as per Autosar 
+naming convention, hence it goes beyond 32 characters.*/
+/*MISRA2012_RULE_5_2_JUSTIFICATION:Memmap macros are defined as per Autosar 
+naming convention, hence it goes beyond 32 characters.*/
+/*MISRA2012_RULE_5_4_JUSTIFICATION:Memmap macros are defined as per Autosar 
+naming convention, hence it goes beyond 32 characters.*/
+/*MISRA2012_RULE_5_5_JUSTIFICATION:Memmap macros are defined as per Autosar 
+naming convention, hence it goes beyond 32 characters.*/
+#ifdef FeeConf_FeeBlockConfiguration_Fee_SWC_NVBlockDescriptor_UserData1 
+/* to prevent double declaration */
+/*MISRA2012_RULE_5_1_JUSTIFICATION:Memmap Macros are defined as per Autosar 
+naming convention, hence it goes beyond 32 characters.*/
+/*MISRA2012_RULE_5_2_JUSTIFICATION:Memmap macros are defined as per Autosar 
+naming convention, hence it goes beyond 32 characters.*/
+/*MISRA2012_RULE_5_4_JUSTIFICATION:Memmap macros are defined as per Autosar 
+naming convention, hence it goes beyond 32 characters.*/
+/*MISRA2012_RULE_5_5_JUSTIFICATION:Memmap macros are defined as per Autosar 
+naming convention, hence it goes beyond 32 characters.*/
+#error FeeConf_FeeBlockConfiguration_Fee_SWC_NVBlockDescriptor_UserData1 already defined
+#else 
+/*MISRA2012_RULE_5_1_JUSTIFICATION:Memmap Macros are defined as per Autosar 
+naming convention, hence it goes beyond 32 characters.*/
+/*MISRA2012_RULE_5_2_JUSTIFICATION:Memmap macros are defined as per Autosar 
+naming convention, hence it goes beyond 32 characters.*/
+/*MISRA2012_RULE_5_4_JUSTIFICATION:Memmap macros are defined as per Autosar 
+naming convention, hence it goes beyond 32 characters.*/
+/*MISRA2012_RULE_5_5_JUSTIFICATION:Memmap macros are defined as per Autosar 
+naming convention, hence it goes beyond 32 characters.*/
+#define FeeConf_FeeBlockConfiguration_Fee_SWC_NVBlockDescriptor_UserData1 ((uint16)48)
+#endif /* #ifdef FeeConf_FeeBlockConfiguration_Fee_SWC_NVBlockDescriptor_UserData1 */
 
 
 #define FEE_DISABLE_DEM_REPORT   (0U)

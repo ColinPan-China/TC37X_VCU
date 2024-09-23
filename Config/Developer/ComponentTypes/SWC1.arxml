@@ -49,6 +49,163 @@
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="A94F0505-C568-430A-A773-414036AE2335">
+              <SHORT-NAME>NvM_Data_IF_UserData1_Send</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NV-PROVIDE-COM-SPEC>
+                  <RAM-BLOCK-INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </RAM-BLOCK-INIT-VALUE>
+                  <ROM-BLOCK-INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </ROM-BLOCK-INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/NvM_Data_IF_UserData1/Element_UserData1</VARIABLE-REF>
+                </NV-PROVIDE-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/NvM_Data_IF_UserData1</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="1CCBE3F6-EBC4-4176-92F8-75E1B6E64DB5">
+              <SHORT-NAME>NvM_Data_IF_UserData1_Recv</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <REQUIRED-COM-SPECS>
+                <NV-REQUIRE-COM-SPEC>
+                  <INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/NvM_Data_IF_UserData1/Element_UserData1</VARIABLE-REF>
+                </NV-REQUIRE-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/NvM_Data_IF_UserData1</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="37C35B90-B3A3-4B21-B4E1-437EF90A46DF">
+              <SHORT-NAME>NvSWC_NvMNotifyJobFinished_UserData1</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Predefined_DEV/PortInterfaces/NvSWC_NvMNotifyJobFinished/JobFinished</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/Predefined_DEV/PortInterfaces/NvSWC_NvMNotifyJobFinished</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
           </PORTS>
           <INTERNAL-BEHAVIORS>
             <SWC-INTERNAL-BEHAVIOR UUID="5DA8B0AB-AA7F-4B1E-ADD2-59D9ACF4A8D5">
@@ -63,6 +220,14 @@
                   <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/SWC1/SWC1_InternalBehavior/SWC1_Runnable10ms</START-ON-EVENT-REF>
                   <PERIOD>0.01</PERIOD>
                 </TIMING-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="063F7ACA-2F44-4214-AF4B-793CAE5302D6">
+                  <SHORT-NAME>OIT_NvSWC_NvMNotifyJobFinished_UserData1_JobFinished_NvSWC_NvMNotifyJobFinished_UserData1_JobFinished</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/SWC1/SWC1_InternalBehavior/NvSWC_NvMNotifyJobFinished_UserData1_JobFinished</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/SWC1/NvSWC_NvMNotifyJobFinished_UserData1</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/Predefined_DEV/PortInterfaces/NvSWC_NvMNotifyJobFinished/JobFinished</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
               </EVENTS>
               <RUNNABLES>
                 <RUNNABLE-ENTITY UUID="20E71603-D50D-49A2-99F9-CFC06390E0F6">
@@ -88,6 +253,28 @@
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="1BC37D29-0561-48DA-B81A-1530F4E442C0">
                   <SHORT-NAME>SWC1_Runnable10ms</SHORT-NAME>
+                  <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                    <VARIABLE-ACCESS UUID="BD5FC105-E5DC-4707-AC03-48E2643FEBBD">
+                      <SHORT-NAME>REC_NvM_Data_IF_UserData1_Recv_Element_UserData1</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/NvM_Data_IF_UserData1_Recv</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/NvM_Data_IF_UserData1/Element_UserData1</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="F4F3A184-950B-4514-A5AB-96CEA5DDB31F">
+                      <SHORT-NAME>SEND_NvM_Data_IF_UserData1_Send_Element_UserData1</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/SWC1/NvM_Data_IF_UserData1_Send</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/NvM_Data_IF_UserData1/Element_UserData1</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
                   <SERVER-CALL-POINTS>
                     <SYNCHRONOUS-SERVER-CALL-POINT UUID="DF893755-9AC6-4190-8DA4-CC51790E60D4">
                       <SHORT-NAME>SC_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode</SHORT-NAME>
@@ -97,6 +284,9 @@
                       </OPERATION-IREF>
                     </SYNCHRONOUS-SERVER-CALL-POINT>
                   </SERVER-CALL-POINTS>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="83295ABC-7E2F-4DFB-9BC2-09D29098CD0D">
+                  <SHORT-NAME>NvSWC_NvMNotifyJobFinished_UserData1_JobFinished</SHORT-NAME>
                 </RUNNABLE-ENTITY>
               </RUNNABLES>
               <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>

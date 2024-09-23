@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Lcfg.c
- *   Generation Time: 2024-09-05 15:06:31
+ *   Generation Time: 2024-09-23 14:00:22
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -99,7 +99,7 @@
 /*lint -restore */
 CONST(Can_BTPType, CAN_CONST) Can_BTP[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     BTP              Comment */
-  /*     0 */  0x02130401u   /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
+  /*     0 */  0x06043E0Fu   /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
 };
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
@@ -225,7 +225,7 @@ CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[1] = {  /* PRQA 
 /*lint -restore */
 CONST(Can_FBTPType, CAN_CONST) Can_FBTP[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     FBTP             Comment */
-  /*     0 */  0x00070200u   /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
+  /*     0 */  0x00130200u   /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
 };
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */

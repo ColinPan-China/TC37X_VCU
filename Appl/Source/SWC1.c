@@ -59,6 +59,22 @@
  *      
  *      For example: 1, 0, 126, +10.
  *
+ * NvM_RequestResultType
+ *   uint8 represents integers with a minimum value of 0 and a maximum value of 255.
+ *      The order-relation on uint8 is: x < y if y - x is positive.
+ *      uint8 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 126, +10.
+ *
+ * NvM_ServiceIdType
+ *   uint8 represents integers with a minimum value of 0 and a maximum value of 255.
+ *      The order-relation on uint8 is: x < y if y - x is positive.
+ *      uint8 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 126, +10.
+ *
  *********************************************************************************************************************/
 
 #include "Rte_SWC1.h"
@@ -67,7 +83,8 @@
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
-
+#include "vstdlib.h"
+#include "NvM.h"
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
@@ -93,12 +110,72 @@
  *   COMM_NO_COMMUNICATION (0U)
  *   COMM_SILENT_COMMUNICATION (1U)
  *   COMM_FULL_COMMUNICATION (2U)
+ * NvM_RequestResultType: Enumeration of integer in interval [0...255] with enumerators
+ *   NVM_REQ_OK (0U)
+ *   NVM_REQ_NOT_OK (1U)
+ *   NVM_REQ_PENDING (2U)
+ *   NVM_REQ_INTEGRITY_FAILED (3U)
+ *   NVM_REQ_BLOCK_SKIPPED (4U)
+ *   NVM_REQ_NV_INVALIDATED (5U)
+ *   NVM_REQ_CANCELED (6U)
+ *   NVM_REQ_REDUNDANCY_FAILED (7U)
+ *   NVM_REQ_RESTORED_FROM_ROM (8U)
+ * NvM_ServiceIdType: Enumeration of integer in interval [0...255] with enumerators
+ *   NVM_READ_BLOCK (6U)
+ *   NVM_WRITE_BLOCK (7U)
+ *   NVM_RESTORE_BLOCK_DEFAULTS (8U)
+ *   NVM_ERASE_BLOCK (9U)
+ *   NVM_INVALIDATE_NV_BLOCK (11U)
+ *   NVM_READ_ALL (12U)
+ *
+ * Array Types:
+ * ============
+ * NvM_Array10Bytes: Array with 10 element(s) of type uint8
  *
  *********************************************************************************************************************/
 
 
 #define SWC1_START_SEC_CODE
 #include "SWC1_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: NvSWC_NvMNotifyJobFinished_UserData1_JobFinished
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <JobFinished> of PortPrototype <NvSWC_NvMNotifyJobFinished_UserData1>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   void NvSWC_NvMNotifyJobFinished_UserData1_JobFinished(NvM_ServiceIdType ServiceId, NvM_RequestResultType JobResult)
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: NvSWC_NvMNotifyJobFinished_UserData1_JobFinished_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(void, SWC1_CODE) NvSWC_NvMNotifyJobFinished_UserData1_JobFinished(NvM_ServiceIdType ServiceId, NvM_RequestResultType JobResult) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: NvSWC_NvMNotifyJobFinished_UserData1_JobFinished
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
 
 /**********************************************************************************************************************
  *
@@ -151,6 +228,20 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  *
  **********************************************************************************************************************
  *
+ * Input Interfaces:
+ * =================
+ *   Explicit S/R API:
+ *   -----------------
+ *   Std_ReturnType Rte_Read_NvM_Data_IF_UserData1_Recv_Element_UserData1(uint8 *data)
+ *     Argument data: uint8* is of type NvM_Array10Bytes
+ *
+ * Output Interfaces:
+ * ==================
+ *   Explicit S/R API:
+ *   -----------------
+ *   Std_ReturnType Rte_Write_NvM_Data_IF_UserData1_Send_Element_UserData1(const uint8 *data)
+ *     Argument data: uint8* is of type NvM_Array10Bytes
+ *
  * Service Calls:
  * ==============
  *   Service Invocation:
@@ -164,7 +255,9 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: SWC1_Runnable10ms_doc
  *********************************************************************************************************************/
-
+uint8 UserData1Rd[32];
+uint8 UserData1Wr[32];
+uint8 UserData1Cmd = 0;
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
@@ -177,6 +270,37 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * Symbol: SWC1_Runnable10ms
  *********************************************************************************************************************/
 	Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
+
+  if(UserData1Cmd == 1)
+  {
+    VStdMemSet(UserData1Rd,0xFF,sizeof(UserData1Rd));
+    Rte_Read_SWC1_NvM_Data_IF_UserData1_Recv_Element_UserData1(UserData1Rd);
+    UserData1Cmd = 0;
+  }
+
+  if(UserData1Cmd == 2)
+  {
+    VStdMemSet(UserData1Wr,0xAA,sizeof(UserData1Wr));
+    Rte_Write_SWC1_NvM_Data_IF_UserData1_Send_Element_UserData1(UserData1Wr);
+    UserData1Cmd = 0;
+    NvM_RequestResultType BlockStatus;
+    /*NVM ReadAll*/
+    NvM_WriteAll();
+    do
+    {
+      Fls_17_Dmu_MainFunction();
+      Fee_MainFunction();
+      NvM_MainFunction();
+      NvM_GetErrorStatus(NvMConf___MultiBlockRequest,&BlockStatus);
+    } while ( NVM_REQ_PENDING == BlockStatus );
+  }
+  if(UserData1Cmd == 3)
+  {
+    VStdMemSet(UserData1Wr,0x00,sizeof(UserData1Wr));
+    NvM_WriteBlock(NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData1,UserData1Wr);
+    UserData1Cmd = 0;
+  } 
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

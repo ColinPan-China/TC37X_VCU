@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Rte_MemMap.h
- *   Generation Time: 2024-09-14 13:44:01
+ *   Generation Time: 2024-09-23 14:00:21
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -548,6 +548,66 @@
 
 # undef RTE_STOP_SEC_NVM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_NVM_SWC_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_NVM_SWC_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_NVM_SWC_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_NVM_SWC_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_NVM_SWC_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_NVM_SWC_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_NVM_SWC_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_NVM_SWC_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_NVM_SWC_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_NVM_SWC_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED_OPEN
+
+# pragma section farrom "MSR_CONST" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearrom "MSR_CONST_FAST" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED_OPEN
+#  error Using RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section farrom restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearrom restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
 #endif
 
 /* -------------------------------------------------------------------------------- */
@@ -652,6 +712,18 @@
 #endif
 #ifdef RTE_STOP_SEC_NVM_APPL_CODE
 # error Using RTE_STOP_SEC_NVM_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_NVM_SWC_APPL_CODE
+# error Using RTE_START_SEC_NVM_SWC_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_NVM_SWC_APPL_CODE
+# error Using RTE_STOP_SEC_NVM_SWC_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
+# error Using RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
+# error Using RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
 #endif
 
 #ifdef MEMMAP_ERROR
