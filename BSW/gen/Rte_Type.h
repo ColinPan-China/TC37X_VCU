@@ -90,6 +90,9 @@ typedef sint16 VcuTxMsg2_Sig3;
 # define Rte_TypeDef_NvM_Array10Bytes
 typedef uint8 NvM_Array10Bytes[10];
 
+# define Rte_TypeDef_NvM_Array32Bytes
+typedef uint8 NvM_Array32Bytes[32];
+
 # define Rte_TypeDef_BswM_ESH_Mode
 typedef uint8 BswM_ESH_Mode;
 
@@ -162,6 +165,8 @@ typedef uint16 NvM_BlockIdType;
 
 extern CONST(NvM_Array10Bytes, RTE_CONST) Rte_C_NvM_Array10Bytes_0;
 
+extern CONST(NvM_Array32Bytes, RTE_CONST) Rte_C_NvM_Array32Bytes_0;
+
 # define RTE_STOP_SEC_CONST_UNSPECIFIED
 # include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 # include "Rte_DataHandleType.h"
@@ -177,6 +182,7 @@ extern CONST(NvM_Array10Bytes, RTE_CONST) Rte_C_NvM_Array10Bytes_0;
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1;
+extern CONST(NvM_Array32Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData2_ROM_NVBlockDescriptor_UserData2;
 
 #  define RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -211,6 +217,7 @@ typedef unsigned int Rte_BitType;
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1; /* PRQA S 3408 */ /* MD_Rte_3408 */
+extern CONST(NvM_Array32Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData2_ROM_NVBlockDescriptor_UserData2; /* PRQA S 3408 */ /* MD_Rte_3408 */
 
 #  define RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -223,6 +230,7 @@ extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NV
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern VAR(NvM_Array10Bytes, RTE_VAR_NOINIT) Rte_NvM_SWC_NVBlockDescriptor_UserData1; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
+extern VAR(NvM_Array32Bytes, RTE_VAR_NOINIT) Rte_NvM_SWC_NVBlockDescriptor_UserData2; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(BswM_ESH_RunRequest, RTE_VAR_NOINIT) Rte_SWC1_Request_ESH_RunRequest_0_requestedMode; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 
 #  define RTE_STOP_SEC_VAR_NOINIT_UNSPECIFIED

@@ -132,6 +132,9 @@ volatile VAR(uint8, RTE_VAR_ZERO_INIT) Rte_StartTiming_InitState = RTE_STATE_UNI
 VAR(NvM_Array10Bytes, RTE_VAR_NOINIT) Rte_NvM_SWC_NVBlockDescriptor_UserData1;
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
+VAR(NvM_Array32Bytes, RTE_VAR_NOINIT) Rte_NvM_SWC_NVBlockDescriptor_UserData2;
+/* PRQA L:L1 */
+/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(BswM_ESH_RunRequest, RTE_VAR_NOINIT) Rte_SWC1_Request_ESH_RunRequest_0_requestedMode;
 /* PRQA L:L1 */
 
@@ -151,6 +154,12 @@ CONST(NvM_Array10Bytes, RTE_CONST) Rte_C_NvM_Array10Bytes_0 = {
   0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U
 };
 /* PRQA L:L1 */
+/* PRQA S 1514, 1533 L1 */ /* MD_Rte_1514, MD_Rte_1533 */
+CONST(NvM_Array32Bytes, RTE_CONST) Rte_C_NvM_Array32Bytes_0 = {
+  0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 
+  0U, 0U, 0U
+};
+/* PRQA L:L1 */
 
 #define RTE_STOP_SEC_CONST_UNSPECIFIED
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -166,6 +175,12 @@ CONST(NvM_Array10Bytes, RTE_CONST) Rte_C_NvM_Array10Bytes_0 = {
 /* PRQA S 3408, 1514, 1533 L1 */ /* MD_Rte_3408, MD_Rte_1514, MD_Rte_1533 */
 CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1 = {
   0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U
+};
+/* PRQA L:L1 */
+/* PRQA S 3408, 1514, 1533 L1 */ /* MD_Rte_3408, MD_Rte_1514, MD_Rte_1533 */
+CONST(NvM_Array32Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData2_ROM_NVBlockDescriptor_UserData2 = {
+  0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 
+  0U, 0U, 0U
 };
 /* PRQA L:L1 */
 
@@ -205,7 +220,8 @@ VAR(Rte_RxTimeoutFlagsType, RTE_VAR_ZERO_INIT) Rte_RxTimeoutFlags = {
 #define RTE_START_SEC_CODE
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-RTE_LOCAL FUNC(void, RTE_CODE) Rte_NvM_SWC_NvM_SWC_Runnable_NvM_SWC_Runnable(void);
+RTE_LOCAL FUNC(void, RTE_CODE) Rte_NvM_SWC_NvM_SWC_UserData1_Runnable_NvM_SWC_UserData1_Runnable(void);
+RTE_LOCAL FUNC(void, RTE_CODE) Rte_NvM_SWC_NvM_SWC_UserData2_Runnable_NvM_SWC_UserData2_Runnable(void);
 
 #define RTE_STOP_SEC_CODE
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -410,6 +426,7 @@ FUNC(void, RTE_CODE) SchM_Start(void)
 {
   /* initialize the NvBlock mirror buffers */
   Rte_MemCpy(Rte_NvM_SWC_NVBlockDescriptor_UserData1, Rte_C_NvM_Array10Bytes_0, sizeof(NvM_Array10Bytes)); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
+  Rte_MemCpy32(Rte_NvM_SWC_NVBlockDescriptor_UserData2, Rte_C_NvM_Array32Bytes_0, sizeof(NvM_Array32Bytes)); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
 
   Rte_InitState = RTE_STATE_SCHM_START;
 }
@@ -572,8 +589,21 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_SWC1_NvM_Data_IF_UserData1_Send_Element
   Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_MemCpy(Rte_NvM_SWC_NVBlockDescriptor_UserData1, data, sizeof(NvM_Array10Bytes)); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
   Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
-  /* scheduled trigger for runnables: Rte_NvM_SWC_NvM_SWC_Runnable_NvM_SWC_Runnable */
-  (void)SetEvent(AswTask, Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable); /* PRQA S 3417 */ /* MD_Rte_Os */
+  /* scheduled trigger for runnables: Rte_NvM_SWC_NvM_SWC_UserData1_Runnable_NvM_SWC_UserData1_Runnable */
+  (void)SetEvent(AswTask, Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable); /* PRQA S 3417 */ /* MD_Rte_Os */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_SWC1_NvM_Data_IF_UserData2_Send_Element_UserData2(P2CONST(uint8, AUTOMATIC, RTE_SWC1_APPL_DATA) data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  Rte_MemCpy32(Rte_NvM_SWC_NVBlockDescriptor_UserData2, data, sizeof(NvM_Array32Bytes)); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
+  /* scheduled trigger for runnables: Rte_NvM_SWC_NvM_SWC_UserData2_Runnable_NvM_SWC_UserData2_Runnable */
+  (void)SetEvent(AswTask, Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable); /* PRQA S 3417 */ /* MD_Rte_Os */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -755,6 +785,17 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_SWC1_NvM_Data_IF_UserData1_Recv_Element_
 
   Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_MemCpy(data, Rte_NvM_SWC_NVBlockDescriptor_UserData1, sizeof(NvM_Array10Bytes)); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_SWC1_NvM_Data_IF_UserData2_Recv_Element_UserData2(P2VAR(uint8, AUTOMATIC, RTE_SWC1_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  Rte_MemCpy32(data, Rte_NvM_SWC_NVBlockDescriptor_UserData2, sizeof(NvM_Array32Bytes)); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
   Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
@@ -1101,6 +1142,21 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_SetMirror_NvM_SWC_NVBlockDescriptor_UserData1
   return ret;
 }
 
+FUNC(Std_ReturnType, RTE_CODE) Rte_SetMirror_NvM_SWC_NVBlockDescriptor_UserData2(P2CONST(void, AUTOMATIC, RTE_APPL_DATA) NVMBuffer) /* PRQA S 3112 */ /* MD_Rte_3112 */
+{
+  Std_ReturnType ret = E_NOT_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+  CONST(uint16_least, RTE_CONST) size = sizeof(NvM_Array32Bytes);
+
+  if (size <= 32U) /* PRQA S 2991, 2995 */ /* MD_Rte_2991, MD_Rte_2995 */ /* COV_RTE_NVMBUFFER_SIZE */
+  {
+    Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    Rte_MemCpy32(Rte_NvM_SWC_NVBlockDescriptor_UserData2, NVMBuffer, size); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
+    Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
+    ret = E_OK;
+  }
+  return ret;
+}
+
 
 /**********************************************************************************************************************
  * NvM-Callback for synchronous copying of the mirror buffer to the NvM
@@ -1121,6 +1177,21 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_GetMirror_NvM_SWC_NVBlockDescriptor_UserData1
   return ret;
 }
 
+FUNC(Std_ReturnType, RTE_CODE) Rte_GetMirror_NvM_SWC_NVBlockDescriptor_UserData2(P2VAR(void, AUTOMATIC, RTE_APPL_VAR) NVMBuffer) /* PRQA S 3112 */ /* MD_Rte_3112 */
+{
+  Std_ReturnType ret = E_NOT_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+  CONST(uint16_least, RTE_CONST) size = sizeof(NvM_Array32Bytes);
+
+  if (size <= 32U) /* PRQA S 2991, 2995 */ /* MD_Rte_2991, MD_Rte_2995 */ /* COV_RTE_NVMBUFFER_SIZE */
+  {
+    Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    Rte_MemCpy32(NVMBuffer, Rte_NvM_SWC_NVBlockDescriptor_UserData2, size); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
+    Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
+    ret = E_OK;
+  }
+  return ret;
+}
+
 
 /**********************************************************************************************************************
  * NvM-Callbacks for forwarding Job Finished notifications from the NvM to the SW-Cs
@@ -1135,13 +1206,22 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_NvMNotifyJobFinished_NvM_SWC_NVBlockDescripto
   return E_OK;
 }
 
+FUNC(Std_ReturnType, RTE_CODE) Rte_NvMNotifyJobFinished_NvM_SWC_NVBlockDescriptor_UserData2(uint8 ServiceId, NvM_RequestResultType JobResult)
+{
+  if (Rte_InitState == RTE_STATE_INIT)
+  {
+    (void)NvSWC_NvMNotifyJobFinished_UserData2_JobFinished(ServiceId, JobResult);
+  }
+  return E_OK;
+}
+
 /**********************************************************************************************************************
  * Runnable Entities for Nv Block Components
  *********************************************************************************************************************/
 
 /**********************************************************************************************************************
  *
- * Runnable Entity Name: NvM_SWC_Runnable
+ * Runnable Entity Name: NvM_SWC_UserData1_Runnable
  *
  *---------------------------------------------------------------------------------------------------------------------
  *
@@ -1150,7 +1230,24 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_NvMNotifyJobFinished_NvM_SWC_NVBlockDescripto
  *
  *********************************************************************************************************************/
 
-RTE_LOCAL FUNC(void, RTE_CODE) Rte_NvM_SWC_NvM_SWC_Runnable_NvM_SWC_Runnable(void)
+RTE_LOCAL FUNC(void, RTE_CODE) Rte_NvM_SWC_NvM_SWC_UserData1_Runnable_NvM_SWC_UserData1_Runnable(void)
+{
+  /* dirty flag not configured */
+
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: NvM_SWC_UserData2_Runnable
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered on DataReceivedEvent for DataElementPrototype <Element_UserData2> of PortPrototype <NvM_Data_IF_UserData2_Rcev>
+ *
+ *********************************************************************************************************************/
+
+RTE_LOCAL FUNC(void, RTE_CODE) Rte_NvM_SWC_NvM_SWC_UserData2_Runnable_NvM_SWC_UserData2_Runnable(void)
 {
   /* dirty flag not configured */
 
@@ -1174,9 +1271,9 @@ TASK(AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 
   for(;;)
   {
-    (void)WaitEvent(Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)WaitEvent(Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)GetEvent(AswTask, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms | Rte_Ev_Run_SWC1_SWC1_Runnable10ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     if ((ev & Rte_Ev_Run_SWC1_SWC1_Runnable10ms) != (EventMaskType)0)
     {
@@ -1209,12 +1306,21 @@ TASK(AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
     }
 
     (void)GetEvent(AswTask, &evRun); /* PRQA S 3417 */ /* MD_Rte_Os */
-    if (((ev & Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable) != (EventMaskType)0) || ((evRun & Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable) != (EventMaskType)0))
+    if (((ev & Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable) != (EventMaskType)0) || ((evRun & Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable) != (EventMaskType)0))
     {
-      (void)ClearEvent(Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable); /* PRQA S 3417 */ /* MD_Rte_Os */
+      (void)ClearEvent(Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable); /* PRQA S 3417 */ /* MD_Rte_Os */
 
       /* call runnable */
-      Rte_NvM_SWC_NvM_SWC_Runnable_NvM_SWC_Runnable(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+      Rte_NvM_SWC_NvM_SWC_UserData1_Runnable_NvM_SWC_UserData1_Runnable(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    (void)GetEvent(AswTask, &evRun); /* PRQA S 3417 */ /* MD_Rte_Os */
+    if (((ev & Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable) != (EventMaskType)0) || ((evRun & Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable) != (EventMaskType)0))
+    {
+      (void)ClearEvent(Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable); /* PRQA S 3417 */ /* MD_Rte_Os */
+
+      /* call runnable */
+      Rte_NvM_SWC_NvM_SWC_UserData2_Runnable_NvM_SWC_UserData2_Runnable(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

@@ -37,7 +37,8 @@
       EVENT = Rte_Ev_Run_Com_SWC_Com_Runnable_2ms:"@RO@";
       EVENT = Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification:"@RO@";
       EVENT = Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification:"@RO@";
-      EVENT = Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable:"@RO@";
+      EVENT = Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable:"@RO@";
+      EVENT = Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable:"@RO@";
       EVENT = Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms:"@RO@";
       EVENT = Rte_Ev_Run_SWC1_SWC1_Runnable10ms:"@RO@";
    }:"@RO@@NR@";
@@ -130,7 +131,11 @@
       MASK = AUTO;
    }:"@ROC@@NR@";
 
-   EVENT Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable {
+   EVENT Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
+   EVENT Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable {
       MASK = AUTO;
    }:"@ROC@@NR@";
 

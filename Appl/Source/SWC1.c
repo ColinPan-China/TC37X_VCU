@@ -131,6 +131,7 @@
  * Array Types:
  * ============
  * NvM_Array10Bytes: Array with 10 element(s) of type uint8
+ * NvM_Array32Bytes: Array with 32 element(s) of type uint8
  *
  *********************************************************************************************************************/
 
@@ -169,6 +170,45 @@ FUNC(void, SWC1_CODE) NvSWC_NvMNotifyJobFinished_UserData1_JobFinished(NvM_Servi
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: NvSWC_NvMNotifyJobFinished_UserData1_JobFinished
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: NvSWC_NvMNotifyJobFinished_UserData2_JobFinished
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <JobFinished> of PortPrototype <NvSWC_NvMNotifyJobFinished_UserData2>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   void NvSWC_NvMNotifyJobFinished_UserData2_JobFinished(NvM_ServiceIdType ServiceId, NvM_RequestResultType JobResult)
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: NvSWC_NvMNotifyJobFinished_UserData2_JobFinished_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(void, SWC1_CODE) NvSWC_NvMNotifyJobFinished_UserData2_JobFinished(NvM_ServiceIdType ServiceId, NvM_RequestResultType JobResult) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: NvSWC_NvMNotifyJobFinished_UserData2_JobFinished
  *********************************************************************************************************************/
 
 
@@ -234,6 +274,8 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  *   -----------------
  *   Std_ReturnType Rte_Read_NvM_Data_IF_UserData1_Recv_Element_UserData1(uint8 *data)
  *     Argument data: uint8* is of type NvM_Array10Bytes
+ *   Std_ReturnType Rte_Read_NvM_Data_IF_UserData2_Recv_Element_UserData2(uint8 *data)
+ *     Argument data: uint8* is of type NvM_Array32Bytes
  *
  * Output Interfaces:
  * ==================
@@ -241,6 +283,8 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  *   -----------------
  *   Std_ReturnType Rte_Write_NvM_Data_IF_UserData1_Send_Element_UserData1(const uint8 *data)
  *     Argument data: uint8* is of type NvM_Array10Bytes
+ *   Std_ReturnType Rte_Write_NvM_Data_IF_UserData2_Send_Element_UserData2(const uint8 *data)
+ *     Argument data: uint8* is of type NvM_Array32Bytes
  *
  * Service Calls:
  * ==============
@@ -258,7 +302,9 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
 uint8 UserData1Rd[32];
 uint8 UserData1Wr[32];
 uint8 UserData1Cmd = 0;
-
+uint8 UserData2Rd[32];
+uint8 UserData2Wr[32];
+uint8 UserData2Cmd = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -301,6 +347,29 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
     UserData1Cmd = 0;
   } 
 
+  if(UserData2Cmd == 1)
+  {
+    VStdMemSet(UserData2Rd,0xFF,sizeof(UserData2Rd));
+    Rte_Read_NvM_Data_IF_UserData2_Recv_Element_UserData2(UserData2Rd);
+    UserData2Cmd = 0;
+  }
+
+  if(UserData2Cmd == 2)
+  {
+    VStdMemSet(UserData2Wr,0x01,sizeof(UserData2Wr));
+    Rte_Write_NvM_Data_IF_UserData2_Send_Element_UserData2(UserData2Wr);
+    UserData2Cmd = 0;
+    NvM_RequestResultType BlockStatus;
+    /*NVM ReadAll*/
+    NvM_WriteAll();
+    do
+    {
+      Fls_17_Dmu_MainFunction();
+      Fee_MainFunction();
+      NvM_MainFunction();
+      NvM_GetErrorStatus(NvMConf___MultiBlockRequest,&BlockStatus);
+    } while ( NVM_REQ_PENDING == BlockStatus );
+  }
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

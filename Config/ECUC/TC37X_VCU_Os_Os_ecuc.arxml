@@ -1969,7 +1969,16 @@ TC37X_ts_appx_V2.5.1.pdf 2018.04</VALUE>
                       <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
                     </ANNOTATION>
                   </ANNOTATIONS>
-                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable</VALUE-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsTask/OsTaskEventRef</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable</VALUE-REF>
                 </ECUC-REFERENCE-VALUE>
               </REFERENCE-VALUES>
             </ECUC-CONTAINER-VALUE>
@@ -2398,8 +2407,17 @@ TC37X_ts_appx_V2.5.1.pdf 2018.04</VALUE>
               </ANNOTATIONS>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsEvent</DEFINITION-REF>
             </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE UUID="d32e6d3f-5bd1-4420-ad5d-a6cb1ff0cfd5">
-              <SHORT-NAME>Rte_Ev_Run_NvM_SWC_NvM_SWC_Runnable</SHORT-NAME>
+            <ECUC-CONTAINER-VALUE UUID="9017f7c3-1e9e-4a22-ba9e-3ace654fe629">
+              <SHORT-NAME>Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable</SHORT-NAME>
+              <ANNOTATIONS>
+                <ANNOTATION>
+                  <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                </ANNOTATION>
+              </ANNOTATIONS>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsEvent</DEFINITION-REF>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="2ee27b66-1567-4dda-b014-cda552fea289">
+              <SHORT-NAME>Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable</SHORT-NAME>
               <ANNOTATIONS>
                 <ANNOTATION>
                   <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>

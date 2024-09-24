@@ -835,6 +835,26 @@
                                     <TARGET-REF DEST="NV-BLOCK-DESCRIPTOR">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData1</TARGET-REF>
                                   </UPSTREAM-REFERENCE-IREF>
                                 </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="9cf0cf6d-1d98-4b1c-b05e-4adf4ec99291">
+                                  <SHORT-NAME>NvM_SWC_NVBlockDescriptor_UserData2</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:NvBlockNeeds">
+                                        <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/NvM_SWC_NVBlockDescriptor_UserData2</SDX-REF>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM_SWC</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="NV-BLOCK-DESCRIPTOR">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData2</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
                               </INSTANCES>
                             </FLAT-MAP>
                           </ELEMENTS>

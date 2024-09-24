@@ -1231,6 +1231,72 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/NvM_SWC/NvSWC_NvMNotifyJobFinished_NVBlockDescriptor_UserData1</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="3918b198-8a2f-4d0e-bee0-eb5ea3dd85d3">
+                                  <SHORT-NAME>SWC1_NvM_Data_IF_UserData2_Send_NvM_SWC_NvM_Data_IF_UserData2_Rcev</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/SWC1/NvM_Data_IF_UserData2_Send</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData2_Rcev</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="0d21b0b6-b747-4472-af3d-d0e328a5d967">
+                                  <SHORT-NAME>NvM_SWC_NvM_Data_IF_UserData2_Send_SWC1_NvM_Data_IF_UserData2_Recv</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData2_Send</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/NvM_Data_IF_UserData2_Recv</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="be8baa7e-c6a7-4435-b88c-27ef45a9a1d6">
+                                  <SHORT-NAME>SWC1_NvSWC_NvMNotifyJobFinished_UserData2_NvM_SWC_NvSWC_NvMNotifyJobFinished_NVBlockDescriptor_UserData2</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/SWC1/NvSWC_NvMNotifyJobFinished_UserData2</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/NvM_SWC/NvSWC_NvMNotifyJobFinished_NVBlockDescriptor_UserData2</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -1340,10 +1406,15 @@
                                     <SD GID="BBB3B39C-C392-468F-9EF1-FC5D0A60A072">/ComponentTypes/Com_SWC_Implementation</SD>
                                     <SD GID="F46DC447-48FA-40AC-B556-211DADA7BA16">/ComponentTypes/NvM_SWC</SD>
                                     <SD GID="5E1541CE-CA73-4331-B1E5-015754C9C331">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData1</SD>
+                                    <SD GID="D2B51BE5-1BB5-4CC4-87F9-FBDA7005BDEF">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData2</SD>
                                     <SD GID="C23168BC-2D21-4F16-9D1E-B520CE1A3DD8">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData1_Recv</SD>
                                     <SD GID="B584EEA2-12EE-48A0-A8EC-93E7BC307D19">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData1_Send</SD>
+                                    <SD GID="152775AA-327A-4B6A-B1E3-6C7325FA612E">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData2_Rcev</SD>
+                                    <SD GID="5A318BA4-C53A-400F-A492-CD01C58E94A9">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData2_Send</SD>
                                     <SD GID="782B4409-59FE-4C85-9498-024A069B5EBD">/ComponentTypes/NvM_SWC/NvM_SWC_InternalBehavior/DRT_NvM_SWC_Runnable_NvM_Data_IF_UserData1_Recv_Element_UserData1</SD>
+                                    <SD GID="E846A3BD-06A8-4AF2-8E40-68C04EC5E3C2">/ComponentTypes/NvM_SWC/NvM_SWC_InternalBehavior/DRT_NvM_SWC_UserData2_Runnable_NvM_Data_IF_UserData2_Rcev_Element_UserData2</SD>
                                     <SD GID="6F7C58FE-AE31-477A-8E98-BC3EC5AFA5D4">/ComponentTypes/NvM_SWC/NvSWC_NvMNotifyJobFinished_NVBlockDescriptor_UserData1</SD>
+                                    <SD GID="2C5D53D7-2002-4F50-9AD3-A735F8512BBF">/ComponentTypes/NvM_SWC/NvSWC_NvMNotifyJobFinished_NVBlockDescriptor_UserData2</SD>
                                     <SD GID="E2C1BA17-BBB8-4735-ACC2-357596FFE3C0">/ComponentTypes/NvM_SWC_Implementation</SD>
                                     <SD GID="29235893-9986-4707-871E-62CD9E51F0C7">/ComponentTypes/PowerMng_SWC</SD>
                                     <SD GID="2801EB6A-BAF6-4448-966E-BF88295D9430">/ComponentTypes/PowerMng_SWC/PowerMng_SWC_InternalBehavior/PowerMng_SWC_InitEvent</SD>
@@ -1352,9 +1423,13 @@
                                     <SD GID="18CAC7A8-50F1-4B8D-9DF8-E1B0EADEECBE">/ComponentTypes/SWC1</SD>
                                     <SD GID="1CCBE3F6-EBC4-4176-92F8-75E1B6E64DB5">/ComponentTypes/SWC1/NvM_Data_IF_UserData1_Recv</SD>
                                     <SD GID="A94F0505-C568-430A-A773-414036AE2335">/ComponentTypes/SWC1/NvM_Data_IF_UserData1_Send</SD>
+                                    <SD GID="B22DF377-1D69-4876-95B9-3145965C3B91">/ComponentTypes/SWC1/NvM_Data_IF_UserData2_Recv</SD>
+                                    <SD GID="20AF7CAB-A11A-4321-8C12-0F9EE9A39EEB">/ComponentTypes/SWC1/NvM_Data_IF_UserData2_Send</SD>
                                     <SD GID="37C35B90-B3A3-4B21-B4E1-437EF90A46DF">/ComponentTypes/SWC1/NvSWC_NvMNotifyJobFinished_UserData1</SD>
+                                    <SD GID="4495243F-6412-4F58-9054-74B2D2395FBB">/ComponentTypes/SWC1/NvSWC_NvMNotifyJobFinished_UserData2</SD>
                                     <SD GID="8C60CFAE-3BA3-41EE-B535-FF2A2B6A82D2">/ComponentTypes/SWC1/Request_ESH_RunRequest_0</SD>
                                     <SD GID="063F7ACA-2F44-4214-AF4B-793CAE5302D6">/ComponentTypes/SWC1/SWC1_InternalBehavior/OIT_NvSWC_NvMNotifyJobFinished_UserData1_JobFinished_NvSWC_NvMNotifyJobFinished_UserData1_JobFinished</SD>
+                                    <SD GID="3FCA423F-7CD7-45EA-96C6-B0E1342CDE99">/ComponentTypes/SWC1/SWC1_InternalBehavior/OIT_NvSWC_NvMNotifyJobFinished_UserData2_JobFinished_NvSWC_NvMNotifyJobFinished_UserData2_JobFinished</SD>
                                     <SD GID="02DBAA78-6849-4155-8578-6FE38CB45AFA">/ComponentTypes/SWC1/SWC1_InternalBehavior/SWC1_InitEvent</SD>
                                     <SD GID="BB44E199-3151-4FAA-9617-E16CE2BFB43B">/ComponentTypes/SWC1/SWC1_InternalBehavior/TMT_SWC1_Runnable10ms</SD>
                                     <SD GID="778A86CE-142A-46BD-8700-54AB1F8839D8">/ComponentTypes/SWC1/UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
