@@ -87,6 +87,12 @@ typedef sint16 VcuTxMsg2_Sig2;
 # define Rte_TypeDef_VcuTxMsg2_Sig3
 typedef sint16 VcuTxMsg2_Sig3;
 
+# define Rte_TypeDef_dtRef_VOID
+typedef void * dtRef_VOID;
+
+# define Rte_TypeDef_dtRef_const_VOID
+typedef const void * dtRef_const_VOID;
+
 # define Rte_TypeDef_NvM_Array10Bytes
 typedef uint8 NvM_Array10Bytes[10];
 
@@ -126,6 +132,9 @@ typedef uint32 EcuM_TimeType;
 # define Rte_TypeDef_EcuM_UserType
 typedef uint8 EcuM_UserType;
 
+# define Rte_TypeDef_NvM_BlockIdType
+typedef uint16 NvM_BlockIdType;
+
 # define Rte_TypeDef_NvM_RequestResultType
 typedef uint8 NvM_RequestResultType;
 
@@ -141,17 +150,8 @@ typedef uint32 TimeInMicrosecondsType;
  * Unused Data type definitions
  *********************************************************************************************************************/
 
-#  define Rte_TypeDef_dtRef_VOID
-typedef void * dtRef_VOID;
-
-#  define Rte_TypeDef_dtRef_const_VOID
-typedef const void * dtRef_const_VOID;
-
 #  define Rte_TypeDef_Dem_UdsStatusByteType
 typedef uint8 Dem_UdsStatusByteType;
-
-#  define Rte_TypeDef_NvM_BlockIdType
-typedef uint16 NvM_BlockIdType;
 
 # endif
 
@@ -183,9 +183,23 @@ extern CONST(NvM_Array32Bytes, RTE_CONST) Rte_C_NvM_Array32Bytes_0;
 
 extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1;
 extern CONST(NvM_Array32Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData2_ROM_NVBlockDescriptor_UserData2;
+extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_SWC1_NvBlockNeed_UserData3_DefaultValue;
 
 #  define RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ * Rte_Pim (Per-Instance Memory)
+ *********************************************************************************************************************/
+
+#  define RTE_START_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(NvM_Array10Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_SWC1_NvBlockNeed_UserData3_MirrorBlock;
+
+#  define RTE_STOP_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 
 # endif
 
@@ -218,6 +232,7 @@ typedef unsigned int Rte_BitType;
 
 extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1; /* PRQA S 3408 */ /* MD_Rte_3408 */
 extern CONST(NvM_Array32Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData2_ROM_NVBlockDescriptor_UserData2; /* PRQA S 3408 */ /* MD_Rte_3408 */
+extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_SWC1_NvBlockNeed_UserData3_DefaultValue; /* PRQA S 3408 */ /* MD_Rte_3408 */
 
 #  define RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

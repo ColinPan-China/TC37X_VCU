@@ -105,7 +105,60 @@ FUNC(Std_ReturnType, RTE_COMM_APPL_CODE) ComM_RequestComMode(ComM_UserHandleType
 #  define RTE_STOP_SEC_COMM_APPL_CODE
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+#  define RTE_START_SEC_NVM_APPL_CODE
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_ReadBlock(NvM_BlockIdType parg0, dtRef_VOID DstPtr); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_SetRamBlockStatus(NvM_BlockIdType parg0, boolean RamBlockStatus); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_WriteBlock(NvM_BlockIdType parg0, dtRef_const_VOID SrcPtr); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+
+#  define RTE_STOP_SEC_NVM_APPL_CODE
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_ReadBlock(arg1) (NvM_ReadBlock((NvM_BlockIdType)5, arg1))
+#  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)5, arg1))
+#  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_WriteBlock(arg1) (NvM_WriteBlock((NvM_BlockIdType)5, arg1))
 #  define Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)0, arg1))
+
+/**********************************************************************************************************************
+ * Rte_CData (SW-C local calibration parameters)
+ *********************************************************************************************************************/
+
+#  ifndef RTE_MICROSAR_PIM_EXPORT
+
+#   define RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
+#   include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_SWC1_NvBlockNeed_UserData3_DefaultValue;
+
+#   define RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
+#   include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#  endif
+
+#  define Rte_CData_NvBlockNeed_UserData3_DefaultValue() (&(Rte_SWC1_NvBlockNeed_UserData3_DefaultValue[0]))
+
+/**********************************************************************************************************************
+ * Rte_Pim (Per-Instance Memory)
+ *********************************************************************************************************************/
+
+#  ifndef RTE_MICROSAR_PIM_EXPORT
+#   define RTE_START_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
+#   include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(NvM_Array10Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_SWC1_NvBlockNeed_UserData3_MirrorBlock;
+
+#   define RTE_STOP_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
+#   include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#  endif
+
+/* PRQA S 3453 L1 */ /* MD_MSR_FctLikeMacro */
+#  define Rte_Pim_NvBlockNeed_UserData3_MirrorBlock() (&((*RtePim_NvBlockNeed_UserData3_MirrorBlock())[0]))
+#  define RtePim_NvBlockNeed_UserData3_MirrorBlock() \
+  (&Rte_SWC1_NvBlockNeed_UserData3_MirrorBlock)
+/* PRQA L:L1 */
+
 
 # endif /* !defined(RTE_CORE) */
 
@@ -141,6 +194,8 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void); /* PRQA S 3451, 0786, 3449 */ /* 
 #  define RTE_E_ComM_UserRequest_E_MODE_LIMITATION (2U)
 
 #  define RTE_E_ComM_UserRequest_E_NOT_OK (1U)
+
+#  define RTE_E_NvMService_AC3_SRBS_E_NOT_OK (1U)
 # endif /* !defined(RTE_CORE) */
 
 # ifdef __cplusplus

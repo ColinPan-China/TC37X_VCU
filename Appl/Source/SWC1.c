@@ -99,6 +99,9 @@
  *
  * Primitive Types:
  * ================
+ * boolean: Boolean (standard type)
+ * dtRef_VOID: DataReference
+ * dtRef_const_VOID: DataReference
  * uint8: Integer in interval [0...255] (standard type)
  *
  * Enumeration Types:
@@ -132,6 +135,26 @@
  * ============
  * NvM_Array10Bytes: Array with 10 element(s) of type uint8
  * NvM_Array32Bytes: Array with 32 element(s) of type uint8
+ *
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ *
+ * APIs which are accessible from all runnable entities of the SW-C
+ *
+ **********************************************************************************************************************
+ * Per-Instance Memory:
+ * ====================
+ *   uint8 *Rte_Pim_NvBlockNeed_UserData3_MirrorBlock(void)
+ *     Returnvalue: uint8* is of type NvM_Array10Bytes
+ *
+ * Calibration Parameters:
+ * =======================
+ *   SW-C local Calibration Parameters:
+ *   ----------------------------------
+ *   uint8 *Rte_CData_NvBlockNeed_UserData3_DefaultValue(void)
+ *     Returnvalue: uint8* is of type NvM_Array10Bytes
  *
  *********************************************************************************************************************/
 
@@ -290,6 +313,15 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  * ==============
  *   Service Invocation:
  *   -------------------
+ *   Std_ReturnType Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_ReadBlock(dtRef_VOID DstPtr)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_E_NOT_OK
+ *   Std_ReturnType Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_SetRamBlockStatus(boolean RamBlockStatus)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_E_NOT_OK
+ *   Std_ReturnType Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_WriteBlock(dtRef_const_VOID SrcPtr)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_E_NOT_OK
  *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode(ComM_ModeType ComMode)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
@@ -302,9 +334,14 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
 uint8 UserData1Rd[32];
 uint8 UserData1Wr[32];
 uint8 UserData1Cmd = 0;
+
 uint8 UserData2Rd[32];
 uint8 UserData2Wr[32];
 uint8 UserData2Cmd = 0;
+
+uint8 UserData3Rd[32];
+uint8 UserData3Wr[32];
+uint8 UserData3Cmd = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -369,6 +406,19 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
       NvM_MainFunction();
       NvM_GetErrorStatus(NvMConf___MultiBlockRequest,&BlockStatus);
     } while ( NVM_REQ_PENDING == BlockStatus );
+  }
+
+  if(UserData3Cmd == 1)
+  {
+    VStdMemSet(UserData3Rd,0xFF,sizeof(UserData3Rd));
+    Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_ReadBlock(UserData3Rd);
+    UserData3Cmd = 0;
+  }
+  if(UserData3Cmd == 2)
+  {
+    VStdMemSet(UserData3Wr,0x09,sizeof(UserData3Wr));
+    Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_WriteBlock(UserData3Wr);
+    UserData3Cmd = 0;
   }
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

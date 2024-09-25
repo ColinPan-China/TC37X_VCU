@@ -28,6 +28,12 @@
  *
  * Not configured:
  *
+ *  Rte_CallHook_SWC1_NvMService_AC3_SRBS_NvBlockNeed_UserData3_ReadBlock_Return
+ *  Rte_CallHook_SWC1_NvMService_AC3_SRBS_NvBlockNeed_UserData3_ReadBlock_Start
+ *  Rte_CallHook_SWC1_NvMService_AC3_SRBS_NvBlockNeed_UserData3_SetRamBlockStatus_Return
+ *  Rte_CallHook_SWC1_NvMService_AC3_SRBS_NvBlockNeed_UserData3_SetRamBlockStatus_Start
+ *  Rte_CallHook_SWC1_NvMService_AC3_SRBS_NvBlockNeed_UserData3_WriteBlock_Return
+ *  Rte_CallHook_SWC1_NvMService_AC3_SRBS_NvBlockNeed_UserData3_WriteBlock_Start
  *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode_Return
  *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode_Start
  *  Rte_ComHookRxTOut_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx
@@ -138,12 +144,28 @@
  *  Rte_Runnable_EcuM_SelectShutdownCause_Start
  *  Rte_Runnable_EcuM_SelectShutdownTarget_Return
  *  Rte_Runnable_EcuM_SelectShutdownTarget_Start
+ *  Rte_Runnable_NvM_EraseBlock_Return
+ *  Rte_Runnable_NvM_EraseBlock_Start
+ *  Rte_Runnable_NvM_GetErrorStatus_Return
+ *  Rte_Runnable_NvM_GetErrorStatus_Start
+ *  Rte_Runnable_NvM_InvalidateNvBlock_Return
+ *  Rte_Runnable_NvM_InvalidateNvBlock_Start
  *  Rte_Runnable_NvM_NvM_MainFunction_Return
  *  Rte_Runnable_NvM_NvM_MainFunction_Start
+ *  Rte_Runnable_NvM_ReadBlock_Return
+ *  Rte_Runnable_NvM_ReadBlock_Start
+ *  Rte_Runnable_NvM_RestoreBlockDefaults_Return
+ *  Rte_Runnable_NvM_RestoreBlockDefaults_Start
  *  Rte_Runnable_NvM_SWC_NvM_SWC_UserData1_Runnable_Return
  *  Rte_Runnable_NvM_SWC_NvM_SWC_UserData1_Runnable_Start
  *  Rte_Runnable_NvM_SWC_NvM_SWC_UserData2_Runnable_Return
  *  Rte_Runnable_NvM_SWC_NvM_SWC_UserData2_Runnable_Start
+ *  Rte_Runnable_NvM_SetBlockProtection_Return
+ *  Rte_Runnable_NvM_SetBlockProtection_Start
+ *  Rte_Runnable_NvM_SetRamBlockStatus_Return
+ *  Rte_Runnable_NvM_SetRamBlockStatus_Start
+ *  Rte_Runnable_NvM_WriteBlock_Return
+ *  Rte_Runnable_NvM_WriteBlock_Start
  *  Rte_Runnable_Os_OsCore0_swc_GetCounterValue_Return
  *  Rte_Runnable_Os_OsCore0_swc_GetCounterValue_Start
  *  Rte_Runnable_Os_OsCore0_swc_GetElapsedValue_Return
