@@ -393,8 +393,9 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
 
   if(UserData2Cmd == 2)
   {
-    VStdMemSet(UserData2Wr,0x01,sizeof(UserData2Wr));
+    VStdMemSet(UserData2Wr,0x0A,sizeof(UserData2Wr));
     Rte_Write_NvM_Data_IF_UserData2_Send_Element_UserData2(UserData2Wr);
+    NvM_SetRamBlockStatus(NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2,TRUE);
     UserData2Cmd = 0;
     NvM_RequestResultType BlockStatus;
     /*NVM ReadAll*/
