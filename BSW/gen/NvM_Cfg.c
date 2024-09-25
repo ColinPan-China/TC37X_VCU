@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: NvM_Cfg.c
- *   Generation Time: 2024-09-25 10:22:51
+ *   Generation Time: 2024-09-25 15:14:38
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -48,7 +48,7 @@
  *  INCLUDES
  *********************************************************************************************************************/
 #include "Std_Types.h"
-#include "NvM_App.h"
+
 /* This tag will only be replaced, if one or more callbacks via Service Ports had been configured */
 
 
@@ -71,6 +71,7 @@
 
 /* include list of the callback definitions */
 #include "Rte_Cbk.h" 
+#include "Nvm_App.h" 
 
 
 /* include configured file declaring or defining resource (un)locking service(s) */

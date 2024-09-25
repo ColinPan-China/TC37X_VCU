@@ -44,6 +44,7 @@ extern "C"
 
 # include "Rte_SWC1_Type.h"
 # include "Rte_DataHandleType.h"
+# include "NvM.h" /* PRQA S 3451 */ /* MD_Rte_3451_NvM */
 
 # ifndef RTE_CORE
 
@@ -115,9 +116,17 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_WriteBlock(NvM_BlockIdType parg0, dt
 #  define RTE_STOP_SEC_NVM_APPL_CODE
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+#  define RTE_START_SEC_NVM_SWC_APPL_CODE
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#  define RTE_STOP_SEC_NVM_SWC_APPL_CODE
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 #  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_ReadBlock(arg1) (NvM_ReadBlock((NvM_BlockIdType)5, arg1))
 #  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)5, arg1))
 #  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_WriteBlock(arg1) (NvM_WriteBlock((NvM_BlockIdType)5, arg1))
+#  define Rte_Call_NvSWC_UserData2_NvMService_AC3_SRBS_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus(NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2, arg1))
 #  define Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)0, arg1))
 
 /**********************************************************************************************************************
@@ -196,6 +205,8 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void); /* PRQA S 3451, 0786, 3449 */ /* 
 #  define RTE_E_ComM_UserRequest_E_NOT_OK (1U)
 
 #  define RTE_E_NvMService_AC3_SRBS_E_NOT_OK (1U)
+
+#  define RTE_E_NvSWC_NvMService_AC3_SRBS_E_NOT_OK (1U)
 # endif /* !defined(RTE_CORE) */
 
 # ifdef __cplusplus
@@ -227,6 +238,11 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void); /* PRQA S 3451, 0786, 3449 */ /* 
 
    MD_Rte_3451:  MISRA rule: Rule8.5
      Reason:     Schedulable entities are declared by the RTE and also by the BSW modules.
+     Risk:       No functional risk.
+     Prevention: Not required.
+
+   MD_Rte_3451_NvM:  MISRA rule: Rule8.5
+     Reason:     NvM functions are declared by the RTE and also by the NvM.
      Risk:       No functional risk.
      Prevention: Not required.
 

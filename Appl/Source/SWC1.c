@@ -309,6 +309,14 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  *   Std_ReturnType Rte_Write_NvM_Data_IF_UserData2_Send_Element_UserData2(const uint8 *data)
  *     Argument data: uint8* is of type NvM_Array32Bytes
  *
+ * Client/Server Interfaces:
+ * =========================
+ *   Server Invocation:
+ *   ------------------
+ *   Std_ReturnType Rte_Call_NvSWC_UserData2_NvMService_AC3_SRBS_SetRamBlockStatus(boolean RamBlockStatus)
+ *     Synchronous Server Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_NvSWC_NvMService_AC3_SRBS_E_NOT_OK
+ *
  * Service Calls:
  * ==============
  *   Service Invocation:
@@ -393,9 +401,10 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
 
   if(UserData2Cmd == 2)
   {
-    VStdMemSet(UserData2Wr,0x0A,sizeof(UserData2Wr));
+    VStdMemSet(UserData2Wr,0x0D,sizeof(UserData2Wr));
     Rte_Write_NvM_Data_IF_UserData2_Send_Element_UserData2(UserData2Wr);
-    NvM_SetRamBlockStatus(NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2,TRUE);
+//    NvM_SetRamBlockStatus(NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2,TRUE);
+    Rte_Call_NvSWC_UserData2_NvMService_AC3_SRBS_SetRamBlockStatus(TRUE);
     UserData2Cmd = 0;
     NvM_RequestResultType BlockStatus;
     /*NVM ReadAll*/

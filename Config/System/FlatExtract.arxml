@@ -1308,6 +1308,28 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/NvMService_AC3_SRBS_NvBlockNeed_UserData3</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="5fd469c5-016e-4c04-8bcb-3c5b8f98b56a">
+                                  <SHORT-NAME>NvM_SWC_NvMService_NVBlockDescriptor_UserData2_SWC1_NvSWC_UserData2_NvMService_AC3_SRBS</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/NvM_SWC/NvMService_NVBlockDescriptor_UserData2</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/NvSWC_UserData2_NvMService_AC3_SRBS</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -1419,12 +1441,19 @@
                                     <SD GID="F46DC447-48FA-40AC-B556-211DADA7BA16">/ComponentTypes/NvM_SWC</SD>
                                     <SD GID="5E1541CE-CA73-4331-B1E5-015754C9C331">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData1</SD>
                                     <SD GID="D2B51BE5-1BB5-4CC4-87F9-FBDA7005BDEF">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData2</SD>
+                                    <SD GID="54A92A5C-4D17-4F57-ADFF-23CE44F437D2">/ComponentTypes/NvM_SWC/NvMService_NVBlockDescriptor_UserData2</SD>
                                     <SD GID="C23168BC-2D21-4F16-9D1E-B520CE1A3DD8">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData1_Recv</SD>
                                     <SD GID="B584EEA2-12EE-48A0-A8EC-93E7BC307D19">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData1_Send</SD>
                                     <SD GID="152775AA-327A-4B6A-B1E3-6C7325FA612E">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData2_Rcev</SD>
                                     <SD GID="5A318BA4-C53A-400F-A492-CD01C58E94A9">/ComponentTypes/NvM_SWC/NvM_Data_IF_UserData2_Send</SD>
                                     <SD GID="782B4409-59FE-4C85-9498-024A069B5EBD">/ComponentTypes/NvM_SWC/NvM_SWC_InternalBehavior/DRT_NvM_SWC_Runnable_NvM_Data_IF_UserData1_Recv_Element_UserData1</SD>
                                     <SD GID="E846A3BD-06A8-4AF2-8E40-68C04EC5E3C2">/ComponentTypes/NvM_SWC/NvM_SWC_InternalBehavior/DRT_NvM_SWC_UserData2_Runnable_NvM_Data_IF_UserData2_Rcev_Element_UserData2</SD>
+                                    <SD GID="5C7C12DC-B69D-428D-B2F2-102E3E3F5C12">/ComponentTypes/NvM_SWC/NvM_SWC_InternalBehavior/OIT_NvMService_NVBlockDescriptor_UserData2_EraseBlock_NvMService_NVBlockDescriptor_UserData2_EraseBlock</SD>
+                                    <SD GID="51464A65-46E0-49BF-9853-FA653091174A">/ComponentTypes/NvM_SWC/NvM_SWC_InternalBehavior/OIT_NvMService_NVBlockDescriptor_UserData2_GetErrorStatus_NvMService_NVBlockDescriptor_UserData2_GetErrorStatus</SD>
+                                    <SD GID="5FDFA3BB-F21B-4B61-A514-0ED15C887C4A">/ComponentTypes/NvM_SWC/NvM_SWC_InternalBehavior/OIT_NvMService_NVBlockDescriptor_UserData2_InvalidateNvBlock_NvMService_NVBlockDescriptor_UserData2_InvalidateNvBlock</SD>
+                                    <SD GID="EB8ABEDF-2755-47B0-B976-6AF3CAAF83D0">/ComponentTypes/NvM_SWC/NvM_SWC_InternalBehavior/OIT_NvMService_NVBlockDescriptor_UserData2_ReadBlock_NvMService_NVBlockDescriptor_UserData2_ReadBlock</SD>
+                                    <SD GID="1EA3779E-A09F-4EFC-A163-99D156FC98C5">/ComponentTypes/NvM_SWC/NvM_SWC_InternalBehavior/OIT_NvMService_NVBlockDescriptor_UserData2_SetRamBlockStatus_NvMService_NVBlockDescriptor_UserData2_SetRamBlockStatus</SD>
+                                    <SD GID="CB81AF90-4281-4A75-BA4E-CA4860669ABF">/ComponentTypes/NvM_SWC/NvM_SWC_InternalBehavior/OIT_NvMService_NVBlockDescriptor_UserData2_WriteBlock_NvMService_NVBlockDescriptor_UserData2_WriteBlock</SD>
                                     <SD GID="6F7C58FE-AE31-477A-8E98-BC3EC5AFA5D4">/ComponentTypes/NvM_SWC/NvSWC_NvMNotifyJobFinished_NVBlockDescriptor_UserData1</SD>
                                     <SD GID="2C5D53D7-2002-4F50-9AD3-A735F8512BBF">/ComponentTypes/NvM_SWC/NvSWC_NvMNotifyJobFinished_NVBlockDescriptor_UserData2</SD>
                                     <SD GID="E2C1BA17-BBB8-4735-ACC2-357596FFE3C0">/ComponentTypes/NvM_SWC_Implementation</SD>
@@ -1440,6 +1469,7 @@
                                     <SD GID="20AF7CAB-A11A-4321-8C12-0F9EE9A39EEB">/ComponentTypes/SWC1/NvM_Data_IF_UserData2_Send</SD>
                                     <SD GID="37C35B90-B3A3-4B21-B4E1-437EF90A46DF">/ComponentTypes/SWC1/NvSWC_NvMNotifyJobFinished_UserData1</SD>
                                     <SD GID="4495243F-6412-4F58-9054-74B2D2395FBB">/ComponentTypes/SWC1/NvSWC_NvMNotifyJobFinished_UserData2</SD>
+                                    <SD GID="A385D30B-41AF-4BAE-9647-6E0E60FD71D5">/ComponentTypes/SWC1/NvSWC_UserData2_NvMService_AC3_SRBS</SD>
                                     <SD GID="8C60CFAE-3BA3-41EE-B535-FF2A2B6A82D2">/ComponentTypes/SWC1/Request_ESH_RunRequest_0</SD>
                                     <SD GID="045EA86D-B00E-4809-B908-3560A265C559">/ComponentTypes/SWC1/SWC1_InternalBehavior/NvBlockNeed_UserData3</SD>
                                     <SD GID="063F7ACA-2F44-4214-AF4B-793CAE5302D6">/ComponentTypes/SWC1/SWC1_InternalBehavior/OIT_NvSWC_NvMNotifyJobFinished_UserData1_JobFinished_NvSWC_NvMNotifyJobFinished_UserData1_JobFinished</SD>
