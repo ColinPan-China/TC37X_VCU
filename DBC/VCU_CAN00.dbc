@@ -64,7 +64,7 @@ BO_ 1280 VCU_Rx_500h_NM: 8 GWM
  SG_ VCU_Rx_500h_NM : 0|64@1+ (1,0) [0|0] ""  VCU
 
 BO_ 1308 VCU_Tx_51Ch_NM: 8 VCU
- SG_ VCU_Rx_51Fh_NM : 0|64@1+ (1,0) [0|0] ""  GWM
+ SG_ VCU_Rx_51Ch_NM : 0|64@1+ (1,0) [0|0] ""  GWM
 
 
 BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
@@ -135,7 +135,7 @@ BA_DEF_DEF_  "NmMessage" "no";
 BA_DEF_DEF_  "NmAsrWaitBusSleepTime" 2000;
 BA_DEF_DEF_  "NmAsrTimeoutTime" 2000;
 BA_DEF_DEF_  "NmAsrRepeatMessageTime" 1500;
-BA_DEF_DEF_  "NmAsrNodeIdentifier" 31;
+BA_DEF_DEF_  "NmAsrNodeIdentifier" 28;
 BA_DEF_DEF_  "NmAsrNode" "yes";
 BA_DEF_DEF_  "NmAsrMessageCount" 128;
 BA_DEF_DEF_  "NmAsrMessage" "no";

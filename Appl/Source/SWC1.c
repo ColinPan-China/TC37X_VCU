@@ -350,6 +350,8 @@ uint8 UserData2Cmd = 0;
 uint8 UserData3Rd[32];
 uint8 UserData3Wr[32];
 uint8 UserData3Cmd = 0;
+
+uint8 ComMReqFlg = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -360,7 +362,14 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: SWC1_Runnable10ms
  *********************************************************************************************************************/
-	Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
+	if( ComMReqFlg == 0 )
+  {
+    Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
+  }
+  else
+  {
+    Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_NO_COMMUNICATION );
+  }
 
   if(UserData1Cmd == 1)
   {

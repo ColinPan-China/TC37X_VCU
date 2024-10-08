@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Lcfg.c
- *   Generation Time: 2024-10-08 10:02:21
+ *   Generation Time: 2024-10-08 14:28:43
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -126,7 +126,7 @@ CONST(Can_BTPType, CAN_CONST) Can_BTP[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL
 /*lint -restore */
 CONST(Can_BufferConfigType, CAN_CONST) Can_BufferConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    RXF0C        TXBC         RXBC   RXF1C  TXEFC        Comment */
-  { /*     0 */ 0x00060004u, 0x00010064u, 0x00u, 0x00u, 0x00u }   /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+  { /*     0 */ 0x0006000Cu, 0x0002008Cu, 0x6Cu, 0x00u, 0x00u }   /* [CT_TC37X_VCU_CAN00_22cb8fec] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -184,9 +184,15 @@ CONST(Can_CanSubSystemBaseAdrType, CAN_CONST) Can_CanSubSystemBaseAdr[1] = {  /*
   MailboxRxBasicEndIdx               the end index of the 0:n relation pointing to Can_Mailbox
   MailboxRxBasicLength               the number of relations pointing to Can_Mailbox
   MailboxRxBasicStartIdx             the start index of the 0:n relation pointing to Can_Mailbox
+  MailboxRxFullEndIdx                the end index of the 0:n relation pointing to Can_Mailbox
+  MailboxRxFullLength                the number of relations pointing to Can_Mailbox
+  MailboxRxFullStartIdx              the start index of the 0:n relation pointing to Can_Mailbox
   MailboxTxBasicEndIdx               the end index of the 0:n relation pointing to Can_Mailbox
   MailboxTxBasicLength               the number of relations pointing to Can_Mailbox
   MailboxTxBasicStartIdx             the start index of the 0:n relation pointing to Can_Mailbox
+  MailboxTxFullEndIdx                the end index of the 0:n relation pointing to Can_Mailbox
+  MailboxTxFullLength                the number of relations pointing to Can_Mailbox
+  MailboxTxFullStartIdx              the start index of the 0:n relation pointing to Can_Mailbox
   RxBasicHwStart                 
   RxBasicHwStop                  
   RxFullHwStart                  
@@ -204,8 +210,8 @@ CONST(Can_CanSubSystemBaseAdrType, CAN_CONST) Can_CanSubSystemBaseAdr[1] = {  /*
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    BasisAdr     CanControllerDefaultBaudrate  IsTTCan  CanControllerDefaultBaudrateIdx  MailboxRxBasicEndIdx                                                                                                                                                     MailboxRxBasicLength                                                                                                                                                     MailboxRxBasicStartIdx                                                                                                                                                     MailboxTxBasicEndIdx                                                                                                                                                     MailboxTxBasicLength                                                                                                                                                     MailboxTxBasicStartIdx                                                                                                                                                     RxBasicHwStart  RxBasicHwStop  RxFullHwStart  RxFullHwStop  RxSelection  TxBasicHwStart  TxBasicHwStop  TxFullHwStart  TxFullHwStop  UnusedHwStart  UnusedHwStop        Comment                                   Referable Keys */
-  { /*     0 */ 0xF0208100u,                         500u,    TRUE,                              0u,                   2u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   1u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                     1u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                     0u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,             0u,            1u,            0u,           0u,       0x01u,             0u,            1u,            1u,           1u,            0u,           0u }   /* [CT_TC37X_VCU_CAN00_22cb8fec] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
+    /* Index    BasisAdr     CanControllerDefaultBaudrate  IsTTCan  CanControllerDefaultBaudrateIdx  MailboxRxBasicEndIdx                                                                                                                                                     MailboxRxBasicLength                                                                                                                                                     MailboxRxBasicStartIdx                                                                                                                                                     MailboxRxFullEndIdx                                                                                                                                                    MailboxRxFullLength                                                                                                                                                    MailboxRxFullStartIdx                                                                                                                                                    MailboxTxBasicEndIdx                                                                                                                                                     MailboxTxBasicLength                                                                                                                                                     MailboxTxBasicStartIdx                                                                                                                                                     MailboxTxFullEndIdx                                                                                                                                                    MailboxTxFullLength                                                                                                                                                    MailboxTxFullStartIdx                                                                                                                                                    RxBasicHwStart  RxBasicHwStop  RxFullHwStart  RxFullHwStop  RxSelection  TxBasicHwStart  TxBasicHwStop  TxFullHwStart  TxFullHwStop  UnusedHwStart  UnusedHwStop        Comment                                   Referable Keys */
+  { /*     0 */ 0xF0208100u,                         500u,    TRUE,                              0u,                   5u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   1u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                     4u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                  4u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                  2u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                    2u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   2u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                     1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                  1u  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                  1u  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                    0u  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,             0u,            1u,            0u,           2u,       0x01u,             1u,            2u,            0u,           1u,            0u,           0u }   /* [CT_TC37X_VCU_CAN00_22cb8fec] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -377,10 +383,10 @@ CONST(Can_OsIsrType, CAN_CONST) Can_IsrOsId[1] = {  /* PRQA S 1514, 1533 */  /* 
   \brief  mailbox configuration (over all controllers)
   \details
   Element                Description
+  IDValue            
   ActiveSendObject   
   ControllerConfigIdx    the index of the 1:1 relation pointing to Can_ControllerConfig
   HwHandle           
-  IDValue            
   MailboxSize        
   MailboxType        
   MaxDataLen         
@@ -390,10 +396,13 @@ CONST(Can_OsIsrType, CAN_CONST) Can_IsrOsId[1] = {  /* PRQA S 1514, 1533 */  /* 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    ActiveSendObject  ControllerConfigIdx                                                                  HwHandle  IDValue  MailboxSize  MailboxType                                MaxDataLen  MemorySectionsIndex        Comment                                      Referable Keys */
-  { /*     0 */               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,       0u,   0x00u,          1u, CAN_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 32u },  /* [CN_TC37X_VCU_CAN00_07b6c9c8_Tx] */  /* [/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN00_07b6c9c8_Tx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
-  { /*     1 */               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,       0u,   0x00u,          6u, CAN_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 32u }   /* [CN_TC37X_VCU_CAN00_c052b9c5_Rx] */  /* [/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN00_c052b9c5_Rx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    IDValue  ActiveSendObject  ControllerConfigIdx                                                                  HwHandle  MailboxSize  MailboxType                                MaxDataLen  MemorySectionsIndex        Comment                                                                Referable Keys */
+  { /*     0 */ 0x051Cu,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,       0u,          1u,  CAN_TX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 32u },  /* [CanHardwareObject_TX0]                                    */  /* [/ActiveEcuC/Can/CanConfigSet/CanHardwareObject_TX0 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+  { /*     1 */ 0x0000u,               1u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,       1u,          1u, CAN_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 33u },  /* [CN_TC37X_VCU_CAN00_07b6c9c8_Tx]                           */  /* [/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN00_07b6c9c8_Tx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+  { /*     2 */ 0x0200u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,       0u,          1u,  CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  0u },  /* [CanHardwareObject_VcuRxMsg1_oTC37X_VCU_CAN00_c149044d_Rx] */  /* [/ActiveEcuC/Can/CanConfigSet/CanHardwareObject_VcuRxMsg1_oTC37X_VCU_CAN00_c149044d_Rx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+  { /*     3 */ 0x0201u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,       1u,          1u,  CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  1u },  /* [CanHardwareObject_VcuRxMsg2_oTC37X_VCU_CAN00_de1782b6_Rx] */  /* [/ActiveEcuC/Can/CanConfigSet/CanHardwareObject_VcuRxMsg2_oTC37X_VCU_CAN00_de1782b6_Rx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+  { /*     4 */ 0x0000u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,       0u,          6u, CAN_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 32u }   /* [CN_TC37X_VCU_CAN00_c052b9c5_Rx]                           */  /* [/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN00_c052b9c5_Rx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -441,8 +450,8 @@ CONST(Can_MemorySectionInfoType, CAN_CONST) Can_MemorySectionInfo[1] = {  /* PRQ
 /*lint -restore */
 CONST(Can_MemorySectionObjectsType, CAN_CONST) Can_MemorySectionObjects[32] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    HwHandle  MailboxElement  MailboxHandle        Comment */
-  { /*     0 */       0u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - CN_TC37X_VCU_CAN00_07b6c9c8_Tx] */
-  { /*     1 */       1u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*     0 */       0u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - CanHardwareObject_TX0] */
+  { /*     1 */       1u,             0u,            1u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - CN_TC37X_VCU_CAN00_07b6c9c8_Tx] */
   { /*     2 */       2u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
   { /*     3 */       3u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
   { /*     4 */       4u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
@@ -498,7 +507,7 @@ CONST(Can_MemorySectionObjectsType, CAN_CONST) Can_MemorySectionObjects[32] = { 
 /*lint -restore */
 CONST(Can_SIDFCType, CAN_CONST) Can_SIDFC[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    FLSSA  LSS    SIDFEEndIdx                                                                  SIDFEStartIdx                                                                        Comment */
-  { /*     0 */ 0x00u, 0x01u,          1u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,            0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */ }   /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+  { /*     0 */ 0x00u, 0x03u,          3u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,            0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */ }   /* [CT_TC37X_VCU_CAN00_22cb8fec] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -516,9 +525,11 @@ CONST(Can_SIDFCType, CAN_CONST) Can_SIDFC[1] = {  /* PRQA S 1514, 1533 */  /* MD
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_SIDFEType, CAN_CONST) Can_SIDFE[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_SIDFEType, CAN_CONST) Can_SIDFE[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     SIDFE                                   Comment                              Referable Keys */
-  /*     0 */  0x88000000u  /*  I: 0 S0 FIFO_0 */   /* [CT_TC37X_VCU_CAN00_22cb8fec] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
+  /*     0 */  0xBA000000u  /* FULLCAN_0 */      ,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
+  /*     1 */  0xBA010001u  /* FULLCAN_1 */      ,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
+  /*     2 */  0x88000000u  /*  I: 0 S0 FIFO_0 */   /* [CT_TC37X_VCU_CAN00_22cb8fec] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
 };
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
@@ -568,8 +579,8 @@ CONST(Can_SRN_AddressType, CAN_CONST) Can_SRN_Address[1] = {  /* PRQA S 1514, 15
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Can_ShmAdrType, CAN_CONST) Can_ShmAdr[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    RXBA                           RXF0A                           RXF1A                          SIDFA                          StartAdr     StopAdr      TXBA                            TXEFA                          XIDFA                                Comment */
-  { /*     0 */ 0xF0200000u  /* Size[B]: 0 */, 0xF0200004u  /* Size[B]: 96 */, 0xF0200000u  /* Size[B]: 0 */, 0xF0200000u  /* Size[B]: 4 */, 0xF0200000u, 0xF0200075u, 0xF0200064u  /* Size[B]: 16 */, 0xF0200000u  /* Size[B]: 0 */, 0xF0200000u  /* Size[B]: 0 */ }   /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+    /* Index    RXBA                            RXF0A                           RXF1A                          SIDFA                           StartAdr     StopAdr      TXBA                            TXEFA                          XIDFA                                Comment */
+  { /*     0 */ 0xF020006Cu  /* Size[B]: 32 */, 0xF020000Cu  /* Size[B]: 96 */, 0xF0200000u  /* Size[B]: 0 */, 0xF0200000u  /* Size[B]: 12 */, 0xF0200000u, 0xF02000ADu, 0xF020008Cu  /* Size[B]: 32 */, 0xF0200000u  /* Size[B]: 0 */, 0xF0200000u  /* Size[B]: 0 */ }   /* [CT_TC37X_VCU_CAN00_22cb8fec] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -675,7 +686,7 @@ CONST(Can_XIDFEType, CAN_CONST) Can_XIDFE[1] = {  /* PRQA S 1514, 1533 */  /* MD
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define CAN_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

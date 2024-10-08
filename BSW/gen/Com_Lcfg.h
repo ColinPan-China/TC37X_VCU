@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Lcfg.h
- *   Generation Time: 2024-09-06 16:09:03
+ *   Generation Time: 2024-10-08 15:45:32
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -683,7 +683,7 @@
 #define COM_PERIODICOFTXMODETRUE                                                                    STD_ON
 #define COM_REPCNTOFTXMODETRUE                                                                      STD_OFF  /**< Deactivateable: 'Com_TxModeTrue.RepCnt' Reason: 'the value of Com_RepCntOfTxModeTrue is always '0' due to this, the array is deactivated.' */
 #define COM_REPPERIODOFTXMODETRUE                                                                   STD_OFF  /**< Deactivateable: 'Com_TxModeTrue.RepPeriod' Reason: 'the value of Com_RepPeriodOfTxModeTrue is always '0' due to this, the array is deactivated.' */
-#define COM_TIMEOFFSETOFTXMODETRUE                                                                  STD_OFF  /**< Deactivateable: 'Com_TxModeTrue.TimeOffset' Reason: 'the value of Com_TimeOffsetOfTxModeTrue is always '1' due to this, the array is deactivated.' */
+#define COM_TIMEOFFSETOFTXMODETRUE                                                                  STD_ON
 #define COM_TIMEPERIODOFTXMODETRUE                                                                  STD_ON
 #define COM_TXPDUCALLOUTFUNCPTR                                                                     STD_OFF  /**< Deactivateable: 'Com_TxPduCalloutFuncPtr' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define COM_TXPDUGRPACTIVE                                                                          STD_ON
@@ -1357,6 +1357,7 @@
 #define COM_ISDEF_TXMODEFALSEIDXOFTXMODEINFO                                                        STD_OFF
 #define COM_ISDEF_TXMODETRUEIDXOFTXMODEINFO                                                         STD_OFF
 #define COM_ISDEF_PERIODICOFTXMODETRUE                                                              STD_OFF
+#define COM_ISDEF_TIMEOFFSETOFTXMODETRUE                                                            STD_OFF
 #define COM_ISDEF_TIMEPERIODOFTXMODETRUE                                                            STD_OFF
 #define COM_ISDEF_EXTERNALIDOFTXPDUINFO                                                             STD_OFF
 #define COM_ISDEF_METADATALENGTHOFTXPDUINFO                                                         STD_OFF
@@ -1539,6 +1540,7 @@
 #define COM_EQ2_TXMODEFALSEIDXOFTXMODEINFO                                                          
 #define COM_EQ2_TXMODETRUEIDXOFTXMODEINFO                                                           
 #define COM_EQ2_PERIODICOFTXMODETRUE                                                                
+#define COM_EQ2_TIMEOFFSETOFTXMODETRUE                                                              
 #define COM_EQ2_TIMEPERIODOFTXMODETRUE                                                              
 #define COM_EQ2_EXTERNALIDOFTXPDUINFO                                                               
 #define COM_EQ2_METADATALENGTHOFTXPDUINFO                                                           
@@ -2001,6 +2003,7 @@
 #define Com_GetTxIPduGroupISRLockThreshold()                                                        Com_GetTxIPduGroupISRLockThresholdOfPCConfig()
 #define Com_GetTimePeriodOfTxModeFalse(Index)                                                       ((Com_TimePeriodOfTxModeFalseType)((((Com_TimePeriodOfTxModeFalseType)(Index)) + 50u)))  /**< Cycle time factor. */
 #define Com_GetTxModeFalseIdxOfTxModeInfo(Index)                                                    Com_GetTxModeTrueIdxOfTxModeInfo(Index)  /**< the index of the 1:1 relation pointing to Com_TxModeFalse */
+#define Com_GetTimeOffsetOfTxModeTrue(Index)                                                        ((Com_TimeOffsetOfTxModeTrueType)((((Com_TimeOffsetOfTxModeTrueType)(Index)) + 11u)))  /**< Initial time offset factor for cyclic transmission. */
 #define Com_GetTimePeriodOfTxModeTrue(Index)                                                        ((Com_TimePeriodOfTxModeTrueType)((((Com_TimePeriodOfTxModeTrueType)(Index)) + 50u)))  /**< Cycle time factor. */
 #define Com_GetExternalIdOfTxPduInfo(Index)                                                         ((Com_ExternalIdOfTxPduInfoType)((Index)))  /**< External ID used to call PduR_ComTransmit(). */
 #define Com_GetMetaDataLengthOfTxPduInfo(Index)                                                     Com_GetPartitionsTxStructIdxOfTxPduInfo(Index)  /**< Length of MetaData. */
@@ -2251,6 +2254,7 @@
 #define Com_HasTxModeTrueIdxOfTxModeInfo()                                                          (TRUE != FALSE)
 #define Com_HasTxModeTrue()                                                                         (TRUE != FALSE)
 #define Com_HasPeriodicOfTxModeTrue()                                                               (TRUE != FALSE)
+#define Com_HasTimeOffsetOfTxModeTrue()                                                             (TRUE != FALSE)
 #define Com_HasTimePeriodOfTxModeTrue()                                                             (TRUE != FALSE)
 #define Com_HasTxPduGrpActive()                                                                     (TRUE != FALSE)
 #define Com_HasTxPduInfo()                                                                          (TRUE != FALSE)
@@ -3166,6 +3170,9 @@ typedef uint8 Com_TxModeTrueIdxOfTxModeInfoType;
 
 /**   \brief  value based type definition for Com_PeriodicOfTxModeTrue */
 typedef boolean Com_PeriodicOfTxModeTrueType;
+
+/**   \brief  value based type definition for Com_TimeOffsetOfTxModeTrue */
+typedef uint8 Com_TimeOffsetOfTxModeTrueType;
 
 /**   \brief  value based type definition for Com_TimePeriodOfTxModeTrue */
 typedef uint8 Com_TimePeriodOfTxModeTrueType;

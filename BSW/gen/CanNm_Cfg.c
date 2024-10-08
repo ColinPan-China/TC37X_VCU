@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanNm_Cfg.c
- *   Generation Time: 2024-09-04 17:27:54
+ *   Generation Time: 2024-10-08 14:59:42
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -103,7 +103,7 @@
 /*lint -restore */
 CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    NodeIdEnabled  ChannelId                                           ImmediateNmCycleTime  ImmediateNmTransmissions  MsgCycleTime  MsgTimeoutTime  PduCbvPosition    PduNidPosition    RemoteSleepIndTime  RepeatMessageTime  TimeoutTime  WaitBusSleepTime        Referable Keys */
-  { /*     0 */          TRUE, NmConf_NmChannelConfig_CN_TC37X_VCU_CAN00_07b6c9c8,                   1u,                     200u,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0,                 0u,              150u,        200u,             201u }   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN00_07b6c9c8] */
+  { /*     0 */          TRUE, NmConf_NmChannelConfig_CN_TC37X_VCU_CAN00_07b6c9c8,                   1u,                      12u,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0,                 0u,              150u,        200u,             201u }   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN00_07b6c9c8] */
 };
 #define CANNM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -143,7 +143,7 @@ CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[1] = {  /* PRQA 
 /*lint -restore */
 CONST(CanNm_PbChannelConfigType, CANNM_CONST) CanNm_PbChannelConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    MsgCycleOffset  NodeId  RxMessageDataEndIdx  RxMessageDataLength  RxMessageDataStartIdx  RxMessageData_CBVIdx  RxMessageData_NIDIdx  RxMessageData_UserDataEndIdx  RxMessageData_UserDataLength  RxMessageData_UserDataStartIdx  TxMessageDataEndIdx  TxMessageDataLength  TxMessageDataStartIdx  TxMessageData_CBVIdx  TxMessageData_NIDIdx  TxMessageData_UserDataEndIdx  TxMessageData_UserDataLength  TxMessageData_UserDataStartIdx  TxPduId                                                                    Referable Keys */
-  { /*     0 */             0u,    31u,                  8u,                  8u,                    0u,                   1u,                   0u,                           8u,                           6u,                             2u,                  8u,                  8u,                    0u,                   1u,                   0u,                           8u,                           6u,                             2u, CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx }   /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN00_CAN_cc8c31fa] */
+  { /*     0 */             0u,    28u,                  8u,                  8u,                    0u,                   1u,                   0u,                           8u,                           6u,                             2u,                  8u,                  8u,                    0u,                   1u,                   0u,                           8u,                           6u,                             2u, CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx }   /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN00_CAN_cc8c31fa] */
 };
 #define CANNM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

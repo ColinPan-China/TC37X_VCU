@@ -127,7 +127,7 @@
                 <CAN-NM-NODE>
                   <SHORT-NAME>GWM</SHORT-NAME>
                   <NM-IF-ECU-REF DEST="NM-ECU">/NM/NmConfig/GWM_CAN</NM-IF-ECU-REF>
-                  <NM-NODE-ID>31</NM-NODE-ID>
+                  <NM-NODE-ID>28</NM-NODE-ID>
                   <RX-NM-PDU-REFS>
                     <RX-NM-PDU-REF DEST="NM-PDU">/PDU/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00</RX-NM-PDU-REF>
                   </RX-NM-PDU-REFS>
@@ -145,7 +145,7 @@
                   <SHORT-NAME>VCU</SHORT-NAME>
                   <CONTROLLER-REF DEST="CAN-COMMUNICATION-CONTROLLER">/ECU/VCU/CT_TC37X_VCU_CAN00</CONTROLLER-REF>
                   <NM-IF-ECU-REF DEST="NM-ECU">/NM/NmConfig/VCU_CAN</NM-IF-ECU-REF>
-                  <NM-NODE-ID>31</NM-NODE-ID>
+                  <NM-NODE-ID>28</NM-NODE-ID>
                   <RX-NM-PDU-REFS>
                     <RX-NM-PDU-REF DEST="NM-PDU">/PDU/VCU_Rx_500h_NM_oTC37X_VCU_CAN00</RX-NM-PDU-REF>
                   </RX-NM-PDU-REFS>

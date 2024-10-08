@@ -149,8 +149,8 @@
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>
     <Display LastVersion="5.24.40 SP2">
-        <FileSet Id="" CS="576aaa58">
-            <File Order="0" EcuInstance="VCU" Hash="c1779f3dd00220deed91c8a9b9bbf5cf" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\VCU_CAN00.dbc</File>
+        <FileSet Id="" CS="4bc16995">
+            <File Order="0" EcuInstance="VCU" Hash="ed08a540b37afc2c0703e45b1c444bd9" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\VCU_CAN00.dbc</File>
         </FileSet>
         <Merge>
             <Path Id="ECU-INSTANCE" ARPath="/ECU/VCU"/>
