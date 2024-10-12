@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanIf_Cfg.h
- *   Generation Time: 2024-10-08 14:28:42
+ *   Generation Time: 2024-10-09 14:09:24
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -217,9 +217,10 @@ typedef uint8 CanIf_TxBufferSizeType;
   \def  Tx PDU handles
 **********************************************************************************************************************/
 
-#define CanIfTxPduHnd_VcuTxMsg2_oTC37X_VCU_CAN00_674a89a8_Tx                                        0u
-#define CanIfTxPduHnd_VcuTxMsg1_oTC37X_VCU_CAN00_78140f53_Tx                                        1u
-#define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx                                   2u
+#define CanIfTxPduHnd_XCP_Response_oTC37X_VCU_CAN00_933a9e7a_Tx                                     0u
+#define CanIfTxPduHnd_VcuTxMsg2_oTC37X_VCU_CAN00_674a89a8_Tx                                        1u
+#define CanIfTxPduHnd_VcuTxMsg1_oTC37X_VCU_CAN00_78140f53_Tx                                        2u
+#define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx                                   3u
 
 
 /**********************************************************************************************************************
@@ -233,6 +234,8 @@ typedef uint8 CanIf_TxBufferSizeType;
 /* Assigned to: PduR_CanIfRxIndication*/
 #define CanIfRxPduHnd_VcuRxMsg2_oTC37X_VCU_CAN00_de1782b6_Rx                                        0u
 #define CanIfRxPduHnd_VcuRxMsg1_oTC37X_VCU_CAN00_c149044d_Rx                                        1u
+/* Assigned to: Xcp_CanIfRxIndication*/
+#define CanIfRxPduHnd_XCP_Request_oTC37X_VCU_CAN00_e22de59e_Rx                                      0u
 
 
 
@@ -240,18 +243,20 @@ typedef uint8 CanIf_TxBufferSizeType;
   \def  AUTOSAR Tx PDU handles
 **********************************************************************************************************************/
 
-#define CanIfConf_CanIfTxPduCfg_VcuTxMsg2_oTC37X_VCU_CAN00_674a89a8_Tx                              0u
-#define CanIfConf_CanIfTxPduCfg_VcuTxMsg1_oTC37X_VCU_CAN00_78140f53_Tx                              1u
-#define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx                         2u
+#define CanIfConf_CanIfTxPduCfg_XCP_Response_oTC37X_VCU_CAN00_933a9e7a_Tx                           0u
+#define CanIfConf_CanIfTxPduCfg_VcuTxMsg2_oTC37X_VCU_CAN00_674a89a8_Tx                              1u
+#define CanIfConf_CanIfTxPduCfg_VcuTxMsg1_oTC37X_VCU_CAN00_78140f53_Tx                              2u
+#define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx                         3u
 
 
 /**********************************************************************************************************************
   \def  AUTOSAR Rx PDU handles
 **********************************************************************************************************************/
 
-#define CanIfConf_CanIfRxPduCfg_VCU_Rx_500h_NM_oTC37X_VCU_CAN00_2f971b6a_Rx                         0u
-#define CanIfConf_CanIfRxPduCfg_VcuRxMsg2_oTC37X_VCU_CAN00_de1782b6_Rx                              1u
-#define CanIfConf_CanIfRxPduCfg_VcuRxMsg1_oTC37X_VCU_CAN00_c149044d_Rx                              2u
+#define CanIfConf_CanIfRxPduCfg_XCP_Request_oTC37X_VCU_CAN00_e22de59e_Rx                            0u
+#define CanIfConf_CanIfRxPduCfg_VCU_Rx_500h_NM_oTC37X_VCU_CAN00_2f971b6a_Rx                         1u
+#define CanIfConf_CanIfRxPduCfg_VcuRxMsg2_oTC37X_VCU_CAN00_de1782b6_Rx                              2u
+#define CanIfConf_CanIfRxPduCfg_VcuRxMsg1_oTC37X_VCU_CAN00_c149044d_Rx                              3u
 
 
 
@@ -586,10 +591,10 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetRxPduConfigOfPCConfig()                                                            CanIf_RxPduConfig  /**< the pointer to CanIf_RxPduConfig */
 #define CanIf_GetSizeOfCtrlStatesOfPCConfig()                                                       1u  /**< the number of accomplishable value elements in CanIf_CtrlStates */
 #define CanIf_GetSizeOfMailBoxConfigOfPCConfig()                                                    5u  /**< the number of accomplishable value elements in CanIf_MailBoxConfig */
-#define CanIf_GetSizeOfRxIndicationFctListOfPCConfig()                                              3u  /**< the number of accomplishable value elements in CanIf_RxIndicationFctList */
-#define CanIf_GetSizeOfRxPduConfigOfPCConfig()                                                      3u  /**< the number of accomplishable value elements in CanIf_RxPduConfig */
-#define CanIf_GetSizeOfTxConfirmationFctListOfPCConfig()                                            2u  /**< the number of accomplishable value elements in CanIf_TxConfirmationFctList */
-#define CanIf_GetSizeOfTxPduConfigOfPCConfig()                                                      3u  /**< the number of accomplishable value elements in CanIf_TxPduConfig */
+#define CanIf_GetSizeOfRxIndicationFctListOfPCConfig()                                              4u  /**< the number of accomplishable value elements in CanIf_RxIndicationFctList */
+#define CanIf_GetSizeOfRxPduConfigOfPCConfig()                                                      4u  /**< the number of accomplishable value elements in CanIf_RxPduConfig */
+#define CanIf_GetSizeOfTxConfirmationFctListOfPCConfig()                                            3u  /**< the number of accomplishable value elements in CanIf_TxConfirmationFctList */
+#define CanIf_GetSizeOfTxPduConfigOfPCConfig()                                                      4u  /**< the number of accomplishable value elements in CanIf_TxPduConfig */
 #define CanIf_GetTxConfirmationFctListOfPCConfig()                                                  CanIf_TxConfirmationFctList  /**< the pointer to CanIf_TxConfirmationFctList */
 #define CanIf_GetTxPduConfigOfPCConfig()                                                            CanIf_TxPduConfig  /**< the pointer to CanIf_TxPduConfig */
 /** 
@@ -1137,7 +1142,7 @@ extern CONST(CanIf_MailBoxConfigType, CANIF_CONST) CanIf_MailBoxConfig[5];
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_RxIndicationFctListType, CANIF_CONST) CanIf_RxIndicationFctList[3];
+extern CONST(CanIf_RxIndicationFctListType, CANIF_CONST) CanIf_RxIndicationFctList[4];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1161,7 +1166,7 @@ extern CONST(CanIf_RxIndicationFctListType, CANIF_CONST) CanIf_RxIndicationFctLi
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_RxPduConfigType, CANIF_CONST) CanIf_RxPduConfig[3];
+extern CONST(CanIf_RxPduConfigType, CANIF_CONST) CanIf_RxPduConfig[4];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1178,7 +1183,7 @@ extern CONST(CanIf_RxPduConfigType, CANIF_CONST) CanIf_RxPduConfig[3];
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_TxConfirmationFctType, CANIF_CONST) CanIf_TxConfirmationFctList[2];
+extern CONST(CanIf_TxConfirmationFctType, CANIF_CONST) CanIf_TxConfirmationFctList[3];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1204,7 +1209,7 @@ extern CONST(CanIf_TxConfirmationFctType, CANIF_CONST) CanIf_TxConfirmationFctLi
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[3];
+extern CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[4];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

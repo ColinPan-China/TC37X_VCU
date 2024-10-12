@@ -354,6 +354,22 @@
  *  SchM_EnterHook_NvM_NVM_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_PduR_PDUR_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_PduR_PDUR_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_Xcp_CANXCP_EXCLUSIVE_AREA_0_Return
+ *  SchM_EnterHook_Xcp_CANXCP_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_Xcp_FRXCP_EXCLUSIVE_AREA_0_Return
+ *  SchM_EnterHook_Xcp_FRXCP_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_Xcp_FRXCP_EXCLUSIVE_AREA_1_Return
+ *  SchM_EnterHook_Xcp_FRXCP_EXCLUSIVE_AREA_1_Start
+ *  SchM_EnterHook_Xcp_FRXCP_EXCLUSIVE_AREA_2_Return
+ *  SchM_EnterHook_Xcp_FRXCP_EXCLUSIVE_AREA_2_Start
+ *  SchM_EnterHook_Xcp_TCPIPXCP_EXCLUSIVE_AREA_0_Return
+ *  SchM_EnterHook_Xcp_TCPIPXCP_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_Xcp_XCP_EXCLUSIVE_AREA_0_Return
+ *  SchM_EnterHook_Xcp_XCP_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_Xcp_XCP_EXCLUSIVE_AREA_1_Return
+ *  SchM_EnterHook_Xcp_XCP_EXCLUSIVE_AREA_1_Start
+ *  SchM_EnterHook_Xcp_XCP_EXCLUSIVE_AREA_2_Return
+ *  SchM_EnterHook_Xcp_XCP_EXCLUSIVE_AREA_2_Start
  *  SchM_ExitHook_BswM_BSWM_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_BswM_BSWM_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_CanIf_CANIF_EXCLUSIVE_AREA_0_Return
@@ -482,6 +498,22 @@
  *  SchM_ExitHook_NvM_NVM_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_PduR_PDUR_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_PduR_PDUR_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_Xcp_CANXCP_EXCLUSIVE_AREA_0_Return
+ *  SchM_ExitHook_Xcp_CANXCP_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_Xcp_FRXCP_EXCLUSIVE_AREA_0_Return
+ *  SchM_ExitHook_Xcp_FRXCP_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_Xcp_FRXCP_EXCLUSIVE_AREA_1_Return
+ *  SchM_ExitHook_Xcp_FRXCP_EXCLUSIVE_AREA_1_Start
+ *  SchM_ExitHook_Xcp_FRXCP_EXCLUSIVE_AREA_2_Return
+ *  SchM_ExitHook_Xcp_FRXCP_EXCLUSIVE_AREA_2_Start
+ *  SchM_ExitHook_Xcp_TCPIPXCP_EXCLUSIVE_AREA_0_Return
+ *  SchM_ExitHook_Xcp_TCPIPXCP_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_Xcp_XCP_EXCLUSIVE_AREA_0_Return
+ *  SchM_ExitHook_Xcp_XCP_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_Xcp_XCP_EXCLUSIVE_AREA_1_Return
+ *  SchM_ExitHook_Xcp_XCP_EXCLUSIVE_AREA_1_Start
+ *  SchM_ExitHook_Xcp_XCP_EXCLUSIVE_AREA_2_Return
+ *  SchM_ExitHook_Xcp_XCP_EXCLUSIVE_AREA_2_Start
  *  SchM_Schedulable_BswM_BswM_MainFunction_Return
  *  SchM_Schedulable_BswM_BswM_MainFunction_Start
  *  SchM_Schedulable_CanNm_CanNm_MainFunction_Return
@@ -508,6 +540,10 @@
  *  SchM_Schedulable_Fls_17_Dmu_Fls_17_Dmu_MainFunction_Start
  *  SchM_Schedulable_NvM_NvM_MainFunction_Return
  *  SchM_Schedulable_NvM_NvM_MainFunction_Start
+ *  SchM_Schedulable_Xcp_CanXcp_MainFunction_Return
+ *  SchM_Schedulable_Xcp_CanXcp_MainFunction_Start
+ *  SchM_Schedulable_Xcp_Xcp_MainFunction_Return
+ *  SchM_Schedulable_Xcp_Xcp_MainFunction_Start
  *
  *********************************************************************************************************************/
 

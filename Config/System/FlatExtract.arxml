@@ -122,6 +122,18 @@
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg2_Sig3_oVcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/XCP_Request_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/XCP_Response_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="XCP-PDU">/PDU/XCP_Request_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="XCP-PDU">/PDU/XCP_Response_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
                               </FIBEX-ELEMENTS>
                               <MAPPINGS>
                                 <SYSTEM-MAPPING UUID="19079e91-2a91-4fa6-9093-7c1b6ba64cfd">

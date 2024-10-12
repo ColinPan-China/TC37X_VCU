@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_25.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2024-10-08, 16:06:25       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2024-10-12, 15:31:27       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b180321-0610           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -151,18 +151,18 @@ static const Mcu_LowPowerModeType  Mcu_kLowPowerModeConfiguration_Config =
 {
   /*MaxModeEvrcCtrl value*/
   {
-    0x1U,
+    0x5U,
     0x0U,
     0U
   },
   /* PMSWCR0 Register value */
-  0x00000000U,
+  0x6800e000U,
   /* PMSWCR3Value  */
   0x00000000U,
   /* PMSWCR4Value  */
   0x00000000U,
   /* PMSWCR5Value  */
-  0x00000000U
+  0x00000001U
 };
 /*Generate configuration structure for GTM Clock config*/
                         static const Mcu_GtmClockSettingType Mcu_kGtmClockConfigPtr_Config =

@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 1.30.0_7.0.0                                                  **
 **                                                                            **
-**  DATE, TIME: 2024-10-08, 16:06:24         !!!IGNORE-LINE!!!                **
+**  DATE, TIME: 2024-10-12, 15:31:27         !!!IGNORE-LINE!!!                **
 **                                                                            **
 **  GENERATOR : Build b180321-0610             !!!IGNORE-LINE!!!              **
 **                                                                            **
@@ -434,6 +434,172 @@ according to requirement ecuc_sws_2108*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
 according to requirement ecuc_sws_2108*/
 #define DioConf_DioChannel_DioChannel_P13_3_D110 (DIO_CHANNEL_13_3)
+#endif
+/*
+DIO PORT : (DioPort_21)
+*/
+#ifndef DioConf_DioPort_DioPort_21
+#define DioConf_DioPort_DioPort_21 (DIO_PORT_21)
+#endif
+/* DIO Channel : (DioChannel_P21_0) */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#ifndef DioConf_DioChannel_DioChannel_P21_0
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#define DioConf_DioChannel_DioChannel_P21_0 (DIO_CHANNEL_21_0)
+#endif
+/* DIO Channel : (DioChannel_P21_1) */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#ifndef DioConf_DioChannel_DioChannel_P21_1
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#define DioConf_DioChannel_DioChannel_P21_1 (DIO_CHANNEL_21_1)
+#endif
+/* DIO Channel : (DioChannel_P21_2_KL15) */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#ifndef DioConf_DioChannel_DioChannel_P21_2_KL15
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#define DioConf_DioChannel_DioChannel_P21_2_KL15 (DIO_CHANNEL_21_2)
+#endif
+/* DIO Channel : (DioChannel_P21_3) */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#ifndef DioConf_DioChannel_DioChannel_P21_3
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#define DioConf_DioChannel_DioChannel_P21_3 (DIO_CHANNEL_21_3)
+#endif
+/* DIO Channel : (DioChannel_P21_4) */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#ifndef DioConf_DioChannel_DioChannel_P21_4
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#define DioConf_DioChannel_DioChannel_P21_4 (DIO_CHANNEL_21_4)
+#endif
+/* DIO Channel : (DioChannel_P21_5) */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#ifndef DioConf_DioChannel_DioChannel_P21_5
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#define DioConf_DioChannel_DioChannel_P21_5 (DIO_CHANNEL_21_5)
+#endif
+/* DIO Channel : (DioChannel_P21_6) */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#ifndef DioConf_DioChannel_DioChannel_P21_6
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#define DioConf_DioChannel_DioChannel_P21_6 (DIO_CHANNEL_21_6)
+#endif
+/* DIO Channel : (DioChannel_P21_7) */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#ifndef DioConf_DioChannel_DioChannel_P21_7
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#define DioConf_DioChannel_DioChannel_P21_7 (DIO_CHANNEL_21_7)
 #endif
 
 

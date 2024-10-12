@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_20.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2024-10-08, 16:06:25         !!!IGNORE-LINE!!!                **
+**  DATE, TIME: 2024-10-12, 15:31:27         !!!IGNORE-LINE!!!                **
 **                                                                            **
 **  GENERATOR : Build b180321-0610             !!!IGNORE-LINE!!!              **
 **                                                                            **
@@ -152,7 +152,7 @@
   defined by IFX namely Mcu_GetCpuIdleModeInitiator, Mcu_GetCpuState,
   Mcu_GetWakeupCause and Mcu_ClearWakeupCause.
 */
-#define MCU_LOW_POWER_MODE_API (STD_OFF)
+#define MCU_LOW_POWER_MODE_API (STD_ON)
 
 /*
   Configuration : MCU_DEINIT_API (McuIfxDeInitApi)
@@ -303,8 +303,8 @@
  7 - All Cores Unanimously
 */
 #define MCU_SYSTEM_CORE_NOT_DEFINED     (0U)
-
-#define MCU_SYSTEM_MODE_CORE            (MCU_SYSTEM_CORE_NOT_DEFINED)
+#define MCU_SYSTEM_MODE_CORE            (1U)
+#define MCU_STANDBY_MODE_ENTRY          (0U)
 
 /* Master Core for triggering Idle Mode for controller
  1 - Core 0
@@ -368,7 +368,7 @@
   in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
-#ifndef McuConf_McuModeSettingConf_McuModeSettingConf_0
+#ifndef McuConf_McuModeSettingConf_McuModeSettingConf_Standby
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -377,7 +377,31 @@
   in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
-  #define McuConf_McuModeSettingConf_McuModeSettingConf_0  (0U)
+  #define McuConf_McuModeSettingConf_McuModeSettingConf_Standby  (2U)
+#endif
+/*
+  Configuration: Mode Id
+  This id corresponds to the container name of the McuModeSettingConfiguration
+  Use this as the parameter for API: Mcu_SetMode
+*/
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+#ifndef McuConf_McuModeSettingConf_McuModeSettingConf
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+  #define McuConf_McuModeSettingConf_McuModeSettingConf  (0U)
 #endif
 
 /*

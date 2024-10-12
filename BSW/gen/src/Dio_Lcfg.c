@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 1.30.0_6.0.0                                                  **
 **                                                                            **
-**  DATE, TIME: 2024-10-08, 16:06:24       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2024-10-12, 15:31:27       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b180321-0610           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -121,8 +121,8 @@
     },
     {
     /* Port21*/
-      DIO_PORT_NOT_CONFIGURED,
-      (0x0000U)
+      DIO_PORT_CONFIGURED,
+      (0x00ffU)
     },
     {
     /* Port22*/

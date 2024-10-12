@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
   <AR-PACKAGES>
-    <AR-PACKAGE>
+    <AR-PACKAGE UUID="52925b53-4b3c-46e3-913d-a21dc97c0984">
       <SHORT-NAME>Dio</SHORT-NAME>
       <ELEMENTS>
         <ECUC-MODULE-CONFIGURATION-VALUES>
           <SHORT-NAME>Dio</SHORT-NAME>
-          <ADMIN-DATA>
-            <SDGS>
-              <SDG GID="DV:CfgPostBuild">
-                <SD GID="DV:postBuildVariantSupport">false</SD>
-              </SDG>
-            </SDGS>
-          </ADMIN-DATA>
           <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AURIX2G/EcucDefs/Dio</DEFINITION-REF>
           <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-LINK-TIME</IMPLEMENTATION-CONFIG-VARIANT>
           <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/AURIX2G/EcucDefs/Dio_Impl</MODULE-DESCRIPTION-REF>
           <CONTAINERS>
-            <ECUC-CONTAINER-VALUE UUID="6690fbec-7b95-46c4-8631-5ad255b0af66">
+            <ECUC-CONTAINER-VALUE UUID="da2a4425-1533-4cfc-9846-5223f41a09cd">
               <SHORT-NAME>CommonPublishedInformation</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/CommonPublishedInformation</DEFINITION-REF>
               <PARAMETER-VALUES>
@@ -59,11 +52,11 @@
                 </ECUC-NUMERICAL-PARAM-VALUE>
               </PARAMETER-VALUES>
             </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE UUID="3ca4f7be-ce7a-47f0-8b45-e9040e432be2">
+            <ECUC-CONTAINER-VALUE UUID="217f17a4-11bd-480d-a821-cdd2fd0fe81d">
               <SHORT-NAME>DioConfig</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig</DEFINITION-REF>
               <SUB-CONTAINERS>
-                <ECUC-CONTAINER-VALUE UUID="ed1b6697-5e87-43cb-9cfa-c354d0b1531b">
+                <ECUC-CONTAINER-VALUE UUID="ea769e02-7066-426c-8a75-606f0d16264b">
                   <SHORT-NAME>DioPort_13</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort</DEFINITION-REF>
                   <PARAMETER-VALUES>
@@ -73,7 +66,7 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="21aab62c-0c6c-4568-850b-3fa80097931b">
+                    <ECUC-CONTAINER-VALUE UUID="d8842dc7-be25-447c-8399-9bc7132e55e6">
                       <SHORT-NAME>DioChannel_P13_0_D107</SHORT-NAME>
                       <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
                       <PARAMETER-VALUES>
@@ -83,7 +76,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="0e3ed85d-2ac8-4a59-a84d-7445e4049cf5">
+                    <ECUC-CONTAINER-VALUE UUID="7cd17bba-cf4d-4b67-9ae8-8fab4e565590">
                       <SHORT-NAME>DioChannel_P13_1_D108</SHORT-NAME>
                       <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
                       <PARAMETER-VALUES>
@@ -93,7 +86,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="9dbf7dfd-d2fa-48bb-b26b-51971f7fab72">
+                    <ECUC-CONTAINER-VALUE UUID="49e8d352-3279-46f7-b4e6-3baa3b591c48">
                       <SHORT-NAME>DioChannel_P13_2_D109</SHORT-NAME>
                       <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
                       <PARAMETER-VALUES>
@@ -103,7 +96,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="290bbf21-70e0-4955-8536-c0e9e8e50424">
+                    <ECUC-CONTAINER-VALUE UUID="9108c35e-7731-4508-afd4-c180397e1eea">
                       <SHORT-NAME>DioChannel_P13_3_D110</SHORT-NAME>
                       <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
                       <PARAMETER-VALUES>
@@ -115,9 +108,101 @@
                     </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="b62ba04e-6756-4adb-a63c-3b406cf361b4">
+                  <SHORT-NAME>DioPort_21</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioPortId</DEFINITION-REF>
+                      <VALUE>21</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="04031567-6c80-4b3d-9a29-2813442dc35a">
+                      <SHORT-NAME>DioChannel_P21_0</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel/DioChannelId</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="e8c7dd3f-e8bd-486e-8e69-a5c7166249dd">
+                      <SHORT-NAME>DioChannel_P21_1</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel/DioChannelId</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="0be90383-0bb4-4a7e-aefc-52233d245954">
+                      <SHORT-NAME>DioChannel_P21_2_KL15</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel/DioChannelId</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="1d2a1a4f-77e8-41f7-bf7e-b619cb4baa96">
+                      <SHORT-NAME>DioChannel_P21_3</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel/DioChannelId</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="fd980741-4fbb-41d7-8f7a-9e737bce51cb">
+                      <SHORT-NAME>DioChannel_P21_4</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel/DioChannelId</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="31e4e566-c781-41f9-8e18-7b9bdd7598f3">
+                      <SHORT-NAME>DioChannel_P21_5</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel/DioChannelId</DEFINITION-REF>
+                          <VALUE>5</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="bb21d980-b165-4d0b-a8b9-87506a5ffab5">
+                      <SHORT-NAME>DioChannel_P21_6</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel/DioChannelId</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="ec0665f5-9bb2-4b65-a957-ef2f6c5feeba">
+                      <SHORT-NAME>DioChannel_P21_7</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Dio/DioConfig/DioPort/DioChannel/DioChannelId</DEFINITION-REF>
+                          <VALUE>7</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
               </SUB-CONTAINERS>
             </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE UUID="61b0da8f-272b-4f0b-87ed-a51ca59b17db">
+            <ECUC-CONTAINER-VALUE UUID="bcdf0524-0536-49dd-9df1-202af95222f2">
               <SHORT-NAME>DioGeneral</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Dio/DioGeneral</DEFINITION-REF>
               <PARAMETER-VALUES>

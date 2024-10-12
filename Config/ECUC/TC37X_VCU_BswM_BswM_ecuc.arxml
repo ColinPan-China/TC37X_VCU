@@ -532,6 +532,38 @@
                                   </SDG>
                                 </SDG>
                               </SDG>
+                              <SDG GID="DV:Feature:INIT_TWO_TP">
+                                <SD GID="DV:Name">InitPhase: INIT_TWO_TP</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                                <SDG GID="DV:Feature:CanXcp_Init">
+                                  <SD GID="DV:Name">CanXcp_Init</SD>
+                                  <SD GID="DV:Value">TRUE</SD>
+                                  <SDG GID="DV:Param:CanXcp_Init_Function">
+                                    <SD GID="DV:Name">CanXcp_Init Function</SD>
+                                    <SD GID="DV:Default">CanXcp_Init(NULL_PTR)</SD>
+                                    <SD GID="DV:Value">CanXcp_Init(NULL_PTR)</SD>
+                                  </SDG>
+                                  <SDG GID="DV:Param:CanXcp_Init_Header">
+                                    <SD GID="DV:Name">CanXcp_Init Header</SD>
+                                    <SD GID="DV:Default">CanXcp.h</SD>
+                                    <SD GID="DV:Value">CanXcp.h</SD>
+                                  </SDG>
+                                </SDG>
+                                <SDG GID="DV:Feature:Xcp_Init">
+                                  <SD GID="DV:Name">Xcp_Init</SD>
+                                  <SD GID="DV:Value">TRUE</SD>
+                                  <SDG GID="DV:Param:Xcp_Init_Function">
+                                    <SD GID="DV:Name">Xcp_Init Function</SD>
+                                    <SD GID="DV:Default">Xcp_Init()</SD>
+                                    <SD GID="DV:Value">Xcp_Init()</SD>
+                                  </SDG>
+                                  <SDG GID="DV:Param:Xcp_Init_Header">
+                                    <SD GID="DV:Name">Xcp_Init Header</SD>
+                                    <SD GID="DV:Default">Xcp.h</SD>
+                                    <SD GID="DV:Value">Xcp.h</SD>
+                                  </SDG>
+                                </SDG>
+                              </SDG>
                               <SDG GID="DV:Feature:INIT_TWO_SYS">
                                 <SD GID="DV:Name">InitPhase: INIT_TWO_SYS</SD>
                                 <SD GID="DV:Value">TRUE</SD>
@@ -6727,7 +6759,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>13</VALUE>
+                              <VALUE>15</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -7068,7 +7100,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>14</VALUE>
+                              <VALUE>16</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -7099,7 +7131,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>15</VALUE>
+                              <VALUE>17</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -7130,7 +7162,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>16</VALUE>
+                              <VALUE>18</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -7161,7 +7193,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>17</VALUE>
+                              <VALUE>19</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -7223,7 +7255,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>11</VALUE>
+                              <VALUE>13</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -7254,13 +7286,75 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>12</VALUE>
+                              <VALUE>14</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
                             <ECUC-REFERENCE-VALUE>
                               <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
                               <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/INIT_Action_NvMReadAll</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="719769b0-f5b6-4fd5-9485-f7ee70bca0fa">
+                          <SHORT-NAME>INIT_Action_CanXcp_Init</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="DV:BswM">
+                                <SDG GID="DV:Statemachines">
+                                  <SDG GID="DV:INIT">
+                                    <SD GID="NAME">INIT_Action_CanXcp_Init</SD>
+                                  </SDG>
+                                </SDG>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMAbortOnFail</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
+                              <VALUE>11</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/INIT_Action_CanXcp_Init</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="e267ed1a-9225-437e-8f3c-b1ed9485b0a3">
+                          <SHORT-NAME>INIT_Action_Xcp_Init</SHORT-NAME>
+                          <ADMIN-DATA>
+                            <SDGS>
+                              <SDG GID="DV:BswM">
+                                <SDG GID="DV:Statemachines">
+                                  <SDG GID="DV:INIT">
+                                    <SD GID="NAME">INIT_Action_Xcp_Init</SD>
+                                  </SDG>
+                                </SDG>
+                              </SDG>
+                            </SDGS>
+                          </ADMIN-DATA>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMAbortOnFail</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
+                              <VALUE>12</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/INIT_Action_Xcp_Init</VALUE-REF>
                             </ECUC-REFERENCE-VALUE>
                           </REFERENCE-VALUES>
                         </ECUC-CONTAINER-VALUE>
@@ -9562,6 +9656,88 @@ else&#13;
                                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMCreateCallout</DEFINITION-REF>
                                   <VALUE>true</VALUE>
                                 </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="f36977da-264c-4b82-b381-65904a46c520">
+                      <SHORT-NAME>INIT_Action_CanXcp_Init</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:BswM">
+                            <SDG GID="DV:Statemachines">
+                              <SDG GID="DV:INIT">
+                                <SD GID="NAME">INIT_Action_CanXcp_Init</SD>
+                              </SDG>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="edbfe1ae-6407-4dc2-b4a5-e26556fa0913">
+                          <SHORT-NAME>BswMAvailableActions</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="514d8ba3-2ad7-437c-adaa-07ad64a98c63">
+                              <SHORT-NAME>BswMUserCallout</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserCalloutFunction</DEFINITION-REF>
+                                  <VALUE>CanXcp_Init(NULL_PTR)</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMCreateCallout</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserIncludeFile</DEFINITION-REF>
+                                  <VALUE>CanXcp.h</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="4d6f1850-2e92-4137-bf17-02d2258acf19">
+                      <SHORT-NAME>INIT_Action_Xcp_Init</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:BswM">
+                            <SDG GID="DV:Statemachines">
+                              <SDG GID="DV:INIT">
+                                <SD GID="NAME">INIT_Action_Xcp_Init</SD>
+                              </SDG>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="267dd2b5-c2c4-4dcc-bdfa-de56e14dc161">
+                          <SHORT-NAME>BswMAvailableActions</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="3d7bdaf0-1917-4f15-a03b-d6c98f94bd43">
+                              <SHORT-NAME>BswMUserCallout</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserCalloutFunction</DEFINITION-REF>
+                                  <VALUE>Xcp_Init()</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMCreateCallout</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserIncludeFile</DEFINITION-REF>
+                                  <VALUE>Xcp.h</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
                               </PARAMETER-VALUES>
                             </ECUC-CONTAINER-VALUE>
                           </SUB-CONTAINERS>

@@ -1,0 +1,48 @@
+/**********************************************************************************************************************
+ *  COPYRIGHT
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  \verbatim
+ *
+ *                 This software is copyright protected and proprietary to Vector Informatik GmbH.
+ *                 Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+ *                 All other rights remain with Vector Informatik GmbH.
+ *  \endverbatim
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  LICENSE
+ *  -------------------------------------------------------------------------------------------------------------------
+ *            Module: Xcp
+ *           Program: MSR_Vector_SLP4
+ *          Customer: Zeekr Automobile (Ningbo Hangzhou Bay New Zoon) Co., Ltd
+ *       Expiry Date: Not restricted
+ *  Ordered Derivat.: TC397_StepB
+ *    License Scope : The usage is restricted to CBD2101138_D00
+ *
+ *  -------------------------------------------------------------------------------------------------------------------
+ *  FILE DESCRIPTION
+ *  -------------------------------------------------------------------------------------------------------------------
+ *              File: XCP_daq.a2l
+ *   Generation Time: 2024-10-10 15:21:33
+ *           Project: TC37X_VCU - Version 1.0
+ *          Delivery: CBD2101138_D00
+ *      Tool Version: DaVinci Configurator  5.24.40 SP2
+ *
+ *
+ *********************************************************************************************************************/
+
+    
+      DYNAMIC
+      101 /* MAX_DAQ */ 
+      2 /* MAX_EVENT_CHANNEL */ 
+      0 /* MIN_DAQ */
+      OPTIMISATION_TYPE_DEFAULT /* OPTIMISATION_TYPE */
+      ADDRESS_EXTENSION_FREE /* ADDRESS_EXTENSION */
+      IDENTIFICATION_FIELD_TYPE_ABSOLUTE /* IDENTIFICATION_FIELD */
+      GRANULARITY_ODT_ENTRY_SIZE_DAQ_BYTE /* GRANULARITY_ODT_ENTRY_SIZE_DAQ */
+      7 /* MAX_ODT_ENTRY_SIZE_DAQ */
+      OVERLOAD_INDICATION_PID
+      PRESCALER_SUPPORTED
+      /begin STIM
+        GRANULARITY_ODT_ENTRY_SIZE_STIM_BYTE
+        7 /* MAX_ODT_ENTRY_SIZE_STIM */
+      /end STIM
+

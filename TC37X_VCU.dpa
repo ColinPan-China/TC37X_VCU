@@ -91,9 +91,6 @@
         <Splitter File=".\Config\ECUC\TC37X_VCU_vBaseEnv_vBaseEnv_ecuc.arxml">
             <Module Name="vBaseEnv"/>
         </Splitter>
-        <Splitter File=".\Config\ECUC\TC37X_VCU_Dio_Dio_ecuc.arxml">
-            <Module Name="Dio"/>
-        </Splitter>
         <Splitter File=".\Config\ECUC\TC37X_VCU_Port_Port_ecuc.arxml">
             <Module Name="Port"/>
         </Splitter>
@@ -145,12 +142,18 @@
         <Splitter File=".\Config\ECUC\TC37X_VCU_NvM_NvM_ecuc.arxml">
             <Module Name="NvM"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Xcp_Xcp_ecuc.arxml">
+            <Module Name="Xcp"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Dio_Dio_ecuc.arxml">
+            <Module Name="Dio"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>
     <Display LastVersion="5.24.40 SP2">
-        <FileSet Id="" CS="4bc16995">
-            <File Order="0" EcuInstance="VCU" Hash="ed08a540b37afc2c0703e45b1c444bd9" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\VCU_CAN00.dbc</File>
+        <FileSet Id="" CS="5755e51a">
+            <File Order="0" EcuInstance="VCU" Hash="406a3842b4347dfd201067c1034360b5" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\VCU_CAN00.dbc</File>
         </FileSet>
         <Merge>
             <Path Id="ECU-INSTANCE" ARPath="/ECU/VCU"/>

@@ -85,7 +85,9 @@
  *********************************************************************************************************************/
 #include "vstdlib.h"
 #include "NvM.h"
-
+#include "Xcp.h"
+#include "Mcu.h"
+#include "Dio.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -352,6 +354,8 @@ uint8 UserData3Wr[32];
 uint8 UserData3Cmd = 0;
 
 uint8 ComMReqFlg = 0;
+
+uint8 XcpCnt = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -362,13 +366,16 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: SWC1_Runnable10ms
  *********************************************************************************************************************/
-	if( ComMReqFlg == 0 )
+//	if( ComMReqFlg == 0 )
+	if( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P21_2_KL15) == 0 )  
   {
     Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
   }
   else
   {
     Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_NO_COMMUNICATION );
+    Mcu_ClearWakeupCause(0xFFFFFFFF);
+    Mcu_SetMode(MCU_STANDBY);
   }
 
   if(UserData1Cmd == 1)
@@ -438,6 +445,13 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
     VStdMemSet(UserData3Wr,0x09,sizeof(UserData3Wr));
     Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_WriteBlock(UserData3Wr);
     UserData3Cmd = 0;
+  }
+  XcpCnt++;
+  Xcp_Event(XcpConf_XcpEventChannel_XcpEventChannel_10MS);
+  if( XcpCnt == 2 )
+  {
+    XcpCnt = 0;
+    Xcp_Event(XcpConf_XcpEventChannel_XcpEventChannel_20MS);
   }
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

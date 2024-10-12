@@ -37,6 +37,9 @@
             <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
               <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/InitialEcuC/PduR</ECUC-MODULE-CONFIGURATION-VALUES-REF>
             </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+            <ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
+              <ECUC-MODULE-CONFIGURATION-VALUES-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/InitialEcuC/Xcp</ECUC-MODULE-CONFIGURATION-VALUES-REF>
+            </ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL>
           </ECUC-VALUES>
         </ECUC-VALUE-COLLECTION>
         <ECUC-MODULE-CONFIGURATION-VALUES UUID="2b605460-5809-4fce-b077-7b862421e4e5">
@@ -592,6 +595,65 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="07f20b74-7efd-310c-8d00-df7b2669ac90">
+                  <SHORT-NAME>XCP_Request_oTC37X_VCU_CAN00_e22de59e_Rx</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">XCP_Request_oTC37X_VCU_CAN00</L-4>
+                  </LONG-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
+                      <VALUE>1542</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDlc</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:SoftDerived</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationName</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:SoftDerived</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE>Xcp_CanIfRxIndication</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationUL</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:SoftDerived</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE>XCP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduHrhIdRef</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:SoftDerived</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/InitialEcuC/CanIf/CanIfInitCfg/CanIfInitHohCfg/CN_TC37X_VCU_CAN00_c052b9c5_Rx</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/InitialEcuC/EcuC/EcucPduCollection/XCP_Request_oTC37X_VCU_CAN00_3c25b45e_Rx</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="488bcf84-f414-35c6-8d7c-40ba2ff8f376">
                   <SHORT-NAME>VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx</SHORT-NAME>
                   <LONG-NAME>
@@ -766,6 +828,65 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/InitialEcuC/EcuC/EcucPduCollection/VcuTxMsg2_oTC37X_VCU_CAN00_0119ca28_Tx</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="ce97f7e6-c107-3338-9933-d9cb6e606677">
+                  <SHORT-NAME>XCP_Response_oTC37X_VCU_CAN00_933a9e7a_Tx</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">XCP_Response_oTC37X_VCU_CAN00</L-4>
+                  </LONG-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
+                      <VALUE>1543</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_FD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduDlc</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:SoftDerived</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationName</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:SoftDerived</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE>Xcp_CanIfTxConfirmation</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:SoftDerived</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE>XCP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:SoftDerived</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/InitialEcuC/CanIf/CanIfInitCfg/CHNL_d841867f</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/InitialEcuC/EcuC/EcucPduCollection/XCP_Response_oTC37X_VCU_CAN00_34d2da2d_Tx</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
@@ -2428,6 +2549,52 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                 </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="7204b50d-36c3-34e9-9361-408eb263c22a">
+                  <SHORT-NAME>XCP_Request_oTC37X_VCU_CAN00_3c25b45e_Rx</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">XCP_Request_oTC37X_VCU_CAN00</L-4>
+                  </LONG-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EcuC/EcucPduCollection/Pdu</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EcuC/EcucPduCollection/Pdu/DynamicLength</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EcuC/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/EcuC/EcucPduCollection/Pdu/SysTPduToFrameMappingRef</DEFINITION-REF>
+                      <VALUE-REF DEST="PDU-TO-FRAME-MAPPING">/CanFrame/XCP_Request_oTC37X_VCU_CAN00/XCP_Request</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="77be4c16-425f-3653-931f-c2dc49dade49">
+                  <SHORT-NAME>XCP_Response_oTC37X_VCU_CAN00_34d2da2d_Tx</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">XCP_Response_oTC37X_VCU_CAN00</L-4>
+                  </LONG-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EcuC/EcucPduCollection/Pdu</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EcuC/EcucPduCollection/Pdu/DynamicLength</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EcuC/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/EcuC/EcucPduCollection/Pdu/SysTPduToFrameMappingRef</DEFINITION-REF>
+                      <VALUE-REF DEST="PDU-TO-FRAME-MAPPING">/CanFrame/XCP_Response_oTC37X_VCU_CAN00/XCP_Response</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
               </SUB-CONTAINERS>
             </ECUC-CONTAINER-VALUE>
           </CONTAINERS>
@@ -2720,6 +2887,66 @@
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
               </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="6da219f9-a5eb-495d-9b4f-9facfb8bc0a4">
+          <SHORT-NAME>Xcp</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Xcp</DEFINITION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="d9f37fb6-45ad-4c03-a596-3ebca4a7b918">
+              <SHORT-NAME>XcpConfig</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Xcp/XcpConfig</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="dc31a4dc-f638-354a-87f8-67b4711c1f0a">
+                  <SHORT-NAME>XCP_Request_oTC37X_VCU_CAN00_3c25b45e_Rx</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">XCP_Request_oTC37X_VCU_CAN00</L-4>
+                  </LONG-NAME>
+                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/Xcp/XcpConfig/XcpPdu</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="c21c5095-9a67-314f-99b6-947d72883815">
+                      <SHORT-NAME>XCP_Request_oTC37X_VCU_CAN00_3c25b45e_Rx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">XCP_Request_oTC37X_VCU_CAN00</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Xcp/XcpConfig/XcpPdu/XcpRxPdu</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Xcp/XcpConfig/XcpPdu/XcpRxPdu/XcpRxPduRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/InitialEcuC/EcuC/EcucPduCollection/XCP_Request_oTC37X_VCU_CAN00_3c25b45e_Rx</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="fc79d674-e276-3347-b11a-b37eadbd30ba">
+                  <SHORT-NAME>XCP_Response_oTC37X_VCU_CAN00_34d2da2d_Tx</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">XCP_Response_oTC37X_VCU_CAN00</L-4>
+                  </LONG-NAME>
+                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/Xcp/XcpConfig/XcpPdu</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="b3f66c0a-4752-3851-aa66-4f2cd6857bd7">
+                      <SHORT-NAME>XCP_Response_oTC37X_VCU_CAN00_34d2da2d_Tx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">XCP_Response_oTC37X_VCU_CAN00</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Xcp/XcpConfig/XcpPdu/XcpTxPdu</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Xcp/XcpConfig/XcpPdu/XcpTxPdu/XcpTxPduRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/InitialEcuC/EcuC/EcucPduCollection/XCP_Response_oTC37X_VCU_CAN00_34d2da2d_Tx</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="7cf508d3-90db-4aca-8d64-ef6ddbc4d6ad">
+              <SHORT-NAME>XcpGeneral</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Xcp/XcpGeneral</DEFINITION-REF>
             </ECUC-CONTAINER-VALUE>
           </CONTAINERS>
         </ECUC-MODULE-CONFIGURATION-VALUES>
