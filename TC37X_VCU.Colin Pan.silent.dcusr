@@ -252,7 +252,7 @@
             <Setting Value="1" Name="nattable.sortIndexes"/>
         </Settings>
         <Settings Name="com.vector.cfg.dom.runtimesys.ui.editor.internal.ecucomponent.parts.ApplicationPortsGrid">
-            <Setting Value="0,1,2,3,4,5,6,7,8,9,10,11," Name="nattable.BODY.columnIndexOrder"/>
+            <Setting Value="0,1,2,3,4,5,6,7,8,9,10," Name="nattable.BODY.columnIndexOrder"/>
             <Setting Value="0" Name="nattable.BODY.columnWidth.defaultMinSize"/>
             <Setting Value="false" Name="nattable.BODY.columnWidth.distributeRemainingSpace"/>
             <Setting Value="0:20,1:295,2:100,3:231,4:415,5:172,6:120,7:106,8:202,9:205,10:173," Name="nattable.BODY.columnWidth.sizes"/>
@@ -279,7 +279,7 @@
             <Setting Value="0,1,2,3,4,5,6,7,8,9,10,11,12," Name="nattable.BODY.columnIndexOrder"/>
             <Setting Value="0" Name="nattable.BODY.columnWidth.defaultMinSize"/>
             <Setting Value="false" Name="nattable.BODY.columnWidth.distributeRemainingSpace"/>
-            <Setting Value="0:20,1:121,2:100,3:165,4:231,5:187,6:172,7:170,8:120,9:106,10:202,11:205,12:173," Name="nattable.BODY.columnWidth.sizes"/>
+            <Setting Value="0:20,1:258,2:100,3:165,4:231,5:187,6:172,7:170,8:120,9:106,10:202,11:205,12:173," Name="nattable.BODY.columnWidth.sizes"/>
             <Setting Value="0" Name="nattable.COLUMN_HEADER.columnWidth.defaultMinSize"/>
             <Setting Value="false" Name="nattable.COLUMN_HEADER.columnWidth.distributeRemainingSpace"/>
             <Setting Value="0" Name="nattable.CORNER.columnWidth.defaultMinSize"/>
@@ -832,6 +832,34 @@
             <Setting Value="ASC" Name="nattable.sortDirections"/>
             <Setting Value="1" Name="nattable.sortIndexes"/>
         </Settings>
+        <Settings Name="com.vector.cfg.gui.gce.internal.GCETable.MICROSAR.BswM.BswMConfig.BswMRteModeDclGroup">
+            <Setting Value="0,1,2," Name="nattable.BODY.columnIndexOrder"/>
+            <Setting Value="0" Name="nattable.BODY.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.BODY.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0:20,1:186,2:93," Name="nattable.BODY.columnWidth.sizes"/>
+            <Setting Value="0" Name="nattable.COLUMN_HEADER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.COLUMN_HEADER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0" Name="nattable.CORNER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.CORNER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0" Name="nattable.ROW_HEADER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.ROW_HEADER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="ASC" Name="nattable.sortDirections"/>
+            <Setting Value="1" Name="nattable.sortIndexes"/>
+        </Settings>
+        <Settings Name="com.vector.cfg.gui.gce.internal.GCETable.MICROSAR.BswM.BswMConfig.BswMRteModeDclGroup.BswMRteMode">
+            <Setting Value="0,1,2," Name="nattable.BODY.columnIndexOrder"/>
+            <Setting Value="0" Name="nattable.BODY.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.BODY.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0:20,1:132,2:157," Name="nattable.BODY.columnWidth.sizes"/>
+            <Setting Value="0" Name="nattable.COLUMN_HEADER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.COLUMN_HEADER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0" Name="nattable.CORNER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.CORNER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0" Name="nattable.ROW_HEADER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.ROW_HEADER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="ASC" Name="nattable.sortDirections"/>
+            <Setting Value="1" Name="nattable.sortIndexes"/>
+        </Settings>
         <Settings Name="com.vector.cfg.gui.gce.internal.GCETable.MICROSAR.CanIf.CanIfCtrlDrvCfg">
             <Setting Value="0,1,2,3,4,5," Name="nattable.BODY.columnIndexOrder"/>
             <Setting Value="0" Name="nattable.BODY.columnWidth.defaultMinSize"/>
@@ -1327,6 +1355,20 @@
             <Setting Value="0" Name="nattable.BODY.columnWidth.defaultMinSize"/>
             <Setting Value="false" Name="nattable.BODY.columnWidth.distributeRemainingSpace"/>
             <Setting Value="0:20,1:162,2:164,3:90,4:159," Name="nattable.BODY.columnWidth.sizes"/>
+            <Setting Value="0" Name="nattable.COLUMN_HEADER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.COLUMN_HEADER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0" Name="nattable.CORNER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.CORNER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0" Name="nattable.ROW_HEADER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.ROW_HEADER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="ASC" Name="nattable.sortDirections"/>
+            <Setting Value="1" Name="nattable.sortIndexes"/>
+        </Settings>
+        <Settings Name="com.vector.cfg.gui.gce.internal.GCETable.MICROSAR.EcuM.EcuMConfiguration.EcuMFlexConfiguration.EcuMResetMode">
+            <Setting Value="0,1,2," Name="nattable.BODY.columnIndexOrder"/>
+            <Setting Value="0" Name="nattable.BODY.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.BODY.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0:20,1:159,2:124," Name="nattable.BODY.columnWidth.sizes"/>
             <Setting Value="0" Name="nattable.COLUMN_HEADER.columnWidth.defaultMinSize"/>
             <Setting Value="false" Name="nattable.COLUMN_HEADER.columnWidth.distributeRemainingSpace"/>
             <Setting Value="0" Name="nattable.CORNER.columnWidth.defaultMinSize"/>

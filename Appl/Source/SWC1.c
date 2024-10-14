@@ -374,8 +374,6 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
   else
   {
     Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_NO_COMMUNICATION );
-//    Mcu_ClearWakeupCause(0xFFFFFFFF);
-//    Mcu_SetMode(MCU_STANDBY);
   }
 
   if(UserData1Cmd == 1)
