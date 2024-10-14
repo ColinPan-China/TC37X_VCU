@@ -468,6 +468,20 @@
             <Setting Value="false" Name="nattable.ROW_HEADER.columnWidth.distributeRemainingSpace"/>
         </Settings>
         <Settings Name="com.vector.cfg.gui.danglingreference.view.DanglingReferencesView"/>
+        <Settings Name="com.vector.cfg.gui.gce.internal.GCETable.AURIX2G.EcucDefs.Dio.DioConfig.DioPort">
+            <Setting Value="0,1,2," Name="nattable.BODY.columnIndexOrder"/>
+            <Setting Value="0" Name="nattable.BODY.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.BODY.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0:20,1:89,2:76," Name="nattable.BODY.columnWidth.sizes"/>
+            <Setting Value="0" Name="nattable.COLUMN_HEADER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.COLUMN_HEADER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0" Name="nattable.CORNER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.CORNER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0" Name="nattable.ROW_HEADER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.ROW_HEADER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="ASC" Name="nattable.sortDirections"/>
+            <Setting Value="1" Name="nattable.sortIndexes"/>
+        </Settings>
         <Settings Name="com.vector.cfg.gui.gce.internal.GCETable.AURIX2G.EcucDefs.Dio.DioConfig.DioPort.DioChannel">
             <Setting Value="0,1,2," Name="nattable.BODY.columnIndexOrder"/>
             <Setting Value="0" Name="nattable.BODY.columnWidth.defaultMinSize"/>

@@ -367,7 +367,7 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * Symbol: SWC1_Runnable10ms
  *********************************************************************************************************************/
 //	if( ComMReqFlg == 0 )
-	if( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P21_2_KL15) == 0 )  
+	if( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_12_KL15) == 0 )  
   {
     Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
   }
@@ -415,11 +415,12 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
 
   if(UserData2Cmd == 2)
   {
-    VStdMemSet(UserData2Wr,0x0D,sizeof(UserData2Wr));
+    VStdMemSet(UserData2Wr,0x06,sizeof(UserData2Wr));
     Rte_Write_NvM_Data_IF_UserData2_Send_Element_UserData2(UserData2Wr);
 //    NvM_SetRamBlockStatus(NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2,TRUE);
     Rte_Call_NvSWC_UserData2_NvMService_AC3_SRBS_SetRamBlockStatus(TRUE);
     UserData2Cmd = 0;
+#if 0
     NvM_RequestResultType BlockStatus;
     /*NVM ReadAll*/
     NvM_WriteAll();
@@ -430,6 +431,7 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
       NvM_MainFunction();
       NvM_GetErrorStatus(NvMConf___MultiBlockRequest,&BlockStatus);
     } while ( NVM_REQ_PENDING == BlockStatus );
+#endif
   }
 
   if(UserData3Cmd == 1)
