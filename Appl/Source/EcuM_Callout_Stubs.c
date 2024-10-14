@@ -192,7 +192,8 @@ FUNC(void, ECUM_CODE) EcuM_AL_SwitchOff(void)
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_AL_SwitchOff>                      DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
   /* Add implementation of EcuM_AL_SwitchOff() */
-  
+  Mcu_ClearWakeupCause(0xFFFFFFFF);
+  Mcu_SetMode(MCU_STANDBY);
   return;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!

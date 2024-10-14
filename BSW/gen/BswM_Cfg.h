@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2024-09-14 13:53:48
+ *   Generation Time: 2024-10-14 10:24:31
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -194,7 +194,9 @@
 /* -----------------------------------------------------------------------------
     &&&~ TIMER DEFINES
  ----------------------------------------------------------------------------- */
-#define BSWM_TMR_ESH_SelfRunRequestTimer 0u 
+#define BSWM_TMR_ESH_NvM_CancelWriteAllTimer 0u 
+#define BSWM_TMR_ESH_NvM_WriteAllTimer       1u 
+#define BSWM_TMR_ESH_SelfRunRequestTimer     2u 
 
 
 
@@ -382,13 +384,13 @@
 #define BSWM_IMMEDIATEUSERUSEDOFNVMBLOCKMAPPING                                                     STD_OFF  /**< Deactivateable: 'BswM_NvMBlockMapping.ImmediateUserUsed' Reason: 'No Mode Request for BswMNvMRequest configured.' */
 #define BSWM_INITVALUEOFNVMBLOCKMAPPING                                                             STD_OFF  /**< Deactivateable: 'BswM_NvMBlockMapping.InitValue' Reason: 'No Mode Request for BswMNvMRequest configured.' */
 #define BSWM_NVMBLOCKSTATE                                                                          STD_OFF  /**< Deactivateable: 'BswM_NvMBlockState' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define BSWM_NVMJOBMAPPING                                                                          STD_OFF  /**< Deactivateable: 'BswM_NvMJobMapping' Reason: 'No Mode Request for BswMNvMJobModeIndication configured.' */
-#define BSWM_EXTERNALIDOFNVMJOBMAPPING                                                              STD_OFF  /**< Deactivateable: 'BswM_NvMJobMapping.ExternalId' Reason: 'No Mode Request for BswMNvMJobModeIndication configured.' */
-#define BSWM_IMMEDIATEUSERENDIDXOFNVMJOBMAPPING                                                     STD_OFF  /**< Deactivateable: 'BswM_NvMJobMapping.ImmediateUserEndIdx' Reason: 'No Mode Request for BswMNvMJobModeIndication configured.' */
-#define BSWM_IMMEDIATEUSERSTARTIDXOFNVMJOBMAPPING                                                   STD_OFF  /**< Deactivateable: 'BswM_NvMJobMapping.ImmediateUserStartIdx' Reason: 'No Mode Request for BswMNvMJobModeIndication configured.' */
-#define BSWM_IMMEDIATEUSERUSEDOFNVMJOBMAPPING                                                       STD_OFF  /**< Deactivateable: 'BswM_NvMJobMapping.ImmediateUserUsed' Reason: 'No Mode Request for BswMNvMJobModeIndication configured.' */
-#define BSWM_INITVALUEOFNVMJOBMAPPING                                                               STD_OFF  /**< Deactivateable: 'BswM_NvMJobMapping.InitValue' Reason: 'No Mode Request for BswMNvMJobModeIndication configured.' */
-#define BSWM_NVMJOBSTATE                                                                            STD_OFF  /**< Deactivateable: 'BswM_NvMJobState' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
+#define BSWM_NVMJOBMAPPING                                                                          STD_ON
+#define BSWM_EXTERNALIDOFNVMJOBMAPPING                                                              STD_ON
+#define BSWM_IMMEDIATEUSERENDIDXOFNVMJOBMAPPING                                                     STD_OFF  /**< Deactivateable: 'BswM_NvMJobMapping.ImmediateUserEndIdx' Reason: 'the optional indirection is deactivated because ImmediateUserUsedOfNvMJobMapping is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define BSWM_IMMEDIATEUSERSTARTIDXOFNVMJOBMAPPING                                                   STD_OFF  /**< Deactivateable: 'BswM_NvMJobMapping.ImmediateUserStartIdx' Reason: 'the optional indirection is deactivated because ImmediateUserUsedOfNvMJobMapping is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define BSWM_IMMEDIATEUSERUSEDOFNVMJOBMAPPING                                                       STD_OFF  /**< Deactivateable: 'BswM_NvMJobMapping.ImmediateUserUsed' Reason: 'the optional indirection is deactivated because ImmediateUserUsedOfNvMJobMapping is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define BSWM_INITVALUEOFNVMJOBMAPPING                                                               STD_ON
+#define BSWM_NVMJOBSTATE                                                                            STD_ON
 #define BSWM_PARTITIONIDENTIFIERS                                                                   STD_ON
 #define BSWM_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                             STD_ON
 #define BSWM_PARTITIONSNVOFPARTITIONIDENTIFIERS                                                     STD_ON
@@ -493,6 +495,8 @@
 #define BSWM_SIZEOFMODEREQUESTQUEUE                                                                 STD_ON
 #define BSWM_SIZEOFNMMAPPING                                                                        STD_ON
 #define BSWM_SIZEOFNMSTATE                                                                          STD_ON
+#define BSWM_SIZEOFNVMJOBMAPPING                                                                    STD_ON
+#define BSWM_SIZEOFNVMJOBSTATE                                                                      STD_ON
 #define BSWM_SIZEOFPARTITIONIDENTIFIERS                                                             STD_ON
 #define BSWM_SIZEOFRULESTATES                                                                       STD_ON
 #define BSWM_SIZEOFRULES                                                                            STD_ON
@@ -534,6 +538,8 @@
 #define BSWM_MODEREQUESTQUEUEOFPCPARTITIONCONFIG                                                    STD_ON
 #define BSWM_NMMAPPINGOFPCPARTITIONCONFIG                                                           STD_ON
 #define BSWM_NMSTATEOFPCPARTITIONCONFIG                                                             STD_ON
+#define BSWM_NVMJOBMAPPINGOFPCPARTITIONCONFIG                                                       STD_ON
+#define BSWM_NVMJOBSTATEOFPCPARTITIONCONFIG                                                         STD_ON
 #define BSWM_QUEUESEMAPHOREOFPCPARTITIONCONFIG                                                      STD_ON
 #define BSWM_QUEUEWRITTENOFPCPARTITIONCONFIG                                                        STD_ON
 #define BSWM_RULESTATESOFPCPARTITIONCONFIG                                                          STD_ON
@@ -554,6 +560,8 @@
 #define BSWM_SIZEOFMODEREQUESTQUEUEOFPCPARTITIONCONFIG                                              STD_ON
 #define BSWM_SIZEOFNMMAPPINGOFPCPARTITIONCONFIG                                                     STD_ON
 #define BSWM_SIZEOFNMSTATEOFPCPARTITIONCONFIG                                                       STD_ON
+#define BSWM_SIZEOFNVMJOBMAPPINGOFPCPARTITIONCONFIG                                                 STD_ON
+#define BSWM_SIZEOFNVMJOBSTATEOFPCPARTITIONCONFIG                                                   STD_ON
 #define BSWM_SIZEOFRULESTATESOFPCPARTITIONCONFIG                                                    STD_ON
 #define BSWM_SIZEOFRULESINDOFPCPARTITIONCONFIG                                                      STD_ON
 #define BSWM_SIZEOFRULESOFPCPARTITIONCONFIG                                                         STD_ON
@@ -659,6 +667,8 @@
 #define BSWM_ISDEF_IMMEDIATEUSERSTARTIDXOFNMMAPPING                                                 STD_ON
 #define BSWM_ISDEF_IMMEDIATEUSERUSEDOFNMMAPPING                                                     STD_ON
 #define BSWM_ISDEF_INITVALUEOFNMMAPPING                                                             STD_ON
+#define BSWM_ISDEF_EXTERNALIDOFNVMJOBMAPPING                                                        STD_ON
+#define BSWM_ISDEF_INITVALUEOFNVMJOBMAPPING                                                         STD_ON
 #define BSWM_ISDEF_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                       STD_OFF
 #define BSWM_ISDEF_PARTITIONSNVOFPARTITIONIDENTIFIERS                                               STD_OFF
 #define BSWM_ISDEF_FCTPTROFRULES                                                                    STD_OFF
@@ -686,6 +696,8 @@
 #define BSWM_ISDEF_MODEREQUESTQUEUEOFPCPARTITIONCONFIG                                              STD_ON
 #define BSWM_ISDEF_NMMAPPINGOFPCPARTITIONCONFIG                                                     STD_ON
 #define BSWM_ISDEF_NMSTATEOFPCPARTITIONCONFIG                                                       STD_ON
+#define BSWM_ISDEF_NVMJOBMAPPINGOFPCPARTITIONCONFIG                                                 STD_ON
+#define BSWM_ISDEF_NVMJOBSTATEOFPCPARTITIONCONFIG                                                   STD_ON
 #define BSWM_ISDEF_QUEUESEMAPHOREOFPCPARTITIONCONFIG                                                STD_ON
 #define BSWM_ISDEF_QUEUEWRITTENOFPCPARTITIONCONFIG                                                  STD_ON
 #define BSWM_ISDEF_RULESTATESOFPCPARTITIONCONFIG                                                    STD_ON
@@ -729,6 +741,8 @@
 #define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFNMMAPPING                                                   3u
 #define BSWM_EQ2_IMMEDIATEUSERUSEDOFNMMAPPING                                                       TRUE
 #define BSWM_EQ2_INITVALUEOFNMMAPPING                                                               NM_STATE_BUS_SLEEP
+#define BSWM_EQ2_EXTERNALIDOFNVMJOBMAPPING                                                          NVM_SERVICE_ID_WRITEALL
+#define BSWM_EQ2_INITVALUEOFNVMJOBMAPPING                                                           NVM_REQ_OK
 #define BSWM_EQ2_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                         
 #define BSWM_EQ2_PARTITIONSNVOFPARTITIONIDENTIFIERS                                                 
 #define BSWM_EQ2_FCTPTROFRULES                                                                      
@@ -756,6 +770,8 @@
 #define BSWM_EQ2_MODEREQUESTQUEUEOFPCPARTITIONCONFIG                                                BswM_ModeRequestQueue
 #define BSWM_EQ2_NMMAPPINGOFPCPARTITIONCONFIG                                                       BswM_NmMapping
 #define BSWM_EQ2_NMSTATEOFPCPARTITIONCONFIG                                                         BswM_NmState
+#define BSWM_EQ2_NVMJOBMAPPINGOFPCPARTITIONCONFIG                                                   BswM_NvMJobMapping
+#define BSWM_EQ2_NVMJOBSTATEOFPCPARTITIONCONFIG                                                     BswM_NvMJobState
 #define BSWM_EQ2_QUEUESEMAPHOREOFPCPARTITIONCONFIG                                                  (&(BswM_QueueSemaphore))
 #define BSWM_EQ2_QUEUEWRITTENOFPCPARTITIONCONFIG                                                    (&(BswM_QueueWritten))
 #define BSWM_EQ2_RULESTATESOFPCPARTITIONCONFIG                                                      BswM_RuleStates.raw
@@ -877,6 +893,12 @@ typedef uint8_least BswM_NmMappingIterType;
 /**   \brief  type used to iterate BswM_NmState */
 typedef uint8_least BswM_NmStateIterType;
 
+/**   \brief  type used to iterate BswM_NvMJobMapping */
+typedef uint8_least BswM_NvMJobMappingIterType;
+
+/**   \brief  type used to iterate BswM_NvMJobState */
+typedef uint8_least BswM_NvMJobStateIterType;
+
 /**   \brief  type used to iterate BswM_PartitionIdentifiers */
 typedef uint8_least BswM_PartitionIdentifiersIterType;
 
@@ -994,6 +1016,9 @@ typedef uint8 BswM_ImmediateUserStartIdxOfNmMappingType;
 /**   \brief  value based type definition for BswM_ImmediateUserUsedOfNmMapping */
 typedef boolean BswM_ImmediateUserUsedOfNmMappingType;
 
+/**   \brief  value based type definition for BswM_ExternalIdOfNvMJobMapping */
+typedef uint32 BswM_ExternalIdOfNvMJobMappingType;
+
 /**   \brief  value based type definition for BswM_PCPartitionConfigIdxOfPartitionIdentifiers */
 typedef uint8 BswM_PCPartitionConfigIdxOfPartitionIdentifiersType;
 
@@ -1065,6 +1090,12 @@ typedef uint8 BswM_SizeOfNmMappingType;
 
 /**   \brief  value based type definition for BswM_SizeOfNmState */
 typedef uint8 BswM_SizeOfNmStateType;
+
+/**   \brief  value based type definition for BswM_SizeOfNvMJobMapping */
+typedef uint8 BswM_SizeOfNvMJobMappingType;
+
+/**   \brief  value based type definition for BswM_SizeOfNvMJobState */
+typedef uint8 BswM_SizeOfNvMJobStateType;
 
 /**   \brief  value based type definition for BswM_SizeOfPartitionIdentifiers */
 typedef uint8 BswM_SizeOfPartitionIdentifiersType;
@@ -1169,6 +1200,12 @@ typedef struct sBswM_NmMappingType
   uint8 BswM_NmMappingNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
 } BswM_NmMappingType;
 
+/**   \brief  type used in BswM_NvMJobMapping */
+typedef struct sBswM_NvMJobMappingType
+{
+  uint8 BswM_NvMJobMappingNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+} BswM_NvMJobMappingType;
+
 /**   \brief  type used in BswM_PartitionIdentifiers */
 typedef struct sBswM_PartitionIdentifiersType
 {
@@ -1247,12 +1284,16 @@ typedef struct BswM_RuleStatesStructSTag
 /**   \brief  type to be used as symbolic data element access to BswM_TimerState in the partition context  */
 typedef struct BswM_TimerStateStructSTag
 {
+  BswM_TimerStateType MRP_ESH_NvM_CancelWriteAllTimer;
+  BswM_TimerStateType MRP_ESH_NvM_WriteAllTimer;
   BswM_TimerStateType MRP_ESH_SelfRunRequestTimer;
 } BswM_TimerStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_TimerValue in the partition context  */
 typedef struct BswM_TimerValueStructSTag
 {
+  BswM_TimerValueType MRP_ESH_NvM_CancelWriteAllTimer;
+  BswM_TimerValueType MRP_ESH_NvM_WriteAllTimer;
   BswM_TimerValueType MRP_ESH_SelfRunRequestTimer;
 } BswM_TimerValueStructSType;
 
@@ -1282,14 +1323,14 @@ typedef union BswM_RuleStatesUTag
 /**   \brief  type to access BswM_TimerState in an index and symbol based style. */
 typedef union BswM_TimerStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_TimerStateType raw[1];
+  BswM_TimerStateType raw[3];
   BswM_TimerStateStructSType str;
 } BswM_TimerStateUType;
 
 /**   \brief  type to access BswM_TimerValue in an index and symbol based style. */
 typedef union BswM_TimerValueUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_TimerValueType raw[1];
+  BswM_TimerValueType raw[3];
   BswM_TimerValueStructSType str;
 } BswM_TimerValueUType;
 
@@ -1352,6 +1393,12 @@ typedef P2CONST(BswM_NmMappingType, TYPEDEF, BSWM_CONST) BswM_NmMappingPtrType;
 
 /**   \brief  type used to point to BswM_NmState */
 typedef P2VAR(Nm_StateType, TYPEDEF, BSWM_VAR_NOINIT) BswM_NmStatePtrType;
+
+/**   \brief  type used to point to BswM_NvMJobMapping */
+typedef P2CONST(BswM_NvMJobMappingType, TYPEDEF, BSWM_CONST) BswM_NvMJobMappingPtrType;
+
+/**   \brief  type used to point to BswM_NvMJobState */
+typedef P2VAR(NvM_RequestResultType, TYPEDEF, BSWM_VAR_NOINIT) BswM_NvMJobStatePtrType;
 
 /**   \brief  type used to point to BswM_PartitionIdentifiers */
 typedef P2CONST(BswM_PartitionIdentifiersType, TYPEDEF, BSWM_CONST) BswM_PartitionIdentifiersPtrType;

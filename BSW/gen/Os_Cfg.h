@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Cfg.h
- *   Generation Time: 2024-10-09 14:09:24
+ *   Generation Time: 2024-10-14 11:05:36
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -87,7 +87,7 @@
 # define OS_CFG_STARTUPHOOK_SYSTEM               (STD_OFF)
 
 /*! Defines whether the system shutdown hook is configured (STD_ON) or not (STD_OFF). */
-# define OS_CFG_SHUTDOWNHOOK_SYSTEM              (STD_OFF)
+# define OS_CFG_SHUTDOWNHOOK_SYSTEM              (STD_ON)
 
 /*! Defines whether the system error hook is configured (STD_ON) or not (STD_OFF). */
 # define OS_CFG_ERRORHOOK_SYSTEM                 (STD_ON)

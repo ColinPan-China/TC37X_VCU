@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Lcfg.c
- *   Generation Time: 2024-09-06 13:53:53
+ *   Generation Time: 2024-10-14 11:05:36
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -139,6 +139,7 @@ VAR(Os_CoreAsrType, OS_VAR_NOINIT) OsCfg_Core_OsCore0_Dyn;
 OS_LOCAL CONST(Os_HookConfigRefType, OS_CONST) OsCfg_Core_OsCore0_HookRefs[OS_CFG_NUM_CORE_OSCORE0_HOOKS + 1u] =
 {
   OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_Os_CoreInitHook_OsCore0),
+  OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_ShutdownHook_OsCore0),
   OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_ErrorHook_OsCore0),
   NULL_PTR
 };
@@ -178,6 +179,7 @@ OS_LOCAL CONST(Os_StackConfigRefType, OS_CONST) OsCfg_Core_OsCore0_StackRefs[OS_
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Init,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Isr_Core,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Kernel,
+  (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Shutdown,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio4294967295,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio49,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio50,
@@ -217,7 +219,7 @@ CONST(Os_CoreAsrConfigType, OS_CONST) OsCfg_Core_OsCore0 =
   /* .PreStartTask         = */ NULL_PTR,
   /* .PreStartTaskCallback = */ NULL_PTR,
   /* .StartupHookRef       = */ NULL_PTR,
-  /* .ShutdownHookRef      = */ NULL_PTR,
+  /* .ShutdownHookRef      = */ &OsCfg_Hook_ShutdownHook_OsCore0,
   /* .ErrorHookRef         = */ &OsCfg_Hook_ErrorHook_OsCore0,
   /* .ProtectionHookRef    = */ NULL_PTR,
   /* .InitHookRef          = */ &OsCfg_Hook_Os_CoreInitHook_OsCore0,

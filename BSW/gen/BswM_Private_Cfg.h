@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Private_Cfg.h
- *   Generation Time: 2024-10-09 14:09:24
+ *   Generation Time: 2024-10-14 10:24:31
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -182,6 +182,8 @@
 #define BswM_GetModeRequestQueueOfPCPartitionConfig(partitionIndex)                                 BswM_ModeRequestQueue  /**< the pointer to BswM_ModeRequestQueue */
 #define BswM_GetNmMappingOfPCPartitionConfig(partitionIndex)                                        BswM_NmMapping  /**< the pointer to BswM_NmMapping */
 #define BswM_GetNmStateOfPCPartitionConfig(partitionIndex)                                          BswM_NmState  /**< the pointer to BswM_NmState */
+#define BswM_GetNvMJobMappingOfPCPartitionConfig(partitionIndex)                                    BswM_NvMJobMapping  /**< the pointer to BswM_NvMJobMapping */
+#define BswM_GetNvMJobStateOfPCPartitionConfig(partitionIndex)                                      BswM_NvMJobState  /**< the pointer to BswM_NvMJobState */
 #define BswM_GetQueueSemaphoreOfPCPartitionConfig(partitionIndex)                                   (&(BswM_QueueSemaphore))  /**< the pointer to BswM_QueueSemaphore */
 #define BswM_GetQueueWrittenOfPCPartitionConfig(partitionIndex)                                     (&(BswM_QueueWritten))  /**< the pointer to BswM_QueueWritten */
 #define BswM_GetRuleStatesOfPCPartitionConfig(partitionIndex)                                       BswM_RuleStates.raw  /**< the pointer to BswM_RuleStates */
@@ -200,12 +202,14 @@
 #define BswM_GetSizeOfModeNotificationFctOfPCPartitionConfig(partitionIndex)                        1u  /**< the number of accomplishable value elements in BswM_ModeNotificationFct */
 #define BswM_GetSizeOfNmMappingOfPCPartitionConfig(partitionIndex)                                  1u  /**< the number of accomplishable value elements in BswM_NmMapping */
 #define BswM_GetSizeOfNmStateOfPCPartitionConfig(partitionIndex)                                    1u  /**< the number of accomplishable value elements in BswM_NmState */
+#define BswM_GetSizeOfNvMJobMappingOfPCPartitionConfig(partitionIndex)                              1u  /**< the number of accomplishable value elements in BswM_NvMJobMapping */
+#define BswM_GetSizeOfNvMJobStateOfPCPartitionConfig(partitionIndex)                                1u  /**< the number of accomplishable value elements in BswM_NvMJobState */
 #define BswM_GetSizeOfRuleStatesOfPCPartitionConfig(partitionIndex)                                 18u  /**< the number of accomplishable value elements in BswM_RuleStates */
 #define BswM_GetSizeOfRulesIndOfPCPartitionConfig(partitionIndex)                                   20u  /**< the number of accomplishable value elements in BswM_RulesInd */
 #define BswM_GetSizeOfRulesOfPCPartitionConfig(partitionIndex)                                      18u  /**< the number of accomplishable value elements in BswM_Rules */
 #define BswM_GetSizeOfSwcModeRequestUpdateFctOfPCPartitionConfig(partitionIndex)                    1u  /**< the number of accomplishable value elements in BswM_SwcModeRequestUpdateFct */
-#define BswM_GetSizeOfTimerStateOfPCPartitionConfig(partitionIndex)                                 1u  /**< the number of accomplishable value elements in BswM_TimerState */
-#define BswM_GetSizeOfTimerValueOfPCPartitionConfig(partitionIndex)                                 1u  /**< the number of accomplishable value elements in BswM_TimerValue */
+#define BswM_GetSizeOfTimerStateOfPCPartitionConfig(partitionIndex)                                 3u  /**< the number of accomplishable value elements in BswM_TimerState */
+#define BswM_GetSizeOfTimerValueOfPCPartitionConfig(partitionIndex)                                 3u  /**< the number of accomplishable value elements in BswM_TimerValue */
 #define BswM_GetSwcModeRequestUpdateFctOfPCPartitionConfig(partitionIndex)                          BswM_SwcModeRequestUpdateFct  /**< the pointer to BswM_SwcModeRequestUpdateFct */
 #define BswM_GetTimerStateOfPCPartitionConfig(partitionIndex)                                       BswM_TimerState.raw  /**< the pointer to BswM_TimerState */
 #define BswM_GetTimerValueOfPCPartitionConfig(partitionIndex)                                       BswM_TimerValue.raw  /**< the pointer to BswM_TimerValue */
@@ -248,6 +252,7 @@
 #define BswM_GetModeNotificationFct(Index, partitionIndex)                                          (BswM_GetModeNotificationFctOfPCPartitionConfig(partitionIndex)[(Index)])
 #define BswM_GetModeRequestQueue(Index, partitionIndex)                                             (BswM_GetModeRequestQueueOfPCPartitionConfig(partitionIndex)[(Index)])
 #define BswM_GetNmState(Index, partitionIndex)                                                      (BswM_GetNmStateOfPCPartitionConfig(partitionIndex)[(Index)])
+#define BswM_GetNvMJobState(Index, partitionIndex)                                                  (BswM_GetNvMJobStateOfPCPartitionConfig(partitionIndex)[(Index)])
 #define BswM_GetPCPartitionConfigIdxOfPartitionIdentifiers(Index)                                   (BswM_GetPartitionIdentifiersOfPCConfig()[(Index)].PCPartitionConfigIdxOfPartitionIdentifiers)
 #define BswM_GetPartitionSNVOfPartitionIdentifiers(Index)                                           (BswM_GetPartitionIdentifiersOfPCConfig()[(Index)].PartitionSNVOfPartitionIdentifiers)
 #define BswM_GetQueueSemaphore(partitionIndex)                                                      ((*(BswM_GetQueueSemaphoreOfPCPartitionConfig(partitionIndex))))
@@ -294,6 +299,8 @@
 #define BswM_GetImmediateUserStartIdxOfNmMapping(Index, partitionIndex)                             3u  /**< the start index of the 0:n relation pointing to BswM_ImmediateUser */
 #define BswM_IsImmediateUserUsedOfNmMapping(Index, partitionIndex)                                  (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to BswM_ImmediateUser */
 #define BswM_GetInitValueOfNmMapping(Index, partitionIndex)                                         NM_STATE_BUS_SLEEP  /**< Initialization value of port. */
+#define BswM_GetExternalIdOfNvMJobMapping(Index, partitionIndex)                                    NVM_SERVICE_ID_WRITEALL  /**< External id of BswMNvMJobModeIndication. */
+#define BswM_GetInitValueOfNvMJobMapping(Index, partitionIndex)                                     NVM_REQ_OK  /**< Initialization value of port. */
 #define BswM_GetSizeOfActionListQueue(partitionIndex)                                               BswM_GetSizeOfActionListQueueOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfActionLists(partitionIndex)                                                   BswM_GetSizeOfActionListsOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfCanSMChannelMapping(partitionIndex)                                           BswM_GetSizeOfCanSMChannelMappingOfPCPartitionConfig(partitionIndex)
@@ -309,6 +316,8 @@
 #define BswM_GetSizeOfModeRequestQueue(partitionIndex)                                              BswM_GetSizeOfModeRequestQueueOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfNmMapping(partitionIndex)                                                     BswM_GetSizeOfNmMappingOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfNmState(partitionIndex)                                                       BswM_GetSizeOfNmStateOfPCPartitionConfig(partitionIndex)
+#define BswM_GetSizeOfNvMJobMapping(partitionIndex)                                                 BswM_GetSizeOfNvMJobMappingOfPCPartitionConfig(partitionIndex)
+#define BswM_GetSizeOfNvMJobState(partitionIndex)                                                   BswM_GetSizeOfNvMJobStateOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfPartitionIdentifiers()                                                        BswM_GetSizeOfPartitionIdentifiersOfPCConfig()
 #define BswM_GetSizeOfRuleStates(partitionIndex)                                                    BswM_GetSizeOfRuleStatesOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfRules(partitionIndex)                                                         BswM_GetSizeOfRulesOfPCPartitionConfig(partitionIndex)
@@ -333,6 +342,7 @@
 #define BswM_SetInitialized(Value, partitionIndex)                                                  (*(BswM_GetInitializedOfPCPartitionConfig(partitionIndex))) = (Value)
 #define BswM_SetModeRequestQueue(Index, Value, partitionIndex)                                      BswM_GetModeRequestQueueOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
 #define BswM_SetNmState(Index, Value, partitionIndex)                                               BswM_GetNmStateOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
+#define BswM_SetNvMJobState(Index, Value, partitionIndex)                                           BswM_GetNvMJobStateOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
 #define BswM_SetQueueSemaphore(Value, partitionIndex)                                               (*(BswM_GetQueueSemaphoreOfPCPartitionConfig(partitionIndex))) = (Value)
 #define BswM_SetQueueWritten(Value, partitionIndex)                                                 (*(BswM_GetQueueWrittenOfPCPartitionConfig(partitionIndex))) = (Value)
 #define BswM_SetRuleStates(Index, Value, partitionIndex)                                            BswM_GetRuleStatesOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
@@ -388,6 +398,10 @@
 #define BswM_HasImmediateUserUsedOfNmMapping(partitionIndex)                                        (TRUE != FALSE)
 #define BswM_HasInitValueOfNmMapping(partitionIndex)                                                (TRUE != FALSE)
 #define BswM_HasNmState(partitionIndex)                                                             (TRUE != FALSE)
+#define BswM_HasNvMJobMapping(partitionIndex)                                                       (TRUE != FALSE)
+#define BswM_HasExternalIdOfNvMJobMapping(partitionIndex)                                           (TRUE != FALSE)
+#define BswM_HasInitValueOfNvMJobMapping(partitionIndex)                                            (TRUE != FALSE)
+#define BswM_HasNvMJobState(partitionIndex)                                                         (TRUE != FALSE)
 #define BswM_HasPartitionIdentifiers()                                                              (TRUE != FALSE)
 #define BswM_HasPCPartitionConfigIdxOfPartitionIdentifiers()                                        (TRUE != FALSE)
 #define BswM_HasPartitionSNVOfPartitionIdentifiers()                                                (TRUE != FALSE)
@@ -415,6 +429,8 @@
 #define BswM_HasSizeOfModeRequestQueue(partitionIndex)                                              (TRUE != FALSE)
 #define BswM_HasSizeOfNmMapping(partitionIndex)                                                     (TRUE != FALSE)
 #define BswM_HasSizeOfNmState(partitionIndex)                                                       (TRUE != FALSE)
+#define BswM_HasSizeOfNvMJobMapping(partitionIndex)                                                 (TRUE != FALSE)
+#define BswM_HasSizeOfNvMJobState(partitionIndex)                                                   (TRUE != FALSE)
 #define BswM_HasSizeOfPartitionIdentifiers()                                                        (TRUE != FALSE)
 #define BswM_HasSizeOfRuleStates(partitionIndex)                                                    (TRUE != FALSE)
 #define BswM_HasSizeOfRules(partitionIndex)                                                         (TRUE != FALSE)
@@ -447,6 +463,8 @@
 #define BswM_HasModeRequestQueueOfPCPartitionConfig(partitionIndex)                                 (TRUE != FALSE)
 #define BswM_HasNmMappingOfPCPartitionConfig(partitionIndex)                                        (TRUE != FALSE)
 #define BswM_HasNmStateOfPCPartitionConfig(partitionIndex)                                          (TRUE != FALSE)
+#define BswM_HasNvMJobMappingOfPCPartitionConfig(partitionIndex)                                    (TRUE != FALSE)
+#define BswM_HasNvMJobStateOfPCPartitionConfig(partitionIndex)                                      (TRUE != FALSE)
 #define BswM_HasQueueSemaphoreOfPCPartitionConfig(partitionIndex)                                   (TRUE != FALSE)
 #define BswM_HasQueueWrittenOfPCPartitionConfig(partitionIndex)                                     (TRUE != FALSE)
 #define BswM_HasRuleStatesOfPCPartitionConfig(partitionIndex)                                       (TRUE != FALSE)
@@ -467,6 +485,8 @@
 #define BswM_HasSizeOfModeRequestQueueOfPCPartitionConfig(partitionIndex)                           (TRUE != FALSE)
 #define BswM_HasSizeOfNmMappingOfPCPartitionConfig(partitionIndex)                                  (TRUE != FALSE)
 #define BswM_HasSizeOfNmStateOfPCPartitionConfig(partitionIndex)                                    (TRUE != FALSE)
+#define BswM_HasSizeOfNvMJobMappingOfPCPartitionConfig(partitionIndex)                              (TRUE != FALSE)
+#define BswM_HasSizeOfNvMJobStateOfPCPartitionConfig(partitionIndex)                                (TRUE != FALSE)
 #define BswM_HasSizeOfRuleStatesOfPCPartitionConfig(partitionIndex)                                 (TRUE != FALSE)
 #define BswM_HasSizeOfRulesIndOfPCPartitionConfig(partitionIndex)                                   (TRUE != FALSE)
 #define BswM_HasSizeOfRulesOfPCPartitionConfig(partitionIndex)                                      (TRUE != FALSE)
@@ -492,6 +512,7 @@
 #define BswM_IncGenericState(Index, partitionIndex)                                                 BswM_GetGenericState(((Index)), (partitionIndex))++
 #define BswM_IncModeRequestQueue(Index, partitionIndex)                                             BswM_GetModeRequestQueue(((Index)), (partitionIndex))++
 #define BswM_IncNmState(Index, partitionIndex)                                                      BswM_GetNmState(((Index)), (partitionIndex))++
+#define BswM_IncNvMJobState(Index, partitionIndex)                                                  BswM_GetNvMJobState(((Index)), (partitionIndex))++
 #define BswM_IncQueueSemaphore(partitionIndex)                                                      BswM_GetQueueSemaphore(partitionIndex)++
 #define BswM_IncRuleStates(Index, partitionIndex)                                                   BswM_GetRuleStates(((Index)), (partitionIndex))++
 #define BswM_IncTimerState(Index, partitionIndex)                                                   BswM_GetTimerState(((Index)), (partitionIndex))++
@@ -512,6 +533,7 @@
 #define BswM_DecGenericState(Index, partitionIndex)                                                 BswM_GetGenericState(((Index)), (partitionIndex))--
 #define BswM_DecModeRequestQueue(Index, partitionIndex)                                             BswM_GetModeRequestQueue(((Index)), (partitionIndex))--
 #define BswM_DecNmState(Index, partitionIndex)                                                      BswM_GetNmState(((Index)), (partitionIndex))--
+#define BswM_DecNvMJobState(Index, partitionIndex)                                                  BswM_GetNvMJobState(((Index)), (partitionIndex))--
 #define BswM_DecQueueSemaphore(partitionIndex)                                                      BswM_GetQueueSemaphore(partitionIndex)--
 #define BswM_DecRuleStates(Index, partitionIndex)                                                   BswM_GetRuleStates(((Index)), (partitionIndex))--
 #define BswM_DecTimerState(Index, partitionIndex)                                                   BswM_GetTimerState(((Index)), (partitionIndex))--
@@ -879,6 +901,23 @@ extern VAR(BswM_ModeRequestQueueType, BSWM_VAR_NOINIT) BswM_ModeRequestQueue[4];
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern VAR(Nm_StateType, BSWM_VAR_NOINIT) BswM_NmState[1];
+#define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  BswM_NvMJobState
+**********************************************************************************************************************/
+/** 
+  \var    BswM_NvMJobState
+  \brief  Variable to store current mode of BswMNvMJobModeIndication mode request ports.
+*/ 
+#define BSWM_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(NvM_RequestResultType, BSWM_VAR_NOINIT) BswM_NvMJobState[1];
 #define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

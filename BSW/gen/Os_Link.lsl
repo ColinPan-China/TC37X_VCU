@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Link.lsl
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-10-14 11:05:36
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -103,6 +103,22 @@ else
   "_OS_OS_COREINITHOOK_CODE_START" = 0;
   "_OS_OS_COREINITHOOK_CODE_END" = 0;
   "_OS_OS_COREINITHOOK_CODE_LIMIT" = 0;
+}
+if (exists(".text.OS_SHUTDOWNHOOK_CODE"))
+{
+  group OS_SHUTDOWNHOOK_CODE_GROUP(align=8)
+  {
+    select "[.]text.OS_SHUTDOWNHOOK_CODE";
+  }
+  "_OS_SHUTDOWNHOOK_CODE_START" = "_lc_gb_OS_SHUTDOWNHOOK_CODE_GROUP";
+  "_OS_SHUTDOWNHOOK_CODE_END" = "_lc_ge_OS_SHUTDOWNHOOK_CODE_GROUP" - 1;
+  "_OS_SHUTDOWNHOOK_CODE_LIMIT" = "_lc_ge_OS_SHUTDOWNHOOK_CODE_GROUP";
+}
+else
+{
+  "_OS_SHUTDOWNHOOK_CODE_START" = 0;
+  "_OS_SHUTDOWNHOOK_CODE_END" = 0;
+  "_OS_SHUTDOWNHOOK_CODE_LIMIT" = 0;
 }
 #endif
 

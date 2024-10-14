@@ -275,8 +275,8 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: SWC1_Init
  *********************************************************************************************************************/
-  Rte_Write_Request_ESH_RunRequest_0_requestedMode(1);
-//Request_ESH_RunRequest_0_requestedMode = 1;
+//  Rte_Write_Request_ESH_RunRequest_0_requestedMode(1);
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -374,8 +374,8 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
   else
   {
     Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_NO_COMMUNICATION );
-    Mcu_ClearWakeupCause(0xFFFFFFFF);
-    Mcu_SetMode(MCU_STANDBY);
+//    Mcu_ClearWakeupCause(0xFFFFFFFF);
+//    Mcu_SetMode(MCU_STANDBY);
   }
 
   if(UserData1Cmd == 1)

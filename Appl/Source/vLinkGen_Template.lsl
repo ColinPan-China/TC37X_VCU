@@ -103,6 +103,7 @@ section_layout mpe:vtc:linear
         select "[.]bss.OS_STACK_OSCORE0_INIT_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_ISR_CORE_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_KERNEL_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE0_SHUTDOWN_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO4294967295_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO49_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO50_VAR_NOINIT";
@@ -1225,6 +1226,7 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_Default_Init_Task_CODE";
         select "[.]text.OS_Default_Init_Task_Trusted_CODE";
         select "[.]text.OS_ERRORHOOK_CODE";
+        select "[.]text.OS_SHUTDOWNHOOK_CODE";
       }
     }
     group OS_USER_CODE_PAD (align = 1)

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: NvM_Cfg.c
- *   Generation Time: 2024-09-25 15:14:38
+ *   Generation Time: 2024-10-14 10:24:31
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -59,7 +59,7 @@
 #include "NvM_Cfg.h"
 #include "NvM_PrivateCfg.h"
 
-
+#include "BswM_NvM.h"
 
 /**********************************************************************************************************************
  *  VERSION CHECKS
@@ -441,7 +441,7 @@ FUNC(void, NVM_PRIVATE_CODE) NvM_ExitCriticalSection(void)
 }
 
 /* PRQA S 3453 1 */ /* MD_MSR_FctLikeMacro */
-#define NvM_invokeMultiBlockMode(serv, res)  /*  if NvMBswMMultiBlockJobStatusInformation is TRUE  */
+#define NvM_invokeMultiBlockMode(serv, res) BswM_NvM_CurrentJobMode((serv),(res)) /*  if NvMBswMMultiBlockJobStatusInformation is TRUE  */
 
 /* PRQA S 3453 1 */ /* MD_MSR_FctLikeMacro */
 #define NvM_invokeMultiCbk(serv, res)   /*  if Multi Block Callback is configured  */

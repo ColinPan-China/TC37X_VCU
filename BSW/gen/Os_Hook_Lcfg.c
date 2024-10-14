@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hook_Lcfg.c
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2024-10-14 11:05:36
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -84,6 +84,9 @@
 /*! Dynamic hook data: Os_CoreInitHook_OsCore0 */
 OS_LOCAL VAR(Os_HookType, OS_VAR_NOINIT) OsCfg_Hook_Os_CoreInitHook_OsCore0_Dyn;
 
+/*! Dynamic hook data: ShutdownHook_OsCore0 */
+OS_LOCAL VAR(Os_HookType, OS_VAR_NOINIT) OsCfg_Hook_ShutdownHook_OsCore0_Dyn;
+
 /*! Dynamic hook data: ErrorHook_OsCore0 */
 OS_LOCAL VAR(Os_HookType, OS_VAR_NOINIT) OsCfg_Hook_ErrorHook_OsCore0_Dyn;
 
@@ -134,6 +137,38 @@ CONST(Os_HookInitHookConfigType, OS_CONST) OsCfg_Hook_Os_CoreInitHook_OsCore0 =
   /* .Callback = */ &Os_CoreInitHook
 };
 
+/*! Hook configuration data: ShutdownHook_OsCore0 */
+CONST(Os_HookStatusHookConfigType, OS_CONST) OsCfg_Hook_ShutdownHook_OsCore0 =
+{
+  /* .Hook     = */
+  {
+    /* .Thread       = */
+    {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_ShutdownHook_OsCore0,
+    /* .Context               = */ &OsCfg_Hal_Context_ShutdownHook_OsCore0_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Shutdown,
+    /* .Dyn                   = */ OS_HOOK_CASTDYN_HOOK_2_THREAD(OsCfg_Hook_ShutdownHook_OsCore0_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore0,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_SHUTDOWNHOOK,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+    /* .HookTypeFlag = */ OS_HOOKFLAG_SHUTDOWNHOOK,
+    /* .NestingMask  = */ OS_HOOKNESTINGMASK_SHUTDOWNHOOK,
+    /* .Id           = */ (Os_HookIdType)1,
+    /* .TaskReturn   = */ Os_HookTaskReturn_ToCallerTask
+  },
+  /* .Callback = */ &ShutdownHook
+};
+
 /*! Hook configuration data: ErrorHook_OsCore0 */
 CONST(Os_HookStatusHookConfigType, OS_CONST) OsCfg_Hook_ErrorHook_OsCore0 =
 {
@@ -160,7 +195,7 @@ CONST(Os_HookStatusHookConfigType, OS_CONST) OsCfg_Hook_ErrorHook_OsCore0 =
   },
     /* .HookTypeFlag = */ OS_HOOKFLAG_ERRORHOOK,
     /* .NestingMask  = */ OS_HOOKNESTINGMASK_ERRORHOOK,
-    /* .Id           = */ (Os_HookIdType)1,
+    /* .Id           = */ (Os_HookIdType)2,
     /* .TaskReturn   = */ Os_HookTaskReturn_WithSchedule
   },
   /* .Callback = */ &ErrorHook
@@ -177,6 +212,7 @@ CONST(Os_HookStatusHookConfigType, OS_CONST) OsCfg_Hook_ErrorHook_OsCore0 =
 CONSTP2CONST(Os_HookConfigType, OS_CONST, OS_CONST) OsCfg_HookRefs[OS_CFG_NUM_HOOKS + 1u] =
 {
   OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_Os_CoreInitHook_OsCore0),
+  OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_ShutdownHook_OsCore0),
   OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_ErrorHook_OsCore0),
   NULL_PTR
 };
