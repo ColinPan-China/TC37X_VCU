@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_25.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2024-10-14, 16:16:25       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2024-10-16, 15:16:09       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b180321-0610           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -156,7 +156,7 @@ static const Mcu_LowPowerModeType  Mcu_kLowPowerModeConfiguration_Config =
     0U
   },
   /* PMSWCR0 Register value */
-  0x6800e000U,
+  0x6800a000U,
   /* PMSWCR3Value  */
   0x00000000U,
   /* PMSWCR4Value  */

@@ -6259,7 +6259,7 @@
                           <PARAMETER-VALUES>
                             <ECUC-TEXTUAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Mcu/McuModuleConfiguration/McuModeSettingConf/McuStdbyModeSettingConf/McuStdbyModePinBConf/McuStdbyModePinBEdgeDetection</DEFINITION-REF>
-                              <VALUE>PINB_TRIG_RISING_FALLING_EDGE_SEL3</VALUE>
+                              <VALUE>PINB_TRIG_FALLING_EDGE_SEL2</VALUE>
                             </ECUC-TEXTUAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Mcu/McuModuleConfiguration/McuModeSettingConf/McuStdbyModeSettingConf/McuStdbyModePinBConf/McuStdbyModePinBFltEnable</DEFINITION-REF>
