@@ -875,6 +875,22 @@
                                   <SHORT-NAME>Dcm</SHORT-NAME>
                                   <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm</TYPE-TREF>
                                 </SW-COMPONENT-PROTOTYPE>
+                                <SW-COMPONENT-PROTOTYPE UUID="c7476a1f-c034-404b-b974-33b412a9cd72">
+                                  <SHORT-NAME>DIAG_SWC</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/DIAG_SWC</TYPE-TREF>
+                                </SW-COMPONENT-PROTOTYPE>
                               </COMPONENTS>
                               <CONNECTORS>
                                 <ASSEMBLY-SW-CONNECTOR UUID="162bee59-e8a0-4697-a1b1-31e18c5b0ff5">
@@ -1411,6 +1427,28 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/NvSWC_UserData2_NvMService_AC3_SRBS</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="7b9bae3f-1472-40a2-bd22-8b46d173ee7a">
+                                  <SHORT-NAME>DIAG_SWC_DataServices_VCU_DID_00_DataRecord_Dcm_DataServices_VCU_DID_00_DataRecord</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/DataServices_VCU_DID_00_DataRecord</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_VCU_DID_00_DataRecord</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="2381ede5-8fd8-4200-a0f6-fd501526a7c0">
+                                  <SHORT-NAME>NvM_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_DIAG_SWC_PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_DIAG_SWC_NvBlockNeed_DiagDID_00</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/PS_DIAG_SWC_NvBlockNeed_DiagDID_00</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -1464,11 +1502,14 @@
                                     <SD GID="b0560f92-2d31-4daa-896f-70e823156344">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/BswM</SD>
                                     <SD GID="274f233c-196e-4efd-8537-a049df7a976a">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</SD>
                                     <SD GID="d6107833-7ec4-46b6-bd77-dc484cc238be">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</SD>
+                                    <SD GID="c7476a1f-c034-404b-b974-33b412a9cd72">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</SD>
+                                    <SD GID="7b9bae3f-1472-40a2-bd22-8b46d173ee7a">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_DataServices_VCU_DID_00_DataRecord_Dcm_DataServices_VCU_DID_00_DataRecord</SD>
                                     <SD GID="52f38fb1-f1fa-4839-bd5d-87d5584a122e">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</SD>
                                     <SD GID="dbd7af71-8f1f-4737-b93f-d0ed84b9ef39">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</SD>
                                     <SD GID="9d4b98fd-81ab-4d03-b31e-e07a3534b100">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0</SD>
                                     <SD GID="3976e9f4-1667-4e85-89f1-31f8167f45a7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EcuM</SD>
                                     <SD GID="bd2d7ed1-0cf5-42f4-a90f-8057441c91be">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM</SD>
+                                    <SD GID="2381ede5-8fd8-4200-a0f6-fd501526a7c0">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_DIAG_SWC_PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="05381a4a-06a9-44db-a1e5-fe7ca0afdeab">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM_SWC</SD>
                                     <SD GID="a3c529ec-93af-4763-9e8e-fc9e2e1f0773">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Os_OsCore0_swc</SD>
                                     <SD GID="119e04d4-6f68-4049-aba2-5fe9bff177dd">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/PowerMng_SWC</SD>
@@ -1514,6 +1555,14 @@
                                     <SD GID="07939212-9963-4D90-B4EF-C7D13D3F1D1C">/ComponentTypes/Com_SWC/VcuTxMsg2_Sig2</SD>
                                     <SD GID="C27F2ED1-7BB1-4B4A-9B16-81C74A78A00D">/ComponentTypes/Com_SWC/VcuTxMsg2_Sig3</SD>
                                     <SD GID="BBB3B39C-C392-468F-9EF1-FC5D0A60A072">/ComponentTypes/Com_SWC_Implementation</SD>
+                                    <SD GID="7C393334-F81C-447D-837E-1F15455AA760">/ComponentTypes/DIAG_SWC</SD>
+                                    <SD GID="B0C63B94-0EBB-4D3A-A369-A55820B76806">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/NvBlockNeed_DiagDID_00</SD>
+                                    <SD GID="A0F860A0-FFE6-451D-B9E9-55D097ECCBF2">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead</SD>
+                                    <SD GID="C230B1C2-A7E8-4EF4-A7D1-C0ADC63CE060">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_ReadData_DataServices_VCU_DID_00_DataRecord_ReadData</SD>
+                                    <SD GID="1C517F4E-4BD2-4BB7-8CD9-BD531A61D96C">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_WriteData_DataServices_VCU_DID_00_DataRecord_WriteData</SD>
+                                    <SD GID="C7C2A11E-09A8-42E1-B046-A5C65679E1C5">/ComponentTypes/DIAG_SWC/DataServices_VCU_DID_00_DataRecord</SD>
+                                    <SD GID="B0D56753-A3B1-431E-9673-294B21654323">/ComponentTypes/DIAG_SWC/PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
+                                    <SD GID="8822BCF7-9CB6-46FA-BB63-4E92E8E4BB4F">/ComponentTypes/DIAG_SWC_Implementation</SD>
                                     <SD GID="F46DC447-48FA-40AC-B556-211DADA7BA16">/ComponentTypes/NvM_SWC</SD>
                                     <SD GID="5E1541CE-CA73-4331-B1E5-015754C9C331">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData1</SD>
                                     <SD GID="D2B51BE5-1BB5-4CC4-87F9-FBDA7005BDEF">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData2</SD>
@@ -1556,6 +1605,7 @@
                                     <SD GID="66263F43-3F17-4564-9D9F-6367B86E68F2">/ComponentTypes/SWC1_Implementation</SD>
                                     <SD GID="83E5C50F-A163-4FAE-8F88-D29CE937AFED">/ECUCompositionTypes/ECU_Composition</SD>
                                     <SD GID="9D6277BB-1E37-4BB9-B185-1DD2BA210E54">/ECUCompositionTypes/ECU_Composition/Com_SWC</SD>
+                                    <SD GID="ED10CD08-2BCF-43E8-BD3C-006B317FF76E">/ECUCompositionTypes/ECU_Composition/DIAG_SWC</SD>
                                     <SD GID="1C873E85-20CE-48A0-A60A-BB516A3AF1EE">/ECUCompositionTypes/ECU_Composition/NvM_SWC</SD>
                                     <SD GID="7077C59A-EDFF-4EBD-992B-AD0A5D0AD472">/ECUCompositionTypes/ECU_Composition/PowerMng_SWC</SD>
                                     <SD GID="45326E4B-4115-4A85-8FF4-E06F7BAE2F7C">/ECUCompositionTypes/ECU_Composition/SWC1</SD>
@@ -2232,13 +2282,21 @@
                                     <SD GID="d8d4f050-5001-4746-ada0-52aaaa0c1c69">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/GetErrorStatus</SD>
                                     <SD GID="e72770b7-e557-4c37-a062-fc8baeab0af7">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/InvalidateNvBlock</SD>
                                     <SD GID="253aaee7-b925-4cbf-a7e0-0a4fda41c7f7">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/NvM_MainFunction</SD>
+                                    <SD GID="fad39d90-bdee-44b0-a954-90a58df30aef">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventEraseBlock_EraseBlock_PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="5817484a-e36e-4cd1-a209-d59cf40de43f">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventEraseBlock_EraseBlock_PS_SWC1NvBlockNeed_UserData3</SD>
+                                    <SD GID="87ed12e8-ab72-4181-afc6-dcea356c5ec6">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventGetErrorStatus_GetErrorStatus_PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="d66f809c-3573-4ee2-8733-72887cdcb1bb">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventGetErrorStatus_GetErrorStatus_PS_SWC1NvBlockNeed_UserData3</SD>
+                                    <SD GID="525dc4d1-c094-4361-98ed-71827fa15586">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventInvalidateNvBlock_InvalidateNvBlock_PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="647ef0b4-8f41-41bc-b70d-8e6f02c5baee">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventInvalidateNvBlock_InvalidateNvBlock_PS_SWC1NvBlockNeed_UserData3</SD>
+                                    <SD GID="7a9d5641-edf8-4f17-9ce7-a0576452b2f8">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventReadBlock_ReadBlock_PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="9b6f3530-9e41-4dec-a111-2981aedc47d8">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventReadBlock_ReadBlock_PS_SWC1NvBlockNeed_UserData3</SD>
+                                    <SD GID="c3994667-8647-4068-9977-26a3b61f3c21">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventRestoreBlockDefaults_RestoreBlockDefaults_PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="5c7c3a2a-85a8-4eba-8927-fe17711fadfc">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventRestoreBlockDefaults_RestoreBlockDefaults_PS_SWC1NvBlockNeed_UserData3</SD>
+                                    <SD GID="48ac9236-1b51-4933-8056-747f139e9644">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventSetBlockProtection_SetBlockProtection_PAdmin_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="953265a9-2c9b-47b0-9c28-4ea30075880c">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventSetBlockProtection_SetBlockProtection_PAdmin_SWC1NvBlockNeed_UserData3</SD>
+                                    <SD GID="374d9818-5aee-461d-9a97-de3ba37123ba">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventSetRamBlockStatus_SetRamBlockStatus_PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="f511ff72-86a1-48ca-8790-0220bde45e2b">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventSetRamBlockStatus_SetRamBlockStatus_PS_SWC1NvBlockNeed_UserData3</SD>
+                                    <SD GID="7307c219-be07-4ac5-9715-8de155143c88">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventWriteBlock_WriteBlock_PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="cea1cf07-36b9-41d1-b8b7-b3e03a6f02fb">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/OpEventWriteBlock_WriteBlock_PS_SWC1NvBlockNeed_UserData3</SD>
                                     <SD GID="e54a91e4-f010-4fd0-be5b-c5b54a4a46ca">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/ReadBlock</SD>
                                     <SD GID="91e3723e-1b8c-4737-8b25-3343e5cfd8ee">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/RestoreBlockDefaults</SD>
@@ -2246,7 +2304,9 @@
                                     <SD GID="ba187b71-033f-4036-a4a6-65be629492cb">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/SetRamBlockStatus</SD>
                                     <SD GID="6f42853d-0faf-4a91-ae6f-4ac432b11d15">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/Timer_NvM_MainFunction</SD>
                                     <SD GID="bf0d5155-e678-450c-a237-08d3b5d797ae">/MICROSAR/NvM_swc/ComponentTypes/NvM/NvMInternalBehavior/WriteBlock</SD>
+                                    <SD GID="132633a3-2739-4d27-af1a-d927dff20aa0">/MICROSAR/NvM_swc/ComponentTypes/NvM/PAdmin_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="4865496a-4e7d-4abc-9418-de6bee30d540">/MICROSAR/NvM_swc/ComponentTypes/NvM/PAdmin_SWC1NvBlockNeed_UserData3</SD>
+                                    <SD GID="7429bb0d-af4a-40a4-a4c3-c907e9c987ef">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="3be77cb9-0f38-416d-af03-67de34ee4422">/MICROSAR/NvM_swc/ComponentTypes/NvM/PS_SWC1NvBlockNeed_UserData3</SD>
                                     <SD GID="e4c3b864-e035-46e5-857d-d608411b800a">/MICROSAR/NvM_swc/DataTypes/CompuMethods/NvM_RequestResultType</SD>
                                     <SD GID="ca8f92da-3d7c-4f86-95d3-7362e2a3b83b">/MICROSAR/NvM_swc/DataTypes/DataConstrs/NvM_BlockIdType_Constr</SD>

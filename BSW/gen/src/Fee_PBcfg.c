@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION     : 1.40.0_9.0.0                                                **
 **                                                                            **
-**  DATE, TIME  : 2024-10-24, 15:42:47   !!!IGNORE-LINE !!!               **
+**  DATE, TIME  : 2024-10-24, 16:42:07   !!!IGNORE-LINE !!!               **
 **                                                                            **
 **  GENERATOR   : Build b180321-0610                                        **
 **                                                                            **
@@ -207,6 +207,16 @@ to the initializer {0} which may be used to initialize an aggregate.
 Here it is defined as enum and first element initialized to 0.
 */
   },
+  {
+    0U, /* Block Cycle Count */
+    (uint8)FEE_NORMAL_DATA,  /* Block type is Normal */
+    144U, /* Block number */
+    6U, /* Fee Block Size */
+/*MISRA2012_RULE_10_3_JUSTIFICATION: Exception MISRA 10_3 is not applicable
+to the initializer {0} which may be used to initialize an aggregate.
+Here it is defined as enum and first element initialized to 0.
+*/
+  },
 };
 /* MISRA2012_RULE_8_7_JUSTIFICATION: External linkage is needed as it is used
 in more than one translation unit. */
@@ -242,7 +252,7 @@ function will not be required. The function is correctly getting assigned to NUL
   /* Fee threshold value */
   512U,
   /* Number of blocks configured */
-  9U,
+  10U,
   {
     /* Ignore the unconfigured blocks */
     FEE_UNCONFIG_BLOCK_IGNORE,

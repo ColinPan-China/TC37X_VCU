@@ -531,6 +531,17 @@
               </ADMIN-DATA>
               <TYPE-TREF DEST="NV-BLOCK-SW-COMPONENT-TYPE">/ComponentTypes/NvM_SWC</TYPE-TREF>
             </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="ED10CD08-2BCF-43E8-BD3C-006B317FF76E">
+              <SHORT-NAME>DIAG_SWC</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/DIAG_SWC</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
           </COMPONENTS>
           <CONNECTORS>
             <DELEGATION-SW-CONNECTOR UUID="1943E245-FA8B-4FAB-9649-5449AB24B87B">

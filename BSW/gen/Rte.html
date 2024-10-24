@@ -119,6 +119,7 @@ Contents
 Rte_BswM.h<br>
 Rte_ComM.h<br>
 Rte_Com_SWC.h<br>
+Rte_DIAG_SWC.h<br>
 Rte_Dcm.h<br>
 Rte_DemMaster_0.h<br>
 Rte_DemSatellite_0.h<br>
@@ -131,6 +132,7 @@ Rte_SWC1.h<br>
 Rte_BswM_Type.h<br>
 Rte_ComM_Type.h<br>
 Rte_Com_SWC_Type.h<br>
+Rte_DIAG_SWC_Type.h<br>
 Rte_Dcm_Type.h<br>
 Rte_DemMaster_0_Type.h<br>
 Rte_DemSatellite_0_Type.h<br>
@@ -151,6 +153,7 @@ Rte_Cbk.h<br>
 BswM_MemMap.h<br>
 ComM_MemMap.h<br>
 Com_SWC_MemMap.h<br>
+DIAG_SWC_MemMap.h<br>
 Dcm_MemMap.h<br>
 DemMaster_0_MemMap.h<br>
 DemSatellite_0_MemMap.h<br>
@@ -217,8 +220,8 @@ Rte_Needs.ecuc.arxml<br>
 Note: This resource usage calculation assumes that the "Boolean" data type is based on uint8 base type.<br>
       Further on padding bytes for structs are not considered, which depends on the compiler settings.<br>
 <br>
-RAM   Size: 56 Bytes<br>
-CONST Size: 94 Bytes<br>
+RAM   Size: 60 Bytes<br>
+CONST Size: 98 Bytes<br>
 <br>
 <P ALIGN=LEFT>
 <A HREF="#refBack"><FONT SIZE=4 FACE="Verdana, Arial, Helvetica" COLOR="#B70032">Back</FONT></A><br>
@@ -378,6 +381,27 @@ CONST Size: 94 Bytes<br>
 <TD>Rte_Msg201h_Rx_Notification</TD>
 <TD>AswTask</TD>
 <TD>Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> DIAG_SWC::DataServices_VCU_DID_00_DataRecord::ConditionCheckRead</TD>
+<TD>DataServices_VCU_DID_00_DataRecord_ConditionCheckRead</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> DIAG_SWC::DataServices_VCU_DID_00_DataRecord::ReadData</TD>
+<TD>DataServices_VCU_DID_00_DataRecord_ReadData</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> DIAG_SWC::DataServices_VCU_DID_00_DataRecord::WriteData</TD>
+<TD>DataServices_VCU_DID_00_DataRecord_WriteData</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
 <TD>n/a</TD>
 </TR>
 <TR>
@@ -1067,6 +1091,13 @@ CONST Size: 94 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::EraseBlock</TD>
+<TD>EraseBlock</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> NvM::PS_SWC1NvBlockNeed_UserData3::EraseBlock</TD>
 <TD>EraseBlock</TD>
 <TD>n/a</TD>
@@ -1074,8 +1105,22 @@ CONST Size: 94 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::GetErrorStatus</TD>
+<TD>GetErrorStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> NvM::PS_SWC1NvBlockNeed_UserData3::GetErrorStatus</TD>
 <TD>GetErrorStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::InvalidateNvBlock</TD>
+<TD>InvalidateNvBlock</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -1095,8 +1140,22 @@ CONST Size: 94 Bytes<br>
 <TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::ReadBlock</TD>
+<TD>ReadBlock</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> NvM::PS_SWC1NvBlockNeed_UserData3::ReadBlock</TD>
 <TD>ReadBlock</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::RestoreBlockDefaults</TD>
+<TD>RestoreBlockDefaults</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -1109,6 +1168,13 @@ CONST Size: 94 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> NvM::PAdmin_DIAG_SWC_NvBlockNeed_DiagDID_00::SetBlockProtection</TD>
+<TD>SetBlockProtection</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> NvM::PAdmin_SWC1NvBlockNeed_UserData3::SetBlockProtection</TD>
 <TD>SetBlockProtection</TD>
 <TD>n/a</TD>
@@ -1116,8 +1182,22 @@ CONST Size: 94 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::SetRamBlockStatus</TD>
+<TD>SetRamBlockStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> NvM::PS_SWC1NvBlockNeed_UserData3::SetRamBlockStatus</TD>
 <TD>SetRamBlockStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::WriteBlock</TD>
+<TD>WriteBlock</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
