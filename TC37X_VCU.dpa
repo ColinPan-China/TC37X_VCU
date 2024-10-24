@@ -58,6 +58,7 @@
         <FlatECUEX>Config\System\FlatExtract.arxml</FlatECUEX>
         <OEMCommunicationExtract>Config\System\Communication.arxml</OEMCommunicationExtract>
         <EcucFileReferences/>
+        <DiagECUC>Config\System\DiagnosticsDescriptionData.arxml</DiagECUC>
     </References>
     <EcucSplitter>
         <Configuration>Config\ECUC\TC37X_VCU.ecuc.arxml</Configuration>
@@ -148,12 +149,28 @@
         <Splitter File=".\Config\ECUC\TC37X_VCU_Dio_Dio_ecuc.arxml">
             <Module Name="Dio"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_CanTp_CanTp_ecuc.arxml">
+            <Module Name="CanTp"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Dcm_Dcm_ecuc.arxml">
+            <Module Name="Dcm"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Dem_Dem_ecuc.arxml">
+            <Module Name="Dem"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>
     <Display LastVersion="5.24.40 SP2">
-        <FileSet Id="" CS="5755e51a">
-            <File Order="0" EcuInstance="VCU" Hash="406a3842b4347dfd201067c1034360b5" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\VCU_CAN00.dbc</File>
+        <FileSet Id="" CS="ef55ad7e">
+            <File Order="0" EcuInstance="VCU" Hash="aecf6084ba67079660328b823eb7c9ed" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\VCU_CAN00.dbc</File>
+            <Diagnostic>
+                <Description Order="1" Hash="f4a8ff919fe690be8ae79b6eef42a2de">$(DpaProjectFolder)\DBC\MyEcu.cdd</Description>
+                <Ecu>MyEcu</Ecu>
+                <Variant>CommonDiagnostics</Variant>
+                <UseLegacySignalImport>false</UseLegacySignalImport>
+                <UseGenericImport>false</UseGenericImport>
+            </Diagnostic>
         </FileSet>
         <Merge>
             <Path Id="ECU-INSTANCE" ARPath="/ECU/VCU"/>

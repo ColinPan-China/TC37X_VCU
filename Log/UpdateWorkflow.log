@@ -1,109 +1,949 @@
-2024-10-09 - 10:23:03
-10:23:03 - Workflow Step 'Update workflow' started.
+2024-10-24 - 15:25:46
+15:25:46 - Workflow Step 'Update workflow' started.
 Using DaVinci Configurator  5.24.40 SP2 (x86_64).
-10:23:03 - Workflow Step 'Validate workflow environment' started.
-10:23:03 - Workflow Step 'Validate dpa file' started.
-10:23:03 - Workflow Step 'Validate dpa file' finished.
-10:23:03 - Workflow Step 'SLP conformance check' started.
-10:23:03 - Workflow Step 'SLP conformance check' finished.
-10:23:03 - Workflow Step 'Validate workflow environment' finished.
-10:23:03 - Workflow Step 'Input File Pre-Processing' started.
-10:23:03 - Workflow Step 'Converting legacy file(s) to AUTOSAR files' started.
+15:25:46 - Workflow Step 'Validate workflow environment' started.
+15:25:47 - Workflow Step 'Validate dpa file' started.
+15:25:47 - Workflow Step 'Validate dpa file' finished.
+15:25:47 - Workflow Step 'SLP conformance check' started.
+15:25:47 - Workflow Step 'SLP conformance check' finished.
+15:25:47 - Workflow Step 'Validate workflow environment' finished.
+15:25:47 - Workflow Step 'Input File Pre-Processing' started.
+15:25:47 - Workflow Step 'Converting legacy file(s) to AUTOSAR files' started.
 Legacy Converter finished successfully.
 Convert legacy file(s) to System Description
 Used executable: C:\Vector\CBD2100764_D00\Misc\LegacyDb2SystemDescrConverter\Application\LegacyDb2SystemDescrConverter.exe
-Arguments: D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN00.dbc -o "C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\LegacyConverterResults\1728440584002-0\ConvertedLegacy" -r 00048 -e -v 19
+Arguments: D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN00.dbc -o "C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\LegacyConverterResults\1729754747631-0\ConvertedLegacy" -r 00048 -e -v 19
 Vector Legacy Database Converter
 Version: 1.8.62.0
 Copyright (c) 2018 Vector Informatik GmbH.
 SIP License found as C:\Vector\CBD2100764_D00\DaVinciConfigurator\ComponentLicense_DaVinciConfigurator.lic
-Command line: C:\Vector\CBD2100764_D00\Misc\LegacyDb2SystemDescrConverter\Application\LegacyDb2SystemDescrConverter.exe D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN00.dbc -o "C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\LegacyConverterResults\1728440584002-0\ConvertedLegacy" -r 00048 -e -v 19
+Command line: C:\Vector\CBD2100764_D00\Misc\LegacyDb2SystemDescrConverter\Application\LegacyDb2SystemDescrConverter.exe D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN00.dbc -o "C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\LegacyConverterResults\1729754747631-0\ConvertedLegacy" -r 00048 -e -v 19
 Converting DBC file D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN00.dbc
 Writing System Description...
 Writing 3 ECU Extracts...
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\LegacyConverterResults\1728440584002-0\ConvertedLegacy.arxml
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\LegacyConverterResults\1728440584002-0\ConvertedLegacy_GWM.arxml
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\LegacyConverterResults\1728440584002-0\ConvertedLegacy_OtherECU.arxml
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\LegacyConverterResults\1728440584002-0\ConvertedLegacy_VCU.arxml
-Elapsed time: 0.578 seconds
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\LegacyConverterResults\1729754747631-0\ConvertedLegacy.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\LegacyConverterResults\1729754747631-0\ConvertedLegacy_GWM.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\LegacyConverterResults\1729754747631-0\ConvertedLegacy_Tester.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\LegacyConverterResults\1729754747631-0\ConvertedLegacy_VCU.arxml
+Elapsed time: 0.589 seconds
 0 Errors
 0 Warnings
-10:23:04 - Workflow Step 'Converting legacy file(s) to AUTOSAR files' finished.
-10:23:04 - Workflow Step 'Load arxml file after preprocessing' started.
-Load arxml file from path: C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\LegacyConverterResults\1728440584002-0\ConvertedLegacy_VCU.arxml
-10:23:04 - Workflow Step 'Load arxml file after preprocessing' finished.
-10:23:04 - Workflow Step 'Evaluate system extract paths' started.
-10:23:04 - Workflow Step 'Evaluate system extract paths' finished.
+15:25:48 - Workflow Step 'Converting legacy file(s) to AUTOSAR files' finished.
+15:25:48 - Workflow Step 'Load arxml file after preprocessing' started.
+Load arxml file from path: C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\LegacyConverterResults\1729754747631-0\ConvertedLegacy_VCU.arxml
+15:25:48 - Workflow Step 'Load arxml file after preprocessing' finished.
+15:25:48 - Workflow Step 'Evaluate system extract paths' started.
+15:25:48 - Workflow Step 'Evaluate system extract paths' finished.
+15:25:48 - Workflow Step 'Converting legacy diagnostics file(s) to AUTOSAR files' started.
+----> Process of diagnostic specification
+DDM-Version: 20.3.0 (Release)
+Importing ODX file D:\TC377_Development\dev\TC37X_VCU\DBC\MyEcu.cdd, ECU: MyEcu, variant: CommonDiagnostics
+Selecting ECU 'MyEcu'  Variant 'CommonDiagnostics'.
+              [WARNING] [DTLDID] SERVICE [19] //MyEcu/CommonDiagnostics/FaultMemory_Read_snapshot: No DIDs could be determined
+Selecting Manufacturer 'GENERIC'.
+              [WARNING] 'GENERIC' was selected and 'Vector' was detected.
+Importing Database information.
+----> Importing Variants
+<---- Importing Variants
+----> Importing StateGroups
+Importing StateMachine information.
+<---- Importing StateGroups
+----> Importing Services
+Importing Service '1001'.
+Importing Service '1002'.
+Importing Service '1003'.
+Importing Service '1101'.
+Importing Service '14'.
+Importing Service '1901'.
+Importing Service '1902'.
+Importing Service '1903'.
+Importing Service '1904'.
+Importing Service '1906'.
+Importing Service '1907'.
+Importing Service '1908'.
+Importing Service '1909'.
+Importing Service '190A'.
+Importing Service '190C'.
+Importing Service '190D'.
+Importing Service '1914'.
+Importing Service '220100'.
+Importing Service '220101'.
+Importing Service '221024'.
+Importing Service '22F180'.
+Importing Service '22F187'.
+Importing Service '22F189'.
+Importing Service '22F18C'.
+Importing Service '22F190'.
+Importing Service '22F193'.
+Importing Service '22F300'.
+Importing Service '23'.
+Importing Service '2701'.
+Importing Service '2702'.
+Importing Service '2703'.
+Importing Service '2704'.
+Importing Service '2800'.
+Importing Service '2801'.
+Importing Service '2802'.
+Importing Service '2803'.
+Importing Service '2C01F300'.
+Importing Service '2C02F300'.
+Importing Service '2C03'.
+Importing Service '2C03F300'.
+Importing Service '2E0100'.
+Importing Service '2E0101'.
+Importing Service '2E1024'.
+Importing Service '2EF180'.
+Importing Service '2EF187'.
+Importing Service '2EF189'.
+Importing Service '2EF18C'.
+Importing Service '2EF190'.
+Importing Service '2EF193'.
+Importing Service '31010100'.
+Importing Service '31010104'.
+Importing Service '31020100'.
+Importing Service '31030100'.
+Importing Service '31030104'.
+Importing Service '3D'.
+Importing Service '3E00'.
+Importing Service '8501'.
+Importing Service '8502'.
+<---- Importing Services
+----> Importing FaultMemory
+Importing FaultMemory.
+              [WARNING] Could not extract DTC format.
+              [WARNING] No parameter found at bytepos 8 length 16bit for service FaultMemory_Read_snapshot
+              [WARNING] Could not find DIDs for DTC (2) . Skipping!
+              [WARNING] Could not find DIDs for DTC (3) . Skipping!
+<---- Importing FaultMemory
+----> Importing EnvironmentalConditions
+<---- Importing EnvironmentalConditions
+----> Importing FreezeFrame
+<---- Importing FreezeFrame
+----> Importing DiagSettings
+Importing DiagSettings
+<---- Importing DiagSettings
+----> Importing DataCompProps
+<---- Importing DataCompProps
+<<<<<<<<<<<<< ODX Import finished successfully after 0.140
+Shaping imported model for diagnostic OEM 'GENERIC'
+- Used Diagnostic OEM:  GENERIC
+- Microsar:             true
+- Meta-Ecuc-Export:     true
+>>>>>>>>>>>>> SHAPING preparation >>>>>>>>>>>>>
+<<<<<<<<<<<<< SHAPING ready after 0.016s (16ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> SHAPING started >>>>>>>>>>>>>
+>>>>>>>>>>>>> ShapingStep ServiceSelection >>>>>>>>>>>>>
+<<<<<<<<<<<<< ShapingStep ServiceSelection( completed in 0s (0ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep DataPreparation >>>>>>>>>>>>>
+At Ecu
+- Shape Data Comp Collections
+At Ecu
+- Shape Compu-Methods
+At Ecu
+- Fix Unsigned Boolean
+- Convert XInt24/XInt64 to Byte-Array
+At Ecu
+- Set Compu-Scale Symbols
+<<<<<<<<<<<<< ShapingStep DataPreparation( completed in 0s (0ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep ServiceDefinition >>>>>>>>>>>>>
+At Ecu
+- Finding duplicated services...
+Destroying duplicated services...
+At Service 0x85
+- Set 'control option record present' to 'false'
+At Service 0x22 SubService 0x100
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0x100 DevelopmentData_Read
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0x100 DevelopmentData_Read
+At Service 0x22 SubService 0x101
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0x101 DataDiagnosticIdentifier_DID_Read
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0x101 DataDiagnosticIdentifier_DID_Read
+At Service 0x22 SubService 0x1024
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0x1024 VCU_DID_00_Read
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0x1024 VCU_DID_00_Read
+At Service 0x22 SubService 0xf180
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0xf180 Boot_Software_Read
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0xf180 Boot_Software_Read
+At Service 0x22 SubService 0xf187
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0xf187 Spare_Part_Number_Read
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0xf187 Spare_Part_Number_Read
+At Service 0x22 SubService 0xf189
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0xf189 EcuIdentification_Read
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0xf189 EcuIdentification_Read
+At Service 0x22 SubService 0xf18c
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0xf18c SerialNumber_Read
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0xf18c SerialNumber_Read
+At Service 0x22 SubService 0xf190
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0xf190 Vehicle_Identification_Read
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0xf190 Vehicle_Identification_Read
+At Service 0x22 SubService 0xf193
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0xf193 Hardware_Version_Read
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x22 0xf193 Hardware_Version_Read
+At Service 0x22 SubService 0xf3
+- Applying service definition shaping to protocol component [F3]
+- Service has now new definition: 0x22 0xf3 0x0 SampleDynamicallyDefinedNonPeriodicDID_Read
+- Applying service definition shaping to protocol component [F3]
+- Service has now new definition: 0x22 0xf300 SampleDynamicallyDefinedNonPeriodicDID_Read
+At Service 0x2c SubService 0x1
+- Applying service definition shaping to protocol component [F3]
+- Service has now new definition: 0x2c 0x1 0xf3 0x0 SampleDynamicallyDefinedNonPeriodicDID_Define_By_Identifier
+- Applying service definition shaping to protocol component [F3]
+- Service has now new definition: 0x2c 0x1 0xf300 SampleDynamicallyDefinedNonPeriodicDID_Define_By_Identifier
+At Service 0x2c SubService 0x2
+- Applying service definition shaping to protocol component [F3]
+- Service has now new definition: 0x2c 0x2 0xf3 0x0 SampleDynamicallyDefinedNonPeriodicDID_Define_By_Address
+- Applying service definition shaping to protocol component [F3]
+- Service has now new definition: 0x2c 0x2 0xf300 SampleDynamicallyDefinedNonPeriodicDID_Define_By_Address
+At Service 0x2c SubService 0x3
+- Applying service definition shaping to protocol component [F3]
+- Service has now new definition: 0x2c 0x3 0xf3 0x0 SampleDynamicallyDefinedNonPeriodicDID_Clear
+- Applying service definition shaping to protocol component [F3]
+- Service has now new definition: 0x2c 0x3 0xf300 SampleDynamicallyDefinedNonPeriodicDID_Clear
+At Service 0x2e SubService 0x100
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0x100 DevelopmentData_Write
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0x100 DevelopmentData_Write
+At Service 0x2e SubService 0x101
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0x101 DataDiagnosticIdentifier_DID_Write
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0x101 DataDiagnosticIdentifier_DID_Write
+At Service 0x2e SubService 0x1024
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0x1024 VCU_DID_00_Write
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0x1024 VCU_DID_00_Write
+At Service 0x2e SubService 0xf180
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0xf180 Boot_Software_Write
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0xf180 Boot_Software_Write
+At Service 0x2e SubService 0xf187
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0xf187 Spare_Part_Number_Write
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0xf187 Spare_Part_Number_Write
+At Service 0x2e SubService 0xf189
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0xf189 EcuIdentification_Write
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0xf189 EcuIdentification_Write
+At Service 0x2e SubService 0xf18c
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0xf18c SerialNumber_Write
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0xf18c SerialNumber_Write
+At Service 0x2e SubService 0xf190
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0xf190 Vehicle_Identification_Write
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0xf190 Vehicle_Identification_Write
+At Service 0x2e SubService 0xf193
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0xf193 Hardware_Version_Write
+- Applying service definition shaping to protocol component [RecordDataIdentifier]
+- Service has now new definition: 0x2e 0xf193 Hardware_Version_Write
+At Service 0x31 SubService 0x1
+- Applying service definition shaping to protocol component [RoutineIdentifier]
+- Service has now new definition: 0x31 0x1 0x100 SampleRoutineControl_Start
+- Applying service definition shaping to protocol component [RoutineIdentifier]
+- Service has now new definition: 0x31 0x1 0x100 SampleRoutineControl_Start
+At Service 0x31 SubService 0x1
+- Applying service definition shaping to protocol component [RoutineIdentifier]
+- Service has now new definition: 0x31 0x1 0x104 SampleRoutineControl_StartOnly_Start
+- Applying service definition shaping to protocol component [RoutineIdentifier]
+- Service has now new definition: 0x31 0x1 0x104 SampleRoutineControl_StartOnly_Start
+At Service 0x31 SubService 0x2
+- Applying service definition shaping to protocol component [RoutineIdentifier]
+- Service has now new definition: 0x31 0x2 0x100 SampleRoutineControl_Stop
+- Applying service definition shaping to protocol component [RoutineIdentifier]
+- Service has now new definition: 0x31 0x2 0x100 SampleRoutineControl_Stop
+At Service 0x31 SubService 0x3
+- Applying service definition shaping to protocol component [RoutineIdentifier]
+- Service has now new definition: 0x31 0x3 0x100 SampleRoutineControl_Results
+- Applying service definition shaping to protocol component [RoutineIdentifier]
+- Service has now new definition: 0x31 0x3 0x100 SampleRoutineControl_Results
+At Service 0x31 SubService 0x3
+- Applying service definition shaping to protocol component [RoutineIdentifier]
+- Service has now new definition: 0x31 0x3 0x104 SampleRoutineControl_StartOnly_Results
+- Applying service definition shaping to protocol component [RoutineIdentifier]
+- Service has now new definition: 0x31 0x3 0x104 SampleRoutineControl_StartOnly_Results
+At Ecu
+- Finding duplicated sub-services...
+<<<<<<<<<<<<< ShapingStep ServiceDefinition( completed in 0.015s (15ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep DataDefinition >>>>>>>>>>>>>
+Service: 0x2e 0x100 DevelopmentData_Write shared data components linked to: Service: 0x22 0x100 DevelopmentData_Read !!!
+Service: 0x2e 0x101 DataDiagnosticIdentifier_DID_Write shared data components linked to: Service: 0x22 0x101 DataDiagnosticIdentifier_DID_Read !!!
+Service: 0x2e 0x1024 VCU_DID_00_Write shared data components linked to: Service: 0x22 0x1024 VCU_DID_00_Read !!!
+Service: 0x2e 0xf180 Boot_Software_Write shared data components linked to: Service: 0x22 0xf180 Boot_Software_Read !!!
+Service: 0x2e 0xf187 Spare_Part_Number_Write shared data components linked to: Service: 0x22 0xf187 Spare_Part_Number_Read !!!
+Service: 0x2e 0xf189 EcuIdentification_Write shared data components linked to: Service: 0x22 0xf189 EcuIdentification_Read !!!
+Service: 0x2e 0xf18c SerialNumber_Write shared data components linked to: Service: 0x22 0xf18c SerialNumber_Read !!!
+Service: 0x2e 0xf190 Vehicle_Identification_Write shared data components linked to: Service: 0x22 0xf190 Vehicle_Identification_Read !!!
+Service: 0x2e 0xf193 Hardware_Version_Write shared data components linked to: Service: 0x22 0xf193 Hardware_Version_Read !!!
+At Ecu 'MyEcu'
+- Building Service Dids
+- Building Routines
+-  + Routine 'SampleRoutineControl' created
+-  + Routine 'SampleRoutineControl_StartOnly' created
+At DTCStatusMask
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DtcAvailabilityMask
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At P2
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At P2Ex
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At P2
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At P2Ex
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At P2
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At P2Ex
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DTCStatusMask
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DTCStatusAvailabilityMask
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DtcFormatIdentifier
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DTCCount
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At StatusOfDtc
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Status_Of_Dtc
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DTC_Severity
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DTCStatusMask
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DtcAvailabilityMask
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DtcFormatIdentifier
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DTCCount
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DTC_Severity
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DTCStatusMask
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DtcStatusAvailabilityMask
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DtcStatusAvailabilityMask
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DTCStatusAvailabilityMask
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DTCStatusAvailabilityMask
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DTCAvailabilityMask
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At OperatingSystemVersion
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At CanDriverVersion
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At NmVersion
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DiagnosticModuleVersion
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At TransportLayerVersion
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DataDiagnosticIdentifier
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DataRecord
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At NumberOfModules
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Boot_Software_Identification
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Spare_Part_Number
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Part_Number
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At SerialNumber
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At VIN
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Hardware_Version_Number
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At DataRecord
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At SecuritySeed
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At SecurityKey
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At SecuritySeed
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At SecurityKey
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Communciation_Type
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Communciation_Type
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Communciation_Type
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Communciation_Type
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At ALFID
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Option0
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At InitState
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Option1
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At StopState
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Result
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Result
+- Trying to remove attribute 'FaultmemoryData'
+- Removeing attribute 'FaultmemoryData'
+At Ecu
+- Shape Routine Parameter Names
+<<<<<<<<<<<<< ShapingStep DataDefinition( completed in 0.016s (16ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep DataIdentifier >>>>>>>>>>>>>
+At Did 0xf190 - 'Vehicle_Identification'
+- Set DID property 'IsVIN' to 'true'
+<<<<<<<<<<<<< ShapingStep DataIdentifier( completed in 0s (0ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep Service >>>>>>>>>>>>>
+At Ecu
+- Building Diagnostic Event Memories
+- Checking Diagnostic Event Memories
+At Service 0x10
+- Qualifier changed from 'DefaultSession_Start' to 'DiagSessionControl'
+- Service action qualifier set to 'SessionControl'
+At Service 0x10 SubService 0x1
+- SubService action qualifier set to 'StartSession'
+At Service 0x10 SubService 0x2
+- SubService action qualifier set to 'StartSession'
+At Service 0x10 SubService 0x3
+- SubService action qualifier set to 'StartSession'
+At Service 0x10 SubService 0x1
+- Qualifier changed from 'DefaultSession_Start' to 'Default'
+At Service 0x10 SubService 0x2
+- Qualifier changed from 'ProgrammingSession_Start' to 'Programming'
+At Service 0x10 SubService 0x3
+- Qualifier changed from 'ExtendedDiagnosticSession_Start' to 'Extended'
+At Service 0x11
+- Qualifier changed from 'Hard_Reset_Reset' to 'EcuReset'
+At Service 0x11 SubService 0x1
+- SubService action qualifier set to 'EcuReset'
+At Service 0x11 SubService 0x1
+- Qualifier changed from 'Hard_Reset_Reset' to 'Hard'
+At Service 0x14
+- Qualifier changed from 'FaultMemory_Clear' to 'ClearDiagInfo'
+At Service 0x14 SubService
+- SubService action qualifier set to 'Clear'
+- Qualifier changed from 'FaultMemory_Clear' to 'ClearDiagInfo'
+At Service 0x19
+- Qualifier changed from 'FaultMemory_ReadAllIdentified' to 'ReadDtcInfo'
+At Service 0x19 SubService 0x2
+- SubService action qualifier set to 'ReadDtc'
+At Service 0x19 SubService 0x1
+- SubService action qualifier set to 'ReadDtc'
+At Service 0x19 SubService 0x3
+- SubService action qualifier set to 'ReadDtc'
+At Service 0x19 SubService 0x4
+- SubService action qualifier set to 'ReadDtc'
+At Service 0x19 SubService 0x6
+- SubService action qualifier set to 'ReadDtc'
+At Service 0x19 SubService 0x7
+- SubService action qualifier set to 'ReadDtc'
+At Service 0x19 SubService 0x8
+- SubService action qualifier set to 'ReadDtc'
+At Service 0x19 SubService 0x9
+- SubService action qualifier set to 'ReadDtc'
+At Service 0x19 SubService 0xa
+- SubService action qualifier set to 'ReadDtc'
+At Service 0x19 SubService 0xc
+- SubService action qualifier set to 'ReadDtc'
+At Service 0x19 SubService 0xd
+- SubService action qualifier set to 'ReadDtc'
+At Service 0x19 SubService 0x14
+- SubService action qualifier set to 'ReadDtc'
+At Service 0x19 SubService 0x1
+- Qualifier changed from 'FaultMemory_ReadNumber' to 'RNODTCBSM'
+At Service 0x19 SubService 0x2
+- Qualifier changed from 'FaultMemory_ReadAllIdentified' to 'RDTCBSM'
+At Service 0x19 SubService 0x3
+- Qualifier changed from 'FaultMemory_Read_snapshot_ID' to 'RDTCSSI'
+At Service 0x19 SubService 0x4
+- Qualifier changed from 'FaultMemory_Read_snapshot' to 'RDTCSSBDTC'
+At Service 0x19 SubService 0x6
+- Qualifier changed from 'FaultMemory_Read_extended' to 'RDTCEDRBDN'
+At Service 0x19 SubService 0x7
+- Qualifier changed from 'FaultMemory_Report_nbr_of_DTC_bei_severity' to 'RNODTCBSMR'
+At Service 0x19 SubService 0x8
+- Qualifier changed from 'FaultMemory_Read_DTC_by_severity' to 'RDTCBSMR'
+At Service 0x19 SubService 0x9
+- Qualifier changed from 'FaultMemory_Read_severity_information' to 'RSIODTC'
+At Service 0x19 SubService 0xa
+- Qualifier changed from 'FaultMemory_ReadAllSupported' to 'RSUPDTC'
+At Service 0x19 SubService 0xc
+- Qualifier changed from 'FaultMemory_Read_first_confirmed_DTC' to 'RFCDTC'
+At Service 0x19 SubService 0xd
+- Qualifier changed from 'FaultMemory_Read_most_recent_test_failed_DTC' to 'RMRTFDTC'
+At Service 0x19 SubService 0x14
+- Qualifier changed from 'FaultMemory_Read_fault_detection_counter' to 'RDTCFDC'
+At Service 0x22
+- Qualifier changed from 'DevelopmentData_Read' to 'ReadDataById'
+- Service action qualifier set to 'Read'
+At Service 0x22 SubService 0x100
+- SubService action qualifier set to 'ReadDid'
+At Service 0x22 SubService 0x101
+- SubService action qualifier set to 'ReadDid'
+At Service 0x22 SubService 0x1024
+- SubService action qualifier set to 'ReadDid'
+At Service 0x22 SubService 0xf180
+- SubService action qualifier set to 'ReadDid'
+At Service 0x22 SubService 0xf187
+- SubService action qualifier set to 'ReadDid'
+At Service 0x22 SubService 0xf189
+- SubService action qualifier set to 'ReadDid'
+At Service 0x22 SubService 0xf18c
+- SubService action qualifier set to 'ReadDid'
+At Service 0x22 SubService 0xf190
+- SubService action qualifier set to 'ReadDid'
+At Service 0x22 SubService 0xf193
+- SubService action qualifier set to 'ReadDid'
+At Service 0x22 SubService 0xf300
+- SubService action qualifier set to 'ReadDid'
+At Service 0x23
+- Qualifier changed from 'Memory_New_Service_2' to 'ReadMemoryByAddress'
+At Service 0x23 SubService
+- SubService action qualifier set to 'Read'
+At Service 0x27
+- Qualifier changed from 'SeedLevel1_Request' to 'SecurityAccess'
+- Service action qualifier set to 'SecurityAccess'
+At Service 0x27 SubService 0x2
+- SubService action qualifier set to 'SendKey'
+At Service 0x27 SubService 0x4
+- SubService action qualifier set to 'SendKey'
+At Service 0x27 SubService 0x1
+- SubService action qualifier set to 'GetSeed'
+At Service 0x27 SubService 0x3
+- SubService action qualifier set to 'GetSeed'
+At Service 0x28
+- Qualifier changed from 'EnableRxAndEnableTx_Control' to 'CommunicationControl'
+At Service 0x28 SubService 0x0
+- SubService action qualifier set to 'CommCtrl'
+At Service 0x28 SubService 0x1
+- SubService action qualifier set to 'CommCtrl'
+At Service 0x28 SubService 0x2
+- SubService action qualifier set to 'CommCtrl'
+At Service 0x28 SubService 0x3
+- SubService action qualifier set to 'CommCtrl'
+At Service 0x28 SubService 0x0
+- Qualifier changed from 'EnableRxAndEnableTx_Control' to 'EnableRxAndTx'
+At Service 0x28 SubService 0x1
+- Qualifier changed from 'EnableRxAndDisableTx_Control' to 'EnableRxAndDisableTx'
+At Service 0x28 SubService 0x2
+- Qualifier changed from 'DisableRxAndEnableTx_Control' to 'DisableRxAndEnableTx'
+At Service 0x28 SubService 0x3
+- Qualifier changed from 'DisableRxAndDisableTx_Control' to 'DisableRxAndTx'
+At Service 0x2c
+- Spec changed from '12' to 'DynamicallyDefine'(4)
+- Qualifier changed from 'SampleDynamicallyDefinedNonPeriodicDID_Define_By_Identifier' to 'DynamicallyDefineDataId'
+At Service 0x2c SubService 0x1
+- SubService action qualifier set to 'DynDefById'
+At Service 0x2c SubService 0x2
+- SubService action qualifier set to 'DynDefByAddr'
+At Service 0x2c SubService 0x3
+- SubService action qualifier set to 'DynDefClr'
+At Service 0x2c SubService 0x3
+- SubService action qualifier set to 'DynDefClr'
+At Service 0x2e
+- Qualifier changed from 'DevelopmentData_Write' to 'WriteDataById'
+- Service action qualifier set to 'Write'
+At Service 0x2e SubService 0x100
+- SubService action qualifier set to 'WriteDid'
+At Service 0x2e SubService 0x101
+- SubService action qualifier set to 'WriteDid'
+At Service 0x2e SubService 0x1024
+- SubService action qualifier set to 'WriteDid'
+At Service 0x2e SubService 0xf180
+- SubService action qualifier set to 'WriteDid'
+At Service 0x2e SubService 0xf187
+- SubService action qualifier set to 'WriteDid'
+At Service 0x2e SubService 0xf189
+- SubService action qualifier set to 'WriteDid'
+At Service 0x2e SubService 0xf18c
+- SubService action qualifier set to 'WriteDid'
+At Service 0x2e SubService 0xf190
+- SubService action qualifier set to 'WriteDid'
+At Service 0x2e SubService 0xf193
+- SubService action qualifier set to 'WriteDid'
+At Service 0x31
+- Spec changed from '8' to 'RoutineControl'(9)
+- Qualifier changed from 'SampleRoutineControl_Start' to 'RoutineControl'
+At Service 0x31 SubService 0x1
+- SubService action qualifier set to 'RtnCtrlStart'
+At Service 0x31 SubService 0x1
+- SubService action qualifier set to 'RtnCtrlStart'
+At Service 0x31 SubService 0x2
+- SubService action qualifier set to 'RtnCtrlStop'
+At Service 0x31 SubService 0x3
+- SubService action qualifier set to 'RtnCtrlReqRes'
+At Service 0x31 SubService 0x3
+- SubService action qualifier set to 'RtnCtrlReqRes'
+At Service 0x3d
+- Qualifier changed from 'Memory_New_Service_3' to 'WriteMemoryByAddress'
+At Service 0x3d SubService
+- SubService action qualifier set to 'Write'
+At Service 0x3e
+- Qualifier changed from 'TesterPresent_Send' to 'TesterPresent'
+At Service 0x3e SubService 0x0
+- SubService action qualifier set to 'Send'
+- Qualifier changed from 'TesterPresent_Send' to 'TesterPresent'
+At Service 0x85
+- Spec changed from '12' to 'FaultMemory'(2)
+- Qualifier changed from 'ControlDTCSetting_On' to 'ControlDtcSetting'
+At Service 0x85 SubService 0x1
+- SubService action qualifier set to 'ControlDtcSetting'
+At Service 0x85 SubService 0x2
+- SubService action qualifier set to 'ControlDtcSetting'
+At Service 0x85 SubService 0x1
+- Qualifier changed from 'ControlDTCSetting_On' to 'Enable'
+At Service 0x85 SubService 0x2
+- Qualifier changed from 'ControlDTCSetting_Off' to 'Disable'
+<<<<<<<<<<<<< ShapingStep Service( completed in 0.016s (16ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep StateMachine >>>>>>>>>>>>>
+At Ecu
+- Merging Environmental Modes
+- Merging Environmental Dids
+- Merging Environmental Rules
+- Merging Access Conditions
+- Building Diagnostic Sessions
+-  + Session 'Default' created
+-  + Session 'Programming' created
+-  + Session 'Extended' created
+              [WARNING] - Service 0x27 0x2 not allowed in its own state 'UnlockedL1'
+- The service execution for this session state will be enabled
+              [WARNING] - Service 0x27 0x2 misses a transition from state 'Level_01' to state 'UnlockedL1'
+- The required transition will be added
+              [WARNING] - Service 0x27 0x4 not allowed in its own state 'Level_3'
+- The service execution for this session state will be enabled
+              [WARNING] - Security state 'Level_01' has no assigned security service
+- Security state 'Level_01' deleted
+- Building Diagnostic Securities
+-  + Security 'UnlockedL1' created
+-  + Security 'Level_3' created
+- Building Authorizations
+- Building Environmental Conditions
+- Building Access Conditions
+-  + Access Cond '|' created
+-  + Access Cond 'S02;S03|' created
+At Ecu
+- Building Access Conditions - finshed
+<<<<<<<<<<<<< ShapingStep StateMachine( completed in 0s (0ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep StateMachine2 >>>>>>>>>>>>>
+At Security 0x1 [serviceAttr(MaxAttemptsToDelay):  exists]
+- Set property 'NumFailed' to '3'
+At Security 0x1 [serviceAttr(DelayTimeMs):  exists]
+- Set property 'DelayTime' to '10000'
+At Security 0x1 [serviceAttr(DelayTimeOnPowerOnMs):  exists]
+- Set property 'BootDelayTime' to '0'
+At Security 0x2 [serviceAttr(MaxAttemptsToDelay):  exists]
+- Set property 'NumFailed' to '3'
+At Security 0x2 [serviceAttr(DelayTimeMs):  exists]
+- Set property 'DelayTime' to '10000'
+<<<<<<<<<<<<< ShapingStep StateMachine2( completed in 0s (0ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep StateMachine3 >>>>>>>>>>>>>
+At Session 0x1 [P2Time is Null]
+- Set property 'P2Time' to '50'
+At Session 0x1 [P2ExTime is Null]
+- Set property 'P2ExTime' to '5000'
+At Session 0x2 [P2Time is Null]
+- Set property 'P2Time' to '50'
+At Session 0x2 [P2ExTime is Null]
+- Set property 'P2ExTime' to '5000'
+At Session 0x3 [P2Time is Null]
+- Set property 'P2Time' to '50'
+At Session 0x3 [P2ExTime is Null]
+- Set property 'P2ExTime' to '5000'
+At Session 0x1 [JumpToBoot is Null]
+- Set property 'JumpToBoot' to 'noBoot'
+- Set Reset-to-FBL to false
+At Session 0x3 [JumpToBoot is Null]
+- Set property 'JumpToBoot' to 'noBoot'
+<<<<<<<<<<<<< ShapingStep StateMachine3( completed in 0s (0ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep Settings >>>>>>>>>>>>>
+At Ecu 'MyEcu'
+- Set 'periodic rate slow' to '1000'
+- Set 'periodic rate medium' to '100'
+- Set 'periodic rate fast' to '20'
+- Set 'maximum number of dynamically defined dids' to '5'
+At Ecu 'MyEcu' Obd2 (DEM): false
+- Set ecu property 'ObdSupport' to 'none'
+<<<<<<<<<<<<< ShapingStep Settings( completed in 0s (0ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep FaultMemory >>>>>>>>>>>>>
+At DTC 0x2
+- Set DTC-Prop 'DtcType' to default 'Fault'
+- Set DTC-Prop 'Priority' to '2'
+- Set DTC-Prop 'AgingCycle' to 'DEM_IGNITION'
+- Set DTC-Prop 'AgingCount' to '100'
+At DTC 0x2
+- Set DTC-Prop 'AgingAllowed' to 'false'
+- Set DTC-Prop 'Severity' to '0'
+At DTC 0x3
+- Set DTC-Prop 'DtcType' to default 'Fault'
+- Set DTC-Prop 'Priority' to '1'
+- Set DTC-Prop 'AgingCycle' to 'DEM_WARMUP'
+- Set DTC-Prop 'AgingCount' to '40'
+At DTC 0x3
+- Set DTC-Prop 'AgingAllowed' to 'true'
+- Set DTC-Prop 'Severity' to '0'
+At Faultmemory
+- Set fault memory property 'ecgNaming' to 'singleElem'
+At Service 0x19 SubService 0x2
+- Set primary memory property 'StatAvailMask' to '255'
+At Event-Memory
+- Set primary memory property 'ssrUpdatable' to 'true'
+<<<<<<<<<<<<< ShapingStep FaultMemory( completed in 0s (0ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep FaultMemory2 >>>>>>>>>>>>>
+At Ecu 'MyEcu'
+- Building DidSets
+At Ecu 'MyEcu' EventImport: false
+- Building Events
+At Event-Memory  SSR-Numeration is Null
+- Set primary memory property 'SsrNumeration' to 'calculated'
+At Occurrence_Counter
+- Set property 'DemDataType' to 'OccCtr'
+At Event 'DTC_0x000002_Event' EventKind is Null
+- Set Event-Prop 'EventKind' to 'SWC' using 'updatable'
+At Event 'DTC_0x000002_Event' EventImport: false
+- Set Event-Prop 'OpCycle' to 'DEM_POWER'
+- Set Event-Prop 'EventFailureCount' to '0'
+At Event 'DTC_0x000003_Event' EventKind is Null
+- Set Event-Prop 'EventKind' to 'SWC' using 'updatable'
+At Event 'DTC_0x000003_Event' EventImport: false
+- Set Event-Prop 'OpCycle' to 'DEM_OBD_DCY'
+- Set Event-Prop 'EventFailureCount' to '2'
+At DTC 0x2
+- Set Event-Prop 'InitMonitor' to 'true'
+At DTC 0x2 IS_ANYOBD: FALSE EventImport: false
+- Warning Indicator 'WarningIndicator' with type 'Warning' created
+- Set Event-Prop 'WarnIndicator' to 'WarningIndicator' using 'Warning'
+At DTC 0x3
+- Set Event-Prop 'InitMonitor' to 'false'
+At DTC 0x3 IS_ANYOBD: FALSE EventImport: false
+- Set Event-Prop 'WarnIndicator' to 'WarningIndicator' using 'Warning'
+<<<<<<<<<<<<< ShapingStep FaultMemory2( completed in 0s (0ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep FaultMemory3 >>>>>>>>>>>>>
+At DTC 0x2 EventImport: false
+- Set Event-Prop 'DebounceType' to 'Counter'
+At DTC 0x3 EventImport: false
+- Set Event-Prop 'DebounceType' to 'Counter'
+At Event 'DTC_0x000002_Event' EventImport: false DebounceType == Counter
+- Set Event-Prop 'JumpUp' to 'Yes'
+- Set Event-Prop 'JumpDown' to 'No'
+- Set Event-Prop 'IncStepSize' to '1'
+- Set Event-Prop 'DecStepSize' to '1'
+- Set Event-Prop 'Register' to default 'NULL'
+At Event 'DTC_0x000003_Event' EventImport: false DebounceType == Counter
+- Set Event-Prop 'JumpUp' to 'Yes'
+- Set Event-Prop 'JumpDown' to 'No'
+- Set Event-Prop 'IncStepSize' to '1'
+- Set Event-Prop 'DecStepSize' to '1'
+- Set Event-Prop 'Register' to default 'NULL'
+<<<<<<<<<<<<< ShapingStep FaultMemory3( completed in 0s (0ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep FaultMemory4 >>>>>>>>>>>>>
+At Event 'DTC_0x000002_Event' Microsar: true
+- Set Event-Prop 'HealingCycle' to 'DEM_POWER' using 'Power'
+At Event 'DTC_0x000003_Event' Microsar: true
+- Set Event-Prop 'HealingCycle' to 'DEM_OBD_DCY' using 'ObdDcy'
+<<<<<<<<<<<<< ShapingStep FaultMemory4( completed in 0s (0ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep FaultMemory5 >>>>>>>>>>>>>
+At Ecu 'MyEcu'
+- Merging Debounce Algorithms
+- Algorithm 'DTC_0x000002_DebounceAlgorithmProperties' has 1 dublicate(s)
+- Merging Operation Cycles
+- Merging Warning Indicators
+- Merging Enable/Storage/Clear Conditions
+<<<<<<<<<<<<< ShapingStep FaultMemory5( completed in 0s (0ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep Obd >>>>>>>>>>>>>
+At Ecu 'MyEcu'
+- Deleting OBD Sub-Services for Pids
+<<<<<<<<<<<<< ShapingStep Obd( completed in 0s (0ms) <<<<<<<<<<<<<
+>>>>>>>>>>>>> ShapingStep CleanUp >>>>>>>>>>>>>
+At Ecu
+- Finding duplicated sub-services in clean-up...
+<<<<<<<<<<<<< ShapingStep CleanUp( completed in 0s (0ms) <<<<<<<<<<<<<
+<<<<<<<<<<<<< SHAPING finished after 0.063s (63ms) <<<<<<<<<<<<<
+              [WARNING] Calling obsolete AR-Shaper
+Exporting ECUC module configurations to file: C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\DiagnosticsImportService\1729754751744-0\DiagnosticsDescriptionData1022492801078781703.xml
+----> Create ECUC from imported diagnostic data.
+Using EcucEx-Parameter 'DemDidQualifierMode' = 'R19' (default)
+Using EcucEx-Parameter 'DcmQualifierMode' = 'R19' (default)
+----> STEP 1: Create ECUC model.
+Creating Dcm module configuration...
+Creating Dem module configuration...
+<---- STEP 1: Finished.
+----> STEP 2: Postprocess created ECUC model.
+----> Decorate imported object qualifiers/shortnames
+<---- Finished decorating qualifiers/shortnames
+----> Transform imported object qualifiers/shortnames to match AUTOSAR IDENTIFIER pattern restriction (except length limit)
+<---- Finished transforming shortnames
+----> Ensure uniqueness of container shortnames within their scope
+<---- Finished ensuring uniqueness of container shortnames
+----> Truncate shortnames whose length exceeds the 128 character limit for AUTOSAR shortnames
+<---- Finished truncating shortnames
+----> Resolve reference parameters
+<---- Finished resolving reference parameters
+<---- STEP 2: Finished.
+----> STEP 3: Serialize ECUC model to XML.
+<---- STEP 3: Finished.
+<---- Finished creation of ECUC from imported diagnostic data.
+<<<<<<<<<<<<< Meta-EcuC Export finished after 0.015
+<---- Process of diagnostic specification.
+15:25:52 - Workflow Step 'Converting legacy diagnostics file(s) to AUTOSAR files' finished.
 Checking if the file preprocessing result is a valid ECU extract...
-Input File Pre-Processing finished sucessfully.
-10:23:05 - Workflow Step 'Input File Pre-Processing' finished.
-10:23:05 - Workflow Step 'Create copy of the Project' started.
-Copy project 'D:\TC377_Development\dev\TC37X_VCU' to 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0'...
+Input File Pre-Processing finished with warning(s).
+15:25:52 - Workflow Step 'Input File Pre-Processing' finished.
+15:25:52 - Workflow Step 'Create copy of the Project' started.
+Copy project 'D:\TC377_Development\dev\TC37X_VCU' to 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0'...
 Adjusting DPA file of copied project...
-10:23:05 - Workflow Step 'Create copy of the Project' finished.
-10:23:05 - Workflow Step 'Analyse Bswmd's of the current project' started.
-10:23:05 - Workflow Step 'Analyse Bswmd's of the current project' finished.
-10:23:05 - Workflow Step 'Close Project' started.
-10:23:05 - Workflow Step 'Close Project' finished.
-10:23:09 - Workflow Step 'Prepare DaVinci Developer update data' started.
-10:23:09 - Workflow Step 'Prepare DaVinci Developer update data' finished.
-10:23:09 - Workflow Step 'Prepare System Extract' started.
-10:23:09 - Workflow Step 'Preprocessing System Extract' started.
-10:23:09 - Workflow Step 'Preprocessing System Extract' finished.
-10:23:09 - Workflow Step 'Create OEM Communication Extract' started.
-10:23:10 - Workflow Step 'Create OEM Communication Extract' finished.
-10:23:10 - Workflow Step 'Prepare System Extract' finished.
-10:23:10 - Workflow Step 'Updating the project' started.
-10:23:12 - Workflow Step 'Create ECU configuration' started.
-10:23:16 - Workflow Step 'Create ECU configuration' finished.
-10:23:16 - Workflow Step 'Update ECU configuration' started.
-No Package path available for module configuration: com.vector.cfg.workflow.ecucupdater.model.internal.ModuleKey@fc924516. Default /ActiveEcuC is used instead.
-10:23:23 - Workflow Step 'Update ECU configuration' finished.
-10:23:23 - Workflow Step 'Updating the project' finished.
-10:23:23 - Workflow Step 'Generate update report' started.
-10:23:32 - Workflow Step 'Generate update report' finished.
-10:23:32 - Workflow Step 'Execute Solving Actions' started.
+15:25:52 - Workflow Step 'Create copy of the Project' finished.
+15:25:52 - Workflow Step 'Analyse Bswmd's of the current project' started.
+15:25:52 - Workflow Step 'Analyse Bswmd's of the current project' finished.
+15:25:52 - Workflow Step 'Close Project' started.
+15:25:52 - Workflow Step 'Close Project' finished.
+15:25:56 - Workflow Step 'Prepare DaVinci Developer update data' started.
+15:25:56 - Workflow Step 'Prepare DaVinci Developer update data' finished.
+15:25:56 - Workflow Step 'Prepare System Extract' started.
+15:25:57 - Workflow Step 'Preprocessing System Extract' started.
+15:25:57 - Workflow Step 'Preprocessing System Extract' finished.
+15:25:57 - Workflow Step 'Create OEM Communication Extract' started.
+15:25:57 - Workflow Step 'Create OEM Communication Extract' finished.
+15:25:57 - Workflow Step 'Prepare System Extract' finished.
+15:25:57 - Workflow Step 'Updating the project' started.
+15:25:59 - Workflow Step 'Create ECU configuration' started.
+15:26:03 - Workflow Step 'Create ECU configuration' finished.
+15:26:03 - Workflow Step 'Update ECU configuration' started.
+No Package path available for module configuration: com.vector.cfg.workflow.ecucupdater.model.internal.ModuleKey@1fec101d. Default /ActiveEcuC is used instead.
+No Package path available for module configuration: com.vector.cfg.workflow.ecucupdater.model.internal.ModuleKey@fc91f9ff. Default /ActiveEcuC is used instead.
+No Package path available for module configuration: com.vector.cfg.workflow.ecucupdater.model.internal.ModuleKey@fc91fa3d. Default /ActiveEcuC is used instead.
+15:26:10 - Workflow Step 'Update ECU configuration' finished.
+15:26:10 - Workflow Step 'Updating the project' finished.
+15:26:10 - Workflow Step 'Generate update report' started.
+15:26:20 - Workflow Step 'Generate update report' finished.
+15:26:20 - Workflow Step 'Execute Solving Actions' started.
 Executing Auto-Solving-Actions...
 Auto-Solving-Actions done.
 Executing update specific Preferred-Solving-Actions...
 Update specific Preferred-Solving-Actions done.
-10:23:36 - Workflow Step 'Execute Solving Actions' finished.
-10:23:36 - Workflow Step 'Update DaVinci Developer Workspace' started.
-Opening workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\TC37X_VCU.dcf'...
-Loading file PlatformTypes_AR4.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\AUTOSAR\PlatformTypes_AR4.arxml)
-Loading file BswM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\ServiceComponents\BswM_swc.arxml)
-Loading file ComM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\ServiceComponents\ComM_swc.arxml)
-Loading file Det_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\ServiceComponents\Det_swc.arxml)
-Loading file EcuM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\ServiceComponents\EcuM_swc.arxml)
-Loading file NvM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\ServiceComponents\NvM_swc.arxml)
-Loading file Os_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\ServiceComponents\Os_swc.arxml)
-Loading file Communication.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Update\DevData\Communication.arxml)
-Loading file Com_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\Com_SWC.arxml)
-Loading file DataTypes.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\DataTypes.arxml)
-Loading file NvM_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\NvM_SWC.arxml)
-Loading file Packages.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\Packages.arxml)
-Loading file PortInterfaces.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\PortInterfaces.arxml)
-Loading file PowerMng_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\PowerMng_SWC.arxml)
-Loading file SWC1.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\SWC1.arxml)
-Loading file TC37X_VCU.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\TC37X_VCU.arxml)
-Opened workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\TC37X_VCU.dcf' successfully.
+15:26:25 - Workflow Step 'Execute Solving Actions' finished.
+15:26:25 - Workflow Step 'Update DaVinci Developer Workspace' started.
+Opening workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\TC37X_VCU.dcf'...
+Loading file PlatformTypes_AR4.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\AUTOSAR\PlatformTypes_AR4.arxml)
+Loading file BswM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\ServiceComponents\BswM_swc.arxml)
+Loading file ComM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\ServiceComponents\ComM_swc.arxml)
+Loading file Dem_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\ServiceComponents\Dem_swc.arxml)
+Loading file Det_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\ServiceComponents\Det_swc.arxml)
+Loading file EcuM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\ServiceComponents\EcuM_swc.arxml)
+Loading file NvM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\ServiceComponents\NvM_swc.arxml)
+Loading file Os_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\ServiceComponents\Os_swc.arxml)
+Loading file Communication.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Update\DevData\Communication.arxml)
+Loading file Com_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\Com_SWC.arxml)
+Loading file DataTypes.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\DataTypes.arxml)
+Loading file NvM_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\NvM_SWC.arxml)
+Loading file Packages.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\Packages.arxml)
+Loading file PortInterfaces.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\PortInterfaces.arxml)
+Loading file PowerMng_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\PowerMng_SWC.arxml)
+Loading file SWC1.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\SWC1.arxml)
+Loading file TC37X_VCU.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\TC37X_VCU.arxml)
+Opened workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\TC37X_VCU.dcf' successfully.
 Start import
-Importing file (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\System\SystemExtract.arxml).
+Importing file (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\System\SystemExtract.arxml).
 Merging imported data
 Finished import
-Saving workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\TC37X_VCU.dcf'...
-Saving file DataTypes.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\DataTypes.arxml)
-Saved workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\TC37X_VCU.dcf' successfully.
-Closing workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\TC37X_VCU.dcf'...
-Closed workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-8549455\Workflow\1728440585570-0\Config\Developer\TC37X_VCU.dcf' successfully.
+Saving workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\TC37X_VCU.dcf'...
+Saving file DataTypes.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\DataTypes.arxml)
+Saved workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\TC37X_VCU.dcf' successfully.
+Closing workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\TC37X_VCU.dcf'...
+Closed workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-4559237\Workflow\1729754752583-0\Config\Developer\TC37X_VCU.dcf' successfully.
 Result of DaVinci Developer workspace update.
               OK
-10:23:43 - Workflow Step 'Update DaVinci Developer Workspace' finished.
-10:23:43 - Workflow Step 'Update RTE configuration' started.
-10:23:44 - Workflow Step 'Update RTE configuration' finished.
-10:23:44 - Workflow Step 'Align differences after successful update' started.
-10:23:44 - Workflow Step 'Align differences after successful update' finished.
-10:23:44 - Workflow Step 'Clean up update data' started.
-10:23:44 - Workflow Step 'Clean up update data' finished.
-Update workflow finished sucessfully.
-10:23:49 - Workflow Step 'Update workflow' finished.
+15:26:33 - Workflow Step 'Update DaVinci Developer Workspace' finished.
+15:26:33 - Workflow Step 'Update RTE configuration' started.
+15:26:33 - Workflow Step 'Update RTE configuration' finished.
+15:26:34 - Workflow Step 'Align differences after successful update' started.
+15:26:34 - Workflow Step 'Align differences after successful update' finished.
+15:26:34 - Workflow Step 'Clean up update data' started.
+15:26:34 - Workflow Step 'Clean up update data' finished.
+Update workflow finished with warning(s).
+15:26:39 - Workflow Step 'Update workflow' finished.

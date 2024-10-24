@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Private_Cfg.h
- *   Generation Time: 2024-10-14 10:24:31
+ *   Generation Time: 2024-10-24 15:42:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -54,6 +54,9 @@
 #include "NvM.h" 
 #include "CanXcp.h" 
 #include "Xcp.h" 
+#include "CanTp.h" 
+#include "Dcm.h" 
+#include "Dem.h" 
 
 
 

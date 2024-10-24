@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: NvM_Cfg.c
- *   Generation Time: 2024-10-14 10:24:31
+ *   Generation Time: 2024-10-24 15:37:48
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -100,6 +100,9 @@ static VAR(uint8, NVM_PRIVATE_DATA) NvMConfigBlock_RamBlock_au8[4u];
 
 #if ((NVM_DATA_INTEGRITY_INT_BUFFER == STD_ON) || (NVM_REPAIR_REDUNDANT_BLOCKS_API == STD_ON))
 static VAR(uint8, NVM_PRIVATE_DATA) NvMBlockDescriptor_UserData0_Crc[2uL]; 
+static VAR(uint8, NVM_PRIVATE_DATA) NvMBlockDescriptor_UserData0_001_Crc[2uL]; 
+static VAR(uint8, NVM_PRIVATE_DATA) NvMBlockDescriptor_UserData0_002_Crc[2uL]; 
+static VAR(uint8, NVM_PRIVATE_DATA) NvMBlockDescriptor_UserData0_003_Crc[2uL]; 
 static VAR(uint8, NVM_PRIVATE_DATA) NvM_SWC_NVBlockDescriptor_UserData1_Crc[2uL]; 
 static VAR(uint8, NVM_PRIVATE_DATA) NvM_SWC_NVBlockDescriptor_UserData2_Crc[2uL]; 
 static VAR(uint8, NVM_PRIVATE_DATA) SWC1NvBlockNeed_UserData3_Crc[2uL]; 
@@ -222,7 +225,121 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
           NVM_BLOCK_CHECK_LOSS_OF_REDUNDANCY_OFF, 
           NVM_BLOCK_NOTIFY_BSWM_OFF
         } /*  Flags  */ , 
+        0x0060u /*  NV block Base number (defined by FEE/EA)  */ , 
+        2u /*  NvMNvBlockLength  */ , 
+        2u /*  NvMNvBlockNVRAMDataLength  */ , 
+        0u /*  NvCryptoReference  */ , 
+        0u /*  NvMacSize  */ , 
+        0u /*  NvMacReference  */ , 
+        1u /*  NvBlockCount  */ , 
+        127u /*  NvMBlockJobPriority  */ , 
+        MEMIF_Fee /*  Device Id (defined by MemIf)  */ , 
+        NVM_BLOCK_NATIVE /*  NvMBlockManagementType  */ , 
+        NVM_BLOCK_CRC_16_ON /*  NvMBlockDataIntegrityType  */ 
+      }, 
+      { /*  NvMBlockDescriptor_UserData0_001  */ 
+        (NvM_RamAddressType)&RamBlock_Nvm_UserData0 /*  NvMRamBlockDataAddress  */ , 
+        NULL_PTR /*  NvMRomBlockDataAddress  */ , 
+        NULL_PTR /*  NvMInitBlockCallback  */ , 
+        NULL_PTR /*  NvMInitBlockCallback (extended)  */ , 
+        NULL_PTR /*  NvMSingleBlockCallback  */ , 
+        NULL_PTR /*  NvMSingleBlockCallback (extended)  */ , 
+        NULL_PTR /*  NvMReadRamBlockFromNvCallback  */ , 
+        NULL_PTR /*  NvMWriteRamBlockToNvCallback  */ , 
+        NULL_PTR /*  NvMBlockPreWriteTransformCallback  */ , 
+        NULL_PTR /*  NvMBlockPostReadTransformCallback  */ , 
+        NvMBlockDescriptor_UserData0_001_Crc /*  RamBlockDataIntegrity data buffer (defined by NvM)  */ , 
+        NULL_PTR /*  CRCCompMechanism CRC data (defined by NvM)  */ , 
+                {
+          NVM_CALC_RAM_BLOCK_CRC_OFF, 
+          NVM_BLOCK_WRITE_PROT_OFF, 
+          NVM_BLOCK_WRITE_BLOCK_ONCE_OFF, 
+          NVM_RESISTANT_TO_CHANGED_SW_ON, 
+          NVM_SELECT_BLOCK_FOR_READALL_ON, 
+          NVM_SELECT_BLOCK_FOR_WRITEALL_ON, 
+          NVM_INVOKE_CALLBACKS_FOR_READALL_OFF, 
+          NVM_INVOKE_CALLBACKS_FOR_WRITEALL_OFF, 
+          NVM_BLOCK_USE_SET_RAM_BLOCK_STATUS_ON, 
+          NVM_BLOCK_CHECK_LOSS_OF_REDUNDANCY_OFF, 
+          NVM_BLOCK_NOTIFY_BSWM_OFF
+        } /*  Flags  */ , 
         0x0020u /*  NV block Base number (defined by FEE/EA)  */ , 
+        2u /*  NvMNvBlockLength  */ , 
+        2u /*  NvMNvBlockNVRAMDataLength  */ , 
+        0u /*  NvCryptoReference  */ , 
+        0u /*  NvMacSize  */ , 
+        0u /*  NvMacReference  */ , 
+        1u /*  NvBlockCount  */ , 
+        127u /*  NvMBlockJobPriority  */ , 
+        MEMIF_Fee /*  Device Id (defined by MemIf)  */ , 
+        NVM_BLOCK_NATIVE /*  NvMBlockManagementType  */ , 
+        NVM_BLOCK_CRC_16_ON /*  NvMBlockDataIntegrityType  */ 
+      }, 
+      { /*  NvMBlockDescriptor_UserData0_002  */ 
+        (NvM_RamAddressType)&RamBlock_Nvm_UserData0 /*  NvMRamBlockDataAddress  */ , 
+        NULL_PTR /*  NvMRomBlockDataAddress  */ , 
+        NULL_PTR /*  NvMInitBlockCallback  */ , 
+        NULL_PTR /*  NvMInitBlockCallback (extended)  */ , 
+        NULL_PTR /*  NvMSingleBlockCallback  */ , 
+        NULL_PTR /*  NvMSingleBlockCallback (extended)  */ , 
+        NULL_PTR /*  NvMReadRamBlockFromNvCallback  */ , 
+        NULL_PTR /*  NvMWriteRamBlockToNvCallback  */ , 
+        NULL_PTR /*  NvMBlockPreWriteTransformCallback  */ , 
+        NULL_PTR /*  NvMBlockPostReadTransformCallback  */ , 
+        NvMBlockDescriptor_UserData0_002_Crc /*  RamBlockDataIntegrity data buffer (defined by NvM)  */ , 
+        NULL_PTR /*  CRCCompMechanism CRC data (defined by NvM)  */ , 
+                {
+          NVM_CALC_RAM_BLOCK_CRC_OFF, 
+          NVM_BLOCK_WRITE_PROT_OFF, 
+          NVM_BLOCK_WRITE_BLOCK_ONCE_OFF, 
+          NVM_RESISTANT_TO_CHANGED_SW_ON, 
+          NVM_SELECT_BLOCK_FOR_READALL_ON, 
+          NVM_SELECT_BLOCK_FOR_WRITEALL_ON, 
+          NVM_INVOKE_CALLBACKS_FOR_READALL_OFF, 
+          NVM_INVOKE_CALLBACKS_FOR_WRITEALL_OFF, 
+          NVM_BLOCK_USE_SET_RAM_BLOCK_STATUS_ON, 
+          NVM_BLOCK_CHECK_LOSS_OF_REDUNDANCY_OFF, 
+          NVM_BLOCK_NOTIFY_BSWM_OFF
+        } /*  Flags  */ , 
+        0x0070u /*  NV block Base number (defined by FEE/EA)  */ , 
+        2u /*  NvMNvBlockLength  */ , 
+        2u /*  NvMNvBlockNVRAMDataLength  */ , 
+        0u /*  NvCryptoReference  */ , 
+        0u /*  NvMacSize  */ , 
+        0u /*  NvMacReference  */ , 
+        1u /*  NvBlockCount  */ , 
+        127u /*  NvMBlockJobPriority  */ , 
+        MEMIF_Fee /*  Device Id (defined by MemIf)  */ , 
+        NVM_BLOCK_NATIVE /*  NvMBlockManagementType  */ , 
+        NVM_BLOCK_CRC_16_ON /*  NvMBlockDataIntegrityType  */ 
+      }, 
+      { /*  NvMBlockDescriptor_UserData0_003  */ 
+        (NvM_RamAddressType)&RamBlock_Nvm_UserData0 /*  NvMRamBlockDataAddress  */ , 
+        NULL_PTR /*  NvMRomBlockDataAddress  */ , 
+        NULL_PTR /*  NvMInitBlockCallback  */ , 
+        NULL_PTR /*  NvMInitBlockCallback (extended)  */ , 
+        NULL_PTR /*  NvMSingleBlockCallback  */ , 
+        NULL_PTR /*  NvMSingleBlockCallback (extended)  */ , 
+        NULL_PTR /*  NvMReadRamBlockFromNvCallback  */ , 
+        NULL_PTR /*  NvMWriteRamBlockToNvCallback  */ , 
+        NULL_PTR /*  NvMBlockPreWriteTransformCallback  */ , 
+        NULL_PTR /*  NvMBlockPostReadTransformCallback  */ , 
+        NvMBlockDescriptor_UserData0_003_Crc /*  RamBlockDataIntegrity data buffer (defined by NvM)  */ , 
+        NULL_PTR /*  CRCCompMechanism CRC data (defined by NvM)  */ , 
+                {
+          NVM_CALC_RAM_BLOCK_CRC_OFF, 
+          NVM_BLOCK_WRITE_PROT_OFF, 
+          NVM_BLOCK_WRITE_BLOCK_ONCE_OFF, 
+          NVM_RESISTANT_TO_CHANGED_SW_ON, 
+          NVM_SELECT_BLOCK_FOR_READALL_ON, 
+          NVM_SELECT_BLOCK_FOR_WRITEALL_ON, 
+          NVM_INVOKE_CALLBACKS_FOR_READALL_OFF, 
+          NVM_INVOKE_CALLBACKS_FOR_WRITEALL_OFF, 
+          NVM_BLOCK_USE_SET_RAM_BLOCK_STATUS_ON, 
+          NVM_BLOCK_CHECK_LOSS_OF_REDUNDANCY_OFF, 
+          NVM_BLOCK_NOTIFY_BSWM_OFF
+        } /*  Flags  */ , 
+        0x0080u /*  NV block Base number (defined by FEE/EA)  */ , 
         2u /*  NvMNvBlockLength  */ , 
         2u /*  NvMNvBlockNVRAMDataLength  */ , 
         0u /*  NvCryptoReference  */ , 

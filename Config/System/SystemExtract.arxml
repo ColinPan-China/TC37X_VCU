@@ -11,6 +11,9 @@
               <FIBEX-ELEMENT-REF DEST="NM-CONFIG">/NM/NmConfig</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-TP-CONFIG">/TP/TC37X_VCU_CAN00_CAN</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-CLUSTER">/Cluster/TC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
@@ -27,6 +30,24 @@
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Vcu_Uds_Func_Request_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_20</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_20</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Vcu_Uds_Response_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Vcu_Uds_Response_oTC37X_VCU_CAN00_20</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
@@ -59,6 +80,24 @@
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Func_Request_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_20</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_20</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Response_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Response_oTC37X_VCU_CAN00_20</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="XCP-PDU">/PDU/XCP_Request_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
@@ -69,6 +108,24 @@
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="NM-PDU">/PDU/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="N-PDU">/PDU/Vcu_Uds_Func_Request_Tp_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="N-PDU">/PDU/Vcu_Uds_Func_Request_Tp_oTC37X_VCU_CAN00_20</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="N-PDU">/PDU/Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="N-PDU">/PDU/Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00_20</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="N-PDU">/PDU/Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="N-PDU">/PDU/Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00_20</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
@@ -154,8 +211,8 @@
                   </NM-RANGE-CONFIG>
                 </CAN-NM-NODE>
                 <CAN-NM-NODE>
-                  <SHORT-NAME>OtherECU</SHORT-NAME>
-                  <NM-IF-ECU-REF DEST="NM-ECU">/NM/NmConfig/OtherECU_CAN</NM-IF-ECU-REF>
+                  <SHORT-NAME>Tester</SHORT-NAME>
+                  <NM-IF-ECU-REF DEST="NM-ECU">/NM/NmConfig/Tester_CAN</NM-IF-ECU-REF>
                   <NM-NODE-ID>28</NM-NODE-ID>
                   <NM-PASSIVE-MODE-ENABLED>true</NM-PASSIVE-MODE-ENABLED>
                   <NM-MSG-CYCLE-OFFSET>0</NM-MSG-CYCLE-OFFSET>
@@ -208,7 +265,7 @@
               <NM-USER-DATA-ENABLED>true</NM-USER-DATA-ENABLED>
             </NM-ECU>
             <NM-ECU>
-              <SHORT-NAME>OtherECU_CAN</SHORT-NAME>
+              <SHORT-NAME>Tester_CAN</SHORT-NAME>
               <BUS-SPECIFIC-NM-ECU>
                 <CAN-NM-ECU/>
               </BUS-SPECIFIC-NM-ECU>
@@ -231,6 +288,131 @@
     </AR-PACKAGE>
     <AR-PACKAGE>
       <SHORT-NAME>TP</SHORT-NAME>
+      <ELEMENTS>
+        <CAN-TP-CONFIG>
+          <SHORT-NAME>TC37X_VCU_CAN00_CAN</SHORT-NAME>
+          <COMMUNICATION-CLUSTER-REF DEST="CAN-CLUSTER">/Cluster/TC37X_VCU_CAN00</COMMUNICATION-CLUSTER-REF>
+          <TP-CHANNELS>
+            <CAN-TP-CHANNEL>
+              <SHORT-NAME>TPCH</SHORT-NAME>
+              <CHANNEL-ID>0</CHANNEL-ID>
+              <CHANNEL-MODE>FULL-DUPLEX-MODE</CHANNEL-MODE>
+            </CAN-TP-CHANNEL>
+          </TP-CHANNELS>
+          <TP-CONNECTIONS>
+            <CAN-TP-CONNECTION>
+              <IDENT>
+                <SHORT-NAME>Vcu_Uds_Func_Request_FD_oTN_Tester_FD</SHORT-NAME>
+              </IDENT>
+              <ADDRESSING-FORMAT>STANDARD</ADDRESSING-FORMAT>
+              <CAN-TP-CHANNEL-REF DEST="CAN-TP-CHANNEL">/TP/TC37X_VCU_CAN00_CAN/TPCH</CAN-TP-CHANNEL-REF>
+              <DATA-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Func_Request_Tp_oTC37X_VCU_CAN00</DATA-PDU-REF>
+              <RECEIVER-REFS>
+                <RECEIVER-REF DEST="CAN-TP-NODE">/TP/TC37X_VCU_CAN00_CAN/TN_VCU_FD</RECEIVER-REF>
+              </RECEIVER-REFS>
+              <TA-TYPE>FUNCTIONAL-CAN-FD</TA-TYPE>
+              <TP-SDU-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Func_Request_oTC37X_VCU_CAN00</TP-SDU-REF>
+              <TRANSMITTER-REF DEST="CAN-TP-NODE">/TP/TC37X_VCU_CAN00_CAN/TN_Tester_FD</TRANSMITTER-REF>
+            </CAN-TP-CONNECTION>
+            <CAN-TP-CONNECTION>
+              <IDENT>
+                <SHORT-NAME>Vcu_Uds_Func_Request_oTN_Tester</SHORT-NAME>
+              </IDENT>
+              <ADDRESSING-FORMAT>STANDARD</ADDRESSING-FORMAT>
+              <CAN-TP-CHANNEL-REF DEST="CAN-TP-CHANNEL">/TP/TC37X_VCU_CAN00_CAN/TPCH</CAN-TP-CHANNEL-REF>
+              <DATA-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Func_Request_Tp_oTC37X_VCU_CAN00_20</DATA-PDU-REF>
+              <RECEIVER-REFS>
+                <RECEIVER-REF DEST="CAN-TP-NODE">/TP/TC37X_VCU_CAN00_CAN/TN_VCU</RECEIVER-REF>
+              </RECEIVER-REFS>
+              <TA-TYPE>FUNCTIONAL</TA-TYPE>
+              <TP-SDU-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_20</TP-SDU-REF>
+              <TRANSMITTER-REF DEST="CAN-TP-NODE">/TP/TC37X_VCU_CAN00_CAN/TN_Tester</TRANSMITTER-REF>
+            </CAN-TP-CONNECTION>
+            <CAN-TP-CONNECTION>
+              <IDENT>
+                <SHORT-NAME>Vcu_Uds_Phy_Request_oTN_VCU</SHORT-NAME>
+              </IDENT>
+              <ADDRESSING-FORMAT>STANDARD</ADDRESSING-FORMAT>
+              <CAN-TP-CHANNEL-REF DEST="CAN-TP-CHANNEL">/TP/TC37X_VCU_CAN00_CAN/TPCH</CAN-TP-CHANNEL-REF>
+              <DATA-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00_20</DATA-PDU-REF>
+              <FLOW-CONTROL-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00_20</FLOW-CONTROL-PDU-REF>
+              <RECEIVER-REFS>
+                <RECEIVER-REF DEST="CAN-TP-NODE">/TP/TC37X_VCU_CAN00_CAN/TN_VCU</RECEIVER-REF>
+              </RECEIVER-REFS>
+              <TA-TYPE>PHYSICAL</TA-TYPE>
+              <TP-SDU-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_20</TP-SDU-REF>
+              <TRANSMITTER-REF DEST="CAN-TP-NODE">/TP/TC37X_VCU_CAN00_CAN/TN_Tester</TRANSMITTER-REF>
+            </CAN-TP-CONNECTION>
+            <CAN-TP-CONNECTION>
+              <IDENT>
+                <SHORT-NAME>Vcu_Uds_Phy_Request_oTN_VCU_FD</SHORT-NAME>
+              </IDENT>
+              <ADDRESSING-FORMAT>STANDARD</ADDRESSING-FORMAT>
+              <CAN-TP-CHANNEL-REF DEST="CAN-TP-CHANNEL">/TP/TC37X_VCU_CAN00_CAN/TPCH</CAN-TP-CHANNEL-REF>
+              <DATA-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00</DATA-PDU-REF>
+              <FLOW-CONTROL-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00</FLOW-CONTROL-PDU-REF>
+              <RECEIVER-REFS>
+                <RECEIVER-REF DEST="CAN-TP-NODE">/TP/TC37X_VCU_CAN00_CAN/TN_VCU_FD</RECEIVER-REF>
+              </RECEIVER-REFS>
+              <TA-TYPE>PHYSICAL-CAN-FD</TA-TYPE>
+              <TP-SDU-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00</TP-SDU-REF>
+              <TRANSMITTER-REF DEST="CAN-TP-NODE">/TP/TC37X_VCU_CAN00_CAN/TN_Tester_FD</TRANSMITTER-REF>
+            </CAN-TP-CONNECTION>
+            <CAN-TP-CONNECTION>
+              <IDENT>
+                <SHORT-NAME>Vcu_Uds_Response_oTN_VCU</SHORT-NAME>
+              </IDENT>
+              <ADDRESSING-FORMAT>STANDARD</ADDRESSING-FORMAT>
+              <CAN-TP-CHANNEL-REF DEST="CAN-TP-CHANNEL">/TP/TC37X_VCU_CAN00_CAN/TPCH</CAN-TP-CHANNEL-REF>
+              <DATA-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00_20</DATA-PDU-REF>
+              <FLOW-CONTROL-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00_20</FLOW-CONTROL-PDU-REF>
+              <RECEIVER-REFS>
+                <RECEIVER-REF DEST="CAN-TP-NODE">/TP/TC37X_VCU_CAN00_CAN/TN_Tester</RECEIVER-REF>
+              </RECEIVER-REFS>
+              <TA-TYPE>PHYSICAL</TA-TYPE>
+              <TP-SDU-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Response_oTC37X_VCU_CAN00_20</TP-SDU-REF>
+              <TRANSMITTER-REF DEST="CAN-TP-NODE">/TP/TC37X_VCU_CAN00_CAN/TN_VCU</TRANSMITTER-REF>
+            </CAN-TP-CONNECTION>
+            <CAN-TP-CONNECTION>
+              <IDENT>
+                <SHORT-NAME>Vcu_Uds_Response_oTN_VCU_FD</SHORT-NAME>
+              </IDENT>
+              <ADDRESSING-FORMAT>STANDARD</ADDRESSING-FORMAT>
+              <CAN-TP-CHANNEL-REF DEST="CAN-TP-CHANNEL">/TP/TC37X_VCU_CAN00_CAN/TPCH</CAN-TP-CHANNEL-REF>
+              <DATA-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00</DATA-PDU-REF>
+              <FLOW-CONTROL-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00</FLOW-CONTROL-PDU-REF>
+              <RECEIVER-REFS>
+                <RECEIVER-REF DEST="CAN-TP-NODE">/TP/TC37X_VCU_CAN00_CAN/TN_Tester_FD</RECEIVER-REF>
+              </RECEIVER-REFS>
+              <TA-TYPE>PHYSICAL-CAN-FD</TA-TYPE>
+              <TP-SDU-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Response_oTC37X_VCU_CAN00</TP-SDU-REF>
+              <TRANSMITTER-REF DEST="CAN-TP-NODE">/TP/TC37X_VCU_CAN00_CAN/TN_VCU_FD</TRANSMITTER-REF>
+            </CAN-TP-CONNECTION>
+          </TP-CONNECTIONS>
+          <TP-ECUS>
+            <CAN-TP-ECU>
+              <CYCLE-TIME-MAIN-FUNCTION>0.005</CYCLE-TIME-MAIN-FUNCTION>
+              <ECU-INSTANCE-REF DEST="ECU-INSTANCE">/ECU/VCU</ECU-INSTANCE-REF>
+            </CAN-TP-ECU>
+          </TP-ECUS>
+          <TP-NODES>
+            <CAN-TP-NODE>
+              <SHORT-NAME>TN_Tester</SHORT-NAME>
+            </CAN-TP-NODE>
+            <CAN-TP-NODE>
+              <SHORT-NAME>TN_Tester_FD</SHORT-NAME>
+            </CAN-TP-NODE>
+            <CAN-TP-NODE>
+              <SHORT-NAME>TN_VCU</SHORT-NAME>
+              <CONNECTOR-REF DEST="CAN-COMMUNICATION-CONNECTOR">/ECU/VCU/CN_TC37X_VCU_CAN00</CONNECTOR-REF>
+            </CAN-TP-NODE>
+            <CAN-TP-NODE>
+              <SHORT-NAME>TN_VCU_FD</SHORT-NAME>
+              <CONNECTOR-REF DEST="CAN-COMMUNICATION-CONNECTOR">/ECU/VCU/CN_TC37X_VCU_CAN00</CONNECTOR-REF>
+            </CAN-TP-NODE>
+          </TP-NODES>
+        </CAN-TP-CONFIG>
+      </ELEMENTS>
     </AR-PACKAGE>
     <AR-PACKAGE>
       <SHORT-NAME>Cluster</SHORT-NAME>
@@ -281,6 +463,102 @@
                       <CAN-FRAME-RX-BEHAVIOR>ANY</CAN-FRAME-RX-BEHAVIOR>
                       <CAN-FRAME-TX-BEHAVIOR>CAN-FD</CAN-FRAME-TX-BEHAVIOR>
                       <IDENTIFIER>1308</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_Vcu_Uds_Func_Request</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/FP_Vcu_Uds_Func_Request_Rx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/Vcu_Uds_Func_Request_oTC37X_VCU_CAN00</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/TC37X_VCU_CAN00/CHNL/PT_Vcu_Uds_Func_Request_Tp</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <CAN-FRAME-RX-BEHAVIOR>CAN-FD</CAN-FRAME-RX-BEHAVIOR>
+                      <CAN-FRAME-TX-BEHAVIOR>CAN-FD</CAN-FRAME-TX-BEHAVIOR>
+                      <IDENTIFIER>1792</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_Vcu_Uds_Func_Request_20</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/FP_Vcu_Uds_Func_Request_Rx_20</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_20</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/TC37X_VCU_CAN00/CHNL/PT_Vcu_Uds_Func_Request_Tp_20</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <CAN-FRAME-RX-BEHAVIOR>CAN-20</CAN-FRAME-RX-BEHAVIOR>
+                      <CAN-FRAME-TX-BEHAVIOR>CAN-20</CAN-FRAME-TX-BEHAVIOR>
+                      <IDENTIFIER>1792</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_Vcu_Uds_Phy_Request</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/FP_Vcu_Uds_Phy_Request_Rx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/TC37X_VCU_CAN00/CHNL/PT_Vcu_Uds_Phy_Request_Tp</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <CAN-FRAME-RX-BEHAVIOR>CAN-FD</CAN-FRAME-RX-BEHAVIOR>
+                      <CAN-FRAME-TX-BEHAVIOR>CAN-FD</CAN-FRAME-TX-BEHAVIOR>
+                      <IDENTIFIER>1793</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_Vcu_Uds_Phy_Request_20</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/FP_Vcu_Uds_Phy_Request_Rx_20</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_20</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/TC37X_VCU_CAN00/CHNL/PT_Vcu_Uds_Phy_Request_Tp_20</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <CAN-FRAME-RX-BEHAVIOR>CAN-20</CAN-FRAME-RX-BEHAVIOR>
+                      <CAN-FRAME-TX-BEHAVIOR>CAN-20</CAN-FRAME-TX-BEHAVIOR>
+                      <IDENTIFIER>1793</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_Vcu_Uds_Response</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/FP_Vcu_Uds_Response_Tx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/Vcu_Uds_Response_oTC37X_VCU_CAN00</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/TC37X_VCU_CAN00/CHNL/PT_Vcu_Uds_Response_Tp</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <CAN-FRAME-RX-BEHAVIOR>CAN-FD</CAN-FRAME-RX-BEHAVIOR>
+                      <CAN-FRAME-TX-BEHAVIOR>CAN-FD</CAN-FRAME-TX-BEHAVIOR>
+                      <IDENTIFIER>1921</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_Vcu_Uds_Response_20</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/FP_Vcu_Uds_Response_Tx_20</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/Vcu_Uds_Response_oTC37X_VCU_CAN00_20</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/TC37X_VCU_CAN00/CHNL/PT_Vcu_Uds_Response_Tp_20</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <CAN-FRAME-RX-BEHAVIOR>CAN-20</CAN-FRAME-RX-BEHAVIOR>
+                      <CAN-FRAME-TX-BEHAVIOR>CAN-20</CAN-FRAME-TX-BEHAVIOR>
+                      <IDENTIFIER>1921</IDENTIFIER>
                     </CAN-FRAME-TRIGGERING>
                     <CAN-FRAME-TRIGGERING>
                       <SHORT-NAME>FT_VcuRxMsg1</SHORT-NAME>
@@ -495,6 +773,90 @@
                   </I-SIGNAL-TRIGGERINGS>
                   <PDU-TRIGGERINGS>
                     <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Vcu_Uds_Func_Request</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/PP_Vcu_Uds_Func_Request_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Func_Request_oTC37X_VCU_CAN00</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Vcu_Uds_Func_Request_20</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/PP_Vcu_Uds_Func_Request_Rx_20</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_20</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Vcu_Uds_Func_Request_Tp</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/PP_Vcu_Uds_Func_Request_Tp_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Func_Request_Tp_oTC37X_VCU_CAN00</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Vcu_Uds_Func_Request_Tp_20</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/PP_Vcu_Uds_Func_Request_Tp_Rx_20</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Func_Request_Tp_oTC37X_VCU_CAN00_20</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Vcu_Uds_Phy_Request</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/PP_Vcu_Uds_Phy_Request_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Vcu_Uds_Phy_Request_20</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/PP_Vcu_Uds_Phy_Request_Rx_20</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_20</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Vcu_Uds_Phy_Request_Tp</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/PP_Vcu_Uds_Phy_Request_Tp_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Vcu_Uds_Phy_Request_Tp_20</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/PP_Vcu_Uds_Phy_Request_Tp_Rx_20</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00_20</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Vcu_Uds_Response</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/PP_Vcu_Uds_Response_Tx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Response_oTC37X_VCU_CAN00</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Vcu_Uds_Response_20</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/PP_Vcu_Uds_Response_Tx_20</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="DCM-I-PDU">/PDU/Vcu_Uds_Response_oTC37X_VCU_CAN00_20</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Vcu_Uds_Response_Tp</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/PP_Vcu_Uds_Response_Tp_Tx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_Vcu_Uds_Response_Tp_20</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/PP_Vcu_Uds_Response_Tp_Tx_20</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00_20</I-PDU-REF>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
                       <SHORT-NAME>PT_VcuRxMsg1</SHORT-NAME>
                       <I-PDU-PORT-REFS>
                         <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN00/PP_VcuRxMsg1_Rx</I-PDU-PORT-REF>
@@ -641,6 +1003,30 @@
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
                 <FRAME-PORT>
+                  <SHORT-NAME>FP_Vcu_Uds_Func_Request_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_Vcu_Uds_Func_Request_Rx_20</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_Vcu_Uds_Phy_Request_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_Vcu_Uds_Phy_Request_Rx_20</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_Vcu_Uds_Response_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_Vcu_Uds_Response_Tx_20</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
                   <SHORT-NAME>FP_VcuRxMsg1_Rx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
@@ -664,6 +1050,54 @@
                   <SHORT-NAME>FP_XCP_Response_Tx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Vcu_Uds_Func_Request_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Vcu_Uds_Func_Request_Rx_20</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Vcu_Uds_Func_Request_Tp_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Vcu_Uds_Func_Request_Tp_Rx_20</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Vcu_Uds_Phy_Request_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Vcu_Uds_Phy_Request_Rx_20</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Vcu_Uds_Phy_Request_Tp_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Vcu_Uds_Phy_Request_Tp_Rx_20</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Vcu_Uds_Response_Tp_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Vcu_Uds_Response_Tp_Tx_20</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Vcu_Uds_Response_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_Vcu_Uds_Response_Tx_20</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
                 <I-PDU-PORT>
                   <SHORT-NAME>PP_VcuRxMsg1_Rx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
@@ -829,6 +1263,78 @@
               <SHORT-NAME>VCU_Tx_51Ch_NM</SHORT-NAME>
               <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
               <PDU-REF DEST="NM-PDU">/PDU/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>Vcu_Uds_Func_Request_oTC37X_VCU_CAN00</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>Vcu_Uds_Func_Request_Tp</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Func_Request_Tp_oTC37X_VCU_CAN00</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_20</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>Vcu_Uds_Func_Request_Tp</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Func_Request_Tp_oTC37X_VCU_CAN00_20</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>Vcu_Uds_Phy_Request_Tp</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_20</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>Vcu_Uds_Phy_Request_Tp</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00_20</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>Vcu_Uds_Response_oTC37X_VCU_CAN00</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>Vcu_Uds_Response_Tp</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>Vcu_Uds_Response_oTC37X_VCU_CAN00_20</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>Vcu_Uds_Response_Tp</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="N-PDU">/PDU/Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00_20</PDU-REF>
               <START-POSITION>0</START-POSITION>
             </PDU-TO-FRAME-MAPPING>
           </PDU-TO-FRAME-MAPPINGS>
@@ -1164,6 +1670,78 @@
           </I-SIGNAL-TO-PDU-MAPPINGS>
           <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
         </I-SIGNAL-I-PDU>
+        <DCM-I-PDU>
+          <SHORT-NAME>Vcu_Uds_Func_Request_oTC37X_VCU_CAN00</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV:DcmConfiguration">
+                <SD GID="DV:DcmConnectionCommunicationType">FUNCTIONAL</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <LENGTH>7</LENGTH>
+          <DIAG-PDU-TYPE>DIAG-REQUEST</DIAG-PDU-TYPE>
+        </DCM-I-PDU>
+        <DCM-I-PDU>
+          <SHORT-NAME>Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_20</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV:DcmConfiguration">
+                <SD GID="DV:DcmConnectionCommunicationType">FUNCTIONAL</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <LENGTH>7</LENGTH>
+          <DIAG-PDU-TYPE>DIAG-REQUEST</DIAG-PDU-TYPE>
+        </DCM-I-PDU>
+        <DCM-I-PDU>
+          <SHORT-NAME>Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV:DcmConfiguration">
+                <SD GID="DV:DcmConnectionCommunicationType">PHYSICAL</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <LENGTH>8</LENGTH>
+          <DIAG-PDU-TYPE>DIAG-REQUEST</DIAG-PDU-TYPE>
+        </DCM-I-PDU>
+        <DCM-I-PDU>
+          <SHORT-NAME>Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_20</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV:DcmConfiguration">
+                <SD GID="DV:DcmConnectionCommunicationType">PHYSICAL</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <LENGTH>8</LENGTH>
+          <DIAG-PDU-TYPE>DIAG-REQUEST</DIAG-PDU-TYPE>
+        </DCM-I-PDU>
+        <DCM-I-PDU>
+          <SHORT-NAME>Vcu_Uds_Response_oTC37X_VCU_CAN00</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV:DcmConfiguration">
+                <SD GID="DV:DcmConnectionCommunicationType">PHYSICAL</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <LENGTH>8</LENGTH>
+          <DIAG-PDU-TYPE>DIAG-RESPONSE</DIAG-PDU-TYPE>
+        </DCM-I-PDU>
+        <DCM-I-PDU>
+          <SHORT-NAME>Vcu_Uds_Response_oTC37X_VCU_CAN00_20</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV:DcmConfiguration">
+                <SD GID="DV:DcmConnectionCommunicationType">PHYSICAL</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <LENGTH>8</LENGTH>
+          <DIAG-PDU-TYPE>DIAG-RESPONSE</DIAG-PDU-TYPE>
+        </DCM-I-PDU>
         <XCP-PDU>
           <SHORT-NAME>XCP_Request_oTC37X_VCU_CAN00</SHORT-NAME>
           <LENGTH>8</LENGTH>
@@ -1182,6 +1760,30 @@
           <LENGTH>8</LENGTH>
           <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
         </NM-PDU>
+        <N-PDU>
+          <SHORT-NAME>Vcu_Uds_Func_Request_Tp_oTC37X_VCU_CAN00</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+        </N-PDU>
+        <N-PDU>
+          <SHORT-NAME>Vcu_Uds_Func_Request_Tp_oTC37X_VCU_CAN00_20</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+        </N-PDU>
+        <N-PDU>
+          <SHORT-NAME>Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+        </N-PDU>
+        <N-PDU>
+          <SHORT-NAME>Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00_20</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+        </N-PDU>
+        <N-PDU>
+          <SHORT-NAME>Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+        </N-PDU>
+        <N-PDU>
+          <SHORT-NAME>Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00_20</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+        </N-PDU>
       </ELEMENTS>
     </AR-PACKAGE>
     <AR-PACKAGE>

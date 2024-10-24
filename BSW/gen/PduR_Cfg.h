@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2024-09-04 17:27:54
+ *   Generation Time: 2024-10-24 15:37:49
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -111,7 +111,15 @@
 #define PDUR_FCT_CANIFTX 0x09u 
 #define PDUR_FCT_CANIFTXCFM 0x02u 
 #define PDUR_FCT_COMTX 0x89u 
- /*   PduR_CanIfIfRxIndication  PduR_CanIfTransmit  PduR_CanIfTxConfirmation  PduR_ComTransmit  */ 
+#define PDUR_FCT_DCMTX 0x99u 
+#define PDUR_FCT_DCMCTX 0x9Au 
+#define PDUR_FCT_CANTPRXIND 0x05u 
+#define PDUR_FCT_CANTPTX 0x09u 
+#define PDUR_FCT_CANTPTXCFM 0x08u 
+#define PDUR_FCT_CANTPSOR 0x06u 
+#define PDUR_FCT_CANTPCPYRX 0x04u 
+#define PDUR_FCT_CANTPCPYTX 0x07u 
+ /*   PduR_CanIfIfRxIndication  PduR_CanIfTransmit  PduR_CanIfTxConfirmation  PduR_ComTransmit  PduR_DcmTransmit  PduR_DcmCancelTransmit  PduR_CanTpTpRxIndication  PduR_CanTpTransmit  PduR_CanTpTxConfirmation  PduR_CanTpStartOfReception  PduR_CanTpCopyRxData  PduR_CanTpCopyTxData  */ 
 
 
 
@@ -147,6 +155,8 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_1a8748e9                       2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_89bb16b0                       3u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_91d52164                       0u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_69924b1b                       1u
 /**\} */
@@ -161,6 +171,46 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define PduRConf_PduRDestPdu_VcuTxMsg1_oTC37X_VCU_CAN00_c82dd125_Tx   0u
 #define PduRConf_PduRDestPdu_VcuTxMsg2_oTC37X_VCU_CAN00_0119ca28_Tx   1u
+/**\} */
+
+/**
+ * \defgroup PduRHandleIdsTpRxDest Handle IDs of handle space TpRxDest.
+ * \brief Transport protocol Rx destination PDUs
+ * \{
+ */
+
+/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
+/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define PduRConf_PduRDestPdu_Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_20_3e171f85_Rx_7d936514_Rx 0u
+#define PduRConf_PduRDestPdu_Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_455d4346_Rx_4bac36fb_Rx 1u
+#define PduRConf_PduRDestPdu_Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_20_5b6ce511_Rx_1bc873ba_Rx 2u
+#define PduRConf_PduRDestPdu_Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_16119f6f_Rx_925fbf89_Rx 3u
+/**\} */
+
+/**
+ * \defgroup PduRHandleIdsTpRxSrc Handle IDs of handle space TpRxSrc.
+ * \brief Transport protocol Rx source PDUs
+ * \{
+ */
+
+/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
+/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_1bc873ba                       2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_4bac36fb                       1u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_7d936514                       0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_925fbf89                       3u
+/**\} */
+
+/**
+ * \defgroup PduRHandleIdsTpTxDest Handle IDs of handle space TpTxDest.
+ * \brief Transport protocol Tx PDUs
+ * \{
+ */
+
+/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
+/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define PduRConf_PduRDestPdu_Vcu_Uds_Response_oTC37X_VCU_CAN00_20_80e8b981_Tx 0u
+#define PduRConf_PduRDestPdu_Vcu_Uds_Response_oTC37X_VCU_CAN00_39638a1a_Tx 1u
 /**\} */
 
 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2024-09-04 17:27:54
+ *   Generation Time: 2024-10-24 15:37:49
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -123,7 +123,7 @@
 
 #define COMM_FULL_COMM_REQUEST_NOTIF                                    STD_OFF
 #define COMM_MAX_NUMBER_OF_USERS                                        1u
-#define COMM_DCM_INDICATION                                             STD_OFF
+#define COMM_DCM_INDICATION                                             STD_ON
 #define COMM_USERMODENOTIFUNC_PNC_USER_ONLY                             STD_ON
 #define COMM_EXISTS_USER_WITH_SINGLE_PNC                                STD_OFF
 
@@ -208,7 +208,7 @@
 #define COMM_USERREQFULLCOMSTARTIDXOFCHANNELPB                                                      STD_ON
 #define COMM_USERREQFULLCOMUSEDOFCHANNELPB                                                          STD_ON
 #define COMM_COMALLOWED                                                                             STD_ON
-#define COMM_DCMREQUESTACTIVE                                                                       STD_OFF  /**< Deactivateable: 'ComM_DcmRequestActive' Reason: 'Keep Awake Channel support or Dcm support is disabled' */
+#define COMM_DCMREQUESTACTIVE                                                                       STD_ON
 #define COMM_ECUMWAKEUPINDICATED                                                                    STD_ON
 #define COMM_EIRATXSIGNALINDIRECTION                                                                STD_OFF  /**< Deactivateable: 'ComM_EiraTxSignalIndirection' Reason: 'the struct is deactivated because all elements are deactivated.' */
 #define COMM_SYMBOLICNAMEVALUEOFEIRATXSIGNALINDIRECTION                                             STD_OFF  /**< Deactivateable: 'ComM_EiraTxSignalIndirection.SymbolicNameValue' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
@@ -267,6 +267,7 @@
 #define COMM_SIZEOFCHANNEL                                                                          STD_ON
 #define COMM_SIZEOFCHANNELPB                                                                        STD_ON
 #define COMM_SIZEOFCOMALLOWED                                                                       STD_ON
+#define COMM_SIZEOFDCMREQUESTACTIVE                                                                 STD_ON
 #define COMM_SIZEOFECUMWAKEUPINDICATED                                                              STD_ON
 #define COMM_SIZEOFNMSTARTUPINDICATED                                                               STD_ON
 #define COMM_SIZEOFPARTITIONIDENTIFIERS                                                             STD_ON
@@ -311,6 +312,7 @@
 #define COMM_CHANNELOFPCPARTITIONCONFIG                                                             STD_ON
 #define COMM_CHANNELPBOFPCPARTITIONCONFIG                                                           STD_ON
 #define COMM_COMALLOWEDOFPCPARTITIONCONFIG                                                          STD_ON
+#define COMM_DCMREQUESTACTIVEOFPCPARTITIONCONFIG                                                    STD_ON
 #define COMM_ECUMWAKEUPINDICATEDOFPCPARTITIONCONFIG                                                 STD_ON
 #define COMM_INHIBITIONOFPCPARTITIONCONFIG                                                          STD_ON
 #define COMM_INITSTATUSOFPCPARTITIONCONFIG                                                          STD_ON
@@ -322,6 +324,7 @@
 #define COMM_SIZEOFCHANNELOFPCPARTITIONCONFIG                                                       STD_ON
 #define COMM_SIZEOFCHANNELPBOFPCPARTITIONCONFIG                                                     STD_ON
 #define COMM_SIZEOFCOMALLOWEDOFPCPARTITIONCONFIG                                                    STD_ON
+#define COMM_SIZEOFDCMREQUESTACTIVEOFPCPARTITIONCONFIG                                              STD_ON
 #define COMM_SIZEOFECUMWAKEUPINDICATEDOFPCPARTITIONCONFIG                                           STD_ON
 #define COMM_SIZEOFNMSTARTUPINDICATEDOFPCPARTITIONCONFIG                                            STD_ON
 #define COMM_SIZEOFPOSTINITIALIZEDOFPCPARTITIONCONFIG                                               STD_ON
@@ -433,6 +436,7 @@
 #define COMM_ISDEF_CHANNELOFPCPARTITIONCONFIG                                                       STD_ON
 #define COMM_ISDEF_CHANNELPBOFPCPARTITIONCONFIG                                                     STD_ON
 #define COMM_ISDEF_COMALLOWEDOFPCPARTITIONCONFIG                                                    STD_ON
+#define COMM_ISDEF_DCMREQUESTACTIVEOFPCPARTITIONCONFIG                                              STD_ON
 #define COMM_ISDEF_ECUMWAKEUPINDICATEDOFPCPARTITIONCONFIG                                           STD_ON
 #define COMM_ISDEF_INHIBITIONOFPCPARTITIONCONFIG                                                    STD_ON
 #define COMM_ISDEF_INITSTATUSOFPCPARTITIONCONFIG                                                    STD_ON
@@ -481,6 +485,7 @@
 #define COMM_EQ2_CHANNELOFPCPARTITIONCONFIG                                                         ComM_Channel
 #define COMM_EQ2_CHANNELPBOFPCPARTITIONCONFIG                                                       ComM_ChannelPb
 #define COMM_EQ2_COMALLOWEDOFPCPARTITIONCONFIG                                                      ComM_ComAllowed.raw
+#define COMM_EQ2_DCMREQUESTACTIVEOFPCPARTITIONCONFIG                                                ComM_DcmRequestActive.raw
 #define COMM_EQ2_ECUMWAKEUPINDICATEDOFPCPARTITIONCONFIG                                             ComM_EcuMWakeUpIndicated
 #define COMM_EQ2_INHIBITIONOFPCPARTITIONCONFIG                                                      (&(ComM_Inhibition))
 #define COMM_EQ2_INITSTATUSOFPCPARTITIONCONFIG                                                      (&(ComM_InitStatus))
@@ -617,6 +622,9 @@ typedef ComM_ChannelIterType ComM_BusSmStateIterType;
 /**   \brief  type used to iterate ComM_ComAllowed */
 typedef ComM_ChannelIterType ComM_ComAllowedIterType;
 
+/**   \brief  type used to iterate ComM_DcmRequestActive */
+typedef ComM_ChannelIterType ComM_DcmRequestActiveIterType;
+
 /** 
   \}
 */ 
@@ -659,6 +667,9 @@ typedef boolean ComM_UserReqFullComUsedOfChannelPbType;
 /**   \brief  value based type definition for ComM_ComAllowed */
 typedef boolean ComM_ComAllowedType;
 
+/**   \brief  value based type definition for ComM_DcmRequestActive */
+typedef boolean ComM_DcmRequestActiveType;
+
 /**   \brief  value based type definition for ComM_EcuMWakeUpIndicated */
 typedef boolean ComM_EcuMWakeUpIndicatedType;
 
@@ -691,6 +702,9 @@ typedef uint8 ComM_SizeOfChannelPbType;
 
 /**   \brief  value based type definition for ComM_SizeOfComAllowed */
 typedef uint8 ComM_SizeOfComAllowedType;
+
+/**   \brief  value based type definition for ComM_SizeOfDcmRequestActive */
+typedef uint8 ComM_SizeOfDcmRequestActiveType;
 
 /**   \brief  value based type definition for ComM_SizeOfEcuMWakeUpIndicated */
 typedef uint8 ComM_SizeOfEcuMWakeUpIndicatedType;
@@ -827,6 +841,12 @@ typedef struct ComM_ComAllowedStructSTag
   ComM_ComAllowedType ComMChannel_0;
 } ComM_ComAllowedStructSType;
 
+/**   \brief  type to be used as symbolic data element access to ComM_DcmRequestActive in the partition context  */
+typedef struct ComM_DcmRequestActiveStructSTag
+{
+  ComM_DcmRequestActiveType ComMChannel_0;
+} ComM_DcmRequestActiveStructSType;
+
 /** 
   \}
 */ 
@@ -864,6 +884,13 @@ typedef union ComM_ComAllowedUTag
   ComM_ComAllowedStructSType str;
 } ComM_ComAllowedUType;
 
+/**   \brief  type to access ComM_DcmRequestActive in an index and symbol based style. */
+typedef union ComM_DcmRequestActiveUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  ComM_DcmRequestActiveType raw[1];
+  ComM_DcmRequestActiveStructSType str;
+} ComM_DcmRequestActiveUType;
+
 /** 
   \}
 */ 
@@ -890,6 +917,9 @@ typedef P2CONST(ComM_ChannelPbType, TYPEDEF, COMM_CONST) ComM_ChannelPbPtrType;
 
 /**   \brief  type used to point to ComM_ComAllowed */
 typedef P2VAR(ComM_ComAllowedType, TYPEDEF, COMM_VAR_NOINIT) ComM_ComAllowedPtrType;
+
+/**   \brief  type used to point to ComM_DcmRequestActive */
+typedef P2VAR(ComM_DcmRequestActiveType, TYPEDEF, COMM_VAR_NOINIT) ComM_DcmRequestActivePtrType;
 
 /**   \brief  type used to point to ComM_EcuMWakeUpIndicated */
 typedef P2VAR(volatile ComM_EcuMWakeUpIndicatedType, TYPEDEF, COMM_VAR_NOINIT) ComM_EcuMWakeUpIndicatedPtrType;
@@ -1100,6 +1130,23 @@ extern VAR(ComM_BusSmStateUType, COMM_VAR_NOINIT) ComM_BusSmState;  /* PRQA S 07
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern VAR(ComM_ComAllowedUType, COMM_VAR_NOINIT) ComM_ComAllowed;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define COMM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_DcmRequestActive
+**********************************************************************************************************************/
+/** 
+  \var    ComM_DcmRequestActive
+  \brief  Status of Dcm active diagnostic request, TRUE if requested, FALSE otherwise
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(ComM_DcmRequestActiveUType, COMM_VAR_NOINIT) ComM_DcmRequestActive;  /* PRQA S 0759 */  /* MD_CSL_Union */
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
