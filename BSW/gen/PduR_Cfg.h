@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2024-10-24 15:37:49
+ *   Generation Time: 2024-10-28 14:08:02
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -156,7 +156,6 @@
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_1a8748e9                       2u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_89bb16b0                       3u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_91d52164                       0u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_69924b1b                       1u
 /**\} */
@@ -181,10 +180,8 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRDestPdu_Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_20_3e171f85_Rx_7d936514_Rx 0u
-#define PduRConf_PduRDestPdu_Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_455d4346_Rx_4bac36fb_Rx 1u
-#define PduRConf_PduRDestPdu_Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_20_5b6ce511_Rx_1bc873ba_Rx 2u
-#define PduRConf_PduRDestPdu_Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_16119f6f_Rx_925fbf89_Rx 3u
+#define PduRConf_PduRDestPdu_Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_455d4346_Rx_4bac36fb_Rx 0u
+#define PduRConf_PduRDestPdu_Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_16119f6f_Rx_925fbf89_Rx 1u
 /**\} */
 
 /**
@@ -195,10 +192,8 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_1bc873ba                       2u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_4bac36fb                       1u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_7d936514                       0u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_925fbf89                       3u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_4bac36fb                       0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_925fbf89                       1u
 /**\} */
 
 /**
@@ -209,8 +204,7 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRDestPdu_Vcu_Uds_Response_oTC37X_VCU_CAN00_20_80e8b981_Tx 0u
-#define PduRConf_PduRDestPdu_Vcu_Uds_Response_oTC37X_VCU_CAN00_39638a1a_Tx 1u
+#define PduRConf_PduRDestPdu_Vcu_Uds_Response_oTC37X_VCU_CAN00_39638a1a_Tx 0u
 /**\} */
 
 

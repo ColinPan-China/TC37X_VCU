@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Cfg.h
- *   Generation Time: 2024-10-08 14:28:43
+ *   Generation Time: 2024-10-28 14:08:03
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -778,9 +778,9 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
   \brief  These defines can be used to deactivate enumeration based code sequences if the enumeration value does not exist in the configuration data.
   \{
 */ 
-#define CAN_EXISTS_NONE_INITOBJECTFDBRSCONFIG                         STD_OFF
+#define CAN_EXISTS_NONE_INITOBJECTFDBRSCONFIG                         STD_ON
 #define CAN_EXISTS_FD_RXTX_INITOBJECTFDBRSCONFIG                      STD_OFF
-#define CAN_EXISTS_FD_RXONLY_INITOBJECTFDBRSCONFIG                    STD_ON
+#define CAN_EXISTS_FD_RXONLY_INITOBJECTFDBRSCONFIG                    STD_OFF
 #define CAN_EXISTS_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX              STD_ON
 #define CAN_EXISTS_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX               STD_ON
 #define CAN_EXISTS_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX              STD_ON
@@ -797,7 +797,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
   \brief  These defines are the enumeration values of enumeration based CONST and VAR data.
   \{
 */ 
-#define CAN_FD_RXONLY_INITOBJECTFDBRSCONFIG                           0x02u
+#define CAN_NONE_INITOBJECTFDBRSCONFIG                                0x00u
 #define CAN_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX                     0x00u
 #define CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX                      0x01u
 #define CAN_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX                     0x02u
@@ -1982,7 +1982,7 @@ typedef uint32 Can_TXBCROfControllerDataType;
 typedef uint32 Can_TXBRPOfControllerDataType;
 
 /**   \brief  value based type definition for Can_FBTP */
-typedef uint32 Can_FBTPType;
+typedef uint8 Can_FBTPType;
 
 /**   \brief  value based type definition for Can_GFC */
 typedef uint8 Can_GFCType;
@@ -2591,12 +2591,12 @@ extern CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[1];
   \var    Can_FBTP
   \brief  Fast Bit Timing and Prescaler
 */ 
-#define CAN_START_SEC_CONST_32BIT
+#define CAN_START_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern CONST(Can_FBTPType, CAN_CONST) Can_FBTP[1];
-#define CAN_STOP_SEC_CONST_32BIT
+#define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

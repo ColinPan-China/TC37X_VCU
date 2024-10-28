@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Lcfg.c
- *   Generation Time: 2024-10-08 14:28:43
+ *   Generation Time: 2024-10-28 14:08:03
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -225,15 +225,15 @@ CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[1] = {  /* PRQA 
   \var    Can_FBTP
   \brief  Fast Bit Timing and Prescaler
 */ 
-#define CAN_START_SEC_CONST_32BIT
+#define CAN_START_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Can_FBTPType, CAN_CONST) Can_FBTP[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index     FBTP             Comment */
-  /*     0 */  0x00010D44u   /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
+  /* Index     FBTP       Comment */
+  /*     0 */  0x00u   /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
 };
-#define CAN_STOP_SEC_CONST_32BIT
+#define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -326,8 +326,8 @@ CONST(Can_InitObjectBaudrateType, CAN_CONST) Can_InitObjectBaudrate[1] = {  /* P
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Can_InitObjectFdBrsConfigType, CAN_CONST) Can_InitObjectFdBrsConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index     InitObjectFdBrsConfig                */
-  /*     0 */  CAN_FD_RXONLY_INITOBJECTFDBRSCONFIG
+  /* Index     InitObjectFdBrsConfig           */
+  /*     0 */  CAN_NONE_INITOBJECTFDBRSCONFIG
 };
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */

@@ -341,24 +341,22 @@
   <Measurements>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879084473</Address>
+      <Address>1879092680</Address>
       <Conversion>DEFAULT_CM</Conversion>
-      <DisplayIdentifier />
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
       <LowerLimit>0</LowerLimit>
       <UpperLimit>255</UpperLimit>
       <ExtendedLowerLimit>0</ExtendedLowerLimit>
       <ExtendedUpperLimit>255</ExtendedUpperLimit>
-      <Name>SWC1.c_ComMReqFlg</Name>
-      <LongIdentifier />
-      <Symbol>SWC1.c_ComMReqFlg</Symbol>
-      <KeyName>SWC1.c|ComMReqFlg</KeyName>
-      <OriginalName>SWC1.c|ComMReqFlg</OriginalName>
+      <Name>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._0</Name>
+      <Symbol>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._0</Symbol>
+      <KeyName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._0</KeyName>
+      <OriginalName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._0</OriginalName>
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879084473</BaseAddress>
+      <BaseAddress>1879092680</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -367,7 +365,131 @@
     </Measurement>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879084477</Address>
+      <Address>1879092681</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._1</Name>
+      <Symbol>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._1</Symbol>
+      <KeyName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._1</KeyName>
+      <OriginalName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._1</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879092681</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Accuracy>0</Accuracy>
+      <BitMask>255</BitMask>
+      <Resolution>0</Resolution>
+    </Measurement>
+    <Measurement>
+      <InterfaceDatas />
+      <Address>1879092682</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._2</Name>
+      <Symbol>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._2</Symbol>
+      <KeyName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._2</KeyName>
+      <OriginalName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._2</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879092682</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Accuracy>0</Accuracy>
+      <BitMask>255</BitMask>
+      <Resolution>0</Resolution>
+    </Measurement>
+    <Measurement>
+      <InterfaceDatas />
+      <Address>1879092683</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._3</Name>
+      <Symbol>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._3</Symbol>
+      <KeyName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._3</KeyName>
+      <OriginalName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._3</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879092683</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Accuracy>0</Accuracy>
+      <BitMask>255</BitMask>
+      <Resolution>0</Resolution>
+    </Measurement>
+    <Measurement>
+      <InterfaceDatas />
+      <Address>1879084554</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <DisplayIdentifier />
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SWC1.c_UserData2Cmd</Name>
+      <LongIdentifier />
+      <Symbol>SWC1.c_UserData2Cmd</Symbol>
+      <KeyName>SWC1.c|UserData2Cmd</KeyName>
+      <OriginalName>SWC1.c|UserData2Cmd</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879084554</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Accuracy>0</Accuracy>
+      <BitMask>255</BitMask>
+      <Resolution>0</Resolution>
+    </Measurement>
+    <Measurement>
+      <InterfaceDatas />
+      <Address>1879084553</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <DisplayIdentifier />
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SWC1.c_UserData1Cmd</Name>
+      <LongIdentifier />
+      <Symbol>SWC1.c_UserData1Cmd</Symbol>
+      <KeyName>SWC1.c|UserData1Cmd</KeyName>
+      <OriginalName>SWC1.c|UserData1Cmd</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879084553</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Accuracy>0</Accuracy>
+      <BitMask>255</BitMask>
+      <Resolution>0</Resolution>
+    </Measurement>
+    <Measurement>
+      <InterfaceDatas />
+      <Address>1879084556</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <DisplayIdentifier />
       <Format>%0.15</Format>
@@ -384,7 +506,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879084477</BaseAddress>
+      <BaseAddress>1879084556</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -430,9 +552,26 @@
     <string>Const Type</string>
     <string>CoreIdType</string>
     <string>CounterType</string>
+    <string>Dem_1904_ObdOnUdsFreezeFrameType</string>
+    <string>Dem_Dcm_ERecExtraSizeType</string>
+    <string>Dem_DTCInternal_StoredStatus</string>
+    <string>Dem_DTCInternal_StoredStatusType</string>
+    <string>Dem_DTCReadoutBuffer_SnapshotSourceType</string>
+    <string>Dem_FilterData_DTCFilteringStrategy</string>
+    <string>Dem_FilterData_DTCFilteringStrategyType</string>
+    <string>Dem_FimFid_PendingStateType</string>
+    <string>Dem_Iumpr_CycleCounter_CycleCounterType</string>
+    <string>Dem_Iumpr_FaultOriginType</string>
+    <string>Dem_Iumpr_RatioAvailability</string>
+    <string>Dem_Iumpr_RatioAvailabilityType</string>
+    <string>Dem_MemAccess_Displace_CheckResultType</string>
+    <string>Dem_Scheduler_TaskId</string>
+    <string>Dem_Scheduler_TaskIdType</string>
     <string>Fee_QsBlock_StateType</string>
     <string>IdleModeType</string>
     <string>ISRType</string>
+    <string>Mcu_CpuIdType</string>
+    <string>Mcu_CpuModeType</string>
     <string>Mcu_PllStatusType</string>
     <string>Mcu_RamStateType</string>
     <string>Mcu_ResetType</string>
@@ -514,14 +653,14 @@
   <InterfaceDatas />
   <Events>
     <Event>
-      <EventName>Event10ms</EventName>
+      <EventName>XcpEventChannel_10MS</EventName>
       <ShortName />
       <EventNumber>0</EventNumber>
       <Period>1</Period>
       <SampleRate>1</SampleRate>
     </Event>
     <Event>
-      <EventName>Event20ms</EventName>
+      <EventName>XcpEventChannel_20MS</EventName>
       <ShortName />
       <EventNumber>1</EventNumber>
       <Period>2</Period>
@@ -532,7 +671,7 @@
   <DTO>1543</DTO>
   <CRO>1542</CRO>
   <StationAddress>0</StationAddress>
-  <Name>TC37X_VCU_V2L_Proj</Name>
+  <Name>Project_VCU</Name>
   <DefaultConversionMethodName>DEFAULT_CM</DefaultConversionMethodName>
   <DefaultDatatype>UWORD</DefaultDatatype>
   <DefaultFormat />

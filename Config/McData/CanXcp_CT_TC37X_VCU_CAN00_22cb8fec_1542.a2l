@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanXcp_CT_TC37X_VCU_CAN00_22cb8fec_1542.a2l
- *   Generation Time: 2024-10-10 15:21:33
+ *   Generation Time: 2024-10-28 14:08:03
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -33,23 +33,13 @@
     /begin XCP_ON_CAN
       0x0102 /* XCP on CAN version */
       CAN_ID_MASTER   1542 /* CMD/STIM */
-      CAN_ID_SLAVE    1073743367 /* RES/ERR/EV/SERV/DAQ */
+      CAN_ID_SLAVE    1543 /* RES/ERR/EV/SERV/DAQ */
       BAUDRATE        500000 /* BAUDRATE */
       SAMPLE_POINT    75 /* SAMPLE_POINT */
       SAMPLE_RATE     SINGLE /* SAMPLE_RATE */
       BTL_CYCLES      80 /* BTL_CYCLES */
       SJW             1 /* length synchr. segment */
-            /begin CAN_FD
-        MAX_DLC                         8 /* DLC of CAN frame */
-        CAN_FD_DATA_TRANSFER_BAUDRATE   2000000 /* Baudrate [Hz] */
-        SAMPLE_POINT                    75 /* Sample Point Receiver */
-        BTL_CYCLES                      20 /* BTL_CYCLES */
-        SJW                             5 /* length synchr. segment */
-        
-        SECONDARY_SAMPLE_POINT          0 /* Sender Sample Point */
-        TRANSCEIVER_DELAY_COMPENSATION  OFF
-      /end CAN_FD
-      /begin PROTOCOL_LAYER 
+            /begin PROTOCOL_LAYER 
         0x0104 
         2000
         10000

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Cfg.h
- *   Generation Time: 2024-10-24 15:37:49
+ *   Generation Time: 2024-10-28 14:08:03
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -74,7 +74,7 @@
 /*! Support generic connections */
 # define DCM_NET_GENERIC_CONNECTION_ENABLED                                    STD_OFF
 /*! Protect against clients other than the one started the non-default session */
-# define DCM_NET_PROTECT_SESSION_OF_CLIENT_ENABLED                             STD_ON
+# define DCM_NET_PROTECT_SESSION_OF_CLIENT_ENABLED                             STD_OFF
 /*! Paged buffer support for DEM interfaces */
 # define DCM_DEMIF_PAGED_BUFFER_ENABLED                                        STD_ON
 /*! Paged buffer support */
@@ -485,7 +485,7 @@
 /*! The maximum size of all configured buffers */
 # define DCM_NET_MAX_BUFFER_SIZE                                                 50u
 /*! Maximum number of connections */
-# define DCM_NET_MAX_NUM_CONNECTIONS                                            2u
+# define DCM_NET_MAX_NUM_CONNECTIONS                                            1u
 /*! Number of channels from main connections and ComControl channels */
 # define DCM_NET_MAX_NUM_ALL_COMM_CHANNELS                                        1u
 /*! The default DemClientId */
@@ -501,17 +501,14 @@
 /*!  ----- Symbolic name values for DCM protocols -----  */
 # define DcmConf_DcmDslProtocolRow_DcmDslProtocolRow_29812fbf                   3u
 /*!  ----- Symbolic name values for Rx PduIds -----  */
-# define DcmConf_DcmDslProtocolRx_Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_20_4b67415f_Rx_613ad1d8  0u
-# define DcmConf_DcmDslProtocolRx_Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_21e26bac_Rx_f99a7a58  2u
-# define DcmConf_DcmDslProtocolRx_Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_20_e74cf2e0_Rx_44bcf4fb  1u
-# define DcmConf_DcmDslProtocolRx_Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_d561dcee_Rx_7ba0ca16  3u
+# define DcmConf_DcmDslProtocolRx_Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_21e26bac_Rx_f99a7a58  0u
+# define DcmConf_DcmDslProtocolRx_Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_d561dcee_Rx_7ba0ca16  1u
 /*!  ----- Symbolic name values for Tx PduIds -----  */
-# define DcmConf_DcmDslProtocolTx_Vcu_Uds_Response_oTC37X_VCU_CAN00_20_3de19375_Tx_9932c7b2  0u
-# define DcmConf_DcmDslProtocolTx_Vcu_Uds_Response_oTC37X_VCU_CAN00_4d111be6_Tx_666acd3e  1u
+# define DcmConf_DcmDslProtocolTx_Vcu_Uds_Response_oTC37X_VCU_CAN00_4d111be6_Tx_666acd3e  0u
 /*! Number of receive PduIds */
-# define DCM_NET_NUM_RX_PDUIDS                                                  4u
+# define DCM_NET_NUM_RX_PDUIDS                                                  2u
 /*! Number of send PduIds */
-# define DCM_NET_NUM_TX_PDUIDS                                                  2u
+# define DCM_NET_NUM_TX_PDUIDS                                                  1u
 /*! The total number of configured protocols */
 # define DCM_NET_NUM_PROTOCOLS                                                  1u
 /*! The minimum RxPduID value of the CanTp */
@@ -521,11 +518,11 @@
 /*! The total number of CanTp RxPduIDs */
 # define DCM_NET_NUM_CANTP_RX_PDUIDS                                              0u
 /*! Size of table Dcm_CfgNetRxPduInfo */
-# define DCM_CFGNETRXPDUINFO_SIZE                                               4u
+# define DCM_CFGNETRXPDUINFO_SIZE                                               2u
 /*! Size of table Dcm_CfgNetTxPduInfo */
-# define DCM_CFGNETTXPDUINFO_SIZE                                               2u
+# define DCM_CFGNETTXPDUINFO_SIZE                                               1u
 /*! Size of table Dcm_CfgNetConnectionInfo */
-# define DCM_CFGNETCONNECTIONINFO_SIZE                                          2u
+# define DCM_CFGNETCONNECTIONINFO_SIZE                                          1u
 /*! Size of table Dcm_CfgNetProtocolInfo */
 # define DCM_CFGNETPROTOCOLINFO_SIZE                                            1u
 /*! Size of table Dcm_CfgNetAllComMChannelMap */

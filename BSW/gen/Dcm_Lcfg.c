@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Lcfg.c
- *   Generation Time: 2024-10-24 15:37:49
+ *   Generation Time: 2024-10-28 14:08:03
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -293,10 +293,9 @@ DCM_LOCAL VAR(Dcm_MsgItemType, DCM_VAR_NOINIT) Dcm_CfgNetBuffer_000[50];
 #define DCM_START_SEC_CONST_8
 #include "MemMap.h"                                                                                                                                  /* PRQA S 5087 */ /* MD_MSR_MemMap */
 /*! TxPduId to DCM connection map */
-CONST(Dcm_NetConnRefMemType, DCM_CONST) Dcm_CfgNetTxPduInfo[2]=
+CONST(Dcm_NetConnRefMemType, DCM_CONST) Dcm_CfgNetTxPduInfo[1]=
 {
-    1u
-  , 0u
+    0u
 };
 /*! Map of DCM relevant network handles */
 CONST(Dcm_CfgNetNetIdRefMemType, DCM_CONST) Dcm_CfgNetConnComMChannelMap[1]=
@@ -477,18 +476,15 @@ CONST(Dcm_CfgNetProtocolNotificationInfoType, DCM_CONST) Dcm_CfgNetProtocolNotif
    { NULL_PTR}
 };
 /*! RxPduId map */
-CONST(Dcm_CfgNetRxPduInfoType, DCM_CONST) Dcm_CfgNetRxPduInfo[4]=
+CONST(Dcm_CfgNetRxPduInfoType, DCM_CONST) Dcm_CfgNetRxPduInfo[2]=
 {
-   { TRUE, 1u}
-  ,{ FALSE, 1u}
-  ,{ TRUE, 0u}
+   { TRUE, 0u}
   ,{ FALSE, 0u}
 };
 /*! DCM connection descriptor */
-CONST(Dcm_CfgNetConnectionInfoType, DCM_CONST) Dcm_CfgNetConnectionInfo[2]=
+CONST(Dcm_CfgNetConnectionInfoType, DCM_CONST) Dcm_CfgNetConnectionInfo[1]=
 {
    { 0x0000u,PduRConf_PduRSrcPdu_PduRSrcPdu_1a8748e9, 0u,0u,0x00u,0x00u, 0u}
-  ,{ 0x0000u,PduRConf_PduRSrcPdu_PduRSrcPdu_89bb16b0, 0u,0u,0x00u,0x00u, 0u}
 };
 /*! DCM protocol descriptor */
 CONST(Dcm_CfgNetProtocolInfoType, DCM_CONST) Dcm_CfgNetProtocolInfo[1]=
