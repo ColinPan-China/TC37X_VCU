@@ -337,11 +337,40 @@
     </columnIndex>
   </ScreenDisplay>
   <AxisPoints />
-  <Characteristics />
+  <Characteristics>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>-2147480356</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <DisplayIdentifier />
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>CDD_MyApp.c_Calib_Sig</Name>
+      <LongIdentifier />
+      <Symbol>CDD_MyApp.c_Calib_Sig</Symbol>
+      <KeyName>CDD_MyApp.c|Calib_Sig</KeyName>
+      <OriginalName>CDD_MyApp.c|Calib_Sig</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>-2147480356</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <CalibrationAccess />
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+  </Characteristics>
   <Measurements>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879092680</Address>
+      <Address>1879090780</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -356,7 +385,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879092680</BaseAddress>
+      <BaseAddress>1879090780</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -365,7 +394,7 @@
     </Measurement>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879092681</Address>
+      <Address>1879090781</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -380,7 +409,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879092681</BaseAddress>
+      <BaseAddress>1879090781</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -389,7 +418,7 @@
     </Measurement>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879092682</Address>
+      <Address>1879090782</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -404,7 +433,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879092682</BaseAddress>
+      <BaseAddress>1879090782</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -413,7 +442,7 @@
     </Measurement>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879092683</Address>
+      <Address>1879090783</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -428,7 +457,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879092683</BaseAddress>
+      <BaseAddress>1879090783</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -647,27 +676,116 @@
     <string>TryToGetSpinlockType</string>
   </EnumNames>
   <EnumAssociatioans />
-  <RecordLayouts />
+  <RecordLayouts>
+    <RecordLayout>
+      <Name>__UBYTE_S</Name>
+      <KeyName>UBYTE</KeyName>
+      <State>0</State>
+      <FunctionValues>
+        <Position>1</Position>
+        <DataType>UBYTE</DataType>
+        <IndexMode>ROW_DIR</IndexMode>
+        <AddressType>DIRECT</AddressType>
+      </FunctionValues>
+    </RecordLayout>
+    <RecordLayout>
+      <Name>__SBYTE_S</Name>
+      <KeyName>SBYTE</KeyName>
+      <State>0</State>
+      <FunctionValues>
+        <Position>1</Position>
+        <DataType>SBYTE</DataType>
+        <IndexMode>ROW_DIR</IndexMode>
+        <AddressType>DIRECT</AddressType>
+      </FunctionValues>
+    </RecordLayout>
+    <RecordLayout>
+      <Name>__UWORD_S</Name>
+      <KeyName>UWORD</KeyName>
+      <State>0</State>
+      <FunctionValues>
+        <Position>1</Position>
+        <DataType>UWORD</DataType>
+        <IndexMode>ROW_DIR</IndexMode>
+        <AddressType>DIRECT</AddressType>
+      </FunctionValues>
+    </RecordLayout>
+    <RecordLayout>
+      <Name>__SWORD_S</Name>
+      <KeyName>SWORD</KeyName>
+      <State>0</State>
+      <FunctionValues>
+        <Position>1</Position>
+        <DataType>SWORD</DataType>
+        <IndexMode>ROW_DIR</IndexMode>
+        <AddressType>DIRECT</AddressType>
+      </FunctionValues>
+    </RecordLayout>
+    <RecordLayout>
+      <Name>__ULONG_S</Name>
+      <KeyName>ULONG</KeyName>
+      <State>0</State>
+      <FunctionValues>
+        <Position>1</Position>
+        <DataType>ULONG</DataType>
+        <IndexMode>ROW_DIR</IndexMode>
+        <AddressType>DIRECT</AddressType>
+      </FunctionValues>
+    </RecordLayout>
+    <RecordLayout>
+      <Name>__SLONG_S</Name>
+      <KeyName>SLONG</KeyName>
+      <State>0</State>
+      <FunctionValues>
+        <Position>1</Position>
+        <DataType>SLONG</DataType>
+        <IndexMode>ROW_DIR</IndexMode>
+        <AddressType>DIRECT</AddressType>
+      </FunctionValues>
+    </RecordLayout>
+    <RecordLayout>
+      <Name>__FLOAT32_IEEE_S</Name>
+      <KeyName>FLOAT32_IEEE</KeyName>
+      <State>0</State>
+      <FunctionValues>
+        <Position>1</Position>
+        <DataType>FLOAT32_IEEE</DataType>
+        <IndexMode>ROW_DIR</IndexMode>
+        <AddressType>DIRECT</AddressType>
+      </FunctionValues>
+    </RecordLayout>
+    <RecordLayout>
+      <Name>__FLOAT64_IEEE_S</Name>
+      <KeyName>FLOAT64_IEEE</KeyName>
+      <State>0</State>
+      <FunctionValues>
+        <Position>1</Position>
+        <DataType>FLOAT64_IEEE</DataType>
+        <IndexMode>ROW_DIR</IndexMode>
+        <AddressType>DIRECT</AddressType>
+      </FunctionValues>
+    </RecordLayout>
+  </RecordLayouts>
   <ModuleName>Module_1</ModuleName>
   <ModuleDescription />
   <InterfaceDatas />
   <Events>
     <Event>
       <EventName>XcpEventChannel_10MS</EventName>
-      <ShortName />
+      <ShortName>XcpEventChannel_10MS</ShortName>
       <EventNumber>0</EventNumber>
       <Period>1</Period>
       <SampleRate>1</SampleRate>
     </Event>
     <Event>
       <EventName>XcpEventChannel_20MS</EventName>
-      <ShortName />
+      <ShortName>XcpEventChannel_10MS</ShortName>
       <EventNumber>1</EventNumber>
       <Period>2</Period>
       <SampleRate>1</SampleRate>
     </Event>
   </Events>
-  <Protocol>CCP</Protocol>
+  <Protocol>XCP</Protocol>
   <DTO>1543</DTO>
   <CRO>1542</CRO>
   <StationAddress>0</StationAddress>
@@ -678,7 +796,7 @@
   <DefaultFloat>IEEE_FLOAT</DefaultFloat>
   <DefaultIndexMode>ROW_DIR</DefaultIndexMode>
   <Description />
-  <ByteOrder>MSB_FIRST</ByteOrder>
+  <ByteOrder>MSB_LAST</ByteOrder>
   <AssociatedFileName>D:\TC377_Development\dev\TC37X_VCU\Debug\TC37X.elf</AssociatedFileName>
   <AssociatedFiletype>ELF</AssociatedFiletype>
   <GlobalOffsetAddress>0</GlobalOffsetAddress>
@@ -687,6 +805,7 @@
   <DaqSecurity />
   <PgmSecurity />
   <CalSecurity />
+  <SecurityDll />
   <CcpCalOrXcpDll />
   <DaqType>DYNAMIC</DaqType>
   <NameType>TYPE_NAME_FULL</NameType>

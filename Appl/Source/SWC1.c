@@ -104,6 +104,7 @@
  * boolean: Boolean (standard type)
  * dtRef_VOID: DataReference
  * dtRef_const_VOID: DataReference
+ * uint16: Integer in interval [0...65535] (standard type)
  * uint8: Integer in interval [0...255] (standard type)
  *
  * Enumeration Types:
@@ -155,6 +156,7 @@
  * =======================
  *   SW-C local Calibration Parameters:
  *   ----------------------------------
+ *   uint16 Rte_CData_CalibrationParameter(void)
  *   uint8 *Rte_CData_NvBlockNeed_UserData3_DefaultValue(void)
  *     Returnvalue: uint8* is of type NvM_Array10Bytes
  *

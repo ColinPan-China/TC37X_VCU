@@ -88,6 +88,7 @@ void LED_LightFunc()
 uint8 CmdNvm = 0;
 uint8 BuffRd[16];
 uint8 BuffWr[16];
+extern uint16 LED_In;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -98,19 +99,39 @@ FUNC(void, PowerMng_SWC_CODE) Led_Runnable1000ms(void) /* PRQA S 0624, 3206 */ /
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Led_Runnable1000ms
  *********************************************************************************************************************/
-LED_LightFunc();
-if(CmdNvm == 1)
-{
-  VStdMemSet(BuffWr,0xAA,sizeof(BuffWr));
-  NvM_WriteBlock(NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0,BuffWr);
-  CmdNvm = 0;
-}
-if(CmdNvm == 2)
-{
-  VStdMemSet(BuffRd,0xFF,sizeof(BuffRd));
-  NvM_ReadBlock(NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0,BuffRd);
+  if(LED_In == 0x0A)/*LED ON*/
+  {
+    uint8 cnt = 0;
+    for( cnt = 0; cnt < 4; cnt++ )
+    {
+        Dio_WriteChannel( led[cnt], 0);
+    }
+  }
+  else if( LED_In == 0x0B)/*LED OFF*/
+  {
+    uint8 cnt = 0;
+    for( cnt = 0; cnt < 4; cnt++ )
+    {
+        Dio_WriteChannel( led[cnt], 1);
+    }
+  }
+  else
+  {
+    LED_LightFunc();
+  }
+
+  if(CmdNvm == 1)
+  {
+    VStdMemSet(BuffWr,0xAA,sizeof(BuffWr));
+    NvM_WriteBlock(NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0,BuffWr);
     CmdNvm = 0;
-}
+  }
+  if(CmdNvm == 2)
+  {
+    VStdMemSet(BuffRd,0xFF,sizeof(BuffRd));
+    NvM_ReadBlock(NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0,BuffRd);
+      CmdNvm = 0;
+  }
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

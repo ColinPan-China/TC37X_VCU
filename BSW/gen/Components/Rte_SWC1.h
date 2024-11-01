@@ -138,12 +138,15 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_WriteBlock(NvM_BlockIdType parg0, dt
 #   define RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
 #   include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+extern CONST(uint16, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_SWC1_CalibrationParameter;
 extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_SWC1_NvBlockNeed_UserData3_DefaultValue;
 
 #   define RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
 #   include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 #  endif
+
+#  define Rte_CData_CalibrationParameter() (Rte_SWC1_CalibrationParameter)
 
 #  define Rte_CData_NvBlockNeed_UserData3_DefaultValue() (&(Rte_SWC1_NvBlockNeed_UserData3_DefaultValue[0]))
 

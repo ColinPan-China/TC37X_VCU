@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Lcfg.c
- *   Generation Time: 2024-10-28 14:08:03
+ *   Generation Time: 2024-11-01 15:23:38
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -230,6 +230,90 @@ DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_RidMgr_0104_RequestResults(
   Dcm_NegativeResponseCodePtrType ErrorCode
   );
 /***********************************************************************************************************************
+ *  Dcm_RidMgr_0105_Start()
+ ***********************************************************************************************************************/
+/*! \brief         Wraps RIDs execution interface.
+ *  \details       Converts uint8 arrays to other signal types required by the RID execution interface and vice versa.
+ *  \param[in]     OpStatus           The operation status
+ *  \param[in,out] pMsgContext        Message-related information for one diagnostic protocol identifier
+ *  \param[in,out] DataLength         IN: Concrete length of the dynamic request signal
+ *                                    OUT: Concrete length of the dynamic response Signal
+ *  \param[out]    ErrorCode          Negative response code
+ *  \return        E_OK               The operation is finished
+ *  \return        DCM_E_PENDING      The operation is not yet finished
+ *  \return        DCM_E_FORCE_RCRRP  Forces a RCR-RP response
+ *                                    The call out will called again once the response is sent. The OpStatus parameter
+ *                                    will contain the transmission result
+ *  \return        E_NOT_OK           The operation has failed. A concrete NRC shall be set, otherwise the DCM sends NRC
+ *                                    0x22
+ *  \context       TASK
+ *  \reentrant     FALSE
+ *  \synchronous   FALSE
+ *  \pre           -
+ ***********************************************************************************************************************/
+DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_RidMgr_0105_Start(
+  Dcm_OpStatusType OpStatus,
+  Dcm_MsgContextPtrType pMsgContext,
+  Dcm_RidMgrRidLengthPtrType DataLength,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  );
+/***********************************************************************************************************************
+ *  Dcm_RidMgr_0105_Stop()
+ ***********************************************************************************************************************/
+/*! \brief         Wraps RIDs execution interface.
+ *  \details       Converts uint8 arrays to other signal types required by the RID execution interface and vice versa.
+ *  \param[in]     OpStatus           The operation status
+ *  \param[in,out] pMsgContext        Message-related information for one diagnostic protocol identifier
+ *  \param[in,out] DataLength         IN: Concrete length of the dynamic request signal
+ *                                    OUT: Concrete length of the dynamic response Signal
+ *  \param[out]    ErrorCode          Negative response code
+ *  \return        E_OK               The operation is finished
+ *  \return        DCM_E_PENDING      The operation is not yet finished
+ *  \return        DCM_E_FORCE_RCRRP  Forces a RCR-RP response
+ *                                    The call out will called again once the response is sent. The OpStatus parameter
+ *                                    will contain the transmission result
+ *  \return        E_NOT_OK           The operation has failed. A concrete NRC shall be set, otherwise the DCM sends NRC
+ *                                    0x22
+ *  \context       TASK
+ *  \reentrant     FALSE
+ *  \synchronous   FALSE
+ *  \pre           -
+ ***********************************************************************************************************************/
+DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_RidMgr_0105_Stop(
+  Dcm_OpStatusType OpStatus,
+  Dcm_MsgContextPtrType pMsgContext,
+  Dcm_RidMgrRidLengthPtrType DataLength,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  );
+/***********************************************************************************************************************
+ *  Dcm_RidMgr_0105_RequestResults()
+ ***********************************************************************************************************************/
+/*! \brief         Wraps RIDs execution interface.
+ *  \details       Converts uint8 arrays to other signal types required by the RID execution interface and vice versa.
+ *  \param[in]     OpStatus           The operation status
+ *  \param[in,out] pMsgContext        Message-related information for one diagnostic protocol identifier
+ *  \param[in,out] DataLength         IN: Concrete length of the dynamic request signal
+ *                                    OUT: Concrete length of the dynamic response Signal
+ *  \param[out]    ErrorCode          Negative response code
+ *  \return        E_OK               The operation is finished
+ *  \return        DCM_E_PENDING      The operation is not yet finished
+ *  \return        DCM_E_FORCE_RCRRP  Forces a RCR-RP response
+ *                                    The call out will called again once the response is sent. The OpStatus parameter
+ *                                    will contain the transmission result
+ *  \return        E_NOT_OK           The operation has failed. A concrete NRC shall be set, otherwise the DCM sends NRC
+ *                                    0x22
+ *  \context       TASK
+ *  \reentrant     FALSE
+ *  \synchronous   FALSE
+ *  \pre           -
+ ***********************************************************************************************************************/
+DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_RidMgr_0105_RequestResults(
+  Dcm_OpStatusType OpStatus,
+  Dcm_MsgContextPtrType pMsgContext,
+  Dcm_RidMgrRidLengthPtrType DataLength,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  );
+/***********************************************************************************************************************
  *  Dcm_ServiceNoPostProcessor()
  ***********************************************************************************************************************/
 /*! \brief         Dummy post-processor
@@ -276,6 +360,37 @@ DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_ServiceNoUpdater(
  ***********************************************************************************************************************/
 DCM_LOCAL FUNC(void, DCM_CALLOUT_CODE) Dcm_ServiceNoCancel(
   Dcm_ContextPtrType pContext
+  );
+/***********************************************************************************************************************
+ *  Dcm_SubSvcWrapper_DcmService_HardReset()
+ ***********************************************************************************************************************/
+/*! \brief         Wraps a specific externally implemented sub-service-processor.
+ *  \details       Encapsulates the internally used pContext parameter.
+ *  \param[in]     pContext              Pointer to the context
+ *  \param[in]     opStatus              The operation status
+ *  \param[in,out] pMsgContext           Message-related information for one diagnostic protocol identifier
+ *                                       The pointers in pMsgContext points behind the sub-function.
+ *  \param[out]    ErrorCode             Negative response code in case return value is DCM_E_NOT_OK
+ *  \return        DCM_E_OK              Job processing finished, send positive response
+ *  \return        DCM_E_PENDING         Job processing is not yet finished
+ *  \return        DCM_E_FORCE_RCRRP     (Vendor extension) Forces a RCR-RP response.
+ *                                       The call out will called again once the response is sent. The OpStatus
+ *                                       parameter will contain the transmission result
+ *  \return        DCM_E_PROCESSINGDONE  (Vendor extension) Can be returned instead of calling Dcm_ProcessingDone() for
+ *                                       the current pMsgContext.
+ *                                       Saves application code and stack usage.
+ *  \return        DCM_E_STOP_REPEATER   Stops the repeater proxy
+ *  \return        DCM_E_NOT_OK          Job processing finished, send NRC from the ErrorCode
+ *  \context       TASK
+ *  \reentrant     FALSE
+ *  \synchronous   FALSE
+ *  \pre           -
+ ***********************************************************************************************************************/
+DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_SubSvcWrapper_DcmService_HardReset(
+  Dcm_ContextPtrType pContext,
+  Dcm_OpStatusType opStatus,
+  Dcm_MsgContextPtrType pMsgContext,
+  Dcm_NegativeResponseCodePtrType ErrorCode
   );
 #define DCM_STOP_SEC_CALLOUT_CODE
 #include "MemMap.h"                                                                                                                                  /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -454,11 +569,12 @@ CONST(uint16, DCM_CONST) Dcm_CfgDidMgrDidLookUpTable[11]=
   ,0xF300u
 };
 /*! RID look up table  */
-CONST(uint16, DCM_CONST) Dcm_CfgRidMgrRidLookUpTable[3]=
+CONST(uint16, DCM_CONST) Dcm_CfgRidMgrRidLookUpTable[4]=
 {
-   2u
+   3u
   ,0x0100u
   ,0x0104u
+  ,0x0105u
 };
 #define DCM_STOP_SEC_CONST_16
 #include "MemMap.h"                                                                                                                                  /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -667,19 +783,23 @@ CONST(Dcm_CfgDidMgrOpInfoDefineType, DCM_CONST) Dcm_CfgDidMgrOpInfoDefine[1]=
    {  0u, 5u} /* DID: 0xF300 */
 };
 /*! RID properties */
-CONST(Dcm_CfgRidMgrRidInfoType, DCM_CONST) Dcm_CfgRidMgrRidInfo[2]=
+CONST(Dcm_CfgRidMgrRidInfoType, DCM_CONST) Dcm_CfgRidMgrRidInfo[3]=
 {
    {    0u,   1u,0x07u, 0u} /* RID: 0x0100 */
   ,{    3u,   1u,0x05u, 0u} /* RID: 0x0104 */
+  ,{    5u,   1u,0x07u, 0u} /* RID: 0x0105 */
 };
 /*! RID operation properties */
-CONST(Dcm_CfgRidMgrOpInfoType, DCM_CONST) Dcm_CfgRidMgrOpInfo[5]=
+CONST(Dcm_CfgRidMgrOpInfoType, DCM_CONST) Dcm_CfgRidMgrOpInfo[8]=
 {
    { ((Dcm_RidMgrOpFuncType)(Dcm_RidMgr_0100_Start)),   1u,   1u,   4u,   4u, 9u, 0u} /* RID: 0x0100 */                                              /* PRQA S 0313 */ /* MD_Dcm_0313 */
   ,{ ((Dcm_RidMgrOpFuncType)(Dcm_RidMgr_0100_Stop)),   0u,   0u,   4u,   4u, 9u, 0u} /* RID: 0x0100 */                                               /* PRQA S 0313 */ /* MD_Dcm_0313 */
   ,{ ((Dcm_RidMgrOpFuncType)(Dcm_RidMgr_0100_RequestResults)),   0u,   0u,   2u,   2u, 9u, 0u} /* RID: 0x0100 */                                     /* PRQA S 0313 */ /* MD_Dcm_0313 */
   ,{ ((Dcm_RidMgrOpFuncType)(Rte_Call_RoutineServices_SampleRoutineControl_StartOnly_Start)),   3u,   3u,   0u,   0u, 1u, 0u} /* RID: 0x0104 */      /* PRQA S 0313 */ /* MD_Dcm_0313 */
   ,{ ((Dcm_RidMgrOpFuncType)(Dcm_RidMgr_0104_RequestResults)),   0u,   0u,   4u,   4u, 9u, 0u} /* RID: 0x0104 */                                     /* PRQA S 0313 */ /* MD_Dcm_0313 */
+  ,{ ((Dcm_RidMgrOpFuncType)(Dcm_RidMgr_0105_Start)),   2u,   2u,   2u,   2u, 9u, 0u} /* RID: 0x0105 */                                              /* PRQA S 0313 */ /* MD_Dcm_0313 */
+  ,{ ((Dcm_RidMgrOpFuncType)(Dcm_RidMgr_0105_Stop)),   2u,   2u,   2u,   2u, 9u, 0u} /* RID: 0x0105 */                                               /* PRQA S 0313 */ /* MD_Dcm_0313 */
+  ,{ ((Dcm_RidMgrOpFuncType)(Dcm_RidMgr_0105_RequestResults)),   0u,   0u,   2u,   2u, 9u, 0u} /* RID: 0x0105 */                                     /* PRQA S 0313 */ /* MD_Dcm_0313 */
 };
 /*! Properties of the MIDs */
 CONST(Dcm_CfgMemMgrMemIdInfoType, DCM_CONST) Dcm_CfgMemMgrMidInfo[1]=
@@ -811,7 +931,7 @@ CONST(Dcm_CfgStateRefMemType, DCM_CONST) Dcm_CfgSvc10SubFuncExecPrecondTable[3]=
 /*! Service 0x11 sub-service properties table  */
 CONST(Dcm_CfgSvc11SubFuncInfoType, DCM_CONST) Dcm_CfgSvc11SubFuncInfo[1]=
 {
-   { Dcm_Service11_01Processor} /* SF: 0x01 */
+   { Dcm_SubSvcWrapper_DcmService_HardReset} /* SF: 0x01 */
 };
 /*! Indirection from service 0x11 sub functions to execution pre conditions */
 CONST(Dcm_CfgStateRefMemType, DCM_CONST) Dcm_CfgSvc11SubFuncExecPrecondTable[1]=
@@ -1093,6 +1213,104 @@ DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_RidMgr_0104_RequestResults(
   return stdReturn;
 }
 /***********************************************************************************************************************
+ *  Dcm_RidMgr_0105_Start()
+ ***********************************************************************************************************************/
+/* Implements CDD Dcm_RidMgr<XXX>() */
+DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_RidMgr_0105_Start(
+  Dcm_OpStatusType OpStatus,
+  Dcm_MsgContextPtrType pMsgContext,  /* PRQA S 3673 */ /* MD_Dcm_APIStd_3673 */
+  Dcm_RidMgrRidLengthPtrType DataLength,  /* PRQA S 3673 */ /* MD_Dcm_APIStd_3673 */
+  Dcm_NegativeResponseCodePtrType ErrorCode  /* PRQA S 3673 */ /* MD_Dcm_APIStd_3673 */
+  )
+{
+  uint16 dataInIn_New_Data_Object;
+  uint16 dataOutOut_New_Data_Object;
+  Std_ReturnType stdReturn;
+
+  dataInIn_New_Data_Object = ((uint16)(Dcm_UtiMake16Bit(Dcm_UtiGetReqDataAsU8Rel(pMsgContext, 0u), Dcm_UtiGetReqDataAsU8Rel(pMsgContext, 1u))));  /* PRQA S 2985 */ /* MD_Dcm_Redundant_2985 */
+
+  DCM_IGNORE_UNREF_PARAM(DataLength);  /* PRQA S 3112 */ /* MD_MSR_DummyStmt */
+
+  stdReturn = Rte_Call_RoutineServices_Vcu_Roution_00_Start(
+                dataInIn_New_Data_Object,
+                OpStatus,
+                &dataOutOut_New_Data_Object,
+                ErrorCode
+                );  /* SBSW_DCM_GEN_COMB_PARAM_PTR_FORWARD */ 
+  if (E_OK == stdReturn)
+  {
+    {
+      Dcm_UtiSetResDataAsU8Rel(pMsgContext, 0u, Dcm_UtiGetHiByte(dataOutOut_New_Data_Object));  /* SBSW_DCM_GEN_PARAM_PTR_FORWARD */
+      Dcm_UtiSetResDataAsU8Rel(pMsgContext, 1u, Dcm_UtiGetLoByte(dataOutOut_New_Data_Object));  /* SBSW_DCM_GEN_PARAM_PTR_FORWARD */
+    }
+  }
+  return stdReturn;
+}
+/***********************************************************************************************************************
+ *  Dcm_RidMgr_0105_Stop()
+ ***********************************************************************************************************************/
+/* Implements CDD Dcm_RidMgr<XXX>() */
+DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_RidMgr_0105_Stop(
+  Dcm_OpStatusType OpStatus,
+  Dcm_MsgContextPtrType pMsgContext,  /* PRQA S 3673 */ /* MD_Dcm_APIStd_3673 */
+  Dcm_RidMgrRidLengthPtrType DataLength,  /* PRQA S 3673 */ /* MD_Dcm_APIStd_3673 */
+  Dcm_NegativeResponseCodePtrType ErrorCode  /* PRQA S 3673 */ /* MD_Dcm_APIStd_3673 */
+  )
+{
+  uint16 dataInIn_New_Data_Object;
+  uint16 dataOutOut_New_Data_Object;
+  Std_ReturnType stdReturn;
+
+  dataInIn_New_Data_Object = ((uint16)(Dcm_UtiMake16Bit(Dcm_UtiGetReqDataAsU8Rel(pMsgContext, 0u), Dcm_UtiGetReqDataAsU8Rel(pMsgContext, 1u))));  /* PRQA S 2985 */ /* MD_Dcm_Redundant_2985 */
+
+  DCM_IGNORE_UNREF_PARAM(DataLength);  /* PRQA S 3112 */ /* MD_MSR_DummyStmt */
+
+  stdReturn = Rte_Call_RoutineServices_Vcu_Roution_00_Stop(
+                dataInIn_New_Data_Object,
+                OpStatus,
+                &dataOutOut_New_Data_Object,
+                ErrorCode
+                );  /* SBSW_DCM_GEN_COMB_PARAM_PTR_FORWARD */ 
+  if (E_OK == stdReturn)
+  {
+    {
+      Dcm_UtiSetResDataAsU8Rel(pMsgContext, 0u, Dcm_UtiGetHiByte(dataOutOut_New_Data_Object));  /* SBSW_DCM_GEN_PARAM_PTR_FORWARD */
+      Dcm_UtiSetResDataAsU8Rel(pMsgContext, 1u, Dcm_UtiGetLoByte(dataOutOut_New_Data_Object));  /* SBSW_DCM_GEN_PARAM_PTR_FORWARD */
+    }
+  }
+  return stdReturn;
+}
+/***********************************************************************************************************************
+ *  Dcm_RidMgr_0105_RequestResults()
+ ***********************************************************************************************************************/
+/* Implements CDD Dcm_RidMgr<XXX>() */
+DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_RidMgr_0105_RequestResults(
+  Dcm_OpStatusType OpStatus,
+  Dcm_MsgContextPtrType pMsgContext,  /* PRQA S 3673 */ /* MD_Dcm_APIStd_3673 */
+  Dcm_RidMgrRidLengthPtrType DataLength,  /* PRQA S 3673 */ /* MD_Dcm_APIStd_3673 */
+  Dcm_NegativeResponseCodePtrType ErrorCode  /* PRQA S 3673 */ /* MD_Dcm_APIStd_3673 */
+  )
+{
+  uint16 dataOutOut_New_Data_Object;
+  Std_ReturnType stdReturn;
+
+  DCM_IGNORE_UNREF_PARAM(DataLength);  /* PRQA S 3112 */ /* MD_MSR_DummyStmt */
+
+  stdReturn = Rte_Call_RoutineServices_Vcu_Roution_00_RequestResults(
+                OpStatus,
+                &dataOutOut_New_Data_Object,
+                ErrorCode
+                );  /* SBSW_DCM_GEN_COMB_PARAM_PTR_FORWARD */ 
+  if (E_OK == stdReturn)
+  {
+    {
+      Dcm_UtiSetResDataAsU8Rel(pMsgContext, 0u, Dcm_UtiGetHiByte(dataOutOut_New_Data_Object));  /* SBSW_DCM_GEN_PARAM_PTR_FORWARD */
+      Dcm_UtiSetResDataAsU8Rel(pMsgContext, 1u, Dcm_UtiGetLoByte(dataOutOut_New_Data_Object));  /* SBSW_DCM_GEN_PARAM_PTR_FORWARD */
+    }
+  }
+  return stdReturn;
+}
+/***********************************************************************************************************************
  *  Dcm_ServiceNoPostProcessor()
  ***********************************************************************************************************************/
 /* Implements CDD Dcm_ServiceNoPostProcessor() */
@@ -1131,6 +1349,20 @@ DCM_LOCAL FUNC(void, DCM_CALLOUT_CODE) Dcm_ServiceNoCancel(
 {
   DCM_IGNORE_UNREF_PARAM(pContext);  /* PRQA S 3112 */ /* MD_MSR_DummyStmt */
   /* nothing to do */
+}
+/***********************************************************************************************************************
+ *  Dcm_SubSvcWrapper_DcmService_HardReset()
+ ***********************************************************************************************************************/
+/* Implements CDD Dcm_SubSvcWrapper_<XXX>() */
+DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_SubSvcWrapper_DcmService_HardReset(
+  Dcm_ContextPtrType pContext,  /* PRQA S 3673 */ /* MD_Dcm_APIStd_3673 */
+  Dcm_OpStatusType opStatus,
+  Dcm_MsgContextPtrType pMsgContext,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  )
+{
+  DCM_IGNORE_UNREF_PARAM(pContext);  /* PRQA S 3112 */ /* MD_MSR_DummyStmt */
+  return DcmService_HardReset(opStatus, pMsgContext, ErrorCode);  /* SBSW_DCM_GEN_PARAM_PTR_FORWARD */
 }
 #define DCM_STOP_SEC_CALLOUT_CODE
 #include "MemMap.h"                                                                                                                                  /* PRQA S 5087 */ /* MD_MSR_MemMap */

@@ -2,39 +2,75 @@ ASAP2_VERSION 1 51
 /begin PROJECT Project_VCU ""
     /begin MODULE Module_1 ""
 
-        /begin IF_DATA ASAP1B_CCP 
-            /begin RASTER
-                "XcpEventChannel_10MS" "" 0 1 1
-            /end RASTER
-            /begin RASTER
-                "XcpEventChannel_20MS" "" 1 2 1
-            /end RASTER
-            /begin SEED_KEY
-                "" "" ""
-            /end SEED_KEY
-            /begin TP_BLOB
-                0x201 0x206  0x00000606 0x00000607 0x00000000 0x02
-                BAUDRATE 0x3D090
-                SAMPLE_POINT 0x4B
-                SAMPLE_RATE 0x1
-                BTL_CYCLES 0x8
-                SJW 0x2
-                SYNC_EDGE SINGLE 
-                DAQ_MODE BURST 
-                BYTES_ONLY 
-                CONSISTENCY ODT
-                ADDRESS_EXTENSION DAQ
-                /begin CHECKSUM_PARAM
-                    0x3 0x0
-                /end CHECKSUM_PARAM
-                OPTIONAL_CMD 0xF 
-                OPTIONAL_CMD 0x23 
-                OPTIONAL_CMD 0xE
-            /end TP_BLOB
+        /begin IF_DATA XCP
+            /begin PROTOCOL_LAYER
+                0x0100
+                0x07D0
+                0x2710
+                0
+                0
+                0
+                0
+                0
+                0x08
+                0x0008
+                BYTE_ORDER_MSB_LAST
+                ADDRESS_GRANULARITY_BYTE
+                SEED_AND_KEY_EXTERNAL_FUNCTION ""
+            /end PROTOCOL_LAYER
+            /begin DAQ
+                DYNAMIC
+                0x0000
+                0x0002
+                0x00
+                OPTIMISATION_TYPE_DEFAULT
+                ADDRESS_EXTENSION_FREE
+                IDENTIFICATION_FIELD_TYPE_ABSOLUTE
+                GRANULARITY_ODT_ENTRY_SIZE_DAQ_BYTE
+                0x07
+                OVERLOAD_INDICATION_PID
+                /begin TIMESTAMP_SUPPORTED
+                    0x0010
+                    SIZE_WORD
+                    UNIT_100NS
+                /end TIMESTAMP_SUPPORTED
+                /begin EVENT
+                    "XcpEventChannel_10MS"
+                    "XcpEventChannel_10MS"
+                    0x0000
+                    DAQ
+                    0xFF
+                    0x01
+                    0x06
+                    0x00
+                /end EVENT
+                /begin EVENT
+                    "XcpEventChannel_20MS"
+                    "XcpEventChannel_10MS"
+                    0x0001
+                    DAQ
+                    0xFF
+                    0x02
+                    0x06
+                    0x00
+                /end EVENT
+            /end DAQ
+            /begin XCP_ON_CAN
+                0x00000000
+                0x00000606
+                0x00000607
+                500000
+                50
+                SINGLE
+                0
+                0
+                SINGLE
+                0
+            /end XCP_ON_CAN
         /end IF_DATA
 
         /begin MOD_COMMON ""
-            BYTE_ORDER MSB_FIRST
+            BYTE_ORDER MSB_LAST
         /end MOD_COMMON
 
         /begin MEASUREMENT Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._0
@@ -46,7 +82,7 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x7000A65C
+            ECU_ADDRESS 0x7000A658
             FORMAT "%0.15"
         /end MEASUREMENT
 
@@ -59,7 +95,7 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x7000A65D
+            ECU_ADDRESS 0x7000A659
             FORMAT "%0.15"
         /end MEASUREMENT
 
@@ -72,7 +108,7 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x7000A65E
+            ECU_ADDRESS 0x7000A65A
             FORMAT "%0.15"
         /end MEASUREMENT
 
@@ -85,7 +121,7 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x7000A65F
+            ECU_ADDRESS 0x7000A65B
             FORMAT "%0.15"
         /end MEASUREMENT
 
@@ -98,7 +134,7 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x70008E0A
+            ECU_ADDRESS 0x70008E0C
             FORMAT "%0.15"
         /end MEASUREMENT
 
@@ -111,7 +147,7 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x70008E09
+            ECU_ADDRESS 0x70008E0B
             FORMAT "%0.15"
         /end MEASUREMENT
 
@@ -124,9 +160,23 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x70008E0C
+            ECU_ADDRESS 0x70008E0E
             FORMAT "%0.15"
         /end MEASUREMENT
+
+        /begin CHARACTERISTIC CDD_MyApp.c_Calib_Sig
+            ""
+            VALUE
+            0x80000CDC
+            __UBYTE_S
+            0
+            DEFAULT_CM
+            0
+            255
+            EXTENDED_LIMITS 0 255
+            BIT_MASK 0x000000FF
+            FORMAT "%0.15"
+        /end CHARACTERISTIC
 
         /begin COMPU_METHOD DEFAULT_CM
             ""
@@ -135,6 +185,38 @@ ASAP2_VERSION 1 51
             ""
             COEFFS 0 1 0 0 0 1
         /end COMPU_METHOD
+
+        /begin RECORD_LAYOUT __UBYTE_S
+            FNC_VALUES 1 UBYTE ROW_DIR DIRECT
+        /end RECORD_LAYOUT
+
+        /begin RECORD_LAYOUT __SBYTE_S
+            FNC_VALUES 1 SBYTE ROW_DIR DIRECT
+        /end RECORD_LAYOUT
+
+        /begin RECORD_LAYOUT __UWORD_S
+            FNC_VALUES 1 UWORD ROW_DIR DIRECT
+        /end RECORD_LAYOUT
+
+        /begin RECORD_LAYOUT __SWORD_S
+            FNC_VALUES 1 SWORD ROW_DIR DIRECT
+        /end RECORD_LAYOUT
+
+        /begin RECORD_LAYOUT __ULONG_S
+            FNC_VALUES 1 ULONG ROW_DIR DIRECT
+        /end RECORD_LAYOUT
+
+        /begin RECORD_LAYOUT __SLONG_S
+            FNC_VALUES 1 SLONG ROW_DIR DIRECT
+        /end RECORD_LAYOUT
+
+        /begin RECORD_LAYOUT __FLOAT32_IEEE_S
+            FNC_VALUES 1 FLOAT32_IEEE ROW_DIR DIRECT
+        /end RECORD_LAYOUT
+
+        /begin RECORD_LAYOUT __FLOAT64_IEEE_S
+            FNC_VALUES 1 FLOAT64_IEEE ROW_DIR DIRECT
+        /end RECORD_LAYOUT
 
     /end MODULE
 /end PROJECT

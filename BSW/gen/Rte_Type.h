@@ -147,9 +147,6 @@ typedef uint8 Dcm_ControlDtcSettingType;
 # define Rte_TypeDef_Dcm_DiagnosticSessionControlType
 typedef uint8 Dcm_DiagnosticSessionControlType;
 
-# define Rte_TypeDef_Dcm_EcuResetType
-typedef uint8 Dcm_EcuResetType;
-
 # define Rte_TypeDef_Dcm_NegativeResponseCodeType
 typedef uint8 Dcm_NegativeResponseCodeType;
 
@@ -171,6 +168,12 @@ typedef uint32 Dcm_RequestDataOut_SampleRoutineControl_StartOnly_Out_ResultPrimi
 # define Rte_TypeDef_Dcm_RequestDataOut_SampleRoutineControl_StartOnly_Out_ResultType
 typedef Dcm_RequestDataOut_SampleRoutineControl_StartOnly_Out_ResultPrimitiveType Dcm_RequestDataOut_SampleRoutineControl_StartOnly_Out_ResultType;
 
+# define Rte_TypeDef_Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType
+typedef uint16 Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType;
+
+# define Rte_TypeDef_Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectType
+typedef Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectType;
+
 # define Rte_TypeDef_Dcm_RequestKindType
 typedef uint8 Dcm_RequestKindType;
 
@@ -189,17 +192,41 @@ typedef Dcm_StartDataIn_SampleRoutineControl_In_Option0PrimitiveType Dcm_StartDa
 # define Rte_TypeDef_Dcm_StartDataIn_SampleRoutineControl_StartOnly_In_Option1ArrayType
 typedef uint8 Dcm_StartDataIn_SampleRoutineControl_StartOnly_In_Option1ArrayType;
 
+# define Rte_TypeDef_Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType
+typedef uint16 Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType;
+
+# define Rte_TypeDef_Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectType
+typedef Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectType;
+
 # define Rte_TypeDef_Dcm_StartDataOut_SampleRoutineControl_Out_InitStatePrimitiveType
 typedef uint32 Dcm_StartDataOut_SampleRoutineControl_Out_InitStatePrimitiveType;
 
 # define Rte_TypeDef_Dcm_StartDataOut_SampleRoutineControl_Out_InitStateType
 typedef Dcm_StartDataOut_SampleRoutineControl_Out_InitStatePrimitiveType Dcm_StartDataOut_SampleRoutineControl_Out_InitStateType;
 
+# define Rte_TypeDef_Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType
+typedef uint16 Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType;
+
+# define Rte_TypeDef_Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectType
+typedef Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectType;
+
+# define Rte_TypeDef_Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType
+typedef uint16 Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType;
+
+# define Rte_TypeDef_Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectType
+typedef Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectType;
+
 # define Rte_TypeDef_Dcm_StopDataOut_SampleRoutineControl_Out_StopStatePrimitiveType
 typedef uint32 Dcm_StopDataOut_SampleRoutineControl_Out_StopStatePrimitiveType;
 
 # define Rte_TypeDef_Dcm_StopDataOut_SampleRoutineControl_Out_StopStateType
 typedef Dcm_StopDataOut_SampleRoutineControl_Out_StopStatePrimitiveType Dcm_StopDataOut_SampleRoutineControl_Out_StopStateType;
+
+# define Rte_TypeDef_Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType
+typedef uint16 Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType;
+
+# define Rte_TypeDef_Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectType
+typedef Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectType;
 
 # define Rte_TypeDef_Dem_DTCFormatType
 typedef uint8 Dem_DTCFormatType;
@@ -331,6 +358,7 @@ extern CONST(NvM_Array32Bytes, RTE_CONST) Rte_C_NvM_Array32Bytes_0;
 #  define RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+extern CONST(uint16, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_SWC1_CalibrationParameter;
 extern CONST(NvM_Arry4Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_DefaultValue;
 extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1;
 extern CONST(NvM_Array32Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData2_ROM_NVBlockDescriptor_UserData2;
@@ -382,6 +410,7 @@ typedef unsigned int Rte_BitType;
 #  define RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+extern CONST(uint16, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_SWC1_CalibrationParameter; /* PRQA S 3408 */ /* MD_Rte_3408 */
 extern CONST(NvM_Arry4Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_DefaultValue; /* PRQA S 3408 */ /* MD_Rte_3408 */
 extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1; /* PRQA S 3408 */ /* MD_Rte_3408 */
 extern CONST(NvM_Array32Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData2_ROM_NVBlockDescriptor_UserData2; /* PRQA S 3408 */ /* MD_Rte_3408 */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Lcfg.h
- *   Generation Time: 2024-10-28 14:08:03
+ *   Generation Time: 2024-11-01 15:23:38
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -2170,7 +2170,7 @@ FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_RepeaterDeadEnd(
   Dcm_NegativeResponseCodePtrType ErrorCode
   );
 /***********************************************************************************************************************
- *  Dcm_Service11_01Processor()
+ *  DcmService_HardReset()
  ***********************************************************************************************************************/
 /*! \brief         Processes a received diagnostic sub-service request.
  *  \details       DCM calls a function of this kind as soon as a supported diagnostic sub-service, configured to be
@@ -2178,25 +2178,26 @@ FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_RepeaterDeadEnd(
  *                 forwarded by DCM through the pMsgContext function parameter.
  *                 The concrete name of the callout is defined by the configuration
  *                 parameter/Dcm/DcmConfigSet/DcmDsd/DcmDsdServiceTable/DcmDsdService/DcmDsdSubService/DcmDsdSubServiceFnc.
- *  \param[in]     pContext             Pointer to the context
- *  \param[in]     opStatus             The operation status
- *  \param[in,out] pMsgContext          Message-related information for one diagnostic protocol identifier
- *                                      The pointers in pMsgContext points behind the sub-function.
- *  \param[out]    ErrorCode            Negative response code in case return value is DCM_E_NOT_OK
- *  \return        DCM_E_OK             Job processing finished, send positive response
- *  \return        DCM_E_PENDING        Job processing is not yet finished
- *  \return        DCM_E_FORCE_RCRRP    (Vendor extension) Forces a RCR-RP response.
- *                                      The call out will called again once the response is sent. The OpStatus parameter
- *                                      will contain the transmission result
- *  \return        DCM_E_STOP_REPEATER  Stops the repeater proxy
- *  \return        DCM_E_NOT_OK         Job processing finished, send NRC from the ErrorCode
+ *  \param[in]     opStatus              The operation status
+ *  \param[in,out] pMsgContext           Message-related information for one diagnostic protocol identifier
+ *                                       The pointers in pMsgContext points behind the sub-function.
+ *  \param[out]    ErrorCode             Negative response code in case return value is DCM_E_NOT_OK
+ *  \return        DCM_E_OK              Job processing finished, send positive response
+ *  \return        DCM_E_PENDING         Job processing is not yet finished
+ *  \return        DCM_E_FORCE_RCRRP     (Vendor extension) Forces a RCR-RP response.
+ *                                       The call out will called again once the response is sent. The OpStatus
+ *                                       parameter will contain the transmission result
+ *  \return        DCM_E_PROCESSINGDONE  (Vendor extension) Can be returned instead of calling Dcm_ProcessingDone() for
+ *                                       the current pMsgContext.
+ *                                       Saves application code and stack usage.
+ *  \return        DCM_E_STOP_REPEATER   Stops the repeater proxy
+ *  \return        DCM_E_NOT_OK          Job processing finished, send NRC from the ErrorCode
  *  \context       TASK
  *  \reentrant     FALSE
  *  \synchronous   FALSE
  *  \pre           -
  ***********************************************************************************************************************/
-FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_Service11_01Processor(
-  Dcm_ContextPtrType pContext,
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) DcmService_HardReset(
   Dcm_OpStatusType opStatus,
   Dcm_MsgContextPtrType pMsgContext,
   Dcm_NegativeResponseCodePtrType ErrorCode
@@ -2759,7 +2760,7 @@ extern CONST(uint8, DCM_CONST) Dcm_CfgSvc85SubFuncLookUpTable[3];
 /*! DID look up table  */
 extern CONST(uint16, DCM_CONST) Dcm_CfgDidMgrDidLookUpTable[11];
 /*! RID look up table  */
-extern CONST(uint16, DCM_CONST) Dcm_CfgRidMgrRidLookUpTable[3];
+extern CONST(uint16, DCM_CONST) Dcm_CfgRidMgrRidLookUpTable[4];
 # define DCM_STOP_SEC_CONST_16
 # include "MemMap.h"                                                                                                                                 /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -2804,9 +2805,9 @@ extern CONST(Dcm_CfgDidMgrSignalOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrSignalO
 /*! Dynamically Defined DID operation properties */
 extern CONST(Dcm_CfgDidMgrOpInfoDefineType, DCM_CONST) Dcm_CfgDidMgrOpInfoDefine[1];
 /*! RID properties */
-extern CONST(Dcm_CfgRidMgrRidInfoType, DCM_CONST) Dcm_CfgRidMgrRidInfo[2];
+extern CONST(Dcm_CfgRidMgrRidInfoType, DCM_CONST) Dcm_CfgRidMgrRidInfo[3];
 /*! RID operation properties */
-extern CONST(Dcm_CfgRidMgrOpInfoType, DCM_CONST) Dcm_CfgRidMgrOpInfo[5];
+extern CONST(Dcm_CfgRidMgrOpInfoType, DCM_CONST) Dcm_CfgRidMgrOpInfo[8];
 /*! Properties of the MIDs */
 extern CONST(Dcm_CfgMemMgrMemIdInfoType, DCM_CONST) Dcm_CfgMemMgrMidInfo[1];
 /*! Properties of the memory map of a specific MID */

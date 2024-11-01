@@ -23,42 +23,6 @@
               </MODE-DECLARATIONS>
               <ON-TRANSITION-VALUE>2</ON-TRANSITION-VALUE>
             </MODE-DECLARATION-GROUP>
-            <MODE-DECLARATION-GROUP UUID="d18c2a2e-c62d-4d7d-b3a0-05b594c04c4c">
-              <SHORT-NAME>DcmEcuReset</SHORT-NAME>
-              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
-              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MICROSAR/Dcm_swc/DcmEcuReset/NONE</INITIAL-MODE-REF>
-              <MODE-DECLARATIONS>
-                <MODE-DECLARATION UUID="9e9f1595-e4df-42a2-b098-f0bf940538bc">
-                  <SHORT-NAME>NONE</SHORT-NAME>
-                  <VALUE>0</VALUE>
-                </MODE-DECLARATION>
-                <MODE-DECLARATION UUID="9f502e74-9b09-41df-8ca6-cd52b0e39e20">
-                  <SHORT-NAME>HARD</SHORT-NAME>
-                  <VALUE>1</VALUE>
-                </MODE-DECLARATION>
-                <MODE-DECLARATION UUID="a3e385d1-6d14-4e2c-81c4-46a1678ed65b">
-                  <SHORT-NAME>KEYONOFF</SHORT-NAME>
-                  <VALUE>2</VALUE>
-                </MODE-DECLARATION>
-                <MODE-DECLARATION UUID="df539e59-6031-471e-9fb6-b19b6d76da26">
-                  <SHORT-NAME>SOFT</SHORT-NAME>
-                  <VALUE>3</VALUE>
-                </MODE-DECLARATION>
-                <MODE-DECLARATION UUID="ac819098-1114-4014-984e-7aaf7c82a967">
-                  <SHORT-NAME>JUMPTOBOOTLOADER</SHORT-NAME>
-                  <VALUE>4</VALUE>
-                </MODE-DECLARATION>
-                <MODE-DECLARATION UUID="3bf5eefb-d432-4e91-aac1-165ddaa62d66">
-                  <SHORT-NAME>JUMPTOSYSSUPPLIERBOOTLOADER</SHORT-NAME>
-                  <VALUE>5</VALUE>
-                </MODE-DECLARATION>
-                <MODE-DECLARATION UUID="ac7b6a35-cc33-4bdc-aa0c-e0fd55fba85d">
-                  <SHORT-NAME>EXECUTE</SHORT-NAME>
-                  <VALUE>6</VALUE>
-                </MODE-DECLARATION>
-              </MODE-DECLARATIONS>
-              <ON-TRANSITION-VALUE>7</ON-TRANSITION-VALUE>
-            </MODE-DECLARATION-GROUP>
             <MODE-DECLARATION-GROUP UUID="291c7b12-d382-486a-95ad-5c1050e11aae">
               <SHORT-NAME>DcmDiagnosticSessionControl</SHORT-NAME>
               <CATEGORY>EXPLICIT_ORDER</CATEGORY>
@@ -135,7 +99,7 @@
               </MODE-DECLARATIONS>
               <ON-TRANSITION-VALUE>12</ON-TRANSITION-VALUE>
             </MODE-DECLARATION-GROUP>
-            <DATA-TYPE-MAPPING-SET UUID="088f1f69-fb6c-4be9-b0aa-2c2cdde878df">
+            <DATA-TYPE-MAPPING-SET UUID="5b4fa98c-3015-435b-904a-e585aea1a46e">
               <SHORT-NAME>DcmMappingSet</SHORT-NAME>
               <DESC>
                 <L-2 L="FOR-ALL">Contains mapping for ModeDeclarationGroups which are provided by Dcm.</L-2>
@@ -144,10 +108,6 @@
                 <MODE-REQUEST-TYPE-MAP>
                   <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_ControlDtcSettingType</IMPLEMENTATION-DATA-TYPE-REF>
                   <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MICROSAR/Dcm_swc/DcmControlDtcSetting</MODE-GROUP-REF>
-                </MODE-REQUEST-TYPE-MAP>
-                <MODE-REQUEST-TYPE-MAP>
-                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_EcuResetType</IMPLEMENTATION-DATA-TYPE-REF>
-                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MICROSAR/Dcm_swc/DcmEcuReset</MODE-GROUP-REF>
                 </MODE-REQUEST-TYPE-MAP>
                 <MODE-REQUEST-TYPE-MAP>
                   <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_DiagnosticSessionControlType</IMPLEMENTATION-DATA-TYPE-REF>
@@ -263,19 +223,6 @@
                       <SW-DATA-DEF-PROPS-CONDITIONAL>
                         <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_ControlDtcSettingType</COMPU-METHOD-REF>
                         <DATA-CONSTR-REF DEST="DATA-CONSTR">/MICROSAR/Dcm_swc/DataTypes/DataConstrs/Dcm_ControlDtcSettingType_Constr</DATA-CONSTR-REF>
-                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
-                      </SW-DATA-DEF-PROPS-CONDITIONAL>
-                    </SW-DATA-DEF-PROPS-VARIANTS>
-                  </SW-DATA-DEF-PROPS>
-                </IMPLEMENTATION-DATA-TYPE>
-                <IMPLEMENTATION-DATA-TYPE UUID="f43fbcf8-8b4e-4393-bb0e-9726f3637da7">
-                  <SHORT-NAME>Dcm_EcuResetType</SHORT-NAME>
-                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
-                  <SW-DATA-DEF-PROPS>
-                    <SW-DATA-DEF-PROPS-VARIANTS>
-                      <SW-DATA-DEF-PROPS-CONDITIONAL>
-                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_EcuResetType</COMPU-METHOD-REF>
-                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/MICROSAR/Dcm_swc/DataTypes/DataConstrs/Dcm_EcuResetType_Constr</DATA-CONSTR-REF>
                         <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
                       </SW-DATA-DEF-PROPS-CONDITIONAL>
                     </SW-DATA-DEF-PROPS-VARIANTS>
@@ -584,6 +531,116 @@
                     </IMPLEMENTATION-DATA-TYPE-ELEMENT>
                   </SUB-ELEMENTS>
                 </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="43948128-72ac-4ec8-aee5-638c6f21fd26">
+                  <SHORT-NAME>Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="69a0f0aa-85ba-4db9-a61b-a25f571abeb2">
+                  <SHORT-NAME>Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="39c7f53f-7fab-4aaf-aa09-c66854df003a">
+                  <SHORT-NAME>Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="509f97aa-098b-4bde-9c1c-5665cb502008">
+                  <SHORT-NAME>Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="bdf42608-a1a9-4579-96d0-d4a762b5cba2">
+                  <SHORT-NAME>Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="d0269b4e-5747-4abb-965f-2faf69d3cce4">
+                  <SHORT-NAME>Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="533288c3-9406-405e-b630-fa5c4e23dbd6">
+                  <SHORT-NAME>Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="01c07c32-258e-4d0b-a944-c650e49df9f7">
+                  <SHORT-NAME>Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="e0bee3a8-df0e-4b89-b8fc-5bcc8fdee2db">
+                  <SHORT-NAME>Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="253f87d4-531c-4ea4-bca4-1995ee951c98">
+                  <SHORT-NAME>Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectType</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
               </ELEMENTS>
               <AR-PACKAGES>
                 <AR-PACKAGE UUID="81d8666d-ec7f-4c9d-9e96-e11741c4d52e">
@@ -668,17 +725,6 @@
                     </DATA-CONSTR>
                     <DATA-CONSTR UUID="883e3913-9d64-4604-8832-40e5214d1cdf">
                       <SHORT-NAME>Dcm_ControlDtcSettingType_Constr</SHORT-NAME>
-                      <DATA-CONSTR-RULES>
-                        <DATA-CONSTR-RULE>
-                          <INTERNAL-CONSTRS>
-                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
-                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
-                          </INTERNAL-CONSTRS>
-                        </DATA-CONSTR-RULE>
-                      </DATA-CONSTR-RULES>
-                    </DATA-CONSTR>
-                    <DATA-CONSTR UUID="b723d555-b034-4e97-aa68-54fd5b1ccfe5">
-                      <SHORT-NAME>Dcm_EcuResetType_Constr</SHORT-NAME>
                       <DATA-CONSTR-RULES>
                         <DATA-CONSTR-RULE>
                           <INTERNAL-CONSTRS>
@@ -1651,70 +1697,6 @@
                         </COMPU-SCALES>
                       </COMPU-INTERNAL-TO-PHYS>
                     </COMPU-METHOD>
-                    <COMPU-METHOD UUID="fed8b5a2-1feb-4fff-8901-50c783ebc3c3">
-                      <SHORT-NAME>Dcm_EcuResetType</SHORT-NAME>
-                      <CATEGORY>TEXTTABLE</CATEGORY>
-                      <COMPU-INTERNAL-TO-PHYS>
-                        <COMPU-SCALES>
-                          <COMPU-SCALE>
-                            <SHORT-LABEL>DCM_ENUM_NONE</SHORT-LABEL>
-                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
-                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
-                            <COMPU-CONST>
-                              <VT>DCM_ENUM_NONE</VT>
-                            </COMPU-CONST>
-                          </COMPU-SCALE>
-                          <COMPU-SCALE>
-                            <SHORT-LABEL>DCM_ENUM_HARD</SHORT-LABEL>
-                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
-                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
-                            <COMPU-CONST>
-                              <VT>DCM_ENUM_HARD</VT>
-                            </COMPU-CONST>
-                          </COMPU-SCALE>
-                          <COMPU-SCALE>
-                            <SHORT-LABEL>DCM_ENUM_KEYONOFF</SHORT-LABEL>
-                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
-                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
-                            <COMPU-CONST>
-                              <VT>DCM_ENUM_KEYONOFF</VT>
-                            </COMPU-CONST>
-                          </COMPU-SCALE>
-                          <COMPU-SCALE>
-                            <SHORT-LABEL>DCM_ENUM_SOFT</SHORT-LABEL>
-                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
-                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
-                            <COMPU-CONST>
-                              <VT>DCM_ENUM_SOFT</VT>
-                            </COMPU-CONST>
-                          </COMPU-SCALE>
-                          <COMPU-SCALE>
-                            <SHORT-LABEL>DCM_ENUM_JUMPTOBOOTLOADER</SHORT-LABEL>
-                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
-                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
-                            <COMPU-CONST>
-                              <VT>DCM_ENUM_JUMPTOBOOTLOADER</VT>
-                            </COMPU-CONST>
-                          </COMPU-SCALE>
-                          <COMPU-SCALE>
-                            <SHORT-LABEL>DCM_ENUM_JUMPTOSYSSUPPLIERBOOTLOADER</SHORT-LABEL>
-                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
-                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
-                            <COMPU-CONST>
-                              <VT>DCM_ENUM_JUMPTOSYSSUPPLIERBOOTLOADER</VT>
-                            </COMPU-CONST>
-                          </COMPU-SCALE>
-                          <COMPU-SCALE>
-                            <SHORT-LABEL>DCM_ENUM_EXECUTE</SHORT-LABEL>
-                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">6</LOWER-LIMIT>
-                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
-                            <COMPU-CONST>
-                              <VT>DCM_ENUM_EXECUTE</VT>
-                            </COMPU-CONST>
-                          </COMPU-SCALE>
-                        </COMPU-SCALES>
-                      </COMPU-INTERNAL-TO-PHYS>
-                    </COMPU-METHOD>
                     <COMPU-METHOD UUID="ff9bd51e-9008-4f11-b854-50349724d25c">
                       <SHORT-NAME>Dcm_DiagnosticSessionControlType</SHORT-NAME>
                       <CATEGORY>TEXTTABLE</CATEGORY>
@@ -1865,15 +1847,6 @@
                   <MODE-GROUP UUID="a80a2043-228d-4367-ac7f-d12acb5fa886">
                     <SHORT-NAME>DcmControlDtcSetting</SHORT-NAME>
                     <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MICROSAR/Dcm_swc/DcmControlDtcSetting</TYPE-TREF>
-                  </MODE-GROUP>
-                </MODE-SWITCH-INTERFACE>
-                <MODE-SWITCH-INTERFACE UUID="fbdbde9a-54ac-4e54-a9bc-0c5324d06f71">
-                  <SHORT-NAME>DcmEcuReset</SHORT-NAME>
-                  <IS-SERVICE>true</IS-SERVICE>
-                  <SERVICE-KIND>DIAGNOSTIC-COMMUNICATION-MANAGER</SERVICE-KIND>
-                  <MODE-GROUP UUID="bffbed5f-cb7b-4728-a22c-3c6db6c6c24a">
-                    <SHORT-NAME>DcmEcuReset</SHORT-NAME>
-                    <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MICROSAR/Dcm_swc/DcmEcuReset</TYPE-TREF>
                   </MODE-GROUP>
                 </MODE-SWITCH-INTERFACE>
                 <MODE-SWITCH-INTERFACE UUID="bb0cc2e5-0657-4fdf-aa61-eff597c8841a">
@@ -3994,6 +3967,165 @@
                     </APPLICATION-ERROR>
                   </POSSIBLE-ERRORS>
                 </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="da03ee72-0a25-4278-8de5-76d580b6e8b0">
+                  <SHORT-NAME>RoutineServices_Vcu_Roution_00</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="DV:DerivedFromReferrables">
+                        <SDG GID="DV:DerivedFromReferrablesVariant">
+                          <SD GID="DV:InvariantValuesView"/>
+                          <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Dcm/DcmConfigSet/DcmDsp/Vcu_Roution_00</SDX-REF>
+                          <SD GID="DV:DerivedFromReferrablesUUID">a9377e4a-8b19-48bc-be1f-215703b6a42f</SD>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>DIAGNOSTIC-COMMUNICATION-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="4be08fa2-1cd5-4e5d-b23d-0403431d3e0a">
+                      <SHORT-NAME>Start</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="92278304-1c9d-4a9d-8231-37a9f6422a4e">
+                          <SHORT-NAME>In_New_Data_Object</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="0bcd0cce-e3e8-42c4-a4eb-7f3cda4021b7">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="c107823a-eaca-4db1-8114-1f0be9012ddf">
+                          <SHORT-NAME>Out_New_Data_Object</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="8a16664d-e009-42d4-8ccd-428e3c7668e7">
+                          <SHORT-NAME>ErrorCode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_NegativeResponseCodeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00/DCM_E_FORCE_RCRRP</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="fef1f6b2-4d0a-4ae5-ba5a-c5f4c28c96dc">
+                      <SHORT-NAME>Stop</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="b948d377-6f41-424f-a17a-e2b9e97cf341">
+                          <SHORT-NAME>In_New_Data_Object</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="4187e82f-c947-436b-b63f-a04613650f34">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="43d5a767-75cc-4899-8084-597e20472cb0">
+                          <SHORT-NAME>Out_New_Data_Object</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="fbbd0973-502b-465f-9252-25cbe8ef8666">
+                          <SHORT-NAME>ErrorCode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_NegativeResponseCodeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00/DCM_E_FORCE_RCRRP</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="a78ff9d0-9434-42e7-b37f-5e59a058b7cf">
+                      <SHORT-NAME>RequestResults</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="00aae814-203f-4f20-a12a-2b1eda50cc1b">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="6e3a0ed9-10d2-41d4-88cb-3c4365385f2e">
+                          <SHORT-NAME>Out_New_Data_Object</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="98ffd887-0caa-49e5-abcc-25c1bba0eda2">
+                          <SHORT-NAME>ErrorCode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_NegativeResponseCodeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00/DCM_E_FORCE_RCRRP</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="ded5ba24-4ad8-4c7e-a35e-44b43d7608b6">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                    <APPLICATION-ERROR UUID="a739ff0c-6da1-4952-baaf-f3a516be1691">
+                      <SHORT-NAME>DCM_E_PENDING</SHORT-NAME>
+                      <ERROR-CODE>10</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                    <APPLICATION-ERROR UUID="73120443-9273-4fdb-8a8c-a3d2a56fecfd">
+                      <SHORT-NAME>DCM_E_FORCE_RCRRP</SHORT-NAME>
+                      <ERROR-CODE>12</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
               </ELEMENTS>
             </AR-PACKAGE>
             <AR-PACKAGE UUID="a1ac36c4-a97c-424e-84a2-68885ebb29c8">
@@ -4006,18 +4138,6 @@
                     <P-PORT-PROTOTYPE UUID="22df0f95-8e4f-419b-8023-b15fb7c39b04">
                       <SHORT-NAME>DcmControlDtcSetting</SHORT-NAME>
                       <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DcmControlDtcSetting</PROVIDED-INTERFACE-TREF>
-                    </P-PORT-PROTOTYPE>
-                    <P-PORT-PROTOTYPE UUID="5cb66f76-beed-4a63-8ac0-33f218de1345">
-                      <SHORT-NAME>DcmEcuReset</SHORT-NAME>
-                      <PROVIDED-COM-SPECS>
-                        <MODE-SWITCH-SENDER-COM-SPEC>
-                          <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/Dcm_swc/Interfaces/DcmEcuReset/DcmEcuReset</MODE-GROUP-REF>
-                          <MODE-SWITCHED-ACK>
-                            <TIMEOUT>0</TIMEOUT>
-                          </MODE-SWITCHED-ACK>
-                        </MODE-SWITCH-SENDER-COM-SPEC>
-                      </PROVIDED-COM-SPECS>
-                      <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DcmEcuReset</PROVIDED-INTERFACE-TREF>
                     </P-PORT-PROTOTYPE>
                     <P-PORT-PROTOTYPE UUID="ed1e2bf8-296c-4ef7-a639-2d84feed9e66">
                       <SHORT-NAME>DcmDiagnosticSessionControl</SHORT-NAME>
@@ -4257,6 +4377,10 @@
                       </ADMIN-DATA>
                       <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DataServices_DataDiagnosticIdentifier_DID_DataDiagnosticIdentifier</REQUIRED-INTERFACE-TREF>
                     </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="db5084a1-3e2f-4ed4-8073-195332f4f497">
+                      <SHORT-NAME>RoutineServices_Vcu_Roution_00</SHORT-NAME>
+                      <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
                   </PORTS>
                   <INTERNAL-BEHAVIORS>
                     <SWC-INTERNAL-BEHAVIOR UUID="b8d3fa7a-7b0c-4f84-a474-4c9eb594cc11">
@@ -4331,7 +4455,6 @@
                             <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_SecLevelType</DATA-TYPE-REF>
                             <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_SesCtrlType</DATA-TYPE-REF>
                             <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_ControlDtcSettingType</DATA-TYPE-REF>
-                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_EcuResetType</DATA-TYPE-REF>
                             <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_DiagnosticSessionControlType</DATA-TYPE-REF>
                             <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_CommunicationModeType</DATA-TYPE-REF>
                           </DATA-TYPE-REFS>
@@ -4342,11 +4465,6 @@
                           <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
                           <INDIRECT-API>false</INDIRECT-API>
                           <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmControlDtcSetting</PORT-REF>
-                        </PORT-API-OPTION>
-                        <PORT-API-OPTION>
-                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
-                          <INDIRECT-API>false</INDIRECT-API>
-                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmEcuReset</PORT-REF>
                         </PORT-API-OPTION>
                         <PORT-API-OPTION>
                           <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
@@ -4382,6 +4500,11 @@
                           <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
                           <INDIRECT-API>false</INDIRECT-API>
                           <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/RoutineServices_SampleRoutineControl_StartOnly</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/RoutineServices_Vcu_Roution_00</PORT-REF>
                         </PORT-API-OPTION>
                         <PORT-API-OPTION>
                           <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
@@ -4465,13 +4588,6 @@
                               <MODE-GROUP-IREF>
                                 <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmControlDtcSetting</CONTEXT-P-PORT-REF>
                                 <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/Dcm_swc/Interfaces/DcmControlDtcSetting/DcmControlDtcSetting</TARGET-MODE-GROUP-REF>
-                              </MODE-GROUP-IREF>
-                            </MODE-SWITCH-POINT>
-                            <MODE-SWITCH-POINT UUID="6a1c9c43-8c22-4749-af9e-8988cc526e2b">
-                              <SHORT-NAME>ModeSwitchPointDcm_MainFunction_DcmEcuReset_DcmEcuReset</SHORT-NAME>
-                              <MODE-GROUP-IREF>
-                                <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmEcuReset</CONTEXT-P-PORT-REF>
-                                <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/Dcm_swc/Interfaces/DcmEcuReset/DcmEcuReset</TARGET-MODE-GROUP-REF>
                               </MODE-GROUP-IREF>
                             </MODE-SWITCH-POINT>
                             <MODE-SWITCH-POINT UUID="ed257b24-cb85-474f-8e70-d87c596d4018">
@@ -4895,6 +5011,30 @@
                               <OPERATION-IREF>
                                 <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_DataDiagnosticIdentifier_DID_DataDiagnosticIdentifier</CONTEXT-R-PORT-REF>
                                 <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_DataDiagnosticIdentifier_DID_DataDiagnosticIdentifier/WriteData</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="20444b96-dd68-437c-8ba7-7f5e75439a84">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_Start_RoutineServices_Vcu_Roution_00</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/RoutineServices_Vcu_Roution_00</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00/Start</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="a730fabe-0174-421c-b02b-546cde74d100">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_Stop_RoutineServices_Vcu_Roution_00</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/RoutineServices_Vcu_Roution_00</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00/Stop</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="a81402ad-7e78-416f-982d-9483439b211d">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_RequestResults_RoutineServices_Vcu_Roution_00</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/RoutineServices_Vcu_Roution_00</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00/RequestResults</TARGET-REQUIRED-OPERATION-REF>
                               </OPERATION-IREF>
                               <TIMEOUT>0</TIMEOUT>
                             </SYNCHRONOUS-SERVER-CALL-POINT>

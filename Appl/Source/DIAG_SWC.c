@@ -59,6 +59,86 @@
  *      
  *      For example: 1, 0, 126, +10.
  *
+ * Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType
+ *   uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
+ *      The order-relation on uint16 is: x < y if y - x is positive.
+ *      uint16 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 1267, +10000.
+ *
+ * Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectType
+ *   uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
+ *      The order-relation on uint16 is: x < y if y - x is positive.
+ *      uint16 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 1267, +10000.
+ *
+ * Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType
+ *   uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
+ *      The order-relation on uint16 is: x < y if y - x is positive.
+ *      uint16 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 1267, +10000.
+ *
+ * Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectType
+ *   uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
+ *      The order-relation on uint16 is: x < y if y - x is positive.
+ *      uint16 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 1267, +10000.
+ *
+ * Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType
+ *   uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
+ *      The order-relation on uint16 is: x < y if y - x is positive.
+ *      uint16 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 1267, +10000.
+ *
+ * Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectType
+ *   uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
+ *      The order-relation on uint16 is: x < y if y - x is positive.
+ *      uint16 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 1267, +10000.
+ *
+ * Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType
+ *   uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
+ *      The order-relation on uint16 is: x < y if y - x is positive.
+ *      uint16 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 1267, +10000.
+ *
+ * Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectType
+ *   uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
+ *      The order-relation on uint16 is: x < y if y - x is positive.
+ *      uint16 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 1267, +10000.
+ *
+ * Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType
+ *   uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
+ *      The order-relation on uint16 is: x < y if y - x is positive.
+ *      uint16 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 1267, +10000.
+ *
+ * Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectType
+ *   uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
+ *      The order-relation on uint16 is: x < y if y - x is positive.
+ *      uint16 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 1267, +10000.
+ *
  * NvM_RequestResultType
  *   uint8 represents integers with a minimum value of 0 and a maximum value of 255.
  *      The order-relation on uint8 is: x < y if y - x is positive.
@@ -90,9 +170,20 @@
  *
  * Primitive Types:
  * ================
+ * Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType: Integer in interval [0...65535]
+ * Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectType: Integer in interval [0...65535]
+ * Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType: Integer in interval [0...65535]
+ * Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectType: Integer in interval [0...65535]
+ * Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType: Integer in interval [0...65535]
+ * Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectType: Integer in interval [0...65535]
+ * Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectPrimitiveType: Integer in interval [0...65535]
+ * Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectType: Integer in interval [0...65535]
+ * Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectPrimitiveType: Integer in interval [0...65535]
+ * Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectType: Integer in interval [0...65535]
  * boolean: Boolean (standard type)
  * dtRef_VOID: DataReference
  * dtRef_const_VOID: DataReference
+ * uint16: Integer in interval [0...65535] (standard type)
  * uint8: Integer in interval [0...255] (standard type)
  *
  * Enumeration Types:
@@ -397,6 +488,150 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_VCU_DID_00_DataRecord_WriteData
   /* Write While NvM_WriteAll()*/
   Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_SetRamBlockStatus(TRUE);
 
+  return RTE_E_OK;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: RoutineServices_Vcu_Roution_00_RequestResults
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <RequestResults> of PortPrototype <RoutineServices_Vcu_Roution_00>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType RoutineServices_Vcu_Roution_00_RequestResults(Dcm_OpStatusType OpStatus, Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectType *Out_New_Data_Object, Dcm_NegativeResponseCodeType *ErrorCode)
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_RoutineServices_Vcu_Roution_00_DCM_E_FORCE_RCRRP
+ *   RTE_E_RoutineServices_Vcu_Roution_00_DCM_E_PENDING
+ *   RTE_E_RoutineServices_Vcu_Roution_00_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: RoutineServices_Vcu_Roution_00_RequestResults_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_RequestResults(Dcm_OpStatusType OpStatus, P2VAR(Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Out_New_Data_Object, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: RoutineServices_Vcu_Roution_00_RequestResults (returns application error)
+ *********************************************************************************************************************/
+
+  return RTE_E_OK;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: RoutineServices_Vcu_Roution_00_Start
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <Start> of PortPrototype <RoutineServices_Vcu_Roution_00>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType RoutineServices_Vcu_Roution_00_Start(Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectType In_New_Data_Object, Dcm_OpStatusType OpStatus, Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectType *Out_New_Data_Object, Dcm_NegativeResponseCodeType *ErrorCode)
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_RoutineServices_Vcu_Roution_00_DCM_E_FORCE_RCRRP
+ *   RTE_E_RoutineServices_Vcu_Roution_00_DCM_E_PENDING
+ *   RTE_E_RoutineServices_Vcu_Roution_00_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: RoutineServices_Vcu_Roution_00_Start_doc
+ *********************************************************************************************************************/
+uint16 LED_In = 0XFF;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_Start(Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectType In_New_Data_Object, Dcm_OpStatusType OpStatus, P2VAR(Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Out_New_Data_Object, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: RoutineServices_Vcu_Roution_00_Start (returns application error)
+ *********************************************************************************************************************/
+  LED_In = In_New_Data_Object;
+  return RTE_E_OK;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: RoutineServices_Vcu_Roution_00_Stop
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <Stop> of PortPrototype <RoutineServices_Vcu_Roution_00>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType RoutineServices_Vcu_Roution_00_Stop(Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectType In_New_Data_Object, Dcm_OpStatusType OpStatus, Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectType *Out_New_Data_Object, Dcm_NegativeResponseCodeType *ErrorCode)
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_RoutineServices_Vcu_Roution_00_DCM_E_FORCE_RCRRP
+ *   RTE_E_RoutineServices_Vcu_Roution_00_DCM_E_PENDING
+ *   RTE_E_RoutineServices_Vcu_Roution_00_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: RoutineServices_Vcu_Roution_00_Stop_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_Stop(Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectType In_New_Data_Object, Dcm_OpStatusType OpStatus, P2VAR(Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Out_New_Data_Object, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: RoutineServices_Vcu_Roution_00_Stop (returns application error)
+ *********************************************************************************************************************/
+  LED_In = 0xFF;
   return RTE_E_OK;
 
 /**********************************************************************************************************************

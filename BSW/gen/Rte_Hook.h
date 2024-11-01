@@ -130,6 +130,12 @@
  *  Rte_CallHook_Dcm_RoutineServices_SampleRoutineControl_Start_Start
  *  Rte_CallHook_Dcm_RoutineServices_SampleRoutineControl_Stop_Return
  *  Rte_CallHook_Dcm_RoutineServices_SampleRoutineControl_Stop_Start
+ *  Rte_CallHook_Dcm_RoutineServices_Vcu_Roution_00_RequestResults_Return
+ *  Rte_CallHook_Dcm_RoutineServices_Vcu_Roution_00_RequestResults_Start
+ *  Rte_CallHook_Dcm_RoutineServices_Vcu_Roution_00_Start_Return
+ *  Rte_CallHook_Dcm_RoutineServices_Vcu_Roution_00_Start_Start
+ *  Rte_CallHook_Dcm_RoutineServices_Vcu_Roution_00_Stop_Return
+ *  Rte_CallHook_Dcm_RoutineServices_Vcu_Roution_00_Stop_Start
  *  Rte_CallHook_Dcm_SecurityAccess_Level_3_CompareKey_Return
  *  Rte_CallHook_Dcm_SecurityAccess_Level_3_CompareKey_Start
  *  Rte_CallHook_Dcm_SecurityAccess_Level_3_GetSeed_Return
@@ -248,6 +254,12 @@
  *  Rte_Runnable_DIAG_SWC_DataServices_VCU_DID_00_DataRecord_ReadData_Start
  *  Rte_Runnable_DIAG_SWC_DataServices_VCU_DID_00_DataRecord_WriteData_Return
  *  Rte_Runnable_DIAG_SWC_DataServices_VCU_DID_00_DataRecord_WriteData_Start
+ *  Rte_Runnable_DIAG_SWC_RoutineServices_Vcu_Roution_00_RequestResults_Return
+ *  Rte_Runnable_DIAG_SWC_RoutineServices_Vcu_Roution_00_RequestResults_Start
+ *  Rte_Runnable_DIAG_SWC_RoutineServices_Vcu_Roution_00_Start_Return
+ *  Rte_Runnable_DIAG_SWC_RoutineServices_Vcu_Roution_00_Start_Start
+ *  Rte_Runnable_DIAG_SWC_RoutineServices_Vcu_Roution_00_Stop_Return
+ *  Rte_Runnable_DIAG_SWC_RoutineServices_Vcu_Roution_00_Stop_Start
  *  Rte_Runnable_Dcm_Dcm_MainFunction_Return
  *  Rte_Runnable_Dcm_Dcm_MainFunction_Start
  *  Rte_Runnable_Dcm_GetActiveProtocol_Return
@@ -400,8 +412,6 @@
  *  Rte_Runnable_SWC1_SWC1_Init_Start
  *  Rte_Runnable_SWC1_SWC1_Runnable10ms_Return
  *  Rte_Runnable_SWC1_SWC1_Runnable10ms_Start
- *  Rte_SwitchAckHook_Dcm_DcmEcuReset_DcmEcuReset_Return
- *  Rte_SwitchAckHook_Dcm_DcmEcuReset_DcmEcuReset_Start
  *  Rte_SwitchHook_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode_Return
  *  Rte_SwitchHook_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode_Start
  *  Rte_SwitchHook_Dcm_DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8_DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8_Return
@@ -410,8 +420,6 @@
  *  Rte_SwitchHook_Dcm_DcmControlDtcSetting_DcmControlDtcSetting_Start
  *  Rte_SwitchHook_Dcm_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl_Return
  *  Rte_SwitchHook_Dcm_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl_Start
- *  Rte_SwitchHook_Dcm_DcmEcuReset_DcmEcuReset_Return
- *  Rte_SwitchHook_Dcm_DcmEcuReset_DcmEcuReset_Start
  *  Rte_Task_Activate
  *  Rte_Task_Dispatch
  *  Rte_Task_SetEvent

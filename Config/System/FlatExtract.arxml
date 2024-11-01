@@ -1422,6 +1422,17 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/PS_DIAG_SWC_NvBlockNeed_DiagDID_00</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="49e4ce71-8535-463b-b2f3-67effea4c69b">
+                                  <SHORT-NAME>DIAG_SWC_RoutineServices_Vcu_Roution_00_Dcm_RoutineServices_Vcu_Roution_00</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/RoutineServices_Vcu_Roution_00</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/RoutineServices_Vcu_Roution_00</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -1477,6 +1488,7 @@
                                     <SD GID="d6107833-7ec4-46b6-bd77-dc484cc238be">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</SD>
                                     <SD GID="c7476a1f-c034-404b-b974-33b412a9cd72">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</SD>
                                     <SD GID="7b9bae3f-1472-40a2-bd22-8b46d173ee7a">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_DataServices_VCU_DID_00_DataRecord_Dcm_DataServices_VCU_DID_00_DataRecord</SD>
+                                    <SD GID="49e4ce71-8535-463b-b2f3-67effea4c69b">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_RoutineServices_Vcu_Roution_00_Dcm_RoutineServices_Vcu_Roution_00</SD>
                                     <SD GID="52f38fb1-f1fa-4839-bd5d-87d5584a122e">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</SD>
                                     <SD GID="dbd7af71-8f1f-4737-b93f-d0ed84b9ef39">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</SD>
                                     <SD GID="9d4b98fd-81ab-4d03-b31e-e07a3534b100">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0</SD>
@@ -1533,8 +1545,12 @@
                                     <SD GID="A0F860A0-FFE6-451D-B9E9-55D097ECCBF2">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead</SD>
                                     <SD GID="C230B1C2-A7E8-4EF4-A7D1-C0ADC63CE060">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_ReadData_DataServices_VCU_DID_00_DataRecord_ReadData</SD>
                                     <SD GID="1C517F4E-4BD2-4BB7-8CD9-BD531A61D96C">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_WriteData_DataServices_VCU_DID_00_DataRecord_WriteData</SD>
+                                    <SD GID="6CDF6892-603A-40FC-A109-4CC5F10B2CE9">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_RoutineServices_Vcu_Roution_00_RequestResults_RoutineServices_Vcu_Roution_00_RequestResults</SD>
+                                    <SD GID="6F2E461F-DB9C-43BB-9DA1-40B1BED51C9D">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_RoutineServices_Vcu_Roution_00_Start_RoutineServices_Vcu_Roution_00_Start</SD>
+                                    <SD GID="6C2C2451-B8AA-400A-B988-5421E704CF3C">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_RoutineServices_Vcu_Roution_00_Stop_RoutineServices_Vcu_Roution_00_Stop</SD>
                                     <SD GID="C7C2A11E-09A8-42E1-B046-A5C65679E1C5">/ComponentTypes/DIAG_SWC/DataServices_VCU_DID_00_DataRecord</SD>
                                     <SD GID="B0D56753-A3B1-431E-9673-294B21654323">/ComponentTypes/DIAG_SWC/PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
+                                    <SD GID="AFEE0A09-7481-4F5D-A67D-391696AAC36A">/ComponentTypes/DIAG_SWC/RoutineServices_Vcu_Roution_00</SD>
                                     <SD GID="8822BCF7-9CB6-46FA-BB63-4E92E8E4BB4F">/ComponentTypes/DIAG_SWC_Implementation</SD>
                                     <SD GID="F46DC447-48FA-40AC-B556-211DADA7BA16">/ComponentTypes/NvM_SWC</SD>
                                     <SD GID="5E1541CE-CA73-4331-B1E5-015754C9C331">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData1</SD>
@@ -1671,13 +1687,11 @@
                                     <SD GID="4e65b62f-4fc8-4f1c-be00-5ac6365669ae">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="22df0f95-8e4f-419b-8023-b15fb7c39b04">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmControlDtcSetting</SD>
                                     <SD GID="ed1e2bf8-296c-4ef7-a639-2d84feed9e66">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmDiagnosticSessionControl</SD>
-                                    <SD GID="5cb66f76-beed-4a63-8ac0-33f218de1345">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmEcuReset</SD>
                                     <SD GID="b8d3fa7a-7b0c-4f84-a474-4c9eb594cc11">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior</SD>
                                     <SD GID="13b667ea-00e1-4b49-96b1-10f0de11ecea">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Dcm_MainFunction</SD>
                                     <SD GID="ff3e16cd-6805-43d3-b994-9e1778f8277a">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Dcm_MainFunction/ModeSwitchPointDcm_MainFunction_DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8_DcmCommunicati_215e9f00</SD>
                                     <SD GID="44217856-d6f4-4566-a744-646c762f90dd">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Dcm_MainFunction/ModeSwitchPointDcm_MainFunction_DcmControlDtcSetting_DcmControlDtcSetting</SD>
                                     <SD GID="ed257b24-cb85-474f-8e70-d87c596d4018">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Dcm_MainFunction/ModeSwitchPointDcm_MainFunction_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl</SD>
-                                    <SD GID="6a1c9c43-8c22-4749-af9e-8988cc526e2b">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Dcm_MainFunction/ModeSwitchPointDcm_MainFunction_DcmEcuReset_DcmEcuReset</SD>
                                     <SD GID="0723a524-396d-4559-9e13-618dc8d2840a">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Dcm_MainFunction/OpServerCallDcm_MainFunction_CompareKey_SecurityAccess_Level_3</SD>
                                     <SD GID="3803d255-3a52-489e-b134-3e2af11417d8">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Dcm_MainFunction/OpServerCallDcm_MainFunction_CompareKey_SecurityAccess_UnlockedL1</SD>
                                     <SD GID="131c6426-9929-4484-a200-24aa223818f7">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Dcm_MainFunction/OpServerCallDcm_MainFunction_ConditionCheckRead_DataServices_Boot_Software_Boot_Software_Identification</SD>
@@ -1744,6 +1758,7 @@
                                     <SD GID="14e50c89-39f2-4839-a2a1-533f0ae31ff8">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Timer_Dcm_MainFunction</SD>
                                     <SD GID="808786b0-e43e-4721-b9e6-2e57f46311be">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/RoutineServices_SampleRoutineControl</SD>
                                     <SD GID="4368f6d7-190f-44da-871d-932c476b51a1">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/RoutineServices_SampleRoutineControl_StartOnly</SD>
+                                    <SD GID="db5084a1-3e2f-4ed4-8073-195332f4f497">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/RoutineServices_Vcu_Roution_00</SD>
                                     <SD GID="fe6b14d0-134e-4223-94ef-f73f3b65c8c1">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/SecurityAccess_Level_3</SD>
                                     <SD GID="6ab10cb2-ee78-4421-81b0-9531825b84d0">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/SecurityAccess_UnlockedL1</SD>
                                     <SD GID="67889ce8-b358-400e-960e-4467e711b2bf">/MICROSAR/Dcm_swc/DataTypes</SD>
@@ -1752,7 +1767,6 @@
                                     <SD GID="2344a315-c6d3-4545-848e-8eadddf8a762">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_ConfirmationStatusType</SD>
                                     <SD GID="b3fac28e-1065-46dd-b6ad-aacfd69e6297">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_ControlDtcSettingType</SD>
                                     <SD GID="ff9bd51e-9008-4f11-b854-50349724d25c">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_DiagnosticSessionControlType</SD>
-                                    <SD GID="fed8b5a2-1feb-4fff-8901-50c783ebc3c3">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_EcuResetType</SD>
                                     <SD GID="05a7db91-26fa-4cf9-9c0a-5b81c22e30b9">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_NegativeResponseCodeType</SD>
                                     <SD GID="54331831-ccec-497e-87b7-684907687830">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_OpStatusType</SD>
                                     <SD GID="cef661ec-c8bb-4d11-acee-892784ae947b">/MICROSAR/Dcm_swc/DataTypes/CompuMethods/Dcm_ProtocolType</SD>
@@ -1764,7 +1778,6 @@
                                     <SD GID="86771e02-37d8-4fb0-98e3-4117f2926022">/MICROSAR/Dcm_swc/DataTypes/DataConstrs/Dcm_ConfirmationStatusType_Constr</SD>
                                     <SD GID="883e3913-9d64-4604-8832-40e5214d1cdf">/MICROSAR/Dcm_swc/DataTypes/DataConstrs/Dcm_ControlDtcSettingType_Constr</SD>
                                     <SD GID="3b131323-5291-4e6a-930e-dd1e59c188ba">/MICROSAR/Dcm_swc/DataTypes/DataConstrs/Dcm_DiagnosticSessionControlType_Constr</SD>
-                                    <SD GID="b723d555-b034-4e97-aa68-54fd5b1ccfe5">/MICROSAR/Dcm_swc/DataTypes/DataConstrs/Dcm_EcuResetType_Constr</SD>
                                     <SD GID="a899cc52-cf6a-4ffd-a18e-919cc700da85">/MICROSAR/Dcm_swc/DataTypes/DataConstrs/Dcm_NegativeResponseCodeType_Constr</SD>
                                     <SD GID="3af2b997-9b92-4b87-a189-8135d3df6726">/MICROSAR/Dcm_swc/DataTypes/DataConstrs/Dcm_OpStatusType_Constr</SD>
                                     <SD GID="d021ecaa-d3a7-4b1f-9760-a5305c330976">/MICROSAR/Dcm_swc/DataTypes/DataConstrs/Dcm_ProtocolType_Constr</SD>
@@ -1785,7 +1798,6 @@
                                     <SD GID="7f65c4e1-a8c5-4be9-8627-6ceb087de7bc">/MICROSAR/Dcm_swc/DataTypes/Dcm_Data4ByteType</SD>
                                     <SD GID="14b71128-d9e3-4fb7-b57f-da96a9ef0ba2">/MICROSAR/Dcm_swc/DataTypes/Dcm_Data4ByteType/Dcm_Data4ByteTypeElement</SD>
                                     <SD GID="a0ce466c-c097-43d5-8d65-ce89a9c58831">/MICROSAR/Dcm_swc/DataTypes/Dcm_DiagnosticSessionControlType</SD>
-                                    <SD GID="f43fbcf8-8b4e-4393-bb0e-9726f3637da7">/MICROSAR/Dcm_swc/DataTypes/Dcm_EcuResetType</SD>
                                     <SD GID="831b552d-c970-43cf-9098-9a4b3dfd4c9d">/MICROSAR/Dcm_swc/DataTypes/Dcm_NegativeResponseCodeType</SD>
                                     <SD GID="f732757f-0eda-4e26-8365-77a7ae132090">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</SD>
                                     <SD GID="cdccd3ca-e41b-4a93-ad31-fd8adcb1ce5b">/MICROSAR/Dcm_swc/DataTypes/Dcm_ProtocolType</SD>
@@ -1825,15 +1837,7 @@
                                     <SD GID="339c3750-9727-4158-823b-2f7597ca9ea4">/MICROSAR/Dcm_swc/DcmDiagnosticSessionControl/DEFAULT_SESSION</SD>
                                     <SD GID="e9d32bf5-8263-4b74-ae6a-12bb6eaabf24">/MICROSAR/Dcm_swc/DcmDiagnosticSessionControl/EXTENDED_SESSION</SD>
                                     <SD GID="cbc2d210-401a-4ba8-8ec6-b33fd31aaf0f">/MICROSAR/Dcm_swc/DcmDiagnosticSessionControl/PROGRAMMING_SESSION</SD>
-                                    <SD GID="d18c2a2e-c62d-4d7d-b3a0-05b594c04c4c">/MICROSAR/Dcm_swc/DcmEcuReset</SD>
-                                    <SD GID="ac7b6a35-cc33-4bdc-aa0c-e0fd55fba85d">/MICROSAR/Dcm_swc/DcmEcuReset/EXECUTE</SD>
-                                    <SD GID="9f502e74-9b09-41df-8ca6-cd52b0e39e20">/MICROSAR/Dcm_swc/DcmEcuReset/HARD</SD>
-                                    <SD GID="ac819098-1114-4014-984e-7aaf7c82a967">/MICROSAR/Dcm_swc/DcmEcuReset/JUMPTOBOOTLOADER</SD>
-                                    <SD GID="3bf5eefb-d432-4e91-aac1-165ddaa62d66">/MICROSAR/Dcm_swc/DcmEcuReset/JUMPTOSYSSUPPLIERBOOTLOADER</SD>
-                                    <SD GID="a3e385d1-6d14-4e2c-81c4-46a1678ed65b">/MICROSAR/Dcm_swc/DcmEcuReset/KEYONOFF</SD>
-                                    <SD GID="9e9f1595-e4df-42a2-b098-f0bf940538bc">/MICROSAR/Dcm_swc/DcmEcuReset/NONE</SD>
-                                    <SD GID="df539e59-6031-471e-9fb6-b19b6d76da26">/MICROSAR/Dcm_swc/DcmEcuReset/SOFT</SD>
-                                    <SD GID="088f1f69-fb6c-4be9-b0aa-2c2cdde878df">/MICROSAR/Dcm_swc/DcmMappingSet</SD>
+                                    <SD GID="5b4fa98c-3015-435b-904a-e585aea1a46e">/MICROSAR/Dcm_swc/DcmMappingSet</SD>
                                     <SD GID="6413af41-7709-421b-9e98-65e656be0bda">/MICROSAR/Dcm_swc/Interfaces</SD>
                                     <SD GID="a03bad90-012b-4cb0-bcc6-bdc7845450c3">/MICROSAR/Dcm_swc/Interfaces/DCMServices</SD>
                                     <SD GID="369dda0c-a11b-4f81-bf91-bdb4e5562722">/MICROSAR/Dcm_swc/Interfaces/DCMServices/E_NOT_OK</SD>
@@ -2038,8 +2042,6 @@
                                     <SD GID="a80a2043-228d-4367-ac7f-d12acb5fa886">/MICROSAR/Dcm_swc/Interfaces/DcmControlDtcSetting/DcmControlDtcSetting</SD>
                                     <SD GID="bb0cc2e5-0657-4fdf-aa61-eff597c8841a">/MICROSAR/Dcm_swc/Interfaces/DcmDiagnosticSessionControl</SD>
                                     <SD GID="8b1e95d8-c3cc-4bb8-af00-2edcf2c50a45">/MICROSAR/Dcm_swc/Interfaces/DcmDiagnosticSessionControl/DcmDiagnosticSessionControl</SD>
-                                    <SD GID="fbdbde9a-54ac-4e54-a9bc-0c5324d06f71">/MICROSAR/Dcm_swc/Interfaces/DcmEcuReset</SD>
-                                    <SD GID="bffbed5f-cb7b-4728-a22c-3c6db6c6c24a">/MICROSAR/Dcm_swc/Interfaces/DcmEcuReset/DcmEcuReset</SD>
                                     <SD GID="499caf6e-0096-4f75-97c1-906c01c594e6">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_SampleRoutineControl</SD>
                                     <SD GID="9a0b920c-da6d-44ac-8909-b2e92d443dd1">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_SampleRoutineControl/DCM_E_FORCE_RCRRP</SD>
                                     <SD GID="3b6a8187-8ea6-4b0a-9f47-467b82c3a0c0">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_SampleRoutineControl/DCM_E_PENDING</SD>

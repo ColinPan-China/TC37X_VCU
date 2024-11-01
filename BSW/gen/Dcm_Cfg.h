@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Cfg.h
- *   Generation Time: 2024-10-28 14:08:03
+ *   Generation Time: 2024-11-01 15:23:38
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -84,7 +84,7 @@
 /*! ECU rapid shutdown mode management support */
 # define DCM_MODE_RPD_SHTDWN_ENABLED                                           STD_OFF
 /*! ECU reset mode management support */
-# define DCM_MODE_ECU_RESET_ENABLED                                            STD_ON
+# define DCM_MODE_ECU_RESET_ENABLED                                            STD_OFF
 /*! Control DTC setting mode management support */
 # define DCM_MODE_CTRLDTCSETTING_ENABLED                                       STD_ON
 /*! Control DTC setting mode management monitoring support */
@@ -277,9 +277,9 @@
 # define DCM_SVC_10_RST2BOOT_HIS_ENABLED                                       STD_ON
 /*! Diagnostic service 0x11 handled by DCM */
 # define DCM_SVC_11_SUPPORT_ENABLED                                            STD_ON
-# define DCM_SVC_11_ECU_RESET_ENABLED                                          STD_ON
+# define DCM_SVC_11_ECU_RESET_ENABLED                                          STD_OFF
 # define DCM_SVC_11_RAPID_SHTDWN_ENABLED                                       STD_OFF
-# define DCM_SVC_11_01_SUPPORT_ENABLED                                         STD_ON
+# define DCM_SVC_11_01_SUPPORT_ENABLED                                         STD_OFF
 # define DCM_SVC_11_02_SUPPORT_ENABLED                                         STD_OFF
 # define DCM_SVC_11_03_SUPPORT_ENABLED                                         STD_OFF
 # define DCM_SVC_11_04_SUPPORT_ENABLED                                         STD_OFF
@@ -598,11 +598,11 @@
 /*! Invalid value for Routine Info Byte */
 # define DCM_CFGRIDMGR_INVALID_ROUTINEINFOBYTE                                    0u
 /*! Size of table Dcm_CfgRidMgrRidLookUpTable */
-# define DCM_CFGRIDMGRRIDLOOKUPTABLE_SIZE                                       3u
+# define DCM_CFGRIDMGRRIDLOOKUPTABLE_SIZE                                       4u
 /*! Size of table Dcm_CfgRidMgrRidInfo */
-# define DCM_CFGRIDMGRRIDINFO_SIZE                                              2u
+# define DCM_CFGRIDMGRRIDINFO_SIZE                                              3u
 /*! Size of table Dcm_CfgRidMgrOpInfo */
-# define DCM_CFGRIDMGROPINFO_SIZE                                               5u
+# define DCM_CFGRIDMGROPINFO_SIZE                                               8u
 /*! Specifies total number of supported memory operations */
 # define DCM_MEMMGR_NUM_MEMORY_OPERATIONS                                       2u
 /*! Specifies total number of memory ranges in single MID or no MID mode */
