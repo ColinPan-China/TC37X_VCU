@@ -116,18 +116,21 @@
 								<option id="com.tasking.ctc.lk.outputFormat.ihex.1164688339" name="Generate Intel Hex format file" superClass="com.tasking.ctc.lk.outputFormat.ihex" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.noDefaultLibraries.2013064119" name="Link default libraries" superClass="com.tasking.ctc.lk.noDefaultLibraries" value="false" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.noRescan.1415836324" name="Rescan libraries to solve unresolved externals" superClass="com.tasking.ctc.lk.noRescan" value="false" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.mapFile.xml.271320922" name="Generate XML map file format (.mapxml) for map file viewer" superClass="com.tasking.ctc.lk.mapFile.xml" value="false" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFile.xml.271320922" name="Generate XML map file format (.mapxml) for map file viewer" superClass="com.tasking.ctc.lk.mapFile.xml" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.mapFile.mapFile.123854181" name="Generate map file (.map)" superClass="com.tasking.ctc.lk.mapFile.mapFile" value="true" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.mapFileFormat.callGraph.125758801" name="Include call graph information" superClass="com.tasking.ctc.lk.mapFileFormat.callGraph" value="false" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.mapFileFormat.files.1492124279" name="Include processed files information" superClass="com.tasking.ctc.lk.mapFileFormat.files" value="false" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.mapFileFormat.invocation.2079922744" name="Include information on invocation and tools" superClass="com.tasking.ctc.lk.mapFileFormat.invocation" value="false" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.mapFileFormat.link.500503036" name="Include link result information" superClass="com.tasking.ctc.lk.mapFileFormat.link" value="false" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.mapFileFormat.locate.1199272106" name="Include locate result information" superClass="com.tasking.ctc.lk.mapFileFormat.locate" value="false" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.mapFileFormat.memory.650705005" name="Include memory usage information" superClass="com.tasking.ctc.lk.mapFileFormat.memory" value="false" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.mapFileFormat.removedSections.596350777" name="Include information on removed sections" superClass="com.tasking.ctc.lk.mapFileFormat.removedSections" value="false" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.mapFileFormat.crossref.2069039190" name="Include cross references information" superClass="com.tasking.ctc.lk.mapFileFormat.crossref" value="false" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.mapFileFormat.rules.766340616" name="Include locate rules" superClass="com.tasking.ctc.lk.mapFileFormat.rules" value="false" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.callGraph.125758801" name="Include call graph information" superClass="com.tasking.ctc.lk.mapFileFormat.callGraph" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.files.1492124279" name="Include processed files information" superClass="com.tasking.ctc.lk.mapFileFormat.files" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.invocation.2079922744" name="Include information on invocation and tools" superClass="com.tasking.ctc.lk.mapFileFormat.invocation" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.link.500503036" name="Include link result information" superClass="com.tasking.ctc.lk.mapFileFormat.link" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.locate.1199272106" name="Include locate result information" superClass="com.tasking.ctc.lk.mapFileFormat.locate" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.memory.650705005" name="Include memory usage information" superClass="com.tasking.ctc.lk.mapFileFormat.memory" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.removedSections.596350777" name="Include information on removed sections" superClass="com.tasking.ctc.lk.mapFileFormat.removedSections" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.crossref.2069039190" name="Include cross references information" superClass="com.tasking.ctc.lk.mapFileFormat.crossref" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.rules.766340616" name="Include locate rules" superClass="com.tasking.ctc.lk.mapFileFormat.rules" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.userProvidedInitCode.1596415437" name="Do not use standard copy table for initialization" superClass="com.tasking.ctc.lk.userProvidedInitCode" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.overlay.2112135526" superClass="com.tasking.ctc.lk.mapFileFormat.overlay" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.nonAlloc.155038625" superClass="com.tasking.ctc.lk.mapFileFormat.nonAlloc" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.lsl.1824699336" superClass="com.tasking.ctc.lk.mapFileFormat.lsl" value="true" valueType="boolean"/>
 								<inputType id="com.tasking.ctc.lkObjInputType.1764213417" name="OBJ" superClass="com.tasking.ctc.lkObjInputType"/>
 								<inputType id="com.tasking.ctc.lkLibInputType.1973690418" name="LIB" superClass="com.tasking.ctc.lkLibInputType"/>
 							</tool>

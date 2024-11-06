@@ -349,11 +349,11 @@
       <UpperLimit>255</UpperLimit>
       <ExtendedLowerLimit>0</ExtendedLowerLimit>
       <ExtendedUpperLimit>255</ExtendedUpperLimit>
-      <Name>CDD_MyApp.c_Calib_Sig</Name>
+      <Name>CDD_MyApp.c_Calib_Sig0</Name>
       <LongIdentifier />
-      <Symbol>CDD_MyApp.c_Calib_Sig</Symbol>
-      <KeyName>CDD_MyApp.c|Calib_Sig</KeyName>
-      <OriginalName>CDD_MyApp.c|Calib_Sig</OriginalName>
+      <Symbol>CDD_MyApp.c_Calib_Sig0</Symbol>
+      <KeyName>CDD_MyApp.c|Calib_Sig0</KeyName>
+      <OriginalName>CDD_MyApp.c|Calib_Sig0</OriginalName>
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
@@ -366,11 +366,39 @@
       <Type>VALUE</Type>
       <BitMask>255</BitMask>
     </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879084550</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <DisplayIdentifier />
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>CDD_MyApp.c_Calib_Sig1</Name>
+      <LongIdentifier />
+      <Symbol>CDD_MyApp.c_Calib_Sig1</Symbol>
+      <KeyName>CDD_MyApp.c|Calib_Sig1</KeyName>
+      <OriginalName>CDD_MyApp.c|Calib_Sig1</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879084550</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <CalibrationAccess />
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
   </Characteristics>
   <Measurements>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879090780</Address>
+      <Address>1879090776</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -385,7 +413,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879090780</BaseAddress>
+      <BaseAddress>1879090776</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -394,7 +422,7 @@
     </Measurement>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879090781</Address>
+      <Address>1879090777</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -409,7 +437,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879090781</BaseAddress>
+      <BaseAddress>1879090777</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -418,7 +446,7 @@
     </Measurement>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879090782</Address>
+      <Address>1879090778</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -433,7 +461,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879090782</BaseAddress>
+      <BaseAddress>1879090778</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -442,7 +470,7 @@
     </Measurement>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879090783</Address>
+      <Address>1879090779</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -457,59 +485,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879090783</BaseAddress>
-      <IndividualOffsetAddress>0</IndividualOffsetAddress>
-      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
-      <Accuracy>0</Accuracy>
-      <BitMask>255</BitMask>
-      <Resolution>0</Resolution>
-    </Measurement>
-    <Measurement>
-      <InterfaceDatas />
-      <Address>1879084554</Address>
-      <Conversion>DEFAULT_CM</Conversion>
-      <DisplayIdentifier />
-      <Format>%0.15</Format>
-      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
-      <LowerLimit>0</LowerLimit>
-      <UpperLimit>255</UpperLimit>
-      <ExtendedLowerLimit>0</ExtendedLowerLimit>
-      <ExtendedUpperLimit>255</ExtendedUpperLimit>
-      <Name>SWC1.c_UserData2Cmd</Name>
-      <LongIdentifier />
-      <Symbol>SWC1.c_UserData2Cmd</Symbol>
-      <KeyName>SWC1.c|UserData2Cmd</KeyName>
-      <OriginalName>SWC1.c|UserData2Cmd</OriginalName>
-      <State>0</State>
-      <DataType>UBYTE</DataType>
-      <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879084554</BaseAddress>
-      <IndividualOffsetAddress>0</IndividualOffsetAddress>
-      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
-      <Accuracy>0</Accuracy>
-      <BitMask>255</BitMask>
-      <Resolution>0</Resolution>
-    </Measurement>
-    <Measurement>
-      <InterfaceDatas />
-      <Address>1879084553</Address>
-      <Conversion>DEFAULT_CM</Conversion>
-      <DisplayIdentifier />
-      <Format>%0.15</Format>
-      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
-      <LowerLimit>0</LowerLimit>
-      <UpperLimit>255</UpperLimit>
-      <ExtendedLowerLimit>0</ExtendedLowerLimit>
-      <ExtendedUpperLimit>255</ExtendedUpperLimit>
-      <Name>SWC1.c_UserData1Cmd</Name>
-      <LongIdentifier />
-      <Symbol>SWC1.c_UserData1Cmd</Symbol>
-      <KeyName>SWC1.c|UserData1Cmd</KeyName>
-      <OriginalName>SWC1.c|UserData1Cmd</OriginalName>
-      <State>0</State>
-      <DataType>UBYTE</DataType>
-      <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879084553</BaseAddress>
+      <BaseAddress>1879090779</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -527,6 +503,32 @@
       <UpperLimit>255</UpperLimit>
       <ExtendedLowerLimit>0</ExtendedLowerLimit>
       <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SWC1.c_UserData1Cmd</Name>
+      <LongIdentifier />
+      <Symbol>SWC1.c_UserData1Cmd</Symbol>
+      <KeyName>SWC1.c|UserData1Cmd</KeyName>
+      <OriginalName>SWC1.c|UserData1Cmd</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879084556</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Accuracy>0</Accuracy>
+      <BitMask>255</BitMask>
+      <Resolution>0</Resolution>
+    </Measurement>
+    <Measurement>
+      <InterfaceDatas />
+      <Address>1879084559</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <DisplayIdentifier />
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
       <Name>SWC1.c_XcpCnt</Name>
       <LongIdentifier />
       <Symbol>SWC1.c_XcpCnt</Symbol>
@@ -535,7 +537,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879084556</BaseAddress>
+      <BaseAddress>1879084559</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
