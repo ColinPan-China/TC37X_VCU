@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Xcp_Cfg.h
- *   Generation Time: 2024-10-10 15:21:33
+ *   Generation Time: 2024-11-06 16:55:50
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -118,10 +118,10 @@
 
 /*  - Calibration commands */
 #define XCP_CALIBRATION                      STD_ON
-#define XCP_BLOCK_DOWNLOAD                   STD_OFF
-#define XCP_MODIFY_BITS                      STD_OFF
-#define XCP_SHORT_DOWNLOAD                   STD_OFF
-#define XCP_BLOCK_DOWNLOAD_MIN_ST            (0u)
+#define XCP_BLOCK_DOWNLOAD                   STD_ON
+#define XCP_MODIFY_BITS                      STD_ON
+#define XCP_SHORT_DOWNLOAD                   STD_ON
+#define XCP_BLOCK_DOWNLOAD_MIN_ST            (1u)
 
 /*  - Synchronous Data Acquisition (DAQ) commands */
 #define XCP_DAQ                              STD_ON
@@ -156,7 +156,7 @@
 #define XCP_MAX_SEGMENT                      (1u)
 #define XCP_PAGE_INFO                        STD_OFF
 #define XCP_MAX_PAGES                        (2u)
-#define XCP_COPY_CAL_PAGE                    STD_OFF
+#define XCP_COPY_CAL_PAGE                    STD_ON
 #define XCP_PAGE_FREEZE                      STD_OFF
 
 /*  - Programming */

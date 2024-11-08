@@ -41,6 +41,9 @@
 
 #include <string.h> /* PRQA S 0818 */ /* MD_XCP_TemplateCode */
 #include "XcpAppl.h"
+//add by panjian
+#include "Overlay.h"
+//add by panjian
 #if( XCP_DAQ_COMPLEMENTARY_CHANNEL == STD_ON )
 #include "VX1000TlIf.h"
 #endif
@@ -632,6 +635,10 @@ FUNC(uint8, XCP_CODE) XcpAppl_Unlock( void )
  *
  *
  */
+/* Add by panjian for Enable OVC*/
+extern volatile const uint8 Calib_Sig0[32];
+extern volatile uint8 Calib_Sig2[32];
+/* Add by panjian for Enable OVC*/
 FUNC(uint8, XCP_CODE) XcpAppl_SetCalPage( uint8 Segment, uint8 Page, uint8 Mode )
 {
   uint8 retVal = XCP_CMD_OK;
@@ -653,6 +660,21 @@ FUNC(uint8, XCP_CODE) XcpAppl_SetCalPage( uint8 Segment, uint8 Page, uint8 Mode 
   else
   {
     XcpAppl_CalPageInfo[Segment].ActiveCalPage = Page;
+
+    /* Add by panjian for Enable OVC*/
+    if( Page == 0x01U )
+    {
+      IfxCpu_enableOverlayBlock(IfxCpu_ResourceCpu_0, 0, IfxCpu_OverlayMemorySelect_core0DsprPspr,
+                                IfxCpu_OverlayAddressMask_32byte, (uint32)&Calib_Sig0,
+                                (uint32)&Calib_Sig2);      
+    }
+
+    if( Page == 0x00U )
+    {
+      IfxCpu_disableOverlayBlock( IfxCpu_ResourceCpu_0, 0 );
+    }
+
+    /* Add by panjian for Enable OVC*/
   }
 
   return retVal;

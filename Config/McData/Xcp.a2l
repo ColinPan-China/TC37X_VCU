@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Xcp.a2l
- *   Generation Time: 2024-10-10 15:21:33
+ *   Generation Time: 2024-11-06 16:55:50
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -48,9 +48,12 @@
         OPTIONAL_CMD SHORT_UPLOAD
         OPTIONAL_CMD TRANSPORT_LAYER_CMD
         OPTIONAL_CMD DOWNLOAD
-        OPTIONAL_CMD DOWNLOAD_MAX        
+        OPTIONAL_CMD DOWNLOAD_NEXT
+        OPTIONAL_CMD SHORT_DOWNLOAD
+        OPTIONAL_CMD MODIFY_BITS
         OPTIONAL_CMD SET_CAL_PAGE
         OPTIONAL_CMD GET_CAL_PAGE       
+        OPTIONAL_CMD COPY_CAL_PAGE
         OPTIONAL_CMD SET_DAQ_PTR
         OPTIONAL_CMD WRITE_DAQ
         OPTIONAL_CMD SET_DAQ_LIST_MODE
@@ -64,6 +67,7 @@
         OPTIONAL_CMD ALLOC_DAQ
         OPTIONAL_CMD ALLOC_ODT
         OPTIONAL_CMD ALLOC_ODT_ENTRY
+        COMMUNICATION_MODE_SUPPORTED  BLOCK  
       /end PROTOCOL_LAYER
       /begin PAG
         1 /* MAX_SEGMENTS */

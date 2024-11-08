@@ -768,10 +768,16 @@ OVERLOAD_INDICATION_EVENT: This means an event is set, when an overload occurs*/
         OPTIONAL_CMD WRITE_DAQ
         OPTIONAL_CMD SET_DAQ_PTR
         OPTIONAL_CMD CLEAR_DAQ_LIST
+        OPTIONAL_CMD GET_CAL_PAGE
+        OPTIONAL_CMD SET_CAL_PAGE
         OPTIONAL_CMD DOWNLOAD
         OPTIONAL_CMD UPLOAD
         OPTIONAL_CMD SET_MTA
         OPTIONAL_CMD GET_COMM_MODE_INFO
+        COMMUNICATION_MODE_SUPPORTED BLOCK
+          MASTER
+            0x2B
+            0x01
       /end PROTOCOL_LAYER
       /begin XCP_ON_CAN
         0x0100
@@ -856,6 +862,31 @@ OVERLOAD_INDICATION_EVENT: This means an event is set, when an overload occurs*/
     /end IF_DATA
 
     /begin MOD_PAR ""
+      /begin MEMORY_SEGMENT
+        CALRAM ""
+        DATA RAM INTERN 0x7000000 0x1000000 -1 -1 -1 -1 -1
+        /begin IF_DATA XCP
+          /begin SEGMENT
+            0x00
+            0x02
+            0x00
+            0x00
+            0x00
+            /begin PAGE
+              0x00
+              ECU_ACCESS_ALLOWED_WITH_XCP_ONLY
+              XCP_READ_ACCESS_ALLOWED_WITH_ECU_ONLY
+              XCP_WRITE_ACCESS_NOT_ALLOWED
+            /end PAGE
+            /begin PAGE
+              0x01
+              ECU_ACCESS_ALLOWED_WITH_XCP_ONLY
+              XCP_READ_ACCESS_ALLOWED_WITH_ECU_ONLY
+              XCP_WRITE_ACCESS_ALLOWED_WITH_ECU_ONLY
+            /end PAGE
+          /end SEGMENT
+        /end IF_DATA
+      /end MEMORY_SEGMENT
     /end MOD_PAR
 
 
@@ -865,14 +896,14 @@ OVERLOAD_INDICATION_EVENT: This means an event is set, when an overload occurs*/
       COEFFS 0 1 0 0 0 1
     /end COMPU_METHOD
 
-    /begin CHARACTERISTIC CDD_MyApp.c_Calib_Sig0 ""
+    /begin CHARACTERISTIC CDD_MyApp.c_Calib_Sig0_Calib_Sig0._0 ""
       VALUE 0x80000CDC __UBYTE_S 0 DEFAULT_CM 0 255
       ECU_ADDRESS_EXTENSION 0x0
       EXTENDED_LIMITS 0 255
       FORMAT "%.15"
     /end CHARACTERISTIC
 
-    /begin CHARACTERISTIC CDD_MyApp.c_Calib_Sig1 ""
+    /begin CHARACTERISTIC CDD_MyApp.c_Calib_Sig1_Calib_Sig1._0 ""
       VALUE 0x70008E06 __UBYTE_S 0 DEFAULT_CM 0 255
       ECU_ADDRESS_EXTENSION 0x0
       EXTENDED_LIMITS 0 255
@@ -881,42 +912,42 @@ OVERLOAD_INDICATION_EVENT: This means an event is set, when an overload occurs*/
 
     /begin MEASUREMENT Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._0 ""
       UBYTE DEFAULT_CM 0 0 0 255
-      ECU_ADDRESS 0x7000A658
+      ECU_ADDRESS 0x7000A678
       ECU_ADDRESS_EXTENSION 0x0
       FORMAT "%.15"
     /end MEASUREMENT
 
     /begin MEASUREMENT Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._1 ""
       UBYTE DEFAULT_CM 0 0 0 255
-      ECU_ADDRESS 0x7000A659
+      ECU_ADDRESS 0x7000A679
       ECU_ADDRESS_EXTENSION 0x0
       FORMAT "%.15"
     /end MEASUREMENT
 
     /begin MEASUREMENT Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._2 ""
       UBYTE DEFAULT_CM 0 0 0 255
-      ECU_ADDRESS 0x7000A65A
+      ECU_ADDRESS 0x7000A67A
       ECU_ADDRESS_EXTENSION 0x0
       FORMAT "%.15"
     /end MEASUREMENT
 
     /begin MEASUREMENT Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._3 ""
       UBYTE DEFAULT_CM 0 0 0 255
-      ECU_ADDRESS 0x7000A65B
+      ECU_ADDRESS 0x7000A67B
       ECU_ADDRESS_EXTENSION 0x0
       FORMAT "%.15"
     /end MEASUREMENT
 
     /begin MEASUREMENT SWC1.c_UserData1Cmd ""
       UBYTE DEFAULT_CM 0 0 0 255
-      ECU_ADDRESS 0x70008E0C
+      ECU_ADDRESS 0x70008E2B
       ECU_ADDRESS_EXTENSION 0x0
       FORMAT "%.15"
     /end MEASUREMENT
 
     /begin MEASUREMENT SWC1.c_XcpCnt ""
       UBYTE DEFAULT_CM 0 0 0 255
-      ECU_ADDRESS 0x70008E0F
+      ECU_ADDRESS 0x70008E2E
       ECU_ADDRESS_EXTENSION 0x0
       FORMAT "%.15"
     /end MEASUREMENT

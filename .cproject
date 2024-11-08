@@ -29,6 +29,8 @@
 								</option>
 								<option id="com.tasking.ctc.cc.includePaths.187766907" name="Include paths" superClass="com.tasking.ctc.cc.includePaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/BSW/Modules/Det}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/CDD/iLLD}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/CDD/OverLay}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/BSW/Modules/CanTp}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/BSW/Modules/Dcm}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/BSW/Modules/Dem}&quot;"/>
@@ -128,9 +130,9 @@
 								<option id="com.tasking.ctc.lk.mapFileFormat.crossref.2069039190" name="Include cross references information" superClass="com.tasking.ctc.lk.mapFileFormat.crossref" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.mapFileFormat.rules.766340616" name="Include locate rules" superClass="com.tasking.ctc.lk.mapFileFormat.rules" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.userProvidedInitCode.1596415437" name="Do not use standard copy table for initialization" superClass="com.tasking.ctc.lk.userProvidedInitCode" value="true" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.mapFileFormat.overlay.2112135526" superClass="com.tasking.ctc.lk.mapFileFormat.overlay" value="true" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.mapFileFormat.nonAlloc.155038625" superClass="com.tasking.ctc.lk.mapFileFormat.nonAlloc" value="true" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.mapFileFormat.lsl.1824699336" superClass="com.tasking.ctc.lk.mapFileFormat.lsl" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.overlay.2112135526" name="Include overlay information" superClass="com.tasking.ctc.lk.mapFileFormat.overlay" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.nonAlloc.155038625" name="Include information of non-alloc sections" superClass="com.tasking.ctc.lk.mapFileFormat.nonAlloc" value="true" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.mapFileFormat.lsl.1824699336" name="Include processor and memory information" superClass="com.tasking.ctc.lk.mapFileFormat.lsl" value="true" valueType="boolean"/>
 								<inputType id="com.tasking.ctc.lkObjInputType.1764213417" name="OBJ" superClass="com.tasking.ctc.lkObjInputType"/>
 								<inputType id="com.tasking.ctc.lkLibInputType.1973690418" name="LIB" superClass="com.tasking.ctc.lkLibInputType"/>
 							</tool>
