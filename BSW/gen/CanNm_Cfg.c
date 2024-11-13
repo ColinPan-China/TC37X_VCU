@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanNm_Cfg.c
- *   Generation Time: 2024-10-08 14:59:42
+ *   Generation Time: 2024-11-12 16:41:16
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -84,6 +84,7 @@
   \var    CanNm_ChannelConfig
   \details
   Element                     Description
+  ComControlEnabled           Determines if Com Control is active or not
   NodeIdEnabled               Determines if Node Ids are enabled or not
   ChannelId                   Channel ID configured for the respective instance of the NM.
   ImmediateNmCycleTime        Fast NM PDU Transmission Time during WUP
@@ -102,8 +103,8 @@
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    NodeIdEnabled  ChannelId                                           ImmediateNmCycleTime  ImmediateNmTransmissions  MsgCycleTime  MsgTimeoutTime  PduCbvPosition    PduNidPosition    RemoteSleepIndTime  RepeatMessageTime  TimeoutTime  WaitBusSleepTime        Referable Keys */
-  { /*     0 */          TRUE, NmConf_NmChannelConfig_CN_TC37X_VCU_CAN00_07b6c9c8,                   1u,                      12u,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0,                 0u,              150u,        200u,             201u }   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN00_07b6c9c8] */
+    /* Index    ComControlEnabled  NodeIdEnabled  ChannelId                                           ImmediateNmCycleTime  ImmediateNmTransmissions  MsgCycleTime  MsgTimeoutTime  PduCbvPosition    PduNidPosition    RemoteSleepIndTime  RepeatMessageTime  TimeoutTime  WaitBusSleepTime        Referable Keys */
+  { /*     0 */              TRUE,          TRUE, NmConf_NmChannelConfig_CN_TC37X_VCU_CAN00_07b6c9c8,                   1u,                      12u,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0,                 0u,              150u,        200u,             201u }   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN00_07b6c9c8] */
 };
 #define CANNM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

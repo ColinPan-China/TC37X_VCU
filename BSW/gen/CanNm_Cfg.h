@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanNm_Cfg.h
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2024-11-12 16:41:16
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -213,7 +213,7 @@
 #define CANNM_CARWAKEUPFILTERNODEIDOFCHANNELCONFIG                    STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.CarWakeUpFilterNodeId' Reason: 'CarWupFilterFeature is disabled' */
 #define CANNM_CARWAKEUPRXENABLEDOFCHANNELCONFIG                       STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.CarWakeUpRxEnabled' Reason: 'CarWupRx is disabled' */
 #define CANNM_CHANNELIDOFCHANNELCONFIG                                STD_ON
-#define CANNM_COMCONTROLENABLEDOFCHANNELCONFIG                        STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.ComControlEnabled' Reason: 'the value of CanNm_ComControlEnabledOfChannelConfig is always 'false' due to this, the array is deactivated.' */
+#define CANNM_COMCONTROLENABLEDOFCHANNELCONFIG                        STD_ON
 #define CANNM_CRIBITALWAYSENABLEDOFCHANNELCONFIG                      STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.CriBitAlwaysEnabled' Reason: 'the value of CanNm_CriBitAlwaysEnabledOfChannelConfig is always 'false' due to this, the array is deactivated.' */
 #define CANNM_ERRORWAITBUSSLEEPTIMEOFCHANNELCONFIG                    STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.ErrorWaitBusSleepTime' Reason: 'the value of CanNm_ErrorWaitBusSleepTimeOfChannelConfig is always '0' due to this, the array is deactivated.' */
 #define CANNM_IMMEDIATENMCYCLETIMEOFCHANNELCONFIG                     STD_ON
@@ -463,6 +463,7 @@
   \{
 */ 
 #define CANNM_ISDEF_CHANNELIDOFCHANNELCONFIG                          STD_OFF
+#define CANNM_ISDEF_COMCONTROLENABLEDOFCHANNELCONFIG                  STD_OFF
 #define CANNM_ISDEF_IMMEDIATENMCYCLETIMEOFCHANNELCONFIG               STD_OFF
 #define CANNM_ISDEF_IMMEDIATENMTRANSMISSIONSOFCHANNELCONFIG           STD_OFF
 #define CANNM_ISDEF_MSGCYCLETIMEOFCHANNELCONFIG                       STD_OFF
@@ -532,6 +533,7 @@
   \{
 */ 
 #define CANNM_EQ2_CHANNELIDOFCHANNELCONFIG                            
+#define CANNM_EQ2_COMCONTROLENABLEDOFCHANNELCONFIG                    
 #define CANNM_EQ2_IMMEDIATENMCYCLETIMEOFCHANNELCONFIG                 
 #define CANNM_EQ2_IMMEDIATENMTRANSMISSIONSOFCHANNELCONFIG             
 #define CANNM_EQ2_MSGCYCLETIMEOFCHANNELCONFIG                         
@@ -725,6 +727,7 @@
   \{
 */ 
 #define CanNm_GetChannelIdOfChannelConfig(Index)                      ((NetworkHandleType)CanNm_GetChannelConfigOfPCConfig()[(Index)].ChannelIdOfChannelConfig)
+#define CanNm_IsComControlEnabledOfChannelConfig(Index)               ((CanNm_GetChannelConfigOfPCConfig()[(Index)].ComControlEnabledOfChannelConfig) != FALSE)
 #define CanNm_GetImmediateNmCycleTimeOfChannelConfig(Index)           (CanNm_GetChannelConfigOfPCConfig()[(Index)].ImmediateNmCycleTimeOfChannelConfig)
 #define CanNm_GetImmediateNmTransmissionsOfChannelConfig(Index)       (CanNm_GetChannelConfigOfPCConfig()[(Index)].ImmediateNmTransmissionsOfChannelConfig)
 #define CanNm_GetMsgCycleTimeOfChannelConfig(Index)                   (CanNm_GetChannelConfigOfPCConfig()[(Index)].MsgCycleTimeOfChannelConfig)
@@ -857,6 +860,7 @@
 */ 
 #define CanNm_HasChannelConfig()                                      (TRUE != FALSE)
 #define CanNm_HasChannelIdOfChannelConfig()                           (TRUE != FALSE)
+#define CanNm_HasComControlEnabledOfChannelConfig()                   (TRUE != FALSE)
 #define CanNm_HasImmediateNmCycleTimeOfChannelConfig()                (TRUE != FALSE)
 #define CanNm_HasImmediateNmTransmissionsOfChannelConfig()            (TRUE != FALSE)
 #define CanNm_HasMsgCycleTimeOfChannelConfig()                        (TRUE != FALSE)
@@ -1144,6 +1148,9 @@ typedef CanNm_ChannelConfigIterType CanNm_WaitBusSleepTimerIterType;
 /**   \brief  value based type definition for CanNm_ChannelIdOfChannelConfig */
 typedef uint8 CanNm_ChannelIdOfChannelConfigType;
 
+/**   \brief  value based type definition for CanNm_ComControlEnabledOfChannelConfig */
+typedef boolean CanNm_ComControlEnabledOfChannelConfigType;
+
 /**   \brief  value based type definition for CanNm_ImmediateNmCycleTimeOfChannelConfig */
 typedef uint8 CanNm_ImmediateNmCycleTimeOfChannelConfigType;
 
@@ -1382,6 +1389,7 @@ typedef uint16 CanNm_WaitBusSleepTimerType;
 /**   \brief  type used in CanNm_ChannelConfig */
 typedef struct sCanNm_ChannelConfigType
 {
+  CanNm_ComControlEnabledOfChannelConfigType ComControlEnabledOfChannelConfig;  /**< Determines if Com Control is active or not */
   CanNm_NodeIdEnabledOfChannelConfigType NodeIdEnabledOfChannelConfig;  /**< Determines if Node Ids are enabled or not */
   CanNm_ChannelIdOfChannelConfigType ChannelIdOfChannelConfig;  /**< Channel ID configured for the respective instance of the NM. */
   CanNm_ImmediateNmCycleTimeOfChannelConfigType ImmediateNmCycleTimeOfChannelConfig;  /**< Fast NM PDU Transmission Time during WUP */
@@ -1735,6 +1743,7 @@ typedef CanNm_PCConfigType CanNm_ConfigType;  /**< A structure type is present f
   \var    CanNm_ChannelConfig
   \details
   Element                     Description
+  ComControlEnabled           Determines if Com Control is active or not
   NodeIdEnabled               Determines if Node Ids are enabled or not
   ChannelId                   Channel ID configured for the respective instance of the NM.
   ImmediateNmCycleTime        Fast NM PDU Transmission Time during WUP

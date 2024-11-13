@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.h
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2024-11-12 16:41:16
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -61,7 +61,7 @@
 #define NM_PASSIVE_MODE_ENABLED                        STD_OFF
 #define NM_STATE_CHANGE_REPORT_ENABLED                 STD_OFF
 
-#define NM_COM_CONTROL_ENABLED                         STD_OFF
+#define NM_COM_CONTROL_ENABLED                         STD_ON
 #define NM_COM_USER_DATA_SUPPORT                       STD_OFF
 #define NM_NODE_DETECTION_ENABLED                      STD_OFF
 
@@ -279,8 +279,8 @@
 #define NM_NMCOORDINATORWITHNMFIATC                                                                 STD_OFF  /**< Deactivateable: 'Nm_NmCoordinatorWithNmFiatC' Reason: 'Coordinator Support Enabled is OFF or there is no coordinated channel with NmFiatC' */
 #define NM_NMFUNCTIONTABLE                                                                          STD_ON
 #define NM_CHECKREMOTESLEEPINDICATIONOFNMFUNCTIONTABLE                                              STD_OFF  /**< Deactivateable: 'Nm_NmFunctionTable.CheckRemoteSleepIndication' Reason: 'Function is not available due to pre-compile settings' */
-#define NM_DISABLECOMMUNICATIONOFNMFUNCTIONTABLE                                                    STD_OFF  /**< Deactivateable: 'Nm_NmFunctionTable.DisableCommunication' Reason: 'Function is not available due to pre-compile settings' */
-#define NM_ENABLECOMMUNICATIONOFNMFUNCTIONTABLE                                                     STD_OFF  /**< Deactivateable: 'Nm_NmFunctionTable.EnableCommunication' Reason: 'Function is not available due to pre-compile settings' */
+#define NM_DISABLECOMMUNICATIONOFNMFUNCTIONTABLE                                                    STD_ON
+#define NM_ENABLECOMMUNICATIONOFNMFUNCTIONTABLE                                                     STD_ON
 #define NM_GETLOCALNODEIDENTIFIEROFNMFUNCTIONTABLE                                                  STD_ON
 #define NM_GETNODEIDENTIFIEROFNMFUNCTIONTABLE                                                       STD_ON
 #define NM_GETPDUDATAOFNMFUNCTIONTABLE                                                              STD_ON
@@ -340,6 +340,8 @@
 #define NM_ISDEF_NMFUNCTIONTABLEIDXOFCHANNELCONFIG                                                  STD_OFF
 #define NM_ISDEF_PARTITIONCONFIGIDXOFCHANNELCONFIG                                                  STD_OFF
 #define NM_ISDEF_PDURXINDICATIONOFCHANNELCONFIG                                                     STD_OFF
+#define NM_ISDEF_DISABLECOMMUNICATIONOFNMFUNCTIONTABLE                                              STD_OFF
+#define NM_ISDEF_ENABLECOMMUNICATIONOFNMFUNCTIONTABLE                                               STD_OFF
 #define NM_ISDEF_GETLOCALNODEIDENTIFIEROFNMFUNCTIONTABLE                                            STD_OFF
 #define NM_ISDEF_GETNODEIDENTIFIEROFNMFUNCTIONTABLE                                                 STD_OFF
 #define NM_ISDEF_GETPDUDATAOFNMFUNCTIONTABLE                                                        STD_OFF
@@ -371,6 +373,8 @@
 #define NM_EQ2_NMFUNCTIONTABLEIDXOFCHANNELCONFIG                                                    
 #define NM_EQ2_PARTITIONCONFIGIDXOFCHANNELCONFIG                                                    
 #define NM_EQ2_PDURXINDICATIONOFCHANNELCONFIG                                                       
+#define NM_EQ2_DISABLECOMMUNICATIONOFNMFUNCTIONTABLE                                                
+#define NM_EQ2_ENABLECOMMUNICATIONOFNMFUNCTIONTABLE                                                 
 #define NM_EQ2_GETLOCALNODEIDENTIFIEROFNMFUNCTIONTABLE                                              
 #define NM_EQ2_GETNODEIDENTIFIEROFNMFUNCTIONTABLE                                                   
 #define NM_EQ2_GETPDUDATAOFNMFUNCTIONTABLE                                                          
@@ -510,6 +514,8 @@
 #define Nm_GetPartitionConfigIdxOfChannelConfig(Index)                                              (Nm_GetChannelConfigOfPCPartitionConfig()[(Index)].PartitionConfigIdxOfChannelConfig)
 #define Nm_GetPduRxIndicationOfChannelConfig(Index)                                                 (Nm_GetChannelConfigOfPCPartitionConfig()[(Index)].PduRxIndicationOfChannelConfig)
 #define Nm_IsInitialized(partitionIndex)                                                            (((*(Nm_GetInitializedOfPCPartitionConfig(partitionIndex)))) != FALSE)
+#define Nm_GetDisableCommunicationOfNmFunctionTable(Index)                                          (Nm_GetNmFunctionTableOfPCPartitionConfig()[(Index)].DisableCommunicationOfNmFunctionTable)
+#define Nm_GetEnableCommunicationOfNmFunctionTable(Index)                                           (Nm_GetNmFunctionTableOfPCPartitionConfig()[(Index)].EnableCommunicationOfNmFunctionTable)
 #define Nm_GetGetLocalNodeIdentifierOfNmFunctionTable(Index)                                        (Nm_GetNmFunctionTableOfPCPartitionConfig()[(Index)].GetLocalNodeIdentifierOfNmFunctionTable)
 #define Nm_GetGetNodeIdentifierOfNmFunctionTable(Index)                                             (Nm_GetNmFunctionTableOfPCPartitionConfig()[(Index)].GetNodeIdentifierOfNmFunctionTable)
 #define Nm_GetGetPduDataOfNmFunctionTable(Index)                                                    (Nm_GetNmFunctionTableOfPCPartitionConfig()[(Index)].GetPduDataOfNmFunctionTable)
@@ -563,6 +569,8 @@
 #define Nm_HasPduRxIndicationOfChannelConfig()                                                      (TRUE != FALSE)
 #define Nm_HasInitialized(partitionIndex)                                                           (TRUE != FALSE)
 #define Nm_HasNmFunctionTable()                                                                     (TRUE != FALSE)
+#define Nm_HasDisableCommunicationOfNmFunctionTable()                                               (TRUE != FALSE)
+#define Nm_HasEnableCommunicationOfNmFunctionTable()                                                (TRUE != FALSE)
 #define Nm_HasGetLocalNodeIdentifierOfNmFunctionTable()                                             (TRUE != FALSE)
 #define Nm_HasGetNodeIdentifierOfNmFunctionTable()                                                  (TRUE != FALSE)
 #define Nm_HasGetPduDataOfNmFunctionTable()                                                         (TRUE != FALSE)
@@ -764,6 +772,8 @@ typedef struct sNm_NmFunctionTableType
   Nm_CallBusFuncTypeGetData GetUserDataOfNmFunctionTable;
   Nm_CallBusFuncTypeGetState GetStateOfNmFunctionTable;
   Nm_CallBusFuncTypeSetUserData SetUserDataOfNmFunctionTable;
+  Nm_CallBusFuncTypeStandard DisableCommunicationOfNmFunctionTable;
+  Nm_CallBusFuncTypeStandard EnableCommunicationOfNmFunctionTable;
   Nm_CallBusFuncTypeStandard NetworkReleaseOfNmFunctionTable;
   Nm_CallBusFuncTypeStandard NetworkRequestOfNmFunctionTable;
   Nm_CallBusFuncTypeStandard PassiveStartUpOfNmFunctionTable;
@@ -923,6 +933,8 @@ extern CONST(Nm_ChannelConfigType, NM_CONST) Nm_ChannelConfig[1];
   GetUserData           
   GetState              
   SetUserData           
+  DisableCommunication  
+  EnableCommunication   
   NetworkRelease        
   NetworkRequest        
   PassiveStartUp        
