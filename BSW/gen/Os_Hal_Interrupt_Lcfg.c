@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Interrupt_Lcfg.c
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2024-11-18 10:32:49
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -92,10 +92,23 @@ CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CanIsr_0 =
   /* .Dummy         = */ (uint32)0
 };
 
+/*! HAL ISR configuration data: CanIsr_1 */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CanIsr_1 =
+{
+  /* .Level          = */ 1,
+  /* .Source         = */ 0x5b4uL,
+  /* .CoreAssignment = */ 0
+};
+
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CanIsr_1 =
+{
+  /* .Dummy         = */ (uint32)0
+};
+
 /*! HAL ISR configuration data: CounterIsr_SystemTimer */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer =
 {
-  /* .Level          = */ 1,
+  /* .Level          = */ 31,
   /* .Source         = */ 0x300uL,
   /* .CoreAssignment = */ 0
 };

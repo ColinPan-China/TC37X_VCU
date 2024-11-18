@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2024-10-28 14:08:02
+ *   Generation Time: 2024-11-18 12:19:06
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -133,6 +133,8 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define PduRConf_PduRDestPdu_VcuRxMsg1_oTC37X_VCU_CAN00_4589bbed_Rx_6711bd67_Rx 0u
 #define PduRConf_PduRDestPdu_VcuRxMsg2_oTC37X_VCU_CAN00_8cbda0e0_Rx_803efadc_Rx 1u
+#define PduRConf_PduRDestPdu_VcuRxMsg3_oTC37X_VCU_CAN01_5bb4c01a_Rx_3905054b_Rx 2u
+#define PduRConf_PduRDestPdu_VcuRxMsg4_oTC37X_VCU_CAN01_55be06ba_Rx_f5b46736_Rx 3u
 /**\} */
 
 /**
@@ -145,6 +147,8 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_803efadc                       1u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_6711bd67                       0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_3905054b                       2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_f5b46736                       3u
 /**\} */
 
 /**
@@ -155,9 +159,11 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_1a8748e9                       2u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_91d52164                       0u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_69924b1b                       1u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_1a8748e9                       4u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_91d52164                       2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_69924b1b                       3u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_df42a212                       1u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_f8c9b934                       0u
 /**\} */
 
 /**
@@ -168,8 +174,10 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRDestPdu_VcuTxMsg1_oTC37X_VCU_CAN00_c82dd125_Tx   0u
-#define PduRConf_PduRDestPdu_VcuTxMsg2_oTC37X_VCU_CAN00_0119ca28_Tx   1u
+#define PduRConf_PduRDestPdu_VcuAdcTxMsg1_oTC37X_VCU_CAN01_6685c7bf_Tx 0u
+#define PduRConf_PduRDestPdu_VcuAdcTxMsg2_oTC37X_VCU_CAN01_afb1dcb2_Tx 1u
+#define PduRConf_PduRDestPdu_VcuTxMsg1_oTC37X_VCU_CAN00_c82dd125_Tx   2u
+#define PduRConf_PduRDestPdu_VcuTxMsg2_oTC37X_VCU_CAN00_0119ca28_Tx   3u
 /**\} */
 
 /**

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2024-10-24 15:37:49
+ *   Generation Time: 2024-11-18 10:32:49
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -122,7 +122,7 @@
 #define COMM_EXISTS_ONLY_NONE_NMTYPEOFCHANNEL                           STD_OFF
 
 #define COMM_FULL_COMM_REQUEST_NOTIF                                    STD_OFF
-#define COMM_MAX_NUMBER_OF_USERS                                        1u
+#define COMM_MAX_NUMBER_OF_USERS                                        2u
 #define COMM_DCM_INDICATION                                             STD_ON
 #define COMM_USERMODENOTIFUNC_PNC_USER_ONLY                             STD_ON
 #define COMM_EXISTS_USER_WITH_SINGLE_PNC                                STD_OFF
@@ -146,6 +146,7 @@
  ----------------------------------------------------------------------------- */
 
 #define ComMConf_ComMUser_CN_TC37X_VCU_CAN00_b1b4f272 0u 
+#define ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c 1u 
 
 
 /* -----------------------------------------------------------------------------
@@ -153,6 +154,7 @@
  ----------------------------------------------------------------------------- */
 
 #define ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8 0u 
+#define ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e 1u 
 
 
 /* -----------------------------------------------------------------------------
@@ -415,19 +417,19 @@
 #define COMM_ISDEF_REQUESTBUSSMMODEAPIOFCHANNEL                                                     STD_OFF
 #define COMM_ISDEF_SILENTSUPPORTOFCHANNEL                                                           STD_ON
 #define COMM_ISDEF_WAKEUPSTATEOFCHANNEL                                                             STD_ON
-#define COMM_ISDEF_USERREQFULLCOMENDIDXOFCHANNELPB                                                  STD_ON
-#define COMM_ISDEF_USERREQFULLCOMSTARTIDXOFCHANNELPB                                                STD_ON
+#define COMM_ISDEF_USERREQFULLCOMENDIDXOFCHANNELPB                                                  STD_OFF
+#define COMM_ISDEF_USERREQFULLCOMSTARTIDXOFCHANNELPB                                                STD_OFF
 #define COMM_ISDEF_USERREQFULLCOMUSEDOFCHANNELPB                                                    STD_ON
 #define COMM_ISDEF_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                       STD_OFF
 #define COMM_ISDEF_PARTITIONSNVOFPARTITIONIDENTIFIERS                                               STD_OFF
 #define COMM_ISDEF_PNCUSEROFUSER                                                                    STD_OFF
-#define COMM_ISDEF_USERBYTEMASKENDIDXOFUSER                                                         STD_ON
-#define COMM_ISDEF_USERBYTEMASKSTARTIDXOFUSER                                                       STD_ON
+#define COMM_ISDEF_USERBYTEMASKENDIDXOFUSER                                                         STD_OFF
+#define COMM_ISDEF_USERBYTEMASKSTARTIDXOFUSER                                                       STD_OFF
 #define COMM_ISDEF_USERBYTEMASKUSEDOFUSER                                                           STD_ON
-#define COMM_ISDEF_CHANNELOFUSERBYTEMASK                                                            STD_ON
+#define COMM_ISDEF_CHANNELOFUSERBYTEMASK                                                            STD_OFF
 #define COMM_ISDEF_CLEARMASKOFUSERBYTEMASK                                                          STD_ON
 #define COMM_ISDEF_SETMASKOFUSERBYTEMASK                                                            STD_ON
-#define COMM_ISDEF_USERREQFULLCOMIDXOFUSERBYTEMASK                                                  STD_ON
+#define COMM_ISDEF_USERREQFULLCOMIDXOFUSERBYTEMASK                                                  STD_OFF
 #define COMM_ISDEF_PCPARTITIONCONFIGOFPCCONFIG                                                      STD_ON
 #define COMM_ISDEF_PARTITIONIDENTIFIERSOFPCCONFIG                                                   STD_ON
 #define COMM_ISDEF_ACTIVECOMMODEOFPCPARTITIONCONFIG                                                 STD_ON
@@ -464,19 +466,19 @@
 #define COMM_EQ2_REQUESTBUSSMMODEAPIOFCHANNEL                                                       
 #define COMM_EQ2_SILENTSUPPORTOFCHANNEL                                                             TRUE
 #define COMM_EQ2_WAKEUPSTATEOFCHANNEL                                                               COMM_FULL_COM_READY_SLEEP
-#define COMM_EQ2_USERREQFULLCOMENDIDXOFCHANNELPB                                                    1u
-#define COMM_EQ2_USERREQFULLCOMSTARTIDXOFCHANNELPB                                                  0u
+#define COMM_EQ2_USERREQFULLCOMENDIDXOFCHANNELPB                                                    
+#define COMM_EQ2_USERREQFULLCOMSTARTIDXOFCHANNELPB                                                  
 #define COMM_EQ2_USERREQFULLCOMUSEDOFCHANNELPB                                                      TRUE
 #define COMM_EQ2_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                         
 #define COMM_EQ2_PARTITIONSNVOFPARTITIONIDENTIFIERS                                                 
 #define COMM_EQ2_PNCUSEROFUSER                                                                      
-#define COMM_EQ2_USERBYTEMASKENDIDXOFUSER                                                           1u
-#define COMM_EQ2_USERBYTEMASKSTARTIDXOFUSER                                                         0u
+#define COMM_EQ2_USERBYTEMASKENDIDXOFUSER                                                           
+#define COMM_EQ2_USERBYTEMASKSTARTIDXOFUSER                                                         
 #define COMM_EQ2_USERBYTEMASKUSEDOFUSER                                                             TRUE
-#define COMM_EQ2_CHANNELOFUSERBYTEMASK                                                              0u
+#define COMM_EQ2_CHANNELOFUSERBYTEMASK                                                              
 #define COMM_EQ2_CLEARMASKOFUSERBYTEMASK                                                            0xFEu
 #define COMM_EQ2_SETMASKOFUSERBYTEMASK                                                              0x01u
-#define COMM_EQ2_USERREQFULLCOMIDXOFUSERBYTEMASK                                                    0u
+#define COMM_EQ2_USERREQFULLCOMIDXOFUSERBYTEMASK                                                    
 #define COMM_EQ2_PCPARTITIONCONFIGOFPCCONFIG                                                        ComM_PCPartitionConfig
 #define COMM_EQ2_PARTITIONIDENTIFIERSOFPCCONFIG                                                     ComM_PartitionIdentifiers
 #define COMM_EQ2_ACTIVECOMMODEOFPCPARTITIONCONFIG                                                   ComM_ActiveComMode.raw
@@ -786,7 +788,8 @@ typedef struct sComM_ChannelType
 /**   \brief  type used in ComM_ChannelPb */
 typedef struct sComM_ChannelPbType
 {
-  uint8 ComM_ChannelPbNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  ComM_UserReqFullComEndIdxOfChannelPbType UserReqFullComEndIdxOfChannelPb;  /**< the end index of the 0:n relation pointing to ComM_UserReqFullCom */
+  ComM_UserReqFullComStartIdxOfChannelPbType UserReqFullComStartIdxOfChannelPb;  /**< the start index of the 0:n relation pointing to ComM_UserReqFullCom */
 } ComM_ChannelPbType;
 
 /**   \brief  type used in ComM_PartitionIdentifiers */
@@ -800,12 +803,15 @@ typedef struct sComM_PartitionIdentifiersType
 typedef struct sComM_UserType
 {
   ComM_PncUserOfUserType PncUserOfUser;  /**< decides if a user is a partial network user or a direct channel user */
+  ComM_UserByteMaskEndIdxOfUserType UserByteMaskEndIdxOfUser;  /**< the end index of the 0:n relation pointing to ComM_UserByteMask */
+  ComM_UserByteMaskStartIdxOfUserType UserByteMaskStartIdxOfUser;  /**< the start index of the 0:n relation pointing to ComM_UserByteMask */
 } ComM_UserType;
 
 /**   \brief  type used in ComM_UserByteMask */
 typedef struct sComM_UserByteMaskType
 {
-  uint8 ComM_UserByteMaskNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  ComM_ChannelOfUserByteMaskType ChannelOfUserByteMask;  /**< ID of the channel which is requested by this entry. */
+  ComM_UserReqFullComIdxOfUserByteMaskType UserReqFullComIdxOfUserByteMask;  /**< the index of the 1:1 relation pointing to ComM_UserReqFullCom */
 } ComM_UserByteMaskType;
 
 /** 
@@ -821,30 +827,35 @@ typedef struct sComM_UserByteMaskType
 typedef struct ComM_ActiveComModeStructSTag
 {
   ComM_StateType ComMChannel_0;
+  ComM_StateType ComMChannel_1;
 } ComM_ActiveComModeStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_BusComModeReq in the partition context  */
 typedef struct ComM_BusComModeReqStructSTag
 {
   ComM_StateType ComMChannel_0;
+  ComM_StateType ComMChannel_1;
 } ComM_BusComModeReqStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_BusSmState in the partition context  */
 typedef struct ComM_BusSmStateStructSTag
 {
   ComM_ModeType ComMChannel_0;
+  ComM_ModeType ComMChannel_1;
 } ComM_BusSmStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_ComAllowed in the partition context  */
 typedef struct ComM_ComAllowedStructSTag
 {
   ComM_ComAllowedType ComMChannel_0;
+  ComM_ComAllowedType ComMChannel_1;
 } ComM_ComAllowedStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_DcmRequestActive in the partition context  */
 typedef struct ComM_DcmRequestActiveStructSTag
 {
   ComM_DcmRequestActiveType ComMChannel_0;
+  ComM_DcmRequestActiveType ComMChannel_1;
 } ComM_DcmRequestActiveStructSType;
 
 /** 
@@ -859,35 +870,35 @@ typedef struct ComM_DcmRequestActiveStructSTag
 /**   \brief  type to access ComM_ActiveComMode in an index and symbol based style. */
 typedef union ComM_ActiveComModeUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_StateType raw[1];
+  ComM_StateType raw[2];
   ComM_ActiveComModeStructSType str;
 } ComM_ActiveComModeUType;
 
 /**   \brief  type to access ComM_BusComModeReq in an index and symbol based style. */
 typedef union ComM_BusComModeReqUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_StateType raw[1];
+  ComM_StateType raw[2];
   ComM_BusComModeReqStructSType str;
 } ComM_BusComModeReqUType;
 
 /**   \brief  type to access ComM_BusSmState in an index and symbol based style. */
 typedef union ComM_BusSmStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_ModeType raw[1];
+  ComM_ModeType raw[2];
   ComM_BusSmStateStructSType str;
 } ComM_BusSmStateUType;
 
 /**   \brief  type to access ComM_ComAllowed in an index and symbol based style. */
 typedef union ComM_ComAllowedUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_ComAllowedType raw[1];
+  ComM_ComAllowedType raw[2];
   ComM_ComAllowedStructSType str;
 } ComM_ComAllowedUType;
 
 /**   \brief  type to access ComM_DcmRequestActive in an index and symbol based style. */
 typedef union ComM_DcmRequestActiveUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_DcmRequestActiveType raw[1];
+  ComM_DcmRequestActiveType raw[2];
   ComM_DcmRequestActiveStructSType str;
 } ComM_DcmRequestActiveUType;
 
@@ -1020,7 +1031,28 @@ typedef ComM_PCConfigType ComM_ConfigType;  /**< A structure type is present for
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[1];
+extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[2];
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_ChannelPb
+**********************************************************************************************************************/
+/** 
+  \var    ComM_ChannelPb
+  \brief  Contains PostBuild configuration parameters of channels
+  \details
+  Element                   Description
+  UserReqFullComEndIdx      the end index of the 0:n relation pointing to ComM_UserReqFullCom
+  UserReqFullComStartIdx    the start index of the 0:n relation pointing to ComM_UserReqFullCom
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[2];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1054,14 +1086,37 @@ extern CONST(ComM_PartitionIdentifiersType, COMM_CONST) ComM_PartitionIdentifier
   \var    ComM_User
   \brief  Information about ComM users
   \details
-  Element    Description
-  PncUser    decides if a user is a partial network user or a direct channel user
+  Element                 Description
+  PncUser                 decides if a user is a partial network user or a direct channel user
+  UserByteMaskEndIdx      the end index of the 0:n relation pointing to ComM_UserByteMask
+  UserByteMaskStartIdx    the start index of the 0:n relation pointing to ComM_UserByteMask
 */ 
 #define COMM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserType, COMM_CONST) ComM_User[1];
+extern CONST(ComM_UserType, COMM_CONST) ComM_User[2];
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_UserByteMask
+**********************************************************************************************************************/
+/** 
+  \var    ComM_UserByteMask
+  \brief  Each user has N entries in this array (N = # channels attached to this user, directly or through PNC). Each entry describes a Byte Position and a Mask for storing/clearing the user request in UserReqFullCom
+  \details
+  Element              Description
+  Channel              ID of the channel which is requested by this entry.
+  UserReqFullComIdx    the index of the 1:1 relation pointing to ComM_UserReqFullCom
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[2];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1248,7 +1303,7 @@ extern VAR(ComM_PostInitializedType, COMM_VAR_NOINIT) ComM_PostInitialized[1];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[1];
+extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[2];
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Lcfg.c
- *   Generation Time: 2024-11-12 17:21:02
+ *   Generation Time: 2024-11-18 11:25:47
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -224,6 +224,15 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CA
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_ExitRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN00_DISABLE_NM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN00_ENABLE_NM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Disable_DM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Enable_DM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableReinit(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_Disable(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_EnableReinit(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_Disable(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableNoinit(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 /*! \} */ /* End of sharing description for BswMActionListFunctions */
 #define BswM_ActionList_ESH_AL_PostRunToPrepShutdown BswM_ActionList_ESH_AL_WakeupToPrep
 /*! \} */ /* End of group BswMActionListFunctions */
@@ -266,6 +275,13 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN00_07b6
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_RunToPostRunNested(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN00_NM_DISABLE(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN00_NM_ENABLE(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 /*! \} */ /* End of sharing description for BswMRuleFunctions */
 /*! \} */ /* End of group BswMRuleFunctions */
 /* PRQA L:FUNCTIONDECLARATIONS */
@@ -351,7 +367,7 @@ VAR(Com_IpduGroupVector, BSWM_VAR_NOINIT) BswM_ComRxIPduGroupDMState;
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[24] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[33] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    FctPtr                                                                   Comment                   Referable Keys */
   { /*     0 */ BswM_ActionList_ESH_AL_RunToPostRun                               },  /* [Priority: 0] */  /* [AL_ESH_AL_RunToPostRun] */
   { /*     1 */ BswM_ActionList_ESH_AL_WaitForNvMToShutdown                       },  /* [Priority: 0] */  /* [AL_ESH_AL_WaitForNvMToShutdown] */
@@ -376,7 +392,66 @@ CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[24] = {  /* PRQA S 1514
   { /*    20 */ BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN00_07b6c9c8_Enable_DM       },  /* [Priority: 0] */  /* [AL_CC_AL_CN_TC37X_VCU_CAN00_07b6c9c8_Enable_DM] */
   { /*    21 */ BswM_ActionList_ESH_AL_ExitRun                                    },  /* [Priority: 0] */  /* [AL_ESH_AL_ExitRun] */
   { /*    22 */ BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN00_DISABLE_NM               },  /* [Priority: 0] */  /* [AL_CC_AL_CN_TC37X_VCU_CAN00_DISABLE_NM] */
-  { /*    23 */ BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN00_ENABLE_NM                }   /* [Priority: 0] */  /* [AL_CC_AL_CN_TC37X_VCU_CAN00_ENABLE_NM] */
+  { /*    23 */ BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN00_ENABLE_NM                },  /* [Priority: 0] */  /* [AL_CC_AL_CN_TC37X_VCU_CAN00_ENABLE_NM] */
+  { /*    24 */ BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Disable_DM      },  /* [Priority: 0] */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Disable_DM] */
+  { /*    25 */ BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Enable_DM       },  /* [Priority: 0] */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Enable_DM] */
+  { /*    26 */ BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableReinit },  /* [Priority: 0] */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableReinit] */
+  { /*    27 */ BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM          },  /* [Priority: 0] */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM] */
+  { /*    28 */ BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_Disable      },  /* [Priority: 0] */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_Disable] */
+  { /*    29 */ BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_EnableReinit },  /* [Priority: 0] */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_EnableReinit] */
+  { /*    30 */ BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT   },  /* [Priority: 0] */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT] */
+  { /*    31 */ BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_Disable      },  /* [Priority: 0] */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_Disable] */
+  { /*    32 */ BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableNoinit }   /* [Priority: 0] */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableNoinit] */
+};
+#define BSWM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  BswM_CanSMChannelMapping
+**********************************************************************************************************************/
+/** 
+  \var    BswM_CanSMChannelMapping
+  \brief  Maps the external id of BswMCanSMIndication to an internal id and references immediate request ports.
+  \details
+  Element                  Description
+  ExternalId               External id of BswMCanSMIndication.
+  ImmediateUserEndIdx      the end index of the 0:n relation pointing to BswM_ImmediateUser
+  ImmediateUserStartIdx    the start index of the 0:n relation pointing to BswM_ImmediateUser
+*/ 
+#define BSWM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(BswM_CanSMChannelMappingType, BSWM_CONST) BswM_CanSMChannelMapping[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    ExternalId                                        ImmediateUserEndIdx  ImmediateUserStartIdx        Referable Keys */
+  { /*     0 */ ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8,                  1u,                    0u },  /* [CANSM_CHANNEL_0, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  { /*     1 */ ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e,                  2u,                    1u }   /* [CANSM_CHANNEL_1, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
+};
+#define BSWM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  BswM_ComMChannelMapping
+**********************************************************************************************************************/
+/** 
+  \var    BswM_ComMChannelMapping
+  \brief  Maps the external id of BswMComMIndication to an internal id and references immediate request ports.
+  \details
+  Element       Description
+  ExternalId    External id of BswMComMIndication.
+*/ 
+#define BSWM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(BswM_ComMChannelMappingType, BSWM_CONST) BswM_ComMChannelMapping[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    ExternalId                                              Referable Keys */
+  { /*     0 */ ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8 },  /* [COMM_CHANNEL_0, MRP_ESH_ComMIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  { /*     1 */ ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e }   /* [COMM_CHANNEL_1, MRP_ESH_ComMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -428,11 +503,12 @@ CONST(BswM_DeferredRulesType, BSWM_CONST) BswM_DeferredRules[7] = {  /* PRQA S 1
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(BswM_GenericMappingType, BSWM_CONST) BswM_GenericMapping[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(BswM_GenericMappingType, BSWM_CONST) BswM_GenericMapping[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    ExternalId                                                  ImmediateUserEndIdx                          ImmediateUserStartIdx                          InitValue                                                                     Referable Keys */
-  { /*     0 */ BSWM_GENERIC_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8,                                          3u,                                            2u, BSWM_GENERICVALUE_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8_NO_COM },  /* [GENERIC_0, MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  { /*     1 */ BSWM_GENERIC_ESH_ComMPendingRequests                      , BSWM_NO_IMMEDIATEUSERENDIDXOFGENERICMAPPING, BSWM_NO_IMMEDIATEUSERSTARTIDXOFGENERICMAPPING, BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST          },  /* [GENERIC_1, MRP_ESH_ComMPendingRequests] */
-  { /*     2 */ BSWM_GENERIC_ESH_State                                    ,                                          4u,                                            3u, BSWM_GENERICVALUE_ESH_State_ESH_INIT                                   }   /* [GENERIC_2, MRP_ESH_State] */
+  { /*     0 */ BSWM_GENERIC_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8,                                          4u,                                            3u, BSWM_GENERICVALUE_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8_NO_COM },  /* [GENERIC_0, MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  { /*     1 */ BSWM_GENERIC_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e,                                          5u,                                            4u, BSWM_GENERICVALUE_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM },  /* [GENERIC_1, MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e] */
+  { /*     2 */ BSWM_GENERIC_ESH_ComMPendingRequests                      , BSWM_NO_IMMEDIATEUSERENDIDXOFGENERICMAPPING, BSWM_NO_IMMEDIATEUSERSTARTIDXOFGENERICMAPPING, BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST          },  /* [GENERIC_2, MRP_ESH_ComMPendingRequests] */
+  { /*     3 */ BSWM_GENERIC_ESH_State                                    ,                                          6u,                                            5u, BSWM_GENERICVALUE_ESH_State_ESH_INIT                                   }   /* [GENERIC_3, MRP_ESH_State] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -455,13 +531,15 @@ CONST(BswM_GenericMappingType, BSWM_CONST) BswM_GenericMapping[3] = {  /* PRQA S
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(BswM_ImmediateUserType, BSWM_CONST) BswM_ImmediateUser[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(BswM_ImmediateUserType, BSWM_CONST) BswM_ImmediateUser[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    MaskedBits  RulesIndEndIdx  RulesIndStartIdx        Comment                                                             Referable Keys */
   { /*     0 */      0x01u,             8u,               0u },  /* [Name: CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8]  */  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8, CANSM_CHANNEL_0] */
-  { /*     1 */      0x01u,            15u,               8u },  /* [Name: CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8, DCM_COM_0] */
-  { /*     2 */      0x01u,            18u,              15u },  /* [Name: CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8]   */  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8, GENERIC_0] */
-  { /*     3 */      0x03u,            26u,              18u },  /* [Name: ESH_State]                                       */  /* [MRP_ESH_State, GENERIC_2] */
-  { /*     4 */      0x01u,            30u,              26u }   /* [Name: CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8]     */  /* [MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8, NM_0] */
+  { /*     1 */      0x01u,            15u,               8u },  /* [Name: CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e]  */  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e, CANSM_CHANNEL_1] */
+  { /*     2 */      0x01u,            22u,              15u },  /* [Name: CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8, DCM_COM_0] */
+  { /*     3 */      0x01u,            25u,              22u },  /* [Name: CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8]   */  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8, GENERIC_0] */
+  { /*     4 */      0x01u,            27u,              25u },  /* [Name: CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e]   */  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e, GENERIC_1] */
+  { /*     5 */      0x03u,            35u,              27u },  /* [Name: ESH_State]                                       */  /* [MRP_ESH_State, GENERIC_3] */
+  { /*     6 */      0x01u,            39u,              35u }   /* [Name: CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8]     */  /* [MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8, NM_0] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -540,18 +618,18 @@ CONST(BswM_PartitionIdentifiersType, BSWM_CONST) BswM_PartitionIdentifiers[1] = 
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[20] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[27] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Id   Init        RuleStatesIdx  FctPtr                                                           Referable Keys */
-  { /*     0 */ 14u, BSWM_FALSE,            0u, BswM_Rule_ESH_RunToPostRun                                },  /* [R_ESH_RunToPostRun, MRP_ESH_State, MRP_ESH_ModeNotification, MRP_ESH_ComMIndication_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_ESH_RunRequest_0, MRP_ESH_RunRequest_1, MRP_ESH_SelfRunRequestTimer] */
-  { /*     1 */ 16u, BSWM_FALSE,            1u, BswM_Rule_ESH_WaitToShutdown                              },  /* [R_ESH_WaitToShutdown, MRP_ESH_State, MRP_ESH_NvMIndication, MRP_ESH_NvM_WriteAllTimer, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ComMPendingRequests] */
-  { /*     2 */ 18u, BSWM_FALSE,            2u, BswM_Rule_ESH_WakeupToPrep                                },  /* [R_ESH_WakeupToPrep, MRP_ESH_State, MRP_ESH_NvMIndication, MRP_ESH_NvM_CancelWriteAllTimer, MRP_ESH_EcuM_GetPendingWakeupEvents, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ComMPendingRequests, MRP_ESH_ModeNotification] */
-  { /*     3 */ 17u, BSWM_FALSE,            3u, BswM_Rule_ESH_WaitToWakeup                                },  /* [R_ESH_WaitToWakeup, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ComMPendingRequests] */
-  { /*     4 */ 19u, BSWM_FALSE,            4u, BswM_Rule_ESH_WakeupToRun                                 },  /* [R_ESH_WakeupToRun, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ComMPendingRequests, MRP_ESH_NvMIndication, MRP_ESH_NvM_CancelWriteAllTimer, MRP_ESH_ModeNotification] */
-  { /*     5 */  9u, BSWM_FALSE,            5u, BswM_Rule_ESH_InitToWakeup                                },  /* [R_ESH_InitToWakeup, MRP_ESH_State] */
-  { /*     6 */ 12u, BSWM_FALSE,            6u, BswM_Rule_ESH_PostRunToPrepNested                         },  /* [R_ESH_PostRunToPrepNested] */
-  { /*     7 */ 11u, BSWM_FALSE,            7u, BswM_Rule_ESH_PostRunNested                               },  /* [R_ESH_PostRunNested] */
-  { /*     8 */ 10u, BSWM_FALSE,            8u, BswM_Rule_ESH_PostRun                                     },  /* [R_ESH_PostRun, MRP_ESH_State, MRP_ESH_ModeNotification] */
-  { /*     9 */ 13u, BSWM_FALSE,            9u, BswM_Rule_ESH_PrepToWait                                  },  /* [R_ESH_PrepToWait, MRP_ESH_State, MRP_ESH_ModeNotification] */
+  { /*     0 */ 21u, BSWM_FALSE,            0u, BswM_Rule_ESH_RunToPostRun                                },  /* [R_ESH_RunToPostRun, MRP_ESH_State, MRP_ESH_ModeNotification, MRP_ESH_ComMIndication_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_ESH_ComMIndication_CN_TC37X_VCU_CAN01_70b1f95e, MRP_ESH_RunRequest_0, MRP_ESH_RunRequest_1, MRP_ESH_SelfRunRequestTimer] */
+  { /*     1 */ 23u, BSWM_FALSE,            1u, BswM_Rule_ESH_WaitToShutdown                              },  /* [R_ESH_WaitToShutdown, MRP_ESH_State, MRP_ESH_NvMIndication, MRP_ESH_NvM_WriteAllTimer, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ComMPendingRequests] */
+  { /*     2 */ 25u, BSWM_FALSE,            2u, BswM_Rule_ESH_WakeupToPrep                                },  /* [R_ESH_WakeupToPrep, MRP_ESH_State, MRP_ESH_NvMIndication, MRP_ESH_NvM_CancelWriteAllTimer, MRP_ESH_EcuM_GetPendingWakeupEvents, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ComMPendingRequests, MRP_ESH_ModeNotification] */
+  { /*     3 */ 24u, BSWM_FALSE,            3u, BswM_Rule_ESH_WaitToWakeup                                },  /* [R_ESH_WaitToWakeup, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ComMPendingRequests] */
+  { /*     4 */ 26u, BSWM_FALSE,            4u, BswM_Rule_ESH_WakeupToRun                                 },  /* [R_ESH_WakeupToRun, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ComMPendingRequests, MRP_ESH_NvMIndication, MRP_ESH_NvM_CancelWriteAllTimer, MRP_ESH_ModeNotification] */
+  { /*     5 */ 16u, BSWM_FALSE,            5u, BswM_Rule_ESH_InitToWakeup                                },  /* [R_ESH_InitToWakeup, MRP_ESH_State] */
+  { /*     6 */ 19u, BSWM_FALSE,            6u, BswM_Rule_ESH_PostRunToPrepNested                         },  /* [R_ESH_PostRunToPrepNested] */
+  { /*     7 */ 18u, BSWM_FALSE,            7u, BswM_Rule_ESH_PostRunNested                               },  /* [R_ESH_PostRunNested] */
+  { /*     8 */ 17u, BSWM_FALSE,            8u, BswM_Rule_ESH_PostRun                                     },  /* [R_ESH_PostRun, MRP_ESH_State, MRP_ESH_ModeNotification] */
+  { /*     9 */ 20u, BSWM_FALSE,            9u, BswM_Rule_ESH_PrepToWait                                  },  /* [R_ESH_PrepToWait, MRP_ESH_State, MRP_ESH_ModeNotification] */
   { /*    10 */  4u, BSWM_FALSE,           10u, BswM_Rule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_DISABLE       },  /* [R_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_DISABLE, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
   { /*    11 */  2u, BSWM_FALSE,           11u, BswM_Rule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX               },  /* [R_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
   { /*    12 */  5u, BSWM_FALSE,           12u, BswM_Rule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_ENABLE        },  /* [R_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_ENABLE, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
@@ -559,9 +637,16 @@ CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[20] = {  /* PRQA S 1514, 1533 */  /
   { /*    14 */  1u, BSWM_TRUE ,           14u, BswM_Rule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_NO_COM           },  /* [R_CC_CN_TC37X_VCU_CAN00_07b6c9c8_NO_COM, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
   { /*    15 */  0u, BSWM_FALSE,           15u, BswM_Rule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_BUSOFF_SILENT    },  /* [R_CC_CN_TC37X_VCU_CAN00_07b6c9c8_BUSOFF_SILENT, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
   { /*    16 */  3u, BSWM_FALSE,           16u, BswM_Rule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX_DM            },  /* [R_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX_DM, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  { /*    17 */ 15u, BSWM_FALSE,           17u, BswM_Rule_ESH_RunToPostRunNested                          },  /* [R_ESH_RunToPostRunNested] */
+  { /*    17 */ 22u, BSWM_FALSE,           17u, BswM_Rule_ESH_RunToPostRunNested                          },  /* [R_ESH_RunToPostRunNested] */
   { /*    18 */  7u, BSWM_FALSE,           18u, BswM_Rule_CC_CN_TC37X_VCU_CAN00_NM_DISABLE                },  /* [R_CC_CN_TC37X_VCU_CAN00_NM_DISABLE, MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  { /*    19 */  8u, BSWM_FALSE,           19u, BswM_Rule_CC_CN_TC37X_VCU_CAN00_NM_ENABLE                 }   /* [R_CC_CN_TC37X_VCU_CAN00_NM_ENABLE, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  { /*    19 */  8u, BSWM_FALSE,           19u, BswM_Rule_CC_CN_TC37X_VCU_CAN00_NM_ENABLE                 },  /* [R_CC_CN_TC37X_VCU_CAN00_NM_ENABLE, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8, MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  { /*    20 */ 12u, BSWM_FALSE,           20u, BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM            },  /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
+  { /*    21 */ 14u, BSWM_FALSE,           21u, BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE        },  /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e, MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e] */
+  { /*    22 */ 10u, BSWM_TRUE ,           22u, BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM           },  /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
+  { /*    23 */ 11u, BSWM_FALSE,           23u, BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX               },  /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
+  { /*    24 */  9u, BSWM_FALSE,           24u, BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT    },  /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
+  { /*    25 */ 13u, BSWM_FALSE,           25u, BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE       },  /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
+  { /*    26 */ 15u, BSWM_FALSE,           26u, BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF }   /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e, MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -579,7 +664,7 @@ CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[20] = {  /* PRQA S 1514, 1533 */  /
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(BswM_RulesIndType, BSWM_CONST) BswM_RulesInd[30] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(BswM_RulesIndType, BSWM_CONST) BswM_RulesInd[39] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     RulesInd      Referable Keys */
   /*     0 */       10u,  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
   /*     1 */       11u,  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
@@ -589,28 +674,37 @@ CONST(BswM_RulesIndType, BSWM_CONST) BswM_RulesInd[30] = {  /* PRQA S 1514, 1533
   /*     5 */       15u,  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
   /*     6 */       16u,  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
   /*     7 */       19u,  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*     8 */       10u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*     9 */       11u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*    10 */       12u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*    11 */       13u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*    12 */       16u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*    13 */       18u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*    14 */       19u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*    15 */       12u,  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*    16 */       13u,  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*    17 */       19u,  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*    18 */        0u,  /* [MRP_ESH_State] */
-  /*    19 */        1u,  /* [MRP_ESH_State] */
-  /*    20 */        2u,  /* [MRP_ESH_State] */
-  /*    21 */        3u,  /* [MRP_ESH_State] */
-  /*    22 */        4u,  /* [MRP_ESH_State] */
-  /*    23 */        5u,  /* [MRP_ESH_State] */
-  /*    24 */        8u,  /* [MRP_ESH_State] */
-  /*    25 */        9u,  /* [MRP_ESH_State] */
-  /*    26 */       10u,  /* [MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*    27 */       12u,  /* [MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*    28 */       13u,  /* [MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*    29 */       19u   /* [MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*     8 */       20u,  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
+  /*     9 */       21u,  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
+  /*    10 */       22u,  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
+  /*    11 */       23u,  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
+  /*    12 */       24u,  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
+  /*    13 */       25u,  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
+  /*    14 */       26u,  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
+  /*    15 */       10u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*    16 */       11u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*    17 */       12u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*    18 */       13u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*    19 */       16u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*    20 */       18u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*    21 */       19u,  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*    22 */       12u,  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*    23 */       13u,  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*    24 */       19u,  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*    25 */       21u,  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e] */
+  /*    26 */       26u,  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e] */
+  /*    27 */        0u,  /* [MRP_ESH_State] */
+  /*    28 */        1u,  /* [MRP_ESH_State] */
+  /*    29 */        2u,  /* [MRP_ESH_State] */
+  /*    30 */        3u,  /* [MRP_ESH_State] */
+  /*    31 */        4u,  /* [MRP_ESH_State] */
+  /*    32 */        5u,  /* [MRP_ESH_State] */
+  /*    33 */        8u,  /* [MRP_ESH_State] */
+  /*    34 */        9u,  /* [MRP_ESH_State] */
+  /*    35 */       10u,  /* [MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*    36 */       12u,  /* [MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*    37 */       13u,  /* [MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*    38 */       19u   /* [MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
 };
 #define BSWM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -670,6 +764,15 @@ VAR(BswM_ActionListQueueUType, BSWM_VAR_NOINIT) BswM_ActionListQueue;  /* PRQA S
   /*    21 */  /* [AL_ESH_AL_ExitRun] */
   /*    22 */  /* [AL_CC_AL_CN_TC37X_VCU_CAN00_DISABLE_NM] */
   /*    23 */  /* [AL_CC_AL_CN_TC37X_VCU_CAN00_ENABLE_NM] */
+  /*    24 */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Disable_DM] */
+  /*    25 */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Enable_DM] */
+  /*    26 */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableReinit] */
+  /*    27 */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM] */
+  /*    28 */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_Disable] */
+  /*    29 */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_EnableReinit] */
+  /*    30 */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT] */
+  /*    31 */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_Disable] */
+  /*    32 */  /* [AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableNoinit] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -687,9 +790,10 @@ VAR(BswM_ActionListQueueUType, BSWM_VAR_NOINIT) BswM_ActionListQueue;  /* PRQA S
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(CanSM_BswMCurrentStateType, BSWM_VAR_NOINIT) BswM_CanSMChannelState[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(CanSM_BswMCurrentStateType, BSWM_VAR_NOINIT) BswM_CanSMChannelState[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [CANSM_CHANNEL_0, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*     1 */  /* [CANSM_CHANNEL_1, MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -707,9 +811,10 @@ VAR(CanSM_BswMCurrentStateType, BSWM_VAR_NOINIT) BswM_CanSMChannelState[1];  /* 
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(ComM_ModeType, BSWM_VAR_NOINIT) BswM_ComMChannelState[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(ComM_ModeType, BSWM_VAR_NOINIT) BswM_ComMChannelState[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [COMM_CHANNEL_0, MRP_ESH_ComMIndication_CN_TC37X_VCU_CAN00_07b6c9c8] */
+  /*     1 */  /* [COMM_CHANNEL_1, MRP_ESH_ComMIndication_CN_TC37X_VCU_CAN01_70b1f95e] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -760,11 +865,12 @@ VAR(BswM_ForcedActionListPriorityType, BSWM_VAR_NOINIT) BswM_ForcedActionListPri
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(BswM_ModeType, BSWM_VAR_NOINIT) BswM_GenericState[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(BswM_ModeType, BSWM_VAR_NOINIT) BswM_GenericState[4];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [GENERIC_0, MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8] */
-  /*     1 */  /* [GENERIC_1, MRP_ESH_ComMPendingRequests] */
-  /*     2 */  /* [GENERIC_2, MRP_ESH_State] */
+  /*     1 */  /* [GENERIC_1, MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e] */
+  /*     2 */  /* [GENERIC_2, MRP_ESH_ComMPendingRequests] */
+  /*     3 */  /* [GENERIC_3, MRP_ESH_State] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -795,13 +901,15 @@ VAR(BswM_InitializedType, BSWM_VAR_NOINIT) BswM_Initialized;  /* PRQA S 1514, 15
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(BswM_ModeRequestQueueType, BSWM_VAR_NOINIT) BswM_ModeRequestQueue[5];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(BswM_ModeRequestQueueType, BSWM_VAR_NOINIT) BswM_ModeRequestQueue[7];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN00_07b6c9c8, CANSM_CHANNEL_0] */
-  /*     1 */  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8, DCM_COM_0] */
-  /*     2 */  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8, GENERIC_0] */
-  /*     3 */  /* [MRP_ESH_State, GENERIC_2] */
-  /*     4 */  /* [MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8, NM_0] */
+  /*     1 */  /* [MRP_CC_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e, CANSM_CHANNEL_1] */
+  /*     2 */  /* [MRP_CC_DcmComIndication_CN_TC37X_VCU_CAN00_07b6c9c8, DCM_COM_0] */
+  /*     3 */  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8, GENERIC_0] */
+  /*     4 */  /* [MRP_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e, GENERIC_1] */
+  /*     5 */  /* [MRP_ESH_State, GENERIC_3] */
+  /*     6 */  /* [MRP_CC_NmIndication_CN_TC37X_VCU_CAN00_07b6c9c8, NM_0] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -907,6 +1015,13 @@ VAR(BswM_RuleStatesUType, BSWM_VAR_NOINIT) BswM_RuleStates;  /* PRQA S 0759, 151
   /*    17 */  /* [R_ESH_RunToPostRunNested] */
   /*    18 */  /* [R_CC_CN_TC37X_VCU_CAN00_NM_DISABLE] */
   /*    19 */  /* [R_CC_CN_TC37X_VCU_CAN00_NM_ENABLE] */
+  /*    20 */  /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM] */
+  /*    21 */  /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE] */
+  /*    22 */  /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM] */
+  /*    23 */  /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX] */
+  /*    24 */  /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT] */
+  /*    25 */  /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE] */
+  /*    26 */  /* [R_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1175,6 +1290,7 @@ BSWM_LOCAL FUNC(void, BSWM_CODE) BswM_SwcModeRequestUpdateFct_BSWM_SINGLEPARTITI
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_RunToPostRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
 {
   ComM_CommunicationAllowed(ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8, FALSE);
+  ComM_CommunicationAllowed(ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e, FALSE);
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
   EcuM_ClearValidatedWakeupEvent(ECUM_WKSOURCE_ALL_SOURCES);
   /*lint -restore */
@@ -1235,6 +1351,7 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_WakeupToRun(Bs
 {
   BswM_UpdateTimer(partitionIdx, BSWM_TMR_ESH_NvM_CancelWriteAllTimer, 0u);
   ComM_CommunicationAllowed(ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8, TRUE);
+  ComM_CommunicationAllowed(ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e, TRUE);
   BswM_UpdateTimer(partitionIdx, BSWM_TMR_ESH_SelfRunRequestTimer, 1000uL);
   BswM_ESH_OnEnterRun();
   BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_ESH_Mode_RUN;
@@ -1271,6 +1388,7 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_ESH_PostRunToP
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_PostRunToRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
 {
   ComM_CommunicationAllowed(ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8, TRUE);
+  ComM_CommunicationAllowed(ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e, TRUE);
   BswM_UpdateTimer(partitionIdx, BSWM_TMR_ESH_SelfRunRequestTimer, 1000uL);
   BswM_ESH_OnEnterRun();
   BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_ESH_Mode_RUN;
@@ -1556,6 +1674,138 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CA
 }/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
 
 /**********************************************************************************************************************
+ *  BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Disable_DM
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Disable_DM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduDMGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Rx_1837cb5c, FALSE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  BswM_MarkDmControlInvocation();
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return E_OK;
+}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+/**********************************************************************************************************************
+ *  BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Enable_DM
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Enable_DM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduDMGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Rx_1837cb5c, TRUE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  BswM_MarkDmControlInvocation();
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return E_OK;
+}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+/**********************************************************************************************************************
+ *  BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableReinit
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableReinit(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda, TRUE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduReinitGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda, TRUE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduDMGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda, TRUE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  BswM_MarkPduGroupControlInvocation(BSWM_GROUPCONTROL_REINIT);
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return E_OK;
+}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+/**********************************************************************************************************************
+ *  BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  BswM_RequestMode(BSWM_GENERIC_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e, BSWM_GENERICVALUE_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM);
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return E_OK;
+}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+/**********************************************************************************************************************
+ *  BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_Disable
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_Disable(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Rx_1837cb5c, FALSE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduDMGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Rx_1837cb5c, FALSE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  BswM_MarkPduGroupControlInvocation(BSWM_GROUPCONTROL_NORMAL);
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return E_OK;
+}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+/**********************************************************************************************************************
+ *  BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_EnableReinit
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_EnableReinit(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Rx_1837cb5c, TRUE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduReinitGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Rx_1837cb5c, TRUE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduDMGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Rx_1837cb5c, TRUE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  BswM_MarkPduGroupControlInvocation(BSWM_GROUPCONTROL_REINIT);
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return E_OK;
+}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+/**********************************************************************************************************************
+ *  BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  BswM_RequestMode(BSWM_GENERIC_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e, BSWM_GENERICVALUE_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT);
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return E_OK;
+}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+/**********************************************************************************************************************
+ *  BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_Disable
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_Disable(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda, FALSE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduDMGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda, FALSE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  BswM_MarkPduGroupControlInvocation(BSWM_GROUPCONTROL_NORMAL);
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return E_OK;
+}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+/**********************************************************************************************************************
+ *  BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableNoinit
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableNoinit(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda, TRUE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  /* PRQA S 0277, 3109, 3201, 3325 COMSETIPDU */ /* MD_BswM_0277, MD_BswM_3109, MD_BswM_3201, MD_BswM_3325 */ /*lint -e506 -e572 */
+  BswM_SetIpduDMGroup(ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda, TRUE); /* SBSW_BSWM_IPDUGROUPVECTORCALL */
+  /* PRQA L:COMSETIPDU */ /*lint +e506 +e572 */
+  BswM_MarkPduGroupControlInvocation(BSWM_GROUPCONTROL_NORMAL);
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return E_OK;
+}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+/**********************************************************************************************************************
  *  BswMRuleFunctions
  *********************************************************************************************************************/
 
@@ -1566,7 +1816,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_RunToPostRun(BswM_PCPa
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_RunToPostRunTransition. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if(((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_RUN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_RUN)) && ((BswM_GetComMChannelState(0, 0u) == COMM_NO_COMMUNICATION) && ((Request_ESH_RunRequest_0_requestedMode == RELEASED) && (Request_ESH_RunRequest_1_requestedMode == RELEASED)) && (BswM_GetTimerState(2, 0u) == BSWM_TIMER_EXPIRED)))
+  if(((BswM_GetGenericState(3, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_RUN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_RUN)) && (((BswM_GetComMChannelState(0, 0u) == COMM_NO_COMMUNICATION) && (BswM_GetComMChannelState(1, 0u) == COMM_NO_COMMUNICATION)) && ((Request_ESH_RunRequest_0_requestedMode == RELEASED) && (Request_ESH_RunRequest_1_requestedMode == RELEASED)) && (BswM_GetTimerState(2, 0u) == BSWM_TIMER_EXPIRED)))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_ExitRun. */
     retVal = BSWM_ID_AL_ESH_AL_ExitRun;
@@ -1583,7 +1833,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_WaitToShutdown(BswM_PC
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_WaitForNvMToShutdown. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM) && ((BswM_GetNvMJobState(0, 0u) != NVM_REQ_PENDING) || (BswM_GetTimerState(1, 0u) != BSWM_TIMER_STARTED)) && ((EcuM_GetValidatedWakeupEvents() == 0u) && (BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST)))
+  if((BswM_GetGenericState(3, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM) && ((BswM_GetNvMJobState(0, 0u) != NVM_REQ_PENDING) || (BswM_GetTimerState(1, 0u) != BSWM_TIMER_STARTED)) && ((EcuM_GetValidatedWakeupEvents() == 0u) && (BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST)))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_WaitForNvMToShutdown. */
     retVal = BSWM_ID_AL_ESH_AL_WaitForNvMToShutdown;
@@ -1600,7 +1850,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_WakeupToPrep(BswM_PCPa
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_WakeupToPrepShutdown. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP) && ((BswM_GetNvMJobState(0, 0u) != NVM_REQ_PENDING) || (BswM_GetTimerState(0, 0u) != BSWM_TIMER_STARTED)) && (EcuM_GetPendingWakeupEvents() == 0u) && ((EcuM_GetValidatedWakeupEvents() == 0u) && (BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST)) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_WAKEUP))
+  if((BswM_GetGenericState(3, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP) && ((BswM_GetNvMJobState(0, 0u) != NVM_REQ_PENDING) || (BswM_GetTimerState(0, 0u) != BSWM_TIMER_STARTED)) && (EcuM_GetPendingWakeupEvents() == 0u) && ((EcuM_GetValidatedWakeupEvents() == 0u) && (BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST)) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_WAKEUP))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_WakeupToPrep. */
     retVal = BSWM_ID_AL_ESH_AL_WakeupToPrep;
@@ -1617,7 +1867,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_WaitToWakeup(BswM_PCPa
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_WaitForNvMToWakeup. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM) && ((EcuM_GetValidatedWakeupEvents() != 0u) || (BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_PENDING_REQUEST)))
+  if((BswM_GetGenericState(3, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM) && ((EcuM_GetValidatedWakeupEvents() != 0u) || (BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_PENDING_REQUEST)))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_WaitForNvMWakeup. */
     retVal = BSWM_ID_AL_ESH_AL_WaitForNvMWakeup;
@@ -1634,7 +1884,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_WakeupToRun(BswM_PCPar
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_WakeupToRun. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP) && ((EcuM_GetValidatedWakeupEvents() != 0u) || (BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_PENDING_REQUEST)) && ((BswM_GetNvMJobState(0, 0u) != NVM_REQ_PENDING) || (BswM_GetTimerState(0, 0u) != BSWM_TIMER_STARTED)) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_WAKEUP))
+  if((BswM_GetGenericState(3, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP) && ((EcuM_GetValidatedWakeupEvents() != 0u) || (BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_PENDING_REQUEST)) && ((BswM_GetNvMJobState(0, 0u) != NVM_REQ_PENDING) || (BswM_GetTimerState(0, 0u) != BSWM_TIMER_STARTED)) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_WAKEUP))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_WakeupToRun. */
     retVal = BSWM_ID_AL_ESH_AL_WakeupToRun;
@@ -1651,7 +1901,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_InitToWakeup(BswM_PCPa
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_InitToWakeup. */
-  if(BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_INIT)
+  if(BswM_GetGenericState(3, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_INIT)
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_InitToWakeup. */
     retVal = BSWM_ID_AL_ESH_AL_InitToWakeup;
@@ -1685,7 +1935,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PostRunNested(BswM_PCP
 {
   BswM_HandleType retVal;
   /* Evaluate logical expression ESH_LE_PostRunToRun. */
-  if(((Request_ESH_RunRequest_0_requestedMode == REQUESTED) || (Request_ESH_RunRequest_1_requestedMode == REQUESTED)) || ((EcuM_GetValidatedWakeupEvents() != 0u) || (BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_PENDING_REQUEST)))
+  if(((Request_ESH_RunRequest_0_requestedMode == REQUESTED) || (Request_ESH_RunRequest_1_requestedMode == REQUESTED)) || ((EcuM_GetValidatedWakeupEvents() != 0u) || (BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_PENDING_REQUEST)))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_PostRunToRun. */
     retVal = BSWM_ID_AL_ESH_AL_PostRunToRun;
@@ -1706,7 +1956,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PostRun(BswM_PCPartiti
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_PostRun. */
-  if((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_POST_RUN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_POSTRUN))
+  if((BswM_GetGenericState(3, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_POST_RUN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_POSTRUN))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_ExitPostRun. */
     retVal = BSWM_ID_AL_ESH_AL_ExitPostRun;
@@ -1723,7 +1973,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PrepToWait(BswM_PCPart
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_PrepShutdownToWaitForNvM. */
-  if((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_PREP_SHUTDOWN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_SHUTDOWN))
+  if((BswM_GetGenericState(3, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_PREP_SHUTDOWN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_SHUTDOWN))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_PrepShutdownToWaitForNvM. */
     retVal = BSWM_ID_AL_ESH_AL_PrepShutdownToWaitForNvM;
@@ -1923,7 +2173,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_RunToPostRunNested(Bsw
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_ComMNoPendingRequests. */
-  if(BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST)
+  if(BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST)
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_RunToPostRun. */
     retVal = BSWM_ID_AL_ESH_AL_RunToPostRun;
@@ -1977,6 +2227,189 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN00_NM_E
   else
   {
     BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN00_NM_ENABLE, BSWM_FALSE, partitionIdx);
+    /* No false action list configured. */
+  }
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return retVal;
+}
+
+/**********************************************************************************************************************
+ *  BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
+  /* Evaluate logical expression CC_LE_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM. */
+  if(BswM_GetCanSMChannelState(1, 0u) == CANSM_BSWM_FULL_COMMUNICATION)
+  {
+    if( BswM_GetRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM, partitionIdx) != BSWM_TRUE ) /* COV_BSWM_TRIGGEREDRULEEXECUTION */
+    {
+      BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM, BSWM_TRUE, partitionIdx);
+      /* Return triggered action list BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Enable_DM. */
+      retVal = BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Enable_DM;
+    }
+  }
+  else
+  {
+    if( BswM_GetRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM, partitionIdx) != BSWM_FALSE ) /* COV_BSWM_TRIGGEREDRULEEXECUTION */
+    {
+      BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM, BSWM_FALSE, partitionIdx);
+      /* Return triggered action list BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Disable_DM. */
+      retVal = BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Disable_DM;
+    }
+  }
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return retVal;
+}
+
+/**********************************************************************************************************************
+ *  BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
+  /* Evaluate logical expression CC_LE_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_REINIT. */
+  if((BswM_GetCanSMChannelState(1, 0u) == CANSM_BSWM_FULL_COMMUNICATION) && (BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM))
+  {
+    if( BswM_GetRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE, partitionIdx) != BSWM_TRUE ) /* COV_BSWM_TRIGGEREDRULEEXECUTION */
+    {
+      BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE, BSWM_TRUE, partitionIdx);
+      /* Return triggered action list BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableReinit. */
+      retVal = BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableReinit;
+    }
+  }
+  else
+  {
+    BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE, BSWM_FALSE, partitionIdx);
+    /* No false action list configured. */
+  }
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return retVal;
+}
+
+/**********************************************************************************************************************
+ *  BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
+  /* Evaluate logical expression CC_LE_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e_EQ_CANSM_BSWM_NO_COMMUNICATION. */
+  if(BswM_GetCanSMChannelState(1, 0u) == CANSM_BSWM_NO_COMMUNICATION)
+  {
+    if( BswM_GetRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM, partitionIdx) != BSWM_TRUE ) /* COV_BSWM_TRIGGEREDRULEEXECUTION */
+    {
+      BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM, BSWM_TRUE, partitionIdx);
+      /* Return triggered action list BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM. */
+      retVal = BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM;
+    }
+  }
+  else
+  {
+    BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM, BSWM_FALSE, partitionIdx);
+    /* No false action list configured. */
+  }
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return retVal;
+}
+
+/**********************************************************************************************************************
+ *  BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
+  /* Evaluate logical expression CC_LE_CN_TC37X_VCU_CAN01_70b1f95e_RX. */
+  if(BswM_GetCanSMChannelState(1, 0u) != CANSM_BSWM_NO_COMMUNICATION)
+  {
+    if( BswM_GetRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX, partitionIdx) != BSWM_TRUE ) /* COV_BSWM_TRIGGEREDRULEEXECUTION */
+    {
+      BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX, BSWM_TRUE, partitionIdx);
+      /* Return triggered action list BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_EnableReinit. */
+      retVal = BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_EnableReinit;
+    }
+  }
+  else
+  {
+    if( BswM_GetRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX, partitionIdx) != BSWM_FALSE ) /* COV_BSWM_TRIGGEREDRULEEXECUTION */
+    {
+      BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX, BSWM_FALSE, partitionIdx);
+      /* Return triggered action list BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_Disable. */
+      retVal = BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_Disable;
+    }
+  }
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return retVal;
+}
+
+/**********************************************************************************************************************
+ *  BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
+  /* Evaluate logical expression CC_LE_CanSMIndication_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT. */
+  if((BswM_GetCanSMChannelState(1, 0u) == CANSM_BSWM_BUS_OFF) || (BswM_GetCanSMChannelState(1, 0u) == CANSM_BSWM_SILENT_COMMUNICATION))
+  {
+    if( BswM_GetRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT, partitionIdx) != BSWM_TRUE ) /* COV_BSWM_TRIGGEREDRULEEXECUTION */
+    {
+      BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT, BSWM_TRUE, partitionIdx);
+      /* Return triggered action list BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT. */
+      retVal = BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT;
+    }
+  }
+  else
+  {
+    BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT, BSWM_FALSE, partitionIdx);
+    /* No false action list configured. */
+  }
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return retVal;
+}
+
+/**********************************************************************************************************************
+ *  BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
+  /* Evaluate logical expression CC_LE_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE. */
+  if(BswM_GetCanSMChannelState(1, 0u) != CANSM_BSWM_FULL_COMMUNICATION)
+  {
+    if( BswM_GetRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE, partitionIdx) != BSWM_TRUE ) /* COV_BSWM_TRIGGEREDRULEEXECUTION */
+    {
+      BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE, BSWM_TRUE, partitionIdx);
+      /* Return triggered action list BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_Disable. */
+      retVal = BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_Disable;
+    }
+  }
+  else
+  {
+    BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE, BSWM_FALSE, partitionIdx);
+    /* No false action list configured. */
+  }
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return retVal;
+}
+
+/**********************************************************************************************************************
+ *  BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
+  /* Evaluate logical expression CC_LE_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE. */
+  if((BswM_GetCanSMChannelState(1, 0u) == CANSM_BSWM_FULL_COMMUNICATION) && (BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT))
+  {
+    if( BswM_GetRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF, partitionIdx) != BSWM_TRUE ) /* COV_BSWM_TRIGGEREDRULEEXECUTION */
+    {
+      BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF, BSWM_TRUE, partitionIdx);
+      /* Return triggered action list BswM_ActionList_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableNoinit. */
+      retVal = BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableNoinit;
+    }
+  }
+  else
+  {
+    BswM_UpdateRuleStates(BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF, BSWM_FALSE, partitionIdx);
     /* No false action list configured. */
   }
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */

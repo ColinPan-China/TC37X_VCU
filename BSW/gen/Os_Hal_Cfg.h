@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Cfg.h
- *   Generation Time: 2024-09-05 15:06:31
+ *   Generation Time: 2024-11-18 10:32:49
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -52,8 +52,10 @@
 /* ISR core and level definitions */
 # define OS_ISR_CANISR_0_CORE      (0)
 # define OS_ISR_CANISR_0_LEVEL     (30)
+# define OS_ISR_CANISR_1_CORE      (0)
+# define OS_ISR_CANISR_1_LEVEL     (1)
 # define OS_ISR_COUNTERISR_SYSTEMTIMER_CORE      (0)
-# define OS_ISR_COUNTERISR_SYSTEMTIMER_LEVEL     (1)
+# define OS_ISR_COUNTERISR_SYSTEMTIMER_LEVEL     (31)
 
 /* Hardware counter timing macros */
 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cbk.h
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2024-11-18 12:19:06
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -58,6 +58,8 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define ComConf_ComIPdu_VcuRxMsg1_oTC37X_VCU_CAN00_78805594_Rx        0u
 #define ComConf_ComIPdu_VcuRxMsg2_oTC37X_VCU_CAN00_920688f6_Rx        1u
+#define ComConf_ComIPdu_VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx        2u
+#define ComConf_ComIPdu_VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx        3u
 /**\} */
 
 /**
@@ -68,8 +70,10 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define ComConf_ComIPdu_VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx        0u
-#define ComConf_ComIPdu_VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx        1u
+#define ComConf_ComIPdu_VcuAdcTxMsg1_oTC37X_VCU_CAN01_fda515ee_Tx     0u
+#define ComConf_ComIPdu_VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx     1u
+#define ComConf_ComIPdu_VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx        2u
+#define ComConf_ComIPdu_VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx        3u
 /**\} */
 
 /**********************************************************************************************************************

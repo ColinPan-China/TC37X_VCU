@@ -2064,6 +2064,12 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
       /* call runnable */
       Dem_SatelliteMainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
+
+    if ((ev & Rte_Ev_Cyclic2_Bsw_Task_0_20ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      ComM_MainFunction_1(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 

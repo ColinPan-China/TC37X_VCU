@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanSM_Cfg.h
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2024-11-18 10:32:49
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -147,7 +147,7 @@
 #define CanSM_GetChannelVarRecordOfPCConfig()                                                       CanSM_ChannelVarRecord  /**< the pointer to CanSM_ChannelVarRecord */
 #define CanSM_GetModeRequestRepetitionMaxOfPCConfig()                                               10u  /**< getCanSMModeRequestRepetitionMax */
 #define CanSM_GetModeRequestRepetitionTimeOfPCConfig()                                              10u  /**< periond of ModeRequest Repetition */
-#define CanSM_GetSizeOfChannelConfigOfPCConfig()                                                    1u  /**< the number of accomplishable value elements in CanSM_ChannelConfig */
+#define CanSM_GetSizeOfChannelConfigOfPCConfig()                                                    2u  /**< the number of accomplishable value elements in CanSM_ChannelConfig */
 /** 
   \}
 */ 
@@ -188,10 +188,10 @@
 #define CanSM_GetBorTimeL1OfChannelConfig(Index)                                                    100u
 #define CanSM_GetBorTimeL2OfChannelConfig(Index)                                                    300u
 #define CanSM_GetBorTimeTxEnsuredOfChannelConfig(Index)                                             500u
-#define CanSM_GetControllerIdOfChannelConfig(Index)                                                 0u
+#define CanSM_GetControllerIdOfChannelConfig(Index)                                                 ((CanSM_ControllerIdOfChannelConfigType)((Index)))
 #define CanSM_GetDemEventId_BusOff_OfChannelConfig(Index)                                           0xFFu
 #define CanSM_GetDemEventId_ModeRequest_OfChannelConfig(Index)                                      0xFFu
-#define CanSM_GetNetworkHandleOfChannelConfig(Index)                                                0u
+#define CanSM_GetNetworkHandleOfChannelConfig(Index)                                                ((CanSM_NetworkHandleOfChannelConfigType)((Index)))
 #define CanSM_IsTrcv_InActive_AtAll_NonPNCannelsOfChannelConfig(Index)                              (((TRUE)) != FALSE)  /**< Config feature which determines if Trvc is active at a Non PN channel */
 #define CanSM_GetFinalMagicNumber()                                                                   /**< Deactivateable: 'CanSM_FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
 #define CanSM_GetInitDataHashCode()                                                                   /**< Deactivateable: 'CanSM_InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
@@ -388,10 +388,10 @@
 #define CANSM_ISDEF_BORTIMEL2OFCHANNELCONFIG                                                        STD_ON
 #define CANSM_ISDEF_BORTIMETXENSUREDOFCHANNELCONFIG                                                 STD_ON
 #define CANSM_ISDEF_BOR_TX_CONFIRMATION_POLLINGOFCHANNELCONFIG                                      STD_OFF
-#define CANSM_ISDEF_CONTROLLERIDOFCHANNELCONFIG                                                     STD_ON
+#define CANSM_ISDEF_CONTROLLERIDOFCHANNELCONFIG                                                     STD_OFF
 #define CANSM_ISDEF_DEMEVENTID_BUSOFF_OFCHANNELCONFIG                                               STD_ON
 #define CANSM_ISDEF_DEMEVENTID_MODEREQUEST_OFCHANNELCONFIG                                          STD_ON
-#define CANSM_ISDEF_NETWORKHANDLEOFCHANNELCONFIG                                                    STD_ON
+#define CANSM_ISDEF_NETWORKHANDLEOFCHANNELCONFIG                                                    STD_OFF
 #define CANSM_ISDEF_PARTIAL_NETWORK_TRCV_SUPPORTOFCHANNELCONFIG                                     STD_OFF
 #define CANSM_ISDEF_PARTIAL_NETWORK_WAKEUP_FILTEROFCHANNELCONFIG                                    STD_OFF
 #define CANSM_ISDEF_PRODERRORDETECT_BUSOFF_OFCHANNELCONFIG                                          STD_OFF
@@ -417,10 +417,10 @@
 #define CANSM_EQ2_BORTIMEL2OFCHANNELCONFIG                                                          300u
 #define CANSM_EQ2_BORTIMETXENSUREDOFCHANNELCONFIG                                                   500u
 #define CANSM_EQ2_BOR_TX_CONFIRMATION_POLLINGOFCHANNELCONFIG                                        
-#define CANSM_EQ2_CONTROLLERIDOFCHANNELCONFIG                                                       0u
+#define CANSM_EQ2_CONTROLLERIDOFCHANNELCONFIG                                                       
 #define CANSM_EQ2_DEMEVENTID_BUSOFF_OFCHANNELCONFIG                                                 0xFFu
 #define CANSM_EQ2_DEMEVENTID_MODEREQUEST_OFCHANNELCONFIG                                            0xFFu
-#define CANSM_EQ2_NETWORKHANDLEOFCHANNELCONFIG                                                      0u
+#define CANSM_EQ2_NETWORKHANDLEOFCHANNELCONFIG                                                      
 #define CANSM_EQ2_PARTIAL_NETWORK_TRCV_SUPPORTOFCHANNELCONFIG                                       
 #define CANSM_EQ2_PARTIAL_NETWORK_WAKEUP_FILTEROFCHANNELCONFIG                                      
 #define CANSM_EQ2_PRODERRORDETECT_BUSOFF_OFCHANNELCONFIG                                            
@@ -626,7 +626,7 @@ typedef CanSM_PCConfigType CanSM_ConfigType;  /**< A structure type is present f
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(CanSM_ChannelVarRecordType, CANSM_VAR_NOINIT) CanSM_ChannelVarRecord[1];
+extern VAR(CanSM_ChannelVarRecordType, CANSM_VAR_NOINIT) CanSM_ChannelVarRecord[2];
 #define CANSM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

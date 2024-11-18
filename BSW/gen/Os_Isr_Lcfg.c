@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.c
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2024-11-18 10:32:50
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -86,6 +86,9 @@
 /*! Dynamic ISR data: CanIsr_0 */
 OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_CanIsr_0_Dyn;
 
+/*! Dynamic ISR data: CanIsr_1 */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_CanIsr_1_Dyn;
+
 /*! Dynamic ISR data: CounterIsr_SystemTimer */
 OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_CounterIsr_SystemTimer_Dyn;
 
@@ -139,6 +142,41 @@ CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_CanIsr_0 =
   /* .IsEnabledOnInitialization = */ TRUE
 }
 ;
+/*! ISR configuration data: CanIsr_1 */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_CanIsr_1_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_CanIsr_1,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_CanIsr_1,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_CanIsr_1 =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_CanIsr_1,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level1_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_CanIsr_1_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_CanIsr_1_HwConfig,
+  /* .IsrId                     = */ CanIsr_1,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
 /*! ISR configuration data: CounterIsr_SystemTimer */
 CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer_HwConfig =
 {
@@ -155,7 +193,7 @@ CONST(Os_TimerIsrConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer =
   /* .Thread   = */
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_CounterIsr_SystemTimer,
-    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level1_Dyn,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level3_Dyn,
     /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
     /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_CounterIsr_SystemTimer_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore0,
@@ -189,6 +227,7 @@ CONST(Os_TimerIsrConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer =
 CONSTP2CONST(Os_IsrConfigType, OS_CONST, OS_CONST) OsCfg_IsrRefs[OS_ISRID_COUNT + 1] =  /* PRQA S 4521 */ /* MD_Os_Rule10.1_4521 */
 {
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_CanIsr_0),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_CanIsr_1),
   OS_TIMER_CASTCONFIG_TIMERISR_2_ISR(OsCfg_Isr_CounterIsr_SystemTimer),
   NULL_PTR
 };

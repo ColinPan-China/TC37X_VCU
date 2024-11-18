@@ -88,6 +88,7 @@
 #include "Xcp.h"
 #include "Mcu.h"
 #include "Dio.h"
+#include "ComM.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -337,6 +338,12 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode(ComM_ModeType ComMode)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
+ *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_GetCurrentComMode(ComM_ModeType *ComMode)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_ComM_UserRequest_E_NOT_OK
+ *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode(ComM_ModeType ComMode)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
  *
  *********************************************************************************************************************/
 /**********************************************************************************************************************
@@ -356,8 +363,10 @@ uint8 UserData3Wr[32];
 uint8 UserData3Cmd = 0;
 
 uint8 ComMReqFlg = 0;
-
+uint8 ComMReqSts = 0;
 uint8 XcpCnt = 0;
+//#include "ComM.h"
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -369,15 +378,16 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * Symbol: SWC1_Runnable10ms
  *********************************************************************************************************************/
 //	if( ComMReqFlg == 0 )
-	if( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_12_KL15) == 0 )  
+	if(1)//( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_12_KL15) == 0 )  
   {
     Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
+    Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_FULL_COMMUNICATION );
   }
   else
   {
     Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_NO_COMMUNICATION );
   }
-
+  Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_GetCurrentComMode(&ComMReqSts);
   if(UserData1Cmd == 1)
   {
     VStdMemSet(UserData1Rd,0xFF,sizeof(UserData1Rd));

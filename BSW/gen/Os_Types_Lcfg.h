@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2024-10-09 14:09:24
+ *   Generation Time: 2024-11-18 10:32:50
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -69,6 +69,7 @@
 
 /* Category 2 ISR identifiers. */
 #define CanIsr_0 CanIsr_0
+#define CanIsr_1 CanIsr_1
 #define CounterIsr_SystemTimer CounterIsr_SystemTimer
 
 /* Alarm identifiers. */
@@ -150,8 +151,9 @@ typedef enum
 typedef enum
 {
   CanIsr_0 = 0,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CounterIsr_SystemTimer = 1,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ISRID_COUNT = 2,
+  CanIsr_1 = 1,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CounterIsr_SystemTimer = 2,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ISRID_COUNT = 3,
   INVALID_ISR = OS_ISRID_COUNT
 } ISRType;
 

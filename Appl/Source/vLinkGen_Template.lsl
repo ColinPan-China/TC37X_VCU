@@ -1223,6 +1223,7 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_AswTask_CODE";
         select "[.]text.OS_Bsw_Task_CODE";
         select "[.]text.OS_CanIsr_0_CODE";
+        select "[.]text.OS_CanIsr_1_CODE";
         select "[.]text.OS_Default_Init_Task_CODE";
         select "[.]text.OS_Default_Init_Task_Trusted_CODE";
         select "[.]text.OS_ERRORHOOK_CODE";
