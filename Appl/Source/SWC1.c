@@ -89,6 +89,7 @@
 #include "Mcu.h"
 #include "Dio.h"
 #include "ComM.h"
+#include "Adc.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -266,7 +267,11 @@ FUNC(void, SWC1_CODE) NvSWC_NvMNotifyJobFinished_UserData2_JobFinished(NvM_Servi
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: SWC1_Init_doc
  *********************************************************************************************************************/
-
+uint16 ADC_SW_GRP0_RES[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+uint16 ADC_SW_GRP1_RES[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+uint16 ADC_SW_GRP2_RES[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+uint16 ADC_SW_GRP3_RES[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+uint16 ADC_SW_GRP11_RES[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
@@ -278,7 +283,25 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: SWC1_Init
  *********************************************************************************************************************/
-//  Rte_Write_Request_ESH_RunRequest_0_requestedMode(1);
+  Rte_Write_Request_ESH_RunRequest_0_requestedMode(1);
+ 	Adc_EnableGroupNotification(AdcConf_AdcGroup_AdcGroup_0);
+	Adc_EnableGroupNotification(AdcConf_AdcGroup_AdcGroup_1);
+	Adc_EnableGroupNotification(AdcConf_AdcGroup_AdcGroup_2);
+  Adc_EnableGroupNotification(AdcConf_AdcGroup_AdcGroup_3);
+	Adc_EnableGroupNotification(AdcConf_AdcGroup_AdcGroup_11);
+
+	Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_0,ADC_SW_GRP0_RES);
+	 Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_1,ADC_SW_GRP1_RES);
+	 Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_2,ADC_SW_GRP2_RES);
+	 Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_3,ADC_SW_GRP3_RES);
+	 Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_11,ADC_SW_GRP11_RES);
+
+
+	Adc_StartGroupConversion(AdcConf_AdcGroup_AdcGroup_0);
+	Adc_StartGroupConversion(AdcConf_AdcGroup_AdcGroup_1);
+	Adc_StartGroupConversion(AdcConf_AdcGroup_AdcGroup_2);
+  Adc_StartGroupConversion(AdcConf_AdcGroup_AdcGroup_3);
+	Adc_StartGroupConversion(AdcConf_AdcGroup_AdcGroup_11);
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

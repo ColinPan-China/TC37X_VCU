@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2024-11-18 10:32:50
+ *   Generation Time: 2024-11-18 17:40:24
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -68,6 +68,11 @@
 #define IdleTask_OsCore0 IdleTask_OsCore0
 
 /* Category 2 ISR identifiers. */
+#define ADC0SR0_ISR ADC0SR0_ISR
+#define ADC11SR0_ISR ADC11SR0_ISR
+#define ADC1SR0_ISR ADC1SR0_ISR
+#define ADC2SR0_ISR ADC2SR0_ISR
+#define ADC3SR0_ISR ADC3SR0_ISR
 #define CanIsr_0 CanIsr_0
 #define CanIsr_1 CanIsr_1
 #define CounterIsr_SystemTimer CounterIsr_SystemTimer
@@ -150,10 +155,15 @@ typedef enum
 /*! Category 2 ISR identifiers. */
 typedef enum
 {
-  CanIsr_0 = 0,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CanIsr_1 = 1,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CounterIsr_SystemTimer = 2,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ISRID_COUNT = 3,
+  ADC0SR0_ISR = 0,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  ADC11SR0_ISR = 1,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  ADC1SR0_ISR = 2,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  ADC2SR0_ISR = 3,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  ADC3SR0_ISR = 4,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CanIsr_0 = 5,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CanIsr_1 = 6,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CounterIsr_SystemTimer = 7,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ISRID_COUNT = 8,
   INVALID_ISR = OS_ISRID_COUNT
 } ISRType;
 

@@ -45,6 +45,7 @@
 #include "Rte_Os_OsCore0_swc.h"
 #include "Rte_PowerMng_SWC.h"
 #include "Rte_SWC1.h"
+#include "SchM_Adc.h"
 #include "SchM_BswM.h"
 #include "SchM_Can.h"
 #include "SchM_CanIf.h"
@@ -1409,6 +1410,32 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBInitEvt_DTC_0x000002_InitM
 /**********************************************************************************************************************
  * Exclusive area access
  *********************************************************************************************************************/
+
+FUNC(void, RTE_CODE) SchM_Enter_Adc_KernelData(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Adc_KernelData(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Adc_SrcRegAccess(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Adc_SrcRegAccess(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
 
 FUNC(void, RTE_CODE) SchM_Enter_Fls_17_Dmu_Erase(void)
 {

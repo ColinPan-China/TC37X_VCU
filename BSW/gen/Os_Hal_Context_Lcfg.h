@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Context_Lcfg.h
- *   Generation Time: 2024-11-18 10:32:49
+ *   Generation Time: 2024-11-18 17:40:24
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -89,6 +89,21 @@ extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Leve
 /*! HAL dynamic ISR2 level context data: Level3 */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level3_Dyn;
 
+/*! HAL dynamic ISR2 level context data: Level4 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level4_Dyn;
+
+/*! HAL dynamic ISR2 level context data: Level5 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level5_Dyn;
+
+/*! HAL dynamic ISR2 level context data: Level6 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level6_Dyn;
+
+/*! HAL dynamic ISR2 level context data: Level7 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level7_Dyn;
+
+/*! HAL dynamic ISR2 level context data: Level8 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level8_Dyn;
+
 /*! HAL dynamic task context data: AswTask */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_AswTask_Dyn;
 
@@ -135,6 +150,21 @@ extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ShutdownHook_
 
 /*! HAL hook context configuration data: ErrorHook_OsCore0 */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ErrorHook_OsCore0;
+
+/*! HAL ISR2 context configuration data: ADC0SR0_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ADC0SR0_ISR;
+
+/*! HAL ISR2 context configuration data: ADC11SR0_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ADC11SR0_ISR;
+
+/*! HAL ISR2 context configuration data: ADC1SR0_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ADC1SR0_ISR;
+
+/*! HAL ISR2 context configuration data: ADC2SR0_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ADC2SR0_ISR;
+
+/*! HAL ISR2 context configuration data: ADC3SR0_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ADC3SR0_ISR;
 
 /*! HAL ISR2 context configuration data: CanIsr_0 */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_CanIsr_0;

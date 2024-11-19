@@ -1219,6 +1219,11 @@ section_layout mpe:vtc:linear
     {
       section "OS_USER_CODE_SEC" (fill, blocksize = 2, attributes = rx)
       {
+        select "[.]text.OS_ADC0SR0_ISR_CODE";
+        select "[.]text.OS_ADC11SR0_ISR_CODE";
+        select "[.]text.OS_ADC1SR0_ISR_CODE";
+        select "[.]text.OS_ADC2SR0_ISR_CODE";
+        select "[.]text.OS_ADC3SR0_ISR_CODE";
         select "[.]text.OS_Asw_Init_CODE";
         select "[.]text.OS_AswTask_CODE";
         select "[.]text.OS_Bsw_Task_CODE";

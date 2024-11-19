@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Cfg.h
- *   Generation Time: 2024-11-18 10:32:49
+ *   Generation Time: 2024-11-18 16:26:47
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -57,7 +57,7 @@
 # define OS_CFG_NUM_BARRIERS                                     (0uL)
 
 /*! Number of ISR2 nesting levels. */
-# define OS_CFG_NUM_ISRLEVELS                                    (3uL)
+# define OS_CFG_NUM_ISRLEVELS                                    (8uL)
 
 /*! Number of all spinlocks. */
 # define OS_CFG_NUM_SYSTEM_SPINLOCKS                             (0uL)
@@ -71,7 +71,7 @@
 # define OS_CFG_NUM_CORE_OSCORE0_IOCS             (0uL)
 # define OS_CFG_NUM_CORE_OSCORE0_RESOURCES        (1uL)
 # define OS_CFG_NUM_CORE_OSCORE0_STACKS           (11uL)
-# define OS_CFG_NUM_CORE_OSCORE0_ISRS             (3uL)
+# define OS_CFG_NUM_CORE_OSCORE0_ISRS             (8uL)
 
 
 /**********************************************************************************************************************

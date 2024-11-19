@@ -158,6 +158,9 @@
         <Splitter File=".\Config\ECUC\TC37X_VCU_Dem_Dem_ecuc.arxml">
             <Module Name="Dem"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Adc_Adc_ecuc.arxml">
+            <Module Name="Adc"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.h
- *   Generation Time: 2024-11-18 10:32:50
+ *   Generation Time: 2024-11-18 17:40:24
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -72,6 +72,26 @@
 
 # define OS_START_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! ISR configuration data: ADC0SR0_ISR */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ADC0SR0_ISR_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ADC0SR0_ISR;
+
+/*! ISR configuration data: ADC11SR0_ISR */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ADC11SR0_ISR_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ADC11SR0_ISR;
+
+/*! ISR configuration data: ADC1SR0_ISR */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ADC1SR0_ISR_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ADC1SR0_ISR;
+
+/*! ISR configuration data: ADC2SR0_ISR */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ADC2SR0_ISR_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ADC2SR0_ISR;
+
+/*! ISR configuration data: ADC3SR0_ISR */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ADC3SR0_ISR_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ADC3SR0_ISR;
 
 /*! ISR configuration data: CanIsr_0 */
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_CanIsr_0_HwConfig;

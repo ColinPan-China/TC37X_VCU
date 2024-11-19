@@ -454,6 +454,10 @@
  *  Rte_WriteHook_SWC1_NvM_Data_IF_UserData2_Send_Element_UserData2_Start
  *  Rte_WriteHook_SWC1_Request_ESH_RunRequest_0_requestedMode_Return
  *  Rte_WriteHook_SWC1_Request_ESH_RunRequest_0_requestedMode_Start
+ *  SchM_EnterHook_Adc_KernelData_Return
+ *  SchM_EnterHook_Adc_KernelData_Start
+ *  SchM_EnterHook_Adc_SrcRegAccess_Return
+ *  SchM_EnterHook_Adc_SrcRegAccess_Start
  *  SchM_EnterHook_BswM_BSWM_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_BswM_BSWM_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_CanIf_CANIF_EXCLUSIVE_AREA_0_Return
@@ -612,6 +616,10 @@
  *  SchM_EnterHook_Xcp_XCP_EXCLUSIVE_AREA_1_Start
  *  SchM_EnterHook_Xcp_XCP_EXCLUSIVE_AREA_2_Return
  *  SchM_EnterHook_Xcp_XCP_EXCLUSIVE_AREA_2_Start
+ *  SchM_ExitHook_Adc_KernelData_Return
+ *  SchM_ExitHook_Adc_KernelData_Start
+ *  SchM_ExitHook_Adc_SrcRegAccess_Return
+ *  SchM_ExitHook_Adc_SrcRegAccess_Start
  *  SchM_ExitHook_BswM_BSWM_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_BswM_BSWM_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_CanIf_CANIF_EXCLUSIVE_AREA_0_Return
