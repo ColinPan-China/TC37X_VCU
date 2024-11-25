@@ -125,6 +125,7 @@ Rte_DemMaster_0.h<br>
 Rte_DemSatellite_0.h<br>
 Rte_Det.h<br>
 Rte_EcuM.h<br>
+Rte_IoHwAb_SWC.h<br>
 Rte_NvM.h<br>
 Rte_Os_OsCore0_swc.h<br>
 Rte_PowerMng_SWC.h<br>
@@ -138,6 +139,7 @@ Rte_DemMaster_0_Type.h<br>
 Rte_DemSatellite_0_Type.h<br>
 Rte_Det_Type.h<br>
 Rte_EcuM_Type.h<br>
+Rte_IoHwAb_SWC_Type.h<br>
 Rte_NvM_Type.h<br>
 Rte_Os_OsCore0_swc_Type.h<br>
 Rte_PowerMng_SWC_Type.h<br>
@@ -158,6 +160,7 @@ Dcm_MemMap.h<br>
 DemMaster_0_MemMap.h<br>
 DemSatellite_0_MemMap.h<br>
 EcuM_MemMap.h<br>
+IoHwAb_SWC_MemMap.h<br>
 Os_OsCore0_swc_MemMap.h<br>
 PowerMng_SWC_MemMap.h<br>
 SWC1_MemMap.h<br>
@@ -1177,6 +1180,20 @@ CONST Size: 100 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>InitEvent</B></TD>
+<TD>IoHwAb_SWC_Init</TD>
+<TD>AswTask</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>IoHwAb_SWC_Runnable</TD>
+<TD>AswTask</TD>
+<TD>Rte_Ev_Cyclic_AswTask_0_10ms</TD>
+<TD>Rte_Al_TE_AswTask_0_10ms</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::EraseBlock</TD>
 <TD>EraseBlock</TD>
 <TD>n/a</TD>
@@ -1404,8 +1421,8 @@ CONST Size: 100 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>SWC1_Runnable10ms</TD>
 <TD>AswTask</TD>
-<TD>Rte_Ev_Run_SWC1_SWC1_Runnable10ms</TD>
-<TD>Rte_Al_TE_SWC1_SWC1_Runnable10ms</TD>
+<TD>Rte_Ev_Cyclic_AswTask_0_10ms</TD>
+<TD>Rte_Al_TE_AswTask_0_10ms</TD>
 </TR>
 </TABLE>
 <br>

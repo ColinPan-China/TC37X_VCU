@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 9.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2024-11-19, 09:18:04        !!!IGNORE-LINE!!!                 **
+**  DATE, TIME: 2024-11-21, 13:39:23        !!!IGNORE-LINE!!!                 **
 **                                                                            **
 **  GENERATOR : Build b180321-0610          !!!IGNORE-LINE!!!                 **
 **                                                                            **
@@ -629,7 +629,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN0
+#ifndef AdcConf_AdcChannel_AdcChannel_G0CH0
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -639,7 +639,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN0  (0U)
+#define AdcConf_AdcChannel_AdcChannel_G0CH0  (0U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -649,7 +649,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN1
+#ifndef AdcConf_AdcChannel_AdcChannel_G0CH1
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -659,7 +659,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN1  (1U)
+#define AdcConf_AdcChannel_AdcChannel_G0CH1  (1U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -669,7 +669,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN2
+#ifndef AdcConf_AdcChannel_AdcChannel_G0CH2
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -679,7 +679,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN2  (2U)
+#define AdcConf_AdcChannel_AdcChannel_G0CH2  (2U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -689,7 +689,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN3
+#ifndef AdcConf_AdcChannel_AdcChannel_G0CH3
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -699,7 +699,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN3  (3U)
+#define AdcConf_AdcChannel_AdcChannel_G0CH3  (3U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -709,7 +709,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN4
+#ifndef AdcConf_AdcChannel_AdcChannel_G0CH4
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -719,7 +719,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN4  (4U)
+#define AdcConf_AdcChannel_AdcChannel_G0CH4  (4U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -729,7 +729,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN5
+#ifndef AdcConf_AdcChannel_AdcChannel_G0CH5
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -739,7 +739,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN5  (5U)
+#define AdcConf_AdcChannel_AdcChannel_G0CH5  (5U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -749,7 +749,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN6
+#ifndef AdcConf_AdcChannel_AdcChannel_G0CH6
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -759,7 +759,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN6  (6U)
+#define AdcConf_AdcChannel_AdcChannel_G0CH6  (6U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -769,7 +769,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN7
+#ifndef AdcConf_AdcChannel_AdcChannel_G0CH7
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -779,7 +779,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN7  (7U)
+#define AdcConf_AdcChannel_AdcChannel_G0CH7  (7U)
 #endif
 
 /******Symbolic Name for all the AdcChannel of HW Unit 1******/
@@ -791,7 +791,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN8
+#ifndef AdcConf_AdcChannel_AdcChannel_G1CH0
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -801,7 +801,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN8  (0U)
+#define AdcConf_AdcChannel_AdcChannel_G1CH0  (0U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -811,7 +811,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN9
+#ifndef AdcConf_AdcChannel_AdcChannel_G1CH1
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -821,7 +821,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN9  (1U)
+#define AdcConf_AdcChannel_AdcChannel_G1CH1  (1U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -831,7 +831,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN10
+#ifndef AdcConf_AdcChannel_AdcChannel_G1CH2
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -841,7 +841,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN10  (2U)
+#define AdcConf_AdcChannel_AdcChannel_G1CH2  (2U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -851,7 +851,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN11
+#ifndef AdcConf_AdcChannel_AdcChannel_G1CH3
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -861,7 +861,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN11  (3U)
+#define AdcConf_AdcChannel_AdcChannel_G1CH3  (3U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -871,7 +871,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN12
+#ifndef AdcConf_AdcChannel_AdcChannel_G1CH4
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -881,7 +881,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN12  (4U)
+#define AdcConf_AdcChannel_AdcChannel_G1CH4  (4U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -891,7 +891,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN13
+#ifndef AdcConf_AdcChannel_AdcChannel_G1CH5
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -901,7 +901,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN13  (5U)
+#define AdcConf_AdcChannel_AdcChannel_G1CH5  (5U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -911,7 +911,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN14
+#ifndef AdcConf_AdcChannel_AdcChannel_G1CH6
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -921,7 +921,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN14  (6U)
+#define AdcConf_AdcChannel_AdcChannel_G1CH6  (6U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -931,7 +931,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN15
+#ifndef AdcConf_AdcChannel_AdcChannel_G1CH7
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -941,7 +941,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN15  (7U)
+#define AdcConf_AdcChannel_AdcChannel_G1CH7  (7U)
 #endif
 
 /******Symbolic Name for all the AdcChannel of HW Unit 2******/
@@ -953,7 +953,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN16
+#ifndef AdcConf_AdcChannel_AdcChannel_G2CH0
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -963,7 +963,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN16  (0U)
+#define AdcConf_AdcChannel_AdcChannel_G2CH0  (0U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -973,7 +973,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN17
+#ifndef AdcConf_AdcChannel_AdcChannel_G2CH1
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -983,7 +983,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN17  (1U)
+#define AdcConf_AdcChannel_AdcChannel_G2CH1  (1U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -993,7 +993,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN18
+#ifndef AdcConf_AdcChannel_AdcChannel_G2CH2
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -1003,7 +1003,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN18  (2U)
+#define AdcConf_AdcChannel_AdcChannel_G2CH2  (2U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -1013,7 +1013,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN19
+#ifndef AdcConf_AdcChannel_AdcChannel_G2CH3
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -1023,7 +1023,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN19  (3U)
+#define AdcConf_AdcChannel_AdcChannel_G2CH3  (3U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -1033,7 +1033,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN20
+#ifndef AdcConf_AdcChannel_AdcChannel_G2CH4
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -1043,7 +1043,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN20  (4U)
+#define AdcConf_AdcChannel_AdcChannel_G2CH4  (4U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -1053,7 +1053,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN21
+#ifndef AdcConf_AdcChannel_AdcChannel_G2CH5
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -1063,7 +1063,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN21  (5U)
+#define AdcConf_AdcChannel_AdcChannel_G2CH5  (5U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -1073,7 +1073,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN22
+#ifndef AdcConf_AdcChannel_AdcChannel_G2CH6
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -1083,7 +1083,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN22  (6U)
+#define AdcConf_AdcChannel_AdcChannel_G2CH6  (6U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
@@ -1093,7 +1093,7 @@ ADC11_KERNEL_INDEX_CORE2
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/ 
-#ifndef AdcConf_AdcChannel_AN23
+#ifndef AdcConf_AdcChannel_AdcChannel_G2CH7
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars
@@ -1103,7 +1103,7 @@ ADC11_KERNEL_INDEX_CORE2
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars
    in generated code due to Autosar Naming constraints.*/
 
-#define AdcConf_AdcChannel_AN23  (7U)
+#define AdcConf_AdcChannel_AdcChannel_G2CH7  (7U)
 #endif
 
 /******Symbolic Name for all the AdcChannel of HW Unit 3******/

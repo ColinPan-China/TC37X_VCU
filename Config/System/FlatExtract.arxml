@@ -960,6 +960,22 @@
                                   </ANNOTATIONS>
                                   <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/DIAG_SWC</TYPE-TREF>
                                 </SW-COMPONENT-PROTOTYPE>
+                                <SW-COMPONENT-PROTOTYPE UUID="b7599610-a9d2-49fd-aa65-b43b7038f13c">
+                                  <SHORT-NAME>IoHwAb_SWC</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <TYPE-TREF DEST="ECU-ABSTRACTION-SW-COMPONENT-TYPE">/ComponentTypes/IoHwAb_SWC</TYPE-TREF>
+                                </SW-COMPONENT-PROTOTYPE>
                               </COMPONENTS>
                               <CONNECTORS>
                                 <ASSEMBLY-SW-CONNECTOR UUID="162bee59-e8a0-4697-a1b1-31e18c5b0ff5">
@@ -1607,6 +1623,7 @@
                                     <SD GID="dbd7af71-8f1f-4737-b93f-d0ed84b9ef39">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</SD>
                                     <SD GID="9d4b98fd-81ab-4d03-b31e-e07a3534b100">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0</SD>
                                     <SD GID="3976e9f4-1667-4e85-89f1-31f8167f45a7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EcuM</SD>
+                                    <SD GID="b7599610-a9d2-49fd-aa65-b43b7038f13c">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/IoHwAb_SWC</SD>
                                     <SD GID="bd2d7ed1-0cf5-42f4-a90f-8057441c91be">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM</SD>
                                     <SD GID="2381ede5-8fd8-4200-a0f6-fd501526a7c0">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_DIAG_SWC_PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="05381a4a-06a9-44db-a1e5-fe7ca0afdeab">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM_SWC</SD>
@@ -1666,6 +1683,10 @@
                                     <SD GID="B0D56753-A3B1-431E-9673-294B21654323">/ComponentTypes/DIAG_SWC/PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="AFEE0A09-7481-4F5D-A67D-391696AAC36A">/ComponentTypes/DIAG_SWC/RoutineServices_Vcu_Roution_00</SD>
                                     <SD GID="8822BCF7-9CB6-46FA-BB63-4E92E8E4BB4F">/ComponentTypes/DIAG_SWC_Implementation</SD>
+                                    <SD GID="131259DF-AC35-4DE4-9686-94C3C6297399">/ComponentTypes/IoHwAb_SWC</SD>
+                                    <SD GID="3BA5A63D-F666-4886-AFA6-FD454CFD7666">/ComponentTypes/IoHwAb_SWC/IoHwAb_SWC_InternalBehavior/IoHwAb_SWC_InitEvent</SD>
+                                    <SD GID="345F9D28-1C42-4083-9465-B901D76C94D1">/ComponentTypes/IoHwAb_SWC/IoHwAb_SWC_InternalBehavior/TMT_IoHwAb_SWC_Runnable</SD>
+                                    <SD GID="BC0DFF7D-5391-424E-9DFB-F588D6FA0F1B">/ComponentTypes/IoHwAb_SWC_Implementation</SD>
                                     <SD GID="F46DC447-48FA-40AC-B556-211DADA7BA16">/ComponentTypes/NvM_SWC</SD>
                                     <SD GID="5E1541CE-CA73-4331-B1E5-015754C9C331">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData1</SD>
                                     <SD GID="D2B51BE5-1BB5-4CC4-87F9-FBDA7005BDEF">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData2</SD>
@@ -1710,6 +1731,7 @@
                                     <SD GID="83E5C50F-A163-4FAE-8F88-D29CE937AFED">/ECUCompositionTypes/ECU_Composition</SD>
                                     <SD GID="9D6277BB-1E37-4BB9-B185-1DD2BA210E54">/ECUCompositionTypes/ECU_Composition/Com_SWC</SD>
                                     <SD GID="ED10CD08-2BCF-43E8-BD3C-006B317FF76E">/ECUCompositionTypes/ECU_Composition/DIAG_SWC</SD>
+                                    <SD GID="C0FE9D92-FF59-4055-8330-C5C650BFCCB7">/ECUCompositionTypes/ECU_Composition/IoHwAb_SWC</SD>
                                     <SD GID="1C873E85-20CE-48A0-A60A-BB516A3AF1EE">/ECUCompositionTypes/ECU_Composition/NvM_SWC</SD>
                                     <SD GID="7077C59A-EDFF-4EBD-992B-AD0A5D0AD472">/ECUCompositionTypes/ECU_Composition/PowerMng_SWC</SD>
                                     <SD GID="45326E4B-4115-4A85-8FF4-E06F7BAE2F7C">/ECUCompositionTypes/ECU_Composition/SWC1</SD>

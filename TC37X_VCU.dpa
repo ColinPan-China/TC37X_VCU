@@ -228,6 +228,9 @@
                 <Settings Name="|MICROSAR|CanTrcv_Tja1043|CanTrcv">
                     <Setting Value="4.4.0" Name="BswImplSwVersion"/>
                 </Settings>
+                <Settings Name="|MICROSAR|CanTrcv_Tja1145|CanTrcv">
+                    <Setting Value="3.8.0" Name="BswImplSwVersion"/>
+                </Settings>
                 <Settings Name="|MICROSAR|Can_Mpc5700Mcan|Can">
                     <Setting Value="5.9.0" Name="BswImplSwVersion"/>
                 </Settings>
@@ -272,6 +275,21 @@
                 </Settings>
                 <Settings Name="|MICROSAR|IpduM">
                     <Setting Value="11.2.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|LinIf">
+                    <Setting Value="10.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|LinSM">
+                    <Setting Value="7.0.2" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|LinTp">
+                    <Setting Value="10.0.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|LinTrcv_30_Tle7259|LinTrcv">
+                    <Setting Value="6.4.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Lin_Tricore|Lin">
+                    <Setting Value="15.2.0" Name="BswImplSwVersion"/>
                 </Settings>
                 <Settings Name="|MICROSAR|MemIf">
                     <Setting Value="3.4.0" Name="BswImplSwVersion"/>
@@ -319,6 +337,9 @@
                     <Setting Value="2.3.2" Name="BswImplSwVersion"/>
                 </Settings>
             </Settings>
+            <Settings Name="com.vector.cfg.persistency.internal.folder">
+                <Settings Name="TargetFolderManager"/>
+            </Settings>
         </Misc>
     </ToolSettings>
     <TopDownServiceConfiguration>
@@ -333,5 +354,6 @@
         <Component Name="PowerMng_SWC" GenerationEnabled="true"/>
         <Component Name="Com_SWC" GenerationEnabled="true"/>
         <Component Name="DIAG_SWC" GenerationEnabled="true"/>
+        <Component Name="IoHwAb_SWC" GenerationEnabled="true"/>
     </SwctGeneration>
 </ProjectAssistant>
