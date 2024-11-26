@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 6.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2024-11-18, 17:27:40      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2024-11-21, 09:26:15      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b180321-0610        !!!IGNORE-LINE!!!                   ** 
 **                                                                            **
@@ -2018,10 +2018,10 @@ Container : IrqAsclin interruptConfiguration
 */
 /* Asclin Tx interrupt Category Setting*/
 #define IRQ_ASCLIN0_TX_CAT            (IRQ_CAT1)
-#define IRQ_ASCLIN1_TX_CAT            (IRQ_CAT1)
-#define IRQ_ASCLIN2_TX_CAT            (IRQ_CAT1)
+#define IRQ_ASCLIN1_TX_CAT            (IRQ_CAT2)
+#define IRQ_ASCLIN2_TX_CAT            (IRQ_CAT2)
 #define IRQ_ASCLIN3_TX_CAT            (IRQ_CAT1)
-#define IRQ_ASCLIN4_TX_CAT            (IRQ_CAT1)
+#define IRQ_ASCLIN4_TX_CAT            (IRQ_CAT2)
 #define IRQ_ASCLIN5_TX_CAT            (IRQ_CAT1)
 #define IRQ_ASCLIN6_TX_CAT            (IRQ_CAT1)
 #define IRQ_ASCLIN7_TX_CAT            (IRQ_CAT1)
@@ -2044,10 +2044,10 @@ Container : IrqAsclin interruptConfiguration
 
 /* Asclin Tx interrupt Priority Setting*/
 #define IRQ_ASCLIN0_TX_PRIO           0x0
-#define IRQ_ASCLIN1_TX_PRIO           0x0
-#define IRQ_ASCLIN2_TX_PRIO           0x0
+#define IRQ_ASCLIN1_TX_PRIO           0x5a
+#define IRQ_ASCLIN2_TX_PRIO           0x50
 #define IRQ_ASCLIN3_TX_PRIO           0x0
-#define IRQ_ASCLIN4_TX_PRIO           0x0
+#define IRQ_ASCLIN4_TX_PRIO           0x5f
 #define IRQ_ASCLIN5_TX_PRIO           0x0
 #define IRQ_ASCLIN6_TX_PRIO           0x0
 #define IRQ_ASCLIN7_TX_PRIO           0x0
@@ -2096,10 +2096,10 @@ Container : IrqAsclin interruptConfiguration
 
 /* Asclin Rx interrupt Category Setting*/
 #define IRQ_ASCLIN0_RX_CAT            (IRQ_CAT1)
-#define IRQ_ASCLIN1_RX_CAT            (IRQ_CAT1)
-#define IRQ_ASCLIN2_RX_CAT            (IRQ_CAT1)
+#define IRQ_ASCLIN1_RX_CAT            (IRQ_CAT2)
+#define IRQ_ASCLIN2_RX_CAT            (IRQ_CAT2)
 #define IRQ_ASCLIN3_RX_CAT            (IRQ_CAT1)
-#define IRQ_ASCLIN4_RX_CAT            (IRQ_CAT1)
+#define IRQ_ASCLIN4_RX_CAT            (IRQ_CAT2)
 #define IRQ_ASCLIN5_RX_CAT            (IRQ_CAT1)
 #define IRQ_ASCLIN6_RX_CAT            (IRQ_CAT1)
 #define IRQ_ASCLIN7_RX_CAT            (IRQ_CAT1)
@@ -2122,10 +2122,10 @@ Container : IrqAsclin interruptConfiguration
 
 /* Asclin Rx interrupt Priority Setting*/
 #define IRQ_ASCLIN0_RX_PRIO           0x0
-#define IRQ_ASCLIN1_RX_PRIO           0x0
-#define IRQ_ASCLIN2_RX_PRIO           0x0
+#define IRQ_ASCLIN1_RX_PRIO           0x5b
+#define IRQ_ASCLIN2_RX_PRIO           0x51
 #define IRQ_ASCLIN3_RX_PRIO           0x0
-#define IRQ_ASCLIN4_RX_PRIO           0x0
+#define IRQ_ASCLIN4_RX_PRIO           0x60
 #define IRQ_ASCLIN5_RX_PRIO           0x0
 #define IRQ_ASCLIN6_RX_PRIO           0x0
 #define IRQ_ASCLIN7_RX_PRIO           0x0
@@ -2174,10 +2174,10 @@ Container : IrqAsclin interruptConfiguration
 
 /* Asclin Err interrupt Category Setting*/
 #define IRQ_ASCLIN0_ERR_CAT           (IRQ_CAT1)
-#define IRQ_ASCLIN1_ERR_CAT           (IRQ_CAT1)
-#define IRQ_ASCLIN2_ERR_CAT           (IRQ_CAT1)
+#define IRQ_ASCLIN1_ERR_CAT           (IRQ_CAT2)
+#define IRQ_ASCLIN2_ERR_CAT           (IRQ_CAT2)
 #define IRQ_ASCLIN3_ERR_CAT           (IRQ_CAT1)
-#define IRQ_ASCLIN4_ERR_CAT           (IRQ_CAT1)
+#define IRQ_ASCLIN4_ERR_CAT           (IRQ_CAT2)
 #define IRQ_ASCLIN5_ERR_CAT           (IRQ_CAT1)
 #define IRQ_ASCLIN6_ERR_CAT           (IRQ_CAT1)
 #define IRQ_ASCLIN7_ERR_CAT           (IRQ_CAT1)
@@ -2200,10 +2200,10 @@ Container : IrqAsclin interruptConfiguration
 
 /* Asclin Err interrupt Priority Setting*/
 #define IRQ_ASCLIN0_ERR_PRIO          0x0
-#define IRQ_ASCLIN1_ERR_PRIO          0x0
-#define IRQ_ASCLIN2_ERR_PRIO          0x0
+#define IRQ_ASCLIN1_ERR_PRIO          0x5c
+#define IRQ_ASCLIN2_ERR_PRIO          0x52
 #define IRQ_ASCLIN3_ERR_PRIO          0x0
-#define IRQ_ASCLIN4_ERR_PRIO          0x0
+#define IRQ_ASCLIN4_ERR_PRIO          0x61
 #define IRQ_ASCLIN5_ERR_PRIO          0x0
 #define IRQ_ASCLIN6_ERR_PRIO          0x0
 #define IRQ_ASCLIN7_ERR_PRIO          0x0
@@ -2677,23 +2677,64 @@ Container : I2C interrupt Configuration
 /* Global macros that determines whether a module / SRN is in use or not
 */
 
+#define IRQ_ASCLIN_CH_NOT_USED 0x0
+#define IRQ_ASCLIN_CH_USED_BY_LIN_DRIVER 0x1
+#define IRQ_ASCLIN_CH_USED_BY_UART_DRIVER 0x2
 
 
 
-#define IRQ_ASCLIN_EXIST              (STD_OFF)
-#define IRQ_ASCLIN0_EXIST             (STD_OFF)
-#define IRQ_ASCLIN1_EXIST             (STD_OFF)
-#define IRQ_ASCLIN2_EXIST             (STD_OFF)
-#define IRQ_ASCLIN3_EXIST             (STD_OFF)
-#define IRQ_ASCLIN4_EXIST             (STD_OFF)
-#define IRQ_ASCLIN5_EXIST             (STD_OFF)
-#define IRQ_ASCLIN6_EXIST             (STD_OFF)
-#define IRQ_ASCLIN7_EXIST             (STD_OFF)
+#define IRQ_ASCLIN_CHANNEL0_USED IRQ_ASCLIN_CH_NOT_USED
 
-#define IRQ_ASCLIN8_EXIST             (STD_OFF)
-#define IRQ_ASCLIN9_EXIST             (STD_OFF)
-#define IRQ_ASCLIN10_EXIST             (STD_OFF)
-#define IRQ_ASCLIN11_EXIST             (STD_OFF)
+
+#define IRQ_ASCLIN_CHANNEL1_USED IRQ_ASCLIN_CH_USED_BY_LIN_DRIVER
+
+
+#define IRQ_ASCLIN_CHANNEL2_USED IRQ_ASCLIN_CH_USED_BY_LIN_DRIVER
+
+
+#define IRQ_ASCLIN_CHANNEL3_USED IRQ_ASCLIN_CH_NOT_USED
+
+
+#define IRQ_ASCLIN_CHANNEL4_USED IRQ_ASCLIN_CH_USED_BY_LIN_DRIVER
+
+
+#define IRQ_ASCLIN_CHANNEL5_USED IRQ_ASCLIN_CH_NOT_USED
+
+
+#define IRQ_ASCLIN_CHANNEL6_USED IRQ_ASCLIN_CH_NOT_USED
+
+
+#define IRQ_ASCLIN_CHANNEL7_USED IRQ_ASCLIN_CH_NOT_USED
+
+
+#define IRQ_ASCLIN_CHANNEL8_USED IRQ_ASCLIN_CH_NOT_USED
+
+
+#define IRQ_ASCLIN_CHANNEL9_USED IRQ_ASCLIN_CH_NOT_USED
+
+
+#define IRQ_ASCLIN_CHANNEL10_USED IRQ_ASCLIN_CH_NOT_USED
+
+
+#define IRQ_ASCLIN_CHANNEL11_USED IRQ_ASCLIN_CH_NOT_USED
+
+
+
+
+#define IRQ_ASCLIN_EXIST              (STD_ON)
+#define IRQ_ASCLIN0_EXIST             (STD_ON)
+#define IRQ_ASCLIN1_EXIST             (STD_ON)
+#define IRQ_ASCLIN2_EXIST             (STD_ON)
+#define IRQ_ASCLIN3_EXIST             (STD_ON)
+#define IRQ_ASCLIN4_EXIST             (STD_ON)
+#define IRQ_ASCLIN5_EXIST             (STD_ON)
+#define IRQ_ASCLIN6_EXIST             (STD_ON)
+#define IRQ_ASCLIN7_EXIST             (STD_ON)
+
+#define IRQ_ASCLIN8_EXIST             (STD_ON)
+#define IRQ_ASCLIN9_EXIST             (STD_ON)
+#define IRQ_ASCLIN10_EXIST             (STD_ON)
+#define IRQ_ASCLIN11_EXIST             (STD_ON)
 #define IRQ_ASCLIN12_EXIST             (STD_OFF)
 #define IRQ_ASCLIN13_EXIST             (STD_OFF)
 #define IRQ_ASCLIN14_EXIST             (STD_OFF)

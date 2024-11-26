@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 1.30.0_11.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2024-11-21, 13:39:22          !!!IGNORE-LINE !!!              **
+**  DATE, TIME: 2024-11-26, 11:23:00          !!!IGNORE-LINE !!!              **
 **                                                                            **
 **  GENERATOR : Build b180321-0610            !!!IGNORE-LINE !!!              **
 **                                                                            **
@@ -926,7 +926,7 @@ static const Port_n_ConfigType Port_kConfiguration[] =
     ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin 4*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
-    ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin 5*/
+    ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_ALT2),/*Pin 5*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
     ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin 6*/
@@ -972,7 +972,7 @@ static const Port_n_ConfigType Port_kConfiguration[] =
       (PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE|PORT_PIN_PAD_STRENGTH_DEFAULT),/*Pin2*/
       (PORT_PIN_PAD_LEVEL_DEFAULT|FAST_PORT_PIN_DEFAULT_DRIVER),/*Pin3*/
       (PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE|PORT_PIN_PAD_STRENGTH_DEFAULT),/*Pin4*/
-      (PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE|PORT_PIN_PAD_STRENGTH_DEFAULT),/*Pin5*/
+      (PORT_PIN_PAD_LEVEL_DEFAULT|SLOW_PORT_PIN_DEFAULT_DRIVER),/*Pin5*/
       (PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE|PORT_PIN_PAD_STRENGTH_DEFAULT),/*Pin6*/
       (PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE|PORT_PIN_PAD_STRENGTH_DEFAULT)/*Pin7*/
                   ),
@@ -1046,7 +1046,7 @@ static const Port_n_ConfigType Port_kConfiguration[] =
       ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin4*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
-      ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin5*/
+      ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_ALT2),/*Pin5*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
       ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin6*/
@@ -3879,7 +3879,372 @@ static const Port_n_PCSRConfigType Port_kPCSRConfig[] =
       PORT_PCSR_DEFAULT   /*Pin15*/
                 )
 };
-    /* MISRA2012_RULE_8_7_JUSTIFICATION: Module configuration data structure
+    /*
+Array contains information on the modes supported by each port pin
+*/
+static const Port_n_ModeType Port_kPinSupportedModes[] = 
+{
+  /*     Port0      */
+  {
+    {
+      (uint8)(0xafU),/*Pin0*/
+      (uint8)(0xd7U),/*Pin1*/
+      (uint8)(0xf7U),/*Pin2*/
+      (uint8)(0xd7U),/*Pin3*/
+      (uint8)(0xdfU),/*Pin4*/
+      (uint8)(0xffU),/*Pin5*/
+      (uint8)(0xe7U),/*Pin6*/
+      (uint8)(0xffU),/*Pin7*/
+      (uint8)(0xefU),/*Pin8*/
+      (uint8)(0xffU),/*Pin9*/
+      (uint8)(0xc7U),/*Pin10*/
+      (uint8)(0x17U),/*Pin11*/
+      (uint8)(0x83U),/*Pin12*/
+      (uint8)(0x00U),/*Pin13*/
+      (uint8)(0x00U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port1      */
+  {
+    {
+      (uint8)(0x00U),/*Pin0*/
+      (uint8)(0x00U),/*Pin1*/
+      (uint8)(0x00U),/*Pin2*/
+      (uint8)(0x33U),/*Pin3*/
+      (uint8)(0x1bU),/*Pin4*/
+      (uint8)(0x13U),/*Pin5*/
+      (uint8)(0x1bU),/*Pin6*/
+      (uint8)(0x1bU),/*Pin7*/
+      (uint8)(0x00U),/*Pin8*/
+      (uint8)(0x00U),/*Pin9*/
+      (uint8)(0x00U),/*Pin10*/
+      (uint8)(0x00U),/*Pin11*/
+      (uint8)(0x00U),/*Pin12*/
+      (uint8)(0x00U),/*Pin13*/
+      (uint8)(0x00U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port2      */
+  {
+    {
+      (uint8)(0xffU),/*Pin0*/
+      (uint8)(0x9fU),/*Pin1*/
+      (uint8)(0xffU),/*Pin2*/
+      (uint8)(0x9fU),/*Pin3*/
+      (uint8)(0xffU),/*Pin4*/
+      (uint8)(0xffU),/*Pin5*/
+      (uint8)(0xbfU),/*Pin6*/
+      (uint8)(0xfbU),/*Pin7*/
+      (uint8)(0xefU),/*Pin8*/
+      (uint8)(0x2fU),/*Pin9*/
+      (uint8)(0x03U),/*Pin10*/
+      (uint8)(0x0bU),/*Pin11*/
+      (uint8)(0x00U),/*Pin12*/
+      (uint8)(0x00U),/*Pin13*/
+      (uint8)(0x00U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port10      */
+  {
+    {
+      (uint8)(0x0fU),/*Pin0*/
+      (uint8)(0x3fU),/*Pin1*/
+      (uint8)(0x3bU),/*Pin2*/
+      (uint8)(0x5bU),/*Pin3*/
+      (uint8)(0x3bU),/*Pin4*/
+      (uint8)(0x7fU),/*Pin5*/
+      (uint8)(0x5fU),/*Pin6*/
+      (uint8)(0x4bU),/*Pin7*/
+      (uint8)(0x0fU),/*Pin8*/
+      (uint8)(0x00U),/*Pin9*/
+      (uint8)(0x00U),/*Pin10*/
+      (uint8)(0x00U),/*Pin11*/
+      (uint8)(0x00U),/*Pin12*/
+      (uint8)(0x00U),/*Pin13*/
+      (uint8)(0x00U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port11      */
+  {
+    {
+      (uint8)(0x67U),/*Pin0*/
+      (uint8)(0x6fU),/*Pin1*/
+      (uint8)(0xfbU),/*Pin2*/
+      (uint8)(0xdbU),/*Pin3*/
+      (uint8)(0xe7U),/*Pin4*/
+      (uint8)(0x03U),/*Pin5*/
+      (uint8)(0xffU),/*Pin6*/
+      (uint8)(0x03U),/*Pin7*/
+      (uint8)(0x03U),/*Pin8*/
+      (uint8)(0xabU),/*Pin9*/
+      (uint8)(0x9bU),/*Pin10*/
+      (uint8)(0xfbU),/*Pin11*/
+      (uint8)(0xffU),/*Pin12*/
+      (uint8)(0x03U),/*Pin13*/
+      (uint8)(0x03U),/*Pin14*/
+      (uint8)(0x03U) /*Pin15*/
+    }
+  },
+  /*     Port12      */
+  {
+    {
+      (uint8)(0x43U),/*Pin0*/
+      (uint8)(0x27U),/*Pin1*/
+      (uint8)(0x00U),/*Pin2*/
+      (uint8)(0x00U),/*Pin3*/
+      (uint8)(0x00U),/*Pin4*/
+      (uint8)(0x00U),/*Pin5*/
+      (uint8)(0x00U),/*Pin6*/
+      (uint8)(0x00U),/*Pin7*/
+      (uint8)(0x00U),/*Pin8*/
+      (uint8)(0x00U),/*Pin9*/
+      (uint8)(0x00U),/*Pin10*/
+      (uint8)(0x00U),/*Pin11*/
+      (uint8)(0x00U),/*Pin12*/
+      (uint8)(0x00U),/*Pin13*/
+      (uint8)(0x00U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port13      */
+  {
+    {
+      (uint8)(0xbfU),/*Pin0*/
+      (uint8)(0x6bU),/*Pin1*/
+      (uint8)(0x7fU),/*Pin2*/
+      (uint8)(0x2fU),/*Pin3*/
+      (uint8)(0x00U),/*Pin4*/
+      (uint8)(0x00U),/*Pin5*/
+      (uint8)(0x00U),/*Pin6*/
+      (uint8)(0x00U),/*Pin7*/
+      (uint8)(0x00U),/*Pin8*/
+      (uint8)(0x00U),/*Pin9*/
+      (uint8)(0x00U),/*Pin10*/
+      (uint8)(0x00U),/*Pin11*/
+      (uint8)(0x00U),/*Pin12*/
+      (uint8)(0x00U),/*Pin13*/
+      (uint8)(0x00U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port14      */
+  {
+    {
+      (uint8)(0xffU),/*Pin0*/
+      (uint8)(0x87U),/*Pin1*/
+      (uint8)(0x4fU),/*Pin2*/
+      (uint8)(0x3fU),/*Pin3*/
+      (uint8)(0x43U),/*Pin4*/
+      (uint8)(0x43U),/*Pin5*/
+      (uint8)(0x5bU),/*Pin6*/
+      (uint8)(0x1fU),/*Pin7*/
+      (uint8)(0x0fU),/*Pin8*/
+      (uint8)(0x7bU),/*Pin9*/
+      (uint8)(0x7bU),/*Pin10*/
+      (uint8)(0x00U),/*Pin11*/
+      (uint8)(0x00U),/*Pin12*/
+      (uint8)(0x00U),/*Pin13*/
+      (uint8)(0x00U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port15      */
+  {
+    {
+      (uint8)(0x6fU),/*Pin0*/
+      (uint8)(0x0fU),/*Pin1*/
+      (uint8)(0x6fU),/*Pin2*/
+      (uint8)(0x2fU),/*Pin3*/
+      (uint8)(0xcfU),/*Pin4*/
+      (uint8)(0xefU),/*Pin5*/
+      (uint8)(0xefU),/*Pin6*/
+      (uint8)(0x8fU),/*Pin7*/
+      (uint8)(0xcbU),/*Pin8*/
+      (uint8)(0x00U),/*Pin9*/
+      (uint8)(0x00U),/*Pin10*/
+      (uint8)(0x00U),/*Pin11*/
+      (uint8)(0x00U),/*Pin12*/
+      (uint8)(0x00U),/*Pin13*/
+      (uint8)(0x00U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port20      */
+  {
+    {
+      (uint8)(0x2fU),/*Pin0*/
+      (uint8)(0x03U),/*Pin1*/
+      (uint8)(0x01U),/*Pin2*/
+      (uint8)(0x3fU),/*Pin3*/
+      (uint8)(0x00U),/*Pin4*/
+      (uint8)(0x00U),/*Pin5*/
+      (uint8)(0x1fU),/*Pin6*/
+      (uint8)(0xa7U),/*Pin7*/
+      (uint8)(0xbfU),/*Pin8*/
+      (uint8)(0x9bU),/*Pin9*/
+      (uint8)(0xffU),/*Pin10*/
+      (uint8)(0x8bU),/*Pin11*/
+      (uint8)(0x9bU),/*Pin12*/
+      (uint8)(0xbbU),/*Pin13*/
+      (uint8)(0x0bU),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port21      */
+  {
+    {
+      (uint8)(0x07U),/*Pin0*/
+      (uint8)(0x03U),/*Pin1*/
+      (uint8)(0x27U),/*Pin2*/
+      (uint8)(0x07U),/*Pin3*/
+      (uint8)(0x07U),/*Pin4*/
+      (uint8)(0x0fU),/*Pin5*/
+      (uint8)(0x87U),/*Pin6*/
+      (uint8)(0x8fU),/*Pin7*/
+      (uint8)(0x00U),/*Pin8*/
+      (uint8)(0x00U),/*Pin9*/
+      (uint8)(0x00U),/*Pin10*/
+      (uint8)(0x00U),/*Pin11*/
+      (uint8)(0x00U),/*Pin12*/
+      (uint8)(0x00U),/*Pin13*/
+      (uint8)(0x00U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port22      */
+  {
+    {
+      (uint8)(0xbfU),/*Pin0*/
+      (uint8)(0xbfU),/*Pin1*/
+      (uint8)(0x3fU),/*Pin2*/
+      (uint8)(0x3bU),/*Pin3*/
+      (uint8)(0x57U),/*Pin4*/
+      (uint8)(0x17U),/*Pin5*/
+      (uint8)(0x13U),/*Pin6*/
+      (uint8)(0x17U),/*Pin7*/
+      (uint8)(0x17U),/*Pin8*/
+      (uint8)(0x13U),/*Pin9*/
+      (uint8)(0x17U),/*Pin10*/
+      (uint8)(0x17U),/*Pin11*/
+      (uint8)(0x00U),/*Pin12*/
+      (uint8)(0x00U),/*Pin13*/
+      (uint8)(0x00U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port23      */
+  {
+    {
+      (uint8)(0x03U),/*Pin0*/
+      (uint8)(0xffU),/*Pin1*/
+      (uint8)(0x23U),/*Pin2*/
+      (uint8)(0x07U),/*Pin3*/
+      (uint8)(0x2fU),/*Pin4*/
+      (uint8)(0x2fU),/*Pin5*/
+      (uint8)(0x33U),/*Pin6*/
+      (uint8)(0x03U),/*Pin7*/
+      (uint8)(0x00U),/*Pin8*/
+      (uint8)(0x00U),/*Pin9*/
+      (uint8)(0x00U),/*Pin10*/
+      (uint8)(0x00U),/*Pin11*/
+      (uint8)(0x00U),/*Pin12*/
+      (uint8)(0x00U),/*Pin13*/
+      (uint8)(0x00U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port32      */
+  {
+    {
+      (uint8)(0x03U),/*Pin0*/
+      (uint8)(0x03U),/*Pin1*/
+      (uint8)(0x47U),/*Pin2*/
+      (uint8)(0x37U),/*Pin3*/
+      (uint8)(0xf3U),/*Pin4*/
+      (uint8)(0x47U),/*Pin5*/
+      (uint8)(0x13U),/*Pin6*/
+      (uint8)(0x07U),/*Pin7*/
+      (uint8)(0x00U),/*Pin8*/
+      (uint8)(0x00U),/*Pin9*/
+      (uint8)(0x00U),/*Pin10*/
+      (uint8)(0x00U),/*Pin11*/
+      (uint8)(0x00U),/*Pin12*/
+      (uint8)(0x00U),/*Pin13*/
+      (uint8)(0x00U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port33      */
+  {
+    {
+      (uint8)(0x47U),/*Pin0*/
+      (uint8)(0x3fU),/*Pin1*/
+      (uint8)(0x7fU),/*Pin2*/
+      (uint8)(0x3fU),/*Pin3*/
+      (uint8)(0xffU),/*Pin4*/
+      (uint8)(0xffU),/*Pin5*/
+      (uint8)(0xefU),/*Pin6*/
+      (uint8)(0x5fU),/*Pin7*/
+      (uint8)(0xafU),/*Pin8*/
+      (uint8)(0xffU),/*Pin9*/
+      (uint8)(0xbfU),/*Pin10*/
+      (uint8)(0xcfU),/*Pin11*/
+      (uint8)(0xdfU),/*Pin12*/
+      (uint8)(0xbfU),/*Pin13*/
+      (uint8)(0x8bU),/*Pin14*/
+      (uint8)(0x8bU) /*Pin15*/
+    }
+  },
+  /*     Port34      */
+  {
+    {
+      (uint8)(0x00U),/*Pin0*/
+      (uint8)(0x97U),/*Pin1*/
+      (uint8)(0x83U),/*Pin2*/
+      (uint8)(0x97U),/*Pin3*/
+      (uint8)(0x97U),/*Pin4*/
+      (uint8)(0x97U),/*Pin5*/
+      (uint8)(0x00U),/*Pin6*/
+      (uint8)(0x00U),/*Pin7*/
+      (uint8)(0x00U),/*Pin8*/
+      (uint8)(0x00U),/*Pin9*/
+      (uint8)(0x00U),/*Pin10*/
+      (uint8)(0x00U),/*Pin11*/
+      (uint8)(0x00U),/*Pin12*/
+      (uint8)(0x00U),/*Pin13*/
+      (uint8)(0x00U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  },
+  /*     Port40      */
+  {
+    {
+      (uint8)(0x01U),/*Pin0*/
+      (uint8)(0x01U),/*Pin1*/
+      (uint8)(0x01U),/*Pin2*/
+      (uint8)(0x01U),/*Pin3*/
+      (uint8)(0x01U),/*Pin4*/
+      (uint8)(0x01U),/*Pin5*/
+      (uint8)(0x01U),/*Pin6*/
+      (uint8)(0x01U),/*Pin7*/
+      (uint8)(0x01U),/*Pin8*/
+      (uint8)(0x01U),/*Pin9*/
+      (uint8)(0x01U),/*Pin10*/
+      (uint8)(0x01U),/*Pin11*/
+      (uint8)(0x01U),/*Pin12*/
+      (uint8)(0x01U),/*Pin13*/
+      (uint8)(0x01U),/*Pin14*/
+      (uint8)(0x00U) /*Pin15*/
+    }
+  }
+/* MISRA2012_RULE_19_2_JUSTIFICATION: Union is needed to access data per port pin 
+and as a 32 Bit Value*/
+};
+/* MISRA2012_RULE_8_7_JUSTIFICATION: Module configuration data structure
 declaration as per Autosar guidelines. This data structure may be needed
 by SW units using Port Driver APIs */
 /* MISRA2012_RULE_8_4_JUSTIFICATION: Definition is as per Autosar guidelines */
@@ -3890,7 +4255,7 @@ const Port_ConfigType Port_Config =
   &Port_kConfiguration[0],
   /* Port 40-th Disc configuration set  */
   &Port_DiscSet[0],
-  /* LVDS configuration */
+  &Port_kPinSupportedModes[0],/* LVDS configuration */
   &Port_kLVDSConfig[0],
   /* PCSR Configuration */
   &Port_kPCSRConfig[0]

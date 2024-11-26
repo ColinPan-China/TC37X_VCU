@@ -10,15 +10,15 @@
 **                                                                            **
 ********************************************************************************
 **                                                                            **
-**  FILENAME  : Port_PBcfg.h                                                  **
+**  FILENAME  : Lin_17_AscLin_PBcfg.h                                         **
 **                                                                            **
-**  VERSION   : 1.30.0_7.0.0                                                  **
+**  VERSION   : 1.40.0_5.0.0                                                  **
 **                                                                            **
-**  DATE, TIME: 2024-11-26, 11:23:00           !!!IGNORE-LINE !!!             **
+**  DATE, TIME: 2024-11-20, 16:26:41      !!!IGNORE-LINE!!!               **
 **                                                                            **
-**  GENERATOR : Build b180321-0610              !!!IGNORE-LINE !!!            **
+**  GENERATOR : Build b180321-0610          !!!IGNORE-LINE!!!               **
 **                                                                            **
-**  BSW MODULE DECRIPTION : Port.bmd                                          **
+**  BSW MODULE DECRIPTION : Lin_17_AscLin.bmd                                 **
 **                                                                            **
 **  VARIANT   : Variant PB                                                    **
 **                                                                            **
@@ -28,31 +28,41 @@
 **                                                                            **
 **  VENDOR    : Infineon Technologies                                         **
 **                                                                            **
-**  DESCRIPTION  : Port configuration generated out of ECUC file               **
+**  DESCRIPTION  : Lin configuration generated out of ECUC file               **
 **                                                                            **
-**  SPECIFICATION(S) : Specification of Port Driver, AUTOSAR Release 4.2.2     **
+**  SPECIFICATION(S) : Specification of Lin Driver, AUTOSAR Release 4.2.2     **
 **                                                                            **
 **  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
 *******************************************************************************/
-#ifndef PORT_PBCFG_H
-#define PORT_PBCFG_H
-
+#ifndef Lin_17_AscLin_PBCFG_H
+#define Lin_17_AscLin_PBCFG_H
 /*******************************************************************************
 **                      Includes                                              **
 *******************************************************************************/
-/*******************************************************************************
-**                      Global Const Declaration                              **
-*******************************************************************************/
-#define PORT_START_SEC_CONFIG_DATA_ASIL_B_GLOBAL_UNSPECIFIED
-/*MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header usage as per Autosar
-guideline.*/
-#include "Port_MemMap.h"
-/* Extern declaration of Port Config Root */
-extern const Port_ConfigType Port_Config;
+#include "Lin_17_AscLin.h"
 
-#define PORT_STOP_SEC_CONFIG_DATA_ASIL_B_GLOBAL_UNSPECIFIED
-/*MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header usage as per Autosar
-guideline.*/
-#include "Port_MemMap.h"
-#endif  /* PORT_PBCFG_H */
+/*******************************************************************************
+**                      Global Macro Definitions                              **
+*******************************************************************************/
+/* <!-- [cover parentID={30A87C0A-EE42-4166-AA4D-EB91CBB4EEC0}]
+[/cover] --> */
+/* <!-- [cover parentID={E4047F9A-8865-4b2c-9D3C-385479854EAD}]
+[/cover] --> */
+#define LIN_17_ASCLIN_START_SEC_CONFIG_DATA_QM_GLOBAL_UNSPECIFIED
+/* MISRA2012_RULE_4_10_JUSTIFICATION: To be compliant with autosar guidelines
+Lin_17_AscLin_Memmap.h header is included without safegaurd.*/
+/* MISRA2012_RULE_20_1_JUSTIFICATION: Lin_17_AscLin_Memmap.h header included
+as per Autosar guidelines. */
+#include "Lin_17_AscLin_MemMap.h"
+/* Extern declaration of Lin Config Root */
+extern const Lin_17_AscLin_ConfigType Lin_17_AscLin_Config;
+/* <!-- [cover parentID={E4047F9A-8865-4b2c-9D3C-385479854EAD}]
+[/cover] --> */
+#define LIN_17_ASCLIN_STOP_SEC_CONFIG_DATA_QM_GLOBAL_UNSPECIFIED
+/* MISRA2012_RULE_4_10_JUSTIFICATION: To be compliant with autosar guidelines
+Lin_17_AscLin_Memmap.h header is included without safegaurd.*/
+/* MISRA2012_RULE_20_1_JUSTIFICATION: Lin_17_AscLin_Memmap.h header included
+as per Autosar guidelines. */
+#include "Lin_17_AscLin_MemMap.h"
+#endif  /* Lin_17_AscLin_PBCFG_H */

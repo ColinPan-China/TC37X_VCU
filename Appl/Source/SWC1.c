@@ -90,6 +90,7 @@
 #include "Dio.h"
 #include "ComM.h"
 #include "Adc.h"
+#include "Lin_17_AscLin.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -279,6 +280,7 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  * Symbol: SWC1_Init
  *********************************************************************************************************************/
   Rte_Write_Request_ESH_RunRequest_0_requestedMode(1);
+	Lin_17_AscLin_Init(&Lin_17_AscLin_Config);
 
 
 /**********************************************************************************************************************
@@ -367,7 +369,34 @@ uint8 ComMReqFlg = 0;
 uint8 ComMReqSts = 0;
 uint8 XcpCnt = 0;
 //#include "ComM.h"
+uint8 Sdu_Data[][8] =
+{
+{0xAA,0xBB,0xCC,0xDD,0xEE,0xFF,0xAA,0xBB},
+{0xFF,0x00,0xFF,0x00,0xFF,0x00,0xFF,0x00}
+};
+Lin_PduType Lin_Pdu[] =
+{
+{0x80, LIN_ENHANCED_CS, LIN_MASTER_RESPONSE, 8, Sdu_Data[0]},
+{0xC1, LIN_ENHANCED_CS, LIN_SLAVE_RESPONSE, 8, Sdu_Data[1]},
+{0xC2, LIN_ENHANCED_CS, LIN_SLAVE_TO_SLAVE, 8, Sdu_Data[1]}
+};
 
+uint8 DataRead[8];
+volatile uint8 *SlaveSduPtr = DataRead;
+void Lin_DemoFunction(void)
+{
+	Std_ReturnType Ret1;
+	Std_ReturnType Ret2;
+	Ret1 = Lin_17_AscLin_SendFrame(Lin_17_AscLinConf_LinChannel_LinChannel_0, &Lin_Pdu[0]);
+	 do
+	 {
+	 	Ret2 = Lin_17_AscLin_GetStatus(Lin_17_AscLinConf_LinChannel_LinChannel_0,(uint8**)&SlaveSduPtr);
+	 	if ((Ret1 != LIN_TX_BUSY) && (Ret1 != LIN_TX_OK))
+	 	{
+	 		break;
+	 	}
+	 }while(Ret2 != LIN_TX_OK );
+}
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -378,6 +407,7 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: SWC1_Runnable10ms
  *********************************************************************************************************************/
+Lin_DemoFunction();
 //	if( ComMReqFlg == 0 )
 	if(1)//( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_12_KL15) == 0 )  
   {

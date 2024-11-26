@@ -1224,6 +1224,9 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_ADC1SR0_ISR_CODE";
         select "[.]text.OS_ADC2SR0_ISR_CODE";
         select "[.]text.OS_ADC3SR0_ISR_CODE";
+        select "[.]text.OS_ASCLIN2ERR_ISR_CODE";
+        select "[.]text.OS_ASCLIN2RX_ISR_CODE";
+        select "[.]text.OS_ASCLIN2TX_ISR_CODE";
         select "[.]text.OS_Asw_Init_CODE";
         select "[.]text.OS_AswTask_CODE";
         select "[.]text.OS_Bsw_Task_CODE";

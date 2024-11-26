@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_20.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2024-11-21, 13:39:24         !!!IGNORE-LINE!!!                **
+**  DATE, TIME: 2024-11-26, 11:23:02         !!!IGNORE-LINE!!!                **
 **                                                                            **
 **  GENERATOR : Build b180321-0610             !!!IGNORE-LINE!!!              **
 **                                                                            **
@@ -74,7 +74,7 @@
   ON  : DET is Enabled
   OFF : DET is Disabled
 */
-#define  MCU_DEV_ERROR_DETECT (STD_OFF)
+#define  MCU_DEV_ERROR_DETECT (STD_ON)
 
 /*
   Configuration: MCU_MULTICORE_ERROR_DETECT
