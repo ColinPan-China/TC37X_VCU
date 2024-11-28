@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Private_Cfg.h
- *   Generation Time: 2024-11-18 10:32:49
+ *   Generation Time: 2024-11-28 15:38:53
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -69,14 +69,14 @@
 #define ComM_GetInitStatusOfPCPartitionConfig(partitionIndex)                                       (&(ComM_InitStatus))  /**< the pointer to ComM_InitStatus */
 #define ComM_GetNmStartUpIndicatedOfPCPartitionConfig(partitionIndex)                               ComM_NmStartUpIndicated  /**< the pointer to ComM_NmStartUpIndicated */
 #define ComM_GetPostInitializedOfPCPartitionConfig(partitionIndex)                                  ComM_PostInitialized  /**< the pointer to ComM_PostInitialized */
-#define ComM_GetSizeOfChannelOfPCPartitionConfig()                                                  2u  /**< the number of accomplishable value elements in ComM_Channel */
-#define ComM_GetSizeOfChannelPbOfPCPartitionConfig()                                                2u  /**< the number of accomplishable value elements in ComM_ChannelPb */
+#define ComM_GetSizeOfChannelOfPCPartitionConfig()                                                  3u  /**< the number of accomplishable value elements in ComM_Channel */
+#define ComM_GetSizeOfChannelPbOfPCPartitionConfig()                                                3u  /**< the number of accomplishable value elements in ComM_ChannelPb */
 #define ComM_GetSizeOfEcuMWakeUpIndicatedOfPCPartitionConfig(partitionIndex)                        1u  /**< the number of accomplishable value elements in ComM_EcuMWakeUpIndicated */
 #define ComM_GetSizeOfNmStartUpIndicatedOfPCPartitionConfig(partitionIndex)                         1u  /**< the number of accomplishable value elements in ComM_NmStartUpIndicated */
 #define ComM_GetSizeOfPostInitializedOfPCPartitionConfig(partitionIndex)                            1u  /**< the number of accomplishable value elements in ComM_PostInitialized */
-#define ComM_GetSizeOfUserByteMaskOfPCPartitionConfig()                                             2u  /**< the number of accomplishable value elements in ComM_UserByteMask */
-#define ComM_GetSizeOfUserOfPCPartitionConfig()                                                     2u  /**< the number of accomplishable value elements in ComM_User */
-#define ComM_GetSizeOfUserReqFullComOfPCPartitionConfig(partitionIndex)                             2u  /**< the number of accomplishable value elements in ComM_UserReqFullCom */
+#define ComM_GetSizeOfUserByteMaskOfPCPartitionConfig()                                             3u  /**< the number of accomplishable value elements in ComM_UserByteMask */
+#define ComM_GetSizeOfUserOfPCPartitionConfig()                                                     3u  /**< the number of accomplishable value elements in ComM_User */
+#define ComM_GetSizeOfUserReqFullComOfPCPartitionConfig(partitionIndex)                             3u  /**< the number of accomplishable value elements in ComM_UserReqFullCom */
 #define ComM_GetUserByteMaskOfPCPartitionConfig()                                                   ComM_UserByteMask  /**< the pointer to ComM_UserByteMask */
 #define ComM_GetUserOfPCPartitionConfig()                                                           ComM_User  /**< the pointer to ComM_User */
 #define ComM_GetUserReqFullComOfPCPartitionConfig(partitionIndex)                                   ComM_UserReqFullCom  /**< the pointer to ComM_UserReqFullCom */
@@ -106,8 +106,13 @@
 #define ComM_GetActiveComMode(Index, partitionIndex)                                                (ComM_GetActiveComModeOfPCPartitionConfig(partitionIndex)[(Index)])
 #define ComM_GetBusComModeReq(Index, partitionIndex)                                                (ComM_GetBusComModeReqOfPCPartitionConfig(partitionIndex)[(Index)])
 #define ComM_GetBusSmState(Index, partitionIndex)                                                   (ComM_GetBusSmStateOfPCPartitionConfig(partitionIndex)[(Index)])
+#define ComM_GetBusTypeOfChannel(Index)                                                             (ComM_GetChannelOfPCPartitionConfig()[(Index)].BusTypeOfChannel)
 #define ComM_GetGetCurrentBusSMModeApiOfChannel(Index)                                              (ComM_GetChannelOfPCPartitionConfig()[(Index)].GetCurrentBusSMModeApiOfChannel)
+#define ComM_IsNmSupportOfChannel(Index)                                                            ((ComM_GetChannelOfPCPartitionConfig()[(Index)].NmSupportOfChannel) != FALSE)
+#define ComM_GetNmTypeOfChannel(Index)                                                              (ComM_GetChannelOfPCPartitionConfig()[(Index)].NmTypeOfChannel)
 #define ComM_GetRequestBusSMModeApiOfChannel(Index)                                                 (ComM_GetChannelOfPCPartitionConfig()[(Index)].RequestBusSMModeApiOfChannel)
+#define ComM_IsSilentSupportOfChannel(Index)                                                        ((ComM_GetChannelOfPCPartitionConfig()[(Index)].SilentSupportOfChannel) != FALSE)
+#define ComM_GetWakeupStateOfChannel(Index)                                                         (ComM_GetChannelOfPCPartitionConfig()[(Index)].WakeupStateOfChannel)
 #define ComM_GetUserReqFullComEndIdxOfChannelPb(Index)                                              (ComM_GetChannelPbOfPCPartitionConfig()[(Index)].UserReqFullComEndIdxOfChannelPb)
 #define ComM_GetUserReqFullComStartIdxOfChannelPb(Index)                                            (ComM_GetChannelPbOfPCPartitionConfig()[(Index)].UserReqFullComStartIdxOfChannelPb)
 #define ComM_IsComAllowed(Index, partitionIndex)                                                    ((ComM_GetComAllowedOfPCPartitionConfig(partitionIndex)[(Index)]) != FALSE)
@@ -134,14 +139,9 @@
   \brief  These macros can be used to read deduplicated data elements.
   \{
 */ 
-#define ComM_GetBusTypeOfChannel(Index)                                                             COMM_BUS_TYPE_CAN  /**< The channel bus type */
 #define ComM_GetGwTypeOfChannel(Index)                                                              COMM_GATEWAY_TYPE_NONE  /**< The partial network gateway type, relevant for channels attached to coordinated partial networks */
 #define ComM_GetInhibitionInitValueOfChannel(Index)                                                 0x00u  /**< Initial value of the inhibition status of the channel */
-#define ComM_IsNmSupportOfChannel(Index)                                                            (((TRUE)) != FALSE)  /**< Decides if the channel has NmType FULL or PASSIVE */
-#define ComM_GetNmTypeOfChannel(Index)                                                              COMM_FULL_NMTYPEOFCHANNEL  /**< The Network Management type of the channel */
 #define ComM_GetPartitionConfigIdxOfChannel(Index)                                                  0u  /**< the index of the 1:1 relation pointing to ComM_PCPartitionConfig */
-#define ComM_IsSilentSupportOfChannel(Index)                                                        (((TRUE)) != FALSE)  /**< Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration) */
-#define ComM_GetWakeupStateOfChannel(Index)                                                         COMM_FULL_COM_READY_SLEEP  /**< Target channel state after a Passive Wake-up */
 #define ComM_IsUserReqFullComUsedOfChannelPb(Index)                                                 (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_UserReqFullCom */
 #define ComM_GetSizeOfActiveComMode(partitionIndex)                                                 ComM_GetSizeOfActiveComModeOfPCPartitionConfig(partitionIndex)
 #define ComM_GetSizeOfBusComModeReq(partitionIndex)                                                 ComM_GetSizeOfBusComModeReqOfPCPartitionConfig(partitionIndex)
@@ -395,6 +395,11 @@
   \brief  Contains PreCompile configuration parameters of channels
   \details
   Element                   Description
+  BusType                   The channel bus type
+  NmSupport                 Decides if the channel has NmType FULL or PASSIVE
+  SilentSupport             Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration)
+  NmType                    The Network Management type of the channel
+  WakeupState               Target channel state after a Passive Wake-up
   GetCurrentBusSMModeApi    Query the current communication mode from the corresponding BusSM
   RequestBusSMModeApi       Request the communication mode from the corresponding BusSM
 */ 
@@ -402,7 +407,7 @@
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[2];
+extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -423,7 +428,7 @@ extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[2];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[2];
+extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -466,7 +471,7 @@ extern CONST(ComM_PartitionIdentifiersType, COMM_CONST) ComM_PartitionIdentifier
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserType, COMM_CONST) ComM_User[2];
+extern CONST(ComM_UserType, COMM_CONST) ComM_User[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -487,7 +492,7 @@ extern CONST(ComM_UserType, COMM_CONST) ComM_User[2];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[2];
+extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -674,7 +679,7 @@ extern VAR(ComM_PostInitializedType, COMM_VAR_NOINIT) ComM_PostInitialized[1];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[2];
+extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[3];
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

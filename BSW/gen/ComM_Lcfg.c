@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Lcfg.c
- *   Generation Time: 2024-11-18 10:32:49
+ *   Generation Time: 2024-11-28 15:38:53
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -46,6 +46,7 @@
 #include "ComM_Private_Cfg.h"
 #include "CanSM_ComM.h"
 #include "CanSM.h"
+#include "LinSM.h"
 
 
 #include "Det.h"
@@ -92,6 +93,11 @@
   \brief  Contains PreCompile configuration parameters of channels
   \details
   Element                   Description
+  BusType                   The channel bus type
+  NmSupport                 Decides if the channel has NmType FULL or PASSIVE
+  SilentSupport             Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration)
+  NmType                    The Network Management type of the channel
+  WakeupState               Target channel state after a Passive Wake-up
   GetCurrentBusSMModeApi    Query the current communication mode from the corresponding BusSM
   RequestBusSMModeApi       Request the communication mode from the corresponding BusSM
 */ 
@@ -99,10 +105,11 @@
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    GetCurrentBusSMModeApi   RequestBusSMModeApi         Referable Keys */
-  { /*     0 */ CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_0] */
-  { /*     1 */ CanSM_GetCurrentComMode, CanSM_RequestComMode }   /* [ComMChannel_1] */
+CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    BusType            NmSupport  SilentSupport  NmType                     WakeupState                      GetCurrentBusSMModeApi   RequestBusSMModeApi         Referable Keys */
+  { /*     0 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE, COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_0] */
+  { /*     1 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE, COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_1] */
+  { /*     2 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE, COMM_NONE_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode }   /* [ComMChannel_2] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -124,10 +131,11 @@ CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[2] = {  /* PRQA S 1514, 1533 */
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    UserReqFullComEndIdx  UserReqFullComStartIdx */
   { /*     0 */                   1u,                     0u },
-  { /*     1 */                   2u,                     1u }
+  { /*     1 */                   2u,                     1u },
+  { /*     2 */                   3u,                     2u }
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -174,10 +182,11 @@ CONST(ComM_PartitionIdentifiersType, COMM_CONST) ComM_PartitionIdentifiers[1] = 
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_UserType, COMM_CONST) ComM_User[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(ComM_UserType, COMM_CONST) ComM_User[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    PncUser  UserByteMaskEndIdx  UserByteMaskStartIdx        Comment */
   { /*     0 */   FALSE,                 1u,                   0u },  /* [CN_TC37X_VCU_CAN00_b1b4f272] */
-  { /*     1 */   FALSE,                 2u,                   1u }   /* [CN_TC37X_VCU_CAN01_5e76994c] */
+  { /*     1 */   FALSE,                 2u,                   1u },  /* [CN_TC37X_VCU_CAN01_5e76994c] */
+  { /*     2 */   FALSE,                 3u,                   2u }   /* [CN_LIN00_984dfd9e] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -199,10 +208,11 @@ CONST(ComM_UserType, COMM_CONST) ComM_User[2] = {  /* PRQA S 1514, 1533 */  /* M
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Channel  UserReqFullComIdx        Referable Keys */
   { /*     0 */      0u,                0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN00_b1b4f272] */
-  { /*     1 */      1u,                1u }   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_5e76994c] */
+  { /*     1 */      1u,                1u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_5e76994c] */
+  { /*     2 */      2u,                2u }   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN00_984dfd9e] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -224,6 +234,7 @@ VAR(ComM_ActiveComModeUType, COMM_VAR_NOINIT) ComM_ActiveComMode;  /* PRQA S 075
   /* Index        Referable Keys */
   /*     0 */  /* [ComMChannel_0] */
   /*     1 */  /* [ComMChannel_1] */
+  /*     2 */  /* [ComMChannel_2] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -245,6 +256,7 @@ VAR(ComM_BusComModeReqUType, COMM_VAR_NOINIT) ComM_BusComModeReq;  /* PRQA S 075
   /* Index        Referable Keys */
   /*     0 */  /* [ComMChannel_0] */
   /*     1 */  /* [ComMChannel_1] */
+  /*     2 */  /* [ComMChannel_2] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -266,6 +278,7 @@ VAR(ComM_BusSmStateUType, COMM_VAR_NOINIT) ComM_BusSmState;  /* PRQA S 0759, 151
   /* Index        Referable Keys */
   /*     0 */  /* [ComMChannel_0] */
   /*     1 */  /* [ComMChannel_1] */
+  /*     2 */  /* [ComMChannel_2] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -287,6 +300,7 @@ VAR(ComM_ComAllowedUType, COMM_VAR_NOINIT) ComM_ComAllowed;  /* PRQA S 0759, 151
   /* Index        Referable Keys */
   /*     0 */  /* [ComMChannel_0] */
   /*     1 */  /* [ComMChannel_1] */
+  /*     2 */  /* [ComMChannel_2] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -308,6 +322,7 @@ VAR(ComM_DcmRequestActiveUType, COMM_VAR_NOINIT) ComM_DcmRequestActive;  /* PRQA
   /* Index        Referable Keys */
   /*     0 */  /* [ComMChannel_0] */
   /*     1 */  /* [ComMChannel_1] */
+  /*     2 */  /* [ComMChannel_2] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -410,10 +425,11 @@ VAR(ComM_PostInitializedType, COMM_VAR_NOINIT) ComM_PostInitialized[1];  /* PRQA
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [ComMChannel_0, Channel0_To_User0] */
   /*     1 */  /* [ComMChannel_1, Channel1_To_User1] */
+  /*     2 */  /* [ComMChannel_2, Channel2_To_User2] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -489,6 +505,24 @@ FUNC(void, COMM_CODE) ComM_MainFunction_1(void)
   /* ----- Implementation ----------------------------------------------- */
   /* #10 Call the ComM_MainFunction() for the corresponding channel. */
   ComM_MainFunction((NetworkHandleType)1 );
+}
+
+/*********************************************************************************************************************
+FUNCTION: ComM_MainFunction_2
+*********************************************************************************************************************/
+/*!
+ * \internal
+ * - #10 Call the ComM_MainFunction() for the corresponding channel.
+ * \endinternal
+ */
+FUNC(void, COMM_CODE) ComM_MainFunction_2(void)
+{
+  /* ----- Development Error Checks ------------------------------------- */
+  /* Not needed, ComM_MainFunction() performs an initialization check. */
+
+  /* ----- Implementation ----------------------------------------------- */
+  /* #10 Call the ComM_MainFunction() for the corresponding channel. */
+  ComM_MainFunction((NetworkHandleType)2 );
 }
 
 

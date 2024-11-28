@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanNm_Cfg.c
- *   Generation Time: 2024-11-18 10:32:49
+ *   Generation Time: 2024-11-28 15:38:52
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -164,10 +164,11 @@ CONST(CanNm_PbChannelConfigType, CANNM_CONST) CanNm_PbChannelConfig[2] = {  /* P
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanNm_SysToNmChIndType, CANNM_CONST) CanNm_SysToNmChInd[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index     SysToNmChInd  */
-  /*     0 */            0u,
-  /*     1 */            1u
+CONST(CanNm_SysToNmChIndType, CANNM_CONST) CanNm_SysToNmChInd[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     SysToNmChInd           */
+  /*     0 */                     0u,
+  /*     1 */                     1u,
+  /*     2 */  CANNM_NO_SYSTONMCHIND
 };
 #define CANNM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanNm_Cfg.h
- *   Generation Time: 2024-11-18 10:32:49
+ *   Generation Time: 2024-11-28 15:38:53
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -688,7 +688,7 @@
 #define CanNm_GetRxMessageDataOfPCConfig()                            CanNm_RxMessageData  /**< the pointer to CanNm_RxMessageData */
 #define CanNm_GetSizeOfChannelConfigOfPCConfig()                      2u  /**< the number of accomplishable value elements in CanNm_ChannelConfig */
 #define CanNm_GetSizeOfPbChannelConfigOfPCConfig()                    2u  /**< the number of accomplishable value elements in CanNm_PbChannelConfig */
-#define CanNm_GetSizeOfSysToNmChIndOfPCConfig()                       2u  /**< the number of accomplishable value elements in CanNm_SysToNmChInd */
+#define CanNm_GetSizeOfSysToNmChIndOfPCConfig()                       3u  /**< the number of accomplishable value elements in CanNm_SysToNmChInd */
 #define CanNm_GetSizeOfTxMessageDataOfPCConfig()                      16u  /**< the number of accomplishable value elements in CanNm_TxMessageData */
 #define CanNm_GetSysToNmChIndOfPCConfig()                             CanNm_SysToNmChInd  /**< the pointer to CanNm_SysToNmChInd */
 #define CanNm_GetTimeoutTimerOfPCConfig()                             CanNm_TimeoutTimer.raw  /**< the pointer to CanNm_TimeoutTimer */
@@ -1831,7 +1831,7 @@ extern CONST(CanNm_PbChannelConfigType, CANNM_CONST) CanNm_PbChannelConfig[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanNm_SysToNmChIndType, CANNM_CONST) CanNm_SysToNmChInd[2];
+extern CONST(CanNm_SysToNmChIndType, CANNM_CONST) CanNm_SysToNmChInd[3];
 #define CANNM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

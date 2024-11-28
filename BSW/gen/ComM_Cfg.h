@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2024-11-18 10:32:49
+ *   Generation Time: 2024-11-28 15:38:53
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -118,11 +118,11 @@
 #define COMM_KEEP_AWAKE_CHANNELS_SUPPORT                                STD_ON
 #define COMM_BUS_TYPE_INTERNAL_PRESENT                                  STD_OFF
 #define COMM_BUS_TYPE_FR_PRESENT                                        STD_OFF
-#define COMM_BUS_TYPE_LIN_PRESENT                                       STD_OFF
+#define COMM_BUS_TYPE_LIN_PRESENT                                       STD_ON
 #define COMM_EXISTS_ONLY_NONE_NMTYPEOFCHANNEL                           STD_OFF
 
 #define COMM_FULL_COMM_REQUEST_NOTIF                                    STD_OFF
-#define COMM_MAX_NUMBER_OF_USERS                                        2u
+#define COMM_MAX_NUMBER_OF_USERS                                        3u
 #define COMM_DCM_INDICATION                                             STD_ON
 #define COMM_USERMODENOTIFUNC_PNC_USER_ONLY                             STD_ON
 #define COMM_EXISTS_USER_WITH_SINGLE_PNC                                STD_OFF
@@ -145,6 +145,7 @@
     &&&~ USER HANDLES
  ----------------------------------------------------------------------------- */
 
+#define ComMConf_ComMUser_CN_LIN00_984dfd9e           2u 
 #define ComMConf_ComMUser_CN_TC37X_VCU_CAN00_b1b4f272 0u 
 #define ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c 1u 
 
@@ -155,6 +156,7 @@
 
 #define ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8 0u 
 #define ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e 1u 
+#define ComMConf_ComMChannel_CN_LIN00_b12a0454           2u 
 
 
 /* -----------------------------------------------------------------------------
@@ -382,7 +384,7 @@
 #define COMM_EXISTS_FULL_NMTYPEOFCHANNEL                                                            STD_ON
 #define COMM_EXISTS_PASSIVE_NMTYPEOFCHANNEL                                                         STD_OFF
 #define COMM_EXISTS_LIGHT_NMTYPEOFCHANNEL                                                           STD_OFF
-#define COMM_EXISTS_NONE_NMTYPEOFCHANNEL                                                            STD_OFF
+#define COMM_EXISTS_NONE_NMTYPEOFCHANNEL                                                            STD_ON
 #define COMM_EXISTS_LINSLAVE_NMTYPEOFCHANNEL                                                        STD_OFF
 #define COMM_EXISTS_EIRA_RX_TYPEOFPNCSIGNAL                                                         STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define COMM_EXISTS_EIRA_TX_TYPEOFPNCSIGNAL                                                         STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
@@ -398,6 +400,7 @@
   \{
 */ 
 #define COMM_FULL_NMTYPEOFCHANNEL                                                                   0x01u
+#define COMM_NONE_NMTYPEOFCHANNEL                                                                   0x04u
 /** 
   \}
 */ 
@@ -407,16 +410,16 @@
   \brief  If all values in a CONST array or an element in a CONST array of structs are equal, the define is STD_ON else STD_OFF.
   \{
 */ 
-#define COMM_ISDEF_BUSTYPEOFCHANNEL                                                                 STD_ON
+#define COMM_ISDEF_BUSTYPEOFCHANNEL                                                                 STD_OFF
 #define COMM_ISDEF_GETCURRENTBUSSMMODEAPIOFCHANNEL                                                  STD_OFF
 #define COMM_ISDEF_GWTYPEOFCHANNEL                                                                  STD_ON
 #define COMM_ISDEF_INHIBITIONINITVALUEOFCHANNEL                                                     STD_ON
-#define COMM_ISDEF_NMSUPPORTOFCHANNEL                                                               STD_ON
-#define COMM_ISDEF_NMTYPEOFCHANNEL                                                                  STD_ON
+#define COMM_ISDEF_NMSUPPORTOFCHANNEL                                                               STD_OFF
+#define COMM_ISDEF_NMTYPEOFCHANNEL                                                                  STD_OFF
 #define COMM_ISDEF_PARTITIONCONFIGIDXOFCHANNEL                                                      STD_ON
 #define COMM_ISDEF_REQUESTBUSSMMODEAPIOFCHANNEL                                                     STD_OFF
-#define COMM_ISDEF_SILENTSUPPORTOFCHANNEL                                                           STD_ON
-#define COMM_ISDEF_WAKEUPSTATEOFCHANNEL                                                             STD_ON
+#define COMM_ISDEF_SILENTSUPPORTOFCHANNEL                                                           STD_OFF
+#define COMM_ISDEF_WAKEUPSTATEOFCHANNEL                                                             STD_OFF
 #define COMM_ISDEF_USERREQFULLCOMENDIDXOFCHANNELPB                                                  STD_OFF
 #define COMM_ISDEF_USERREQFULLCOMSTARTIDXOFCHANNELPB                                                STD_OFF
 #define COMM_ISDEF_USERREQFULLCOMUSEDOFCHANNELPB                                                    STD_ON
@@ -456,16 +459,16 @@
   \brief  If all values in a CONST array or an element in a CONST array of structs are equal, the define contains the always equals value.
   \{
 */ 
-#define COMM_EQ2_BUSTYPEOFCHANNEL                                                                   COMM_BUS_TYPE_CAN
+#define COMM_EQ2_BUSTYPEOFCHANNEL                                                                   
 #define COMM_EQ2_GETCURRENTBUSSMMODEAPIOFCHANNEL                                                    
 #define COMM_EQ2_GWTYPEOFCHANNEL                                                                    COMM_GATEWAY_TYPE_NONE
 #define COMM_EQ2_INHIBITIONINITVALUEOFCHANNEL                                                       0x00u
-#define COMM_EQ2_NMSUPPORTOFCHANNEL                                                                 TRUE
-#define COMM_EQ2_NMTYPEOFCHANNEL                                                                    COMM_FULL_NMTYPEOFCHANNEL
+#define COMM_EQ2_NMSUPPORTOFCHANNEL                                                                 
+#define COMM_EQ2_NMTYPEOFCHANNEL                                                                    
 #define COMM_EQ2_PARTITIONCONFIGIDXOFCHANNEL                                                        0u
 #define COMM_EQ2_REQUESTBUSSMMODEAPIOFCHANNEL                                                       
-#define COMM_EQ2_SILENTSUPPORTOFCHANNEL                                                             TRUE
-#define COMM_EQ2_WAKEUPSTATEOFCHANNEL                                                               COMM_FULL_COM_READY_SLEEP
+#define COMM_EQ2_SILENTSUPPORTOFCHANNEL                                                             
+#define COMM_EQ2_WAKEUPSTATEOFCHANNEL                                                               
 #define COMM_EQ2_USERREQFULLCOMENDIDXOFCHANNELPB                                                    
 #define COMM_EQ2_USERREQFULLCOMSTARTIDXOFCHANNELPB                                                  
 #define COMM_EQ2_USERREQFULLCOMUSEDOFCHANNELPB                                                      TRUE
@@ -781,6 +784,11 @@ typedef uint8 ComM_UserReqFullComType;
 /**   \brief  type used in ComM_Channel */
 typedef struct sComM_ChannelType
 {
+  ComM_BusType BusTypeOfChannel;  /**< The channel bus type */
+  ComM_NmSupportOfChannelType NmSupportOfChannel;  /**< Decides if the channel has NmType FULL or PASSIVE */
+  ComM_SilentSupportOfChannelType SilentSupportOfChannel;  /**< Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration) */
+  ComM_NmTypeOfChannelType NmTypeOfChannel;  /**< The Network Management type of the channel */
+  ComM_WakeupStateOfChannelType WakeupStateOfChannel;  /**< Target channel state after a Passive Wake-up */
   GetCurrentBusSMModeApiType GetCurrentBusSMModeApiOfChannel;  /**< Query the current communication mode from the corresponding BusSM */
   RequestBusSMModeApiType RequestBusSMModeApiOfChannel;  /**< Request the communication mode from the corresponding BusSM */
 } ComM_ChannelType;
@@ -828,6 +836,7 @@ typedef struct ComM_ActiveComModeStructSTag
 {
   ComM_StateType ComMChannel_0;
   ComM_StateType ComMChannel_1;
+  ComM_StateType ComMChannel_2;
 } ComM_ActiveComModeStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_BusComModeReq in the partition context  */
@@ -835,6 +844,7 @@ typedef struct ComM_BusComModeReqStructSTag
 {
   ComM_StateType ComMChannel_0;
   ComM_StateType ComMChannel_1;
+  ComM_StateType ComMChannel_2;
 } ComM_BusComModeReqStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_BusSmState in the partition context  */
@@ -842,6 +852,7 @@ typedef struct ComM_BusSmStateStructSTag
 {
   ComM_ModeType ComMChannel_0;
   ComM_ModeType ComMChannel_1;
+  ComM_ModeType ComMChannel_2;
 } ComM_BusSmStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_ComAllowed in the partition context  */
@@ -849,6 +860,7 @@ typedef struct ComM_ComAllowedStructSTag
 {
   ComM_ComAllowedType ComMChannel_0;
   ComM_ComAllowedType ComMChannel_1;
+  ComM_ComAllowedType ComMChannel_2;
 } ComM_ComAllowedStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_DcmRequestActive in the partition context  */
@@ -856,6 +868,7 @@ typedef struct ComM_DcmRequestActiveStructSTag
 {
   ComM_DcmRequestActiveType ComMChannel_0;
   ComM_DcmRequestActiveType ComMChannel_1;
+  ComM_DcmRequestActiveType ComMChannel_2;
 } ComM_DcmRequestActiveStructSType;
 
 /** 
@@ -870,35 +883,35 @@ typedef struct ComM_DcmRequestActiveStructSTag
 /**   \brief  type to access ComM_ActiveComMode in an index and symbol based style. */
 typedef union ComM_ActiveComModeUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_StateType raw[2];
+  ComM_StateType raw[3];
   ComM_ActiveComModeStructSType str;
 } ComM_ActiveComModeUType;
 
 /**   \brief  type to access ComM_BusComModeReq in an index and symbol based style. */
 typedef union ComM_BusComModeReqUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_StateType raw[2];
+  ComM_StateType raw[3];
   ComM_BusComModeReqStructSType str;
 } ComM_BusComModeReqUType;
 
 /**   \brief  type to access ComM_BusSmState in an index and symbol based style. */
 typedef union ComM_BusSmStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_ModeType raw[2];
+  ComM_ModeType raw[3];
   ComM_BusSmStateStructSType str;
 } ComM_BusSmStateUType;
 
 /**   \brief  type to access ComM_ComAllowed in an index and symbol based style. */
 typedef union ComM_ComAllowedUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_ComAllowedType raw[2];
+  ComM_ComAllowedType raw[3];
   ComM_ComAllowedStructSType str;
 } ComM_ComAllowedUType;
 
 /**   \brief  type to access ComM_DcmRequestActive in an index and symbol based style. */
 typedef union ComM_DcmRequestActiveUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_DcmRequestActiveType raw[2];
+  ComM_DcmRequestActiveType raw[3];
   ComM_DcmRequestActiveStructSType str;
 } ComM_DcmRequestActiveUType;
 
@@ -1024,6 +1037,11 @@ typedef ComM_PCConfigType ComM_ConfigType;  /**< A structure type is present for
   \brief  Contains PreCompile configuration parameters of channels
   \details
   Element                   Description
+  BusType                   The channel bus type
+  NmSupport                 Decides if the channel has NmType FULL or PASSIVE
+  SilentSupport             Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration)
+  NmType                    The Network Management type of the channel
+  WakeupState               Target channel state after a Passive Wake-up
   GetCurrentBusSMModeApi    Query the current communication mode from the corresponding BusSM
   RequestBusSMModeApi       Request the communication mode from the corresponding BusSM
 */ 
@@ -1031,7 +1049,7 @@ typedef ComM_PCConfigType ComM_ConfigType;  /**< A structure type is present for
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[2];
+extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1052,7 +1070,7 @@ extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[2];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[2];
+extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1095,7 +1113,7 @@ extern CONST(ComM_PartitionIdentifiersType, COMM_CONST) ComM_PartitionIdentifier
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserType, COMM_CONST) ComM_User[2];
+extern CONST(ComM_UserType, COMM_CONST) ComM_User[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1116,7 +1134,7 @@ extern CONST(ComM_UserType, COMM_CONST) ComM_User[2];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[2];
+extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1303,7 +1321,7 @@ extern VAR(ComM_PostInitializedType, COMM_VAR_NOINIT) ComM_PostInitialized[1];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[2];
+extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[3];
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

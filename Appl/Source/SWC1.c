@@ -280,7 +280,7 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  * Symbol: SWC1_Init
  *********************************************************************************************************************/
   Rte_Write_Request_ESH_RunRequest_0_requestedMode(1);
-	Lin_17_AscLin_Init(&Lin_17_AscLin_Config);
+//	Lin_17_AscLin_Init(&Lin_17_AscLin_Config);
 
 
 /**********************************************************************************************************************
@@ -376,9 +376,9 @@ uint8 Sdu_Data[][8] =
 };
 Lin_PduType Lin_Pdu[] =
 {
-{0x80, LIN_ENHANCED_CS, LIN_MASTER_RESPONSE, 8, Sdu_Data[0]},
-{0xC1, LIN_ENHANCED_CS, LIN_SLAVE_RESPONSE, 8, Sdu_Data[1]},
-{0xC2, LIN_ENHANCED_CS, LIN_SLAVE_TO_SLAVE, 8, Sdu_Data[1]}
+{0x80, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_TX, 8, Sdu_Data[0]},
+{0xC1, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_RX, 8, Sdu_Data[1]},
+{0xC2, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_RX, 8, Sdu_Data[1]}
 };
 
 uint8 DataRead[8];
@@ -407,12 +407,14 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: SWC1_Runnable10ms
  *********************************************************************************************************************/
-Lin_DemoFunction();
+//Lin_DemoFunction();
 //	if( ComMReqFlg == 0 )
 	if(1)//( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_12_KL15) == 0 )  
   {
     Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
     Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_FULL_COMMUNICATION );
+    ComM_RequestComMode(2,2);
+
   }
   else
   {

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.c
- *   Generation Time: 2024-11-18 10:32:49
+ *   Generation Time: 2024-11-28 15:38:52
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -175,6 +175,28 @@ CONST(Nm_PartitionIdentifiersType, NM_CONST) Nm_PartitionIdentifiers[1] = {  /* 
   { /*     0 */ NM_SINGLE_PARTITION,                   0u }
 };
 #define NM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "Nm_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Nm_SysToNmChInd
+**********************************************************************************************************************/
+/** 
+  \var    Nm_SysToNmChInd
+  \brief  Channel indirection: System Channel handle to NM channel handle
+*/ 
+#define NM_START_SEC_CONST_8
+/*lint -save -esym(961, 19.1) */
+#include "Nm_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Nm_SysToNmChIndType, NM_CONST) Nm_SysToNmChInd[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     SysToNmChInd        */
+  /*     0 */                  0u,
+  /*     1 */                  1u,
+  /*     2 */  NM_NO_SYSTONMCHIND
+};
+#define NM_STOP_SEC_CONST_8
 /*lint -save -esym(961, 19.1) */
 #include "Nm_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

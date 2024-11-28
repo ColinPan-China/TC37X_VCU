@@ -1696,7 +1696,7 @@ Std_ReturnType Lin_17_AscLin_SendFrame
     /* [cover parentID={3E7D9C9E-F2DC-44cf-8CB5-1D14D2CA2311}]
     [/cover] */
     /* Write Data bytes to local buffer in case of Master to Slave */
-    if (PduStatePtr->Drc == LIN_MASTER_RESPONSE)
+    if (PduStatePtr->Drc == LIN_FRAMERESPONSE_TX)
     {
       Index = 0U;
       DataPtr = PduInfoPtr->SduPtr;
@@ -1832,7 +1832,7 @@ Std_ReturnType Lin_17_AscLin_GoToSleep(const uint8 Channel)
     PduStatePtr->Dl = LIN_17_ASCLIN_SLEEPCMD_DL;
     PduStatePtr->Cs = LIN_CLASSIC_CS;
     PduStatePtr->Pid = LIN_17_ASCLIN_SLEEPCMD_PID;
-    PduStatePtr->Drc = LIN_MASTER_RESPONSE;
+    PduStatePtr->Drc = LIN_FRAMERESPONSE_TX;
 
     /* Sleep data */
     /* [cover parentID={CF442622-0972-4730-8131-760BAC9021B8}]
@@ -3681,7 +3681,7 @@ static void Lin_17_AscLin_lHwStartTransmission
   LocalPid &= LIN_17_ASCLIN_PID_MASK_WO_PARITY;
   HwModulePtr->TXDATA.U =  LocalPid;
 
-  if (LIN_MASTER_RESPONSE == LocalDrc)
+  if (LIN_FRAMERESPONSE_TX == LocalDrc)
   {
     /* [cover parentID={D291ED3D-C0F4-4eed-9BB1-848097D24AD2}]
         [/cover] */
@@ -3697,7 +3697,7 @@ static void Lin_17_AscLin_lHwStartTransmission
     /* Enable the Response transmission in case of Master to Slave  */
     HwModulePtr->FLAGSSET.B.TRRQS = LIN_17_ASCLIN_ENABLE_FLAG ;
   }
-  else if (LIN_SLAVE_RESPONSE == LocalDrc)
+  else if (LIN_FRAMERESPONSE_RX == LocalDrc)
   {
     /* [cover parentID={FA3663B3-2A4B-4476-8BFC-63C29E0744BF}]
         [/cover] */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Generated_Types.h
- *   Generation Time: 2024-11-18 10:32:49
+ *   Generation Time: 2024-11-28 15:38:53
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -55,6 +55,7 @@
 #define EcuMConf_EcuMWakeupSource_ECUM_WKSOURCE_EXTERNAL_WDG   (4uL) 
 #define EcuMConf_EcuMWakeupSource_CN_TC37X_VCU_CAN00_07b6c9c8  (5uL) 
 #define EcuMConf_EcuMWakeupSource_CN_TC37X_VCU_CAN01_70b1f95e  (6uL) 
+#define EcuMConf_EcuMWakeupSource_CN_LIN00_b12a0454            (7uL) 
 
  
 /* ------------------------------------- Range of EcuM_WakeupSourceType -------------------------------------------- */
@@ -67,6 +68,7 @@
 #define ECUM_WKSOURCE_EXTERNAL_WDG                (EcuM_WakeupSourceType)(16uL) 
 #define ECUM_WKSOURCE_CN_TC37X_VCU_CAN00_07b6c9c8 (EcuM_WakeupSourceType)(32uL) 
 #define ECUM_WKSOURCE_CN_TC37X_VCU_CAN01_70b1f95e (EcuM_WakeupSourceType)(64uL) 
+#define ECUM_WKSOURCE_CN_LIN00_b12a0454           (EcuM_WakeupSourceType)(128uL) 
 
 
 

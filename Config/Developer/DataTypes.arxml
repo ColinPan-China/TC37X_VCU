@@ -353,6 +353,19 @@
           <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
           <NATIVE-DECLARATION>sint16</NATIVE-DECLARATION>
         </SW-BASE-TYPE>
+        <SW-BASE-TYPE UUID="E6B8D465-2654-497D-8AB0-776D8659A6E6">
+          <SHORT-NAME>uint8</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV_SDG">
+                <SD GID="DV_ReadOnly">1</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+          <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+        </SW-BASE-TYPE>
       </ELEMENTS>
       <AR-PACKAGES>
         <AR-PACKAGE UUID="F803B517-CFFA-4CBA-A2BC-B6F2F4B47D61">
@@ -934,6 +947,258 @@
                 </DATA-CONSTR-RULE>
               </DATA-CONSTR-RULES>
             </DATA-CONSTR>
+            <DATA-CONSTR UUID="70A99D86-DCE9-4FDE-AD2F-46D7370B3D61">
+              <SHORT-NAME>DC_Vcu_Lin0_RxMsg1_Sig0</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="6C889B14-F980-4FE4-AF87-6925B7E14FD5">
+              <SHORT-NAME>DC_Vcu_Lin0_RxMsg1_Sig1</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="C00AE3CA-22C7-4EB0-9C53-54329C940B1A">
+              <SHORT-NAME>DC_Vcu_Lin0_RxMsg2_Sig0</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="383B3B48-A74E-414E-A5E6-8269BF0D7C8D">
+              <SHORT-NAME>DC_Vcu_Lin0_RxMsg2_Sig1</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="D273FB1D-502F-4D55-B346-5FD6D3587C39">
+              <SHORT-NAME>DC_Vcu_Lin0_RxMsg2_Sig2</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="BF59792A-2A03-4111-A096-6916D63952E7">
+              <SHORT-NAME>DC_Vcu_Lin0_RxMsg2_Sig3</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="20989950-F528-46E7-BA9B-FD9B5CB90E61">
+              <SHORT-NAME>DC_Vcu_Lin0_TxMsg1_Sig0</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="D45E6C15-B291-4B60-A5B8-87C4FC47A075">
+              <SHORT-NAME>DC_Vcu_Lin0_TxMsg1_Sig1</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="9750A8F8-15CE-456D-8962-E86358594D4B">
+              <SHORT-NAME>DC_Vcu_Lin0_TxMsg1_Sig2</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="97F4519E-FF8D-4FF6-B9EC-9FFF268B8072">
+              <SHORT-NAME>DC_Vcu_Lin0_TxMsg1_Sig3</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="3047C10B-C392-494B-8A09-972B1136CE9C">
+              <SHORT-NAME>DC_Vcu_Lin0_TxMsg2_Sig0</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="83BAE8EB-118F-43F1-BD7F-AEF2BBEF1840">
+              <SHORT-NAME>DC_Vcu_Lin0_TxMsg2_Sig1</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="107E2AEE-6E79-407C-95A4-0CE36B1243F9">
+              <SHORT-NAME>DC_Vcu_Lin0_TxMsg2_Sig2</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="F239EBB2-CA00-4A0A-9BBD-B45D9F34C237">
+              <SHORT-NAME>DC_Vcu_Lin0_TxMsg2_Sig3</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
           </ELEMENTS>
         </AR-PACKAGE>
         <AR-PACKAGE UUID="1D6C4D34-E8C8-4F0E-9E70-B8021C94BE2E">
@@ -1282,6 +1547,160 @@
             </COMPU-METHOD>
             <COMPU-METHOD UUID="215FD60F-6D6C-4135-83D9-28CA89AA4748">
               <SHORT-NAME>CM_VcuRxMsg4_Sig3</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="785F976F-0A0A-42AA-A6F1-C651BFF70C54">
+              <SHORT-NAME>CM_Vcu_Lin0_RxMsg1_Sig0</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="755D24DF-3667-4C5D-BD7C-4DB51B1BFE8D">
+              <SHORT-NAME>CM_Vcu_Lin0_RxMsg1_Sig1</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="C213B3A5-3F78-4080-A146-68721E72FF21">
+              <SHORT-NAME>CM_Vcu_Lin0_RxMsg2_Sig0</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="35CA5AB6-39E6-48B2-B074-2ABE60049EF1">
+              <SHORT-NAME>CM_Vcu_Lin0_RxMsg2_Sig1</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="E398500B-CF1D-4E44-9D5C-E8659678AF2D">
+              <SHORT-NAME>CM_Vcu_Lin0_RxMsg2_Sig2</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="06CBF089-10CD-4CFE-8AC3-D6EDD4E80802">
+              <SHORT-NAME>CM_Vcu_Lin0_RxMsg2_Sig3</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="E3EF54EE-70DE-4950-8EA3-809A2C65CDB3">
+              <SHORT-NAME>CM_Vcu_Lin0_TxMsg1_Sig0</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="E77F645C-7DCD-4463-8F6E-9E09DBB63620">
+              <SHORT-NAME>CM_Vcu_Lin0_TxMsg1_Sig1</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="7F94D751-65B9-42EC-8453-CE6BE39F8FE8">
+              <SHORT-NAME>CM_Vcu_Lin0_TxMsg1_Sig2</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="D8DB128E-FDF8-4E7D-80EC-EBAC63CE9D17">
+              <SHORT-NAME>CM_Vcu_Lin0_TxMsg1_Sig3</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="20F4699C-51A9-468C-A0E9-B50353514814">
+              <SHORT-NAME>CM_Vcu_Lin0_TxMsg2_Sig0</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="FCD85A6A-5F59-4B94-9EA6-CF3A4B7B8982">
+              <SHORT-NAME>CM_Vcu_Lin0_TxMsg2_Sig1</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="651A6E0C-0FF3-4DC7-BABE-E14239F72208">
+              <SHORT-NAME>CM_Vcu_Lin0_TxMsg2_Sig2</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="3D293788-C435-4657-86D8-CCC2D95B44C2">
+              <SHORT-NAME>CM_Vcu_Lin0_TxMsg2_Sig3</SHORT-NAME>
               <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>

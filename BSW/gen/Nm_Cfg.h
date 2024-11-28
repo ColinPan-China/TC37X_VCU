@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.h
- *   Generation Time: 2024-11-18 10:32:49
+ *   Generation Time: 2024-11-28 15:38:53
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -154,7 +154,7 @@
 /*! Optimization that is turned ON if and only if no passively coordinated channel exists on a satellite partition. */
 #define NM_OPTIMIZE_NO_PASSIVE_COORD_ON_SATELLITE_PARTITION   STD_ON
 
-#define NM_SYS_CHANNELS_PC                             2u
+#define NM_SYS_CHANNELS_PC                             3u
 #define NM_NM_CHANNELS_PC                              2u
 #define NM_COORD_PC                                    0u
 #define NM_BUSNMS_PC                                   2u
@@ -310,7 +310,8 @@
 #define NM_SIZEOFNMFUNCTIONTABLE                                                                    STD_ON
 #define NM_SIZEOFPARTITIONIDENTIFIERS                                                               STD_ON
 #define NM_SIZEOFPOSTINITIALIZED                                                                    STD_ON
-#define NM_SYSTONMCHIND                                                                             STD_OFF  /**< Deactivateable: 'Nm_SysToNmChInd' Reason: 'Channel Indirection is not needed because Macro Layer Enabled is ON or the number of system channels is equal to the number of NM channels in the VARIANT-PRE-COMPILE' */
+#define NM_SIZEOFSYSTONMCHIND                                                                       STD_ON
+#define NM_SYSTONMCHIND                                                                             STD_ON
 #define NM_WAKEUPDETECTED                                                                           STD_OFF  /**< Deactivateable: 'Nm_WakeupDetected' Reason: 'Nm Gw Ext Enabled is turned OFF' */
 #define NM_PCCONFIG                                                                                 STD_ON
 #define NM_FINALMAGICNUMBEROFPCCONFIG                                                               STD_OFF  /**< Deactivateable: 'Nm_PCConfig.FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
@@ -328,6 +329,18 @@
 #define NM_SIZEOFCHANNELCONFIGOFPCPARTITIONCONFIG                                                   STD_ON
 #define NM_SIZEOFNMFUNCTIONTABLEOFPCPARTITIONCONFIG                                                 STD_ON
 #define NM_SIZEOFPOSTINITIALIZEDOFPCPARTITIONCONFIG                                                 STD_ON
+#define NM_SIZEOFSYSTONMCHINDOFPCPARTITIONCONFIG                                                    STD_ON
+#define NM_SYSTONMCHINDOFPCPARTITIONCONFIG                                                          STD_ON
+/** 
+  \}
+*/ 
+
+/** 
+  \defgroup  NmPCNoReferenceDefines  Nm No Reference Defines (PRE_COMPILE)
+  \brief  These defines are used to indicate unused indexes in data relations.
+  \{
+*/ 
+#define NM_NO_SYSTONMCHIND                                                                          255u
 /** 
   \}
 */ 
@@ -354,6 +367,7 @@
 #define NM_ISDEF_SETUSERDATAOFNMFUNCTIONTABLE                                                       STD_OFF
 #define NM_ISDEF_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                         STD_OFF
 #define NM_ISDEF_PARTITIONSNVOFPARTITIONIDENTIFIERS                                                 STD_OFF
+#define NM_ISDEF_SYSTONMCHIND                                                                       STD_OFF
 #define NM_ISDEF_PCPARTITIONCONFIGOFPCCONFIG                                                        STD_ON
 #define NM_ISDEF_PARTITIONIDENTIFIERSOFPCCONFIG                                                     STD_ON
 #define NM_ISDEF_CARWAKEUPCALLBACKFCTPTROFPCPARTITIONCONFIG                                         STD_ON
@@ -361,6 +375,7 @@
 #define NM_ISDEF_INITIALIZEDOFPCPARTITIONCONFIG                                                     STD_ON
 #define NM_ISDEF_NMFUNCTIONTABLEOFPCPARTITIONCONFIG                                                 STD_ON
 #define NM_ISDEF_POSTINITIALIZEDOFPCPARTITIONCONFIG                                                 STD_ON
+#define NM_ISDEF_SYSTONMCHINDOFPCPARTITIONCONFIG                                                    STD_ON
 /** 
   \}
 */ 
@@ -387,6 +402,7 @@
 #define NM_EQ2_SETUSERDATAOFNMFUNCTIONTABLE                                                         
 #define NM_EQ2_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                           
 #define NM_EQ2_PARTITIONSNVOFPARTITIONIDENTIFIERS                                                   
+#define NM_EQ2_SYSTONMCHIND                                                                         
 #define NM_EQ2_PCPARTITIONCONFIGOFPCCONFIG                                                          Nm_PCPartitionConfig
 #define NM_EQ2_PARTITIONIDENTIFIERSOFPCCONFIG                                                       Nm_PartitionIdentifiers
 #define NM_EQ2_CARWAKEUPCALLBACKFCTPTROFPCPARTITIONCONFIG                                           (&(Nm_CarWakeUpCallbackFctPtr))
@@ -394,6 +410,7 @@
 #define NM_EQ2_INITIALIZEDOFPCPARTITIONCONFIG                                                       (&(Nm_Initialized))
 #define NM_EQ2_NMFUNCTIONTABLEOFPCPARTITIONCONFIG                                                   Nm_NmFunctionTable
 #define NM_EQ2_POSTINITIALIZEDOFPCPARTITIONCONFIG                                                   Nm_PostInitialized
+#define NM_EQ2_SYSTONMCHINDOFPCPARTITIONCONFIG                                                      Nm_SysToNmChInd
 /** 
   \}
 */ 
@@ -500,6 +517,8 @@
 #define Nm_GetSizeOfChannelConfigOfPCPartitionConfig()                                              2u  /**< the number of accomplishable value elements in Nm_ChannelConfig */
 #define Nm_GetSizeOfNmFunctionTableOfPCPartitionConfig()                                            1u  /**< the number of accomplishable value elements in Nm_NmFunctionTable */
 #define Nm_GetSizeOfPostInitializedOfPCPartitionConfig(partitionIndex)                              1u  /**< the number of accomplishable value elements in Nm_PostInitialized */
+#define Nm_GetSizeOfSysToNmChIndOfPCPartitionConfig()                                               3u  /**< the number of accomplishable value elements in Nm_SysToNmChInd */
+#define Nm_GetSysToNmChIndOfPCPartitionConfig()                                                     Nm_SysToNmChInd  /**< the pointer to Nm_SysToNmChInd */
 /** 
   \}
 */ 
@@ -529,6 +548,7 @@
 #define Nm_GetPCPartitionConfigIdxOfPartitionIdentifiers(Index)                                     (Nm_GetPartitionIdentifiersOfPCConfig()[(Index)].PCPartitionConfigIdxOfPartitionIdentifiers)
 #define Nm_GetPartitionSNVOfPartitionIdentifiers(Index)                                             (Nm_GetPartitionIdentifiersOfPCConfig()[(Index)].PartitionSNVOfPartitionIdentifiers)
 #define Nm_IsPostInitialized(Index, partitionIndex)                                                 ((Nm_GetPostInitializedOfPCPartitionConfig(partitionIndex)[(Index)]) != FALSE)
+#define Nm_GetSysToNmChInd(Index)                                                                   (Nm_GetSysToNmChIndOfPCPartitionConfig()[(Index)])
 /** 
   \}
 */ 
@@ -542,6 +562,7 @@
 #define Nm_GetSizeOfNmFunctionTable()                                                               Nm_GetSizeOfNmFunctionTableOfPCPartitionConfig()
 #define Nm_GetSizeOfPartitionIdentifiers()                                                          Nm_GetSizeOfPartitionIdentifiersOfPCConfig()
 #define Nm_GetSizeOfPostInitialized(partitionIndex)                                                 Nm_GetSizeOfPostInitializedOfPCPartitionConfig(partitionIndex)
+#define Nm_GetSizeOfSysToNmChInd()                                                                  Nm_GetSizeOfSysToNmChIndOfPCPartitionConfig()
 /** 
   \}
 */ 
@@ -589,6 +610,8 @@
 #define Nm_HasSizeOfNmFunctionTable()                                                               (TRUE != FALSE)
 #define Nm_HasSizeOfPartitionIdentifiers()                                                          (TRUE != FALSE)
 #define Nm_HasSizeOfPostInitialized(partitionIndex)                                                 (TRUE != FALSE)
+#define Nm_HasSizeOfSysToNmChInd()                                                                  (TRUE != FALSE)
+#define Nm_HasSysToNmChInd()                                                                        (TRUE != FALSE)
 #define Nm_HasPCConfig()                                                                            (TRUE != FALSE)
 #define Nm_HasPCPartitionConfigOfPCConfig()                                                         (TRUE != FALSE)
 #define Nm_HasPartitionIdentifiersOfPCConfig()                                                      (TRUE != FALSE)
@@ -602,6 +625,8 @@
 #define Nm_HasSizeOfChannelConfigOfPCPartitionConfig()                                              (TRUE != FALSE)
 #define Nm_HasSizeOfNmFunctionTableOfPCPartitionConfig()                                            (TRUE != FALSE)
 #define Nm_HasSizeOfPostInitializedOfPCPartitionConfig(partitionIndex)                              (TRUE != FALSE)
+#define Nm_HasSizeOfSysToNmChIndOfPCPartitionConfig()                                               (TRUE != FALSE)
+#define Nm_HasSysToNmChIndOfPCPartitionConfig()                                                     (TRUE != FALSE)
 /** 
   \}
 */ 
@@ -697,6 +722,9 @@ typedef uint8_least Nm_PartitionIdentifiersIterType;
 /**   \brief  type used to iterate Nm_PostInitialized */
 typedef uint8_least Nm_PostInitializedIterType;
 
+/**   \brief  type used to iterate Nm_SysToNmChInd */
+typedef uint8_least Nm_SysToNmChIndIterType;
+
 /**   \brief  type used to iterate Nm_PCPartitionConfig */
 typedef uint8_least Nm_PCPartitionConfigIterType;
 
@@ -741,6 +769,12 @@ typedef uint8 Nm_SizeOfPartitionIdentifiersType;
 
 /**   \brief  value based type definition for Nm_SizeOfPostInitialized */
 typedef uint8 Nm_SizeOfPostInitializedType;
+
+/**   \brief  value based type definition for Nm_SizeOfSysToNmChInd */
+typedef uint8 Nm_SizeOfSysToNmChIndType;
+
+/**   \brief  value based type definition for Nm_SysToNmChInd */
+typedef uint8 Nm_SysToNmChIndType;
 
 /** 
   \}
@@ -813,6 +847,9 @@ typedef P2CONST(Nm_PartitionIdentifiersType, TYPEDEF, NM_CONST) Nm_PartitionIden
 
 /**   \brief  type used to point to Nm_PostInitialized */
 typedef P2VAR(Nm_PostInitializedType, TYPEDEF, NM_VAR_NO_INIT) Nm_PostInitializedPtrType;
+
+/**   \brief  type used to point to Nm_SysToNmChInd */
+typedef P2CONST(Nm_SysToNmChIndType, TYPEDEF, NM_CONST) Nm_SysToNmChIndPtrType;
 
 /** 
   \}
@@ -967,6 +1004,23 @@ extern CONST(Nm_NmFunctionTableType, NM_CONST) Nm_NmFunctionTable[1];
 /*lint -restore */
 extern CONST(Nm_PartitionIdentifiersType, NM_CONST) Nm_PartitionIdentifiers[1];
 #define NM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "Nm_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Nm_SysToNmChInd
+**********************************************************************************************************************/
+/** 
+  \var    Nm_SysToNmChInd
+  \brief  Channel indirection: System Channel handle to NM channel handle
+*/ 
+#define NM_START_SEC_CONST_8
+/*lint -save -esym(961, 19.1) */
+#include "Nm_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(Nm_SysToNmChIndType, NM_CONST) Nm_SysToNmChInd[3];
+#define NM_STOP_SEC_CONST_8
 /*lint -save -esym(961, 19.1) */
 #include "Nm_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

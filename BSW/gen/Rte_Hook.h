@@ -226,6 +226,8 @@
  *  Rte_Runnable_ComM_ComM_MainFunction_0_Start
  *  Rte_Runnable_ComM_ComM_MainFunction_1_Return
  *  Rte_Runnable_ComM_ComM_MainFunction_1_Start
+ *  Rte_Runnable_ComM_ComM_MainFunction_2_Return
+ *  Rte_Runnable_ComM_ComM_MainFunction_2_Start
  *  Rte_Runnable_ComM_GetCurrentComMode_Return
  *  Rte_Runnable_ComM_GetCurrentComMode_Start
  *  Rte_Runnable_ComM_GetInhibitionStatus_Return
@@ -580,6 +582,22 @@
  *  SchM_EnterHook_Fls_17_Dmu_UserContentCount_Start
  *  SchM_EnterHook_Fls_17_Dmu_Write_Return
  *  SchM_EnterHook_Fls_17_Dmu_Write_Start
+ *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Return
+ *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_1_Return
+ *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_1_Start
+ *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_2_Return
+ *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_2_Start
+ *  SchM_EnterHook_LinSM_LINSM_EXCLUSIVE_AREA_0_Return
+ *  SchM_EnterHook_LinSM_LINSM_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_LinSM_LINSM_EXCLUSIVE_AREA_1_Return
+ *  SchM_EnterHook_LinSM_LINSM_EXCLUSIVE_AREA_1_Start
+ *  SchM_EnterHook_LinSM_LINSM_EXCLUSIVE_AREA_2_Return
+ *  SchM_EnterHook_LinSM_LINSM_EXCLUSIVE_AREA_2_Start
+ *  SchM_EnterHook_LinSM_LINSM_EXCLUSIVE_AREA_3_Return
+ *  SchM_EnterHook_LinSM_LINSM_EXCLUSIVE_AREA_3_Start
+ *  SchM_EnterHook_LinSM_LINSM_EXCLUSIVE_AREA_4_Return
+ *  SchM_EnterHook_LinSM_LINSM_EXCLUSIVE_AREA_4_Start
  *  SchM_EnterHook_McalLib_CpuEndInit_Return
  *  SchM_EnterHook_McalLib_CpuEndInit_Start
  *  SchM_EnterHook_McalLib_PeripheralEndInit_Return
@@ -742,6 +760,22 @@
  *  SchM_ExitHook_Fls_17_Dmu_UserContentCount_Start
  *  SchM_ExitHook_Fls_17_Dmu_Write_Return
  *  SchM_ExitHook_Fls_17_Dmu_Write_Start
+ *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Return
+ *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_1_Return
+ *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_1_Start
+ *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_2_Return
+ *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_2_Start
+ *  SchM_ExitHook_LinSM_LINSM_EXCLUSIVE_AREA_0_Return
+ *  SchM_ExitHook_LinSM_LINSM_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_LinSM_LINSM_EXCLUSIVE_AREA_1_Return
+ *  SchM_ExitHook_LinSM_LINSM_EXCLUSIVE_AREA_1_Start
+ *  SchM_ExitHook_LinSM_LINSM_EXCLUSIVE_AREA_2_Return
+ *  SchM_ExitHook_LinSM_LINSM_EXCLUSIVE_AREA_2_Start
+ *  SchM_ExitHook_LinSM_LINSM_EXCLUSIVE_AREA_3_Return
+ *  SchM_ExitHook_LinSM_LINSM_EXCLUSIVE_AREA_3_Start
+ *  SchM_ExitHook_LinSM_LINSM_EXCLUSIVE_AREA_4_Return
+ *  SchM_ExitHook_LinSM_LINSM_EXCLUSIVE_AREA_4_Start
  *  SchM_ExitHook_McalLib_CpuEndInit_Return
  *  SchM_ExitHook_McalLib_CpuEndInit_Start
  *  SchM_ExitHook_McalLib_PeripheralEndInit_Return
@@ -800,6 +834,8 @@
  *  SchM_Schedulable_ComM_ComM_MainFunction_0_Start
  *  SchM_Schedulable_ComM_ComM_MainFunction_1_Return
  *  SchM_Schedulable_ComM_ComM_MainFunction_1_Start
+ *  SchM_Schedulable_ComM_ComM_MainFunction_2_Return
+ *  SchM_Schedulable_ComM_ComM_MainFunction_2_Start
  *  SchM_Schedulable_Com_Com_MainFunctionRx_ComMainFunctionRx_Return
  *  SchM_Schedulable_Com_Com_MainFunctionRx_ComMainFunctionRx_Start
  *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_Return
@@ -816,6 +852,10 @@
  *  SchM_Schedulable_Fee_Fee_MainFunction_Start
  *  SchM_Schedulable_Fls_17_Dmu_Fls_17_Dmu_MainFunction_Return
  *  SchM_Schedulable_Fls_17_Dmu_Fls_17_Dmu_MainFunction_Start
+ *  SchM_Schedulable_LinIf_LinIf_MainFunction_Return
+ *  SchM_Schedulable_LinIf_LinIf_MainFunction_Start
+ *  SchM_Schedulable_LinSM_LinSM_MainFunction_Return
+ *  SchM_Schedulable_LinSM_LinSM_MainFunction_Start
  *  SchM_Schedulable_NvM_NvM_MainFunction_Return
  *  SchM_Schedulable_NvM_NvM_MainFunction_Start
  *  SchM_Schedulable_Xcp_CanXcp_MainFunction_Return

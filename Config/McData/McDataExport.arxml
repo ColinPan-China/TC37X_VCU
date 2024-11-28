@@ -84,6 +84,26 @@
           <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
           <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior</BEHAVIOR-REF>
         </BSW-IMPLEMENTATION>
+        <BSW-IMPLEMENTATION UUID="06f2a960-c62e-456a-80ee-db03a601390a">
+          <SHORT-NAME>LinIf_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>9.00.00</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/LinIf_ib_bswmd/BswModuleDescriptions/LinIf/LinIfBehavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
+        <BSW-IMPLEMENTATION UUID="489c368f-1652-4e5d-8e61-f065cddaadaa">
+          <SHORT-NAME>LinSM_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>7.00.02</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+          <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/LinSM_ib_bswmd/BswModuleDescriptions/LinSM/LinSMBehavior</BEHAVIOR-REF>
+        </BSW-IMPLEMENTATION>
         <BSW-IMPLEMENTATION UUID="10e1d426-5838-4dbc-827a-9f03994ff3ed">
           <SHORT-NAME>Nm_Impl</SHORT-NAME>
           <MC-SUPPORT/>
@@ -447,6 +467,10 @@
                           <SHORT-NAME>ComM_MainFunction_1</SHORT-NAME>
                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM_MainFunction_1</IMPLEMENTED-ENTRY-REF>
                         </BSW-SCHEDULABLE-ENTITY>
+                        <BSW-SCHEDULABLE-ENTITY UUID="17e90655-dba0-47b2-bbf0-d705fa9ad6bc">
+                          <SHORT-NAME>ComM_MainFunction_2</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM_MainFunction_2</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
                       </ENTITYS>
                       <EVENTS>
                         <BSW-TIMING-EVENT UUID="73385784-e53c-43ff-bab7-2b136119ad62">
@@ -457,6 +481,11 @@
                         <BSW-TIMING-EVENT UUID="c941fb1d-81b4-4ca3-af63-784f43a33d00">
                           <SHORT-NAME>ComM_MainFunction_1TimingEvent0</SHORT-NAME>
                           <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM/ComMBehavior/ComM_MainFunction_1</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.02</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="70c37cc3-7c2d-4036-a266-e1d3346c25c7">
+                          <SHORT-NAME>ComM_MainFunction_2TimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM/ComMBehavior/ComM_MainFunction_2</STARTS-ON-EVENT-REF>
                           <PERIOD>0.02</PERIOD>
                         </BSW-TIMING-EVENT>
                       </EVENTS>
@@ -470,6 +499,11 @@
                 </BSW-MODULE-ENTRY>
                 <BSW-MODULE-ENTRY UUID="db66d5f9-cbfb-4c86-b8c7-ed3ecec9eaec">
                   <SHORT-NAME>ComM_MainFunction_1</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="d50df5de-ee05-4ef5-ba05-093e83f1287a">
+                  <SHORT-NAME>ComM_MainFunction_2</SHORT-NAME>
                   <CALL-TYPE>SCHEDULED</CALL-TYPE>
                   <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
                 </BSW-MODULE-ENTRY>
@@ -614,6 +648,136 @@
               </ELEMENTS>
             </AR-PACKAGE>
             <AR-PACKAGE UUID="bf66fd53-4fa5-4e22-8f30-7cac43d8722b">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="21e367f8-ab08-49fb-a674-7b0cef51536d">
+          <SHORT-NAME>LinIf_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="175a40f6-7949-4b93-95ff-7c3866b82f68">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="9cbb8822-97f9-4014-a32b-484544ee40ad">
+                  <SHORT-NAME>LinIf</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="1adc47ee-78fb-43d6-bad8-bf16497abed5">
+                      <SHORT-NAME>LinIfBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="a69651db-1b73-4be7-aecb-ee652f45bcdc">
+                          <SHORT-NAME>LINIF_EXCLUSIVE_AREA_0</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Exclusive area for LinIf channel main function</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="08eda9eb-17d8-46ed-8f47-fd31b0d123e4">
+                          <SHORT-NAME>LINIF_EXCLUSIVE_AREA_1</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Exclusive area for asynchronous API functions</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="b08c85a6-b039-4cb9-afe4-9c71fee5d633">
+                          <SHORT-NAME>LINIF_EXCLUSIVE_AREA_2</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Exclusive area for callback functions from LIN driver in interrupt context</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="cc309901-8722-4005-80c8-75d42befbb46">
+                          <SHORT-NAME>LinIf_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/LinIf_ib_bswmd/BswModuleDescriptions/LinIf_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="a467cedd-e607-4103-905d-f1ef77335147">
+                          <SHORT-NAME>LinIf_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/LinIf_ib_bswmd/BswModuleDescriptions/LinIf/LinIfBehavior/LinIf_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.005</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="7ae29eb5-c517-48b0-8beb-2ac210a17be2">
+                  <SHORT-NAME>LinIf_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="ea871078-b301-4136-b040-294678cb4c04">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="173d0018-b52c-4433-a8cf-204ab167b135">
+          <SHORT-NAME>LinSM_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="9fbedf96-8b4b-42a1-877d-379038b76923">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="692c8698-c081-445f-8a3b-24fd44931333">
+                  <SHORT-NAME>LinSM</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="45139591-80e9-410e-8634-c70c2a1d85bd">
+                      <SHORT-NAME>LinSMBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="6d299c82-e6cf-4714-992f-356014f2a89d">
+                          <SHORT-NAME>LINSM_EXCLUSIVE_AREA_0</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Must lock task interrupts, if LinIf_MainFunction(), LinSM_MainFunction() or BswM action BswMLinScheduleSwitch priority level is higher than the level of ComM_MainFunction().</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="79cc4f77-c6fa-4634-b1af-7b9bfb7788bd">
+                          <SHORT-NAME>LINSM_EXCLUSIVE_AREA_1</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Must lock task interrupts, if ComM_MainFunction(), LinSM_MainFunction() or BswM action BswMLinScheduleSwitch priority level is higher than the level of LinIf_MainFunction().</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="19504158-f98a-49b4-b606-463e2cbbb04d">
+                          <SHORT-NAME>LINSM_EXCLUSIVE_AREA_2</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Must lock task interrupts, if ComM_MainFunction(), LinIf_MainFunction() or BswM action BswMLinScheduleSwitch priority level is higher than the level of LinSM_MainFunction().</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="f0590afa-cdbd-4b46-b15b-48e19511aa32">
+                          <SHORT-NAME>LINSM_EXCLUSIVE_AREA_3</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Must lock task interrupts, if ComM_MainFunction(), LinIf_MainFunction() or LinSM_MainFunction() interrupt priority level is higher than the level of the BswM action BswMLinScheduleSwitch.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="ef1abd90-5b3b-4b6a-bd8b-67343d85a514">
+                          <SHORT-NAME>LINSM_EXCLUSIVE_AREA_4</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Must lock task interrupts if the function LinSM_GotoSleepIndication() may be interrupted by any of the functions LinSM_MainFunction(), LinSM_RequestComMode(), LinSM_WakeupConfirmation() or LinSM_GotoSleepConfirmation().</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="8b80f213-24c1-417c-8780-3112d137351f">
+                          <SHORT-NAME>LinSM_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/LinSM_ib_bswmd/BswModuleDescriptions/LinSM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="ac9c3bf7-285e-4bce-a637-f85a4382abde">
+                          <SHORT-NAME>LinSM_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/LinSM_ib_bswmd/BswModuleDescriptions/LinSM/LinSMBehavior/LinSM_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="c60c4650-6822-461d-a7cf-b07779ca2131">
+                  <SHORT-NAME>LinSM_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="63e623c6-ad80-450c-824a-844f4de74c47">
               <SHORT-NAME>XcpEvents</SHORT-NAME>
             </AR-PACKAGE>
           </AR-PACKAGES>

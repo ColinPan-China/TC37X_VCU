@@ -62,6 +62,8 @@
 #include "SchM_EcuM.h"
 #include "SchM_Fee.h"
 #include "SchM_Fls_17_Dmu.h"
+#include "SchM_LinIf.h"
+#include "SchM_LinSM.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"
 #include "SchM_Nm.h"
@@ -1933,10 +1935,6 @@ TASK(AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
   EventMaskType ev;
   EventMaskType evRun;
 
-
-  /* call runnable */
-  IoHwAb_SWC_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
   for(;;)
   {
     (void)WaitEvent(Rte_Ev_Cyclic_AswTask_0_10ms | Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms); /* PRQA S 3417 */ /* MD_Rte_Os */
@@ -2012,6 +2010,9 @@ TASK(Asw_Init) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 
   /* call runnable */
   PowerMng_SWC_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+  /* call runnable */
+  IoHwAb_SWC_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
   (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -2107,6 +2108,21 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
     {
       /* call runnable */
       ComM_MainFunction_1(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+      /* call runnable */
+      ComM_MainFunction_2(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Cyclic2_Bsw_Task_0_5ms) != (EventMaskType)0)
+    {
+      /* call schedulable entity */
+      LinIf_MainFunction();
+    }
+
+    if ((ev & Rte_Ev_Cyclic2_Bsw_Task_0_10ms) != (EventMaskType)0)
+    {
+      /* call schedulable entity */
+      LinSM_MainFunction();
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

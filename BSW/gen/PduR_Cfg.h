@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2024-11-18 12:19:06
+ *   Generation Time: 2024-11-28 15:38:52
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -119,7 +119,11 @@
 #define PDUR_FCT_CANTPSOR 0x06u 
 #define PDUR_FCT_CANTPCPYRX 0x04u 
 #define PDUR_FCT_CANTPCPYTX 0x07u 
- /*   PduR_CanIfIfRxIndication  PduR_CanIfTransmit  PduR_CanIfTxConfirmation  PduR_ComTransmit  PduR_DcmTransmit  PduR_DcmCancelTransmit  PduR_CanTpTpRxIndication  PduR_CanTpTransmit  PduR_CanTpTxConfirmation  PduR_CanTpStartOfReception  PduR_CanTpCopyRxData  PduR_CanTpCopyTxData  */ 
+#define PDUR_FCT_LINIFRXIND 0x51u 
+#define PDUR_FCT_LINIFTX 0x59u 
+#define PDUR_FCT_LINIFTXCFM 0x52u 
+#define PDUR_FCT_LINIFTT 0x53u 
+ /*   PduR_CanIfIfRxIndication  PduR_CanIfTransmit  PduR_CanIfTxConfirmation  PduR_ComTransmit  PduR_DcmTransmit  PduR_DcmCancelTransmit  PduR_CanTpTpRxIndication  PduR_CanTpTransmit  PduR_CanTpTxConfirmation  PduR_CanTpStartOfReception  PduR_CanTpCopyRxData  PduR_CanTpCopyTxData  PduR_LinIfIfRxIndication  PduR_LinIfTransmit  PduR_LinIfTxConfirmation  PduR_LinIfTriggerTransmit  */ 
 
 
 
@@ -135,6 +139,8 @@
 #define PduRConf_PduRDestPdu_VcuRxMsg2_oTC37X_VCU_CAN00_8cbda0e0_Rx_803efadc_Rx 1u
 #define PduRConf_PduRDestPdu_VcuRxMsg3_oTC37X_VCU_CAN01_5bb4c01a_Rx_3905054b_Rx 2u
 #define PduRConf_PduRDestPdu_VcuRxMsg4_oTC37X_VCU_CAN01_55be06ba_Rx_f5b46736_Rx 3u
+#define PduRConf_PduRDestPdu_Vcu_Lin0_RxMsg1_oLIN00_def4d57f_Rx_763211c2_Rx 4u
+#define PduRConf_PduRDestPdu_Vcu_Lin0_RxMsg2_oLIN00_a811ec42_Rx_c59add12_Rx 5u
 /**\} */
 
 /**
@@ -147,7 +153,9 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_803efadc                       1u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_6711bd67                       0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_763211c2                       4u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_3905054b                       2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_c59add12                       5u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_f5b46736                       3u
 /**\} */
 
@@ -159,9 +167,11 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_1a8748e9                       4u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_1a8748e9                       6u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_91d52164                       2u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_69924b1b                       3u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_a77b2a3a                       5u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_af3681f0                       4u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_df42a212                       1u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_f8c9b934                       0u
 /**\} */
@@ -178,6 +188,8 @@
 #define PduRConf_PduRDestPdu_VcuAdcTxMsg2_oTC37X_VCU_CAN01_afb1dcb2_Tx 1u
 #define PduRConf_PduRDestPdu_VcuTxMsg1_oTC37X_VCU_CAN00_c82dd125_Tx   2u
 #define PduRConf_PduRDestPdu_VcuTxMsg2_oTC37X_VCU_CAN00_0119ca28_Tx   3u
+#define PduRConf_PduRDestPdu_Vcu_Lin0_TxMsg1_oLIN00_db48db31_Tx       4u
+#define PduRConf_PduRDestPdu_Vcu_Lin0_TxMsg2_oLIN00_adade20c_Tx       5u
 /**\} */
 
 /**

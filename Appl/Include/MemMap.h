@@ -397,6 +397,240 @@
  *  CanSM END
  *********************************************************************************************************************/
 
+/***********************************************************************************************************************
+ *  LINSM START
+ **********************************************************************************************************************/
+
+/*******  CODE sections **********************************************************************************************/
+
+#ifdef LINSM_START_SEC_CODE
+# undef LINSM_START_SEC_CODE
+# define START_SEC_CODE
+#endif
+#ifdef LINSM_STOP_SEC_CODE
+# undef LINSM_STOP_SEC_CODE
+# define STOP_SEC_CODE
+#endif
+
+/*******  CONST sections  ********************************************************************************************/
+
+/* CONST sections */
+
+#ifdef LINSM_START_SEC_CONST_8BIT
+# undef LINSM_START_SEC_CONST_8BIT
+# define START_SEC_CONST_8BIT
+#endif
+#ifdef LINSM_STOP_SEC_CONST_8BIT
+# undef LINSM_STOP_SEC_CONST_8BIT
+# define STOP_SEC_CONST
+#endif
+
+#ifdef LINSM_START_SEC_CONST_UNSPECIFIED
+# undef LINSM_START_SEC_CONST_UNSPECIFIED
+# define START_SEC_CONST_UNSPECIFIED
+#endif
+#ifdef LINSM_STOP_SEC_CONST_UNSPECIFIED
+# undef LINSM_STOP_SEC_CONST_UNSPECIFIED
+# define STOP_SEC_CONST
+#endif
+
+
+/* Postbuild CFG CONST sections */
+
+#ifdef LINSM_START_SEC_PBCFG
+# undef LINSM_START_SEC_PBCFG
+# define START_SEC_CONST_PBCFG
+#endif
+#ifdef LINSM_STOP_SEC_PBCFG
+# undef LINSM_STOP_SEC_PBCFG
+# define STOP_SEC_CONST
+#endif
+
+
+/*******  VAR sections  **********************************************************************************************/
+
+/* VAR NOINIT sections */
+
+#ifdef LINSM_START_SEC_VAR_NOINIT_8BIT
+# undef LINSM_START_SEC_VAR_NOINIT_8BIT
+# define START_SEC_VAR_NOINIT_8BIT
+#endif
+#ifdef LINSM_STOP_SEC_VAR_NOINIT_8BIT
+# undef LINSM_STOP_SEC_VAR_NOINIT_8BIT
+# define STOP_SEC_VAR
+#endif
+
+#ifdef LINSM_START_SEC_VAR_NOINIT_16BIT
+# undef LINSM_START_SEC_VAR_NOINIT_16BIT
+# define START_SEC_VAR_NOINIT_16BIT
+#endif
+#ifdef LINSM_STOP_SEC_VAR_NOINIT_16BIT
+# undef LINSM_STOP_SEC_VAR_NOINIT_16BIT
+# define STOP_SEC_VAR
+#endif
+
+#ifdef LINSM_START_SEC_VAR_NOINIT_32BIT
+# undef LINSM_START_SEC_VAR_NOINIT_32BIT
+# define START_SEC_VAR_NOINIT_32BIT
+#endif
+#ifdef LINSM_STOP_SEC_VAR_NOINIT_32BIT
+# undef LINSM_STOP_SEC_VAR_NOINIT_32BIT
+# define STOP_SEC_VAR
+#endif
+
+#ifdef LINSM_START_SEC_VAR_NOINIT_64BIT
+# undef LINSM_START_SEC_VAR_NOINIT_64BIT
+# define START_SEC_VAR_NOINIT_64BIT
+#endif
+#ifdef LINSM_STOP_SEC_VAR_NOINIT_64BIT
+# undef LINSM_STOP_SEC_VAR_NOINIT_64BIT
+# define STOP_SEC_VAR
+#endif
+
+#ifdef LINSM_START_SEC_VAR_NOINIT_UNSPECIFIED
+# undef LINSM_START_SEC_VAR_NOINIT_UNSPECIFIED
+# define START_SEC_VAR_NOINIT_UNSPECIFIED
+#endif
+#ifdef LINSM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+# undef LINSM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR ZERO INIT sections */
+
+#ifdef LINSM_START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# undef LINSM_START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# define START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+#endif
+#ifdef LINSM_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# undef LINSM_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# define STOP_SEC_VAR
+#endif
+
+#ifdef LINSM_START_SEC_VAR_ZERO_INIT_8BIT
+# undef LINSM_START_SEC_VAR_ZERO_INIT_8BIT
+# define START_SEC_VAR_ZERO_INIT_8BIT
+#endif
+#ifdef LINSM_STOP_SEC_VAR_ZERO_INIT_8BIT
+# undef LINSM_STOP_SEC_VAR_ZERO_INIT_8BIT
+# define STOP_SEC_VAR
+#endif
+
+/**********************************************************************************************************************
+ *  LINSM END
+ *********************************************************************************************************************/
+
+
+ /**********************************************************************************************************************
+ *  LINIF START
+ *********************************************************************************************************************/
+
+/* Code */
+#ifdef LINIF_START_SEC_CODE
+  #undef LINIF_START_SEC_CODE                       /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define START_SEC_CODE                            /* mapped to default code section */
+#endif
+#ifdef LINIF_STOP_SEC_CODE
+  #undef LINIF_STOP_SEC_CODE                        /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define STOP_SEC_CODE                             /* default code stop section */
+#endif
+
+/* Const 8 bit */
+#ifdef LINIF_START_SEC_CONST_8BIT
+  #undef LINIF_START_SEC_CONST_8BIT                 /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define START_SEC_CONST_8BIT                      /* mapped to const 8 bit section */
+#endif
+#ifdef LINIF_STOP_SEC_CONST_8BIT
+  #undef LINIF_STOP_SEC_CONST_8BIT                  /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define STOP_SEC_CONST                            /* default const stop section */
+#endif
+
+/* Const 16 bit */
+#ifdef LINIF_START_SEC_CONST_16BIT
+  #undef LINIF_START_SEC_CONST_16BIT                /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define START_SEC_CONST_16BIT                     /* mapped to const 16 bit section */
+#endif
+#ifdef LINIF_STOP_SEC_CONST_16BIT
+  #undef LINIF_STOP_SEC_CONST_16BIT                 /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define STOP_SEC_CONST                            /* default const stop section */
+#endif
+
+/* Const 32 bit */
+#ifdef LINIF_START_SEC_CONST_32BIT
+  #undef LINIF_START_SEC_CONST_32BIT                /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define START_SEC_CONST_32BIT                     /* mapped to const 32 bit section */
+#endif
+#ifdef LINIF_STOP_SEC_CONST_32BIT
+  #undef LINIF_STOP_SEC_CONST_32BIT                 /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define STOP_SEC_CONST                            /* default const stop section */
+#endif
+
+/* Const unspecified */
+#ifdef LINIF_START_SEC_CONST_UNSPECIFIED
+  #undef LINIF_START_SEC_CONST_UNSPECIFIED          /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define START_SEC_CONST_UNSPECIFIED               /* mapped to const unspecified section */
+#endif
+#ifdef LINIF_STOP_SEC_CONST_UNSPECIFIED
+  #undef LINIF_STOP_SEC_CONST_UNSPECIFIED           /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define STOP_SEC_CONST                            /* default const stop section */
+#endif
+
+/* Post build config unspecified */
+#ifdef LINIF_START_SEC_PBCFG
+  #undef LINIF_START_SEC_PBCFG                      /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define START_SEC_CONST_PBCFG                     /* mapped to post build section */
+#endif
+#ifdef LINIF_STOP_SEC_PBCFG
+  #undef LINIF_STOP_SEC_PBCFG                       /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define STOP_SEC_CONST                            /* default post build stop section */
+#endif
+
+/* Var noinit unspecified */
+#ifdef LINIF_START_SEC_VAR_NOINIT_UNSPECIFIED
+  #undef LINIF_START_SEC_VAR_NOINIT_UNSPECIFIED     /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define START_SEC_VAR_NOINIT_UNSPECIFIED          /* mapped to uninitialized var unspecified section */
+#endif
+#ifdef LINIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+  #undef LINIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED      /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define STOP_SEC_VAR                              /* default var stop section */
+#endif
+
+/* Var noinit 8 bit */
+#ifdef LINIF_START_SEC_VAR_NOINIT_8BIT
+  #undef LINIF_START_SEC_VAR_NOINIT_8BIT            /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define START_SEC_VAR_NOINIT_8BIT                 /* mapped to uninitialized var 8 bit section */
+#endif
+#ifdef LINIF_STOP_SEC_VAR_NOINIT_8BIT
+  #undef LINIF_STOP_SEC_VAR_NOINIT_8BIT             /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define STOP_SEC_VAR                              /* default var stop section */
+#endif
+
+/* Var zero init 8 bit */
+#ifdef LINIF_START_SEC_VAR_ZERO_INIT_8BIT
+  #undef LINIF_START_SEC_VAR_ZERO_INIT_8BIT         /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define START_SEC_VAR_ZERO_INIT_8BIT              /* mapped to zero initialized var unspecified section */
+#endif
+#ifdef LINIF_STOP_SEC_VAR_ZERO_INIT_8BIT
+  #undef LINIF_STOP_SEC_VAR_ZERO_INIT_8BIT          /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define STOP_SEC_VAR                              /* default var stop section */
+#endif
+
+/* Post build config unspecified */
+#ifdef LINIF_START_SEC_VAR_PBCFG
+  #undef LINIF_START_SEC_VAR_PBCFG                  /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define START_SEC_VAR_PBCFG                       /* mapped to post build section */
+#endif
+#ifdef LINIF_STOP_SEC_VAR_PBCFG
+  #undef LINIF_STOP_SEC_VAR_PBCFG                   /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define STOP_SEC_VAR                              /* default post build stop section */
+#endif
+
+/**********************************************************************************************************************
+ *  LINIF END
+ *********************************************************************************************************************/
+
+ 
 
 /**********************************************************************************************************************
  *  VX1000HOOKIF START 
