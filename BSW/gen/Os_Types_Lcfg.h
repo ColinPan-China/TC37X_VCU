@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2024-11-26 11:23:05
+ *   Generation Time: 2024-11-28 16:28:22
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -73,6 +73,9 @@
 #define ADC1SR0_ISR ADC1SR0_ISR
 #define ADC2SR0_ISR ADC2SR0_ISR
 #define ADC3SR0_ISR ADC3SR0_ISR
+#define ASCLIN1ERR_ISR ASCLIN1ERR_ISR
+#define ASCLIN1RX_ISR ASCLIN1RX_ISR
+#define ASCLIN1TX_ISR ASCLIN1TX_ISR
 #define ASCLIN2ERR_ISR ASCLIN2ERR_ISR
 #define ASCLIN2RX_ISR ASCLIN2RX_ISR
 #define ASCLIN2TX_ISR ASCLIN2TX_ISR
@@ -163,13 +166,16 @@ typedef enum
   ADC1SR0_ISR = 2,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   ADC2SR0_ISR = 3,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   ADC3SR0_ISR = 4,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  ASCLIN2ERR_ISR = 5,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  ASCLIN2RX_ISR = 6,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  ASCLIN2TX_ISR = 7,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CanIsr_0 = 8,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CanIsr_1 = 9,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CounterIsr_SystemTimer = 10,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ISRID_COUNT = 11,
+  ASCLIN1ERR_ISR = 5,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  ASCLIN1RX_ISR = 6,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  ASCLIN1TX_ISR = 7,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  ASCLIN2ERR_ISR = 8,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  ASCLIN2RX_ISR = 9,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  ASCLIN2TX_ISR = 10,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CanIsr_0 = 11,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CanIsr_1 = 12,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CounterIsr_SystemTimer = 13,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ISRID_COUNT = 14,
   INVALID_ISR = OS_ISRID_COUNT
 } ISRType;
 

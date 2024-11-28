@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Lcfg.h
- *   Generation Time: 2024-11-26 11:23:04
+ *   Generation Time: 2024-11-28 16:28:22
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -193,6 +193,42 @@ extern FUNC(void, OS_ADC2SR0_ISR_CODE) Os_Isr_ADC2SR0_ISR(void);
 extern FUNC(void, OS_ADC3SR0_ISR_CODE) Os_Isr_ADC3SR0_ISR(void);
 
 # define OS_STOP_SEC_ADC3SR0_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_ASCLIN1ERR_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  ASCLIN1ERR_ISR()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_ASCLIN1ERR_ISR_CODE) Os_Isr_ASCLIN1ERR_ISR(void);
+
+# define OS_STOP_SEC_ASCLIN1ERR_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_ASCLIN1RX_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  ASCLIN1RX_ISR()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_ASCLIN1RX_ISR_CODE) Os_Isr_ASCLIN1RX_ISR(void);
+
+# define OS_STOP_SEC_ASCLIN1RX_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_ASCLIN1TX_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  ASCLIN1TX_ISR()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_ASCLIN1TX_ISR_CODE) Os_Isr_ASCLIN1TX_ISR(void);
+
+# define OS_STOP_SEC_ASCLIN1TX_ISR_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

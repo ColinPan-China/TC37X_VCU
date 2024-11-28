@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.c
- *   Generation Time: 2024-11-26 11:23:04
+ *   Generation Time: 2024-11-28 16:28:22
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -97,6 +97,15 @@ OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_ADC2SR0_ISR_Dyn;
 
 /*! Dynamic ISR data: ADC3SR0_ISR */
 OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_ADC3SR0_ISR_Dyn;
+
+/*! Dynamic ISR data: ASCLIN1ERR_ISR */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_ASCLIN1ERR_ISR_Dyn;
+
+/*! Dynamic ISR data: ASCLIN1RX_ISR */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_ASCLIN1RX_ISR_Dyn;
+
+/*! Dynamic ISR data: ASCLIN1TX_ISR */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_ASCLIN1TX_ISR_Dyn;
 
 /*! Dynamic ISR data: ASCLIN2ERR_ISR */
 OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_ASCLIN2ERR_ISR_Dyn;
@@ -303,6 +312,111 @@ CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ADC3SR0_ISR =
   },
   /* .SourceConfig              = */ &OsCfg_Isr_ADC3SR0_ISR_HwConfig,
   /* .IsrId                     = */ ADC3SR0_ISR,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
+/*! ISR configuration data: ASCLIN1ERR_ISR */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ASCLIN1ERR_ISR_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_ASCLIN1ERR_ISR,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_ASCLIN1ERR_ISR,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ASCLIN1ERR_ISR =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_ASCLIN1ERR_ISR,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level14_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_ASCLIN1ERR_ISR_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_ASCLIN1ERR_ISR_HwConfig,
+  /* .IsrId                     = */ ASCLIN1ERR_ISR,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
+/*! ISR configuration data: ASCLIN1RX_ISR */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ASCLIN1RX_ISR_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_ASCLIN1RX_ISR,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_ASCLIN1RX_ISR,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ASCLIN1RX_ISR =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_ASCLIN1RX_ISR,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level13_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_ASCLIN1RX_ISR_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_ASCLIN1RX_ISR_HwConfig,
+  /* .IsrId                     = */ ASCLIN1RX_ISR,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
+/*! ISR configuration data: ASCLIN1TX_ISR */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ASCLIN1TX_ISR_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_ASCLIN1TX_ISR,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_ASCLIN1TX_ISR,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ASCLIN1TX_ISR =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_ASCLIN1TX_ISR,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level12_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_ASCLIN1TX_ISR_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_ASCLIN1TX_ISR_HwConfig,
+  /* .IsrId                     = */ ASCLIN1TX_ISR,
   /* .IsEnabledOnInitialization = */ TRUE
 }
 ;
@@ -535,6 +649,9 @@ CONSTP2CONST(Os_IsrConfigType, OS_CONST, OS_CONST) OsCfg_IsrRefs[OS_ISRID_COUNT 
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ADC1SR0_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ADC2SR0_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ADC3SR0_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN1ERR_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN1RX_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN1TX_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN2ERR_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN2RX_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN2TX_ISR),

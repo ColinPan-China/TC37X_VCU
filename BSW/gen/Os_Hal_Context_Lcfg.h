@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Context_Lcfg.h
- *   Generation Time: 2024-11-26 11:23:04
+ *   Generation Time: 2024-11-28 16:28:22
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -113,6 +113,15 @@ extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Leve
 /*! HAL dynamic ISR2 level context data: Level11 */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level11_Dyn;
 
+/*! HAL dynamic ISR2 level context data: Level12 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level12_Dyn;
+
+/*! HAL dynamic ISR2 level context data: Level13 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level13_Dyn;
+
+/*! HAL dynamic ISR2 level context data: Level14 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level14_Dyn;
+
 /*! HAL dynamic task context data: AswTask */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_AswTask_Dyn;
 
@@ -174,6 +183,15 @@ extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ADC2SR0_ISR;
 
 /*! HAL ISR2 context configuration data: ADC3SR0_ISR */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ADC3SR0_ISR;
+
+/*! HAL ISR2 context configuration data: ASCLIN1ERR_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ASCLIN1ERR_ISR;
+
+/*! HAL ISR2 context configuration data: ASCLIN1RX_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ASCLIN1RX_ISR;
+
+/*! HAL ISR2 context configuration data: ASCLIN1TX_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ASCLIN1TX_ISR;
 
 /*! HAL ISR2 context configuration data: ASCLIN2ERR_ISR */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ASCLIN2ERR_ISR;
