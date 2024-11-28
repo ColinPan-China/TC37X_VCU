@@ -121,6 +121,52 @@ typedef enum
   LIN_CH_SLEEP,
 }Lin_StatusType;
 
+/**********************************************************************************************************************
+ * LIN Transceiver General Types
+ *********************************************************************************************************************/
+
+/*! This type is used to indicate and set the operation mode of the transceiver. */
+typedef enum LinTrcv_TrcvModeTypeTag
+{
+  /*! Normal mode. */
+  LINTRCV_TRCV_MODE_NORMAL,
+  /*! Standby mode. */
+  LINTRCV_TRCV_MODE_STANDBY,
+  /*! Sleep mode. */
+  LINTRCV_TRCV_MODE_SLEEP
+} LinTrcv_TrcvModeType;
+
+/*! This type is used to configure the wakeup setting of the transceiver. */
+typedef enum LinTrcv_TrcvWakeupModeTypeTag
+{
+  /*! Enable wakeup reporting. */
+  LINTRCV_WUMODE_ENABLE,
+  /*! Disable wakeup reporting. */
+  LINTRCV_WUMODE_DISABLE,
+  /*! Clear the stored wakeup reason. */
+  LINTRCV_WUMODE_CLEAR
+} LinTrcv_TrcvWakeupModeType;
+
+/*! This type is used to indicate the wakeup reason. */
+typedef enum LinTrcv_TrcvWakeupReasonTypeTag
+{
+  /*! Error, wakeup reason was not detected. */
+  LINTRCV_WU_ERROR,
+  /*! Wakeup reporting is not supported. */
+  LINTRCV_WU_NOT_SUPPORTED,
+  /*! Wakeup caused by the network was detected. */
+  LINTRCV_WU_BY_BUS,
+  /*! Wakeup caused by a transceiver pin was detected. */
+  LINTRCV_WU_BY_PIN,
+  /*! Wakeup caused by a ECU request was detected. */
+  LINTRCV_WU_INTERNALLY,
+  /*! Wakeup caused by a ECU reset was detected. */
+  LINTRCV_WU_RESET,
+  /*! Wakeup caused by a ECU reset after power on was detected. */
+  LINTRCV_WU_POWER_ON
+} LinTrcv_TrcvWakeupReasonType;
+
+/*! \} */
 
 /*******************************************************************************
 **                      Global Constant Declarations                          **

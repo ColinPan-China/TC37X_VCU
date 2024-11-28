@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Private_Cfg.h
- *   Generation Time: 2024-11-28 15:38:53
+ *   Generation Time: 2024-11-28 17:26:36
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -59,6 +59,7 @@
 #include "Dem.h" 
 #include "LinIf.h" 
 #include "LinSM.h" 
+#include "LinTrcv_30_Tle7259.h" 
 #include "Lin_17_AscLin.h" 
 
 

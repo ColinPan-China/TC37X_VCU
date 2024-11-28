@@ -170,6 +170,9 @@
         <Splitter File=".\Config\ECUC\TC37X_VCU_LinIf_LinIf_ecuc.arxml">
             <Module Name="LinIf"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_LinTrcv_LinTrcv_ecuc.arxml">
+            <Module Name="LinTrcv"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>

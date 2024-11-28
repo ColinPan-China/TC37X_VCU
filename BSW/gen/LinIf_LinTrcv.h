@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinIf_LinTrcv.h
- *   Generation Time: 2024-11-28 15:38:53
+ *   Generation Time: 2024-11-28 16:57:44
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -32,6 +32,8 @@
 
 #if !defined(LINIF_LINTRCV_H)
 #define LINIF_LINTRCV_H
+
+#include "LinTrcv_30_Tle7259.h"
 
 
 

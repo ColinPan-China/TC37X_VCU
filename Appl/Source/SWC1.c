@@ -281,7 +281,7 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  *********************************************************************************************************************/
   Rte_Write_Request_ESH_RunRequest_0_requestedMode(1);
 //	Lin_17_AscLin_Init(&Lin_17_AscLin_Config);
-  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P23_5_LIN_SLP,1);
+//  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P23_5_LIN_SLP,1);
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

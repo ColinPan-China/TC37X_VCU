@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinIf_Cfg.h
- *   Generation Time: 2024-11-28 16:28:21
+ *   Generation Time: 2024-11-28 16:57:43
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -61,7 +61,7 @@
  *********************************************************************************************************************/
 #define LINIF_VERSION_INFO_API                                        STD_OFF
 #define LINIF_TP_SUPPORTED                                            STD_OFF
-#define LINIF_TRCV_HANDLING                                           STD_OFF
+#define LINIF_TRCV_HANDLING                                           STD_ON
 #define LINIF_CANCEL_TRANSMIT_SUPPORTED                               STD_OFF
 #define LINIF_LIN_CHANNEL_WAKEUP_SUPPORT                              STD_ON
 #define LINIF_LINTRCV_WAKEUP_SUPPORT                                  STD_OFF
@@ -313,6 +313,15 @@
 #define LINIF_PDUIDOFFRAMELIST                                                                      STD_ON
 #define LINIF_PIDOFFRAMELIST                                                                        STD_ON
 #define LINIF_INITDATAHASHCODE                                                                      STD_OFF  /**< Deactivateable: 'LinIf_InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
+#define LINIF_LINIFTOLINTRCVCHANNEL                                                                 STD_ON
+#define LINIF_TRCVCHANNELOFLINIFTOLINTRCVCHANNEL                                                    STD_ON
+#define LINIF_LINIFTOLINTRCVNR                                                                      STD_ON
+#define LINIF_TRCVNROFLINIFTOLINTRCVNR                                                              STD_ON
+#define LINIF_LINTRCV_CHECKWAKEUPFCT                                                                STD_ON
+#define LINIF_LINTRCV_GETBUSWUREASONFCT                                                             STD_ON
+#define LINIF_LINTRCV_GETOPMODEFCT                                                                  STD_ON
+#define LINIF_LINTRCV_SETOPMODEFCT                                                                  STD_ON
+#define LINIF_LINTRCV_SETWAKEUPMODEFCT                                                              STD_ON
 #define LINIF_MASTERCHANNELCONFIG                                                                   STD_ON
 #define LINIF_NUMBEROFSCHEDULESOFMASTERCHANNELCONFIG                                                STD_ON
 #define LINIF_SCHEDULECHANGEBEFORESLOTENDOFMASTERCHANNELCONFIG                                      STD_ON
@@ -375,6 +384,13 @@
 #define LINIF_FRAMELENGTHDELAYLISTOFPCCONFIG                                                        STD_ON
 #define LINIF_FRAMELISTOFPCCONFIG                                                                   STD_ON
 #define LINIF_INITDATAHASHCODEOFPCCONFIG                                                            STD_OFF  /**< Deactivateable: 'LinIf_PCConfig.InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
+#define LINIF_LINIFTOLINTRCVCHANNELOFPCCONFIG                                                       STD_ON
+#define LINIF_LINIFTOLINTRCVNROFPCCONFIG                                                            STD_ON
+#define LINIF_LINTRCV_CHECKWAKEUPFCTOFPCCONFIG                                                      STD_ON
+#define LINIF_LINTRCV_GETBUSWUREASONFCTOFPCCONFIG                                                   STD_ON
+#define LINIF_LINTRCV_GETOPMODEFCTOFPCCONFIG                                                        STD_ON
+#define LINIF_LINTRCV_SETOPMODEFCTOFPCCONFIG                                                        STD_ON
+#define LINIF_LINTRCV_SETWAKEUPMODEFCTOFPCCONFIG                                                    STD_ON
 #define LINIF_MASTERCHANNELCONFIGOFPCCONFIG                                                         STD_ON
 #define LINIF_MASTERCHANNELDATAOFPCCONFIG                                                           STD_ON
 #define LINIF_SCHEDULETABLELISTINDOFPCCONFIG                                                        STD_ON
@@ -436,6 +452,13 @@
 #define LINIF_ISDEF_LENGTHOFFRAMELIST                                                               STD_OFF
 #define LINIF_ISDEF_PDUIDOFFRAMELIST                                                                STD_OFF
 #define LINIF_ISDEF_PIDOFFRAMELIST                                                                  STD_OFF
+#define LINIF_ISDEF_TRCVCHANNELOFLINIFTOLINTRCVCHANNEL                                              STD_OFF
+#define LINIF_ISDEF_TRCVNROFLINIFTOLINTRCVNR                                                        STD_OFF
+#define LINIF_ISDEF_LINTRCV_CHECKWAKEUPFCT                                                          STD_OFF
+#define LINIF_ISDEF_LINTRCV_GETBUSWUREASONFCT                                                       STD_OFF
+#define LINIF_ISDEF_LINTRCV_GETOPMODEFCT                                                            STD_OFF
+#define LINIF_ISDEF_LINTRCV_SETOPMODEFCT                                                            STD_OFF
+#define LINIF_ISDEF_LINTRCV_SETWAKEUPMODEFCT                                                        STD_OFF
 #define LINIF_ISDEF_NUMBEROFSCHEDULESOFMASTERCHANNELCONFIG                                          STD_OFF
 #define LINIF_ISDEF_SCHEDULECHANGEBEFORESLOTENDOFMASTERCHANNELCONFIG                                STD_OFF
 #define LINIF_ISDEF_SCHEDULETABLELISTINDENDIDXOFMASTERCHANNELCONFIG                                 STD_OFF
@@ -457,6 +480,13 @@
 #define LINIF_ISDEF_ENTRYOFPCCONFIG                                                                 STD_ON
 #define LINIF_ISDEF_FRAMELENGTHDELAYLISTOFPCCONFIG                                                  STD_ON
 #define LINIF_ISDEF_FRAMELISTOFPCCONFIG                                                             STD_ON
+#define LINIF_ISDEF_LINIFTOLINTRCVCHANNELOFPCCONFIG                                                 STD_ON
+#define LINIF_ISDEF_LINIFTOLINTRCVNROFPCCONFIG                                                      STD_ON
+#define LINIF_ISDEF_LINTRCV_CHECKWAKEUPFCTOFPCCONFIG                                                STD_ON
+#define LINIF_ISDEF_LINTRCV_GETBUSWUREASONFCTOFPCCONFIG                                             STD_ON
+#define LINIF_ISDEF_LINTRCV_GETOPMODEFCTOFPCCONFIG                                                  STD_ON
+#define LINIF_ISDEF_LINTRCV_SETOPMODEFCTOFPCCONFIG                                                  STD_ON
+#define LINIF_ISDEF_LINTRCV_SETWAKEUPMODEFCTOFPCCONFIG                                              STD_ON
 #define LINIF_ISDEF_MASTERCHANNELCONFIGOFPCCONFIG                                                   STD_ON
 #define LINIF_ISDEF_MASTERCHANNELDATAOFPCCONFIG                                                     STD_ON
 #define LINIF_ISDEF_SCHEDULETABLELISTINDOFPCCONFIG                                                  STD_ON
@@ -498,6 +528,13 @@
 #define LINIF_EQ2_LENGTHOFFRAMELIST                                                                 
 #define LINIF_EQ2_PDUIDOFFRAMELIST                                                                  
 #define LINIF_EQ2_PIDOFFRAMELIST                                                                    
+#define LINIF_EQ2_TRCVCHANNELOFLINIFTOLINTRCVCHANNEL                                                
+#define LINIF_EQ2_TRCVNROFLINIFTOLINTRCVNR                                                          
+#define LINIF_EQ2_LINTRCV_CHECKWAKEUPFCT                                                            
+#define LINIF_EQ2_LINTRCV_GETBUSWUREASONFCT                                                         
+#define LINIF_EQ2_LINTRCV_GETOPMODEFCT                                                              
+#define LINIF_EQ2_LINTRCV_SETOPMODEFCT                                                              
+#define LINIF_EQ2_LINTRCV_SETWAKEUPMODEFCT                                                          
 #define LINIF_EQ2_NUMBEROFSCHEDULESOFMASTERCHANNELCONFIG                                            
 #define LINIF_EQ2_SCHEDULECHANGEBEFORESLOTENDOFMASTERCHANNELCONFIG                                  
 #define LINIF_EQ2_SCHEDULETABLELISTINDENDIDXOFMASTERCHANNELCONFIG                                   
@@ -519,6 +556,13 @@
 #define LINIF_EQ2_ENTRYOFPCCONFIG                                                                   LinIf_Entry
 #define LINIF_EQ2_FRAMELENGTHDELAYLISTOFPCCONFIG                                                    LinIf_FrameLengthDelayList
 #define LINIF_EQ2_FRAMELISTOFPCCONFIG                                                               LinIf_FrameList
+#define LINIF_EQ2_LINIFTOLINTRCVCHANNELOFPCCONFIG                                                   LinIf_LinIfToLinTrcvChannel
+#define LINIF_EQ2_LINIFTOLINTRCVNROFPCCONFIG                                                        LinIf_LinIfToLinTrcvNr
+#define LINIF_EQ2_LINTRCV_CHECKWAKEUPFCTOFPCCONFIG                                                  LinIf_LinTrcv_CheckWakeupFct
+#define LINIF_EQ2_LINTRCV_GETBUSWUREASONFCTOFPCCONFIG                                               LinIf_LinTrcv_GetBusWuReasonFct
+#define LINIF_EQ2_LINTRCV_GETOPMODEFCTOFPCCONFIG                                                    LinIf_LinTrcv_GetOpModeFct
+#define LINIF_EQ2_LINTRCV_SETOPMODEFCTOFPCCONFIG                                                    LinIf_LinTrcv_SetOpModeFct
+#define LINIF_EQ2_LINTRCV_SETWAKEUPMODEFCTOFPCCONFIG                                                LinIf_LinTrcv_SetWakeupModeFct
 #define LINIF_EQ2_MASTERCHANNELCONFIGOFPCCONFIG                                                     LinIf_MasterChannelConfig
 #define LINIF_EQ2_MASTERCHANNELDATAOFPCCONFIG                                                       LinIf_MasterChannelData.raw
 #define LINIF_EQ2_SCHEDULETABLELISTINDOFPCCONFIG                                                    LinIf_ScheduleTableListInd
@@ -629,6 +673,13 @@
 #define LinIf_GetEntryOfPCConfig()                                                                  LinIf_Entry  /**< the pointer to LinIf_Entry */
 #define LinIf_GetFrameLengthDelayListOfPCConfig()                                                   LinIf_FrameLengthDelayList  /**< the pointer to LinIf_FrameLengthDelayList */
 #define LinIf_GetFrameListOfPCConfig()                                                              LinIf_FrameList  /**< the pointer to LinIf_FrameList */
+#define LinIf_GetLinIfToLinTrcvChannelOfPCConfig()                                                  LinIf_LinIfToLinTrcvChannel  /**< the pointer to LinIf_LinIfToLinTrcvChannel */
+#define LinIf_GetLinIfToLinTrcvNrOfPCConfig()                                                       LinIf_LinIfToLinTrcvNr  /**< the pointer to LinIf_LinIfToLinTrcvNr */
+#define LinIf_GetLinTrcv_CheckWakeupFctOfPCConfig()                                                 LinIf_LinTrcv_CheckWakeupFct  /**< the pointer to LinIf_LinTrcv_CheckWakeupFct */
+#define LinIf_GetLinTrcv_GetBusWuReasonFctOfPCConfig()                                              LinIf_LinTrcv_GetBusWuReasonFct  /**< the pointer to LinIf_LinTrcv_GetBusWuReasonFct */
+#define LinIf_GetLinTrcv_GetOpModeFctOfPCConfig()                                                   LinIf_LinTrcv_GetOpModeFct  /**< the pointer to LinIf_LinTrcv_GetOpModeFct */
+#define LinIf_GetLinTrcv_SetOpModeFctOfPCConfig()                                                   LinIf_LinTrcv_SetOpModeFct  /**< the pointer to LinIf_LinTrcv_SetOpModeFct */
+#define LinIf_GetLinTrcv_SetWakeupModeFctOfPCConfig()                                               LinIf_LinTrcv_SetWakeupModeFct  /**< the pointer to LinIf_LinTrcv_SetWakeupModeFct */
 #define LinIf_GetMasterChannelConfigOfPCConfig()                                                    LinIf_MasterChannelConfig  /**< the pointer to LinIf_MasterChannelConfig */
 #define LinIf_GetMasterChannelDataOfPCConfig()                                                      LinIf_MasterChannelData.raw  /**< the pointer to LinIf_MasterChannelData */
 #define LinIf_GetScheduleTableListIndOfPCConfig()                                                   LinIf_ScheduleTableListInd  /**< the pointer to LinIf_ScheduleTableListInd */
@@ -675,6 +726,13 @@
 #define LinIf_GetLengthOfFrameList(Index)                                                           (LinIf_GetFrameListOfPCConfig()[(Index)].LengthOfFrameList)
 #define LinIf_GetPduIdOfFrameList(Index)                                                            (LinIf_GetFrameListOfPCConfig()[(Index)].PduIdOfFrameList)
 #define LinIf_GetPidOfFrameList(Index)                                                              (LinIf_GetFrameListOfPCConfig()[(Index)].PidOfFrameList)
+#define LinIf_GetTrcvChannelOfLinIfToLinTrcvChannel(Index)                                          (LinIf_GetLinIfToLinTrcvChannelOfPCConfig()[(Index)].TrcvChannelOfLinIfToLinTrcvChannel)
+#define LinIf_GetTrcvNrOfLinIfToLinTrcvNr(Index)                                                    (LinIf_GetLinIfToLinTrcvNrOfPCConfig()[(Index)].TrcvNrOfLinIfToLinTrcvNr)
+#define LinIf_GetLinTrcv_CheckWakeupFct(Index)                                                      (LinIf_GetLinTrcv_CheckWakeupFctOfPCConfig()[(Index)])
+#define LinIf_GetLinTrcv_GetBusWuReasonFct(Index)                                                   (LinIf_GetLinTrcv_GetBusWuReasonFctOfPCConfig()[(Index)])
+#define LinIf_GetLinTrcv_GetOpModeFct(Index)                                                        (LinIf_GetLinTrcv_GetOpModeFctOfPCConfig()[(Index)])
+#define LinIf_GetLinTrcv_SetOpModeFct(Index)                                                        (LinIf_GetLinTrcv_SetOpModeFctOfPCConfig()[(Index)])
+#define LinIf_GetLinTrcv_SetWakeupModeFct(Index)                                                    (LinIf_GetLinTrcv_SetWakeupModeFctOfPCConfig()[(Index)])
 #define LinIf_GetNumberOfSchedulesOfMasterChannelConfig(Index)                                      ((LinIf_SchHandleType)LinIf_GetMasterChannelConfigOfPCConfig()[(Index)].NumberOfSchedulesOfMasterChannelConfig)
 #define LinIf_IsScheduleChangeBeforeSlotEndOfMasterChannelConfig(Index)                             ((LinIf_GetMasterChannelConfigOfPCConfig()[(Index)].ScheduleChangeBeforeSlotEndOfMasterChannelConfig) != FALSE)
 #define LinIf_GetScheduleTableListIndEndIdxOfMasterChannelConfig(Index)                             (LinIf_GetMasterChannelConfigOfPCConfig()[(Index)].ScheduleTableListIndEndIdxOfMasterChannelConfig)
@@ -769,6 +827,15 @@
 #define LinIf_HasLengthOfFrameList()                                                                (TRUE != FALSE)
 #define LinIf_HasPduIdOfFrameList()                                                                 (TRUE != FALSE)
 #define LinIf_HasPidOfFrameList()                                                                   (TRUE != FALSE)
+#define LinIf_HasLinIfToLinTrcvChannel()                                                            (TRUE != FALSE)
+#define LinIf_HasTrcvChannelOfLinIfToLinTrcvChannel()                                               (TRUE != FALSE)
+#define LinIf_HasLinIfToLinTrcvNr()                                                                 (TRUE != FALSE)
+#define LinIf_HasTrcvNrOfLinIfToLinTrcvNr()                                                         (TRUE != FALSE)
+#define LinIf_HasLinTrcv_CheckWakeupFct()                                                           (TRUE != FALSE)
+#define LinIf_HasLinTrcv_GetBusWuReasonFct()                                                        (TRUE != FALSE)
+#define LinIf_HasLinTrcv_GetOpModeFct()                                                             (TRUE != FALSE)
+#define LinIf_HasLinTrcv_SetOpModeFct()                                                             (TRUE != FALSE)
+#define LinIf_HasLinTrcv_SetWakeupModeFct()                                                         (TRUE != FALSE)
 #define LinIf_HasMasterChannelConfig()                                                              (TRUE != FALSE)
 #define LinIf_HasNumberOfSchedulesOfMasterChannelConfig()                                           (TRUE != FALSE)
 #define LinIf_HasScheduleChangeBeforeSlotEndOfMasterChannelConfig()                                 (TRUE != FALSE)
@@ -801,6 +868,13 @@
 #define LinIf_HasEntryOfPCConfig()                                                                  (TRUE != FALSE)
 #define LinIf_HasFrameLengthDelayListOfPCConfig()                                                   (TRUE != FALSE)
 #define LinIf_HasFrameListOfPCConfig()                                                              (TRUE != FALSE)
+#define LinIf_HasLinIfToLinTrcvChannelOfPCConfig()                                                  (TRUE != FALSE)
+#define LinIf_HasLinIfToLinTrcvNrOfPCConfig()                                                       (TRUE != FALSE)
+#define LinIf_HasLinTrcv_CheckWakeupFctOfPCConfig()                                                 (TRUE != FALSE)
+#define LinIf_HasLinTrcv_GetBusWuReasonFctOfPCConfig()                                              (TRUE != FALSE)
+#define LinIf_HasLinTrcv_GetOpModeFctOfPCConfig()                                                   (TRUE != FALSE)
+#define LinIf_HasLinTrcv_SetOpModeFctOfPCConfig()                                                   (TRUE != FALSE)
+#define LinIf_HasLinTrcv_SetWakeupModeFctOfPCConfig()                                               (TRUE != FALSE)
 #define LinIf_HasMasterChannelConfigOfPCConfig()                                                    (TRUE != FALSE)
 #define LinIf_HasMasterChannelDataOfPCConfig()                                                      (TRUE != FALSE)
 #define LinIf_HasScheduleTableListIndOfPCConfig()                                                   (TRUE != FALSE)
@@ -944,6 +1018,27 @@ typedef uint8_least LinIf_FrameLengthDelayListIterType;
 /**   \brief  type used to iterate LinIf_FrameList */
 typedef uint8_least LinIf_FrameListIterType;
 
+/**   \brief  type used to iterate LinIf_LinIfToLinTrcvChannel */
+typedef uint8_least LinIf_LinIfToLinTrcvChannelIterType;
+
+/**   \brief  type used to iterate LinIf_LinIfToLinTrcvNr */
+typedef uint8_least LinIf_LinIfToLinTrcvNrIterType;
+
+/**   \brief  type used to iterate LinIf_LinTrcv_CheckWakeupFct */
+typedef uint8_least LinIf_LinTrcv_CheckWakeupFctIterType;
+
+/**   \brief  type used to iterate LinIf_LinTrcv_GetBusWuReasonFct */
+typedef uint8_least LinIf_LinTrcv_GetBusWuReasonFctIterType;
+
+/**   \brief  type used to iterate LinIf_LinTrcv_GetOpModeFct */
+typedef uint8_least LinIf_LinTrcv_GetOpModeFctIterType;
+
+/**   \brief  type used to iterate LinIf_LinTrcv_SetOpModeFct */
+typedef uint8_least LinIf_LinTrcv_SetOpModeFctIterType;
+
+/**   \brief  type used to iterate LinIf_LinTrcv_SetWakeupModeFct */
+typedef uint8_least LinIf_LinTrcv_SetWakeupModeFctIterType;
+
 /**   \brief  type used to iterate LinIf_MasterChannelConfig */
 typedef uint8_least LinIf_MasterChannelConfigIterType;
 
@@ -1042,6 +1137,12 @@ typedef PduIdType LinIf_PduIdOfFrameListType;
 
 /**   \brief  value based type definition for LinIf_PidOfFrameList */
 typedef uint8 LinIf_PidOfFrameListType;
+
+/**   \brief  value based type definition for LinIf_TrcvChannelOfLinIfToLinTrcvChannel */
+typedef uint8 LinIf_TrcvChannelOfLinIfToLinTrcvChannelType;
+
+/**   \brief  value based type definition for LinIf_TrcvNrOfLinIfToLinTrcvNr */
+typedef uint8 LinIf_TrcvNrOfLinIfToLinTrcvNrType;
 
 /**   \brief  value based type definition for LinIf_NumberOfSchedulesOfMasterChannelConfig */
 typedef uint8 LinIf_NumberOfSchedulesOfMasterChannelConfigType;
@@ -1168,6 +1269,18 @@ typedef struct sLinIf_FrameListType
   Lin_FrameResponseType DirectionOfFrameList;  /**< TX RX S2S */
 } LinIf_FrameListType;
 
+/**   \brief  type used in LinIf_LinIfToLinTrcvChannel */
+typedef struct sLinIf_LinIfToLinTrcvChannelType
+{
+  LinIf_TrcvChannelOfLinIfToLinTrcvChannelType TrcvChannelOfLinIfToLinTrcvChannel;
+} LinIf_LinIfToLinTrcvChannelType;
+
+/**   \brief  type used in LinIf_LinIfToLinTrcvNr */
+typedef struct sLinIf_LinIfToLinTrcvNrType
+{
+  LinIf_TrcvNrOfLinIfToLinTrcvNrType TrcvNrOfLinIfToLinTrcvNr;
+} LinIf_LinIfToLinTrcvNrType;
+
 /**   \brief  type used in LinIf_MasterChannelConfig */
 typedef struct sLinIf_MasterChannelConfigType
 {
@@ -1272,6 +1385,27 @@ typedef P2CONST(LinIf_FrameLengthDelayListType, TYPEDEF, LINIF_CONST) LinIf_Fram
 
 /**   \brief  type used to point to LinIf_FrameList */
 typedef P2CONST(LinIf_FrameListType, TYPEDEF, LINIF_CONST) LinIf_FrameListPtrType;
+
+/**   \brief  type used to point to LinIf_LinIfToLinTrcvChannel */
+typedef P2CONST(LinIf_LinIfToLinTrcvChannelType, TYPEDEF, LINIF_CONST) LinIf_LinIfToLinTrcvChannelPtrType;
+
+/**   \brief  type used to point to LinIf_LinIfToLinTrcvNr */
+typedef P2CONST(LinIf_LinIfToLinTrcvNrType, TYPEDEF, LINIF_CONST) LinIf_LinIfToLinTrcvNrPtrType;
+
+/**   \brief  type used to point to LinIf_LinTrcv_CheckWakeupFct */
+typedef P2CONST(LinIf_LinTrcv_CheckWakeupFctType, TYPEDEF, LINIF_CONST) LinIf_LinTrcv_CheckWakeupFctPtrType;
+
+/**   \brief  type used to point to LinIf_LinTrcv_GetBusWuReasonFct */
+typedef P2CONST(LinIf_LinTrcv_GetBusWuReasonFctType, TYPEDEF, LINIF_CONST) LinIf_LinTrcv_GetBusWuReasonFctPtrType;
+
+/**   \brief  type used to point to LinIf_LinTrcv_GetOpModeFct */
+typedef P2CONST(LinIf_LinTrcv_GetOpModeFctType, TYPEDEF, LINIF_CONST) LinIf_LinTrcv_GetOpModeFctPtrType;
+
+/**   \brief  type used to point to LinIf_LinTrcv_SetOpModeFct */
+typedef P2CONST(LinIf_LinTrcv_SetOpModeFctType, TYPEDEF, LINIF_CONST) LinIf_LinTrcv_SetOpModeFctPtrType;
+
+/**   \brief  type used to point to LinIf_LinTrcv_SetWakeupModeFct */
+typedef P2CONST(LinIf_LinTrcv_SetWakeupModeFctType, TYPEDEF, LINIF_CONST) LinIf_LinTrcv_SetWakeupModeFctPtrType;
 
 /**   \brief  type used to point to LinIf_MasterChannelConfig */
 typedef P2CONST(LinIf_MasterChannelConfigType, TYPEDEF, LINIF_CONST) LinIf_MasterChannelConfigPtrType;
@@ -1467,6 +1601,109 @@ extern CONST(LinIf_FrameLengthDelayListType, LINIF_CONST) LinIf_FrameLengthDelay
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern CONST(LinIf_FrameListType, LINIF_CONST) LinIf_FrameList[6];
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinIfToLinTrcvChannel
+**********************************************************************************************************************/
+/** 
+  \var    LinIf_LinIfToLinTrcvChannel
+  \details
+  Element        Description
+  TrcvChannel
+*/ 
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(LinIf_LinIfToLinTrcvChannelType, LINIF_CONST) LinIf_LinIfToLinTrcvChannel[1];
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinIfToLinTrcvNr
+**********************************************************************************************************************/
+/** 
+  \var    LinIf_LinIfToLinTrcvNr
+  \details
+  Element    Description
+  TrcvNr 
+*/ 
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(LinIf_LinIfToLinTrcvNrType, LINIF_CONST) LinIf_LinIfToLinTrcvNr[1];
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinTrcv_CheckWakeupFct
+**********************************************************************************************************************/
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(LinIf_LinTrcv_CheckWakeupFctType, LINIF_CONST) LinIf_LinTrcv_CheckWakeupFct[1];
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinTrcv_GetBusWuReasonFct
+**********************************************************************************************************************/
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(LinIf_LinTrcv_GetBusWuReasonFctType, LINIF_CONST) LinIf_LinTrcv_GetBusWuReasonFct[1];
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinTrcv_GetOpModeFct
+**********************************************************************************************************************/
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(LinIf_LinTrcv_GetOpModeFctType, LINIF_CONST) LinIf_LinTrcv_GetOpModeFct[1];
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinTrcv_SetOpModeFct
+**********************************************************************************************************************/
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(LinIf_LinTrcv_SetOpModeFctType, LINIF_CONST) LinIf_LinTrcv_SetOpModeFct[1];
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinTrcv_SetWakeupModeFct
+**********************************************************************************************************************/
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(LinIf_LinTrcv_SetWakeupModeFctType, LINIF_CONST) LinIf_LinTrcv_SetWakeupModeFct[1];
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

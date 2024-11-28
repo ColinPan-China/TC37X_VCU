@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinIf_Lcfg.c
- *   Generation Time: 2024-11-28 15:38:53
+ *   Generation Time: 2024-11-28 16:57:44
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -44,6 +44,7 @@
 #include "LinIf.h"
 #include "PduR_LinIf.h"
 #include "LinSM_Cbk.h"
+#include "LinIf_LinTrcv.h"
 
 
 /**********************************************************************************************************************
@@ -243,6 +244,130 @@ CONST(LinIf_FrameListType, LINIF_CONST) LinIf_FrameList[6] = {  /* PRQA S 1514, 
   { /*     3 */ PduRConf_PduRSrcPdu_PduRSrcPdu_c59add12                ,        0u,     8u, 0x61u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_RX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_Vcu_Lin0_RxMsg2_bfda55a3_Rx] */
   { /*     4 */ 0                                                      ,        1u,     8u, 0x3Cu, LIN_CLASSIC_CS , LIN_FRAMERESPONSE_TX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_MasterReq_355bc768_Tx] */
   { /*     5 */ 0                                                      ,        2u,     8u, 0x7Du, LIN_CLASSIC_CS , LIN_FRAMERESPONSE_RX }   /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_SlaveResp_9d5cbedc_Rx] */
+};
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinIfToLinTrcvChannel
+**********************************************************************************************************************/
+/** 
+  \var    LinIf_LinIfToLinTrcvChannel
+  \details
+  Element        Description
+  TrcvChannel
+*/ 
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(LinIf_LinIfToLinTrcvChannelType, LINIF_CONST) LinIf_LinIfToLinTrcvChannel[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    TrcvChannel                                                                               */
+  { /*     0 */ 0 /* LinIfConf_LinIfChannel_CHNL_45618847 -> LinTrcvConf_LinTrcvChannel_LinTrcvChannel */ }
+};
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinIfToLinTrcvNr
+**********************************************************************************************************************/
+/** 
+  \var    LinIf_LinIfToLinTrcvNr
+  \details
+  Element    Description
+  TrcvNr 
+*/ 
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(LinIf_LinIfToLinTrcvNrType, LINIF_CONST) LinIf_LinIfToLinTrcvNr[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    TrcvNr                                                             */
+  { /*     0 */ 0 /* LinIfConf_LinIfChannel_CHNL_45618847 -> LinTrcv_30_Tle7259 */ }
+};
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinTrcv_CheckWakeupFct
+**********************************************************************************************************************/
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(LinIf_LinTrcv_CheckWakeupFctType, LINIF_CONST) LinIf_LinTrcv_CheckWakeupFct[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     LinTrcv_CheckWakeupFct          */
+  /*     0 */ LinTrcv_30_Tle7259_CheckWakeup 
+};
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinTrcv_GetBusWuReasonFct
+**********************************************************************************************************************/
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(LinIf_LinTrcv_GetBusWuReasonFctType, LINIF_CONST) LinIf_LinTrcv_GetBusWuReasonFct[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     LinTrcv_GetBusWuReasonFct          */
+  /*     0 */ LinTrcv_30_Tle7259_GetBusWuReason 
+};
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinTrcv_GetOpModeFct
+**********************************************************************************************************************/
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(LinIf_LinTrcv_GetOpModeFctType, LINIF_CONST) LinIf_LinTrcv_GetOpModeFct[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     LinTrcv_GetOpModeFct          */
+  /*     0 */ LinTrcv_30_Tle7259_GetOpMode 
+};
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinTrcv_SetOpModeFct
+**********************************************************************************************************************/
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(LinIf_LinTrcv_SetOpModeFctType, LINIF_CONST) LinIf_LinTrcv_SetOpModeFct[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     LinTrcv_SetOpModeFct          */
+  /*     0 */ LinTrcv_30_Tle7259_SetOpMode 
+};
+#define LINIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LinIf_LinTrcv_SetWakeupModeFct
+**********************************************************************************************************************/
+#define LINIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(LinIf_LinTrcv_SetWakeupModeFctType, LINIF_CONST) LinIf_LinTrcv_SetWakeupModeFct[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     LinTrcv_SetWakeupModeFct          */
+  /*     0 */ LinTrcv_30_Tle7259_SetWakeupMode 
 };
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

@@ -64,6 +64,7 @@
 #include "SchM_Fls_17_Dmu.h"
 #include "SchM_LinIf.h"
 #include "SchM_LinSM.h"
+#include "SchM_LinTrcv_30_Tle7259.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"
 #include "SchM_Nm.h"

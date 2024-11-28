@@ -598,6 +598,8 @@
  *  SchM_EnterHook_LinSM_LINSM_EXCLUSIVE_AREA_3_Start
  *  SchM_EnterHook_LinSM_LINSM_EXCLUSIVE_AREA_4_Return
  *  SchM_EnterHook_LinSM_LINSM_EXCLUSIVE_AREA_4_Start
+ *  SchM_EnterHook_LinTrcv_30_Tle7259_LINTRCV_30_TLE7259_EXCLUSIVE_AREA_0_Return
+ *  SchM_EnterHook_LinTrcv_30_Tle7259_LINTRCV_30_TLE7259_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_McalLib_CpuEndInit_Return
  *  SchM_EnterHook_McalLib_CpuEndInit_Start
  *  SchM_EnterHook_McalLib_PeripheralEndInit_Return
@@ -776,6 +778,8 @@
  *  SchM_ExitHook_LinSM_LINSM_EXCLUSIVE_AREA_3_Start
  *  SchM_ExitHook_LinSM_LINSM_EXCLUSIVE_AREA_4_Return
  *  SchM_ExitHook_LinSM_LINSM_EXCLUSIVE_AREA_4_Start
+ *  SchM_ExitHook_LinTrcv_30_Tle7259_LINTRCV_30_TLE7259_EXCLUSIVE_AREA_0_Return
+ *  SchM_ExitHook_LinTrcv_30_Tle7259_LINTRCV_30_TLE7259_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_McalLib_CpuEndInit_Return
  *  SchM_ExitHook_McalLib_CpuEndInit_Start
  *  SchM_ExitHook_McalLib_PeripheralEndInit_Return

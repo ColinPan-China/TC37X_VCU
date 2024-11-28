@@ -7380,6 +7380,91 @@
  *  CANTP END
  *********************************************************************************************************************/
 
+/**********************************************************************************************************************
+ *  LIN TRANSCEIVER TLE7259 DRIVER START
+ *********************************************************************************************************************/
+/*******  CODE sections **********************************************************************************************/
+
+#if defined(LINTRCV_30_TLE7259_START_SEC_CODE)
+# undef LINTRCV_30_TLE7259_START_SEC_CODE      /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CODE
+#endif
+#if defined(LINTRCV_30_TLE7259_STOP_SEC_CODE)
+# undef LINTRCV_30_TLE7259_STOP_SEC_CODE       /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CODE
+#endif
+
+
+/*******  CONST sections  ********************************************************************************************/
+
+/* CONST sections */
+
+#if defined(LINTRCV_30_TLE7259_START_SEC_CONST_8BIT)
+# undef LINTRCV_30_TLE7259_START_SEC_CONST_8BIT  /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_8BIT
+#endif
+#if defined(LINTRCV_30_TLE7259_STOP_SEC_CONST_8BIT)
+# undef LINTRCV_30_TLE7259_STOP_SEC_CONST_8BIT   /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(LINTRCV_30_TLE7259_START_SEC_CONST_32BIT)
+# undef LINTRCV_30_TLE7259_START_SEC_CONST_32BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_32BIT
+#endif
+#if defined(LINTRCV_30_TLE7259_STOP_SEC_CONST_32BIT)
+# undef LINTRCV_30_TLE7259_STOP_SEC_CONST_32BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST
+#endif
+
+
+#if defined(LINTRCV_30_TLE7259_START_SEC_CONST_UNSPECIFIED)
+# undef LINTRCV_30_TLE7259_START_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_UNSPECIFIED
+#endif
+#if defined(LINTRCV_30_TLE7259_STOP_SEC_CONST_UNSPECIFIED)
+# undef LINTRCV_30_TLE7259_STOP_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST
+#endif
+
+/*******  VAR sections  **********************************************************************************************/
+
+/* VAR NOINIT sections */
+
+#if defined(LINTRCV_30_TLE7259_START_SEC_VAR_NOINIT_UNSPECIFIED)
+# undef LINTRCV_30_TLE7259_START_SEC_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_NOINIT_UNSPECIFIED
+#endif
+#if defined(LINTRCV_30_TLE7259_STOP_SEC_VAR_NOINIT_UNSPECIFIED)
+# undef LINTRCV_30_TLE7259_STOP_SEC_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+/* VAR ZERO INIT sections */
+
+#if defined(LINTRCV_30_TLE7259_START_SEC_VAR_ZERO_INIT_8BIT)
+# undef LINTRCV_30_TLE7259_START_SEC_VAR_ZERO_INIT_8BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_ZERO_INIT_8BIT
+#endif
+#if defined(LINTRCV_30_TLE7259_STOP_SEC_VAR_ZERO_INIT_8BIT)
+# undef LINTRCV_30_TLE7259_STOP_SEC_VAR_ZERO_INIT_8BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(LINTRCV_30_TLE7259_START_SEC_VAR_ZERO_INIT_UNSPECIFIED)
+# undef LINTRCV_30_TLE7259_START_SEC_VAR_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+#endif
+#if defined(LINTRCV_30_TLE7259_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED)
+# undef LINTRCV_30_TLE7259_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+/* PRQA S 0883 4 */ /* MD_LINTRCV_0883 */
+/**********************************************************************************************************************
+ *  LIN TRANSCEIVER TLE7259 DRIVER END
+ *********************************************************************************************************************/
+
 
 /**********************************************************************************************************************
  *  VSTDLIB START
