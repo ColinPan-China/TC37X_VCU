@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinIf_Lin.h
- *   Generation Time: 2024-11-28 16:57:44
+ *   Generation Time: 2024-11-29 09:52:33
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -33,7 +33,7 @@
 #if !defined(LINIF_LIN_H)
 #define LINIF_LIN_H
 
-#include "Lin_17_AscLin.h"
+#include "Lin.h"
 
 
 #endif /* LINIF_LIN_H */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinIf_Cfg.h
- *   Generation Time: 2024-11-28 16:57:43
+ *   Generation Time: 2024-11-29 09:52:33
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -166,13 +166,13 @@
 #define LINIF_LINDRIVER_MASTER_DUMMY_FUNCTIONS                        STD_OFF
 
 /* Single LIN driver instance */
-#define LinIf_Lin_SendFrame_FctCall(a,b)                              Lin_17_AscLin_SendFrame((a), (b)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
-#define LinIf_Lin_GoToSleep_FctCall(a)                                Lin_17_AscLin_GoToSleep((a)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
-#define LinIf_Lin_GoToSleepInternal_FctCall(a)                        Lin_17_AscLin_GoToSleepInternal((a)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
-#define LinIf_Lin_Wakeup_FctCall(a)                                   Lin_17_AscLin_Wakeup((a)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
-#define LinIf_Lin_WakeupInternal_FctCall(a)                           Lin_17_AscLin_WakeupInternal((a)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
-#define LinIf_Lin_CheckWakeup_FctCall(a)                              Lin_17_AscLin_CheckWakeup((a)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
-#define LinIf_Lin_GetStatus_FctCall(a,b)                              Lin_17_AscLin_GetStatus((a), (b)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+#define LinIf_Lin_SendFrame_FctCall(a,b)                              Lin_SendFrame((a), (b)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+#define LinIf_Lin_GoToSleep_FctCall(a)                                Lin_GoToSleep((a)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+#define LinIf_Lin_GoToSleepInternal_FctCall(a)                        Lin_GoToSleepInternal((a)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+#define LinIf_Lin_Wakeup_FctCall(a)                                   Lin_Wakeup((a)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+#define LinIf_Lin_WakeupInternal_FctCall(a)                           Lin_WakeupInternal((a)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+#define LinIf_Lin_CheckWakeup_FctCall(a)                              Lin_CheckWakeup((a)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+#define LinIf_Lin_GetStatus_FctCall(a,b)                              Lin_GetStatus((a), (b)) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
 
 /* Master / Slave only configuration optimizations */
 #if ( LINIF_NODETYPE_SLAVE_ONLY == STD_ON ) || ( LINIF_NODETYPE_MASTER_ONLY == STD_ON )
