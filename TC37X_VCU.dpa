@@ -177,12 +177,12 @@
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>
     <Display LastVersion="5.24.40 SP2">
-        <FileSet Id="" CS="b81bb419">
+        <FileSet Id="" CS="89eaad62">
             <File Order="0" EcuInstance="VCU" Hash="1af01060ef382f074ebc7ad86564f702" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\VCU_CAN00.dbc</File>
             <File Order="2" EcuInstance="VCU" Hash="9c913df781eb00d583fc7580aaffea96" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\VCU_CAN01.dbc</File>
             <File Order="3" EcuInstance="VCU" Hash="dfcef1d8e287632a636ff5e87d1c4aac" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\LIN0.ldf</File>
             <Diagnostic>
-                <Description Order="1" Hash="54ab9fad85a3e8f82ed4ced0a985fde">$(DpaProjectFolder)\DBC\MyEcu.cdd</Description>
+                <Description Order="1" Hash="c8ac59fb9c9ec760f145793c5f50dd8a">$(DpaProjectFolder)\DBC\MyEcu.cdd</Description>
                 <Ecu>MyEcu</Ecu>
                 <Variant>CommonDiagnostics</Variant>
                 <UseLegacySignalImport>false</UseLegacySignalImport>
