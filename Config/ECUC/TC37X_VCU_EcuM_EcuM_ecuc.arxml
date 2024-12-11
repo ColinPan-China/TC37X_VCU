@@ -108,7 +108,7 @@
                   <PARAMETER-VALUES>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMConfigConsistencyHash</DEFINITION-REF>
-                      <VALUE>16023387902513129942</VALUE>
+                      <VALUE>14772144092167428474</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
@@ -401,6 +401,44 @@
                             <ECUC-TEXTUAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem/EcuMModuleHeader</DEFINITION-REF>
                               <VALUE>Adc.h</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="f7866f19-d398-4fa1-b2e7-1cdaa2834ad7">
+                          <SHORT-NAME>Dma_Init</SHORT-NAME>
+                          <INDEX>6</INDEX>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem/EcuMModuleID</DEFINITION-REF>
+                              <VALUE>Dma</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem/EcuMModuleService</DEFINITION-REF>
+                              <VALUE>Dma_Init</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem/EcuMModuleHeader</DEFINITION-REF>
+                              <VALUE>Dma.h</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="99cc2313-289d-4a26-9a82-f8c0087fc800">
+                          <SHORT-NAME>Spi_Init</SHORT-NAME>
+                          <INDEX>7</INDEX>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem/EcuMModuleID</DEFINITION-REF>
+                              <VALUE>Spi</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem/EcuMModuleService</DEFINITION-REF>
+                              <VALUE>Spi_Init</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem/EcuMModuleHeader</DEFINITION-REF>
+                              <VALUE>Spi.h</VALUE>
                             </ECUC-TEXTUAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                         </ECUC-CONTAINER-VALUE>

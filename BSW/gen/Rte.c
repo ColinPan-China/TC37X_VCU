@@ -59,9 +59,11 @@
 #include "SchM_Dem.h"
 #include "SchM_Det.h"
 #include "SchM_Dio.h"
+#include "SchM_Dma.h"
 #include "SchM_EcuM.h"
 #include "SchM_Fee.h"
 #include "SchM_Fls_17_Dmu.h"
+#include "SchM_Irq.h"
 #include "SchM_LinIf.h"
 #include "SchM_LinSM.h"
 #include "SchM_LinTrcv_30_Tle7259.h"
@@ -71,6 +73,7 @@
 #include "SchM_NvM.h"
 #include "SchM_PduR.h"
 #include "SchM_Port.h"
+#include "SchM_Spi.h"
 #include "SchM_Xcp.h"
 
 #include "Rte_Hook.h"
@@ -1441,6 +1444,123 @@ FUNC(void, RTE_CODE) SchM_Exit_Adc_SrcRegAccess(void)
 }
 
 
+FUNC(void, RTE_CODE) SchM_Enter_Dma_ChEventStatus(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Dma_ChEventStatus(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Dma_ChannelConfigUpdate(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Dma_ChannelConfigUpdate(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Dma_ChannelFreezeResume(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Dma_ChannelFreezeResume(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Dma_ChannelHWTrigger(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Dma_ChannelHWTrigger(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Dma_ChannelInitDeinit(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Dma_ChannelInitDeinit(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Dma_ChannelStartStop(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Dma_ChannelStartStop(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Dma_ChannelSwitchBuffer(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Dma_ChannelSwitchBuffer(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Dma_InterruptStatus(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Dma_InterruptStatus(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Dma_MEErrorStatus(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Dma_MEErrorStatus(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
 FUNC(void, RTE_CODE) SchM_Enter_Fls_17_Dmu_Erase(void)
 {
   /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
@@ -1539,6 +1659,149 @@ FUNC(void, RTE_CODE) SchM_Enter_Mcu_TomTgcReg(void)
 }
 
 FUNC(void, RTE_CODE) SchM_Exit_Mcu_TomTgcReg(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Spi_Buffer_Update(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Spi_Buffer_Update(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Spi_Cancel_Seq(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Spi_Cancel_Seq(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Spi_ChannelLock(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Spi_ChannelLock(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Spi_Queue_Update(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Spi_Queue_Update(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Spi_Queue_Update_QSPI0(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Spi_Queue_Update_QSPI0(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Spi_Queue_Update_QSPI1(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Spi_Queue_Update_QSPI1(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Spi_Queue_Update_QSPI2(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Spi_Queue_Update_QSPI2(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Spi_Queue_Update_QSPI3(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Spi_Queue_Update_QSPI3(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Spi_Queue_Update_QSPI4(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Spi_Queue_Update_QSPI4(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Spi_Queue_Update_QSPI5(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Spi_Queue_Update_QSPI5(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Spi_SyncLock(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Spi_SyncLock(void)
 {
   /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
   ResumeAllInterrupts();
@@ -2124,6 +2387,12 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
     {
       /* call schedulable entity */
       LinSM_MainFunction();
+    }
+
+    if ((ev & Rte_Ev_Cyclic2_Bsw_Task_0_5ms) != (EventMaskType)0)
+    {
+      /* call schedulable entity */
+      Spi_MainFunction_Handling();
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

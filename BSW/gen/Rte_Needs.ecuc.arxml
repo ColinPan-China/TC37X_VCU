@@ -565,6 +565,12 @@
                             </SUB-CONTAINERS>
                         </ECUC-CONTAINER-VALUE>
                         <ECUC-CONTAINER-VALUE>
+                            <SHORT-NAME>Dma</SHORT-NAME>
+                            <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteBswModuleInstance</DEFINITION-REF>
+                            <SUB-CONTAINERS>
+                            </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
                             <SHORT-NAME>EcuM</SHORT-NAME>
                             <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteBswModuleInstance</DEFINITION-REF>
                             <SUB-CONTAINERS>
@@ -622,6 +628,12 @@
                                         </ECUC-REFERENCE-VALUE>
                                     </REFERENCE-VALUES>
                                 </ECUC-CONTAINER-VALUE>
+                            </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                            <SHORT-NAME>Irq</SHORT-NAME>
+                            <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteBswModuleInstance</DEFINITION-REF>
+                            <SUB-CONTAINERS>
                             </SUB-CONTAINERS>
                         </ECUC-CONTAINER-VALUE>
                         <ECUC-CONTAINER-VALUE>
@@ -718,6 +730,26 @@
                             <SHORT-NAME>Port</SHORT-NAME>
                             <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteBswModuleInstance</DEFINITION-REF>
                             <SUB-CONTAINERS>
+                            </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                            <SHORT-NAME>Spi</SHORT-NAME>
+                            <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteBswModuleInstance</DEFINITION-REF>
+                            <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                    <SHORT-NAME>Spi_MainFunction_HandlingTimingEvent0</SHORT-NAME>
+                                    <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteBswModuleInstance/RteBswEventToTaskMapping</DEFINITION-REF>
+                                    <REFERENCE-VALUES>
+                                        <ECUC-REFERENCE-VALUE>
+                                            <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Rte/RteBswModuleInstance/RteBswEventToTaskMapping/RteBswUsedOsEventRef</DEFINITION-REF>
+                                            <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/DaVinci_Project/Os/Rte_Ev_Cyclic2_Bsw_Task_0_5ms</VALUE-REF>
+                                        </ECUC-REFERENCE-VALUE>
+                                        <ECUC-REFERENCE-VALUE>
+                                            <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Rte/RteBswModuleInstance/RteBswEventToTaskMapping/RteBswUsedOsAlarmRef</DEFINITION-REF>
+                                            <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/DaVinci_Project/Os/Rte_Al_TE2_Bsw_Task_0_5ms</VALUE-REF>
+                                        </ECUC-REFERENCE-VALUE>
+                                    </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
                             </SUB-CONTAINERS>
                         </ECUC-CONTAINER-VALUE>
                         <ECUC-CONTAINER-VALUE>

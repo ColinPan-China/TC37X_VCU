@@ -562,6 +562,24 @@
  *  SchM_EnterHook_Dem_DEM_EXCLUSIVE_AREA_4_Start
  *  SchM_EnterHook_Det_DET_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_Det_DET_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_Dma_ChEventStatus_Return
+ *  SchM_EnterHook_Dma_ChEventStatus_Start
+ *  SchM_EnterHook_Dma_ChannelConfigUpdate_Return
+ *  SchM_EnterHook_Dma_ChannelConfigUpdate_Start
+ *  SchM_EnterHook_Dma_ChannelFreezeResume_Return
+ *  SchM_EnterHook_Dma_ChannelFreezeResume_Start
+ *  SchM_EnterHook_Dma_ChannelHWTrigger_Return
+ *  SchM_EnterHook_Dma_ChannelHWTrigger_Start
+ *  SchM_EnterHook_Dma_ChannelInitDeinit_Return
+ *  SchM_EnterHook_Dma_ChannelInitDeinit_Start
+ *  SchM_EnterHook_Dma_ChannelStartStop_Return
+ *  SchM_EnterHook_Dma_ChannelStartStop_Start
+ *  SchM_EnterHook_Dma_ChannelSwitchBuffer_Return
+ *  SchM_EnterHook_Dma_ChannelSwitchBuffer_Start
+ *  SchM_EnterHook_Dma_InterruptStatus_Return
+ *  SchM_EnterHook_Dma_InterruptStatus_Start
+ *  SchM_EnterHook_Dma_MEErrorStatus_Return
+ *  SchM_EnterHook_Dma_MEErrorStatus_Start
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_1_Return
@@ -624,6 +642,28 @@
  *  SchM_EnterHook_NvM_NVM_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_PduR_PDUR_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_PduR_PDUR_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_Spi_Buffer_Update_Return
+ *  SchM_EnterHook_Spi_Buffer_Update_Start
+ *  SchM_EnterHook_Spi_Cancel_Seq_Return
+ *  SchM_EnterHook_Spi_Cancel_Seq_Start
+ *  SchM_EnterHook_Spi_ChannelLock_Return
+ *  SchM_EnterHook_Spi_ChannelLock_Start
+ *  SchM_EnterHook_Spi_Queue_Update_QSPI0_Return
+ *  SchM_EnterHook_Spi_Queue_Update_QSPI0_Start
+ *  SchM_EnterHook_Spi_Queue_Update_QSPI1_Return
+ *  SchM_EnterHook_Spi_Queue_Update_QSPI1_Start
+ *  SchM_EnterHook_Spi_Queue_Update_QSPI2_Return
+ *  SchM_EnterHook_Spi_Queue_Update_QSPI2_Start
+ *  SchM_EnterHook_Spi_Queue_Update_QSPI3_Return
+ *  SchM_EnterHook_Spi_Queue_Update_QSPI3_Start
+ *  SchM_EnterHook_Spi_Queue_Update_QSPI4_Return
+ *  SchM_EnterHook_Spi_Queue_Update_QSPI4_Start
+ *  SchM_EnterHook_Spi_Queue_Update_QSPI5_Return
+ *  SchM_EnterHook_Spi_Queue_Update_QSPI5_Start
+ *  SchM_EnterHook_Spi_Queue_Update_Return
+ *  SchM_EnterHook_Spi_Queue_Update_Start
+ *  SchM_EnterHook_Spi_SyncLock_Return
+ *  SchM_EnterHook_Spi_SyncLock_Start
  *  SchM_EnterHook_Xcp_CANXCP_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_Xcp_CANXCP_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_Xcp_FRXCP_EXCLUSIVE_AREA_0_Return
@@ -742,6 +782,24 @@
  *  SchM_ExitHook_Dem_DEM_EXCLUSIVE_AREA_4_Start
  *  SchM_ExitHook_Det_DET_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_Det_DET_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_Dma_ChEventStatus_Return
+ *  SchM_ExitHook_Dma_ChEventStatus_Start
+ *  SchM_ExitHook_Dma_ChannelConfigUpdate_Return
+ *  SchM_ExitHook_Dma_ChannelConfigUpdate_Start
+ *  SchM_ExitHook_Dma_ChannelFreezeResume_Return
+ *  SchM_ExitHook_Dma_ChannelFreezeResume_Start
+ *  SchM_ExitHook_Dma_ChannelHWTrigger_Return
+ *  SchM_ExitHook_Dma_ChannelHWTrigger_Start
+ *  SchM_ExitHook_Dma_ChannelInitDeinit_Return
+ *  SchM_ExitHook_Dma_ChannelInitDeinit_Start
+ *  SchM_ExitHook_Dma_ChannelStartStop_Return
+ *  SchM_ExitHook_Dma_ChannelStartStop_Start
+ *  SchM_ExitHook_Dma_ChannelSwitchBuffer_Return
+ *  SchM_ExitHook_Dma_ChannelSwitchBuffer_Start
+ *  SchM_ExitHook_Dma_InterruptStatus_Return
+ *  SchM_ExitHook_Dma_InterruptStatus_Start
+ *  SchM_ExitHook_Dma_MEErrorStatus_Return
+ *  SchM_ExitHook_Dma_MEErrorStatus_Start
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_1_Return
@@ -804,6 +862,28 @@
  *  SchM_ExitHook_NvM_NVM_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_PduR_PDUR_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_PduR_PDUR_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_Spi_Buffer_Update_Return
+ *  SchM_ExitHook_Spi_Buffer_Update_Start
+ *  SchM_ExitHook_Spi_Cancel_Seq_Return
+ *  SchM_ExitHook_Spi_Cancel_Seq_Start
+ *  SchM_ExitHook_Spi_ChannelLock_Return
+ *  SchM_ExitHook_Spi_ChannelLock_Start
+ *  SchM_ExitHook_Spi_Queue_Update_QSPI0_Return
+ *  SchM_ExitHook_Spi_Queue_Update_QSPI0_Start
+ *  SchM_ExitHook_Spi_Queue_Update_QSPI1_Return
+ *  SchM_ExitHook_Spi_Queue_Update_QSPI1_Start
+ *  SchM_ExitHook_Spi_Queue_Update_QSPI2_Return
+ *  SchM_ExitHook_Spi_Queue_Update_QSPI2_Start
+ *  SchM_ExitHook_Spi_Queue_Update_QSPI3_Return
+ *  SchM_ExitHook_Spi_Queue_Update_QSPI3_Start
+ *  SchM_ExitHook_Spi_Queue_Update_QSPI4_Return
+ *  SchM_ExitHook_Spi_Queue_Update_QSPI4_Start
+ *  SchM_ExitHook_Spi_Queue_Update_QSPI5_Return
+ *  SchM_ExitHook_Spi_Queue_Update_QSPI5_Start
+ *  SchM_ExitHook_Spi_Queue_Update_Return
+ *  SchM_ExitHook_Spi_Queue_Update_Start
+ *  SchM_ExitHook_Spi_SyncLock_Return
+ *  SchM_ExitHook_Spi_SyncLock_Start
  *  SchM_ExitHook_Xcp_CANXCP_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_Xcp_CANXCP_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_Xcp_FRXCP_EXCLUSIVE_AREA_0_Return
@@ -862,6 +942,8 @@
  *  SchM_Schedulable_LinSM_LinSM_MainFunction_Start
  *  SchM_Schedulable_NvM_NvM_MainFunction_Return
  *  SchM_Schedulable_NvM_NvM_MainFunction_Start
+ *  SchM_Schedulable_Spi_Spi_MainFunction_Handling_Return
+ *  SchM_Schedulable_Spi_Spi_MainFunction_Handling_Start
  *  SchM_Schedulable_Xcp_CanXcp_MainFunction_Return
  *  SchM_Schedulable_Xcp_CanXcp_MainFunction_Start
  *  SchM_Schedulable_Xcp_Xcp_MainFunction_Return

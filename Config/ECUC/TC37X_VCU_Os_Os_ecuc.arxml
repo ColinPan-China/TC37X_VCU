@@ -369,6 +369,22 @@
                           <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/Os/OsOS/OsStackSummary/OsStack/OsStackUser</DEFINITION-REF>
                           <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/ASCLIN1ERR_ISR</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/Os/OsOS/OsStackSummary/OsStack/OsStackUser</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/DMACH10SR_ISR</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/Os/OsOS/OsStackSummary/OsStack/OsStackUser</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/DMACH11SR_ISR</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/Os/OsOS/OsStackSummary/OsStack/OsStackUser</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/QSPI3ERR_ISR</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/Os/OsOS/OsStackSummary/OsStack/OsStackUser</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/QSPI3PT_ISR</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
                     <ECUC-CONTAINER-VALUE UUID="737f71d1-787b-4926-8ff0-ce25bc00a6b2">
@@ -1574,7 +1590,7 @@ TC37X_ts_appx_V2.5.1.pdf 2018.04</VALUE>
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptPriority</DEFINITION-REF>
-                  <VALUE>31</VALUE>
+                  <VALUE>1</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-TEXTUAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrCategory</DEFINITION-REF>
@@ -1851,6 +1867,22 @@ TC37X_ts_appx_V2.5.1.pdf 2018.04</VALUE>
                 <ECUC-REFERENCE-VALUE>
                   <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsApplication/OsAppIsrRef</DEFINITION-REF>
                   <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/ASCLIN1ERR_ISR</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsApplication/OsAppIsrRef</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/DMACH10SR_ISR</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsApplication/OsAppIsrRef</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/DMACH11SR_ISR</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsApplication/OsAppIsrRef</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/QSPI3ERR_ISR</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsApplication/OsAppIsrRef</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/QSPI3PT_ISR</VALUE-REF>
                 </ECUC-REFERENCE-VALUE>
               </REFERENCE-VALUES>
               <SUB-CONTAINERS>
@@ -2583,7 +2615,7 @@ TC37X_ts_appx_V2.5.1.pdf 2018.04</VALUE>
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptPriority</DEFINITION-REF>
-                  <VALUE>1</VALUE>
+                  <VALUE>31</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-TEXTUAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrCategory</DEFINITION-REF>
@@ -3094,6 +3126,158 @@ TC37X_ts_appx_V2.5.1.pdf 2018.04</VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptSource</DEFINITION-REF>
                   <VALUE>92</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrStackSize</DEFINITION-REF>
+                  <VALUE>1024</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrEnableNesting</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrUsesFpu</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInitialEnableInterruptSource</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="715c28c9-d9ca-443b-a223-4121d5943f2e">
+              <SHORT-NAME>DMACH10SR_ISR</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsIsr</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptPriority</DEFINITION-REF>
+                  <VALUE>114</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrCategory</DEFINITION-REF>
+                  <VALUE>CATEGORY_2</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptType</DEFINITION-REF>
+                  <VALUE>EXTERNAL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptSource</DEFINITION-REF>
+                  <VALUE>920</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrStackSize</DEFINITION-REF>
+                  <VALUE>1024</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrEnableNesting</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrUsesFpu</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInitialEnableInterruptSource</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="7235102c-6339-438e-834c-ad80e6144d8c">
+              <SHORT-NAME>DMACH11SR_ISR</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsIsr</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptPriority</DEFINITION-REF>
+                  <VALUE>115</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrCategory</DEFINITION-REF>
+                  <VALUE>CATEGORY_2</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptType</DEFINITION-REF>
+                  <VALUE>EXTERNAL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptSource</DEFINITION-REF>
+                  <VALUE>924</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrStackSize</DEFINITION-REF>
+                  <VALUE>1024</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrEnableNesting</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrUsesFpu</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInitialEnableInterruptSource</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="36c1d289-7d3d-435d-8fa4-dfbfe00f0a46">
+              <SHORT-NAME>QSPI3ERR_ISR</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsIsr</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptPriority</DEFINITION-REF>
+                  <VALUE>102</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrCategory</DEFINITION-REF>
+                  <VALUE>CATEGORY_2</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptType</DEFINITION-REF>
+                  <VALUE>EXTERNAL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptSource</DEFINITION-REF>
+                  <VALUE>308</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrStackSize</DEFINITION-REF>
+                  <VALUE>1024</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrEnableNesting</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrUsesFpu</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInitialEnableInterruptSource</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="c18ee4cd-3b96-458d-ae00-bc2f36e560da">
+              <SHORT-NAME>QSPI3PT_ISR</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsIsr</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptPriority</DEFINITION-REF>
+                  <VALUE>103</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrCategory</DEFINITION-REF>
+                  <VALUE>CATEGORY_2</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptType</DEFINITION-REF>
+                  <VALUE>EXTERNAL</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptSource</DEFINITION-REF>
+                  <VALUE>312</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrStackSize</DEFINITION-REF>

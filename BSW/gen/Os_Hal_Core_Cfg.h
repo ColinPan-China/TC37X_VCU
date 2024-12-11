@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Core_Cfg.h
- *   Generation Time: 2024-11-28 16:28:22
+ *   Generation Time: 2024-12-11 14:18:03
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -46,7 +46,7 @@
 
 
 /*! Number of interrupt sources initialized by the hardware init core. */
-#define OS_CFG_NUM_SYSTEM_INTERRUPTSOURCEREFS                     (14uL)
+#define OS_CFG_NUM_SYSTEM_INTERRUPTSOURCEREFS                     (18uL)
 
 
 /*! Number of interrupt sources initialized by core OsCore0 */

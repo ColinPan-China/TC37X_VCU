@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="33022ff3-f082-4548-ab3c-90793765f2d3">
+      <SHORT-NAME>AURIX2G</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="7e118c10-0a18-49f2-9978-33759fe5e7c2">
+          <SHORT-NAME>EcucDefs</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="81da0fd3-11d8-4b21-b2d0-ff56f543d39d">
+              <SHORT-NAME>Irq_ib_bswmd</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="cc79983d-1a89-49f3-b867-4b80c72d6933">
+                  <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+                  <ELEMENTS>
+                    <BSW-MODULE-DESCRIPTION UUID="e50e480f-1e0a-465d-8ec4-4d752633b9ac">
+                      <SHORT-NAME>Irq</SHORT-NAME>
+                      <INTERNAL-BEHAVIORS>
+                        <BSW-INTERNAL-BEHAVIOR UUID="a2c89196-8f15-4415-9d66-b83105207c54">
+                          <SHORT-NAME>IrqBehavior</SHORT-NAME>
+                        </BSW-INTERNAL-BEHAVIOR>
+                      </INTERNAL-BEHAVIORS>
+                    </BSW-MODULE-DESCRIPTION>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

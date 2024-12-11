@@ -257,6 +257,21 @@
                     <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucGeneral/BswInitialization/LinTrcv_30_Tle7259_Init</SDX-REF>
                   </SDG>
                 </SDG>
+                <SDG GID=".Dma.Dma">
+                  <SDG GID="Dma_Init">
+                    <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucGeneral/BswInitialization/Dma_Init</SDX-REF>
+                  </SDG>
+                </SDG>
+                <SDG GID=".Irq.Irq">
+                  <SDG GID="Irq_Init">
+                    <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucGeneral/BswInitialization/Irq_Init</SDX-REF>
+                  </SDG>
+                </SDG>
+                <SDG GID=".Spi.Spi">
+                  <SDG GID="Spi_Init">
+                    <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucGeneral/BswInitialization/Spi_Init</SDX-REF>
+                  </SDG>
+                </SDG>
               </SDG>
             </SDGS>
           </ADMIN-DATA>
@@ -2941,6 +2956,138 @@
                         <ECUC-REFERENCE-VALUE>
                           <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/ModuleRef</DEFINITION-REF>
                           <VALUE-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/ActiveEcuC/Lin</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="fb6ac1c2-c2c9-4838-aa7b-e21f74e047d3">
+                      <SHORT-NAME>Spi_Init</SHORT-NAME>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <LABEL>
+                            <L-4 L="FOR-ALL">/Spi/Spi</L-4>
+                          </LABEL>
+                          <ANNOTATION-ORIGIN>DV:EcucBswInitFunction</ANNOTATION-ORIGIN>
+                          <ANNOTATION-TEXT>
+                            <P>
+                              <L-1 L="FOR-ALL">PLAIN_TEXT</L-1>
+                            </P>
+                            <P>
+                              <L-1 L="FOR-ALL">Created Spi_Init by Extended Init XML Service</L-1>
+                            </P>
+                          </ANNOTATION-TEXT>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/Header</DEFINITION-REF>
+                          <VALUE>Spi.h</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/InitPhase</DEFINITION-REF>
+                          <VALUE>INIT_ONE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/ConfigType</DEFINITION-REF>
+                          <VALUE>Spi_ConfigType</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/ConfigPtrName</DEFINITION-REF>
+                          <VALUE>&amp;Spi_Config</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/ConfigPtrClass</DEFINITION-REF>
+                          <VALUE>AUTOMATIC</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/ModuleRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/Spi/Spi</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="72ca547d-3c10-4a14-b752-c422156f4205">
+                      <SHORT-NAME>Dma_Init</SHORT-NAME>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <LABEL>
+                            <L-4 L="FOR-ALL">/Dma/Dma</L-4>
+                          </LABEL>
+                          <ANNOTATION-ORIGIN>DV:EcucBswInitFunction</ANNOTATION-ORIGIN>
+                          <ANNOTATION-TEXT>
+                            <P>
+                              <L-1 L="FOR-ALL">PLAIN_TEXT</L-1>
+                            </P>
+                            <P>
+                              <L-1 L="FOR-ALL">Created Dma_Init by Extended Init XML Service</L-1>
+                            </P>
+                          </ANNOTATION-TEXT>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/Header</DEFINITION-REF>
+                          <VALUE>Dma.h</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/InitPhase</DEFINITION-REF>
+                          <VALUE>INIT_ONE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/ConfigType</DEFINITION-REF>
+                          <VALUE>Dma_ConfigType</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/ConfigPtrName</DEFINITION-REF>
+                          <VALUE>&amp;Dma_Config</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/ConfigPtrClass</DEFINITION-REF>
+                          <VALUE>AUTOMATIC</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/ModuleRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/Dma/Dma</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="0a36fe94-71fe-4ad9-b932-1217264a2800">
+                      <SHORT-NAME>Irq_Init</SHORT-NAME>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <LABEL>
+                            <L-4 L="FOR-ALL">/Irq/Irq</L-4>
+                          </LABEL>
+                          <ANNOTATION-ORIGIN>DV:EcucBswInitFunction</ANNOTATION-ORIGIN>
+                          <ANNOTATION-TEXT>
+                            <P>
+                              <L-1 L="FOR-ALL">PLAIN_TEXT</L-1>
+                            </P>
+                            <P>
+                              <L-1 L="FOR-ALL">Created Irq_Init by Extended Init XML Service</L-1>
+                            </P>
+                          </ANNOTATION-TEXT>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/Header</DEFINITION-REF>
+                          <VALUE>Irq.h</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/InitPhase</DEFINITION-REF>
+                          <VALUE>NO_INIT</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/EcuC/EcucGeneral/BswInitialization/InitFunction/ModuleRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/Irq/Irq</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>

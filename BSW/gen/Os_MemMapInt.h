@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_MemMapInt.h
- *   Generation Time: 2024-11-28 16:28:22
+ *   Generation Time: 2024-12-11 15:41:00
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -510,6 +510,56 @@
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
 #endif
 
+#ifdef OS_START_SEC_DMACH10SR_ISR_CODE
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_DMACH10SR_ISR_CODE_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code "OS_DMACH10SR_ISR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_DMACH10SR_ISR_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_DMACH10SR_ISR_CODE
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_DMACH10SR_ISR_CODE_OPEN
+#  error Section OS_DMACH10SR_ISR_CODE is currently not opened and so cannot be closed.
+# endif
+# undef OS_DMACH10SR_ISR_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_DMACH10SR_ISR_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_DMACH11SR_ISR_CODE
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_DMACH11SR_ISR_CODE_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code "OS_DMACH11SR_ISR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_DMACH11SR_ISR_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_DMACH11SR_ISR_CODE
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_DMACH11SR_ISR_CODE_OPEN
+#  error Section OS_DMACH11SR_ISR_CODE is currently not opened and so cannot be closed.
+# endif
+# undef OS_DMACH11SR_ISR_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_DMACH11SR_ISR_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
 #ifdef OS_START_SEC_Default_Init_Task_CODE
 # ifdef OS_MEMMAP_SECTION_OPEN
 #  error A MemMap section is already open. Nesting is not supported.
@@ -557,6 +607,56 @@
 # undef OS_Default_Init_Task_Trusted_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
 # pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
 # undef OS_STOP_SEC_Default_Init_Task_Trusted_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_QSPI3ERR_ISR_CODE
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_QSPI3ERR_ISR_CODE_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code "OS_QSPI3ERR_ISR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_QSPI3ERR_ISR_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_QSPI3ERR_ISR_CODE
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_QSPI3ERR_ISR_CODE_OPEN
+#  error Section OS_QSPI3ERR_ISR_CODE is currently not opened and so cannot be closed.
+# endif
+# undef OS_QSPI3ERR_ISR_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_QSPI3ERR_ISR_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_QSPI3PT_ISR_CODE
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_QSPI3PT_ISR_CODE_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code "OS_QSPI3PT_ISR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_QSPI3PT_ISR_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_QSPI3PT_ISR_CODE
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_QSPI3PT_ISR_CODE_OPEN
+#  error Section OS_QSPI3PT_ISR_CODE is currently not opened and so cannot be closed.
+# endif
+# undef OS_QSPI3PT_ISR_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_QSPI3PT_ISR_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
 #endif
 

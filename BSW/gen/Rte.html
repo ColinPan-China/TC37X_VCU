@@ -183,9 +183,11 @@ SchM_Dcm.h<br>
 SchM_Dem.h<br>
 SchM_Det.h<br>
 SchM_Dio.h<br>
+SchM_Dma.h<br>
 SchM_EcuM.h<br>
 SchM_Fee.h<br>
 SchM_Fls_17_Dmu.h<br>
+SchM_Irq.h<br>
 SchM_LinIf.h<br>
 SchM_LinSM.h<br>
 SchM_LinTrcv_30_Tle7259.h<br>
@@ -195,6 +197,7 @@ SchM_Nm.h<br>
 SchM_NvM.h<br>
 SchM_PduR.h<br>
 SchM_Port.h<br>
+SchM_Spi.h<br>
 SchM_Xcp.h<br>
 SchM_Adc_Type.h<br>
 SchM_BswM_Type.h<br>
@@ -209,9 +212,11 @@ SchM_Dcm_Type.h<br>
 SchM_Dem_Type.h<br>
 SchM_Det_Type.h<br>
 SchM_Dio_Type.h<br>
+SchM_Dma_Type.h<br>
 SchM_EcuM_Type.h<br>
 SchM_Fee_Type.h<br>
 SchM_Fls_17_Dmu_Type.h<br>
+SchM_Irq_Type.h<br>
 SchM_LinIf_Type.h<br>
 SchM_LinSM_Type.h<br>
 SchM_LinTrcv_30_Tle7259_Type.h<br>
@@ -221,6 +226,7 @@ SchM_Nm_Type.h<br>
 SchM_NvM_Type.h<br>
 SchM_PduR_Type.h<br>
 SchM_Port_Type.h<br>
+SchM_Spi_Type.h<br>
 SchM_Xcp_Type.h<br>
 Rte.oil<br>
 Rte_Needs.ecuc.arxml<br>
@@ -1649,6 +1655,13 @@ CONST Size: 100 Bytes<br>
 <TD>Bsw_Task</TD>
 <TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
 <TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>Spi_MainFunction_Handling</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_5ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>

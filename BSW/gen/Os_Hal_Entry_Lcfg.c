@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Entry_Lcfg.c
- *   Generation Time: 2024-11-28 16:43:25
+ *   Generation Time: 2024-12-11 15:40:59
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -113,7 +113,7 @@ Os_Hal_UnhandledTrapEntry(0, 7)
 
 Os_Hal_InterruptSectionDeclaration(0)
 Os_Hal_UnhandledInterruptEntry(0, 0)
-Os_Hal_Cat2InterruptEntry(0, 1, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CanIsr_1)
+Os_Hal_Cat2InterruptEntry(0, 1, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer)
 Os_Hal_UnhandledInterruptEntry(0, 2)
 Os_Hal_UnhandledInterruptEntry(0, 3)
 Os_Hal_UnhandledInterruptEntry(0, 4)
@@ -143,7 +143,7 @@ Os_Hal_UnhandledInterruptEntry(0, 27)
 Os_Hal_UnhandledInterruptEntry(0, 28)
 Os_Hal_UnhandledInterruptEntry(0, 29)
 Os_Hal_Cat2InterruptEntry(0, 30, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CanIsr_0)
-Os_Hal_Cat2InterruptEntry(0, 31, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer)
+Os_Hal_Cat2InterruptEntry(0, 31, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CanIsr_1)
 Os_Hal_UnhandledInterruptEntry(0, 32)
 Os_Hal_UnhandledInterruptEntry(0, 33)
 Os_Hal_UnhandledInterruptEntry(0, 34)
@@ -214,8 +214,8 @@ Os_Hal_UnhandledInterruptEntry(0, 98)
 Os_Hal_UnhandledInterruptEntry(0, 99)
 Os_Hal_UnhandledInterruptEntry(0, 100)
 Os_Hal_UnhandledInterruptEntry(0, 101)
-Os_Hal_UnhandledInterruptEntry(0, 102)
-Os_Hal_UnhandledInterruptEntry(0, 103)
+Os_Hal_Cat2InterruptEntry(0, 102, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_QSPI3ERR_ISR)
+Os_Hal_Cat2InterruptEntry(0, 103, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_QSPI3PT_ISR)
 Os_Hal_UnhandledInterruptEntry(0, 104)
 Os_Hal_UnhandledInterruptEntry(0, 105)
 Os_Hal_UnhandledInterruptEntry(0, 106)
@@ -226,8 +226,8 @@ Os_Hal_UnhandledInterruptEntry(0, 110)
 Os_Hal_UnhandledInterruptEntry(0, 111)
 Os_Hal_UnhandledInterruptEntry(0, 112)
 Os_Hal_UnhandledInterruptEntry(0, 113)
-Os_Hal_UnhandledInterruptEntry(0, 114)
-Os_Hal_UnhandledInterruptEntry(0, 115)
+Os_Hal_Cat2InterruptEntry(0, 114, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_DMACH10SR_ISR)
+Os_Hal_Cat2InterruptEntry(0, 115, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_DMACH11SR_ISR)
 Os_Hal_UnhandledInterruptEntry(0, 116)
 Os_Hal_UnhandledInterruptEntry(0, 117)
 Os_Hal_UnhandledInterruptEntry(0, 118)

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.c
- *   Generation Time: 2024-11-28 16:28:22
+ *   Generation Time: 2024-12-11 15:41:00
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -124,6 +124,18 @@ OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_CanIsr_1_Dyn;
 
 /*! Dynamic ISR data: CounterIsr_SystemTimer */
 OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_CounterIsr_SystemTimer_Dyn;
+
+/*! Dynamic ISR data: DMACH10SR_ISR */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_DMACH10SR_ISR_Dyn;
+
+/*! Dynamic ISR data: DMACH11SR_ISR */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_DMACH11SR_ISR_Dyn;
+
+/*! Dynamic ISR data: QSPI3ERR_ISR */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_QSPI3ERR_ISR_Dyn;
+
+/*! Dynamic ISR data: QSPI3PT_ISR */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_QSPI3PT_ISR_Dyn;
 
 #define OS_STOP_SEC_CORE0_VAR_NOINIT_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -574,7 +586,7 @@ CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_CanIsr_1 =
   /* .Thread   = */
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_CanIsr_1,
-    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level1_Dyn,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level3_Dyn,
     /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
     /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_CanIsr_1_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
@@ -611,7 +623,7 @@ CONST(Os_TimerIsrConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer =
   /* .Thread   = */
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_CounterIsr_SystemTimer,
-    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level3_Dyn,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level1_Dyn,
     /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
     /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_CounterIsr_SystemTimer_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore0,
@@ -634,6 +646,146 @@ CONST(Os_TimerIsrConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer =
 ,
   /* .Counter = */ OS_COUNTER_CASTCONFIG_TIMERPFRT_2_COUNTER(OsCfg_Counter_SystemTimer)
 };
+/*! ISR configuration data: DMACH10SR_ISR */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_DMACH10SR_ISR_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_DMACH10SR_ISR,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_DMACH10SR_ISR,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_DMACH10SR_ISR =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_DMACH10SR_ISR,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level17_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_DMACH10SR_ISR_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_DMACH10SR_ISR_HwConfig,
+  /* .IsrId                     = */ DMACH10SR_ISR,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
+/*! ISR configuration data: DMACH11SR_ISR */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_DMACH11SR_ISR_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_DMACH11SR_ISR,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_DMACH11SR_ISR,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_DMACH11SR_ISR =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_DMACH11SR_ISR,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level18_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_DMACH11SR_ISR_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_DMACH11SR_ISR_HwConfig,
+  /* .IsrId                     = */ DMACH11SR_ISR,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
+/*! ISR configuration data: QSPI3ERR_ISR */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_QSPI3ERR_ISR_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_QSPI3ERR_ISR,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_QSPI3ERR_ISR,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_QSPI3ERR_ISR =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_QSPI3ERR_ISR,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level15_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_QSPI3ERR_ISR_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_QSPI3ERR_ISR_HwConfig,
+  /* .IsrId                     = */ QSPI3ERR_ISR,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
+/*! ISR configuration data: QSPI3PT_ISR */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_QSPI3PT_ISR_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_QSPI3PT_ISR,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_QSPI3PT_ISR,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_QSPI3PT_ISR =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_QSPI3PT_ISR,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level16_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_QSPI3PT_ISR_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_QSPI3PT_ISR_HwConfig,
+  /* .IsrId                     = */ QSPI3PT_ISR,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
 #define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -658,6 +810,10 @@ CONSTP2CONST(Os_IsrConfigType, OS_CONST, OS_CONST) OsCfg_IsrRefs[OS_ISRID_COUNT 
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_CanIsr_0),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_CanIsr_1),
   OS_TIMER_CASTCONFIG_TIMERISR_2_ISR(OsCfg_Isr_CounterIsr_SystemTimer),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_DMACH10SR_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_DMACH11SR_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_QSPI3ERR_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_QSPI3PT_ISR),
   NULL_PTR
 };
 

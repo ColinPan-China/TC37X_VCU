@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Context_Lcfg.h
- *   Generation Time: 2024-11-28 16:28:22
+ *   Generation Time: 2024-12-11 15:40:59
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -122,6 +122,18 @@ extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Leve
 /*! HAL dynamic ISR2 level context data: Level14 */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level14_Dyn;
 
+/*! HAL dynamic ISR2 level context data: Level15 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level15_Dyn;
+
+/*! HAL dynamic ISR2 level context data: Level16 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level16_Dyn;
+
+/*! HAL dynamic ISR2 level context data: Level17 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level17_Dyn;
+
+/*! HAL dynamic ISR2 level context data: Level18 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level18_Dyn;
+
 /*! HAL dynamic task context data: AswTask */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_AswTask_Dyn;
 
@@ -210,6 +222,18 @@ extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_CanIsr_1;
 
 /*! HAL ISR2 context configuration data: CounterIsr_SystemTimer */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_CounterIsr_SystemTimer;
+
+/*! HAL ISR2 context configuration data: DMACH10SR_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_DMACH10SR_ISR;
+
+/*! HAL ISR2 context configuration data: DMACH11SR_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_DMACH11SR_ISR;
+
+/*! HAL ISR2 context configuration data: QSPI3ERR_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_QSPI3ERR_ISR;
+
+/*! HAL ISR2 context configuration data: QSPI3PT_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_QSPI3PT_ISR;
 
 /*! HAL task context configuration data: AswTask */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_AswTask;

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Application_Lcfg.c
- *   Generation Time: 2024-11-28 16:28:22
+ *   Generation Time: 2024-12-11 15:40:59
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -143,6 +143,10 @@ OS_LOCAL CONST(Os_IsrConfigRefType, OS_CONST) OsCfg_App_OsApplication_IsrRefs[OS
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN2TX_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_CanIsr_0),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_CanIsr_1),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_DMACH10SR_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_DMACH11SR_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_QSPI3ERR_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_QSPI3PT_ISR),
   NULL_PTR
 };
 

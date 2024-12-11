@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="33022ff3-f082-4548-ab3c-90793765f2d3">
+      <SHORT-NAME>AURIX2G</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="7e118c10-0a18-49f2-9978-33759fe5e7c2">
+          <SHORT-NAME>EcucDefs</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="643bf0a5-9341-43c8-8a7a-60b57914dbc2">
+              <SHORT-NAME>Spi_ib_bswmd</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="4064c367-88c8-4ac5-9e2d-e581089b3e94">
+                  <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+                  <ELEMENTS>
+                    <BSW-MODULE-DESCRIPTION UUID="e04c1207-9224-4f8e-81aa-4bc94fbf4a29">
+                      <SHORT-NAME>Spi</SHORT-NAME>
+                      <PROVIDED-ENTRYS>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G/EcucDefs/Spi_ib_bswmd/BswModuleDescriptions/Spi_MainFunction_Handling</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      </PROVIDED-ENTRYS>
+                      <INTERNAL-BEHAVIORS>
+                        <BSW-INTERNAL-BEHAVIOR UUID="5bf63462-253b-41e0-8fb8-b559f6deb3f1">
+                          <SHORT-NAME>SpiBehavior</SHORT-NAME>
+                          <EXCLUSIVE-AREAS>
+                            <EXCLUSIVE-AREA UUID="e03cd20d-b45c-49e0-8844-ed6d2bc1506a">
+                              <SHORT-NAME>Buffer_Update</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="98925953-2cc6-4013-8025-17448c1c89f6">
+                              <SHORT-NAME>SyncLock</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="832275ad-f91c-4b92-8652-b85b3bb2e6e2">
+                              <SHORT-NAME>ChannelLock</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="eada6690-3f4c-4851-8aca-4359951ba565">
+                              <SHORT-NAME>Cancel_Seq</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="31972218-6cab-43c4-86a1-3729538c958c">
+                              <SHORT-NAME>Queue_Update_QSPI0</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="03608dd6-36ab-4aca-839d-b4314e4385a8">
+                              <SHORT-NAME>Queue_Update_QSPI1</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="e73bcbe1-c9b5-47c7-add4-9410d8160dc2">
+                              <SHORT-NAME>Queue_Update_QSPI2</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="b99ff23c-a8a3-480e-bd8f-df539cf0eb42">
+                              <SHORT-NAME>Queue_Update_QSPI3</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="6d2d2b18-ba8f-4cb7-a4c9-fee72016482b">
+                              <SHORT-NAME>Queue_Update_QSPI4</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="93e75802-8d83-4a3d-8fa9-db7776674146">
+                              <SHORT-NAME>Queue_Update_QSPI5</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="39deac4a-32a1-42af-a7e4-70c138275841">
+                              <SHORT-NAME>Queue_Update</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                          </EXCLUSIVE-AREAS>
+                          <ENTITYS>
+                            <BSW-SCHEDULABLE-ENTITY UUID="918cb006-228c-41b9-8ca7-8da8be5384b5">
+                              <SHORT-NAME>Spi_MainFunction_Handling</SHORT-NAME>
+                              <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G/EcucDefs/Spi_ib_bswmd/BswModuleDescriptions/Spi_MainFunction_Handling</IMPLEMENTED-ENTRY-REF>
+                            </BSW-SCHEDULABLE-ENTITY>
+                          </ENTITYS>
+                          <EVENTS>
+                            <BSW-TIMING-EVENT UUID="8ba54e84-479f-4581-98be-d00e9e271a6f">
+                              <SHORT-NAME>Spi_MainFunction_HandlingTimingEvent0</SHORT-NAME>
+                              <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AURIX2G/EcucDefs/Spi_ib_bswmd/BswModuleDescriptions/Spi/SpiBehavior/Spi_MainFunction_Handling</STARTS-ON-EVENT-REF>
+                              <PERIOD>0.005</PERIOD>
+                            </BSW-TIMING-EVENT>
+                          </EVENTS>
+                        </BSW-INTERNAL-BEHAVIOR>
+                      </INTERNAL-BEHAVIORS>
+                    </BSW-MODULE-DESCRIPTION>
+                    <BSW-MODULE-ENTRY UUID="8489c5d6-97ff-4c43-b09c-09d3932918f4">
+                      <SHORT-NAME>Spi_MainFunction_Handling</SHORT-NAME>
+                      <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                      <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                    </BSW-MODULE-ENTRY>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

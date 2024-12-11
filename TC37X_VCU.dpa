@@ -173,6 +173,15 @@
         <Splitter File=".\Config\ECUC\TC37X_VCU_LinTrcv_LinTrcv_ecuc.arxml">
             <Module Name="LinTrcv"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Dma_Dma_ecuc.arxml">
+            <Module Name="Dma"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Spi_Spi_ecuc.arxml">
+            <Module Name="Spi"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Irq_Irq_ecuc.arxml">
+            <Module Name="Irq"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Interrupt_Lcfg.c
- *   Generation Time: 2024-11-28 16:43:25
+ *   Generation Time: 2024-12-11 15:41:00
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -238,7 +238,7 @@ CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CanIsr_0 =
 /*! HAL ISR configuration data: CanIsr_1 */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CanIsr_1 =
 {
-  /* .Level          = */ 1,
+  /* .Level          = */ 31,
   /* .Source         = */ 0x5b4uL,
   /* .CoreAssignment = */ 0
 };
@@ -251,12 +251,64 @@ CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CanIsr_1 =
 /*! HAL ISR configuration data: CounterIsr_SystemTimer */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer =
 {
-  /* .Level          = */ 31,
+  /* .Level          = */ 1,
   /* .Source         = */ 0x300uL,
   /* .CoreAssignment = */ 0
 };
 
 CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CounterIsr_SystemTimer =
+{
+  /* .Dummy         = */ (uint32)0
+};
+
+/*! HAL ISR configuration data: DMACH10SR_ISR */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_DMACH10SR_ISR =
+{
+  /* .Level          = */ 114,
+  /* .Source         = */ 0x370uL,
+  /* .CoreAssignment = */ 0
+};
+
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_DMACH10SR_ISR =
+{
+  /* .Dummy         = */ (uint32)0
+};
+
+/*! HAL ISR configuration data: DMACH11SR_ISR */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_DMACH11SR_ISR =
+{
+  /* .Level          = */ 115,
+  /* .Source         = */ 0x378uL,
+  /* .CoreAssignment = */ 0
+};
+
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_DMACH11SR_ISR =
+{
+  /* .Dummy         = */ (uint32)0
+};
+
+/*! HAL ISR configuration data: QSPI3ERR_ISR */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_QSPI3ERR_ISR =
+{
+  /* .Level          = */ 102,
+  /* .Source         = */ 0x134uL,
+  /* .CoreAssignment = */ 0
+};
+
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_QSPI3ERR_ISR =
+{
+  /* .Dummy         = */ (uint32)0
+};
+
+/*! HAL ISR configuration data: QSPI3PT_ISR */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_QSPI3PT_ISR =
+{
+  /* .Level          = */ 103,
+  /* .Source         = */ 0x138uL,
+  /* .CoreAssignment = */ 0
+};
+
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_QSPI3PT_ISR =
 {
   /* .Dummy         = */ (uint32)0
 };

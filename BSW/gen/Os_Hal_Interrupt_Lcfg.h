@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Interrupt_Lcfg.h
- *   Generation Time: 2024-11-28 16:28:22
+ *   Generation Time: 2024-12-11 15:41:00
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -131,6 +131,22 @@ extern CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CanIsr_1;
 /*! HAL ISR configuration data: CounterIsr_SystemTimer */
 extern CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer;
 extern CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CounterIsr_SystemTimer;
+
+/*! HAL ISR configuration data: DMACH10SR_ISR */
+extern CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_DMACH10SR_ISR;
+extern CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_DMACH10SR_ISR;
+
+/*! HAL ISR configuration data: DMACH11SR_ISR */
+extern CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_DMACH11SR_ISR;
+extern CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_DMACH11SR_ISR;
+
+/*! HAL ISR configuration data: QSPI3ERR_ISR */
+extern CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_QSPI3ERR_ISR;
+extern CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_QSPI3ERR_ISR;
+
+/*! HAL ISR configuration data: QSPI3PT_ISR */
+extern CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_QSPI3PT_ISR;
+extern CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_QSPI3PT_ISR;
 
 # define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

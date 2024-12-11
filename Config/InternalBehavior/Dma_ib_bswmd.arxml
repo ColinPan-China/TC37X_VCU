@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="33022ff3-f082-4548-ab3c-90793765f2d3">
+      <SHORT-NAME>AURIX2G</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="7e118c10-0a18-49f2-9978-33759fe5e7c2">
+          <SHORT-NAME>EcucDefs</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="c1c5e49a-7ded-423f-b6a5-2a4ca113c6ae">
+              <SHORT-NAME>Dma_ib_bswmd</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="f9d1c920-05c1-436c-833a-5b93d0a21812">
+                  <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+                  <ELEMENTS>
+                    <BSW-MODULE-DESCRIPTION UUID="d087d653-a693-4ed8-ae6b-39d71b2d6885">
+                      <SHORT-NAME>Dma</SHORT-NAME>
+                      <INTERNAL-BEHAVIORS>
+                        <BSW-INTERNAL-BEHAVIOR UUID="2527491b-9a3f-4bcf-8fa1-33b4329d17b0">
+                          <SHORT-NAME>DmaBehavior</SHORT-NAME>
+                          <EXCLUSIVE-AREAS>
+                            <EXCLUSIVE-AREA UUID="7dfb59b9-e129-4135-a83f-c4ceca977567">
+                              <SHORT-NAME>ChannelInitDeinit</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="d781f2ce-ee36-46e7-bb0f-808c8b1ca8fa">
+                              <SHORT-NAME>ChannelFreezeResume</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="614d608b-8e35-4472-ae75-08dc88d478b0">
+                              <SHORT-NAME>ChannelHWTrigger</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="1b428653-6cda-4193-9860-2b4086d57157">
+                              <SHORT-NAME>ChannelStartStop</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="88ce5beb-dba2-4859-9c5d-95018767cbd7">
+                              <SHORT-NAME>ChannelSwitchBuffer</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="4a4695a8-ff2b-40fd-9afd-c0c73e4c9a13">
+                              <SHORT-NAME>ChEventStatus</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="3181b2e6-9b95-485f-b86a-f0f18adc32d0">
+                              <SHORT-NAME>MEErrorStatus</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="0dfc04ba-cd84-4ceb-9c81-ca2455f24a2a">
+                              <SHORT-NAME>InterruptStatus</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="7c436949-9264-43cb-a7bf-36e9065fc769">
+                              <SHORT-NAME>ChannelConfigUpdate</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                          </EXCLUSIVE-AREAS>
+                        </BSW-INTERNAL-BEHAVIOR>
+                      </INTERNAL-BEHAVIORS>
+                    </BSW-MODULE-DESCRIPTION>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

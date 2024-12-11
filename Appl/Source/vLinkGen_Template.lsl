@@ -1237,7 +1237,11 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_CanIsr_1_CODE";
         select "[.]text.OS_Default_Init_Task_CODE";
         select "[.]text.OS_Default_Init_Task_Trusted_CODE";
+        select "[.]text.OS_DMACH10SR_ISR_CODE";
+        select "[.]text.OS_DMACH11SR_ISR_CODE";
         select "[.]text.OS_ERRORHOOK_CODE";
+        select "[.]text.OS_QSPI3ERR_ISR_CODE";
+        select "[.]text.OS_QSPI3PT_ISR_CODE";
         select "[.]text.OS_SHUTDOWNHOOK_CODE";
       }
     }

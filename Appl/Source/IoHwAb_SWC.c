@@ -43,7 +43,9 @@
  *********************************************************************************************************************/
 #include "Adc.h"
 #include "vstdlib.h"
-
+#include "Spi.h"
+#include "IfxSrc_reg.h"
+#include "Irq.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -168,6 +170,14 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
   AdcValSampleInfo_Table[2].Group = AdcConf_AdcGroup_AdcGroup_2;
   AdcValSampleInfo_Table[3].Group = AdcConf_AdcGroup_AdcGroup_3;
   AdcValSampleInfo_Table[4].Group = AdcConf_AdcGroup_AdcGroup_11;
+  
+  IRQ_SFR_MODIFY32 (SRC_QSPI3TX.U,  IRQ_CLEAR_MASK, \
+                    ((uint32)IRQ_QSPI3_TX_TOS | (uint32) IRQ_QSPI3_TX_PRIO));
+  IRQ_SFR_MODIFY32 (SRC_QSPI3RX.U,  IRQ_CLEAR_MASK, \
+                    ((uint32)IRQ_QSPI3_RX_TOS | (uint32) IRQ_QSPI3_RX_PRIO));
+
+  SRC_QSPI3RX.B.SRE 	= 1;
+  SRC_QSPI3TX.B.SRE 	= 1;
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
@@ -188,7 +198,13 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: IoHwAb_SWC_Runnable_doc
  *********************************************************************************************************************/
-
+uint8 SpiwriteData1[8]={0x00,0x00,0x01,0xAA,0xAA,0xAA,0xAA,0xAA};
+uint8 SpiReadData1[8]={0};
+uint8 TLE8888_Flg_Rd = 1;
+uint8 SpiwriteData[8]={0x8D,0x7F,0x00,0x00,0x00,0x00,0x00,0x00};
+uint8 SpiReadData[8]={0};
+uint8 Spi_Trans_Ok = 1;
+uint8 TLE8888_Spi_Trans_Ok = 1;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -239,7 +255,14 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
     {
       ExtVoltageInput_Table[index].ExtVoltageVal = CurAdVal*500/4096;
     }
+
   }
+      if( TLE8888_Spi_Trans_Ok )
+      {
+          TLE8888_Spi_Trans_Ok = 0;
+          Spi_SetupEB(SpiConf_SpiChannel_SpiChannel_TLE8888,SpiwriteData,SpiReadData,2);
+          Spi_AsyncTransmit(SpiConf_SpiSequence_SpiSequence_TLE8888);
+      }
 
 //  ExtVoltageVal_Calculation();
 
@@ -285,6 +308,18 @@ void ExtVoltageVal_Calculation()
 {
 
 }
+
+void SpiSeq_TLE9201_Notify()
+{
+  Spi_Trans_Ok = 1;
+}
+
+
+void SpiSeq_TLE8888_Notify()
+{
+  TLE8888_Spi_Trans_Ok = 1;
+}
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of function definition area >>              DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

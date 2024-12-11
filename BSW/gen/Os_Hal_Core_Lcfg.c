@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Core_Lcfg.c
- *   Generation Time: 2024-11-28 16:28:22
+ *   Generation Time: 2024-12-11 15:40:59
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -155,6 +155,10 @@ CONSTP2CONST(Os_IsrHwConfigType, OS_CONST, OS_CONST)
   &OsCfg_Isr_CanIsr_0_HwConfig,
   &OsCfg_Isr_CanIsr_1_HwConfig,
   &OsCfg_Isr_CounterIsr_SystemTimer_HwConfig,
+  &OsCfg_Isr_DMACH10SR_ISR_HwConfig,
+  &OsCfg_Isr_DMACH11SR_ISR_HwConfig,
+  &OsCfg_Isr_QSPI3ERR_ISR_HwConfig,
+  &OsCfg_Isr_QSPI3PT_ISR_HwConfig,
   NULL_PTR
 };
 
