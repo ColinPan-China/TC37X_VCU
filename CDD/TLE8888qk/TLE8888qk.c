@@ -1,5 +1,6 @@
 #include "TLE8888qk.h"
 #include "vstdlib.h"
+#include "Dio.h"
 
 #define CMD_READ			(0 << 0)
 #define CMD_WRITE			(1 << 0)
@@ -83,6 +84,13 @@ typedef enum
   TLE8888QK_WATCHDOGRESET_STATE,
 }Tle8888qk_State_e;
 
+typedef struct TLE8888qk_Config
+{
+  uint16  TxCmd;
+  uint16  RxCmd;
+  uint8   RegVal;
+}TLE8888qk_CfgType;
+
 /*Function watchdog QA list */
 const uint8 tle8888_fwd_responses[16][4] = 
 {
@@ -130,6 +138,29 @@ uint16 cont2_reg      = 0;
 uint16 bridiag0       = 0;
 uint16 bridiag1       = 0;
 
+
+
+TLE8888qk_CfgType TLE8888qk_CfgTable[] =
+{
+  { CMD_CHIP_UNLOCK,        0,  0 },
+  { CMD_OE_SET,             0,  0 },
+#if 1
+  { CMD_DDCONFIG(2,0XF0),   0,  0 },//OUT21-24,direct pin control
+  { CMD_INCONFIG(0,0X10),   0,  0 },//Input9  assign to OUT21
+  { CMD_INCONFIG(1,0X11),   0,  0 },//Input10 assign to OUT22
+  { CMD_INCONFIG(2,0X12),   0,  0 },//Input11 assign to OUT23
+  { CMD_INCONFIG(3,0X13),   0,  0 },//Input12 assign to OUT24
+#endif
+  { CMD_BRICONFIG(0,0xFF),  0,  0 },
+  { CMD_OECONFIG(2,0xF0),   0,  0 },
+  { CMD_CONT(2,0xF0),       0,  0 },
+};
+
+#define TLE8888QK_CFGCNT (sizeof(TLE8888qk_CfgTable)/sizeof(TLE8888qk_CfgType))
+
+uint8 CfgIndex  = 0;
+
+
 Tle8888qk_State_e Tle8888qk_State = 0;
 
 uint8 SpiRxBuf_Tle8888[2]={0};
@@ -145,6 +176,7 @@ void SpiSeq_TLE8888_Notify()
 }
 
 void  chip_reset();
+void TLE8888qk_Config(); 
 void  TLE8888qk_Init();
 void  TLE8888qk_Main();
 void  TLE8888qk_SpiTransmit(uint16 tx, uint16 *rx_ptr);
@@ -270,13 +302,15 @@ void TLE8888qk_Main()
 
 void TLE8888qk_Init()
 {
+  CfgIndex = 0;
   chip_reset();
 }
 
 uint8 TLE8888qk_WdgFeed()
 {
   uint8 update_status = 0;
-  
+  uint8 ret           = 0;
+
   fwd_ts += WWD_TASK_PERIOD_MS;
   wwd_ts += WWD_TASK_PERIOD_MS;
 
@@ -312,29 +346,35 @@ uint8 TLE8888qk_WdgFeed()
     /* No watchdog error occurred */
     if((wwd_err_cnt == 0) && (fwd_err_cnt == 0) && (tot_err_cnt == 0))
     {
+      TLE8888qk_Config();
+      if( CfgIndex < TLE8888QK_CFGCNT )
+      {
+        return 0;
+      }
+
       if(initflg == 0)
       {
         initflg = 1;
-        TLE8888qk_SpiTransmit(CMD_CHIP_UNLOCK, NULL_PTR);
-        TLE8888qk_SpiTransmit(CMD_OE_SET, NULL_PTR);
+//        TLE8888qk_SpiTransmit(CMD_CHIP_UNLOCK, NULL_PTR);
+//        TLE8888qk_SpiTransmit(CMD_OE_SET, NULL_PTR);
       }
       else if(initflg == 1)
       {
         initflg = 2;
-        TLE8888qk_SpiTransmit(CMD_BRICONFIG(0,0xFF),&bridge0_reg);
-        TLE8888qk_SpiTransmit(CMD_BRICONFIG(0,0xFF),&bridge0_reg);
+//        TLE8888qk_SpiTransmit(CMD_BRICONFIG(0,0xFF),&bridge0_reg);
+//        TLE8888qk_SpiTransmit(CMD_BRICONFIG(0,0xFF),&bridge0_reg);
       }
       else if(initflg == 2)
       {
         initflg = 3;
-		    TLE8888qk_SpiTransmit(CMD_OECONFIG(2,0xF0),&oeconfig2_reg);
-		    TLE8888qk_SpiTransmit(CMD_OECONFIG(2,0xF0),&oeconfig2_reg); 
+//		    TLE8888qk_SpiTransmit(CMD_OECONFIG(2,0xF0),&oeconfig2_reg);
+//		    TLE8888qk_SpiTransmit(CMD_OECONFIG(2,0xF0),&oeconfig2_reg); 
       }
       else if(initflg == 3)
       {
         initflg = 4;
-        TLE8888qk_SpiTransmit(CMD_CONT(2,0xF0),&cont2_reg);
-        TLE8888qk_SpiTransmit(CMD_CONT(2,0xF0),&cont2_reg);
+//        TLE8888qk_SpiTransmit(CMD_CONT(2,0xF0),&cont2_reg);
+//        TLE8888qk_SpiTransmit(CMD_CONT(2,0xF0),&cont2_reg);
       }
       else if(initflg == 4)
       {
@@ -354,7 +394,7 @@ uint8 TLE8888qk_WdgFeed()
         TLE8888qk_SpiTransmit(CMD_BRICONFIG_READ(0),&bridge0_reg);
         TLE8888qk_SpiTransmit(CMD_BRICONFIG_READ(0),&bridge0_reg);
       }
-        else if(initflg == 7)
+      else if(initflg == 7)
       {
         initflg = 4;
         TLE8888qk_SpiTransmit(CMD_OECONFIG_READ(2),&oeconfig2_reg);
@@ -369,10 +409,44 @@ uint8 TLE8888qk_WdgFeed()
       bridiag0_Val   = getDataFromResponse(bridiag0) & 0x7f;
       bridiag1_Val    = getDataFromResponse(bridiag1) & 0x7f;
     }
+    else
+    {
+      ret = 1;
+    }
   }
+  return ret;
 }
 
 void TLE8888qk_WwdgFeed() 
 {
 	TLE8888qk_SpiTransmit(CMD_WWDSERVICECMD, NULL_PTR);
+}
+
+uint8 sts_bridge = 0;
+void TLE8888qk_Config() 
+{
+  if( CfgIndex < TLE8888QK_CFGCNT )
+  {
+    TLE8888qk_SpiTransmit( TLE8888qk_CfgTable[CfgIndex].TxCmd,
+                            &TLE8888qk_CfgTable[CfgIndex].RxCmd );
+    TLE8888qk_SpiTransmit( TLE8888qk_CfgTable[CfgIndex].TxCmd,
+                            &TLE8888qk_CfgTable[CfgIndex].RxCmd );
+
+    TLE8888qk_CfgTable[CfgIndex].RegVal = getDataFromResponse(TLE8888qk_CfgTable[CfgIndex].RxCmd) & 0x7f;
+    CfgIndex++;
+  }
+
+  /*Direct IO control*/
+  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P2_0_IN12, sts_bridge);
+  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P2_1_IN11, sts_bridge);
+  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P2_2_IN10, sts_bridge);
+  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P2_3_IN9,  sts_bridge);
+  if( sts_bridge == 0 )
+  {
+    sts_bridge = 1;
+  }
+  else
+  {
+    sts_bridge = 0;
+  }
 }
