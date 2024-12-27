@@ -83,7 +83,7 @@ typedef enum
   TLE8888QK_WATCHDOGRESET_STATE,
 }Tle8888qk_State_e;
 
-
+/*Function watchdog QA list */
 const uint8 tle8888_fwd_responses[16][4] = 
 {
 	/* Reverse order:
@@ -106,12 +106,32 @@ const uint8 tle8888_fwd_responses[16][4] =
 	{0x01, 0xF1, 0x0E, 0xFE}
 };
 
-uint8						wwd_err_cnt;
-uint8						fwd_err_cnt;
-uint8						tot_err_cnt;
+/*Watchdog error count */
+uint8   wwd_err_cnt = 0;
+uint8   fwd_err_cnt = 0;
+uint8   tot_err_cnt = 0;
+uint8   initflg     = 0;
+
+/*Watchdog timinmg count */
+uint32	wwd_ts = 0;
+uint32	fwd_ts = 0;
+
+/*Out21-24 config reg val */
+uint16 BRICONFIG0_Val  = 0;
+uint16 OEConfig2_Val   = 0;
+uint16 CMD_CONT_Val    = 0;
+uint16 bridiag0_Val    = 0;
+uint16 bridiag1_Val    = 0;
+
+/*Out21-24 config reg response val */
+uint16 bridge0_reg     = 0;
+uint16 oeconfig2_reg  = 0;
+uint16 cont2_reg      = 0;
+uint16 bridiag0       = 0;
+uint16 bridiag1       = 0;
+
 Tle8888qk_State_e Tle8888qk_State = 0;
 
-uint8 SpiTxBuf_Tle8888[2]={0};
 uint8 SpiRxBuf_Tle8888[2]={0};
 
 uint8 TLE9201_Spi_Trans_Ok = 1;
@@ -124,11 +144,12 @@ void SpiSeq_TLE8888_Notify()
 {
 }
 
-void TLE8888qk_Init();
-void TLE8888qk_Main();
-void TLE8888qk_SpiTransmit(uint16 tx, uint16 *rx_ptr);
-void TLE8888qk_WwdgFeed();
-void TLE8888qk_FwdgFeed(); 
+void  chip_reset();
+void  TLE8888qk_Init();
+void  TLE8888qk_Main();
+void  TLE8888qk_SpiTransmit(uint16 tx, uint16 *rx_ptr);
+void  TLE8888qk_WwdgFeed();
+void  TLE8888qk_FwdgFeed(); 
 uint8 TLE8888qk_WdgFeed();
 
 void TLE8888qk_SpiTransmit(uint16 tx, uint16 *rx_ptr)
@@ -252,24 +273,10 @@ void TLE8888qk_Init()
   chip_reset();
 }
 
-uint32					wwd_ts;
-uint32					fwd_ts;
-uint8 initflg = 0;
-uint16 BRICONFIG0_Val = 0;
-uint16 OEConfig2_Val = 0;
-uint16 CMD_CONT_Val = 0;
-uint16 bridiag0_Val = 0;
-uint16 bridiag1_Val = 0;
-
-uint16 bridge0_reg = 0;
-uint16 oeconfig2_reg = 0;
-uint16 cont2_reg = 0;
-uint16 bridiag0 = 0;
-uint16 bridiag1 = 0;
-
 uint8 TLE8888qk_WdgFeed()
 {
   uint8 update_status = 0;
+  
   fwd_ts += WWD_TASK_PERIOD_MS;
   wwd_ts += WWD_TASK_PERIOD_MS;
 
