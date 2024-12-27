@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 15.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2024-12-11, 15:40:57  !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2024-12-26, 14:46:52  !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b180321-0610      !!!IGNORE-LINE!!!                   **
 **                                                                            **
@@ -228,7 +228,7 @@ static const Spi_SequenceConfigType Spi_kSequenceConfig_Core0[] =
     /* Sync sequence = 0x00 or Async sequence = 0x01 */
     0x01U
   },
-    /* Asynchronous Sequence[s] on QSPI3 */
+    /* Synchronous Sequence[s] */
     /* Sequence:SpiSequence_TLE8888 */
   {
     SpiConf_SpiSequence_SpiSequence_TLE8888,
@@ -244,7 +244,7 @@ static const Spi_SequenceConfigType Spi_kSequenceConfig_Core0[] =
         /* Hw Module Used (b001000)*/
     0x08U,
     /* Sync sequence = 0x00 or Async sequence = 0x01 */
-    0x01U
+    0x00U
   }};
 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers shall be distinct
@@ -317,7 +317,7 @@ static const Spi_JobConfigType Spi_kJobConfig_Core0[] =
     SPI_PARITY_UNUSED,        /* Parity support */
     (0U)                    /*Frame based CS is disabled*/
   },
-  /* Asynchronous Job[s] on QSPI3 */
+  /* Synchronous Job[s] */
   /* Job:SpiJob_TLE8888 */
   {
     SpiConf_SpiJob_SpiJob_TLE8888,
@@ -394,7 +394,7 @@ static const Spi_ChannelConfigType Spi_kChannelConfig_Core0[] =
     0x00000000U,     /* Default data */
     0x1ffeU,         /* Number of Data Elements */
     SPI_EB_CHANNEL,  /* External Buffer Channel */
-    0x88U,            /* MSB[7], DataWidth=8[6:0] */
+    0x82U,            /* MSB[7], DataWidth=2[6:0] */
     SpiConf_SpiChannel_SpiChannel_TLE9201
   },
   /* EB Chnl[s] on QSPI3 core0*/
@@ -502,14 +502,14 @@ names
 static const Spi_QspiHwConfigType Spi_kQspiHwConfigQSPI3 =
 {
   0x04000000U,               /* Active CS Level, SSOC SFR value */
-  SPI_ASYNC_IB_BUFFER_SIZE_QSPI3,  /* Buffers on QSPI3 only */
-  SPI_JOB_QUEUE_LENGTH_QSPI3,/* Job Queue Length */
-  (uint8)10U,                 /* DMA Rx Channel */
-  (uint8)11U,                 /* DMA Tx Channel */
-  SPI_DMA_MAX_TCS_NUM_QSPI3, /* DMA TCS count, for both Rx and Tx */
+  0,   /* Buffers on all synchronous QSPI Hw */
+  0U,                        /* Queue length can be ignored for Sync */
+  (uint8)SPI_DMA_CHNL_INVALID,   /* DMA Tx Channel */
+  (uint8)SPI_DMA_CHNL_INVALID,   /* DMA Rx Channel */
+  0U,                        /* DMA TCS value can be ignored for Sync */
   SPI_CLK_SLEEP_DISABLE,     /* Module Sleep disabled */
   (uint8)2U,                 /* Input class, MRIS bit field in PISEL SFR */
-  1U,                         /* Max Sequence Count on the QSPI */
+  1U,                         /* Applicable only for Async QSPI */
   0U,  /* External Demultiplexer feature is disabled */
   0U /* SLSO0 Strobe delay */
 };
@@ -626,11 +626,11 @@ const Spi_CoreConfigType Spi_Config_Core0 =
   (010 QSPI configured as Async for core0)
   QSPI5 - 0
   QSPI4 - 0
-  QSPI3 - 2
+  QSPI3 - 1
   QSPI2 - 2
   QSPI1 - 0
   QSPI0 - 0*/
-  0x00480U,
+  0x00280U,
   /* No. of Sequences configured */
   2U,
   /* No. of Jobs configured */

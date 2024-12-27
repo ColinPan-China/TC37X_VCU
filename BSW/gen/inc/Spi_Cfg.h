@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_14.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2024-12-11, 15:40:57  !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2024-12-26, 14:46:52  !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b180321-0610       !!!IGNORE-LINE!!!                  **
 **                                                                            **
@@ -119,7 +119,7 @@ sequences are allowed. For Level = 1, its value is STD_OFF by default */
 /* Index for QSPI3 module */
 #define SPI_QSPI3_INDEX                       (3U)
 /* Sync/Async */
-#define SPI_QSPI3_HWTYPE                      (SPI_ASYNC_BUS)
+#define SPI_QSPI3_HWTYPE                      (SPI_SYNC_BUS)
 /* Is QSPI4 Used */
 #define SPI_HW_QSPI4_USED                     (STD_OFF)
 /* Timeout value to wait for trail delay to be completed.
@@ -148,10 +148,6 @@ Module enters sleep mode upon sleep request         */
 #define SPI_ASYNC_IB_BUFFER_SIZE_QSPI2        (0U)
 
 #define SPI_MAX_SEQUENCE_QSPI2                (1U)
-/* IB buffer Size for Async QSPI3 */
-#define SPI_ASYNC_IB_BUFFER_SIZE_QSPI3        (0U)
-
-#define SPI_MAX_SEQUENCE_QSPI3                (1U)
 #define SPI_ASYNC_IB_BUFFER_SIZE_CORE0           (0U)
 /* IB Buffer Size for Sync QSPIx */
 /*kernel 2*/
@@ -223,15 +219,13 @@ variable which is uint32 holds the status of the IB channel */
 
 #define SPI_NUM_EB_CHANNELS_CORE0            (2U)
 /* Number of Asynchronous QSPI master */
-#define SPI_NUM_ASYNC_QSPI_MASTER             (2U)
+#define SPI_NUM_ASYNC_QSPI_MASTER             (1U)
 /* Number of Synchronous QSPI master */
-#define SPI_NUM_SYNC_QSPI_MASTER              (0U)
+#define SPI_NUM_SYNC_QSPI_MASTER              (1U)
 /* Number of QSPI master */
 #define SPI_NUM_QSPI_MASTER                   (2U)
 /* DMA Transaction control set per channel for QSPI2 */
 #define SPI_DMA_MAX_TCS_NUM_QSPI2             (1U)
-/* DMA Transaction control set per channel for QSPI3 */
-#define SPI_DMA_MAX_TCS_NUM_QSPI3             (1U)
 /* Indicates no CS to be done */
 #define SPI_CS_VIA_HW_OR_NONE                 (0xFFFFU)
 #define SPI_PARITY_EVEN                       (0U)

@@ -80,6 +80,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
  * Symbol: IoHwAb_SWC_Init
  *********************************************************************************************************************/
   Adc_SampleInit();
+
   /*SPI Irq Init*/
   IRQ_SFR_MODIFY32 (SRC_QSPI3TX.U,  IRQ_CLEAR_MASK, \
                     ((uint32)IRQ_QSPI3_TX_TOS | (uint32) IRQ_QSPI3_TX_PRIO));
@@ -88,7 +89,8 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
 
   SRC_QSPI3RX.B.SRE 	= 1;
   SRC_QSPI3TX.B.SRE 	= 1;
-  //TLE8888_Init();
+
+//  TLE8888qk_Init();
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -120,7 +122,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
  * Symbol: IoHwAb_SWC_Runnable
  *********************************************************************************************************************/
   Adc_SampleMain();
-  TLE8888_Main();
+  TLE8888qk_Main();
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

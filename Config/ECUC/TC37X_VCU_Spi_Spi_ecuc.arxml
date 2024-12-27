@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
   <AR-PACKAGES>
-    <AR-PACKAGE UUID="9cbe1aa5-ca9b-4ac4-b28a-7afabc59c34e">
+    <AR-PACKAGE UUID="a88c1b9b-d066-4e4a-bf2c-a760037bcc2f">
       <SHORT-NAME>Spi</SHORT-NAME>
       <ELEMENTS>
         <ECUC-MODULE-CONFIGURATION-VALUES>
@@ -10,7 +10,7 @@
           <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-POST-BUILD</IMPLEMENTATION-CONFIG-VARIANT>
           <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/AURIX2G/EcucDefs/Spi_Impl</MODULE-DESCRIPTION-REF>
           <CONTAINERS>
-            <ECUC-CONTAINER-VALUE UUID="c56be40f-1e18-4c1f-9baf-c4f6e8d21421">
+            <ECUC-CONTAINER-VALUE UUID="2ac00e58-c465-496e-b59c-d728880f2ea4">
               <SHORT-NAME>CommonPublishedInformation</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/CommonPublishedInformation</DEFINITION-REF>
               <PARAMETER-VALUES>
@@ -52,7 +52,7 @@
                 </ECUC-NUMERICAL-PARAM-VALUE>
               </PARAMETER-VALUES>
             </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE UUID="6cfd2102-d136-4ec5-b587-6e1e767d97ab">
+            <ECUC-CONTAINER-VALUE UUID="1da7f17a-a8de-4c1d-8baf-7748cd89cb0f">
               <SHORT-NAME>SpiDriver</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver</DEFINITION-REF>
               <PARAMETER-VALUES>
@@ -76,7 +76,7 @@
                 </ECUC-REFERENCE-VALUE>
               </REFERENCE-VALUES>
               <SUB-CONTAINERS>
-                <ECUC-CONTAINER-VALUE UUID="b32468e3-2180-4812-b52a-e729b8f9e4d5">
+                <ECUC-CONTAINER-VALUE UUID="a91b2192-3e1c-4fd2-8af0-5c660f1d47c5">
                   <SHORT-NAME>SpiChannel_TLE8888</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiChannel</DEFINITION-REF>
                   <PARAMETER-VALUES>
@@ -110,7 +110,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="641e3294-378c-4107-a086-fcaa97eabb4c">
+                <ECUC-CONTAINER-VALUE UUID="f8a029c8-ef5e-4ea6-bdd0-2b1ececb48a9">
                   <SHORT-NAME>SpiChannel_TLE9201</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiChannel</DEFINITION-REF>
                   <PARAMETER-VALUES>
@@ -124,7 +124,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiChannel/SpiDataWidth</DEFINITION-REF>
-                      <VALUE>8</VALUE>
+                      <VALUE>2</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiChannel/SpiDefaultData</DEFINITION-REF>
@@ -144,7 +144,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="ffd52bce-d1c2-4289-b013-ec244f0c0779">
+                <ECUC-CONTAINER-VALUE UUID="a39f7dfb-02bd-4bc2-ab4a-f0c917568cb1">
                   <SHORT-NAME>SpiExternalDevice_TLE8888</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiExternalDevice</DEFINITION-REF>
                   <PARAMETER-VALUES>
@@ -206,7 +206,7 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="e250e5bc-9c7d-413f-8e43-85a92cd278a5">
+                <ECUC-CONTAINER-VALUE UUID="efada796-b799-4606-99f0-85670972b0d5">
                   <SHORT-NAME>SpiExternalDevice_TLE9201</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiExternalDevice</DEFINITION-REF>
                   <PARAMETER-VALUES>
@@ -268,7 +268,7 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="18052ff5-c163-4dfa-827b-d9e801485244">
+                <ECUC-CONTAINER-VALUE UUID="2bde7297-cc5a-416b-bf0a-bbd8a71826fb">
                   <SHORT-NAME>SpiJob_TLE8888</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiJob</DEFINITION-REF>
                   <PARAMETER-VALUES>
@@ -278,7 +278,7 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiJob/SpiHwUnitSynchronous</DEFINITION-REF>
-                      <VALUE>ASYNCHRONOUS</VALUE>
+                      <VALUE>SYNCHRONOUS</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiJob/SpiJobId</DEFINITION-REF>
@@ -296,7 +296,7 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="1c002a28-b3d7-4fbb-af1e-c8f66a8f853c">
+                    <ECUC-CONTAINER-VALUE UUID="0e202cb4-e279-43ed-a99d-0a98edd95fab">
                       <SHORT-NAME>SpiChannelList_0</SHORT-NAME>
                       <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiJob/SpiChannelList</DEFINITION-REF>
                       <PARAMETER-VALUES>
@@ -314,7 +314,7 @@
                     </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="d8671036-e81f-45bf-b3ed-f369de6822bd">
+                <ECUC-CONTAINER-VALUE UUID="8a2adca4-e53e-4119-a8bc-5600b8b22460">
                   <SHORT-NAME>SpiJob_TLE9201</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiJob</DEFINITION-REF>
                   <PARAMETER-VALUES>
@@ -342,7 +342,7 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="0fc2d9ac-94fc-42c8-a5a6-7ab452fd73fc">
+                    <ECUC-CONTAINER-VALUE UUID="acb3017a-92f7-465b-8ef0-b1f5e673a6fe">
                       <SHORT-NAME>SpiChannelList_0</SHORT-NAME>
                       <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiJob/SpiChannelList</DEFINITION-REF>
                       <PARAMETER-VALUES>
@@ -360,7 +360,7 @@
                     </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="d2a4f128-c1e1-4d2b-b8eb-173e6f4baa80">
+                <ECUC-CONTAINER-VALUE UUID="ea9fd800-b09d-4b17-b209-d5b36e37d7fe">
                   <SHORT-NAME>SpiSequence_TLE8888</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiSequence</DEFINITION-REF>
                   <PARAMETER-VALUES>
@@ -384,7 +384,7 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="ef933da6-9b51-4972-a0b3-484773133f60">
+                <ECUC-CONTAINER-VALUE UUID="cbc893b9-b3b8-4c8a-9121-d46e0418f844">
                   <SHORT-NAME>SpiSequence_TLE9201</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiDriver/SpiSequence</DEFINITION-REF>
                   <PARAMETER-VALUES>
@@ -410,7 +410,7 @@
                 </ECUC-CONTAINER-VALUE>
               </SUB-CONTAINERS>
             </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE UUID="0c880b86-6a34-487c-8c48-a2b85584889a">
+            <ECUC-CONTAINER-VALUE UUID="879e258a-9b02-427f-beb4-2f7abcf93fe4">
               <SHORT-NAME>SpiGeneral</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiGeneral</DEFINITION-REF>
               <PARAMETER-VALUES>
@@ -472,11 +472,11 @@
                 </ECUC-NUMERICAL-PARAM-VALUE>
               </PARAMETER-VALUES>
             </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE UUID="6b7af0fe-b27c-419a-b494-5821f0367152">
+            <ECUC-CONTAINER-VALUE UUID="5571264a-8427-4fb9-8129-9a983eb14631">
               <SHORT-NAME>SpiHwConfiguration_0</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiHwConfiguration</DEFINITION-REF>
               <SUB-CONTAINERS>
-                <ECUC-CONTAINER-VALUE UUID="2381db1d-77ec-4915-b20c-2b9882d3fb32">
+                <ECUC-CONTAINER-VALUE UUID="45f122d5-cba4-4bd5-b922-aed5b92abe4e">
                   <SHORT-NAME>SpiHwConfigurationQspi_0</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiHwConfiguration/SpiHwConfigurationQspi</DEFINITION-REF>
                   <PARAMETER-VALUES>
@@ -505,24 +505,8 @@
                       <VALUE>false</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
-                  <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="84538e25-1f34-4c04-b45b-f0f2e7b90bc6">
-                      <SHORT-NAME>SpiHwDmaConfigurationQspi_0</SHORT-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiHwConfiguration/SpiHwConfigurationQspi/SpiHwDmaConfigurationQspi</DEFINITION-REF>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AURIX2G/EcucDefs/Spi/SpiHwConfiguration/SpiHwConfigurationQspi/SpiHwDmaConfigurationQspi/SpiHwDmaChannelReceptionRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dma/Dma/DmaChannelConfig_QSPI3_RX</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AURIX2G/EcucDefs/Spi/SpiHwConfiguration/SpiHwConfigurationQspi/SpiHwDmaConfigurationQspi/SpiHwDmaChannelTransmissionRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Dma/Dma/DmaChannelConfig_QSPI3_TX</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                    </ECUC-CONTAINER-VALUE>
-                  </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="f421e031-8b07-4419-ae71-d2a488f35d8e">
+                <ECUC-CONTAINER-VALUE UUID="f09d56ab-0cc0-45b7-b65e-4d528065c2dd">
                   <SHORT-NAME>SpiHwConfigurationQspi_1</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiHwConfiguration/SpiHwConfigurationQspi</DEFINITION-REF>
                   <PARAMETER-VALUES>
@@ -552,7 +536,7 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="d496480c-7fcf-464a-8d8d-c174521214ef">
+                    <ECUC-CONTAINER-VALUE UUID="4dd03e47-ef99-4dc9-8c4f-cb645c068af3">
                       <SHORT-NAME>SpiHwDmaConfigurationQspi_0</SHORT-NAME>
                       <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiHwConfiguration/SpiHwConfigurationQspi/SpiHwDmaConfigurationQspi</DEFINITION-REF>
                       <REFERENCE-VALUES>
@@ -570,7 +554,7 @@
                 </ECUC-CONTAINER-VALUE>
               </SUB-CONTAINERS>
             </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE UUID="4b72bbb7-f8b3-4e12-ac35-1a66d08d7ba8">
+            <ECUC-CONTAINER-VALUE UUID="76dff1e7-2be6-4ab9-a539-515e3ed899e6">
               <SHORT-NAME>SpiPublishedInformation</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Spi/SpiPublishedInformation</DEFINITION-REF>
               <PARAMETER-VALUES>
