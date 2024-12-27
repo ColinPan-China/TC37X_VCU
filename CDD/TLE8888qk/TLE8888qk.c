@@ -71,8 +71,9 @@
 #define getRegisterFromResponse(x) (((x) >> 1) & 0x7f)
 #define getDataFromResponse(x) (((x) >> 8) & 0xff)
 
-#define FWD_PERIOD_MS		(20)
-#define WWD_PERIOD_MS		(110)
+#define FWD_PERIOD_MS		      (20)
+#define WWD_PERIOD_MS		      (110)
+#define WWD_TASK_PERIOD_MS		(10)
 
 typedef enum
 {
@@ -269,8 +270,8 @@ uint16 bridiag1 = 0;
 uint8 TLE8888qk_WdgFeed()
 {
   uint8 update_status = 0;
-  fwd_ts += 10;
-  wwd_ts += 10;
+  fwd_ts += WWD_TASK_PERIOD_MS;
+  wwd_ts += WWD_TASK_PERIOD_MS;
 
   /* Window watchdog refresh */
   if (wwd_ts >= WWD_PERIOD_MS)
