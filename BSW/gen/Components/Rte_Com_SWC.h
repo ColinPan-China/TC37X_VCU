@@ -51,6 +51,14 @@ extern "C"
  * Init Values for unqueued S/R communication (primitive types only)
  *********************************************************************************************************************/
 
+#  define Rte_InitValue_EXT1_Valid_EXT1_Valid (0U)
+#  define Rte_InitValue_EXT2_Valid_EXT2_Valid (0U)
+#  define Rte_InitValue_EXT3_Valid_EXT3_Valid (0U)
+#  define Rte_InitValue_EXT4_Valid_EXT4_Valid (0U)
+#  define Rte_InitValue_EXT_A_IN1_EXT_A_IN1 (0)
+#  define Rte_InitValue_EXT_A_IN2_EXT_A_IN2 (0)
+#  define Rte_InitValue_EXT_A_IN3_EXT_A_IN3 (0)
+#  define Rte_InitValue_EXT_A_IN4_EXT_A_IN4 (0)
 #  define Rte_InitValue_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0 (0)
 #  define Rte_InitValue_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1 (0)
 #  define Rte_InitValue_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2 (0)
@@ -84,6 +92,14 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0(P2
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig1_VcuRxMsg2_Sig1(P2VAR(VcuRxMsg2_Sig1, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2(P2VAR(VcuRxMsg2_Sig2, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3(P2VAR(VcuRxMsg2_Sig3, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT1_Valid_EXT1_Valid(EXT1_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT2_Valid_EXT2_Valid(EXT2_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT3_Valid_EXT3_Valid(EXT3_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT4_Valid_EXT4_Valid(EXT4_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN1_EXT_A_IN1(EXT_A_IN1 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN2_EXT_A_IN2(EXT_A_IN2 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN3_EXT_A_IN3(EXT_A_IN3 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN4_EXT_A_IN4(EXT_A_IN4 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0(VcuTxMsg1_Sig0 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1(VcuTxMsg1_Sig1 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2(VcuTxMsg1_Sig2 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
@@ -115,6 +131,14 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
 /**********************************************************************************************************************
  * Rte_Write_<p>_<d> (explicit S/R communication with isQueued = false)
  *********************************************************************************************************************/
+#  define Rte_Write_EXT1_Valid_EXT1_Valid Rte_Write_Com_SWC_EXT1_Valid_EXT1_Valid
+#  define Rte_Write_EXT2_Valid_EXT2_Valid Rte_Write_Com_SWC_EXT2_Valid_EXT2_Valid
+#  define Rte_Write_EXT3_Valid_EXT3_Valid Rte_Write_Com_SWC_EXT3_Valid_EXT3_Valid
+#  define Rte_Write_EXT4_Valid_EXT4_Valid Rte_Write_Com_SWC_EXT4_Valid_EXT4_Valid
+#  define Rte_Write_EXT_A_IN1_EXT_A_IN1 Rte_Write_Com_SWC_EXT_A_IN1_EXT_A_IN1
+#  define Rte_Write_EXT_A_IN2_EXT_A_IN2 Rte_Write_Com_SWC_EXT_A_IN2_EXT_A_IN2
+#  define Rte_Write_EXT_A_IN3_EXT_A_IN3 Rte_Write_Com_SWC_EXT_A_IN3_EXT_A_IN3
+#  define Rte_Write_EXT_A_IN4_EXT_A_IN4 Rte_Write_Com_SWC_EXT_A_IN4_EXT_A_IN4
 #  define Rte_Write_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0 Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0
 #  define Rte_Write_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1 Rte_Write_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1
 #  define Rte_Write_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2 Rte_Write_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2

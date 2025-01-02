@@ -176,6 +176,14 @@
  *  Rte_ComHookRx_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx
  *  Rte_ComHookRx_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx
  *  Rte_ComHookRx_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx
+ *  Rte_ComHook_EXT1_Valid_oVcuTxIoMsg1_oTC37X_VCU_CAN00_caf787ea_Tx_SigTx
+ *  Rte_ComHook_EXT2_Valid_oVcuTxIoMsg1_oTC37X_VCU_CAN00_9096b88a_Tx_SigTx
+ *  Rte_ComHook_EXT3_Valid_oVcuTxIoMsg2_oTC37X_VCU_CAN00_fae072f7_Tx_SigTx
+ *  Rte_ComHook_EXT4_Valid_oVcuTxIoMsg2_oTC37X_VCU_CAN00_ced21b28_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN1_oVcuTxIoMsg1_oTC37X_VCU_CAN00_37348eff_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN2_oVcuTxIoMsg1_oTC37X_VCU_CAN00_241cb78c_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN3_oVcuTxIoMsg2_oTC37X_VCU_CAN00_c07d823f_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN4_oVcuTxIoMsg2_oTC37X_VCU_CAN00_e8ca1808_Tx_SigTx
  *  Rte_ComHook_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx_SigRx
  *  Rte_ComHook_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx_SigRx
  *  Rte_ComHook_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx_SigRx
@@ -438,6 +446,22 @@
  *  Rte_Task_Terminate
  *  Rte_Task_WaitEvent
  *  Rte_Task_WaitEventRet
+ *  Rte_WriteHook_Com_SWC_EXT1_Valid_EXT1_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT1_Valid_EXT1_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT2_Valid_EXT2_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT2_Valid_EXT2_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT3_Valid_EXT3_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT3_Valid_EXT3_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT4_Valid_EXT4_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT4_Valid_EXT4_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN1_EXT_A_IN1_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN1_EXT_A_IN1_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN2_EXT_A_IN2_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN2_EXT_A_IN2_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN3_EXT_A_IN3_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN3_EXT_A_IN3_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN4_EXT_A_IN4_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN4_EXT_A_IN4_Start
  *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0_Return
  *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0_Start
  *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1_Return

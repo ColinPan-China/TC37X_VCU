@@ -39,6 +39,30 @@ typedef EventMaskType Rte_EventMaskType;
  * Data type definitions
  *********************************************************************************************************************/
 
+# define Rte_TypeDef_EXT1_Valid
+typedef uint16 EXT1_Valid;
+
+# define Rte_TypeDef_EXT2_Valid
+typedef uint16 EXT2_Valid;
+
+# define Rte_TypeDef_EXT3_Valid
+typedef uint16 EXT3_Valid;
+
+# define Rte_TypeDef_EXT4_Valid
+typedef uint16 EXT4_Valid;
+
+# define Rte_TypeDef_EXT_A_IN1
+typedef sint16 EXT_A_IN1;
+
+# define Rte_TypeDef_EXT_A_IN2
+typedef sint16 EXT_A_IN2;
+
+# define Rte_TypeDef_EXT_A_IN3
+typedef sint16 EXT_A_IN3;
+
+# define Rte_TypeDef_EXT_A_IN4
+typedef sint16 EXT_A_IN4;
+
 # define Rte_TypeDef_VcuRxMsg1_Sig0
 typedef sint16 VcuRxMsg1_Sig0;
 

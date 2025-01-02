@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cbk.h
- *   Generation Time: 2024-11-28 15:38:53
+ *   Generation Time: 2025-01-02 15:14:09
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -74,10 +74,12 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define ComConf_ComIPdu_VcuAdcTxMsg1_oTC37X_VCU_CAN01_fda515ee_Tx     0u
 #define ComConf_ComIPdu_VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx     1u
-#define ComConf_ComIPdu_VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx        2u
-#define ComConf_ComIPdu_VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx        3u
-#define ComConf_ComIPdu_Vcu_Lin0_TxMsg1_oLIN00_f39ae32f_Tx            4u
-#define ComConf_ComIPdu_Vcu_Lin0_TxMsg2_oLIN00_7d15e4cc_Tx            5u
+#define ComConf_ComIPdu_VcuTxIoMsg1_oTC37X_VCU_CAN00_54884add_Tx      2u
+#define ComConf_ComIPdu_VcuTxIoMsg2_oTC37X_VCU_CAN00_be0e97bf_Tx      3u
+#define ComConf_ComIPdu_VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx        4u
+#define ComConf_ComIPdu_VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx        5u
+#define ComConf_ComIPdu_Vcu_Lin0_TxMsg1_oLIN00_f39ae32f_Tx            6u
+#define ComConf_ComIPdu_Vcu_Lin0_TxMsg2_oLIN00_7d15e4cc_Tx            7u
 /**\} */
 
 /**********************************************************************************************************************

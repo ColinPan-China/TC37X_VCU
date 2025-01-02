@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2024-11-28 15:38:52
+ *   Generation Time: 2025-01-02 15:14:09
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -167,11 +167,13 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_1a8748e9                       6u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_91d52164                       2u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_69924b1b                       3u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_a77b2a3a                       5u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_af3681f0                       4u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_1a8748e9                       8u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_3ef2d11c                       3u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_91d52164                       4u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_96b222db                       2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_69924b1b                       5u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_a77b2a3a                       7u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_af3681f0                       6u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_df42a212                       1u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_f8c9b934                       0u
 /**\} */
@@ -186,10 +188,12 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define PduRConf_PduRDestPdu_VcuAdcTxMsg1_oTC37X_VCU_CAN01_6685c7bf_Tx 0u
 #define PduRConf_PduRDestPdu_VcuAdcTxMsg2_oTC37X_VCU_CAN01_afb1dcb2_Tx 1u
-#define PduRConf_PduRDestPdu_VcuTxMsg1_oTC37X_VCU_CAN00_c82dd125_Tx   2u
-#define PduRConf_PduRDestPdu_VcuTxMsg2_oTC37X_VCU_CAN00_0119ca28_Tx   3u
-#define PduRConf_PduRDestPdu_Vcu_Lin0_TxMsg1_oLIN00_db48db31_Tx       4u
-#define PduRConf_PduRDestPdu_Vcu_Lin0_TxMsg2_oLIN00_adade20c_Tx       5u
+#define PduRConf_PduRDestPdu_VcuTxIoMsg1_oTC37X_VCU_CAN00_869e33bc_Tx 2u
+#define PduRConf_PduRDestPdu_VcuTxIoMsg2_oTC37X_VCU_CAN00_4faa28b1_Tx 3u
+#define PduRConf_PduRDestPdu_VcuTxMsg1_oTC37X_VCU_CAN00_c82dd125_Tx   4u
+#define PduRConf_PduRDestPdu_VcuTxMsg2_oTC37X_VCU_CAN00_0119ca28_Tx   5u
+#define PduRConf_PduRDestPdu_Vcu_Lin0_TxMsg1_oLIN00_db48db31_Tx       6u
+#define PduRConf_PduRDestPdu_Vcu_Lin0_TxMsg2_oLIN00_adade20c_Tx       7u
 /**\} */
 
 /**

@@ -41,7 +41,7 @@
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
-
+#include "Adc_Sample.h"
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
@@ -56,6 +56,14 @@
  *
  * Primitive Types:
  * ================
+ * EXT1_Valid: Integer in interval [0...1]
+ * EXT2_Valid: Integer in interval [0...1]
+ * EXT3_Valid: Integer in interval [0...1]
+ * EXT4_Valid: Integer in interval [0...1]
+ * EXT_A_IN1: Integer in interval [-256...255]
+ * EXT_A_IN2: Integer in interval [-32768...32767]
+ * EXT_A_IN3: Integer in interval [-256...255]
+ * EXT_A_IN4: Integer in interval [-32768...32767]
  * VcuRxMsg1_Sig0: Integer in interval [-32768...32767]
  * VcuRxMsg1_Sig1: Integer in interval [-32768...32767]
  * VcuRxMsg1_Sig2: Integer in interval [-32768...32767]
@@ -107,6 +115,14 @@
  * ==================
  *   Explicit S/R API:
  *   -----------------
+ *   Std_ReturnType Rte_Write_EXT1_Valid_EXT1_Valid(EXT1_Valid data)
+ *   Std_ReturnType Rte_Write_EXT2_Valid_EXT2_Valid(EXT2_Valid data)
+ *   Std_ReturnType Rte_Write_EXT3_Valid_EXT3_Valid(EXT3_Valid data)
+ *   Std_ReturnType Rte_Write_EXT4_Valid_EXT4_Valid(EXT4_Valid data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN1_EXT_A_IN1(EXT_A_IN1 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN2_EXT_A_IN2(EXT_A_IN2 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN3_EXT_A_IN3(EXT_A_IN3 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN4_EXT_A_IN4(EXT_A_IN4 data)
  *   Std_ReturnType Rte_Write_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0(VcuTxMsg1_Sig0 data)
  *   Std_ReturnType Rte_Write_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1(VcuTxMsg1_Sig1 data)
  *   Std_ReturnType Rte_Write_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2(VcuTxMsg1_Sig2 data)
@@ -121,7 +137,7 @@
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: Com_Runnable_2ms_doc
  *********************************************************************************************************************/
-
+void ExtTempUpdate();
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
@@ -133,7 +149,7 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_2ms(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Com_Runnable_2ms
  *********************************************************************************************************************/
-
+  ExtTempUpdate();
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
@@ -234,6 +250,36 @@ FUNC(void, Com_SWC_CODE) Rte_Msg201h_Rx_Notification(void) /* PRQA S 0624, 3206 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of function definition area >>            DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
+uint8  cnt  = 0;
+void ExtTempUpdate()
+{
+  sint16 temp = 0;
+  uint8  flg  = 0;
+
+  cnt += 2;
+  if( cnt > 200 )
+  {
+    cnt = 0;
+    IoHwGetExtTemp(0,&temp,&flg);
+    Rte_Write_EXT_A_IN1_EXT_A_IN1(temp);
+    Rte_Write_EXT1_Valid_EXT1_Valid(flg);
+
+    IoHwGetExtTemp(1,&temp,&flg);
+    Rte_Write_EXT_A_IN2_EXT_A_IN2(temp);
+    Rte_Write_EXT2_Valid_EXT2_Valid(flg);
+
+    IoHwGetExtTemp(2,&temp,&flg);
+    Rte_Write_EXT_A_IN3_EXT_A_IN3(temp);
+    Rte_Write_EXT3_Valid_EXT3_Valid(flg);
+
+    IoHwGetExtTemp(3,&temp,&flg);
+    Rte_Write_EXT_A_IN4_EXT_A_IN4(temp);
+    Rte_Write_EXT4_Valid_EXT4_Valid(flg);
+
+
+  }
+
+}
 
 
 /**********************************************************************************************************************

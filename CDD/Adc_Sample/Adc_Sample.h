@@ -3,9 +3,15 @@
 
 #include "Platform_Types.h"
 #include "Adc.h"
+#include "vstdlib.h"
+
+
+#define INVALID_TEMP (-273)
+
 
 extern void Adc_SampleInit();
 
 extern void Adc_SampleMain();
 
+extern void IoHwGetExtTemp( uint8 ch, sint16 *temp, boolean *ValidFlg );
 #endif /* ADC_SAMPLE_H */

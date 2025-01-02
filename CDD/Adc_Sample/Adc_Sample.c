@@ -1,10 +1,8 @@
 #include "Adc_Sample.h"
-#include "Adc.h"
-#include "vstdlib.h"
 
 typedef enum
 {
-  EXT_A_IN1, 
+  EXT_A_IN1 = 0, 
   EXT_A_IN2,
   EXT_A_IN3,
   EXT_A_IN4,
@@ -20,6 +18,21 @@ typedef enum
   EXT_A_IN14,
   EXT_A_IN15,
 }ExtAdcInputType;
+
+typedef struct AdcValSample
+{
+  uint16 AdcCompleteFlag;
+  uint16 AdcChannelResult[8];
+  Adc_GroupType Group;
+}AdcValSampleType;
+
+typedef struct TempAdConvert
+{
+  sint16 Temp;
+  uint32 Rmax;
+  uint32 Rnormal;
+  uint32 Rmin;
+}TempAdConvertType;
 
 typedef struct ExtVoltageInput
 {
@@ -37,21 +50,6 @@ typedef struct ExtVoltageInput
   boolean SampleEnable;
 }ExtVoltageInputType;
 
-typedef struct AdcValSample
-{
-  uint16 AdcCompleteFlag;
-  uint16 AdcChannelResult[8];
-  Adc_GroupType Group;
-}AdcValSampleType;
-
-typedef struct TempAdConvert
-{
-  sint16 Temp;
-  uint32 Rmax;
-  uint32 Rnormal;
-  uint32 Rmin;
-}TempAdConvertType;
-
 AdcValSampleType AdcValSampleInfo_Table[5];
 
 uint16 ADC_SW_GRP0_RES[8]  = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
@@ -62,21 +60,21 @@ uint16 ADC_SW_GRP11_RES[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
 ExtVoltageInputType ExtVoltageInput_Table[] =
 {                                                                                                     /*Vcc     Up    Down  R    Temp   valid   En    */
-	{ EXT_A_IN1,  AdcConf_AdcChannel_AdcChannel_G3CH1,  0, &AdcValSampleInfo_Table[3].AdcChannelResult,   4096,   100,  20,  0,  0x7FFF,  FALSE, TRUE },/*65*/
-	{ EXT_A_IN2,  AdcConf_AdcChannel_AdcChannel_G2CH5,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,   4096,   100,  20,  0,  0x7FFF,  FALSE, TRUE },/*52*/
-	{ EXT_A_IN3,  AdcConf_AdcChannel_AdcChannel_G2CH3,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,   4096,   100,  20,  0,  0x7FFF,  FALSE, TRUE },/*39*/
-	{ EXT_A_IN4,  AdcConf_AdcChannel_AdcChannel_G2CH4,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,   4096,   100,  20,  0,  0x7FFF,  FALSE, TRUE },/*26*/
-	{ EXT_A_IN5,  AdcConf_AdcChannel_AdcChannel_G2CH2,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,   4096,   100,  20,  0,  0x7FFF,  FALSE, TRUE },/*13*/
-	{ EXT_A_IN6,  AdcConf_AdcChannel_AdcChannel_G2CH1,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,      0,     0,  20,  0,  0x7FFF,  FALSE, TRUE },/*119*/
-	{ EXT_A_IN7,  AdcConf_AdcChannel_AdcChannel_G2CH6,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,   4096,   100,  20,  0,  0x7FFF,  FALSE, TRUE },/*105*/
-	{ EXT_A_IN8,  AdcConf_AdcChannel_AdcChannel_G2CH7,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,   4096,   100,  20,  0,  0x7FFF,  FALSE, TRUE },/*79*/
-	{ EXT_A_IN9,  AdcConf_AdcChannel_AdcChannel_G11CH5, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,   4096,    10,  20,  0,  0x7FFF,  FALSE, TRUE },/*118*/
-	{ EXT_A_IN10, AdcConf_AdcChannel_AdcChannel_G11CH2, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,   4096,     1,  20,  0,  0x7FFF,  FALSE, TRUE },/*106*/
-	{ EXT_A_IN11, AdcConf_AdcChannel_AdcChannel_G11CH7, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,   4096,     1,  20,  0,  0x7FFF,  FALSE, TRUE },/*80*/
-	{ EXT_A_IN12, AdcConf_AdcChannel_AdcChannel_G11CH6, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,   4096,   100,  20,  0,  0x7FFF,  FALSE, TRUE },/*92*/
-	{ EXT_A_IN13, AdcConf_AdcChannel_AdcChannel_G11CH4, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,   4096,    10,  20,  0,  0x7FFF,  FALSE, TRUE },/*93*/
-	{ EXT_A_IN14, AdcConf_AdcChannel_AdcChannel_G11CH1, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,      0,    20,  10,  0,  0x7FFF,  FALSE, TRUE },/*67*/
-	{ EXT_A_IN15, AdcConf_AdcChannel_AdcChannel_G11CH3, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,      0,     0,  510, 0,  0x7FFF,  FALSE, TRUE },/*66*/
+	{ EXT_A_IN1,  AdcConf_AdcChannel_AdcChannel_G3CH1,  0, &AdcValSampleInfo_Table[3].AdcChannelResult,   4096,   100,  20,  0,  INVALID_TEMP,  FALSE, TRUE },/*65*/
+	{ EXT_A_IN2,  AdcConf_AdcChannel_AdcChannel_G2CH5,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,   4096,   100,  20,  0,  INVALID_TEMP,  FALSE, TRUE },/*52*/
+	{ EXT_A_IN3,  AdcConf_AdcChannel_AdcChannel_G2CH3,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,   4096,   100,  20,  0,  INVALID_TEMP,  FALSE, TRUE },/*39*/
+	{ EXT_A_IN4,  AdcConf_AdcChannel_AdcChannel_G2CH4,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,   4096,   100,  20,  0,  INVALID_TEMP,  FALSE, TRUE },/*26*/
+	{ EXT_A_IN5,  AdcConf_AdcChannel_AdcChannel_G2CH2,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,   4096,   100,  20,  0,  INVALID_TEMP,  FALSE, TRUE },/*13*/
+	{ EXT_A_IN6,  AdcConf_AdcChannel_AdcChannel_G2CH1,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,      0,     0,  20,  0,  INVALID_TEMP,  FALSE, TRUE },/*119*/
+	{ EXT_A_IN7,  AdcConf_AdcChannel_AdcChannel_G2CH6,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,   4096,   100,  20,  0,  INVALID_TEMP,  FALSE, TRUE },/*105*/
+	{ EXT_A_IN8,  AdcConf_AdcChannel_AdcChannel_G2CH7,  0, &AdcValSampleInfo_Table[2].AdcChannelResult,   4096,   100,  20,  0,  INVALID_TEMP,  FALSE, TRUE },/*79*/
+	{ EXT_A_IN9,  AdcConf_AdcChannel_AdcChannel_G11CH5, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,   4096,    10,  20,  0,  INVALID_TEMP,  FALSE, TRUE },/*118*/
+	{ EXT_A_IN10, AdcConf_AdcChannel_AdcChannel_G11CH2, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,   4096,     1,  20,  0,  INVALID_TEMP,  FALSE, TRUE },/*106*/
+	{ EXT_A_IN11, AdcConf_AdcChannel_AdcChannel_G11CH7, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,   4096,     1,  20,  0,  INVALID_TEMP,  FALSE, TRUE },/*80*/
+	{ EXT_A_IN12, AdcConf_AdcChannel_AdcChannel_G11CH6, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,   4096,   100,  20,  0,  INVALID_TEMP,  FALSE, TRUE },/*92*/
+	{ EXT_A_IN13, AdcConf_AdcChannel_AdcChannel_G11CH4, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,   4096,    10,  20,  0,  INVALID_TEMP,  FALSE, TRUE },/*93*/
+	{ EXT_A_IN14, AdcConf_AdcChannel_AdcChannel_G11CH1, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,      0,    20,  10,  0,  INVALID_TEMP,  FALSE, TRUE },/*67*/
+	{ EXT_A_IN15, AdcConf_AdcChannel_AdcChannel_G11CH3, 0, &AdcValSampleInfo_Table[4].AdcChannelResult,      0,     0,  510, 0,  INVALID_TEMP,  FALSE, TRUE },/*66*/
 };
 
 #define EXT_ADC_INPUT_NUM ((sizeof(ExtVoltageInput_Table))/(sizeof(ExtVoltageInput_Table[0])))
@@ -260,6 +258,7 @@ TempAdConvertType TempAdConvert_Table[] =
 
 #define TEMP_CONVERT_NUM ((sizeof(TempAdConvert_Table))/(sizeof(TempAdConvert_Table[0])))
 
+void ExtInputUpdate();
 void Adc_SampleInit();
 void Adc_SampleMain();
 uint8 TempAdcConvert( uint32 Resistance, sint16 *pTemp );
@@ -362,11 +361,16 @@ void Adc_SampleMain()
         {
           ExtVoltageInput_Table[index].TempValidFlg = TRUE;
         }
+        else
+        {
+          ExtVoltageInput_Table[index].TempValidFlg = FALSE;
+        }
       }
       else
       {
         ExtVoltageInput_Table[index].ResistanceIn = 0xFFFF;
         ExtVoltageInput_Table[index].TempValidFlg = FALSE;
+        ExtVoltageInput_Table[index].Temp = INVALID_TEMP;
       }
 
       ExtVoltageInput_Table[index].ExtVoltageVal = CurAdVal*500/4096;
@@ -400,6 +404,7 @@ uint8 TempAdcConvert( uint32 Resistance, sint16 *pTemp )
   if( R < TempAdConvert_Table[TEMP_CONVERT_NUM-1].Rmin ||
       R > TempAdConvert_Table[0].Rmax )
   {
+    *pTemp = INVALID_TEMP;
     return 1;
   }
 
@@ -412,9 +417,18 @@ uint8 TempAdcConvert( uint32 Resistance, sint16 *pTemp )
       break;
     }
   }
+
   if( index >= TEMP_CONVERT_NUM )
   {
+    *pTemp = INVALID_TEMP;
     ret = 1;
   }
   return ret;
 }
+
+void IoHwGetExtTemp( uint8 ch, sint16 *temp, boolean *ValidFlg )
+{
+  *temp = ExtVoltageInput_Table[ch].Temp;
+  *ValidFlg = ExtVoltageInput_Table[ch].TempValidFlg;
+}
+
