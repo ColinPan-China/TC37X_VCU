@@ -39,6 +39,27 @@ typedef EventMaskType Rte_EventMaskType;
  * Data type definitions
  *********************************************************************************************************************/
 
+# define Rte_TypeDef_EXT10_Valid
+typedef uint16 EXT10_Valid;
+
+# define Rte_TypeDef_EXT11_Valid
+typedef uint16 EXT11_Valid;
+
+# define Rte_TypeDef_EXT12_Valid
+typedef uint16 EXT12_Valid;
+
+# define Rte_TypeDef_EXT13_Valid
+typedef uint16 EXT13_Valid;
+
+# define Rte_TypeDef_EXT14_Valid
+typedef uint16 EXT14_Valid;
+
+# define Rte_TypeDef_EXT15_Valid
+typedef uint16 EXT15_Valid;
+
+# define Rte_TypeDef_EXT16_Valid
+typedef uint16 EXT16_Valid;
+
 # define Rte_TypeDef_EXT1_Valid
 typedef uint16 EXT1_Valid;
 
@@ -51,8 +72,44 @@ typedef uint16 EXT3_Valid;
 # define Rte_TypeDef_EXT4_Valid
 typedef uint16 EXT4_Valid;
 
+# define Rte_TypeDef_EXT5_Valid
+typedef uint16 EXT5_Valid;
+
+# define Rte_TypeDef_EXT6_Valid
+typedef uint16 EXT6_Valid;
+
+# define Rte_TypeDef_EXT7_Valid
+typedef uint16 EXT7_Valid;
+
+# define Rte_TypeDef_EXT8_Valid
+typedef uint16 EXT8_Valid;
+
+# define Rte_TypeDef_EXT9_Valid
+typedef uint16 EXT9_Valid;
+
 # define Rte_TypeDef_EXT_A_IN1
 typedef sint16 EXT_A_IN1;
+
+# define Rte_TypeDef_EXT_A_IN10
+typedef sint16 EXT_A_IN10;
+
+# define Rte_TypeDef_EXT_A_IN11
+typedef sint16 EXT_A_IN11;
+
+# define Rte_TypeDef_EXT_A_IN12
+typedef sint16 EXT_A_IN12;
+
+# define Rte_TypeDef_EXT_A_IN13
+typedef sint16 EXT_A_IN13;
+
+# define Rte_TypeDef_EXT_A_IN14
+typedef sint16 EXT_A_IN14;
+
+# define Rte_TypeDef_EXT_A_IN15
+typedef sint16 EXT_A_IN15;
+
+# define Rte_TypeDef_EXT_A_IN16
+typedef sint16 EXT_A_IN16;
 
 # define Rte_TypeDef_EXT_A_IN2
 typedef sint16 EXT_A_IN2;
@@ -62,6 +119,21 @@ typedef sint16 EXT_A_IN3;
 
 # define Rte_TypeDef_EXT_A_IN4
 typedef sint16 EXT_A_IN4;
+
+# define Rte_TypeDef_EXT_A_IN5
+typedef sint16 EXT_A_IN5;
+
+# define Rte_TypeDef_EXT_A_IN6
+typedef sint16 EXT_A_IN6;
+
+# define Rte_TypeDef_EXT_A_IN7
+typedef sint16 EXT_A_IN7;
+
+# define Rte_TypeDef_EXT_A_IN8
+typedef sint16 EXT_A_IN8;
+
+# define Rte_TypeDef_EXT_A_IN9
+typedef sint16 EXT_A_IN9;
 
 # define Rte_TypeDef_VcuRxMsg1_Sig0
 typedef sint16 VcuRxMsg1_Sig0;

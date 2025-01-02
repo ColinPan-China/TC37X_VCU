@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Lcfg.h
- *   Generation Time: 2025-01-02 15:14:10
+ *   Generation Time: 2025-01-02 16:24:13
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -1755,7 +1755,7 @@
 #define Com_GetRxTOutInfoOfMainFunctionRxIndOfPCConfig()                                            Com_RxTOutInfoOfMainFunctionRxInd  /**< the pointer to Com_RxTOutInfoOfMainFunctionRxInd */
 #define Com_GetRxTOutInfoOfPCConfig()                                                               Com_RxTOutInfo  /**< the pointer to Com_RxTOutInfo */
 #define Com_GetSizeOfActivatableRxComIPdusOfPCConfig()                                              6u  /**< the number of accomplishable value elements in Com_ActivatableRxComIPdus */
-#define Com_GetSizeOfActivatableTxComIPdusOfPCConfig()                                              8u  /**< the number of accomplishable value elements in Com_ActivatableTxComIPdus */
+#define Com_GetSizeOfActivatableTxComIPdusOfPCConfig()                                              14u  /**< the number of accomplishable value elements in Com_ActivatableTxComIPdus */
 #define Com_GetSizeOfCbkRxTOutFuncPtrIndOfPCConfig()                                                8u  /**< the number of accomplishable value elements in Com_CbkRxTOutFuncPtrInd */
 #define Com_GetSizeOfCbkRxTOutFuncPtrOfPCConfig()                                                   8u  /**< the number of accomplishable value elements in Com_CbkRxTOutFuncPtr */
 #define Com_GetSizeOfConstValueSInt16OfPCConfig()                                                   1u  /**< the number of accomplishable value elements in Com_ConstValueSInt16 */
@@ -1783,18 +1783,18 @@
 #define Com_GetSizeOfRxTOutInfoIndOfPCConfig()                                                      2u  /**< the number of accomplishable value elements in Com_RxTOutInfoInd */
 #define Com_GetSizeOfRxTOutInfoOfMainFunctionRxIndOfPCConfig()                                      2u  /**< the number of accomplishable value elements in Com_RxTOutInfoOfMainFunctionRxInd */
 #define Com_GetSizeOfRxTOutInfoOfPCConfig()                                                         2u  /**< the number of accomplishable value elements in Com_RxTOutInfo */
-#define Com_GetSizeOfTxBufferOfPCConfig()                                                           64u  /**< the number of accomplishable value elements in Com_TxBuffer */
-#define Com_GetSizeOfTxCyclicPduOfMainFunctionTxIndOfPCConfig()                                     6u  /**< the number of accomplishable value elements in Com_TxCyclicPduOfMainFunctionTxInd */
-#define Com_GetSizeOfTxCyclicPduOfPCConfig()                                                        6u  /**< the number of accomplishable value elements in Com_TxCyclicPdu */
+#define Com_GetSizeOfTxBufferOfPCConfig()                                                           112u  /**< the number of accomplishable value elements in Com_TxBuffer */
+#define Com_GetSizeOfTxCyclicPduOfMainFunctionTxIndOfPCConfig()                                     12u  /**< the number of accomplishable value elements in Com_TxCyclicPduOfMainFunctionTxInd */
+#define Com_GetSizeOfTxCyclicPduOfPCConfig()                                                        12u  /**< the number of accomplishable value elements in Com_TxCyclicPdu */
 #define Com_GetSizeOfTxIPduGroupISRLockCounterOfPCConfig()                                          1u  /**< the number of accomplishable value elements in Com_TxIPduGroupISRLockCounter */
 #define Com_GetSizeOfTxModeFalseOfPCConfig()                                                        2u  /**< the number of accomplishable value elements in Com_TxModeFalse */
-#define Com_GetSizeOfTxModeInfoOfPCConfig()                                                         8u  /**< the number of accomplishable value elements in Com_TxModeInfo */
+#define Com_GetSizeOfTxModeInfoOfPCConfig()                                                         14u  /**< the number of accomplishable value elements in Com_TxModeInfo */
 #define Com_GetSizeOfTxModeTrueOfPCConfig()                                                         3u  /**< the number of accomplishable value elements in Com_TxModeTrue */
-#define Com_GetSizeOfTxPduInfoOfMainFunctionTxIndOfPCConfig()                                       8u  /**< the number of accomplishable value elements in Com_TxPduInfoOfMainFunctionTxInd */
-#define Com_GetSizeOfTxPduInfoOfPCConfig()                                                          8u  /**< the number of accomplishable value elements in Com_TxPduInfo */
-#define Com_GetSizeOfTxPduInitValueOfPCConfig()                                                     64u  /**< the number of accomplishable value elements in Com_TxPduInitValue */
+#define Com_GetSizeOfTxPduInfoOfMainFunctionTxIndOfPCConfig()                                       14u  /**< the number of accomplishable value elements in Com_TxPduInfoOfMainFunctionTxInd */
+#define Com_GetSizeOfTxPduInfoOfPCConfig()                                                          14u  /**< the number of accomplishable value elements in Com_TxPduInfo */
+#define Com_GetSizeOfTxPduInitValueOfPCConfig()                                                     112u  /**< the number of accomplishable value elements in Com_TxPduInitValue */
 #define Com_GetSizeOfTxProcessingISRLockCounterOfPCConfig()                                         1u  /**< the number of accomplishable value elements in Com_TxProcessingISRLockCounter */
-#define Com_GetSizeOfTxSigInfoOfPCConfig()                                                          32u  /**< the number of accomplishable value elements in Com_TxSigInfo */
+#define Com_GetSizeOfTxSigInfoOfPCConfig()                                                          56u  /**< the number of accomplishable value elements in Com_TxSigInfo */
 #define Com_GetTransmitRequestOfPCConfig()                                                          Com_TransmitRequest.raw  /**< the pointer to Com_TransmitRequest */
 #define Com_GetTxBufferOfPCConfig()                                                                 Com_TxBuffer  /**< the pointer to Com_TxBuffer */
 #define Com_GetTxCyclicPduOfMainFunctionTxIndOfPCConfig()                                           Com_TxCyclicPduOfMainFunctionTxInd  /**< the pointer to Com_TxCyclicPduOfMainFunctionTxInd */
@@ -1939,10 +1939,10 @@
 #define Com_IsRxPduInfoOfMainFunctionRxIndUsedOfMainFunctionRxStruct(Index)                         Com_IsRxTOutInfoOfMainFunctionRxIndUsedOfMainFunctionRxStruct(Index)  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_RxPduInfoOfMainFunctionRxInd */
 #define Com_GetRxTOutInfoOfMainFunctionRxIndEndIdxOfMainFunctionRxStruct(Index)                     ((Com_RxTOutInfoOfMainFunctionRxIndEndIdxOfMainFunctionRxStructType)((((Com_RxTOutInfoOfMainFunctionRxIndEndIdxOfMainFunctionRxStructType)(Index)) + 2u)))  /**< the end index of the 0:n relation pointing to Com_RxTOutInfoOfMainFunctionRxInd */
 #define Com_GetRxTOutInfoOfMainFunctionRxIndStartIdxOfMainFunctionRxStruct(Index)                   ((Com_RxTOutInfoOfMainFunctionRxIndStartIdxOfMainFunctionRxStructType)((Index)))  /**< the start index of the 0:n relation pointing to Com_RxTOutInfoOfMainFunctionRxInd */
-#define Com_GetTxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct(Index)                    ((Com_TxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)((((Com_TxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)(Index)) + 6u)))  /**< the end index of the 0:n relation pointing to Com_TxCyclicPduOfMainFunctionTxInd */
+#define Com_GetTxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct(Index)                    ((Com_TxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)((((Com_TxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)(Index)) + 12u)))  /**< the end index of the 0:n relation pointing to Com_TxCyclicPduOfMainFunctionTxInd */
 #define Com_GetTxCyclicPduOfMainFunctionTxIndStartIdxOfMainFunctionTxStruct(Index)                  ((Com_TxCyclicPduOfMainFunctionTxIndStartIdxOfMainFunctionTxStructType)((Index)))  /**< the start index of the 0:n relation pointing to Com_TxCyclicPduOfMainFunctionTxInd */
 #define Com_IsTxCyclicPduOfMainFunctionTxIndUsedOfMainFunctionTxStruct(Index)                       Com_IsTxPduInfoOfMainFunctionTxIndUsedOfMainFunctionTxStruct(Index)  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_TxCyclicPduOfMainFunctionTxInd */
-#define Com_GetTxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct(Index)                      ((Com_TxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)((((Com_TxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)(Index)) + 8u)))  /**< the end index of the 0:n relation pointing to Com_TxPduInfoOfMainFunctionTxInd */
+#define Com_GetTxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct(Index)                      ((Com_TxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)((((Com_TxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)(Index)) + 14u)))  /**< the end index of the 0:n relation pointing to Com_TxPduInfoOfMainFunctionTxInd */
 #define Com_GetTxPduInfoOfMainFunctionTxIndStartIdxOfMainFunctionTxStruct(Index)                    ((Com_TxPduInfoOfMainFunctionTxIndStartIdxOfMainFunctionTxStructType)((Index)))  /**< the start index of the 0:n relation pointing to Com_TxPduInfoOfMainFunctionTxInd */
 #define Com_GetTxProcessingISRLockCounterIdxOfMainFunctionTxStruct(Index)                           ((Com_TxProcessingISRLockCounterIdxOfMainFunctionTxStructType)((Index)))  /**< the index of the 1:1 relation pointing to Com_TxProcessingISRLockCounter */
 #define Com_GetRxIPduGroupISRLockCounterIdxOfPartitionsActivatableRxComIPdusStruct(Index)           ((Com_RxIPduGroupISRLockCounterIdxOfPartitionsActivatableRxComIPdusStructType)((Index)))  /**< the index of the 1:1 relation pointing to Com_RxIPduGroupISRLockCounter */
@@ -3553,6 +3553,12 @@ typedef struct Com_CurrentTxModeStructSTag
   Com_CurrentTxModeType VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx;
   Com_CurrentTxModeType VcuTxIoMsg1_oTC37X_VCU_CAN00_54884add_Tx;
   Com_CurrentTxModeType VcuTxIoMsg2_oTC37X_VCU_CAN00_be0e97bf_Tx;
+  Com_CurrentTxModeType VcuTxIoMsg3_oTC37X_VCU_CAN00_515c215e_Tx;
+  Com_CurrentTxModeType VcuTxIoMsg4_oTC37X_VCU_CAN00_b0722b3a_Tx;
+  Com_CurrentTxModeType VcuTxIoMsg5_oTC37X_VCU_CAN00_5f209ddb_Tx;
+  Com_CurrentTxModeType VcuTxIoMsg6_oTC37X_VCU_CAN00_b5a640b9_Tx;
+  Com_CurrentTxModeType VcuTxIoMsg7_oTC37X_VCU_CAN00_5af4f658_Tx;
+  Com_CurrentTxModeType VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx;
   Com_CurrentTxModeType VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx;
   Com_CurrentTxModeType VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx;
   Com_CurrentTxModeType Vcu_Lin0_TxMsg1_oLIN00_f39ae32f_Tx;
@@ -3566,6 +3572,12 @@ typedef struct Com_CycleTimeCntStructSTag
   Com_CycleTimeCntType VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx;
   Com_CycleTimeCntType VcuTxIoMsg1_oTC37X_VCU_CAN00_54884add_Tx;
   Com_CycleTimeCntType VcuTxIoMsg2_oTC37X_VCU_CAN00_be0e97bf_Tx;
+  Com_CycleTimeCntType VcuTxIoMsg3_oTC37X_VCU_CAN00_515c215e_Tx;
+  Com_CycleTimeCntType VcuTxIoMsg4_oTC37X_VCU_CAN00_b0722b3a_Tx;
+  Com_CycleTimeCntType VcuTxIoMsg5_oTC37X_VCU_CAN00_5f209ddb_Tx;
+  Com_CycleTimeCntType VcuTxIoMsg6_oTC37X_VCU_CAN00_b5a640b9_Tx;
+  Com_CycleTimeCntType VcuTxIoMsg7_oTC37X_VCU_CAN00_5af4f658_Tx;
+  Com_CycleTimeCntType VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx;
   Com_CycleTimeCntType VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx;
   Com_CycleTimeCntType VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx;
   Com_CycleTimeCntType Vcu_Lin0_TxMsg1_oLIN00_f39ae32f_Tx;
@@ -3579,6 +3591,12 @@ typedef struct Com_CyclicSendRequestStructSTag
   Com_CyclicSendRequestType VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx;
   Com_CyclicSendRequestType VcuTxIoMsg1_oTC37X_VCU_CAN00_54884add_Tx;
   Com_CyclicSendRequestType VcuTxIoMsg2_oTC37X_VCU_CAN00_be0e97bf_Tx;
+  Com_CyclicSendRequestType VcuTxIoMsg3_oTC37X_VCU_CAN00_515c215e_Tx;
+  Com_CyclicSendRequestType VcuTxIoMsg4_oTC37X_VCU_CAN00_b0722b3a_Tx;
+  Com_CyclicSendRequestType VcuTxIoMsg5_oTC37X_VCU_CAN00_5f209ddb_Tx;
+  Com_CyclicSendRequestType VcuTxIoMsg6_oTC37X_VCU_CAN00_b5a640b9_Tx;
+  Com_CyclicSendRequestType VcuTxIoMsg7_oTC37X_VCU_CAN00_5af4f658_Tx;
+  Com_CyclicSendRequestType VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx;
   Com_CyclicSendRequestType VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx;
   Com_CyclicSendRequestType VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx;
   Com_CyclicSendRequestType Vcu_Lin0_TxMsg1_oLIN00_f39ae32f_Tx;
@@ -3632,6 +3650,12 @@ typedef struct Com_TransmitRequestStructSTag
   Com_TransmitRequestType VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx;
   Com_TransmitRequestType VcuTxIoMsg1_oTC37X_VCU_CAN00_54884add_Tx;
   Com_TransmitRequestType VcuTxIoMsg2_oTC37X_VCU_CAN00_be0e97bf_Tx;
+  Com_TransmitRequestType VcuTxIoMsg3_oTC37X_VCU_CAN00_515c215e_Tx;
+  Com_TransmitRequestType VcuTxIoMsg4_oTC37X_VCU_CAN00_b0722b3a_Tx;
+  Com_TransmitRequestType VcuTxIoMsg5_oTC37X_VCU_CAN00_5f209ddb_Tx;
+  Com_TransmitRequestType VcuTxIoMsg6_oTC37X_VCU_CAN00_b5a640b9_Tx;
+  Com_TransmitRequestType VcuTxIoMsg7_oTC37X_VCU_CAN00_5af4f658_Tx;
+  Com_TransmitRequestType VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx;
   Com_TransmitRequestType VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx;
   Com_TransmitRequestType VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx;
   Com_TransmitRequestType Vcu_Lin0_TxMsg1_oLIN00_f39ae32f_Tx;
@@ -3662,21 +3686,21 @@ typedef struct Com_TxProcessingISRLockCounterStructSTag
 /**   \brief  type to access Com_CurrentTxMode in an index and symbol based style. */
 typedef union Com_CurrentTxModeUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  Com_CurrentTxModeType raw[8];
+  Com_CurrentTxModeType raw[14];
   Com_CurrentTxModeStructSType str;
 } Com_CurrentTxModeUType;
 
 /**   \brief  type to access Com_CycleTimeCnt in an index and symbol based style. */
 typedef union Com_CycleTimeCntUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  Com_CycleTimeCntType raw[8];
+  Com_CycleTimeCntType raw[14];
   Com_CycleTimeCntStructSType str;
 } Com_CycleTimeCntUType;
 
 /**   \brief  type to access Com_CyclicSendRequest in an index and symbol based style. */
 typedef union Com_CyclicSendRequestUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  Com_CyclicSendRequestType raw[8];
+  Com_CyclicSendRequestType raw[14];
   Com_CyclicSendRequestStructSType str;
 } Com_CyclicSendRequestUType;
 
@@ -3718,7 +3742,7 @@ typedef union Com_RxMainFunctionProcessingISRLockCounterUTag
 /**   \brief  type to access Com_TransmitRequest in an index and symbol based style. */
 typedef union Com_TransmitRequestUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  Com_TransmitRequestType raw[8];
+  Com_TransmitRequestType raw[14];
   Com_TransmitRequestStructSType str;
 } Com_TransmitRequestUType;
 
@@ -3971,7 +3995,7 @@ extern CONST(Com_ActivatableRxComIPdusType, COM_CONST) Com_ActivatableRxComIPdus
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Com_ActivatableTxComIPdusType, COM_CONST) Com_ActivatableTxComIPdus[8];
+extern CONST(Com_ActivatableTxComIPdusType, COM_CONST) Com_ActivatableTxComIPdus[14];
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4256,7 +4280,7 @@ extern CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[8];
+extern CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[14];
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4302,7 +4326,7 @@ extern CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[3];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[8];
+extern CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[14];
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4319,7 +4343,7 @@ extern CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[8];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[64];
+extern CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[112];
 #define COM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4346,7 +4370,7 @@ extern CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[64];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Com_TxSigInfoType, COM_CONST) Com_TxSigInfo[32];
+extern CONST(Com_TxSigInfoType, COM_CONST) Com_TxSigInfo[56];
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4610,7 +4634,7 @@ extern VAR(Com_TransmitRequestUType, COM_VAR_NOINIT) Com_TransmitRequest;  /* PR
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Com_TxBufferType, COM_VAR_NOINIT) Com_TxBuffer[64];
+extern VAR(Com_TxBufferType, COM_VAR_NOINIT) Com_TxBuffer[112];
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4640,7 +4664,7 @@ extern VAR(Com_TxIPduGroupISRLockCounterUType, COM_VAR_NOINIT) Com_TxIPduGroupIS
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Com_TxPduGrpActiveType, COM_VAR_NOINIT) Com_TxPduGrpActive[8];
+extern VAR(Com_TxPduGrpActiveType, COM_VAR_NOINIT) Com_TxPduGrpActive[14];
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4670,7 +4694,7 @@ extern VAR(Com_TxProcessingISRLockCounterUType, COM_VAR_NOINIT) Com_TxProcessing
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Com_TxSduLengthType, COM_VAR_NOINIT) Com_TxSduLength[8];
+extern VAR(Com_TxSduLengthType, COM_VAR_NOINIT) Com_TxSduLength[14];
 #define COM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

@@ -1357,6 +1357,438 @@
                 </DATA-CONSTR-RULE>
               </DATA-CONSTR-RULES>
             </DATA-CONSTR>
+            <DATA-CONSTR UUID="1E554E30-4773-4994-B52E-DF560755AEDB">
+              <SHORT-NAME>DC_EXT_A_IN10</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="268D5859-7C92-492D-97D4-7A255D3C5723">
+              <SHORT-NAME>DC_EXT_A_IN11</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-256</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="A61BEB84-6061-421D-A22D-8CA9AB1AD5EC">
+              <SHORT-NAME>DC_EXT_A_IN12</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="57C63DA8-FE51-4D64-A20E-674EE92F84BD">
+              <SHORT-NAME>DC_EXT_A_IN13</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-256</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="223EC320-EB2F-46BB-81AF-75F99FEE7365">
+              <SHORT-NAME>DC_EXT_A_IN14</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="11180CDE-F4BB-49BC-BB50-1C072C56AA02">
+              <SHORT-NAME>DC_EXT_A_IN15</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-256</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="A6B96A04-24D9-444A-B435-50AAE680EAC5">
+              <SHORT-NAME>DC_EXT_A_IN16</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="B5670B0C-593C-4FFC-B1DD-818C5C5D186B">
+              <SHORT-NAME>DC_EXT_A_IN5</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-256</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="13A32165-FC9A-4A6B-B1A6-46CB473E39B4">
+              <SHORT-NAME>DC_EXT_A_IN6</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="A1F9E78A-606D-48FC-89CF-F8DCF45D5C88">
+              <SHORT-NAME>DC_EXT_A_IN7</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-256</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="B7DB9330-E1EA-4E26-A763-FF936279CF73">
+              <SHORT-NAME>DC_EXT_A_IN8</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="3F645E27-A5D6-4117-A7CC-040C3B7EBAD4">
+              <SHORT-NAME>DC_EXT_A_IN9</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-256</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="B2CAA957-8967-4815-94A3-87646135420B">
+              <SHORT-NAME>DC_EXT10_Valid</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="7A6E5DE7-73C3-42C9-B795-92379A3F92DF">
+              <SHORT-NAME>DC_EXT11_Valid</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="8D3A28D9-0F28-4A2D-A154-278B968CE1BD">
+              <SHORT-NAME>DC_EXT12_Valid</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="3F72009E-4BA2-4563-B596-FEBFDD5C2210">
+              <SHORT-NAME>DC_EXT13_Valid</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="37288233-A7A1-4CF3-86A3-B7891BF828A7">
+              <SHORT-NAME>DC_EXT14_Valid</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="9D681506-EE16-4B11-BB10-A5EB0F494880">
+              <SHORT-NAME>DC_EXT15_Valid</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="4EBC2C26-AA88-4C13-99E4-95BA948EBB1E">
+              <SHORT-NAME>DC_EXT16_Valid</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="AC2D997C-DD79-4262-B406-6B4ECB3C1BA1">
+              <SHORT-NAME>DC_EXT5_Valid</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="07C77C34-58A9-45FD-9468-E2B3FD10ACCC">
+              <SHORT-NAME>DC_EXT6_Valid</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="D8E60844-6D0A-48E7-A0E6-E1BEEFC1487C">
+              <SHORT-NAME>DC_EXT7_Valid</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="413C00C6-1BB8-4EBE-A653-8F8F9A2A0895">
+              <SHORT-NAME>DC_EXT8_Valid</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="A240A1C8-5E9F-4C8A-AE27-DDBB5233B6F0">
+              <SHORT-NAME>DC_EXT9_Valid</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
           </ELEMENTS>
         </AR-PACKAGE>
         <AR-PACKAGE UUID="1D6C4D34-E8C8-4F0E-9E70-B8021C94BE2E">
@@ -1956,6 +2388,270 @@
                 </SDGS>
               </ADMIN-DATA>
             </COMPU-METHOD>
+            <COMPU-METHOD UUID="687BA750-2F32-40B6-BEC7-DC213C8A6134">
+              <SHORT-NAME>CM_EXT_A_IN10</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="92A36A0A-2886-4C9D-8D16-281668B67B09">
+              <SHORT-NAME>CM_EXT_A_IN11</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="F0F06F9B-DD53-42F4-9C50-0A8D7507FDDC">
+              <SHORT-NAME>CM_EXT_A_IN12</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="DD497E92-98E6-4FDE-8FC6-78378E56715A">
+              <SHORT-NAME>CM_EXT_A_IN13</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="40F5A780-D8DD-484E-B3C9-6901A151E676">
+              <SHORT-NAME>CM_EXT_A_IN14</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="AB0D1E66-4CE2-441E-AA35-6D7461033124">
+              <SHORT-NAME>CM_EXT_A_IN15</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="85539C0E-D8F6-4B82-A1FC-BE484CD4DC9B">
+              <SHORT-NAME>CM_EXT_A_IN16</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="4CAC2756-20AE-4A53-A5EF-DA67D92AA43A">
+              <SHORT-NAME>CM_EXT_A_IN5</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="7F24EECD-76E6-4896-9DE2-43DEE5F3DA94">
+              <SHORT-NAME>CM_EXT_A_IN6</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="E47E1988-9FD2-4164-8F10-CB1CB4A7EC35">
+              <SHORT-NAME>CM_EXT_A_IN7</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="62B9BE87-F97A-4164-95EF-DECDCF4AC2B0">
+              <SHORT-NAME>CM_EXT_A_IN8</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="9E390C7C-E12A-40A5-99C2-96F10E53460F">
+              <SHORT-NAME>CM_EXT_A_IN9</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="DED13E0D-ED65-4D5B-8127-2DC1B9822DC2">
+              <SHORT-NAME>CM_EXT10_Valid</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="A453281F-7E70-4B69-928C-08D0C3582B02">
+              <SHORT-NAME>CM_EXT11_Valid</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="274B562F-CF18-433B-A50D-7286250CA4FE">
+              <SHORT-NAME>CM_EXT12_Valid</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="A99A5E2F-D391-4687-8873-6C3C9E0BAB92">
+              <SHORT-NAME>CM_EXT13_Valid</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="C09ADDAA-E7F0-4048-9A5F-CF2BB8526744">
+              <SHORT-NAME>CM_EXT14_Valid</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="DAD98D62-DFEC-451A-BF7A-91A18E3CC008">
+              <SHORT-NAME>CM_EXT15_Valid</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="7DC6918E-A9FC-4EF4-A35E-A01C7B4D577B">
+              <SHORT-NAME>CM_EXT16_Valid</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="AB43EB9A-7D81-4AF3-9B85-B6546FFB9B73">
+              <SHORT-NAME>CM_EXT5_Valid</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="F5989581-E934-4E95-881F-7273AB8D1D55">
+              <SHORT-NAME>CM_EXT6_Valid</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="7ACFD17C-7C62-439F-9746-4AF28D4E1BBE">
+              <SHORT-NAME>CM_EXT7_Valid</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="3F7901AF-46DC-4903-8094-803156BD7351">
+              <SHORT-NAME>CM_EXT8_Valid</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="39C05FC4-9EE8-4332-8BC9-92E561ECBBF3">
+              <SHORT-NAME>CM_EXT9_Valid</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
           </ELEMENTS>
         </AR-PACKAGE>
         <AR-PACKAGE UUID="FC6FFAB8-8A7D-4845-AA13-2744AB69DEFE">
@@ -1971,6 +2667,8 @@
                 </SDGS>
               </ADMIN-DATA>
               <DISPLAY-NAME>¡ãC</DISPLAY-NAME>
+              <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
+              <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
             </UNIT>
           </ELEMENTS>
         </AR-PACKAGE>
@@ -2341,6 +3039,294 @@
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN3</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="945609D0-B8B8-4D98-99F6-DE2007840A3E">
+          <SHORT-NAME>EXT10_Valid</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT10_Valid</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="A345BCB1-5920-44AD-92A2-E24765D9CB06">
+          <SHORT-NAME>EXT12_Valid</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT12_Valid</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="CFFA40C3-72BA-4CC7-9575-24D3A5389126">
+          <SHORT-NAME>EXT15_Valid</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT15_Valid</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="08EA7C00-F49D-422D-A16F-49A659DD50D6">
+          <SHORT-NAME>EXT5_Valid</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT5_Valid</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="2E33008C-1934-4B25-B141-6D4206AFF7BD">
+          <SHORT-NAME>EXT_A_IN15</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN15</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="6231FB34-0B6D-4FD7-96A1-BC0BA63E555B">
+          <SHORT-NAME>EXT7_Valid</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT7_Valid</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="80CB47CE-F7B0-4C97-BB7E-667EC113EF3C">
+          <SHORT-NAME>EXT_A_IN13</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN13</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="DB38B71E-6850-45B4-A6D5-4F5ACF6E60B4">
+          <SHORT-NAME>EXT_A_IN5</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN5</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="DC2AD000-A98A-4579-ADA2-8547105EDD61">
+          <SHORT-NAME>EXT6_Valid</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT6_Valid</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="6063F21A-71F8-4AA1-A4BB-445B20C61996">
+          <SHORT-NAME>EXT_A_IN12</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN12</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="BDB16987-C4E2-4934-BE1E-8CF0972873BC">
+          <SHORT-NAME>EXT_A_IN7</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN7</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="B50DBC13-F2B6-4234-90B3-D8427BBD1A71">
+          <SHORT-NAME>EXT13_Valid</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT13_Valid</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="5F4444E9-563A-4543-B3FE-41BA7DBFE9EA">
+          <SHORT-NAME>EXT_A_IN9</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN9</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="F9AFD0EF-43EA-48C3-8617-631253DB0BE0">
+          <SHORT-NAME>EXT9_Valid</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT9_Valid</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="11B43EDF-62D8-490C-A67B-EDE4764561AB">
+          <SHORT-NAME>EXT8_Valid</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT8_Valid</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="6083ABE2-501F-4E3C-B0B0-1E0386A89998">
+          <SHORT-NAME>EXT11_Valid</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT11_Valid</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="F9771387-B6C2-4962-9252-01339D574153">
+          <SHORT-NAME>EXT_A_IN6</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN6</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="326D5094-69B6-4020-8F1C-CCF60409501F">
+          <SHORT-NAME>EXT16_Valid</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT16_Valid</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="91E2491E-B86C-41F6-B5BC-DD5943A052B8">
+          <SHORT-NAME>EXT14_Valid</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT14_Valid</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="FC3CAED1-710B-440A-AAC8-72AF756B7334">
+          <SHORT-NAME>EXT_A_IN16</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN16</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="67860C0D-8BF2-430C-A14E-B72962190680">
+          <SHORT-NAME>EXT_A_IN11</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN11</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="E0CAE440-9FF8-425C-8310-D4EA9CA0CDB6">
+          <SHORT-NAME>EXT_A_IN8</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN8</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="749576F4-5251-4862-8DCF-AEB12C4898D9">
+          <SHORT-NAME>EXT_A_IN14</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN14</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </IMPLEMENTATION-DATA-TYPE>
+        <IMPLEMENTATION-DATA-TYPE UUID="EB530E1E-040C-41C5-AC03-C6A78EB480E7">
+          <SHORT-NAME>EXT_A_IN10</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN10</DATA-CONSTR-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </SW-DATA-DEF-PROPS>

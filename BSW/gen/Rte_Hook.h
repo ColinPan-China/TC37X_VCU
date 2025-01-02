@@ -176,14 +176,38 @@
  *  Rte_ComHookRx_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx
  *  Rte_ComHookRx_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx
  *  Rte_ComHookRx_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx
+ *  Rte_ComHook_EXT10_Valid_oVcuTxIoMsg5_oTC37X_VCU_CAN00_ba532916_Tx_SigTx
+ *  Rte_ComHook_EXT11_Valid_oVcuTxIoMsg6_oTC37X_VCU_CAN00_d025e36b_Tx_SigTx
+ *  Rte_ComHook_EXT12_Valid_oVcuTxIoMsg6_oTC37X_VCU_CAN00_8a44dc0b_Tx_SigTx
+ *  Rte_ComHook_EXT13_Valid_oVcuTxIoMsg7_oTC37X_VCU_CAN00_e5e67df5_Tx_SigTx
+ *  Rte_ComHook_EXT14_Valid_oVcuTxIoMsg7_oTC37X_VCU_CAN00_d1d4142a_Tx_SigTx
+ *  Rte_ComHook_EXT15_Valid_oVcuTxIoMsg8_oTC37X_VCU_CAN00_a75ba75d_Tx_SigTx
+ *  Rte_ComHook_EXT16_Valid_oVcuTxIoMsg8_oTC37X_VCU_CAN00_fd3a983d_Tx_SigTx
  *  Rte_ComHook_EXT1_Valid_oVcuTxIoMsg1_oTC37X_VCU_CAN00_caf787ea_Tx_SigTx
  *  Rte_ComHook_EXT2_Valid_oVcuTxIoMsg1_oTC37X_VCU_CAN00_9096b88a_Tx_SigTx
  *  Rte_ComHook_EXT3_Valid_oVcuTxIoMsg2_oTC37X_VCU_CAN00_fae072f7_Tx_SigTx
  *  Rte_ComHook_EXT4_Valid_oVcuTxIoMsg2_oTC37X_VCU_CAN00_ced21b28_Tx_SigTx
+ *  Rte_ComHook_EXT5_Valid_oVcuTxIoMsg3_oTC37X_VCU_CAN00_a170bad6_Tx_SigTx
+ *  Rte_ComHook_EXT6_Valid_oVcuTxIoMsg3_oTC37X_VCU_CAN00_fb1185b6_Tx_SigTx
+ *  Rte_ComHook_EXT7_Valid_oVcuTxIoMsg4_oTC37X_VCU_CAN00_9acf98cd_Tx_SigTx
+ *  Rte_ComHook_EXT8_Valid_oVcuTxIoMsg4_oTC37X_VCU_CAN00_725b5c6c_Tx_SigTx
+ *  Rte_ComHook_EXT9_Valid_oVcuTxIoMsg5_oTC37X_VCU_CAN00_1df9fd92_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN10_oVcuTxIoMsg5_oTC37X_VCU_CAN00_83e5b725_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN11_oVcuTxIoMsg6_oTC37X_VCU_CAN00_67848296_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN12_oVcuTxIoMsg6_oTC37X_VCU_CAN00_74acbbe5_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN13_oVcuTxIoMsg7_oTC37X_VCU_CAN00_9519e5d5_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN14_oVcuTxIoMsg7_oTC37X_VCU_CAN00_bdae7fe2_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN15_oVcuTxIoMsg8_oTC37X_VCU_CAN00_4536335b_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN16_oVcuTxIoMsg8_oTC37X_VCU_CAN00_561e0a28_Tx_SigTx
  *  Rte_ComHook_EXT_A_IN1_oVcuTxIoMsg1_oTC37X_VCU_CAN00_37348eff_Tx_SigTx
  *  Rte_ComHook_EXT_A_IN2_oVcuTxIoMsg1_oTC37X_VCU_CAN00_241cb78c_Tx_SigTx
  *  Rte_ComHook_EXT_A_IN3_oVcuTxIoMsg2_oTC37X_VCU_CAN00_c07d823f_Tx_SigTx
  *  Rte_ComHook_EXT_A_IN4_oVcuTxIoMsg2_oTC37X_VCU_CAN00_e8ca1808_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN5_oVcuTxIoMsg3_oTC37X_VCU_CAN00_097f4638_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN6_oVcuTxIoMsg3_oTC37X_VCU_CAN00_1a577f4b_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN7_oVcuTxIoMsg4_oTC37X_VCU_CAN00_f59e9dfe_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN8_oVcuTxIoMsg4_oTC37X_VCU_CAN00_aa164141_Tx_SigTx
+ *  Rte_ComHook_EXT_A_IN9_oVcuTxIoMsg5_oTC37X_VCU_CAN00_4ba31f71_Tx_SigTx
  *  Rte_ComHook_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx_SigRx
  *  Rte_ComHook_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx_SigRx
  *  Rte_ComHook_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx_SigRx
@@ -446,6 +470,20 @@
  *  Rte_Task_Terminate
  *  Rte_Task_WaitEvent
  *  Rte_Task_WaitEventRet
+ *  Rte_WriteHook_Com_SWC_EXT10_Valid_EXT10_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT10_Valid_EXT10_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT11_Valid_EXT11_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT11_Valid_EXT11_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT12_Valid_EXT12_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT12_Valid_EXT12_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT13_Valid_EXT13_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT13_Valid_EXT13_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT14_Valid_EXT14_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT14_Valid_EXT14_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT15_Valid_EXT15_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT15_Valid_EXT15_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT16_Valid_EXT16_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT16_Valid_EXT16_Valid_Start
  *  Rte_WriteHook_Com_SWC_EXT1_Valid_EXT1_Valid_Return
  *  Rte_WriteHook_Com_SWC_EXT1_Valid_EXT1_Valid_Start
  *  Rte_WriteHook_Com_SWC_EXT2_Valid_EXT2_Valid_Return
@@ -454,6 +492,30 @@
  *  Rte_WriteHook_Com_SWC_EXT3_Valid_EXT3_Valid_Start
  *  Rte_WriteHook_Com_SWC_EXT4_Valid_EXT4_Valid_Return
  *  Rte_WriteHook_Com_SWC_EXT4_Valid_EXT4_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT5_Valid_EXT5_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT5_Valid_EXT5_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT6_Valid_EXT6_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT6_Valid_EXT6_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT7_Valid_EXT7_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT7_Valid_EXT7_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT8_Valid_EXT8_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT8_Valid_EXT8_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT9_Valid_EXT9_Valid_Return
+ *  Rte_WriteHook_Com_SWC_EXT9_Valid_EXT9_Valid_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN10_EXT_A_IN10_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN10_EXT_A_IN10_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN11_EXT_A_IN11_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN11_EXT_A_IN11_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN12_EXT_A_IN12_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN12_EXT_A_IN12_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN13_EXT_A_IN13_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN13_EXT_A_IN13_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN14_EXT_A_IN14_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN14_EXT_A_IN14_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN15_EXT_A_IN15_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN15_EXT_A_IN15_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN16_EXT_A_IN16_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN16_EXT_A_IN16_Start
  *  Rte_WriteHook_Com_SWC_EXT_A_IN1_EXT_A_IN1_Return
  *  Rte_WriteHook_Com_SWC_EXT_A_IN1_EXT_A_IN1_Start
  *  Rte_WriteHook_Com_SWC_EXT_A_IN2_EXT_A_IN2_Return
@@ -462,6 +524,16 @@
  *  Rte_WriteHook_Com_SWC_EXT_A_IN3_EXT_A_IN3_Start
  *  Rte_WriteHook_Com_SWC_EXT_A_IN4_EXT_A_IN4_Return
  *  Rte_WriteHook_Com_SWC_EXT_A_IN4_EXT_A_IN4_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN5_EXT_A_IN5_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN5_EXT_A_IN5_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN6_EXT_A_IN6_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN6_EXT_A_IN6_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN7_EXT_A_IN7_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN7_EXT_A_IN7_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN8_EXT_A_IN8_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN8_EXT_A_IN8_Start
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN9_EXT_A_IN9_Return
+ *  Rte_WriteHook_Com_SWC_EXT_A_IN9_EXT_A_IN9_Start
  *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0_Return
  *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0_Start
  *  Rte_WriteHook_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1_Return

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cbk.h
- *   Generation Time: 2025-01-02 15:14:09
+ *   Generation Time: 2025-01-02 16:24:12
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -76,10 +76,16 @@
 #define ComConf_ComIPdu_VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx     1u
 #define ComConf_ComIPdu_VcuTxIoMsg1_oTC37X_VCU_CAN00_54884add_Tx      2u
 #define ComConf_ComIPdu_VcuTxIoMsg2_oTC37X_VCU_CAN00_be0e97bf_Tx      3u
-#define ComConf_ComIPdu_VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx        4u
-#define ComConf_ComIPdu_VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx        5u
-#define ComConf_ComIPdu_Vcu_Lin0_TxMsg1_oLIN00_f39ae32f_Tx            6u
-#define ComConf_ComIPdu_Vcu_Lin0_TxMsg2_oLIN00_7d15e4cc_Tx            7u
+#define ComConf_ComIPdu_VcuTxIoMsg3_oTC37X_VCU_CAN00_515c215e_Tx      4u
+#define ComConf_ComIPdu_VcuTxIoMsg4_oTC37X_VCU_CAN00_b0722b3a_Tx      5u
+#define ComConf_ComIPdu_VcuTxIoMsg5_oTC37X_VCU_CAN00_5f209ddb_Tx      6u
+#define ComConf_ComIPdu_VcuTxIoMsg6_oTC37X_VCU_CAN00_b5a640b9_Tx      7u
+#define ComConf_ComIPdu_VcuTxIoMsg7_oTC37X_VCU_CAN00_5af4f658_Tx      8u
+#define ComConf_ComIPdu_VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx      9u
+#define ComConf_ComIPdu_VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx        10u
+#define ComConf_ComIPdu_VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx        11u
+#define ComConf_ComIPdu_Vcu_Lin0_TxMsg1_oLIN00_f39ae32f_Tx            12u
+#define ComConf_ComIPdu_Vcu_Lin0_TxMsg2_oLIN00_7d15e4cc_Tx            13u
 /**\} */
 
 /**********************************************************************************************************************

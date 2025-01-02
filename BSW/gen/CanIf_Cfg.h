@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanIf_Cfg.h
- *   Generation Time: 2025-01-02 15:14:09
+ *   Generation Time: 2025-01-02 16:24:13
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -220,14 +220,20 @@ typedef uint8 CanIf_TxBufferSizeType;
 
 #define CanIfTxPduHnd_Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00_2ff8982b_Tx                              0u
 #define CanIfTxPduHnd_XCP_Response_oTC37X_VCU_CAN00_933a9e7a_Tx                                     1u
-#define CanIfTxPduHnd_VcuTxIoMsg2_oTC37X_VCU_CAN00_0c9644c1_Tx                                      2u
-#define CanIfTxPduHnd_VcuTxIoMsg1_oTC37X_VCU_CAN00_644aaa1f_Tx                                      3u
-#define CanIfTxPduHnd_VcuTxMsg2_oTC37X_VCU_CAN00_674a89a8_Tx                                        4u
-#define CanIfTxPduHnd_VcuTxMsg1_oTC37X_VCU_CAN00_78140f53_Tx                                        5u
-#define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx                                   6u
-#define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_587183bc_Tx                                   7u
-#define CanIfTxPduHnd_VcuAdcTxMsg2_oTC37X_VCU_CAN01_fa8a8e09_Tx                                     8u
-#define CanIfTxPduHnd_VcuAdcTxMsg1_oTC37X_VCU_CAN01_29adaf4d_Tx                                     9u
+#define CanIfTxPduHnd_VcuTxIoMsg8_oTC37X_VCU_CAN00_a52d2444_Tx                                      2u
+#define CanIfTxPduHnd_VcuTxIoMsg7_oTC37X_VCU_CAN00_b5f377a3_Tx                                      3u
+#define CanIfTxPduHnd_VcuTxIoMsg6_oTC37X_VCU_CAN00_92472de9_Tx                                      4u
+#define CanIfTxPduHnd_VcuTxIoMsg5_oTC37X_VCU_CAN00_fa9bc337_Tx                                      5u
+#define CanIfTxPduHnd_VcuTxIoMsg4_oTC37X_VCU_CAN00_dd2f997d_Tx                                      6u
+#define CanIfTxPduHnd_VcuTxIoMsg3_oTC37X_VCU_CAN00_2b221e8b_Tx                                      7u
+#define CanIfTxPduHnd_VcuTxIoMsg2_oTC37X_VCU_CAN00_0c9644c1_Tx                                      8u
+#define CanIfTxPduHnd_VcuTxIoMsg1_oTC37X_VCU_CAN00_644aaa1f_Tx                                      9u
+#define CanIfTxPduHnd_VcuTxMsg2_oTC37X_VCU_CAN00_674a89a8_Tx                                        10u
+#define CanIfTxPduHnd_VcuTxMsg1_oTC37X_VCU_CAN00_78140f53_Tx                                        11u
+#define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx                                   12u
+#define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_587183bc_Tx                                   13u
+#define CanIfTxPduHnd_VcuAdcTxMsg2_oTC37X_VCU_CAN01_fa8a8e09_Tx                                     14u
+#define CanIfTxPduHnd_VcuAdcTxMsg1_oTC37X_VCU_CAN01_29adaf4d_Tx                                     15u
 
 
 /**********************************************************************************************************************
@@ -258,14 +264,20 @@ typedef uint8 CanIf_TxBufferSizeType;
 
 #define CanIfConf_CanIfTxPduCfg_Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00_2ff8982b_Tx                    0u
 #define CanIfConf_CanIfTxPduCfg_XCP_Response_oTC37X_VCU_CAN00_933a9e7a_Tx                           1u
-#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg2_oTC37X_VCU_CAN00_0c9644c1_Tx                            2u
-#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg1_oTC37X_VCU_CAN00_644aaa1f_Tx                            3u
-#define CanIfConf_CanIfTxPduCfg_VcuTxMsg2_oTC37X_VCU_CAN00_674a89a8_Tx                              4u
-#define CanIfConf_CanIfTxPduCfg_VcuTxMsg1_oTC37X_VCU_CAN00_78140f53_Tx                              5u
-#define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx                         6u
-#define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_587183bc_Tx                         7u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxMsg2_oTC37X_VCU_CAN01_fa8a8e09_Tx                           8u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxMsg1_oTC37X_VCU_CAN01_29adaf4d_Tx                           9u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg8_oTC37X_VCU_CAN00_a52d2444_Tx                            2u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg7_oTC37X_VCU_CAN00_b5f377a3_Tx                            3u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg6_oTC37X_VCU_CAN00_92472de9_Tx                            4u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg5_oTC37X_VCU_CAN00_fa9bc337_Tx                            5u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg4_oTC37X_VCU_CAN00_dd2f997d_Tx                            6u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg3_oTC37X_VCU_CAN00_2b221e8b_Tx                            7u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg2_oTC37X_VCU_CAN00_0c9644c1_Tx                            8u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg1_oTC37X_VCU_CAN00_644aaa1f_Tx                            9u
+#define CanIfConf_CanIfTxPduCfg_VcuTxMsg2_oTC37X_VCU_CAN00_674a89a8_Tx                              10u
+#define CanIfConf_CanIfTxPduCfg_VcuTxMsg1_oTC37X_VCU_CAN00_78140f53_Tx                              11u
+#define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx                         12u
+#define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_587183bc_Tx                         13u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxMsg2_oTC37X_VCU_CAN01_fa8a8e09_Tx                           14u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxMsg1_oTC37X_VCU_CAN01_29adaf4d_Tx                           15u
 
 
 /**********************************************************************************************************************
@@ -618,7 +630,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetSizeOfRxIndicationFctListOfPCConfig()                                              5u  /**< the number of accomplishable value elements in CanIf_RxIndicationFctList */
 #define CanIf_GetSizeOfRxPduConfigOfPCConfig()                                                      9u  /**< the number of accomplishable value elements in CanIf_RxPduConfig */
 #define CanIf_GetSizeOfTxConfirmationFctListOfPCConfig()                                            4u  /**< the number of accomplishable value elements in CanIf_TxConfirmationFctList */
-#define CanIf_GetSizeOfTxPduConfigOfPCConfig()                                                      10u  /**< the number of accomplishable value elements in CanIf_TxPduConfig */
+#define CanIf_GetSizeOfTxPduConfigOfPCConfig()                                                      16u  /**< the number of accomplishable value elements in CanIf_TxPduConfig */
 #define CanIf_GetTxConfirmationFctListOfPCConfig()                                                  CanIf_TxConfirmationFctList  /**< the pointer to CanIf_TxConfirmationFctList */
 #define CanIf_GetTxPduConfigOfPCConfig()                                                            CanIf_TxPduConfig  /**< the pointer to CanIf_TxPduConfig */
 /** 
@@ -1234,7 +1246,7 @@ extern CONST(CanIf_TxConfirmationFctType, CANIF_CONST) CanIf_TxConfirmationFctLi
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[10];
+extern CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[16];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

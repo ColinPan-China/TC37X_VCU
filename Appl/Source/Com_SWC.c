@@ -56,14 +56,38 @@
  *
  * Primitive Types:
  * ================
+ * EXT10_Valid: Integer in interval [0...1]
+ * EXT11_Valid: Integer in interval [0...1]
+ * EXT12_Valid: Integer in interval [0...1]
+ * EXT13_Valid: Integer in interval [0...1]
+ * EXT14_Valid: Integer in interval [0...1]
+ * EXT15_Valid: Integer in interval [0...1]
+ * EXT16_Valid: Integer in interval [0...1]
  * EXT1_Valid: Integer in interval [0...1]
  * EXT2_Valid: Integer in interval [0...1]
  * EXT3_Valid: Integer in interval [0...1]
  * EXT4_Valid: Integer in interval [0...1]
+ * EXT5_Valid: Integer in interval [0...1]
+ * EXT6_Valid: Integer in interval [0...1]
+ * EXT7_Valid: Integer in interval [0...1]
+ * EXT8_Valid: Integer in interval [0...1]
+ * EXT9_Valid: Integer in interval [0...1]
  * EXT_A_IN1: Integer in interval [-256...255]
+ * EXT_A_IN10: Integer in interval [-32768...32767]
+ * EXT_A_IN11: Integer in interval [-256...255]
+ * EXT_A_IN12: Integer in interval [-32768...32767]
+ * EXT_A_IN13: Integer in interval [-256...255]
+ * EXT_A_IN14: Integer in interval [-32768...32767]
+ * EXT_A_IN15: Integer in interval [-256...255]
+ * EXT_A_IN16: Integer in interval [-32768...32767]
  * EXT_A_IN2: Integer in interval [-32768...32767]
  * EXT_A_IN3: Integer in interval [-256...255]
  * EXT_A_IN4: Integer in interval [-32768...32767]
+ * EXT_A_IN5: Integer in interval [-256...255]
+ * EXT_A_IN6: Integer in interval [-32768...32767]
+ * EXT_A_IN7: Integer in interval [-256...255]
+ * EXT_A_IN8: Integer in interval [-32768...32767]
+ * EXT_A_IN9: Integer in interval [-256...255]
  * VcuRxMsg1_Sig0: Integer in interval [-32768...32767]
  * VcuRxMsg1_Sig1: Integer in interval [-32768...32767]
  * VcuRxMsg1_Sig2: Integer in interval [-32768...32767]
@@ -115,14 +139,38 @@
  * ==================
  *   Explicit S/R API:
  *   -----------------
+ *   Std_ReturnType Rte_Write_EXT10_Valid_EXT10_Valid(EXT10_Valid data)
+ *   Std_ReturnType Rte_Write_EXT11_Valid_EXT11_Valid(EXT11_Valid data)
+ *   Std_ReturnType Rte_Write_EXT12_Valid_EXT12_Valid(EXT12_Valid data)
+ *   Std_ReturnType Rte_Write_EXT13_Valid_EXT13_Valid(EXT13_Valid data)
+ *   Std_ReturnType Rte_Write_EXT14_Valid_EXT14_Valid(EXT14_Valid data)
+ *   Std_ReturnType Rte_Write_EXT15_Valid_EXT15_Valid(EXT15_Valid data)
+ *   Std_ReturnType Rte_Write_EXT16_Valid_EXT16_Valid(EXT16_Valid data)
  *   Std_ReturnType Rte_Write_EXT1_Valid_EXT1_Valid(EXT1_Valid data)
  *   Std_ReturnType Rte_Write_EXT2_Valid_EXT2_Valid(EXT2_Valid data)
  *   Std_ReturnType Rte_Write_EXT3_Valid_EXT3_Valid(EXT3_Valid data)
  *   Std_ReturnType Rte_Write_EXT4_Valid_EXT4_Valid(EXT4_Valid data)
+ *   Std_ReturnType Rte_Write_EXT5_Valid_EXT5_Valid(EXT5_Valid data)
+ *   Std_ReturnType Rte_Write_EXT6_Valid_EXT6_Valid(EXT6_Valid data)
+ *   Std_ReturnType Rte_Write_EXT7_Valid_EXT7_Valid(EXT7_Valid data)
+ *   Std_ReturnType Rte_Write_EXT8_Valid_EXT8_Valid(EXT8_Valid data)
+ *   Std_ReturnType Rte_Write_EXT9_Valid_EXT9_Valid(EXT9_Valid data)
  *   Std_ReturnType Rte_Write_EXT_A_IN1_EXT_A_IN1(EXT_A_IN1 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN10_EXT_A_IN10(EXT_A_IN10 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN11_EXT_A_IN11(EXT_A_IN11 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN12_EXT_A_IN12(EXT_A_IN12 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN13_EXT_A_IN13(EXT_A_IN13 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN14_EXT_A_IN14(EXT_A_IN14 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN15_EXT_A_IN15(EXT_A_IN15 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN16_EXT_A_IN16(EXT_A_IN16 data)
  *   Std_ReturnType Rte_Write_EXT_A_IN2_EXT_A_IN2(EXT_A_IN2 data)
  *   Std_ReturnType Rte_Write_EXT_A_IN3_EXT_A_IN3(EXT_A_IN3 data)
  *   Std_ReturnType Rte_Write_EXT_A_IN4_EXT_A_IN4(EXT_A_IN4 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN5_EXT_A_IN5(EXT_A_IN5 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN6_EXT_A_IN6(EXT_A_IN6 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN7_EXT_A_IN7(EXT_A_IN7 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN8_EXT_A_IN8(EXT_A_IN8 data)
+ *   Std_ReturnType Rte_Write_EXT_A_IN9_EXT_A_IN9(EXT_A_IN9 data)
  *   Std_ReturnType Rte_Write_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0(VcuTxMsg1_Sig0 data)
  *   Std_ReturnType Rte_Write_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1(VcuTxMsg1_Sig1 data)
  *   Std_ReturnType Rte_Write_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2(VcuTxMsg1_Sig2 data)
@@ -275,8 +323,54 @@ void ExtTempUpdate()
     IoHwGetExtTemp(3,&temp,&flg);
     Rte_Write_EXT_A_IN4_EXT_A_IN4(temp);
     Rte_Write_EXT4_Valid_EXT4_Valid(flg);
+  
+    IoHwGetExtTemp(4,&temp,&flg);
+    Rte_Write_EXT_A_IN5_EXT_A_IN5(temp);
+    Rte_Write_EXT5_Valid_EXT5_Valid(flg);
+  
+    IoHwGetExtTemp(5,&temp,&flg);
+    Rte_Write_EXT_A_IN6_EXT_A_IN6(temp);
+    Rte_Write_EXT6_Valid_EXT6_Valid(flg);
+  
+    IoHwGetExtTemp(6,&temp,&flg);
+    Rte_Write_EXT_A_IN7_EXT_A_IN7(temp);
+    Rte_Write_EXT7_Valid_EXT7_Valid(flg);
 
+    IoHwGetExtTemp(7,&temp,&flg);
+    Rte_Write_EXT_A_IN8_EXT_A_IN8(temp);
+    Rte_Write_EXT8_Valid_EXT8_Valid(flg);
 
+    IoHwGetExtTemp(8,&temp,&flg);
+    Rte_Write_EXT_A_IN9_EXT_A_IN9(temp);
+    Rte_Write_EXT9_Valid_EXT9_Valid(flg);
+
+    IoHwGetExtTemp(9,&temp,&flg);
+    Rte_Write_EXT_A_IN10_EXT_A_IN10(temp);
+    Rte_Write_EXT10_Valid_EXT10_Valid(flg);
+
+    IoHwGetExtTemp(10,&temp,&flg);
+    Rte_Write_EXT_A_IN11_EXT_A_IN11(temp);
+    Rte_Write_EXT11_Valid_EXT11_Valid(flg);
+
+    IoHwGetExtTemp(11,&temp,&flg);
+    Rte_Write_EXT_A_IN12_EXT_A_IN12(temp);
+    Rte_Write_EXT12_Valid_EXT12_Valid(flg);
+  
+    IoHwGetExtTemp(12,&temp,&flg);
+    Rte_Write_EXT_A_IN13_EXT_A_IN13(temp);
+    Rte_Write_EXT13_Valid_EXT13_Valid(flg);
+
+    IoHwGetExtTemp(13,&temp,&flg);
+    Rte_Write_EXT_A_IN14_EXT_A_IN14(temp);
+    Rte_Write_EXT14_Valid_EXT14_Valid(flg);
+
+    IoHwGetExtTemp(14,&temp,&flg);
+    Rte_Write_EXT_A_IN15_EXT_A_IN15(temp);
+    Rte_Write_EXT15_Valid_EXT15_Valid(flg);
+
+//    IoHwGetExtTemp(16,&temp,&flg);
+    Rte_Write_EXT_A_IN16_EXT_A_IN16(-273);
+    Rte_Write_EXT16_Valid_EXT16_Valid(0);
   }
 
 }

@@ -51,14 +51,38 @@ extern "C"
  * Init Values for unqueued S/R communication (primitive types only)
  *********************************************************************************************************************/
 
+#  define Rte_InitValue_EXT10_Valid_EXT10_Valid (0U)
+#  define Rte_InitValue_EXT11_Valid_EXT11_Valid (0U)
+#  define Rte_InitValue_EXT12_Valid_EXT12_Valid (0U)
+#  define Rte_InitValue_EXT13_Valid_EXT13_Valid (0U)
+#  define Rte_InitValue_EXT14_Valid_EXT14_Valid (0U)
+#  define Rte_InitValue_EXT15_Valid_EXT15_Valid (0U)
+#  define Rte_InitValue_EXT16_Valid_EXT16_Valid (0U)
 #  define Rte_InitValue_EXT1_Valid_EXT1_Valid (0U)
 #  define Rte_InitValue_EXT2_Valid_EXT2_Valid (0U)
 #  define Rte_InitValue_EXT3_Valid_EXT3_Valid (0U)
 #  define Rte_InitValue_EXT4_Valid_EXT4_Valid (0U)
+#  define Rte_InitValue_EXT5_Valid_EXT5_Valid (0U)
+#  define Rte_InitValue_EXT6_Valid_EXT6_Valid (0U)
+#  define Rte_InitValue_EXT7_Valid_EXT7_Valid (0U)
+#  define Rte_InitValue_EXT8_Valid_EXT8_Valid (0U)
+#  define Rte_InitValue_EXT9_Valid_EXT9_Valid (0U)
 #  define Rte_InitValue_EXT_A_IN1_EXT_A_IN1 (0)
+#  define Rte_InitValue_EXT_A_IN10_EXT_A_IN10 (0)
+#  define Rte_InitValue_EXT_A_IN11_EXT_A_IN11 (0)
+#  define Rte_InitValue_EXT_A_IN12_EXT_A_IN12 (0)
+#  define Rte_InitValue_EXT_A_IN13_EXT_A_IN13 (0)
+#  define Rte_InitValue_EXT_A_IN14_EXT_A_IN14 (0)
+#  define Rte_InitValue_EXT_A_IN15_EXT_A_IN15 (0)
+#  define Rte_InitValue_EXT_A_IN16_EXT_A_IN16 (0)
 #  define Rte_InitValue_EXT_A_IN2_EXT_A_IN2 (0)
 #  define Rte_InitValue_EXT_A_IN3_EXT_A_IN3 (0)
 #  define Rte_InitValue_EXT_A_IN4_EXT_A_IN4 (0)
+#  define Rte_InitValue_EXT_A_IN5_EXT_A_IN5 (0)
+#  define Rte_InitValue_EXT_A_IN6_EXT_A_IN6 (0)
+#  define Rte_InitValue_EXT_A_IN7_EXT_A_IN7 (0)
+#  define Rte_InitValue_EXT_A_IN8_EXT_A_IN8 (0)
+#  define Rte_InitValue_EXT_A_IN9_EXT_A_IN9 (0)
 #  define Rte_InitValue_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0 (0)
 #  define Rte_InitValue_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1 (0)
 #  define Rte_InitValue_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2 (0)
@@ -92,14 +116,38 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0(P2
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig1_VcuRxMsg2_Sig1(P2VAR(VcuRxMsg2_Sig1, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2(P2VAR(VcuRxMsg2_Sig2, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3(P2VAR(VcuRxMsg2_Sig3, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT10_Valid_EXT10_Valid(EXT10_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT11_Valid_EXT11_Valid(EXT11_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT12_Valid_EXT12_Valid(EXT12_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT13_Valid_EXT13_Valid(EXT13_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT14_Valid_EXT14_Valid(EXT14_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT15_Valid_EXT15_Valid(EXT15_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT16_Valid_EXT16_Valid(EXT16_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT1_Valid_EXT1_Valid(EXT1_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT2_Valid_EXT2_Valid(EXT2_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT3_Valid_EXT3_Valid(EXT3_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT4_Valid_EXT4_Valid(EXT4_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT5_Valid_EXT5_Valid(EXT5_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT6_Valid_EXT6_Valid(EXT6_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT7_Valid_EXT7_Valid(EXT7_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT8_Valid_EXT8_Valid(EXT8_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT9_Valid_EXT9_Valid(EXT9_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN1_EXT_A_IN1(EXT_A_IN1 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN10_EXT_A_IN10(EXT_A_IN10 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN11_EXT_A_IN11(EXT_A_IN11 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN12_EXT_A_IN12(EXT_A_IN12 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN13_EXT_A_IN13(EXT_A_IN13 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN14_EXT_A_IN14(EXT_A_IN14 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN15_EXT_A_IN15(EXT_A_IN15 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN16_EXT_A_IN16(EXT_A_IN16 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN2_EXT_A_IN2(EXT_A_IN2 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN3_EXT_A_IN3(EXT_A_IN3 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN4_EXT_A_IN4(EXT_A_IN4 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN5_EXT_A_IN5(EXT_A_IN5 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN6_EXT_A_IN6(EXT_A_IN6 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN7_EXT_A_IN7(EXT_A_IN7 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN8_EXT_A_IN8(EXT_A_IN8 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN9_EXT_A_IN9(EXT_A_IN9 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0(VcuTxMsg1_Sig0 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1(VcuTxMsg1_Sig1 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2(VcuTxMsg1_Sig2 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
@@ -131,14 +179,38 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
 /**********************************************************************************************************************
  * Rte_Write_<p>_<d> (explicit S/R communication with isQueued = false)
  *********************************************************************************************************************/
+#  define Rte_Write_EXT10_Valid_EXT10_Valid Rte_Write_Com_SWC_EXT10_Valid_EXT10_Valid
+#  define Rte_Write_EXT11_Valid_EXT11_Valid Rte_Write_Com_SWC_EXT11_Valid_EXT11_Valid
+#  define Rte_Write_EXT12_Valid_EXT12_Valid Rte_Write_Com_SWC_EXT12_Valid_EXT12_Valid
+#  define Rte_Write_EXT13_Valid_EXT13_Valid Rte_Write_Com_SWC_EXT13_Valid_EXT13_Valid
+#  define Rte_Write_EXT14_Valid_EXT14_Valid Rte_Write_Com_SWC_EXT14_Valid_EXT14_Valid
+#  define Rte_Write_EXT15_Valid_EXT15_Valid Rte_Write_Com_SWC_EXT15_Valid_EXT15_Valid
+#  define Rte_Write_EXT16_Valid_EXT16_Valid Rte_Write_Com_SWC_EXT16_Valid_EXT16_Valid
 #  define Rte_Write_EXT1_Valid_EXT1_Valid Rte_Write_Com_SWC_EXT1_Valid_EXT1_Valid
 #  define Rte_Write_EXT2_Valid_EXT2_Valid Rte_Write_Com_SWC_EXT2_Valid_EXT2_Valid
 #  define Rte_Write_EXT3_Valid_EXT3_Valid Rte_Write_Com_SWC_EXT3_Valid_EXT3_Valid
 #  define Rte_Write_EXT4_Valid_EXT4_Valid Rte_Write_Com_SWC_EXT4_Valid_EXT4_Valid
+#  define Rte_Write_EXT5_Valid_EXT5_Valid Rte_Write_Com_SWC_EXT5_Valid_EXT5_Valid
+#  define Rte_Write_EXT6_Valid_EXT6_Valid Rte_Write_Com_SWC_EXT6_Valid_EXT6_Valid
+#  define Rte_Write_EXT7_Valid_EXT7_Valid Rte_Write_Com_SWC_EXT7_Valid_EXT7_Valid
+#  define Rte_Write_EXT8_Valid_EXT8_Valid Rte_Write_Com_SWC_EXT8_Valid_EXT8_Valid
+#  define Rte_Write_EXT9_Valid_EXT9_Valid Rte_Write_Com_SWC_EXT9_Valid_EXT9_Valid
 #  define Rte_Write_EXT_A_IN1_EXT_A_IN1 Rte_Write_Com_SWC_EXT_A_IN1_EXT_A_IN1
+#  define Rte_Write_EXT_A_IN10_EXT_A_IN10 Rte_Write_Com_SWC_EXT_A_IN10_EXT_A_IN10
+#  define Rte_Write_EXT_A_IN11_EXT_A_IN11 Rte_Write_Com_SWC_EXT_A_IN11_EXT_A_IN11
+#  define Rte_Write_EXT_A_IN12_EXT_A_IN12 Rte_Write_Com_SWC_EXT_A_IN12_EXT_A_IN12
+#  define Rte_Write_EXT_A_IN13_EXT_A_IN13 Rte_Write_Com_SWC_EXT_A_IN13_EXT_A_IN13
+#  define Rte_Write_EXT_A_IN14_EXT_A_IN14 Rte_Write_Com_SWC_EXT_A_IN14_EXT_A_IN14
+#  define Rte_Write_EXT_A_IN15_EXT_A_IN15 Rte_Write_Com_SWC_EXT_A_IN15_EXT_A_IN15
+#  define Rte_Write_EXT_A_IN16_EXT_A_IN16 Rte_Write_Com_SWC_EXT_A_IN16_EXT_A_IN16
 #  define Rte_Write_EXT_A_IN2_EXT_A_IN2 Rte_Write_Com_SWC_EXT_A_IN2_EXT_A_IN2
 #  define Rte_Write_EXT_A_IN3_EXT_A_IN3 Rte_Write_Com_SWC_EXT_A_IN3_EXT_A_IN3
 #  define Rte_Write_EXT_A_IN4_EXT_A_IN4 Rte_Write_Com_SWC_EXT_A_IN4_EXT_A_IN4
+#  define Rte_Write_EXT_A_IN5_EXT_A_IN5 Rte_Write_Com_SWC_EXT_A_IN5_EXT_A_IN5
+#  define Rte_Write_EXT_A_IN6_EXT_A_IN6 Rte_Write_Com_SWC_EXT_A_IN6_EXT_A_IN6
+#  define Rte_Write_EXT_A_IN7_EXT_A_IN7 Rte_Write_Com_SWC_EXT_A_IN7_EXT_A_IN7
+#  define Rte_Write_EXT_A_IN8_EXT_A_IN8 Rte_Write_Com_SWC_EXT_A_IN8_EXT_A_IN8
+#  define Rte_Write_EXT_A_IN9_EXT_A_IN9 Rte_Write_Com_SWC_EXT_A_IN9_EXT_A_IN9
 #  define Rte_Write_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0 Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0
 #  define Rte_Write_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1 Rte_Write_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1
 #  define Rte_Write_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2 Rte_Write_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2
