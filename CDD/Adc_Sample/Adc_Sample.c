@@ -428,7 +428,10 @@ uint8 TempAdcConvert( uint32 Resistance, sint16 *pTemp )
 
 void IoHwGetExtTemp( uint8 ch, sint16 *temp, boolean *ValidFlg )
 {
-  *temp = ExtVoltageInput_Table[ch].Temp;
-  *ValidFlg = ExtVoltageInput_Table[ch].TempValidFlg;
+  if( ch < EXT_ADC_INPUT_NUM )
+  {
+    *temp     = ExtVoltageInput_Table[ch].Temp;
+    *ValidFlg = ExtVoltageInput_Table[ch].TempValidFlg;
+  }
 }
 
