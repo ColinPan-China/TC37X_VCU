@@ -118,204 +118,6 @@
                     <SDGS>
                       <SDG GID="DV:BswM">
                         <SDG GID="DV:Statemachines">
-                          <SDG GID="DV:Communication">
-                            <SD GID="DV:Version">19.03.00.02</SD>
-                            <SDG GID="DV:Feature:CN_LIN00_b12a0454">
-                              <SD GID="DV:Name">CN_LIN00_b12a0454</SD>
-                              <SD GID="DV:Value">TRUE</SD>
-                              <SDG GID="DV:Param:ReInitialize_TX">
-                                <SD GID="DV:Name">ReInitialize TX</SD>
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:ReInitialize_RX">
-                                <SD GID="DV:Name">ReInitialize RX</SD>
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:Start_Schedule">
-                                <SD GID="DV:Name">Start Schedule</SD>
-                                <SD GID="DV:Default">NO_STARTUP_SCHEDULE</SD>
-                                <SD GID="DV:Value">Vcu_Lin0_Schedule_8fbcfe93</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:VCU_oLIN00_Rx_4b9dfc53">
-                                <SD GID="DV:Name">Schedule: Vcu_Lin0_Schedule_8fbcfe93</SD>
-                                <SD GID="DV:Value">TRUE</SD>
-                                <SDG GID="DV:Feature:CC_CN_LIN00_b12a0454_VCU_oLIN00_Rx_4b9dfc53_VCU_oLIN00_Rx_4b9dfc53">
-                                  <SD GID="DV:Name">Group: VCU_oLIN00_Rx_4b9dfc53</SD>
-                                  <SD GID="DV:Value">TRUE</SD>
-                                </SDG>
-                                <SDG GID="DV:Feature:CC_CN_LIN00_b12a0454_VCU_oLIN00_Tx_1dc75bd5_VCU_oLIN00_Tx_1dc75bd5">
-                                  <SD GID="DV:Name">Group: VCU_oLIN00_Tx_1dc75bd5</SD>
-                                  <SD GID="DV:Value">TRUE</SD>
-                                </SDG>
-                              </SDG>
-                            </SDG>
-                            <SDG GID="DV:Feature:CN_TC37X_VCU_CAN00_07b6c9c8">
-                              <SD GID="DV:Name">CN_TC37X_VCU_CAN00_07b6c9c8</SD>
-                              <SD GID="DV:Value">TRUE</SD>
-                              <SDG GID="DV:Param:ReInitialize_TX">
-                                <SD GID="DV:Name">ReInitialize TX</SD>
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:ReInitialize_RX">
-                                <SD GID="DV:Name">ReInitialize RX</SD>
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORMAL">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM_NM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM_NM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORM_NM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:NM_STATE_BUS_OFF">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:NM_STATE_CHECK_WAKEUP">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:NM_STATE_WAIT_STARTUP">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:NM_STATE_BUS_SLEEP">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:NM_STATE_PREPARE_BUS_SLEEP">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:CC_CN_TC37X_VCU_CAN00_07b6c9c8_NM">
-                                <SD GID="DV:Name">Nm Communication</SD>
-                                <SD GID="DV:Value">FALSE</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:CC_CN_TC37X_VCU_CAN00_07b6c9c8_VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf_VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf">
-                                <SD GID="DV:Name">Group: VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf</SD>
-                                <SD GID="DV:Value">TRUE</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:CC_CN_TC37X_VCU_CAN00_07b6c9c8_VCU_oTC37X_VCU_CAN00_Rx_a08bac39_VCU_oTC37X_VCU_CAN00_Rx_a08bac39">
-                                <SD GID="DV:Name">Group: VCU_oTC37X_VCU_CAN00_Rx_a08bac39</SD>
-                                <SD GID="DV:Value">TRUE</SD>
-                              </SDG>
-                            </SDG>
-                            <SDG GID="DV:Feature:CN_TC37X_VCU_CAN01_70b1f95e">
-                              <SD GID="DV:Name">CN_TC37X_VCU_CAN01_70b1f95e</SD>
-                              <SD GID="DV:Value">TRUE</SD>
-                              <SDG GID="DV:Param:ReInitialize_TX">
-                                <SD GID="DV:Name">ReInitialize TX</SD>
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:ReInitialize_RX">
-                                <SD GID="DV:Name">ReInitialize RX</SD>
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">true</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORMAL">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM_NM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM_NM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORM_NM">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:NM_STATE_BUS_OFF">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:NM_STATE_CHECK_WAKEUP">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:NM_STATE_WAIT_STARTUP">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:NM_STATE_BUS_SLEEP">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Param:NM_STATE_PREPARE_BUS_SLEEP">
-                                <SD GID="DV:Default">false</SD>
-                                <SD GID="DV:Value">false</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:CC_CN_TC37X_VCU_CAN01_70b1f95e_NM">
-                                <SD GID="DV:Name">Nm Communication</SD>
-                                <SD GID="DV:Value">FALSE</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:CC_CN_TC37X_VCU_CAN01_70b1f95e_VCU_oTC37X_VCU_CAN01_Rx_1837cb5c_VCU_oTC37X_VCU_CAN01_Rx_1837cb5c">
-                                <SD GID="DV:Name">Group: VCU_oTC37X_VCU_CAN01_Rx_1837cb5c</SD>
-                                <SD GID="DV:Value">TRUE</SD>
-                              </SDG>
-                              <SDG GID="DV:Feature:CC_CN_TC37X_VCU_CAN01_70b1f95e_VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda_VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda">
-                                <SD GID="DV:Name">Group: VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda</SD>
-                                <SD GID="DV:Value">TRUE</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
                           <SDG GID="DV:ESH">
                             <SD GID="DV:Version">19.03.00.02</SD>
                             <SDG GID="DV:Feature:ECU_State_Machine">
@@ -931,6 +733,204 @@
                               </SDG>
                             </SDG>
                           </SDG>
+                          <SDG GID="DV:Communication">
+                            <SD GID="DV:Version">19.03.00.02</SD>
+                            <SDG GID="DV:Feature:CN_LIN00_b12a0454">
+                              <SD GID="DV:Name">CN_LIN00_b12a0454</SD>
+                              <SD GID="DV:Value">TRUE</SD>
+                              <SDG GID="DV:Param:ReInitialize_TX">
+                                <SD GID="DV:Name">ReInitialize TX</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:ReInitialize_RX">
+                                <SD GID="DV:Name">ReInitialize RX</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:Start_Schedule">
+                                <SD GID="DV:Name">Start Schedule</SD>
+                                <SD GID="DV:Default">NO_STARTUP_SCHEDULE</SD>
+                                <SD GID="DV:Value">TCU_LIN_Schedule_740f8639</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:VCU_oLIN00_Rx_4b9dfc53">
+                                <SD GID="DV:Name">Schedule: TCU_LIN_Schedule_740f8639</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                                <SDG GID="DV:Feature:CC_CN_LIN00_b12a0454_VCU_oLIN00_Rx_4b9dfc53_VCU_oLIN00_Rx_4b9dfc53">
+                                  <SD GID="DV:Name">Group: VCU_oLIN00_Rx_4b9dfc53</SD>
+                                  <SD GID="DV:Value">TRUE</SD>
+                                </SDG>
+                                <SDG GID="DV:Feature:CC_CN_LIN00_b12a0454_VCU_oLIN00_Tx_1dc75bd5_VCU_oLIN00_Tx_1dc75bd5">
+                                  <SD GID="DV:Name">Group: VCU_oLIN00_Tx_1dc75bd5</SD>
+                                  <SD GID="DV:Value">TRUE</SD>
+                                </SDG>
+                              </SDG>
+                            </SDG>
+                            <SDG GID="DV:Feature:CN_TC37X_VCU_CAN00_07b6c9c8">
+                              <SD GID="DV:Name">CN_TC37X_VCU_CAN00_07b6c9c8</SD>
+                              <SD GID="DV:Value">TRUE</SD>
+                              <SDG GID="DV:Param:ReInitialize_TX">
+                                <SD GID="DV:Name">ReInitialize TX</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:ReInitialize_RX">
+                                <SD GID="DV:Name">ReInitialize RX</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORMAL">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:NM_STATE_BUS_OFF">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:NM_STATE_CHECK_WAKEUP">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:NM_STATE_WAIT_STARTUP">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:NM_STATE_BUS_SLEEP">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:NM_STATE_PREPARE_BUS_SLEEP">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:CC_CN_TC37X_VCU_CAN00_07b6c9c8_NM">
+                                <SD GID="DV:Name">Nm Communication</SD>
+                                <SD GID="DV:Value">FALSE</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:CC_CN_TC37X_VCU_CAN00_07b6c9c8_VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf_VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf">
+                                <SD GID="DV:Name">Group: VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:CC_CN_TC37X_VCU_CAN00_07b6c9c8_VCU_oTC37X_VCU_CAN00_Rx_a08bac39_VCU_oTC37X_VCU_CAN00_Rx_a08bac39">
+                                <SD GID="DV:Name">Group: VCU_oTC37X_VCU_CAN00_Rx_a08bac39</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                              </SDG>
+                            </SDG>
+                            <SDG GID="DV:Feature:CN_TC37X_VCU_CAN01_70b1f95e">
+                              <SD GID="DV:Name">CN_TC37X_VCU_CAN01_70b1f95e</SD>
+                              <SD GID="DV:Value">TRUE</SD>
+                              <SDG GID="DV:Param:ReInitialize_TX">
+                                <SD GID="DV:Name">ReInitialize TX</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:ReInitialize_RX">
+                                <SD GID="DV:Name">ReInitialize RX</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">true</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORMAL">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:NM_STATE_BUS_OFF">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:NM_STATE_CHECK_WAKEUP">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:NM_STATE_WAIT_STARTUP">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:NM_STATE_BUS_SLEEP">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:NM_STATE_PREPARE_BUS_SLEEP">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:CC_CN_TC37X_VCU_CAN01_70b1f95e_NM">
+                                <SD GID="DV:Name">Nm Communication</SD>
+                                <SD GID="DV:Value">FALSE</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:CC_CN_TC37X_VCU_CAN01_70b1f95e_VCU_oTC37X_VCU_CAN01_Rx_1837cb5c_VCU_oTC37X_VCU_CAN01_Rx_1837cb5c">
+                                <SD GID="DV:Name">Group: VCU_oTC37X_VCU_CAN01_Rx_1837cb5c</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:CC_CN_TC37X_VCU_CAN01_70b1f95e_VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda_VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda">
+                                <SD GID="DV:Name">Group: VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda</SD>
+                                <SD GID="DV:Value">TRUE</SD>
+                              </SDG>
+                            </SDG>
+                          </SDG>
                         </SDG>
                       </SDG>
                     </SDGS>
@@ -994,7 +994,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>23</VALUE>
+                          <VALUE>22</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -1763,7 +1763,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>25</VALUE>
+                          <VALUE>24</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -2028,7 +2028,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>27</VALUE>
+                          <VALUE>26</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -2243,7 +2243,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>26</VALUE>
+                          <VALUE>25</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -2389,7 +2389,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>28</VALUE>
+                          <VALUE>27</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -2467,7 +2467,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>18</VALUE>
+                          <VALUE>17</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -2578,7 +2578,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>21</VALUE>
+                          <VALUE>20</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -2922,7 +2922,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>20</VALUE>
+                          <VALUE>19</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -3144,7 +3144,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>19</VALUE>
+                          <VALUE>18</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -3259,7 +3259,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>22</VALUE>
+                          <VALUE>21</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -3613,7 +3613,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>6</VALUE>
+                          <VALUE>5</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -3964,7 +3964,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>4</VALUE>
+                          <VALUE>3</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -4103,7 +4103,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>7</VALUE>
+                          <VALUE>6</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -4492,7 +4492,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>8</VALUE>
+                          <VALUE>7</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -4639,7 +4639,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>3</VALUE>
+                          <VALUE>2</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -4750,7 +4750,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>2</VALUE>
+                          <VALUE>1</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -4910,7 +4910,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>5</VALUE>
+                          <VALUE>4</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -5143,7 +5143,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>24</VALUE>
+                          <VALUE>23</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -6511,7 +6511,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>9</VALUE>
+                          <VALUE>8</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -6591,7 +6591,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>10</VALUE>
+                          <VALUE>9</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -6630,7 +6630,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>14</VALUE>
+                          <VALUE>13</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -6804,7 +6804,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>16</VALUE>
+                          <VALUE>15</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -7026,7 +7026,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>12</VALUE>
+                          <VALUE>11</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -7137,7 +7137,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>13</VALUE>
+                          <VALUE>12</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -7252,7 +7252,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>11</VALUE>
+                          <VALUE>10</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -7412,7 +7412,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>15</VALUE>
+                          <VALUE>14</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -7523,7 +7523,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>17</VALUE>
+                          <VALUE>16</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
@@ -7721,80 +7721,6 @@
                         </ECUC-CONTAINER-VALUE>
                       </SUB-CONTAINERS>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="de52bc71-233c-4d19-8303-ec1e691d0894">
-                      <SHORT-NAME>CC_CN_LIN00_b12a0454_Vcu_Lin0_Schedule_8fbcfe93</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:Communication">
-                                <SD GID="NAME">CC_CN_LIN00_b12a0454_Vcu_Lin0_Schedule_8fbcfe93</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMNestedExecutionOnly</DEFINITION-REF>
-                          <VALUE>false</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>1</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
-                          <VALUE>BSWM_FALSE</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleExpressionRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMArbitration/CC_LE_CN_LIN00_b12a0454_Vcu_Lin0_Schedule_8fbcfe93</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleFalseActionList</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/CC_AL_CN_LIN00_b12a0454_Vcu_Lin0_Schedule_8fbcfe93_Disable</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleTrueActionList</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/CC_AL_CN_LIN00_b12a0454_Vcu_Lin0_Schedule_8fbcfe93_Enable</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="6454c0fe-b457-4718-a884-1d844aeb84d3">
-                      <SHORT-NAME>CC_LE_CN_LIN00_b12a0454_Vcu_Lin0_Schedule_8fbcfe93</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:Communication">
-                                <SD GID="NAME">CC_LE_CN_LIN00_b12a0454_Vcu_Lin0_Schedule_8fbcfe93</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMLogicalExpression</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMLogicalExpression/BswMLogicalOperator</DEFINITION-REF>
-                          <VALUE>BSWM_AND</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMLogicalExpression/BswMArgumentRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMArbitration/CC_Cond_LinSMIndication_CN_LIN00_b12a0454_EQ_LINSM_BSWM_FULL_COM</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMLogicalExpression/BswMArgumentRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMArbitration/CC_Cond_LinScheduleIndication_CHNL_45618847_Vcu_Lin0_Schedule_8fbcfe93_EQ_LinSMConf_LinSMSchedule_Vcu_Lin0_Schedule_8fbcfe93</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                    </ECUC-CONTAINER-VALUE>
                     <ECUC-CONTAINER-VALUE UUID="5eef6843-3fec-405c-8ede-2e5f90d3e78a">
                       <SHORT-NAME>CC_Cond_LinSMIndication_CN_LIN00_b12a0454_EQ_LINSM_BSWM_FULL_COM</SHORT-NAME>
                       <ADMIN-DATA>
@@ -7892,110 +7818,6 @@
                                 <ECUC-TEXTUAL-PARAM-VALUE>
                                   <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMBswModeInitValue/BswMBswModeInitValueMode</DEFINITION-REF>
                                   <VALUE>LINSM_BSWM_NO_COM</VALUE>
-                                </ECUC-TEXTUAL-PARAM-VALUE>
-                              </PARAMETER-VALUES>
-                            </ECUC-CONTAINER-VALUE>
-                          </SUB-CONTAINERS>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="194af64d-86a6-440e-b168-5be1e44e1871">
-                      <SHORT-NAME>CC_Cond_LinScheduleIndication_CHNL_45618847_Vcu_Lin0_Schedule_8fbcfe93_EQ_LinSMConf_LinSMSchedule_Vcu_Lin0_Schedule_8fbcfe93</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:Communication">
-                                <SD GID="NAME">CC_Cond_LinScheduleIndication_CHNL_45618847_Vcu_Lin0_Schedule_8fbcfe93_EQ_LinSMConf_LinSMSchedule_Vcu_Lin0_Schedule_8fbcfe93</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeCondition</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeCondition/BswMConditionType</DEFINITION-REF>
-                          <VALUE>BSWM_EQUALS</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeCondition/BswMConditionMode</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMArbitration/CC_LinScheduleIndication_CHNL_45618847_Vcu_Lin0_Schedule_8fbcfe93</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="ced40a1f-9ae1-48c8-bf3a-3838cae18998">
-                          <SHORT-NAME>BswMConditionValue</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeCondition/BswMConditionValue</DEFINITION-REF>
-                          <SUB-CONTAINERS>
-                            <ECUC-CONTAINER-VALUE UUID="4a304b60-6170-4083-8141-d0b607647767">
-                              <SHORT-NAME>BswMBswMode</SHORT-NAME>
-                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeCondition/BswMConditionValue/BswMBswMode</DEFINITION-REF>
-                              <PARAMETER-VALUES>
-                                <ECUC-TEXTUAL-PARAM-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeCondition/BswMConditionValue/BswMBswMode/BswMBswRequestedMode</DEFINITION-REF>
-                                  <VALUE>LinSMConf_LinSMSchedule_Vcu_Lin0_Schedule_8fbcfe93</VALUE>
-                                </ECUC-TEXTUAL-PARAM-VALUE>
-                              </PARAMETER-VALUES>
-                            </ECUC-CONTAINER-VALUE>
-                          </SUB-CONTAINERS>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="34bab770-4d1a-448d-bf9d-26ea43ea1211">
-                      <SHORT-NAME>CC_LinScheduleIndication_CHNL_45618847_Vcu_Lin0_Schedule_8fbcfe93</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:Communication">
-                                <SD GID="NAME">CC_LinScheduleIndication_CHNL_45618847_Vcu_Lin0_Schedule_8fbcfe93</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMArbitrateOnInit</DEFINITION-REF>
-                          <VALUE>false</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMRequestProcessing</DEFINITION-REF>
-                          <VALUE>BSWM_IMMEDIATE</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="229ac9bd-44b9-4f48-9b63-e68275c01cc9">
-                          <SHORT-NAME>BswMModeRequestSource</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeRequestSource</DEFINITION-REF>
-                          <SUB-CONTAINERS>
-                            <ECUC-CONTAINER-VALUE UUID="17cd90f8-fd77-44f0-aa2b-ecba3b9a1b0f">
-                              <SHORT-NAME>BswMLinScheduleIndication</SHORT-NAME>
-                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeRequestSource/BswMLinScheduleIndication</DEFINITION-REF>
-                              <REFERENCE-VALUES>
-                                <ECUC-REFERENCE-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeRequestSource/BswMLinScheduleIndication/BswMLinScheduleRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_45618847/Vcu_Lin0_Schedule_8fbcfe93</VALUE-REF>
-                                </ECUC-REFERENCE-VALUE>
-                              </REFERENCE-VALUES>
-                            </ECUC-CONTAINER-VALUE>
-                          </SUB-CONTAINERS>
-                        </ECUC-CONTAINER-VALUE>
-                        <ECUC-CONTAINER-VALUE UUID="5f94901f-6617-4de6-863c-ce61affa769a">
-                          <SHORT-NAME>BswMModeInitValue</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue</DEFINITION-REF>
-                          <SUB-CONTAINERS>
-                            <ECUC-CONTAINER-VALUE UUID="01248432-7e28-4914-b3ae-a806ffab304d">
-                              <SHORT-NAME>BswMBswModeInitValue</SHORT-NAME>
-                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMBswModeInitValue</DEFINITION-REF>
-                              <PARAMETER-VALUES>
-                                <ECUC-TEXTUAL-PARAM-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMBswModeInitValue/BswMBswModeInitValueMode</DEFINITION-REF>
-                                  <VALUE>LinSMConf_LinSMSchedule_CHNL_45618847_32a17f26</VALUE>
                                 </ECUC-TEXTUAL-PARAM-VALUE>
                               </PARAMETER-VALUES>
                             </ECUC-CONTAINER-VALUE>
@@ -14943,91 +14765,6 @@ else&#13;
                         </ECUC-CONTAINER-VALUE>
                       </SUB-CONTAINERS>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="893c5474-8fdf-468e-b197-6cbe21c0b34f">
-                      <SHORT-NAME>CC_AL_CN_LIN00_b12a0454_Vcu_Lin0_Schedule_8fbcfe93_Disable</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:Communication">
-                                <SD GID="NAME">CC_AL_CN_LIN00_b12a0454_Vcu_Lin0_Schedule_8fbcfe93_Disable</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListExecution</DEFINITION-REF>
-                          <VALUE>BSWM_TRIGGER</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="8e8b9106-d8d0-43e8-aaf5-865b8b654a51">
-                          <SHORT-NAME>CC_DisablePDUGroup_VCU_oLIN00_Tx_1dc75bd5</SHORT-NAME>
-                          <ADMIN-DATA>
-                            <SDGS>
-                              <SDG GID="DV:BswM">
-                                <SDG GID="DV:Statemachines">
-                                  <SDG GID="DV:Communication">
-                                    <SD GID="NAME">CC_DisablePDUGroup_VCU_oLIN00_Tx_1dc75bd5</SD>
-                                  </SDG>
-                                </SDG>
-                              </SDG>
-                            </SDGS>
-                          </ADMIN-DATA>
-                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem</DEFINITION-REF>
-                          <PARAMETER-VALUES>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMAbortOnFail</DEFINITION-REF>
-                              <VALUE>false</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>0</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                          </PARAMETER-VALUES>
-                          <REFERENCE-VALUES>
-                            <ECUC-REFERENCE-VALUE>
-                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
-                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/CC_DisablePDUGroup_VCU_oLIN00_Tx_1dc75bd5</VALUE-REF>
-                            </ECUC-REFERENCE-VALUE>
-                          </REFERENCE-VALUES>
-                        </ECUC-CONTAINER-VALUE>
-                        <ECUC-CONTAINER-VALUE UUID="95028775-32e3-4ae7-b2ea-b145ec89b6fa">
-                          <SHORT-NAME>CC_DisablePDUGroup_VCU_oLIN00_Rx_4b9dfc53</SHORT-NAME>
-                          <ADMIN-DATA>
-                            <SDGS>
-                              <SDG GID="DV:BswM">
-                                <SDG GID="DV:Statemachines">
-                                  <SDG GID="DV:Communication">
-                                    <SD GID="NAME">CC_DisablePDUGroup_VCU_oLIN00_Rx_4b9dfc53</SD>
-                                  </SDG>
-                                </SDG>
-                              </SDG>
-                            </SDGS>
-                          </ADMIN-DATA>
-                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem</DEFINITION-REF>
-                          <PARAMETER-VALUES>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMAbortOnFail</DEFINITION-REF>
-                              <VALUE>false</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>1</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                          </PARAMETER-VALUES>
-                          <REFERENCE-VALUES>
-                            <ECUC-REFERENCE-VALUE>
-                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
-                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/CC_DisablePDUGroup_VCU_oLIN00_Rx_4b9dfc53</VALUE-REF>
-                            </ECUC-REFERENCE-VALUE>
-                          </REFERENCE-VALUES>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
                     <ECUC-CONTAINER-VALUE UUID="7882e02a-dd38-4356-ac12-671f55a8a9cb">
                       <SHORT-NAME>CC_DisablePDUGroup_VCU_oLIN00_Tx_1dc75bd5</SHORT-NAME>
                       <ADMIN-DATA>
@@ -15103,91 +14840,6 @@ else&#13;
                               </REFERENCE-VALUES>
                             </ECUC-CONTAINER-VALUE>
                           </SUB-CONTAINERS>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="bf0b9516-3cc0-4f78-aa90-b426f28a1d2b">
-                      <SHORT-NAME>CC_AL_CN_LIN00_b12a0454_Vcu_Lin0_Schedule_8fbcfe93_Enable</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:Communication">
-                                <SD GID="NAME">CC_AL_CN_LIN00_b12a0454_Vcu_Lin0_Schedule_8fbcfe93_Enable</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListExecution</DEFINITION-REF>
-                          <VALUE>BSWM_TRIGGER</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="dd1b95f1-d2b5-43be-b640-b59c0f94d234">
-                          <SHORT-NAME>CC_EnablePDUGroup_VCU_oLIN00_Tx_1dc75bd5</SHORT-NAME>
-                          <ADMIN-DATA>
-                            <SDGS>
-                              <SDG GID="DV:BswM">
-                                <SDG GID="DV:Statemachines">
-                                  <SDG GID="DV:Communication">
-                                    <SD GID="NAME">CC_EnablePDUGroup_VCU_oLIN00_Tx_1dc75bd5</SD>
-                                  </SDG>
-                                </SDG>
-                              </SDG>
-                            </SDGS>
-                          </ADMIN-DATA>
-                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem</DEFINITION-REF>
-                          <PARAMETER-VALUES>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMAbortOnFail</DEFINITION-REF>
-                              <VALUE>false</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>0</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                          </PARAMETER-VALUES>
-                          <REFERENCE-VALUES>
-                            <ECUC-REFERENCE-VALUE>
-                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
-                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/CC_EnablePDUGroup_VCU_oLIN00_Tx_1dc75bd5</VALUE-REF>
-                            </ECUC-REFERENCE-VALUE>
-                          </REFERENCE-VALUES>
-                        </ECUC-CONTAINER-VALUE>
-                        <ECUC-CONTAINER-VALUE UUID="9f3ff1e8-6a76-4c82-9056-c85c82064a2f">
-                          <SHORT-NAME>CC_EnablePDUGroup_VCU_oLIN00_Rx_4b9dfc53</SHORT-NAME>
-                          <ADMIN-DATA>
-                            <SDGS>
-                              <SDG GID="DV:BswM">
-                                <SDG GID="DV:Statemachines">
-                                  <SDG GID="DV:Communication">
-                                    <SD GID="NAME">CC_EnablePDUGroup_VCU_oLIN00_Rx_4b9dfc53</SD>
-                                  </SDG>
-                                </SDG>
-                              </SDG>
-                            </SDGS>
-                          </ADMIN-DATA>
-                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem</DEFINITION-REF>
-                          <PARAMETER-VALUES>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMAbortOnFail</DEFINITION-REF>
-                              <VALUE>false</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>1</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                          </PARAMETER-VALUES>
-                          <REFERENCE-VALUES>
-                            <ECUC-REFERENCE-VALUE>
-                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
-                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/CC_EnablePDUGroup_VCU_oLIN00_Rx_4b9dfc53</VALUE-REF>
-                            </ECUC-REFERENCE-VALUE>
-                          </REFERENCE-VALUES>
                         </ECUC-CONTAINER-VALUE>
                       </SUB-CONTAINERS>
                     </ECUC-CONTAINER-VALUE>
@@ -15290,14 +14942,14 @@ else&#13;
                         </ECUC-TEXTUAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                       <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="374fc52a-02e0-43d8-8cf6-f5f0ff541c33">
-                          <SHORT-NAME>CC_LinSchdeduleSwitch_CHNL_45618847_Vcu_Lin0_Schedule_8fbcfe93</SHORT-NAME>
+                        <ECUC-CONTAINER-VALUE UUID="f5d53f86-af89-454d-a4c0-2037d060b975">
+                          <SHORT-NAME>CC_LinSchdeduleSwitch_CHNL_45618847_TCU_LIN_Schedule_740f8639</SHORT-NAME>
                           <ADMIN-DATA>
                             <SDGS>
                               <SDG GID="DV:BswM">
                                 <SDG GID="DV:Statemachines">
                                   <SDG GID="DV:Communication">
-                                    <SD GID="NAME">CC_LinSchdeduleSwitch_CHNL_45618847_Vcu_Lin0_Schedule_8fbcfe93</SD>
+                                    <SD GID="NAME">CC_LinSchdeduleSwitch_CHNL_45618847_TCU_LIN_Schedule_740f8639</SD>
                                   </SDG>
                                 </SDG>
                               </SDG>
@@ -15317,42 +14969,9 @@ else&#13;
                           <REFERENCE-VALUES>
                             <ECUC-REFERENCE-VALUE>
                               <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
-                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/CC_LinSchdeduleSwitch_CHNL_45618847_Vcu_Lin0_Schedule_8fbcfe93</VALUE-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/CC_LinSchdeduleSwitch_CHNL_45618847_TCU_LIN_Schedule_740f8639</VALUE-REF>
                             </ECUC-REFERENCE-VALUE>
                           </REFERENCE-VALUES>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="e36aadb9-33cd-4aed-b8f4-85dbc7c6589e">
-                      <SHORT-NAME>CC_LinSchdeduleSwitch_CHNL_45618847_Vcu_Lin0_Schedule_8fbcfe93</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:Communication">
-                                <SD GID="NAME">CC_LinSchdeduleSwitch_CHNL_45618847_Vcu_Lin0_Schedule_8fbcfe93</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction</DEFINITION-REF>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="c54302c7-ef0a-44fa-b1ec-6fd327386fc4">
-                          <SHORT-NAME>BswMAvailableActions</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions</DEFINITION-REF>
-                          <SUB-CONTAINERS>
-                            <ECUC-CONTAINER-VALUE UUID="17d320a1-3bf4-4d5f-82a3-aaf2449cef0a">
-                              <SHORT-NAME>BswMLinScheduleSwitch</SHORT-NAME>
-                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMLinScheduleSwitch</DEFINITION-REF>
-                              <REFERENCE-VALUES>
-                                <ECUC-REFERENCE-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMLinScheduleSwitch/BswMLinScheduleRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_45618847/Vcu_Lin0_Schedule_8fbcfe93</VALUE-REF>
-                                </ECUC-REFERENCE-VALUE>
-                              </REFERENCE-VALUES>
-                            </ECUC-CONTAINER-VALUE>
-                          </SUB-CONTAINERS>
                         </ECUC-CONTAINER-VALUE>
                       </SUB-CONTAINERS>
                     </ECUC-CONTAINER-VALUE>
@@ -15593,6 +15212,39 @@ else&#13;
                                   <VALUE>Lin.h</VALUE>
                                 </ECUC-TEXTUAL-PARAM-VALUE>
                               </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="aa56e819-d075-4702-930d-3263b32f6940">
+                      <SHORT-NAME>CC_LinSchdeduleSwitch_CHNL_45618847_TCU_LIN_Schedule_740f8639</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:BswM">
+                            <SDG GID="DV:Statemachines">
+                              <SDG GID="DV:Communication">
+                                <SD GID="NAME">CC_LinSchdeduleSwitch_CHNL_45618847_TCU_LIN_Schedule_740f8639</SD>
+                              </SDG>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="a51e7e70-09a7-4784-8252-0b2eb044e2f4">
+                          <SHORT-NAME>BswMAvailableActions</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="d5e9f1a4-b5f1-4410-a17e-4fb25d05b239">
+                              <SHORT-NAME>BswMLinScheduleSwitch</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMLinScheduleSwitch</DEFINITION-REF>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMLinScheduleSwitch/BswMLinScheduleRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_45618847/TCU_LIN_Schedule_740f8639</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
                             </ECUC-CONTAINER-VALUE>
                           </SUB-CONTAINERS>
                         </ECUC-CONTAINER-VALUE>

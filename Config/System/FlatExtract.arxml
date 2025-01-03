@@ -279,91 +279,13 @@
                                   <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/SlaveResp_oLIN00</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/Vcu_Lin0_RxMsg1_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/Vcu_Lin0_RxMsg2_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/Vcu_Lin0_TxMsg1_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/Vcu_Lin0_TxMsg2_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/Vcu_Lin0_RxMsg1_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/Vcu_Lin0_RxMsg2_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/Vcu_Lin0_TxMsg1_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/Vcu_Lin0_TxMsg2_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/MasterReq_GWM_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/MasterReq_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/SlaveResp_GWM_oLIN00</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="N-PDU">/PDU/MasterReq_Tp_oLIN00</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="N-PDU">/PDU/SlaveResp_Tp_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_RxMsg1_Sig0_oVcu_Lin0_RxMsg1_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_RxMsg1_Sig1_oVcu_Lin0_RxMsg1_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_RxMsg2_Sig0_oVcu_Lin0_RxMsg2_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_RxMsg2_Sig1_oVcu_Lin0_RxMsg2_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_RxMsg2_Sig2_oVcu_Lin0_RxMsg1_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_RxMsg2_Sig2_oVcu_Lin0_RxMsg2_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_RxMsg2_Sig3_oVcu_Lin0_RxMsg1_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_RxMsg2_Sig3_oVcu_Lin0_RxMsg2_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_TxMsg1_Sig0_oVcu_Lin0_TxMsg1_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_TxMsg1_Sig1_oVcu_Lin0_TxMsg1_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_TxMsg1_Sig2_oVcu_Lin0_TxMsg1_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_TxMsg1_Sig3_oVcu_Lin0_TxMsg1_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_TxMsg2_Sig0_oVcu_Lin0_TxMsg2_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_TxMsg2_Sig1_oVcu_Lin0_TxMsg2_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_TxMsg2_Sig2_oVcu_Lin0_TxMsg2_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_TxMsg2_Sig3_oVcu_Lin0_TxMsg2_oLIN00</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuTxIoMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
@@ -508,6 +430,351 @@
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT9_Valid_oVcuTxIoMsg5_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/EDCU_EXV2_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/EXV_1_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/EXV_2_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/EXV2_Status_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/HVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/HVCH_Rsp02_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/PMP_Cmd_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/PMP2_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/PMP3_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/SVA_VCU_STD_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/TCU_HVCH_Cmd_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/VCU_EXV_1_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/VCU_EXV_2_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/VCU_SVA_CMD_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/EDCU_EXV2_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/EXV_1_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/EXV_2_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/EXV2_Status_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/HVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/HVCH_Rsp02_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/PMP_Cmd_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/PMP2_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/PMP3_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/SVA_VCU_STD_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/TCU_HVCH_Cmd_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_EXV_1_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_EXV_2_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_SVA_CMD_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/MasterReq_ERV_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/MasterReq_EXV_1_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/MasterReq_EXV_2_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/MasterReq_HVCH_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/MasterReq_PMP_1_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/MasterReq_PMP_2_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/MasterReq_SVA_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/SlaveResp_ERV_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/SlaveResp_EXV_1_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/SlaveResp_EXV_2_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/SlaveResp_HVCH_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/SlaveResp_PMP_1_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/SlaveResp_PMP_2_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="DCM-I-PDU">/PDU/SlaveResp_SVA_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Act_Pos_sta_oSVA_VCU_STD_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Blockage_Fault_STA_oSVA_VCU_STD_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Breakage_Fault_STA_oSVA_VCU_STD_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Calibration_cmd_oVCU_SVA_CMD_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Calibration_sta_oSVA_VCU_STD_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ECC_PMP2_SpdSet_oPMP_Cmd_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ECC_PMP3_SpdSet_oPMP_Cmd_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EDCU_EXV2_Cmd_Init_Rq_oEDCU_EXV2_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EDCU_EXV2_Cmd_Move_Enbl_oEDCU_EXV2_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EDCU_EXV2_Cmd_Set_Rq_oEDCU_EXV2_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV1_CurrentInitState_oEXV_1_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV1_CurrentPosition_oEXV_1_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV1_FaultState_oEXV_1_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV1_ResponseError_oEXV_1_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV1_RunState_oEXV_1_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV1_TemperatureWarn_oEXV_1_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV1_VoltageState_oEXV_1_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV2_curInit_Stat_oEXV2_Status_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV2_CurrentInitState_oEXV_2_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV2_CurrentPosition_oEXV_2_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV2_Fault_Stat_oEXV2_Status_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV2_FaultState_oEXV_2_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV2_OvrTemp_Warn_oEXV2_Status_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV2_Pos_oEXV2_Status_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV2_ResponseError_oEXV_2_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV2_Run_Stat_oEXV2_Status_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV2_RunState_oEXV_2_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV2_TemperatureWarn_oEXV_2_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV2_Volt_Stat_oEXV2_Status_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXV2_VoltageState_oEXV_2_VCU_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_CurrSens_Flt_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_defectHeaterCircuits_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_DutyCycle_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_ExtPwrSup_Flt_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_HV_DC_curr_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_HV_voltage_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_HV_Voltage_Valid_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_IntelTemp_oHVCH_Rsp02_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_InternalPCBTemp_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_LIN_Flt_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_MediumTemp_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_Off_ShrtCurr_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_RsErr_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_Status_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_TempLim_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVCH_TempSens_Flt_oHVCH_Rsp01_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/LIN_Resp_Error_sta_oSVA_VCU_STD_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP2_PumpDryRunningSta_oPMP2_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP2_PumpInputVolt_oPMP2_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP2_PumpMotorSta_oPMP2_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP2_PumpPowerSta_oPMP2_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP2_PumpTempSta_oPMP2_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP2_RealRPM_oPMP2_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP2_RESP_ERROR_oPMP2_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP3_PumpDryRunningSta_oPMP3_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP3_PumpInputVolt_oPMP3_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP3_PumpMotorSta_oPMP3_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP3_PumpPowerSta_oPMP3_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP3_PumpTempSta_oPMP3_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP3_RealRPM_oPMP3_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/PMP3_RESP_ERROR_oPMP3_Sts_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/RsErr_EXV2_oEXV2_Status_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Target_Pos_cmd_oVCU_SVA_CMD_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/TCU_HVCH_heating_rq_oTCU_HVCH_Cmd_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/TCU_HVCH_On_Rq_oTCU_HVCH_Cmd_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/TCU_HVCH_TmaxLim_output_oTCU_HVCH_Cmd_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/TCU_HVCHMaxPowerLimit_oTCU_HVCH_Cmd_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/TMM_EXV1_EnableRequest_oVCU_EXV_1_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/TMM_EXV1_initRequest_oVCU_EXV_1_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/TMM_EXV1_PositionRequest_oVCU_EXV_1_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/TMM_EXV2_EnableRequest_oVCU_EXV_2_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/TMM_EXV2_initRequest_oVCU_EXV_2_oLIN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/TMM_EXV2_PositionRequest_oVCU_EXV_2_oLIN00</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                               </FIBEX-ELEMENTS>
                               <MAPPINGS>

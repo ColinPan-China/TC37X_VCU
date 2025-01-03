@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinIf_Cfg.h
- *   Generation Time: 2024-11-29 09:52:33
+ *   Generation Time: 2025-01-03 11:03:37
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -213,8 +213,12 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define LinIfConf_LinIfTxPdu_LinIfTxPdu_21a51ec5                      1u
-#define LinIfConf_LinIfTxPdu_LinIfTxPdu_67e62ef9                      0u
+#define LinIfConf_LinIfTxPdu_LinIfTxPdu_51fe7a72                      0u
+#define LinIfConf_LinIfTxPdu_LinIfTxPdu_814bac9f                      4u
+#define LinIfConf_LinIfTxPdu_LinIfTxPdu_66470162                      3u
+#define LinIfConf_LinIfTxPdu_LinIfTxPdu_c5fc6a36                      1u
+#define LinIfConf_LinIfTxPdu_LinIfTxPdu_d8f856fb                      2u
+#define LinIfConf_LinIfTxPdu_LinIfTxPdu_d60e946c                      5u
 /**\} */
 
 /**********************************************************************************************************************
@@ -232,7 +236,7 @@
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define LinIfConf_LinIfScheduleTable_NULLSchedule                     0u
-#define LinIfConf_LinIfScheduleTable_Vcu_Lin0_Schedule_8fbcfe93       1u
+#define LinIfConf_LinIfScheduleTable_TCU_LIN_Schedule_740f8639        1u
 /**\} */
 
 /**********************************************************************************************************************
@@ -690,7 +694,7 @@
 #define LinIf_GetSizeOfSystemToLinIfChannelOfPCConfig()                                             3u  /**< the number of accomplishable value elements in LinIf_SystemToLinIfChannel */
 #define LinIf_GetSlaveChannelConfigOfPCConfig()                                                     NULL_PTR  /**< the pointer to LinIf_SlaveChannelConfig */
 #define LinIf_GetSystemToLinIfChannelOfPCConfig()                                                   LinIf_SystemToLinIfChannel  /**< the pointer to LinIf_SystemToLinIfChannel */
-#define LinIf_GetUncTxFrmTotalNumberOfPCConfig()                                                    2u  /**< Number of unconditional Tx frames */
+#define LinIf_GetUncTxFrmTotalNumberOfPCConfig()                                                    6u  /**< Number of unconditional Tx frames */
 /** 
   \}
 */ 
@@ -1557,7 +1561,7 @@ extern CONST(LinIf_ChannelToDrvWakeupInfoType, LINIF_CONST) LinIf_ChannelToDrvWa
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(LinIf_EntryType, LINIF_CONST) LinIf_Entry[4];
+extern CONST(LinIf_EntryType, LINIF_CONST) LinIf_Entry[14];
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1600,7 +1604,7 @@ extern CONST(LinIf_FrameLengthDelayListType, LINIF_CONST) LinIf_FrameLengthDelay
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(LinIf_FrameListType, LINIF_CONST) LinIf_FrameList[6];
+extern CONST(LinIf_FrameListType, LINIF_CONST) LinIf_FrameList[16];
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinSM_Cfg.h
- *   Generation Time: 2024-11-28 15:38:53
+ *   Generation Time: 2025-01-03 11:03:38
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -115,7 +115,7 @@
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define LinSMConf_LinSMSchedule_CHNL_45618847_32a17f26                0u
-#define LinSMConf_LinSMSchedule_Vcu_Lin0_Schedule_8fbcfe93            1u
+#define LinSMConf_LinSMSchedule_TCU_LIN_Schedule_740f8639             1u
 /**\} */
 
 

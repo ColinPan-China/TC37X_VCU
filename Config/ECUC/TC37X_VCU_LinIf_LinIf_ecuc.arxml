@@ -182,272 +182,6 @@
                         </ECUC-CONTAINER-VALUE>
                       </SUB-CONTAINERS>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="f43d65c0-f0ba-3b5f-8243-47f347a7b81e">
-                      <SHORT-NAME>Vcu_Lin0_Schedule_8fbcfe93</SHORT-NAME>
-                      <LONG-NAME>
-                        <L-4 L="FOR-ALL">Vcu_Lin0_Schedule</L-4>
-                      </LONG-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfRunMode</DEFINITION-REF>
-                          <VALUE>RUN_CONTINUOUS</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfScheduleTableIndex</DEFINITION-REF>
-                          <VALUE>1</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfScheduleTableName</DEFINITION-REF>
-                          <VALUE/>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfResumePosition</DEFINITION-REF>
-                          <VALUE>START_FROM_BEGINNING</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfScheduleMode</DEFINITION-REF>
-                          <VALUE>LINTP_APPLICATIVE_SCHEDULE</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="df6da2df-540a-49a8-b0b2-842941e7e907">
-                          <SHORT-NAME>Vcu_Lin0_Schedule_f9dc6319</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
-                          <PARAMETER-VALUES>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
-                              <VALUE>0.02</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
-                              <VALUE>3</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                          </PARAMETER-VALUES>
-                          <REFERENCE-VALUES>
-                            <ECUC-REFERENCE-VALUE>
-                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
-                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_Vcu_Lin0_RxMsg2_bfda55a3_Rx</VALUE-REF>
-                            </ECUC-REFERENCE-VALUE>
-                          </REFERENCE-VALUES>
-                        </ECUC-CONTAINER-VALUE>
-                        <ECUC-CONTAINER-VALUE UUID="bcffa39c-07fe-41c7-a1e6-12a0d0eaf20f">
-                          <SHORT-NAME>Vcu_Lin0_Schedule_fc08089a</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
-                          <PARAMETER-VALUES>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
-                              <VALUE>0.02</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
-                              <VALUE>1</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                          </PARAMETER-VALUES>
-                          <REFERENCE-VALUES>
-                            <ECUC-REFERENCE-VALUE>
-                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
-                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_Vcu_Lin0_TxMsg2_6983b6be_Tx</VALUE-REF>
-                            </ECUC-REFERENCE-VALUE>
-                          </REFERENCE-VALUES>
-                        </ECUC-CONTAINER-VALUE>
-                        <ECUC-CONTAINER-VALUE UUID="5f9bd914-b325-4e64-a16b-3c955bf13e0d">
-                          <SHORT-NAME>Vcu_Lin0_Schedule_135abe7b</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
-                          <PARAMETER-VALUES>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
-                              <VALUE>0.02</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
-                              <VALUE>0</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                          </PARAMETER-VALUES>
-                          <REFERENCE-VALUES>
-                            <ECUC-REFERENCE-VALUE>
-                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
-                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_Vcu_Lin0_TxMsg1_f08ae704_Tx</VALUE-REF>
-                            </ECUC-REFERENCE-VALUE>
-                          </REFERENCE-VALUES>
-                        </ECUC-CONTAINER-VALUE>
-                        <ECUC-CONTAINER-VALUE UUID="29d8201d-11bf-4e91-9717-1a6a52118b95">
-                          <SHORT-NAME>Vcu_Lin0_Schedule_168ed5f8</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
-                          <PARAMETER-VALUES>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
-                              <VALUE>0.02</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
-                              <VALUE>2</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                          </PARAMETER-VALUES>
-                          <REFERENCE-VALUES>
-                            <ECUC-REFERENCE-VALUE>
-                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
-                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_Vcu_Lin0_RxMsg1_26d30419_Rx</VALUE-REF>
-                            </ECUC-REFERENCE-VALUE>
-                          </REFERENCE-VALUES>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="2f983bb9-ee57-3762-860d-5b8c1dfb8780">
-                      <SHORT-NAME>FT_Vcu_Lin0_RxMsg1_26d30419_Rx</SHORT-NAME>
-                      <LONG-NAME>
-                        <L-4 L="FOR-ALL">FT_Vcu_Lin0_RxMsg1</L-4>
-                      </LONG-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
-                          <VALUE>ENHANCED</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
-                          <VALUE>8</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
-                          <VALUE>32</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
-                          <VALUE>UNCONDITIONAL</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="7cbe8300-6574-3f4e-bfae-a4af4c0b1359">
-                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
-                          <SUB-CONTAINERS>
-                            <ECUC-CONTAINER-VALUE UUID="e5536498-a529-3826-bd7a-3f209559accc">
-                              <SHORT-NAME>LinIfRxPdu</SHORT-NAME>
-                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu</DEFINITION-REF>
-                              <PARAMETER-VALUES>
-                                <ECUC-TEXTUAL-PARAM-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfUserRxIndicationUL</DEFINITION-REF>
-                                  <VALUE>PDUR</VALUE>
-                                </ECUC-TEXTUAL-PARAM-VALUE>
-                              </PARAMETER-VALUES>
-                              <REFERENCE-VALUES>
-                                <ECUC-REFERENCE-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfRxPduRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/Vcu_Lin0_RxMsg1_oLIN00_def4d57f_Rx</VALUE-REF>
-                                </ECUC-REFERENCE-VALUE>
-                              </REFERENCE-VALUES>
-                            </ECUC-CONTAINER-VALUE>
-                          </SUB-CONTAINERS>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="cebec1dc-ce5c-3135-9035-9149dd525583">
-                      <SHORT-NAME>FT_Vcu_Lin0_TxMsg1_f08ae704_Tx</SHORT-NAME>
-                      <LONG-NAME>
-                        <L-4 L="FOR-ALL">FT_Vcu_Lin0_TxMsg1</L-4>
-                      </LONG-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
-                          <VALUE>ENHANCED</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
-                          <VALUE>8</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
-                          <VALUE>94</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
-                          <VALUE>UNCONDITIONAL</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="eae0f470-75b6-379e-bea0-c244ab09e2ae">
-                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
-                          <SUB-CONTAINERS>
-                            <ECUC-CONTAINER-VALUE UUID="4328348e-ca88-320c-b484-47f766d42b81">
-                              <SHORT-NAME>LinIfTxPdu_67e62ef9</SHORT-NAME>
-                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu</DEFINITION-REF>
-                              <PARAMETER-VALUES>
-                                <ECUC-NUMERICAL-PARAM-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduId</DEFINITION-REF>
-                                  <VALUE>0</VALUE>
-                                </ECUC-NUMERICAL-PARAM-VALUE>
-                                <ECUC-TEXTUAL-PARAM-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfUserTxUL</DEFINITION-REF>
-                                  <VALUE>PDUR</VALUE>
-                                </ECUC-TEXTUAL-PARAM-VALUE>
-                              </PARAMETER-VALUES>
-                              <REFERENCE-VALUES>
-                                <ECUC-REFERENCE-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/Vcu_Lin0_TxMsg1_oLIN00_db48db31_Tx</VALUE-REF>
-                                </ECUC-REFERENCE-VALUE>
-                              </REFERENCE-VALUES>
-                            </ECUC-CONTAINER-VALUE>
-                          </SUB-CONTAINERS>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="bf0a147c-0d81-3718-8dec-5a6abade6c26">
-                      <SHORT-NAME>FT_Vcu_Lin0_TxMsg2_6983b6be_Tx</SHORT-NAME>
-                      <LONG-NAME>
-                        <L-4 L="FOR-ALL">FT_Vcu_Lin0_TxMsg2</L-4>
-                      </LONG-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
-                          <VALUE>ENHANCED</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
-                          <VALUE>8</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
-                          <VALUE>31</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
-                          <VALUE>UNCONDITIONAL</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="2aeb37ec-03dd-3926-8785-25cd6f9bb37f">
-                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
-                          <SUB-CONTAINERS>
-                            <ECUC-CONTAINER-VALUE UUID="7be23500-bbc0-3b65-bff9-dfe71ea64f18">
-                              <SHORT-NAME>LinIfTxPdu_21a51ec5</SHORT-NAME>
-                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu</DEFINITION-REF>
-                              <PARAMETER-VALUES>
-                                <ECUC-NUMERICAL-PARAM-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduId</DEFINITION-REF>
-                                  <VALUE>1</VALUE>
-                                </ECUC-NUMERICAL-PARAM-VALUE>
-                                <ECUC-TEXTUAL-PARAM-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfUserTxUL</DEFINITION-REF>
-                                  <VALUE>PDUR</VALUE>
-                                </ECUC-TEXTUAL-PARAM-VALUE>
-                              </PARAMETER-VALUES>
-                              <REFERENCE-VALUES>
-                                <ECUC-REFERENCE-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/Vcu_Lin0_TxMsg2_oLIN00_adade20c_Tx</VALUE-REF>
-                                </ECUC-REFERENCE-VALUE>
-                              </REFERENCE-VALUES>
-                            </ECUC-CONTAINER-VALUE>
-                          </SUB-CONTAINERS>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
                     <ECUC-CONTAINER-VALUE UUID="781f28e4-34ca-374f-8787-9d34dbba9ff5">
                       <SHORT-NAME>FT_SlaveResp_9d5cbedc_Rx</SHORT-NAME>
                       <LONG-NAME>
@@ -480,55 +214,6 @@
                             <ECUC-CONTAINER-VALUE UUID="b27ad7a0-7179-3f50-8bf2-916b039daa1a">
                               <SHORT-NAME>LinIfInternalPdu</SHORT-NAME>
                               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfInternalPdu</DEFINITION-REF>
-                            </ECUC-CONTAINER-VALUE>
-                          </SUB-CONTAINERS>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="1c0a64ad-8ffb-341d-8b3d-c7086e15084a">
-                      <SHORT-NAME>FT_Vcu_Lin0_RxMsg2_bfda55a3_Rx</SHORT-NAME>
-                      <LONG-NAME>
-                        <L-4 L="FOR-ALL">FT_Vcu_Lin0_RxMsg2</L-4>
-                      </LONG-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
-                          <VALUE>ENHANCED</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
-                          <VALUE>8</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
-                          <VALUE>97</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
-                          <VALUE>UNCONDITIONAL</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="e631a1af-d6de-33aa-89b1-bc6442a15b00">
-                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
-                          <SUB-CONTAINERS>
-                            <ECUC-CONTAINER-VALUE UUID="28cb6eb2-a1c5-39c1-9833-336a3b96e4a7">
-                              <SHORT-NAME>LinIfRxPdu</SHORT-NAME>
-                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu</DEFINITION-REF>
-                              <PARAMETER-VALUES>
-                                <ECUC-TEXTUAL-PARAM-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfUserRxIndicationUL</DEFINITION-REF>
-                                  <VALUE>PDUR</VALUE>
-                                </ECUC-TEXTUAL-PARAM-VALUE>
-                              </PARAMETER-VALUES>
-                              <REFERENCE-VALUES>
-                                <ECUC-REFERENCE-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfRxPduRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/Vcu_Lin0_RxMsg2_oLIN00_a811ec42_Rx</VALUE-REF>
-                                </ECUC-REFERENCE-VALUE>
-                              </REFERENCE-VALUES>
                             </ECUC-CONTAINER-VALUE>
                           </SUB-CONTAINERS>
                         </ECUC-CONTAINER-VALUE>
@@ -591,6 +276,1027 @@
                           <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinTrcv/LinTrcvChannel</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="99675dcc-41ac-394d-8d12-49dc66454a7e">
+                      <SHORT-NAME>FT_PMP3_Sts_f45e64cb_Rx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_PMP3_Sts</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>231</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="7df1a4cf-8ed8-3e6d-8b43-77f6b5a6b9ca">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="00c43b2b-0e71-336b-a3e3-308ea4d63ab8">
+                              <SHORT-NAME>LinIfRxPdu</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfUserRxIndicationUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfRxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/PMP3_Sts_oLIN00_4e808b3d_Rx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="1823ebb6-46f5-36fc-8948-8612874c1f5f">
+                      <SHORT-NAME>FT_VCU_EXV_2_a2a0816d_Tx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_VCU_EXV_2</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>180</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="9defcaec-bd3d-3b33-a4cd-f4dc0534a39f">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="40fb6573-9e70-3584-8924-93eeb4453832">
+                              <SHORT-NAME>LinIfTxPdu_814bac9f</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduId</DEFINITION-REF>
+                                  <VALUE>4</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfUserTxUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VCU_EXV_2_oLIN00_2e4da991_Tx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="e2edbd04-3514-3b5c-b646-5222339d65ac">
+                      <SHORT-NAME>FT_VCU_EXV_1_3ba9d0d7_Tx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_VCU_EXV_1</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>31</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="6fb5bd7e-c32d-394b-a578-4be839237d4e">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="7be41309-026b-38c3-8fa9-418dcaf8a201">
+                              <SHORT-NAME>LinIfTxPdu_66470162</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduId</DEFINITION-REF>
+                                  <VALUE>3</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfUserTxUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VCU_EXV_1_oLIN00_58a890ac_Tx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="4dbd49b6-f802-3946-a90c-1e13f7bf98f9">
+                      <SHORT-NAME>FT_PMP_Cmd_bd05f3f5_Tx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_PMP_Cmd</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>100</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="c8b7080e-2b42-3351-9f38-f809b2891405">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="623a0f48-fcb1-3600-bf35-a3bf1b18b68b">
+                              <SHORT-NAME>LinIfTxPdu_c5fc6a36</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduId</DEFINITION-REF>
+                                  <VALUE>1</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfUserTxUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/PMP_Cmd_oLIN00_6d889c97_Tx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="cdd55c3b-a559-366e-a678-84dc3587da2f">
+                      <SHORT-NAME>FT_TCU_HVCH_Cmd_ccc60f64_Tx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_TCU_HVCH_Cmd</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>85</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="44ae3c90-2289-32fb-8e22-3785550e5472">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="68571441-c649-3a1f-aacd-f8fbc9d84f3c">
+                              <SHORT-NAME>LinIfTxPdu_d8f856fb</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduId</DEFINITION-REF>
+                                  <VALUE>2</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfUserTxUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/TCU_HVCH_Cmd_oLIN00_ddc31229_Tx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="75da6bb9-5727-3f98-a217-1a45710afd11">
+                      <SHORT-NAME>FT_VCU_SVA_CMD_86a423b3_Tx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_VCU_SVA_CMD</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>80</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="d9b9630f-8d30-3fb1-8035-b6958680c534">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="6ea17c3d-a3e1-3042-8a7a-b0142fa6777e">
+                              <SHORT-NAME>LinIfTxPdu_d60e946c</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduId</DEFINITION-REF>
+                                  <VALUE>5</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfUserTxUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VCU_SVA_CMD_oLIN00_89e2bb7b_Tx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="989c85dd-f9aa-396e-bfff-94221992389d">
+                      <SHORT-NAME>FT_EXV_2_VCU_c45065f9_Rx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_EXV_2_VCU</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>245</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="abee5084-012d-3077-81cf-cfff418d5501">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="9c4349b7-5e6a-36ce-ab67-5e6af4f10513">
+                              <SHORT-NAME>LinIfRxPdu</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfUserRxIndicationUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfRxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/EXV_2_VCU_oLIN00_85f64a15_Rx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="7936463a-52d4-3b0b-bc81-7957186dc3e5">
+                      <SHORT-NAME>FT_EXV_1_VCU_83f01f29_Rx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_EXV_1_VCU</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>173</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="752d4710-8480-3a45-8b48-5014ac66672f">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="38ad367c-f297-39c0-9aaa-673664d53a30">
+                              <SHORT-NAME>LinIfRxPdu</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfUserRxIndicationUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfRxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/EXV_1_VCU_oLIN00_366267d6_Rx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="50a17e28-1178-333a-9989-efa74bf722b0">
+                      <SHORT-NAME>FT_HVCH_Rsp02_90df2aef_Rx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_HVCH_Rsp02</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>151</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="dc7f1908-dbb7-30eb-b85b-427defd520df">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="5f0400f2-3ed2-350d-b556-42759909f7fe">
+                              <SHORT-NAME>LinIfRxPdu</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfUserRxIndicationUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfRxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/HVCH_Rsp02_oLIN00_a3ea669e_Rx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="71a1c135-ab0f-3ab0-8d70-15f63b0d35e5">
+                      <SHORT-NAME>FT_EXV2_Status_7cc3db8b_Rx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_EXV2_Status</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>146</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="c28c8ba9-f754-3939-a2ff-4733b97f3ded">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="03d44916-8412-335a-8aff-8b0f1bff7727">
+                              <SHORT-NAME>LinIfRxPdu</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfUserRxIndicationUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfRxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/EXV2_Status_oLIN00_7fcf9f75_Rx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="89840d24-add2-31fa-b33b-edfc8d73f197">
+                      <SHORT-NAME>FT_HVCH_Rsp01_09d67b55_Rx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_HVCH_Rsp01</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>214</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="45d2df02-51cf-3f4c-b1f4-ff5632ee4e37">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="a2bd8bc9-25e4-3795-971a-8fabaedc27d7">
+                              <SHORT-NAME>LinIfRxPdu</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfUserRxIndicationUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfRxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/HVCH_Rsp01_oLIN00_d50f5fa3_Rx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="5f57972d-0fdd-3ce1-8331-74b4351d1344">
+                      <SHORT-NAME>TCU_LIN_Schedule_740f8639</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">TCU_LIN_Schedule</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfRunMode</DEFINITION-REF>
+                          <VALUE>RUN_CONTINUOUS</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfScheduleTableIndex</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfScheduleTableName</DEFINITION-REF>
+                          <VALUE/>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfResumePosition</DEFINITION-REF>
+                          <VALUE>START_FROM_BEGINNING</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfScheduleMode</DEFINITION-REF>
+                          <VALUE>LINTP_APPLICATIVE_SCHEDULE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="2d0f9245-edad-44ae-b48d-c002e7fc5713">
+                          <SHORT-NAME>TCU_LIN_Schedule_0b3bc331</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.01</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>6</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_PMP_Cmd_bd05f3f5_Tx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="20761114-e555-44af-b2b4-23a0aaf38df0">
+                          <SHORT-NAME>TCU_LIN_Schedule_efc1a2d6</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>3</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_EXV_1_VCU_83f01f29_Rx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="c8da7dee-b9e0-410c-9deb-01e311a37166">
+                          <SHORT-NAME>TCU_LIN_Schedule_0e83c94d</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.02</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>13</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_HVCH_Rsp02_90df2aef_Rx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="4777752f-ef36-4b57-ac7a-1d11d90e2499">
+                          <SHORT-NAME>TCU_LIN_Schedule_e405142f</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.015</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>10</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_SVA_VCU_STD_d43d5185_Rx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="15f7ff27-9820-4fac-8999-23e3dee876e7">
+                          <SHORT-NAME>TCU_LIN_Schedule_00931437</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_VCU_EXV_1_3ba9d0d7_Tx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="afa547ad-6691-4270-bfe1-7c7e0547b0f4">
+                          <SHORT-NAME>TCU_LIN_Schedule_0eefa8b2</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>4</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_VCU_EXV_2_a2a0816d_Tx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="d4d1aebf-cde6-4695-b5c6-65452391e299">
+                          <SHORT-NAME>TCU_LIN_Schedule_05477fb4</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.01</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_EDCU_EXV2_cbc2ea70_Tx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="2b2e546f-5b3a-4f85-ba8d-42f195fc2ae3">
+                          <SHORT-NAME>TCU_LIN_Schedule_fd446759</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.015</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>9</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_VCU_SVA_CMD_86a423b3_Tx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="4b43c649-148f-4c85-8b7c-f070eb4ad412">
+                          <SHORT-NAME>TCU_LIN_Schedule_0b57a2ce</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.02</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>11</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_TCU_HVCH_Cmd_ccc60f64_Tx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="e08d3ab6-503e-4f77-b057-2dfc7a328fcb">
+                          <SHORT-NAME>TCU_LIN_Schedule_e1d17fac</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.02</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>12</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_HVCH_Rsp01_09d67b55_Rx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="2217022f-6b94-460a-b228-e83f45d033e0">
+                          <SHORT-NAME>TCU_LIN_Schedule_e46975d0</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.01</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>7</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_PMP2_Sts_c93e4d7b_Rx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="73fbbf2e-cd8b-4eec-aa9f-583802e14c80">
+                          <SHORT-NAME>TCU_LIN_Schedule_e1bd1e53</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>5</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_EXV_2_VCU_c45065f9_Rx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="c7dc6039-a46d-4455-b703-6aeae2a8e7da">
+                          <SHORT-NAME>TCU_LIN_Schedule_ea15c955</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.01</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_EXV2_Status_7cc3db8b_Rx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="cbf1e0cb-5706-46e1-8b39-1470b48c0f9e">
+                          <SHORT-NAME>TCU_LIN_Schedule_1216d1b8</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfDelay</DEFINITION-REF>
+                              <VALUE>0.01</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfEntryIndex</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable/LinIfEntry/LinIfFrameRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_PMP3_Sts_f45e64cb_Rx</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="3cea7438-74d3-3a7c-8483-a4a96fdcc151">
+                      <SHORT-NAME>FT_PMP2_Sts_c93e4d7b_Rx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_PMP2_Sts</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>166</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="d92a9e81-53d4-3526-9196-d6a06371fb74">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="f448ca1a-d0be-330d-93f5-6374693ed048">
+                              <SHORT-NAME>LinIfRxPdu</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfUserRxIndicationUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfRxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/PMP2_Sts_oLIN00_200c907c_Rx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="b0530c62-13f2-3762-976d-a5c14c519ae5">
+                      <SHORT-NAME>FT_SVA_VCU_STD_d43d5185_Rx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_SVA_VCU_STD</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>17</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="b0d9c948-7201-3feb-baba-aac60c414315">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="9147852b-d11e-3da7-96f2-fa9f001af967">
+                              <SHORT-NAME>LinIfRxPdu</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfUserRxIndicationUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfRxPdu/LinIfRxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/SVA_VCU_STD_oLIN00_4f0795ef_Rx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="4449c1fe-6b4c-3517-934b-f31e7f57a504">
+                      <SHORT-NAME>FT_EDCU_EXV2_cbc2ea70_Tx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">FT_EDCU_EXV2</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfChecksumType</DEFINITION-REF>
+                          <VALUE>ENHANCED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfLength</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPid</DEFINITION-REF>
+                          <VALUE>226</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfFrameType</DEFINITION-REF>
+                          <VALUE>UNCONDITIONAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="c93675bd-33c5-3fef-a127-6559fe0586cd">
+                          <SHORT-NAME>LinIfPduDirection</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="f413a999-a3fd-33c2-8435-dfcf22dfee86">
+                              <SHORT-NAME>LinIfTxPdu_51fe7a72</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduId</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfUserTxUL</DEFINITION-REF>
+                                  <VALUE>PDUR</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfFrame/LinIfPduDirection/LinIfTxPdu/LinIfTxPduRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/EDCU_EXV2_oLIN00_18b050dc_Tx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
                     </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>

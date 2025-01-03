@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinIf_Lcfg.c
- *   Generation Time: 2024-11-28 16:57:44
+ *   Generation Time: 2025-01-03 11:03:38
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -111,7 +111,7 @@
 /*lint -restore */
 CONST(LinIf_ChannelConfigType, LINIF_CONST) LinIf_ChannelConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    ChannelFuncCallCycle  FrameLengthDelayListEndIdx  FrameLengthDelayListStartIdx  FrameListEndIdx  FrameListStartIdx  LoadBalancingOffset  NodeChannelConfigIdx  NodeChannelDataIdx  NodeType                      StartupState  TimeBase  WakeupDelayExternal  WakeupDelayInternal */
-  { /*     0 */                   1u,                         8u,                           0u,              6u,                0u,                  1u,                   0u,                 0u, LinIf_ChannelNodeType_Master,           0u,       5u,                 20u,                 20u }
+  { /*     0 */                   1u,                         8u,                           0u,             16u,                0u,                  1u,                   0u,                 0u, LinIf_ChannelNodeType_Master,           0u,       5u,                 20u,                 20u }
 };
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -177,12 +177,22 @@ CONST(LinIf_ChannelToDrvWakeupInfoType, LINIF_CONST) LinIf_ChannelToDrvWakeupInf
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(LinIf_EntryType, LINIF_CONST) LinIf_Entry[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    DelayInTimebaseTicks  FrameListIdx        Comment                                      Referable Keys */
-  { /*     0 */                   4u,           0u },  /* [FT_Vcu_Lin0_TxMsg1_f08ae704_Tx] */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/Vcu_Lin0_Schedule_8fbcfe93] */
-  { /*     1 */                   4u,           1u },  /* [FT_Vcu_Lin0_TxMsg2_6983b6be_Tx] */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/Vcu_Lin0_Schedule_8fbcfe93] */
-  { /*     2 */                   4u,           2u },  /* [FT_Vcu_Lin0_RxMsg1_26d30419_Rx] */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/Vcu_Lin0_Schedule_8fbcfe93] */
-  { /*     3 */                   4u,           3u }   /* [FT_Vcu_Lin0_RxMsg2_bfda55a3_Rx] */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/Vcu_Lin0_Schedule_8fbcfe93] */
+CONST(LinIf_EntryType, LINIF_CONST) LinIf_Entry[14] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    DelayInTimebaseTicks  FrameListIdx        Comment                                   Referable Keys */
+  { /*     0 */                   2u,           5u },  /* [FT_EDCU_EXV2_cbc2ea70_Tx]    */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
+  { /*     1 */                   2u,          10u },  /* [FT_EXV2_Status_7cc3db8b_Rx]  */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
+  { /*     2 */                  20u,           1u },  /* [FT_VCU_EXV_1_3ba9d0d7_Tx]    */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
+  { /*     3 */                  20u,           8u },  /* [FT_EXV_1_VCU_83f01f29_Rx]    */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
+  { /*     4 */                  20u,           0u },  /* [FT_VCU_EXV_2_a2a0816d_Tx]    */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
+  { /*     5 */                  20u,           7u },  /* [FT_EXV_2_VCU_c45065f9_Rx]    */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
+  { /*     6 */                   2u,           2u },  /* [FT_PMP_Cmd_bd05f3f5_Tx]      */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
+  { /*     7 */                   2u,          12u },  /* [FT_PMP2_Sts_c93e4d7b_Rx]     */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
+  { /*     8 */                   2u,           6u },  /* [FT_PMP3_Sts_f45e64cb_Rx]     */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
+  { /*     9 */                   3u,           4u },  /* [FT_VCU_SVA_CMD_86a423b3_Tx]  */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
+  { /*    10 */                   3u,          13u },  /* [FT_SVA_VCU_STD_d43d5185_Rx]  */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
+  { /*    11 */                   4u,           3u },  /* [FT_TCU_HVCH_Cmd_ccc60f64_Tx] */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
+  { /*    12 */                   4u,          11u },  /* [FT_HVCH_Rsp01_09d67b55_Rx]   */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
+  { /*    13 */                   4u,           9u }   /* [FT_HVCH_Rsp02_90df2aef_Rx]   */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639] */
 };
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -236,14 +246,24 @@ CONST(LinIf_FrameLengthDelayListType, LINIF_CONST) LinIf_FrameLengthDelayList[8]
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(LinIf_FrameListType, LINIF_CONST) LinIf_FrameList[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    PduId                                                    FrameType  Length  Pid    ChecksumType     Direction                   Referable Keys */
-  { /*     0 */ PduRConf_PduRDestPdu_Vcu_Lin0_TxMsg1_oLIN00_db48db31_Tx,        0u,     8u, 0x5Eu, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_TX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_Vcu_Lin0_TxMsg1_f08ae704_Tx] */
-  { /*     1 */ PduRConf_PduRDestPdu_Vcu_Lin0_TxMsg2_oLIN00_adade20c_Tx,        0u,     8u, 0x1Fu, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_TX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_Vcu_Lin0_TxMsg2_6983b6be_Tx] */
-  { /*     2 */ PduRConf_PduRSrcPdu_PduRSrcPdu_763211c2                ,        0u,     8u, 0x20u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_RX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_Vcu_Lin0_RxMsg1_26d30419_Rx] */
-  { /*     3 */ PduRConf_PduRSrcPdu_PduRSrcPdu_c59add12                ,        0u,     8u, 0x61u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_RX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_Vcu_Lin0_RxMsg2_bfda55a3_Rx] */
-  { /*     4 */ 0                                                      ,        1u,     8u, 0x3Cu, LIN_CLASSIC_CS , LIN_FRAMERESPONSE_TX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_MasterReq_355bc768_Tx] */
-  { /*     5 */ 0                                                      ,        2u,     8u, 0x7Du, LIN_CLASSIC_CS , LIN_FRAMERESPONSE_RX }   /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_SlaveResp_9d5cbedc_Rx] */
+CONST(LinIf_FrameListType, LINIF_CONST) LinIf_FrameList[16] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    PduId                                                 FrameType  Length  Pid    ChecksumType     Direction                   Referable Keys */
+  { /*     0 */ PduRConf_PduRDestPdu_VCU_EXV_2_oLIN00_2e4da991_Tx   ,        0u,     8u, 0xB4u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_TX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_VCU_EXV_2_a2a0816d_Tx] */
+  { /*     1 */ PduRConf_PduRDestPdu_VCU_EXV_1_oLIN00_58a890ac_Tx   ,        0u,     8u, 0x1Fu, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_TX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_VCU_EXV_1_3ba9d0d7_Tx] */
+  { /*     2 */ PduRConf_PduRDestPdu_PMP_Cmd_oLIN00_6d889c97_Tx     ,        0u,     8u, 0x64u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_TX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_PMP_Cmd_bd05f3f5_Tx] */
+  { /*     3 */ PduRConf_PduRDestPdu_TCU_HVCH_Cmd_oLIN00_ddc31229_Tx,        0u,     4u, 0x55u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_TX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_TCU_HVCH_Cmd_ccc60f64_Tx] */
+  { /*     4 */ PduRConf_PduRDestPdu_VCU_SVA_CMD_oLIN00_89e2bb7b_Tx ,        0u,     8u, 0x50u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_TX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_VCU_SVA_CMD_86a423b3_Tx] */
+  { /*     5 */ PduRConf_PduRDestPdu_EDCU_EXV2_oLIN00_18b050dc_Tx   ,        0u,     8u, 0xE2u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_TX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_EDCU_EXV2_cbc2ea70_Tx] */
+  { /*     6 */ PduRConf_PduRSrcPdu_PduRSrcPdu_43cea622             ,        0u,     8u, 0xE7u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_RX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_PMP3_Sts_f45e64cb_Rx] */
+  { /*     7 */ PduRConf_PduRSrcPdu_PduRSrcPdu_b894d38e             ,        0u,     8u, 0xF5u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_RX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_EXV_2_VCU_c45065f9_Rx] */
+  { /*     8 */ PduRConf_PduRSrcPdu_PduRSrcPdu_718a1cfb             ,        0u,     8u, 0xADu, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_RX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_EXV_1_VCU_83f01f29_Rx] */
+  { /*     9 */ PduRConf_PduRSrcPdu_PduRSrcPdu_90a9658c             ,        0u,     8u, 0x97u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_RX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_HVCH_Rsp02_90df2aef_Rx] */
+  { /*    10 */ PduRConf_PduRSrcPdu_PduRSrcPdu_c3f2be6b             ,        0u,     8u, 0x92u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_RX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_EXV2_Status_7cc3db8b_Rx] */
+  { /*    11 */ PduRConf_PduRSrcPdu_PduRSrcPdu_aa2a3f7d             ,        0u,     8u, 0xD6u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_RX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_HVCH_Rsp01_09d67b55_Rx] */
+  { /*    12 */ PduRConf_PduRSrcPdu_PduRSrcPdu_9a742e46             ,        0u,     8u, 0xA6u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_RX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_PMP2_Sts_c93e4d7b_Rx] */
+  { /*    13 */ PduRConf_PduRSrcPdu_PduRSrcPdu_166cd16c             ,        0u,     8u, 0x11u, LIN_ENHANCED_CS, LIN_FRAMERESPONSE_RX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_SVA_VCU_STD_d43d5185_Rx] */
+  { /*    14 */ 0                                                   ,        1u,     8u, 0x3Cu, LIN_CLASSIC_CS , LIN_FRAMERESPONSE_TX },  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_MasterReq_355bc768_Tx] */
+  { /*    15 */ 0                                                   ,        2u,     8u, 0x7Du, LIN_CLASSIC_CS , LIN_FRAMERESPONSE_RX }   /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847, /ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/FT_SlaveResp_9d5cbedc_Rx] */
 };
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -417,9 +437,9 @@ CONST(LinIf_MasterChannelConfigType, LINIF_CONST) LinIf_MasterChannelConfig[1] =
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(LinIf_ScheduleTableListType, LINIF_CONST) LinIf_ScheduleTableList[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    EntryEndIdx                              EntryStartIdx                              NumberOfScheduleEntries  ResumePosition  RunMode        Comment                                  Referable Keys */
-  { /*     0 */ LINIF_NO_ENTRYENDIDXOFSCHEDULETABLELIST, LINIF_NO_ENTRYSTARTIDXOFSCHEDULETABLELIST,                   0x00u,          0x00u,   0x00u },  /* [NULLSchedule]               */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847] */
-  { /*     1 */                                      4u,                                        0u,                   0x04u,          0x01u,   0x00u }   /* [Vcu_Lin0_Schedule_8fbcfe93] */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847] */
+    /* Index    EntryEndIdx                              EntryStartIdx                              NumberOfScheduleEntries  ResumePosition  RunMode        Comment                                 Referable Keys */
+  { /*     0 */ LINIF_NO_ENTRYENDIDXOFSCHEDULETABLELIST, LINIF_NO_ENTRYSTARTIDXOFSCHEDULETABLELIST,                   0x00u,          0x00u,   0x00u },  /* [NULLSchedule]              */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847] */
+  { /*     1 */                                     14u,                                        0u,                   0x0Eu,          0x01u,   0x00u }   /* [TCU_LIN_Schedule_740f8639] */  /* [/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847] */
 };
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
