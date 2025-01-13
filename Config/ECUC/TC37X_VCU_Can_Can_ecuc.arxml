@@ -936,7 +936,7 @@
                       <PARAMETER-VALUES>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerBaudRate</DEFINITION-REF>
-                          <VALUE>125</VALUE>
+                          <VALUE>500</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerBaudRateConfigID</DEFINITION-REF>
@@ -944,15 +944,15 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerPropSeg</DEFINITION-REF>
-                          <VALUE>3</VALUE>
+                          <VALUE>4</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSeg1</DEFINITION-REF>
-                          <VALUE>2</VALUE>
+                          <VALUE>55</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSeg2</DEFINITION-REF>
-                          <VALUE>2</VALUE>
+                          <VALUE>20</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSyncJumpWidth</DEFINITION-REF>
@@ -964,7 +964,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanBaudratePrescaler</DEFINITION-REF>
-                          <VALUE>80</VALUE>
+                          <VALUE>2</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
