@@ -179,6 +179,9 @@
         <Splitter File=".\Config\ECUC\TC37X_VCU_Irq_Irq_ecuc.arxml">
             <Module Name="Irq"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_CanTrcv_CanTrcv_ecuc.arxml">
+            <Module Name="CanTrcv"/>
+        </Splitter>
         <Splitter File=".\Config\ECUC\TC37X_VCU_Spi_Spi_ecuc.arxml">
             <Module Name="Spi"/>
         </Splitter>

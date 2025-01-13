@@ -47,6 +47,7 @@
 #include "Irq.h"
 #include "TLE8888qk.h"
 #include "Adc_Sample.h"
+#include "TJA1145.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -114,7 +115,10 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
-
+uint8 Reg0 = 0;
+uint8 Reg1 = 0;
+uint8 Reg2 = 0;
+uint8 flg = 0;
 FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
 {
 /**********************************************************************************************************************
@@ -123,6 +127,16 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
  *********************************************************************************************************************/
   Adc_SampleMain();
   TLE8888qk_Main();
+
+  if( flg > 0 )
+  {
+    Tja1145_WriteReg(TJA1145FD_MODE_CONTROL_REG, 0x07);
+    Tja1145_WriteReg(TJA1145FD_CAN_CONTROL_REG, 0x03);
+  }
+
+  Tja1145_ReadReg(TJA1145FD_MAIN_STATUS_REG, &Reg0);
+  Tja1145_ReadReg(TJA1145FD_TRANSCEIVER_STATUS_REG, &Reg1);
+  Tja1145_ReadReg(TJA1145FD_IDENTIFICATION_REG, &Reg2);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

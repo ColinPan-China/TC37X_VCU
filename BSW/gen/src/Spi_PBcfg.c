@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 15.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2025-01-13, 11:31:01  !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2025-01-13, 17:30:42  !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b180321-0610      !!!IGNORE-LINE!!!                   **
 **                                                                            **
@@ -101,33 +101,86 @@ names
           
             
   /*Sequence Index Lookup*/
-  static const uint8 SequenceLookupIndex[2] =
+  static const uint8 SequenceLookupIndex[5] =
 {
   /* Physical index value for Sequence SpiSequence_TLE8888 Sequence ID 0 */
   1U,
     /* Physical index value for Sequence SpiSequence_TLE9201 Sequence ID 1 */
-  0U  
+  0U,
+    /* Physical index value for Sequence SpiSequence_TJA1145_Norm Sequence ID 2 */
+  4U,
+    /* Physical index value for Sequence SpiSequence_TJA1145_Large Sequence ID 3 */
+  2U,
+    /* Physical index value for Sequence SpiSequence_TJA1145_Medium Sequence ID 4 */
+  3U  
 };
 
   /*Job Index Lookup*/
-static const uint16 JobLookupIndex[2] =
+static const uint16 JobLookupIndex[6] =
 {
   /* Physical index value for Job SpiJob_TLE8888 Job ID 0 */
   1U,
     /* Physical index value for Job SpiJob_TLE9201 Job ID 1 */
-  0U  
+  0U,
+    /* Physical index value for Job SpiJob_TJA1145_0 Job ID 2 */
+  2U,
+    /* Physical index value for Job SpiJob_TJA1145_1 Job ID 3 */
+  3U,
+    /* Physical index value for Job SpiJob_TJA1145_2 Job ID 4 */
+  4U,
+    /* Physical index value for Job SpiJob_TJA1145_3 Job ID 5 */
+  5U  
 };
 
   /*Channel Index Lookup*/
-static const uint8 ChannelLookupIndex[2] =
+static const uint8 ChannelLookupIndex[6] =
 {
   /* Physical index value for channel SpiChannel_TLE8888 channel ID 0 */
   1U,
     /* Physical index value for channel SpiChannel_TLE9201 channel ID 1 */
-  0U  
+  0U,
+    /* Physical index value for channel SpiChannel_TJA1145_0 channel ID 2 */
+  5U,
+    /* Physical index value for channel SpiChannel_TJA1145_1 channel ID 3 */
+  4U,
+    /* Physical index value for channel SpiChannel_TJA1145_2 channel ID 4 */
+  3U,
+    /* Physical index value for channel SpiChannel_TJA1145_3 channel ID 5 */
+  2U  
 };
 
   /* Linked list for the Job[s] assigned to the sequence[s] Physical*/
+
+static const Spi_JobType SpiSequence_TJA1145_Large_JobLinkPtr_Physical[] =
+{
+  2U, /* Physical index value for Job SpiJob_TJA1145_0 Job ID 2 */
+  
+  3U, /* Physical index value for Job SpiJob_TJA1145_1 Job ID 3 */
+  
+  4U, /* Physical index value for Job SpiJob_TJA1145_2 Job ID 4 */
+  
+  5U, /* Physical index value for Job SpiJob_TJA1145_3 Job ID 5 */
+  
+  SPI_JOB_DELIMITER
+};
+
+static const Spi_JobType SpiSequence_TJA1145_Medium_JobLinkPtr_Physical[] =
+{
+  2U, /* Physical index value for Job SpiJob_TJA1145_0 Job ID 2 */
+  
+  3U, /* Physical index value for Job SpiJob_TJA1145_1 Job ID 3 */
+  
+  4U, /* Physical index value for Job SpiJob_TJA1145_2 Job ID 4 */
+  
+  SPI_JOB_DELIMITER
+};
+
+static const Spi_JobType SpiSequence_TJA1145_Norm_JobLinkPtr_Physical[] =
+{
+  2U, /* Physical index value for Job SpiJob_TJA1145_0 Job ID 2 */
+  
+  SPI_JOB_DELIMITER
+};
 
 static const Spi_JobType SpiSequence_TLE8888_JobLinkPtr_Physical[] =
 {
@@ -144,6 +197,34 @@ static const Spi_JobType SpiSequence_TLE9201_JobLinkPtr_Physical[] =
 };
   /* Linked list for the channel[s] assigned to the job[s] Physical */
 
+static const Spi_ChannelType SpiJob_TJA1145_0_ChannelLinkPtr_Physical[] =
+{
+  5U, /* Physical index value for Channel SpiChannel_TJA1145_0 Channel ID 2 */
+  
+  SPI_CHANNEL_DELIMITER
+};
+
+static const Spi_ChannelType SpiJob_TJA1145_1_ChannelLinkPtr_Physical[] =
+{
+  4U, /* Physical index value for Channel SpiChannel_TJA1145_1 Channel ID 3 */
+  
+  SPI_CHANNEL_DELIMITER
+};
+
+static const Spi_ChannelType SpiJob_TJA1145_2_ChannelLinkPtr_Physical[] =
+{
+  3U, /* Physical index value for Channel SpiChannel_TJA1145_2 Channel ID 4 */
+  
+  SPI_CHANNEL_DELIMITER
+};
+
+static const Spi_ChannelType SpiJob_TJA1145_3_ChannelLinkPtr_Physical[] =
+{
+  2U, /* Physical index value for Channel SpiChannel_TJA1145_3 Channel ID 5 */
+  
+  SPI_CHANNEL_DELIMITER
+};
+
 static const Spi_ChannelType SpiJob_TLE8888_ChannelLinkPtr_Physical[] =
 {
   1U, /* Physical index value for Channel SpiChannel_TLE8888 Channel ID 0 */
@@ -158,6 +239,45 @@ static const Spi_ChannelType SpiJob_TLE9201_ChannelLinkPtr_Physical[] =
   SPI_CHANNEL_DELIMITER
 };
     /* Linked list of sequence[s] with Job[s] shared  */
+static const Spi_SequenceType SpiSequence_TJA1145_Large_SeqSharePtr[] =
+{
+  
+  
+  SpiConf_SpiSequence_SpiSequence_TJA1145_Medium,
+
+    
+  
+  SpiConf_SpiSequence_SpiSequence_TJA1145_Norm,
+
+  SPI_SEQUENCE_DELIMITER
+};
+
+static const Spi_SequenceType SpiSequence_TJA1145_Medium_SeqSharePtr[] =
+{
+  
+  
+  SpiConf_SpiSequence_SpiSequence_TJA1145_Large,
+
+    
+  
+  SpiConf_SpiSequence_SpiSequence_TJA1145_Norm,
+
+  SPI_SEQUENCE_DELIMITER
+};
+
+static const Spi_SequenceType SpiSequence_TJA1145_Norm_SeqSharePtr[] =
+{
+  
+  
+  SpiConf_SpiSequence_SpiSequence_TJA1145_Large,
+
+    
+  
+  SpiConf_SpiSequence_SpiSequence_TJA1145_Medium,
+
+  SPI_SEQUENCE_DELIMITER
+};
+
 static const Spi_SequenceType SpiSequence_TLE8888_SeqSharePtr[] =
 {
   SPI_SEQUENCE_DELIMITER
@@ -243,6 +363,55 @@ static const Spi_SequenceConfigType Spi_kSequenceConfig_Core0[] =
     1U,
         /* Hw Module Used (b001000)*/
     0x08U,
+    /* Sync sequence = 0x00 or Async sequence = 0x01 */
+    0x00U
+  },
+    /* Synchronous Sequence[s] */
+    /* Sequence:SpiSequence_TJA1145_Large */
+  {
+    SpiConf_SpiSequence_SpiSequence_TJA1145_Large,
+    /* Notification function */
+    NULL_PTR,
+    /* Job linked list */
+    SpiSequence_TJA1145_Large_JobLinkPtr_Physical,
+    /* Seq linked list, with jobs shared */
+    SpiSequence_TJA1145_Large_SeqSharePtr,
+    /* No. of jobs in Seq */
+    4U,
+        /* Hw Module Used (b010000)*/
+    0x10U,
+    /* Sync sequence = 0x00 or Async sequence = 0x01 */
+    0x00U
+  },
+  /* Sequence:SpiSequence_TJA1145_Medium */
+  {
+    SpiConf_SpiSequence_SpiSequence_TJA1145_Medium,
+    /* Notification function */
+    NULL_PTR,
+    /* Job linked list */
+    SpiSequence_TJA1145_Medium_JobLinkPtr_Physical,
+    /* Seq linked list, with jobs shared */
+    SpiSequence_TJA1145_Medium_SeqSharePtr,
+    /* No. of jobs in Seq */
+    3U,
+        /* Hw Module Used (b010000)*/
+    0x10U,
+    /* Sync sequence = 0x00 or Async sequence = 0x01 */
+    0x00U
+  },
+  /* Sequence:SpiSequence_TJA1145_Norm */
+  {
+    SpiConf_SpiSequence_SpiSequence_TJA1145_Norm,
+    /* Notification function */
+    NULL_PTR,
+    /* Job linked list */
+    SpiSequence_TJA1145_Norm_JobLinkPtr_Physical,
+    /* Seq linked list, with jobs shared */
+    SpiSequence_TJA1145_Norm_SeqSharePtr,
+    /* No. of jobs in Seq */
+    1U,
+        /* Hw Module Used (b010000)*/
+    0x10U,
     /* Sync sequence = 0x00 or Async sequence = 0x01 */
     0x00U
   }};
@@ -343,6 +512,111 @@ static const Spi_JobConfigType Spi_kJobConfig_Core0[] =
     (uint8)((SPI_QSPI_CHANNEL10 << 4U)|SPI_QSPI3_INDEX),
     SPI_PARITY_UNUSED,        /* Parity support */
     (0U)                    /*Frame based CS is disabled*/
+  },
+  /* Synchronous Job[s] */
+  /* Job:SpiJob_TJA1145_0 */
+  {
+    SpiConf_SpiJob_SpiJob_TJA1145_0,
+    NULL_PTR,                   /* No Notification function */
+    Spi_BaudRateAndClockParam(  /* Baudrate = 20000.0Hz */
+    (0xf9U), (0x00U),          /* TQ , LoopBack */
+    (0x13U), (0x00U),          /*  Q , A        */
+    (0x00U), (0x01U),          /*  B , C        */
+    (0x01U), (0x00U),          /*  CPH , CPOL   */
+    (0x00U)                    /*  PAREN        */
+    ),
+    Spi_IdleLeadTrailParam(
+    (1U), (4U), /* IPRE,IDLE:   IdleA/B delay = 1.0E-7s */
+    (1U), (4U), /* LPRE,LEAD:   Lead delay    = 1.0E-7s */
+    (1U), (4U),/* TPRE, TRAIL: Trail delay   = 1.0E-7s */
+    (1U)
+    ),
+    SpiJob_TJA1145_0_ChannelLinkPtr_Physical, /* Channel linked list Physical*/
+    SPI_CS_VIA_HW_OR_NONE,   /* CS_VIA_HW */
+    (uint8)0U,               /* Job Priority : 0...3*/
+    (uint8)STD_LOW,              /* CS polarity */
+    /* Chnl[bit:7:4],QSPI[3:0] */
+    (uint8)((SPI_QSPI_CHANNEL3 << 4U)|SPI_QSPI4_INDEX),
+    SPI_PARITY_UNUSED,        /* Parity support */
+    (0U)                    /*Frame based CS is disabled*/
+  },
+  /* Job:SpiJob_TJA1145_1 */
+  {
+    SpiConf_SpiJob_SpiJob_TJA1145_1,
+    NULL_PTR,                   /* No Notification function */
+    Spi_BaudRateAndClockParam(  /* Baudrate = 20000.0Hz */
+    (0xf9U), (0x00U),          /* TQ , LoopBack */
+    (0x13U), (0x00U),          /*  Q , A        */
+    (0x00U), (0x01U),          /*  B , C        */
+    (0x01U), (0x00U),          /*  CPH , CPOL   */
+    (0x00U)                    /*  PAREN        */
+    ),
+    Spi_IdleLeadTrailParam(
+    (1U), (4U), /* IPRE,IDLE:   IdleA/B delay = 1.0E-7s */
+    (1U), (4U), /* LPRE,LEAD:   Lead delay    = 1.0E-7s */
+    (1U), (4U),/* TPRE, TRAIL: Trail delay   = 1.0E-7s */
+    (1U)
+    ),
+    SpiJob_TJA1145_1_ChannelLinkPtr_Physical, /* Channel linked list Physical*/
+    SPI_CS_VIA_HW_OR_NONE,   /* CS_VIA_HW */
+    (uint8)0U,               /* Job Priority : 0...3*/
+    (uint8)STD_LOW,              /* CS polarity */
+    /* Chnl[bit:7:4],QSPI[3:0] */
+    (uint8)((SPI_QSPI_CHANNEL3 << 4U)|SPI_QSPI4_INDEX),
+    SPI_PARITY_UNUSED,        /* Parity support */
+    (0U)                    /*Frame based CS is disabled*/
+  },
+  /* Job:SpiJob_TJA1145_2 */
+  {
+    SpiConf_SpiJob_SpiJob_TJA1145_2,
+    NULL_PTR,                   /* No Notification function */
+    Spi_BaudRateAndClockParam(  /* Baudrate = 20000.0Hz */
+    (0xf9U), (0x00U),          /* TQ , LoopBack */
+    (0x13U), (0x00U),          /*  Q , A        */
+    (0x00U), (0x01U),          /*  B , C        */
+    (0x01U), (0x00U),          /*  CPH , CPOL   */
+    (0x00U)                    /*  PAREN        */
+    ),
+    Spi_IdleLeadTrailParam(
+    (1U), (4U), /* IPRE,IDLE:   IdleA/B delay = 1.0E-7s */
+    (1U), (4U), /* LPRE,LEAD:   Lead delay    = 1.0E-7s */
+    (1U), (4U),/* TPRE, TRAIL: Trail delay   = 1.0E-7s */
+    (1U)
+    ),
+    SpiJob_TJA1145_2_ChannelLinkPtr_Physical, /* Channel linked list Physical*/
+    SPI_CS_VIA_HW_OR_NONE,   /* CS_VIA_HW */
+    (uint8)0U,               /* Job Priority : 0...3*/
+    (uint8)STD_LOW,              /* CS polarity */
+    /* Chnl[bit:7:4],QSPI[3:0] */
+    (uint8)((SPI_QSPI_CHANNEL3 << 4U)|SPI_QSPI4_INDEX),
+    SPI_PARITY_UNUSED,        /* Parity support */
+    (0U)                    /*Frame based CS is disabled*/
+  },
+  /* Job:SpiJob_TJA1145_3 */
+  {
+    SpiConf_SpiJob_SpiJob_TJA1145_3,
+    NULL_PTR,                   /* No Notification function */
+    Spi_BaudRateAndClockParam(  /* Baudrate = 20000.0Hz */
+    (0xf9U), (0x00U),          /* TQ , LoopBack */
+    (0x13U), (0x00U),          /*  Q , A        */
+    (0x00U), (0x01U),          /*  B , C        */
+    (0x01U), (0x00U),          /*  CPH , CPOL   */
+    (0x00U)                    /*  PAREN        */
+    ),
+    Spi_IdleLeadTrailParam(
+    (1U), (4U), /* IPRE,IDLE:   IdleA/B delay = 1.0E-7s */
+    (1U), (4U), /* LPRE,LEAD:   Lead delay    = 1.0E-7s */
+    (1U), (4U),/* TPRE, TRAIL: Trail delay   = 1.0E-7s */
+    (1U)
+    ),
+    SpiJob_TJA1145_3_ChannelLinkPtr_Physical, /* Channel linked list Physical*/
+    SPI_CS_VIA_HW_OR_NONE,   /* CS_VIA_HW */
+    (uint8)0U,               /* Job Priority : 0...3*/
+    (uint8)STD_LOW,              /* CS polarity */
+    /* Chnl[bit:7:4],QSPI[3:0] */
+    (uint8)((SPI_QSPI_CHANNEL3 << 4U)|SPI_QSPI4_INDEX),
+    SPI_PARITY_UNUSED,        /* Parity support */
+    (0U)                    /*Frame based CS is disabled*/
   }};
 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers shall be distinct
@@ -405,6 +679,39 @@ static const Spi_ChannelConfigType Spi_kChannelConfig_Core0[] =
     SPI_EB_CHANNEL,  /* External Buffer Channel */
     0x08U,            /* LSB[7], DataWidth=8[6:0] */
     SpiConf_SpiChannel_SpiChannel_TLE8888
+  },
+  /* EB Chnl[s] on QSPI4 core0*/
+  /* Channel:SpiChannel_TJA1145_3 */
+  {
+    0x00000000U,     /* Default data */
+    0x1ffeU,         /* Number of Data Elements */
+    SPI_EB_CHANNEL,  /* External Buffer Channel */
+    0x08U,            /* LSB[7], DataWidth=8[6:0] */
+    SpiConf_SpiChannel_SpiChannel_TJA1145_3
+  },
+  /* Channel:SpiChannel_TJA1145_2 */
+  {
+    0x00000000U,     /* Default data */
+    0x1ffeU,         /* Number of Data Elements */
+    SPI_EB_CHANNEL,  /* External Buffer Channel */
+    0x08U,            /* LSB[7], DataWidth=8[6:0] */
+    SpiConf_SpiChannel_SpiChannel_TJA1145_2
+  },
+  /* Channel:SpiChannel_TJA1145_1 */
+  {
+    0x00000000U,     /* Default data */
+    0x1ffeU,         /* Number of Data Elements */
+    SPI_EB_CHANNEL,  /* External Buffer Channel */
+    0x08U,            /* LSB[7], DataWidth=8[6:0] */
+    SpiConf_SpiChannel_SpiChannel_TJA1145_1
+  },
+  /* Channel:SpiChannel_TJA1145_0 */
+  {
+    0x00000000U,     /* Default data */
+    0x1ffeU,         /* Number of Data Elements */
+    SPI_EB_CHANNEL,  /* External Buffer Channel */
+    0x88U,            /* MSB[7], DataWidth=8[6:0] */
+    SpiConf_SpiChannel_SpiChannel_TJA1145_0
   }};
 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers shall be distinct
@@ -531,7 +838,59 @@ names
 * the variable has to be placed. */
 #include "Spi_MemMap.h"
 /***************** CORE0 QSPI3 CONFIGURATION MemMap SECTION END *************/
-                        
+      /******************* CORE0 QSPI4 CONFIGURATION MEMMAP SECTION *************/
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers shall be distinct
+* because of AS naming convention*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: Identifiers declared in the same scope
+shall be distinct
+* because of AS naming convention*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: Macro identifiers shall be distinct
+* because of AS naming convention*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: Identifiers shall be distinct from macro
+names
+* because of AS naming convention*/
+#define SPI_START_SEC_CONFIG_DATA_ASIL_B_CORE0_32
+/* MISRA2012_RULE_4_10_JUSTIFICATION: Spi_Memmap.h is repeatedly included
+* without include guard. This is as per AUTOSAR */
+/* MISRA2012_RULE_20_1_JUSTIFICATION: Declaration before #include,
+* this is due to inclusion of memmap.h to specify the location to which
+* the variable has to be placed. */
+#include "Spi_MemMap.h"
+/* QSPI4 */
+
+static const Spi_QspiHwConfigType Spi_kQspiHwConfigQSPI4 =
+{
+  0x00080000U,               /* Active CS Level, SSOC SFR value */
+  0,   /* Buffers on all synchronous QSPI Hw */
+  0U,                        /* Queue length can be ignored for Sync */
+  (uint8)SPI_DMA_CHNL_INVALID,   /* DMA Tx Channel */
+  (uint8)SPI_DMA_CHNL_INVALID,   /* DMA Rx Channel */
+  0U,                        /* DMA TCS value can be ignored for Sync */
+  SPI_CLK_SLEEP_DISABLE,     /* Module Sleep disabled */
+  (uint8)1U,                 /* Input class, MRIS bit field in PISEL SFR */
+  3U,                         /* Applicable only for Async QSPI */
+  0U,  /* External Demultiplexer feature is disabled */
+  0U /* SLSO0 Strobe delay */
+};
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers shall be distinct
+* because of AS naming convention*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: Identifiers declared in the same scope
+shall be distinct
+* because of AS naming convention*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: Macro identifiers shall be distinct
+* because of AS naming convention*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: Identifiers shall be distinct from macro
+names
+* because of AS naming convention*/
+#define SPI_STOP_SEC_CONFIG_DATA_ASIL_B_CORE0_32
+/* MISRA2012_RULE_4_10_JUSTIFICATION: Spi_Memmap.h is repeatedly included
+* without include guard. This is as per AUTOSAR */
+/* MISRA2012_RULE_20_1_JUSTIFICATION: Declaration before #include,
+* this is due to inclusion of memmap.h to specify the location to which
+* the variable has to be placed. */
+#include "Spi_MemMap.h"
+/***************** CORE0 QSPI4 CONFIGURATION MemMap SECTION END *************/
+                                    
 /********************CORE0 RX/TX BUFFERS MEMMAP SECTION***********************/
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers shall be distinct
 * because of AS naming convention*/
@@ -557,6 +916,10 @@ static const Spi_CoreChannelOffsetType Spi_ChannelOffsets_Core0[SPI_NUM_IB_CHANN
 {
   {0, 0},    /*SpiChannel_TLE9201*/
   {0, 0},    /*SpiChannel_TLE8888*/
+  {0, 0},    /*SpiChannel_TJA1145_3*/
+  {0, 0},    /*SpiChannel_TJA1145_2*/
+  {0, 0},    /*SpiChannel_TJA1145_1*/
+  {0, 0},    /*SpiChannel_TJA1145_0*/
   {0xFFFF, 0xFFFF}
 };
 
@@ -617,7 +980,7 @@ const Spi_CoreConfigType Spi_Config_Core0 =
     NULL_PTR,
     &Spi_kQspiHwConfigQSPI2,
     &Spi_kQspiHwConfigQSPI3,
-    NULL_PTR,
+    &Spi_kQspiHwConfigQSPI4,
   },
   /* Hw Map Index */      
   /*
@@ -625,18 +988,18 @@ const Spi_CoreConfigType Spi_Config_Core0 =
   (001 QSPI configured as Sync for core0)
   (010 QSPI configured as Async for core0)
   QSPI5 - 0
-  QSPI4 - 0
+  QSPI4 - 1
   QSPI3 - 1
   QSPI2 - 2
   QSPI1 - 0
   QSPI0 - 0*/
-  0x00280U,
+  0x01280U,
   /* No. of Sequences configured */
-  2U,
+  5U,
   /* No. of Jobs configured */
-  2U,
+  6U,
   /* No. of Channels configured */
-  2U
+  6U
 };
 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers shall be distinct
@@ -689,11 +1052,11 @@ const Spi_ConfigType Spi_Config =
   JobLookupIndex,
   ChannelLookupIndex,
   /*Total number of Sequence*/
-  2U,
+  5U,
   /*Total number of Jobs*/
-  2U,
+  6U,
   /*Total number of Channels*/
-  2U,
+  6U,
   /*Sync Delay*/
   65535U
 };
