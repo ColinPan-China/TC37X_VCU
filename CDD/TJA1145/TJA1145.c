@@ -1,5 +1,5 @@
 #include "TJA1145.h"
-#include "vstdlib.h"
+
 
 
 
@@ -32,5 +32,6 @@ uint8 Tja1145_ReadReg( uint8 regaddr , uint8 *regval)
 
 void Tja1145_Init()
 {
-    
+  Tja1145_WriteReg(TJA1145FD_MODE_CONTROL_REG, 0x07);
+  Tja1145_WriteReg(TJA1145FD_CAN_CONTROL_REG, 0x02);
 }

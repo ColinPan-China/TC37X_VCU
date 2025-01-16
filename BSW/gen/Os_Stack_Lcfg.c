@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Stack_Lcfg.c
- *   Generation Time: 2024-12-11 15:41:00
+ *   Generation Time: 2025-01-16 10:23:52
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -118,7 +118,7 @@ OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Init_Dyn, OS_CFG_SIZE_OSCORE0_INIT_STACK);
 #include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /* ISR core global stack: OsCore0_Isr_Core */
-/* User: [ADC0SR0_ISR, ADC11SR0_ISR, ADC1SR0_ISR, ADC2SR0_ISR, ADC3SR0_ISR, ASCLIN1ERR_ISR, ASCLIN1RX_ISR, ASCLIN1TX_ISR, ASCLIN2ERR_ISR, ASCLIN2RX_ISR, ASCLIN2TX_ISR, CanIsr_0, CanIsr_1, CounterIsr_SystemTimer, DMACH10SR_ISR, DMACH11SR_ISR, QSPI3ERR_ISR, QSPI3PT_ISR] */
+/* User: [ADC0SR0_ISR, ADC11SR0_ISR, ADC1SR0_ISR, ADC2SR0_ISR, ADC3SR0_ISR, ASCLIN1ERR_ISR, ASCLIN1RX_ISR, ASCLIN1TX_ISR, ASCLIN2ERR_ISR, ASCLIN2RX_ISR, ASCLIN2TX_ISR, CanIsr_0, CanIsr_1, CanIsr_4, CounterIsr_SystemTimer, DMACH10SR_ISR, DMACH11SR_ISR, QSPI3ERR_ISR, QSPI3PT_ISR] */
 OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Isr_Core_Dyn, OS_CFG_SIZE_OSCORE0_ISR_CORE_STACK);
 
 #define OS_STOP_SEC_STACK_OSCORE0_ISR_CORE_VAR_NOINIT_UNSPECIFIED

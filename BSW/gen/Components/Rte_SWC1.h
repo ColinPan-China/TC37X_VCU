@@ -128,9 +128,9 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_WriteBlock(NvM_BlockIdType parg0, dt
 #  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)8, arg1))
 #  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_WriteBlock(arg1) (NvM_WriteBlock((NvM_BlockIdType)8, arg1))
 #  define Rte_Call_NvSWC_UserData2_NvMService_AC3_SRBS_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus(NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2, arg1))
-#  define Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)0, arg1))
-#  define Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_GetCurrentComMode(arg1) (ComM_GetCurrentComMode((ComM_UserHandleType)1, arg1))
-#  define Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)1, arg1))
+#  define Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)1, arg1))
+#  define Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_GetCurrentComMode(arg1) (ComM_GetCurrentComMode((ComM_UserHandleType)2, arg1))
+#  define Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)2, arg1))
 
 /**********************************************************************************************************************
  * Rte_CData (SW-C local calibration parameters)

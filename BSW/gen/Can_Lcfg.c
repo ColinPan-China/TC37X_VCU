@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Lcfg.c
- *   Generation Time: 2025-01-13 11:31:06
+ *   Generation Time: 2025-01-16 10:23:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -97,10 +97,11 @@
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_BTPType, CAN_CONST) Can_BTP[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_BTPType, CAN_CONST) Can_BTP[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     BTP              Comment */
-  /*     0 */  0x00013A13u,  /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
-  /*     1 */  0x00013A13u   /* [CT_TC37X_VCU_CAN01_55ccbf7a - CanControllerBaudrateConfig] */
+  /*     0 */  0x00013A13u,  /* [CT_KAMA_FP_EPT_0303_1b7da7f9 - CanControllerBaudrateConfig] */
+  /*     1 */  0x00013A13u,  /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
+  /*     2 */  0x00013A13u   /* [CT_TC37X_VCU_CAN01_55ccbf7a - CanControllerBaudrateConfig] */
 };
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
@@ -125,10 +126,11 @@ CONST(Can_BTPType, CAN_CONST) Can_BTP[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_BufferConfigType, CAN_CONST) Can_BufferConfig[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_BufferConfigType, CAN_CONST) Can_BufferConfig[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    RXF0C        TXBC         RXBC   RXF1C  TXEFC        Comment */
-  { /*     0 */ 0x0006000Cu, 0x0002008Cu, 0x6Cu, 0x00u, 0x00u },  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
-  { /*     1 */ 0x000600B0u, 0x00010110u, 0x00u, 0x00u, 0x00u }   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
+  { /*     0 */ 0x00060004u, 0x00010064u, 0x00u, 0x00u, 0x00u },  /* [CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  { /*     1 */ 0x0006000Cu, 0x0002008Cu, 0x6Cu, 0x00u, 0x00u },  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+  { /*     2 */ 0x000600B0u, 0x00010110u, 0x00u, 0x00u, 0x00u }   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -146,10 +148,11 @@ CONST(Can_BufferConfigType, CAN_CONST) Can_BufferConfig[2] = {  /* PRQA S 1514, 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_CanIfChannelIdType, CAN_CONST) Can_CanIfChannelId[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_CanIfChannelIdType, CAN_CONST) Can_CanIfChannelId[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     CanIfChannelId      Comment */
-  /*     0 */              0u,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
-  /*     1 */              1u   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
+  /*     0 */              0u,  /* [CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  /*     1 */              1u,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+  /*     2 */              2u   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
 };
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -163,9 +166,10 @@ CONST(Can_CanIfChannelIdType, CAN_CONST) Can_CanIfChannelId[2] = {  /* PRQA S 15
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_CanSubSystemBaseAdrType, CAN_CONST) Can_CanSubSystemBaseAdr[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_CanSubSystemBaseAdrType, CAN_CONST) Can_CanSubSystemBaseAdr[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     CanSubSystemBaseAdr      Comment */
-  /*     0 */          0xF0208000u   /* [Sub-system base address for system 0] */
+  /*     0 */          0xF0208000u,  /* [Sub-system base address for system 0] */
+  /*     1 */          0xF0218000u   /* [Sub-system base address for system 1] */
 };
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
@@ -212,10 +216,11 @@ CONST(Can_CanSubSystemBaseAdrType, CAN_CONST) Can_CanSubSystemBaseAdr[1] = {  /*
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    BasisAdr     CanControllerDefaultBaudrate  IsTTCan  CanControllerDefaultBaudrateIdx  MailboxRxBasicEndIdx                                                                                                                                                     MailboxRxBasicLength                                                                                                                                                     MailboxRxBasicStartIdx                                                                                                                                                     MailboxRxFullEndIdx                                                                                                                                                                             MailboxRxFullLength                                                                                                                                                    MailboxRxFullStartIdx                                                                                                                                                                             MailboxTxBasicEndIdx                                                                                                                                                     MailboxTxBasicLength                                                                                                                                                     MailboxTxBasicStartIdx                                                                                                                                                     MailboxTxFullEndIdx                                                                                                                                                                             MailboxTxFullLength                                                                                                                                                    MailboxTxFullStartIdx                                                                                                                                                                             RxBasicHwStart  RxBasicHwStop  RxFullHwStart  RxFullHwStop  RxSelection  TxBasicHwStart  TxBasicHwStop  TxFullHwStart  TxFullHwStop  UnusedHwStart  UnusedHwStop        Comment                                   Referable Keys */
-  { /*     0 */ 0xF0208100u,                         500u,    TRUE,                              0u,                   5u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   1u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                     4u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                                           4u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                  2u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                                             2u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   2u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                     1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                                           1u  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                  1u  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                                             0u  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,             0u,            1u,            0u,           2u,       0x01u,             1u,            2u,            0u,           1u,            0u,           0u },  /* [CT_TC37X_VCU_CAN00_22cb8fec] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
-  { /*     1 */ 0xF0208500u,                         500u,   FALSE,                              0u,                   7u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   1u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                     6u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */, CAN_NO_MAILBOXRXFULLENDIDXOFCONTROLLERCONFIG  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                  0u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */, CAN_NO_MAILBOXRXFULLSTARTIDXOFCONTROLLERCONFIG  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   6u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                     5u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */, CAN_NO_MAILBOXTXFULLENDIDXOFCONTROLLERCONFIG  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                  0u  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */, CAN_NO_MAILBOXTXFULLSTARTIDXOFCONTROLLERCONFIG  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,             0u,            1u,            0u,           0u,       0x01u,             0u,            1u,            1u,           1u,            0u,           0u }   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a] */
+CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    BasisAdr     CanControllerDefaultBaudrate  IsTTCan  CanControllerDefaultBaudrateIdx  MailboxRxBasicEndIdx                                                                                                                                                      MailboxRxBasicLength                                                                                                                                                      MailboxRxBasicStartIdx                                                                                                                                                      MailboxRxFullEndIdx                                                                                                                                                                              MailboxRxFullLength                                                                                                                                                     MailboxRxFullStartIdx                                                                                                                                                                              MailboxTxBasicEndIdx                                                                                                                                                      MailboxTxBasicLength                                                                                                                                                      MailboxTxBasicStartIdx                                                                                                                                                      MailboxTxFullEndIdx                                                                                                                                                                              MailboxTxFullLength                                                                                                                                                     MailboxTxFullStartIdx                                                                                                                                                                              RxBasicHwStart  RxBasicHwStop  RxFullHwStart  RxFullHwStop  RxSelection  TxBasicHwStart  TxBasicHwStop  TxFullHwStart  TxFullHwStop  UnusedHwStart  UnusedHwStop        Comment                                    Referable Keys */
+  { /*     0 */ 0xF0218100u,                         500u,   FALSE,                              0u,                   2u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   1u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                     1u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */, CAN_NO_MAILBOXRXFULLENDIDXOFCONTROLLERCONFIG  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                  0u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */, CAN_NO_MAILBOXRXFULLSTARTIDXOFCONTROLLERCONFIG  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                   1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                     0u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */, CAN_NO_MAILBOXTXFULLENDIDXOFCONTROLLERCONFIG  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,                  0u  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */, CAN_NO_MAILBOXTXFULLSTARTIDXOFCONTROLLERCONFIG  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */,             0u,            1u,            0u,           0u,       0x02u,             0u,            1u,            1u,           1u,            0u,           0u },  /* [CT_KAMA_FP_EPT_0303_1b7da7f9] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  { /*     1 */ 0xF0208100u,                         500u,    TRUE,                              0u,                   7u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                   1u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                     6u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                                           6u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                  2u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                                             4u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                   4u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                   1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                     3u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                                           3u  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                  1u  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                                             2u  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,             0u,            1u,            0u,           2u,       0x01u,             1u,            2u,            0u,           1u,            0u,           0u },  /* [CT_TC37X_VCU_CAN00_22cb8fec]  */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
+  { /*     2 */ 0xF0208500u,                         500u,   FALSE,                              0u,                   9u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                   1u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                     8u  /* RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ , CAN_NO_MAILBOXRXFULLENDIDXOFCONTROLLERCONFIG  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                  0u  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ , CAN_NO_MAILBOXRXFULLSTARTIDXOFCONTROLLERCONFIG  /* RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                   8u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                   1u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                     7u  /* TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ , CAN_NO_MAILBOXTXFULLENDIDXOFCONTROLLERCONFIG  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,                  0u  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ , CAN_NO_MAILBOXTXFULLSTARTIDXOFCONTROLLERCONFIG  /* TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController) */ ,             0u,            1u,            0u,           0u,       0x01u,             0u,            1u,            1u,           1u,            0u,           0u }   /* [CT_TC37X_VCU_CAN01_55ccbf7a]  */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -233,10 +238,11 @@ CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[2] = {  /* PRQA 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_FBTPType, CAN_CONST) Can_FBTP[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_FBTPType, CAN_CONST) Can_FBTP[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     FBTP       Comment */
-  /*     0 */  0x00u,  /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
-  /*     1 */  0x00u   /* [CT_TC37X_VCU_CAN01_55ccbf7a - CanControllerBaudrateConfig] */
+  /*     0 */  0x00u,  /* [CT_KAMA_FP_EPT_0303_1b7da7f9 - CanControllerBaudrateConfig] */
+  /*     1 */  0x00u,  /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
+  /*     2 */  0x00u   /* [CT_TC37X_VCU_CAN01_55ccbf7a - CanControllerBaudrateConfig] */
 };
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -250,10 +256,11 @@ CONST(Can_FBTPType, CAN_CONST) Can_FBTP[2] = {  /* PRQA S 1514, 1533 */  /* MD_C
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_GFCType, CAN_CONST) Can_GFC[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_GFCType, CAN_CONST) Can_GFC[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     GFC        Comment */
-  /*     0 */  0x3Fu,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
-  /*     1 */  0x3Fu   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
+  /*     0 */  0x3Fu,  /* [CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  /*     1 */  0x3Fu,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+  /*     2 */  0x3Fu   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
 };
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -271,10 +278,11 @@ CONST(Can_GFCType, CAN_CONST) Can_GFC[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_INT_PriorityType, CAN_CONST) Can_INT_Priority[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_INT_PriorityType, CAN_CONST) Can_INT_Priority[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     INT_Priority      Comment */
-  /*     0 */         0x30u,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
-  /*     1 */         0x31u   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
+  /*     0 */         0x00u,  /* [CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  /*     1 */         0x30u,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+  /*     2 */         0x31u   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
 };
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -292,10 +300,11 @@ CONST(Can_INT_PriorityType, CAN_CONST) Can_INT_Priority[2] = {  /* PRQA S 1514, 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_INT_RoutingGroupType, CAN_CONST) Can_INT_RoutingGroup[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_INT_RoutingGroupType, CAN_CONST) Can_INT_RoutingGroup[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     INT_RoutingGroup      Comment */
-  /*     0 */       0x00000000u,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
-  /*     1 */       0x11111111u   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
+  /*     0 */       0x00000000u,  /* [CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  /*     1 */       0x00000000u,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+  /*     2 */       0x11111111u   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
 };
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
@@ -313,10 +322,11 @@ CONST(Can_INT_RoutingGroupType, CAN_CONST) Can_INT_RoutingGroup[2] = {  /* PRQA 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_InitObjectBaudrateType, CAN_CONST) Can_InitObjectBaudrate[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_InitObjectBaudrateType, CAN_CONST) Can_InitObjectBaudrate[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     InitObjectBaudrate      Comment */
-  /*     0 */                500u,  /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
-  /*     1 */                500u   /* [CT_TC37X_VCU_CAN01_55ccbf7a - CanControllerBaudrateConfig] */
+  /*     0 */                500u,  /* [CT_KAMA_FP_EPT_0303_1b7da7f9 - CanControllerBaudrateConfig] */
+  /*     1 */                500u,  /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
+  /*     2 */                500u   /* [CT_TC37X_VCU_CAN01_55ccbf7a - CanControllerBaudrateConfig] */
 };
 #define CAN_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
@@ -334,10 +344,11 @@ CONST(Can_InitObjectBaudrateType, CAN_CONST) Can_InitObjectBaudrate[2] = {  /* P
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_InitObjectFdBrsConfigType, CAN_CONST) Can_InitObjectFdBrsConfig[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_InitObjectFdBrsConfigType, CAN_CONST) Can_InitObjectFdBrsConfig[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     InitObjectFdBrsConfig           */
   /*     0 */  CAN_NONE_INITOBJECTFDBRSCONFIG,
-  /*     1 */  CAN_NONE_INITOBJECTFDBRSCONFIG
+  /*     1 */  CAN_NONE_INITOBJECTFDBRSCONFIG,
+  /*     2 */  CAN_NONE_INITOBJECTFDBRSCONFIG
 };
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -355,11 +366,12 @@ CONST(Can_InitObjectFdBrsConfigType, CAN_CONST) Can_InitObjectFdBrsConfig[2] = {
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_InitObjectStartIndexType, CAN_CONST) Can_InitObjectStartIndex[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_InitObjectStartIndexType, CAN_CONST) Can_InitObjectStartIndex[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     InitObjectStartIndex      Comment */
-  /*     0 */                    0u,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
-  /*     1 */                    1u,  /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
-  /*     2 */                    2u   /* [stop index] */
+  /*     0 */                    0u,  /* [CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  /*     1 */                    1u,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+  /*     2 */                    2u,  /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
+  /*     3 */                    3u   /* [stop index] */
 };
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -377,10 +389,11 @@ CONST(Can_InitObjectStartIndexType, CAN_CONST) Can_InitObjectStartIndex[3] = {  
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_OsIsrType, CAN_CONST) Can_IsrOsId[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_OsIsrType, CAN_CONST) Can_IsrOsId[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     IsrOsId       Comment */
-  /*     0 */ CanIsr_0 ,  /* [CT_TC37X_VCU_CAN00_22cb8fec [Node | Channel] 0] */
-  /*     1 */ CanIsr_1    /* [CT_TC37X_VCU_CAN01_55ccbf7a [Node | Channel] 1] */
+  /*     0 */ CanIsr_4 ,  /* [CT_KAMA_FP_EPT_0303_1b7da7f9 [Node | Channel] 4] */
+  /*     1 */ CanIsr_0 ,  /* [CT_TC37X_VCU_CAN00_22cb8fec [Node | Channel] 0] */
+  /*     2 */ CanIsr_1    /* [CT_TC37X_VCU_CAN01_55ccbf7a [Node | Channel] 1] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -408,15 +421,17 @@ CONST(Can_OsIsrType, CAN_CONST) Can_IsrOsId[2] = {  /* PRQA S 1514, 1533 */  /* 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    IDValue  ActiveSendObject  ControllerConfigIdx                                                                  HwHandle  MailboxSize  MailboxType                                MaxDataLen  MemorySectionsIndex        Comment                                                                Referable Keys */
-  { /*     0 */ 0x051Cu,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,       0u,          1u,  CAN_TX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 64u },  /* [CanHardwareObject_TX0]                                    */  /* [/ActiveEcuC/Can/CanConfigSet/CanHardwareObject_TX0 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
-  { /*     1 */ 0x0000u,               1u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,       1u,          1u, CAN_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 65u },  /* [CN_TC37X_VCU_CAN00_07b6c9c8_Tx]                           */  /* [/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN00_07b6c9c8_Tx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
-  { /*     2 */ 0x0200u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,       0u,          1u,  CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  0u },  /* [CanHardwareObject_VcuRxMsg1_oTC37X_VCU_CAN00_c149044d_Rx] */  /* [/ActiveEcuC/Can/CanConfigSet/CanHardwareObject_VcuRxMsg1_oTC37X_VCU_CAN00_c149044d_Rx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
-  { /*     3 */ 0x0201u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,       1u,          1u,  CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                  1u },  /* [CanHardwareObject_VcuRxMsg2_oTC37X_VCU_CAN00_de1782b6_Rx] */  /* [/ActiveEcuC/Can/CanConfigSet/CanHardwareObject_VcuRxMsg2_oTC37X_VCU_CAN00_de1782b6_Rx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
-  { /*     4 */ 0x0000u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,       0u,          6u, CAN_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 32u },  /* [CN_TC37X_VCU_CAN00_c052b9c5_Rx]                           */  /* [/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN00_c052b9c5_Rx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
-  { /*     5 */ 0x0000u,               2u,                  1u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a */,       0u,          1u, CAN_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 64u },  /* [CN_TC37X_VCU_CAN01_70b1f95e_Tx]                           */  /* [/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN01_70b1f95e_Tx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a, TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
-  { /*     6 */ 0x0000u,               0u,                  1u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a */,       0u,          6u, CAN_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 64u }   /* [CN_TC37X_VCU_CAN01_2f90d2fb_Rx]                           */  /* [/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN01_2f90d2fb_Rx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a, RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[9] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    IDValue  ActiveSendObject  ControllerConfigIdx                                                                   HwHandle  MailboxSize  MailboxType                                MaxDataLen  MemorySectionsIndex        Comment                                                                Referable Keys */
+  { /*     0 */ 0x0000u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 */,       0u,          1u, CAN_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 64u },  /* [CN_KAMA_FP_EPT_0303_275b3e6e_Tx]                          */  /* [/ActiveEcuC/Can/CanConfigSet/CN_KAMA_FP_EPT_0303_275b3e6e_Tx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9, TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+  { /*     1 */ 0x0000u,               0u,                  0u  /* /ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 */,       0u,          6u, CAN_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 32u },  /* [CN_KAMA_FP_EPT_0303_c7999d11_Rx]                          */  /* [/ActiveEcuC/Can/CanConfigSet/CN_KAMA_FP_EPT_0303_c7999d11_Rx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9, RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+  { /*     2 */ 0x051Cu,               1u,                  1u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */ ,       0u,          1u,  CAN_TX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 96u },  /* [CanHardwareObject_TX0]                                    */  /* [/ActiveEcuC/Can/CanConfigSet/CanHardwareObject_TX0 (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, TX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+  { /*     3 */ 0x0000u,               2u,                  1u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */ ,       1u,          1u, CAN_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 97u },  /* [CN_TC37X_VCU_CAN00_07b6c9c8_Tx]                           */  /* [/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN00_07b6c9c8_Tx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+  { /*     4 */ 0x0200u,               0u,                  1u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */ ,       0u,          1u,  CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 96u },  /* [CanHardwareObject_VcuRxMsg1_oTC37X_VCU_CAN00_c149044d_Rx] */  /* [/ActiveEcuC/Can/CanConfigSet/CanHardwareObject_VcuRxMsg1_oTC37X_VCU_CAN00_c149044d_Rx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+  { /*     5 */ 0x0201u,               0u,                  1u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */ ,       1u,          1u,  CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 97u },  /* [CanHardwareObject_VcuRxMsg2_oTC37X_VCU_CAN00_de1782b6_Rx] */  /* [/ActiveEcuC/Can/CanConfigSet/CanHardwareObject_VcuRxMsg2_oTC37X_VCU_CAN00_de1782b6_Rx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, RX_FULLCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+  { /*     6 */ 0x0000u,               0u,                  1u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */ ,       0u,          6u, CAN_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 96u },  /* [CN_TC37X_VCU_CAN00_c052b9c5_Rx]                           */  /* [/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN00_c052b9c5_Rx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec, RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+  { /*     7 */ 0x0000u,               3u,                  2u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a */ ,       0u,          1u, CAN_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 96u },  /* [CN_TC37X_VCU_CAN01_70b1f95e_Tx]                           */  /* [/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN01_70b1f95e_Tx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a, TX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
+  { /*     8 */ 0x0000u,               0u,                  2u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a */ ,       0u,          6u, CAN_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX,         8u,                 96u }   /* [CN_TC37X_VCU_CAN01_2f90d2fb_Rx]                           */  /* [/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN01_2f90d2fb_Rx (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanHardwareObject), /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a, RX_BASICCAN_TYPE/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a (DefRef: /MICROSAR/Can_Mpc5700Mcan/Can/CanConfigSet/CanController)] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -437,10 +452,11 @@ CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[7] = {  /* PRQA S 1514, 1533 */  /
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_MemorySectionInfoType, CAN_CONST) Can_MemorySectionInfo[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_MemorySectionInfoType, CAN_CONST) Can_MemorySectionInfo[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    MemorySectionStart        Comment */
-  { /*     0 */                 0u },  /* [MemorySection: TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec] */
-  { /*     1 */                32u }   /* [MemorySection: TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a] */
+  { /*     0 */                 0u },  /* [MemorySection: TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  { /*     1 */                32u },  /* [MemorySection: TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec] */
+  { /*     2 */                64u }   /* [MemorySection: TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -463,73 +479,105 @@ CONST(Can_MemorySectionInfoType, CAN_CONST) Can_MemorySectionInfo[2] = {  /* PRQ
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_MemorySectionObjectsType, CAN_CONST) Can_MemorySectionObjects[64] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_MemorySectionObjectsType, CAN_CONST) Can_MemorySectionObjects[96] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    HwHandle  MailboxElement  MailboxHandle        Comment */
-  { /*     0 */       0u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - CanHardwareObject_TX0] */
-  { /*     1 */       1u,             0u,            1u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - CN_TC37X_VCU_CAN00_07b6c9c8_Tx] */
-  { /*     2 */       2u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*     3 */       3u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*     4 */       4u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*     5 */       5u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*     6 */       6u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*     7 */       7u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*     8 */       8u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*     9 */       9u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    10 */      10u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    11 */      11u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    12 */      12u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    13 */      13u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    14 */      14u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    15 */      15u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    16 */      16u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    17 */      17u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    18 */      18u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    19 */      19u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    20 */      20u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    21 */      21u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    22 */      22u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    23 */      23u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    24 */      24u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    25 */      25u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    26 */      26u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    27 */      27u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    28 */      28u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    29 */      29u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    30 */      30u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    31 */      31u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
-  { /*    32 */       0u,             0u,            5u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - CN_TC37X_VCU_CAN01_70b1f95e_Tx] */
-  { /*    33 */       1u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    34 */       2u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    35 */       3u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    36 */       4u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    37 */       5u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    38 */       6u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    39 */       7u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    40 */       8u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    41 */       9u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    42 */      10u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    43 */      11u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    44 */      12u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    45 */      13u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    46 */      14u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    47 */      15u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    48 */      16u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    49 */      17u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*     0 */       0u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - CN_KAMA_FP_EPT_0303_275b3e6e_Tx] */
+  { /*     1 */       1u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*     2 */       2u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*     3 */       3u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*     4 */       4u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*     5 */       5u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*     6 */       6u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*     7 */       7u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*     8 */       8u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*     9 */       9u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    10 */      10u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    11 */      11u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    12 */      12u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    13 */      13u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    14 */      14u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    15 */      15u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    16 */      16u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    17 */      17u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    18 */      18u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    19 */      19u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    20 */      20u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    21 */      21u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    22 */      22u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    23 */      23u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    24 */      24u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    25 */      25u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    26 */      26u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    27 */      27u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    28 */      28u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    29 */      29u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    30 */      30u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    31 */      31u,             0u,            0u },  /* [TxBuffer_CT_KAMA_FP_EPT_0303_1b7da7f9 - Reserved] */
+  { /*    32 */       0u,             0u,            2u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - CanHardwareObject_TX0] */
+  { /*    33 */       1u,             0u,            3u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - CN_TC37X_VCU_CAN00_07b6c9c8_Tx] */
+  { /*    34 */       2u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    35 */       3u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    36 */       4u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    37 */       5u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    38 */       6u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    39 */       7u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    40 */       8u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    41 */       9u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    42 */      10u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    43 */      11u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    44 */      12u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    45 */      13u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    46 */      14u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    47 */      15u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    48 */      16u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    49 */      17u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
     /* Index    HwHandle  MailboxElement  MailboxHandle        Comment */
-  { /*    50 */      18u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    51 */      19u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    52 */      20u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    53 */      21u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    54 */      22u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    55 */      23u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    56 */      24u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    57 */      25u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    58 */      26u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    59 */      27u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    60 */      28u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    61 */      29u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    62 */      30u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
-  { /*    63 */      31u,             0u,            0u }   /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    50 */      18u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    51 */      19u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    52 */      20u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    53 */      21u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    54 */      22u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    55 */      23u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    56 */      24u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    57 */      25u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    58 */      26u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    59 */      27u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    60 */      28u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    61 */      29u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    62 */      30u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    63 */      31u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec - Reserved] */
+  { /*    64 */       0u,             0u,            7u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - CN_TC37X_VCU_CAN01_70b1f95e_Tx] */
+  { /*    65 */       1u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    66 */       2u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    67 */       3u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    68 */       4u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    69 */       5u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    70 */       6u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    71 */       7u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    72 */       8u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    73 */       9u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    74 */      10u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    75 */      11u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    76 */      12u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    77 */      13u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    78 */      14u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    79 */      15u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    80 */      16u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    81 */      17u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    82 */      18u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    83 */      19u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    84 */      20u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    85 */      21u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    86 */      22u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    87 */      23u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    88 */      24u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    89 */      25u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    90 */      26u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    91 */      27u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    92 */      28u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    93 */      29u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    94 */      30u,             0u,            0u },  /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
+  { /*    95 */      31u,             0u,            0u }   /* [TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a - Reserved] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -553,10 +601,11 @@ CONST(Can_MemorySectionObjectsType, CAN_CONST) Can_MemorySectionObjects[64] = { 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_SIDFCType, CAN_CONST) Can_SIDFC[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    FLSSA  LSS    SIDFEEndIdx                                                                  SIDFEStartIdx                                                                        Comment */
-  { /*     0 */ 0x00u, 0x03u,          3u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */,            0u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */ },  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
-  { /*     1 */ 0xACu, 0x01u,          4u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a */,            3u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a */ }   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
+CONST(Can_SIDFCType, CAN_CONST) Can_SIDFC[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    FLSSA  LSS    SIDFEEndIdx                                                                   SIDFEStartIdx                                                                         Comment */
+  { /*     0 */ 0x00u, 0x01u,          1u  /* /ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 */,            0u  /* /ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9 */ },  /* [CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  { /*     1 */ 0x00u, 0x03u,          4u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */ ,            1u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec */  },  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+  { /*     2 */ 0xACu, 0x01u,          5u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a */ ,            4u  /* /ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a */  }   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -574,12 +623,13 @@ CONST(Can_SIDFCType, CAN_CONST) Can_SIDFC[2] = {  /* PRQA S 1514, 1533 */  /* MD
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_SIDFEType, CAN_CONST) Can_SIDFE[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index     SIDFE                                   Comment                              Referable Keys */
-  /*     0 */  0xBA000000u  /* FULLCAN_0 */      ,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
-  /*     1 */  0xBA010001u  /* FULLCAN_1 */      ,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
-  /*     2 */  0x88000000u  /*  I: 0 S0 FIFO_0 */,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
-  /*     3 */  0x88000000u  /*  I: 0 S0 FIFO_0 */   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a] */
+CONST(Can_SIDFEType, CAN_CONST) Can_SIDFE[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     SIDFE                                   Comment                               Referable Keys */
+  /*     0 */  0x88000000u  /*  I: 0 S0 FIFO_0 */,  /* [CT_KAMA_FP_EPT_0303_1b7da7f9] */  /* [/ActiveEcuC/Can/CanConfigSet/CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  /*     1 */  0xBA000000u  /* FULLCAN_0 */      ,  /* [CT_TC37X_VCU_CAN00_22cb8fec]  */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
+  /*     2 */  0xBA010001u  /* FULLCAN_1 */      ,  /* [CT_TC37X_VCU_CAN00_22cb8fec]  */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
+  /*     3 */  0x88000000u  /*  I: 0 S0 FIFO_0 */,  /* [CT_TC37X_VCU_CAN00_22cb8fec]  */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN00_22cb8fec] */
+  /*     4 */  0x88000000u  /*  I: 0 S0 FIFO_0 */   /* [CT_TC37X_VCU_CAN01_55ccbf7a]  */  /* [/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN01_55ccbf7a] */
 };
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
@@ -597,10 +647,11 @@ CONST(Can_SIDFEType, CAN_CONST) Can_SIDFE[4] = {  /* PRQA S 1514, 1533 */  /* MD
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_SRN_AddressType, CAN_CONST) Can_SRN_Address[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_SRN_AddressType, CAN_CONST) Can_SRN_Address[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     SRN_Address      Comment */
-  /*     0 */  0xF00385B0u,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
-  /*     1 */  0xF00385B4u   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
+  /*     0 */  0xF00385F0u,  /* [CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  /*     1 */  0xF00385B0u,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+  /*     2 */  0xF00385B4u   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
 };
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
@@ -629,10 +680,11 @@ CONST(Can_SRN_AddressType, CAN_CONST) Can_SRN_Address[2] = {  /* PRQA S 1514, 15
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_ShmAdrType, CAN_CONST) Can_ShmAdr[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_ShmAdrType, CAN_CONST) Can_ShmAdr[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    RXBA                            RXF0A                           RXF1A                          SIDFA                           StartAdr     StopAdr      TXBA                            TXEFA                          XIDFA                                Comment */
-  { /*     0 */ 0xF020006Cu  /* Size[B]: 32 */, 0xF020000Cu  /* Size[B]: 96 */, 0xF0200000u  /* Size[B]: 0 */, 0xF0200000u  /* Size[B]: 12 */, 0xF0200000u, 0xF02000ADu, 0xF020008Cu  /* Size[B]: 32 */, 0xF0200000u  /* Size[B]: 0 */, 0xF0200000u  /* Size[B]: 0 */ },  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
-  { /*     1 */ 0xF0200000u  /* Size[B]: 0 */ , 0xF02000B0u  /* Size[B]: 96 */, 0xF0200000u  /* Size[B]: 0 */, 0xF02000ACu  /* Size[B]: 4 */ , 0xF0200000u, 0xF0200121u, 0xF0200110u  /* Size[B]: 16 */, 0xF0200000u  /* Size[B]: 0 */, 0xF0200000u  /* Size[B]: 0 */ }   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
+  { /*     0 */ 0xF0210000u  /* Size[B]: 0 */ , 0xF0210004u  /* Size[B]: 96 */, 0xF0210000u  /* Size[B]: 0 */, 0xF0210000u  /* Size[B]: 4 */ , 0xF0210000u, 0xF0210075u, 0xF0210064u  /* Size[B]: 16 */, 0xF0210000u  /* Size[B]: 0 */, 0xF0210000u  /* Size[B]: 0 */ },  /* [CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  { /*     1 */ 0xF020006Cu  /* Size[B]: 32 */, 0xF020000Cu  /* Size[B]: 96 */, 0xF0200000u  /* Size[B]: 0 */, 0xF0200000u  /* Size[B]: 12 */, 0xF0200000u, 0xF02000ADu, 0xF020008Cu  /* Size[B]: 32 */, 0xF0200000u  /* Size[B]: 0 */, 0xF0200000u  /* Size[B]: 0 */ },  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+  { /*     2 */ 0xF0200000u  /* Size[B]: 0 */ , 0xF02000B0u  /* Size[B]: 96 */, 0xF0200000u  /* Size[B]: 0 */, 0xF02000ACu  /* Size[B]: 4 */ , 0xF0200000u, 0xF0200121u, 0xF0200110u  /* Size[B]: 16 */, 0xF0200000u  /* Size[B]: 0 */, 0xF0200000u  /* Size[B]: 0 */ }   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -650,10 +702,11 @@ CONST(Can_ShmAdrType, CAN_CONST) Can_ShmAdr[2] = {  /* PRQA S 1514, 1533 */  /* 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_TDCRType, CAN_CONST) Can_TDCR[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_TDCRType, CAN_CONST) Can_TDCR[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     TDCR       Comment */
-  /*     0 */  0x00u,  /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
-  /*     1 */  0x00u   /* [CT_TC37X_VCU_CAN01_55ccbf7a - CanControllerBaudrateConfig] */
+  /*     0 */  0x00u,  /* [CT_KAMA_FP_EPT_0303_1b7da7f9 - CanControllerBaudrateConfig] */
+  /*     1 */  0x00u,  /* [CT_TC37X_VCU_CAN00_22cb8fec - CanControllerBaudrateConfig] */
+  /*     2 */  0x00u   /* [CT_TC37X_VCU_CAN01_55ccbf7a - CanControllerBaudrateConfig] */
 };
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -667,10 +720,11 @@ CONST(Can_TDCRType, CAN_CONST) Can_TDCR[2] = {  /* PRQA S 1514, 1533 */  /* MD_C
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_XIDAMType, CAN_CONST) Can_XIDAM[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_XIDAMType, CAN_CONST) Can_XIDAM[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     XIDAM            Comment */
-  /*     0 */  0x1FFFFFFFu,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
-  /*     1 */  0x1FFFFFFFu   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
+  /*     0 */  0x1FFFFFFFu,  /* [CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  /*     1 */  0x1FFFFFFFu,  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+  /*     2 */  0x1FFFFFFFu   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
 };
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
@@ -692,10 +746,11 @@ CONST(Can_XIDAMType, CAN_CONST) Can_XIDAM[2] = {  /* PRQA S 1514, 1533 */  /* MD
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Can_XIDFCType, CAN_CONST) Can_XIDFC[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Can_XIDFCType, CAN_CONST) Can_XIDFC[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    FLESA  LSE          Comment */
-  { /*     0 */ 0x00u, 0x00u },  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
-  { /*     1 */ 0x00u, 0x00u }   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
+  { /*     0 */ 0x00u, 0x00u },  /* [CT_KAMA_FP_EPT_0303_1b7da7f9] */
+  { /*     1 */ 0x00u, 0x00u },  /* [CT_TC37X_VCU_CAN00_22cb8fec] */
+  { /*     2 */ 0x00u, 0x00u }   /* [CT_TC37X_VCU_CAN01_55ccbf7a] */
 };
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -741,7 +796,7 @@ CONST(Can_XIDFEType, CAN_CONST) Can_XIDFE[1] = {  /* PRQA S 1514, 1533 */  /* MD
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[4];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define CAN_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -776,7 +831,7 @@ VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[3];  /* PRQA 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Can_ControllerDataType, CAN_VAR_NOINIT) Can_ControllerData[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Can_ControllerDataType, CAN_VAR_NOINIT) Can_ControllerData[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define CAN_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

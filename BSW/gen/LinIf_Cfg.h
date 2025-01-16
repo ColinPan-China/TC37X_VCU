@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinIf_Cfg.h
- *   Generation Time: 2025-01-03 11:03:37
+ *   Generation Time: 2025-01-16 10:23:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -691,7 +691,7 @@
 #define LinIf_GetSizeOfChannelConfigOfPCConfig()                                                    1u  /**< the number of accomplishable value elements in LinIf_ChannelConfig */
 #define LinIf_GetSizeOfChannelDataOfPCConfig()                                                      1u  /**< the number of accomplishable value elements in LinIf_ChannelData */
 #define LinIf_GetSizeOfMasterChannelDataOfPCConfig()                                                1u  /**< the number of accomplishable value elements in LinIf_MasterChannelData */
-#define LinIf_GetSizeOfSystemToLinIfChannelOfPCConfig()                                             3u  /**< the number of accomplishable value elements in LinIf_SystemToLinIfChannel */
+#define LinIf_GetSizeOfSystemToLinIfChannelOfPCConfig()                                             4u  /**< the number of accomplishable value elements in LinIf_SystemToLinIfChannel */
 #define LinIf_GetSlaveChannelConfigOfPCConfig()                                                     NULL_PTR  /**< the pointer to LinIf_SlaveChannelConfig */
 #define LinIf_GetSystemToLinIfChannelOfPCConfig()                                                   LinIf_SystemToLinIfChannel  /**< the pointer to LinIf_SystemToLinIfChannel */
 #define LinIf_GetUncTxFrmTotalNumberOfPCConfig()                                                    6u  /**< Number of unconditional Tx frames */
@@ -1119,7 +1119,7 @@ typedef uint8 LinIf_LinChannelIndexOfChannelIndTableType;
 typedef uint8 LinIf_SystemChannelIndexOfChannelIndTableType;
 
 /**   \brief  value based type definition for LinIf_LinWakeupSourceOfChannelToDrvWakeupInfo */
-typedef uint8 LinIf_LinWakeupSourceOfChannelToDrvWakeupInfoType;
+typedef uint16 LinIf_LinWakeupSourceOfChannelToDrvWakeupInfoType;
 
 /**   \brief  value based type definition for LinIf_DelayInTimebaseTicksOfEntry */
 typedef uint8 LinIf_DelayInTimebaseTicksOfEntryType;
@@ -1788,7 +1788,7 @@ extern CONST(LinIf_ScheduleTableListIndType, LINIF_CONST) LinIf_ScheduleTableLis
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(LinIf_SystemToLinIfChannelType, LINIF_CONST) LinIf_SystemToLinIfChannel[3];
+extern CONST(LinIf_SystemToLinIfChannelType, LINIF_CONST) LinIf_SystemToLinIfChannel[4];
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

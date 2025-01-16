@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Lcfg.h
- *   Generation Time: 2024-12-11 15:41:00
+ *   Generation Time: 2025-01-16 10:23:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -289,6 +289,18 @@ extern FUNC(void, OS_CANISR_0_CODE) Os_Isr_CanIsr_0(void);
 extern FUNC(void, OS_CANISR_1_CODE) Os_Isr_CanIsr_1(void);
 
 # define OS_STOP_SEC_CanIsr_1_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_CanIsr_4_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  CanIsr_4()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_CANISR_4_CODE) Os_Isr_CanIsr_4(void);
+
+# define OS_STOP_SEC_CanIsr_4_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

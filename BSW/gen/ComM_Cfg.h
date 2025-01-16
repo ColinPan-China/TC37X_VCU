@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2024-11-28 15:38:53
+ *   Generation Time: 2025-01-16 10:23:50
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -122,7 +122,7 @@
 #define COMM_EXISTS_ONLY_NONE_NMTYPEOFCHANNEL                           STD_OFF
 
 #define COMM_FULL_COMM_REQUEST_NOTIF                                    STD_OFF
-#define COMM_MAX_NUMBER_OF_USERS                                        3u
+#define COMM_MAX_NUMBER_OF_USERS                                        4u
 #define COMM_DCM_INDICATION                                             STD_ON
 #define COMM_USERMODENOTIFUNC_PNC_USER_ONLY                             STD_ON
 #define COMM_EXISTS_USER_WITH_SINGLE_PNC                                STD_OFF
@@ -145,18 +145,20 @@
     &&&~ USER HANDLES
  ----------------------------------------------------------------------------- */
 
-#define ComMConf_ComMUser_CN_LIN00_984dfd9e           2u 
-#define ComMConf_ComMUser_CN_TC37X_VCU_CAN00_b1b4f272 0u 
-#define ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c 1u 
+#define ComMConf_ComMUser_CN_KAMA_FP_EPT_0303_b67fd6a6 0u 
+#define ComMConf_ComMUser_CN_LIN00_984dfd9e            3u 
+#define ComMConf_ComMUser_CN_TC37X_VCU_CAN00_b1b4f272  1u 
+#define ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c  2u 
 
 
 /* -----------------------------------------------------------------------------
     &&&~ CHANNEL HANDLES
  ----------------------------------------------------------------------------- */
 
-#define ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8 0u 
-#define ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e 1u 
-#define ComMConf_ComMChannel_CN_LIN00_b12a0454           2u 
+#define ComMConf_ComMChannel_CN_KAMA_FP_EPT_0303_275b3e6e 0u 
+#define ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8  1u 
+#define ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e  2u 
+#define ComMConf_ComMChannel_CN_LIN00_b12a0454            3u 
 
 
 /* -----------------------------------------------------------------------------
@@ -837,6 +839,7 @@ typedef struct ComM_ActiveComModeStructSTag
   ComM_StateType ComMChannel_0;
   ComM_StateType ComMChannel_1;
   ComM_StateType ComMChannel_2;
+  ComM_StateType ComMChannel_3;
 } ComM_ActiveComModeStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_BusComModeReq in the partition context  */
@@ -845,6 +848,7 @@ typedef struct ComM_BusComModeReqStructSTag
   ComM_StateType ComMChannel_0;
   ComM_StateType ComMChannel_1;
   ComM_StateType ComMChannel_2;
+  ComM_StateType ComMChannel_3;
 } ComM_BusComModeReqStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_BusSmState in the partition context  */
@@ -853,6 +857,7 @@ typedef struct ComM_BusSmStateStructSTag
   ComM_ModeType ComMChannel_0;
   ComM_ModeType ComMChannel_1;
   ComM_ModeType ComMChannel_2;
+  ComM_ModeType ComMChannel_3;
 } ComM_BusSmStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_ComAllowed in the partition context  */
@@ -861,6 +866,7 @@ typedef struct ComM_ComAllowedStructSTag
   ComM_ComAllowedType ComMChannel_0;
   ComM_ComAllowedType ComMChannel_1;
   ComM_ComAllowedType ComMChannel_2;
+  ComM_ComAllowedType ComMChannel_3;
 } ComM_ComAllowedStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_DcmRequestActive in the partition context  */
@@ -869,6 +875,7 @@ typedef struct ComM_DcmRequestActiveStructSTag
   ComM_DcmRequestActiveType ComMChannel_0;
   ComM_DcmRequestActiveType ComMChannel_1;
   ComM_DcmRequestActiveType ComMChannel_2;
+  ComM_DcmRequestActiveType ComMChannel_3;
 } ComM_DcmRequestActiveStructSType;
 
 /** 
@@ -883,35 +890,35 @@ typedef struct ComM_DcmRequestActiveStructSTag
 /**   \brief  type to access ComM_ActiveComMode in an index and symbol based style. */
 typedef union ComM_ActiveComModeUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_StateType raw[3];
+  ComM_StateType raw[4];
   ComM_ActiveComModeStructSType str;
 } ComM_ActiveComModeUType;
 
 /**   \brief  type to access ComM_BusComModeReq in an index and symbol based style. */
 typedef union ComM_BusComModeReqUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_StateType raw[3];
+  ComM_StateType raw[4];
   ComM_BusComModeReqStructSType str;
 } ComM_BusComModeReqUType;
 
 /**   \brief  type to access ComM_BusSmState in an index and symbol based style. */
 typedef union ComM_BusSmStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_ModeType raw[3];
+  ComM_ModeType raw[4];
   ComM_BusSmStateStructSType str;
 } ComM_BusSmStateUType;
 
 /**   \brief  type to access ComM_ComAllowed in an index and symbol based style. */
 typedef union ComM_ComAllowedUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_ComAllowedType raw[3];
+  ComM_ComAllowedType raw[4];
   ComM_ComAllowedStructSType str;
 } ComM_ComAllowedUType;
 
 /**   \brief  type to access ComM_DcmRequestActive in an index and symbol based style. */
 typedef union ComM_DcmRequestActiveUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_DcmRequestActiveType raw[3];
+  ComM_DcmRequestActiveType raw[4];
   ComM_DcmRequestActiveStructSType str;
 } ComM_DcmRequestActiveUType;
 
@@ -1049,7 +1056,7 @@ typedef ComM_PCConfigType ComM_ConfigType;  /**< A structure type is present for
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[3];
+extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[4];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1070,7 +1077,7 @@ extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[3];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[3];
+extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[4];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1113,7 +1120,7 @@ extern CONST(ComM_PartitionIdentifiersType, COMM_CONST) ComM_PartitionIdentifier
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserType, COMM_CONST) ComM_User[3];
+extern CONST(ComM_UserType, COMM_CONST) ComM_User[4];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1134,7 +1141,7 @@ extern CONST(ComM_UserType, COMM_CONST) ComM_User[3];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[3];
+extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[4];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1321,7 +1328,7 @@ extern VAR(ComM_PostInitializedType, COMM_VAR_NOINIT) ComM_PostInitialized[1];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[3];
+extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[4];
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

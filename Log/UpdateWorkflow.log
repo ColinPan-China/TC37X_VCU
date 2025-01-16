@@ -1,25 +1,100 @@
-2025-01-03 - 10:51:34
-10:51:34 - Workflow Step 'Update workflow' started.
+2025-01-16 - 10:14:18
+10:14:18 - Workflow Step 'Update workflow' started.
 Using DaVinci Configurator  5.24.40 SP2 (x86_64).
-10:51:34 - Workflow Step 'Validate workflow environment' started.
-10:51:34 - Workflow Step 'Validate dpa file' started.
-10:51:36 - Workflow Step 'Validate dpa file' finished.
-10:51:36 - Workflow Step 'SLP conformance check' started.
-10:51:36 - Workflow Step 'SLP conformance check' finished.
-10:51:36 - Workflow Step 'Validate workflow environment' finished.
-10:51:36 - Workflow Step 'Input File Pre-Processing' started.
-10:51:36 - Workflow Step 'Converting legacy file(s) to AUTOSAR files' started.
+10:14:18 - Workflow Step 'Validate workflow environment' started.
+10:14:18 - Workflow Step 'Validate dpa file' started.
+10:14:20 - Workflow Step 'Validate dpa file' finished.
+10:14:20 - Workflow Step 'SLP conformance check' started.
+10:14:20 - Workflow Step 'SLP conformance check' finished.
+10:14:20 - Workflow Step 'Validate workflow environment' finished.
+10:14:20 - Workflow Step 'Input File Pre-Processing' started.
+10:14:20 - Workflow Step 'Converting legacy file(s) to AUTOSAR files' started.
               [WARNING] Legacy Converter finished with warnings.
 Convert legacy file(s) to System Description
 Used executable: C:\Vector\CBD2100764_D00\Misc\LegacyDb2SystemDescrConverter\Application\LegacyDb2SystemDescrConverter.exe
-Arguments: D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN00.dbc D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN01.dbc D:\TC377_Development\dev\TC37X_VCU\DBC\LIN0.ldf -o "C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy" -r 00048 -e -v 19
+Arguments: D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN00.dbc D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN01.dbc D:\TC377_Development\dev\TC37X_VCU\DBC\LIN0.ldf D:\TC377_Development\dev\TC37X_VCU\DBC\KAMA_FP_EPT.dbc -o "C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy" -r 00048 -e -v 19
 Vector Legacy Database Converter
 Version: 1.8.62.0
 Copyright (c) 2018 Vector Informatik GmbH.
 SIP License found as C:\Vector\CBD2100764_D00\DaVinciConfigurator\ComponentLicense_DaVinciConfigurator.lic
-Command line: C:\Vector\CBD2100764_D00\Misc\LegacyDb2SystemDescrConverter\Application\LegacyDb2SystemDescrConverter.exe D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN00.dbc D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN01.dbc D:\TC377_Development\dev\TC37X_VCU\DBC\LIN0.ldf -o "C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy" -r 00048 -e -v 19
+Command line: C:\Vector\CBD2100764_D00\Misc\LegacyDb2SystemDescrConverter\Application\LegacyDb2SystemDescrConverter.exe D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN00.dbc D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN01.dbc D:\TC377_Development\dev\TC37X_VCU\DBC\LIN0.ldf D:\TC377_Development\dev\TC37X_VCU\DBC\KAMA_FP_EPT.dbc -o "C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy" -r 00048 -e -v 19
 Converting DBC file D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN00.dbc
 Converting DBC file D:\TC377_Development\dev\TC37X_VCU\DBC\VCU_CAN01.dbc
+Converting DBC file D:\TC377_Development\dev\TC37X_VCU\DBC\KAMA_FP_EPT.dbc
+              [WARNING] 2-bit signal TCU_HVACACState has invalid value range [0,4]
+==> The value range is reduced to [0,3]
+              [WARNING] 1-bit signal TCU_CompEnable has invalid value range [0,1]
+==> The value range is reduced to [0,0]
+              [WARNING] 13-bit signal TCU_CompTargetSpeed has invalid value range [0,8191]
+==> The value range is reduced to [0,4095]
+              [WARNING] 8-bit signal TCU_CompMaxAllowPwrCmsp has invalid value range [0,254]
+==> The value range is reduced to [0,127]
+              [WARNING] 8-bit signal TCU_CompMaxAllowPwrCmsp has invalid value range [0,254]
+==> The value range is reduced to [0,127]
+              [WARNING] 11-bit signal APTC_HVBusVoltage has invalid value range [0,20400]
+==> The value range is reduced to [0,2047]
+              [WARNING] 11-bit signal APTC_HVBusVoltage has invalid value range [0,20400]
+==> The value range is reduced to [0,2047]
+              [WARNING] 16-bit signal BMS_PackVoltage has invalid value range [0,655350]
+==> The value range is reduced to [0,65535]
+              [WARNING] 16-bit signal BMS_PackVoltage has invalid value range [0,655350]
+==> The value range is reduced to [0,65535]
+              [WARNING] 16-bit signal BMS_LinkVoltage has invalid value range [0,655350]
+==> The value range is reduced to [0,65535]
+              [WARNING] 16-bit signal BMS_LinkVoltage has invalid value range [0,655350]
+==> The value range is reduced to [0,65535]
+              [WARNING] 4-bit signal BMS_BatType has invalid value range [0,255]
+==> The value range is reduced to [0,15]
+              [WARNING] 4-bit signal BMS_BatSupName has invalid value range [0,4294967295]
+==> The value range is reduced to [0,15]
+              [WARNING] 24-bit signal BMS_SumChgkwh has invalid value range [0,16777216]
+==> The value range is reduced to [0,16777215]
+              [WARNING] 24-bit signal BMS_SumDisChgkwh has invalid value range [0,16777216]
+==> The value range is reduced to [0,16777215]
+              [WARNING] 3-bit signal BMS_HeatCommand has invalid value range [0,8]
+==> The value range is reduced to [0,7]
+              [WARNING] 3-bit signal BMS_CoolCommand has invalid value range [0,8]
+==> The value range is reduced to [0,7]
+              [WARNING] 1-bit signal BMS_ErrorBSUOffline has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ErrorHallOffline has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ErrorCellVoltOffline has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ErrorCellTempOffline has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ErrorPreChaFailed has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ErrorRelay has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ErrorBSUBalance has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ErrorHighSoc has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ErrorSoCJump_RM has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ErrorHVIL has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ErrorEmergencyOffCrash has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ErrorSystemsMatch has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ErrorSmoke has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ErrorLeakDet has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 1-bit signal BMS_ThermalRunawayFault has invalid value range [0,3]
+==> The value range is reduced to [0,1]
+              [WARNING] 8-bit signal BMS_BatProDatYear has invalid value range [-1985,-1730]
+==> The value range is reduced to [0,-1730]
+              [WARNING] 8-bit signal BMS_BatProDatYear has invalid value range [-1985,-1730]
+==> The value range is reduced to [0,-1730]
+              [WARNING] 8-bit signal BCM_RLHSTempSensorValue has invalid value range [0,320]
+==> The value range is reduced to [0,255]
+              [WARNING] 8-bit signal BCM_RLHSTempSensorValue has invalid value range [0,320]
+==> The value range is reduced to [0,255]
+              [WARNING] 8-bit signal BMS_BatProDatYear has invalid init value '-1985'
+==> The init value is discarded
 Converting LDF file D:\TC377_Development\dev\TC37X_VCU\DBC\LIN0.ldf
 LIN protocol version: 2.1
 LIN language version: 2.1
@@ -30,28 +105,36 @@ LIN language version: 2.1
               [WARNING] 1-bit signal LIN_Resp_Error_sta has invalid value range [0,2]
 ==> The value range is reduced to [0,1]
 Writing System Description...
-Writing 10 ECU Extracts...
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy.arxml
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy_ERV.arxml
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy_EXV_1.arxml
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy_EXV_2.arxml
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy_GWM.arxml
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy_HVCH.arxml
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy_PMP_1.arxml
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy_PMP_2.arxml
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy_SVA.arxml
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy_Tester.arxml
-C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy_VCU.arxml
-Elapsed time: 0.742 seconds
+Writing 18 ECU Extracts...
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_ADCU.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_BMS.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_Diag.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_ERV.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_EVCOM.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_EXV_1.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_EXV_2.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_GW.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_GWM.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_HVCH.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_MCU.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_PMP_1.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_PMP_2.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_POD.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_PTC.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_SVA.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_Tester.arxml
+C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_VCU.arxml
+Elapsed time: 0.764 seconds
 0 Errors
-3 Warnings
-10:51:37 - Workflow Step 'Converting legacy file(s) to AUTOSAR files' finished.
-10:51:37 - Workflow Step 'Load arxml file after preprocessing' started.
-Load arxml file from path: C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\LegacyConverterResults\1735872696702-0\ConvertedLegacy_VCU.arxml
-10:51:37 - Workflow Step 'Load arxml file after preprocessing' finished.
-10:51:37 - Workflow Step 'Evaluate system extract paths' started.
-10:51:37 - Workflow Step 'Evaluate system extract paths' finished.
-10:51:37 - Workflow Step 'Converting legacy diagnostics file(s) to AUTOSAR files' started.
+40 Warnings
+10:14:21 - Workflow Step 'Converting legacy file(s) to AUTOSAR files' finished.
+10:14:21 - Workflow Step 'Load arxml file after preprocessing' started.
+Load arxml file from path: C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\LegacyConverterResults\1736993660440-0\ConvertedLegacy_VCU.arxml
+10:14:21 - Workflow Step 'Load arxml file after preprocessing' finished.
+10:14:21 - Workflow Step 'Evaluate system extract paths' started.
+10:14:21 - Workflow Step 'Evaluate system extract paths' finished.
+10:14:21 - Workflow Step 'Converting legacy diagnostics file(s) to AUTOSAR files' started.
 ----> Process of diagnostic specification
 DDM-Version: 20.3.0 (Release)
 Importing ODX file D:\TC377_Development\dev\TC37X_VCU\DBC\MyEcu.cdd, ECU: MyEcu, variant: CommonDiagnostics
@@ -144,13 +227,13 @@ Importing DiagSettings
 <---- Importing DiagSettings
 ----> Importing DataCompProps
 <---- Importing DataCompProps
-<<<<<<<<<<<<< ODX Import finished successfully after 0.156
+<<<<<<<<<<<<< ODX Import finished successfully after 0.172
 Shaping imported model for diagnostic OEM 'GENERIC'
 - Used Diagnostic OEM:  GENERIC
 - Microsar:             true
 - Meta-Ecuc-Export:     true
 >>>>>>>>>>>>> SHAPING preparation >>>>>>>>>>>>>
-<<<<<<<<<<<<< SHAPING ready after 0.016s (16ms) <<<<<<<<<<<<<
+<<<<<<<<<<<<< SHAPING ready after 0s (0ms) <<<<<<<<<<<<<
 >>>>>>>>>>>>> SHAPING started >>>>>>>>>>>>>
 >>>>>>>>>>>>> ShapingStep ServiceSelection >>>>>>>>>>>>>
 <<<<<<<<<<<<< ShapingStep ServiceSelection( completed in 0s (0ms) <<<<<<<<<<<<<
@@ -323,7 +406,7 @@ At Service 0x31 SubService 0x3
 - Service has now new definition: 0x31 0x3 0x105 Vcu_Roution_00_Results
 At Ecu
 - Finding duplicated sub-services...
-<<<<<<<<<<<<< ShapingStep ServiceDefinition( completed in 0.016s (16ms) <<<<<<<<<<<<<
+<<<<<<<<<<<<< ShapingStep ServiceDefinition( completed in 0.015s (15ms) <<<<<<<<<<<<<
 >>>>>>>>>>>>> ShapingStep DataDefinition >>>>>>>>>>>>>
 Service: 0x2e 0x100 DevelopmentData_Write shared data components linked to: Service: 0x22 0x100 DevelopmentData_Read !!!
 Service: 0x2e 0x101 DataDiagnosticIdentifier_DID_Write shared data components linked to: Service: 0x22 0x101 DataDiagnosticIdentifier_DID_Read !!!
@@ -525,7 +608,7 @@ At New_Data_Object
 - Removeing attribute 'FaultmemoryData'
 At Ecu
 - Shape Routine Parameter Names
-<<<<<<<<<<<<< ShapingStep DataDefinition( completed in 0.015s (15ms) <<<<<<<<<<<<<
+<<<<<<<<<<<<< ShapingStep DataDefinition( completed in 0.016s (16ms) <<<<<<<<<<<<<
 >>>>>>>>>>>>> ShapingStep DataIdentifier >>>>>>>>>>>>>
 At Did 0xf190 - 'Vehicle_Identification'
 - Set DID property 'IsVIN' to 'true'
@@ -900,9 +983,9 @@ At Ecu 'MyEcu'
 At Ecu
 - Finding duplicated sub-services in clean-up...
 <<<<<<<<<<<<< ShapingStep CleanUp( completed in 0s (0ms) <<<<<<<<<<<<<
-<<<<<<<<<<<<< SHAPING finished after 0.063s (63ms) <<<<<<<<<<<<<
+<<<<<<<<<<<<< SHAPING finished after 0.047s (47ms) <<<<<<<<<<<<<
               [WARNING] Calling obsolete AR-Shaper
-Exporting ECUC module configurations to file: C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\DiagnosticsImportService\1735872701050-0\DiagnosticsDescriptionData7286108968271330387.xml
+Exporting ECUC module configurations to file: C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\DiagnosticsImportService\1736993664957-0\DiagnosticsDescriptionData8560053793168297764.xml
 ----> Create ECUC from imported diagnostic data.
 Using EcucEx-Parameter 'DemDidQualifierMode' = 'R19' (default)
 Using EcucEx-Parameter 'DcmQualifierMode' = 'R19' (default)
@@ -925,30 +1008,30 @@ Creating Dem module configuration...
 ----> STEP 3: Serialize ECUC model to XML.
 <---- STEP 3: Finished.
 <---- Finished creation of ECUC from imported diagnostic data.
-<<<<<<<<<<<<< Meta-EcuC Export finished after 0.015
+<<<<<<<<<<<<< Meta-EcuC Export finished after 0.000
 <---- Process of diagnostic specification.
-10:51:41 - Workflow Step 'Converting legacy diagnostics file(s) to AUTOSAR files' finished.
+10:14:25 - Workflow Step 'Converting legacy diagnostics file(s) to AUTOSAR files' finished.
 Checking if the file preprocessing result is a valid ECU extract...
 Input File Pre-Processing finished with warning(s).
-10:51:41 - Workflow Step 'Input File Pre-Processing' finished.
-10:51:42 - Workflow Step 'Create copy of the Project' started.
-Copy project 'D:\TC377_Development\dev\TC37X_VCU' to 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0'...
+10:14:25 - Workflow Step 'Input File Pre-Processing' finished.
+10:14:26 - Workflow Step 'Create copy of the Project' started.
+Copy project 'D:\TC377_Development\dev\TC37X_VCU' to 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0'...
 Adjusting DPA file of copied project...
-10:51:42 - Workflow Step 'Create copy of the Project' finished.
-10:51:42 - Workflow Step 'Analyse Bswmd's of the current project' started.
-10:51:42 - Workflow Step 'Analyse Bswmd's of the current project' finished.
-10:51:42 - Workflow Step 'Close Project' started.
-10:51:42 - Workflow Step 'Close Project' finished.
-10:51:47 - Workflow Step 'Prepare DaVinci Developer update data' started.
-10:51:47 - Workflow Step 'Prepare DaVinci Developer update data' finished.
-10:51:47 - Workflow Step 'Prepare System Extract' started.
-10:51:47 - Workflow Step 'Preprocessing System Extract' started.
-10:51:47 - Workflow Step 'Preprocessing System Extract' finished.
-10:51:47 - Workflow Step 'Create OEM Communication Extract' started.
-10:51:47 - Workflow Step 'Create OEM Communication Extract' finished.
-10:51:47 - Workflow Step 'Prepare System Extract' finished.
-10:51:47 - Workflow Step 'Updating the project' started.
-10:51:50 - Workflow Step 'Create ECU configuration' started.
+10:14:26 - Workflow Step 'Create copy of the Project' finished.
+10:14:26 - Workflow Step 'Analyse Bswmd's of the current project' started.
+10:14:26 - Workflow Step 'Analyse Bswmd's of the current project' finished.
+10:14:26 - Workflow Step 'Close Project' started.
+10:14:26 - Workflow Step 'Close Project' finished.
+10:14:30 - Workflow Step 'Prepare DaVinci Developer update data' started.
+10:14:30 - Workflow Step 'Prepare DaVinci Developer update data' finished.
+10:14:30 - Workflow Step 'Prepare System Extract' started.
+10:14:31 - Workflow Step 'Preprocessing System Extract' started.
+10:14:31 - Workflow Step 'Preprocessing System Extract' finished.
+10:14:31 - Workflow Step 'Create OEM Communication Extract' started.
+10:14:31 - Workflow Step 'Create OEM Communication Extract' finished.
+10:14:31 - Workflow Step 'Prepare System Extract' finished.
+10:14:31 - Workflow Step 'Updating the project' started.
+10:14:33 - Workflow Step 'Create ECU configuration' started.
               [WARNING] No timing defined for the ISignalIPdu (not relevant for LIN PDUs).
               No timing defined for the ISignalIPdu (not relevant for LIN PDUs).
 Extract Path: AsrPath: /PDU/EDCU_EXV2_oLIN00
@@ -973,58 +1056,58 @@ Ecuc Path: AsrPath: /Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx/ComTxIPdu
               No timing defined for the ISignalIPdu (not relevant for LIN PDUs).
 Extract Path: AsrPath: /PDU/VCU_SVA_CMD_oLIN00
 Ecuc Path: AsrPath: /Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx/ComTxIPdu
-10:51:57 - Workflow Step 'Create ECU configuration' finished.
-10:51:57 - Workflow Step 'Update ECU configuration' started.
-10:52:07 - Workflow Step 'Update ECU configuration' finished.
-10:52:07 - Workflow Step 'Updating the project' finished.
-10:52:07 - Workflow Step 'Generate update report' started.
-10:52:23 - Workflow Step 'Generate update report' finished.
-10:52:23 - Workflow Step 'Execute Solving Actions' started.
+10:14:40 - Workflow Step 'Create ECU configuration' finished.
+10:14:40 - Workflow Step 'Update ECU configuration' started.
+10:14:48 - Workflow Step 'Update ECU configuration' finished.
+10:14:48 - Workflow Step 'Updating the project' finished.
+10:14:48 - Workflow Step 'Generate update report' started.
+10:15:00 - Workflow Step 'Generate update report' finished.
+10:15:00 - Workflow Step 'Execute Solving Actions' started.
 Executing Auto-Solving-Actions...
 Auto-Solving-Actions done.
 Executing update specific Preferred-Solving-Actions...
 Update specific Preferred-Solving-Actions done.
-10:52:29 - Workflow Step 'Execute Solving Actions' finished.
-10:52:29 - Workflow Step 'Update DaVinci Developer Workspace' started.
-Opening workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\TC37X_VCU.dcf'...
-Loading file PlatformTypes_AR4.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\AUTOSAR\PlatformTypes_AR4.arxml)
-Loading file BswM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\ServiceComponents\BswM_swc.arxml)
-Loading file ComM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\ServiceComponents\ComM_swc.arxml)
-Loading file Dcm_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\ServiceComponents\Dcm_swc.arxml)
-Loading file Dem_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\ServiceComponents\Dem_swc.arxml)
-Loading file Det_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\ServiceComponents\Det_swc.arxml)
-Loading file EcuM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\ServiceComponents\EcuM_swc.arxml)
-Loading file NvM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\ServiceComponents\NvM_swc.arxml)
-Loading file Os_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\ServiceComponents\Os_swc.arxml)
-Loading file Communication.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Update\DevData\Communication.arxml)
-Loading file Com_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\Com_SWC.arxml)
-Loading file DataTypes.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\DataTypes.arxml)
-Loading file DIAG_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\DIAG_SWC.arxml)
-Loading file IoHwAb_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\IoHwAb_SWC.arxml)
-Loading file NvM_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\NvM_SWC.arxml)
-Loading file Packages.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\Packages.arxml)
-Loading file PortInterfaces.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\PortInterfaces.arxml)
-Loading file PowerMng_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\PowerMng_SWC.arxml)
-Loading file SWC1.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\SWC1.arxml)
-Loading file TC37X_VCU.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\TC37X_VCU.arxml)
-Opened workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\TC37X_VCU.dcf' successfully.
+10:15:06 - Workflow Step 'Execute Solving Actions' finished.
+10:15:06 - Workflow Step 'Update DaVinci Developer Workspace' started.
+Opening workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\TC37X_VCU.dcf'...
+Loading file PlatformTypes_AR4.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\AUTOSAR\PlatformTypes_AR4.arxml)
+Loading file BswM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\ServiceComponents\BswM_swc.arxml)
+Loading file ComM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\ServiceComponents\ComM_swc.arxml)
+Loading file Dcm_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\ServiceComponents\Dcm_swc.arxml)
+Loading file Dem_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\ServiceComponents\Dem_swc.arxml)
+Loading file Det_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\ServiceComponents\Det_swc.arxml)
+Loading file EcuM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\ServiceComponents\EcuM_swc.arxml)
+Loading file NvM_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\ServiceComponents\NvM_swc.arxml)
+Loading file Os_swc.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\ServiceComponents\Os_swc.arxml)
+Loading file Communication.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Update\DevData\Communication.arxml)
+Loading file Com_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\Com_SWC.arxml)
+Loading file DataTypes.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\DataTypes.arxml)
+Loading file DIAG_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\DIAG_SWC.arxml)
+Loading file IoHwAb_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\IoHwAb_SWC.arxml)
+Loading file NvM_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\NvM_SWC.arxml)
+Loading file Packages.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\Packages.arxml)
+Loading file PortInterfaces.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\PortInterfaces.arxml)
+Loading file PowerMng_SWC.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\PowerMng_SWC.arxml)
+Loading file SWC1.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\SWC1.arxml)
+Loading file TC37X_VCU.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\TC37X_VCU.arxml)
+Opened workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\TC37X_VCU.dcf' successfully.
 Start import
-Importing file (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\System\SystemExtract.arxml).
+Importing file (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\System\SystemExtract.arxml).
 Merging imported data
 Finished import
-Saving workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\TC37X_VCU.dcf'...
-Saving file DataTypes.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\DataTypes.arxml)
-Saved workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\TC37X_VCU.dcf' successfully.
-Closing workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\TC37X_VCU.dcf'...
-Closed workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-2546746\Workflow\1735872702158-0\Config\Developer\TC37X_VCU.dcf' successfully.
+Saving workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\TC37X_VCU.dcf'...
+Saving file DataTypes.arxml (C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\DataTypes.arxml)
+Saved workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\TC37X_VCU.dcf' successfully.
+Closing workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\TC37X_VCU.dcf'...
+Closed workspace 'C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-3562303\Workflow\1736993666026-0\Config\Developer\TC37X_VCU.dcf' successfully.
 Result of DaVinci Developer workspace update.
               OK
-10:52:39 - Workflow Step 'Update DaVinci Developer Workspace' finished.
-10:52:39 - Workflow Step 'Update RTE configuration' started.
-10:52:41 - Workflow Step 'Update RTE configuration' finished.
-10:52:41 - Workflow Step 'Align differences after successful update' started.
-10:52:41 - Workflow Step 'Align differences after successful update' finished.
-10:52:41 - Workflow Step 'Clean up update data' started.
-10:52:41 - Workflow Step 'Clean up update data' finished.
+10:15:15 - Workflow Step 'Update DaVinci Developer Workspace' finished.
+10:15:15 - Workflow Step 'Update RTE configuration' started.
+10:15:17 - Workflow Step 'Update RTE configuration' finished.
+10:15:17 - Workflow Step 'Align differences after successful update' started.
+10:15:17 - Workflow Step 'Align differences after successful update' finished.
+10:15:17 - Workflow Step 'Clean up update data' started.
+10:15:17 - Workflow Step 'Clean up update data' finished.
 Update workflow finished with warning(s).
-10:52:46 - Workflow Step 'Update workflow' finished.
+10:15:22 - Workflow Step 'Update workflow' finished.
