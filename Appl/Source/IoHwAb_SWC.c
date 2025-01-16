@@ -91,7 +91,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
   SRC_QSPI3RX.B.SRE 	= 1;
   SRC_QSPI3TX.B.SRE 	= 1;
 
-//  TLE8888qk_Init();
+  Tja1145_Init();
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -111,7 +111,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: IoHwAb_SWC_Runnable_doc
  *********************************************************************************************************************/
-uint8 flg = 1;
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -124,16 +124,6 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
  *********************************************************************************************************************/
   Adc_SampleMain();
   TLE8888qk_Main();
-
-  if( flg > 0 )
-  {
-    Tja1145_WriteReg(TJA1145FD_MODE_CONTROL_REG, 0x07);
-    Tja1145_WriteReg(TJA1145FD_CAN_CONTROL_REG, 0x02);
-  }
-
-//  Tja1145_ReadReg(TJA1145FD_MAIN_STATUS_REG, &Reg0);
-//  Tja1145_ReadReg(TJA1145FD_TRANSCEIVER_STATUS_REG, &Reg1);
-//  Tja1145_ReadReg(TJA1145FD_IDENTIFICATION_REG, &Reg2);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

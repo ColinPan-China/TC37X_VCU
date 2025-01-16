@@ -19,4 +19,5 @@
 uint8 Tja1145_ReadReg( uint8 regaddr, uint8 *regval );
 void Tja1145_WriteReg( uint8 regaddr, uint8 data );
 void Tja1145_Init();
+
 #endif /* TJA1145_H */

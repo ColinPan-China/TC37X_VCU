@@ -338,6 +338,18 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  *   Std_ReturnType Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_WriteBlock(dtRef_const_VOID SrcPtr)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_E_NOT_OK
+ *   Std_ReturnType Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_GetCurrentComMode(ComM_ModeType *ComMode)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_ComM_UserRequest_E_NOT_OK
+ *   Std_ReturnType Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(ComM_ModeType ComMode)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
+ *   Std_ReturnType Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(ComM_ModeType ComMode)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
+ *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_GetCurrentComMode(ComM_ModeType *ComMode)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_ComM_UserRequest_E_NOT_OK
  *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode(ComM_ModeType ComMode)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
@@ -413,8 +425,8 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
   {
     Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
     Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_FULL_COMMUNICATION );
-    ComM_RequestComMode(ComMConf_ComMChannel_CN_KAMA_FP_EPT_0303_275b3e6e,2);
-    ComM_RequestComMode(ComMConf_ComMChannel_CN_LIN00_b12a0454,2);
+    Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_FULL_COMMUNICATION);
+    Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(COMM_FULL_COMMUNICATION);
   }
   else
   {
