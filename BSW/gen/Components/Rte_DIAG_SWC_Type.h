@@ -326,6 +326,178 @@ extern "C"
 #   define DCM_FORCE_RCRRP_NOT_OK (64U)
 #  endif
 
+#  ifndef DEM_EVENT_STATUS_PASSED
+#   define DEM_EVENT_STATUS_PASSED (0U)
+#  endif
+
+#  ifndef DEM_EVENT_STATUS_FAILED
+#   define DEM_EVENT_STATUS_FAILED (1U)
+#  endif
+
+#  ifndef DEM_EVENT_STATUS_PREPASSED
+#   define DEM_EVENT_STATUS_PREPASSED (2U)
+#  endif
+
+#  ifndef DEM_EVENT_STATUS_PREFAILED
+#   define DEM_EVENT_STATUS_PREFAILED (3U)
+#  endif
+
+#  ifndef DEM_EVENT_STATUS_FDC_THRESHOLD_REACHED
+#   define DEM_EVENT_STATUS_FDC_THRESHOLD_REACHED (4U)
+#  endif
+
+#  ifndef DEM_EVENT_STATUS_PASSED_CONDITIONS_NOT_FULFILLED
+#   define DEM_EVENT_STATUS_PASSED_CONDITIONS_NOT_FULFILLED (5U)
+#  endif
+
+#  ifndef DEM_EVENT_STATUS_FAILED_CONDITIONS_NOT_FULFILLED
+#   define DEM_EVENT_STATUS_FAILED_CONDITIONS_NOT_FULFILLED (6U)
+#  endif
+
+#  ifndef DEM_EVENT_STATUS_PREPASSED_CONDITIONS_NOT_FULFILLED
+#   define DEM_EVENT_STATUS_PREPASSED_CONDITIONS_NOT_FULFILLED (7U)
+#  endif
+
+#  ifndef DEM_EVENT_STATUS_PREFAILED_CONDITIONS_NOT_FULFILLED
+#   define DEM_EVENT_STATUS_PREFAILED_CONDITIONS_NOT_FULFILLED (8U)
+#  endif
+
+#  ifndef DEM_CYCLE_STATE_START
+#   define DEM_CYCLE_STATE_START (0U)
+#  endif
+
+#  ifndef DEM_CYCLE_STATE_END
+#   define DEM_CYCLE_STATE_END (1U)
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TF
+#   define DEM_UDS_STATUS_TF (1U)
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TF_BflMask
+#   define DEM_UDS_STATUS_TF_BflMask 1U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TF_BflPn
+#   define DEM_UDS_STATUS_TF_BflPn 0U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TF_BflLn
+#   define DEM_UDS_STATUS_TF_BflLn 1U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TFTOC
+#   define DEM_UDS_STATUS_TFTOC (2U)
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TFTOC_BflMask
+#   define DEM_UDS_STATUS_TFTOC_BflMask 2U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TFTOC_BflPn
+#   define DEM_UDS_STATUS_TFTOC_BflPn 1U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TFTOC_BflLn
+#   define DEM_UDS_STATUS_TFTOC_BflLn 1U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_PDTC
+#   define DEM_UDS_STATUS_PDTC (4U)
+#  endif
+
+#  ifndef DEM_UDS_STATUS_PDTC_BflMask
+#   define DEM_UDS_STATUS_PDTC_BflMask 4U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_PDTC_BflPn
+#   define DEM_UDS_STATUS_PDTC_BflPn 2U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_PDTC_BflLn
+#   define DEM_UDS_STATUS_PDTC_BflLn 1U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_CDTC
+#   define DEM_UDS_STATUS_CDTC (8U)
+#  endif
+
+#  ifndef DEM_UDS_STATUS_CDTC_BflMask
+#   define DEM_UDS_STATUS_CDTC_BflMask 8U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_CDTC_BflPn
+#   define DEM_UDS_STATUS_CDTC_BflPn 3U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_CDTC_BflLn
+#   define DEM_UDS_STATUS_CDTC_BflLn 1U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TNCSLC
+#   define DEM_UDS_STATUS_TNCSLC (16U)
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TNCSLC_BflMask
+#   define DEM_UDS_STATUS_TNCSLC_BflMask 16U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TNCSLC_BflPn
+#   define DEM_UDS_STATUS_TNCSLC_BflPn 4U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TNCSLC_BflLn
+#   define DEM_UDS_STATUS_TNCSLC_BflLn 1U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TFSLC
+#   define DEM_UDS_STATUS_TFSLC (32U)
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TFSLC_BflMask
+#   define DEM_UDS_STATUS_TFSLC_BflMask 32U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TFSLC_BflPn
+#   define DEM_UDS_STATUS_TFSLC_BflPn 5U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TFSLC_BflLn
+#   define DEM_UDS_STATUS_TFSLC_BflLn 1U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TNCTOC
+#   define DEM_UDS_STATUS_TNCTOC (64U)
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TNCTOC_BflMask
+#   define DEM_UDS_STATUS_TNCTOC_BflMask 64U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TNCTOC_BflPn
+#   define DEM_UDS_STATUS_TNCTOC_BflPn 6U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_TNCTOC_BflLn
+#   define DEM_UDS_STATUS_TNCTOC_BflLn 1U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_WIR
+#   define DEM_UDS_STATUS_WIR (128U)
+#  endif
+
+#  ifndef DEM_UDS_STATUS_WIR_BflMask
+#   define DEM_UDS_STATUS_WIR_BflMask 128U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_WIR_BflPn
+#   define DEM_UDS_STATUS_WIR_BflPn 7U
+#  endif
+
+#  ifndef DEM_UDS_STATUS_WIR_BflLn
+#   define DEM_UDS_STATUS_WIR_BflLn 1U
+#  endif
+
 #  ifndef NVM_REQ_OK
 #   define NVM_REQ_OK (0U)
 #  endif

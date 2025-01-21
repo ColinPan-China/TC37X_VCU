@@ -51,6 +51,24 @@ extern "C"
 /**********************************************************************************************************************
  * Rte_Call_<p>_<o> (unmapped) for synchronous C/S communication
  *********************************************************************************************************************/
+#  define RTE_START_SEC_DEMMASTER_0_APPL_CODE
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+FUNC(Std_ReturnType, RTE_DEMMASTER_0_APPL_CODE) Dem_GetOperationCycleState(uint8 parg0, P2VAR(Dem_OperationCycleStateType, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) CycleState); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_DEMMASTER_0_APPL_CODE) Dem_SetOperationCycleState(uint8 parg0, Dem_OperationCycleStateType CycleState); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+
+#  define RTE_STOP_SEC_DEMMASTER_0_APPL_CODE
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#  define RTE_START_SEC_DEMSATELLITE_0_APPL_CODE
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+FUNC(Std_ReturnType, RTE_DEMSATELLITE_0_APPL_CODE) Dem_GetEventUdsStatus(Dem_EventIdType parg0, P2VAR(Dem_UdsStatusByteType, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) UDSStatusByte); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_DEMSATELLITE_0_APPL_CODE) Dem_SetEventStatus(Dem_EventIdType parg0, Dem_EventStatusType EventStatus); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+
+#  define RTE_STOP_SEC_DEMSATELLITE_0_APPL_CODE
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 #  define RTE_START_SEC_NVM_APPL_CODE
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -62,6 +80,18 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_WriteBlock(NvM_BlockIdType parg0, dt
 #  define RTE_STOP_SEC_NVM_APPL_CODE
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+#  define Rte_Call_Event_DTC_0x000002_GetEventStatus(arg1) (Dem_GetEventUdsStatus((Dem_EventIdType)1, arg1))
+#  define Rte_Call_Event_DTC_0x000002_SetEventStatus(arg1) (Dem_SetEventStatus((Dem_EventIdType)1, arg1))
+#  define Rte_Call_Event_DTC_0x000003_GetEventStatus(arg1) (Dem_GetEventUdsStatus((Dem_EventIdType)2, arg1))
+#  define Rte_Call_Event_DTC_0x000003_SetEventStatus(arg1) (Dem_SetEventStatus((Dem_EventIdType)2, arg1))
+#  define Rte_Call_OpCycle_IgnitionCycle_GetOperationCycleState(arg1) (Dem_GetOperationCycleState((uint8)0, arg1))
+#  define Rte_Call_OpCycle_IgnitionCycle_SetOperationCycleState(arg1) (Dem_SetOperationCycleState((uint8)0, arg1))
+#  define Rte_Call_OpCycle_OBDDrivingCycle_GetOperationCycleState(arg1) (Dem_GetOperationCycleState((uint8)1, arg1))
+#  define Rte_Call_OpCycle_OBDDrivingCycle_SetOperationCycleState(arg1) (Dem_SetOperationCycleState((uint8)1, arg1))
+#  define Rte_Call_OpCycle_PowerCycle_GetOperationCycleState(arg1) (Dem_GetOperationCycleState((uint8)2, arg1))
+#  define Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(arg1) (Dem_SetOperationCycleState((uint8)2, arg1))
+#  define Rte_Call_OpCycle_WarmUpCycle_GetOperationCycleState(arg1) (Dem_GetOperationCycleState((uint8)3, arg1))
+#  define Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(arg1) (Dem_SetOperationCycleState((uint8)3, arg1))
 #  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_GetErrorStatus(arg1) (NvM_GetErrorStatus((NvM_BlockIdType)9, arg1))
 #  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_ReadBlock(arg1) (NvM_ReadBlock((NvM_BlockIdType)9, arg1))
 #  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)9, arg1))
@@ -118,6 +148,8 @@ extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNe
  *********************************************************************************************************************/
 
 # ifndef RTE_CORE
+#  define RTE_RUNNABLE_DIAG_SWC_Init DIAG_SWC_Init
+#  define RTE_RUNNABLE_DTCMonitorRunnable_10ms DTCMonitorRunnable_10ms
 #  define RTE_RUNNABLE_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead DataServices_VCU_DID_00_DataRecord_ConditionCheckRead
 #  define RTE_RUNNABLE_DataServices_VCU_DID_00_DataRecord_ReadData DataServices_VCU_DID_00_DataRecord_ReadData
 #  define RTE_RUNNABLE_DataServices_VCU_DID_00_DataRecord_WriteData DataServices_VCU_DID_00_DataRecord_WriteData
@@ -126,6 +158,8 @@ extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNe
 #  define RTE_RUNNABLE_RoutineServices_Vcu_Roution_00_Stop RoutineServices_Vcu_Roution_00_Stop
 # endif
 
+FUNC(void, DIAG_SWC_CODE) DIAG_SWC_Init(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
+FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_VCU_DID_00_DataRecord_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_VCU_DID_00_DataRecord_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_VCU_DID_00_DataRecord_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
@@ -146,7 +180,13 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_Stop(Dcm_Stop
 
 #  define RTE_E_DataServices_VCU_DID_00_DataRecord_E_NOT_OK (1U)
 
+#  define RTE_E_DiagnosticMonitor_E_NOT_OK (1U)
+
 #  define RTE_E_NvMService_AC3_SRBS_Defs_E_NOT_OK (1U)
+
+#  define RTE_E_OperationCycle_E_NOT_OK (1U)
+
+#  define RTE_E_OperationCycle_E_OK (0U)
 
 #  define RTE_E_RoutineServices_Vcu_Roution_00_DCM_E_FORCE_RCRRP (12U)
 
@@ -178,6 +218,11 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_Stop(Dcm_Stop
      Prevention: Not required.
 
    MD_Rte_3449:  MISRA rule: Rule8.5
+     Reason:     Schedulable entities are declared by the RTE and also by the BSW modules.
+     Risk:       No functional risk.
+     Prevention: Not required.
+
+   MD_Rte_3451:  MISRA rule: Rule8.5
      Reason:     Schedulable entities are declared by the RTE and also by the BSW modules.
      Risk:       No functional risk.
      Prevention: Not required.

@@ -3935,6 +3935,72 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_LIN00_984dfd9e</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="937541d3-4558-4686-995a-181f7b93da25">
+                                  <SHORT-NAME>DemSatellite_0_Event_DTC_0x000003_DIAG_SWC_Event_DTC_0x000003</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/Event_DTC_0x000003</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/Event_DTC_0x000003</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="20cb2b18-e8e0-4edb-98ac-951b1acc2bca">
+                                  <SHORT-NAME>DemSatellite_0_Event_DTC_0x000002_DIAG_SWC_Event_DTC_0x000002</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/Event_DTC_0x000002</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/Event_DTC_0x000002</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="5087f367-db07-4346-be60-7752b5271a2d">
+                                  <SHORT-NAME>DemMaster_0_OpCycle_IgnitionCycle_DIAG_SWC_OpCycle_IgnitionCycle</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/OpCycle_IgnitionCycle</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/OpCycle_IgnitionCycle</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="8928a0bd-25b7-4b73-acc5-b858473f9a85">
+                                  <SHORT-NAME>DemMaster_0_OpCycle_OBDDrivingCycle_DIAG_SWC_OpCycle_OBDDrivingCycle</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/OpCycle_OBDDrivingCycle</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/OpCycle_OBDDrivingCycle</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="6e4b5fd1-4ada-45f8-b9da-5e4ee40d0bff">
+                                  <SHORT-NAME>DemMaster_0_OpCycle_PowerCycle_DIAG_SWC_OpCycle_PowerCycle</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/OpCycle_PowerCycle</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/OpCycle_PowerCycle</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="e41d533f-6d8d-4e28-ad89-cfb4aeff78bf">
+                                  <SHORT-NAME>DemMaster_0_OpCycle_WarmUpCycle_DIAG_SWC_OpCycle_WarmUpCycle</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/OpCycle_WarmUpCycle</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/OpCycle_WarmUpCycle</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -4022,7 +4088,13 @@
                                     <SD GID="c7476a1f-c034-404b-b974-33b412a9cd72">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</SD>
                                     <SD GID="52f38fb1-f1fa-4839-bd5d-87d5584a122e">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</SD>
                                     <SD GID="dbd7af71-8f1f-4737-b93f-d0ed84b9ef39">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</SD>
+                                    <SD GID="5087f367-db07-4346-be60-7752b5271a2d">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0_OpCycle_IgnitionCycle_DIAG_SWC_OpCycle_IgnitionCycle</SD>
+                                    <SD GID="8928a0bd-25b7-4b73-acc5-b858473f9a85">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0_OpCycle_OBDDrivingCycle_DIAG_SWC_OpCycle_OBDDrivingCycle</SD>
+                                    <SD GID="6e4b5fd1-4ada-45f8-b9da-5e4ee40d0bff">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0_OpCycle_PowerCycle_DIAG_SWC_OpCycle_PowerCycle</SD>
+                                    <SD GID="e41d533f-6d8d-4e28-ad89-cfb4aeff78bf">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0_OpCycle_WarmUpCycle_DIAG_SWC_OpCycle_WarmUpCycle</SD>
                                     <SD GID="9d4b98fd-81ab-4d03-b31e-e07a3534b100">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0</SD>
+                                    <SD GID="20cb2b18-e8e0-4edb-98ac-951b1acc2bca">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0_Event_DTC_0x000002_DIAG_SWC_Event_DTC_0x000002</SD>
+                                    <SD GID="937541d3-4558-4686-995a-181f7b93da25">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0_Event_DTC_0x000003_DIAG_SWC_Event_DTC_0x000003</SD>
                                     <SD GID="ec5099ee-8e43-4553-8915-3481bc1d0215">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT10_Valid</SD>
                                     <SD GID="06463ff8-c7f3-4a98-95e9-cccd66d6a4c1">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT11_Valid</SD>
                                     <SD GID="5655d00e-eaf8-4421-9f9a-a0e9c6497e73">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT12_Valid</SD>
@@ -4136,6 +4208,7 @@
                                     <SD GID="C27F2ED1-7BB1-4B4A-9B16-81C74A78A00D">/ComponentTypes/Com_SWC/VcuTxMsg2_Sig3</SD>
                                     <SD GID="BBB3B39C-C392-468F-9EF1-FC5D0A60A072">/ComponentTypes/Com_SWC_Implementation</SD>
                                     <SD GID="7C393334-F81C-447D-837E-1F15455AA760">/ComponentTypes/DIAG_SWC</SD>
+                                    <SD GID="E1479815-5FEF-4896-9F58-551F83D07826">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/DIAG_SWC_InitEvent</SD>
                                     <SD GID="B0C63B94-0EBB-4D3A-A369-A55820B76806">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="A0F860A0-FFE6-451D-B9E9-55D097ECCBF2">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead</SD>
                                     <SD GID="C230B1C2-A7E8-4EF4-A7D1-C0ADC63CE060">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_ReadData_DataServices_VCU_DID_00_DataRecord_ReadData</SD>
@@ -4143,7 +4216,14 @@
                                     <SD GID="6CDF6892-603A-40FC-A109-4CC5F10B2CE9">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_RoutineServices_Vcu_Roution_00_RequestResults_RoutineServices_Vcu_Roution_00_RequestResults</SD>
                                     <SD GID="6F2E461F-DB9C-43BB-9DA1-40B1BED51C9D">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_RoutineServices_Vcu_Roution_00_Start_RoutineServices_Vcu_Roution_00_Start</SD>
                                     <SD GID="6C2C2451-B8AA-400A-B988-5421E704CF3C">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_RoutineServices_Vcu_Roution_00_Stop_RoutineServices_Vcu_Roution_00_Stop</SD>
+                                    <SD GID="578A7505-0BEB-4C97-8B28-3D6105B5A55B">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/TMT_DTCMonitorRunnable_10ms</SD>
                                     <SD GID="C7C2A11E-09A8-42E1-B046-A5C65679E1C5">/ComponentTypes/DIAG_SWC/DataServices_VCU_DID_00_DataRecord</SD>
+                                    <SD GID="38B68986-F484-48BB-BB6F-854BEDFBB6BC">/ComponentTypes/DIAG_SWC/Event_DTC_0x000002</SD>
+                                    <SD GID="C514489A-2921-4F50-9453-ED65165AB63D">/ComponentTypes/DIAG_SWC/Event_DTC_0x000003</SD>
+                                    <SD GID="59241691-B91D-4AAA-977C-AE2D128FC595">/ComponentTypes/DIAG_SWC/OpCycle_IgnitionCycle</SD>
+                                    <SD GID="92E5A45B-3BAB-4520-B774-EADC7758D7ED">/ComponentTypes/DIAG_SWC/OpCycle_OBDDrivingCycle</SD>
+                                    <SD GID="601E3C70-5872-4834-8C7F-B91E761446FD">/ComponentTypes/DIAG_SWC/OpCycle_PowerCycle</SD>
+                                    <SD GID="B060ED8F-5DB7-4170-9886-EC887118D324">/ComponentTypes/DIAG_SWC/OpCycle_WarmUpCycle</SD>
                                     <SD GID="B0D56753-A3B1-431E-9673-294B21654323">/ComponentTypes/DIAG_SWC/PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="AFEE0A09-7481-4F5D-A67D-391696AAC36A">/ComponentTypes/DIAG_SWC/RoutineServices_Vcu_Roution_00</SD>
                                     <SD GID="8822BCF7-9CB6-46FA-BB63-4E92E8E4BB4F">/ComponentTypes/DIAG_SWC_Implementation</SD>
@@ -4579,6 +4659,10 @@
                                     <SD GID="abfa387b-508d-4afc-ac7c-ddf97ce34696">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/DemMaster_0InternalBehavior/OpEventSetOperationCycleState_SetOperationCycleState_OpCycle_WarmUpCycle</SD>
                                     <SD GID="eb3e8964-ef95-491c-80bb-ea7e596cc639">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/DemMaster_0InternalBehavior/SelectDTC</SD>
                                     <SD GID="6b8b5c26-f3ab-42fd-9eba-f527f7680cf9">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/DemMaster_0InternalBehavior/Timer_Dem_MasterMainFunction</SD>
+                                    <SD GID="29b0a18d-478b-4c16-a4f6-7ccc2358398b">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/OpCycle_IgnitionCycle</SD>
+                                    <SD GID="5aa588b6-a726-4073-8d11-2c45a4780b30">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/OpCycle_OBDDrivingCycle</SD>
+                                    <SD GID="129e3db2-1023-4a2a-a8dc-9543a3bab75f">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/OpCycle_PowerCycle</SD>
+                                    <SD GID="e7bf7dbc-9701-4568-8478-4dfb6211ca4f">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/OpCycle_WarmUpCycle</SD>
                                     <SD GID="800015f2-9bad-457d-b9a9-66d8aa89d06e">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/OverflowIndPrimaryMemory_DemClient</SD>
                                     <SD GID="175c7642-dfe4-4a66-aab4-d27ce182c94c">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/DemSatellite_0InternalBehavior/OpEventGetDTCOfEvent_GetDTCOfEvent_Event_DTC_0x000002</SD>
                                     <SD GID="d814b3b7-b4b9-4d7b-b15c-d850bc0b71da">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/DemSatellite_0InternalBehavior/OpEventGetDTCOfEvent_GetDTCOfEvent_Event_DTC_0x000003</SD>
@@ -4636,6 +4720,8 @@
                                     <SD GID="bb42ba32-390e-41ba-b842-2eaf65cf0694">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/DemSatellite_0InternalBehavior/OpEventSetEventStatus_SetEventStatus_Event_DTC_0x000002</SD>
                                     <SD GID="a57d0147-c787-41f1-8c84-29417c62e16f">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/DemSatellite_0InternalBehavior/OpEventSetEventStatus_SetEventStatus_Event_DTC_0x000003</SD>
                                     <SD GID="801a89b5-9f19-491b-8fb0-54b905453d83">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/DemSatellite_0InternalBehavior/Timer_Dem_SatelliteMainFunction</SD>
+                                    <SD GID="f37a132d-da09-4583-af23-8efa4546001f">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/Event_DTC_0x000002</SD>
+                                    <SD GID="98ac8f58-cb12-4d5a-b434-26894aa13af0">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/Event_DTC_0x000003</SD>
                                     <SD GID="bfc23f9f-3a5e-4ca7-b689-c0f010f5ac6f">/MICROSAR/Dem_swc/DataTypes/Dem_DTCOriginType</SD>
                                     <SD GID="b512dc7a-b8d7-489b-8dcd-a3ffabc55192">/MICROSAR/Dem_swc/Interfaces/ClearDTC</SD>
                                     <SD GID="efbf5b2e-5331-4182-8de0-681311ccc44f">/MICROSAR/Dem_swc/Interfaces/ClearDTC/ClearDTC</SD>
