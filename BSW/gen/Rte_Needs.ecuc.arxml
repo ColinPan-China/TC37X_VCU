@@ -13,6 +13,26 @@
                             <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Com/ComConfig</DEFINITION-REF>
                             <SUB-CONTAINERS>
                                 <ECUC-CONTAINER-VALUE>
+                                    <SHORT-NAME>ECC_PMP2_SpdSet_oPMP_Cmd_oLIN00_8cabc4b7_Tx</SHORT-NAME>
+                                    <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Com/ComConfig/ComSignal</DEFINITION-REF>
+                                    <PARAMETER-VALUES>
+                                        <ECUC-TEXTUAL-PARAM-VALUE>
+                                            <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Com/ComConfig/ComSignal/ComSignalType</DEFINITION-REF>
+                                            <VALUE>UINT8</VALUE>
+                                        </ECUC-TEXTUAL-PARAM-VALUE>
+                                    </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                    <SHORT-NAME>ECC_PMP3_SpdSet_oPMP_Cmd_oLIN00_0d8ea190_Tx</SHORT-NAME>
+                                    <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Com/ComConfig/ComSignal</DEFINITION-REF>
+                                    <PARAMETER-VALUES>
+                                        <ECUC-TEXTUAL-PARAM-VALUE>
+                                            <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Com/ComConfig/ComSignal/ComSignalType</DEFINITION-REF>
+                                            <VALUE>UINT8</VALUE>
+                                        </ECUC-TEXTUAL-PARAM-VALUE>
+                                    </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
                                     <SHORT-NAME>EXT10_Valid_oVcuTxIoMsg5_oTC37X_VCU_CAN00_ba532916_Tx</SHORT-NAME>
                                     <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Com/ComConfig/ComSignal</DEFINITION-REF>
                                     <PARAMETER-VALUES>

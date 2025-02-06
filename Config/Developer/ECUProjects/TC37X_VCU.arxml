@@ -347,6 +347,20 @@
                   </DATA-ELEMENT-IREF>
                   <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN10</SYSTEM-SIGNAL-REF>
                 </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                  <DATA-ELEMENT-IREF>
+                    <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/ECC_PMP2_SpdSet</CONTEXT-PORT-REF>
+                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP2_SpdSet/ECC_PMP2_SpdSet</TARGET-DATA-PROTOTYPE-REF>
+                  </DATA-ELEMENT-IREF>
+                  <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/ECC_PMP2_SpdSet</SYSTEM-SIGNAL-REF>
+                </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                  <DATA-ELEMENT-IREF>
+                    <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/ECC_PMP3_SpdSet</CONTEXT-PORT-REF>
+                    <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP3_SpdSet/ECC_PMP3_SpdSet</TARGET-DATA-PROTOTYPE-REF>
+                  </DATA-ELEMENT-IREF>
+                  <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/ECC_PMP3_SpdSet</SYSTEM-SIGNAL-REF>
+                </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
               </DATA-MAPPINGS>
             </SYSTEM-MAPPING>
           </MAPPINGS>
@@ -1381,6 +1395,48 @@
               </PROVIDED-COM-SPECS>
               <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/EXT_A_IN10</PROVIDED-INTERFACE-TREF>
             </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="DEBDDCDE-76BA-4587-B797-BF66350B513F">
+              <SHORT-NAME>ECC_PMP2_SpdSet</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP2_SpdSet/ECC_PMP2_SpdSet</DATA-ELEMENT-REF>
+                  <INIT-VALUE>
+                    <NUMERICAL-VALUE-SPECIFICATION>
+                      <VALUE>0</VALUE>
+                    </NUMERICAL-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/ECC_PMP2_SpdSet</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="7B3872EB-A0A5-4122-8ADB-E347E02ECA18">
+              <SHORT-NAME>ECC_PMP3_SpdSet</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP3_SpdSet/ECC_PMP3_SpdSet</DATA-ELEMENT-REF>
+                  <INIT-VALUE>
+                    <NUMERICAL-VALUE-SPECIFICATION>
+                      <VALUE>0</VALUE>
+                    </NUMERICAL-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/ECC_PMP3_SpdSet</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
           </PORTS>
           <COMPONENTS>
             <SW-COMPONENT-PROTOTYPE UUID="45326E4B-4115-4A85-8FF4-E06F7BAE2F7C">
@@ -2007,6 +2063,26 @@
                 </P-PORT-IN-COMPOSITION-INSTANCE-REF>
               </INNER-PORT-IREF>
               <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN10</OUTER-PORT-REF>
+            </DELEGATION-SW-CONNECTOR>
+            <DELEGATION-SW-CONNECTOR UUID="CB49F216-6DA3-4B8E-8A2A-CECD7972DE66">
+              <SHORT-NAME>Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet</SHORT-NAME>
+              <INNER-PORT-IREF>
+                <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                  <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/Com_SWC</CONTEXT-COMPONENT-REF>
+                  <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/ECC_PMP2_SpdSet</TARGET-P-PORT-REF>
+                </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+              </INNER-PORT-IREF>
+              <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/ECC_PMP2_SpdSet</OUTER-PORT-REF>
+            </DELEGATION-SW-CONNECTOR>
+            <DELEGATION-SW-CONNECTOR UUID="2BDF70A2-C16A-4108-831C-A0466C4A9940">
+              <SHORT-NAME>Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet</SHORT-NAME>
+              <INNER-PORT-IREF>
+                <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                  <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/Com_SWC</CONTEXT-COMPONENT-REF>
+                  <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/ECC_PMP3_SpdSet</TARGET-P-PORT-REF>
+                </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+              </INNER-PORT-IREF>
+              <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/ECC_PMP3_SpdSet</OUTER-PORT-REF>
             </DELEGATION-SW-CONNECTOR>
           </CONNECTORS>
         </COMPOSITION-SW-COMPONENT-TYPE>

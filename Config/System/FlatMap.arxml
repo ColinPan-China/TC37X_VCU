@@ -2383,6 +2383,96 @@
                                     <TARGET-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN10</TARGET-REF>
                                   </ECU-EXTRACT-REFERENCE-IREF>
                                 </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="426beb57-d364-45ed-b546-4512346329d0">
+                                  <SHORT-NAME>ECC_PMP2_SpdSet</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:CfgNamedRefs">
+                                        <SDG GID="DV:CfgFlattener">
+                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
+                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/ECC_PMP2_SpdSet</SDX-REF>
+                                          </SDG>
+                                        </SDG>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/ECC_PMP2_SpdSet</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP2_SpdSet/ECC_PMP2_SpdSet</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP2_SpdSet</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP2_SpdSet/ECC_PMP2_SpdSet</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="9724e0b7-1a2d-4011-b641-4cdb8cc707f2">
+                                  <SHORT-NAME>ECC_PMP2_SpdSet_001</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/ECC_PMP2_SpdSet</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP2_SpdSet</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="6c62f312-cb01-4da5-afc1-89c8beacc2e7">
+                                  <SHORT-NAME>ECC_PMP3_SpdSet</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:CfgNamedRefs">
+                                        <SDG GID="DV:CfgFlattener">
+                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
+                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/ECC_PMP3_SpdSet</SDX-REF>
+                                          </SDG>
+                                        </SDG>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/ECC_PMP3_SpdSet</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP3_SpdSet/ECC_PMP3_SpdSet</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP3_SpdSet</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP3_SpdSet/ECC_PMP3_SpdSet</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="d70d9d16-2335-4959-bc31-1c9de9a30632">
+                                  <SHORT-NAME>ECC_PMP3_SpdSet_001</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/ECC_PMP3_SpdSet</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP3_SpdSet</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
                               </INSTANCES>
                             </FLAT-MAP>
                           </ELEMENTS>

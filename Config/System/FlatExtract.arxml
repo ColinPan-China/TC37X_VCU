@@ -1246,6 +1246,22 @@
                                       </DATA-ELEMENT-IREF>
                                       <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN10</SYSTEM-SIGNAL-REF>
                                     </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP2_SpdSet</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP2_SpdSet/ECC_PMP2_SpdSet</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/ECC_PMP2_SpdSet</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP3_SpdSet</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP3_SpdSet/ECC_PMP3_SpdSet</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/ECC_PMP3_SpdSet</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
                                   </DATA-MAPPINGS>
                                 </SYSTEM-MAPPING>
                               </MAPPINGS>
@@ -2526,6 +2542,58 @@
                                     </NONQUEUED-SENDER-COM-SPEC>
                                   </PROVIDED-COM-SPECS>
                                   <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/EXT_A_IN10</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="4a3c82ce-02b8-4cbb-8b2d-980bb76def98">
+                                  <SHORT-NAME>ECC_PMP2_SpdSet</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP2_SpdSet/ECC_PMP2_SpdSet</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/ECC_PMP2_SpdSet</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="0af8978f-f997-41fc-9840-9cd4e416e976">
+                                  <SHORT-NAME>ECC_PMP3_SpdSet</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP3_SpdSet/ECC_PMP3_SpdSet</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/ECC_PMP3_SpdSet</PROVIDED-INTERFACE-TREF>
                                 </P-PORT-PROTOTYPE>
                               </PORTS>
                               <COMPONENTS>
@@ -4001,6 +4069,48 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/OpCycle_WarmUpCycle</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="646706ec-4644-4ba1-a2eb-5294093c1b78">
+                                  <SHORT-NAME>Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/ECC_PMP2_SpdSet</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP2_SpdSet</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="f4da3258-0c23-4554-b0d3-0dfa07fd36e4">
+                                  <SHORT-NAME>Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/ECC_PMP3_SpdSet</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP3_SpdSet</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -4095,6 +4205,8 @@
                                     <SD GID="9d4b98fd-81ab-4d03-b31e-e07a3534b100">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0</SD>
                                     <SD GID="20cb2b18-e8e0-4edb-98ac-951b1acc2bca">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0_Event_DTC_0x000002_DIAG_SWC_Event_DTC_0x000002</SD>
                                     <SD GID="937541d3-4558-4686-995a-181f7b93da25">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0_Event_DTC_0x000003_DIAG_SWC_Event_DTC_0x000003</SD>
+                                    <SD GID="4a3c82ce-02b8-4cbb-8b2d-980bb76def98">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP2_SpdSet</SD>
+                                    <SD GID="0af8978f-f997-41fc-9840-9cd4e416e976">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP3_SpdSet</SD>
                                     <SD GID="ec5099ee-8e43-4553-8915-3481bc1d0215">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT10_Valid</SD>
                                     <SD GID="06463ff8-c7f3-4a98-95e9-cccd66d6a4c1">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT11_Valid</SD>
                                     <SD GID="5655d00e-eaf8-4421-9f9a-a0e9c6497e73">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT12_Valid</SD>
@@ -4158,6 +4270,8 @@
                                     <SD GID="18984354-BF8F-45C4-965A-3B02BE16E306">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/DRT_Rte_Msg200h_Rx_Notification_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0</SD>
                                     <SD GID="B745682D-5619-4AEA-8D86-22D3FB6C8B51">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/DRT_Rte_Msg201h_Rx_Notification_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0</SD>
                                     <SD GID="7B4FE19D-2362-4205-878E-EA969B8AAAE0">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/TMT_Com_Runnable_2ms</SD>
+                                    <SD GID="9E15A807-3BB0-4253-BF08-878616B3C49F">/ComponentTypes/Com_SWC/ECC_PMP2_SpdSet</SD>
+                                    <SD GID="D3C64840-E388-4626-AA62-5B229E9417C3">/ComponentTypes/Com_SWC/ECC_PMP3_SpdSet</SD>
                                     <SD GID="834E9CE9-BB79-46D5-8ED1-B1BFDE76164A">/ComponentTypes/Com_SWC/EXT10_Valid</SD>
                                     <SD GID="24C97251-9C91-44EF-833C-69568A16A05D">/ComponentTypes/Com_SWC/EXT11_Valid</SD>
                                     <SD GID="D90634CC-E4CD-47DB-8CBF-09951282BE4A">/ComponentTypes/Com_SWC/EXT12_Valid</SD>
@@ -4277,6 +4391,8 @@
                                     <SD GID="83E5C50F-A163-4FAE-8F88-D29CE937AFED">/ECUCompositionTypes/ECU_Composition</SD>
                                     <SD GID="9D6277BB-1E37-4BB9-B185-1DD2BA210E54">/ECUCompositionTypes/ECU_Composition/Com_SWC</SD>
                                     <SD GID="ED10CD08-2BCF-43E8-BD3C-006B317FF76E">/ECUCompositionTypes/ECU_Composition/DIAG_SWC</SD>
+                                    <SD GID="DEBDDCDE-76BA-4587-B797-BF66350B513F">/ECUCompositionTypes/ECU_Composition/ECC_PMP2_SpdSet</SD>
+                                    <SD GID="7B3872EB-A0A5-4122-8ADB-E347E02ECA18">/ECUCompositionTypes/ECU_Composition/ECC_PMP3_SpdSet</SD>
                                     <SD GID="DC993CE6-8F86-4E1A-935D-FD0BED2956B6">/ECUCompositionTypes/ECU_Composition/EXT10_Valid</SD>
                                     <SD GID="CBD9F0F0-944A-4FDC-AD33-142C0B59C60D">/ECUCompositionTypes/ECU_Composition/EXT11_Valid</SD>
                                     <SD GID="A72303FF-79E1-4A31-9774-F601370A1619">/ECUCompositionTypes/ECU_Composition/EXT12_Valid</SD>
@@ -4894,6 +5010,10 @@
                                     <SD GID="0fff2c26-5dfb-414f-850e-a8d6abcf7853">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte/RteBehavior/Rte_ComSendSignalProxyPeriodic</SD>
                                     <SD GID="aeaffa7c-9dac-4c22-891b-0c5327d4d0fb">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte/RteBehavior/Rte_ComSendSignalProxyPeriodicTimingEvent0</SD>
                                     <SD GID="a5b642f7-15bc-414b-bc91-6bfb2bfc507f">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte_ComSendSignalProxyPeriodic</SD>
+                                    <SD GID="451B48C1-80E0-4BBC-98DF-9E93219E10AC">/PortInterfaces/ECC_PMP2_SpdSet</SD>
+                                    <SD GID="5D2DAF0C-2CCA-4E17-9837-23DD546ABD58">/PortInterfaces/ECC_PMP2_SpdSet/ECC_PMP2_SpdSet</SD>
+                                    <SD GID="D37AB656-EC57-4825-9876-3B1A02E3066E">/PortInterfaces/ECC_PMP3_SpdSet</SD>
+                                    <SD GID="0077EB86-7BE2-4F86-8C42-66D78F572CAA">/PortInterfaces/ECC_PMP3_SpdSet/ECC_PMP3_SpdSet</SD>
                                     <SD GID="C428AD88-1909-4E15-B088-91A7F31544A9">/PortInterfaces/EXT10_Valid</SD>
                                     <SD GID="7A3D5DDF-18E2-477E-A4D7-798F9D0F8184">/PortInterfaces/EXT10_Valid/EXT10_Valid</SD>
                                     <SD GID="702FCEE5-6B0B-4CB3-BBED-F9138B32307C">/PortInterfaces/EXT11_Valid</SD>

@@ -39,6 +39,12 @@ typedef EventMaskType Rte_EventMaskType;
  * Data type definitions
  *********************************************************************************************************************/
 
+# define Rte_TypeDef_ECC_PMP2_SpdSet
+typedef uint8 ECC_PMP2_SpdSet;
+
+# define Rte_TypeDef_ECC_PMP3_SpdSet
+typedef uint8 ECC_PMP3_SpdSet;
+
 # define Rte_TypeDef_EXT10_Valid
 typedef uint16 EXT10_Valid;
 

@@ -56,6 +56,8 @@
  *
  * Primitive Types:
  * ================
+ * ECC_PMP2_SpdSet: Integer in interval [0...100]
+ * ECC_PMP3_SpdSet: Integer in interval [0...100]
  * EXT10_Valid: Integer in interval [0...1]
  * EXT11_Valid: Integer in interval [0...1]
  * EXT12_Valid: Integer in interval [0...1]
@@ -139,6 +141,8 @@
  * ==================
  *   Explicit S/R API:
  *   -----------------
+ *   Std_ReturnType Rte_Write_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet(ECC_PMP2_SpdSet data)
+ *   Std_ReturnType Rte_Write_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet(ECC_PMP3_SpdSet data)
  *   Std_ReturnType Rte_Write_EXT10_Valid_EXT10_Valid(EXT10_Valid data)
  *   Std_ReturnType Rte_Write_EXT11_Valid_EXT11_Valid(EXT11_Valid data)
  *   Std_ReturnType Rte_Write_EXT12_Valid_EXT12_Valid(EXT12_Valid data)
@@ -186,7 +190,7 @@
  * Symbol: Com_Runnable_2ms_doc
  *********************************************************************************************************************/
 void ExtTempUpdate();
-
+uint8 SpeedSet = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -198,6 +202,8 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_2ms(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  * Symbol: Com_Runnable_2ms
  *********************************************************************************************************************/
   ExtTempUpdate();
+  Rte_Write_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet(SpeedSet);
+  Rte_Write_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet(SpeedSet);
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

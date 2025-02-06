@@ -208,6 +208,8 @@
  *  Rte_ComHookRx_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx
  *  Rte_ComHookRx_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx
  *  Rte_ComHookRx_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx
+ *  Rte_ComHook_ECC_PMP2_SpdSet_oPMP_Cmd_oLIN00_8cabc4b7_Tx_SigTx
+ *  Rte_ComHook_ECC_PMP3_SpdSet_oPMP_Cmd_oLIN00_0d8ea190_Tx_SigTx
  *  Rte_ComHook_EXT10_Valid_oVcuTxIoMsg5_oTC37X_VCU_CAN00_ba532916_Tx_SigTx
  *  Rte_ComHook_EXT11_Valid_oVcuTxIoMsg6_oTC37X_VCU_CAN00_d025e36b_Tx_SigTx
  *  Rte_ComHook_EXT12_Valid_oVcuTxIoMsg6_oTC37X_VCU_CAN00_8a44dc0b_Tx_SigTx
@@ -508,6 +510,10 @@
  *  Rte_Task_Terminate
  *  Rte_Task_WaitEvent
  *  Rte_Task_WaitEventRet
+ *  Rte_WriteHook_Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet_Return
+ *  Rte_WriteHook_Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet_Start
+ *  Rte_WriteHook_Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet_Return
+ *  Rte_WriteHook_Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet_Start
  *  Rte_WriteHook_Com_SWC_EXT10_Valid_EXT10_Valid_Return
  *  Rte_WriteHook_Com_SWC_EXT10_Valid_EXT10_Valid_Start
  *  Rte_WriteHook_Com_SWC_EXT11_Valid_EXT11_Valid_Return

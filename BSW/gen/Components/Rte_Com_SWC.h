@@ -51,6 +51,8 @@ extern "C"
  * Init Values for unqueued S/R communication (primitive types only)
  *********************************************************************************************************************/
 
+#  define Rte_InitValue_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet (0U)
+#  define Rte_InitValue_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet (0U)
 #  define Rte_InitValue_EXT10_Valid_EXT10_Valid (0U)
 #  define Rte_InitValue_EXT11_Valid_EXT11_Valid (0U)
 #  define Rte_InitValue_EXT12_Valid_EXT12_Valid (0U)
@@ -116,6 +118,8 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0(P2
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig1_VcuRxMsg2_Sig1(P2VAR(VcuRxMsg2_Sig1, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2(P2VAR(VcuRxMsg2_Sig2, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3(P2VAR(VcuRxMsg2_Sig3, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet(ECC_PMP2_SpdSet data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet(ECC_PMP3_SpdSet data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT10_Valid_EXT10_Valid(EXT10_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT11_Valid_EXT11_Valid(EXT11_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT12_Valid_EXT12_Valid(EXT12_Valid data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
@@ -179,6 +183,8 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
 /**********************************************************************************************************************
  * Rte_Write_<p>_<d> (explicit S/R communication with isQueued = false)
  *********************************************************************************************************************/
+#  define Rte_Write_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet Rte_Write_Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet
+#  define Rte_Write_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet Rte_Write_Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet
 #  define Rte_Write_EXT10_Valid_EXT10_Valid Rte_Write_Com_SWC_EXT10_Valid_EXT10_Valid
 #  define Rte_Write_EXT11_Valid_EXT11_Valid Rte_Write_Com_SWC_EXT11_Valid_EXT11_Valid
 #  define Rte_Write_EXT12_Valid_EXT12_Valid Rte_Write_Com_SWC_EXT12_Valid_EXT12_Valid
