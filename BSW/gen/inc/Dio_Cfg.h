@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 1.30.0_7.0.0                                                  **
 **                                                                            **
-**  DATE, TIME: 2025-02-06, 16:06:43         !!!IGNORE-LINE!!!                **
+**  DATE, TIME: 2025-02-07, 10:35:33         !!!IGNORE-LINE!!!                **
 **                                                                            **
 **  GENERATOR : Build b180321-0610             !!!IGNORE-LINE!!!              **
 **                                                                            **
@@ -784,6 +784,32 @@ according to requirement ecuc_sws_2108*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
 according to requirement ecuc_sws_2108*/
 #define DioConf_DioChannel_DioChannel_P2_3_IN9 (DIO_CHANNEL_2_3)
+#endif
+/*
+DIO PORT : (DioPort_10)
+*/
+#ifndef DioConf_DioPort_DioPort_10
+#define DioConf_DioPort_DioPort_10 (DIO_PORT_10)
+#endif
+/* DIO Channel : (DioChannel_P10_8_KEY) */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#ifndef DioConf_DioChannel_DioChannel_P10_8_KEY
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#define DioConf_DioChannel_DioChannel_P10_8_KEY (DIO_CHANNEL_10_8)
 #endif
 
 

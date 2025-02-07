@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 1.30.0_11.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2025-02-06, 16:06:44          !!!IGNORE-LINE !!!              **
+**  DATE, TIME: 2025-02-07, 10:35:33          !!!IGNORE-LINE !!!              **
 **                                                                            **
 **  GENERATOR : Build b180321-0610            !!!IGNORE-LINE !!!              **
 **                                                                            **
@@ -935,7 +935,7 @@ static const Port_n_ConfigType Port_kConfiguration[] =
     ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin 7*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
-    ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin 8*/
+    ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_GPIO),/*Pin 8*/
     (PORT_PIN_DEFAULT),/*Pin 9*/
     (PORT_PIN_DEFAULT),/*Pin 10*/
     (PORT_PIN_DEFAULT),/*Pin 11*/
@@ -955,7 +955,7 @@ static const Port_n_ConfigType Port_kConfiguration[] =
       PORT_PIN_LEVEL_LOW,/* Pin 5 */
       PORT_PIN_LEVEL_LOW,/* Pin 6 */
       PORT_PIN_LEVEL_LOW,/* Pin 7 */
-      PORT_PIN_LEVEL_LOW,/* Pin 8 */
+      PORT_PIN_LEVEL_HIGH,/* Pin 8 */
       0U,/* Pin 9 */
       0U,/* Pin 10 */
       0U,/* Pin 11 */
@@ -978,7 +978,7 @@ static const Port_n_ConfigType Port_kConfiguration[] =
                   ),
     /* Port pins drive strength2 configuration */
     Portx_lPdrConfig2(
-      (PORT_INPUT_LEVEL_CMOS_AUTOMOTIVE|PORT_PIN_PAD_STRENGTH_DEFAULT),/*Pin8*/
+      (PORT_PIN_PAD_LEVEL_DEFAULT|SLOW_PORT_PIN_DEFAULT_DRIVER),/*Pin8*/
       (PORT_PIN_PAD_DEFAULT),/*Pin9*/
       (PORT_PIN_PAD_DEFAULT),/*Pin10*/
       (PORT_PIN_PAD_DEFAULT),/*Pin11*/
@@ -1055,7 +1055,7 @@ static const Port_n_ConfigType Port_kConfiguration[] =
       ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin7*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
-      ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin8*/
+      ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_GPIO),/*Pin8*/
       (PORT_PIN_DEFAULT),/*Pin9*/
       (PORT_PIN_DEFAULT),/*Pin10*/
       (PORT_PIN_DEFAULT),/*Pin11*/

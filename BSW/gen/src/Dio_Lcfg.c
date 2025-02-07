@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 1.30.0_6.0.0                                                  **
 **                                                                            **
-**  DATE, TIME: 2025-02-06, 16:06:43       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2025-02-07, 10:35:32       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b180321-0610           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -86,8 +86,8 @@
     },
     {
     /* Port10*/
-      DIO_PORT_NOT_CONFIGURED,
-      (0x0000U)
+      DIO_PORT_CONFIGURED,
+      (0x0100U)
     },
     {
     /* Port11*/

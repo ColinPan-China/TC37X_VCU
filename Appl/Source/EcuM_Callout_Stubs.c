@@ -78,7 +78,7 @@
 #include "Adc.h" 
 #include "Dma.h" 
 #include "Spi.h" 
-
+#include "Dio.h" 
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK User Includes>                          DO NOT CHANGE THIS COMMENT!
@@ -198,6 +198,7 @@ FUNC(void, ECUM_CODE) EcuM_AL_SwitchOff(void)
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_AL_SwitchOff>                      DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
   /* Add implementation of EcuM_AL_SwitchOff() */
+  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P10_8_KEY,0);
   Mcu_ClearWakeupCause(0xFFFFFFFF);
   Mcu_SetMode(MCU_STANDBY);
   return;

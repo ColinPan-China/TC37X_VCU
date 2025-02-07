@@ -92,6 +92,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
   SRC_QSPI3TX.B.SRE 	= 1;
 
   Tja1145_Init();
+  Tja1145_GoSleep();
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

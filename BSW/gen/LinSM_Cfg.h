@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinSM_Cfg.h
- *   Generation Time: 2025-01-16 10:23:51
+ *   Generation Time: 2025-02-06 17:04:00
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -138,7 +138,7 @@
 #define LINSM_SCHEDULEENDNOTIFICATIONOFCHANNELCONFIG                                                STD_OFF  /**< Deactivateable: 'LinSM_ChannelConfig.ScheduleEndNotification' Reason: 'the value of LinSM_ScheduleEndNotificationOfChannelConfig is always 'false' due to this, the array is deactivated.' */
 #define LINSM_SILENCEAFTERWAKEUPTIMEOUTOFCHANNELCONFIG                                              STD_OFF  /**< Deactivateable: 'LinSM_ChannelConfig.SilenceAfterWakeupTimeout' Reason: 'the value of LinSM_SilenceAfterWakeupTimeoutOfChannelConfig is always '0' due to this, the array is deactivated.' */
 #define LINSM_SLEEPSUPPORTOFCHANNELCONFIG                                                           STD_ON
-#define LINSM_TRANSCEIVERHANDLINGOFCHANNELCONFIG                                                    STD_OFF  /**< Deactivateable: 'LinSM_ChannelConfig.TransceiverHandling' Reason: 'the value of LinSM_TransceiverHandlingOfChannelConfig is always '0' due to this, the array is deactivated.' */
+#define LINSM_TRANSCEIVERHANDLINGOFCHANNELCONFIG                                                    STD_ON
 #define LINSM_CHANNELPOSTBUILDCONFIG                                                                STD_ON
 #define LINSM_SCHEDULETABLEIDRANGEOFCHANNELPOSTBUILDCONFIG                                          STD_ON
 #define LINSM_COMMTOLINSMCHANNEL                                                                    STD_ON
@@ -237,6 +237,7 @@
 #define LINSM_ISDEF_CONFIRMATIONTIMEOUTOFCHANNELCONFIG                                              STD_ON
 #define LINSM_ISDEF_MASTERNODETYPEOFCHANNELCONFIG                                                   STD_ON
 #define LINSM_ISDEF_SLEEPSUPPORTOFCHANNELCONFIG                                                     STD_ON
+#define LINSM_ISDEF_TRANSCEIVERHANDLINGOFCHANNELCONFIG                                              STD_ON
 #define LINSM_ISDEF_SCHEDULETABLEIDRANGEOFCHANNELPOSTBUILDCONFIG                                    STD_ON
 #define LINSM_ISDEF_COMMTOLINSMCHANNEL                                                              STD_OFF
 #define LINSM_ISDEF_CHANNELCONFIGOFPCCONFIG                                                         STD_ON
@@ -263,6 +264,7 @@
 #define LINSM_EQ2_CONFIRMATIONTIMEOUTOFCHANNELCONFIG                                                100u
 #define LINSM_EQ2_MASTERNODETYPEOFCHANNELCONFIG                                                     TRUE
 #define LINSM_EQ2_SLEEPSUPPORTOFCHANNELCONFIG                                                       TRUE
+#define LINSM_EQ2_TRANSCEIVERHANDLINGOFCHANNELCONFIG                                                LINSM_TRCV_SLEEP
 #define LINSM_EQ2_SCHEDULETABLEIDRANGEOFCHANNELPOSTBUILDCONFIG                                      2u
 #define LINSM_EQ2_COMMTOLINSMCHANNEL                                                                
 #define LINSM_EQ2_CHANNELCONFIGOFPCCONFIG                                                           LinSM_ChannelConfig
@@ -426,6 +428,7 @@
 #define LinSM_GetConfirmationTimeoutOfChannelConfig(Index)                                          100u
 #define LinSM_IsMasterNodeTypeOfChannelConfig(Index)                                                (((TRUE)) != FALSE)
 #define LinSM_IsSleepSupportOfChannelConfig(Index)                                                  (((TRUE)) != FALSE)
+#define LinSM_GetTransceiverHandlingOfChannelConfig(Index)                                          LINSM_TRCV_SLEEP
 #define LinSM_GetScheduleTableIdRangeOfChannelPostBuildConfig(Index)                                2u
 #define LinSM_GetSizeOfChannelConfig()                                                              LinSM_GetSizeOfChannelConfigOfPCConfig()
 #define LinSM_GetSizeOfComMToLinSMChannel()                                                         LinSM_GetSizeOfComMToLinSMChannelOfPCConfig()
@@ -477,6 +480,7 @@
 #define LinSM_HasConfirmationTimeoutOfChannelConfig()                                               (TRUE != FALSE)
 #define LinSM_HasMasterNodeTypeOfChannelConfig()                                                    (TRUE != FALSE)
 #define LinSM_HasSleepSupportOfChannelConfig()                                                      (TRUE != FALSE)
+#define LinSM_HasTransceiverHandlingOfChannelConfig()                                               (TRUE != FALSE)
 #define LinSM_HasChannelPostBuildConfig()                                                           (TRUE != FALSE)
 #define LinSM_HasScheduleTableIdRangeOfChannelPostBuildConfig()                                     (TRUE != FALSE)
 #define LinSM_HasComMToLinSMChannel()                                                               (TRUE != FALSE)
@@ -634,6 +638,9 @@ typedef boolean LinSM_MasterNodeTypeOfChannelConfigType;
 
 /**   \brief  value based type definition for LinSM_SleepSupportOfChannelConfig */
 typedef boolean LinSM_SleepSupportOfChannelConfigType;
+
+/**   \brief  value based type definition for LinSM_TransceiverHandlingOfChannelConfig */
+typedef uint8 LinSM_TransceiverHandlingOfChannelConfigType;
 
 /**   \brief  value based type definition for LinSM_ScheduleTableIdRangeOfChannelPostBuildConfig */
 typedef uint8 LinSM_ScheduleTableIdRangeOfChannelPostBuildConfigType;
