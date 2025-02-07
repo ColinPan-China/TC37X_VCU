@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Context_Lcfg.h
- *   Generation Time: 2025-01-16 10:23:51
+ *   Generation Time: 2025-02-07 11:21:31
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -137,6 +137,9 @@ extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Leve
 /*! HAL dynamic ISR2 level context data: Level19 */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level19_Dyn;
 
+/*! HAL dynamic ISR2 level context data: Level20 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level20_Dyn;
+
 /*! HAL dynamic task context data: AswTask */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_AswTask_Dyn;
 
@@ -198,6 +201,9 @@ extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ADC2SR0_ISR;
 
 /*! HAL ISR2 context configuration data: ADC3SR0_ISR */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ADC3SR0_ISR;
+
+/*! HAL ISR2 context configuration data: ADC8SR0_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ADC8SR0_ISR;
 
 /*! HAL ISR2 context configuration data: ASCLIN1ERR_ISR */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ASCLIN1ERR_ISR;

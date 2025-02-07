@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Application_Cfg.h
- *   Generation Time: 2025-01-16 10:23:51
+ *   Generation Time: 2025-02-07 11:21:30
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -48,7 +48,7 @@
 # define OS_CFG_NUM_APP_OSAPPLICATION_ALARMS             (6uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_COUNTERS           (0uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_HOOKS              (0uL)
-# define OS_CFG_NUM_APP_OSAPPLICATION_ISRS               (18uL)
+# define OS_CFG_NUM_APP_OSAPPLICATION_ISRS               (19uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_CAT1ISRS           (0uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_SCHTS              (0uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_TASKS              (3uL)

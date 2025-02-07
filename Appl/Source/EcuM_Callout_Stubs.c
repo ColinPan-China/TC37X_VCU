@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2025-01-16 10:23:50
+ *   Generation Time: 2025-02-07 11:12:45
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -78,7 +78,7 @@
 #include "Adc.h" 
 #include "Dma.h" 
 #include "Spi.h" 
-#include "Dio.h" 
+
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK User Includes>                          DO NOT CHANGE THIS COMMENT!
@@ -198,7 +198,7 @@ FUNC(void, ECUM_CODE) EcuM_AL_SwitchOff(void)
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_AL_SwitchOff>                      DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
   /* Add implementation of EcuM_AL_SwitchOff() */
-  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P10_8_KEY,0);
+//  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P10_8_KEY,0);
   Mcu_ClearWakeupCause(0xFFFFFFFF);
   Mcu_SetMode(MCU_STANDBY);
   return;

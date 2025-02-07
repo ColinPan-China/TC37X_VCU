@@ -158,9 +158,6 @@
         <Splitter File=".\Config\ECUC\TC37X_VCU_Dem_Dem_ecuc.arxml">
             <Module Name="Dem"/>
         </Splitter>
-        <Splitter File=".\Config\ECUC\TC37X_VCU_Adc_Adc_ecuc.arxml">
-            <Module Name="Adc"/>
-        </Splitter>
         <Splitter File=".\Config\ECUC\TC37X_VCU_Lin_Lin_ecuc.arxml">
             <Module Name="Lin"/>
         </Splitter>
@@ -182,14 +179,17 @@
         <Splitter File=".\Config\ECUC\TC37X_VCU_Spi_Spi_ecuc.arxml">
             <Module Name="Spi"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Adc_Adc_ecuc.arxml">
+            <Module Name="Adc"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>
     <Display LastVersion="5.24.40 SP2">
-        <FileSet Id="" CS="3ab647cf">
+        <FileSet Id="" CS="fcec3e80">
             <File Order="0" EcuInstance="VCU" Hash="213bda1b0316231a39e53d9e97a880ad" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\VCU_CAN00.dbc</File>
             <File Order="2" EcuInstance="VCU" Hash="9c913df781eb00d583fc7580aaffea96" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\VCU_CAN01.dbc</File>
-            <File Order="3" EcuInstance="VCU" Hash="e6e188a60f94b68dbe07e414686fa5e8" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\LIN0.ldf</File>
+            <File Order="3" EcuInstance="VCU" Hash="e9835bf490363b026255ff29335a5bfb" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\LIN0.ldf</File>
             <File Order="4" EcuInstance="VCU" Hash="590693732196838823f922b5c7432cfd" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\KAMA_FP_EPT.dbc</File>
             <Diagnostic>
                 <Description Order="1" Hash="685ac303a2fc3eb5d194b29aed5926c1">$(DpaProjectFolder)\DBC\MyEcu.cdd</Description>

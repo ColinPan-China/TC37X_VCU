@@ -50,13 +50,14 @@ typedef struct ExtVoltageInput
   boolean SampleEnable;
 }ExtVoltageInputType;
 
-AdcValSampleType AdcValSampleInfo_Table[5];
+AdcValSampleType AdcValSampleInfo_Table[6];
 
 uint16 ADC_SW_GRP0_RES[8]  = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 uint16 ADC_SW_GRP1_RES[8]  = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 uint16 ADC_SW_GRP2_RES[8]  = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 uint16 ADC_SW_GRP3_RES[8]  = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 uint16 ADC_SW_GRP11_RES[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+uint16 ADC_SW_GRP8_RES[8]  = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
 ExtVoltageInputType ExtVoltageInput_Table[] =
 {                                                                                                     /*Vcc     Up    Down  R    Temp   valid   En    */
@@ -295,6 +296,11 @@ void IoHwAb_AdcNotification352()
 	AdcValSampleInfo_Table[4].AdcCompleteFlag = TRUE;
 }
 
+void IoHwAb_AdcNotification256()
+{
+	AdcValSampleInfo_Table[5].AdcCompleteFlag = TRUE;
+}
+
 void Adc_SampleInit()
 {
  	Adc_EnableGroupNotification(AdcConf_AdcGroup_AdcGroup_0);
@@ -302,19 +308,21 @@ void Adc_SampleInit()
 	Adc_EnableGroupNotification(AdcConf_AdcGroup_AdcGroup_2);
   Adc_EnableGroupNotification(AdcConf_AdcGroup_AdcGroup_3);
 	Adc_EnableGroupNotification(AdcConf_AdcGroup_AdcGroup_11);
+	Adc_EnableGroupNotification(AdcConf_AdcGroup_AdcGroup_8);
 
   Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_0,ADC_SW_GRP0_RES);
   Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_1,ADC_SW_GRP1_RES);
   Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_2,ADC_SW_GRP2_RES);
   Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_3,ADC_SW_GRP3_RES);
   Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_11,ADC_SW_GRP11_RES);
-
+  Adc_SetupResultBuffer(AdcConf_AdcGroup_AdcGroup_8,ADC_SW_GRP8_RES);
 
 	Adc_StartGroupConversion(AdcConf_AdcGroup_AdcGroup_0);
 	Adc_StartGroupConversion(AdcConf_AdcGroup_AdcGroup_1);
 	Adc_StartGroupConversion(AdcConf_AdcGroup_AdcGroup_2);
   Adc_StartGroupConversion(AdcConf_AdcGroup_AdcGroup_3);
 	Adc_StartGroupConversion(AdcConf_AdcGroup_AdcGroup_11);
+	Adc_StartGroupConversion(AdcConf_AdcGroup_AdcGroup_8);
 
   VStdMemSet(AdcValSampleInfo_Table,0x00U,sizeof(AdcValSampleInfo_Table));
   AdcValSampleInfo_Table[0].Group = AdcConf_AdcGroup_AdcGroup_0;
@@ -322,6 +330,7 @@ void Adc_SampleInit()
   AdcValSampleInfo_Table[2].Group = AdcConf_AdcGroup_AdcGroup_2;
   AdcValSampleInfo_Table[3].Group = AdcConf_AdcGroup_AdcGroup_3;
   AdcValSampleInfo_Table[4].Group = AdcConf_AdcGroup_AdcGroup_11;
+  AdcValSampleInfo_Table[5].Group = AdcConf_AdcGroup_AdcGroup_8;
 }
 
 void Adc_SampleMain()
