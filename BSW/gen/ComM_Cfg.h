@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2025-01-16 10:23:50
+ *   Generation Time: 2025-02-07 15:51:38
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -194,8 +194,8 @@
 #define COMM_MANAGINGCHANNELIDOFCHANNEL                                                             STD_OFF  /**< Deactivateable: 'ComM_Channel.ManagingChannelId' Reason: 'the value of ComM_ManagingChannelIdOfChannel is always 'COMM_NO_MANAGINGCHANNELIDOFCHANNEL' due to this, the array is deactivated.' */
 #define COMM_MANAGINGCHANNELOFCHANNEL                                                               STD_OFF  /**< Deactivateable: 'ComM_Channel.ManagingChannel' Reason: 'the value of ComM_ManagingChannelOfChannel is always 'false' due to this, the array is deactivated.' */
 #define COMM_MANAGINGUSEROFCHANNEL                                                                  STD_OFF  /**< Deactivateable: 'ComM_Channel.ManagingUser' Reason: 'the value of ComM_ManagingUserOfChannel is always 'COMM_NO_MANAGINGUSEROFCHANNEL' due to this, the array is deactivated.' */
-#define COMM_MINFULLCOMTIMEOFCHANNEL                                                                STD_OFF  /**< Deactivateable: 'ComM_Channel.MinFullComTime' Reason: 'the value of ComM_MinFullComTimeOfChannel is always '0' due to this, the array is deactivated.' */
-#define COMM_NMLIGHTDURATIONOFCHANNEL                                                               STD_OFF  /**< Deactivateable: 'ComM_Channel.NmLightDuration' Reason: 'the value of ComM_NmLightDurationOfChannel is always '0' due to this, the array is deactivated.' */
+#define COMM_MINFULLCOMTIMEOFCHANNEL                                                                STD_ON
+#define COMM_NMLIGHTDURATIONOFCHANNEL                                                               STD_ON
 #define COMM_NMLIGHTSILENTDURATIONOFCHANNEL                                                         STD_OFF  /**< Deactivateable: 'ComM_Channel.NmLightSilentDuration' Reason: 'the value of ComM_NmLightSilentDurationOfChannel is always '0' due to this, the array is deactivated.' */
 #define COMM_NMSUPPORTOFCHANNEL                                                                     STD_ON
 #define COMM_NMTYPEOFCHANNEL                                                                        STD_ON
@@ -225,8 +225,8 @@
 #define COMM_INITDATAHASHCODE                                                                       STD_OFF  /**< Deactivateable: 'ComM_InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
 #define COMM_INITSTATUS                                                                             STD_ON
 #define COMM_LASTSTATECHANGE                                                                        STD_OFF  /**< Deactivateable: 'ComM_LastStateChange' Reason: 'No user mode Notification configured.' */
-#define COMM_MINFULLCOMMODETIMER                                                                    STD_OFF  /**< Deactivateable: 'ComM_MinFullComModeTimer' Reason: 'Min Full Com Timer is disabled' */
-#define COMM_NMLIGHTTIMER                                                                           STD_OFF  /**< Deactivateable: 'ComM_NmLightTimer' Reason: 'Nm Light and Nm Light Silent Timers are disabled' */
+#define COMM_MINFULLCOMMODETIMER                                                                    STD_ON
+#define COMM_NMLIGHTTIMER                                                                           STD_ON
 #define COMM_NMSTARTUPINDICATED                                                                     STD_ON
 #define COMM_NOTIFYPNCSTATECHANGE                                                                   STD_OFF  /**< Deactivateable: 'ComM_NotifyPncStateChange' Reason: 'No user mode Notification configured.' */
 #define COMM_NVMSTOREREQ                                                                            STD_OFF  /**< Deactivateable: 'ComM_NvMStoreReq' Reason: 'NvM support is disabled' */
@@ -275,6 +275,8 @@
 #define COMM_SIZEOFCOMALLOWED                                                                       STD_ON
 #define COMM_SIZEOFDCMREQUESTACTIVE                                                                 STD_ON
 #define COMM_SIZEOFECUMWAKEUPINDICATED                                                              STD_ON
+#define COMM_SIZEOFMINFULLCOMMODETIMER                                                              STD_ON
+#define COMM_SIZEOFNMLIGHTTIMER                                                                     STD_ON
 #define COMM_SIZEOFNMSTARTUPINDICATED                                                               STD_ON
 #define COMM_SIZEOFPARTITIONIDENTIFIERS                                                             STD_ON
 #define COMM_SIZEOFPOSTINITIALIZED                                                                  STD_ON
@@ -322,6 +324,8 @@
 #define COMM_ECUMWAKEUPINDICATEDOFPCPARTITIONCONFIG                                                 STD_ON
 #define COMM_INHIBITIONOFPCPARTITIONCONFIG                                                          STD_ON
 #define COMM_INITSTATUSOFPCPARTITIONCONFIG                                                          STD_ON
+#define COMM_MINFULLCOMMODETIMEROFPCPARTITIONCONFIG                                                 STD_ON
+#define COMM_NMLIGHTTIMEROFPCPARTITIONCONFIG                                                        STD_ON
 #define COMM_NMSTARTUPINDICATEDOFPCPARTITIONCONFIG                                                  STD_ON
 #define COMM_POSTINITIALIZEDOFPCPARTITIONCONFIG                                                     STD_ON
 #define COMM_SIZEOFACTIVECOMMODEOFPCPARTITIONCONFIG                                                 STD_ON
@@ -332,6 +336,8 @@
 #define COMM_SIZEOFCOMALLOWEDOFPCPARTITIONCONFIG                                                    STD_ON
 #define COMM_SIZEOFDCMREQUESTACTIVEOFPCPARTITIONCONFIG                                              STD_ON
 #define COMM_SIZEOFECUMWAKEUPINDICATEDOFPCPARTITIONCONFIG                                           STD_ON
+#define COMM_SIZEOFMINFULLCOMMODETIMEROFPCPARTITIONCONFIG                                           STD_ON
+#define COMM_SIZEOFNMLIGHTTIMEROFPCPARTITIONCONFIG                                                  STD_ON
 #define COMM_SIZEOFNMSTARTUPINDICATEDOFPCPARTITIONCONFIG                                            STD_ON
 #define COMM_SIZEOFPOSTINITIALIZEDOFPCPARTITIONCONFIG                                               STD_ON
 #define COMM_SIZEOFUSERBYTEMASKOFPCPARTITIONCONFIG                                                  STD_ON
@@ -349,6 +355,8 @@
   \brief  These defines are used to implement against the minimum value in numerical based data.
   \{
 */ 
+#define COMM_MIN_MINFULLCOMMODETIMER                                                                0u
+#define COMM_MIN_NMLIGHTTIMER                                                                       0u
 #define COMM_MIN_USERREQFULLCOM                                                                     0u
 /** 
   \}
@@ -359,6 +367,8 @@
   \brief  These defines are used to implement against the maximum value in numerical based data.
   \{
 */ 
+#define COMM_MAX_MINFULLCOMMODETIMER                                                                65535u
+#define COMM_MAX_NMLIGHTTIMER                                                                       65535u
 #define COMM_MAX_USERREQFULLCOM                                                                     255u
 /** 
   \}
@@ -385,8 +395,8 @@
 #define COMM_EXISTS_NOT_USED_IN_THIS_VARIANT_NMTYPEOFCHANNEL                                        STD_OFF
 #define COMM_EXISTS_FULL_NMTYPEOFCHANNEL                                                            STD_ON
 #define COMM_EXISTS_PASSIVE_NMTYPEOFCHANNEL                                                         STD_OFF
-#define COMM_EXISTS_LIGHT_NMTYPEOFCHANNEL                                                           STD_OFF
-#define COMM_EXISTS_NONE_NMTYPEOFCHANNEL                                                            STD_ON
+#define COMM_EXISTS_LIGHT_NMTYPEOFCHANNEL                                                           STD_ON
+#define COMM_EXISTS_NONE_NMTYPEOFCHANNEL                                                            STD_OFF
 #define COMM_EXISTS_LINSLAVE_NMTYPEOFCHANNEL                                                        STD_OFF
 #define COMM_EXISTS_EIRA_RX_TYPEOFPNCSIGNAL                                                         STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define COMM_EXISTS_EIRA_TX_TYPEOFPNCSIGNAL                                                         STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
@@ -402,7 +412,7 @@
   \{
 */ 
 #define COMM_FULL_NMTYPEOFCHANNEL                                                                   0x01u
-#define COMM_NONE_NMTYPEOFCHANNEL                                                                   0x04u
+#define COMM_LIGHT_NMTYPEOFCHANNEL                                                                  0x03u
 /** 
   \}
 */ 
@@ -416,6 +426,8 @@
 #define COMM_ISDEF_GETCURRENTBUSSMMODEAPIOFCHANNEL                                                  STD_OFF
 #define COMM_ISDEF_GWTYPEOFCHANNEL                                                                  STD_ON
 #define COMM_ISDEF_INHIBITIONINITVALUEOFCHANNEL                                                     STD_ON
+#define COMM_ISDEF_MINFULLCOMTIMEOFCHANNEL                                                          STD_OFF
+#define COMM_ISDEF_NMLIGHTDURATIONOFCHANNEL                                                         STD_OFF
 #define COMM_ISDEF_NMSUPPORTOFCHANNEL                                                               STD_OFF
 #define COMM_ISDEF_NMTYPEOFCHANNEL                                                                  STD_OFF
 #define COMM_ISDEF_PARTITIONCONFIGIDXOFCHANNEL                                                      STD_ON
@@ -447,6 +459,8 @@
 #define COMM_ISDEF_ECUMWAKEUPINDICATEDOFPCPARTITIONCONFIG                                           STD_ON
 #define COMM_ISDEF_INHIBITIONOFPCPARTITIONCONFIG                                                    STD_ON
 #define COMM_ISDEF_INITSTATUSOFPCPARTITIONCONFIG                                                    STD_ON
+#define COMM_ISDEF_MINFULLCOMMODETIMEROFPCPARTITIONCONFIG                                           STD_ON
+#define COMM_ISDEF_NMLIGHTTIMEROFPCPARTITIONCONFIG                                                  STD_ON
 #define COMM_ISDEF_NMSTARTUPINDICATEDOFPCPARTITIONCONFIG                                            STD_ON
 #define COMM_ISDEF_POSTINITIALIZEDOFPCPARTITIONCONFIG                                               STD_ON
 #define COMM_ISDEF_USERBYTEMASKOFPCPARTITIONCONFIG                                                  STD_ON
@@ -465,6 +479,8 @@
 #define COMM_EQ2_GETCURRENTBUSSMMODEAPIOFCHANNEL                                                    
 #define COMM_EQ2_GWTYPEOFCHANNEL                                                                    COMM_GATEWAY_TYPE_NONE
 #define COMM_EQ2_INHIBITIONINITVALUEOFCHANNEL                                                       0x00u
+#define COMM_EQ2_MINFULLCOMTIMEOFCHANNEL                                                            
+#define COMM_EQ2_NMLIGHTDURATIONOFCHANNEL                                                           
 #define COMM_EQ2_NMSUPPORTOFCHANNEL                                                                 
 #define COMM_EQ2_NMTYPEOFCHANNEL                                                                    
 #define COMM_EQ2_PARTITIONCONFIGIDXOFCHANNEL                                                        0u
@@ -496,6 +512,8 @@
 #define COMM_EQ2_ECUMWAKEUPINDICATEDOFPCPARTITIONCONFIG                                             ComM_EcuMWakeUpIndicated
 #define COMM_EQ2_INHIBITIONOFPCPARTITIONCONFIG                                                      (&(ComM_Inhibition))
 #define COMM_EQ2_INITSTATUSOFPCPARTITIONCONFIG                                                      (&(ComM_InitStatus))
+#define COMM_EQ2_MINFULLCOMMODETIMEROFPCPARTITIONCONFIG                                             ComM_MinFullComModeTimer.raw
+#define COMM_EQ2_NMLIGHTTIMEROFPCPARTITIONCONFIG                                                    ComM_NmLightTimer.raw
 #define COMM_EQ2_NMSTARTUPINDICATEDOFPCPARTITIONCONFIG                                              ComM_NmStartUpIndicated
 #define COMM_EQ2_POSTINITIALIZEDOFPCPARTITIONCONFIG                                                 ComM_PostInitialized
 #define COMM_EQ2_USERBYTEMASKOFPCPARTITIONCONFIG                                                    ComM_UserByteMask
@@ -632,6 +650,12 @@ typedef ComM_ChannelIterType ComM_ComAllowedIterType;
 /**   \brief  type used to iterate ComM_DcmRequestActive */
 typedef ComM_ChannelIterType ComM_DcmRequestActiveIterType;
 
+/**   \brief  type used to iterate ComM_MinFullComModeTimer */
+typedef ComM_ChannelIterType ComM_MinFullComModeTimerIterType;
+
+/**   \brief  type used to iterate ComM_NmLightTimer */
+typedef ComM_ChannelIterType ComM_NmLightTimerIterType;
+
 /** 
   \}
 */ 
@@ -646,6 +670,12 @@ typedef uint8 ComM_GwTypeOfChannelType;
 
 /**   \brief  value based type definition for ComM_InhibitionInitValueOfChannel */
 typedef uint8 ComM_InhibitionInitValueOfChannelType;
+
+/**   \brief  value based type definition for ComM_MinFullComTimeOfChannel */
+typedef uint8 ComM_MinFullComTimeOfChannelType;
+
+/**   \brief  value based type definition for ComM_NmLightDurationOfChannel */
+typedef uint8 ComM_NmLightDurationOfChannelType;
 
 /**   \brief  value based type definition for ComM_NmSupportOfChannel */
 typedef boolean ComM_NmSupportOfChannelType;
@@ -679,6 +709,12 @@ typedef boolean ComM_DcmRequestActiveType;
 
 /**   \brief  value based type definition for ComM_EcuMWakeUpIndicated */
 typedef boolean ComM_EcuMWakeUpIndicatedType;
+
+/**   \brief  value based type definition for ComM_MinFullComModeTimer */
+typedef uint16 ComM_MinFullComModeTimerType;
+
+/**   \brief  value based type definition for ComM_NmLightTimer */
+typedef uint16 ComM_NmLightTimerType;
 
 /**   \brief  value based type definition for ComM_NmStartUpIndicated */
 typedef boolean ComM_NmStartUpIndicatedType;
@@ -715,6 +751,12 @@ typedef uint8 ComM_SizeOfDcmRequestActiveType;
 
 /**   \brief  value based type definition for ComM_SizeOfEcuMWakeUpIndicated */
 typedef uint8 ComM_SizeOfEcuMWakeUpIndicatedType;
+
+/**   \brief  value based type definition for ComM_SizeOfMinFullComModeTimer */
+typedef uint8 ComM_SizeOfMinFullComModeTimerType;
+
+/**   \brief  value based type definition for ComM_SizeOfNmLightTimer */
+typedef uint8 ComM_SizeOfNmLightTimerType;
 
 /**   \brief  value based type definition for ComM_SizeOfNmStartUpIndicated */
 typedef uint8 ComM_SizeOfNmStartUpIndicatedType;
@@ -789,6 +831,8 @@ typedef struct sComM_ChannelType
   ComM_BusType BusTypeOfChannel;  /**< The channel bus type */
   ComM_NmSupportOfChannelType NmSupportOfChannel;  /**< Decides if the channel has NmType FULL or PASSIVE */
   ComM_SilentSupportOfChannelType SilentSupportOfChannel;  /**< Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration) */
+  ComM_MinFullComTimeOfChannelType MinFullComTimeOfChannel;  /**< Minimal full communication time for the channel, relevant for NmTypes LIGHT and FULL */
+  ComM_NmLightDurationOfChannelType NmLightDurationOfChannel;  /**< Nm Light Timeout */
   ComM_NmTypeOfChannelType NmTypeOfChannel;  /**< The Network Management type of the channel */
   ComM_WakeupStateOfChannelType WakeupStateOfChannel;  /**< Target channel state after a Passive Wake-up */
   GetCurrentBusSMModeApiType GetCurrentBusSMModeApiOfChannel;  /**< Query the current communication mode from the corresponding BusSM */
@@ -878,6 +922,24 @@ typedef struct ComM_DcmRequestActiveStructSTag
   ComM_DcmRequestActiveType ComMChannel_3;
 } ComM_DcmRequestActiveStructSType;
 
+/**   \brief  type to be used as symbolic data element access to ComM_MinFullComModeTimer in the partition context  */
+typedef struct ComM_MinFullComModeTimerStructSTag
+{
+  ComM_MinFullComModeTimerType ComMChannel_0;
+  ComM_MinFullComModeTimerType ComMChannel_1;
+  ComM_MinFullComModeTimerType ComMChannel_2;
+  ComM_MinFullComModeTimerType ComMChannel_3;
+} ComM_MinFullComModeTimerStructSType;
+
+/**   \brief  type to be used as symbolic data element access to ComM_NmLightTimer in the partition context  */
+typedef struct ComM_NmLightTimerStructSTag
+{
+  ComM_NmLightTimerType ComMChannel_0;
+  ComM_NmLightTimerType ComMChannel_1;
+  ComM_NmLightTimerType ComMChannel_2;
+  ComM_NmLightTimerType ComMChannel_3;
+} ComM_NmLightTimerStructSType;
+
 /** 
   \}
 */ 
@@ -922,6 +984,20 @@ typedef union ComM_DcmRequestActiveUTag
   ComM_DcmRequestActiveStructSType str;
 } ComM_DcmRequestActiveUType;
 
+/**   \brief  type to access ComM_MinFullComModeTimer in an index and symbol based style. */
+typedef union ComM_MinFullComModeTimerUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  ComM_MinFullComModeTimerType raw[4];
+  ComM_MinFullComModeTimerStructSType str;
+} ComM_MinFullComModeTimerUType;
+
+/**   \brief  type to access ComM_NmLightTimer in an index and symbol based style. */
+typedef union ComM_NmLightTimerUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  ComM_NmLightTimerType raw[4];
+  ComM_NmLightTimerStructSType str;
+} ComM_NmLightTimerUType;
+
 /** 
   \}
 */ 
@@ -960,6 +1036,12 @@ typedef P2VAR(ComM_InhibitionType, TYPEDEF, COMM_NVM_DATA_NOINIT) ComM_Inhibitio
 
 /**   \brief  type used to point to ComM_InitStatus */
 typedef P2VAR(ComM_InitStatusType, TYPEDEF, COMM_VAR_NOINIT) ComM_InitStatusPtrType;
+
+/**   \brief  type used to point to ComM_MinFullComModeTimer */
+typedef P2VAR(ComM_MinFullComModeTimerType, TYPEDEF, COMM_VAR_NOINIT) ComM_MinFullComModeTimerPtrType;
+
+/**   \brief  type used to point to ComM_NmLightTimer */
+typedef P2VAR(ComM_NmLightTimerType, TYPEDEF, COMM_VAR_NOINIT) ComM_NmLightTimerPtrType;
 
 /**   \brief  type used to point to ComM_NmStartUpIndicated */
 typedef P2VAR(volatile ComM_NmStartUpIndicatedType, TYPEDEF, COMM_VAR_NOINIT) ComM_NmStartUpIndicatedPtrType;
@@ -1047,6 +1129,8 @@ typedef ComM_PCConfigType ComM_ConfigType;  /**< A structure type is present for
   BusType                   The channel bus type
   NmSupport                 Decides if the channel has NmType FULL or PASSIVE
   SilentSupport             Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration)
+  MinFullComTime            Minimal full communication time for the channel, relevant for NmTypes LIGHT and FULL
+  NmLightDuration           Nm Light Timeout
   NmType                    The Network Management type of the channel
   WakeupState               Target channel state after a Passive Wake-up
   GetCurrentBusSMModeApi    Query the current communication mode from the corresponding BusSM
@@ -1279,6 +1363,40 @@ extern VAR(ComM_InhibitionType, COMM_NVM_DATA_NOINIT) ComM_Inhibition;
 /*lint -restore */
 extern VAR(ComM_InitStatusType, COMM_VAR_NOINIT) ComM_InitStatus;
 #define COMM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_MinFullComModeTimer
+**********************************************************************************************************************/
+/** 
+  \var    ComM_MinFullComModeTimer
+  \brief  The current value of Min Full Com Mode timer
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(ComM_MinFullComModeTimerUType, COMM_VAR_NOINIT) ComM_MinFullComModeTimer;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define COMM_STOP_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_NmLightTimer
+**********************************************************************************************************************/
+/** 
+  \var    ComM_NmLightTimer
+  \brief  The current value of Nm Light or Nm Light Silent timer
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(ComM_NmLightTimerUType, COMM_VAR_NOINIT) ComM_NmLightTimer;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define COMM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

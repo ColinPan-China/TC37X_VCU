@@ -92,6 +92,8 @@
 #include "Adc.h"
 #include "Lin_17_AscLin.h"
 #include "Adc_Sample.h"
+
+#define NVM_TEST_FUNCTION (0u)
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -280,7 +282,7 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: SWC1_Init
  *********************************************************************************************************************/
-  Rte_Write_Request_ESH_RunRequest_0_requestedMode(1);
+//  Rte_Write_Request_ESH_RunRequest_0_requestedMode(1);
 //	Lin_17_AscLin_Init(&Lin_17_AscLin_Config);
 //  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P23_5_LIN_SLP,1);
 
@@ -378,10 +380,8 @@ uint8 UserData3Rd[32];
 uint8 UserData3Wr[32];
 uint8 UserData3Cmd = 0;
 
-uint8 ComMReqFlg = 0;
-uint8 ComMReqSts = 0;
 uint8 XcpCnt = 0;
-//#include "ComM.h"
+
 uint8 Sdu_Data[][8] =
 {
 {0xAA,0xBB,0xCC,0xDD,0xEE,0xFF,0xAA,0xBB},
@@ -422,40 +422,45 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * Symbol: SWC1_Runnable10ms
  *********************************************************************************************************************/
 //Lin_DemoFunction();
-//	if( ComMReqFlg == 0 )
 	if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )//( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_12_KL15) == 0 )  
   {
-    Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
-    Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_FULL_COMMUNICATION );
-    Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_FULL_COMMUNICATION);
-    Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(COMM_FULL_COMMUNICATION);
     ShutdownTimer = 0;
   }
   else
   {
     if( ShutdownTimer < 500 )
     {
-      Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
-      Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_FULL_COMMUNICATION );
-      Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_FULL_COMMUNICATION);
-      Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(COMM_FULL_COMMUNICATION);
       ShutdownTimer++;
     }
-    else
-    {
-      Dio_WriteChannel(DioConf_DioChannel_DioChannel_P23_5_LIN_SLP,0);
-      Dio_WriteChannel(DioConf_DioChannel_DioChannel_P10_8_KEY,0);
-
-      Tja1145_GoSleep();
-
-      Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_NO_COMMUNICATION );
-      Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_NO_COMMUNICATION );
-      Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_NO_COMMUNICATION );
-      Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_NO_COMMUNICATION);
-      Rte_Write_Request_ESH_RunRequest_0_requestedMode(0);
-    }
   }
-  Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_GetCurrentComMode(&ComMReqSts);
+
+  if( ShutdownTimer < 500 )
+  {
+    Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
+    Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_FULL_COMMUNICATION );
+  
+    Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(COMM_FULL_COMMUNICATION);
+
+    Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_FULL_COMMUNICATION);
+  }
+  else/* Mcu go shutdown */
+  {
+//    Dio_WriteChannel(DioConf_DioChannel_DioChannel_P23_5_LIN_SLP,0);
+//    Dio_WriteChannel(DioConf_DioChannel_DioChannel_P10_8_KEY,0);
+
+//    Tja1145_GoSleep();
+
+
+    Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_NO_COMMUNICATION );
+    Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_NO_COMMUNICATION );
+    Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode( COMM_NO_COMMUNICATION );
+
+    Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_NO_COMMUNICATION);
+
+    Rte_Write_Request_ESH_RunRequest_0_requestedMode(0);
+  }
+
+  #if NVM_TEST_FUNCTION
   if(UserData1Cmd == 1)
   {
     VStdMemSet(UserData1Rd,0xFF,sizeof(UserData1Rd));
@@ -526,6 +531,8 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
     Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_WriteBlock(UserData3Wr);
     UserData3Cmd = 0;
   }
+  #endif
+
   XcpCnt++;
   Xcp_Event(XcpConf_XcpEventChannel_XcpEventChannel_10MS);
   if( XcpCnt == 2 )
