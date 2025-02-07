@@ -443,4 +443,18 @@ void IoHwGetExtTemp( uint8 ch, sint16 *temp, boolean *ValidFlg )
     *ValidFlg = ExtVoltageInput_Table[ch].TempValidFlg;
   }
 }
+  
+uint16 kl15voltage = 0;
+uint8 IoHwGetKL15Level()
+{
+  kl15voltage = AdcValSampleInfo_Table[5].AdcChannelResult[2]*5*157*100/4096/47;
 
+  if( kl15voltage > KL15_HIGH_VOLTAGE )
+  {
+    return KL15_HIGH_LEVEL;
+  }
+  else
+  {
+    return KL15_LOW_LEVEL;
+  }
+}

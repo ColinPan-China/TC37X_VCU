@@ -8,6 +8,11 @@
 
 #define INVALID_TEMP (-273)
 
+#define KL15_HIGH_VOLTAGE (750)//7.5v
+#define KL15_LOW_VOLTAGE  (500)//5v
+
+#define KL15_HIGH_LEVEL (1)
+#define KL15_LOW_LEVEL  (0)
 
 extern void Adc_SampleInit();
 

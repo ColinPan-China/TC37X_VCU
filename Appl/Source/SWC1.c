@@ -91,6 +91,7 @@
 #include "ComM.h"
 #include "Adc.h"
 #include "Lin_17_AscLin.h"
+#include "Adc_Sample.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -409,7 +410,7 @@ void Lin_DemoFunction(void)
 	 	}
 	 }while(Ret2 != LIN_TX_OK );
 }
-uint8 slpflg = 0;
+uint16 ShutdownTimer = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -422,23 +423,37 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  *********************************************************************************************************************/
 //Lin_DemoFunction();
 //	if( ComMReqFlg == 0 )
-	if( slpflg == 0 )//( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_12_KL15) == 0 )  
+	if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )//( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_12_KL15) == 0 )  
   {
     Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
     Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_FULL_COMMUNICATION );
     Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_FULL_COMMUNICATION);
-//    Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(COMM_FULL_COMMUNICATION);
+    Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(COMM_FULL_COMMUNICATION);
+    ShutdownTimer = 0;
   }
   else
   {
-    Dio_WriteChannel(DioConf_DioChannel_DioChannel_P23_5_LIN_SLP,0);
-    Dio_WriteChannel(DioConf_DioChannel_DioChannel_P10_8_KEY,0);
-    Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_NO_COMMUNICATION );
-    Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_NO_COMMUNICATION );
-    Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_NO_COMMUNICATION );
-    Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_NO_COMMUNICATION);
-    Rte_Write_Request_ESH_RunRequest_0_requestedMode(0);
+    if( ShutdownTimer < 500 )
+    {
+      Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
+      Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_FULL_COMMUNICATION );
+      Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_FULL_COMMUNICATION);
+      Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(COMM_FULL_COMMUNICATION);
+      ShutdownTimer++;
+    }
+    else
+    {
+      Dio_WriteChannel(DioConf_DioChannel_DioChannel_P23_5_LIN_SLP,0);
+      Dio_WriteChannel(DioConf_DioChannel_DioChannel_P10_8_KEY,0);
 
+      Tja1145_GoSleep();
+
+      Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_NO_COMMUNICATION );
+      Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_NO_COMMUNICATION );
+      Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_NO_COMMUNICATION );
+      Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_NO_COMMUNICATION);
+      Rte_Write_Request_ESH_RunRequest_0_requestedMode(0);
+    }
   }
   Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_GetCurrentComMode(&ComMReqSts);
   if(UserData1Cmd == 1)
