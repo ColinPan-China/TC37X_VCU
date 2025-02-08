@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2025-02-08 15:12:59
+ *   Generation Time: 2025-02-08 15:22:10
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -46,6 +46,7 @@
 #include "BswM_NvM.h"
 #include "BswM_Nm.h"
 #include "Rte_BswM_Type.h"
+#include "Dem.h" 
 
 
 
@@ -173,17 +174,18 @@
 #define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE (17) 
 #define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE (18) 
 #define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF (19) 
-#define BswMConf_BswMRule_ESH_InitToWakeup (20) 
-#define BswMConf_BswMRule_ESH_PostRun (21) 
-#define BswMConf_BswMRule_ESH_PostRunNested (22) 
-#define BswMConf_BswMRule_ESH_PostRunToPrepNested (23) 
-#define BswMConf_BswMRule_ESH_PrepToWait (24) 
-#define BswMConf_BswMRule_ESH_RunToPostRun (25) 
-#define BswMConf_BswMRule_ESH_RunToPostRunNested (26) 
-#define BswMConf_BswMRule_ESH_WaitToShutdown (27) 
-#define BswMConf_BswMRule_ESH_WaitToWakeup (28) 
-#define BswMConf_BswMRule_ESH_WakeupToPrep (29) 
-#define BswMConf_BswMRule_ESH_WakeupToRun (30) 
+#define BswMConf_BswMRule_ESH_DemInit (20) 
+#define BswMConf_BswMRule_ESH_InitToWakeup (21) 
+#define BswMConf_BswMRule_ESH_PostRun (22) 
+#define BswMConf_BswMRule_ESH_PostRunNested (23) 
+#define BswMConf_BswMRule_ESH_PostRunToPrepNested (24) 
+#define BswMConf_BswMRule_ESH_PrepToWait (25) 
+#define BswMConf_BswMRule_ESH_RunToPostRun (26) 
+#define BswMConf_BswMRule_ESH_RunToPostRunNested (27) 
+#define BswMConf_BswMRule_ESH_WaitToShutdown (28) 
+#define BswMConf_BswMRule_ESH_WaitToWakeup (29) 
+#define BswMConf_BswMRule_ESH_WakeupToPrep (30) 
+#define BswMConf_BswMRule_ESH_WakeupToRun (31) 
 
 
 /* -----------------------------------------------------------------------------
@@ -192,6 +194,8 @@
 #define BSWM_GENERIC_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8 241u 
 #define BSWM_GENERIC_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e 242u 
 #define BSWM_GENERIC_ESH_ComMPendingRequests                       232u 
+#define BSWM_GENERIC_ESH_DemInitStatus                             231u 
+#define BSWM_GENERIC_ESH_DemPostRunRequested                       233u 
 #define BSWM_GENERIC_ESH_State                                     230u 
 
 #define BSWM_GENERICVALUE_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8_BUSOFF_SILENT 0x0001u 
@@ -200,6 +204,10 @@
 #define BSWM_GENERICVALUE_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM        0x0000u 
 #define BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST                 0x0000u 
 #define BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_PENDING_REQUEST            0x0001u 
+#define BSWM_GENERICVALUE_ESH_DemInitStatus_DEM_INITIALIZED                           0x0000u 
+#define BSWM_GENERICVALUE_ESH_DemInitStatus_DEM_NOT_INITIALIZED                       0x0001u 
+#define BSWM_GENERICVALUE_ESH_DemPostRunRequested_FALSE                               0x0001u 
+#define BSWM_GENERICVALUE_ESH_DemPostRunRequested_TRUE                                0x0000u 
 #define BSWM_GENERICVALUE_ESH_State_ESH_INIT                                          0x0000u 
 #define BSWM_GENERICVALUE_ESH_State_ESH_POST_RUN                                      0x0002u 
 #define BSWM_GENERICVALUE_ESH_State_ESH_PREP_SHUTDOWN                                 0x0003u 
@@ -698,7 +706,7 @@
 #define BSWM_ISDEF_ONINITOFIMMEDIATEUSER                                                            STD_OFF
 #define BSWM_ISDEF_RULESINDENDIDXOFIMMEDIATEUSER                                                    STD_OFF
 #define BSWM_ISDEF_RULESINDSTARTIDXOFIMMEDIATEUSER                                                  STD_OFF
-#define BSWM_ISDEF_RULESINDUSEDOFIMMEDIATEUSER                                                      STD_ON
+#define BSWM_ISDEF_RULESINDUSEDOFIMMEDIATEUSER                                                      STD_OFF
 #define BSWM_ISDEF_INITGENVARANDINITAL                                                              STD_OFF
 #define BSWM_ISDEF_EXTERNALIDOFLINSMMAPPING                                                         STD_ON
 #define BSWM_ISDEF_IMMEDIATEUSERENDIDXOFLINSMMAPPING                                                STD_ON
@@ -786,17 +794,17 @@
 #define BSWM_EQ2_ONINITOFIMMEDIATEUSER                                                              
 #define BSWM_EQ2_RULESINDENDIDXOFIMMEDIATEUSER                                                      
 #define BSWM_EQ2_RULESINDSTARTIDXOFIMMEDIATEUSER                                                    
-#define BSWM_EQ2_RULESINDUSEDOFIMMEDIATEUSER                                                        TRUE
+#define BSWM_EQ2_RULESINDUSEDOFIMMEDIATEUSER                                                        
 #define BSWM_EQ2_INITGENVARANDINITAL                                                                
 #define BSWM_EQ2_EXTERNALIDOFLINSMMAPPING                                                           ComMConf_ComMChannel_CN_LIN00_b12a0454
-#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFLINSMMAPPING                                                  8u
-#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFLINSMMAPPING                                                7u
+#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFLINSMMAPPING                                                  9u
+#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFLINSMMAPPING                                                8u
 #define BSWM_EQ2_IMMEDIATEUSERUSEDOFLINSMMAPPING                                                    TRUE
 #define BSWM_EQ2_INITVALUEOFLINSMMAPPING                                                            LINSM_BSWM_NO_COM
 #define BSWM_EQ2_MODENOTIFICATIONFCT                                                                
 #define BSWM_EQ2_EXTERNALIDOFNMMAPPING                                                              ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8
-#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFNMMAPPING                                                     9u
-#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFNMMAPPING                                                   8u
+#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFNMMAPPING                                                     10u
+#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFNMMAPPING                                                   9u
 #define BSWM_EQ2_IMMEDIATEUSERUSEDOFNMMAPPING                                                       TRUE
 #define BSWM_EQ2_INITVALUEOFNMMAPPING                                                               NM_STATE_BUS_SLEEP
 #define BSWM_EQ2_EXTERNALIDOFNVMJOBMAPPING                                                          NVM_SERVICE_ID_WRITEALL
@@ -1398,6 +1406,7 @@ typedef struct BswM_ActionListQueueStructSTag
   BswM_ActionListQueueType AL_CC_AL_CN_KAMA_FP_EPT_0303_275b3e6e_TX_EnableNoinit;
   BswM_ActionListQueueType AL_CC_AL_CN_KAMA_FP_EPT_0303_275b3e6e_Disable_DM;
   BswM_ActionListQueueType AL_CC_AL_CN_KAMA_FP_EPT_0303_275b3e6e_Enable_DM;
+  BswM_ActionListQueueType AL_ESH_AL_DemInit;
 } BswM_ActionListQueueStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_RuleStates in the partition context  */
@@ -1434,6 +1443,7 @@ typedef struct BswM_RuleStatesStructSTag
   BswM_RuleStatesType R_CC_CN_KAMA_FP_EPT_0303_275b3e6e_RX;
   BswM_RuleStatesType R_CC_CN_KAMA_FP_EPT_0303_275b3e6e_TX;
   BswM_RuleStatesType R_CC_CN_KAMA_FP_EPT_0303_275b3e6e_RX_DM;
+  BswM_RuleStatesType R_ESH_DemInit;
 } BswM_RuleStatesStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_TimerState in the partition context  */
@@ -1464,14 +1474,14 @@ typedef struct BswM_TimerValueStructSTag
 /**   \brief  type to access BswM_ActionListQueue in an index and symbol based style. */
 typedef union BswM_ActionListQueueUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_ActionListQueueType raw[40];
+  BswM_ActionListQueueType raw[41];
   BswM_ActionListQueueStructSType str;
 } BswM_ActionListQueueUType;
 
 /**   \brief  type to access BswM_RuleStates in an index and symbol based style. */
 typedef union BswM_RuleStatesUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_RuleStatesType raw[31];
+  BswM_RuleStatesType raw[32];
   BswM_RuleStatesStructSType str;
 } BswM_RuleStatesUType;
 
@@ -1707,6 +1717,7 @@ extern FUNC(void, BSWM_CODE) BswM_ESH_OnEnterWaitForNvm(void);
 extern FUNC(void, BSWM_CODE) BswM_ESH_OnEnterWakeup(void);
 extern FUNC(void, BSWM_CODE) BswM_INIT_NvMReadAll(void);
 extern FUNC(void, BSWM_CODE) ESH_ComM_CheckPendingRequests(void);
+extern FUNC(void, BSWM_CODE) ESH_Dem_PostRunRequested(void);
 /* PRQA L:CALLOUTDECLARATIONS */
 
 /* -----------------------------------------------------------------------------

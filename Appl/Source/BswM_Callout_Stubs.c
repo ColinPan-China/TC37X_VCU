@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Callout_Stubs.c
- *   Generation Time: 2025-02-08 15:12:59
+ *   Generation Time: 2025-02-08 15:22:10
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -224,12 +224,8 @@ FUNC(void, BSWM_CODE) ESH_ComM_CheckPendingRequests(void)
 } /* End of ESH_ComM_CheckPendingRequests */
 
 
-
-
-#define BSWM_STOP_SEC_CODE
-#include "BswM_vMemMap.h"  /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-#if 0
+FUNC(void, BSWM_CODE) ESH_Dem_PostRunRequested(void)
+{
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK ESH_Dem_PostRunRequested>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -238,7 +234,26 @@ FUNC(void, BSWM_CODE) ESH_ComM_CheckPendingRequests(void)
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
+  boolean isRequested = FALSE;
+  (void)Dem_PostRunRequested(&isRequested); /* SBSW_BSWM_FCTCALL_LOCALVAR */
+  if (isRequested == TRUE)
+  {
+    BswM_RequestMode(BSWM_GENERIC_ESH_DemPostRunRequested, BSWM_GENERICVALUE_ESH_DemPostRunRequested_TRUE);
+  }
+  else
+  {
+    BswM_RequestMode(BSWM_GENERIC_ESH_DemPostRunRequested, BSWM_GENERICVALUE_ESH_DemPostRunRequested_FALSE);
+  }
+  
+} /* End of ESH_Dem_PostRunRequested */
 
+
+
+
+#define BSWM_STOP_SEC_CODE
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#if 0
 #endif
 
 
