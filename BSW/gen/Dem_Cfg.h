@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Cfg.h
- *   Generation Time: 2024-10-24 15:37:49
+ *   Generation Time: 2025-02-08 10:50:37
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -268,8 +268,8 @@
 #define DEM_CFG_SUPPORT_MULTIPLE_SATELLITES                                STD_OFF      /* Autodetected - STD_ON: count of different /Dem/DemConfigSet/DemEventParameter/DemOsApplicationRef plus /Dem/DemGeneral/DemOsApplicationRef targets > 1; STD_OFF: master and all satellites run in the same partition */ 
 #define DEM_CFG_SUPPORT_MULTITRIP                                          STD_ON       /* Autodetected - STD_ON: any /Dem/DemConfigSet/DemEventParameter/DemEventClass/DemIndicatorAttribute/DemIndicatorHealingCycleCounterThreshold parameter or /Dem/DemConfigSet/DemEventParameter/DemEventClass/DemEventFailureCycleCounterThreshold parameter has value > 1 or DEM module has Implemenation Variant VARIANT-POST-BUILD-LOADABLE, STD_OFF: (no such parameters or all values <= 1) and module is VARIANT-PRE-COMPILE */ 
 #define DEM_CFG_SUPPORT_NVM_APPL_SYNCHRONIZE                               STD_OFF      /* Vector extension - /Dem/DemGeneral/DemNvSynchronizeSupport */ 
-#define DEM_CFG_SUPPORT_NVM_IMMEDIATE                                      STD_OFF      /* Autodetected - STD_ON: /Dem/DemGeneral/DemImmediateNvStorageSupport == TRUE || any /Dem/DemConfigSet/DemDTCClass/DemImmediateNvStorage == TRUE - STD_OFF: StorageSupport parameter absent or FALSE and all DTCClass values == FALSE */ 
-#define DEM_CFG_SUPPORT_NVM_WRITELIMIT                                     STD_OFF      /* Autodetected - STD_ON: /Dem/DemGeneral/DemImmediateNvStorageLimit parameter exists, STD_OFF: no such parameter */ 
+#define DEM_CFG_SUPPORT_NVM_IMMEDIATE                                      STD_ON       /* Autodetected - STD_ON: /Dem/DemGeneral/DemImmediateNvStorageSupport == TRUE || any /Dem/DemConfigSet/DemDTCClass/DemImmediateNvStorage == TRUE - STD_OFF: StorageSupport parameter absent or FALSE and all DTCClass values == FALSE */ 
+#define DEM_CFG_SUPPORT_NVM_WRITELIMIT                                     STD_ON       /* Autodetected - STD_ON: /Dem/DemGeneral/DemImmediateNvStorageLimit parameter exists, STD_OFF: no such parameter */ 
 #define DEM_CFG_SUPPORT_OBDII                                              STD_OFF      /* Feature not licensed. */ 
 #define DEM_CFG_SUPPORT_OBDII_FREEZEFRAME_IN_SVC19                         STD_OFF      /* (DEM_CFG_HAS_OBDII_ENABLED == STD_OFF) */ 
 #define DEM_CFG_SUPPORT_OBDII_OR_OBDONUDS                                  STD_OFF      /* ((DEM_CFG_HAS_OBDII_ENABLED == STD_OFF) && (DEM_CFG_SUPPORT_OBDONUDS == STD_OFF)) */ 
@@ -338,7 +338,7 @@
 #define DEM_CFG_SUPPORT_WWHOBD                                             STD_OFF      /* Feature not licensed. */ 
 #define DEM_CFG_USE_MEMCOPY_MACROS                                         STD_OFF      /* Vector extension - /Dem/DemGeneral/DemUseMemcopyMacros */ 
 #define DEM_CFG_USE_MULTI_PARTITION_FIM                                    STD_OFF      /* Vector extension - /Dem/DemGeneral/DemUseMultiPartitionFiM */ 
-#define DEM_CFG_USE_NVM                                                    STD_ON       /* Autodetected - STD_ON: correct /Dem/DemGeneral/DemNvRamBlockId container(s) detected, STD_OFF: no such container or wrong content */ 
+#define DEM_CFG_USE_NVM                                                    STD_ON       /* Overwritten by Vector extension - /Dem/DemGeneral/DemUseNvm */ 
 #define DEM_CFG_USE_OHDS                                                   STD_OFF      /* Vector extension - /Dem/DemGeneral/DemUseOHDS */ 
 
  /*  Timebased debouncing - high/low resolution timer values are configured (or may be configured by PostBuild-Loadable)  */ 

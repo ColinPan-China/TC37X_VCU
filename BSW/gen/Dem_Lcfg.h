@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Lcfg.h
- *   Generation Time: 2024-10-24 15:37:50
+ *   Generation Time: 2025-02-08 10:50:37
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -819,7 +819,7 @@
 #define DEM_CFG_ISDEF_DTCSEVERITYOFDTCTABLE                                                         STD_ON
 #define DEM_CFG_ISDEF_FUNCTIONALGROUPIDENTIFIEROFDTCTABLE                                           STD_OFF
 #define DEM_CFG_ISDEF_FUNCTIONALUNITOFDTCTABLE                                                      STD_OFF
-#define DEM_CFG_ISDEF_IMMEDIATENVSTORAGEOFDTCTABLE                                                  STD_ON
+#define DEM_CFG_ISDEF_IMMEDIATENVSTORAGEOFDTCTABLE                                                  STD_OFF
 #define DEM_CFG_ISDEF_J1939DTCOFDTCTABLE                                                            STD_OFF
 #define DEM_CFG_ISDEF_J1939NODEIDINDENDIDXOFDTCTABLE                                                STD_OFF
 #define DEM_CFG_ISDEF_J1939NODEIDINDSTARTIDXOFDTCTABLE                                              STD_OFF
@@ -1143,7 +1143,7 @@
 #define DEM_CFG_EQ2_DTCSEVERITYOFDTCTABLE                                                           0u
 #define DEM_CFG_EQ2_FUNCTIONALGROUPIDENTIFIEROFDTCTABLE                                             
 #define DEM_CFG_EQ2_FUNCTIONALUNITOFDTCTABLE                                                        
-#define DEM_CFG_EQ2_IMMEDIATENVSTORAGEOFDTCTABLE                                                    FALSE
+#define DEM_CFG_EQ2_IMMEDIATENVSTORAGEOFDTCTABLE                                                    
 #define DEM_CFG_EQ2_J1939DTCOFDTCTABLE                                                              
 #define DEM_CFG_EQ2_J1939NODEIDINDENDIDXOFDTCTABLE                                                  
 #define DEM_CFG_EQ2_J1939NODEIDINDSTARTIDXOFDTCTABLE                                                
@@ -1551,7 +1551,7 @@
 #define DEM_CFG_GLOBAL_FREEZEFRAME_SIZE                                0u                                /* /Dem/DemGeneral/DemMaxNumberEventEntryOBDFreezeFrame */ 
 #define DEM_CFG_GLOBAL_J1939_READING_DTC_RUNTIME_LIMIT                 3u                                /* /Dem/DemGeneral/DemGeneralJ1939/DemJ1939ReadingDTCRuntimeLimit not configured, substituted by number of events (incl. event #0) */ 
 #define DEM_CFG_GLOBAL_MIRROR_SIZE                                     0u                                /* /Dem/DemGeneral/DemMaxNumberEventEntryMirror */ 
-#define DEM_CFG_GLOBAL_NV_STORAGE_LIMIT                                0u                                /* /Dem/DemGeneral/DemImmediateNvStorageLimit, 0: no limit configured */ 
+#define DEM_CFG_GLOBAL_NV_STORAGE_LIMIT                                255u                              /* /Dem/DemGeneral/DemImmediateNvStorageLimit, 0: no limit configured */ 
 #define DEM_CFG_GLOBAL_PERMANENT_SIZE                                  0u                                /* /Dem/DemGeneral/DemMaxNumberEventEntryPermanent */ 
 #define DEM_CFG_GLOBAL_PRESTORED_FF_SIZE                               0u                                /* /Dem/DemGeneral/DemMaxNumberPrestoredFF, see Dem_Cfg_GlobalPrestorageSize() */ 
 #define DEM_CFG_GLOBAL_PRIMARY_SIZE                                    2u                                /* /Dem/DemGeneral/DemMaxNumberEventEntryPrimary */ 
@@ -1652,9 +1652,9 @@
 #define DEM_A2L_MAX_SIZE_STDENV_RECORD                                0uL          /* largest, configured StdEnvData */ 
 
  /*  NvRamBlock size configured in the NvM module  */ 
-#define DEM_CFG_ADMIN_DATABLOCK_SIZE                                  2u           /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_ADMIN */ 
-#define DEM_CFG_STATUS_DATABLOCK_SIZE                                 2u           /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_STATUS */ 
-#define DEM_CFG_PRIMARY_DATABLOCK_SIZE                                2u           /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_PRIMARY */ 
+#define DEM_CFG_ADMIN_DATABLOCK_SIZE                                  16u          /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_ADMIN */ 
+#define DEM_CFG_STATUS_DATABLOCK_SIZE                                 16u          /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_STATUS */ 
+#define DEM_CFG_PRIMARY_DATABLOCK_SIZE                                12u          /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_PRIMARY */ 
 
 
 
@@ -2160,7 +2160,7 @@
 #define Dem_Cfg_GetPassTimerCyclesOfDebounceTable(Index)                                            0  /**< HiRes- or LoRes-Timer ticks for DemDebounceTimePassedThreshold of the DemEventParameter/DemEventClass/DemDebounceAlgorithmClass/DemDebounceTimeBase */
 #define Dem_Cfg_IsStorageOfDebounceTable(Index)                                                     (((FALSE)) != FALSE)  /**< DemDebounceCounterStorage of the DemEventParameter/DemEventClass/DemDebounceAlgorithmClass/DemDebounceCounterBased */
 #define Dem_Cfg_GetDtcSeverityOfDtcTable(Index)                                                     0u
-#define Dem_Cfg_IsImmediateNvStorageOfDtcTable(Index)                                               (((FALSE)) != FALSE)
+#define Dem_Cfg_IsImmediateNvStorageOfDtcTable(Index)                                               (((boolean)(Dem_Cfg_GetFunctionalUnitOfDtcTable(Index) == 0u)) != FALSE)
 #define Dem_Cfg_GetIndexOfEnableConditionGroupTable(Index)                                          0u  /**< Dummy - contains always the index of this element (self) */
 #define Dem_Cfg_GetEnableConditionGroupTableInd(Index)                                              0u  /**< the indexes of the 1:1 sorted relation pointing to Dem_Cfg_EnableConditionGroupTable */
 #define Dem_Cfg_IsFulfilledAtInitOfEnableConditionInitTable(Index)                                  (((TRUE)) != FALSE)  /**< Initial value: 'FALSE' condition is not fulfilled, 'TRUE' condition is fulfilled */

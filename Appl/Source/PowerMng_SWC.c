@@ -120,7 +120,7 @@ FUNC(void, PowerMng_SWC_CODE) Led_Runnable1000ms(void) /* PRQA S 0624, 3206 */ /
     LED_LightFunc();
   }
 
-  if(CmdNvm == 1)
+/*  if(CmdNvm == 1)
   {
     VStdMemSet(BuffWr,0xAA,sizeof(BuffWr));
     NvM_WriteBlock(NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0,BuffWr);
@@ -131,7 +131,7 @@ FUNC(void, PowerMng_SWC_CODE) Led_Runnable1000ms(void) /* PRQA S 0624, 3206 */ /
     VStdMemSet(BuffRd,0xFF,sizeof(BuffRd));
     NvM_ReadBlock(NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0,BuffRd);
       CmdNvm = 0;
-  }
+  }*/
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

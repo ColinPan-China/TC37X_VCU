@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Lcfg.c
- *   Generation Time: 2024-10-24 15:37:49
+ *   Generation Time: 2025-02-08 10:50:37
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -328,11 +328,11 @@ CONST(Dem_InitMonitorForEventFPtrType, DEM_CONST) Dem_Cfg_InitMonitorForEvent[2]
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Dem_Cfg_MemoryBlockIdType, DEM_CONST) Dem_Cfg_MemoryBlockId[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index     MemoryBlockId                                                                     Comment */
-  /*     0 */ NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0 /*NvMBlockId=2*/     ,  /* [DemNvRamBlockId] */
-  /*     1 */ NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0_003 /*NvMBlockId=5*/ ,  /* [DemNvRamBlockId_003] */
-  /*     2 */ NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0_001 /*NvMBlockId=3*/ ,  /* [DemNvRamBlockId_001] */
-  /*     3 */ NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0_002 /*NvMBlockId=4*/    /* [DemNvRamBlockId_002] */
+  /* Index     MemoryBlockId                                                           Comment */
+  /*     0 */ NvMConf_NvMBlockDescriptor_NvM_DEM_AdminData /*NvMBlockId=2*/      ,  /* [DemNvRamBlockId] */
+  /*     1 */ NvMConf_NvMBlockDescriptor_NvM_DEM_StatusData /*NvMBlockId=5*/     ,  /* [DemNvRamBlockId_003] */
+  /*     2 */ NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_0 /*NvMBlockId=3*/ ,  /* [DemNvRamBlockId_001] */
+  /*     3 */ NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_1 /*NvMBlockId=4*/    /* [DemNvRamBlockId_002] */
 };
 #define DEM_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */

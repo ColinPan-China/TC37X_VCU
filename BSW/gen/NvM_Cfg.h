@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: NvM_Cfg.h
- *   Generation Time: 2024-10-24 16:40:46
+ *   Generation Time: 2025-02-08 10:50:36
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -134,10 +134,10 @@ typedef union
  */
 #define NvMConf___MultiBlockRequest (0u) 
 #define NvMConf_NvMBlockDescriptor_NvMConfigBlock (1u) 
-#define NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0 (2u) 
-#define NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0_001 (3u) 
-#define NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0_002 (4u) 
-#define NvMConf_NvMBlockDescriptor_NvMBlockDescriptor_UserData0_003 (5u) 
+#define NvMConf_NvMBlockDescriptor_NvM_DEM_AdminData (2u) 
+#define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_0 (3u) 
+#define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_1 (4u) 
+#define NvMConf_NvMBlockDescriptor_NvM_DEM_StatusData (5u) 
 #define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData1 (6u) 
 #define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2 (7u) 
 #define NvMConf_NvMBlockDescriptor_SWC1NvBlockNeed_UserData3 (8u) 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: NvM_Cfg.c
- *   Generation Time: 2024-10-24 16:40:46
+ *   Generation Time: 2025-02-08 10:59:52
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -72,6 +72,7 @@
 /* include list of the callback definitions */
 #include "Rte_Cbk.h" 
 #include "Nvm_App.h" 
+#include "Dem.h" 
 
 
 /* include configured file declaring or defining resource (un)locking service(s) */
@@ -99,10 +100,10 @@ CONST(uint16, NVM_PRIVATE_CONST) NvM_CrcQueueSize_u16 = NVM_TOTAL_NUM_OF_NVRAM_B
 static VAR(uint8, NVM_PRIVATE_DATA) NvMConfigBlock_RamBlock_au8[4u];
 
 #if ((NVM_DATA_INTEGRITY_INT_BUFFER == STD_ON) || (NVM_REPAIR_REDUNDANT_BLOCKS_API == STD_ON))
-static VAR(uint8, NVM_PRIVATE_DATA) NvMBlockDescriptor_UserData0_Crc[2uL]; 
-static VAR(uint8, NVM_PRIVATE_DATA) NvMBlockDescriptor_UserData0_001_Crc[2uL]; 
-static VAR(uint8, NVM_PRIVATE_DATA) NvMBlockDescriptor_UserData0_002_Crc[2uL]; 
-static VAR(uint8, NVM_PRIVATE_DATA) NvMBlockDescriptor_UserData0_003_Crc[2uL]; 
+static VAR(uint8, NVM_PRIVATE_DATA) NvM_DEM_AdminData_Crc[2uL]; 
+static VAR(uint8, NVM_PRIVATE_DATA) NvM_DEM_PrimaryEntry_0_Crc[2uL]; 
+static VAR(uint8, NVM_PRIVATE_DATA) NvM_DEM_PrimaryEntry_1_Crc[2uL]; 
+static VAR(uint8, NVM_PRIVATE_DATA) NvM_DEM_StatusData_Crc[2uL]; 
 static VAR(uint8, NVM_PRIVATE_DATA) NvM_SWC_NVBlockDescriptor_UserData1_Crc[2uL]; 
 static VAR(uint8, NVM_PRIVATE_DATA) NvM_SWC_NVBlockDescriptor_UserData2_Crc[2uL]; 
 static VAR(uint8, NVM_PRIVATE_DATA) SWC1NvBlockNeed_UserData3_Crc[2uL]; 
@@ -200,8 +201,8 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
         NVM_BLOCK_REDUNDANT /*  NvMBlockManagementType  */ , 
         NVM_BLOCK_CRC_16_ON /*  NvMBlockDataIntegrityType  */ 
       }, 
-      { /*  NvMBlockDescriptor_UserData0  */ 
-        (NvM_RamAddressType)&RamBlock_Nvm_UserData0 /*  NvMRamBlockDataAddress  */ , 
+      { /*  NvM_DEM_AdminData  */ 
+        (NvM_RamAddressType)&Dem_Cfg_AdminData /*  NvMRamBlockDataAddress  */ , 
         NULL_PTR /*  NvMRomBlockDataAddress  */ , 
         NULL_PTR /*  NvMInitBlockCallback  */ , 
         NULL_PTR /*  NvMInitBlockCallback (extended)  */ , 
@@ -211,7 +212,7 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
         NULL_PTR /*  NvMWriteRamBlockToNvCallback  */ , 
         NULL_PTR /*  NvMBlockPreWriteTransformCallback  */ , 
         NULL_PTR /*  NvMBlockPostReadTransformCallback  */ , 
-        NvMBlockDescriptor_UserData0_Crc /*  RamBlockDataIntegrity data buffer (defined by NvM)  */ , 
+        NvM_DEM_AdminData_Crc /*  RamBlockDataIntegrity data buffer (defined by NvM)  */ , 
         NULL_PTR /*  CRCCompMechanism CRC data (defined by NvM)  */ , 
                 {
           NVM_CALC_RAM_BLOCK_CRC_OFF, 
@@ -227,8 +228,8 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
           NVM_BLOCK_NOTIFY_BSWM_OFF
         } /*  Flags  */ , 
         0x0060u /*  NV block Base number (defined by FEE/EA)  */ , 
-        2u /*  NvMNvBlockLength  */ , 
-        2u /*  NvMNvBlockNVRAMDataLength  */ , 
+        16u /*  NvMNvBlockLength  */ , 
+        16u /*  NvMNvBlockNVRAMDataLength  */ , 
         0u /*  NvCryptoReference  */ , 
         0u /*  NvMacSize  */ , 
         0u /*  NvMacReference  */ , 
@@ -238,8 +239,8 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
         NVM_BLOCK_NATIVE /*  NvMBlockManagementType  */ , 
         NVM_BLOCK_CRC_16_ON /*  NvMBlockDataIntegrityType  */ 
       }, 
-      { /*  NvMBlockDescriptor_UserData0_001  */ 
-        (NvM_RamAddressType)&RamBlock_Nvm_UserData0 /*  NvMRamBlockDataAddress  */ , 
+      { /*  NvM_DEM_PrimaryEntry_0  */ 
+        (NvM_RamAddressType)&Dem_Cfg_PrimaryEntry_0 /*  NvMRamBlockDataAddress  */ , 
         NULL_PTR /*  NvMRomBlockDataAddress  */ , 
         NULL_PTR /*  NvMInitBlockCallback  */ , 
         NULL_PTR /*  NvMInitBlockCallback (extended)  */ , 
@@ -249,7 +250,7 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
         NULL_PTR /*  NvMWriteRamBlockToNvCallback  */ , 
         NULL_PTR /*  NvMBlockPreWriteTransformCallback  */ , 
         NULL_PTR /*  NvMBlockPostReadTransformCallback  */ , 
-        NvMBlockDescriptor_UserData0_001_Crc /*  RamBlockDataIntegrity data buffer (defined by NvM)  */ , 
+        NvM_DEM_PrimaryEntry_0_Crc /*  RamBlockDataIntegrity data buffer (defined by NvM)  */ , 
         NULL_PTR /*  CRCCompMechanism CRC data (defined by NvM)  */ , 
                 {
           NVM_CALC_RAM_BLOCK_CRC_OFF, 
@@ -265,8 +266,8 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
           NVM_BLOCK_NOTIFY_BSWM_OFF
         } /*  Flags  */ , 
         0x0020u /*  NV block Base number (defined by FEE/EA)  */ , 
-        2u /*  NvMNvBlockLength  */ , 
-        2u /*  NvMNvBlockNVRAMDataLength  */ , 
+        12u /*  NvMNvBlockLength  */ , 
+        12u /*  NvMNvBlockNVRAMDataLength  */ , 
         0u /*  NvCryptoReference  */ , 
         0u /*  NvMacSize  */ , 
         0u /*  NvMacReference  */ , 
@@ -276,8 +277,8 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
         NVM_BLOCK_NATIVE /*  NvMBlockManagementType  */ , 
         NVM_BLOCK_CRC_16_ON /*  NvMBlockDataIntegrityType  */ 
       }, 
-      { /*  NvMBlockDescriptor_UserData0_002  */ 
-        (NvM_RamAddressType)&RamBlock_Nvm_UserData0 /*  NvMRamBlockDataAddress  */ , 
+      { /*  NvM_DEM_PrimaryEntry_1  */ 
+        (NvM_RamAddressType)&Dem_Cfg_PrimaryEntry_1 /*  NvMRamBlockDataAddress  */ , 
         NULL_PTR /*  NvMRomBlockDataAddress  */ , 
         NULL_PTR /*  NvMInitBlockCallback  */ , 
         NULL_PTR /*  NvMInitBlockCallback (extended)  */ , 
@@ -287,7 +288,7 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
         NULL_PTR /*  NvMWriteRamBlockToNvCallback  */ , 
         NULL_PTR /*  NvMBlockPreWriteTransformCallback  */ , 
         NULL_PTR /*  NvMBlockPostReadTransformCallback  */ , 
-        NvMBlockDescriptor_UserData0_002_Crc /*  RamBlockDataIntegrity data buffer (defined by NvM)  */ , 
+        NvM_DEM_PrimaryEntry_1_Crc /*  RamBlockDataIntegrity data buffer (defined by NvM)  */ , 
         NULL_PTR /*  CRCCompMechanism CRC data (defined by NvM)  */ , 
                 {
           NVM_CALC_RAM_BLOCK_CRC_OFF, 
@@ -303,8 +304,8 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
           NVM_BLOCK_NOTIFY_BSWM_OFF
         } /*  Flags  */ , 
         0x0070u /*  NV block Base number (defined by FEE/EA)  */ , 
-        2u /*  NvMNvBlockLength  */ , 
-        2u /*  NvMNvBlockNVRAMDataLength  */ , 
+        12u /*  NvMNvBlockLength  */ , 
+        12u /*  NvMNvBlockNVRAMDataLength  */ , 
         0u /*  NvCryptoReference  */ , 
         0u /*  NvMacSize  */ , 
         0u /*  NvMacReference  */ , 
@@ -314,8 +315,8 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
         NVM_BLOCK_NATIVE /*  NvMBlockManagementType  */ , 
         NVM_BLOCK_CRC_16_ON /*  NvMBlockDataIntegrityType  */ 
       }, 
-      { /*  NvMBlockDescriptor_UserData0_003  */ 
-        (NvM_RamAddressType)&RamBlock_Nvm_UserData0 /*  NvMRamBlockDataAddress  */ , 
+      { /*  NvM_DEM_StatusData  */ 
+        (NvM_RamAddressType)&Dem_Cfg_StatusData /*  NvMRamBlockDataAddress  */ , 
         NULL_PTR /*  NvMRomBlockDataAddress  */ , 
         NULL_PTR /*  NvMInitBlockCallback  */ , 
         NULL_PTR /*  NvMInitBlockCallback (extended)  */ , 
@@ -325,7 +326,7 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
         NULL_PTR /*  NvMWriteRamBlockToNvCallback  */ , 
         NULL_PTR /*  NvMBlockPreWriteTransformCallback  */ , 
         NULL_PTR /*  NvMBlockPostReadTransformCallback  */ , 
-        NvMBlockDescriptor_UserData0_003_Crc /*  RamBlockDataIntegrity data buffer (defined by NvM)  */ , 
+        NvM_DEM_StatusData_Crc /*  RamBlockDataIntegrity data buffer (defined by NvM)  */ , 
         NULL_PTR /*  CRCCompMechanism CRC data (defined by NvM)  */ , 
                 {
           NVM_CALC_RAM_BLOCK_CRC_OFF, 
@@ -341,8 +342,8 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
           NVM_BLOCK_NOTIFY_BSWM_OFF
         } /*  Flags  */ , 
         0x0080u /*  NV block Base number (defined by FEE/EA)  */ , 
-        2u /*  NvMNvBlockLength  */ , 
-        2u /*  NvMNvBlockNVRAMDataLength  */ , 
+        16u /*  NvMNvBlockLength  */ , 
+        16u /*  NvMNvBlockNVRAMDataLength  */ , 
         0u /*  NvCryptoReference  */ , 
         0u /*  NvMacSize  */ , 
         0u /*  NvMacReference  */ , 

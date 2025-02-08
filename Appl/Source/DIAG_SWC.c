@@ -179,7 +179,7 @@
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
-
+#include "NvM.h"
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
@@ -490,6 +490,8 @@ FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void) /* PRQA S 0624, 3206 */ 
     Rte_Call_Event_DTC_0x000002_SetEventStatus(DEM_EVENT_STATUS_FAILED);
     Rte_Call_Event_DTC_0x000003_SetEventStatus(DEM_EVENT_STATUS_FAILED);
     DTC_FailCnt--;
+    NvM_SetRamBlockStatus(NvMConf_NvMBlockDescriptor_NvM_DEM_AdminData,TRUE);
+    NvM_SetRamBlockStatus(NvMConf_NvMBlockDescriptor_NvM_DEM_StatusData,TRUE);
   }
 
   Rte_Call_Event_DTC_0x000002_GetEventStatus(&DTC_Status_0002);
