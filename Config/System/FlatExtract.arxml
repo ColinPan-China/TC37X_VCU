@@ -4111,6 +4111,17 @@
                                   </INNER-PORT-IREF>
                                   <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP3_SpdSet</OUTER-PORT-REF>
                                 </DELEGATION-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="5ebe7fba-e9bc-4a72-a78a-2586a1f0e3b7">
+                                  <SHORT-NAME>DIAG_SWC_SecurityAccess_Level_3_Dcm_SecurityAccess_Level_3</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/SecurityAccess_Level_3</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/SecurityAccess_Level_3</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -4197,6 +4208,7 @@
                                     <SD GID="3fdd918c-645a-4515-a163-6f7b78c24061">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_LIN00_984dfd9e_SWC1_UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="d6107833-7ec4-46b6-bd77-dc484cc238be">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</SD>
                                     <SD GID="c7476a1f-c034-404b-b974-33b412a9cd72">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</SD>
+                                    <SD GID="5ebe7fba-e9bc-4a72-a78a-2586a1f0e3b7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_SecurityAccess_Level_3_Dcm_SecurityAccess_Level_3</SD>
                                     <SD GID="52f38fb1-f1fa-4839-bd5d-87d5584a122e">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</SD>
                                     <SD GID="dbd7af71-8f1f-4737-b93f-d0ed84b9ef39">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</SD>
                                     <SD GID="5087f367-db07-4346-be60-7752b5271a2d">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0_OpCycle_IgnitionCycle_DIAG_SWC_OpCycle_IgnitionCycle</SD>
@@ -4331,6 +4343,10 @@
                                     <SD GID="6CDF6892-603A-40FC-A109-4CC5F10B2CE9">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_RoutineServices_Vcu_Roution_00_RequestResults_RoutineServices_Vcu_Roution_00_RequestResults</SD>
                                     <SD GID="6F2E461F-DB9C-43BB-9DA1-40B1BED51C9D">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_RoutineServices_Vcu_Roution_00_Start_RoutineServices_Vcu_Roution_00_Start</SD>
                                     <SD GID="6C2C2451-B8AA-400A-B988-5421E704CF3C">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_RoutineServices_Vcu_Roution_00_Stop_RoutineServices_Vcu_Roution_00_Stop</SD>
+                                    <SD GID="62904C7F-6221-4449-AA9E-00709E584410">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_SecurityAccess_Level_3_CompareKey_SecurityAccess_Level_3_CompareKey</SD>
+                                    <SD GID="8CDDB831-AEAE-4784-937E-6A931458E844">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_SecurityAccess_Level_3_GetSecurityAttemptCounter_SecurityAccess_Level_3_GetSecurityAttemptCounter</SD>
+                                    <SD GID="D2ED75BA-EB15-4A00-B584-BB53AFBA2305">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_SecurityAccess_Level_3_GetSeed_SecurityAccess_Level_3_GetSeed</SD>
+                                    <SD GID="CD850F0B-5D7A-4B0C-A8E2-8E8D2AD3793F">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_SecurityAccess_Level_3_SetSecurityAttemptCounter_SecurityAccess_Level_3_SetSecurityAttemptCounter</SD>
                                     <SD GID="578A7505-0BEB-4C97-8B28-3D6105B5A55B">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/TMT_DTCMonitorRunnable_10ms</SD>
                                     <SD GID="C7C2A11E-09A8-42E1-B046-A5C65679E1C5">/ComponentTypes/DIAG_SWC/DataServices_VCU_DID_00_DataRecord</SD>
                                     <SD GID="38B68986-F484-48BB-BB6F-854BEDFBB6BC">/ComponentTypes/DIAG_SWC/Event_DTC_0x000002</SD>
@@ -4341,6 +4357,7 @@
                                     <SD GID="B060ED8F-5DB7-4170-9886-EC887118D324">/ComponentTypes/DIAG_SWC/OpCycle_WarmUpCycle</SD>
                                     <SD GID="B0D56753-A3B1-431E-9673-294B21654323">/ComponentTypes/DIAG_SWC/PS_DIAG_SWC_NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="AFEE0A09-7481-4F5D-A67D-391696AAC36A">/ComponentTypes/DIAG_SWC/RoutineServices_Vcu_Roution_00</SD>
+                                    <SD GID="9A8F96F8-7DF1-435F-B3F1-44ABD9EA0272">/ComponentTypes/DIAG_SWC/SecurityAccess_Level_3</SD>
                                     <SD GID="8822BCF7-9CB6-46FA-BB63-4E92E8E4BB4F">/ComponentTypes/DIAG_SWC_Implementation</SD>
                                     <SD GID="131259DF-AC35-4DE4-9686-94C3C6297399">/ComponentTypes/IoHwAb_SWC</SD>
                                     <SD GID="3BA5A63D-F666-4886-AFA6-FD454CFD7666">/ComponentTypes/IoHwAb_SWC/IoHwAb_SWC_InternalBehavior/IoHwAb_SWC_InitEvent</SD>
@@ -4548,6 +4565,8 @@
                                     <SD GID="ed1e2bf8-296c-4ef7-a639-2d84feed9e66">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmDiagnosticSessionControl</SD>
                                     <SD GID="b8d3fa7a-7b0c-4f84-a474-4c9eb594cc11">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior</SD>
                                     <SD GID="13b667ea-00e1-4b49-96b1-10f0de11ecea">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Dcm_MainFunction</SD>
+                                    <SD GID="cfdb1273-b6bf-4aa4-8706-cd479dae6344">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Dcm_MainFunction/OpServerCallDcm_MainFunction_GetSecurityAttemptCounter_SecurityAccess_Level_3</SD>
+                                    <SD GID="aa642d2c-2930-41bf-9586-8228d9c658eb">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Dcm_MainFunction/OpServerCallDcm_MainFunction_SetSecurityAttemptCounter_SecurityAccess_Level_3</SD>
                                     <SD GID="3b044e79-0e4e-48d4-b70a-5733508c1e13">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/GetActiveProtocol</SD>
                                     <SD GID="b93ab36f-c5b3-4f02-bcd6-fafe43e2215d">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/GetRequestKind</SD>
                                     <SD GID="c9df88ae-6400-400c-90b6-66109959a590">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/GetSecurityLevel</SD>
@@ -4737,7 +4756,13 @@
                                     <SD GID="822fa40a-cf2d-4473-bf97-e59fa0a8ff92">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/DCM_E_COMPARE_KEY_FAILED</SD>
                                     <SD GID="04b7daf1-8d8b-4cf9-9799-d71aa9ac2a55">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/DCM_E_PENDING</SD>
                                     <SD GID="fd4d24ee-2d4e-40dd-9c12-23e87401bae8">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/E_NOT_OK</SD>
+                                    <SD GID="d60eda72-7ee5-4eb3-a54d-296d3eee8330">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/GetSecurityAttemptCounter</SD>
+                                    <SD GID="61117b66-9440-4795-b5a2-24a64b5d57b7">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/GetSecurityAttemptCounter/AttemptCounter</SD>
+                                    <SD GID="1951616d-81a2-4ef1-b17f-f3b30aa552cc">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/GetSecurityAttemptCounter/OpStatus</SD>
                                     <SD GID="eb2d9615-a1f6-459c-bb7f-12ee6b555b2e">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/GetSeed</SD>
+                                    <SD GID="fbc8f2d4-0a5a-4f14-9727-5d1bd2ebda70">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/SetSecurityAttemptCounter</SD>
+                                    <SD GID="2aa9b291-9a10-4946-b915-592f4529c8fc">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/SetSecurityAttemptCounter/AttemptCounter</SD>
+                                    <SD GID="1f9c70b6-5b77-4734-80e7-f35cd6a71014">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/SetSecurityAttemptCounter/OpStatus</SD>
                                     <SD GID="a6e1c581-b2ef-4b63-8539-e74146efd8c1">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_UnlockedL1</SD>
                                     <SD GID="188f566a-5402-48a5-b0b3-f3d69748efaf">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_UnlockedL1/CompareKey</SD>
                                     <SD GID="2616d156-afa8-457b-acb1-f119c418f75e">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_UnlockedL1/DCM_E_COMPARE_KEY_FAILED</SD>

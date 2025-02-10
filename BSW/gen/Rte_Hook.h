@@ -162,8 +162,12 @@
  *  Rte_CallHook_Dcm_RoutineServices_Vcu_Roution_00_Stop_Start
  *  Rte_CallHook_Dcm_SecurityAccess_Level_3_CompareKey_Return
  *  Rte_CallHook_Dcm_SecurityAccess_Level_3_CompareKey_Start
+ *  Rte_CallHook_Dcm_SecurityAccess_Level_3_GetSecurityAttemptCounter_Return
+ *  Rte_CallHook_Dcm_SecurityAccess_Level_3_GetSecurityAttemptCounter_Start
  *  Rte_CallHook_Dcm_SecurityAccess_Level_3_GetSeed_Return
  *  Rte_CallHook_Dcm_SecurityAccess_Level_3_GetSeed_Start
+ *  Rte_CallHook_Dcm_SecurityAccess_Level_3_SetSecurityAttemptCounter_Return
+ *  Rte_CallHook_Dcm_SecurityAccess_Level_3_SetSecurityAttemptCounter_Start
  *  Rte_CallHook_Dcm_SecurityAccess_UnlockedL1_CompareKey_Return
  *  Rte_CallHook_Dcm_SecurityAccess_UnlockedL1_CompareKey_Start
  *  Rte_CallHook_Dcm_SecurityAccess_UnlockedL1_GetSeed_Return
@@ -340,6 +344,14 @@
  *  Rte_Runnable_DIAG_SWC_RoutineServices_Vcu_Roution_00_Start_Start
  *  Rte_Runnable_DIAG_SWC_RoutineServices_Vcu_Roution_00_Stop_Return
  *  Rte_Runnable_DIAG_SWC_RoutineServices_Vcu_Roution_00_Stop_Start
+ *  Rte_Runnable_DIAG_SWC_SecurityAccess_Level_3_CompareKey_Return
+ *  Rte_Runnable_DIAG_SWC_SecurityAccess_Level_3_CompareKey_Start
+ *  Rte_Runnable_DIAG_SWC_SecurityAccess_Level_3_GetSecurityAttemptCounter_Return
+ *  Rte_Runnable_DIAG_SWC_SecurityAccess_Level_3_GetSecurityAttemptCounter_Start
+ *  Rte_Runnable_DIAG_SWC_SecurityAccess_Level_3_GetSeed_Return
+ *  Rte_Runnable_DIAG_SWC_SecurityAccess_Level_3_GetSeed_Start
+ *  Rte_Runnable_DIAG_SWC_SecurityAccess_Level_3_SetSecurityAttemptCounter_Return
+ *  Rte_Runnable_DIAG_SWC_SecurityAccess_Level_3_SetSecurityAttemptCounter_Start
  *  Rte_Runnable_Dcm_Dcm_MainFunction_Return
  *  Rte_Runnable_Dcm_Dcm_MainFunction_Start
  *  Rte_Runnable_Dcm_GetActiveProtocol_Return

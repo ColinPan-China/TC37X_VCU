@@ -345,6 +345,7 @@
  *
  * Array Types:
  * ============
+ * Dcm_Data2ByteType: Array with 2 element(s) of type uint8
  * Dcm_Data4ByteType: Array with 4 element(s) of type uint8
  * NvM_Arry4Bytes: Array with 4 element(s) of type uint8
  *
@@ -828,6 +829,206 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_Stop(Dcm_Stop
  * Symbol: RoutineServices_Vcu_Roution_00_Stop (returns application error)
  *********************************************************************************************************************/
   LED_In = 0xFF;
+  return RTE_E_OK;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: SecurityAccess_Level_3_CompareKey
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <CompareKey> of PortPrototype <SecurityAccess_Level_3>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType SecurityAccess_Level_3_CompareKey(const uint8 *Key, Dcm_OpStatusType OpStatus, Dcm_NegativeResponseCodeType *ErrorCode)
+ *     Argument Key: uint8* is of type Dcm_Data2ByteType
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_SecurityAccess_Level_3_DCM_E_COMPARE_KEY_FAILED
+ *   RTE_E_SecurityAccess_Level_3_DCM_E_PENDING
+ *   RTE_E_SecurityAccess_Level_3_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: SecurityAccess_Level_3_CompareKey_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_CompareKey(P2CONST(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_DATA) Key, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: SecurityAccess_Level_3_CompareKey (returns application error)
+ *********************************************************************************************************************/
+  uint16 keytmp = 0x00U; 
+  keytmp = Key[0] + (Key[1]<<8);
+  if( keytmp == 0x2728 )
+  {
+    return 0;
+  }
+  else
+  {
+    return 1;
+  }
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: SecurityAccess_Level_3_GetSecurityAttemptCounter
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <GetSecurityAttemptCounter> of PortPrototype <SecurityAccess_Level_3>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType SecurityAccess_Level_3_GetSecurityAttemptCounter(Dcm_OpStatusType OpStatus, uint8 *AttemptCounter)
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_SecurityAccess_Level_3_DCM_E_PENDING
+ *   RTE_E_SecurityAccess_Level_3_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: SecurityAccess_Level_3_GetSecurityAttemptCounter_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_GetSecurityAttemptCounter(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) AttemptCounter) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: SecurityAccess_Level_3_GetSecurityAttemptCounter (returns application error)
+ *********************************************************************************************************************/
+
+  return RTE_E_OK;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: SecurityAccess_Level_3_GetSeed
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <GetSeed> of PortPrototype <SecurityAccess_Level_3>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType SecurityAccess_Level_3_GetSeed(Dcm_OpStatusType OpStatus, uint8 *Seed, Dcm_NegativeResponseCodeType *ErrorCode)
+ *     Argument Seed: uint8* is of type Dcm_Data2ByteType
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_SecurityAccess_Level_3_DCM_E_PENDING
+ *   RTE_E_SecurityAccess_Level_3_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: SecurityAccess_Level_3_GetSeed_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_GetSeed(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Seed, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: SecurityAccess_Level_3_GetSeed (returns application error)
+ *********************************************************************************************************************/
+  *Seed = 0x27;
+
+  return RTE_E_OK;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: SecurityAccess_Level_3_SetSecurityAttemptCounter
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <SetSecurityAttemptCounter> of PortPrototype <SecurityAccess_Level_3>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType SecurityAccess_Level_3_SetSecurityAttemptCounter(Dcm_OpStatusType OpStatus, uint8 AttemptCounter)
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_SecurityAccess_Level_3_DCM_E_PENDING
+ *   RTE_E_SecurityAccess_Level_3_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: SecurityAccess_Level_3_SetSecurityAttemptCounter_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_SetSecurityAttemptCounter(Dcm_OpStatusType OpStatus, uint8 AttemptCounter) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: SecurityAccess_Level_3_SetSecurityAttemptCounter (returns application error)
+ *********************************************************************************************************************/
+
   return RTE_E_OK;
 
 /**********************************************************************************************************************

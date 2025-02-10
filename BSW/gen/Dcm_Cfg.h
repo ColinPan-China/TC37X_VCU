@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Cfg.h
- *   Generation Time: 2024-11-01 15:23:38
+ *   Generation Time: 2025-02-10 09:15:39
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -104,7 +104,7 @@
 /*! Support security access delay on boot */
 # define DCM_STATE_SEC_DELAY_ON_BOOT_ENABLED                                   STD_OFF
 /*! Support SecurityGet-/SetAttemptCounter APIs */
-# define DCM_STATE_SEC_ATT_CNTR_EXT_STORAGE_ENABLED                            STD_OFF
+# define DCM_STATE_SEC_ATT_CNTR_EXT_STORAGE_ENABLED                            STD_ON
 /*! Support security fixed bytes */
 # define DCM_STATE_SECURITY_FIXED_BYTES_ENABLED                                STD_OFF
 /*! Support mulitple secuirty fixed bytes per security level */

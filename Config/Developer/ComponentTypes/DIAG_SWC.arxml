@@ -260,6 +260,35 @@
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/OperationCycle</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="9A8F96F8-7DF1-435F-B3F1-44ABD9EA0272">
+              <SHORT-NAME>SecurityAccess_Level_3</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/GetSeed</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/CompareKey</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/GetSecurityAttemptCounter</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/SetSecurityAttemptCounter</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
           </PORTS>
           <INTERNAL-BEHAVIORS>
             <SWC-INTERNAL-BEHAVIOR UUID="9769A5E0-D1CD-49AB-890E-9641785FFDCC">
@@ -335,6 +364,38 @@
                   <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/DTCMonitorRunnable_10ms</START-ON-EVENT-REF>
                   <PERIOD>0.01</PERIOD>
                 </TIMING-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="CD850F0B-5D7A-4B0C-A8E2-8E8D2AD3793F">
+                  <SHORT-NAME>OIT_SecurityAccess_Level_3_SetSecurityAttemptCounter_SecurityAccess_Level_3_SetSecurityAttemptCounter</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/SecurityAccess_Level_3_SetSecurityAttemptCounter</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/SecurityAccess_Level_3</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/SetSecurityAttemptCounter</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="8CDDB831-AEAE-4784-937E-6A931458E844">
+                  <SHORT-NAME>OIT_SecurityAccess_Level_3_GetSecurityAttemptCounter_SecurityAccess_Level_3_GetSecurityAttemptCounter</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/SecurityAccess_Level_3_GetSecurityAttemptCounter</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/SecurityAccess_Level_3</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/GetSecurityAttemptCounter</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="62904C7F-6221-4449-AA9E-00709E584410">
+                  <SHORT-NAME>OIT_SecurityAccess_Level_3_CompareKey_SecurityAccess_Level_3_CompareKey</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/SecurityAccess_Level_3_CompareKey</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/SecurityAccess_Level_3</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/CompareKey</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="D2ED75BA-EB15-4A00-B584-BB53AFBA2305">
+                  <SHORT-NAME>OIT_SecurityAccess_Level_3_GetSeed_SecurityAccess_Level_3_GetSeed</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/SecurityAccess_Level_3_GetSeed</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/SecurityAccess_Level_3</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/GetSeed</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
               </EVENTS>
               <RUNNABLES>
                 <RUNNABLE-ENTITY UUID="4127B6E4-DDF5-480E-8E51-BD7799F7C539">
@@ -496,6 +557,18 @@
                       </OPERATION-IREF>
                     </SYNCHRONOUS-SERVER-CALL-POINT>
                   </SERVER-CALL-POINTS>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="2EBE98EF-8C75-476B-9BF4-4F42E97D9218">
+                  <SHORT-NAME>SecurityAccess_Level_3_SetSecurityAttemptCounter</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="6D9D5556-7146-4AF4-AB85-407023AD68E0">
+                  <SHORT-NAME>SecurityAccess_Level_3_GetSecurityAttemptCounter</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="049F9C1C-3A88-467D-83FD-1E1A233C1A1D">
+                  <SHORT-NAME>SecurityAccess_Level_3_CompareKey</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="32EA7DA9-C268-4133-8F45-CE71ECF94BE8">
+                  <SHORT-NAME>SecurityAccess_Level_3_GetSeed</SHORT-NAME>
                 </RUNNABLE-ENTITY>
               </RUNNABLES>
               <SERVICE-DEPENDENCYS>

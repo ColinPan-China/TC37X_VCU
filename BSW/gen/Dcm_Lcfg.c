@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Lcfg.c
- *   Generation Time: 2024-11-01 15:23:38
+ *   Generation Time: 2025-02-10 09:15:39
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -391,6 +391,50 @@ DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_SubSvcWrapper_DcmService_Ha
   Dcm_OpStatusType opStatus,
   Dcm_MsgContextPtrType pMsgContext,
   Dcm_NegativeResponseCodePtrType ErrorCode
+  );
+/***********************************************************************************************************************
+ *  Dcm_Svc27_Dummy_GetSecurityAttemptCounter()
+ ***********************************************************************************************************************/
+/*! \brief         Gets attempt counter.
+ *  \details       Once DCM is initialized, DCM requests this function per security level to get the stored
+ *                 attempt-counter value prior last power-down/reset event. The concrete name of the callout is defined
+ *                 by the configuration parameter
+ *                 /Dcm/DcmConfigSet/DcmDsp/DcmDspSecurity/DcmDspSecurityRow/DcmDspSecurityGetAttemptCounterFnc.
+ *  \param[in]     OpStatus        The operation status
+ *  \param[out]    AttemptCounter  Attempt counter value
+ *  \return        E_OK            The operation is finished
+ *  \return        E_NOT_OK        The operation has failed
+ *  \return        DCM_E_PENDING   The operation is not yet finished
+ *  \context       TASK
+ *  \reentrant     FALSE
+ *  \synchronous   FALSE
+ *  \pre           -
+ ***********************************************************************************************************************/
+DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_Svc27_Dummy_GetSecurityAttemptCounter(
+  Dcm_OpStatusType OpStatus,
+  P2VAR(uint8, AUTOMATIC, DCM_VAR_NOINIT) AttemptCounter
+  );
+/***********************************************************************************************************************
+ *  Dcm_Svc27_Dummy_SetSecurityAttemptCounter()
+ ***********************************************************************************************************************/
+/*! \brief         Sets attempt counter.
+ *  \details       Each time the corresponding security level counter value is changes, DCM will first notify the
+ *                 application calling this API to store the new value prior giving any result to the diagnostic client.
+ *                 The concrete name of the callout is defined by the configuration parameter
+ *                 /Dcm/DcmConfigSet/DcmDsp/DcmDspSecurity/DcmDspSecurityRow/DcmDspSecuritySetAttemptCounterFnc.
+ *  \param[in]     OpStatus        The operation status
+ *  \param[in]     AttemptCounter  Attempt counter value
+ *  \return        E_OK            The operation is finished
+ *  \return        E_NOT_OK        The operation has failed
+ *  \return        DCM_E_PENDING   The operation is not yet finished
+ *  \context       TASK
+ *  \reentrant     FALSE
+ *  \synchronous   FALSE
+ *  \pre           -
+ ***********************************************************************************************************************/
+DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_Svc27_Dummy_SetSecurityAttemptCounter(
+  Dcm_OpStatusType OpStatus,
+  uint8 AttemptCounter
   );
 #define DCM_STOP_SEC_CALLOUT_CODE
 #include "MemMap.h"                                                                                                                                  /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -981,8 +1025,8 @@ CONST(Dcm_CfgSvc27SubFuncInfoType, DCM_CONST) Dcm_CfgSvc27SubFuncInfo[4]=
 /*! Service 0x27 security level properties table  */
 CONST(Dcm_CfgSvc27SecLevelInfoType, DCM_CONST) Dcm_CfgSvc27SecLevelInfo[2]=
 {
-   { ((Dcm_Svc27GetSeedFuncType)(Rte_Call_SecurityAccess_UnlockedL1_GetSeed)),Rte_Call_SecurityAccess_UnlockedL1_CompareKey,   4u, 0u} /* SecLvl: UnlockedL1 */ /* PRQA S 0313 */ /* MD_Dcm_0313 */
-  ,{ ((Dcm_Svc27GetSeedFuncType)(Rte_Call_SecurityAccess_Level_3_GetSeed)),Rte_Call_SecurityAccess_Level_3_CompareKey,   2u, 0u} /* SecLvl: Level_3 */ /* PRQA S 0313 */ /* MD_Dcm_0313 */
+   { ((Dcm_Svc27GetSeedFuncType)(Rte_Call_SecurityAccess_UnlockedL1_GetSeed)),Rte_Call_SecurityAccess_UnlockedL1_CompareKey,Dcm_Svc27_Dummy_GetSecurityAttemptCounter,Dcm_Svc27_Dummy_SetSecurityAttemptCounter,   4u, 0u} /* SecLvl: UnlockedL1 */ /* PRQA S 0313 */ /* MD_Dcm_0313 */
+  ,{ ((Dcm_Svc27GetSeedFuncType)(Rte_Call_SecurityAccess_Level_3_GetSeed)),Rte_Call_SecurityAccess_Level_3_CompareKey,Rte_Call_SecurityAccess_Level_3_GetSecurityAttemptCounter,Rte_Call_SecurityAccess_Level_3_SetSecurityAttemptCounter,   2u, 0u} /* SecLvl: Level_3 */ /* PRQA S 0313 */ /* MD_Dcm_0313 */
 };
 /*! Indirection from service 0x27 sub functions to execution pre conditions */
 CONST(Dcm_CfgStateRefMemType, DCM_CONST) Dcm_CfgSvc27SubFuncExecPrecondTable[4]=
@@ -1363,6 +1407,32 @@ DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_SubSvcWrapper_DcmService_Ha
 {
   DCM_IGNORE_UNREF_PARAM(pContext);  /* PRQA S 3112 */ /* MD_MSR_DummyStmt */
   return DcmService_HardReset(opStatus, pMsgContext, ErrorCode);  /* SBSW_DCM_GEN_PARAM_PTR_FORWARD */
+}
+/***********************************************************************************************************************
+ *  Dcm_Svc27_Dummy_GetSecurityAttemptCounter()
+ ***********************************************************************************************************************/
+/* Implements CDD Dcm_Svc27_Dummy_GetSecurityAttemptCounter() */
+DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_Svc27_Dummy_GetSecurityAttemptCounter(
+  Dcm_OpStatusType OpStatus,
+  P2VAR(uint8, AUTOMATIC, DCM_VAR_NOINIT) AttemptCounter
+  )
+{
+  DCM_IGNORE_UNREF_PARAM(OpStatus);  /* PRQA S 3112 */ /* MD_MSR_DummyStmt */
+  *AttemptCounter =  0u; /* Set counter always to zero */  /* SBSW_DCM_GEN_PARAM_PTR_WRITE */
+  return E_OK;
+}
+/***********************************************************************************************************************
+ *  Dcm_Svc27_Dummy_SetSecurityAttemptCounter()
+ ***********************************************************************************************************************/
+/* Implements CDD Dcm_Svc27_Dummy_SetSecurityAttemptCounter() */
+DCM_LOCAL FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_Svc27_Dummy_SetSecurityAttemptCounter(
+  Dcm_OpStatusType OpStatus, 
+  uint8 AttemptCounter
+  )
+{
+  DCM_IGNORE_UNREF_PARAM(OpStatus);  /* PRQA S 3112 */ /* MD_MSR_DummyStmt */
+  DCM_IGNORE_UNREF_PARAM(AttemptCounter);  /* PRQA S 3112 */ /* MD_MSR_DummyStmt */
+  return E_OK;
 }
 #define DCM_STOP_SEC_CALLOUT_CODE
 #include "MemMap.h"                                                                                                                                  /* PRQA S 5087 */ /* MD_MSR_MemMap */

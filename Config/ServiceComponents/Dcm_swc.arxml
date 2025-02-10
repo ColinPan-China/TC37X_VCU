@@ -2168,6 +2168,62 @@
                         <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/DCM_E_COMPARE_KEY_FAILED</POSSIBLE-ERROR-REF>
                       </POSSIBLE-ERROR-REFS>
                     </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="d60eda72-7ee5-4eb3-a54d-296d3eee8330">
+                      <SHORT-NAME>GetSecurityAttemptCounter</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="1951616d-81a2-4ef1-b17f-f3b30aa552cc">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="61117b66-9440-4795-b5a2-24a64b5d57b7">
+                          <SHORT-NAME>AttemptCounter</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="fbc8f2d4-0a5a-4f14-9727-5d1bd2ebda70">
+                      <SHORT-NAME>SetSecurityAttemptCounter</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="1f9c70b6-5b77-4734-80e7-f35cd6a71014">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="2aa9b291-9a10-4946-b915-592f4529c8fc">
+                          <SHORT-NAME>AttemptCounter</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
                   </OPERATIONS>
                   <POSSIBLE-ERRORS>
                     <APPLICATION-ERROR UUID="fd4d24ee-2d4e-40dd-9c12-23e87401bae8">
@@ -5035,6 +5091,22 @@
                               <OPERATION-IREF>
                                 <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/RoutineServices_Vcu_Roution_00</CONTEXT-R-PORT-REF>
                                 <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_Vcu_Roution_00/RequestResults</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="cfdb1273-b6bf-4aa4-8706-cd479dae6344">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_GetSecurityAttemptCounter_SecurityAccess_Level_3</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/SecurityAccess_Level_3</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/GetSecurityAttemptCounter</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="aa642d2c-2930-41bf-9586-8228d9c658eb">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_SetSecurityAttemptCounter_SecurityAccess_Level_3</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/SecurityAccess_Level_3</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/SecurityAccess_Level_3/SetSecurityAttemptCounter</TARGET-REQUIRED-OPERATION-REF>
                               </OPERATION-IREF>
                               <TIMEOUT>0</TIMEOUT>
                             </SYNCHRONOUS-SERVER-CALL-POINT>

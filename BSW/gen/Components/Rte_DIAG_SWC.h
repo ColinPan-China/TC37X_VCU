@@ -156,6 +156,10 @@ extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNe
 #  define RTE_RUNNABLE_RoutineServices_Vcu_Roution_00_RequestResults RoutineServices_Vcu_Roution_00_RequestResults
 #  define RTE_RUNNABLE_RoutineServices_Vcu_Roution_00_Start RoutineServices_Vcu_Roution_00_Start
 #  define RTE_RUNNABLE_RoutineServices_Vcu_Roution_00_Stop RoutineServices_Vcu_Roution_00_Stop
+#  define RTE_RUNNABLE_SecurityAccess_Level_3_CompareKey SecurityAccess_Level_3_CompareKey
+#  define RTE_RUNNABLE_SecurityAccess_Level_3_GetSecurityAttemptCounter SecurityAccess_Level_3_GetSecurityAttemptCounter
+#  define RTE_RUNNABLE_SecurityAccess_Level_3_GetSeed SecurityAccess_Level_3_GetSeed
+#  define RTE_RUNNABLE_SecurityAccess_Level_3_SetSecurityAttemptCounter SecurityAccess_Level_3_SetSecurityAttemptCounter
 # endif
 
 FUNC(void, DIAG_SWC_CODE) DIAG_SWC_Init(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
@@ -166,6 +170,10 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_VCU_DID_00_DataRecord_WriteData
 FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_RequestResults(Dcm_OpStatusType OpStatus, P2VAR(Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Out_New_Data_Object, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_Start(Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectType In_New_Data_Object, Dcm_OpStatusType OpStatus, P2VAR(Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Out_New_Data_Object, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_Stop(Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectType In_New_Data_Object, Dcm_OpStatusType OpStatus, P2VAR(Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Out_New_Data_Object, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_CompareKey(P2CONST(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_DATA) Key, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_GetSecurityAttemptCounter(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) AttemptCounter); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_GetSeed(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Seed, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_SetSecurityAttemptCounter(Dcm_OpStatusType OpStatus, uint8 AttemptCounter); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 
 # define DIAG_SWC_STOP_SEC_CODE
 # include "DIAG_SWC_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -193,6 +201,12 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_Stop(Dcm_Stop
 #  define RTE_E_RoutineServices_Vcu_Roution_00_DCM_E_PENDING (10U)
 
 #  define RTE_E_RoutineServices_Vcu_Roution_00_E_NOT_OK (1U)
+
+#  define RTE_E_SecurityAccess_Level_3_DCM_E_COMPARE_KEY_FAILED (11U)
+
+#  define RTE_E_SecurityAccess_Level_3_DCM_E_PENDING (10U)
+
+#  define RTE_E_SecurityAccess_Level_3_E_NOT_OK (1U)
 # endif /* !defined(RTE_CORE) */
 
 # ifdef __cplusplus
