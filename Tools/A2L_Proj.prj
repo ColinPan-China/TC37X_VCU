@@ -340,7 +340,7 @@
   <Characteristics>
     <Characteristic>
       <InterfaceDatas />
-      <Address>1879084304</Address>
+      <Address>-2147478271</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -355,7 +355,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879084304</BaseAddress>
+      <BaseAddress>-2147478271</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Deposit>__UBYTE_S</Deposit>
@@ -365,7 +365,7 @@
     </Characteristic>
     <Characteristic>
       <InterfaceDatas />
-      <Address>1879084336</Address>
+      <Address>1879089374</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -380,7 +380,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879084336</BaseAddress>
+      <BaseAddress>1879089374</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Deposit>__UBYTE_S</Deposit>
@@ -392,7 +392,7 @@
   <Measurements>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879090840</Address>
+      <Address>1879096290</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -407,7 +407,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879090840</BaseAddress>
+      <BaseAddress>1879096290</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -416,7 +416,7 @@
     </Measurement>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879090841</Address>
+      <Address>1879096291</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -431,7 +431,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879090841</BaseAddress>
+      <BaseAddress>1879096291</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -440,7 +440,7 @@
     </Measurement>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879090842</Address>
+      <Address>1879096292</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -455,7 +455,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879090842</BaseAddress>
+      <BaseAddress>1879096292</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -464,7 +464,7 @@
     </Measurement>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879090843</Address>
+      <Address>1879096293</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -479,7 +479,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879090843</BaseAddress>
+      <BaseAddress>1879096293</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -488,33 +488,7 @@
     </Measurement>
     <Measurement>
       <InterfaceDatas />
-      <Address>1879084619</Address>
-      <Conversion>DEFAULT_CM</Conversion>
-      <DisplayIdentifier />
-      <Format>%0.15</Format>
-      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
-      <LowerLimit>0</LowerLimit>
-      <UpperLimit>255</UpperLimit>
-      <ExtendedLowerLimit>0</ExtendedLowerLimit>
-      <ExtendedUpperLimit>255</ExtendedUpperLimit>
-      <Name>SWC1.c_UserData1Cmd</Name>
-      <LongIdentifier />
-      <Symbol>SWC1.c_UserData1Cmd</Symbol>
-      <KeyName>SWC1.c|UserData1Cmd</KeyName>
-      <OriginalName>SWC1.c|UserData1Cmd</OriginalName>
-      <State>0</State>
-      <DataType>UBYTE</DataType>
-      <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879084619</BaseAddress>
-      <IndividualOffsetAddress>0</IndividualOffsetAddress>
-      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
-      <Accuracy>0</Accuracy>
-      <BitMask>255</BitMask>
-      <Resolution>0</Resolution>
-    </Measurement>
-    <Measurement>
-      <InterfaceDatas />
-      <Address>1879084622</Address>
+      <Address>1879089447</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <DisplayIdentifier />
       <Format>%0.15</Format>
@@ -531,7 +505,85 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879084622</BaseAddress>
+      <BaseAddress>1879089447</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Accuracy>0</Accuracy>
+      <BitMask>255</BitMask>
+      <Resolution>0</Resolution>
+    </Measurement>
+    <Measurement>
+      <InterfaceDatas />
+      <Address>1879089441</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <DisplayIdentifier />
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>DIAG_SWC.c_DTC_Status_0002</Name>
+      <LongIdentifier />
+      <Symbol>DIAG_SWC.c_DTC_Status_0002</Symbol>
+      <KeyName>DIAG_SWC.c|DTC_Status_0002</KeyName>
+      <OriginalName>DIAG_SWC.c|DTC_Status_0002</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089441</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Accuracy>0</Accuracy>
+      <BitMask>255</BitMask>
+      <Resolution>0</Resolution>
+    </Measurement>
+    <Measurement>
+      <InterfaceDatas />
+      <Address>1879089442</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <DisplayIdentifier />
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>DIAG_SWC.c_DTC_Status_0003</Name>
+      <LongIdentifier />
+      <Symbol>DIAG_SWC.c_DTC_Status_0003</Symbol>
+      <KeyName>DIAG_SWC.c|DTC_Status_0003</KeyName>
+      <OriginalName>DIAG_SWC.c|DTC_Status_0003</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089442</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Accuracy>0</Accuracy>
+      <BitMask>255</BitMask>
+      <Resolution>0</Resolution>
+    </Measurement>
+    <Measurement>
+      <InterfaceDatas />
+      <Address>1879089440</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <DisplayIdentifier />
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>DIAG_SWC.c_DTC_FailCnt</Name>
+      <LongIdentifier />
+      <Symbol>DIAG_SWC.c_DTC_FailCnt</Symbol>
+      <KeyName>DIAG_SWC.c|DTC_FailCnt</KeyName>
+      <OriginalName>DIAG_SWC.c|DTC_FailCnt</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089440</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Accuracy>0</Accuracy>
@@ -555,6 +607,7 @@
   </ConversionMethods>
   <EnumNames>
     <string>AccessType</string>
+    <string>Adc_InitStateType</string>
     <string>AlarmType</string>
     <string>ApplicationStateType</string>
     <string>ApplicationType</string>
@@ -592,12 +645,28 @@
     <string>Dem_MemAccess_Displace_CheckResultType</string>
     <string>Dem_Scheduler_TaskId</string>
     <string>Dem_Scheduler_TaskIdType</string>
+    <string>Dma_CrcType</string>
+    <string>Dma_EventsType</string>
+    <string>Dma_MoveEngineListType</string>
+    <string>ExtAdcInputType</string>
     <string>Fee_QsBlock_StateType</string>
     <string>IdleModeType</string>
     <string>IfxCpu_OverlayAddressMask</string>
     <string>IfxCpu_OverlayMemorySelect</string>
     <string>IfxCpu_ResourceCpu</string>
     <string>ISRType</string>
+    <string>Lin_17_AscLin_CoreInitStatusType</string>
+    <string>Lin_17_AscLin_InternalStatusType</string>
+    <string>Lin_FrameCsModelType</string>
+    <string>Lin_FrameResponseType</string>
+    <string>Lin_FrameResponseTypeTag</string>
+    <string>Lin_StatusType</string>
+    <string>LinTrcv_TrcvModeType</string>
+    <string>LinTrcv_TrcvModeTypeTag</string>
+    <string>LinTrcv_TrcvWakeupModeType</string>
+    <string>LinTrcv_TrcvWakeupModeTypeTag</string>
+    <string>LinTrcv_TrcvWakeupReasonType</string>
+    <string>LinTrcv_TrcvWakeupReasonTypeTag</string>
     <string>Mcu_CpuIdType</string>
     <string>Mcu_CpuModeType</string>
     <string>Mcu_PllStatusType</string>
@@ -667,9 +736,16 @@
     <string>RestartType</string>
     <string>ScheduleTableStatusType</string>
     <string>ScheduleTableType</string>
+    <string>Spi_AsyncModeType</string>
+    <string>Spi_JobResultType</string>
+    <string>Spi_LoopBackType</string>
+    <string>Spi_SeqResultType</string>
+    <string>Spi_StatusType</string>
+    <string>SpiCommsTypes</string>
     <string>SpinlockIdType</string>
     <string>TaskStateType</string>
     <string>TaskType</string>
+    <string>Tle8888qk_State_e</string>
     <string>TpDataStateType</string>
     <string>TrustedFunctionIndexType</string>
     <string>TryToGetSpinlockType</string>
