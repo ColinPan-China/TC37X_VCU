@@ -48,6 +48,7 @@
 #include "TLE8888qk.h"
 #include "Adc_Sample.h"
 #include "TJA1145.h"
+#include "Dio.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -92,6 +93,10 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
   SRC_QSPI3TX.B.SRE 	= 1;
 
   Tja1145_Init();
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_7_IN0, 1 );
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, 1 );
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_9_IN2, 1 );
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_10_IN3, 1 );
 //  Tja1145_GoSleep();
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
@@ -112,7 +117,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: IoHwAb_SWC_Runnable_doc
  *********************************************************************************************************************/
-
+uint8 sts_SV = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -125,6 +130,19 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
  *********************************************************************************************************************/
   Adc_SampleMain();
   TLE8888qk_Main();
+
+//  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_7_IN0, sts_SV );
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, sts_SV );
+//  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_9_IN2, sts_SV );
+//  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_10_IN3, sts_SV );
+  if( sts_SV == 0 )
+  {
+    sts_SV = 1;
+  }
+  else
+  {
+    sts_SV = 0;
+  }
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
