@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2025-02-07 11:12:45
+ *   Generation Time: 2025-02-18 10:29:56
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -78,6 +78,7 @@
 #include "Adc.h" 
 #include "Dma.h" 
 #include "Spi.h" 
+#include "Pwm_17_GtmCcu6.h" 
 
 
 /**********************************************************************************************************************
@@ -264,6 +265,7 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverInitOne(void)
   Adc_Init( &Adc_Config );
   Dma_Init( &Dma_Config );
   Spi_Init( &Spi_Config );
+  Pwm_17_GtmCcu6_Init( &Pwm_17_GtmCcu6_Config );
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_AL_DriverInitOne>                  DO NOT CHANGE THIS COMMENT!

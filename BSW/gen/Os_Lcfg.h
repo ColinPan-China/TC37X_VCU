@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Lcfg.h
- *   Generation Time: 2025-02-07 11:21:31
+ *   Generation Time: 2025-02-18 10:19:38
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -337,6 +337,30 @@ extern FUNC(void, OS_DMACH10SR_ISR_CODE) Os_Isr_DMACH10SR_ISR(void);
 extern FUNC(void, OS_DMACH11SR_ISR_CODE) Os_Isr_DMACH11SR_ISR(void);
 
 # define OS_STOP_SEC_DMACH11SR_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_GTMTOM1SR3_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  GTMTOM1SR3_ISR()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_GTMTOM1SR3_ISR_CODE) Os_Isr_GTMTOM1SR3_ISR(void);
+
+# define OS_STOP_SEC_GTMTOM1SR3_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_GTMTOM1SR4_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  GTMTOM1SR4_ISR()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_GTMTOM1SR4_ISR_CODE) Os_Isr_GTMTOM1SR4_ISR(void);
+
+# define OS_STOP_SEC_GTMTOM1SR4_ISR_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

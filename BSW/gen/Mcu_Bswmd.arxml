@@ -17,7 +17,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_19.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2025-02-10, 14:35:03          !!!IGNORE-LINE!!!               **
+**  DATE, TIME: 2025-02-18, 10:29:53          !!!IGNORE-LINE!!!               **
 **                                                                            **
 **  GENERATOR : Build b180321-0610            !!!IGNORE-LINE!!!               **
 **                                                                            **
@@ -326,6 +326,15 @@
                 <REQUIRED-ENTRYS>
                   <BSW-MODULE-ENTRY-REF-CONDITIONAL>
                     <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Dem/BswModuleEntrys/Dem_ReportErrorStatus</BSW-MODULE-ENTRY-REF>
+                  </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                </REQUIRED-ENTRYS>
+              </BSW-MODULE-DEPENDENCY>
+              <BSW-MODULE-DEPENDENCY>
+                <SHORT-NAME>PwmDependency</SHORT-NAME>
+                <TARGET-MODULE-ID>121</TARGET-MODULE-ID>
+                <REQUIRED-ENTRYS>
+                  <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                    <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Pwm_17_GtmCcu6/BswModuleEntrys/Pwm_Isr</BSW-MODULE-ENTRY-REF>
                   </BSW-MODULE-ENTRY-REF-CONDITIONAL>
                 </REQUIRED-ENTRYS>
               </BSW-MODULE-DEPENDENCY>

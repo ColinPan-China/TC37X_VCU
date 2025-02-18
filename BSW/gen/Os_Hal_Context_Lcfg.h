@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Context_Lcfg.h
- *   Generation Time: 2025-02-07 11:21:31
+ *   Generation Time: 2025-02-18 10:19:37
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -140,6 +140,12 @@ extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Leve
 /*! HAL dynamic ISR2 level context data: Level20 */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level20_Dyn;
 
+/*! HAL dynamic ISR2 level context data: Level21 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level21_Dyn;
+
+/*! HAL dynamic ISR2 level context data: Level22 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level22_Dyn;
+
 /*! HAL dynamic task context data: AswTask */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_AswTask_Dyn;
 
@@ -240,6 +246,12 @@ extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_DMACH10SR_ISR
 
 /*! HAL ISR2 context configuration data: DMACH11SR_ISR */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_DMACH11SR_ISR;
+
+/*! HAL ISR2 context configuration data: GTMTOM1SR3_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_GTMTOM1SR3_ISR;
+
+/*! HAL ISR2 context configuration data: GTMTOM1SR4_ISR */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_GTMTOM1SR4_ISR;
 
 /*! HAL ISR2 context configuration data: QSPI3ERR_ISR */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_QSPI3ERR_ISR;

@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 6.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2025-02-07, 11:28:15      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2025-02-18, 10:29:51      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b180321-0610        !!!IGNORE-LINE!!!                   ** 
 **                                                                            **
@@ -1768,8 +1768,8 @@ Container : Irq GTM interruptConfiguration
 #define IRQ_GTM_TOM1_SR0_CAT        (IRQ_CAT1)
 #define IRQ_GTM_TOM1_SR1_CAT        (IRQ_CAT1)
 #define IRQ_GTM_TOM1_SR2_CAT        (IRQ_CAT1)
-#define IRQ_GTM_TOM1_SR3_CAT        (IRQ_CAT1)
-#define IRQ_GTM_TOM1_SR4_CAT        (IRQ_CAT1)
+#define IRQ_GTM_TOM1_SR3_CAT        (IRQ_CAT2)
+#define IRQ_GTM_TOM1_SR4_CAT        (IRQ_CAT2)
 #define IRQ_GTM_TOM1_SR5_CAT        (IRQ_CAT1)
 #define IRQ_GTM_TOM1_SR6_CAT        (IRQ_CAT1)
 #define IRQ_GTM_TOM1_SR7_CAT        (IRQ_CAT1)
@@ -1778,8 +1778,8 @@ Container : Irq GTM interruptConfiguration
 #define IRQ_GTM_TOM1_SR0_PRIO       0x0
 #define IRQ_GTM_TOM1_SR1_PRIO       0x0
 #define IRQ_GTM_TOM1_SR2_PRIO       0x0
-#define IRQ_GTM_TOM1_SR3_PRIO       0x0
-#define IRQ_GTM_TOM1_SR4_PRIO       0x0
+#define IRQ_GTM_TOM1_SR3_PRIO       0x79
+#define IRQ_GTM_TOM1_SR4_PRIO       0x7a
 #define IRQ_GTM_TOM1_SR5_PRIO       0x0
 #define IRQ_GTM_TOM1_SR6_PRIO       0x0
 #define IRQ_GTM_TOM1_SR7_PRIO       0x0
@@ -2541,9 +2541,9 @@ Container : I2C interrupt Configuration
 #define IRQ_QSPI_HC_SRN_EXIST       (STD_OFF)
 
 
-#define IRQ_CCU6_EXIST              (STD_OFF)
-#define IRQ_CCU60_EXIST             (STD_OFF)
-#define IRQ_CCU61_EXIST             (STD_OFF)
+#define IRQ_CCU6_EXIST              (STD_ON)
+#define IRQ_CCU60_EXIST             (STD_ON)
+#define IRQ_CCU61_EXIST             (STD_ON)
 
 #define IRQ_GPT12_EXIST               (STD_ON)
 #define IRQ_GPT120_EXIST            (STD_ON)

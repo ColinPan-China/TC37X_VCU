@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2025-02-07 11:21:31
+ *   Generation Time: 2025-02-18 10:19:38
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -86,6 +86,8 @@
 #define CounterIsr_SystemTimer CounterIsr_SystemTimer
 #define DMACH10SR_ISR DMACH10SR_ISR
 #define DMACH11SR_ISR DMACH11SR_ISR
+#define GTMTOM1SR3_ISR GTMTOM1SR3_ISR
+#define GTMTOM1SR4_ISR GTMTOM1SR4_ISR
 #define QSPI3ERR_ISR QSPI3ERR_ISR
 #define QSPI3PT_ISR QSPI3PT_ISR
 
@@ -185,9 +187,11 @@ typedef enum
   CounterIsr_SystemTimer = 15,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   DMACH10SR_ISR = 16,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   DMACH11SR_ISR = 17,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  QSPI3ERR_ISR = 18,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  QSPI3PT_ISR = 19,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ISRID_COUNT = 20,
+  GTMTOM1SR3_ISR = 18,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  GTMTOM1SR4_ISR = 19,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  QSPI3ERR_ISR = 20,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  QSPI3PT_ISR = 21,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ISRID_COUNT = 22,
   INVALID_ISR = OS_ISRID_COUNT
 } ISRType;
 

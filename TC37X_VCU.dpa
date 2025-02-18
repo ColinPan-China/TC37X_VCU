@@ -182,6 +182,9 @@
         <Splitter File=".\Config\ECUC\TC37X_VCU_Adc_Adc_ecuc.arxml">
             <Module Name="Adc"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC37X_VCU_Pwm_Pwm_ecuc.arxml">
+            <Module Name="Pwm"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>
@@ -360,8 +363,15 @@
                     <Setting Value="2.3.2" Name="BswImplSwVersion"/>
                 </Settings>
             </Settings>
+            <Settings Name="com.vector.cfg.gui.pse.pages.generators">
+                <Settings Name="BuildVipProject"/>
+                <Settings Name="CustomWorkflowExecution"/>
+            </Settings>
             <Settings Name="com.vector.cfg.persistency.internal.folder">
                 <Settings Name="TargetFolderManager"/>
+            </Settings>
+            <Settings Name="generationReportSettings">
+                <Setting Value="true" Name="createGenerationReportXml"/>
             </Settings>
         </Misc>
     </ToolSettings>
