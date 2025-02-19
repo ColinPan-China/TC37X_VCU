@@ -49,7 +49,7 @@
 #include "Adc_Sample.h"
 #include "TJA1145.h"
 #include "Dio.h"
-#include "Pwm_17_GtmCcu6.h"
+#include "PwmIf.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -99,9 +99,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_9_IN2, 1 );
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_10_IN3, 1 );
 
-  Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT1,8000,0x4000);
-  Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT2,8000,0x4000);
-
+  PwnIf_Start();
 //  Tja1145_GoSleep();
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
@@ -135,7 +133,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
  *********************************************************************************************************************/
   Adc_SampleMain();
   TLE8888qk_Main();
-
+  PwnIf_Main();
 //  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_7_IN0, sts_SV );
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, sts_SV );
 //  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_9_IN2, sts_SV );

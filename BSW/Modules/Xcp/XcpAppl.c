@@ -638,6 +638,14 @@ FUNC(uint8, XCP_CODE) XcpAppl_Unlock( void )
 /* Add by panjian for Enable OVC*/
 extern volatile const uint8 Calib_Sig0[32];
 extern volatile uint8 Calib_Sig2[32];
+
+
+extern const volatile uint32 PwmOutPeriod_Set_Flash1[8];
+extern volatile uint32 PwmOutPeriod_Set_Ram1[8];
+
+extern const volatile uint32 PwmOutPeriod_Set_Flash2[8];
+extern volatile uint32 PwmOutPeriod_Set_Ram2[8];
+
 /* Add by panjian for Enable OVC*/
 FUNC(uint8, XCP_CODE) XcpAppl_SetCalPage( uint8 Segment, uint8 Page, uint8 Mode )
 {
@@ -666,12 +674,21 @@ FUNC(uint8, XCP_CODE) XcpAppl_SetCalPage( uint8 Segment, uint8 Page, uint8 Mode 
     {
       IfxCpu_enableOverlayBlock(IfxCpu_ResourceCpu_0, 0, IfxCpu_OverlayMemorySelect_core0DsprPspr,
                                 IfxCpu_OverlayAddressMask_32byte, (uint32)&Calib_Sig0,
-                                (uint32)&Calib_Sig2);      
+                                (uint32)&Calib_Sig2);
+                                
+      IfxCpu_enableOverlayBlock(IfxCpu_ResourceCpu_0, 1, IfxCpu_OverlayMemorySelect_core0DsprPspr,
+        IfxCpu_OverlayAddressMask_32byte, (uint32)&PwmOutPeriod_Set_Flash1,
+        (uint32)&PwmOutPeriod_Set_Ram1);
+
+      IfxCpu_enableOverlayBlock(IfxCpu_ResourceCpu_0, 2, IfxCpu_OverlayMemorySelect_core0DsprPspr,
+        IfxCpu_OverlayAddressMask_32byte, (uint32)&PwmOutPeriod_Set_Flash2,
+        (uint32)&PwmOutPeriod_Set_Ram2);  
     }
 
     if( Page == 0x00U )
     {
       IfxCpu_disableOverlayBlock( IfxCpu_ResourceCpu_0, 0 );
+      IfxCpu_disableOverlayBlock( IfxCpu_ResourceCpu_0, 1 );
     }
 
     /* Add by panjian for Enable OVC*/
