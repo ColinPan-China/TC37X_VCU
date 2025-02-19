@@ -82,7 +82,7 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x7000BCE2
+            ECU_ADDRESS 0x7000BCF2
             FORMAT "%0.15"
         /end MEASUREMENT
 
@@ -95,7 +95,7 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x7000BCE3
+            ECU_ADDRESS 0x7000BCF3
             FORMAT "%0.15"
         /end MEASUREMENT
 
@@ -108,7 +108,7 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x7000BCE4
+            ECU_ADDRESS 0x7000BCF4
             FORMAT "%0.15"
         /end MEASUREMENT
 
@@ -121,7 +121,7 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x7000BCE5
+            ECU_ADDRESS 0x7000BCF5
             FORMAT "%0.15"
         /end MEASUREMENT
 
@@ -134,7 +134,7 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x7000A1F8
+            ECU_ADDRESS 0x7000A208
             FORMAT "%0.15"
         /end MEASUREMENT
 
@@ -147,7 +147,7 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x7000A1F1
+            ECU_ADDRESS 0x7000A201
             FORMAT "%0.15"
         /end MEASUREMENT
 
@@ -160,7 +160,7 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x7000A1F2
+            ECU_ADDRESS 0x7000A202
             FORMAT "%0.15"
         /end MEASUREMENT
 
@@ -173,14 +173,14 @@ ASAP2_VERSION 1 51
             0
             255
             BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x7000A1F0
+            ECU_ADDRESS 0x7000A200
             FORMAT "%0.15"
         /end MEASUREMENT
 
         /begin CHARACTERISTIC CDD_MyApp.c_Calib_Sig0_Calib_Sig0._0
             ""
             VALUE
-            0x800015E9
+            0x800015C9
             __UBYTE_S
             0
             DEFAULT_CM
@@ -194,7 +194,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC CDD_MyApp.c_Calib_Sig1_Calib_Sig1._0
             ""
             VALUE
-            0x7000A1AE
+            0x7000A1BE
             __UBYTE_S
             0
             DEFAULT_CM
@@ -208,7 +208,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC PwmIf.c_PwmOutPeriod_Set_Flash1_PwmOutPeriod_Set_Flash1._0
             ""
             VALUE
-            0x8000153C
+            0x80000600
             __ULONG_S
             0
             DEFAULT_CM
@@ -218,10 +218,10 @@ ASAP2_VERSION 1 51
             FORMAT "%0.15"
         /end CHARACTERISTIC
 
-        /begin CHARACTERISTIC PwmIf.c_PwmOutPeriod_Set_Flash2_PwmOutPeriod_Set_Flash2._0
+        /begin CHARACTERISTIC PwmIf.c_PwmOutPeriod_Set_Flash1_PwmOutPeriod_Set_Flash1._1
             ""
             VALUE
-            0x8000155C
+            0x80000604
             __ULONG_S
             0
             DEFAULT_CM
