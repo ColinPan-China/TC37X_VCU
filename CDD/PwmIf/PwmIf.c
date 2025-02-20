@@ -1,8 +1,8 @@
 #include "Pwm_17_GtmCcu6.h"
 #include "PwmIf.h"
 
-#define PWM_DEFAULT_PERIOD1  (8000U)
-#define PWM_DEFAULT_PERIOD2  (12000U)
+#define PWM_DEFAULT_PERIOD1  (10U)
+#define PWM_DEFAULT_PERIOD2  (20U)
 
 uint32 DutyTick[2] = { 0x4000, 0x4000 };
 
@@ -26,13 +26,13 @@ volatile uint32 PwmOutPeriod_Set_Ram2[8] = { PWM_DEFAULT_PERIOD2+1, PWM_DEFAULT_
 #pragma align restore
 #endif
 
-uint32 PwmOut1Period_Cur = 8000;
-uint32 PwmOut2Period_Cur = 8000;
+uint32 PwmOut1Period_Cur = 0;
+uint32 PwmOut2Period_Cur = 0;
 
 void PwnIf_Start()
 {
-    Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT1,8000,0x4000);//Period:1s/100Mhz*256*8000
-    Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT2,8000,0x4000);  
+//    Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT1,8000,0x4000);//Period:1s/100Mhz*256*8000
+//    Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT2,8000,0x4000);  
 }
 
 void PwnIf_SetDuty(uint8 PwmCh,uint8 Duty)
@@ -43,15 +43,18 @@ void PwnIf_SetDuty(uint8 PwmCh,uint8 Duty)
 
 void PwnIf_Main()
 {
+    uint32 periodtick = 0;
     if( PwmOutPeriod_Set_Flash1[0]!= PwmOut1Period_Cur )
     {
-        Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT1,PwmOutPeriod_Set_Flash1[0],DutyTick[0]);//Period:1s/100Mhz*256*8000
+        periodtick = PwmOutPeriod_Set_Flash1[0]*390625/1000;
+        Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT1,periodtick,DutyTick[0]);//Period:1s/100Mhz*256*8000   [100Mhz = 100000000Hz]
         PwmOut1Period_Cur = PwmOutPeriod_Set_Flash1[0];
     }
 
     if( PwmOutPeriod_Set_Flash1[1] != PwmOut2Period_Cur )
     {
-        Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT2,PwmOutPeriod_Set_Flash1[1],DutyTick[1]);  
+        periodtick = PwmOutPeriod_Set_Flash1[1]*390625/1000;
+        Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT2,periodtick,DutyTick[1]);  
         PwmOut2Period_Cur = PwmOutPeriod_Set_Flash1[1];
     }   
 }
