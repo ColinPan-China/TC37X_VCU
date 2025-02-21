@@ -72,10 +72,10 @@ FUNC(Std_ReturnType, RTE_DEMSATELLITE_0_APPL_CODE) Dem_SetEventStatus(Dem_EventI
 #  define RTE_START_SEC_NVM_APPL_CODE
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_GetErrorStatus(NvM_BlockIdType parg0, P2VAR(NvM_RequestResultType, AUTOMATIC, RTE_NVM_APPL_VAR) ErrorStatus); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_ReadBlock(NvM_BlockIdType parg0, dtRef_VOID DstPtr); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_SetRamBlockStatus(NvM_BlockIdType parg0, boolean RamBlockStatus); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_WriteBlock(NvM_BlockIdType parg0, dtRef_const_VOID SrcPtr); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_GetErrorStatus(NvM_BlockIdType parg0, P2VAR(NvM_RequestResultType, AUTOMATIC, RTE_NVM_APPL_VAR) ErrorStatus); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 
 #  define RTE_STOP_SEC_NVM_APPL_CODE
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -84,6 +84,9 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_WriteBlock(NvM_BlockIdType parg0, dt
 #  define Rte_Call_Event_DTC_0x000002_SetEventStatus(arg1) (Dem_SetEventStatus((Dem_EventIdType)1, arg1))
 #  define Rte_Call_Event_DTC_0x000003_GetEventStatus(arg1) (Dem_GetEventUdsStatus((Dem_EventIdType)2, arg1))
 #  define Rte_Call_Event_DTC_0x000003_SetEventStatus(arg1) (Dem_SetEventStatus((Dem_EventIdType)2, arg1))
+#  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_ReadBlock(arg1) (NvM_ReadBlock((NvM_BlockIdType)10, arg1))
+#  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)10, arg1))
+#  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_WriteBlock(arg1) (NvM_WriteBlock((NvM_BlockIdType)10, arg1))
 #  define Rte_Call_OpCycle_IgnitionCycle_GetOperationCycleState(arg1) (Dem_GetOperationCycleState((uint8)0, arg1))
 #  define Rte_Call_OpCycle_IgnitionCycle_SetOperationCycleState(arg1) (Dem_SetOperationCycleState((uint8)0, arg1))
 #  define Rte_Call_OpCycle_OBDDrivingCycle_GetOperationCycleState(arg1) (Dem_GetOperationCycleState((uint8)1, arg1))
@@ -106,12 +109,15 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_WriteBlock(NvM_BlockIdType parg0, dt
 #   define RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
 #   include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+extern CONST(uint8, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvBlockNeed_AttemptCounter_DefaultValue;
 extern CONST(NvM_Arry4Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_DefaultValue;
 
 #   define RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
 #   include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 #  endif
+
+#  define Rte_CData_NvBlockNeed_AttemptCounter_DefaultValue() (Rte_DIAG_SWC_NvBlockNeed_AttemptCounter_DefaultValue)
 
 #  define Rte_CData_NvBlockNeed_DiagDID_00_DefaultValue() (&(Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_DefaultValue[0]))
 
@@ -123,12 +129,18 @@ extern CONST(NvM_Arry4Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvB
 #   define RTE_START_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
 #   include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+extern VAR(uint8, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNeed_AttemptCounter_MirrorBlock;
 extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock;
 
 #   define RTE_STOP_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
 #   include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 #  endif
+
+/* PRQA S 3453 L1 */ /* MD_MSR_FctLikeMacro */
+#  define Rte_Pim_NvBlockNeed_AttemptCounter_MirrorBlock() \
+  (&Rte_DIAG_SWC_NvBlockNeed_AttemptCounter_MirrorBlock)
+/* PRQA L:L1 */
 
 /* PRQA S 3453 L1 */ /* MD_MSR_FctLikeMacro */
 #  define Rte_Pim_NvBlockNeed_DiagDID_00_MirrorBlock() (&((*RtePim_NvBlockNeed_DiagDID_00_MirrorBlock())[0]))
@@ -189,6 +201,8 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_SetSecurityAttemptCou
 #  define RTE_E_DataServices_VCU_DID_00_DataRecord_E_NOT_OK (1U)
 
 #  define RTE_E_DiagnosticMonitor_E_NOT_OK (1U)
+
+#  define RTE_E_NvMService_AC3_SRBS_E_NOT_OK (1U)
 
 #  define RTE_E_NvMService_AC3_SRBS_Defs_E_NOT_OK (1U)
 

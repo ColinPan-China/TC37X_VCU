@@ -359,6 +359,7 @@
  **********************************************************************************************************************
  * Per-Instance Memory:
  * ====================
+ *   uint8 *Rte_Pim_NvBlockNeed_AttemptCounter_MirrorBlock(void)
  *   uint8 *Rte_Pim_NvBlockNeed_DiagDID_00_MirrorBlock(void)
  *     Returnvalue: uint8* is of type NvM_Arry4Bytes
  *
@@ -366,6 +367,7 @@
  * =======================
  *   SW-C local Calibration Parameters:
  *   ----------------------------------
+ *   uint8 Rte_CData_NvBlockNeed_AttemptCounter_DefaultValue(void)
  *   uint8 *Rte_CData_NvBlockNeed_DiagDID_00_DefaultValue(void)
  *     Returnvalue: uint8* is of type NvM_Arry4Bytes
  *
@@ -904,6 +906,22 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_CompareKey(P2CONST(ui
  *
  **********************************************************************************************************************
  *
+ * Service Calls:
+ * ==============
+ *   Service Invocation:
+ *   -------------------
+ *   Std_ReturnType Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_ReadBlock(dtRef_VOID DstPtr)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_E_NOT_OK
+ *   Std_ReturnType Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_SetRamBlockStatus(boolean RamBlockStatus)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_E_NOT_OK
+ *   Std_ReturnType Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_WriteBlock(dtRef_const_VOID SrcPtr)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_E_NOT_OK
+ *
+ **********************************************************************************************************************
+ *
  * Runnable prototype:
  * ===================
  *   Std_ReturnType SecurityAccess_Level_3_GetSecurityAttemptCounter(Dcm_OpStatusType OpStatus, uint8 *AttemptCounter)
@@ -932,7 +950,7 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_GetSecurityAttemptCou
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: SecurityAccess_Level_3_GetSecurityAttemptCounter (returns application error)
  *********************************************************************************************************************/
-
+  *AttemptCounter = *Rte_Pim_NvBlockNeed_AttemptCounter_MirrorBlock();
   return RTE_E_OK;
 
 /**********************************************************************************************************************
@@ -1000,6 +1018,22 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_GetSeed(Dcm_OpStatusT
  *
  **********************************************************************************************************************
  *
+ * Service Calls:
+ * ==============
+ *   Service Invocation:
+ *   -------------------
+ *   Std_ReturnType Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_ReadBlock(dtRef_VOID DstPtr)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_E_NOT_OK
+ *   Std_ReturnType Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_SetRamBlockStatus(boolean RamBlockStatus)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_E_NOT_OK
+ *   Std_ReturnType Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_WriteBlock(dtRef_const_VOID SrcPtr)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_E_NOT_OK
+ *
+ **********************************************************************************************************************
+ *
  * Runnable prototype:
  * ===================
  *   Std_ReturnType SecurityAccess_Level_3_SetSecurityAttemptCounter(Dcm_OpStatusType OpStatus, uint8 AttemptCounter)
@@ -1028,7 +1062,8 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_SetSecurityAttemptCou
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: SecurityAccess_Level_3_SetSecurityAttemptCounter (returns application error)
  *********************************************************************************************************************/
-
+  *Rte_Pim_NvBlockNeed_AttemptCounter_MirrorBlock() = AttemptCounter;
+  Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_WriteBlock(Rte_Pim_NvBlockNeed_AttemptCounter_MirrorBlock());
   return RTE_E_OK;
 
 /**********************************************************************************************************************

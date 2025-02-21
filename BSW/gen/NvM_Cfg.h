@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: NvM_Cfg.h
- *   Generation Time: 2025-02-08 10:50:36
+ *   Generation Time: 2025-02-21 14:00:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -93,7 +93,7 @@ typedef union
 #define NVM_DATA_INTEGRITY_INT_BUFFER         (STD_ON)
 
 /* number of defined NV blocks */
-#define NVM_TOTAL_NUM_OF_NVRAM_BLOCKS         (10u)
+#define NVM_TOTAL_NUM_OF_NVRAM_BLOCKS         (11u)
 
 /* internal buffer size */
 #define NVM_INTERNAL_BUFFER_LENGTH            34uL
@@ -142,6 +142,7 @@ typedef union
 #define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2 (7u) 
 #define NvMConf_NvMBlockDescriptor_SWC1NvBlockNeed_UserData3 (8u) 
 #define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_DiagDID_00 (9u) 
+#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_AttemptCounter (10u) 
 
 
 /* CONST_DESCRIPTOR_TABLE contains all block relevant data, including the compiled config ID
