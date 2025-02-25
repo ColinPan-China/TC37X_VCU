@@ -71,14 +71,14 @@ derivative mpe
     mau = 8;
     type = rom;
     size = 1536; /* 2 KiB */
-    map (dest=bus:local_bus, dest_offset = 0x80000000, size = 1536);
+    map (dest=bus:local_bus, dest_offset = 0x80100000, size = 1536);
   }
   memory RegionBlock_PFlash0_Cached
   {
     mau = 8;
     type = rom;
-    size = 3144192; /* 3 MiB */
-    map (dest=bus:local_bus, dest_offset = 0x80000600, size = 3144192);
+    size = 2095616; /* 2 MiB */
+    map (dest=bus:local_bus, dest_offset = 0x80100600, size = 2095616);
   }
   memory RegionBlock_BMHD0
   {
