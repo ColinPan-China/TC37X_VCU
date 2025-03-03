@@ -87,14 +87,14 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_GetErrorStatus(NvM_BlockIdType parg0
 #  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_ReadBlock(arg1) (NvM_ReadBlock((NvM_BlockIdType)10, arg1))
 #  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)10, arg1))
 #  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_WriteBlock(arg1) (NvM_WriteBlock((NvM_BlockIdType)10, arg1))
-#  define Rte_Call_OpCycle_IgnitionCycle_GetOperationCycleState(arg1) (Dem_GetOperationCycleState((uint8)0, arg1))
-#  define Rte_Call_OpCycle_IgnitionCycle_SetOperationCycleState(arg1) (Dem_SetOperationCycleState((uint8)0, arg1))
-#  define Rte_Call_OpCycle_OBDDrivingCycle_GetOperationCycleState(arg1) (Dem_GetOperationCycleState((uint8)1, arg1))
-#  define Rte_Call_OpCycle_OBDDrivingCycle_SetOperationCycleState(arg1) (Dem_SetOperationCycleState((uint8)1, arg1))
-#  define Rte_Call_OpCycle_PowerCycle_GetOperationCycleState(arg1) (Dem_GetOperationCycleState((uint8)2, arg1))
-#  define Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(arg1) (Dem_SetOperationCycleState((uint8)2, arg1))
-#  define Rte_Call_OpCycle_WarmUpCycle_GetOperationCycleState(arg1) (Dem_GetOperationCycleState((uint8)3, arg1))
-#  define Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(arg1) (Dem_SetOperationCycleState((uint8)3, arg1))
+#  define Rte_Call_OpCycle_IgnitionCycle_GetOperationCycleState(arg1) (RTE_E_UNCONNECTED)
+#  define Rte_Call_OpCycle_IgnitionCycle_SetOperationCycleState(arg1) (RTE_E_UNCONNECTED)
+#  define Rte_Call_OpCycle_OBDDrivingCycle_GetOperationCycleState(arg1) (RTE_E_UNCONNECTED)
+#  define Rte_Call_OpCycle_OBDDrivingCycle_SetOperationCycleState(arg1) (RTE_E_UNCONNECTED)
+#  define Rte_Call_OpCycle_PowerCycle_GetOperationCycleState(arg1) (Dem_GetOperationCycleState((uint8)0, arg1))
+#  define Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(arg1) (Dem_SetOperationCycleState((uint8)0, arg1))
+#  define Rte_Call_OpCycle_WarmUpCycle_GetOperationCycleState(arg1) (RTE_E_UNCONNECTED)
+#  define Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(arg1) (RTE_E_UNCONNECTED)
 #  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_GetErrorStatus(arg1) (NvM_GetErrorStatus((NvM_BlockIdType)9, arg1))
 #  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_ReadBlock(arg1) (NvM_ReadBlock((NvM_BlockIdType)9, arg1))
 #  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)9, arg1))
@@ -184,7 +184,7 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_Start(Dcm_Sta
 FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_Stop(Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectType In_New_Data_Object, Dcm_OpStatusType OpStatus, P2VAR(Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Out_New_Data_Object, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_CompareKey(P2CONST(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_DATA) Key, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_GetSecurityAttemptCounter(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) AttemptCounter); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_GetSeed(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Seed, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_GetSeed(P2CONST(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_DATA) SecurityAccessDataRecord, Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Seed, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_SetSecurityAttemptCounter(Dcm_OpStatusType OpStatus, uint8 AttemptCounter); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 
 # define DIAG_SWC_STOP_SEC_CODE

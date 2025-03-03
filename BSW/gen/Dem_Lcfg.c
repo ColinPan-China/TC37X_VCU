@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Lcfg.c
- *   Generation Time: 2025-02-08 10:50:37
+ *   Generation Time: 2025-03-03 11:01:38
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -117,38 +117,13 @@
   SECTION: GLOBAL DATA
 **********************************************************************************************************************/
 /**********************************************************************************************************************
-  Dem_Cfg_CycleIdTable
-**********************************************************************************************************************/
-/** 
-  \var    Dem_Cfg_CycleIdTable
-  \details
-  Element        Description
-  MaskedBits     contains bitcoded the boolean data of Dem_Cfg_EndsOnInitOfCycleIdTable, Dem_Cfg_UsedForAgingOfCycleIdTable
-  OpCycleType    DemOperationCycleType of the DemOperationCycle: [DEM_CFG_OPCYC_IGNITION, DEM_CFG_OPCYC_OBD_DCY, DEM_CFG_OPCYC_OTHER, DEM_CFG_OPCYC_POWER, DEM_CFG_OPCYC_TIME, DEM_CFG_OPCYC_WARMUP, DEM_CFG_OPCYC_IGNITION_HYBRID, DEM_CFG_OPCYC_AGING]
-*/ 
-#define DEM_START_SEC_CONST_UNSPECIFIED
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-CONST(Dem_Cfg_CycleIdTableType, DEM_CONST) Dem_Cfg_CycleIdTable[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    MaskedBits  OpCycleType                   Comment */
-  { /*     0 */      0x01u, DEM_CFG_OPCYC_IGNITION },  /* [DemConf_DemOperationCycle_IgnitionCycle] */
-  { /*     1 */      0x00u, DEM_CFG_OPCYC_OBD_DCY  },  /* [DemConf_DemOperationCycle_OBDDrivingCycle] */
-  { /*     2 */      0x00u, DEM_CFG_OPCYC_POWER    },  /* [DemConf_DemOperationCycle_PowerCycle] */
-  { /*     3 */      0x01u, DEM_CFG_OPCYC_WARMUP   }   /* [DemConf_DemOperationCycle_WarmUpCycle] */
-};
-#define DEM_STOP_SEC_CONST_UNSPECIFIED
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-
-/**********************************************************************************************************************
   Dem_Cfg_DataCollectionTable
 **********************************************************************************************************************/
 /** 
   \var    Dem_Cfg_DataCollectionTable
   \details
   Element                                Description
+  CollectionSize                     
   DataElementTableCol2ElmtIndEndIdx      the end index of the 0:n relation pointing to Dem_Cfg_DataElementTableCol2ElmtInd
   DataElementTableCol2ElmtIndStartIdx    the start index of the 0:n relation pointing to Dem_Cfg_DataElementTableCol2ElmtInd
   StorageKind                        
@@ -157,10 +132,11 @@ CONST(Dem_Cfg_CycleIdTableType, DEM_CONST) Dem_Cfg_CycleIdTable[4] = {  /* PRQA 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_Cfg_DataCollectionTableType, DEM_CONST) Dem_Cfg_DataCollectionTable[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    DataElementTableCol2ElmtIndEndIdx                                  DataElementTableCol2ElmtIndStartIdx                                  StorageKind                       Referable Keys */
-  { /*     0 */ DEM_CFG_NO_DATAELEMENTTABLECOL2ELMTINDENDIDXOFDATACOLLECTIONTABLE, DEM_CFG_NO_DATAELEMENTTABLECOL2ELMTINDSTARTIDXOFDATACOLLECTIONTABLE, DEM_CFG_EREC_TYPE_GLOBAL   },  /* [#NoDataCollectionConfigured] */
-  { /*     1 */                                                                1u,                                                                  0u, DEM_CFG_EREC_TYPE_INTERNAL }   /* [#EdrOccurrenceCounter, Ext:ExtendedDataClass_83dcefb7, #ExtendedDataRecord] */
+CONST(Dem_Cfg_DataCollectionTableType, DEM_CONST) Dem_Cfg_DataCollectionTable[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    CollectionSize  DataElementTableCol2ElmtIndEndIdx                                  DataElementTableCol2ElmtIndStartIdx                                  StorageKind                       Referable Keys */
+  { /*     0 */             0u, DEM_CFG_NO_DATAELEMENTTABLECOL2ELMTINDENDIDXOFDATACOLLECTIONTABLE, DEM_CFG_NO_DATAELEMENTTABLECOL2ELMTINDSTARTIDXOFDATACOLLECTIONTABLE, DEM_CFG_EREC_TYPE_GLOBAL   },  /* [#NoDataCollectionConfigured] */
+  { /*     1 */             2u,                                                                2u,                                                                  0u, DEM_CFG_EREC_TYPE_INTERNAL },  /* [#EdrExtendedDataRecord0x01, Ext:ExtendedDataClass_4f5344cd, #ExtendedDataRecord] */
+  { /*     2 */             1u,                                                                3u,                                                                  2u, DEM_CFG_EREC_TYPE_INTERNAL }   /* [#EdrExtendedDataRecord0x02, Ext:ExtendedDataClass_4f5344cd, #ExtendedDataRecord] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -173,21 +149,45 @@ CONST(Dem_Cfg_DataCollectionTableType, DEM_CONST) Dem_Cfg_DataCollectionTable[2]
 /** 
   \var    Dem_Cfg_DataElementTable
   \details
-  Element             Description
-  DataIsStoredInNV
-  ElementKind         DataElement kind, returned by Dem_Cfg_DataCallbackType()
-  ReadDataFunc        C-function for getting the data. Its signature depends on ElementKind: With value(s) DEM_CFG_DATA_FROM_CBK_WITH_EVENTID use: Std_ReturnType (*)(uint8* Buffer, uint16 EventId); - and use: Std_ReturnType (*)(uint8* Buffer); with the other values DEM_CFG_DATA_FROM_CBK, DEM_CFG_DATA_FROM_SR_PORT_BOOLEAN, DEM_CFG_DATA_FROM_SR_PORT_SINT16, DEM_CFG_DATA_FROM_SR_PORT_SINT16_INTEL, DEM_CFG_DATA_FROM_SR_PORT_SINT32, DEM_CFG_DATA_FROM_SR_PORT_SINT32_INTEL, DEM_CFG_DATA_FROM_SR_PORT_SINT8, DEM_CFG_DATA_FROM_SR_PORT_SINT8_N, DEM_CFG_DATA_FROM_SR_PORT_UINT16, DEM_CFG_DATA_FROM_SR_PORT_UINT16_INTEL, DEM_CFG_DATA_FROM_SR_PORT_UINT32, DEM_CFG_DATA_FROM_SR_PORT_UINT32_INTEL, DEM_CFG_DATA_FROM_SR_PORT_UINT8, DEM_CFG_DATA_FROM_SR_PORT_UINT8_N.
+  Element         Description
+  ElementKind     DataElement kind, returned by Dem_Cfg_DataCallbackType()
+  ElementSize     Size of data element in Byte.
+  ReadDataFunc    C-function for getting the data. Its signature depends on ElementKind: With value(s) DEM_CFG_DATA_FROM_CBK_WITH_EVENTID use: Std_ReturnType (*)(uint8* Buffer, uint16 EventId); - and use: Std_ReturnType (*)(uint8* Buffer); with the other values DEM_CFG_DATA_FROM_CBK, DEM_CFG_DATA_FROM_SR_PORT_BOOLEAN, DEM_CFG_DATA_FROM_SR_PORT_SINT16, DEM_CFG_DATA_FROM_SR_PORT_SINT16_INTEL, DEM_CFG_DATA_FROM_SR_PORT_SINT32, DEM_CFG_DATA_FROM_SR_PORT_SINT32_INTEL, DEM_CFG_DATA_FROM_SR_PORT_SINT8, DEM_CFG_DATA_FROM_SR_PORT_SINT8_N, DEM_CFG_DATA_FROM_SR_PORT_UINT16, DEM_CFG_DATA_FROM_SR_PORT_UINT16_INTEL, DEM_CFG_DATA_FROM_SR_PORT_UINT32, DEM_CFG_DATA_FROM_SR_PORT_UINT32_INTEL, DEM_CFG_DATA_FROM_SR_PORT_UINT8, DEM_CFG_DATA_FROM_SR_PORT_UINT8_N.
 */ 
 #define DEM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_Cfg_DataElementTableType, DEM_CONST) Dem_Cfg_DataElementTable[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    DataIsStoredInNV  ElementKind                  ReadDataFunc                                                                Referable Keys */
-  { /*     0 */            FALSE, DEM_CFG_DATAELEMENT_INVALID,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR },  /* [#NoDataElementConfigured] */
-  { /*     1 */             TRUE, DEM_CFG_DATA_FROM_OCCCTR   ,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR }   /* [#OccurrenceCounter_Occurrence_Counter, EdrOccurrenceCounter] */
+CONST(Dem_Cfg_DataElementTableType, DEM_CONST) Dem_Cfg_DataElementTable[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    ElementKind                          ElementSize  ReadDataFunc                                                                Referable Keys */
+  { /*     0 */ DEM_CFG_DATAELEMENT_INVALID        ,          0u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR },  /* [#NoDataElementConfigured] */
+  { /*     1 */ DEM_CFG_DATA_FROM_AGINGCTR         ,          1u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR },  /* [#ExtendedDataRecord0x02_Fault_Aging_Counte_Up, EdrExtendedDataRecord0x02] */
+  { /*     2 */ DEM_CFG_DATA_FROM_AGINGCTR_INVERTED,          1u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR },  /* [#ExtendedDataRecord0x01_Fault_Aging_Counter, EdrExtendedDataRecord0x01] */
+  { /*     3 */ DEM_CFG_DATA_FROM_OCCCTR           ,          1u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR }   /* [#ExtendedDataRecord0x01_Occurence_Counter, EdrExtendedDataRecord0x01] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Dem_Cfg_DataElementTableCol2ElmtInd
+**********************************************************************************************************************/
+/** 
+  \var    Dem_Cfg_DataElementTableCol2ElmtInd
+  \brief  the indexes of the 1:1 sorted relation pointing to Dem_Cfg_DataElementTable
+*/ 
+#define DEM_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Dem_Cfg_DataElementTableCol2ElmtIndType, DEM_CONST) Dem_Cfg_DataElementTableCol2ElmtInd[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     DataElementTableCol2ElmtInd      Referable Keys */
+  /*     0 */                           3u,  /* [EdrExtendedDataRecord0x01] */
+  /*     1 */                           2u,  /* [EdrExtendedDataRecord0x01] */
+  /*     2 */                           1u   /* [EdrExtendedDataRecord0x02] */
+};
+#define DEM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -210,10 +210,11 @@ CONST(Dem_Cfg_DataElementTableType, DEM_CONST) Dem_Cfg_DataElementTable[2] = {  
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_Cfg_DebounceTableType, DEM_CONST) Dem_Cfg_DebounceTable[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Dem_Cfg_DebounceTableType, DEM_CONST) Dem_Cfg_DebounceTable[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    DecrementStepSize  FailedThreshold  IncrementStepSize  PassedThreshold  EventDebounceAlgorithm                                                      MaskedBits        Referable Keys */
-  { /*     0 */                -1,             127,                 1,            -128, DEM_CFG_DEM_CFG_DEBOUNCETYPE_COUNTER_EVENTDEBOUNCEALGORITHMOFDEBOUNCETABLE,      0x02u },  /* [DTC_0x000002, DTC_0x000003] */
-  { /*     1 */                 0,               0,                 0,               0, DEM_CFG_DEM_CFG_DEBOUNCETYPE_INVALID_EVENTDEBOUNCEALGORITHMOFDEBOUNCETABLE,      0x00u }   /* [#EVENT_INVALID] */
+  { /*     0 */               -32,              40,                32,             -40, DEM_CFG_DEM_CFG_DEBOUNCETYPE_COUNTER_EVENTDEBOUNCEALGORITHMOFDEBOUNCETABLE,      0x00u },  /* [DTC_0X000003] */
+  { /*     1 */                -1,              40,                 1,             -40, DEM_CFG_DEM_CFG_DEBOUNCETYPE_COUNTER_EVENTDEBOUNCEALGORITHMOFDEBOUNCETABLE,      0x02u },  /* [DTC_0X000002, DTC_0X000004] */
+  { /*     2 */                 0,               0,                 0,               0, DEM_CFG_DEM_CFG_DEBOUNCETYPE_INVALID_EVENTDEBOUNCEALGORITHMOFDEBOUNCETABLE,      0x00u }   /* [#EVENT_INVALID] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -234,11 +235,63 @@ CONST(Dem_Cfg_DebounceTableType, DEM_CONST) Dem_Cfg_DebounceTable[2] = {  /* PRQ
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_Cfg_DtcTableType, DEM_CONST) Dem_Cfg_DtcTable[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Dem_Cfg_DtcTableType, DEM_CONST) Dem_Cfg_DtcTable[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    UdsDtc       FunctionalUnit        Referable Keys */
   { /*     0 */ 0x00FFFFFFu,           255u },  /* [#NoUdsDtcConfigured, #NoObdDtcConfigured, #NoJ1939DtcConfigured] */
-  { /*     1 */ 0x00000002u,             0u },  /* [DTCClass_DTC_0x000002] */
-  { /*     2 */ 0x00000003u,             0u }   /* [DTCClass_DTC_0x000003] */
+  { /*     1 */ 0x00000202u,             0u },  /* [DTCClass_DTC_0X000002] */
+  { /*     2 */ 0x00000303u,             0u },  /* [DTCClass_DTC_0X000003] */
+  { /*     3 */ 0x00000004u,             0u }   /* [DTCClass_DTC_0X000004] */
+};
+#define DEM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Dem_Cfg_EnableConditionGroupTableInd
+**********************************************************************************************************************/
+/** 
+  \var    Dem_Cfg_EnableConditionGroupTableInd
+  \brief  the indexes of the 1:1 sorted relation pointing to Dem_Cfg_EnableConditionGroupTable
+*/ 
+#define DEM_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Dem_Cfg_EnableConditionGroupTableIndType, DEM_CONST) Dem_Cfg_EnableConditionGroupTableInd[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     EnableConditionGroupTableInd      Referable Keys */
+  /*     0 */                            0u,  /* [__Internal_ControlDtcSetting] */
+  /*     1 */                            2u,  /* [__Internal_ControlDtcSetting] */
+  /*     2 */                            1u,  /* [__Internal_ControlDtcSetting] */
+  /*     3 */                            2u,  /* [Example_EnableCondition1] */
+  /*     4 */                            1u,  /* [Example_EnableCondition1] */
+  /*     5 */                            1u   /* [Example_EnableCondition2] */
+};
+#define DEM_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Dem_Cfg_EnableConditionTable
+**********************************************************************************************************************/
+/** 
+  \var    Dem_Cfg_EnableConditionTable
+  \brief  Map each EnableCondition(Id) to the referring EnableConditionGroups - this is reverse direction of the AUTOSAR configuration model.
+  \details
+  Element                                 Description
+  EnableConditionGroupTableIndEndIdx      the end index of the 0:n relation pointing to Dem_Cfg_EnableConditionGroupTableInd
+  EnableConditionGroupTableIndStartIdx    the start index of the 0:n relation pointing to Dem_Cfg_EnableConditionGroupTableInd
+*/ 
+#define DEM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Dem_Cfg_EnableConditionTableType, DEM_CONST) Dem_Cfg_EnableConditionTable[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    EnableConditionGroupTableIndEndIdx  EnableConditionGroupTableIndStartIdx */
+  { /*     0 */                                 3u,                                   0u },
+  { /*     1 */                                 5u,                                   3u },
+  { /*     2 */                                 6u,                                   5u }
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -251,24 +304,22 @@ CONST(Dem_Cfg_DtcTableType, DEM_CONST) Dem_Cfg_DtcTable[3] = {  /* PRQA S 1514, 
 /** 
   \var    Dem_Cfg_EventTable
   \details
-  Element                              Description
-  AgingCycleCounterThreshold           DemAgingCycleCounterThreshold of the DemEventParameter/DemEventClass. If AgingAllowedOfEventTable==FALSE and DemAgingCycleCounterThreshold does not exist '255' is set. If AgingAllowedOfEventTable==TRUE and DemAgingCycleCounterThreshold does not exist '0' is set.
-  AgingCycleId                         DemOperationCycle (ID) referenced by DemEventParameter/DemEventClass/DemAgingCycleRef
-  DtcTableIdx                          the index of the 1:1 relation pointing to Dem_Cfg_DtcTable
-  EventFailureCycleCounterThreshold    DemEventFailureCycleCounterThreshold of the DemEventParameter/DemEventClass, '0': is also default for unset parameter
-  InitMonitorForEventIdx               the index of the 0:1 relation pointing to Dem_Cfg_InitMonitorForEvent
-  MaskedBits                           contains bitcoded the boolean data of Dem_Cfg_AgingAllowedOfEventTable, Dem_Cfg_EventLatchTFOfEventTable, Dem_Cfg_OBDVisibilityDelayedUntilDcyQualificationOfEventTable
-  OperationCycleId                     DemOperationCycle (ID) referenced by DemEventParameter/DemEventClass/DemOperationCycleRef
+  Element                         Description
+  DebounceTableIdx                the index of the 1:1 relation pointing to Dem_Cfg_DebounceTable
+  DtcTableIdx                     the index of the 1:1 relation pointing to Dem_Cfg_DtcTable
+  EnableConditionGroupTableIdx    the index of the 1:1 relation pointing to Dem_Cfg_EnableConditionGroupTable
+  EventPriority                   DemEventParameter/DemEventClass/DemEventPriority, values [1..255] for the configuration range [1..255].
 */ 
 #define DEM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_Cfg_EventTableType, DEM_CONST) Dem_Cfg_EventTable[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    AgingCycleCounterThreshold  AgingCycleId                             DtcTableIdx  EventFailureCycleCounterThreshold  InitMonitorForEventIdx  MaskedBits  OperationCycleId                                 Referable Keys */
-  { /*     0 */                       100u, DemConf_DemOperationCycle_IgnitionCycle,          1u,                                0u,                     1u,      0x00u, DemConf_DemOperationCycle_PowerCycle      },  /* [#EVENT_INVALID, #NoExtendedDataRecordConfigured, Satellite#0] */
-  { /*     1 */                       100u, DemConf_DemOperationCycle_IgnitionCycle,          1u,                                0u,                     1u,      0x00u, DemConf_DemOperationCycle_PowerCycle      },  /* [DTC_0x000002, #EdrOccurrenceCounter, Satellite#0] */
-  { /*     2 */                        40u, DemConf_DemOperationCycle_WarmUpCycle  ,          2u,                                2u,                     0u,      0x05u, DemConf_DemOperationCycle_OBDDrivingCycle }   /* [DTC_0x000003, #EdrOccurrenceCounter, Satellite#0] */
+CONST(Dem_Cfg_EventTableType, DEM_CONST) Dem_Cfg_EventTable[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    DebounceTableIdx  DtcTableIdx  EnableConditionGroupTableIdx  EventPriority        Referable Keys */
+  { /*     0 */               1u,          1u,                           1u,            1u },  /* [#EVENT_INVALID, #NoExtendedDataRecordConfigured, Satellite#0] */
+  { /*     1 */               1u,          1u,                           1u,            1u },  /* [DTC_0X000002, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
+  { /*     2 */               0u,          2u,                           2u,            2u },  /* [DTC_0X000003, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
+  { /*     3 */               1u,          3u,                           0u,            4u }   /* [DTC_0X000004, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -284,32 +335,16 @@ CONST(Dem_Cfg_EventTableType, DEM_CONST) Dem_Cfg_EventTable[3] = {  /* PRQA S 15
   Element                                   Description
   DataCollectionTableEdr2CollIndEndIdx      the end index of the 0:n relation pointing to Dem_Cfg_DataCollectionTableEdr2CollInd
   DataCollectionTableEdr2CollIndStartIdx    the start index of the 0:n relation pointing to Dem_Cfg_DataCollectionTableEdr2CollInd
+  MaxRecordSize                         
 */ 
 #define DEM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Dem_Cfg_ExtendedDataTableType, DEM_CONST) Dem_Cfg_ExtendedDataTable[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    DataCollectionTableEdr2CollIndEndIdx                                DataCollectionTableEdr2CollIndStartIdx                                      Referable Keys */
-  { /*     0 */ DEM_CFG_NO_DATACOLLECTIONTABLEEDR2COLLINDENDIDXOFEXTENDEDDATATABLE, DEM_CFG_NO_DATACOLLECTIONTABLEEDR2COLLINDSTARTIDXOFEXTENDEDDATATABLE },  /* [#NoExtendedDataRecordConfigured] */
-  { /*     1 */                                                                 1u,                                                                   0u }   /* [#ExtendedDataClass_83dcefb7, #EVENT_INVALID, DTC_0x000002, DTC_0x000003] */
-};
-#define DEM_STOP_SEC_CONST_UNSPECIFIED
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-
-/**********************************************************************************************************************
-  Dem_Cfg_InitMonitorForEvent
-**********************************************************************************************************************/
-#define DEM_START_SEC_CONST_UNSPECIFIED
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-CONST(Dem_InitMonitorForEventFPtrType, DEM_CONST) Dem_Cfg_InitMonitorForEvent[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index     InitMonitorForEvent                                      Referable Keys */
-  /*     0 */ NULL_PTR                                            ,  /* [#NoCallbackInitMonitorConfigured] */
-  /*     1 */ Rte_Call_CBInitEvt_DTC_0x000002_InitMonitorForEvent    /* [DTC_0x000002] */
+    /* Index    DataCollectionTableEdr2CollIndEndIdx                                DataCollectionTableEdr2CollIndStartIdx                                MaxRecordSize        Referable Keys */
+  { /*     0 */ DEM_CFG_NO_DATACOLLECTIONTABLEEDR2COLLINDENDIDXOFEXTENDEDDATATABLE, DEM_CFG_NO_DATACOLLECTIONTABLEEDR2COLLINDSTARTIDXOFEXTENDEDDATATABLE,            0u },  /* [#NoExtendedDataRecordConfigured] */
+  { /*     1 */                                                                 2u,                                                                   0u,            2u }   /* [#ExtendedDataClass_4f5344cd, #EVENT_INVALID, DTC_0X000002, DTC_0X000003, DTC_0X000004] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -527,7 +562,7 @@ VAR(Dem_DTCSelector_DataType, DEM_VAR_NOINIT) Dem_Cfg_DTCSelectorTable[1];  /* P
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Dem_Cfg_EnableConditionFulfilledType, DEM_VAR_NOINIT) Dem_Cfg_EnableConditionFulfilled[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Dem_Cfg_EnableConditionFulfilledType, DEM_VAR_NOINIT) Dem_Cfg_EnableConditionFulfilled[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define DEM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -544,9 +579,11 @@ VAR(Dem_Cfg_EnableConditionFulfilledType, DEM_VAR_NOINIT) Dem_Cfg_EnableConditio
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Dem_Cfg_EnableConditionGroupCounterType, DEM_VAR_NOINIT) Dem_Cfg_EnableConditionGroupCounter[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Dem_Cfg_EnableConditionGroupCounterType, DEM_VAR_NOINIT) Dem_Cfg_EnableConditionGroupCounter[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [##NoEnableConditionGroupConfigured, __Internal_ControlDtcSetting] */
+  /*     1 */  /* [#EnableConditionGroup_2f9cc720, __Internal_ControlDtcSetting, Example_EnableCondition1, Example_EnableCondition2] */
+  /*     2 */  /* [#EnableConditionGroup_Example_EnableCondition1, __Internal_ControlDtcSetting, Example_EnableCondition1] */
 
 #define DEM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -564,9 +601,11 @@ VAR(Dem_Cfg_EnableConditionGroupCounterType, DEM_VAR_NOINIT) Dem_Cfg_EnableCondi
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-volatile VAR(Dem_Cfg_EnableConditionGroupStateType, DEM_VAR_NOINIT) Dem_Cfg_EnableConditionGroupState[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+volatile VAR(Dem_Cfg_EnableConditionGroupStateType, DEM_VAR_NOINIT) Dem_Cfg_EnableConditionGroupState[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [##NoEnableConditionGroupConfigured, __Internal_ControlDtcSetting] */
+  /*     1 */  /* [#EnableConditionGroup_2f9cc720, __Internal_ControlDtcSetting, Example_EnableCondition1, Example_EnableCondition2] */
+  /*     2 */  /* [#EnableConditionGroup_Example_EnableCondition1, __Internal_ControlDtcSetting, Example_EnableCondition1] */
 
 #define DEM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -584,7 +623,7 @@ volatile VAR(Dem_Cfg_EnableConditionGroupStateType, DEM_VAR_NOINIT) Dem_Cfg_Enab
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-volatile VAR(Dem_Cfg_EventDataCommitNumberType, DEM_VAR_NOINIT) Dem_Cfg_EventDataCommitNumber[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+volatile VAR(Dem_Cfg_EventDataCommitNumberType, DEM_VAR_NOINIT) Dem_Cfg_EventDataCommitNumber[4];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define DEM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -601,11 +640,12 @@ volatile VAR(Dem_Cfg_EventDataCommitNumberType, DEM_VAR_NOINIT) Dem_Cfg_EventDat
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-volatile VAR(Dem_Cfg_EventDebounceValueType, DEM_VAR_NOINIT) Dem_Cfg_EventDebounceValue[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+volatile VAR(Dem_Cfg_EventDebounceValueType, DEM_VAR_NOINIT) Dem_Cfg_EventDebounceValue[4];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [#EVENT_INVALID, #NoExtendedDataRecordConfigured, Satellite#0] */
-  /*     1 */  /* [DTC_0x000002, #EdrOccurrenceCounter, Satellite#0] */
-  /*     2 */  /* [DTC_0x000003, #EdrOccurrenceCounter, Satellite#0] */
+  /*     1 */  /* [DTC_0X000002, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
+  /*     2 */  /* [DTC_0X000003, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
+  /*     3 */  /* [DTC_0X000004, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
 
 #define DEM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
@@ -623,11 +663,12 @@ volatile VAR(Dem_Cfg_EventDebounceValueType, DEM_VAR_NOINIT) Dem_Cfg_EventDeboun
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-volatile VAR(Dem_Event_InternalStatusType, DEM_VAR_NOINIT) Dem_Cfg_EventInternalStatus[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+volatile VAR(Dem_Event_InternalStatusType, DEM_VAR_NOINIT) Dem_Cfg_EventInternalStatus[4];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [#EVENT_INVALID, #NoExtendedDataRecordConfigured, Satellite#0] */
-  /*     1 */  /* [DTC_0x000002, #EdrOccurrenceCounter, Satellite#0] */
-  /*     2 */  /* [DTC_0x000003, #EdrOccurrenceCounter, Satellite#0] */
+  /*     1 */  /* [DTC_0X000002, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
+  /*     2 */  /* [DTC_0X000003, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
+  /*     3 */  /* [DTC_0X000004, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
 
 #define DEM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

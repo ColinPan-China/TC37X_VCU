@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Lcfg.h
- *   Generation Time: 2024-11-01 15:23:38
+ *   Generation Time: 2025-03-03 11:01:38
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -1790,6 +1790,47 @@ FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_Service2EProcessor(
   Dcm_NegativeResponseCodePtrType ErrorCode
   );
 /***********************************************************************************************************************
+ *  Dcm_Service2FInit()
+ ***********************************************************************************************************************/
+/*! \brief         Initializes service 0x2F processing.
+ *  \details       -
+ *  \context       TASK
+ *  \reentrant     TRUE
+ *  \pre           -
+ ***********************************************************************************************************************/
+FUNC(void, DCM_CODE) Dcm_Service2FInit(void);
+/***********************************************************************************************************************
+ *  Dcm_Service2FProcessor()
+ ***********************************************************************************************************************/
+/*! \brief         Processes a received diagnostic service request.
+ *  \details       DCM calls a function of this kind as soon as a supported diagnostic service, configured to be handled
+ *                 by a CDD, is received. All of the relevant diagnostic request parameter information is forwarded by
+ *                 DCM through the pMsgContext function parameter.
+ *                 The concrete name of the callout is defined by the configuration
+ *                 parameter/Dcm/DcmConfigSet/DcmDsd/DcmDsdServiceTable/DcmDsdService/DcmDsdSidTabFnc.
+ *  \param[in]     pContext           Pointer to the context
+ *  \param[in]     opStatus           The operation status
+ *  \param[in,out] pMsgContext        Message-related information for one diagnostic protocol identifier
+ *                                    The pointers in pMsgContext points behind the SID.
+ *  \param[out]    ErrorCode          Negative response code in case return value is DCM_E_NOT_OK
+ *  \return        DCM_E_OK           Job processing finished, send positive response
+ *  \return        DCM_E_PENDING      Job processing is not yet finished
+ *  \return        DCM_E_FORCE_RCRRP  (Vendor extension) Forces a RCR-RP response.
+ *                                    The call out will called again once the response is sent. The OpStatus parameter
+ *                                    will contain the transmission result
+ *  \return        DCM_E_NOT_OK       Job processing finished, send NRC from the ErrorCode
+ *  \context       TASK
+ *  \reentrant     FALSE
+ *  \synchronous   FALSE
+ *  \pre           -
+ ***********************************************************************************************************************/
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_Service2FProcessor(
+  Dcm_ContextPtrType pContext,
+  Dcm_OpStatusType opStatus,
+  Dcm_MsgContextPtrType pMsgContext,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  );
+/***********************************************************************************************************************
  *  Dcm_Service31Processor()
  ***********************************************************************************************************************/
 /*! \brief         Processes a received diagnostic service request.
@@ -2042,6 +2083,22 @@ FUNC(void, DCM_CALLOUT_CODE) Dcm_Service2CPostProcessor(
   Dcm_ConfirmationStatusType status
   );
 /***********************************************************************************************************************
+ *  Dcm_Service2FPostProcessor()
+ ***********************************************************************************************************************/
+/*! \brief         Finalizes the service processing.
+ *  \details       Triggers a mode switch, performs a state transition or executes other actions depending on the
+ *                 concrete diagnostic service.
+ *  \param[in]     pContext  Pointer to the context
+ *  \param[in]     status    The post-processing status
+ *  \context       TASK
+ *  \reentrant     FALSE
+ *  \pre           -
+ ***********************************************************************************************************************/
+FUNC(void, DCM_CALLOUT_CODE) Dcm_Service2FPostProcessor(
+  Dcm_ContextPtrType pContext,
+  Dcm_ConfirmationStatusType status
+  );
+/***********************************************************************************************************************
  *  Dcm_Service85PostProcessor()
  ***********************************************************************************************************************/
 /*! \brief         Finalizes the service processing.
@@ -2136,6 +2193,19 @@ FUNC(void, DCM_CALLOUT_CODE) Dcm_Service2ECancel(
   Dcm_ContextPtrType pContext
   );
 /***********************************************************************************************************************
+ *  Dcm_Service2FCancel()
+ ***********************************************************************************************************************/
+/*! \brief         Cancels an ongoing service processing.
+ *  \details       -
+ *  \param[in]     pContext      Pointer to the context
+ *  \context       TASK
+ *  \reentrant     FALSE
+ *  \pre           -
+ ***********************************************************************************************************************/
+FUNC(void, DCM_CALLOUT_CODE) Dcm_Service2FCancel(
+  Dcm_ContextPtrType pContext
+  );
+/***********************************************************************************************************************
  *  Dcm_Service85Cancel()
  ***********************************************************************************************************************/
 /*! \brief         Cancels an ongoing service processing.
@@ -2164,6 +2234,38 @@ FUNC(void, DCM_CALLOUT_CODE) Dcm_Service85Cancel(
  *  \pre           -
  ***********************************************************************************************************************/
 FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_RepeaterDeadEnd(
+  Dcm_ContextPtrType pContext,
+  Dcm_OpStatusType opStatus,
+  Dcm_MsgContextPtrType pMsgContext,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  );
+/***********************************************************************************************************************
+ *  Dcm_Service11_03Processor()
+ ***********************************************************************************************************************/
+/*! \brief         Processes a received diagnostic sub-service request.
+ *  \details       DCM calls a function of this kind as soon as a supported diagnostic sub-service, configured to be
+ *                 handled by a CDD, is received. All of the relevant diagnostic request parameter information is
+ *                 forwarded by DCM through the pMsgContext function parameter.
+ *                 The concrete name of the callout is defined by the configuration
+ *                 parameter/Dcm/DcmConfigSet/DcmDsd/DcmDsdServiceTable/DcmDsdService/DcmDsdSubService/DcmDsdSubServiceFnc.
+ *  \param[in]     pContext             Pointer to the context
+ *  \param[in]     opStatus             The operation status
+ *  \param[in,out] pMsgContext          Message-related information for one diagnostic protocol identifier
+ *                                      The pointers in pMsgContext points behind the sub-function.
+ *  \param[out]    ErrorCode            Negative response code in case return value is DCM_E_NOT_OK
+ *  \return        DCM_E_OK             Job processing finished, send positive response
+ *  \return        DCM_E_PENDING        Job processing is not yet finished
+ *  \return        DCM_E_FORCE_RCRRP    (Vendor extension) Forces a RCR-RP response.
+ *                                      The call out will called again once the response is sent. The OpStatus parameter
+ *                                      will contain the transmission result
+ *  \return        DCM_E_STOP_REPEATER  Stops the repeater proxy
+ *  \return        DCM_E_NOT_OK         Job processing finished, send NRC from the ErrorCode
+ *  \context       TASK
+ *  \reentrant     FALSE
+ *  \synchronous   FALSE
+ *  \pre           -
+ ***********************************************************************************************************************/
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_Service11_03Processor(
   Dcm_ContextPtrType pContext,
   Dcm_OpStatusType opStatus,
   Dcm_MsgContextPtrType pMsgContext,
@@ -2491,6 +2593,38 @@ FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_Service19_0AProcessor(
   Dcm_NegativeResponseCodePtrType ErrorCode
   );
 /***********************************************************************************************************************
+ *  Dcm_Service19_0BProcessor()
+ ***********************************************************************************************************************/
+/*! \brief         Processes a received diagnostic sub-service request.
+ *  \details       DCM calls a function of this kind as soon as a supported diagnostic sub-service, configured to be
+ *                 handled by a CDD, is received. All of the relevant diagnostic request parameter information is
+ *                 forwarded by DCM through the pMsgContext function parameter.
+ *                 The concrete name of the callout is defined by the configuration
+ *                 parameter/Dcm/DcmConfigSet/DcmDsd/DcmDsdServiceTable/DcmDsdService/DcmDsdSubService/DcmDsdSubServiceFnc.
+ *  \param[in]     pContext             Pointer to the context
+ *  \param[in]     opStatus             The operation status
+ *  \param[in,out] pMsgContext          Message-related information for one diagnostic protocol identifier
+ *                                      The pointers in pMsgContext points behind the sub-function.
+ *  \param[out]    ErrorCode            Negative response code in case return value is DCM_E_NOT_OK
+ *  \return        DCM_E_OK             Job processing finished, send positive response
+ *  \return        DCM_E_PENDING        Job processing is not yet finished
+ *  \return        DCM_E_FORCE_RCRRP    (Vendor extension) Forces a RCR-RP response.
+ *                                      The call out will called again once the response is sent. The OpStatus parameter
+ *                                      will contain the transmission result
+ *  \return        DCM_E_STOP_REPEATER  Stops the repeater proxy
+ *  \return        DCM_E_NOT_OK         Job processing finished, send NRC from the ErrorCode
+ *  \context       TASK
+ *  \reentrant     FALSE
+ *  \synchronous   FALSE
+ *  \pre           -
+ ***********************************************************************************************************************/
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_Service19_0BProcessor(
+  Dcm_ContextPtrType pContext,
+  Dcm_OpStatusType opStatus,
+  Dcm_MsgContextPtrType pMsgContext,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  );
+/***********************************************************************************************************************
  *  Dcm_Service19_0CProcessor()
  ***********************************************************************************************************************/
 /*! \brief         Processes a received diagnostic sub-service request.
@@ -2549,6 +2683,38 @@ FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_Service19_0CProcessor(
  *  \pre           -
  ***********************************************************************************************************************/
 FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_Service19_0DProcessor(
+  Dcm_ContextPtrType pContext,
+  Dcm_OpStatusType opStatus,
+  Dcm_MsgContextPtrType pMsgContext,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  );
+/***********************************************************************************************************************
+ *  Dcm_Service19_0EProcessor()
+ ***********************************************************************************************************************/
+/*! \brief         Processes a received diagnostic sub-service request.
+ *  \details       DCM calls a function of this kind as soon as a supported diagnostic sub-service, configured to be
+ *                 handled by a CDD, is received. All of the relevant diagnostic request parameter information is
+ *                 forwarded by DCM through the pMsgContext function parameter.
+ *                 The concrete name of the callout is defined by the configuration
+ *                 parameter/Dcm/DcmConfigSet/DcmDsd/DcmDsdServiceTable/DcmDsdService/DcmDsdSubService/DcmDsdSubServiceFnc.
+ *  \param[in]     pContext             Pointer to the context
+ *  \param[in]     opStatus             The operation status
+ *  \param[in,out] pMsgContext          Message-related information for one diagnostic protocol identifier
+ *                                      The pointers in pMsgContext points behind the sub-function.
+ *  \param[out]    ErrorCode            Negative response code in case return value is DCM_E_NOT_OK
+ *  \return        DCM_E_OK             Job processing finished, send positive response
+ *  \return        DCM_E_PENDING        Job processing is not yet finished
+ *  \return        DCM_E_FORCE_RCRRP    (Vendor extension) Forces a RCR-RP response.
+ *                                      The call out will called again once the response is sent. The OpStatus parameter
+ *                                      will contain the transmission result
+ *  \return        DCM_E_STOP_REPEATER  Stops the repeater proxy
+ *  \return        DCM_E_NOT_OK         Job processing finished, send NRC from the ErrorCode
+ *  \context       TASK
+ *  \reentrant     FALSE
+ *  \synchronous   FALSE
+ *  \pre           -
+ ***********************************************************************************************************************/
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_Service19_0EProcessor(
   Dcm_ContextPtrType pContext,
   Dcm_OpStatusType opStatus,
   Dcm_MsgContextPtrType pMsgContext,
@@ -2731,13 +2897,13 @@ extern CONST(Dcm_CfgNetNetIdRefMemType, DCM_CONST) Dcm_CfgNetComCtrlChannelListA
 /*! Look up table of all supported ALFIDs */
 extern CONST(uint8, DCM_CONST) Dcm_CfgMemMgrAlfidLookUpTable[17];
 /*! Look up table of DCM service identifiers */
-extern CONST(uint8, DCM_CONST) Dcm_CfgDiagSvcIdLookUpTable[15];
+extern CONST(uint8, DCM_CONST) Dcm_CfgDiagSvcIdLookUpTable[16];
 /*! Service 0x10 look up table  */
 extern CONST(uint8, DCM_CONST) Dcm_CfgSvc10SubFuncLookUpTable[4];
 /*! Service 0x11 look up table  */
-extern CONST(uint8, DCM_CONST) Dcm_CfgSvc11SubFuncLookUpTable[2];
+extern CONST(uint8, DCM_CONST) Dcm_CfgSvc11SubFuncLookUpTable[3];
 /*! Service 0x19 look up table  */
-extern CONST(uint8, DCM_CONST) Dcm_CfgSvc19SubFuncLookUpTable[13];
+extern CONST(uint8, DCM_CONST) Dcm_CfgSvc19SubFuncLookUpTable[15];
 /*! Service 0x27 look up table  */
 extern CONST(uint8, DCM_CONST) Dcm_CfgSvc27SubFuncLookUpTable[5];
 /*! Service 0x28 look up table  */
@@ -2758,9 +2924,9 @@ extern CONST(uint8, DCM_CONST) Dcm_CfgSvc85SubFuncLookUpTable[3];
 # define DCM_START_SEC_CONST_16
 # include "MemMap.h"                                                                                                                                 /* PRQA S 5087 */ /* MD_MSR_MemMap */
 /*! DID look up table  */
-extern CONST(uint16, DCM_CONST) Dcm_CfgDidMgrDidLookUpTable[11];
+extern CONST(uint16, DCM_CONST) Dcm_CfgDidMgrDidLookUpTable[15];
 /*! RID look up table  */
-extern CONST(uint16, DCM_CONST) Dcm_CfgRidMgrRidLookUpTable[4];
+extern CONST(uint16, DCM_CONST) Dcm_CfgRidMgrRidLookUpTable[3];
 # define DCM_STOP_SEC_CONST_16
 # include "MemMap.h"                                                                                                                                 /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -2781,7 +2947,7 @@ extern CONST(NetworkHandleType, DCM_CONST) Dcm_CfgNetAllComMChannelMap[1];
 /*! Look up table of DCM relevant network handles */
 extern CONST(NetworkHandleType, DCM_CONST) Dcm_CfgNetNetworkHandleLookUpTable[2];
 /*! Diagnostic service execution conditions */
-extern CONST(Dcm_CfgStatePreconditionInfoType, DCM_CONST) Dcm_CfgStatePreconditions[2];
+extern CONST(Dcm_CfgStatePreconditionInfoType, DCM_CONST) Dcm_CfgStatePreconditions[3];
 /*! Session state properties */
 extern CONST(Dcm_CfgStateSessionInfoType, DCM_CONST) Dcm_CfgStateSessionInfo[3];
 /*! Security Access state properties */
@@ -2795,53 +2961,57 @@ extern CONST(Dcm_CfgDidMgrDidRangeType, DCM_CONST) Dcm_CfgDidMgrDidRanges[1];
 /*! DID ranges to DID info map */
 extern CONST(Dcm_CfgDidMgrDidInfoRefType, DCM_CONST) Dcm_CfgDidMgrRangeDidInfoRefs[1];
 /*! DID properties */
-extern CONST(Dcm_CfgDidMgrDidInfoType, DCM_CONST) Dcm_CfgDidMgrDidInfo[10];
+extern CONST(Dcm_CfgDidMgrDidInfoType, DCM_CONST) Dcm_CfgDidMgrDidInfo[14];
 /*! DID operation properties */
-extern CONST(Dcm_CfgDidMgrDidOpInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpInfo[20];
+extern CONST(Dcm_CfgDidMgrDidOpInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpInfo[27];
 /*! DID operation classes */
-extern CONST(Dcm_CfgDidMgrDidOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpClassInfo[30];
+extern CONST(Dcm_CfgDidMgrDidOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpClassInfo[43];
 /*! DID signal operation classes */
-extern CONST(Dcm_CfgDidMgrSignalOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrSignalOpClassInfo[44];
+extern CONST(Dcm_CfgDidMgrSignalOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrSignalOpClassInfo[57];
+/*! IO control DID operation properties */
+extern CONST(Dcm_CfgDidMgrOpInfoIoControlType, DCM_CONST) Dcm_CfgDidMgrOpInfoIoControl[1];
 /*! Dynamically Defined DID operation properties */
 extern CONST(Dcm_CfgDidMgrOpInfoDefineType, DCM_CONST) Dcm_CfgDidMgrOpInfoDefine[1];
+/*! Bridge for combined DID operation properties */
+extern CONST(Dcm_CfgDidMgrOpInfoCombinedType, DCM_CONST) Dcm_CfgDidMgrOpInfoCombined[1];
 /*! RID properties */
-extern CONST(Dcm_CfgRidMgrRidInfoType, DCM_CONST) Dcm_CfgRidMgrRidInfo[3];
+extern CONST(Dcm_CfgRidMgrRidInfoType, DCM_CONST) Dcm_CfgRidMgrRidInfo[2];
 /*! RID operation properties */
-extern CONST(Dcm_CfgRidMgrOpInfoType, DCM_CONST) Dcm_CfgRidMgrOpInfo[8];
+extern CONST(Dcm_CfgRidMgrOpInfoType, DCM_CONST) Dcm_CfgRidMgrOpInfo[4];
 /*! Properties of the MIDs */
 extern CONST(Dcm_CfgMemMgrMemIdInfoType, DCM_CONST) Dcm_CfgMemMgrMidInfo[1];
 /*! Properties of the memory map of a specific MID */
 extern CONST(Dcm_CfgMemMgrMemMapInfoType, DCM_CONST) Dcm_CfgMemMgrMemMap[1];
 /*! DCM service initializers */
-extern CONST(Dcm_DiagSvcInitFuncType, DCM_CONST) Dcm_CfgDiagSvcInitializers[3];
+extern CONST(Dcm_DiagSvcInitFuncType, DCM_CONST) Dcm_CfgDiagSvcInitializers[4];
 /*! DCM service properties */
-extern CONST(Dcm_CfgDiagServiceInfoType, DCM_CONST) Dcm_CfgDiagServiceInfo[15];
+extern CONST(Dcm_CfgDiagServiceInfoType, DCM_CONST) Dcm_CfgDiagServiceInfo[16];
 /*! Indirection from diag service info to execution pre conditions */
-extern CONST(Dcm_CfgStateRefMemType, DCM_CONST) Dcm_CfgDiagSvcIdExecPrecondTable[14];
+extern CONST(Dcm_CfgStateRefMemType, DCM_CONST) Dcm_CfgDiagSvcIdExecPrecondTable[15];
 /*! DCM service post processors */
-extern CONST(Dcm_DiagSvcConfirmationFuncType, DCM_CONST) Dcm_CfgDiagSvcPostProcessors[10];
+extern CONST(Dcm_DiagSvcConfirmationFuncType, DCM_CONST) Dcm_CfgDiagSvcPostProcessors[11];
 /*! DCM service paged buffer updater */
 extern CONST(Dcm_DiagSvcUpdateFuncType, DCM_CONST) Dcm_CfgDiagSvcUpdaters[3];
 /*! DCM service paged buffer canceller */
-extern CONST(Dcm_DiagSvcCancelFuncType, DCM_CONST) Dcm_CfgDiagSvcCancellers[6];
+extern CONST(Dcm_DiagSvcCancelFuncType, DCM_CONST) Dcm_CfgDiagSvcCancellers[7];
 /*! OEM notification functions */
 extern CONST(Dcm_CfgDiagNotificationInfoType, DCM_CONST) Dcm_CfgDiagOemNotificationInfo[1];
 /*! System supplier notification functions */
 extern CONST(Dcm_CfgDiagNotificationInfoType, DCM_CONST) Dcm_CfgDiagSysNotificationInfo[1];
 /*! DCM service to protocol map */
-extern CONST(Dcm_CfgDiagSvc2ProtMapMemType, DCM_CONST) Dcm_CfgDiagSvcId2ProtMap[14];
+extern CONST(Dcm_CfgDiagSvc2ProtMapMemType, DCM_CONST) Dcm_CfgDiagSvcId2ProtMap[15];
 /*! Service 0x10 sub-service properties table  */
 extern CONST(Dcm_CfgSvc10SubFuncInfoType, DCM_CONST) Dcm_CfgSvc10SubFuncInfo[3];
 /*! Indirection from service 0x10 sub functions to execution pre conditions */
 extern CONST(Dcm_CfgStateRefMemType, DCM_CONST) Dcm_CfgSvc10SubFuncExecPrecondTable[3];
 /*! Service 0x11 sub-service properties table  */
-extern CONST(Dcm_CfgSvc11SubFuncInfoType, DCM_CONST) Dcm_CfgSvc11SubFuncInfo[1];
+extern CONST(Dcm_CfgSvc11SubFuncInfoType, DCM_CONST) Dcm_CfgSvc11SubFuncInfo[2];
 /*! Indirection from service 0x11 sub functions to execution pre conditions */
-extern CONST(Dcm_CfgStateRefMemType, DCM_CONST) Dcm_CfgSvc11SubFuncExecPrecondTable[1];
+extern CONST(Dcm_CfgStateRefMemType, DCM_CONST) Dcm_CfgSvc11SubFuncExecPrecondTable[2];
 /*! Service 0x19 sub-service properties table  */
-extern CONST(Dcm_CfgSvc19SubFuncInfoType, DCM_CONST) Dcm_CfgSvc19SubFuncInfo[12];
+extern CONST(Dcm_CfgSvc19SubFuncInfoType, DCM_CONST) Dcm_CfgSvc19SubFuncInfo[14];
 /*! Indirection from service 0x19 sub functions to execution pre conditions */
-extern CONST(Dcm_CfgStateRefMemType, DCM_CONST) Dcm_CfgSvc19SubFuncExecPrecondTable[12];
+extern CONST(Dcm_CfgStateRefMemType, DCM_CONST) Dcm_CfgSvc19SubFuncExecPrecondTable[14];
 /*! Service 0x27 sub-service properties table  */
 extern CONST(Dcm_CfgSvc27SubFuncInfoType, DCM_CONST) Dcm_CfgSvc27SubFuncInfo[4];
 /*! Service 0x27 security level properties table  */

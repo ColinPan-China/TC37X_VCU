@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
   <AR-PACKAGES>
-    <AR-PACKAGE UUID="76a708ca-2087-4fe9-82ea-de473e09ee05">
+    <AR-PACKAGE>
       <SHORT-NAME>Pwm</SHORT-NAME>
       <ELEMENTS>
         <ECUC-MODULE-CONFIGURATION-VALUES>
           <SHORT-NAME>Pwm</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV:CfgPostBuild">
+                <SD GID="DV:postBuildVariantSupport">false</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
           <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AURIX2G/EcucDefs/Pwm</DEFINITION-REF>
           <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-POST-BUILD</IMPLEMENTATION-CONFIG-VARIANT>
           <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/AURIX2G/EcucDefs/Pwm_Impl</MODULE-DESCRIPTION-REF>
           <CONTAINERS>
             <ECUC-CONTAINER-VALUE UUID="f4ae0a01-cb0f-493c-863e-7690dcd0e5f8">
               <SHORT-NAME>CommonPublishedInformation</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/CommonPublishedInformation</DEFINITION-REF>
+              <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/CommonPublishedInformation</DEFINITION-REF>
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Pwm/CommonPublishedInformation/ArMajorVersion</DEFINITION-REF>
@@ -58,11 +65,11 @@
             </ECUC-CONTAINER-VALUE>
             <ECUC-CONTAINER-VALUE UUID="8d47dfe2-61c2-4168-8c84-57612af8a535">
               <SHORT-NAME>PwmChannelConfigSet</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet</DEFINITION-REF>
+              <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet</DEFINITION-REF>
               <SUB-CONTAINERS>
                 <ECUC-CONTAINER-VALUE UUID="d78e17b2-de2d-4db6-8dfc-d8cadaa12d2f">
                   <SHORT-NAME>PwmChannel_PWM_OUT1</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel</DEFINITION-REF>
+                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel</DEFINITION-REF>
                   <PARAMETER-VALUES>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/PwmAssignedHwUnit</DEFINITION-REF>
@@ -110,7 +117,7 @@
                   <SUB-CONTAINERS>
                     <ECUC-CONTAINER-VALUE UUID="436b9a4c-d64c-43b0-89b2-69dc7b1c286f">
                       <SHORT-NAME>GtmTimerOutputModuleConfiguration_0</SHORT-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/GtmTimerOutputModuleConfiguration</DEFINITION-REF>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/GtmTimerOutputModuleConfiguration</DEFINITION-REF>
                       <PARAMETER-VALUES>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/GtmTimerOutputModuleConfiguration/GtmTimerClockSelect</DEFINITION-REF>
@@ -126,7 +133,7 @@
                     </ECUC-CONTAINER-VALUE>
                     <ECUC-CONTAINER-VALUE UUID="aa889ef2-0125-4b01-af28-38b447a3d380">
                       <SHORT-NAME>CCU6CC6Configuration</SHORT-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/CCU6CC6Configuration</DEFINITION-REF>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/CCU6CC6Configuration</DEFINITION-REF>
                       <PARAMETER-VALUES>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/CCU6CC6Configuration/CCU6TimerUsed</DEFINITION-REF>
@@ -156,7 +163,7 @@
                 </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="971f6632-2ba4-4756-b6b7-4c69ad54a0b7">
                   <SHORT-NAME>PwmChannel_PWM_OUT2</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel</DEFINITION-REF>
+                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel</DEFINITION-REF>
                   <PARAMETER-VALUES>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/PwmAssignedHwUnit</DEFINITION-REF>
@@ -204,7 +211,7 @@
                   <SUB-CONTAINERS>
                     <ECUC-CONTAINER-VALUE UUID="028c6708-a312-4c04-8092-bb7923e39544">
                       <SHORT-NAME>GtmTimerOutputModuleConfiguration_0</SHORT-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/GtmTimerOutputModuleConfiguration</DEFINITION-REF>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/GtmTimerOutputModuleConfiguration</DEFINITION-REF>
                       <PARAMETER-VALUES>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/GtmTimerOutputModuleConfiguration/GtmTimerClockSelect</DEFINITION-REF>
@@ -220,7 +227,7 @@
                     </ECUC-CONTAINER-VALUE>
                     <ECUC-CONTAINER-VALUE UUID="94570080-1816-4c73-972f-37e56d4accc3">
                       <SHORT-NAME>CCU6CC6Configuration</SHORT-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/CCU6CC6Configuration</DEFINITION-REF>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/CCU6CC6Configuration</DEFINITION-REF>
                       <PARAMETER-VALUES>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Pwm/PwmChannelConfigSet/PwmChannel/CCU6CC6Configuration/CCU6TimerUsed</DEFINITION-REF>
@@ -252,7 +259,7 @@
             </ECUC-CONTAINER-VALUE>
             <ECUC-CONTAINER-VALUE UUID="11600af2-ba79-493b-b42f-658ca5701e71">
               <SHORT-NAME>PwmConfigurationOfOptApiServices</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmConfigurationOfOptApiServices</DEFINITION-REF>
+              <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmConfigurationOfOptApiServices</DEFINITION-REF>
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Pwm/PwmConfigurationOfOptApiServices/PwmDeInitApi</DEFINITION-REF>
@@ -282,7 +289,7 @@
             </ECUC-CONTAINER-VALUE>
             <ECUC-CONTAINER-VALUE UUID="f03cb221-e912-4e4e-9479-1ef736db87ac">
               <SHORT-NAME>PwmGeneral</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmGeneral</DEFINITION-REF>
+              <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AURIX2G/EcucDefs/Pwm/PwmGeneral</DEFINITION-REF>
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Pwm/PwmGeneral/PwmChannelCoherentSelection</DEFINITION-REF>

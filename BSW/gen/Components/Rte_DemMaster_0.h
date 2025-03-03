@@ -46,28 +46,6 @@ extern "C"
 # include "Rte_DataHandleType.h"
 
 
-# define RTE_START_SEC_CODE
-# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-/**********************************************************************************************************************
- * API prototypes
- *********************************************************************************************************************/
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBInitEvt_DTC_0x000002_InitMonitorForEvent(Dem_InitMonitorReasonType InitMonitorReason); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-
-# define RTE_STOP_SEC_CODE
-# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
-# ifndef RTE_CORE
-
-/**********************************************************************************************************************
- * Rte_Call_<p>_<o> (unmapped) for synchronous C/S communication
- *********************************************************************************************************************/
-#  define Rte_Call_CBInitEvt_DTC_0x000002_InitMonitorForEvent Rte_Call_DemMaster_0_CBInitEvt_DTC_0x000002_InitMonitorForEvent
-
-# endif /* !defined(RTE_CORE) */
-
-
 # define DemMaster_0_START_SEC_CODE
 # include "DemMaster_0_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -96,6 +74,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBInitEvt_DTC_0x000002_InitM
 #  define RTE_RUNNABLE_GetOperationCycleState Dem_GetOperationCycleState
 #  define RTE_RUNNABLE_PostRunRequested Dem_PostRunRequested
 #  define RTE_RUNNABLE_SelectDTC Dem_SelectDTC
+#  define RTE_RUNNABLE_SetEnableCondition Dem_SetEnableCondition
 #  define RTE_RUNNABLE_SetOperationCycleState Dem_SetOperationCycleState
 # endif
 
@@ -119,6 +98,7 @@ FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_GetNumberOfEventMemoryEntries(uint8 p
 FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_GetOperationCycleState(uint8 parg0, P2VAR(Dem_OperationCycleStateType, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) CycleState); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_PostRunRequested(P2VAR(boolean, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) IsRequested); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_SelectDTC(uint8 parg0, uint32 DTC, Dem_DTCFormatType DTCFormat, Dem_DTCOriginType DTCOrigin); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_SetEnableCondition(uint8 parg0, boolean ConditionFulfilled); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_SetOperationCycleState(uint8 parg0, Dem_OperationCycleStateType CycleState); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 
 # define DemMaster_0_STOP_SEC_CODE
@@ -129,8 +109,6 @@ FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_SetOperationCycleState(uint8 parg0, D
 /**********************************************************************************************************************
  * Application errors
  *********************************************************************************************************************/
-
-#  define RTE_E_CallbackInitMonitorForEvent_E_NOT_OK (1U)
 
 #  define RTE_E_ClearDTC_DEM_CLEAR_BUSY (5U)
 
@@ -149,6 +127,8 @@ FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_SetOperationCycleState(uint8 parg0, D
 #  define RTE_E_ClearDTC_E_OK (0U)
 
 #  define RTE_E_DemServices_E_NOT_OK (1U)
+
+#  define RTE_E_EnableCondition_E_NOT_OK (1U)
 
 #  define RTE_E_EvMemOverflowIndication_E_NOT_OK (1U)
 
