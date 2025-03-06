@@ -46,6 +46,28 @@ extern "C"
 # include "Rte_DataHandleType.h"
 
 
+# ifndef RTE_CORE
+
+/**********************************************************************************************************************
+ * Rte_Call_<p>_<o> (unmapped) for synchronous C/S communication
+ *********************************************************************************************************************/
+#  define RTE_START_SEC_DIAG_SWC_APPL_CODE
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+FUNC(Std_ReturnType, RTE_DIAG_SWC_APPL_CODE) CBReadData_DID_0xf1a0_F1A0_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_DIAG_SWC_APPL_CODE) CBReadData_DID_0xf1a1_F1A1_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_DIAG_SWC_APPL_CODE) CBReadData_DID_0xf1a2_F1A2_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+
+#  define RTE_STOP_SEC_DIAG_SWC_APPL_CODE
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#  define Rte_Call_CBReadData_DID_0xf1a0_F1A0_Data_ReadData CBReadData_DID_0xf1a0_F1A0_Data_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a1_F1A1_Data_ReadData CBReadData_DID_0xf1a1_F1A1_Data_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a2_F1A2_Data_ReadData CBReadData_DID_0xf1a2_F1A2_Data_ReadData
+
+# endif /* !defined(RTE_CORE) */
+
+
 # define DemMaster_0_START_SEC_CODE
 # include "DemMaster_0_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -109,6 +131,12 @@ FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_SetOperationCycleState(uint8 parg0, D
 /**********************************************************************************************************************
  * Application errors
  *********************************************************************************************************************/
+
+#  define RTE_E_CSDataServices_DID_0xf1a0_F1A0_Data_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a1_F1A1_Data_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a2_F1A2_Data_E_NOT_OK (1U)
 
 #  define RTE_E_ClearDTC_DEM_CLEAR_BUSY (5U)
 

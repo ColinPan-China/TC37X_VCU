@@ -179,6 +179,7 @@
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
+#include "Dem.h"
 
 
 /**********************************************************************************************************************
@@ -345,6 +346,7 @@
  *
  * Array Types:
  * ============
+ * DataArrayType_uint8_2: Array with 2 element(s) of type uint8
  * Dcm_Data2ByteType: Array with 2 element(s) of type uint8
  * Dcm_Data4ByteType: Array with 4 element(s) of type uint8
  * NvM_Arry4Bytes: Array with 4 element(s) of type uint8
@@ -376,6 +378,150 @@
 
 #define DIAG_SWC_START_SEC_CODE
 #include "DIAG_SWC_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: CBReadData_DID_0xf1a0_F1A0_Data_ReadData
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <ReadData> of PortPrototype <CBReadData_DID_0xf1a0_F1A0_Data>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType CBReadData_DID_0xf1a0_F1A0_Data_ReadData(uint8 *Data)
+ *     Argument Data: uint8* is of type DataArrayType_uint8_2
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_CSDataServices_DID_0xf1a0_F1A0_Data_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: CBReadData_DID_0xf1a0_F1A0_Data_ReadData_doc
+ *********************************************************************************************************************/
+uint8 FrezeFram = 0;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a0_F1A0_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: CBReadData_DID_0xf1a0_F1A0_Data_ReadData (returns application error)
+ *********************************************************************************************************************/
+  Data[0] = FrezeFram++;
+  Data[1] = FrezeFram++;
+  return RTE_E_OK;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: CBReadData_DID_0xf1a1_F1A1_Data_ReadData
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <ReadData> of PortPrototype <CBReadData_DID_0xf1a1_F1A1_Data>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType CBReadData_DID_0xf1a1_F1A1_Data_ReadData(uint8 *Data)
+ *     Argument Data: uint8* is of type DataArrayType_uint8_2
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_CSDataServices_DID_0xf1a1_F1A1_Data_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: CBReadData_DID_0xf1a1_F1A1_Data_ReadData_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a1_F1A1_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: CBReadData_DID_0xf1a1_F1A1_Data_ReadData (returns application error)
+ *********************************************************************************************************************/
+  Data[0] = FrezeFram++;
+  Data[1] = FrezeFram++;
+  return RTE_E_OK;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: CBReadData_DID_0xf1a2_F1A2_Data_ReadData
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <ReadData> of PortPrototype <CBReadData_DID_0xf1a2_F1A2_Data>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType CBReadData_DID_0xf1a2_F1A2_Data_ReadData(uint8 *Data)
+ *     Argument Data: uint8* is of type DataArrayType_uint8_2
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_CSDataServices_DID_0xf1a2_F1A2_Data_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: CBReadData_DID_0xf1a2_F1A2_Data_ReadData_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a2_F1A2_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: CBReadData_DID_0xf1a2_F1A2_Data_ReadData (returns application error)
+ *********************************************************************************************************************/
+  Data[0] = FrezeFram++;
+  Data[1] = FrezeFram++;
+  return RTE_E_OK;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
 
 /**********************************************************************************************************************
  *
@@ -421,8 +567,9 @@
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: DIAG_SWC_Init_doc
  *********************************************************************************************************************/
-
-
+uint8 len1 = 0;
+uint8 len2 = 0;
+uint8 len3 = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -437,6 +584,10 @@ FUNC(void, DIAG_SWC_CODE) DIAG_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
   Rte_Call_OpCycle_OBDDrivingCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
   Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
   Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
+
+  len1 = sizeof(Dem_Cfg_PrimaryEntry_0);
+  len2 = sizeof(Dem_Cfg_StatusData);
+  len3 = sizeof(Dem_Cfg_AdminData);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

@@ -84,9 +84,9 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_GetErrorStatus(NvM_BlockIdType parg0
 #  define Rte_Call_Event_DTC_0x000002_SetEventStatus(arg1) (Dem_SetEventStatus((Dem_EventIdType)1, arg1))
 #  define Rte_Call_Event_DTC_0x000003_GetEventStatus(arg1) (Dem_GetEventUdsStatus((Dem_EventIdType)2, arg1))
 #  define Rte_Call_Event_DTC_0x000003_SetEventStatus(arg1) (Dem_SetEventStatus((Dem_EventIdType)2, arg1))
-#  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_ReadBlock(arg1) (NvM_ReadBlock((NvM_BlockIdType)10, arg1))
-#  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)10, arg1))
-#  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_WriteBlock(arg1) (NvM_WriteBlock((NvM_BlockIdType)10, arg1))
+#  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_ReadBlock(arg1) (NvM_ReadBlock((NvM_BlockIdType)11, arg1))
+#  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)11, arg1))
+#  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounter_WriteBlock(arg1) (NvM_WriteBlock((NvM_BlockIdType)11, arg1))
 #  define Rte_Call_OpCycle_IgnitionCycle_GetOperationCycleState(arg1) (RTE_E_UNCONNECTED)
 #  define Rte_Call_OpCycle_IgnitionCycle_SetOperationCycleState(arg1) (RTE_E_UNCONNECTED)
 #  define Rte_Call_OpCycle_OBDDrivingCycle_GetOperationCycleState(arg1) (RTE_E_UNCONNECTED)
@@ -95,10 +95,10 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_GetErrorStatus(NvM_BlockIdType parg0
 #  define Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(arg1) (Dem_SetOperationCycleState((uint8)0, arg1))
 #  define Rte_Call_OpCycle_WarmUpCycle_GetOperationCycleState(arg1) (RTE_E_UNCONNECTED)
 #  define Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(arg1) (RTE_E_UNCONNECTED)
-#  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_GetErrorStatus(arg1) (NvM_GetErrorStatus((NvM_BlockIdType)9, arg1))
-#  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_ReadBlock(arg1) (NvM_ReadBlock((NvM_BlockIdType)9, arg1))
-#  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)9, arg1))
-#  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_WriteBlock(arg1) (NvM_WriteBlock((NvM_BlockIdType)9, arg1))
+#  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_GetErrorStatus(arg1) (NvM_GetErrorStatus((NvM_BlockIdType)10, arg1))
+#  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_ReadBlock(arg1) (NvM_ReadBlock((NvM_BlockIdType)10, arg1))
+#  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)10, arg1))
+#  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_WriteBlock(arg1) (NvM_WriteBlock((NvM_BlockIdType)10, arg1))
 
 /**********************************************************************************************************************
  * Rte_CData (SW-C local calibration parameters)
@@ -160,6 +160,9 @@ extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNe
  *********************************************************************************************************************/
 
 # ifndef RTE_CORE
+#  define RTE_RUNNABLE_CBReadData_DID_0xf1a0_F1A0_Data_ReadData CBReadData_DID_0xf1a0_F1A0_Data_ReadData
+#  define RTE_RUNNABLE_CBReadData_DID_0xf1a1_F1A1_Data_ReadData CBReadData_DID_0xf1a1_F1A1_Data_ReadData
+#  define RTE_RUNNABLE_CBReadData_DID_0xf1a2_F1A2_Data_ReadData CBReadData_DID_0xf1a2_F1A2_Data_ReadData
 #  define RTE_RUNNABLE_DIAG_SWC_Init DIAG_SWC_Init
 #  define RTE_RUNNABLE_DTCMonitorRunnable_10ms DTCMonitorRunnable_10ms
 #  define RTE_RUNNABLE_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead DataServices_VCU_DID_00_DataRecord_ConditionCheckRead
@@ -174,6 +177,9 @@ extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNe
 #  define RTE_RUNNABLE_SecurityAccess_Level_3_SetSecurityAttemptCounter SecurityAccess_Level_3_SetSecurityAttemptCounter
 # endif
 
+FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a0_F1A0_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a1_F1A1_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a2_F1A2_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(void, DIAG_SWC_CODE) DIAG_SWC_Init(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_VCU_DID_00_DataRecord_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
@@ -195,6 +201,12 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_SetSecurityAttemptCou
 /**********************************************************************************************************************
  * Application errors
  *********************************************************************************************************************/
+
+#  define RTE_E_CSDataServices_DID_0xf1a0_F1A0_Data_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a1_F1A1_Data_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a2_F1A2_Data_E_NOT_OK (1U)
 
 #  define RTE_E_DataServices_VCU_DID_00_DataRecord_DCM_E_PENDING (10U)
 

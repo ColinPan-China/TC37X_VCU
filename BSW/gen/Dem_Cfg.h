@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Cfg.h
- *   Generation Time: 2025-03-03 11:01:38
+ *   Generation Time: 2025-03-06 13:46:45
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -308,7 +308,7 @@
 #define DEM_CFG_SUPPORT_SECONDARY                                          STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemMaxNumberEventEntrySecondary > 0 */ 
 #define DEM_CFG_SUPPORT_SI30_STATUS                                        STD_OFF      /* Autodetected - STD_ON: /Dem/DemGeneral/DemSupportExtendedFiM == TRUE || any /Dem/DemGeneral/DemDataClass/DemDataElementInternalData == DEM_SI30_STATUS exists, STD_OFF: else */ 
 #define DEM_CFG_SUPPORT_SIMILAR_CONDITIONS                                 STD_OFF      /* ((DEM_CFG_HAS_OBDII_ENABLED == STD_OFF) && (DEM_CFG_SUPPORT_WWHOBD == STD_OFF) && (DEM_CFG_SUPPORT_OBDONUDS == STD_OFF)) */ 
-#define DEM_CFG_SUPPORT_SRECS                                              STD_OFF      /* Internal - STD_ON: any EventParameter references FreezeFrame(s), STD_OFF: no EventParameter references FreezeFrames */ 
+#define DEM_CFG_SUPPORT_SRECS                                              STD_ON       /* Internal - STD_ON: any EventParameter references FreezeFrame(s), STD_OFF: no EventParameter references FreezeFrames */ 
 #define DEM_CFG_SUPPORT_SRECS_CALCULATED                                   STD_ON       /* Autodetected - via /Dem/DemGeneral/DemTypeOfFreezeFrameRecordNumeration == DEM_FF_RECNUM_CALCULATED or DEM_FF_RECNUM_CALCULATED_FIFO */ 
 #define DEM_CFG_SUPPORT_SRECS_CALCULATED_FIFO                              STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemTypeOfFreezeFrameRecordNumeration == DEM_FF_RECNUM_CALCULATED_FIFO */ 
 #define DEM_CFG_SUPPORT_SRECS_CONFIGURED                                   STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemTypeOfFreezeFrameRecordNumeration == DEM_FF_RECNUM_CONFIGURED */ 

@@ -1377,6 +1377,108 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF194_1_New_Data_O
   return ret;
 }
 
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
 FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
@@ -1781,6 +1883,36 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_SecurityAccess_UnlockedL1_GetSeed(Dc
   OpStatus = OpStatus;
   Seed = Seed;
   ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a0_F1A0_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a1_F1A1_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a2_F1A2_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
   /* call to server runnable removed as client is never triggered */
 
   return ret;

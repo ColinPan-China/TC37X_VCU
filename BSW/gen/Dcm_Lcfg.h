@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Lcfg.h
- *   Generation Time: 2025-03-03 11:01:38
+ *   Generation Time: 2025-03-06 13:46:45
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -2924,7 +2924,7 @@ extern CONST(uint8, DCM_CONST) Dcm_CfgSvc85SubFuncLookUpTable[3];
 # define DCM_START_SEC_CONST_16
 # include "MemMap.h"                                                                                                                                 /* PRQA S 5087 */ /* MD_MSR_MemMap */
 /*! DID look up table  */
-extern CONST(uint16, DCM_CONST) Dcm_CfgDidMgrDidLookUpTable[15];
+extern CONST(uint16, DCM_CONST) Dcm_CfgDidMgrDidLookUpTable[18];
 /*! RID look up table  */
 extern CONST(uint16, DCM_CONST) Dcm_CfgRidMgrRidLookUpTable[3];
 # define DCM_STOP_SEC_CONST_16
@@ -2961,13 +2961,13 @@ extern CONST(Dcm_CfgDidMgrDidRangeType, DCM_CONST) Dcm_CfgDidMgrDidRanges[1];
 /*! DID ranges to DID info map */
 extern CONST(Dcm_CfgDidMgrDidInfoRefType, DCM_CONST) Dcm_CfgDidMgrRangeDidInfoRefs[1];
 /*! DID properties */
-extern CONST(Dcm_CfgDidMgrDidInfoType, DCM_CONST) Dcm_CfgDidMgrDidInfo[14];
+extern CONST(Dcm_CfgDidMgrDidInfoType, DCM_CONST) Dcm_CfgDidMgrDidInfo[17];
 /*! DID operation properties */
-extern CONST(Dcm_CfgDidMgrDidOpInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpInfo[27];
+extern CONST(Dcm_CfgDidMgrDidOpInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpInfo[33];
 /*! DID operation classes */
-extern CONST(Dcm_CfgDidMgrDidOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpClassInfo[43];
+extern CONST(Dcm_CfgDidMgrDidOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpClassInfo[52];
 /*! DID signal operation classes */
-extern CONST(Dcm_CfgDidMgrSignalOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrSignalOpClassInfo[57];
+extern CONST(Dcm_CfgDidMgrSignalOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrSignalOpClassInfo[66];
 /*! IO control DID operation properties */
 extern CONST(Dcm_CfgDidMgrOpInfoIoControlType, DCM_CONST) Dcm_CfgDidMgrOpInfoIoControl[1];
 /*! Dynamically Defined DID operation properties */

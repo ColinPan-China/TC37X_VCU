@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Lcfg.c
- *   Generation Time: 2025-03-03 11:01:38
+ *   Generation Time: 2025-03-06 13:46:45
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -490,9 +490,9 @@ CONST(uint8, DCM_CONST) Dcm_CfgSvc85SubFuncLookUpTable[3]=
 #define DCM_START_SEC_CONST_16
 #include "MemMap.h"                                                                                                                                  /* PRQA S 5087 */ /* MD_MSR_MemMap */
 /*! DID look up table  */
-CONST(uint16, DCM_CONST) Dcm_CfgDidMgrDidLookUpTable[15]=
+CONST(uint16, DCM_CONST) Dcm_CfgDidMgrDidLookUpTable[18]=
 {
-   14u
+   17u
   ,0x0100u
   ,0x0101u
   ,0x0200u
@@ -506,6 +506,9 @@ CONST(uint16, DCM_CONST) Dcm_CfgDidMgrDidLookUpTable[15]=
   ,0xF190u
   ,0xF193u
   ,0xF194u
+  ,0xF1A0u
+  ,0xF1A1u
+  ,0xF1A2u
   ,0xF300u
 };
 /*! RID look up table  */
@@ -598,7 +601,7 @@ CONST(Dcm_CfgDidMgrDidInfoRefType, DCM_CONST) Dcm_CfgDidMgrRangeDidInfoRefs[1]=
    0u /* dummy initializer */
 };
 /*! DID properties */
-CONST(Dcm_CfgDidMgrDidInfoType, DCM_CONST) Dcm_CfgDidMgrDidInfo[14]=
+CONST(Dcm_CfgDidMgrDidInfoType, DCM_CONST) Dcm_CfgDidMgrDidInfo[17]=
 {
    {   10u,  10u,  10u,   0u,   0u,0x03u} /* DID: 0x0100 */
   ,{    2u,   2u,   2u,   2u,   0u,0x03u} /* DID: 0x0101 */
@@ -613,10 +616,13 @@ CONST(Dcm_CfgDidMgrDidInfoType, DCM_CONST) Dcm_CfgDidMgrDidInfo[14]=
   ,{   17u,  17u,  17u,  19u,   0u,0x03u} /* DID: 0xF190 */
   ,{    4u,   4u,   4u,  21u,   0u,0x03u} /* DID: 0xF193 */
   ,{    1u,   1u,   1u,  23u,   0u,0x03u} /* DID: 0xF194 */
-  ,{    0u,  50u,   0u,  25u,   0u,0x11u} /* DID: 0xF300 */
+  ,{    2u,   2u,   2u,  25u,   0u,0x03u} /* DID: 0xF1A0 */
+  ,{    2u,   2u,   2u,  27u,   0u,0x03u} /* DID: 0xF1A1 */
+  ,{    2u,   2u,   2u,  29u,   0u,0x03u} /* DID: 0xF1A2 */
+  ,{    0u,  50u,   0u,  31u,   0u,0x11u} /* DID: 0xF300 */
 };
 /*! DID operation properties */
-CONST(Dcm_CfgDidMgrDidOpInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpInfo[27]=
+CONST(Dcm_CfgDidMgrDidOpInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpInfo[33]=
 {
    {    0u,   0u,0x05u} /* DID: 0x0100 */
   ,{    0u,   2u,0x01u} /* DID: 0x0100 */
@@ -643,11 +649,17 @@ CONST(Dcm_CfgDidMgrDidOpInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpInfo[27]=
   ,{    0u,  36u,0x01u} /* DID: 0xF193 */
   ,{    0u,  37u,0x05u} /* DID: 0xF194 */
   ,{    0u,  39u,0x01u} /* DID: 0xF194 */
-  ,{    0u,  40u,0x03u} /* DID: 0xF300 */
-  ,{    0u,  42u,0x00u} /* DID: 0xF300 */
+  ,{    0u,  40u,0x05u} /* DID: 0xF1A0 */
+  ,{    0u,  42u,0x01u} /* DID: 0xF1A0 */
+  ,{    0u,  43u,0x05u} /* DID: 0xF1A1 */
+  ,{    0u,  45u,0x01u} /* DID: 0xF1A1 */
+  ,{    0u,  46u,0x05u} /* DID: 0xF1A2 */
+  ,{    0u,  48u,0x01u} /* DID: 0xF1A2 */
+  ,{    0u,  49u,0x03u} /* DID: 0xF300 */
+  ,{    0u,  51u,0x00u} /* DID: 0xF300 */
 };
 /*! DID operation classes */
-CONST(Dcm_CfgDidMgrDidOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpClassInfo[43]=
+CONST(Dcm_CfgDidMgrDidOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpClassInfo[52]=
 {
    {  0u}
   ,{  5u}
@@ -692,9 +704,18 @@ CONST(Dcm_CfgDidMgrDidOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrDidOpClassInfo[43
   ,{ 55u}
   ,{ 56u}
   ,{ 57u}
+  ,{ 58u}
+  ,{ 59u}
+  ,{ 60u}
+  ,{ 61u}
+  ,{ 62u}
+  ,{ 63u}
+  ,{ 64u}
+  ,{ 65u}
+  ,{ 66u}
 };
 /*! DID signal operation classes */
-CONST(Dcm_CfgDidMgrSignalOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrSignalOpClassInfo[57]=
+CONST(Dcm_CfgDidMgrSignalOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrSignalOpClassInfo[66]=
 {
    { ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DevelopmentData_OperatingSystemVersion_ReadData)),   2u,   2u,0x0002u} /* DID: 0x0100 */          /* PRQA S 0313 */ /* MD_Dcm_0313 */
   ,{ ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DevelopmentData_CanDriverVersion_ReadData)),   2u,   2u,0x0002u} /* DID: 0x0100 */                /* PRQA S 0313 */ /* MD_Dcm_0313 */
@@ -751,6 +772,15 @@ CONST(Dcm_CfgDidMgrSignalOpClassInfoType, DCM_CONST) Dcm_CfgDidMgrSignalOpClassI
   ,{ ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DID_0xF194_1_New_Data_Object_ReadData)),   1u,   1u,0x0002u} /* DID: 0xF194 */                    /* PRQA S 0313 */ /* MD_Dcm_0313 */
   ,{ ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DID_0xF194_1_New_Data_Object_ConditionCheckRead)),   0u,   0u,0x0201u} /* DID: 0xF194 */          /* PRQA S 0313 */ /* MD_Dcm_0313 */
   ,{ ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DID_0xF194_1_New_Data_Object_WriteData)),   1u,   1u,0x1002u} /* DID: 0xF194 */                   /* PRQA S 0313 */ /* MD_Dcm_0313 */
+  ,{ ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DID_0xF1A0_F1A0_Data_ReadData)),   2u,   2u,0x0002u} /* DID: 0xF1A0 */                            /* PRQA S 0313 */ /* MD_Dcm_0313 */
+  ,{ ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DID_0xF1A0_F1A0_Data_ConditionCheckRead)),   0u,   0u,0x0201u} /* DID: 0xF1A0 */                  /* PRQA S 0313 */ /* MD_Dcm_0313 */
+  ,{ ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DID_0xF1A0_F1A0_Data_WriteData)),   2u,   2u,0x1002u} /* DID: 0xF1A0 */                           /* PRQA S 0313 */ /* MD_Dcm_0313 */
+  ,{ ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DID_0xF1A1_F1A1_Data_ReadData)),   2u,   2u,0x0002u} /* DID: 0xF1A1 */                            /* PRQA S 0313 */ /* MD_Dcm_0313 */
+  ,{ ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DID_0xF1A1_F1A1_Data_ConditionCheckRead)),   0u,   0u,0x0201u} /* DID: 0xF1A1 */                  /* PRQA S 0313 */ /* MD_Dcm_0313 */
+  ,{ ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DID_0xF1A1_F1A1_Data_WriteData)),   2u,   2u,0x1002u} /* DID: 0xF1A1 */                           /* PRQA S 0313 */ /* MD_Dcm_0313 */
+  ,{ ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DID_0xF1A2_F1A2_Data_ReadData)),   2u,   2u,0x0002u} /* DID: 0xF1A2 */                            /* PRQA S 0313 */ /* MD_Dcm_0313 */
+  ,{ ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DID_0xF1A2_F1A2_Data_ConditionCheckRead)),   0u,   0u,0x0201u} /* DID: 0xF1A2 */                  /* PRQA S 0313 */ /* MD_Dcm_0313 */
+  ,{ ((Dcm_DidMgrOpFuncType)(Rte_Call_DataServices_DID_0xF1A2_F1A2_Data_WriteData)),   2u,   2u,0x1002u} /* DID: 0xF1A2 */                           /* PRQA S 0313 */ /* MD_Dcm_0313 */
   ,{ ((Dcm_DidMgrOpFuncType)(Dcm_DidMgr_F300_ReadData)),   0u,   0u,0x0007u} /* DID: 0xF300 */                                                       /* PRQA S 0313 */ /* MD_Dcm_0313 */
   ,{ ((Dcm_DidMgrOpFuncType)(Dcm_DidMgr_F300_ReadDataLength)),   0u,   0u,0x0102u} /* DID: 0xF300 */                                                 /* PRQA S 0313 */ /* MD_Dcm_0313 */
 };

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Cfg.h
- *   Generation Time: 2025-03-03 11:01:38
+ *   Generation Time: 2025-03-06 13:46:45
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -580,19 +580,19 @@
 /*! Maximum size of an IO control DIDs CEMR to be passed to the application */
 # define DCM_DIDMGR_IODID_MAX_EXT_CEMR_SIZE                                       1u
 /*! Size of table Dcm_CfgDidMgrDidLookUpTable */
-# define DCM_CFGDIDMGRDIDLOOKUPTABLE_SIZE                                      15u
+# define DCM_CFGDIDMGRDIDLOOKUPTABLE_SIZE                                      18u
 /*! Size of table Dcm_CfgDidMgrDidRanges */
 # define DCM_CFGDIDMGRDIDRANGES_SIZE                                            1u
 /*! Size of table Dcm_CfgDidMgrRangeDidInfoRefs */
 # define DCM_CFGDIDMGRRANGEDIDINFOREFS_SIZE                                     1u
 /*! Size of table Dcm_CfgDidMgrDidInfo */
-# define DCM_CFGDIDMGRDIDINFO_SIZE                                             14u
+# define DCM_CFGDIDMGRDIDINFO_SIZE                                             17u
 /*! Size of table Dcm_CfgDidMgrDidOpInfo */
-# define DCM_CFGDIDMGRDIDOPINFO_SIZE                                           27u
+# define DCM_CFGDIDMGRDIDOPINFO_SIZE                                           33u
 /*! Size of table Dcm_CfgDidMgrDidOpClassInfo */
-# define DCM_CFGDIDMGRDIDOPCLASSINFO_SIZE                                      43u
+# define DCM_CFGDIDMGRDIDOPCLASSINFO_SIZE                                      52u
 /*! Size of table Dcm_CfgDidMgrSignalOpClassInfo */
-# define DCM_CFGDIDMGRSIGNALOPCLASSINFO_SIZE                                   57u
+# define DCM_CFGDIDMGRSIGNALOPCLASSINFO_SIZE                                   66u
 /*! Size of table Dcm_CfgDidMgrOpInfoIoControl */
 # define DCM_CFGDIDMGROPINFOIOCONTROL_SIZE                                      1u
 /*! Size of table Dcm_CfgDidMgrOpInfoDefine */

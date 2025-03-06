@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: NvM_Cfg.h
- *   Generation Time: 2025-02-21 14:00:51
+ *   Generation Time: 2025-03-06 13:46:44
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -93,7 +93,7 @@ typedef union
 #define NVM_DATA_INTEGRITY_INT_BUFFER         (STD_ON)
 
 /* number of defined NV blocks */
-#define NVM_TOTAL_NUM_OF_NVRAM_BLOCKS         (11u)
+#define NVM_TOTAL_NUM_OF_NVRAM_BLOCKS         (12u)
 
 /* internal buffer size */
 #define NVM_INTERNAL_BUFFER_LENGTH            34uL
@@ -136,13 +136,14 @@ typedef union
 #define NvMConf_NvMBlockDescriptor_NvMConfigBlock (1u) 
 #define NvMConf_NvMBlockDescriptor_NvM_DEM_AdminData (2u) 
 #define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_0 (3u) 
-#define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_1 (4u) 
-#define NvMConf_NvMBlockDescriptor_NvM_DEM_StatusData (5u) 
-#define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData1 (6u) 
-#define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2 (7u) 
-#define NvMConf_NvMBlockDescriptor_SWC1NvBlockNeed_UserData3 (8u) 
-#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_DiagDID_00 (9u) 
-#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_AttemptCounter (10u) 
+#define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_2 (4u) 
+#define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_1 (5u) 
+#define NvMConf_NvMBlockDescriptor_NvM_DEM_StatusData (6u) 
+#define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData1 (7u) 
+#define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2 (8u) 
+#define NvMConf_NvMBlockDescriptor_SWC1NvBlockNeed_UserData3 (9u) 
+#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_DiagDID_00 (10u) 
+#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_AttemptCounter (11u) 
 
 
 /* CONST_DESCRIPTOR_TABLE contains all block relevant data, including the compiled config ID

@@ -195,6 +195,9 @@ typedef void * dtRef_VOID;
 # define Rte_TypeDef_dtRef_const_VOID
 typedef const void * dtRef_const_VOID;
 
+# define Rte_TypeDef_DataArrayType_uint8_2
+typedef uint8 DataArrayType_uint8_2[2];
+
 # define Rte_TypeDef_Dcm_Data13ByteType
 typedef uint8 Dcm_Data13ByteType[13];
 

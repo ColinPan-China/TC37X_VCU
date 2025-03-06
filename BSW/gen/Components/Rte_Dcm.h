@@ -76,6 +76,15 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0400_DID_Data_Rea
 FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF194_1_New_Data_Object_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF194_1_New_Data_Object_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF194_1_New_Data_Object_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
@@ -173,6 +182,15 @@ FUNC(Std_ReturnType, RTE_DIAG_SWC_APPL_CODE) SecurityAccess_Level_3_SetSecurityA
 #  define Rte_Call_DataServices_DID_0xF194_1_New_Data_Object_ConditionCheckRead Rte_Call_Dcm_DataServices_DID_0xF194_1_New_Data_Object_ConditionCheckRead
 #  define Rte_Call_DataServices_DID_0xF194_1_New_Data_Object_ReadData Rte_Call_Dcm_DataServices_DID_0xF194_1_New_Data_Object_ReadData
 #  define Rte_Call_DataServices_DID_0xF194_1_New_Data_Object_WriteData Rte_Call_Dcm_DataServices_DID_0xF194_1_New_Data_Object_WriteData
+#  define Rte_Call_DataServices_DID_0xF1A0_F1A0_Data_ConditionCheckRead Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_ConditionCheckRead
+#  define Rte_Call_DataServices_DID_0xF1A0_F1A0_Data_ReadData Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_ReadData
+#  define Rte_Call_DataServices_DID_0xF1A0_F1A0_Data_WriteData Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_WriteData
+#  define Rte_Call_DataServices_DID_0xF1A1_F1A1_Data_ConditionCheckRead Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_ConditionCheckRead
+#  define Rte_Call_DataServices_DID_0xF1A1_F1A1_Data_ReadData Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_ReadData
+#  define Rte_Call_DataServices_DID_0xF1A1_F1A1_Data_WriteData Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_WriteData
+#  define Rte_Call_DataServices_DID_0xF1A2_F1A2_Data_ConditionCheckRead Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_ConditionCheckRead
+#  define Rte_Call_DataServices_DID_0xF1A2_F1A2_Data_ReadData Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_ReadData
+#  define Rte_Call_DataServices_DID_0xF1A2_F1A2_Data_WriteData Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_WriteData
 #  define Rte_Call_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_ConditionCheckRead Rte_Call_Dcm_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_ConditionCheckRead
 #  define Rte_Call_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_ReadData Rte_Call_Dcm_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_ReadData
 #  define Rte_Call_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_WriteData Rte_Call_Dcm_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_WriteData
@@ -284,6 +302,18 @@ FUNC(Std_ReturnType, Dcm_CODE) Dcm_SetActiveDiagnostic(boolean active); /* PRQA 
 #  define RTE_E_DataServices_DID_0xF194_1_New_Data_Object_DCM_E_PENDING (10U)
 
 #  define RTE_E_DataServices_DID_0xF194_1_New_Data_Object_E_NOT_OK (1U)
+
+#  define RTE_E_DataServices_DID_0xF1A0_F1A0_Data_DCM_E_PENDING (10U)
+
+#  define RTE_E_DataServices_DID_0xF1A0_F1A0_Data_E_NOT_OK (1U)
+
+#  define RTE_E_DataServices_DID_0xF1A1_F1A1_Data_DCM_E_PENDING (10U)
+
+#  define RTE_E_DataServices_DID_0xF1A1_F1A1_Data_E_NOT_OK (1U)
+
+#  define RTE_E_DataServices_DID_0xF1A2_F1A2_Data_DCM_E_PENDING (10U)
+
+#  define RTE_E_DataServices_DID_0xF1A2_F1A2_Data_E_NOT_OK (1U)
 
 #  define RTE_E_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_DCM_E_PENDING (10U)
 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Lcfg.c
- *   Generation Time: 2025-03-03 11:01:38
+ *   Generation Time: 2025-03-06 13:46:45
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -123,6 +123,7 @@
   \var    Dem_Cfg_DataCollectionTable
   \details
   Element                                Description
+  IdNumber                           
   CollectionSize                     
   DataElementTableCol2ElmtIndEndIdx      the end index of the 0:n relation pointing to Dem_Cfg_DataElementTableCol2ElmtInd
   DataElementTableCol2ElmtIndStartIdx    the start index of the 0:n relation pointing to Dem_Cfg_DataElementTableCol2ElmtInd
@@ -132,11 +133,14 @@
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_Cfg_DataCollectionTableType, DEM_CONST) Dem_Cfg_DataCollectionTable[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    CollectionSize  DataElementTableCol2ElmtIndEndIdx                                  DataElementTableCol2ElmtIndStartIdx                                  StorageKind                       Referable Keys */
-  { /*     0 */             0u, DEM_CFG_NO_DATAELEMENTTABLECOL2ELMTINDENDIDXOFDATACOLLECTIONTABLE, DEM_CFG_NO_DATAELEMENTTABLECOL2ELMTINDSTARTIDXOFDATACOLLECTIONTABLE, DEM_CFG_EREC_TYPE_GLOBAL   },  /* [#NoDataCollectionConfigured] */
-  { /*     1 */             2u,                                                                2u,                                                                  0u, DEM_CFG_EREC_TYPE_INTERNAL },  /* [#EdrExtendedDataRecord0x01, Ext:ExtendedDataClass_4f5344cd, #ExtendedDataRecord] */
-  { /*     2 */             1u,                                                                3u,                                                                  2u, DEM_CFG_EREC_TYPE_INTERNAL }   /* [#EdrExtendedDataRecord0x02, Ext:ExtendedDataClass_4f5344cd, #ExtendedDataRecord] */
+CONST(Dem_Cfg_DataCollectionTableType, DEM_CONST) Dem_Cfg_DataCollectionTable[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    IdNumber  CollectionSize  DataElementTableCol2ElmtIndEndIdx                                  DataElementTableCol2ElmtIndStartIdx                                  StorageKind                       Referable Keys */
+  { /*     0 */  0x0000u,             0u, DEM_CFG_NO_DATAELEMENTTABLECOL2ELMTINDENDIDXOFDATACOLLECTIONTABLE, DEM_CFG_NO_DATAELEMENTTABLECOL2ELMTINDSTARTIDXOFDATACOLLECTIONTABLE, DEM_CFG_EREC_TYPE_GLOBAL   },  /* [#NoDataCollectionConfigured] */
+  { /*     1 */  0x0001u,             2u,                                                                2u,                                                                  0u, DEM_CFG_EREC_TYPE_INTERNAL },  /* [#EdrExtendedDataRecord0x01, Ext:ExtendedDataClass_4f5344cd, #ExtendedDataRecord] */
+  { /*     2 */  0x0002u,             1u,                                                                3u,                                                                  2u, DEM_CFG_EREC_TYPE_INTERNAL },  /* [#EdrExtendedDataRecord0x02, Ext:ExtendedDataClass_4f5344cd, #ExtendedDataRecord] */
+  { /*     3 */  0xF1A0u,             2u,                                                                4u,                                                                  3u, DEM_CFG_EREC_TYPE_USER     },  /* [#DidDID_0xF1A0, Ffm:FreezeFrameClass_8de652ca] */
+  { /*     4 */  0xF1A1u,             2u,                                                                5u,                                                                  4u, DEM_CFG_EREC_TYPE_USER     },  /* [#DidDID_0xF1A1, Ffm:FreezeFrameClass_8de652ca] */
+  { /*     5 */  0xF1A2u,             2u,                                                                6u,                                                                  5u, DEM_CFG_EREC_TYPE_USER     }   /* [#DidDID_0xF1A2, Ffm:FreezeFrameClass_8de652ca] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -158,12 +162,15 @@ CONST(Dem_Cfg_DataCollectionTableType, DEM_CONST) Dem_Cfg_DataCollectionTable[3]
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_Cfg_DataElementTableType, DEM_CONST) Dem_Cfg_DataElementTable[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    ElementKind                          ElementSize  ReadDataFunc                                                                Referable Keys */
-  { /*     0 */ DEM_CFG_DATAELEMENT_INVALID        ,          0u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR },  /* [#NoDataElementConfigured] */
-  { /*     1 */ DEM_CFG_DATA_FROM_AGINGCTR         ,          1u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR },  /* [#ExtendedDataRecord0x02_Fault_Aging_Counte_Up, EdrExtendedDataRecord0x02] */
-  { /*     2 */ DEM_CFG_DATA_FROM_AGINGCTR_INVERTED,          1u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR },  /* [#ExtendedDataRecord0x01_Fault_Aging_Counter, EdrExtendedDataRecord0x01] */
-  { /*     3 */ DEM_CFG_DATA_FROM_OCCCTR           ,          1u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR }   /* [#ExtendedDataRecord0x01_Occurence_Counter, EdrExtendedDataRecord0x01] */
+CONST(Dem_Cfg_DataElementTableType, DEM_CONST) Dem_Cfg_DataElementTable[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    ElementKind                          ElementSize  ReadDataFunc                                                                                                         Referable Keys */
+  { /*     0 */ DEM_CFG_DATAELEMENT_INVALID        ,          0u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR                                          },  /* [#NoDataElementConfigured] */
+  { /*     1 */ DEM_CFG_DATA_FROM_AGINGCTR         ,          1u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR                                          },  /* [#ExtendedDataRecord0x02_Fault_Aging_Counte_Up, EdrExtendedDataRecord0x02] */
+  { /*     2 */ DEM_CFG_DATA_FROM_AGINGCTR_INVERTED,          1u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR                                          },  /* [#ExtendedDataRecord0x01_Fault_Aging_Counter, EdrExtendedDataRecord0x01] */
+  { /*     3 */ DEM_CFG_DATA_FROM_OCCCTR           ,          1u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ NULL_PTR                                          },  /* [#ExtendedDataRecord0x01_Occurence_Counter, EdrExtendedDataRecord0x01] */
+  { /*     4 */ DEM_CFG_DATA_FROM_CBK              ,          2u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ Rte_Call_CBReadData_DID_0xf1a2_F1A2_Data_ReadData },  /* [#DID_0xf1a2_F1A2_Data, DidDID_0xF1A2] */
+  { /*     5 */ DEM_CFG_DATA_FROM_CBK              ,          2u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ Rte_Call_CBReadData_DID_0xf1a1_F1A1_Data_ReadData },  /* [#DID_0xf1a1_F1A1_Data, DidDID_0xF1A1] */
+  { /*     6 */ DEM_CFG_DATA_FROM_CBK              ,          2u,  (Dem_ReadDataFPtrType) /* PRQA S 0313 */ /* MD_DEM_11.1 */ Rte_Call_CBReadData_DID_0xf1a0_F1A0_Data_ReadData }   /* [#DID_0xf1a0_F1A0_Data, DidDID_0xF1A0] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -181,11 +188,14 @@ CONST(Dem_Cfg_DataElementTableType, DEM_CONST) Dem_Cfg_DataElementTable[4] = {  
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_Cfg_DataElementTableCol2ElmtIndType, DEM_CONST) Dem_Cfg_DataElementTableCol2ElmtInd[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Dem_Cfg_DataElementTableCol2ElmtIndType, DEM_CONST) Dem_Cfg_DataElementTableCol2ElmtInd[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     DataElementTableCol2ElmtInd      Referable Keys */
   /*     0 */                           3u,  /* [EdrExtendedDataRecord0x01] */
   /*     1 */                           2u,  /* [EdrExtendedDataRecord0x01] */
-  /*     2 */                           1u   /* [EdrExtendedDataRecord0x02] */
+  /*     2 */                           1u,  /* [EdrExtendedDataRecord0x02] */
+  /*     3 */                           6u,  /* [DidDID_0xF1A0] */
+  /*     4 */                           5u,  /* [DidDID_0xF1A1] */
+  /*     5 */                           4u   /* [DidDID_0xF1A2] */
 };
 #define DEM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -352,22 +362,72 @@ CONST(Dem_Cfg_ExtendedDataTableType, DEM_CONST) Dem_Cfg_ExtendedDataTable[2] = {
 /*lint -restore */
 
 /**********************************************************************************************************************
+  Dem_Cfg_FreezeFrameNumTable
+**********************************************************************************************************************/
+/** 
+  \var    Dem_Cfg_FreezeFrameNumTable
+  \details
+  Element     Description
+  FFUpdate
+*/ 
+#define DEM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Dem_Cfg_FreezeFrameNumTableType, DEM_CONST) Dem_Cfg_FreezeFrameNumTable[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    FFUpdate        Referable Keys */
+  { /*     0 */    FALSE },  /* [calcFFRecNumClass_02, #EVENT_INVALID, DTC_0X000002, DTC_0X000003, DTC_0X000004] */
+  { /*     1 */     TRUE }   /* [calcFFRecNumClass_02, #EVENT_INVALID, DTC_0X000002, DTC_0X000003, DTC_0X000004] */
+};
+#define DEM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Dem_Cfg_FreezeFrameTable
+**********************************************************************************************************************/
+/** 
+  \var    Dem_Cfg_FreezeFrameTable
+  \details
+  Element                                   Description
+  DataCollectionTableFfm2CollIndEndIdx      the end index of the 0:n relation pointing to Dem_Cfg_DataCollectionTableFfm2CollInd
+  DataCollectionTableFfm2CollIndStartIdx    the start index of the 0:n relation pointing to Dem_Cfg_DataCollectionTableFfm2CollInd
+  RecordSize                                Summarized size of did data that is stored in Dem_Cfg_PrimaryEntryType.SnapshotData[][] (i.e. typically without size of dids containing internal data elements).
+  RecordSizeUds                             Summarized size of did data, did numbers and snapshot header (i.e. dynamical payload size of the uds response message).
+*/ 
+#define DEM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Dem_Cfg_FreezeFrameTableType, DEM_CONST) Dem_Cfg_FreezeFrameTable[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    DataCollectionTableFfm2CollIndEndIdx                               DataCollectionTableFfm2CollIndStartIdx                               RecordSize  RecordSizeUds        Referable Keys */
+  { /*     0 */ DEM_CFG_NO_DATACOLLECTIONTABLEFFM2COLLINDENDIDXOFFREEZEFRAMETABLE, DEM_CFG_NO_DATACOLLECTIONTABLEFFM2COLLINDSTARTIDXOFFREEZEFRAMETABLE,         0u,            0u },  /* [#NoFreezeFrameConfigured] */
+  { /*     1 */                                                                3u,                                                                  0u,         6u,           14u }   /* [#FreezeFrameClass_8de652ca, #EVENT_INVALID, DTC_0X000002, DTC_0X000003, DTC_0X000004] */
+};
+#define DEM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   Dem_Cfg_MemoryBlockId
 **********************************************************************************************************************/
 /** 
   \var    Dem_Cfg_MemoryBlockId
-  \brief  The array contains these items: Admin, Status, 2 * Primary
+  \brief  The array contains these items: Admin, Status, 3 * Primary
 */ 
 #define DEM_START_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_Cfg_MemoryBlockIdType, DEM_CONST) Dem_Cfg_MemoryBlockId[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Dem_Cfg_MemoryBlockIdType, DEM_CONST) Dem_Cfg_MemoryBlockId[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     MemoryBlockId                                                           Comment */
-  /*     0 */ NvMConf_NvMBlockDescriptor_NvM_DEM_AdminData /*NvMBlockId=2*/      ,  /* [DemNvRamBlockId] */
-  /*     1 */ NvMConf_NvMBlockDescriptor_NvM_DEM_StatusData /*NvMBlockId=5*/     ,  /* [DemNvRamBlockId_003] */
-  /*     2 */ NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_0 /*NvMBlockId=3*/ ,  /* [DemNvRamBlockId_001] */
-  /*     3 */ NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_1 /*NvMBlockId=4*/    /* [DemNvRamBlockId_002] */
+  /*     0 */ NvMConf_NvMBlockDescriptor_NvM_DEM_AdminData /*NvMBlockId=2*/      ,  /* [DemNvRamBlockId_AdminData] */
+  /*     1 */ NvMConf_NvMBlockDescriptor_NvM_DEM_StatusData /*NvMBlockId=6*/     ,  /* [DemNvRamBlockId_DEM_StatusData] */
+  /*     2 */ NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_0 /*NvMBlockId=3*/ ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_0] */
+  /*     3 */ NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_1 /*NvMBlockId=5*/ ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_1] */
+  /*     4 */ NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_2 /*NvMBlockId=4*/    /* [DemNvRamBlockId_DEM_PrimaryEntry_2] */
 };
 #define DEM_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
@@ -379,18 +439,19 @@ CONST(Dem_Cfg_MemoryBlockIdType, DEM_CONST) Dem_Cfg_MemoryBlockId[4] = {  /* PRQ
 **********************************************************************************************************************/
 /** 
   \var    Dem_Cfg_MemoryBlockIdToMemoryEntryId
-  \brief  The array contains these items: Admin, Status, 2 * Primary
+  \brief  The array contains these items: Admin, Status, 3 * Primary
 */ 
 #define DEM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_Cfg_MemoryEntryHandleType, DEM_CONST) Dem_Cfg_MemoryBlockIdToMemoryEntryId[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Dem_Cfg_MemoryEntryHandleType, DEM_CONST) Dem_Cfg_MemoryBlockIdToMemoryEntryId[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     MemoryBlockIdToMemoryEntryId        Comment */
-  /*     0 */ DEM_MEMORYENTRY_HANDLE_INVALID ,  /* [DemNvRamBlockId] */
-  /*     1 */ DEM_MEMORYENTRY_HANDLE_INVALID ,  /* [DemNvRamBlockId_003] */
-  /*     2 */ 0u                             ,  /* [DemNvRamBlockId_001] */
-  /*     3 */ 1u                                /* [DemNvRamBlockId_002] */
+  /*     0 */ DEM_MEMORYENTRY_HANDLE_INVALID ,  /* [DemNvRamBlockId_AdminData] */
+  /*     1 */ DEM_MEMORYENTRY_HANDLE_INVALID ,  /* [DemNvRamBlockId_DEM_StatusData] */
+  /*     2 */ 0u                             ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_0] */
+  /*     3 */ 1u                             ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_1] */
+  /*     4 */ 2u                                /* [DemNvRamBlockId_DEM_PrimaryEntry_2] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -402,18 +463,19 @@ CONST(Dem_Cfg_MemoryEntryHandleType, DEM_CONST) Dem_Cfg_MemoryBlockIdToMemoryEnt
 **********************************************************************************************************************/
 /** 
   \var    Dem_Cfg_MemoryDataPtr
-  \brief  The array contains these items: Admin, Status, 2 * Primary
+  \brief  The array contains these items: Admin, Status, 3 * Primary
 */ 
 #define DEM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_NvDataPtrType, DEM_CONST) Dem_Cfg_MemoryDataPtr[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Dem_NvDataPtrType, DEM_CONST) Dem_Cfg_MemoryDataPtr[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     MemoryDataPtr                                                                                  Comment */
-  /*     0 */ (Dem_NvDataPtrType) &Dem_Cfg_GetAdminData()        /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId] */
-  /*     1 */ (Dem_NvDataPtrType) &Dem_Cfg_GetStatusData()       /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_003] */
-  /*     2 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_0()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_001] */
-  /*     3 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_1()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */   /* [DemNvRamBlockId_002] */
+  /*     0 */ (Dem_NvDataPtrType) &Dem_Cfg_GetAdminData()        /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_AdminData] */
+  /*     1 */ (Dem_NvDataPtrType) &Dem_Cfg_GetStatusData()       /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_StatusData] */
+  /*     2 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_0()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_0] */
+  /*     3 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_1()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_1] */
+  /*     4 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_2()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */   /* [DemNvRamBlockId_DEM_PrimaryEntry_2] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -425,18 +487,19 @@ CONST(Dem_NvDataPtrType, DEM_CONST) Dem_Cfg_MemoryDataPtr[4] = {  /* PRQA S 1514
 **********************************************************************************************************************/
 /** 
   \var    Dem_Cfg_MemoryDataSize
-  \brief  The array contains these items: Admin, Status, 2 * Primary
+  \brief  The array contains these items: Admin, Status, 3 * Primary
 */ 
 #define DEM_START_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_Cfg_MemoryDataSizeType, DEM_CONST) Dem_Cfg_MemoryDataSize[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Dem_Cfg_MemoryDataSizeType, DEM_CONST) Dem_Cfg_MemoryDataSize[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     MemoryDataSize                                                        Comment */
-  /*     0 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetAdminData())      ,  /* [DemNvRamBlockId] */
-  /*     1 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetStatusData())     ,  /* [DemNvRamBlockId_003] */
-  /*     2 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_0()) ,  /* [DemNvRamBlockId_001] */
-  /*     3 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_1())    /* [DemNvRamBlockId_002] */
+  /*     0 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetAdminData())      ,  /* [DemNvRamBlockId_AdminData] */
+  /*     1 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetStatusData())     ,  /* [DemNvRamBlockId_DEM_StatusData] */
+  /*     2 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_0()) ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_0] */
+  /*     3 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_1()) ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_1] */
+  /*     4 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_2())    /* [DemNvRamBlockId_DEM_PrimaryEntry_2] */
 };
 #define DEM_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
@@ -448,17 +511,18 @@ CONST(Dem_Cfg_MemoryDataSizeType, DEM_CONST) Dem_Cfg_MemoryDataSize[4] = {  /* P
 **********************************************************************************************************************/
 /** 
   \var    Dem_Cfg_MemoryEntry
-  \brief  The array contains these items: 2 * Primary, ReadoutBuffer; size = DEM_CFG_GLOBAL_PRIMARY_SIZE + DEM_CFG_GLOBAL_SECONDARY_SIZE + DEM_CFG_NUMBER_OF_READOUTBUFFERS * DEM_CFG_NUMBER_OF_SUBEVENT_DATA_READOUTBUFFERS
+  \brief  The array contains these items: 3 * Primary, ReadoutBuffer; size = DEM_CFG_GLOBAL_PRIMARY_SIZE + DEM_CFG_GLOBAL_SECONDARY_SIZE + DEM_CFG_NUMBER_OF_READOUTBUFFERS * DEM_CFG_NUMBER_OF_SUBEVENT_DATA_READOUTBUFFERS
 */ 
 #define DEM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_SharedMemoryEntryPtrType, DEM_CONST) Dem_Cfg_MemoryEntry[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Dem_SharedMemoryEntryPtrType, DEM_CONST) Dem_Cfg_MemoryEntry[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     MemoryEntry                                                                                          Comment */
-  /*     0 */ &Dem_Cfg_GetPrimaryEntry_0()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_001] */
-  /*     1 */ &Dem_Cfg_GetPrimaryEntry_1()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_002] */
-  /*     2 */ &Dem_Cfg_GetReadoutBuffer(0).ReadOutBufferData[0].Data   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */   /* [Dem_Cfg_ReadoutBuffer[0].ReadOutBufferData[0].Data] */
+  /*     0 */ &Dem_Cfg_GetPrimaryEntry_0()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_0] */
+  /*     1 */ &Dem_Cfg_GetPrimaryEntry_1()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_1] */
+  /*     2 */ &Dem_Cfg_GetPrimaryEntry_2()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_2] */
+  /*     3 */ &Dem_Cfg_GetReadoutBuffer(0).ReadOutBufferData[0].Data   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */   /* [Dem_Cfg_ReadoutBuffer[0].ReadOutBufferData[0].Data] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -799,13 +863,13 @@ VAR(Dem_Cfg_IndicatorContinuousType, DEM_VAR_NOINIT) Dem_Cfg_IndicatorContinuous
 **********************************************************************************************************************/
 /** 
   \var    Dem_Cfg_MemoryStatus
-  \brief  The array contains these items: Admin, Status, 2 * Primary
+  \brief  The array contains these items: Admin, Status, 3 * Primary
 */ 
 #define DEM_START_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Dem_Cfg_MemoryStatusType, DEM_VAR_NOINIT) Dem_Cfg_MemoryStatus[4];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Dem_Cfg_MemoryStatusType, DEM_VAR_NOINIT) Dem_Cfg_MemoryStatus[5];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define DEM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -822,7 +886,7 @@ VAR(Dem_Cfg_MemoryStatusType, DEM_VAR_NOINIT) Dem_Cfg_MemoryStatus[4];  /* PRQA 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Dem_Cfg_MemoryIndexType, DEM_VAR_NOINIT) Dem_Cfg_PrimaryChronology[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Dem_Cfg_MemoryIndexType, DEM_VAR_NOINIT) Dem_Cfg_PrimaryChronology[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define DEM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -849,6 +913,19 @@ VAR(Dem_Cfg_PrimaryEntryType, DEM_NVM_DATA_NOINIT) Dem_Cfg_PrimaryEntry_0;  /* P
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 VAR(Dem_Cfg_PrimaryEntryType, DEM_NVM_DATA_NOINIT) Dem_Cfg_PrimaryEntry_1;  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+#define DEM_STOP_SEC_VAR_SAVED_ZONE0_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Dem_Cfg_PrimaryEntry_2
+**********************************************************************************************************************/
+#define DEM_START_SEC_VAR_SAVED_ZONE0_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Dem_Cfg_PrimaryEntryType, DEM_NVM_DATA_NOINIT) Dem_Cfg_PrimaryEntry_2;  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define DEM_STOP_SEC_VAR_SAVED_ZONE0_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
