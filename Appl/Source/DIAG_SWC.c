@@ -567,9 +567,14 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a2_F1A2_Data_ReadData(P2V
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: DIAG_SWC_Init_doc
  *********************************************************************************************************************/
+#define DEM_NVM_BLOCK_CALCULATED    (FALSE)
+
+#if(DEM_NVM_BLOCK_CALCULATED)
 uint8 len1 = 0;
 uint8 len2 = 0;
 uint8 len3 = 0;
+#endif
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -585,9 +590,11 @@ FUNC(void, DIAG_SWC_CODE) DIAG_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
   Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
   Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
 
-  len1 = sizeof(Dem_Cfg_PrimaryEntry_0);
-  len2 = sizeof(Dem_Cfg_StatusData);
-  len3 = sizeof(Dem_Cfg_AdminData);
+  #if(DEM_NVM_BLOCK_CALCULATED)
+  len1 = sizeof( Dem_Cfg_PrimaryEntry_0 );
+  len2 = sizeof( Dem_Cfg_StatusData );
+  len3 = sizeof( Dem_Cfg_AdminData );
+  #endif
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -627,6 +634,7 @@ FUNC(void, DIAG_SWC_CODE) DIAG_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * Symbol: DTCMonitorRunnable_10ms_doc
  *********************************************************************************************************************/
 uint8 DTC_FailCnt     = 0;
+uint8 DTC_PassCnt     = 0;
 uint8 DTC_Status_0002 = 0;
 uint8 DTC_Status_0003 = 0;
 /**********************************************************************************************************************
@@ -646,6 +654,12 @@ FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void) /* PRQA S 0624, 3206 */ 
     DTC_FailCnt--;
   }
 
+  if(  DTC_PassCnt > 0 )
+  {
+    Rte_Call_Event_DTC_0x000002_SetEventStatus(DEM_EVENT_STATUS_PASSED);
+    Rte_Call_Event_DTC_0x000003_SetEventStatus(DEM_EVENT_STATUS_PASSED);
+    DTC_PassCnt--;
+  }
   Rte_Call_Event_DTC_0x000002_GetEventStatus(&DTC_Status_0002);
   Rte_Call_Event_DTC_0x000003_GetEventStatus(&DTC_Status_0003);
 
