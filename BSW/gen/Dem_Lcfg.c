@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Lcfg.c
- *   Generation Time: 2025-03-06 13:46:45
+ *   Generation Time: 2025-03-11 15:18:14
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -769,23 +769,6 @@ VAR(Dem_Cfg_ExtendedDataRecordIterator_FilterType, DEM_VAR_NOINIT) Dem_Cfg_Exten
 /*lint -restore */
 VAR(Dem_Cfg_FilterData_InfoType, DEM_VAR_NOINIT) Dem_Cfg_FilterInfoTable[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define DEM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-
-/**********************************************************************************************************************
-  Dem_Cfg_FilterReportedEvents
-**********************************************************************************************************************/
-/** 
-  \var    Dem_Cfg_FilterReportedEvents
-  \brief  size = ceiling( DEM_G_NUMBER_OF_EVENTS / 8 )
-*/ 
-#define DEM_START_SEC_VAR_NOINIT_8BIT
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-VAR(Dem_Cfg_FilterReportedEventsType, DEM_VAR_NOINIT) Dem_Cfg_FilterReportedEvents[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-#define DEM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

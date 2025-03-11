@@ -180,7 +180,7 @@
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 #include "Dem.h"
-
+#include "Adc_Sample.h"
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
@@ -585,10 +585,10 @@ FUNC(void, DIAG_SWC_CODE) DIAG_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: DIAG_SWC_Init
  *********************************************************************************************************************/
-  Rte_Call_OpCycle_IgnitionCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
-  Rte_Call_OpCycle_OBDDrivingCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
-  Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
-  Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
+//  Rte_Call_OpCycle_IgnitionCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
+//  Rte_Call_OpCycle_OBDDrivingCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
+//  Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
+//  Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
 
   #if(DEM_NVM_BLOCK_CALCULATED)
   len1 = sizeof( Dem_Cfg_PrimaryEntry_0 );
@@ -637,6 +637,7 @@ uint8 DTC_FailCnt     = 0;
 uint8 DTC_PassCnt     = 0;
 uint8 DTC_Status_0002 = 0;
 uint8 DTC_Status_0003 = 0;
+uint8 CurOpCycleSts   = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -647,7 +648,30 @@ FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void) /* PRQA S 0624, 3206 */ 
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: DTCMonitorRunnable_10ms
  *********************************************************************************************************************/
-  if(  DTC_FailCnt > 0 )
+  if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )//( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_12_KL15) == 0 )  
+  {
+    Rte_Call_OpCycle_PowerCycle_GetOperationCycleState(&CurOpCycleSts);
+    if( CurOpCycleSts != DEM_CYCLE_STATE_START )
+    {
+      Rte_Call_OpCycle_IgnitionCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
+      Rte_Call_OpCycle_OBDDrivingCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
+      Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
+      Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
+    }
+  }
+  else
+  {
+    Rte_Call_OpCycle_PowerCycle_GetOperationCycleState(&CurOpCycleSts);
+    if( CurOpCycleSts != DEM_CYCLE_STATE_END )
+    {
+      Rte_Call_OpCycle_IgnitionCycle_SetOperationCycleState(DEM_CYCLE_STATE_END);
+      Rte_Call_OpCycle_OBDDrivingCycle_SetOperationCycleState(DEM_CYCLE_STATE_END);
+      Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(DEM_CYCLE_STATE_END);
+      Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(DEM_CYCLE_STATE_END);
+    }
+  }
+
+ if(  DTC_FailCnt > 0 )
   {
     Rte_Call_Event_DTC_0x000002_SetEventStatus(DEM_EVENT_STATUS_FAILED);
     Rte_Call_Event_DTC_0x000003_SetEventStatus(DEM_EVENT_STATUS_FAILED);

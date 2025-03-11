@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Cfg.h
- *   Generation Time: 2025-03-06 13:46:45
+ *   Generation Time: 2025-03-11 15:45:21
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -184,14 +184,14 @@
 #define DEM_CFG_NOTIFY_J1939DCM                                            STD_OFF      /* (DEM_CFG_SUPPORT_J1939 == STD_OFF) */ 
 #define DEM_CFG_NOTIFY_J1939DTC_STATUS                                     STD_OFF      /* Autodetected - STD_ON: /Dem/DemGeneral/DemGeneralJ1939/DemCallbackJ1939DTCStatusChanged container(s) exist, STD_OFF: no such container */ 
 #define DEM_CFG_NOTIFY_MONITOR_STATUS_FIM                                  STD_OFF      /* /Dem/DemGeneral/DemTriggerFiMReports */ 
-#define DEM_CFG_PROCESS_CDTC_ALL_DTC                                       STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemResetConfirmedBitOnOverflow == FALSE */ 
-#define DEM_CFG_PROCESS_CDTC_STOREDONLY                                    STD_ON       /* Autodetected - via /Dem/DemGeneral/DemResetConfirmedBitOnOverflow == TRUE */ 
+#define DEM_CFG_PROCESS_CDTC_ALL_DTC                                       STD_ON       /* Autodetected - via /Dem/DemGeneral/DemResetConfirmedBitOnOverflow == FALSE */ 
+#define DEM_CFG_PROCESS_CDTC_STOREDONLY                                    STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemResetConfirmedBitOnOverflow == TRUE */ 
 #define DEM_CFG_PROCESS_COMPRESSION_MISFIRE_ALWAYS_COMPLETE                STD_OFF      /* ((DEM_CFG_HAS_OBDII_ENABLED == STD_OFF) && (DEM_CFG_SUPPORT_WWHOBD == STD_OFF) && (DEM_CFG_SUPPORT_OBDONUDS == STD_OFF)) */ 
 #define DEM_CFG_PROCESS_FUELSYSTEM_ALWAYS_COMPLETE                         STD_OFF      /* ((DEM_CFG_HAS_OBDII_ENABLED == STD_OFF) && (DEM_CFG_SUPPORT_WWHOBD == STD_OFF) && (DEM_CFG_SUPPORT_OBDONUDS == STD_OFF)) */ 
 #define DEM_CFG_PROCESS_OCCTR_CONFIRMED                                    STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemOccurrenceCounterProcessing == DEM_PROCESS_OCCCTR_CDTC */ 
 #define DEM_CFG_PROCESS_OCCTR_TESTFAILED                                   STD_ON       /* Autodetected - via /Dem/DemGeneral/DemOccurrenceCounterProcessing == DEM_PROCESS_OCCCTR_TF */ 
-#define DEM_CFG_PROCESS_PDTC_ALL_DTC                                       STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemPendingDtcProcessing == DEM_PROCESS_PDTC_ALL_DTC */ 
-#define DEM_CFG_PROCESS_PDTC_STOREDONLY                                    STD_ON       /* Autodetected - via /Dem/DemGeneral/DemPendingDtcProcessing == DEM_PROCESS_PDTC_STOREDONLY */ 
+#define DEM_CFG_PROCESS_PDTC_ALL_DTC                                       STD_ON       /* Autodetected - via /Dem/DemGeneral/DemPendingDtcProcessing == DEM_PROCESS_PDTC_ALL_DTC */ 
+#define DEM_CFG_PROCESS_PDTC_STOREDONLY                                    STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemPendingDtcProcessing == DEM_PROCESS_PDTC_STOREDONLY */ 
 #define DEM_CFG_PROCESS_PID41_COMPREHENSIVE_COMPLETE                       STD_OFF      /* ((DEM_CFG_HAS_OBDII_ENABLED == STD_OFF) && (DEM_CFG_SUPPORT_WWHOBD == STD_OFF) && (DEM_CFG_SUPPORT_OBDONUDS == STD_OFF)) */ 
 #define DEM_CFG_PROCESS_TFSLC_ALL_DTC                                      STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemStatusBitHandlingTestFailedSinceLastClear == DEM_STATUS_BIT_AGING */ 
 #define DEM_CFG_PROCESS_TFSLC_CLEARONLY                                    STD_ON       /* Autodetected - via /Dem/DemGeneral/DemStatusBitHandlingTestFailedSinceLastClear == DEM_STATUS_BIT_NORMAL */ 
@@ -212,7 +212,7 @@
 #define DEM_CFG_SUPPORT_AWL                                                STD_OFF      /* (DEM_CFG_SUPPORT_J1939 == STD_OFF) */ 
 #define DEM_CFG_SUPPORT_CLEAR_DTC_RUNTIME_LIMIT                            STD_OFF      /* Vector extension - /Dem/DemGeneral/DemClearDTCRuntimeLimit */ 
 #define DEM_CFG_SUPPORT_CLEAR_PDTC_NO_PFC                                  STD_OFF      /* ((DEM_CFG_HAS_OBDII_ENABLED == STD_OFF) && (DEM_CFG_SUPPORT_OBDONUDS == STD_OFF)) */ 
-#define DEM_CFG_SUPPORT_CLEAR_TESTFAILED_ON_OPCYCLE                        STD_OFF      /* Vector extension - /Dem/DemGeneral/DemResetTestFailedOnOperationCycleStart */ 
+#define DEM_CFG_SUPPORT_CLEAR_TESTFAILED_ON_OPCYCLE                        STD_ON       /* Vector extension - /Dem/DemGeneral/DemResetTestFailedOnOperationCycleStart */ 
 #define DEM_CFG_SUPPORT_CLIENTS                                            STD_ON       /* Autodetected - STD_ON: 1 or more /Dem/DemGeneral/DemClient exists, STD_OFF: else */ 
 #define DEM_CFG_SUPPORT_COMPATIBILITY                                      STD_OFF      /* Vector extension - /Dem/DemGeneral/DemCompatibilitySwitch */ 
 #define DEM_CFG_SUPPORT_CONFIRMED_STORAGE_FREEZE_FRAME                     STD_OFF      /* ((DEM_CFG_HAS_OBDII_ENABLED == STD_OFF) && (DEM_CFG_SUPPORT_WWHOBD == STD_OFF)) */ 
@@ -316,7 +316,7 @@
 #define DEM_CFG_SUPPORT_SVC19_16                                           STD_OFF      /* Vector extension - /Dem/DemGeneral/DemSupportService19x16 */ 
 #define DEM_CFG_SUPPORT_SVC19_1A                                           STD_OFF      /* Vector extension - /Dem/DemGeneral/DemSupportService19x1A */ 
 #define DEM_CFG_SUPPORT_SVC19_56                                           STD_OFF      /* Vector extension - /Dem/DemGeneral/DemSupportService19x56 */ 
-#define DEM_CFG_SUPPORT_TESTFAILED_STORAGE                                 STD_ON       /* /Dem/DemGeneral/DemStatusBitStorageTestFailed */ 
+#define DEM_CFG_SUPPORT_TESTFAILED_STORAGE                                 STD_OFF      /* /Dem/DemGeneral/DemStatusBitStorageTestFailed */ 
 #define DEM_CFG_SUPPORT_TIME_SERIES_FUTURE_FAST                            STD_OFF      /* Autodetected - STD_ON: (/Dem/DemGeneral/DemMaxNumberTimeSeriesSnapshots > 0) && (/Dem/DemGeneral/DemTimeSeriesSnapshot/DemTimeSeriesFastRateFutureSamples > 0) && (PostBuild-Loadable || any event has DemEventTimeSeries==FAST_RATE), STD_OFF: else. */ 
 #define DEM_CFG_SUPPORT_TIME_SERIES_FUTURE_NORMAL                          STD_OFF      /* Autodetected - STD_ON: (/Dem/DemGeneral/DemMaxNumberTimeSeriesSnapshots > 0) && (/Dem/DemGeneral/DemTimeSeriesSnapshot/DemTimeSeriesNormalRateFutureSamples > 0) && (PostBuild-Loadable || any event has DemEventTimeSeries==NORMAL_RATE|FAST_RATE), STD_OFF: else. */ 
 #define DEM_CFG_SUPPORT_TIME_SERIES_PAST_FAST                              STD_OFF      /* Autodetected - STD_ON: (/Dem/DemGeneral/DemMaxNumberTimeSeriesSnapshots > 0) && (/Dem/DemGeneral/DemTimeSeriesSnapshot/DemTimeSeriesFastRatePastSamples > 0) && (PostBuild-Loadable || any event has DemEventTimeSeries==FAST_RATE), STD_OFF: else. */ 
