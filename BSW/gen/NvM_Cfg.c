@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: NvM_Cfg.c
- *   Generation Time: 2025-03-06 14:04:47
+ *   Generation Time: 2025-03-12 13:55:30
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -73,6 +73,7 @@
 #include "Rte_Cbk.h" 
 #include "Nvm_App.h" 
 #include "Dem.h" 
+#include "Dem_Cbk.h" 
 
 
 /* include configured file declaring or defining resource (un)locking service(s) */
@@ -246,7 +247,7 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
         NULL_PTR /*  NvMRomBlockDataAddress  */ , 
         NULL_PTR /*  NvMInitBlockCallback  */ , 
         NULL_PTR /*  NvMInitBlockCallback (extended)  */ , 
-        NULL_PTR /*  NvMSingleBlockCallback  */ , 
+        Dem_NvM_JobFinished /*  NvMSingleBlockCallback  */ , 
         NULL_PTR /*  NvMSingleBlockCallback (extended)  */ , 
         NULL_PTR /*  NvMReadRamBlockFromNvCallback  */ , 
         NULL_PTR /*  NvMWriteRamBlockToNvCallback  */ , 
@@ -261,8 +262,8 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
           NVM_RESISTANT_TO_CHANGED_SW_ON, 
           NVM_SELECT_BLOCK_FOR_READALL_ON, 
           NVM_SELECT_BLOCK_FOR_WRITEALL_ON, 
-          NVM_INVOKE_CALLBACKS_FOR_READALL_OFF, 
-          NVM_INVOKE_CALLBACKS_FOR_WRITEALL_OFF, 
+          NVM_INVOKE_CALLBACKS_FOR_READALL_ON, 
+          NVM_INVOKE_CALLBACKS_FOR_WRITEALL_ON, 
           NVM_BLOCK_USE_SET_RAM_BLOCK_STATUS_ON, 
           NVM_BLOCK_CHECK_LOSS_OF_REDUNDANCY_OFF, 
           NVM_BLOCK_NOTIFY_BSWM_OFF
@@ -284,7 +285,7 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
         NULL_PTR /*  NvMRomBlockDataAddress  */ , 
         NULL_PTR /*  NvMInitBlockCallback  */ , 
         NULL_PTR /*  NvMInitBlockCallback (extended)  */ , 
-        NULL_PTR /*  NvMSingleBlockCallback  */ , 
+        Dem_NvM_JobFinished /*  NvMSingleBlockCallback  */ , 
         NULL_PTR /*  NvMSingleBlockCallback (extended)  */ , 
         NULL_PTR /*  NvMReadRamBlockFromNvCallback  */ , 
         NULL_PTR /*  NvMWriteRamBlockToNvCallback  */ , 
@@ -299,8 +300,8 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
           NVM_RESISTANT_TO_CHANGED_SW_ON, 
           NVM_SELECT_BLOCK_FOR_READALL_ON, 
           NVM_SELECT_BLOCK_FOR_WRITEALL_ON, 
-          NVM_INVOKE_CALLBACKS_FOR_READALL_OFF, 
-          NVM_INVOKE_CALLBACKS_FOR_WRITEALL_OFF, 
+          NVM_INVOKE_CALLBACKS_FOR_READALL_ON, 
+          NVM_INVOKE_CALLBACKS_FOR_WRITEALL_ON, 
           NVM_BLOCK_USE_SET_RAM_BLOCK_STATUS_ON, 
           NVM_BLOCK_CHECK_LOSS_OF_REDUNDANCY_OFF, 
           NVM_BLOCK_NOTIFY_BSWM_OFF
@@ -322,7 +323,7 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
         NULL_PTR /*  NvMRomBlockDataAddress  */ , 
         NULL_PTR /*  NvMInitBlockCallback  */ , 
         NULL_PTR /*  NvMInitBlockCallback (extended)  */ , 
-        NULL_PTR /*  NvMSingleBlockCallback  */ , 
+        Dem_NvM_JobFinished /*  NvMSingleBlockCallback  */ , 
         NULL_PTR /*  NvMSingleBlockCallback (extended)  */ , 
         NULL_PTR /*  NvMReadRamBlockFromNvCallback  */ , 
         NULL_PTR /*  NvMWriteRamBlockToNvCallback  */ , 
@@ -337,8 +338,8 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
           NVM_RESISTANT_TO_CHANGED_SW_ON, 
           NVM_SELECT_BLOCK_FOR_READALL_ON, 
           NVM_SELECT_BLOCK_FOR_WRITEALL_ON, 
-          NVM_INVOKE_CALLBACKS_FOR_READALL_OFF, 
-          NVM_INVOKE_CALLBACKS_FOR_WRITEALL_OFF, 
+          NVM_INVOKE_CALLBACKS_FOR_READALL_ON, 
+          NVM_INVOKE_CALLBACKS_FOR_WRITEALL_ON, 
           NVM_BLOCK_USE_SET_RAM_BLOCK_STATUS_ON, 
           NVM_BLOCK_CHECK_LOSS_OF_REDUNDANCY_OFF, 
           NVM_BLOCK_NOTIFY_BSWM_OFF

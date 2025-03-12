@@ -635,6 +635,7 @@ FUNC(void, DIAG_SWC_CODE) DIAG_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  *********************************************************************************************************************/
 uint8 DTC_FailCnt     = 0;
 uint8 DTC_PassCnt     = 0;
+uint8 DTC_Storage     = 0;
 uint8 DTC_Status_0002 = 0;
 uint8 DTC_Status_0003 = 0;
 uint8 CurOpCycleSts   = 0;
@@ -675,17 +676,22 @@ FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void) /* PRQA S 0624, 3206 */ 
   {
     Rte_Call_Event_DTC_0x000002_SetEventStatus(DEM_EVENT_STATUS_FAILED);
     Rte_Call_Event_DTC_0x000003_SetEventStatus(DEM_EVENT_STATUS_FAILED);
-    DTC_FailCnt--;
+//    DTC_FailCnt--;
   }
 
   if(  DTC_PassCnt > 0 )
   {
     Rte_Call_Event_DTC_0x000002_SetEventStatus(DEM_EVENT_STATUS_PASSED);
     Rte_Call_Event_DTC_0x000003_SetEventStatus(DEM_EVENT_STATUS_PASSED);
-    DTC_PassCnt--;
+//    DTC_PassCnt--;
   }
   Rte_Call_Event_DTC_0x000002_GetEventStatus(&DTC_Status_0002);
   Rte_Call_Event_DTC_0x000003_GetEventStatus(&DTC_Status_0003);
+
+
+  if( DTC_Storage > 0 )
+  {
+  }
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
