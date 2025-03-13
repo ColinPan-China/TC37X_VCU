@@ -163,6 +163,7 @@ extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNe
 #  define RTE_RUNNABLE_CBReadData_DID_0xf1a0_F1A0_Data_ReadData CBReadData_DID_0xf1a0_F1A0_Data_ReadData
 #  define RTE_RUNNABLE_CBReadData_DID_0xf1a1_F1A1_Data_ReadData CBReadData_DID_0xf1a1_F1A1_Data_ReadData
 #  define RTE_RUNNABLE_CBReadData_DID_0xf1a2_F1A2_Data_ReadData CBReadData_DID_0xf1a2_F1A2_Data_ReadData
+#  define RTE_RUNNABLE_CBReadData_DID_0xf1a3_F1A3_Data_ReadData CBReadData_DID_0xf1a3_F1A3_Data_ReadData
 #  define RTE_RUNNABLE_DIAG_SWC_Init DIAG_SWC_Init
 #  define RTE_RUNNABLE_DTCMonitorRunnable_10ms DTCMonitorRunnable_10ms
 #  define RTE_RUNNABLE_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead DataServices_VCU_DID_00_DataRecord_ConditionCheckRead
@@ -180,6 +181,7 @@ extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNe
 FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a0_F1A0_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a1_F1A1_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a2_F1A2_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a3_F1A3_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(void, DIAG_SWC_CODE) DIAG_SWC_Init(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_VCU_DID_00_DataRecord_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
@@ -207,6 +209,8 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_SetSecurityAttemptCou
 #  define RTE_E_CSDataServices_DID_0xf1a1_F1A1_Data_E_NOT_OK (1U)
 
 #  define RTE_E_CSDataServices_DID_0xf1a2_F1A2_Data_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a3_F1A3_Data_E_NOT_OK (1U)
 
 #  define RTE_E_DataServices_VCU_DID_00_DataRecord_DCM_E_PENDING (10U)
 

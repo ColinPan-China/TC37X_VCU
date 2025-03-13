@@ -525,6 +525,54 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a2_F1A2_Data_ReadData(P2V
 
 /**********************************************************************************************************************
  *
+ * Runnable Entity Name: CBReadData_DID_0xf1a3_F1A3_Data_ReadData
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <ReadData> of PortPrototype <CBReadData_DID_0xf1a3_F1A3_Data>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType CBReadData_DID_0xf1a3_F1A3_Data_ReadData(uint8 *Data)
+ *     Argument Data: uint8* is of type DataArrayType_uint8_2
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_CSDataServices_DID_0xf1a3_F1A3_Data_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: CBReadData_DID_0xf1a3_F1A3_Data_ReadData_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a3_F1A3_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: CBReadData_DID_0xf1a3_F1A3_Data_ReadData (returns application error)
+ *********************************************************************************************************************/
+  Data[0] = FrezeFram++;
+  Data[1] = FrezeFram++;
+  return RTE_E_OK;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
  * Runnable Entity Name: DIAG_SWC_Init
  *
  *---------------------------------------------------------------------------------------------------------------------

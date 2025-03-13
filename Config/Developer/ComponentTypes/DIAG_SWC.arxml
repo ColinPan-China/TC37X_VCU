@@ -371,6 +371,23 @@
               </PROVIDED-COM-SPECS>
               <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a2_F1A2_Data</PROVIDED-INTERFACE-TREF>
             </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="9AFE7BDB-7A4F-42A3-A671-9DCD477F2C1B">
+              <SHORT-NAME>CBReadData_DID_0xf1a3_F1A3_Data</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a3_F1A3_Data/ReadData</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a3_F1A3_Data</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
           </PORTS>
           <INTERNAL-BEHAVIORS>
             <SWC-INTERNAL-BEHAVIOR UUID="9769A5E0-D1CD-49AB-890E-9641785FFDCC">
@@ -511,6 +528,14 @@
                   <OPERATION-IREF>
                     <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/CBReadData_DID_0xf1a2_F1A2_Data</CONTEXT-P-PORT-REF>
                     <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a2_F1A2_Data/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="DA43139A-6BAF-40FF-A47C-70D17219E8A8">
+                  <SHORT-NAME>OIT_CBReadData_DID_0xf1a3_F1A3_Data_ReadData_CBReadData_DID_0xf1a3_F1A3_Data_ReadData</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/CBReadData_DID_0xf1a3_F1A3_Data_ReadData</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/CBReadData_DID_0xf1a3_F1A3_Data</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a3_F1A3_Data/ReadData</TARGET-PROVIDED-OPERATION-REF>
                   </OPERATION-IREF>
                 </OPERATION-INVOKED-EVENT>
               </EVENTS>
@@ -741,6 +766,9 @@
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="8CC66180-4C22-4AB5-B2A2-74F091C39773">
                   <SHORT-NAME>CBReadData_DID_0xf1a2_F1A2_Data_ReadData</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="F37773C4-9EEB-4962-945A-C0003DA313FF">
+                  <SHORT-NAME>CBReadData_DID_0xf1a3_F1A3_Data_ReadData</SHORT-NAME>
                 </RUNNABLE-ENTITY>
               </RUNNABLES>
               <SERVICE-DEPENDENCYS>

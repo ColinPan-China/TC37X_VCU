@@ -189,13 +189,13 @@
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>
     <Display LastVersion="5.24.40 SP2">
-        <FileSet Id="" CS="966f5683">
+        <FileSet Id="" CS="49331b3e">
             <File Order="0" EcuInstance="VCU" Hash="213bda1b0316231a39e53d9e97a880ad" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\VCU_CAN00.dbc</File>
             <File Order="2" EcuInstance="VCU" Hash="9c913df781eb00d583fc7580aaffea96" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\VCU_CAN01.dbc</File>
             <File Order="3" EcuInstance="VCU" Hash="e9835bf490363b026255ff29335a5bfb" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\LIN0.ldf</File>
             <File Order="4" EcuInstance="VCU" Hash="590693732196838823f922b5c7432cfd" FileCategory="legacy_communication_data">$(DpaProjectFolder)\DBC\KAMA_FP_EPT.dbc</File>
             <Diagnostic>
-                <Description Order="1" Hash="c461b5f0c1fa5fd306d5a9e3ee2ec7dd">$(DpaProjectFolder)\DBC\MyEcu.cdd</Description>
+                <Description Order="1" Hash="42494e5c4fa64c7556c146beebc0d72d">$(DpaProjectFolder)\DBC\MyEcu.cdd</Description>
                 <Ecu>MyEcu</Ecu>
                 <Variant>Base_Variant</Variant>
                 <UseLegacySignalImport>false</UseLegacySignalImport>

@@ -57,6 +57,7 @@ extern "C"
 FUNC(Std_ReturnType, RTE_DIAG_SWC_APPL_CODE) CBReadData_DID_0xf1a0_F1A0_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_DIAG_SWC_APPL_CODE) CBReadData_DID_0xf1a1_F1A1_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_DIAG_SWC_APPL_CODE) CBReadData_DID_0xf1a2_F1A2_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_DIAG_SWC_APPL_CODE) CBReadData_DID_0xf1a3_F1A3_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 
 #  define RTE_STOP_SEC_DIAG_SWC_APPL_CODE
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -64,6 +65,7 @@ FUNC(Std_ReturnType, RTE_DIAG_SWC_APPL_CODE) CBReadData_DID_0xf1a2_F1A2_Data_Rea
 #  define Rte_Call_CBReadData_DID_0xf1a0_F1A0_Data_ReadData CBReadData_DID_0xf1a0_F1A0_Data_ReadData
 #  define Rte_Call_CBReadData_DID_0xf1a1_F1A1_Data_ReadData CBReadData_DID_0xf1a1_F1A1_Data_ReadData
 #  define Rte_Call_CBReadData_DID_0xf1a2_F1A2_Data_ReadData CBReadData_DID_0xf1a2_F1A2_Data_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a3_F1A3_Data_ReadData CBReadData_DID_0xf1a3_F1A3_Data_ReadData
 
 # endif /* !defined(RTE_CORE) */
 
@@ -137,6 +139,8 @@ FUNC(Std_ReturnType, DemMaster_0_CODE) Dem_SetOperationCycleState(uint8 parg0, D
 #  define RTE_E_CSDataServices_DID_0xf1a1_F1A1_Data_E_NOT_OK (1U)
 
 #  define RTE_E_CSDataServices_DID_0xf1a2_F1A2_Data_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a3_F1A3_Data_E_NOT_OK (1U)
 
 #  define RTE_E_ClearDTC_DEM_CLEAR_BUSY (5U)
 

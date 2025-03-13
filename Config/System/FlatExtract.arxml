@@ -4133,6 +4133,17 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_DID_0xf1a2_F1A2_Data</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="914a1609-f14c-4905-a14a-ed723f7dd195">
+                                  <SHORT-NAME>DIAG_SWC_CBReadData_DID_0xf1a3_F1A3_Data_DemMaster_0_CBReadData_DID_0xf1a3_F1A3_Data</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/CBReadData_DID_0xf1a3_F1A3_Data</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_DID_0xf1a3_F1A3_Data</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -4222,6 +4233,7 @@
                                     <SD GID="0322021c-e24a-4ca4-a30d-185fbf48de7d">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_CBReadData_DID_0xf1a0_F1A0_Data_DemMaster_0_CBReadData_DID_0xf1a0_F1A0_Data</SD>
                                     <SD GID="f4385bee-0ed6-452c-a9a7-d66b95abf79d">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_CBReadData_DID_0xf1a1_F1A1_Data_DemMaster_0_CBReadData_DID_0xf1a1_F1A1_Data</SD>
                                     <SD GID="598cfcf3-796f-429b-b43f-757712f86bb7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_CBReadData_DID_0xf1a2_F1A2_Data_DemMaster_0_CBReadData_DID_0xf1a2_F1A2_Data</SD>
+                                    <SD GID="914a1609-f14c-4905-a14a-ed723f7dd195">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_CBReadData_DID_0xf1a3_F1A3_Data_DemMaster_0_CBReadData_DID_0xf1a3_F1A3_Data</SD>
                                     <SD GID="64ec4541-e8b7-481b-aad1-872429f16a36">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounterNvM_PS_DIAG_SWC_NvBlockNeed_AttemptCounter</SD>
                                     <SD GID="52f38fb1-f1fa-4839-bd5d-87d5584a122e">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</SD>
                                     <SD GID="dbd7af71-8f1f-4737-b93f-d0ed84b9ef39">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</SD>
@@ -4348,12 +4360,14 @@
                                     <SD GID="18A09CC2-441B-4A98-82CF-E59E0A06948F">/ComponentTypes/DIAG_SWC/CBReadData_DID_0xf1a0_F1A0_Data</SD>
                                     <SD GID="E3ACDD70-78CF-4446-9C41-2C99920C10F1">/ComponentTypes/DIAG_SWC/CBReadData_DID_0xf1a1_F1A1_Data</SD>
                                     <SD GID="CF9C7E55-DA50-4F79-B51D-998FBB343B58">/ComponentTypes/DIAG_SWC/CBReadData_DID_0xf1a2_F1A2_Data</SD>
+                                    <SD GID="9AFE7BDB-7A4F-42A3-A671-9DCD477F2C1B">/ComponentTypes/DIAG_SWC/CBReadData_DID_0xf1a3_F1A3_Data</SD>
                                     <SD GID="E1479815-5FEF-4896-9F58-551F83D07826">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/DIAG_SWC_InitEvent</SD>
                                     <SD GID="2EFA0735-93F0-46E5-B722-78F12C1C44A3">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/NvBlockNeed_AttemptCounter</SD>
                                     <SD GID="B0C63B94-0EBB-4D3A-A369-A55820B76806">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/NvBlockNeed_DiagDID_00</SD>
                                     <SD GID="A41B73E9-4954-4850-8A67-F035B187EF18">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_CBReadData_DID_0xf1a0_F1A0_Data_ReadData_CBReadData_DID_0xf1a0_F1A0_Data_ReadData</SD>
                                     <SD GID="71A06A60-4AE4-44A1-8EBC-8CC49D2D1924">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_CBReadData_DID_0xf1a1_F1A1_Data_ReadData_CBReadData_DID_0xf1a1_F1A1_Data_ReadData</SD>
                                     <SD GID="83C57B43-B349-4F99-B20F-0A15AAF105B9">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_CBReadData_DID_0xf1a2_F1A2_Data_ReadData_CBReadData_DID_0xf1a2_F1A2_Data_ReadData</SD>
+                                    <SD GID="DA43139A-6BAF-40FF-A47C-70D17219E8A8">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_CBReadData_DID_0xf1a3_F1A3_Data_ReadData_CBReadData_DID_0xf1a3_F1A3_Data_ReadData</SD>
                                     <SD GID="A0F860A0-FFE6-451D-B9E9-55D097ECCBF2">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead</SD>
                                     <SD GID="C230B1C2-A7E8-4EF4-A7D1-C0ADC63CE060">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_ReadData_DataServices_VCU_DID_00_DataRecord_ReadData</SD>
                                     <SD GID="1C517F4E-4BD2-4BB7-8CD9-BD531A61D96C">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_WriteData_DataServices_VCU_DID_00_DataRecord_WriteData</SD>
@@ -4750,6 +4764,7 @@
                                     <SD GID="3a3bed78-3670-44c7-828a-eb4137e9e9d4">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_DID_0xf1a0_F1A0_Data</SD>
                                     <SD GID="6231c33e-51c7-4d9e-abd8-c6b5b84293d0">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_DID_0xf1a1_F1A1_Data</SD>
                                     <SD GID="6b0853a4-8bbc-4340-ac7f-37fe75701f66">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_DID_0xf1a2_F1A2_Data</SD>
+                                    <SD GID="5f3d1845-5eb6-4698-acff-96d37260bbd2">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_DID_0xf1a3_F1A3_Data</SD>
                                     <SD GID="4bb453d2-9771-4f1a-a611-3d2e050b5179">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/ClearDTC_DemClient</SD>
                                     <SD GID="07f46fff-8870-421b-a07e-341f2c06888b">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/DemMaster_0InternalBehavior/ClearDTC</SD>
                                     <SD GID="92f6a37e-1a39-4f54-8b32-92ca62fb48cb">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/DemMaster_0InternalBehavior/GetEventMemoryOverflow</SD>

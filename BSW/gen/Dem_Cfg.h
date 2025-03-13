@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Cfg.h
- *   Generation Time: 2025-03-11 15:45:21
+ *   Generation Time: 2025-03-12 16:51:24
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -245,7 +245,7 @@
 #define DEM_CFG_SUPPORT_EVENTSUPPRESSION                                   STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemSuppressionSupport == (DEM_EVENT_SUPPRESSION | DEM_EVENT_AND_DTC_SUPPRESSION) */ 
 #define DEM_CFG_SUPPORT_EXTENDED_FIM                                       STD_OFF      /* Vector extension - /Dem/DemGeneral/DemSupportExtendedFiM */ 
 #define DEM_CFG_SUPPORT_FREEZEFRAME                                        STD_OFF      /* Autodetected - via /Dem/DemGeneral/DemMaxNumberEventEntryOBDFreezeFrame > 0 */ 
-#define DEM_CFG_SUPPORT_GLOBAL_SRECS                                       STD_OFF      /* Vector extension - /Dem/DemGeneral/DemGlobalFreezeFrame */ 
+#define DEM_CFG_SUPPORT_GLOBAL_SRECS                                       STD_ON       /* Vector extension - /Dem/DemGeneral/DemGlobalFreezeFrame */ 
 #define DEM_CFG_SUPPORT_IGNITION_COMPRESSION                               STD_OFF      /* ((DEM_CFG_HAS_OBDII_ENABLED == STD_OFF) && (DEM_CFG_SUPPORT_WWHOBD == STD_OFF) && (DEM_CFG_SUPPORT_OBDONUDS == STD_OFF)) */ 
 #define DEM_CFG_SUPPORT_IGNITION_SPARK                                     STD_OFF      /* ((DEM_CFG_HAS_OBDII_ENABLED == STD_OFF) && (DEM_CFG_SUPPORT_WWHOBD == STD_OFF) && (DEM_CFG_SUPPORT_OBDONUDS == STD_OFF)) */ 
 #define DEM_CFG_SUPPORT_INDICATORS                                         STD_ON       /* Autodetected - STD_ON: /Dem/DemConfigSet/DemEventParameter/DemEventClass/DemIndicatorAttribute container(s) exist, STD_OFF: no such container */ 

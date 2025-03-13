@@ -4887,6 +4887,38 @@
                     </APPLICATION-ERROR>
                   </POSSIBLE-ERRORS>
                 </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="2f032007-275e-4f38-8851-f2fdac341801">
+                  <SHORT-NAME>CSDataServices_DID_0xf1a3_F1A3_Data</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>DIAGNOSTIC-EVENT-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="e0ee2a39-1ad3-4da2-9991-209cb86ceff7">
+                      <SHORT-NAME>ReadData</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="d9763807-31a3-494b-bf18-790d84d3d0aa">
+                          <SHORT-NAME>Data</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dem_swc/DataTypes/DataArrayType_uint8_2</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a3_F1A3_Data/E_NOT_OK</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="78684963-5f84-45db-aae2-5050cf4a848a">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
               </ELEMENTS>
             </AR-PACKAGE>
             <AR-PACKAGE UUID="f6402ad2-beeb-4ef1-8575-2c021c52953a">
@@ -4972,6 +5004,21 @@
                         </SDGS>
                       </ADMIN-DATA>
                       <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a0_F1A0_Data</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="5f3d1845-5eb6-4698-acff-96d37260bbd2">
+                      <SHORT-NAME>CBReadData_DID_0xf1a3_F1A3_Data</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Dem/DemGeneral/DID_0xf1a3_F1A3_Data</SDX-REF>
+                              <SD GID="DV:DerivedFromReferrablesUUID">b57a9304-2272-419d-b7c2-817677e46c8b</SD>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a3_F1A3_Data</REQUIRED-INTERFACE-TREF>
                     </R-PORT-PROTOTYPE>
                   </PORTS>
                   <INTERNAL-BEHAVIORS>
@@ -5311,6 +5358,11 @@
                           <INDIRECT-API>false</INDIRECT-API>
                           <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_DID_0xf1a0_F1A0_Data</PORT-REF>
                         </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_DID_0xf1a3_F1A3_Data</PORT-REF>
+                        </PORT-API-OPTION>
                       </PORT-API-OPTIONS>
                       <RUNNABLES>
                         <RUNNABLE-ENTITY UUID="14d89e66-9c58-40dc-93f1-b2fd6fc543ec">
@@ -5339,6 +5391,14 @@
                               <OPERATION-IREF>
                                 <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_DID_0xf1a0_F1A0_Data</CONTEXT-R-PORT-REF>
                                 <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a0_F1A0_Data/ReadData</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="b59c7ff7-bc17-40e9-a49b-b10d3c16abad">
+                              <SHORT-NAME>OpServerCallDem_MasterMainFunction_ReadData_CBReadData_DID_0xf1a3_F1A3_Data</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemMaster_0/CBReadData_DID_0xf1a3_F1A3_Data</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a3_F1A3_Data/ReadData</TARGET-REQUIRED-OPERATION-REF>
                               </OPERATION-IREF>
                               <TIMEOUT>0</TIMEOUT>
                             </SYNCHRONOUS-SERVER-CALL-POINT>
@@ -5623,6 +5683,21 @@
                         </SDGS>
                       </ADMIN-DATA>
                       <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a0_F1A0_Data</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="eb85b746-4b36-4aea-899e-231a762d6ace">
+                      <SHORT-NAME>CBReadData_DID_0xf1a3_F1A3_Data</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Dem/DemGeneral/DID_0xf1a3_F1A3_Data</SDX-REF>
+                              <SD GID="DV:DerivedFromReferrablesUUID">b57a9304-2272-419d-b7c2-817677e46c8b</SD>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a3_F1A3_Data</REQUIRED-INTERFACE-TREF>
                     </R-PORT-PROTOTYPE>
                   </PORTS>
                   <INTERNAL-BEHAVIORS>
@@ -6389,6 +6464,11 @@
                           <INDIRECT-API>false</INDIRECT-API>
                           <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/CBReadData_DID_0xf1a0_F1A0_Data</PORT-REF>
                         </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/CBReadData_DID_0xf1a3_F1A3_Data</PORT-REF>
+                        </PORT-API-OPTION>
                       </PORT-API-OPTIONS>
                       <RUNNABLES>
                         <RUNNABLE-ENTITY UUID="52bf794c-29a6-4eb7-abd4-ab0ae18967fd">
@@ -6417,6 +6497,14 @@
                               <OPERATION-IREF>
                                 <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/CBReadData_DID_0xf1a0_F1A0_Data</CONTEXT-R-PORT-REF>
                                 <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a0_F1A0_Data/ReadData</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="a6db0f8a-843c-4c0f-bd9d-9f2b9c032c4e">
+                              <SHORT-NAME>OpServerCallDem_SatelliteMainFunction_ReadData_CBReadData_DID_0xf1a3_F1A3_Data</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dem_swc/ComponentTypes/DemSatellite_0/CBReadData_DID_0xf1a3_F1A3_Data</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a3_F1A3_Data/ReadData</TARGET-REQUIRED-OPERATION-REF>
                               </OPERATION-IREF>
                               <TIMEOUT>0</TIMEOUT>
                             </SYNCHRONOUS-SERVER-CALL-POINT>
