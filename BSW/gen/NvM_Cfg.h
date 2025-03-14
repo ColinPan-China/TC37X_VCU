@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: NvM_Cfg.h
- *   Generation Time: 2025-03-06 13:46:44
+ *   Generation Time: 2025-03-14 15:09:22
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -93,10 +93,10 @@ typedef union
 #define NVM_DATA_INTEGRITY_INT_BUFFER         (STD_ON)
 
 /* number of defined NV blocks */
-#define NVM_TOTAL_NUM_OF_NVRAM_BLOCKS         (12u)
+#define NVM_TOTAL_NUM_OF_NVRAM_BLOCKS         (13u)
 
 /* internal buffer size */
-#define NVM_INTERNAL_BUFFER_LENGTH            34uL
+#define NVM_INTERNAL_BUFFER_LENGTH            38uL
 
 /* version info api switch */
 #define NVM_VERSION_INFO_API                  (STD_OFF)
@@ -137,13 +137,14 @@ typedef union
 #define NvMConf_NvMBlockDescriptor_NvM_DEM_AdminData (2u) 
 #define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_0 (3u) 
 #define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_2 (4u) 
-#define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_1 (5u) 
-#define NvMConf_NvMBlockDescriptor_NvM_DEM_StatusData (6u) 
-#define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData1 (7u) 
-#define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2 (8u) 
-#define NvMConf_NvMBlockDescriptor_SWC1NvBlockNeed_UserData3 (9u) 
-#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_DiagDID_00 (10u) 
-#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_AttemptCounter (11u) 
+#define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_3 (5u) 
+#define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_1 (6u) 
+#define NvMConf_NvMBlockDescriptor_NvM_DEM_StatusData (7u) 
+#define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData1 (8u) 
+#define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2 (9u) 
+#define NvMConf_NvMBlockDescriptor_SWC1NvBlockNeed_UserData3 (10u) 
+#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_DiagDID_00 (11u) 
+#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_AttemptCounter (12u) 
 
 
 /* CONST_DESCRIPTOR_TABLE contains all block relevant data, including the compiled config ID

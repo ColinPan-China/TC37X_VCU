@@ -726,7 +726,7 @@ FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void) /* PRQA S 0624, 3206 */ 
     Rte_Call_Event_DTC_0x000003_SetEventStatus(DEM_EVENT_STATUS_FAILED);
 //    DTC_FailCnt--;
   }
-  Dem_SetEventStatus( 4, 3 );
+//  Dem_SetEventStatus( 4, 3 );
 
   if(  DTC_PassCnt > 0 )
   {

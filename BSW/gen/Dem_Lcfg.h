@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Lcfg.h
- *   Generation Time: 2025-03-14 13:24:32
+ *   Generation Time: 2025-03-14 15:09:23
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -322,6 +322,7 @@
 #define DEM_CFG_PRIMARYENTRY_0                                                                      STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
 #define DEM_CFG_PRIMARYENTRY_1                                                                      STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
 #define DEM_CFG_PRIMARYENTRY_2                                                                      STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
+#define DEM_CFG_PRIMARYENTRY_3                                                                      STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
 #define DEM_CFG_RATIOIDTABLE                                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
 #define DEM_CFG_READINESSGROUPTABLE                                                                 STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
 #define DEM_CFG_EVENTTABLE_OBDRDYGROUP2EVENTIDINDENDIDXOFREADINESSGROUPTABLE                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
@@ -537,6 +538,7 @@
 #define DEM_CFG_PRIMARYENTRY_0OFPCCONFIG                                                            STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
 #define DEM_CFG_PRIMARYENTRY_1OFPCCONFIG                                                            STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
 #define DEM_CFG_PRIMARYENTRY_2OFPCCONFIG                                                            STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
+#define DEM_CFG_PRIMARYENTRY_3OFPCCONFIG                                                            STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
 #define DEM_CFG_RATIOIDTABLEOFPCCONFIG                                                              STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
 #define DEM_CFG_READINESSGROUPTABLEOFPCCONFIG                                                       STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
 #define DEM_CFG_READOUTBUFFEROFPCCONFIG                                                             STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is COMPILETIME_CHECKING. */
@@ -1061,6 +1063,7 @@
 #define DEM_CFG_ISDEF_PRIMARYENTRY_0OFPCCONFIG                                                      STD_ON
 #define DEM_CFG_ISDEF_PRIMARYENTRY_1OFPCCONFIG                                                      STD_ON
 #define DEM_CFG_ISDEF_PRIMARYENTRY_2OFPCCONFIG                                                      STD_ON
+#define DEM_CFG_ISDEF_PRIMARYENTRY_3OFPCCONFIG                                                      STD_ON
 #define DEM_CFG_ISDEF_RATIOIDTABLEOFPCCONFIG                                                        STD_ON
 #define DEM_CFG_ISDEF_READINESSGROUPTABLEOFPCCONFIG                                                 STD_ON
 #define DEM_CFG_ISDEF_READOUTBUFFEROFPCCONFIG                                                       STD_ON
@@ -1389,6 +1392,7 @@
 #define DEM_CFG_EQ2_PRIMARYENTRY_0OFPCCONFIG                                                        (&(Dem_Cfg_PrimaryEntry_0))
 #define DEM_CFG_EQ2_PRIMARYENTRY_1OFPCCONFIG                                                        (&(Dem_Cfg_PrimaryEntry_1))
 #define DEM_CFG_EQ2_PRIMARYENTRY_2OFPCCONFIG                                                        (&(Dem_Cfg_PrimaryEntry_2))
+#define DEM_CFG_EQ2_PRIMARYENTRY_3OFPCCONFIG                                                        (&(Dem_Cfg_PrimaryEntry_3))
 #define DEM_CFG_EQ2_RATIOIDTABLEOFPCCONFIG                                                          Dem_Cfg_RatioIdTable
 #define DEM_CFG_EQ2_READINESSGROUPTABLEOFPCCONFIG                                                   Dem_Cfg_ReadinessGroupTable
 #define DEM_CFG_EQ2_READOUTBUFFEROFPCCONFIG                                                         Dem_Cfg_ReadoutBuffer
@@ -1566,7 +1570,7 @@
 #define DEM_CFG_GLOBAL_NV_STORAGE_LIMIT                                255u                              /* /Dem/DemGeneral/DemImmediateNvStorageLimit, 0: no limit configured */ 
 #define DEM_CFG_GLOBAL_PERMANENT_SIZE                                  0u                                /* /Dem/DemGeneral/DemMaxNumberEventEntryPermanent */ 
 #define DEM_CFG_GLOBAL_PRESTORED_FF_SIZE                               0u                                /* /Dem/DemGeneral/DemMaxNumberPrestoredFF, see Dem_Cfg_GlobalPrestorageSize() */ 
-#define DEM_CFG_GLOBAL_PRIMARY_SIZE                                    3u                                /* /Dem/DemGeneral/DemMaxNumberEventEntryPrimary */ 
+#define DEM_CFG_GLOBAL_PRIMARY_SIZE                                    4u                                /* /Dem/DemGeneral/DemMaxNumberEventEntryPrimary */ 
 #define DEM_CFG_GLOBAL_SECONDARY_SIZE                                  0u                                /* /Dem/DemGeneral/DemMaxNumberEventEntrySecondary */ 
 #define DEM_CFG_GLOBAL_STATUS_MASK                                     0xFFu                             /* /Dem/DemGeneral/DemDtcStatusAvailabilityMask */ 
 #define DEM_CFG_GLOBAL_TASK_MS                                         10u                               /* /Dem/DemGeneral/DemTaskTime in [ms]. See also macro DEM_CFG_TASK_TIME for exact float value */ 
@@ -1673,15 +1677,15 @@
 
  /*  NvRamBlock size configured in the NvM module  */ 
 #define DEM_CFG_ADMIN_DATABLOCK_SIZE                                  8u           /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_ADMIN */ 
-#define DEM_CFG_STATUS_DATABLOCK_SIZE                                 16u          /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_STATUS */ 
-#define DEM_CFG_PRIMARY_DATABLOCK_SIZE                                24u          /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_PRIMARY */ 
+#define DEM_CFG_STATUS_DATABLOCK_SIZE                                 20u          /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_STATUS */ 
+#define DEM_CFG_PRIMARY_DATABLOCK_SIZE                                36u          /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_PRIMARY */ 
 
 
 
 
  /*  NV block global definitions  */ 
 #define DEM_CFG_EVENTAVAILABLEDATATYPE_SIZE                           1u           /* Number of elements in arraytype 'Dem_Cfg_EventAvailableDataType'. */ 
-#define DEM_CFG_GLOBAL_NV_BLOCK_COUNT                                 5u           /* Number of NV blocks. */ 
+#define DEM_CFG_GLOBAL_NV_BLOCK_COUNT                                 6u           /* Number of NV blocks. */ 
 #define DEM_CFG_GLOBAL_PROCESSORWORDS_PER_REPORTEDEVENTSTYPE          1u           /* Number of Dem_Com_ProcessorWordType elements in arraytype 'Dem_Cfg_ReportedEventsType'. */ 
 #define DEM_CFG_MAX_J1939_EXP_FF_SIZE                                 0u           /* Data size of the largest configured J1939 FreezeFrame record. */ 
 #define DEM_CFG_MAX_J1939_FF_SIZE                                     0u           /* Data size of the largest configured J1939 FreezeFrame record. */ 
@@ -1699,10 +1703,10 @@
 #define DEM_CFG_MAX_SIZE_SNAPSHOT                                     8u           /* Data size of the largest FreezeFrame record to be stored in SnapshotData[DEM_CFG_MAX_NUM_SNAPSHOTS][DEM_CFG_MAX_SIZE_SNAPSHOT] or '1' if size is 0 or there are 0 records. */ 
 #define DEM_CFG_MAX_SIZE_TIMESERIESSNAPSHOT                           1u           /* Data size of the largest Time Series snapshot record or '1' if size is 0 or there are 0 records. Time series snapshot is stored in time series entry, e.g. in SnapshotData_NormalRate[DEM_CFG_TIMESERIES_NORMAL_SAMPLES][DEM_CFG_MAX_SIZE_TIMESERIESSNAPSHOT]; */ 
 #define DEM_CFG_MAX_SIZE_WWHFREEZEFRAME                               1u           /* Data size of the largest WWH-OBD FreezeFrame record to be stored in ObdFreezeFrameData[DEM_CFG_MAX_SIZE_WWHFREEZEFRAME] or '1' if size is 0 or there are 0 records. */ 
-#define DEM_CFG_MEMORYENTRY_HANDLE_INVALID                            4u           /* Value for an invalid memory entry handle */ 
+#define DEM_CFG_MEMORYENTRY_HANDLE_INVALID                            5u           /* Value for an invalid memory entry handle */ 
 #define DEM_CFG_MEMORYINDEX_MAX                                       255u         /* Maximum value of Dem_Cfg_MemoryIndexType */ 
 #define DEM_CFG_MEMORY_ADMIN_INDEX                                    0u           /* Index into Dem_Cfg_MemoryBlockId[], Dem_Cfg_MemoryDataSize[], Dem_Cfg_MemoryDataPtr[] and other Memory*[] arrays. */ 
-#define DEM_CFG_MEMORY_PRIMARY_INDEX                                  2u           /* Index into Dem_Cfg_MemoryBlockId[], Dem_Cfg_MemoryDataSize[], Dem_Cfg_MemoryDataPtr[] and other Memory*[] arrays. Buffer count: Dem_Cfg_GlobalPrimarySize() = 3 */ 
+#define DEM_CFG_MEMORY_PRIMARY_INDEX                                  2u           /* Index into Dem_Cfg_MemoryBlockId[], Dem_Cfg_MemoryDataSize[], Dem_Cfg_MemoryDataPtr[] and other Memory*[] arrays. Buffer count: Dem_Cfg_GlobalPrimarySize() = 4 */ 
 #define DEM_CFG_MEMORY_STATUS_INDEX                                   1u           /* Index into Dem_Cfg_MemoryBlockId[], Dem_Cfg_MemoryDataSize[], Dem_Cfg_MemoryDataPtr[] and other Memory*[] arrays. */ 
 #define DEM_CFG_NUMBER_OF_SUBEVENT_DATA_READOUTBUFFERS                1u           /* Maximum number of required readout buffer for subevent data. If DEM_CFG_SUPPORT_TYPE2_COMBINATION == STD_ON: Min(#MaxSubEventsInOneGroup,#MaxEntryInPrimary/Secondary), else: 1 */ 
 #define DEM_CFG_PROCESSEDCOMBINEDDTCGROUP_SIZE                        1u           /* Number of elements in arraytype 'Dem_Cfg_ProcessedCombinedDTCGroupType'. */ 
@@ -1839,7 +1843,7 @@
 #define Dem_Cfg_GetIndicatorContinuousOfPCConfig()                                                  Dem_Cfg_IndicatorContinuous  /**< the pointer to Dem_Cfg_IndicatorContinuous */
 #define Dem_Cfg_GetIndicatorFastFlashOfPCConfig()                                                   Dem_Cfg_IndicatorFastFlash  /**< the pointer to Dem_Cfg_IndicatorFastFlash */
 #define Dem_Cfg_GetIndicatorSlowFlashOfPCConfig()                                                   Dem_Cfg_IndicatorSlowFlash  /**< the pointer to Dem_Cfg_IndicatorSlowFlash */
-#define Dem_Cfg_GetInitDataHashCodeOfPCConfig(ConfigDataPtr)                                        1717281842  /**< the hashcode to validate the initialization structure at initialization time of Dem */
+#define Dem_Cfg_GetInitDataHashCodeOfPCConfig(ConfigDataPtr)                                        -1603906650  /**< the hashcode to validate the initialization structure at initialization time of Dem */
 #define Dem_Cfg_GetInitMonListForFuncOfPCConfig()                                                   Dem_Cfg_InitMonListForFunc  /**< the pointer to Dem_Cfg_InitMonListForFunc */
 #define Dem_Cfg_GetInitMonitorForEventOfPCConfig()                                                  Dem_Cfg_InitMonitorForEvent  /**< the pointer to Dem_Cfg_InitMonitorForEvent */
 #define Dem_Cfg_GetInitMonitorsForFuncOfPCConfig()                                                  Dem_Cfg_InitMonitorsForFunc  /**< the pointer to Dem_Cfg_InitMonitorsForFunc */
@@ -1868,6 +1872,7 @@
 #define Dem_Cfg_GetPrimaryEntry_0OfPCConfig()                                                       (&(Dem_Cfg_PrimaryEntry_0))  /**< the pointer to Dem_Cfg_PrimaryEntry_0 */
 #define Dem_Cfg_GetPrimaryEntry_1OfPCConfig()                                                       (&(Dem_Cfg_PrimaryEntry_1))  /**< the pointer to Dem_Cfg_PrimaryEntry_1 */
 #define Dem_Cfg_GetPrimaryEntry_2OfPCConfig()                                                       (&(Dem_Cfg_PrimaryEntry_2))  /**< the pointer to Dem_Cfg_PrimaryEntry_2 */
+#define Dem_Cfg_GetPrimaryEntry_3OfPCConfig()                                                       (&(Dem_Cfg_PrimaryEntry_3))  /**< the pointer to Dem_Cfg_PrimaryEntry_3 */
 #define Dem_Cfg_GetRatioIdTableOfPCConfig()                                                         Dem_Cfg_RatioIdTable  /**< the pointer to Dem_Cfg_RatioIdTable */
 #define Dem_Cfg_GetReadinessGroupTableOfPCConfig()                                                  Dem_Cfg_ReadinessGroupTable  /**< the pointer to Dem_Cfg_ReadinessGroupTable */
 #define Dem_Cfg_GetReadoutBufferOfPCConfig()                                                        Dem_Cfg_ReadoutBuffer  /**< the pointer to Dem_Cfg_ReadoutBuffer */
@@ -1910,13 +1915,13 @@
 #define Dem_Cfg_GetSizeOfIndicatorSlowFlashOfPCConfig()                                             0u  /**< the number of accomplishable value elements in Dem_Cfg_IndicatorSlowFlash */
 #define Dem_Cfg_GetSizeOfInitMonitorForEventOfPCConfig()                                            0u  /**< the number of accomplishable value elements in Dem_Cfg_InitMonitorForEvent */
 #define Dem_Cfg_GetSizeOfInitMonitorsForFuncOfPCConfig()                                            0u  /**< the number of accomplishable value elements in Dem_Cfg_InitMonitorsForFunc */
-#define Dem_Cfg_GetSizeOfMemoryBlockIdToMemoryEntryIdOfPCConfig()                                   5u  /**< the number of accomplishable value elements in Dem_Cfg_MemoryBlockIdToMemoryEntryId */
-#define Dem_Cfg_GetSizeOfMemoryEntryOfPCConfig()                                                    4u  /**< the number of accomplishable value elements in Dem_Cfg_MemoryEntry */
-#define Dem_Cfg_GetSizeOfMemoryStatusOfPCConfig()                                                   5u  /**< the number of accomplishable value elements in Dem_Cfg_MemoryStatus */
+#define Dem_Cfg_GetSizeOfMemoryBlockIdToMemoryEntryIdOfPCConfig()                                   6u  /**< the number of accomplishable value elements in Dem_Cfg_MemoryBlockIdToMemoryEntryId */
+#define Dem_Cfg_GetSizeOfMemoryEntryOfPCConfig()                                                    5u  /**< the number of accomplishable value elements in Dem_Cfg_MemoryEntry */
+#define Dem_Cfg_GetSizeOfMemoryStatusOfPCConfig()                                                   6u  /**< the number of accomplishable value elements in Dem_Cfg_MemoryStatus */
 #define Dem_Cfg_GetSizeOfMonitorActivityRatioTableOfPCConfig()                                      1u  /**< the number of accomplishable value elements in Dem_Cfg_MonitorActivityRatioTable */
 #define Dem_Cfg_GetSizeOfObdIumprUpdatePendingOfPCConfig()                                          0u  /**< the number of accomplishable value elements in Dem_Cfg_ObdIumprUpdatePending */
 #define Dem_Cfg_GetSizeOfPrestorageIndexOfPCConfig()                                                0u  /**< the number of accomplishable value elements in Dem_Cfg_PrestorageIndex */
-#define Dem_Cfg_GetSizeOfPrimaryChronologyOfPCConfig()                                              3u  /**< the number of accomplishable value elements in Dem_Cfg_PrimaryChronology */
+#define Dem_Cfg_GetSizeOfPrimaryChronologyOfPCConfig()                                              4u  /**< the number of accomplishable value elements in Dem_Cfg_PrimaryChronology */
 #define Dem_Cfg_GetSizeOfReadinessGroupTableOfPCConfig()                                            1u  /**< the number of accomplishable value elements in Dem_Cfg_ReadinessGroupTable */
 #define Dem_Cfg_GetSizeOfReadoutBufferOfPCConfig()                                                  1u  /**< the number of accomplishable value elements in Dem_Cfg_ReadoutBuffer */
 #define Dem_Cfg_GetSizeOfReportedEventsOfFilterOfPCConfig()                                         1u  /**< the number of accomplishable value elements in Dem_Cfg_ReportedEventsOfFilter */
@@ -2110,6 +2115,7 @@
 #define Dem_Cfg_GetPrimaryEntry_0()                                                                 ((*(Dem_Cfg_GetPrimaryEntry_0OfPCConfig())))
 #define Dem_Cfg_GetPrimaryEntry_1()                                                                 ((*(Dem_Cfg_GetPrimaryEntry_1OfPCConfig())))
 #define Dem_Cfg_GetPrimaryEntry_2()                                                                 ((*(Dem_Cfg_GetPrimaryEntry_2OfPCConfig())))
+#define Dem_Cfg_GetPrimaryEntry_3()                                                                 ((*(Dem_Cfg_GetPrimaryEntry_3OfPCConfig())))
 #define Dem_Cfg_GetEventTable_ObdRdyGroup2EventIdIndEndIdxOfReadinessGroupTable(Index)              (0u)
 #define Dem_Cfg_GetEventTable_ObdRdyGroup2EventIdIndStartIdxOfReadinessGroupTable(Index)            (0u)
 #define Dem_Cfg_IsEventTable_ObdRdyGroup2EventIdIndUsedOfReadinessGroupTable(Index)                 ((FALSE) != FALSE)
@@ -2344,6 +2350,7 @@
 #define Dem_Cfg_SetPrimaryEntry_0(Value)                                                            (*(Dem_Cfg_GetPrimaryEntry_0OfPCConfig())) = (Value)
 #define Dem_Cfg_SetPrimaryEntry_1(Value)                                                            (*(Dem_Cfg_GetPrimaryEntry_1OfPCConfig())) = (Value)
 #define Dem_Cfg_SetPrimaryEntry_2(Value)                                                            (*(Dem_Cfg_GetPrimaryEntry_2OfPCConfig())) = (Value)
+#define Dem_Cfg_SetPrimaryEntry_3(Value)                                                            (*(Dem_Cfg_GetPrimaryEntry_3OfPCConfig())) = (Value)
 #define Dem_Cfg_SetReadoutBuffer(Index, Value)                                                      Dem_Cfg_GetReadoutBufferOfPCConfig()[(Index)] = (Value)
 #define Dem_Cfg_SetReportedEventsOfFilter(Index, Value)                                             Dem_Cfg_GetReportedEventsOfFilterOfPCConfig()[(Index)] = (Value)
 #define Dem_Cfg_SetSatelliteInfo0(Value)                                                            (*(Dem_Cfg_GetSatelliteInfo0OfPCConfig())) = (Value)
@@ -2410,6 +2417,7 @@
 #define Dem_Cfg_GetAddrPrimaryEntry_0()                                                             (&Dem_Cfg_GetPrimaryEntry_0())
 #define Dem_Cfg_GetAddrPrimaryEntry_1()                                                             (&Dem_Cfg_GetPrimaryEntry_1())
 #define Dem_Cfg_GetAddrPrimaryEntry_2()                                                             (&Dem_Cfg_GetPrimaryEntry_2())
+#define Dem_Cfg_GetAddrPrimaryEntry_3()                                                             (&Dem_Cfg_GetPrimaryEntry_3())
 #define Dem_Cfg_GetAddrReadoutBuffer(Index)                                                         (&Dem_Cfg_GetReadoutBuffer(Index))
 #define Dem_Cfg_GetAddrReportedEventsOfFilter(Index)                                                (&Dem_Cfg_GetReportedEventsOfFilter(Index))
 #define Dem_Cfg_GetAddrSatelliteInfo0()                                                             (&Dem_Cfg_GetSatelliteInfo0())
@@ -2669,6 +2677,7 @@
 #define Dem_Cfg_HasPrimaryEntry_0()                                                                 (TRUE != FALSE)
 #define Dem_Cfg_HasPrimaryEntry_1()                                                                 (TRUE != FALSE)
 #define Dem_Cfg_HasPrimaryEntry_2()                                                                 (TRUE != FALSE)
+#define Dem_Cfg_HasPrimaryEntry_3()                                                                 (TRUE != FALSE)
 #define Dem_Cfg_HasRatioIdTable()                                                                   (FALSE != FALSE)
 #define Dem_Cfg_HasReadinessGroupTable()                                                            (TRUE != FALSE)
 #define Dem_Cfg_HasEventTable_ObdRdyGroup2EventIdIndEndIdxOfReadinessGroupTable()                   (FALSE != FALSE)
@@ -2884,6 +2893,7 @@
 #define Dem_Cfg_HasPrimaryEntry_0OfPCConfig()                                                       (TRUE != FALSE)
 #define Dem_Cfg_HasPrimaryEntry_1OfPCConfig()                                                       (TRUE != FALSE)
 #define Dem_Cfg_HasPrimaryEntry_2OfPCConfig()                                                       (TRUE != FALSE)
+#define Dem_Cfg_HasPrimaryEntry_3OfPCConfig()                                                       (TRUE != FALSE)
 #define Dem_Cfg_HasRatioIdTableOfPCConfig()                                                         (FALSE != FALSE)
 #define Dem_Cfg_HasReadinessGroupTableOfPCConfig()                                                  (TRUE != FALSE)
 #define Dem_Cfg_HasReadoutBufferOfPCConfig()                                                        (TRUE != FALSE)
@@ -5173,6 +5183,9 @@ typedef P2VAR(Dem_Cfg_PrimaryEntryType, TYPEDEF, DEM_NVM_DATA_NOINIT) Dem_Cfg_Pr
 /**   \brief  type used to point to Dem_Cfg_PrimaryEntry_2 */
 typedef P2VAR(Dem_Cfg_PrimaryEntryType, TYPEDEF, DEM_NVM_DATA_NOINIT) Dem_Cfg_PrimaryEntry_2PtrType;
 
+/**   \brief  type used to point to Dem_Cfg_PrimaryEntry_3 */
+typedef P2VAR(Dem_Cfg_PrimaryEntryType, TYPEDEF, DEM_NVM_DATA_NOINIT) Dem_Cfg_PrimaryEntry_3PtrType;
+
 /**   \brief  type used to point to Dem_Cfg_RatioIdTable */
 typedef P2CONST(Dem_Cfg_RatioIdTableType, TYPEDEF, DEM_CONST) Dem_Cfg_RatioIdTablePtrType;
 
@@ -5522,13 +5535,13 @@ extern CONST(Dem_Cfg_FreezeFrameTableType, DEM_CONST) Dem_Cfg_FreezeFrameTable[3
 **********************************************************************************************************************/
 /** 
   \var    Dem_Cfg_MemoryBlockId
-  \brief  The array contains these items: Admin, Status, 3 * Primary
+  \brief  The array contains these items: Admin, Status, 4 * Primary
 */ 
 #define DEM_START_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Dem_Cfg_MemoryBlockIdType, DEM_CONST) Dem_Cfg_MemoryBlockId[5];
+extern CONST(Dem_Cfg_MemoryBlockIdType, DEM_CONST) Dem_Cfg_MemoryBlockId[6];
 #define DEM_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -5539,13 +5552,13 @@ extern CONST(Dem_Cfg_MemoryBlockIdType, DEM_CONST) Dem_Cfg_MemoryBlockId[5];
 **********************************************************************************************************************/
 /** 
   \var    Dem_Cfg_MemoryBlockIdToMemoryEntryId
-  \brief  The array contains these items: Admin, Status, 3 * Primary
+  \brief  The array contains these items: Admin, Status, 4 * Primary
 */ 
 #define DEM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Dem_Cfg_MemoryEntryHandleType, DEM_CONST) Dem_Cfg_MemoryBlockIdToMemoryEntryId[5];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
+extern CONST(Dem_Cfg_MemoryEntryHandleType, DEM_CONST) Dem_Cfg_MemoryBlockIdToMemoryEntryId[6];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -5556,13 +5569,13 @@ extern CONST(Dem_Cfg_MemoryEntryHandleType, DEM_CONST) Dem_Cfg_MemoryBlockIdToMe
 **********************************************************************************************************************/
 /** 
   \var    Dem_Cfg_MemoryDataPtr
-  \brief  The array contains these items: Admin, Status, 3 * Primary
+  \brief  The array contains these items: Admin, Status, 4 * Primary
 */ 
 #define DEM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Dem_NvDataPtrType, DEM_CONST) Dem_Cfg_MemoryDataPtr[5];
+extern CONST(Dem_NvDataPtrType, DEM_CONST) Dem_Cfg_MemoryDataPtr[6];
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -5573,13 +5586,13 @@ extern CONST(Dem_NvDataPtrType, DEM_CONST) Dem_Cfg_MemoryDataPtr[5];
 **********************************************************************************************************************/
 /** 
   \var    Dem_Cfg_MemoryDataSize
-  \brief  The array contains these items: Admin, Status, 3 * Primary
+  \brief  The array contains these items: Admin, Status, 4 * Primary
 */ 
 #define DEM_START_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Dem_Cfg_MemoryDataSizeType, DEM_CONST) Dem_Cfg_MemoryDataSize[5];
+extern CONST(Dem_Cfg_MemoryDataSizeType, DEM_CONST) Dem_Cfg_MemoryDataSize[6];
 #define DEM_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -5590,13 +5603,13 @@ extern CONST(Dem_Cfg_MemoryDataSizeType, DEM_CONST) Dem_Cfg_MemoryDataSize[5];
 **********************************************************************************************************************/
 /** 
   \var    Dem_Cfg_MemoryEntry
-  \brief  The array contains these items: 3 * Primary, ReadoutBuffer; size = DEM_CFG_GLOBAL_PRIMARY_SIZE + DEM_CFG_GLOBAL_SECONDARY_SIZE + DEM_CFG_NUMBER_OF_READOUTBUFFERS * DEM_CFG_NUMBER_OF_SUBEVENT_DATA_READOUTBUFFERS
+  \brief  The array contains these items: 4 * Primary, ReadoutBuffer; size = DEM_CFG_GLOBAL_PRIMARY_SIZE + DEM_CFG_GLOBAL_SECONDARY_SIZE + DEM_CFG_NUMBER_OF_READOUTBUFFERS * DEM_CFG_NUMBER_OF_SUBEVENT_DATA_READOUTBUFFERS
 */ 
 #define DEM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Dem_SharedMemoryEntryPtrType, DEM_CONST) Dem_Cfg_MemoryEntry[4];
+extern CONST(Dem_SharedMemoryEntryPtrType, DEM_CONST) Dem_Cfg_MemoryEntry[5];
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -5897,13 +5910,13 @@ extern VAR(Dem_Cfg_IndicatorContinuousType, DEM_VAR_NOINIT) Dem_Cfg_IndicatorCon
 **********************************************************************************************************************/
 /** 
   \var    Dem_Cfg_MemoryStatus
-  \brief  The array contains these items: Admin, Status, 3 * Primary
+  \brief  The array contains these items: Admin, Status, 4 * Primary
 */ 
 #define DEM_START_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Dem_Cfg_MemoryStatusType, DEM_VAR_NOINIT) Dem_Cfg_MemoryStatus[5];
+extern VAR(Dem_Cfg_MemoryStatusType, DEM_VAR_NOINIT) Dem_Cfg_MemoryStatus[6];
 #define DEM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -5920,7 +5933,7 @@ extern VAR(Dem_Cfg_MemoryStatusType, DEM_VAR_NOINIT) Dem_Cfg_MemoryStatus[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Dem_Cfg_MemoryIndexType, DEM_VAR_NOINIT) Dem_Cfg_PrimaryChronology[3];
+extern VAR(Dem_Cfg_MemoryIndexType, DEM_VAR_NOINIT) Dem_Cfg_PrimaryChronology[4];
 #define DEM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -5960,6 +5973,19 @@ extern VAR(Dem_Cfg_PrimaryEntryType, DEM_NVM_DATA_NOINIT) Dem_Cfg_PrimaryEntry_1
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern VAR(Dem_Cfg_PrimaryEntryType, DEM_NVM_DATA_NOINIT) Dem_Cfg_PrimaryEntry_2;
+#define DEM_STOP_SEC_VAR_SAVED_ZONE0_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Dem_Cfg_PrimaryEntry_3
+**********************************************************************************************************************/
+#define DEM_START_SEC_VAR_SAVED_ZONE0_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(Dem_Cfg_PrimaryEntryType, DEM_NVM_DATA_NOINIT) Dem_Cfg_PrimaryEntry_3;
 #define DEM_STOP_SEC_VAR_SAVED_ZONE0_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
