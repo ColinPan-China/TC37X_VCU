@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Lcfg.c
- *   Generation Time: 2025-03-12 16:51:24
+ *   Generation Time: 2025-03-14 13:23:15
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -252,7 +252,7 @@ CONST(Dem_Cfg_DataElementTableCol2ElmtIndType, DEM_CONST) Dem_Cfg_DataElementTab
 CONST(Dem_Cfg_DebounceTableType, DEM_CONST) Dem_Cfg_DebounceTable[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    DecrementStepSize  FailedThreshold  IncrementStepSize  PassedThreshold  EventDebounceAlgorithm                                                      MaskedBits        Referable Keys */
   { /*     0 */               -32,              40,                32,             -40, DEM_CFG_DEM_CFG_DEBOUNCETYPE_COUNTER_EVENTDEBOUNCEALGORITHMOFDEBOUNCETABLE,      0x00u },  /* [DTC_0X000003] */
-  { /*     1 */                -1,              40,                 1,             -40, DEM_CFG_DEM_CFG_DEBOUNCETYPE_COUNTER_EVENTDEBOUNCEALGORITHMOFDEBOUNCETABLE,      0x02u },  /* [DTC_0X000002, DTC_0X000004] */
+  { /*     1 */                -1,              40,                 1,             -40, DEM_CFG_DEM_CFG_DEBOUNCETYPE_COUNTER_EVENTDEBOUNCEALGORITHMOFDEBOUNCETABLE,      0x02u },  /* [CAN00_BUSOFF, DTC_0X000002, DTC_0X000004] */
   { /*     2 */                 0,               0,                 0,               0, DEM_CFG_DEM_CFG_DEBOUNCETYPE_INVALID_EVENTDEBOUNCEALGORITHMOFDEBOUNCETABLE,      0x00u }   /* [#EVENT_INVALID] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
@@ -274,12 +274,13 @@ CONST(Dem_Cfg_DebounceTableType, DEM_CONST) Dem_Cfg_DebounceTable[3] = {  /* PRQ
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_Cfg_DtcTableType, DEM_CONST) Dem_Cfg_DtcTable[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Dem_Cfg_DtcTableType, DEM_CONST) Dem_Cfg_DtcTable[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    UdsDtc       FunctionalUnit        Referable Keys */
   { /*     0 */ 0x00FFFFFFu,           255u },  /* [#NoUdsDtcConfigured, #NoObdDtcConfigured, #NoJ1939DtcConfigured] */
   { /*     1 */ 0x00000202u,             0u },  /* [DTCClass_DTC_0X000002] */
   { /*     2 */ 0x00000303u,             0u },  /* [DTCClass_DTC_0X000003] */
-  { /*     3 */ 0x00000004u,             0u }   /* [DTCClass_DTC_0X000004] */
+  { /*     3 */ 0x00000004u,             0u },  /* [DTCClass_DTC_0X000004] */
+  { /*     4 */ 0x00D00104u,             0u }   /* [DTCClass_CAN00_BUSOFF] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -347,6 +348,7 @@ CONST(Dem_Cfg_EnableConditionTableType, DEM_CONST) Dem_Cfg_EnableConditionTable[
   DebounceTableIdx                the index of the 1:1 relation pointing to Dem_Cfg_DebounceTable
   DtcTableIdx                     the index of the 1:1 relation pointing to Dem_Cfg_DtcTable
   EnableConditionGroupTableIdx    the index of the 1:1 relation pointing to Dem_Cfg_EnableConditionGroupTable
+  EventKind                       DemEventKind of the DemEventParameter
   EventPriority                   DemEventParameter/DemEventClass/DemEventPriority, values [1..255] for the configuration range [1..255].
   FreezeFrameTableStdFFIdx        the index of the 1:1 relation pointing to Dem_Cfg_FreezeFrameTable
 */ 
@@ -354,12 +356,13 @@ CONST(Dem_Cfg_EnableConditionTableType, DEM_CONST) Dem_Cfg_EnableConditionTable[
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Dem_Cfg_EventTableType, DEM_CONST) Dem_Cfg_EventTable[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    DebounceTableIdx  DtcTableIdx  EnableConditionGroupTableIdx  EventPriority  FreezeFrameTableStdFFIdx        Referable Keys */
-  { /*     0 */               1u,          1u,                           1u,            1u,                       1u },  /* [#EVENT_INVALID, #NoExtendedDataRecordConfigured, Satellite#0] */
-  { /*     1 */               1u,          1u,                           1u,            1u,                       1u },  /* [DTC_0X000002, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
-  { /*     2 */               0u,          2u,                           2u,            2u,                       2u },  /* [DTC_0X000003, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
-  { /*     3 */               1u,          3u,                           0u,            4u,                       2u }   /* [DTC_0X000004, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
+CONST(Dem_Cfg_EventTableType, DEM_CONST) Dem_Cfg_EventTable[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    DebounceTableIdx  DtcTableIdx  EnableConditionGroupTableIdx  EventKind                                         EventPriority  FreezeFrameTableStdFFIdx        Referable Keys */
+  { /*     0 */               1u,          1u,                           1u, DEM_CFG_DEM_EVENT_KIND_SWC_EVENTKINDOFEVENTTABLE,            1u,                       1u },  /* [#EVENT_INVALID, #NoExtendedDataRecordConfigured, Satellite#0] */
+  { /*     1 */               1u,          1u,                           1u, DEM_CFG_DEM_EVENT_KIND_SWC_EVENTKINDOFEVENTTABLE,            1u,                       1u },  /* [DTC_0X000002, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
+  { /*     2 */               0u,          2u,                           2u, DEM_CFG_DEM_EVENT_KIND_SWC_EVENTKINDOFEVENTTABLE,            2u,                       2u },  /* [DTC_0X000003, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
+  { /*     3 */               1u,          3u,                           0u, DEM_CFG_DEM_EVENT_KIND_SWC_EVENTKINDOFEVENTTABLE,            4u,                       2u },  /* [DTC_0X000004, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
+  { /*     4 */               1u,          4u,                           0u, DEM_CFG_DEM_EVENT_KIND_BSW_EVENTKINDOFEVENTTABLE,            3u,                       2u }   /* [CAN00_BUSOFF, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -384,7 +387,7 @@ CONST(Dem_Cfg_EventTableType, DEM_CONST) Dem_Cfg_EventTable[4] = {  /* PRQA S 15
 CONST(Dem_Cfg_ExtendedDataTableType, DEM_CONST) Dem_Cfg_ExtendedDataTable[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    DataCollectionTableEdr2CollIndEndIdx                                DataCollectionTableEdr2CollIndStartIdx                                MaxRecordSize        Referable Keys */
   { /*     0 */ DEM_CFG_NO_DATACOLLECTIONTABLEEDR2COLLINDENDIDXOFEXTENDEDDATATABLE, DEM_CFG_NO_DATACOLLECTIONTABLEEDR2COLLINDSTARTIDXOFEXTENDEDDATATABLE,            0u },  /* [#NoExtendedDataRecordConfigured] */
-  { /*     1 */                                                                 2u,                                                                   0u,            2u }   /* [#ExtendedDataClass_4f5344cd, #EVENT_INVALID, DTC_0X000002, DTC_0X000003, DTC_0X000004] */
+  { /*     1 */                                                                 2u,                                                                   0u,            2u }   /* [#ExtendedDataClass_4f5344cd, #EVENT_INVALID, DTC_0X000002, DTC_0X000003, DTC_0X000004, CAN00_BUSOFF] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -406,8 +409,8 @@ CONST(Dem_Cfg_ExtendedDataTableType, DEM_CONST) Dem_Cfg_ExtendedDataTable[2] = {
 /*lint -restore */
 CONST(Dem_Cfg_FreezeFrameNumTableType, DEM_CONST) Dem_Cfg_FreezeFrameNumTable[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    FFUpdate        Referable Keys */
-  { /*     0 */    FALSE },  /* [calcFFRecNumClass_02, #EVENT_INVALID, DTC_0X000002, DTC_0X000003, DTC_0X000004] */
-  { /*     1 */     TRUE }   /* [calcFFRecNumClass_02, #EVENT_INVALID, DTC_0X000002, DTC_0X000003, DTC_0X000004] */
+  { /*     0 */    FALSE },  /* [calcFFRecNumClass_02, #EVENT_INVALID, DTC_0X000002, DTC_0X000003, DTC_0X000004, CAN00_BUSOFF] */
+  { /*     1 */     TRUE }   /* [calcFFRecNumClass_02, #EVENT_INVALID, DTC_0X000002, DTC_0X000003, DTC_0X000004, CAN00_BUSOFF] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -434,7 +437,7 @@ CONST(Dem_Cfg_FreezeFrameTableType, DEM_CONST) Dem_Cfg_FreezeFrameTable[3] = {  
     /* Index    DataCollectionTableFfm2CollIndEndIdx                               DataCollectionTableFfm2CollIndStartIdx                               RecordSize  RecordSizeUds        Referable Keys */
   { /*     0 */ DEM_CFG_NO_DATACOLLECTIONTABLEFFM2COLLINDENDIDXOFFREEZEFRAMETABLE, DEM_CFG_NO_DATACOLLECTIONTABLEFFM2COLLINDSTARTIDXOFFREEZEFRAMETABLE,         0u,            0u },  /* [#NoFreezeFrameConfigured] */
   { /*     1 */                                                                4u,                                                                  0u,         8u,           18u },  /* [#FreezeFrameClass_34739cdf, #EVENT_INVALID, DTC_0X000002] */
-  { /*     2 */                                                                7u,                                                                  4u,         6u,           14u }   /* [#FreezeFrameClass_8de652ca, DTC_0X000003, DTC_0X000004, globalFF] */
+  { /*     2 */                                                                7u,                                                                  4u,         6u,           14u }   /* [#FreezeFrameClass_8de652ca, DTC_0X000003, DTC_0X000004, CAN00_BUSOFF, globalFF] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -718,7 +721,7 @@ volatile VAR(Dem_Cfg_EnableConditionGroupStateType, DEM_VAR_NOINIT) Dem_Cfg_Enab
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-volatile VAR(Dem_Cfg_EventDataCommitNumberType, DEM_VAR_NOINIT) Dem_Cfg_EventDataCommitNumber[4];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+volatile VAR(Dem_Cfg_EventDataCommitNumberType, DEM_VAR_NOINIT) Dem_Cfg_EventDataCommitNumber[5];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define DEM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -735,12 +738,13 @@ volatile VAR(Dem_Cfg_EventDataCommitNumberType, DEM_VAR_NOINIT) Dem_Cfg_EventDat
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-volatile VAR(Dem_Cfg_EventDebounceValueType, DEM_VAR_NOINIT) Dem_Cfg_EventDebounceValue[4];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+volatile VAR(Dem_Cfg_EventDebounceValueType, DEM_VAR_NOINIT) Dem_Cfg_EventDebounceValue[5];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [#EVENT_INVALID, #NoExtendedDataRecordConfigured, Satellite#0] */
   /*     1 */  /* [DTC_0X000002, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
   /*     2 */  /* [DTC_0X000003, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
   /*     3 */  /* [DTC_0X000004, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
+  /*     4 */  /* [CAN00_BUSOFF, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
 
 #define DEM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
@@ -758,12 +762,13 @@ volatile VAR(Dem_Cfg_EventDebounceValueType, DEM_VAR_NOINIT) Dem_Cfg_EventDeboun
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-volatile VAR(Dem_Event_InternalStatusType, DEM_VAR_NOINIT) Dem_Cfg_EventInternalStatus[4];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+volatile VAR(Dem_Event_InternalStatusType, DEM_VAR_NOINIT) Dem_Cfg_EventInternalStatus[5];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [#EVENT_INVALID, #NoExtendedDataRecordConfigured, Satellite#0] */
   /*     1 */  /* [DTC_0X000002, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
   /*     2 */  /* [DTC_0X000003, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
   /*     3 */  /* [DTC_0X000004, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
+  /*     4 */  /* [CAN00_BUSOFF, #EdrExtendedDataRecord0x01, #EdrExtendedDataRecord0x02, Satellite#0] */
 
 #define DEM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
