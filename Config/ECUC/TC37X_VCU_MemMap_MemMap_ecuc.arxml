@@ -4877,6 +4877,462 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="79dfebdc-1f85-487c-8401-b81a46b806c6">
+                  <SHORT-NAME>OS_SystemApplication_OsCore1_VAR_INIT</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping</DEFINITION-REF>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapAddressingModeSetRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/MemMap/OS_SystemApplication_OsCore1_VAR_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore1_VAR_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore1_VAR_FAST_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore1_VAR_NOCACHE_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="7785c339-c70f-468f-a787-9b3bea7e2adc">
+                  <SHORT-NAME>OS_SystemApplication_OsCore1_VAR_NOINIT</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping</DEFINITION-REF>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapAddressingModeSetRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/MemMap/OS_SystemApplication_OsCore1_VAR_NOINIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore1_VAR_NO_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore1_VAR_FAST_NO_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore1_VAR_NOCACHE_NO_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="78637742-fc74-4840-b4dd-38ec0059031d">
+                  <SHORT-NAME>OS_SystemApplication_OsCore1_VAR_ZERO_INIT</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping</DEFINITION-REF>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapAddressingModeSetRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/MemMap/OS_SystemApplication_OsCore1_VAR_ZERO_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore1_VAR_CLEARED</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore1_VAR_FAST_CLEARED</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore1_VAR_NOCACHE_CLEARED</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="2e86e715-b74f-4de2-8c6f-dde7f96f1e6e">
+                  <SHORT-NAME>OS_SystemApplication_OsCore1_CONST</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping</DEFINITION-REF>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapAddressingModeSetRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/MemMap/MSR_CONST</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore1_CONST</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore1_CONST_FAST</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="5269170d-9518-42cc-915f-3e88f523e9a2">
+                  <SHORT-NAME>OS_SystemApplication_OsCore2_VAR_INIT</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping</DEFINITION-REF>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapAddressingModeSetRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/MemMap/OS_SystemApplication_OsCore2_VAR_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore2_VAR_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore2_VAR_FAST_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore2_VAR_NOCACHE_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="1cd57416-9083-4eb2-8308-9a68dc8a40b8">
+                  <SHORT-NAME>OS_SystemApplication_OsCore2_VAR_NOINIT</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping</DEFINITION-REF>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapAddressingModeSetRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/MemMap/OS_SystemApplication_OsCore2_VAR_NOINIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore2_VAR_NO_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore2_VAR_FAST_NO_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore2_VAR_NOCACHE_NO_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="bdf6ad35-2424-4b09-9cf6-9012355c8f2f">
+                  <SHORT-NAME>OS_SystemApplication_OsCore2_VAR_ZERO_INIT</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping</DEFINITION-REF>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapAddressingModeSetRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/MemMap/OS_SystemApplication_OsCore2_VAR_ZERO_INIT</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore2_VAR_CLEARED</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore2_VAR_FAST_CLEARED</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore2_VAR_NOCACHE_CLEARED</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="c0ab0bbd-c928-422f-bf1d-b4b0a065015f">
+                  <SHORT-NAME>OS_SystemApplication_OsCore2_CONST</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping</DEFINITION-REF>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapAddressingModeSetRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/MemMap/MSR_CONST</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore2_CONST</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAllocation/MemMapGenericMapping/MemMapSwAddressMethodRef</DEFINITION-REF>
+                      <VALUE-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore2_CONST_FAST</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="c40ce9f1-516c-45e0-b518-c19c4b0c1e23">
+              <SHORT-NAME>OS_SystemApplication_OsCore1_VAR_INIT</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapCompilerMemClassSymbolImpl</DEFINITION-REF>
+                  <VALUE/>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="2d5f80ac-9fbe-4359-ae3a-830f14f178a1">
+                  <SHORT-NAME>OS_SystemApplication_OsCore1_VAR_INIT</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>BOOLEAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>16</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>32</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>64</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>UNSPECIFIED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapLinkerLogicalGroupRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/OS_DATA_CORE1_VAR</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="89120d7f-2087-4bb4-9fcb-4c3f0f56cf03">
+              <SHORT-NAME>OS_SystemApplication_OsCore1_VAR_NOINIT</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapCompilerMemClassSymbolImpl</DEFINITION-REF>
+                  <VALUE/>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="a3550be4-fdea-4a1f-82af-ee7ea8911c3d">
+                  <SHORT-NAME>OS_SystemApplication_OsCore1_VAR_NOINIT</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>BOOLEAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>16</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>32</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>64</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>UNSPECIFIED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapLinkerLogicalGroupRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/OS_DATA_CORE1_VAR</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="596c3f29-8b23-4045-9f51-df6aa5fefa4d">
+              <SHORT-NAME>OS_SystemApplication_OsCore1_VAR_ZERO_INIT</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapCompilerMemClassSymbolImpl</DEFINITION-REF>
+                  <VALUE/>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="b5a038d3-cd31-4c53-b8e0-03f4b9c39a68">
+                  <SHORT-NAME>OS_SystemApplication_OsCore1_VAR_ZERO_INIT</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>BOOLEAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>16</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>32</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>64</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>UNSPECIFIED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapLinkerLogicalGroupRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/OS_DATA_CORE1_VAR</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="142113d8-2aea-4655-9160-7e21655d2fa4">
+              <SHORT-NAME>OS_SystemApplication_OsCore2_VAR_INIT</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapCompilerMemClassSymbolImpl</DEFINITION-REF>
+                  <VALUE/>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="8b924a1f-116d-4bcc-b61e-148cab2750e9">
+                  <SHORT-NAME>OS_SystemApplication_OsCore2_VAR_INIT</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>BOOLEAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>16</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>32</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>64</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>UNSPECIFIED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapLinkerLogicalGroupRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/OS_DATA_CORE2_VAR</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="172b07fc-1e42-4949-8176-e10051d97dae">
+              <SHORT-NAME>OS_SystemApplication_OsCore2_VAR_NOINIT</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapCompilerMemClassSymbolImpl</DEFINITION-REF>
+                  <VALUE/>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="0e60e7e0-0367-47dd-b9b8-1835db25fb14">
+                  <SHORT-NAME>OS_SystemApplication_OsCore2_VAR_NOINIT</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>BOOLEAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>16</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>32</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>64</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>UNSPECIFIED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapLinkerLogicalGroupRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/OS_DATA_CORE2_VAR</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="c2fcf7c1-5e5c-4bdd-b5ee-98b70e1b4021">
+              <SHORT-NAME>OS_SystemApplication_OsCore2_VAR_ZERO_INIT</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapCompilerMemClassSymbolImpl</DEFINITION-REF>
+                  <VALUE/>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="14ea7ec6-74fc-496d-bef2-cdef5db158f6">
+                  <SHORT-NAME>OS_SystemApplication_OsCore2_VAR_ZERO_INIT</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>BOOLEAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>16</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>32</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>64</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapAlignmentSelector</DEFINITION-REF>
+                      <VALUE>UNSPECIFIED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/MemMap/MemMapAddressingModeSet/MemMapAddressingMode/MemMapLinkerLogicalGroupRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/OS_DATA_CORE2_VAR</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
               </SUB-CONTAINERS>
             </ECUC-CONTAINER-VALUE>
           </CONTAINERS>
