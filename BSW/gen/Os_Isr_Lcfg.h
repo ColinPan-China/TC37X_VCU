@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.h
- *   Generation Time: 2025-02-18 10:19:38
+ *   Generation Time: 2025-03-19 15:20:34
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -133,9 +133,9 @@ extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_CanIsr_1;
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_CanIsr_4_HwConfig;
 extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_CanIsr_4;
 
-/*! ISR configuration data: CounterIsr_SystemTimer */
-extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer_HwConfig;
-extern CONST(Os_TimerIsrConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer;
+/*! ISR configuration data: CounterIsr_SystemTimer0 */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer0_HwConfig;
+extern CONST(Os_TimerIsrConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer0;
 
 /*! ISR configuration data: DMACH10SR_ISR */
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_DMACH10SR_ISR_HwConfig;
@@ -161,7 +161,41 @@ extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_QSPI3ERR_ISR;
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_QSPI3PT_ISR_HwConfig;
 extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_QSPI3PT_ISR;
 
+/*! ISR configuration data: XSignalIsr_OsCore0 */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_XSignalIsr_OsCore0_HwConfig;
+extern CONST(Os_XSigIsrConfigType, OS_CONST) OsCfg_Isr_XSignalIsr_OsCore0;
+
 # define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_CORE1_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! ISR configuration data: CounterIsr_SystemTimer1 */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer1_HwConfig;
+extern CONST(Os_TimerIsrConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer1;
+
+/*! ISR configuration data: XSignalIsr_OsCore1 */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_XSignalIsr_OsCore1_HwConfig;
+extern CONST(Os_XSigIsrConfigType, OS_CONST) OsCfg_Isr_XSignalIsr_OsCore1;
+
+# define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_CORE2_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! ISR configuration data: CounterIsr_SystemTimer2 */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer2_HwConfig;
+extern CONST(Os_TimerIsrConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer2;
+
+/*! ISR configuration data: XSignalIsr_OsCore2 */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_XSignalIsr_OsCore2_HwConfig;
+extern CONST(Os_XSigIsrConfigType, OS_CONST) OsCfg_Isr_XSignalIsr_OsCore2;
+
+# define OS_STOP_SEC_CORE2_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

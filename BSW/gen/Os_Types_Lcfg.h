@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2025-02-18 10:19:38
+ *   Generation Time: 2025-03-19 15:20:35
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -52,6 +52,8 @@
 /* OS-Application identifiers. */
 #define OsApplication OsApplication
 #define SystemApplication_OsCore0 SystemApplication_OsCore0
+#define SystemApplication_OsCore1 SystemApplication_OsCore1
+#define SystemApplication_OsCore2 SystemApplication_OsCore2
 
 /* Trusted function identifiers. */
 
@@ -63,9 +65,22 @@
 #define AswTask AswTask
 #define Asw_Init Asw_Init
 #define Bsw_Task Bsw_Task
+#define Core0_BswTask Core0_BswTask
+#define Core1_AswInit Core1_AswInit
+#define Core1_AswTask Core1_AswTask
+#define Core1_BswTask Core1_BswTask
+#define Core2_AswInit Core2_AswInit
+#define Core2_AswTask Core2_AswTask
+#define Core2_BswTask Core2_BswTask
 #define Default_Init_Task Default_Init_Task
+#define Default_Init_Task_Core1 Default_Init_Task_Core1
+#define Default_Init_Task_Core1_Trusted Default_Init_Task_Core1_Trusted
+#define Default_Init_Task_Core2 Default_Init_Task_Core2
+#define Default_Init_Task_Core2_Trusted Default_Init_Task_Core2_Trusted
 #define Default_Init_Task_Trusted Default_Init_Task_Trusted
 #define IdleTask_OsCore0 IdleTask_OsCore0
+#define IdleTask_OsCore1 IdleTask_OsCore1
+#define IdleTask_OsCore2 IdleTask_OsCore2
 
 /* Category 2 ISR identifiers. */
 #define ADC0SR0_ISR ADC0SR0_ISR
@@ -83,29 +98,43 @@
 #define CanIsr_0 CanIsr_0
 #define CanIsr_1 CanIsr_1
 #define CanIsr_4 CanIsr_4
-#define CounterIsr_SystemTimer CounterIsr_SystemTimer
+#define CounterIsr_SystemTimer0 CounterIsr_SystemTimer0
+#define CounterIsr_SystemTimer1 CounterIsr_SystemTimer1
+#define CounterIsr_SystemTimer2 CounterIsr_SystemTimer2
 #define DMACH10SR_ISR DMACH10SR_ISR
 #define DMACH11SR_ISR DMACH11SR_ISR
 #define GTMTOM1SR3_ISR GTMTOM1SR3_ISR
 #define GTMTOM1SR4_ISR GTMTOM1SR4_ISR
 #define QSPI3ERR_ISR QSPI3ERR_ISR
 #define QSPI3PT_ISR QSPI3PT_ISR
+#define XSignalIsr_OsCore0 XSignalIsr_OsCore0
+#define XSignalIsr_OsCore1 XSignalIsr_OsCore1
+#define XSignalIsr_OsCore2 XSignalIsr_OsCore2
 
 /* Alarm identifiers. */
 #define Rte_Al_TE2_Bsw_Task_0_10ms Rte_Al_TE2_Bsw_Task_0_10ms
 #define Rte_Al_TE2_Bsw_Task_0_20ms Rte_Al_TE2_Bsw_Task_0_20ms
 #define Rte_Al_TE2_Bsw_Task_0_5ms Rte_Al_TE2_Bsw_Task_0_5ms
+#define Rte_Al_TE2_Core0_BswTask_0_10ms Rte_Al_TE2_Core0_BswTask_0_10ms
+#define Rte_Al_TE2_EcuM_EcuM_MainFunction Rte_Al_TE2_EcuM_EcuM_MainFunction
+#define Rte_Al_TE3_EcuM_EcuM_MainFunction Rte_Al_TE3_EcuM_EcuM_MainFunction
 #define Rte_Al_TE_AswTask_0_10ms Rte_Al_TE_AswTask_0_10ms
 #define Rte_Al_TE_Com_SWC_Com_Runnable_2ms Rte_Al_TE_Com_SWC_Com_Runnable_2ms
+#define Rte_Al_TE_Core1App_SWC_Core1App_Runnable100ms Rte_Al_TE_Core1App_SWC_Core1App_Runnable100ms
+#define Rte_Al_TE_Core2App_SWC_Core2App_Runnable100ms Rte_Al_TE_Core2App_SWC_Core2App_Runnable100ms
 #define Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms
 
 /* Counter identifiers. */
-#define SystemTimer SystemTimer
+#define SystemTimer_Core0 SystemTimer_Core0
+#define SystemTimer_Core1 SystemTimer_Core1
+#define SystemTimer_Core2 SystemTimer_Core2
 
 /* ScheduleTable identifiers. */
 
 /* Resource identifiers. */
-#define OsResource OsResource
+#define OsResource0 OsResource0
+#define OsResource1 OsResource1
+#define OsResource2 OsResource2
 
 /* Spinlock identifiers. */
 
@@ -131,7 +160,9 @@ typedef enum
 {
   OsApplication = 0, /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   SystemApplication_OsCore0 = 1, /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_APPID_COUNT = 2,
+  SystemApplication_OsCore1 = 2, /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  SystemApplication_OsCore2 = 3, /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_APPID_COUNT = 4,
   INVALID_OSAPPLICATION = OS_APPID_COUNT
 } ApplicationType;
 
@@ -159,10 +190,23 @@ typedef enum
   AswTask = 0,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Asw_Init = 1,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Bsw_Task = 2,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Default_Init_Task = 3,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Default_Init_Task_Trusted = 4,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  IdleTask_OsCore0 = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_TASKID_COUNT = 6,
+  Core0_BswTask = 3,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Core1_AswInit = 4,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Core1_AswTask = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Core1_BswTask = 6,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Core2_AswInit = 7,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Core2_AswTask = 8,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Core2_BswTask = 9,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task = 10,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task_Core1 = 11,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task_Core1_Trusted = 12,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task_Core2 = 13,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task_Core2_Trusted = 14,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task_Trusted = 15,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  IdleTask_OsCore0 = 16,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  IdleTask_OsCore1 = 17,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  IdleTask_OsCore2 = 18,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_TASKID_COUNT = 19,
   INVALID_TASK = OS_TASKID_COUNT
 } TaskType;
 
@@ -184,14 +228,19 @@ typedef enum
   CanIsr_0 = 12,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   CanIsr_1 = 13,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   CanIsr_4 = 14,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CounterIsr_SystemTimer = 15,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  DMACH10SR_ISR = 16,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  DMACH11SR_ISR = 17,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  GTMTOM1SR3_ISR = 18,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  GTMTOM1SR4_ISR = 19,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  QSPI3ERR_ISR = 20,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  QSPI3PT_ISR = 21,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ISRID_COUNT = 22,
+  CounterIsr_SystemTimer0 = 15,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CounterIsr_SystemTimer1 = 16,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CounterIsr_SystemTimer2 = 17,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  DMACH10SR_ISR = 18,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  DMACH11SR_ISR = 19,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  GTMTOM1SR3_ISR = 20,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  GTMTOM1SR4_ISR = 21,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  QSPI3ERR_ISR = 22,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  QSPI3PT_ISR = 23,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore0 = 24,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore1 = 25,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore2 = 26,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ISRID_COUNT = 27,
   INVALID_ISR = OS_ISRID_COUNT
 } ISRType;
 
@@ -201,17 +250,24 @@ typedef enum
   Rte_Al_TE2_Bsw_Task_0_10ms = 0,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE2_Bsw_Task_0_20ms = 1,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE2_Bsw_Task_0_5ms = 2,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_AswTask_0_10ms = 3,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Com_SWC_Com_Runnable_2ms = 4,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ALARMID_COUNT = 6
+  Rte_Al_TE2_Core0_BswTask_0_10ms = 3,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE2_EcuM_EcuM_MainFunction = 4,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE3_EcuM_EcuM_MainFunction = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_AswTask_0_10ms = 6,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Com_SWC_Com_Runnable_2ms = 7,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Core1App_SWC_Core1App_Runnable100ms = 8,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Core2App_SWC_Core2App_Runnable100ms = 9,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms = 10,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ALARMID_COUNT = 11
 } AlarmType;
 
 /*! Counter identifiers. */
 typedef enum
 {
-  SystemTimer = 0,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_COUNTERID_COUNT = 1
+  SystemTimer_Core0 = 0,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  SystemTimer_Core1 = 1,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  SystemTimer_Core2 = 2,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_COUNTERID_COUNT = 3
 } CounterType;
 
 /*! ScheduleTable identifiers. */
@@ -223,8 +279,10 @@ typedef enum
 /*! Resource identifiers. */
 typedef enum
 {
-  OsResource = 0,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_RESOURCEID_COUNT = 1
+  OsResource0 = 0,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OsResource1 = 1,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OsResource2 = 2,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_RESOURCEID_COUNT = 3
 } ResourceType;
 
 /*! Spinlock identifiers. */

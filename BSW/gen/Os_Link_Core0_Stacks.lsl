@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Link_Core0_Stacks.lsl
- *   Generation Time: 2024-10-14 11:05:36
+ *   Generation Time: 2025-03-19 13:54:58
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -135,6 +135,15 @@ group OS_STACK_OSCORE0_TASK_PRIO63_VAR_NOINIT_GROUP(ordered, contiguous, fill, a
 "_OS_STACK_OSCORE0_TASK_PRIO63_VAR_NOINIT_START" = "_lc_gb_OS_STACK_OSCORE0_TASK_PRIO63_VAR_NOINIT_GROUP";
 "_OS_STACK_OSCORE0_TASK_PRIO63_VAR_NOINIT_END" = "_lc_ge_OS_STACK_OSCORE0_TASK_PRIO63_VAR_NOINIT_GROUP" - 1;
 "_OS_STACK_OSCORE0_TASK_PRIO63_VAR_NOINIT_LIMIT" = "_lc_ge_OS_STACK_OSCORE0_TASK_PRIO63_VAR_NOINIT_GROUP";
+
+/* Stack: OsCore0_Task_Prio66 (1024 Byte) */
+group OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+{
+  select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT";
+}
+"_OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_START" = "_lc_gb_OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_GROUP";
+"_OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_END" = "_lc_ge_OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_GROUP" - 1;
+"_OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_LIMIT" = "_lc_ge_OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_GROUP";
 
 } /* OS_CORE0_STACKS_GROUP */
 "_OS_CORE0_STACKS_START" = "_lc_gb_OS_CORE0_STACKS_GROUP";

@@ -79,6 +79,12 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_NvMNotifyJobFinished_NvM_SWC_NVBlockDescripto
 FUNC(Std_ReturnType, RTE_CODE) Rte_NvMNotifyJobFinished_NvM_SWC_NVBlockDescriptor_UserData2(uint8 ServiceId, NvM_RequestResultType JobResult);
 
 
+/**********************************************************************************************************************
+ * RTE Schedulable entity for COM-Access from different partitions
+ *********************************************************************************************************************/
+
+FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void);
+
 # define RTE_STOP_SEC_CODE
 # include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 

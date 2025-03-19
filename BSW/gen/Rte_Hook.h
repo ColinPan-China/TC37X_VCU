@@ -390,6 +390,14 @@
  *  Rte_Runnable_Com_SWC_Rte_Msg200h_Rx_Notification_Start
  *  Rte_Runnable_Com_SWC_Rte_Msg201h_Rx_Notification_Return
  *  Rte_Runnable_Com_SWC_Rte_Msg201h_Rx_Notification_Start
+ *  Rte_Runnable_Core1App_SWC_Core1App_Runnable100ms_Return
+ *  Rte_Runnable_Core1App_SWC_Core1App_Runnable100ms_Start
+ *  Rte_Runnable_Core1App_SWC_Core1App_SWC_Init_Return
+ *  Rte_Runnable_Core1App_SWC_Core1App_SWC_Init_Start
+ *  Rte_Runnable_Core2App_SWC_Core2App_Runnable100ms_Return
+ *  Rte_Runnable_Core2App_SWC_Core2App_Runnable100ms_Start
+ *  Rte_Runnable_Core2App_SWC_Core2App_SWC_Init_Return
+ *  Rte_Runnable_Core2App_SWC_Core2App_SWC_Init_Start
  *  Rte_Runnable_DIAG_SWC_CBReadData_DID_0xf1a0_F1A0_Data_ReadData_Return
  *  Rte_Runnable_DIAG_SWC_CBReadData_DID_0xf1a0_F1A0_Data_ReadData_Start
  *  Rte_Runnable_DIAG_SWC_CBReadData_DID_0xf1a1_F1A1_Data_ReadData_Return
@@ -568,6 +576,14 @@
  *  Rte_Runnable_Os_OsCore0_swc_GetCounterValue_Start
  *  Rte_Runnable_Os_OsCore0_swc_GetElapsedValue_Return
  *  Rte_Runnable_Os_OsCore0_swc_GetElapsedValue_Start
+ *  Rte_Runnable_Os_OsCore1_swc_GetCounterValue_Return
+ *  Rte_Runnable_Os_OsCore1_swc_GetCounterValue_Start
+ *  Rte_Runnable_Os_OsCore1_swc_GetElapsedValue_Return
+ *  Rte_Runnable_Os_OsCore1_swc_GetElapsedValue_Start
+ *  Rte_Runnable_Os_OsCore2_swc_GetCounterValue_Return
+ *  Rte_Runnable_Os_OsCore2_swc_GetCounterValue_Start
+ *  Rte_Runnable_Os_OsCore2_swc_GetElapsedValue_Return
+ *  Rte_Runnable_Os_OsCore2_swc_GetElapsedValue_Start
  *  Rte_Runnable_PowerMng_SWC_Led_Runnable1000ms_Return
  *  Rte_Runnable_PowerMng_SWC_Led_Runnable1000ms_Start
  *  Rte_Runnable_PowerMng_SWC_PowerMng_SWC_Init_Return
@@ -1180,6 +1196,8 @@
  *  SchM_Schedulable_LinSM_LinSM_MainFunction_Start
  *  SchM_Schedulable_NvM_NvM_MainFunction_Return
  *  SchM_Schedulable_NvM_NvM_MainFunction_Start
+ *  SchM_Schedulable_Rte_Rte_ComSendSignalProxyPeriodic_Return
+ *  SchM_Schedulable_Rte_Rte_ComSendSignalProxyPeriodic_Start
  *  SchM_Schedulable_Spi_Spi_MainFunction_Handling_Return
  *  SchM_Schedulable_Spi_Spi_MainFunction_Handling_Start
  *  SchM_Schedulable_Xcp_CanXcp_MainFunction_Return

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Core_Lcfg.c
- *   Generation Time: 2025-02-18 10:19:37
+ *   Generation Time: 2025-03-19 15:20:34
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -79,6 +79,26 @@ OS_LOCAL VAR(Os_Hal_Core2ThreadType, OS_VAR_NOINIT_FAST) OsCfg_Hal_Core2Thread_O
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
+#define OS_START_SEC_CORE1_VAR_FAST_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! HAL dynamic core to thread data: OsCore1 */
+OS_LOCAL VAR(Os_Hal_Core2ThreadType, OS_VAR_NOINIT_FAST) OsCfg_Hal_Core2Thread_OsCore1_Dyn;
+
+#define OS_STOP_SEC_CORE1_VAR_FAST_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_CORE2_VAR_FAST_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! HAL dynamic core to thread data: OsCore2 */
+OS_LOCAL VAR(Os_Hal_Core2ThreadType, OS_VAR_NOINIT_FAST) OsCfg_Hal_Core2Thread_OsCore2_Dyn;
+
+#define OS_STOP_SEC_CORE2_VAR_FAST_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
 /**********************************************************************************************************************
  *  GLOBAL DATA
  *********************************************************************************************************************/
@@ -121,6 +141,74 @@ CONST(Os_Hal_CoreAsrConfigType, OS_CONST) OsCfg_Hal_CoreAsr_OsCore0 =
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
+#define OS_START_SEC_CORE1_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! HAL core initialized interrupt sources: OsCore1 */
+CONSTP2CONST(Os_IsrHwConfigType, OS_CONST, OS_CONST)
+  OsCfg_Hal_Core_OsCore1_InterruptSourceRefs[OS_CFG_NUM_CORE_OSCORE1_INTERRUPTSOURCEREFS + 1u] =
+{
+  /* No core exclusive interrupt sources to be initialized by OsCore1. */
+  NULL_PTR
+};
+
+
+/*! HAL core configuration data: OsCore1 */
+CONST(Os_Hal_CoreConfigType, OS_CONST) OsCfg_Hal_Core_OsCore1 =
+{
+  /* .CoreId                  = */ 1, /* Physical id of OsCore1 */
+  /* .ProgramCounterRegister  = */ OS_HAL_CORE1_PC,
+  /* .StartLabelAddress       = */ (uint32)&(_start_tc1), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
+  /* .DBGSRRegister           = */ OS_HAL_CORE1_DBGSR,
+  /* .SYSCON_CORECON_Register = */ OS_HAL_CORE1_SYSCON_CORECON,
+  /* .BOOTCONRegister         = */ OS_HAL_CORE1_BOOTCON
+}
+;
+
+/*! HAL AUTOSAR core configuration data: OsCore1 */
+CONST(Os_Hal_CoreAsrConfigType, OS_CONST) OsCfg_Hal_CoreAsr_OsCore1 =
+{
+  /* .CoreId        = */ 1, /* This is the logical id of the core */
+};
+
+#define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_CORE2_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! HAL core initialized interrupt sources: OsCore2 */
+CONSTP2CONST(Os_IsrHwConfigType, OS_CONST, OS_CONST)
+  OsCfg_Hal_Core_OsCore2_InterruptSourceRefs[OS_CFG_NUM_CORE_OSCORE2_INTERRUPTSOURCEREFS + 1u] =
+{
+  /* No core exclusive interrupt sources to be initialized by OsCore2. */
+  NULL_PTR
+};
+
+
+/*! HAL core configuration data: OsCore2 */
+CONST(Os_Hal_CoreConfigType, OS_CONST) OsCfg_Hal_Core_OsCore2 =
+{
+  /* .CoreId                  = */ 2, /* Physical id of OsCore2 */
+  /* .ProgramCounterRegister  = */ OS_HAL_CORE2_PC,
+  /* .StartLabelAddress       = */ (uint32)&(_start_tc2), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
+  /* .DBGSRRegister           = */ OS_HAL_CORE2_DBGSR,
+  /* .SYSCON_CORECON_Register = */ OS_HAL_CORE2_SYSCON_CORECON,
+  /* .BOOTCONRegister         = */ OS_HAL_CORE2_BOOTCON
+}
+;
+
+/*! HAL AUTOSAR core configuration data: OsCore2 */
+CONST(Os_Hal_CoreAsrConfigType, OS_CONST) OsCfg_Hal_CoreAsr_OsCore2 =
+{
+  /* .CoreId        = */ 2, /* This is the logical id of the core */
+};
+
+#define OS_STOP_SEC_CORE2_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
 #define OS_START_SEC_CONST_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -130,6 +218,8 @@ CONST(Os_Hal_Core2ThreadConfigType, OS_CONST) OsCfg_Hal_Core2Thread =
   /* .Core2Thread = */
   {
     &OsCfg_Hal_Core2Thread_OsCore0_Dyn, /* OS_CORE_ID_0 */
+    &OsCfg_Hal_Core2Thread_OsCore1_Dyn, /* OS_CORE_ID_1 */
+    &OsCfg_Hal_Core2Thread_OsCore2_Dyn, /* OS_CORE_ID_2 */
   }
 };
 
@@ -156,13 +246,18 @@ CONSTP2CONST(Os_IsrHwConfigType, OS_CONST, OS_CONST)
   &OsCfg_Isr_CanIsr_0_HwConfig,
   &OsCfg_Isr_CanIsr_1_HwConfig,
   &OsCfg_Isr_CanIsr_4_HwConfig,
-  &OsCfg_Isr_CounterIsr_SystemTimer_HwConfig,
+  &OsCfg_Isr_CounterIsr_SystemTimer0_HwConfig,
+  &OsCfg_Isr_CounterIsr_SystemTimer1_HwConfig,
+  &OsCfg_Isr_CounterIsr_SystemTimer2_HwConfig,
   &OsCfg_Isr_DMACH10SR_ISR_HwConfig,
   &OsCfg_Isr_DMACH11SR_ISR_HwConfig,
   &OsCfg_Isr_GTMTOM1SR3_ISR_HwConfig,
   &OsCfg_Isr_GTMTOM1SR4_ISR_HwConfig,
   &OsCfg_Isr_QSPI3ERR_ISR_HwConfig,
   &OsCfg_Isr_QSPI3PT_ISR_HwConfig,
+  &OsCfg_Isr_XSignalIsr_OsCore0_HwConfig,
+  &OsCfg_Isr_XSignalIsr_OsCore1_HwConfig,
+  &OsCfg_Isr_XSignalIsr_OsCore2_HwConfig,
   NULL_PTR
 };
 

@@ -108,6 +108,7 @@ section_layout mpe:vtc:linear
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO49_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO50_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO63_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT";
       }
     }
     group OS_STACKS_CORE0_VAR_NOINIT_PAD (align = 1)
@@ -121,6 +122,70 @@ section_layout mpe:vtc:linear
     "_OS_STACKS_CORE0_VAR_ALL_START" = "_OS_STACKS_CORE0_VAR_NOINIT_START";
     "_OS_STACKS_CORE0_VAR_ALL_END" = "_OS_STACKS_CORE0_VAR_NOINIT_END";
     "_OS_STACKS_CORE0_VAR_ALL_LIMIT" = "_OS_STACKS_CORE0_VAR_NOINIT_LIMIT";
+  }
+
+  group OS_STACKS_CORE1_VAR_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_0_DSPR_Core1)
+  {
+    group OS_STACKS_CORE1_VAR_NOINIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_STACKS_CORE1_VAR_NOINIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]bss.OS_STACK_OSCORE1_ERROR_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE1_INIT_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE1_ISR_CORE_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE1_KERNEL_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE1_SHUTDOWN_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE1_TASK_PRIO4294967295_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE1_TASK_PRIO49_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE1_TASK_PRIO50_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE1_TASK_PRIO51_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE1_TASK_PRIO52_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE1_TASK_PRIO53_VAR_NOINIT";
+      }
+    }
+    group OS_STACKS_CORE1_VAR_NOINIT_PAD (align = 1)
+    {
+      reserved "OS_STACKS_CORE1_VAR_NOINIT_PAD" (size = 16);
+    }
+    "_OS_STACKS_CORE1_VAR_NOINIT_START" = "_lc_gb_OS_STACKS_CORE1_VAR_NOINIT";
+    "_OS_STACKS_CORE1_VAR_NOINIT_END" = ("_lc_gb_OS_STACKS_CORE1_VAR_NOINIT_PAD" == 0) ? 0 : "_lc_gb_OS_STACKS_CORE1_VAR_NOINIT_PAD" - 1;
+    "_OS_STACKS_CORE1_VAR_NOINIT_LIMIT" = "_lc_gb_OS_STACKS_CORE1_VAR_NOINIT_PAD";
+
+    "_OS_STACKS_CORE1_VAR_ALL_START" = "_OS_STACKS_CORE1_VAR_NOINIT_START";
+    "_OS_STACKS_CORE1_VAR_ALL_END" = "_OS_STACKS_CORE1_VAR_NOINIT_END";
+    "_OS_STACKS_CORE1_VAR_ALL_LIMIT" = "_OS_STACKS_CORE1_VAR_NOINIT_LIMIT";
+  }
+
+  group OS_STACKS_CORE2_VAR_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_0_DSPR_Core2)
+  {
+    group OS_STACKS_CORE2_VAR_NOINIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_STACKS_CORE2_VAR_NOINIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]bss.OS_STACK_OSCORE2_ERROR_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE2_INIT_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE2_ISR_CORE_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE2_KERNEL_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE2_SHUTDOWN_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE2_TASK_PRIO4294967295_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE2_TASK_PRIO49_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE2_TASK_PRIO50_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE2_TASK_PRIO51_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE2_TASK_PRIO52_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE2_TASK_PRIO53_VAR_NOINIT";
+      }
+    }
+    group OS_STACKS_CORE2_VAR_NOINIT_PAD (align = 1)
+    {
+      reserved "OS_STACKS_CORE2_VAR_NOINIT_PAD" (size = 16);
+    }
+    "_OS_STACKS_CORE2_VAR_NOINIT_START" = "_lc_gb_OS_STACKS_CORE2_VAR_NOINIT";
+    "_OS_STACKS_CORE2_VAR_NOINIT_END" = ("_lc_gb_OS_STACKS_CORE2_VAR_NOINIT_PAD" == 0) ? 0 : "_lc_gb_OS_STACKS_CORE2_VAR_NOINIT_PAD" - 1;
+    "_OS_STACKS_CORE2_VAR_NOINIT_LIMIT" = "_lc_gb_OS_STACKS_CORE2_VAR_NOINIT_PAD";
+
+    "_OS_STACKS_CORE2_VAR_ALL_START" = "_OS_STACKS_CORE2_VAR_NOINIT_START";
+    "_OS_STACKS_CORE2_VAR_ALL_END" = "_OS_STACKS_CORE2_VAR_NOINIT_END";
+    "_OS_STACKS_CORE2_VAR_ALL_LIMIT" = "_OS_STACKS_CORE2_VAR_NOINIT_LIMIT";
   }
 
   group Startup_Code_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_Startup_Cached)
@@ -621,6 +686,364 @@ section_layout mpe:vtc:linear
     "_OS_DATA_CORE0_VAR_ALL_LIMIT" = "_OS_DATA_CORE0_VAR_ZERO_INIT_bss_LIMIT";
   }
 
+  group OS_DATA_CORE1_VAR_ROM_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Cached)
+  {
+    group OS_DATA_CORE1_VAR_FAST_INIT_ROM (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE1_VAR_FAST_INIT_ROM_SEC" (fill, blocksize = 2, attributes = rx)
+      {
+        group (load_addr)
+        {
+          select "[.]zdata.OS_CORE1_VAR_FAST";
+          select "[.]zdata.OS_CORE1_VAR_FAST_NOCACHE";
+          select "[.]zdata.OS_SystemApplication_OsCore1_VAR_FAST";
+          select "[.]zdata.OS_SystemApplication_OsCore1_VAR_FAST_NOCACHE";
+        }
+      }
+    }
+    "_OS_DATA_CORE1_VAR_FAST_INIT_ROM_START" = "_lc_gb_OS_DATA_CORE1_VAR_FAST_INIT_ROM";
+    "_OS_DATA_CORE1_VAR_FAST_INIT_ROM_LIMIT" = "_lc_ge_OS_DATA_CORE1_VAR_FAST_INIT_ROM";
+
+    group OS_DATA_CORE1_VAR_INIT_ROM (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE1_VAR_INIT_ROM_SEC" (fill, blocksize = 2, attributes = rx)
+      {
+        group (load_addr)
+        {
+          select "[.]data.OS_CORE1_VAR";
+          select "[.]data.OS_CORE1_VAR_NOCACHE";
+          select "[.]data.OS_SystemApplication_OsCore1_VAR";
+          select "[.]data.OS_SystemApplication_OsCore1_VAR_NOCACHE";
+        }
+      }
+    }
+    "_OS_DATA_CORE1_VAR_INIT_ROM_START" = "_lc_gb_OS_DATA_CORE1_VAR_INIT_ROM";
+    "_OS_DATA_CORE1_VAR_INIT_ROM_LIMIT" = "_lc_ge_OS_DATA_CORE1_VAR_INIT_ROM";
+
+  }
+
+  group OS_DATA_CORE1_VAR_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_0_DSPR_Core1)
+  {
+    group OS_DATA_CORE1_VAR_FAST_INIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE1_VAR_FAST_INIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]zdata.OS_CORE1_VAR_FAST";
+        select "[.]zdata.OS_CORE1_VAR_FAST_NOCACHE";
+        select "[.]zdata.OS_SystemApplication_OsCore1_VAR_FAST";
+        select "[.]zdata.OS_SystemApplication_OsCore1_VAR_FAST_NOCACHE";
+      }
+    }
+    group OS_DATA_CORE1_VAR_FAST_INIT_PAD (align = 4)
+    {
+      reserved "OS_DATA_CORE1_VAR_FAST_INIT_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE1_VAR_FAST_INIT_START" = "_lc_gb_OS_DATA_CORE1_VAR_FAST_INIT";
+    "_OS_DATA_CORE1_VAR_FAST_INIT_END" = ("_lc_gb_OS_DATA_CORE1_VAR_FAST_INIT_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE1_VAR_FAST_INIT_PAD" - 1;
+    "_OS_DATA_CORE1_VAR_FAST_INIT_LIMIT" = "_lc_gb_OS_DATA_CORE1_VAR_FAST_INIT_PAD";
+
+    group OS_DATA_CORE1_VAR_FAST_NOINIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE1_VAR_FAST_NOINIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]zbss.OS_CORE1_VAR_FAST_NOCACHE_NOINIT";
+        select "[.]zbss.OS_CORE1_VAR_FAST_NOINIT";
+        select "[.]zbss.OS_SystemApplication_OsCore1_VAR_FAST_NOCACHE_NOINIT";
+        select "[.]zbss.OS_SystemApplication_OsCore1_VAR_FAST_NOINIT";
+      }
+    }
+    group OS_DATA_CORE1_VAR_FAST_NOINIT_PAD (align = 1)
+    {
+      reserved "OS_DATA_CORE1_VAR_FAST_NOINIT_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE1_VAR_FAST_NOINIT_START" = "_lc_gb_OS_DATA_CORE1_VAR_FAST_NOINIT";
+    "_OS_DATA_CORE1_VAR_FAST_NOINIT_END" = ("_lc_gb_OS_DATA_CORE1_VAR_FAST_NOINIT_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE1_VAR_FAST_NOINIT_PAD" - 1;
+    "_OS_DATA_CORE1_VAR_FAST_NOINIT_LIMIT" = "_lc_gb_OS_DATA_CORE1_VAR_FAST_NOINIT_PAD";
+
+    group OS_DATA_CORE1_VAR_FAST_ZERO_INIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE1_VAR_FAST_ZERO_INIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]*.OS_SystemApplication_OsCore1_VAR_FAST_NOCACHE_ZERO_INIT";
+        select "[.]*.OS_SystemApplication_OsCore1_VAR_FAST_ZERO_INIT";
+      }
+    }
+    group OS_DATA_CORE1_VAR_FAST_ZERO_INIT_PAD (align = 4)
+    {
+      reserved "OS_DATA_CORE1_VAR_FAST_ZERO_INIT_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_START" = "_lc_gb_OS_DATA_CORE1_VAR_FAST_ZERO_INIT";
+    "_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_END" = ("_lc_gb_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_PAD" - 1;
+    "_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_LIMIT" = "_lc_gb_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_PAD";
+
+    group OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]*.OS_SystemApplication_OsCore1_VAR_FAST_NOCACHE_ZERO_INIT_bss";
+        select "[.]*.OS_SystemApplication_OsCore1_VAR_FAST_ZERO_INIT_bss";
+      }
+    }
+    group OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss_PAD (align = 4)
+    {
+      reserved "OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss_START" = "_lc_gb_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss";
+    "_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss_END" = ("_lc_gb_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss_PAD" - 1;
+    "_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss_LIMIT" = "_lc_gb_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss_PAD";
+
+    group OS_DATA_CORE1_VAR_INIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE1_VAR_INIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]data.OS_CORE1_VAR";
+        select "[.]data.OS_CORE1_VAR_NOCACHE";
+        select "[.]data.OS_SystemApplication_OsCore1_VAR";
+        select "[.]data.OS_SystemApplication_OsCore1_VAR_NOCACHE";
+      }
+    }
+    group OS_DATA_CORE1_VAR_INIT_PAD (align = 4)
+    {
+      reserved "OS_DATA_CORE1_VAR_INIT_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE1_VAR_INIT_START" = "_lc_gb_OS_DATA_CORE1_VAR_INIT";
+    "_OS_DATA_CORE1_VAR_INIT_END" = ("_lc_gb_OS_DATA_CORE1_VAR_INIT_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE1_VAR_INIT_PAD" - 1;
+    "_OS_DATA_CORE1_VAR_INIT_LIMIT" = "_lc_gb_OS_DATA_CORE1_VAR_INIT_PAD";
+
+    group OS_DATA_CORE1_VAR_NOINIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE1_VAR_NOINIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]bss.OS_CORE1_VAR_NOCACHE_NOINIT";
+        select "[.]bss.OS_CORE1_VAR_NOINIT";
+        select "[.]bss.OS_SystemApplication_OsCore1_VAR_NOCACHE_NOINIT";
+        select "[.]bss.OS_SystemApplication_OsCore1_VAR_NOINIT";
+      }
+    }
+    group OS_DATA_CORE1_VAR_NOINIT_PAD (align = 1)
+    {
+      reserved "OS_DATA_CORE1_VAR_NOINIT_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE1_VAR_NOINIT_START" = "_lc_gb_OS_DATA_CORE1_VAR_NOINIT";
+    "_OS_DATA_CORE1_VAR_NOINIT_END" = ("_lc_gb_OS_DATA_CORE1_VAR_NOINIT_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE1_VAR_NOINIT_PAD" - 1;
+    "_OS_DATA_CORE1_VAR_NOINIT_LIMIT" = "_lc_gb_OS_DATA_CORE1_VAR_NOINIT_PAD";
+
+    group OS_DATA_CORE1_VAR_ZERO_INIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE1_VAR_ZERO_INIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]*.OS_SystemApplication_OsCore1_VAR_NOCACHE_ZERO_INIT";
+        select "[.]*.OS_SystemApplication_OsCore1_VAR_ZERO_INIT";
+      }
+    }
+    group OS_DATA_CORE1_VAR_ZERO_INIT_PAD (align = 4)
+    {
+      reserved "OS_DATA_CORE1_VAR_ZERO_INIT_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE1_VAR_ZERO_INIT_START" = "_lc_gb_OS_DATA_CORE1_VAR_ZERO_INIT";
+    "_OS_DATA_CORE1_VAR_ZERO_INIT_END" = ("_lc_gb_OS_DATA_CORE1_VAR_ZERO_INIT_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE1_VAR_ZERO_INIT_PAD" - 1;
+    "_OS_DATA_CORE1_VAR_ZERO_INIT_LIMIT" = "_lc_gb_OS_DATA_CORE1_VAR_ZERO_INIT_PAD";
+
+    group OS_DATA_CORE1_VAR_ZERO_INIT_bss (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE1_VAR_ZERO_INIT_bss_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]*.OS_SystemApplication_OsCore1_VAR_NOCACHE_ZERO_INIT_bss";
+        select "[.]*.OS_SystemApplication_OsCore1_VAR_ZERO_INIT_bss";
+      }
+    }
+    group OS_DATA_CORE1_VAR_ZERO_INIT_bss_PAD (align = 4)
+    {
+      reserved "OS_DATA_CORE1_VAR_ZERO_INIT_bss_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE1_VAR_ZERO_INIT_bss_START" = "_lc_gb_OS_DATA_CORE1_VAR_ZERO_INIT_bss";
+    "_OS_DATA_CORE1_VAR_ZERO_INIT_bss_END" = ("_lc_gb_OS_DATA_CORE1_VAR_ZERO_INIT_bss_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE1_VAR_ZERO_INIT_bss_PAD" - 1;
+    "_OS_DATA_CORE1_VAR_ZERO_INIT_bss_LIMIT" = "_lc_gb_OS_DATA_CORE1_VAR_ZERO_INIT_bss_PAD";
+
+    "_OS_DATA_CORE1_VAR_ALL_START" = "_OS_DATA_CORE1_VAR_FAST_INIT_START";
+    "_OS_DATA_CORE1_VAR_ALL_END" = "_OS_DATA_CORE1_VAR_ZERO_INIT_bss_END";
+    "_OS_DATA_CORE1_VAR_ALL_LIMIT" = "_OS_DATA_CORE1_VAR_ZERO_INIT_bss_LIMIT";
+  }
+
+  group OS_DATA_CORE2_VAR_ROM_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Cached)
+  {
+    group OS_DATA_CORE2_VAR_FAST_INIT_ROM (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE2_VAR_FAST_INIT_ROM_SEC" (fill, blocksize = 2, attributes = rx)
+      {
+        group (load_addr)
+        {
+          select "[.]zdata.OS_CORE2_VAR_FAST";
+          select "[.]zdata.OS_CORE2_VAR_FAST_NOCACHE";
+          select "[.]zdata.OS_SystemApplication_OsCore2_VAR_FAST";
+          select "[.]zdata.OS_SystemApplication_OsCore2_VAR_FAST_NOCACHE";
+        }
+      }
+    }
+    "_OS_DATA_CORE2_VAR_FAST_INIT_ROM_START" = "_lc_gb_OS_DATA_CORE2_VAR_FAST_INIT_ROM";
+    "_OS_DATA_CORE2_VAR_FAST_INIT_ROM_LIMIT" = "_lc_ge_OS_DATA_CORE2_VAR_FAST_INIT_ROM";
+
+    group OS_DATA_CORE2_VAR_INIT_ROM (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE2_VAR_INIT_ROM_SEC" (fill, blocksize = 2, attributes = rx)
+      {
+        group (load_addr)
+        {
+          select "[.]data.OS_CORE2_VAR";
+          select "[.]data.OS_CORE2_VAR_NOCACHE";
+          select "[.]data.OS_SystemApplication_OsCore2_VAR";
+          select "[.]data.OS_SystemApplication_OsCore2_VAR_NOCACHE";
+        }
+      }
+    }
+    "_OS_DATA_CORE2_VAR_INIT_ROM_START" = "_lc_gb_OS_DATA_CORE2_VAR_INIT_ROM";
+    "_OS_DATA_CORE2_VAR_INIT_ROM_LIMIT" = "_lc_ge_OS_DATA_CORE2_VAR_INIT_ROM";
+
+  }
+
+  group OS_DATA_CORE2_VAR_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_0_DSPR_Core2)
+  {
+    group OS_DATA_CORE2_VAR_FAST_INIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE2_VAR_FAST_INIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]zdata.OS_CORE2_VAR_FAST";
+        select "[.]zdata.OS_CORE2_VAR_FAST_NOCACHE";
+        select "[.]zdata.OS_SystemApplication_OsCore2_VAR_FAST";
+        select "[.]zdata.OS_SystemApplication_OsCore2_VAR_FAST_NOCACHE";
+      }
+    }
+    group OS_DATA_CORE2_VAR_FAST_INIT_PAD (align = 4)
+    {
+      reserved "OS_DATA_CORE2_VAR_FAST_INIT_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE2_VAR_FAST_INIT_START" = "_lc_gb_OS_DATA_CORE2_VAR_FAST_INIT";
+    "_OS_DATA_CORE2_VAR_FAST_INIT_END" = ("_lc_gb_OS_DATA_CORE2_VAR_FAST_INIT_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE2_VAR_FAST_INIT_PAD" - 1;
+    "_OS_DATA_CORE2_VAR_FAST_INIT_LIMIT" = "_lc_gb_OS_DATA_CORE2_VAR_FAST_INIT_PAD";
+
+    group OS_DATA_CORE2_VAR_FAST_NOINIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE2_VAR_FAST_NOINIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]zbss.OS_CORE2_VAR_FAST_NOCACHE_NOINIT";
+        select "[.]zbss.OS_CORE2_VAR_FAST_NOINIT";
+        select "[.]zbss.OS_SystemApplication_OsCore2_VAR_FAST_NOCACHE_NOINIT";
+        select "[.]zbss.OS_SystemApplication_OsCore2_VAR_FAST_NOINIT";
+      }
+    }
+    group OS_DATA_CORE2_VAR_FAST_NOINIT_PAD (align = 1)
+    {
+      reserved "OS_DATA_CORE2_VAR_FAST_NOINIT_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE2_VAR_FAST_NOINIT_START" = "_lc_gb_OS_DATA_CORE2_VAR_FAST_NOINIT";
+    "_OS_DATA_CORE2_VAR_FAST_NOINIT_END" = ("_lc_gb_OS_DATA_CORE2_VAR_FAST_NOINIT_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE2_VAR_FAST_NOINIT_PAD" - 1;
+    "_OS_DATA_CORE2_VAR_FAST_NOINIT_LIMIT" = "_lc_gb_OS_DATA_CORE2_VAR_FAST_NOINIT_PAD";
+
+    group OS_DATA_CORE2_VAR_FAST_ZERO_INIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE2_VAR_FAST_ZERO_INIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]*.OS_SystemApplication_OsCore2_VAR_FAST_NOCACHE_ZERO_INIT";
+        select "[.]*.OS_SystemApplication_OsCore2_VAR_FAST_ZERO_INIT";
+      }
+    }
+    group OS_DATA_CORE2_VAR_FAST_ZERO_INIT_PAD (align = 4)
+    {
+      reserved "OS_DATA_CORE2_VAR_FAST_ZERO_INIT_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_START" = "_lc_gb_OS_DATA_CORE2_VAR_FAST_ZERO_INIT";
+    "_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_END" = ("_lc_gb_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_PAD" - 1;
+    "_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_LIMIT" = "_lc_gb_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_PAD";
+
+    group OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]*.OS_SystemApplication_OsCore2_VAR_FAST_NOCACHE_ZERO_INIT_bss";
+        select "[.]*.OS_SystemApplication_OsCore2_VAR_FAST_ZERO_INIT_bss";
+      }
+    }
+    group OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss_PAD (align = 4)
+    {
+      reserved "OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss_START" = "_lc_gb_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss";
+    "_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss_END" = ("_lc_gb_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss_PAD" - 1;
+    "_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss_LIMIT" = "_lc_gb_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss_PAD";
+
+    group OS_DATA_CORE2_VAR_INIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE2_VAR_INIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]data.OS_CORE2_VAR";
+        select "[.]data.OS_CORE2_VAR_NOCACHE";
+        select "[.]data.OS_SystemApplication_OsCore2_VAR";
+        select "[.]data.OS_SystemApplication_OsCore2_VAR_NOCACHE";
+      }
+    }
+    group OS_DATA_CORE2_VAR_INIT_PAD (align = 4)
+    {
+      reserved "OS_DATA_CORE2_VAR_INIT_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE2_VAR_INIT_START" = "_lc_gb_OS_DATA_CORE2_VAR_INIT";
+    "_OS_DATA_CORE2_VAR_INIT_END" = ("_lc_gb_OS_DATA_CORE2_VAR_INIT_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE2_VAR_INIT_PAD" - 1;
+    "_OS_DATA_CORE2_VAR_INIT_LIMIT" = "_lc_gb_OS_DATA_CORE2_VAR_INIT_PAD";
+
+    group OS_DATA_CORE2_VAR_NOINIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE2_VAR_NOINIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]bss.OS_CORE2_VAR_NOCACHE_NOINIT";
+        select "[.]bss.OS_CORE2_VAR_NOINIT";
+        select "[.]bss.OS_SystemApplication_OsCore2_VAR_NOCACHE_NOINIT";
+        select "[.]bss.OS_SystemApplication_OsCore2_VAR_NOINIT";
+      }
+    }
+    group OS_DATA_CORE2_VAR_NOINIT_PAD (align = 1)
+    {
+      reserved "OS_DATA_CORE2_VAR_NOINIT_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE2_VAR_NOINIT_START" = "_lc_gb_OS_DATA_CORE2_VAR_NOINIT";
+    "_OS_DATA_CORE2_VAR_NOINIT_END" = ("_lc_gb_OS_DATA_CORE2_VAR_NOINIT_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE2_VAR_NOINIT_PAD" - 1;
+    "_OS_DATA_CORE2_VAR_NOINIT_LIMIT" = "_lc_gb_OS_DATA_CORE2_VAR_NOINIT_PAD";
+
+    group OS_DATA_CORE2_VAR_ZERO_INIT (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE2_VAR_ZERO_INIT_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]*.OS_SystemApplication_OsCore2_VAR_NOCACHE_ZERO_INIT";
+        select "[.]*.OS_SystemApplication_OsCore2_VAR_ZERO_INIT";
+      }
+    }
+    group OS_DATA_CORE2_VAR_ZERO_INIT_PAD (align = 4)
+    {
+      reserved "OS_DATA_CORE2_VAR_ZERO_INIT_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE2_VAR_ZERO_INIT_START" = "_lc_gb_OS_DATA_CORE2_VAR_ZERO_INIT";
+    "_OS_DATA_CORE2_VAR_ZERO_INIT_END" = ("_lc_gb_OS_DATA_CORE2_VAR_ZERO_INIT_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE2_VAR_ZERO_INIT_PAD" - 1;
+    "_OS_DATA_CORE2_VAR_ZERO_INIT_LIMIT" = "_lc_gb_OS_DATA_CORE2_VAR_ZERO_INIT_PAD";
+
+    group OS_DATA_CORE2_VAR_ZERO_INIT_bss (ordered, contiguous, fill, align = 16)
+    {
+      section "OS_DATA_CORE2_VAR_ZERO_INIT_bss_SEC" (blocksize = 2, attributes = rw)
+      {
+        select "[.]*.OS_SystemApplication_OsCore2_VAR_NOCACHE_ZERO_INIT_bss";
+        select "[.]*.OS_SystemApplication_OsCore2_VAR_ZERO_INIT_bss";
+      }
+    }
+    group OS_DATA_CORE2_VAR_ZERO_INIT_bss_PAD (align = 4)
+    {
+      reserved "OS_DATA_CORE2_VAR_ZERO_INIT_bss_PAD" (size = 16);
+    }
+    "_OS_DATA_CORE2_VAR_ZERO_INIT_bss_START" = "_lc_gb_OS_DATA_CORE2_VAR_ZERO_INIT_bss";
+    "_OS_DATA_CORE2_VAR_ZERO_INIT_bss_END" = ("_lc_gb_OS_DATA_CORE2_VAR_ZERO_INIT_bss_PAD" == 0) ? 0 : "_lc_gb_OS_DATA_CORE2_VAR_ZERO_INIT_bss_PAD" - 1;
+    "_OS_DATA_CORE2_VAR_ZERO_INIT_bss_LIMIT" = "_lc_gb_OS_DATA_CORE2_VAR_ZERO_INIT_bss_PAD";
+
+    "_OS_DATA_CORE2_VAR_ALL_START" = "_OS_DATA_CORE2_VAR_FAST_INIT_START";
+    "_OS_DATA_CORE2_VAR_ALL_END" = "_OS_DATA_CORE2_VAR_ZERO_INIT_bss_END";
+    "_OS_DATA_CORE2_VAR_ALL_LIMIT" = "_OS_DATA_CORE2_VAR_ZERO_INIT_bss_LIMIT";
+  }
+
   group OS_DATA_SHARED_VAR_ROM_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Cached)
   {
     group OS_DATA_SHARED_VAR_FAST_INIT_ROM (ordered, contiguous, fill, align = 16)
@@ -673,8 +1096,14 @@ section_layout mpe:vtc:linear
       section "OS_DATA_SHARED_VAR_FAST_NOINIT_SEC" (blocksize = 2, attributes = rw)
       {
         select "[.]zbss.OS_BARRIER_CORE0_VAR_FAST_NOCACHE_NOINIT";
+        select "[.]zbss.OS_BARRIER_CORE1_VAR_FAST_NOCACHE_NOINIT";
+        select "[.]zbss.OS_BARRIER_CORE2_VAR_FAST_NOCACHE_NOINIT";
         select "[.]zbss.OS_CORESTATUS_CORE0_VAR_FAST_NOCACHE_NOINIT";
+        select "[.]zbss.OS_CORESTATUS_CORE1_VAR_FAST_NOCACHE_NOINIT";
+        select "[.]zbss.OS_CORESTATUS_CORE2_VAR_FAST_NOCACHE_NOINIT";
         select "[.]zbss.OS_PUBLIC_CORE0_VAR_FAST_NOINIT";
+        select "[.]zbss.OS_PUBLIC_CORE1_VAR_FAST_NOINIT";
+        select "[.]zbss.OS_PUBLIC_CORE2_VAR_FAST_NOINIT";
         select "[.]zbss.OS_VAR_FAST_NOCACHE_NOINIT";
       }
     }
@@ -706,8 +1135,14 @@ section_layout mpe:vtc:linear
       section "OS_DATA_SHARED_VAR_NOINIT_SEC" (blocksize = 2, attributes = rw)
       {
         select "[.]bss.OS_BARRIER_CORE0_VAR_NOCACHE_NOINIT";
+        select "[.]bss.OS_BARRIER_CORE1_VAR_NOCACHE_NOINIT";
+        select "[.]bss.OS_BARRIER_CORE2_VAR_NOCACHE_NOINIT";
         select "[.]bss.OS_CORESTATUS_CORE0_VAR_NOCACHE_NOINIT";
+        select "[.]bss.OS_CORESTATUS_CORE1_VAR_NOCACHE_NOINIT";
+        select "[.]bss.OS_CORESTATUS_CORE2_VAR_NOCACHE_NOINIT";
         select "[.]bss.OS_PUBLIC_CORE0_VAR_NOINIT";
+        select "[.]bss.OS_PUBLIC_CORE1_VAR_NOINIT";
+        select "[.]bss.OS_PUBLIC_CORE2_VAR_NOINIT";
         select "[.]bss.OS_VAR_NOCACHE_NOINIT";
       }
     }
@@ -766,6 +1201,94 @@ section_layout mpe:vtc:linear
     "_OS_EXCVEC_CORE0_CONST_ALL_START" = "_OS_EXCVEC_CORE0_CONST_START";
     "_OS_EXCVEC_CORE0_CONST_ALL_END" = "_OS_EXCVEC_CORE0_CONST_END";
     "_OS_EXCVEC_CORE0_CONST_ALL_LIMIT" = "_OS_EXCVEC_CORE0_CONST_LIMIT";
+  }
+
+  group OS_EXCVEC_CORE1_CODE_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Cached)
+  {
+    group OS_EXCVEC_CORE1_CODE (ordered, contiguous, fill, align = 256)
+    {
+      section "OS_EXCVEC_CORE1_CODE_SEC" (fill, blocksize = 2, attributes = rx)
+      {
+        select "[.]text.OS_EXCVEC_CORE1_CODE";
+      }
+    }
+    group OS_EXCVEC_CORE1_CODE_PAD (align = 8)
+    {
+      reserved "OS_EXCVEC_CORE1_CODE_PAD" (size = 16);
+    }
+    "_OS_EXCVEC_CORE1_CODE_START" = "_lc_gb_OS_EXCVEC_CORE1_CODE";
+    "_OS_EXCVEC_CORE1_CODE_END" = ("_lc_gb_OS_EXCVEC_CORE1_CODE_PAD" == 0) ? 0 : "_lc_gb_OS_EXCVEC_CORE1_CODE_PAD" - 1;
+    "_OS_EXCVEC_CORE1_CODE_LIMIT" = "_lc_gb_OS_EXCVEC_CORE1_CODE_PAD";
+
+    "_OS_EXCVEC_CORE1_CODE_ALL_START" = "_OS_EXCVEC_CORE1_CODE_START";
+    "_OS_EXCVEC_CORE1_CODE_ALL_END" = "_OS_EXCVEC_CORE1_CODE_END";
+    "_OS_EXCVEC_CORE1_CODE_ALL_LIMIT" = "_OS_EXCVEC_CORE1_CODE_LIMIT";
+  }
+
+  group OS_EXCVEC_CORE1_CONST_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Cached)
+  {
+    group OS_EXCVEC_CORE1_CONST (ordered, contiguous, fill, align = 256)
+    {
+      section "OS_EXCVEC_CORE1_CONST_SEC" (fill, blocksize = 2, attributes = rx)
+      {
+        select "[.]rodata.OS_EXCVEC_CORE1_CONST";
+      }
+    }
+    group OS_EXCVEC_CORE1_CONST_PAD (align = 8)
+    {
+      reserved "OS_EXCVEC_CORE1_CONST_PAD" (size = 16);
+    }
+    "_OS_EXCVEC_CORE1_CONST_START" = "_lc_gb_OS_EXCVEC_CORE1_CONST";
+    "_OS_EXCVEC_CORE1_CONST_END" = ("_lc_gb_OS_EXCVEC_CORE1_CONST_PAD" == 0) ? 0 : "_lc_gb_OS_EXCVEC_CORE1_CONST_PAD" - 1;
+    "_OS_EXCVEC_CORE1_CONST_LIMIT" = "_lc_gb_OS_EXCVEC_CORE1_CONST_PAD";
+
+    "_OS_EXCVEC_CORE1_CONST_ALL_START" = "_OS_EXCVEC_CORE1_CONST_START";
+    "_OS_EXCVEC_CORE1_CONST_ALL_END" = "_OS_EXCVEC_CORE1_CONST_END";
+    "_OS_EXCVEC_CORE1_CONST_ALL_LIMIT" = "_OS_EXCVEC_CORE1_CONST_LIMIT";
+  }
+
+  group OS_EXCVEC_CORE2_CODE_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Cached)
+  {
+    group OS_EXCVEC_CORE2_CODE (ordered, contiguous, fill, align = 256)
+    {
+      section "OS_EXCVEC_CORE2_CODE_SEC" (fill, blocksize = 2, attributes = rx)
+      {
+        select "[.]text.OS_EXCVEC_CORE2_CODE";
+      }
+    }
+    group OS_EXCVEC_CORE2_CODE_PAD (align = 8)
+    {
+      reserved "OS_EXCVEC_CORE2_CODE_PAD" (size = 16);
+    }
+    "_OS_EXCVEC_CORE2_CODE_START" = "_lc_gb_OS_EXCVEC_CORE2_CODE";
+    "_OS_EXCVEC_CORE2_CODE_END" = ("_lc_gb_OS_EXCVEC_CORE2_CODE_PAD" == 0) ? 0 : "_lc_gb_OS_EXCVEC_CORE2_CODE_PAD" - 1;
+    "_OS_EXCVEC_CORE2_CODE_LIMIT" = "_lc_gb_OS_EXCVEC_CORE2_CODE_PAD";
+
+    "_OS_EXCVEC_CORE2_CODE_ALL_START" = "_OS_EXCVEC_CORE2_CODE_START";
+    "_OS_EXCVEC_CORE2_CODE_ALL_END" = "_OS_EXCVEC_CORE2_CODE_END";
+    "_OS_EXCVEC_CORE2_CODE_ALL_LIMIT" = "_OS_EXCVEC_CORE2_CODE_LIMIT";
+  }
+
+  group OS_EXCVEC_CORE2_CONST_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Cached)
+  {
+    group OS_EXCVEC_CORE2_CONST (ordered, contiguous, fill, align = 256)
+    {
+      section "OS_EXCVEC_CORE2_CONST_SEC" (fill, blocksize = 2, attributes = rx)
+      {
+        select "[.]rodata.OS_EXCVEC_CORE2_CONST";
+      }
+    }
+    group OS_EXCVEC_CORE2_CONST_PAD (align = 8)
+    {
+      reserved "OS_EXCVEC_CORE2_CONST_PAD" (size = 16);
+    }
+    "_OS_EXCVEC_CORE2_CONST_START" = "_lc_gb_OS_EXCVEC_CORE2_CONST";
+    "_OS_EXCVEC_CORE2_CONST_END" = ("_lc_gb_OS_EXCVEC_CORE2_CONST_PAD" == 0) ? 0 : "_lc_gb_OS_EXCVEC_CORE2_CONST_PAD" - 1;
+    "_OS_EXCVEC_CORE2_CONST_LIMIT" = "_lc_gb_OS_EXCVEC_CORE2_CONST_PAD";
+
+    "_OS_EXCVEC_CORE2_CONST_ALL_START" = "_OS_EXCVEC_CORE2_CONST_START";
+    "_OS_EXCVEC_CORE2_CONST_ALL_END" = "_OS_EXCVEC_CORE2_CONST_END";
+    "_OS_EXCVEC_CORE2_CONST_ALL_LIMIT" = "_OS_EXCVEC_CORE2_CONST_LIMIT";
   }
 
   group OS_GLOBALSHARED_CONST_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Cached)
@@ -1046,6 +1569,94 @@ section_layout mpe:vtc:linear
     "_OS_INTVEC_CORE0_CONST_ALL_LIMIT" = "_OS_INTVEC_CORE0_CONST_LIMIT";
   }
 
+  group OS_INTVEC_CORE1_CODE_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Cached)
+  {
+    group OS_INTVEC_CORE1_CODE (ordered, contiguous, fill, align = 8192)
+    {
+      section "OS_INTVEC_CORE1_CODE_SEC" (fill, blocksize = 2, attributes = rx)
+      {
+        select "[.]text.OS_INTVEC_CORE1_CODE";
+      }
+    }
+    group OS_INTVEC_CORE1_CODE_PAD (align = 8)
+    {
+      reserved "OS_INTVEC_CORE1_CODE_PAD" (size = 16);
+    }
+    "_OS_INTVEC_CORE1_CODE_START" = "_lc_gb_OS_INTVEC_CORE1_CODE";
+    "_OS_INTVEC_CORE1_CODE_END" = ("_lc_gb_OS_INTVEC_CORE1_CODE_PAD" == 0) ? 0 : "_lc_gb_OS_INTVEC_CORE1_CODE_PAD" - 1;
+    "_OS_INTVEC_CORE1_CODE_LIMIT" = "_lc_gb_OS_INTVEC_CORE1_CODE_PAD";
+
+    "_OS_INTVEC_CORE1_CODE_ALL_START" = "_OS_INTVEC_CORE1_CODE_START";
+    "_OS_INTVEC_CORE1_CODE_ALL_END" = "_OS_INTVEC_CORE1_CODE_END";
+    "_OS_INTVEC_CORE1_CODE_ALL_LIMIT" = "_OS_INTVEC_CORE1_CODE_LIMIT";
+  }
+
+  group OS_INTVEC_CORE1_CONST_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Cached)
+  {
+    group OS_INTVEC_CORE1_CONST (ordered, contiguous, fill, align = 8192)
+    {
+      section "OS_INTVEC_CORE1_CONST_SEC" (fill, blocksize = 2, attributes = rx)
+      {
+        select "[.]rodata.OS_INTVEC_CORE1_CONST";
+      }
+    }
+    group OS_INTVEC_CORE1_CONST_PAD (align = 8)
+    {
+      reserved "OS_INTVEC_CORE1_CONST_PAD" (size = 16);
+    }
+    "_OS_INTVEC_CORE1_CONST_START" = "_lc_gb_OS_INTVEC_CORE1_CONST";
+    "_OS_INTVEC_CORE1_CONST_END" = ("_lc_gb_OS_INTVEC_CORE1_CONST_PAD" == 0) ? 0 : "_lc_gb_OS_INTVEC_CORE1_CONST_PAD" - 1;
+    "_OS_INTVEC_CORE1_CONST_LIMIT" = "_lc_gb_OS_INTVEC_CORE1_CONST_PAD";
+
+    "_OS_INTVEC_CORE1_CONST_ALL_START" = "_OS_INTVEC_CORE1_CONST_START";
+    "_OS_INTVEC_CORE1_CONST_ALL_END" = "_OS_INTVEC_CORE1_CONST_END";
+    "_OS_INTVEC_CORE1_CONST_ALL_LIMIT" = "_OS_INTVEC_CORE1_CONST_LIMIT";
+  }
+
+  group OS_INTVEC_CORE2_CODE_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Cached)
+  {
+    group OS_INTVEC_CORE2_CODE (ordered, contiguous, fill, align = 8192)
+    {
+      section "OS_INTVEC_CORE2_CODE_SEC" (fill, blocksize = 2, attributes = rx)
+      {
+        select "[.]text.OS_INTVEC_CORE2_CODE";
+      }
+    }
+    group OS_INTVEC_CORE2_CODE_PAD (align = 8)
+    {
+      reserved "OS_INTVEC_CORE2_CODE_PAD" (size = 16);
+    }
+    "_OS_INTVEC_CORE2_CODE_START" = "_lc_gb_OS_INTVEC_CORE2_CODE";
+    "_OS_INTVEC_CORE2_CODE_END" = ("_lc_gb_OS_INTVEC_CORE2_CODE_PAD" == 0) ? 0 : "_lc_gb_OS_INTVEC_CORE2_CODE_PAD" - 1;
+    "_OS_INTVEC_CORE2_CODE_LIMIT" = "_lc_gb_OS_INTVEC_CORE2_CODE_PAD";
+
+    "_OS_INTVEC_CORE2_CODE_ALL_START" = "_OS_INTVEC_CORE2_CODE_START";
+    "_OS_INTVEC_CORE2_CODE_ALL_END" = "_OS_INTVEC_CORE2_CODE_END";
+    "_OS_INTVEC_CORE2_CODE_ALL_LIMIT" = "_OS_INTVEC_CORE2_CODE_LIMIT";
+  }
+
+  group OS_INTVEC_CORE2_CONST_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Cached)
+  {
+    group OS_INTVEC_CORE2_CONST (ordered, contiguous, fill, align = 8192)
+    {
+      section "OS_INTVEC_CORE2_CONST_SEC" (fill, blocksize = 2, attributes = rx)
+      {
+        select "[.]rodata.OS_INTVEC_CORE2_CONST";
+      }
+    }
+    group OS_INTVEC_CORE2_CONST_PAD (align = 8)
+    {
+      reserved "OS_INTVEC_CORE2_CONST_PAD" (size = 16);
+    }
+    "_OS_INTVEC_CORE2_CONST_START" = "_lc_gb_OS_INTVEC_CORE2_CONST";
+    "_OS_INTVEC_CORE2_CONST_END" = ("_lc_gb_OS_INTVEC_CORE2_CONST_PAD" == 0) ? 0 : "_lc_gb_OS_INTVEC_CORE2_CONST_PAD" - 1;
+    "_OS_INTVEC_CORE2_CONST_LIMIT" = "_lc_gb_OS_INTVEC_CORE2_CONST_PAD";
+
+    "_OS_INTVEC_CORE2_CONST_ALL_START" = "_OS_INTVEC_CORE2_CONST_START";
+    "_OS_INTVEC_CORE2_CONST_ALL_END" = "_OS_INTVEC_CORE2_CONST_END";
+    "_OS_INTVEC_CORE2_CONST_ALL_LIMIT" = "_OS_INTVEC_CORE2_CONST_LIMIT";
+  }
+
   group OS_OsApplication_VAR_ROM_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Cached)
   {
     group OS_OsApplication_VAR_FAST_INIT_ROM (ordered, contiguous, fill, align = 16)
@@ -1237,7 +1848,18 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_CanIsr_0_CODE";
         select "[.]text.OS_CanIsr_1_CODE";
         select "[.]text.OS_CanIsr_4_CODE";
+        select "[.]text.OS_Core0_BswTask_CODE";
+        select "[.]text.OS_Core1_AswInit_CODE";
+        select "[.]text.OS_Core1_AswTask_CODE";
+        select "[.]text.OS_Core1_BswTask_CODE";
+        select "[.]text.OS_Core2_AswInit_CODE";
+        select "[.]text.OS_Core2_AswTask_CODE";
+        select "[.]text.OS_Core2_BswTask_CODE";
         select "[.]text.OS_Default_Init_Task_CODE";
+        select "[.]text.OS_Default_Init_Task_Core1_CODE";
+        select "[.]text.OS_Default_Init_Task_Core1_Trusted_CODE";
+        select "[.]text.OS_Default_Init_Task_Core2_CODE";
+        select "[.]text.OS_Default_Init_Task_Core2_Trusted_CODE";
         select "[.]text.OS_Default_Init_Task_Trusted_CODE";
         select "[.]text.OS_DMACH10SR_ISR_CODE";
         select "[.]text.OS_DMACH11SR_ISR_CODE";
@@ -1387,8 +2009,16 @@ section_layout mpe:vtc:linear
         select "[.]zrodata.OS_CONST_FAST";
         select "[.]rodata.OS_CORE0_CONST";
         select "[.]zrodata.OS_CORE0_CONST_FAST";
+        select "[.]rodata.OS_CORE1_CONST";
+        select "[.]zrodata.OS_CORE1_CONST_FAST";
+        select "[.]rodata.OS_CORE2_CONST";
+        select "[.]zrodata.OS_CORE2_CONST_FAST";
         select "[.]rodata.OS_SystemApplication_OsCore0_CONST";
         select "[.]zrodata.OS_SystemApplication_OsCore0_CONST_FAST";
+        select "[.]rodata.OS_SystemApplication_OsCore1_CONST";
+        select "[.]zrodata.OS_SystemApplication_OsCore1_CONST_FAST";
+        select "[.]rodata.OS_SystemApplication_OsCore2_CONST";
+        select "[.]zrodata.OS_SystemApplication_OsCore2_CONST_FAST";
       }
     }
     group OS_CONST_PAD (align = 1)

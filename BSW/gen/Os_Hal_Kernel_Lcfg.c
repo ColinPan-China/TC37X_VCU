@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Kernel_Lcfg.c
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2025-03-19 13:54:58
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -84,6 +84,8 @@
 CONSTP2CONST(Os_CoreConfigType, OS_CONST, OS_CONST) OsCfg_CoreRefs[OS_COREID_COUNT + 1u] =                /* PRQA S 4521 */ /* MD_Os_Rule10.1_4521 */
 {
   OS_CORE_CASTCONFIG_COREASR_2_CORE(OsCfg_Core_OsCore0),
+  OS_CORE_CASTCONFIG_COREASR_2_CORE(OsCfg_Core_OsCore1),
+  OS_CORE_CASTCONFIG_COREASR_2_CORE(OsCfg_Core_OsCore2),
   NULL_PTR
 };
 
@@ -91,6 +93,8 @@ CONSTP2CONST(Os_CoreConfigType, OS_CONST, OS_CONST) OsCfg_CoreRefs[OS_COREID_COU
 CONSTP2CONST(Os_CoreConfigType, OS_CONST, OS_CONST) OsCfg_CorePhysicalRefs[OS_CFG_COREPHYSICALID_COUNT + 1u] =
 {
   OS_CORE_CASTCONFIG_COREASR_2_CORE(OsCfg_Core_OsCore0),
+  OS_CORE_CASTCONFIG_COREASR_2_CORE(OsCfg_Core_OsCore1),
+  OS_CORE_CASTCONFIG_COREASR_2_CORE(OsCfg_Core_OsCore2),
   NULL_PTR
 };
 
@@ -98,6 +102,8 @@ CONSTP2CONST(Os_CoreConfigType, OS_CONST, OS_CONST) OsCfg_CorePhysicalRefs[OS_CF
 CONSTP2CONST(Os_Hal_ContextStackConfigType, OS_CONST, OS_CONST) OsCfg_Stack_KernelStacks[OS_CFG_COREPHYSICALID_COUNT + 1u] = /* PRQA S 1533 */ /* MD_Os_Rule8.9_1533 */
 {
   &OsCfg_Hal_Stack_OsCore0_Kernel,
+  &OsCfg_Hal_Stack_OsCore1_Kernel,
+  &OsCfg_Hal_Stack_OsCore2_Kernel,
   NULL_PTR
 };
 

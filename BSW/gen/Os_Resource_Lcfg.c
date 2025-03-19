@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Resource_Lcfg.c
- *   Generation Time: 2024-09-03 11:08:40
+ *   Generation Time: 2025-03-19 13:54:58
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -72,10 +72,30 @@
 #define OS_START_SEC_CORE0_VAR_NOINIT_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-/*! Dynamic resource data: OsResource */
-OS_LOCAL VAR(Os_ResourceType, OS_VAR_NOINIT) OsCfg_Resource_OsResource_Dyn;
+/*! Dynamic resource data: OsResource0 */
+OS_LOCAL VAR(Os_ResourceType, OS_VAR_NOINIT) OsCfg_Resource_OsResource0_Dyn;
 
 #define OS_STOP_SEC_CORE0_VAR_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_CORE1_VAR_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Dynamic resource data: OsResource1 */
+OS_LOCAL VAR(Os_ResourceType, OS_VAR_NOINIT) OsCfg_Resource_OsResource1_Dyn;
+
+#define OS_STOP_SEC_CORE1_VAR_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_CORE2_VAR_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Dynamic resource data: OsResource2 */
+OS_LOCAL VAR(Os_ResourceType, OS_VAR_NOINIT) OsCfg_Resource_OsResource2_Dyn;
+
+#define OS_STOP_SEC_CORE2_VAR_NOINIT_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -91,21 +111,65 @@ OS_LOCAL VAR(Os_ResourceType, OS_VAR_NOINIT) OsCfg_Resource_OsResource_Dyn;
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
-/*! Resource configuration data: OsResource */
-CONST(Os_ResourceConfigType, OS_CONST) OsCfg_Resource_OsResource =
+/*! Resource configuration data: OsResource0 */
+CONST(Os_ResourceConfigType, OS_CONST) OsCfg_Resource_OsResource0 =
 {
   /* .Lock            = */
   {
-    /* .Dyn                   = */ OS_RESOURCE_CASTDYN_RESOURCE_2_LOCK(OsCfg_Resource_OsResource_Dyn),
+    /* .Dyn                   = */ OS_RESOURCE_CASTDYN_RESOURCE_2_LOCK(OsCfg_Resource_OsResource0_Dyn),
     /* .AccessingApplications = */ (OS_APPID2MASK(OsApplication) | OS_APPID2MASK(SystemApplication_OsCore0)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
     /* .Type                  = */ OS_LOCKTYPE_RESOURCE_STANDARD
   },
   /* .Core            = */ &OsCfg_Core_OsCore0,
-  /* .ResourceId      = */ OsResource,
+  /* .ResourceId      = */ OsResource0,
   /* .CeilingPriority = */ 0
 };
 
 #define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_CORE1_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+/*! Resource configuration data: OsResource1 */
+CONST(Os_ResourceConfigType, OS_CONST) OsCfg_Resource_OsResource1 =
+{
+  /* .Lock            = */
+  {
+    /* .Dyn                   = */ OS_RESOURCE_CASTDYN_RESOURCE_2_LOCK(OsCfg_Resource_OsResource1_Dyn),
+    /* .AccessingApplications = */ OS_APPID2MASK(SystemApplication_OsCore1),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
+    /* .Type                  = */ OS_LOCKTYPE_RESOURCE_STANDARD
+  },
+  /* .Core            = */ &OsCfg_Core_OsCore1,
+  /* .ResourceId      = */ OsResource1,
+  /* .CeilingPriority = */ 4
+};
+
+#define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_CORE2_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+/*! Resource configuration data: OsResource2 */
+CONST(Os_ResourceConfigType, OS_CONST) OsCfg_Resource_OsResource2 =
+{
+  /* .Lock            = */
+  {
+    /* .Dyn                   = */ OS_RESOURCE_CASTDYN_RESOURCE_2_LOCK(OsCfg_Resource_OsResource2_Dyn),
+    /* .AccessingApplications = */ OS_APPID2MASK(SystemApplication_OsCore2),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
+    /* .Type                  = */ OS_LOCKTYPE_RESOURCE_STANDARD
+  },
+  /* .Core            = */ &OsCfg_Core_OsCore2,
+  /* .ResourceId      = */ OsResource2,
+  /* .CeilingPriority = */ 4
+};
+
+#define OS_STOP_SEC_CORE2_CONST_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -115,7 +179,9 @@ CONST(Os_ResourceConfigType, OS_CONST) OsCfg_Resource_OsResource =
 /*! Object reference table for resources. */
 CONSTP2CONST(Os_ResourceConfigType, OS_CONST, OS_CONST) OsCfg_ResourceRefs[OS_RESOURCEID_COUNT + 1] =  /* PRQA S 4521 */ /* MD_Os_Rule10.1_4521 */
 {
-  OS_RESOURCE_CASTCONFIG_RESOURCE_2_RESOURCE(OsCfg_Resource_OsResource),
+  OS_RESOURCE_CASTCONFIG_RESOURCE_2_RESOURCE(OsCfg_Resource_OsResource0),
+  OS_RESOURCE_CASTCONFIG_RESOURCE_2_RESOURCE(OsCfg_Resource_OsResource1),
+  OS_RESOURCE_CASTCONFIG_RESOURCE_2_RESOURCE(OsCfg_Resource_OsResource2),
   NULL_PTR
 };
 

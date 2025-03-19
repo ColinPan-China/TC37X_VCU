@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Alarm_Lcfg.h
- *   Generation Time: 2024-11-21 09:52:36
+ *   Generation Time: 2025-03-19 13:54:57
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -83,6 +83,9 @@ extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_Bsw_Ta
 /*! Alarm configuration data: Rte_Al_TE2_Bsw_Task_0_5ms */
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_Bsw_Task_0_5ms;
 
+/*! Alarm configuration data: Rte_Al_TE2_Core0_BswTask_0_10ms */
+extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_Core0_BswTask_0_10ms;
+
 /*! Alarm configuration data: Rte_Al_TE_AswTask_0_10ms */
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_AswTask_0_10ms;
 
@@ -93,6 +96,32 @@ extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Com_SWC
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms;
 
 # define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_CORE1_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Alarm configuration data: Rte_Al_TE2_EcuM_EcuM_MainFunction */
+extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_EcuM_EcuM_MainFunction;
+
+/*! Alarm configuration data: Rte_Al_TE_Core1App_SWC_Core1App_Runnable100ms */
+extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1App_SWC_Core1App_Runnable100ms;
+
+# define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_CORE2_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Alarm configuration data: Rte_Al_TE3_EcuM_EcuM_MainFunction */
+extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE3_EcuM_EcuM_MainFunction;
+
+/*! Alarm configuration data: Rte_Al_TE_Core2App_SWC_Core2App_Runnable100ms */
+extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core2App_SWC_Core2App_Runnable100ms;
+
+# define OS_STOP_SEC_CORE2_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

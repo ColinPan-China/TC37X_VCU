@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: vLinkGen_Lcfg.c
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2025-03-19 13:54:58
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -171,6 +171,54 @@ const vLinkGen_MemArea vLinkGen_ZeroInit_One_Groups[VLINKGEN_CFG_NUM_ZERO_INIT_O
      /*  .Start  */ (uint32)_OS_DATA_CORE0_VAR_ZERO_INIT_bss_START, 
      /*  .End  */ (uint32)_lc_ge_OS_DATA_CORE0_VAR_ZERO_INIT_bss, 
      /*  .Core  */ 0uL, 
+     /*  .Alignment  */ 0uL
+  }, 
+  { /*  OS_DATA_CORE1_VAR_FAST_ZERO_INIT  */ 
+     /*  .Start  */ (uint32)_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_START, 
+     /*  .End  */ (uint32)_lc_ge_OS_DATA_CORE1_VAR_FAST_ZERO_INIT, 
+     /*  .Core  */ 1uL, 
+     /*  .Alignment  */ 0uL
+  }, 
+  { /*  OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss  */ 
+     /*  .Start  */ (uint32)_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss_START, 
+     /*  .End  */ (uint32)_lc_ge_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss, 
+     /*  .Core  */ 1uL, 
+     /*  .Alignment  */ 0uL
+  }, 
+  { /*  OS_DATA_CORE1_VAR_ZERO_INIT  */ 
+     /*  .Start  */ (uint32)_OS_DATA_CORE1_VAR_ZERO_INIT_START, 
+     /*  .End  */ (uint32)_lc_ge_OS_DATA_CORE1_VAR_ZERO_INIT, 
+     /*  .Core  */ 1uL, 
+     /*  .Alignment  */ 0uL
+  }, 
+  { /*  OS_DATA_CORE1_VAR_ZERO_INIT_bss  */ 
+     /*  .Start  */ (uint32)_OS_DATA_CORE1_VAR_ZERO_INIT_bss_START, 
+     /*  .End  */ (uint32)_lc_ge_OS_DATA_CORE1_VAR_ZERO_INIT_bss, 
+     /*  .Core  */ 1uL, 
+     /*  .Alignment  */ 0uL
+  }, 
+  { /*  OS_DATA_CORE2_VAR_FAST_ZERO_INIT  */ 
+     /*  .Start  */ (uint32)_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_START, 
+     /*  .End  */ (uint32)_lc_ge_OS_DATA_CORE2_VAR_FAST_ZERO_INIT, 
+     /*  .Core  */ 2uL, 
+     /*  .Alignment  */ 0uL
+  }, 
+  { /*  OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss  */ 
+     /*  .Start  */ (uint32)_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss_START, 
+     /*  .End  */ (uint32)_lc_ge_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss, 
+     /*  .Core  */ 2uL, 
+     /*  .Alignment  */ 0uL
+  }, 
+  { /*  OS_DATA_CORE2_VAR_ZERO_INIT  */ 
+     /*  .Start  */ (uint32)_OS_DATA_CORE2_VAR_ZERO_INIT_START, 
+     /*  .End  */ (uint32)_lc_ge_OS_DATA_CORE2_VAR_ZERO_INIT, 
+     /*  .Core  */ 2uL, 
+     /*  .Alignment  */ 0uL
+  }, 
+  { /*  OS_DATA_CORE2_VAR_ZERO_INIT_bss  */ 
+     /*  .Start  */ (uint32)_OS_DATA_CORE2_VAR_ZERO_INIT_bss_START, 
+     /*  .End  */ (uint32)_lc_ge_OS_DATA_CORE2_VAR_ZERO_INIT_bss, 
+     /*  .Core  */ 2uL, 
      /*  .Alignment  */ 0uL
   }, 
   { /*  OS_GLOBALSHARED_VAR_FAST_ZERO_INIT  */ 
@@ -328,6 +376,38 @@ const vLinkGen_RamMemArea vLinkGen_Init_One_Groups[VLINKGEN_CFG_NUM_INIT_ONE_GRO
      /*  .Romstart  */ (uint32)_OS_DATA_CORE0_VAR_INIT_ROM_START, 
      /*  .Romend  */ (uint32)_OS_DATA_CORE0_VAR_INIT_ROM_LIMIT, 
      /*  .Core  */ 0uL, 
+     /*  .Alignment  */ 0uL
+  }, 
+  { /*  OS_DATA_CORE1_VAR_FAST_INIT  */ 
+     /*  .Start  */ (uint32)_OS_DATA_CORE1_VAR_FAST_INIT_START, 
+     /*  .End  */ (uint32)_lc_ge_OS_DATA_CORE1_VAR_FAST_INIT, 
+     /*  .Romstart  */ (uint32)_OS_DATA_CORE1_VAR_FAST_INIT_ROM_START, 
+     /*  .Romend  */ (uint32)_OS_DATA_CORE1_VAR_FAST_INIT_ROM_LIMIT, 
+     /*  .Core  */ 1uL, 
+     /*  .Alignment  */ 0uL
+  }, 
+  { /*  OS_DATA_CORE1_VAR_INIT  */ 
+     /*  .Start  */ (uint32)_OS_DATA_CORE1_VAR_INIT_START, 
+     /*  .End  */ (uint32)_lc_ge_OS_DATA_CORE1_VAR_INIT, 
+     /*  .Romstart  */ (uint32)_OS_DATA_CORE1_VAR_INIT_ROM_START, 
+     /*  .Romend  */ (uint32)_OS_DATA_CORE1_VAR_INIT_ROM_LIMIT, 
+     /*  .Core  */ 1uL, 
+     /*  .Alignment  */ 0uL
+  }, 
+  { /*  OS_DATA_CORE2_VAR_FAST_INIT  */ 
+     /*  .Start  */ (uint32)_OS_DATA_CORE2_VAR_FAST_INIT_START, 
+     /*  .End  */ (uint32)_lc_ge_OS_DATA_CORE2_VAR_FAST_INIT, 
+     /*  .Romstart  */ (uint32)_OS_DATA_CORE2_VAR_FAST_INIT_ROM_START, 
+     /*  .Romend  */ (uint32)_OS_DATA_CORE2_VAR_FAST_INIT_ROM_LIMIT, 
+     /*  .Core  */ 2uL, 
+     /*  .Alignment  */ 0uL
+  }, 
+  { /*  OS_DATA_CORE2_VAR_INIT  */ 
+     /*  .Start  */ (uint32)_OS_DATA_CORE2_VAR_INIT_START, 
+     /*  .End  */ (uint32)_lc_ge_OS_DATA_CORE2_VAR_INIT, 
+     /*  .Romstart  */ (uint32)_OS_DATA_CORE2_VAR_INIT_ROM_START, 
+     /*  .Romend  */ (uint32)_OS_DATA_CORE2_VAR_INIT_ROM_LIMIT, 
+     /*  .Core  */ 2uL, 
      /*  .Alignment  */ 0uL
   }, 
   { /*  OS_DATA_SHARED_VAR_FAST_INIT  */ 

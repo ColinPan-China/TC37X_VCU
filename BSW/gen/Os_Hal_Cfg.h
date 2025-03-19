@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Cfg.h
- *   Generation Time: 2025-02-18 10:19:37
+ *   Generation Time: 2025-03-19 15:20:34
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -80,8 +80,12 @@
 # define OS_ISR_CANISR_1_LEVEL     (31)
 # define OS_ISR_CANISR_4_CORE      (0)
 # define OS_ISR_CANISR_4_LEVEL     (32)
-# define OS_ISR_COUNTERISR_SYSTEMTIMER_CORE      (0)
-# define OS_ISR_COUNTERISR_SYSTEMTIMER_LEVEL     (1)
+# define OS_ISR_COUNTERISR_SYSTEMTIMER0_CORE      (0)
+# define OS_ISR_COUNTERISR_SYSTEMTIMER0_LEVEL     (1)
+# define OS_ISR_COUNTERISR_SYSTEMTIMER1_CORE      (1)
+# define OS_ISR_COUNTERISR_SYSTEMTIMER1_LEVEL     (1)
+# define OS_ISR_COUNTERISR_SYSTEMTIMER2_CORE      (2)
+# define OS_ISR_COUNTERISR_SYSTEMTIMER2_LEVEL     (1)
 # define OS_ISR_DMACH10SR_ISR_CORE      (0)
 # define OS_ISR_DMACH10SR_ISR_LEVEL     (114)
 # define OS_ISR_DMACH11SR_ISR_CORE      (0)
@@ -94,40 +98,100 @@
 # define OS_ISR_QSPI3ERR_ISR_LEVEL     (102)
 # define OS_ISR_QSPI3PT_ISR_CORE      (0)
 # define OS_ISR_QSPI3PT_ISR_LEVEL     (103)
+# define OS_ISR_XSIGNALISR_OSCORE0_CORE      (0)
+# define OS_ISR_XSIGNALISR_OSCORE0_LEVEL     (2)
+# define OS_ISR_XSIGNALISR_OSCORE1_CORE      (1)
+# define OS_ISR_XSIGNALISR_OSCORE1_LEVEL     (2)
+# define OS_ISR_XSIGNALISR_OSCORE2_CORE      (2)
+# define OS_ISR_XSIGNALISR_OSCORE2_LEVEL     (2)
 
 /* Hardware counter timing macros */
 
-/* Counter timing macros and constants: SystemTimer */
-# define OSMAXALLOWEDVALUE_SystemTimer     (2147483647uL) /* 0x7FFFFFFFuL */
-# define OSMINCYCLE_SystemTimer            (1uL)
-# define OSTICKSPERBASE_SystemTimer        (100000uL)
-# define OSTICKDURATION_SystemTimer        (1000000uL)
+/* Counter timing macros and constants: SystemTimer_Core0 */
+# define OSMAXALLOWEDVALUE_SystemTimer_Core0     (2147483647uL) /* 0x7FFFFFFFuL */
+# define OSMINCYCLE_SystemTimer_Core0            (1uL)
+# define OSTICKSPERBASE_SystemTimer_Core0        (100000uL)
+# define OSTICKDURATION_SystemTimer_Core0        (1000000uL)
 
 /* OSEK compatibility for the system timer. */
-# define OSMAXALLOWEDVALUE     (OSMAXALLOWEDVALUE_SystemTimer)
-# define OSMINCYCLE            (OSMINCYCLE_SystemTimer)
-# define OSTICKSPERBASE        (OSTICKSPERBASE_SystemTimer)
-# define OSTICKDURATION        (OSTICKDURATION_SystemTimer)
+# define OSMAXALLOWEDVALUE     (OSMAXALLOWEDVALUE_SystemTimer_Core0)
+# define OSMINCYCLE            (OSMINCYCLE_SystemTimer_Core0)
+# define OSTICKSPERBASE        (OSTICKSPERBASE_SystemTimer_Core0)
+# define OSTICKDURATION        (OSTICKDURATION_SystemTimer_Core0)
 
-/*! Macro OS_NS2TICKS_SystemTimer was approximated with a deviation of 0.0ppm. */
-# define OS_NS2TICKS_SystemTimer(x)     ( (TickType) (((((uint32)(x)) * 1) + 500000) / 1000000) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
-/*! Macro OS_TICKS2NS_SystemTimer was approximated with a deviation of 0.0ppm. */
-# define OS_TICKS2NS_SystemTimer(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1000000) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_NS2TICKS_SystemTimer_Core0 was approximated with a deviation of 0.0ppm. */
+# define OS_NS2TICKS_SystemTimer_Core0(x)     ( (TickType) (((((uint32)(x)) * 1) + 500000) / 1000000) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_TICKS2NS_SystemTimer_Core0 was approximated with a deviation of 0.0ppm. */
+# define OS_TICKS2NS_SystemTimer_Core0(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1000000) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
 
-/*! Macro OS_US2TICKS_SystemTimer was approximated with a deviation of 0.0ppm. */
-# define OS_US2TICKS_SystemTimer(x)     ( (TickType) (((((uint32)(x)) * 1) + 500) / 1000) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
-/*! Macro OS_TICKS2US_SystemTimer was approximated with a deviation of 1.1102230246251565E-10ppm. */
-# define OS_TICKS2US_SystemTimer(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1000) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_US2TICKS_SystemTimer_Core0 was approximated with a deviation of 0.0ppm. */
+# define OS_US2TICKS_SystemTimer_Core0(x)     ( (TickType) (((((uint32)(x)) * 1) + 500) / 1000) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_TICKS2US_SystemTimer_Core0 was approximated with a deviation of 1.1102230246251565E-10ppm. */
+# define OS_TICKS2US_SystemTimer_Core0(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1000) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
 
-/*! Macro OS_MS2TICKS_SystemTimer was approximated with a deviation of 0.0ppm. */
-# define OS_MS2TICKS_SystemTimer(x)     ( (TickType) (((((uint32)(x)) * 1) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
-/*! Macro OS_TICKS2MS_SystemTimer was approximated with a deviation of 0.0ppm. */
-# define OS_TICKS2MS_SystemTimer(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_MS2TICKS_SystemTimer_Core0 was approximated with a deviation of 0.0ppm. */
+# define OS_MS2TICKS_SystemTimer_Core0(x)     ( (TickType) (((((uint32)(x)) * 1) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_TICKS2MS_SystemTimer_Core0 was approximated with a deviation of 0.0ppm. */
+# define OS_TICKS2MS_SystemTimer_Core0(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
 
-/*! Macro OS_SEC2TICKS_SystemTimer was approximated with a deviation of 0.0ppm. */
-# define OS_SEC2TICKS_SystemTimer(x)     ( (TickType) (((((uint32)(x)) * 1000) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
-/*! Macro OS_TICKS2SEC_SystemTimer was approximated with a deviation of 0.0ppm. */
-# define OS_TICKS2SEC_SystemTimer(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1) + 500) / 1000) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_SEC2TICKS_SystemTimer_Core0 was approximated with a deviation of 0.0ppm. */
+# define OS_SEC2TICKS_SystemTimer_Core0(x)     ( (TickType) (((((uint32)(x)) * 1000) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_TICKS2SEC_SystemTimer_Core0 was approximated with a deviation of 0.0ppm. */
+# define OS_TICKS2SEC_SystemTimer_Core0(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1) + 500) / 1000) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+
+
+/* Counter timing macros and constants: SystemTimer_Core1 */
+# define OSMAXALLOWEDVALUE_SystemTimer_Core1     (2147483647uL) /* 0x7FFFFFFFuL */
+# define OSMINCYCLE_SystemTimer_Core1            (1uL)
+# define OSTICKSPERBASE_SystemTimer_Core1        (100000uL)
+# define OSTICKDURATION_SystemTimer_Core1        (1000000uL)
+
+/*! Macro OS_NS2TICKS_SystemTimer_Core1 was approximated with a deviation of 0.0ppm. */
+# define OS_NS2TICKS_SystemTimer_Core1(x)     ( (TickType) (((((uint32)(x)) * 1) + 500000) / 1000000) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_TICKS2NS_SystemTimer_Core1 was approximated with a deviation of 0.0ppm. */
+# define OS_TICKS2NS_SystemTimer_Core1(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1000000) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+
+/*! Macro OS_US2TICKS_SystemTimer_Core1 was approximated with a deviation of 0.0ppm. */
+# define OS_US2TICKS_SystemTimer_Core1(x)     ( (TickType) (((((uint32)(x)) * 1) + 500) / 1000) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_TICKS2US_SystemTimer_Core1 was approximated with a deviation of 1.1102230246251565E-10ppm. */
+# define OS_TICKS2US_SystemTimer_Core1(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1000) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+
+/*! Macro OS_MS2TICKS_SystemTimer_Core1 was approximated with a deviation of 0.0ppm. */
+# define OS_MS2TICKS_SystemTimer_Core1(x)     ( (TickType) (((((uint32)(x)) * 1) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_TICKS2MS_SystemTimer_Core1 was approximated with a deviation of 0.0ppm. */
+# define OS_TICKS2MS_SystemTimer_Core1(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+
+/*! Macro OS_SEC2TICKS_SystemTimer_Core1 was approximated with a deviation of 0.0ppm. */
+# define OS_SEC2TICKS_SystemTimer_Core1(x)     ( (TickType) (((((uint32)(x)) * 1000) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_TICKS2SEC_SystemTimer_Core1 was approximated with a deviation of 0.0ppm. */
+# define OS_TICKS2SEC_SystemTimer_Core1(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1) + 500) / 1000) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+
+
+/* Counter timing macros and constants: SystemTimer_Core2 */
+# define OSMAXALLOWEDVALUE_SystemTimer_Core2     (2147483647uL) /* 0x7FFFFFFFuL */
+# define OSMINCYCLE_SystemTimer_Core2            (1uL)
+# define OSTICKSPERBASE_SystemTimer_Core2        (100000uL)
+# define OSTICKDURATION_SystemTimer_Core2        (1000000uL)
+
+/*! Macro OS_NS2TICKS_SystemTimer_Core2 was approximated with a deviation of 0.0ppm. */
+# define OS_NS2TICKS_SystemTimer_Core2(x)     ( (TickType) (((((uint32)(x)) * 1) + 500000) / 1000000) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_TICKS2NS_SystemTimer_Core2 was approximated with a deviation of 0.0ppm. */
+# define OS_TICKS2NS_SystemTimer_Core2(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1000000) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+
+/*! Macro OS_US2TICKS_SystemTimer_Core2 was approximated with a deviation of 0.0ppm. */
+# define OS_US2TICKS_SystemTimer_Core2(x)     ( (TickType) (((((uint32)(x)) * 1) + 500) / 1000) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_TICKS2US_SystemTimer_Core2 was approximated with a deviation of 1.1102230246251565E-10ppm. */
+# define OS_TICKS2US_SystemTimer_Core2(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1000) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+
+/*! Macro OS_MS2TICKS_SystemTimer_Core2 was approximated with a deviation of 0.0ppm. */
+# define OS_MS2TICKS_SystemTimer_Core2(x)     ( (TickType) (((((uint32)(x)) * 1) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_TICKS2MS_SystemTimer_Core2 was approximated with a deviation of 0.0ppm. */
+# define OS_TICKS2MS_SystemTimer_Core2(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+
+/*! Macro OS_SEC2TICKS_SystemTimer_Core2 was approximated with a deviation of 0.0ppm. */
+# define OS_SEC2TICKS_SystemTimer_Core2(x)     ( (TickType) (((((uint32)(x)) * 1000) + 0) / 1) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+/*! Macro OS_TICKS2SEC_SystemTimer_Core2 was approximated with a deviation of 0.0ppm. */
+# define OS_TICKS2SEC_SystemTimer_Core2(x)     ( (PhysicalTimeType) (((((uint32)(x)) * 1) + 500) / 1000) ) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
 
 
 

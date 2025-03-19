@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Interrupt_Lcfg.c
- *   Generation Time: 2025-02-18 10:19:37
+ *   Generation Time: 2025-03-19 15:20:34
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -274,15 +274,15 @@ CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CanIsr_4 =
   /* .Dummy         = */ (uint32)0
 };
 
-/*! HAL ISR configuration data: CounterIsr_SystemTimer */
-CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer =
+/*! HAL ISR configuration data: CounterIsr_SystemTimer0 */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer0 =
 {
   /* .Level          = */ 1,
   /* .Source         = */ 0x300uL,
   /* .CoreAssignment = */ 0
 };
 
-CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CounterIsr_SystemTimer =
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CounterIsr_SystemTimer0 =
 {
   /* .Dummy         = */ (uint32)0
 };
@@ -365,7 +365,104 @@ CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_QSPI3PT_ISR =
   /* .Dummy         = */ (uint32)0
 };
 
+/*! HAL ISR configuration data: XSignalIsr_OsCore0 */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_XSignalIsr_OsCore0 =
+{
+  /* .Level          = */ 2,
+  /* .Source         = */ 0x5f4uL,
+  /* .CoreAssignment = */ 0
+};
+
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_XSignalIsr_OsCore0 =
+{
+  /* .Dummy         = */ (uint32)0
+};
+
+/*! HAL X-Signal ISR configuration data: XSignalIsr_OsCore0 */
+CONST(Os_Hal_XSigInterruptConfigType, OS_CONST) OsCfg_Hal_XSig_XSignalIsr_OsCore0 =
+{
+  /* .ConfigData  = */ &OsCfg_Hal_IntIsr_XSignalIsr_OsCore0,
+};
+
 #define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_CORE1_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! HAL ISR configuration data: CounterIsr_SystemTimer1 */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer1 =
+{
+  /* .Level          = */ 1,
+  /* .Source         = */ 0x304uL,
+  /* .CoreAssignment = */ 2
+};
+
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CounterIsr_SystemTimer1 =
+{
+  /* .Dummy         = */ (uint32)0
+};
+
+/*! HAL ISR configuration data: XSignalIsr_OsCore1 */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_XSignalIsr_OsCore1 =
+{
+  /* .Level          = */ 2,
+  /* .Source         = */ 0x5f8uL,
+  /* .CoreAssignment = */ 2
+};
+
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_XSignalIsr_OsCore1 =
+{
+  /* .Dummy         = */ (uint32)0
+};
+
+/*! HAL X-Signal ISR configuration data: XSignalIsr_OsCore1 */
+CONST(Os_Hal_XSigInterruptConfigType, OS_CONST) OsCfg_Hal_XSig_XSignalIsr_OsCore1 =
+{
+  /* .ConfigData  = */ &OsCfg_Hal_IntIsr_XSignalIsr_OsCore1,
+};
+
+#define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_CORE2_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! HAL ISR configuration data: CounterIsr_SystemTimer2 */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer2 =
+{
+  /* .Level          = */ 1,
+  /* .Source         = */ 0x308uL,
+  /* .CoreAssignment = */ 3
+};
+
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CounterIsr_SystemTimer2 =
+{
+  /* .Dummy         = */ (uint32)0
+};
+
+/*! HAL ISR configuration data: XSignalIsr_OsCore2 */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_XSignalIsr_OsCore2 =
+{
+  /* .Level          = */ 2,
+  /* .Source         = */ 0x5fcuL,
+  /* .CoreAssignment = */ 3
+};
+
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_XSignalIsr_OsCore2 =
+{
+  /* .Dummy         = */ (uint32)0
+};
+
+/*! HAL X-Signal ISR configuration data: XSignalIsr_OsCore2 */
+CONST(Os_Hal_XSigInterruptConfigType, OS_CONST) OsCfg_Hal_XSig_XSignalIsr_OsCore2 =
+{
+  /* .ConfigData  = */ &OsCfg_Hal_IntIsr_XSignalIsr_OsCore2,
+};
+
+#define OS_STOP_SEC_CORE2_CONST_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_PrivateCfg.h
- *   Generation Time: 2025-03-14 15:09:23
+ *   Generation Time: 2025-03-19 15:20:34
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -75,17 +75,21 @@
   \brief  These macros can be used to read deduplicated by constance root data elements.
   \{
 */ 
+#define EcuM_GetCoreStatusOfPCConfig()                                EcuM_CoreStatus  /**< the pointer to EcuM_CoreStatus */
 #define EcuM_GetDefaultAppModeOfPCConfig()                            OSDEFAULTAPPMODE  /**< EcuMDefaultAppMode of the Os module */
 #define EcuM_GetDefaultShutdownModeOfPCConfig()                       0u  /**< Default Shutdown Mode - Depending on target it its either a Sleep Mode or Reset Mode. */
 #define EcuM_GetDefaultShutdownTargetOfPCConfig()                     ECUM_STATE_OFF  /**< Default Shutdown Target */
 #define EcuM_GetDriverInitOneOfPCConfig()                             EcuM_DriverInitOne  /**< the pointer to EcuM_DriverInitOne */
-#define EcuM_GetEcuM_CRCHash_LowerOfPCConfig()                        0x56A6A1F0u
-#define EcuM_GetEcuM_CRCHash_UpperOfPCConfig()                        0xC2D6E8C2u
+#define EcuM_GetEcuM_CRCHash_LowerOfPCConfig()                        0x9426AA35u
+#define EcuM_GetEcuM_CRCHash_UpperOfPCConfig()                        0x9730345Cu
 #define EcuM_GetGeneratorCompatibilityVersionOfPCConfig()             2816u
 #define EcuM_GetMaxWakeupSourceCountOfPCConfig()                      9u  /**< Max Wakeup source count. */
 #define EcuM_GetModuleStateOfPCConfig()                               (&(EcuM_ModuleState))  /**< the pointer to EcuM_ModuleState */
 #define EcuM_GetNormalMcuModeOfPCConfig()                             McuConf_McuModeSettingConf_McuModeSettingConf_Standby  /**< EcuMNormalMcuModeRef id of the Mcu module */
+#define EcuM_GetPartitionDataOfPCConfig()                             EcuM_PartitionData  /**< the pointer to EcuM_PartitionData */
+#define EcuM_GetSizeOfCoreStatusOfPCConfig()                          3u  /**< the number of accomplishable value elements in EcuM_CoreStatus */
 #define EcuM_GetSizeOfDriverInitOneOfPCConfig()                       1u  /**< the number of accomplishable value elements in EcuM_DriverInitOne */
+#define EcuM_GetSizeOfPartitionDataOfPCConfig()                       4u  /**< the number of accomplishable value elements in EcuM_PartitionData */
 #define EcuM_GetSizeOfWakeupSourceListOfPCConfig()                    9u  /**< the number of accomplishable value elements in EcuM_WakeupSourceList */
 #define EcuM_GetWakeupSourceListOfPCConfig()                          EcuM_WakeupSourceList  /**< the pointer to EcuM_WakeupSourceList */
 /** 
@@ -97,8 +101,12 @@
   \brief  These macros can be used to read CONST and VAR data.
   \{
 */ 
+#define EcuM_GetCoreStatus(Index)                                     (EcuM_GetCoreStatusOfPCConfig()[(Index)])
 #define EcuM_GetFunctionOfDriverInitOne(Index)                        (EcuM_GetDriverInitOneOfPCConfig()[(Index)].FunctionOfDriverInitOne)
 #define EcuM_GetModuleState()                                         ((*(EcuM_GetModuleStateOfPCConfig())))
+#define EcuM_GetApplicationOfPartitionData(Index)                     (EcuM_GetPartitionDataOfPCConfig()[(Index)].ApplicationOfPartitionData)
+#define EcuM_IsEcuMPartitionOfPartitionData(Index)                    ((EcuM_GetPartitionDataOfPCConfig()[(Index)].EcuMPartitionOfPartitionData) != FALSE)
+#define EcuM_GetResourceOfPartitionData(Index)                        (EcuM_GetPartitionDataOfPCConfig()[(Index)].ResourceOfPartitionData)
 #define EcuM_GetChannelOfWakeupSourceList(Index)                      (EcuM_GetWakeupSourceListOfPCConfig()[(Index)].ChannelOfWakeupSourceList)
 /** 
   \}
@@ -117,7 +125,9 @@
 #define EcuM_GetGeneratorCompatibilityVersion()                       EcuM_GetGeneratorCompatibilityVersionOfPCConfig()
 #define EcuM_GetMaxWakeupSourceCount()                                EcuM_GetMaxWakeupSourceCountOfPCConfig()
 #define EcuM_GetNormalMcuMode()                                       EcuM_GetNormalMcuModeOfPCConfig()
+#define EcuM_GetSizeOfCoreStatus()                                    EcuM_GetSizeOfCoreStatusOfPCConfig()
 #define EcuM_GetSizeOfDriverInitOne()                                 EcuM_GetSizeOfDriverInitOneOfPCConfig()
+#define EcuM_GetSizeOfPartitionData()                                 EcuM_GetSizeOfPartitionDataOfPCConfig()
 #define EcuM_GetSizeOfWakeupSourceList()                              EcuM_GetSizeOfWakeupSourceListOfPCConfig()
 /** 
   \}
@@ -138,6 +148,7 @@
   \brief  These macros can be used to detect at runtime a deactivated piece of information. TRUE in the CONFIGURATION_VARIANT PRE-COMPILE, TRUE or FALSE in the CONFIGURATION_VARIANT POST-BUILD.
   \{
 */ 
+#define EcuM_HasCoreStatus()                                          (TRUE != FALSE)
 #define EcuM_HasDefaultAppMode()                                      (TRUE != FALSE)
 #define EcuM_HasDefaultShutdownMode()                                 (TRUE != FALSE)
 #define EcuM_HasDefaultShutdownTarget()                               (TRUE != FALSE)
@@ -149,11 +160,18 @@
 #define EcuM_HasMaxWakeupSourceCount()                                (TRUE != FALSE)
 #define EcuM_HasModuleState()                                         (TRUE != FALSE)
 #define EcuM_HasNormalMcuMode()                                       (TRUE != FALSE)
+#define EcuM_HasPartitionData()                                       (TRUE != FALSE)
+#define EcuM_HasApplicationOfPartitionData()                          (TRUE != FALSE)
+#define EcuM_HasEcuMPartitionOfPartitionData()                        (TRUE != FALSE)
+#define EcuM_HasResourceOfPartitionData()                             (TRUE != FALSE)
+#define EcuM_HasSizeOfCoreStatus()                                    (TRUE != FALSE)
 #define EcuM_HasSizeOfDriverInitOne()                                 (TRUE != FALSE)
+#define EcuM_HasSizeOfPartitionData()                                 (TRUE != FALSE)
 #define EcuM_HasSizeOfWakeupSourceList()                              (TRUE != FALSE)
 #define EcuM_HasWakeupSourceList()                                    (TRUE != FALSE)
 #define EcuM_HasChannelOfWakeupSourceList()                           (TRUE != FALSE)
 #define EcuM_HasPCConfig()                                            (TRUE != FALSE)
+#define EcuM_HasCoreStatusOfPCConfig()                                (TRUE != FALSE)
 #define EcuM_HasDefaultAppModeOfPCConfig()                            (TRUE != FALSE)
 #define EcuM_HasDefaultShutdownModeOfPCConfig()                       (TRUE != FALSE)
 #define EcuM_HasDefaultShutdownTargetOfPCConfig()                     (TRUE != FALSE)
@@ -164,7 +182,10 @@
 #define EcuM_HasMaxWakeupSourceCountOfPCConfig()                      (TRUE != FALSE)
 #define EcuM_HasModuleStateOfPCConfig()                               (TRUE != FALSE)
 #define EcuM_HasNormalMcuModeOfPCConfig()                             (TRUE != FALSE)
+#define EcuM_HasPartitionDataOfPCConfig()                             (TRUE != FALSE)
+#define EcuM_HasSizeOfCoreStatusOfPCConfig()                          (TRUE != FALSE)
 #define EcuM_HasSizeOfDriverInitOneOfPCConfig()                       (TRUE != FALSE)
+#define EcuM_HasSizeOfPartitionDataOfPCConfig()                       (TRUE != FALSE)
 #define EcuM_HasSizeOfWakeupSourceListOfPCConfig()                    (TRUE != FALSE)
 #define EcuM_HasWakeupSourceListOfPCConfig()                          (TRUE != FALSE)
 /** 
@@ -244,6 +265,23 @@ typedef uint8 EcuM_ConfigType;
 
 
 /**********************************************************************************************************************
+  EcuM_CoreStatus
+**********************************************************************************************************************/
+/** 
+  \var    EcuM_CoreStatus
+  \brief  Stores status of each core.
+*/ 
+#define ECUM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(EcuM_CoreStatusArrayType, ECUM_CONST) EcuM_CoreStatus[3];
+#define ECUM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   EcuM_DriverInitOne
 **********************************************************************************************************************/
 /** 
@@ -257,6 +295,28 @@ typedef uint8 EcuM_ConfigType;
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern CONST(EcuM_DriverInitOneType, ECUM_CONST) EcuM_DriverInitOne[1];
+#define ECUM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  EcuM_PartitionData
+**********************************************************************************************************************/
+/** 
+  \var    EcuM_PartitionData
+  \brief  Contains all parameters configured for initialization of partitions.
+  \details
+  Element          Description
+  EcuMPartition    Set to true for the partitions with active BswM
+  Application      
+  Resource     
+*/ 
+#define ECUM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(EcuM_PartitionDataType, ECUM_CONST) EcuM_PartitionData[4];
 #define ECUM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

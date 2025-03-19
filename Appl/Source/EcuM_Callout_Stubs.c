@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2025-02-18 10:29:56
+ *   Generation Time: 2025-03-19 13:54:58
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -238,8 +238,11 @@ FUNC(void, ECUM_CODE) EcuM_AL_Reset(EcuM_ResetType Reset) /* PRQA S 3206 */ /* M
 **********************************************************************************************************************/
 FUNC(void, ECUM_CODE) EcuM_AL_DriverInitZero(void) 
 {
-  BswM_InitMemory();
-  Rte_InitMemory();
+  if(GetCoreID() == ECUM_CORE_ID_BSW)
+  {
+    BswM_InitMemory();
+    Rte_InitMemory();
+  }
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_AL_DriverInitZero>                 DO NOT CHANGE THIS COMMENT!
@@ -257,15 +260,18 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverInitZero(void)
 **********************************************************************************************************************/
 FUNC(void, ECUM_CODE) EcuM_AL_DriverInitOne(void) 
 {
-  Port_Init( &Port_Config );
-  Mcu_Init( &Mcu_Config );
-  Mcu_InitClock(0);while (MCU_PLL_LOCKED != Mcu_GetPllStatus());Mcu_DistributePllClock();
-  BswM_PreInit( BswM_Config_Ptr );
-  Fls_17_Dmu_Init( &Fls_17_Dmu_Config );
-  Adc_Init( &Adc_Config );
-  Dma_Init( &Dma_Config );
-  Spi_Init( &Spi_Config );
-  Pwm_17_GtmCcu6_Init( &Pwm_17_GtmCcu6_Config );
+  if(GetCoreID() == ECUM_CORE_ID_BSW)
+  {
+    Port_Init( &Port_Config );
+    Mcu_Init( &Mcu_Config );
+    Mcu_InitClock(0);while (MCU_PLL_LOCKED != Mcu_GetPllStatus());Mcu_DistributePllClock();
+    BswM_PreInit( BswM_Config_Ptr );
+    Fls_17_Dmu_Init( &Fls_17_Dmu_Config );
+    Adc_Init( &Adc_Config );
+    Dma_Init( &Dma_Config );
+    Spi_Init( &Spi_Config );
+    Pwm_17_GtmCcu6_Init( &Pwm_17_GtmCcu6_Config );
+  }
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_AL_DriverInitOne>                  DO NOT CHANGE THIS COMMENT!

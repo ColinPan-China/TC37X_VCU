@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: vLinkGen_Lcfg.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2025-03-19 13:54:58
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -134,6 +134,26 @@ extern uint8 _OS_DATA_CORE0_VAR_INIT_ROM_START[];
 extern uint8 _OS_DATA_CORE0_VAR_INIT_START[]; 
 extern uint8 _OS_DATA_CORE0_VAR_ZERO_INIT_START[]; 
 extern uint8 _OS_DATA_CORE0_VAR_ZERO_INIT_bss_START[]; 
+extern uint8 _OS_DATA_CORE1_VAR_FAST_INIT_ROM_LIMIT[]; 
+extern uint8 _OS_DATA_CORE1_VAR_FAST_INIT_ROM_START[]; 
+extern uint8 _OS_DATA_CORE1_VAR_FAST_INIT_START[]; 
+extern uint8 _OS_DATA_CORE1_VAR_FAST_ZERO_INIT_START[]; 
+extern uint8 _OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss_START[]; 
+extern uint8 _OS_DATA_CORE1_VAR_INIT_ROM_LIMIT[]; 
+extern uint8 _OS_DATA_CORE1_VAR_INIT_ROM_START[]; 
+extern uint8 _OS_DATA_CORE1_VAR_INIT_START[]; 
+extern uint8 _OS_DATA_CORE1_VAR_ZERO_INIT_START[]; 
+extern uint8 _OS_DATA_CORE1_VAR_ZERO_INIT_bss_START[]; 
+extern uint8 _OS_DATA_CORE2_VAR_FAST_INIT_ROM_LIMIT[]; 
+extern uint8 _OS_DATA_CORE2_VAR_FAST_INIT_ROM_START[]; 
+extern uint8 _OS_DATA_CORE2_VAR_FAST_INIT_START[]; 
+extern uint8 _OS_DATA_CORE2_VAR_FAST_ZERO_INIT_START[]; 
+extern uint8 _OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss_START[]; 
+extern uint8 _OS_DATA_CORE2_VAR_INIT_ROM_LIMIT[]; 
+extern uint8 _OS_DATA_CORE2_VAR_INIT_ROM_START[]; 
+extern uint8 _OS_DATA_CORE2_VAR_INIT_START[]; 
+extern uint8 _OS_DATA_CORE2_VAR_ZERO_INIT_START[]; 
+extern uint8 _OS_DATA_CORE2_VAR_ZERO_INIT_bss_START[]; 
 extern uint8 _OS_DATA_SHARED_VAR_FAST_INIT_ROM_LIMIT[]; 
 extern uint8 _OS_DATA_SHARED_VAR_FAST_INIT_ROM_START[]; 
 extern uint8 _OS_DATA_SHARED_VAR_FAST_INIT_START[]; 
@@ -177,6 +197,18 @@ extern uint8 _lc_ge_OS_DATA_CORE0_VAR_FAST_ZERO_INIT_bss[];
 extern uint8 _lc_ge_OS_DATA_CORE0_VAR_INIT[]; 
 extern uint8 _lc_ge_OS_DATA_CORE0_VAR_ZERO_INIT[]; 
 extern uint8 _lc_ge_OS_DATA_CORE0_VAR_ZERO_INIT_bss[]; 
+extern uint8 _lc_ge_OS_DATA_CORE1_VAR_FAST_INIT[]; 
+extern uint8 _lc_ge_OS_DATA_CORE1_VAR_FAST_ZERO_INIT[]; 
+extern uint8 _lc_ge_OS_DATA_CORE1_VAR_FAST_ZERO_INIT_bss[]; 
+extern uint8 _lc_ge_OS_DATA_CORE1_VAR_INIT[]; 
+extern uint8 _lc_ge_OS_DATA_CORE1_VAR_ZERO_INIT[]; 
+extern uint8 _lc_ge_OS_DATA_CORE1_VAR_ZERO_INIT_bss[]; 
+extern uint8 _lc_ge_OS_DATA_CORE2_VAR_FAST_INIT[]; 
+extern uint8 _lc_ge_OS_DATA_CORE2_VAR_FAST_ZERO_INIT[]; 
+extern uint8 _lc_ge_OS_DATA_CORE2_VAR_FAST_ZERO_INIT_bss[]; 
+extern uint8 _lc_ge_OS_DATA_CORE2_VAR_INIT[]; 
+extern uint8 _lc_ge_OS_DATA_CORE2_VAR_ZERO_INIT[]; 
+extern uint8 _lc_ge_OS_DATA_CORE2_VAR_ZERO_INIT_bss[]; 
 extern uint8 _lc_ge_OS_DATA_SHARED_VAR_FAST_INIT[]; 
 extern uint8 _lc_ge_OS_DATA_SHARED_VAR_INIT[]; 
 extern uint8 _lc_ge_OS_GLOBALSHARED_VAR_FAST_INIT[]; 

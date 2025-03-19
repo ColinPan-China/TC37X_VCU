@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Types.h
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2025-03-19 13:54:58
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -33,7 +33,7 @@
 #if !defined (PDUR_TYPES_H)
 # define PDUR_TYPES_H
 
-#define PDUR_MAX_NUMBER_OF_CORES   1
+#define PDUR_MAX_NUMBER_OF_CORES   3
 /**********************************************************************************************************************
  * INCLUDES
  *********************************************************************************************************************/

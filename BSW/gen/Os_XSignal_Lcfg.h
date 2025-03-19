@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_XSignal_Lcfg.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2025-03-19 15:20:35
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -65,8 +65,6 @@
 typedef enum
 {
   /* USED */
-  OS_XSIGFUNCTIONIDX_USEDCOUNT = 0,
-  /* UNUSED */
   XSigFunctionIdx_ActivateTask = 0,
   XSigFunctionIdx_CancelAlarm = 1,
   XSigFunctionIdx_ControlIdle = 2,
@@ -94,6 +92,8 @@ typedef enum
   XSigFunctionIdx_StartScheduleTableRel = 24,
   XSigFunctionIdx_StopScheduleTable = 25,
   XSigFunctionIdx_TerminateApplication = 26,
+  OS_XSIGFUNCTIONIDX_USEDCOUNT = 27,
+  /* UNUSED */
   OS_XSIGFUNCTIONIDX_COUNT = 27
 } Os_XSigFunctionIdx;
 
@@ -109,7 +109,36 @@ typedef enum
 # define OS_START_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+/* X-Signal configuration data: OsCore0 */
+extern CONST(Os_XSigFunctionTableConfigType, OS_CONST) OsCfg_Isr_XSignalIsr_OsCore0_FuncTable;
+extern CONST(Os_XSigRecvPortConfigRefType, OS_CONST) OsCfg_Isr_XSignalIsr_OsCore0_PortRefs[OS_CFG_NUM_ISR_XSIGNALISR_OSCORE0_PORTS + 1u];
+extern CONST(Os_XSigConfigType, OS_CONST) OsCfg_XSig_OsCore0;
+
 # define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_CORE1_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/* X-Signal configuration data: OsCore1 */
+extern CONST(Os_XSigFunctionTableConfigType, OS_CONST) OsCfg_Isr_XSignalIsr_OsCore1_FuncTable;
+extern CONST(Os_XSigRecvPortConfigRefType, OS_CONST) OsCfg_Isr_XSignalIsr_OsCore1_PortRefs[OS_CFG_NUM_ISR_XSIGNALISR_OSCORE1_PORTS + 1u];
+extern CONST(Os_XSigConfigType, OS_CONST) OsCfg_XSig_OsCore1;
+
+# define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_CORE2_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/* X-Signal configuration data: OsCore2 */
+extern CONST(Os_XSigFunctionTableConfigType, OS_CONST) OsCfg_Isr_XSignalIsr_OsCore2_FuncTable;
+extern CONST(Os_XSigRecvPortConfigRefType, OS_CONST) OsCfg_Isr_XSignalIsr_OsCore2_PortRefs[OS_CFG_NUM_ISR_XSIGNALISR_OSCORE2_PORTS + 1u];
+extern CONST(Os_XSigConfigType, OS_CONST) OsCfg_XSig_OsCore2;
+
+# define OS_STOP_SEC_CORE2_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

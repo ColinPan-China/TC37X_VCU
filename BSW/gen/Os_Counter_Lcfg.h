@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Counter_Lcfg.h
- *   Generation Time: 2024-09-02 15:10:11
+ *   Generation Time: 2025-03-19 13:54:58
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -72,10 +72,30 @@
 # define OS_START_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-/*! Counter configuration data: SystemTimer */
-extern CONST(Os_TimerPfrtConfigType, OS_CONST) OsCfg_Counter_SystemTimer;
+/*! Counter configuration data: SystemTimer_Core0 */
+extern CONST(Os_TimerPfrtConfigType, OS_CONST) OsCfg_Counter_SystemTimer_Core0;
 
 # define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_CORE1_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Counter configuration data: SystemTimer_Core1 */
+extern CONST(Os_TimerPfrtConfigType, OS_CONST) OsCfg_Counter_SystemTimer_Core1;
+
+# define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_CORE2_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Counter configuration data: SystemTimer_Core2 */
+extern CONST(Os_TimerPfrtConfigType, OS_CONST) OsCfg_Counter_SystemTimer_Core2;
+
+# define OS_STOP_SEC_CORE2_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

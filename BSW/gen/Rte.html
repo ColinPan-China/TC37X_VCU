@@ -119,6 +119,8 @@ Contents
 Rte_BswM.h<br>
 Rte_ComM.h<br>
 Rte_Com_SWC.h<br>
+Rte_Core1App_SWC.h<br>
+Rte_Core2App_SWC.h<br>
 Rte_DIAG_SWC.h<br>
 Rte_Dcm.h<br>
 Rte_DemMaster_0.h<br>
@@ -128,11 +130,15 @@ Rte_EcuM.h<br>
 Rte_IoHwAb_SWC.h<br>
 Rte_NvM.h<br>
 Rte_Os_OsCore0_swc.h<br>
+Rte_Os_OsCore1_swc.h<br>
+Rte_Os_OsCore2_swc.h<br>
 Rte_PowerMng_SWC.h<br>
 Rte_SWC1.h<br>
 Rte_BswM_Type.h<br>
 Rte_ComM_Type.h<br>
 Rte_Com_SWC_Type.h<br>
+Rte_Core1App_SWC_Type.h<br>
+Rte_Core2App_SWC_Type.h<br>
 Rte_DIAG_SWC_Type.h<br>
 Rte_Dcm_Type.h<br>
 Rte_DemMaster_0_Type.h<br>
@@ -142,6 +148,8 @@ Rte_EcuM_Type.h<br>
 Rte_IoHwAb_SWC_Type.h<br>
 Rte_NvM_Type.h<br>
 Rte_Os_OsCore0_swc_Type.h<br>
+Rte_Os_OsCore1_swc_Type.h<br>
+Rte_Os_OsCore2_swc_Type.h<br>
 Rte_PowerMng_SWC_Type.h<br>
 Rte_SWC1_Type.h<br>
 Rte_Main.h<br>
@@ -155,6 +163,8 @@ Rte_Cbk.h<br>
 BswM_MemMap.h<br>
 ComM_MemMap.h<br>
 Com_SWC_MemMap.h<br>
+Core1App_SWC_MemMap.h<br>
+Core2App_SWC_MemMap.h<br>
 DIAG_SWC_MemMap.h<br>
 Dcm_MemMap.h<br>
 DemMaster_0_MemMap.h<br>
@@ -162,10 +172,17 @@ DemSatellite_0_MemMap.h<br>
 EcuM_MemMap.h<br>
 IoHwAb_SWC_MemMap.h<br>
 Os_OsCore0_swc_MemMap.h<br>
+Os_OsCore1_swc_MemMap.h<br>
+Os_OsCore2_swc_MemMap.h<br>
 PowerMng_SWC_MemMap.h<br>
 SWC1_MemMap.h<br>
 Rte_Compiler_Cfg.h<br>
+usrostyp.h<br>
 Rte.c<br>
+Rte_OsApplication.c<br>
+Rte_SystemApplication_OsCore0.c<br>
+Rte_SystemApplication_OsCore1.c<br>
+Rte_SystemApplication_OsCore2.c<br>
 Rte_cfg.mak<br>
 Rte_check.mak<br>
 Rte_defs.mak<br>
@@ -239,7 +256,7 @@ Rte_Needs.ecuc.arxml<br>
 Note: This resource usage calculation assumes that the "Boolean" data type is based on uint8 base type.<br>
       Further on padding bytes for structs are not considered, which depends on the compiler settings.<br>
 <br>
-RAM   Size: 61 Bytes<br>
+RAM   Size: 63 Bytes<br>
 CONST Size: 101 Bytes<br>
 <br>
 <P ALIGN=LEFT>
@@ -269,6 +286,48 @@ CONST Size: 101 Bytes<br>
 <TD>Extended</TD>
 <TD>FULL</TD>
 <TD>65</TD>
+</TR>
+<TR>
+<TD>Core0_BswTask</TD>
+<TD>Basic</TD>
+<TD>FULL</TD>
+<TD>66</TD>
+</TR>
+<TR>
+<TD>Core1_AswInit</TD>
+<TD>Basic</TD>
+<TD>FULL</TD>
+<TD>53</TD>
+</TR>
+<TR>
+<TD>Core1_AswTask</TD>
+<TD>Basic</TD>
+<TD>FULL</TD>
+<TD>52</TD>
+</TR>
+<TR>
+<TD>Core1_BswTask</TD>
+<TD>Basic</TD>
+<TD>FULL</TD>
+<TD>51</TD>
+</TR>
+<TR>
+<TD>Core2_AswInit</TD>
+<TD>Basic</TD>
+<TD>FULL</TD>
+<TD>53</TD>
+</TR>
+<TR>
+<TD>Core2_AswTask</TD>
+<TD>Basic</TD>
+<TD>FULL</TD>
+<TD>52</TD>
+</TR>
+<TR>
+<TD>Core2_BswTask</TD>
+<TD>Basic</TD>
+<TD>FULL</TD>
+<TD>51</TD>
 </TR>
 </TABLE>
 <P ALIGN=LEFT>
@@ -589,6 +648,34 @@ CONST Size: 101 Bytes<br>
 <TD>Rte_Msg201h_Rx_Notification</TD>
 <TD>AswTask</TD>
 <TD>Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 100ms</TD>
+<TD>Core1App_Runnable100ms</TD>
+<TD>Core1_AswTask</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE_Core1App_SWC_Core1App_Runnable100ms</TD>
+</TR>
+<TR>
+<TD><B>InitEvent</B></TD>
+<TD>Core1App_SWC_Init</TD>
+<TD>Core1_AswInit</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 100ms</TD>
+<TD>Core2App_Runnable100ms</TD>
+<TD>Core2_AswTask</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE_Core2App_SWC_Core2App_Runnable100ms</TD>
+</TR>
+<TR>
+<TD><B>InitEvent</B></TD>
+<TD>Core2App_SWC_Init</TD>
+<TD>Core2_AswInit</TD>
+<TD>n/a</TD>
 <TD>n/a</TD>
 </TR>
 <TR>
@@ -1539,9 +1626,9 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>EcuM_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> EcuM::EcuM_BootTarget::GetBootTarget</TD>
@@ -1838,14 +1925,42 @@ CONST Size: 101 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
-<TD><B>OperationInvokedEvent</B> Os_OsCore0_swc::OsService_SystemTimer::GetCounterValue</TD>
+<TD><B>OperationInvokedEvent</B> Os_OsCore0_swc::OsService_SystemTimer_Core0::GetCounterValue</TD>
 <TD>GetCounterValue</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
 </TR>
 <TR>
-<TD><B>OperationInvokedEvent</B> Os_OsCore0_swc::OsService_SystemTimer::GetElapsedValue</TD>
+<TD><B>OperationInvokedEvent</B> Os_OsCore0_swc::OsService_SystemTimer_Core0::GetElapsedValue</TD>
+<TD>GetElapsedValue</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> Os_OsCore1_swc::OsService_SystemTimer_Core1::GetCounterValue</TD>
+<TD>GetCounterValue</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> Os_OsCore1_swc::OsService_SystemTimer_Core1::GetElapsedValue</TD>
+<TD>GetElapsedValue</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> Os_OsCore2_swc::OsService_SystemTimer_Core2::GetCounterValue</TD>
+<TD>GetCounterValue</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> Os_OsCore2_swc::OsService_SystemTimer_Core2::GetElapsedValue</TD>
 <TD>GetElapsedValue</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -2018,9 +2133,23 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>EcuM_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>EcuM_MainFunction</TD>
+<TD>Core1_BswTask</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_EcuM_EcuM_MainFunction</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>EcuM_MainFunction</TD>
+<TD>Core2_BswTask</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE3_EcuM_EcuM_MainFunction</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
@@ -2053,6 +2182,13 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>NvM_MainFunction</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>Rte_ComSendSignalProxyPeriodic</TD>
 <TD>Bsw_Task</TD>
 <TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
 <TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>

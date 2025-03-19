@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Counter_Cfg.h
- *   Generation Time: 2024-10-09 14:09:24
+ *   Generation Time: 2025-03-19 13:54:58
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -56,8 +56,14 @@
 /*! Defines whether any counter uses FRT as PIT (STD_ON) or not (STD_OFF) */
 # define OS_CFG_COUNTER_PFRT_USED                (STD_ON)
 
-/*! Number of counter jobs: SystemTimer */
-# define OS_CFG_NUM_COUNTER_SYSTEMTIMER_JOBS     (6uL)
+/*! Number of counter jobs: SystemTimer_Core0 */
+# define OS_CFG_NUM_COUNTER_SYSTEMTIMER_CORE0_JOBS     (7uL)
+
+/*! Number of counter jobs: SystemTimer_Core1 */
+# define OS_CFG_NUM_COUNTER_SYSTEMTIMER_CORE1_JOBS     (2uL)
+
+/*! Number of counter jobs: SystemTimer_Core2 */
+# define OS_CFG_NUM_COUNTER_SYSTEMTIMER_CORE2_JOBS     (2uL)
 
 
 /**********************************************************************************************************************

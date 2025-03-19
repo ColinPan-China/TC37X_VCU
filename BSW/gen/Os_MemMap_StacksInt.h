@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_MemMap_StacksInt.h
- *   Generation Time: 2024-10-14 11:05:36
+ *   Generation Time: 2025-03-19 13:54:58
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -351,6 +351,673 @@
 # pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
 # pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
 # undef OS_STOP_SEC_STACK_OSCORE0_TASK_PRIO63_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE1_ERROR_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE1_ERROR_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE1_ERROR_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE1_ERROR_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE1_ERROR_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE1_ERROR_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE1_ERROR_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE1_ERROR_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE1_ERROR_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE1_ERROR_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE1_INIT_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE1_INIT_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE1_INIT_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE1_INIT_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE1_INIT_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE1_INIT_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE1_INIT_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE1_INIT_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE1_INIT_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE1_INIT_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE1_ISR_CORE_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE1_ISR_CORE_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE1_ISR_CORE_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE1_ISR_CORE_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE1_ISR_CORE_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE1_ISR_CORE_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE1_ISR_CORE_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE1_ISR_CORE_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE1_ISR_CORE_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE1_ISR_CORE_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE1_KERNEL_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE1_KERNEL_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE1_KERNEL_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE1_KERNEL_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE1_KERNEL_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE1_KERNEL_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE1_KERNEL_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE1_KERNEL_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE1_KERNEL_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE1_KERNEL_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE1_SHUTDOWN_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE1_SHUTDOWN_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE1_SHUTDOWN_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE1_SHUTDOWN_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE1_SHUTDOWN_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE1_SHUTDOWN_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE1_SHUTDOWN_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE1_SHUTDOWN_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE1_SHUTDOWN_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE1_SHUTDOWN_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE1_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE1_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE1_TASK_PRIO4294967295_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE1_TASK_PRIO4294967295_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE1_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE1_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE1_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE1_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE1_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE1_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE1_TASK_PRIO49_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE1_TASK_PRIO49_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE1_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE1_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE1_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE1_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE1_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE1_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE1_TASK_PRIO50_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE1_TASK_PRIO50_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE1_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE1_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE1_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE1_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE1_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE1_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE1_TASK_PRIO51_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE1_TASK_PRIO51_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE1_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE1_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE1_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE1_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE1_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE1_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE1_TASK_PRIO52_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE1_TASK_PRIO52_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE1_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE1_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE1_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE1_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE1_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE1_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE1_TASK_PRIO53_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE1_TASK_PRIO53_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE1_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE1_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE1_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE1_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE2_ERROR_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE2_ERROR_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE2_ERROR_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE2_ERROR_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE2_ERROR_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE2_ERROR_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE2_ERROR_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE2_ERROR_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE2_ERROR_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE2_ERROR_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE2_INIT_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE2_INIT_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE2_INIT_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE2_INIT_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE2_INIT_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE2_INIT_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE2_INIT_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE2_INIT_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE2_INIT_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE2_INIT_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE2_ISR_CORE_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE2_ISR_CORE_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE2_ISR_CORE_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE2_ISR_CORE_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE2_ISR_CORE_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE2_ISR_CORE_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE2_ISR_CORE_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE2_ISR_CORE_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE2_ISR_CORE_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE2_ISR_CORE_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE2_KERNEL_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE2_KERNEL_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE2_KERNEL_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE2_KERNEL_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE2_KERNEL_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE2_KERNEL_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE2_KERNEL_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE2_KERNEL_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE2_KERNEL_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE2_KERNEL_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE2_SHUTDOWN_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE2_SHUTDOWN_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE2_SHUTDOWN_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE2_SHUTDOWN_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE2_SHUTDOWN_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE2_SHUTDOWN_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE2_SHUTDOWN_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE2_SHUTDOWN_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE2_SHUTDOWN_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE2_SHUTDOWN_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE2_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE2_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE2_TASK_PRIO4294967295_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE2_TASK_PRIO4294967295_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE2_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE2_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE2_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE2_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE2_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE2_TASK_PRIO4294967295_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE2_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE2_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE2_TASK_PRIO49_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE2_TASK_PRIO49_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE2_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE2_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE2_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE2_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE2_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE2_TASK_PRIO49_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE2_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE2_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE2_TASK_PRIO50_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE2_TASK_PRIO50_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE2_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE2_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE2_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE2_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE2_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE2_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE2_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE2_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE2_TASK_PRIO51_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE2_TASK_PRIO51_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE2_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE2_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE2_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE2_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE2_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE2_TASK_PRIO51_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE2_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE2_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE2_TASK_PRIO52_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE2_TASK_PRIO52_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE2_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE2_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE2_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE2_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE2_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE2_TASK_PRIO52_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_STACK_OSCORE2_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_STACK_OSCORE2_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_STACK_OSCORE2_TASK_PRIO53_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_STACK_OSCORE2_TASK_PRIO53_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align 8 /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_STACK_OSCORE2_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_STACK_OSCORE2_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_STACK_OSCORE2_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_STACK_OSCORE2_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# endif
+# undef OS_STACK_OSCORE2_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma align restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_STACK_OSCORE2_TASK_PRIO53_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
 #endif
 

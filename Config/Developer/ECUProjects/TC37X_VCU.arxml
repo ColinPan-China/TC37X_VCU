@@ -1505,6 +1505,28 @@
               </ADMIN-DATA>
               <TYPE-TREF DEST="ECU-ABSTRACTION-SW-COMPONENT-TYPE">/ComponentTypes/IoHwAb_SWC</TYPE-TREF>
             </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="1FFB48DD-7706-4D49-9859-0C07D9AE419B">
+              <SHORT-NAME>Core2App_SWC</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/Core2App_SWC</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="25EA7E03-0209-4335-90B2-E01273F5460A">
+              <SHORT-NAME>Core1App_SWC</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/Core1App_SWC</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
           </COMPONENTS>
           <CONNECTORS>
             <DELEGATION-SW-CONNECTOR UUID="1943E245-FA8B-4FAB-9649-5449AB24B87B">

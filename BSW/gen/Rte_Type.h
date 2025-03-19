@@ -475,6 +475,31 @@ typedef unsigned int Rte_BitType;
 # define RTE_STATE_SCHM_INIT  (2U)
 # define RTE_STATE_INIT       (3U)
 
+# define RTE_START_SEC_VAR_NOCACHE_ZERO_INIT_8BIT
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern volatile VAR(uint8, RTE_VAR_ZERO_INIT_NOCACHE) Rte_InitState; /* PRQA S 3408 */ /* MD_Rte_3408 */
+extern volatile VAR(uint8, RTE_VAR_ZERO_INIT_NOCACHE) Rte_StartTiming_InitState; /* PRQA S 0850, 3408 */ /* MD_MSR_MacroArgumentEmpty, MD_Rte_3408 */
+
+# define RTE_STOP_SEC_VAR_NOCACHE_ZERO_INIT_8BIT
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+# define RTE_START_SEC_VAR_SystemApplication_OsCore1_NOCACHE_ZERO_INIT_8BIT
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern volatile VAR(uint8, RTE_VAR_ZERO_INIT_NOCACHE) Rte_InitState_1; /* PRQA S 3408 */ /* MD_Rte_3408 */
+
+# define RTE_STOP_SEC_VAR_SystemApplication_OsCore1_NOCACHE_ZERO_INIT_8BIT
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+# define RTE_START_SEC_VAR_SystemApplication_OsCore2_NOCACHE_ZERO_INIT_8BIT
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern volatile VAR(uint8, RTE_VAR_ZERO_INIT_NOCACHE) Rte_InitState_2; /* PRQA S 3408 */ /* MD_Rte_3408 */
+
+# define RTE_STOP_SEC_VAR_SystemApplication_OsCore2_NOCACHE_ZERO_INIT_8BIT
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 # ifdef RTE_CORE
 
 /**********************************************************************************************************************
@@ -498,14 +523,14 @@ extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_SWC1_NvBlo
  * Buffers for unqueued S/R
  *********************************************************************************************************************/
 
-#  define RTE_START_SEC_VAR_NOINIT_UNSPECIFIED
+#  define RTE_START_SEC_VAR_OsApplication_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-extern VAR(NvM_Array10Bytes, RTE_VAR_NOINIT) Rte_NvM_SWC_NVBlockDescriptor_UserData1; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
-extern VAR(NvM_Array32Bytes, RTE_VAR_NOINIT) Rte_NvM_SWC_NVBlockDescriptor_UserData2; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
-extern VAR(BswM_ESH_RunRequest, RTE_VAR_NOINIT) Rte_SWC1_Request_ESH_RunRequest_0_requestedMode; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
+extern VAR(NvM_Array10Bytes, RTE_VAR_INIT) Rte_NvM_SWC_NVBlockDescriptor_UserData1; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
+extern VAR(NvM_Array32Bytes, RTE_VAR_INIT) Rte_NvM_SWC_NVBlockDescriptor_UserData2; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
+extern VAR(BswM_ESH_RunRequest, RTE_VAR_INIT) Rte_SWC1_Request_ESH_RunRequest_0_requestedMode; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 
-#  define RTE_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+#  define RTE_STOP_SEC_VAR_OsApplication_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 typedef struct
@@ -518,16 +543,30 @@ typedef struct
   Rte_BitType Rte_RxTimeout_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx : 1;
   Rte_BitType Rte_RxTimeout_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx : 1;
   Rte_BitType Rte_RxTimeout_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx : 1;
-} Rte_RxTimeoutFlagsType;
+} Rte_SystemApplication_OsCore0_RxTimeoutFlagsType;
 
 #  define RTE_START_SEC_VAR_ZERO_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-extern VAR(Rte_RxTimeoutFlagsType, RTE_VAR_ZERO_INIT) Rte_RxTimeoutFlags;
+extern VAR(Rte_SystemApplication_OsCore0_RxTimeoutFlagsType, RTE_VAR_ZERO_INIT) Rte_SystemApplication_OsCore0_RxTimeoutFlags;
 
 #  define RTE_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+
+
+/**********************************************************************************************************************
+ * Data structures for mode management
+ *********************************************************************************************************************/
+
+
+#  define RTE_START_SEC_VAR_OsApplication_INIT_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode;
+
+#  define RTE_STOP_SEC_VAR_OsApplication_INIT_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
 # endif /* defined(RTE_CORE) */

@@ -246,6 +246,14 @@
                 <SHORT-NAME>VAR_SystemApplication_OsCore2_NOCACHE_INIT_UNSPECIFIED</SHORT-NAME>
                 <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore2_VAR_NOCACHE_INIT</SW-ADDRMETHOD-REF>
               </MEMORY-SECTION>
+              <MEMORY-SECTION UUID="a91c0de4-1baf-446b-9539-a62c89d23c83">
+                <SHORT-NAME>CORE1APP_SWC_APPL_CODE</SHORT-NAME>
+                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/MICROSAR_MemMap/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+              </MEMORY-SECTION>
+              <MEMORY-SECTION UUID="3fb8f7b6-afde-4b5a-bd54-50e62abaacd3">
+                <SHORT-NAME>CORE2APP_SWC_APPL_CODE</SHORT-NAME>
+                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/MICROSAR_MemMap/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+              </MEMORY-SECTION>
             </MEMORY-SECTIONS>
           </RESOURCE-CONSUMPTION>
           <SW-VERSION>4.26.00</SW-VERSION>

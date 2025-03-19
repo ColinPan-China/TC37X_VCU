@@ -2737,6 +2737,38 @@
                                   <SHORT-NAME>Os_OsCore2_swc</SHORT-NAME>
                                   <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/MICROSAR/Os_swc/ComponentTypes/Os_OsCore2_swc</TYPE-TREF>
                                 </SW-COMPONENT-PROTOTYPE>
+                                <SW-COMPONENT-PROTOTYPE UUID="e8b718b9-9ddb-4fd5-bb6d-ac7b6fab1687">
+                                  <SHORT-NAME>Core2App_SWC</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/Core2App_SWC</TYPE-TREF>
+                                </SW-COMPONENT-PROTOTYPE>
+                                <SW-COMPONENT-PROTOTYPE UUID="2d4f5da4-6673-45d4-a013-1b1fb4609395">
+                                  <SHORT-NAME>Core1App_SWC</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/Core1App_SWC</TYPE-TREF>
+                                </SW-COMPONENT-PROTOTYPE>
                               </COMPONENTS>
                               <CONNECTORS>
                                 <ASSEMBLY-SW-CONNECTOR UUID="162bee59-e8a0-4697-a1b1-31e18c5b0ff5">
@@ -4237,6 +4269,8 @@
                                     <SD GID="b0560f92-2d31-4daa-896f-70e823156344">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/BswM</SD>
                                     <SD GID="274f233c-196e-4efd-8537-a049df7a976a">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</SD>
                                     <SD GID="d6107833-7ec4-46b6-bd77-dc484cc238be">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</SD>
+                                    <SD GID="2d4f5da4-6673-45d4-a013-1b1fb4609395">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Core1App_SWC</SD>
+                                    <SD GID="e8b718b9-9ddb-4fd5-bb6d-ac7b6fab1687">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Core2App_SWC</SD>
                                     <SD GID="c7476a1f-c034-404b-b974-33b412a9cd72">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</SD>
                                     <SD GID="0322021c-e24a-4ca4-a30d-185fbf48de7d">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_CBReadData_DID_0xf1a0_F1A0_Data_DemMaster_0_CBReadData_DID_0xf1a0_F1A0_Data</SD>
                                     <SD GID="f4385bee-0ed6-452c-a9a7-d66b95abf79d">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_CBReadData_DID_0xf1a1_F1A1_Data_DemMaster_0_CBReadData_DID_0xf1a1_F1A1_Data</SD>
@@ -4367,6 +4401,14 @@
                                     <SD GID="07939212-9963-4D90-B4EF-C7D13D3F1D1C">/ComponentTypes/Com_SWC/VcuTxMsg2_Sig2</SD>
                                     <SD GID="C27F2ED1-7BB1-4B4A-9B16-81C74A78A00D">/ComponentTypes/Com_SWC/VcuTxMsg2_Sig3</SD>
                                     <SD GID="BBB3B39C-C392-468F-9EF1-FC5D0A60A072">/ComponentTypes/Com_SWC_Implementation</SD>
+                                    <SD GID="8DFD5382-3504-4548-8290-F4BECB874FA1">/ComponentTypes/Core1App_SWC</SD>
+                                    <SD GID="2E8AF6D6-BE47-4121-A7ED-95DC0940CD83">/ComponentTypes/Core1App_SWC/Core1App_SWC_InternalBehavior/Core1App_SWC_InitEvent</SD>
+                                    <SD GID="CC6B0BED-4E6B-4C3D-83C1-F77F6625ED0A">/ComponentTypes/Core1App_SWC/Core1App_SWC_InternalBehavior/TMT_Core1App_Runnable100ms</SD>
+                                    <SD GID="3C106474-F686-421B-AF5C-BAB5A7146F5E">/ComponentTypes/Core1App_SWC_Implementation</SD>
+                                    <SD GID="DC0DDB34-B898-4098-8939-AD20B40EAD5D">/ComponentTypes/Core2App_SWC</SD>
+                                    <SD GID="EC95D494-858D-455A-96C1-1840B2831ED9">/ComponentTypes/Core2App_SWC/Core2App_SWC_InternalBehavior/Core2App_SWC_InitEvent</SD>
+                                    <SD GID="E2570FF2-19BA-4B8F-85DE-6AEC20BBE1C3">/ComponentTypes/Core2App_SWC/Core2App_SWC_InternalBehavior/TMT_Core2App_Runnable100ms</SD>
+                                    <SD GID="581AA61F-4CE6-4714-88D9-0FE1D4690479">/ComponentTypes/Core2App_SWC_Implementation</SD>
                                     <SD GID="7C393334-F81C-447D-837E-1F15455AA760">/ComponentTypes/DIAG_SWC</SD>
                                     <SD GID="18A09CC2-441B-4A98-82CF-E59E0A06948F">/ComponentTypes/DIAG_SWC/CBReadData_DID_0xf1a0_F1A0_Data</SD>
                                     <SD GID="E3ACDD70-78CF-4446-9C41-2C99920C10F1">/ComponentTypes/DIAG_SWC/CBReadData_DID_0xf1a1_F1A1_Data</SD>
@@ -4451,6 +4493,8 @@
                                     <SD GID="66263F43-3F17-4564-9D9F-6367B86E68F2">/ComponentTypes/SWC1_Implementation</SD>
                                     <SD GID="83E5C50F-A163-4FAE-8F88-D29CE937AFED">/ECUCompositionTypes/ECU_Composition</SD>
                                     <SD GID="9D6277BB-1E37-4BB9-B185-1DD2BA210E54">/ECUCompositionTypes/ECU_Composition/Com_SWC</SD>
+                                    <SD GID="25EA7E03-0209-4335-90B2-E01273F5460A">/ECUCompositionTypes/ECU_Composition/Core1App_SWC</SD>
+                                    <SD GID="1FFB48DD-7706-4D49-9859-0C07D9AE419B">/ECUCompositionTypes/ECU_Composition/Core2App_SWC</SD>
                                     <SD GID="ED10CD08-2BCF-43E8-BD3C-006B317FF76E">/ECUCompositionTypes/ECU_Composition/DIAG_SWC</SD>
                                     <SD GID="DEBDDCDE-76BA-4587-B797-BF66350B513F">/ECUCompositionTypes/ECU_Composition/ECC_PMP2_SpdSet</SD>
                                     <SD GID="7B3872EB-A0A5-4122-8ADB-E347E02ECA18">/ECUCompositionTypes/ECU_Composition/ECC_PMP3_SpdSet</SD>
@@ -4911,6 +4955,8 @@
                                     <SD GID="119f6f4e-319e-472c-a77d-2ef595ecb22c">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/ECUM_EXCLUSIVE_AREA_3</SD>
                                     <SD GID="f3566fd3-89d9-4647-ae8d-59010bb070a3">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/EcuM_MainFunction</SD>
                                     <SD GID="3f77abae-6da2-4509-8e38-1efbf72c2baf">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/EcuM_MainFunctionTimingEvent0</SD>
+                                    <SD GID="d9d13958-1623-4f9a-be23-aa55adad5f45">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/EcuM_MainFunctionTimingEvent1</SD>
+                                    <SD GID="72f085c6-9ea3-4b44-8a45-0b3f8011bae9">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/EcuM_MainFunctionTimingEvent2</SD>
                                     <SD GID="02a02774-c061-4c5c-b84a-d39319da20ac">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM_MainFunction</SD>
                                     <SD GID="4eb4dd2e-748b-477f-9246-91ebfde99407">/MICROSAR/EcuM_swc/ComponentTypes/EcuM</SD>
                                     <SD GID="adea1135-7934-4310-9a8d-8ca720f0ec3b">/MICROSAR/EcuM_swc/ComponentTypes/EcuM/EcuMInternalBehavior</SD>

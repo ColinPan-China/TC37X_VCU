@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hook_Lcfg.c
- *   Generation Time: 2024-10-14 11:05:36
+ *   Generation Time: 2025-03-19 13:54:58
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -91,6 +91,38 @@ OS_LOCAL VAR(Os_HookType, OS_VAR_NOINIT) OsCfg_Hook_ShutdownHook_OsCore0_Dyn;
 OS_LOCAL VAR(Os_HookType, OS_VAR_NOINIT) OsCfg_Hook_ErrorHook_OsCore0_Dyn;
 
 #define OS_STOP_SEC_CORE0_VAR_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_CORE1_VAR_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Dynamic hook data: Os_CoreInitHook_OsCore1 */
+OS_LOCAL VAR(Os_HookType, OS_VAR_NOINIT) OsCfg_Hook_Os_CoreInitHook_OsCore1_Dyn;
+
+/*! Dynamic hook data: ShutdownHook_OsCore1 */
+OS_LOCAL VAR(Os_HookType, OS_VAR_NOINIT) OsCfg_Hook_ShutdownHook_OsCore1_Dyn;
+
+/*! Dynamic hook data: ErrorHook_OsCore1 */
+OS_LOCAL VAR(Os_HookType, OS_VAR_NOINIT) OsCfg_Hook_ErrorHook_OsCore1_Dyn;
+
+#define OS_STOP_SEC_CORE1_VAR_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_CORE2_VAR_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Dynamic hook data: Os_CoreInitHook_OsCore2 */
+OS_LOCAL VAR(Os_HookType, OS_VAR_NOINIT) OsCfg_Hook_Os_CoreInitHook_OsCore2_Dyn;
+
+/*! Dynamic hook data: ShutdownHook_OsCore2 */
+OS_LOCAL VAR(Os_HookType, OS_VAR_NOINIT) OsCfg_Hook_ShutdownHook_OsCore2_Dyn;
+
+/*! Dynamic hook data: ErrorHook_OsCore2 */
+OS_LOCAL VAR(Os_HookType, OS_VAR_NOINIT) OsCfg_Hook_ErrorHook_OsCore2_Dyn;
+
+#define OS_STOP_SEC_CORE2_VAR_NOINIT_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -205,6 +237,212 @@ CONST(Os_HookStatusHookConfigType, OS_CONST) OsCfg_Hook_ErrorHook_OsCore0 =
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
+#define OS_START_SEC_CORE1_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Hook configuration data: Os_CoreInitHook_OsCore1 */
+CONST(Os_HookInitHookConfigType, OS_CONST) OsCfg_Hook_Os_CoreInitHook_OsCore1 =
+{
+  /* .Hook     = */
+  {
+    /* .Thread       = */
+    {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_Os_CoreInitHook_OsCore1,
+    /* .Context               = */ &OsCfg_Hal_Context_Os_CoreInitHook_OsCore1_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore1_Init,
+    /* .Dyn                   = */ OS_HOOK_CASTDYN_HOOK_2_THREAD(OsCfg_Hook_Os_CoreInitHook_OsCore1_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1,
+    /* .Core                  = */ &OsCfg_Core_OsCore1,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore1_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_INITHOOK,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ TRUE,
+    /* .UsesFpu               = */ FALSE
+  },
+    /* .HookTypeFlag = */ OS_HOOKFLAG_INITHOOK,
+    /* .NestingMask  = */ OS_HOOKNESTINGMASK_INITHOOK,
+    /* .Id           = */ (Os_HookIdType)3,
+    /* .TaskReturn   = */ Os_HookTaskReturn_BeginScheduling
+  },
+  /* .Callback = */ &Os_CoreInitHook
+};
+
+/*! Hook configuration data: ShutdownHook_OsCore1 */
+CONST(Os_HookStatusHookConfigType, OS_CONST) OsCfg_Hook_ShutdownHook_OsCore1 =
+{
+  /* .Hook     = */
+  {
+    /* .Thread       = */
+    {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_ShutdownHook_OsCore1,
+    /* .Context               = */ &OsCfg_Hal_Context_ShutdownHook_OsCore1_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore1_Shutdown,
+    /* .Dyn                   = */ OS_HOOK_CASTDYN_HOOK_2_THREAD(OsCfg_Hook_ShutdownHook_OsCore1_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1,
+    /* .Core                  = */ &OsCfg_Core_OsCore1,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore1_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_SHUTDOWNHOOK,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+    /* .HookTypeFlag = */ OS_HOOKFLAG_SHUTDOWNHOOK,
+    /* .NestingMask  = */ OS_HOOKNESTINGMASK_SHUTDOWNHOOK,
+    /* .Id           = */ (Os_HookIdType)4,
+    /* .TaskReturn   = */ Os_HookTaskReturn_ToCallerTask
+  },
+  /* .Callback = */ &ShutdownHook
+};
+
+/*! Hook configuration data: ErrorHook_OsCore1 */
+CONST(Os_HookStatusHookConfigType, OS_CONST) OsCfg_Hook_ErrorHook_OsCore1 =
+{
+  /* .Hook     = */
+  {
+    /* .Thread       = */
+    {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_ErrorHook_OsCore1,
+    /* .Context               = */ &OsCfg_Hal_Context_ErrorHook_OsCore1_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore1_Error,
+    /* .Dyn                   = */ OS_HOOK_CASTDYN_HOOK_2_THREAD(OsCfg_Hook_ErrorHook_OsCore1_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1,
+    /* .Core                  = */ &OsCfg_Core_OsCore1,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore1_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ERRORHOOK,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+    /* .HookTypeFlag = */ OS_HOOKFLAG_ERRORHOOK,
+    /* .NestingMask  = */ OS_HOOKNESTINGMASK_ERRORHOOK,
+    /* .Id           = */ (Os_HookIdType)5,
+    /* .TaskReturn   = */ Os_HookTaskReturn_WithSchedule
+  },
+  /* .Callback = */ &ErrorHook
+};
+
+#define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_CORE2_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Hook configuration data: Os_CoreInitHook_OsCore2 */
+CONST(Os_HookInitHookConfigType, OS_CONST) OsCfg_Hook_Os_CoreInitHook_OsCore2 =
+{
+  /* .Hook     = */
+  {
+    /* .Thread       = */
+    {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_Os_CoreInitHook_OsCore2,
+    /* .Context               = */ &OsCfg_Hal_Context_Os_CoreInitHook_OsCore2_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore2_Init,
+    /* .Dyn                   = */ OS_HOOK_CASTDYN_HOOK_2_THREAD(OsCfg_Hook_Os_CoreInitHook_OsCore2_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore2,
+    /* .Core                  = */ &OsCfg_Core_OsCore2,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore2_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_INITHOOK,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ TRUE,
+    /* .UsesFpu               = */ FALSE
+  },
+    /* .HookTypeFlag = */ OS_HOOKFLAG_INITHOOK,
+    /* .NestingMask  = */ OS_HOOKNESTINGMASK_INITHOOK,
+    /* .Id           = */ (Os_HookIdType)6,
+    /* .TaskReturn   = */ Os_HookTaskReturn_BeginScheduling
+  },
+  /* .Callback = */ &Os_CoreInitHook
+};
+
+/*! Hook configuration data: ShutdownHook_OsCore2 */
+CONST(Os_HookStatusHookConfigType, OS_CONST) OsCfg_Hook_ShutdownHook_OsCore2 =
+{
+  /* .Hook     = */
+  {
+    /* .Thread       = */
+    {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_ShutdownHook_OsCore2,
+    /* .Context               = */ &OsCfg_Hal_Context_ShutdownHook_OsCore2_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore2_Shutdown,
+    /* .Dyn                   = */ OS_HOOK_CASTDYN_HOOK_2_THREAD(OsCfg_Hook_ShutdownHook_OsCore2_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore2,
+    /* .Core                  = */ &OsCfg_Core_OsCore2,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore2_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_SHUTDOWNHOOK,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+    /* .HookTypeFlag = */ OS_HOOKFLAG_SHUTDOWNHOOK,
+    /* .NestingMask  = */ OS_HOOKNESTINGMASK_SHUTDOWNHOOK,
+    /* .Id           = */ (Os_HookIdType)7,
+    /* .TaskReturn   = */ Os_HookTaskReturn_ToCallerTask
+  },
+  /* .Callback = */ &ShutdownHook
+};
+
+/*! Hook configuration data: ErrorHook_OsCore2 */
+CONST(Os_HookStatusHookConfigType, OS_CONST) OsCfg_Hook_ErrorHook_OsCore2 =
+{
+  /* .Hook     = */
+  {
+    /* .Thread       = */
+    {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_ErrorHook_OsCore2,
+    /* .Context               = */ &OsCfg_Hal_Context_ErrorHook_OsCore2_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore2_Error,
+    /* .Dyn                   = */ OS_HOOK_CASTDYN_HOOK_2_THREAD(OsCfg_Hook_ErrorHook_OsCore2_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore2,
+    /* .Core                  = */ &OsCfg_Core_OsCore2,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore2_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ERRORHOOK,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+    /* .HookTypeFlag = */ OS_HOOKFLAG_ERRORHOOK,
+    /* .NestingMask  = */ OS_HOOKNESTINGMASK_ERRORHOOK,
+    /* .Id           = */ (Os_HookIdType)8,
+    /* .TaskReturn   = */ Os_HookTaskReturn_WithSchedule
+  },
+  /* .Callback = */ &ErrorHook
+};
+
+#define OS_STOP_SEC_CORE2_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
 #define OS_START_SEC_CONST_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -214,6 +452,12 @@ CONSTP2CONST(Os_HookConfigType, OS_CONST, OS_CONST) OsCfg_HookRefs[OS_CFG_NUM_HO
   OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_Os_CoreInitHook_OsCore0),
   OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_ShutdownHook_OsCore0),
   OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_ErrorHook_OsCore0),
+  OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_Os_CoreInitHook_OsCore1),
+  OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_ShutdownHook_OsCore1),
+  OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_ErrorHook_OsCore1),
+  OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_Os_CoreInitHook_OsCore2),
+  OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_ShutdownHook_OsCore2),
+  OS_HOOK_CASTCONFIG_STATUSHOOK_2_HOOK(OsCfg_Hook_ErrorHook_OsCore2),
   NULL_PTR
 };
 

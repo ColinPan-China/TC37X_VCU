@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Cfg.h
- *   Generation Time: 2025-01-16 10:23:51
+ *   Generation Time: 2025-03-19 13:54:57
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -245,8 +245,8 @@
 #define CAN_API1                             1u
 #define CAN_API2                             2u
 
-#define CAN_OS_TICK2MS(tick)     OS_TICKS2MS_SystemTimer((tick))     /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
-#define CAN_OS_COUNTER_ID        SystemTimer
+#define CAN_OS_TICK2MS(tick)     OS_TICKS2MS_SystemTimer_Core0((tick))     /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
+#define CAN_OS_COUNTER_ID        SystemTimer_Core0
 
 /* -----------------------------------------------------------------------------
     Defines / Switches

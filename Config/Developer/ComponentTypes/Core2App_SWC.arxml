@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00046.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="A8ACCE0E-642F-4E81-9CF7-4CBA9B812966">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="DC0DDB34-B898-4098-8939-AD20B40EAD5D">
+          <SHORT-NAME>Core2App_SWC</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="FC127EA4-F747-44C8-95E4-6F0BA7574741">
+              <SHORT-NAME>Core2App_SWC_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <INIT-EVENT UUID="EC95D494-858D-455A-96C1-1840B2831ED9">
+                  <SHORT-NAME>Core2App_SWC_InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Core2App_SWC/Core2App_SWC_InternalBehavior/Core2App_SWC_Init</START-ON-EVENT-REF>
+                </INIT-EVENT>
+                <TIMING-EVENT UUID="E2570FF2-19BA-4B8F-85DE-6AEC20BBE1C3">
+                  <SHORT-NAME>TMT_Core2App_Runnable100ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Core2App_SWC/Core2App_SWC_InternalBehavior/Core2App_Runnable100ms</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="0FCC2F82-0A42-4AA0-A302-08E8485DB0AC">
+                  <SHORT-NAME>Core2App_Runnable100ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="D416132C-E267-4287-9FC3-C654BFE59A3C">
+                  <SHORT-NAME>Core2App_SWC_Init</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:RunnableKind">
+                        <SD>InitRunnable</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="581AA61F-4CE6-4714-88D9-0FE1D4690479">
+          <SHORT-NAME>Core2App_SWC_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/Core2App_SWC/Core2App_SWC_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
