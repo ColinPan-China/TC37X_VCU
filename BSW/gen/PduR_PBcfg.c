@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_PBcfg.c
- *   Generation Time: 2024-11-28 15:38:53
+ *   Generation Time: 2025-03-25 11:03:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -48,6 +48,7 @@
 #include "Dcm_Cbk.h"
 #include "CanTp.h"
 #include "LinIf.h"
+#include "CanNm.h"
 
 /**********************************************************************************************************************
  * LOCAL CONSTANT MACROS

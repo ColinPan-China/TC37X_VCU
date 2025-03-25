@@ -364,6 +364,8 @@
  *  Rte_Runnable_ComM_ComM_MainFunction_3_Start
  *  Rte_Runnable_ComM_GetCurrentComMode_Return
  *  Rte_Runnable_ComM_GetCurrentComMode_Start
+ *  Rte_Runnable_ComM_GetCurrentPNCComMode_Return
+ *  Rte_Runnable_ComM_GetCurrentPNCComMode_Start
  *  Rte_Runnable_ComM_GetInhibitionStatus_Return
  *  Rte_Runnable_ComM_GetInhibitionStatus_Start
  *  Rte_Runnable_ComM_GetMaxComMode_Return

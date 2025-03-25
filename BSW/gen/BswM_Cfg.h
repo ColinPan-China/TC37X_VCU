@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2025-02-08 15:22:10
+ *   Generation Time: 2025-03-25 11:03:18
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -136,7 +136,7 @@
 #define BSWM_ENABLE_WDGM                     STD_OFF
 #define BSWM_ENABLE_RULE_CONTROL             STD_OFF
 #define BSWM_VERSION_INFO_API                STD_OFF
-#define BSWM_COMM_PNC_SUPPORT                STD_OFF
+#define BSWM_COMM_PNC_SUPPORT                STD_ON
 #define BSWM_COMM_INITIATE_RESET             STD_OFF
 #define BSWM_CHANNEL_COUNT                   4u
 #define BSWM_WAKEUP_SOURCE_COUNT             9u

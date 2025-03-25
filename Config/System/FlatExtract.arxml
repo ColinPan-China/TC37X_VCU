@@ -857,6 +857,12 @@
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tohx_out_oVCU_Minor_01_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_Tx_51Ch_NM_PNCData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
                               </FIBEX-ELEMENTS>
                               <MAPPINGS>
                                 <SYSTEM-MAPPING UUID="19079e91-2a91-4fa6-9093-7c1b6ba64cfd">
@@ -4586,10 +4592,24 @@
                                     <SD GID="e8734859-8ae4-4a9e-9db3-e8ba6cffb1cc">/MICROSAR/BswM_swc/Interfaces/BswM_MSI_ESH_RunRequest/BswM_MDGP_ESH_RunRequest</SD>
                                     <SD GID="255c5012-5426-484c-a853-7cf1dd229a94">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest</SD>
                                     <SD GID="4d5ec514-e820-47f8-8518-f3dbf0905dae">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest/requestedMode</SD>
+                                    <SD GID="276ddffc-1c3c-4fff-b94e-926039f3f1e3">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetCurrentComMode</SD>
+                                    <SD GID="733857f4-dfc3-4314-980a-3ca969028e42">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetCurrentPNCComMode</SD>
+                                    <SD GID="1753d622-d761-4e25-ae66-6aec356074e9">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetMaxComMode</SD>
+                                    <SD GID="2b0706b9-c9bd-48a9-8e59-c51233120740">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetRequestedComMode</SD>
                                     <SD GID="b53e4f2d-9b8b-4b55-bd1d-6a3969617aa1">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_KAMA_FP_EPT_0303_b67fd6a6</SD>
                                     <SD GID="d61866aa-e364-480d-ab63-a6c4824c2748">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="23456fdc-f7ad-49c1-9c3b-598ac832089c">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="a5364b02-7699-465a-81e0-efe6c80b6e71">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
+                                    <SD GID="754ca60f-3448-4bdc-90e0-52b64e2fdf2f">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_ComMUser_PNC24</SD>
+                                    <SD GID="86eff6bc-9f8e-408d-86e6-3714ad984025">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_ComMUser_PNC26</SD>
+                                    <SD GID="96574c45-71ea-41fb-b1d7-b9144f9f59d2">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_ComMUser_PNC31</SD>
+                                    <SD GID="5a04f13f-631b-44e5-bf24-e66d207569c5">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentPNCComMode_GetCurrentPNCComMode_UR_CN_KAMA_FP_EPT_0303_b67fd6a6</SD>
+                                    <SD GID="df51f3fd-2965-4bf7-9ba9-3d389681c904">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentPNCComMode_GetCurrentPNCComMode_UR_CN_LIN00_984dfd9e</SD>
+                                    <SD GID="7f4e0df0-500c-433a-aba5-934cefd154fc">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentPNCComMode_GetCurrentPNCComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
+                                    <SD GID="405029b0-339f-4787-b05d-ac3291744219">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentPNCComMode_GetCurrentPNCComMode_UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
+                                    <SD GID="00041d39-363f-4ed4-9ddb-5810a2f9325d">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentPNCComMode_GetCurrentPNCComMode_UR_ComMUser_PNC24</SD>
+                                    <SD GID="0d501e4a-e060-4d57-8c0e-47ab0a35ce5e">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentPNCComMode_GetCurrentPNCComMode_UR_ComMUser_PNC26</SD>
+                                    <SD GID="5301e195-cb9e-4143-bd0d-5bdfe660336d">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentPNCComMode_GetCurrentPNCComMode_UR_ComMUser_PNC31</SD>
                                     <SD GID="8ad933c5-974d-4ad8-9b9b-e4cd6950479b">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_KAMA_FP_EPT_0303_275b3e6e</SD>
                                     <SD GID="72214d33-46e3-40ea-8805-6c7333b485df">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_LIN00_b12a0454</SD>
                                     <SD GID="5e890fa0-13ec-43cb-bf41-1c6645ad4a73">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
@@ -4602,10 +4622,16 @@
                                     <SD GID="454c9a4b-45e3-4fb1-9b6c-f035bfb7e878">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="8bf1c7f1-6ee3-442d-aaac-4d290efda5ac">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="5de38e1f-417a-459d-a711-5336fc927989">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
+                                    <SD GID="9f75374a-998f-4c9d-8053-c8a1b5a2dd05">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_ComMUser_PNC24</SD>
+                                    <SD GID="e4cd7476-acbf-426f-80b6-04a2edcf1ad2">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_ComMUser_PNC26</SD>
+                                    <SD GID="38c32578-ff64-462c-b598-04aa1570914b">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_ComMUser_PNC31</SD>
                                     <SD GID="5fd5aae7-cd76-4809-b4be-40935ff008f4">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_KAMA_FP_EPT_0303_b67fd6a6</SD>
                                     <SD GID="ab0aeb48-b011-4179-92dd-62ceb2bf5410">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="2669447e-1154-419a-aa58-2b9bd1cd6009">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="bff9ee43-9af4-4da1-a83c-00d0e9dc97d1">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
+                                    <SD GID="b18b2461-db41-4c78-a4d9-c0b8187bca45">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_ComMUser_PNC24</SD>
+                                    <SD GID="0c766d85-0003-4ecc-9820-07811ddfa16f">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_ComMUser_PNC26</SD>
+                                    <SD GID="4a15c681-ddb1-4b87-b85e-1640d14e463f">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_ComMUser_PNC31</SD>
                                     <SD GID="7e54de55-cb28-4473-9a01-74d7c695ba3c">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_KAMA_FP_EPT_0303_275b3e6e</SD>
                                     <SD GID="c760f995-41a1-4169-bde7-8a8310f63f7e">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_LIN00_b12a0454</SD>
                                     <SD GID="29c05688-a08e-49c6-ba26-a39635214f50">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
@@ -4618,6 +4644,10 @@
                                     <SD GID="3a7ace68-f286-41fc-8824-5f2b6181f66d">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="a79c2142-00a2-4471-ae46-c0bca0868254">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="614f04a3-1522-46bc-8343-865f09895d24">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
+                                    <SD GID="ab6d3b85-9cf5-4070-9784-8dc48425d901">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_ComMUser_PNC24</SD>
+                                    <SD GID="3ff3c475-f784-4866-8b51-bb739bd90429">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_ComMUser_PNC26</SD>
+                                    <SD GID="8fa16835-2d61-4e57-9f11-c0c829592c4d">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_ComMUser_PNC31</SD>
+                                    <SD GID="da28d723-ae23-4ab2-b443-f3d8058bffbc">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/RequestComMode</SD>
                                     <SD GID="279e6a6c-6a9a-4dd9-b402-1c8650570835">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/Timer_ComM_MainFunction_1</SD>
                                     <SD GID="5bcb6a61-d460-491a-a161-2124e68fb0ba">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/Timer_ComM_MainFunction_2</SD>
                                     <SD GID="fb17e297-0bd6-449f-b0b1-511a782385f7">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/Timer_ComM_MainFunction_3</SD>
@@ -4625,6 +4655,21 @@
                                     <SD GID="f6e01367-ebd5-40d0-8f91-21c6257b8af9">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="ab1e5b41-3baa-4fcf-aec5-44c99b7466d5">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="6d2f5e0a-126d-440d-a52c-2302c9dca7b4">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
+                                    <SD GID="cc561f6d-7a31-454d-a17c-9d645df8c63e">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_ComMUser_PNC24</SD>
+                                    <SD GID="7cf9711e-ec46-431e-9a06-d78ae925e809">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_ComMUser_PNC26</SD>
+                                    <SD GID="e2a5f97d-5377-4eb4-ab1a-41411c561bf3">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_ComMUser_PNC31</SD>
+                                    <SD GID="d89692b6-d3e8-4d7d-a15f-6792c461107a">/MICROSAR/ComM_swc/DataTypes/ComM_ModeType</SD>
+                                    <SD GID="9daa47c6-f0c1-4265-8eb7-f11b3efe5e8b">/MICROSAR/ComM_swc/DataTypes/ComM_UserHandleType</SD>
+                                    <SD GID="586e5ae9-cbe5-4d6c-9882-3ceadcecac26">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest</SD>
+                                    <SD GID="a2f7e712-deea-48a1-bebd-1e4ba29a55e7">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/COMM_E_NO_PNC_ASSIGNED</SD>
+                                    <SD GID="b5e95010-8e79-4882-8b5a-d347efa9d59f">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/E_MULTIPLE_PNC_ASSIGNED</SD>
+                                    <SD GID="19853818-9dbd-4545-9818-220c11d06b26">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/E_NOT_OK</SD>
+                                    <SD GID="8a87f3a4-c1c3-4164-a2d7-dfa09e816b62">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetCurrentComMode</SD>
+                                    <SD GID="26e4786b-244e-447a-9f1f-e41681c5f66b">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetCurrentPNCComMode</SD>
+                                    <SD GID="11832973-e809-49e4-a461-5abac7648843">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetCurrentPNCComMode/ComMode</SD>
+                                    <SD GID="37e483b7-6854-4b56-a33f-2dab89e2a53d">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetMaxComMode</SD>
+                                    <SD GID="993d53be-59f6-4a27-9c3f-3ff87ffa7d15">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetRequestedComMode</SD>
+                                    <SD GID="31e057b7-f241-4f87-8633-5570432c5c3d">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</SD>
                                     <SD GID="67ce1ed5-0cd8-4659-8ac8-43f5140ba846">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionRx_ComMainFunctionRx</SD>
                                     <SD GID="f0154cf3-78b1-439c-8e4f-9030105fdde1">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionRx_ComMainFunctionRxTimingEvent0</SD>
                                     <SD GID="6449745c-0c85-4010-bbca-08969bfc9cab">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionTx_ComMainFunctionTx</SD>

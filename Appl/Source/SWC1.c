@@ -442,6 +442,10 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
     Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(COMM_FULL_COMMUNICATION);
 
     Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_FULL_COMMUNICATION);
+    
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC24,COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC26,COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC31,COMM_FULL_COMMUNICATION);
   }
   else/* Mcu go shutdown */
   {

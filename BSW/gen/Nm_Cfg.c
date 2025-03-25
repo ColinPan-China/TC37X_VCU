@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.c
- *   Generation Time: 2025-01-16 10:23:50
+ *   Generation Time: 2025-03-25 11:03:18
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -135,7 +135,6 @@ CONST(Nm_ChannelConfigType, NM_CONST) Nm_ChannelConfig[2] = {  /* PRQA S 1514, 1
   GetPduData            
   GetUserData           
   GetState              
-  SetUserData           
   DisableCommunication  
   EnableCommunication   
   NetworkRelease        
@@ -147,8 +146,8 @@ CONST(Nm_ChannelConfigType, NM_CONST) Nm_ChannelConfig[2] = {  /* PRQA S 1514, 1
 #include "Nm_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Nm_NmFunctionTableType, NM_CONST) Nm_NmFunctionTable[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    GetLocalNodeIdentifier        GetNodeIdentifier        GetPduData        GetUserData        GetState        SetUserData        DisableCommunication        EnableCommunication        NetworkRelease        NetworkRequest        PassiveStartUp              Referable Keys */
-  { /*     0 */ CanNm_GetLocalNodeIdentifier, CanNm_GetNodeIdentifier, CanNm_GetPduData, CanNm_GetUserData, CanNm_GetState, CanNm_SetUserData, CanNm_DisableCommunication, CanNm_EnableCommunication, CanNm_NetworkRelease, CanNm_NetworkRequest, CanNm_PassiveStartUp }   /* [CanNm] */
+    /* Index    GetLocalNodeIdentifier        GetNodeIdentifier        GetPduData        GetUserData        GetState        DisableCommunication        EnableCommunication        NetworkRelease        NetworkRequest        PassiveStartUp              Referable Keys */
+  { /*     0 */ CanNm_GetLocalNodeIdentifier, CanNm_GetNodeIdentifier, CanNm_GetPduData, CanNm_GetUserData, CanNm_GetState, CanNm_DisableCommunication, CanNm_EnableCommunication, CanNm_NetworkRelease, CanNm_NetworkRequest, CanNm_PassiveStartUp }   /* [CanNm] */
 };
 #define NM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

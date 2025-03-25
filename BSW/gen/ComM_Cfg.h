@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2025-02-07 15:51:38
+ *   Generation Time: 2025-03-25 11:22:05
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -99,18 +99,18 @@
 #define COMM_MODE_LIMITATION                                            STD_OFF
 #define COMM_WAKEUP_INHIBITION                                          STD_OFF
 
-#define COMM_PNC_SUPPORT                                                STD_OFF
+#define COMM_PNC_SUPPORT                                                STD_ON
 #define COMM_PNC_ACTIVE_COORD                                           STD_OFF
 #define COMM_PNC_PS_TIMER                                               0u
-#define COMM_ACTIVE_PNC                                                 0u
+#define COMM_ACTIVE_PNC                                                 3u
 #define COMM_PNC_EXTENDED_FUNCTIONALITY_ENABLED                         STD_OFF
 #define COMM_PNC_TO_CHANNEL_ROUTING_LIMITATION_ENABLED                  STD_OFF
 #define COMM_PNC_PASSIVE_GW_SUPPORT                                     STD_OFF
 #define COMM_PNC_EXISTS_COORD_PNC_WITH_GW_PASSIVE_AND_MANAGED_CHANNELS  STD_OFF
 #define COMM_PNC_EXISTS_GATEWAY_TYPE_ACTIVE                             STD_OFF
 #define COMM_PNC_EXISTS_GATEWAY_TYPE_NONE                               STD_OFF
-#define COMM_PNC_SIGNAL_LENGTH                                          0u
-#define COMM_PNC_MAX_NUMBER_OF_EIRA_RX                                  0u
+#define COMM_PNC_SIGNAL_LENGTH                                          6u
+#define COMM_PNC_MAX_NUMBER_OF_EIRA_RX                                  1u
 #define COMM_PNC_CHECK_ENABLED_AT_RUNTIME                               STD_OFF
 #define COMM_PNC_0_VECTOR_AVOIDANCE                                     STD_OFF
 
@@ -122,10 +122,10 @@
 #define COMM_EXISTS_ONLY_NONE_NMTYPEOFCHANNEL                           STD_OFF
 
 #define COMM_FULL_COMM_REQUEST_NOTIF                                    STD_OFF
-#define COMM_MAX_NUMBER_OF_USERS                                        4u
+#define COMM_MAX_NUMBER_OF_USERS                                        7u
 #define COMM_DCM_INDICATION                                             STD_ON
 #define COMM_USERMODENOTIFUNC_PNC_USER_ONLY                             STD_ON
-#define COMM_EXISTS_USER_WITH_SINGLE_PNC                                STD_OFF
+#define COMM_EXISTS_USER_WITH_SINGLE_PNC                                STD_ON
 
 #define COMM_SYNCHRONOUS_WAKE_UP                                        STD_ON
 #define COMM_EXTENDED_RAM_CHECK                                         STD_OFF
@@ -149,6 +149,9 @@
 #define ComMConf_ComMUser_CN_LIN00_984dfd9e            3u 
 #define ComMConf_ComMUser_CN_TC37X_VCU_CAN00_b1b4f272  1u 
 #define ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c  2u 
+#define ComMConf_ComMUser_ComMUser_PNC24               4u 
+#define ComMConf_ComMUser_ComMUser_PNC26               5u 
+#define ComMConf_ComMUser_ComMUser_PNC31               6u 
 
 
 /* -----------------------------------------------------------------------------
@@ -165,6 +168,9 @@
     &&&~ PNC HANDLES
  ----------------------------------------------------------------------------- */
 
+#define ComMConf_ComMPnc_ComMPnc_24 24u 
+#define ComMConf_ComMPnc_ComMPnc_26 26u 
+#define ComMConf_ComMPnc_ComMPnc_31 31u 
 
 
 /**********************************************************************************************************************
@@ -177,10 +183,10 @@
   \{
 */ 
 #define COMM_ACTIVECOMMODE                                                                          STD_ON
-#define COMM_ACTIVEPNCCOMMODE                                                                       STD_OFF  /**< Deactivateable: 'ComM_ActivePncComMode' Reason: 'PNC Support is disabled' */
+#define COMM_ACTIVEPNCCOMMODE                                                                       STD_ON
 #define COMM_BUSCOMMODEREQ                                                                          STD_ON
 #define COMM_BUSCOMMODEREQFRSHUTDOWN                                                                STD_OFF  /**< Deactivateable: 'ComM_BusComModeReqFrShutdown' Reason: 'Fr support is not present' */
-#define COMM_BUSPNCCOMMODEREQ                                                                       STD_OFF  /**< Deactivateable: 'ComM_BusPncComModeReq' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
+#define COMM_BUSPNCCOMMODEREQ                                                                       STD_ON
 #define COMM_BUSSLEEPMODEINDICATED                                                                  STD_OFF  /**< Deactivateable: 'ComM_BusSleepModeIndicated' Reason: 'NM variant LINSLAVE is not present' */
 #define COMM_BUSSMSTATE                                                                             STD_ON
 #define COMM_CHANNEL                                                                                STD_ON
@@ -201,23 +207,23 @@
 #define COMM_NMTYPEOFCHANNEL                                                                        STD_ON
 #define COMM_PARTITIONCONFIGIDXOFCHANNEL                                                            STD_ON
 #define COMM_PASSIVEORLINSLAVEOFCHANNEL                                                             STD_OFF  /**< Deactivateable: 'ComM_Channel.PassiveOrLinSlave' Reason: 'the value of ComM_PassiveOrLinSlaveOfChannel is always 'false' due to this, the array is deactivated.' */
-#define COMM_PNCNMREQUESTOFCHANNEL                                                                  STD_OFF  /**< Deactivateable: 'ComM_Channel.PncNmRequest' Reason: 'PNC Support is disabled' */
+#define COMM_PNCNMREQUESTOFCHANNEL                                                                  STD_OFF  /**< Deactivateable: 'ComM_Channel.PncNmRequest' Reason: 'the value of ComM_PncNmRequestOfChannel is always 'false' due to this, the array is deactivated.' */
 #define COMM_REQUESTBUSSMMODEAPIOFCHANNEL                                                           STD_ON
 #define COMM_RESETAFTERFORCINGNOCOMMOFCHANNEL                                                       STD_OFF  /**< Deactivateable: 'ComM_Channel.ResetAfterForcingNoComm' Reason: 'the value of ComM_ResetAfterForcingNoCommOfChannel is always 'false' due to this, the array is deactivated.' */
 #define COMM_SILENTSUPPORTOFCHANNEL                                                                 STD_ON
 #define COMM_WAKEUPSTATEOFCHANNEL                                                                   STD_ON
 #define COMM_CHANNELPB                                                                              STD_ON
-#define COMM_PNCPBINDENDIDXOFCHANNELPB                                                              STD_OFF  /**< Deactivateable: 'ComM_ChannelPb.PncPbIndEndIdx' Reason: 'the optional indirection is deactivated because PncPbIndUsedOfChannelPb is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define COMM_PNCPBINDSTARTIDXOFCHANNELPB                                                            STD_OFF  /**< Deactivateable: 'ComM_ChannelPb.PncPbIndStartIdx' Reason: 'the optional indirection is deactivated because PncPbIndUsedOfChannelPb is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define COMM_PNCPBINDUSEDOFCHANNELPB                                                                STD_OFF  /**< Deactivateable: 'ComM_ChannelPb.PncPbIndUsed' Reason: 'the optional indirection is deactivated because PncPbIndUsedOfChannelPb is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define COMM_PNCPBINDENDIDXOFCHANNELPB                                                              STD_ON
+#define COMM_PNCPBINDSTARTIDXOFCHANNELPB                                                            STD_ON
+#define COMM_PNCPBINDUSEDOFCHANNELPB                                                                STD_ON
 #define COMM_USERREQFULLCOMENDIDXOFCHANNELPB                                                        STD_ON
 #define COMM_USERREQFULLCOMSTARTIDXOFCHANNELPB                                                      STD_ON
 #define COMM_USERREQFULLCOMUSEDOFCHANNELPB                                                          STD_ON
 #define COMM_COMALLOWED                                                                             STD_ON
 #define COMM_DCMREQUESTACTIVE                                                                       STD_ON
 #define COMM_ECUMWAKEUPINDICATED                                                                    STD_ON
-#define COMM_EIRATXSIGNALINDIRECTION                                                                STD_OFF  /**< Deactivateable: 'ComM_EiraTxSignalIndirection' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define COMM_SYMBOLICNAMEVALUEOFEIRATXSIGNALINDIRECTION                                             STD_OFF  /**< Deactivateable: 'ComM_EiraTxSignalIndirection.SymbolicNameValue' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
+#define COMM_EIRATXSIGNALINDIRECTION                                                                STD_ON
+#define COMM_SYMBOLICNAMEVALUEOFEIRATXSIGNALINDIRECTION                                             STD_ON
 #define COMM_FINALMAGICNUMBER                                                                       STD_OFF  /**< Deactivateable: 'ComM_FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
 #define COMM_FRSHUTDOWN                                                                             STD_OFF  /**< Deactivateable: 'ComM_FrShutdown' Reason: 'Fr support is not present' */
 #define COMM_FULLCOMREQUESTERS                                                                      STD_OFF  /**< Deactivateable: 'ComM_FullComRequesters' Reason: 'Deactivated because no channel had ComMFullCommRequestNoficiation enabled' */
@@ -233,80 +239,94 @@
 #define COMM_PARTITIONIDENTIFIERS                                                                   STD_ON
 #define COMM_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                             STD_ON
 #define COMM_PARTITIONSNVOFPARTITIONIDENTIFIERS                                                     STD_ON
-#define COMM_PNC                                                                                    STD_OFF  /**< Deactivateable: 'ComM_Pnc' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define COMM_CLEARMASKOFPNC                                                                         STD_OFF  /**< Deactivateable: 'ComM_Pnc.ClearMask' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_COORDINATEDOFPNC                                                                       STD_OFF  /**< Deactivateable: 'ComM_Pnc.Coordinated' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCIDOFPNC                                                                             STD_OFF  /**< Deactivateable: 'ComM_Pnc.PncId' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_SETMASKOFPNC                                                                           STD_OFF  /**< Deactivateable: 'ComM_Pnc.SetMask' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_SYSTEMUSEROFPNC                                                                        STD_OFF  /**< Deactivateable: 'ComM_Pnc.SystemUser' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_WAKEUPENABLEDOFPNC                                                                     STD_OFF  /**< Deactivateable: 'ComM_Pnc.WakeupEnabled' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCCHANNELMAPPING                                                                      STD_OFF  /**< Deactivateable: 'ComM_PncChannelMapping' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCPSLEEPTIMER                                                                         STD_OFF  /**< Deactivateable: 'ComM_PncPSleepTimer' Reason: 'PNC Support is disabled' */
-#define COMM_PNCPB                                                                                  STD_OFF  /**< Deactivateable: 'ComM_PncPb' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define COMM_PNCCHANNELMAPPINGENDIDXOFPNCPB                                                         STD_OFF  /**< Deactivateable: 'ComM_PncPb.PncChannelMappingEndIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCCHANNELMAPPINGSTARTIDXOFPNCPB                                                       STD_OFF  /**< Deactivateable: 'ComM_PncPb.PncChannelMappingStartIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCCHANNELMAPPINGUSEDOFPNCPB                                                           STD_OFF  /**< Deactivateable: 'ComM_PncPb.PncChannelMappingUsed' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCSIGNALINDENDIDXOFPNCPB                                                              STD_OFF  /**< Deactivateable: 'ComM_PncPb.PncSignalIndEndIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCSIGNALINDSTARTIDXOFPNCPB                                                            STD_OFF  /**< Deactivateable: 'ComM_PncPb.PncSignalIndStartIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCSIGNALINDUSEDOFPNCPB                                                                STD_OFF  /**< Deactivateable: 'ComM_PncPb.PncSignalIndUsed' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_SIGNALBYTEINDEXOFPNCPB                                                                 STD_OFF  /**< Deactivateable: 'ComM_PncPb.SignalByteIndex' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_USERREQPNCFULLCOMENDIDXOFPNCPB                                                         STD_OFF  /**< Deactivateable: 'ComM_PncPb.UserReqPncFullComEndIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_USERREQPNCFULLCOMSTARTIDXOFPNCPB                                                       STD_OFF  /**< Deactivateable: 'ComM_PncPb.UserReqPncFullComStartIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCPBIND                                                                               STD_OFF  /**< Deactivateable: 'ComM_PncPbInd' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCSIGNAL                                                                              STD_OFF  /**< Deactivateable: 'ComM_PncSignal' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define COMM_BUSTYPEIDOFPNCSIGNAL                                                                   STD_OFF  /**< Deactivateable: 'ComM_PncSignal.BusTypeId' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_CHANNELIDXOFPNCSIGNAL                                                                  STD_OFF  /**< Deactivateable: 'ComM_PncSignal.ChannelIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_CHANNELUSEDOFPNCSIGNAL                                                                 STD_OFF  /**< Deactivateable: 'ComM_PncSignal.ChannelUsed' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCSIGNALVALUESENDIDXOFPNCSIGNAL                                                       STD_OFF  /**< Deactivateable: 'ComM_PncSignal.PncSignalValuesEndIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCSIGNALVALUESSTARTIDXOFPNCSIGNAL                                                     STD_OFF  /**< Deactivateable: 'ComM_PncSignal.PncSignalValuesStartIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCSIGNALVALUESUSEDOFPNCSIGNAL                                                         STD_OFF  /**< Deactivateable: 'ComM_PncSignal.PncSignalValuesUsed' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_TYPEOFPNCSIGNAL                                                                        STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCSIGNALIND                                                                           STD_OFF  /**< Deactivateable: 'ComM_PncSignalInd' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCSIGNALVALUES                                                                        STD_OFF  /**< Deactivateable: 'ComM_PncSignalValues' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCTOCHANNELROUTINGSTATE                                                               STD_OFF  /**< Deactivateable: 'ComM_PncToChannelRoutingState' Reason: 'PNC Support is disabled' */
+#define COMM_PNC                                                                                    STD_ON
+#define COMM_CLEARMASKOFPNC                                                                         STD_ON
+#define COMM_COORDINATEDOFPNC                                                                       STD_OFF  /**< Deactivateable: 'ComM_Pnc.Coordinated' Reason: 'the value of ComM_CoordinatedOfPnc is always 'false' due to this, the array is deactivated.' */
+#define COMM_PNCIDOFPNC                                                                             STD_ON
+#define COMM_SETMASKOFPNC                                                                           STD_ON
+#define COMM_SYSTEMUSEROFPNC                                                                        STD_OFF  /**< Deactivateable: 'ComM_Pnc.SystemUser' Reason: 'the value of ComM_SystemUserOfPnc is always '65535' due to this, the array is deactivated.' */
+#define COMM_WAKEUPENABLEDOFPNC                                                                     STD_OFF  /**< Deactivateable: 'ComM_Pnc.WakeupEnabled' Reason: 'the value of ComM_WakeupEnabledOfPnc is always 'false' due to this, the array is deactivated.' */
+#define COMM_PNCCHANNELMAPPING                                                                      STD_ON
+#define COMM_PNCPSLEEPTIMER                                                                         STD_ON
+#define COMM_PNCPB                                                                                  STD_ON
+#define COMM_PNCCHANNELMAPPINGENDIDXOFPNCPB                                                         STD_ON
+#define COMM_PNCCHANNELMAPPINGSTARTIDXOFPNCPB                                                       STD_ON
+#define COMM_PNCCHANNELMAPPINGUSEDOFPNCPB                                                           STD_ON
+#define COMM_PNCSIGNALINDENDIDXOFPNCPB                                                              STD_ON
+#define COMM_PNCSIGNALINDSTARTIDXOFPNCPB                                                            STD_ON
+#define COMM_PNCSIGNALINDUSEDOFPNCPB                                                                STD_ON
+#define COMM_SIGNALBYTEINDEXOFPNCPB                                                                 STD_ON
+#define COMM_USERREQPNCFULLCOMENDIDXOFPNCPB                                                         STD_ON
+#define COMM_USERREQPNCFULLCOMSTARTIDXOFPNCPB                                                       STD_ON
+#define COMM_PNCPBIND                                                                               STD_ON
+#define COMM_PNCSIGNAL                                                                              STD_ON
+#define COMM_BUSTYPEIDOFPNCSIGNAL                                                                   STD_ON
+#define COMM_CHANNELIDXOFPNCSIGNAL                                                                  STD_ON
+#define COMM_CHANNELUSEDOFPNCSIGNAL                                                                 STD_ON
+#define COMM_PNCSIGNALVALUESENDIDXOFPNCSIGNAL                                                       STD_ON
+#define COMM_PNCSIGNALVALUESSTARTIDXOFPNCSIGNAL                                                     STD_ON
+#define COMM_PNCSIGNALVALUESUSEDOFPNCSIGNAL                                                         STD_ON
+#define COMM_TYPEOFPNCSIGNAL                                                                        STD_ON
+#define COMM_PNCSIGNALIND                                                                           STD_ON
+#define COMM_PNCSIGNALVALUES                                                                        STD_ON
+#define COMM_PNCTOCHANNELROUTINGSTATE                                                               STD_ON
 #define COMM_POSTINITIALIZED                                                                        STD_ON
 #define COMM_RESETREQUIRED                                                                          STD_OFF  /**< Deactivateable: 'ComM_ResetRequired' Reason: 'NoResetAfterForcingNoCom is not present' */
 #define COMM_SIMULATEDSMMODE                                                                        STD_OFF  /**< Deactivateable: 'ComM_SimulatedSmMode' Reason: 'No channel of type 'internal' is present' */
 #define COMM_SIZEOFACTIVECOMMODE                                                                    STD_ON
+#define COMM_SIZEOFACTIVEPNCCOMMODE                                                                 STD_ON
 #define COMM_SIZEOFBUSCOMMODEREQ                                                                    STD_ON
+#define COMM_SIZEOFBUSPNCCOMMODEREQ                                                                 STD_ON
 #define COMM_SIZEOFBUSSMSTATE                                                                       STD_ON
 #define COMM_SIZEOFCHANNEL                                                                          STD_ON
 #define COMM_SIZEOFCHANNELPB                                                                        STD_ON
 #define COMM_SIZEOFCOMALLOWED                                                                       STD_ON
 #define COMM_SIZEOFDCMREQUESTACTIVE                                                                 STD_ON
 #define COMM_SIZEOFECUMWAKEUPINDICATED                                                              STD_ON
+#define COMM_SIZEOFEIRATXSIGNALINDIRECTION                                                          STD_ON
 #define COMM_SIZEOFMINFULLCOMMODETIMER                                                              STD_ON
 #define COMM_SIZEOFNMLIGHTTIMER                                                                     STD_ON
 #define COMM_SIZEOFNMSTARTUPINDICATED                                                               STD_ON
 #define COMM_SIZEOFPARTITIONIDENTIFIERS                                                             STD_ON
+#define COMM_SIZEOFPNC                                                                              STD_ON
+#define COMM_SIZEOFPNCCHANNELMAPPING                                                                STD_ON
+#define COMM_SIZEOFPNCPSLEEPTIMER                                                                   STD_ON
+#define COMM_SIZEOFPNCPB                                                                            STD_ON
+#define COMM_SIZEOFPNCPBIND                                                                         STD_ON
+#define COMM_SIZEOFPNCSIGNAL                                                                        STD_ON
+#define COMM_SIZEOFPNCSIGNALIND                                                                     STD_ON
+#define COMM_SIZEOFPNCSIGNALVALUES                                                                  STD_ON
+#define COMM_SIZEOFPNCTOCHANNELROUTINGSTATE                                                         STD_ON
 #define COMM_SIZEOFPOSTINITIALIZED                                                                  STD_ON
 #define COMM_SIZEOFUSER                                                                             STD_ON
 #define COMM_SIZEOFUSERBYTEMASK                                                                     STD_ON
+#define COMM_SIZEOFUSERPNCBYTEMASK                                                                  STD_ON
 #define COMM_SIZEOFUSERREQFULLCOM                                                                   STD_ON
+#define COMM_SIZEOFUSERREQPNCFULLCOM                                                                STD_ON
 #define COMM_STATECHANGE                                                                            STD_OFF  /**< Deactivateable: 'ComM_StateChange' Reason: 'No user mode Notification configured.' */
 #define COMM_USER                                                                                   STD_ON
 #define COMM_PNCUSEROFUSER                                                                          STD_ON
 #define COMM_USERBYTEMASKENDIDXOFUSER                                                               STD_ON
 #define COMM_USERBYTEMASKSTARTIDXOFUSER                                                             STD_ON
 #define COMM_USERBYTEMASKUSEDOFUSER                                                                 STD_ON
-#define COMM_USERPNCBYTEMASKENDIDXOFUSER                                                            STD_OFF  /**< Deactivateable: 'ComM_User.UserPncByteMaskEndIdx' Reason: 'the optional indirection is deactivated because UserPncByteMaskUsedOfUser is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define COMM_USERPNCBYTEMASKLENGTHOFUSER                                                            STD_OFF  /**< Deactivateable: 'ComM_User.UserPncByteMaskLength' Reason: 'the optional indirection is deactivated because UserPncByteMaskUsedOfUser is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define COMM_USERPNCBYTEMASKSTARTIDXOFUSER                                                          STD_OFF  /**< Deactivateable: 'ComM_User.UserPncByteMaskStartIdx' Reason: 'the optional indirection is deactivated because UserPncByteMaskUsedOfUser is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define COMM_USERPNCBYTEMASKUSEDOFUSER                                                              STD_OFF  /**< Deactivateable: 'ComM_User.UserPncByteMaskUsed' Reason: 'the optional indirection is deactivated because UserPncByteMaskUsedOfUser is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define COMM_USERPNCBYTEMASKENDIDXOFUSER                                                            STD_ON
+#define COMM_USERPNCBYTEMASKLENGTHOFUSER                                                            STD_ON
+#define COMM_USERPNCBYTEMASKSTARTIDXOFUSER                                                          STD_ON
+#define COMM_USERPNCBYTEMASKUSEDOFUSER                                                              STD_ON
 #define COMM_USERBYTEMASK                                                                           STD_ON
 #define COMM_CHANNELOFUSERBYTEMASK                                                                  STD_ON
 #define COMM_CLEARMASKOFUSERBYTEMASK                                                                STD_ON
 #define COMM_SETMASKOFUSERBYTEMASK                                                                  STD_ON
 #define COMM_USERREQFULLCOMIDXOFUSERBYTEMASK                                                        STD_ON
 #define COMM_USERMODENOTIFUNC                                                                       STD_OFF  /**< Deactivateable: 'ComM_UserModeNotiFunc' Reason: 'No user mode Notification configured.' */
-#define COMM_USERPNCBYTEMASK                                                                        STD_OFF  /**< Deactivateable: 'ComM_UserPncByteMask' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define COMM_CLEARMASKOFUSERPNCBYTEMASK                                                             STD_OFF  /**< Deactivateable: 'ComM_UserPncByteMask.ClearMask' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCIDOFUSERPNCBYTEMASK                                                                 STD_OFF  /**< Deactivateable: 'ComM_UserPncByteMask.PncID' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_PNCIDXOFUSERPNCBYTEMASK                                                                STD_OFF  /**< Deactivateable: 'ComM_UserPncByteMask.PncIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_SETMASKOFUSERPNCBYTEMASK                                                               STD_OFF  /**< Deactivateable: 'ComM_UserPncByteMask.SetMask' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_USERREQPNCFULLCOMIDXOFUSERPNCBYTEMASK                                                  STD_OFF  /**< Deactivateable: 'ComM_UserPncByteMask.UserReqPncFullComIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
+#define COMM_USERPNCBYTEMASK                                                                        STD_ON
+#define COMM_CLEARMASKOFUSERPNCBYTEMASK                                                             STD_ON
+#define COMM_PNCIDOFUSERPNCBYTEMASK                                                                 STD_ON
+#define COMM_PNCIDXOFUSERPNCBYTEMASK                                                                STD_ON
+#define COMM_SETMASKOFUSERPNCBYTEMASK                                                               STD_ON
+#define COMM_USERREQPNCFULLCOMIDXOFUSERPNCBYTEMASK                                                  STD_ON
 #define COMM_USERREQFULLCOM                                                                         STD_ON
-#define COMM_USERREQPNCFULLCOM                                                                      STD_OFF  /**< Deactivateable: 'ComM_UserReqPncFullCom' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
+#define COMM_USERREQPNCFULLCOM                                                                      STD_ON
 #define COMM_PCCONFIG                                                                               STD_ON
 #define COMM_FINALMAGICNUMBEROFPCCONFIG                                                             STD_OFF  /**< Deactivateable: 'ComM_PCConfig.FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
 #define COMM_INITDATAHASHCODEOFPCCONFIG                                                             STD_OFF  /**< Deactivateable: 'ComM_PCConfig.InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
@@ -315,37 +335,65 @@
 #define COMM_SIZEOFPARTITIONIDENTIFIERSOFPCCONFIG                                                   STD_ON
 #define COMM_PCPARTITIONCONFIG                                                                      STD_ON
 #define COMM_ACTIVECOMMODEOFPCPARTITIONCONFIG                                                       STD_ON
+#define COMM_ACTIVEPNCCOMMODEOFPCPARTITIONCONFIG                                                    STD_ON
 #define COMM_BUSCOMMODEREQOFPCPARTITIONCONFIG                                                       STD_ON
+#define COMM_BUSPNCCOMMODEREQOFPCPARTITIONCONFIG                                                    STD_ON
 #define COMM_BUSSMSTATEOFPCPARTITIONCONFIG                                                          STD_ON
 #define COMM_CHANNELOFPCPARTITIONCONFIG                                                             STD_ON
 #define COMM_CHANNELPBOFPCPARTITIONCONFIG                                                           STD_ON
 #define COMM_COMALLOWEDOFPCPARTITIONCONFIG                                                          STD_ON
 #define COMM_DCMREQUESTACTIVEOFPCPARTITIONCONFIG                                                    STD_ON
 #define COMM_ECUMWAKEUPINDICATEDOFPCPARTITIONCONFIG                                                 STD_ON
+#define COMM_EIRATXSIGNALINDIRECTIONOFPCPARTITIONCONFIG                                             STD_ON
 #define COMM_INHIBITIONOFPCPARTITIONCONFIG                                                          STD_ON
 #define COMM_INITSTATUSOFPCPARTITIONCONFIG                                                          STD_ON
 #define COMM_MINFULLCOMMODETIMEROFPCPARTITIONCONFIG                                                 STD_ON
 #define COMM_NMLIGHTTIMEROFPCPARTITIONCONFIG                                                        STD_ON
 #define COMM_NMSTARTUPINDICATEDOFPCPARTITIONCONFIG                                                  STD_ON
+#define COMM_PNCCHANNELMAPPINGOFPCPARTITIONCONFIG                                                   STD_ON
+#define COMM_PNCOFPCPARTITIONCONFIG                                                                 STD_ON
+#define COMM_PNCPSLEEPTIMEROFPCPARTITIONCONFIG                                                      STD_ON
+#define COMM_PNCPBINDOFPCPARTITIONCONFIG                                                            STD_ON
+#define COMM_PNCPBOFPCPARTITIONCONFIG                                                               STD_ON
+#define COMM_PNCSIGNALINDOFPCPARTITIONCONFIG                                                        STD_ON
+#define COMM_PNCSIGNALOFPCPARTITIONCONFIG                                                           STD_ON
+#define COMM_PNCSIGNALVALUESOFPCPARTITIONCONFIG                                                     STD_ON
+#define COMM_PNCTOCHANNELROUTINGSTATEOFPCPARTITIONCONFIG                                            STD_ON
 #define COMM_POSTINITIALIZEDOFPCPARTITIONCONFIG                                                     STD_ON
 #define COMM_SIZEOFACTIVECOMMODEOFPCPARTITIONCONFIG                                                 STD_ON
+#define COMM_SIZEOFACTIVEPNCCOMMODEOFPCPARTITIONCONFIG                                              STD_ON
 #define COMM_SIZEOFBUSCOMMODEREQOFPCPARTITIONCONFIG                                                 STD_ON
+#define COMM_SIZEOFBUSPNCCOMMODEREQOFPCPARTITIONCONFIG                                              STD_ON
 #define COMM_SIZEOFBUSSMSTATEOFPCPARTITIONCONFIG                                                    STD_ON
 #define COMM_SIZEOFCHANNELOFPCPARTITIONCONFIG                                                       STD_ON
 #define COMM_SIZEOFCHANNELPBOFPCPARTITIONCONFIG                                                     STD_ON
 #define COMM_SIZEOFCOMALLOWEDOFPCPARTITIONCONFIG                                                    STD_ON
 #define COMM_SIZEOFDCMREQUESTACTIVEOFPCPARTITIONCONFIG                                              STD_ON
 #define COMM_SIZEOFECUMWAKEUPINDICATEDOFPCPARTITIONCONFIG                                           STD_ON
+#define COMM_SIZEOFEIRATXSIGNALINDIRECTIONOFPCPARTITIONCONFIG                                       STD_ON
 #define COMM_SIZEOFMINFULLCOMMODETIMEROFPCPARTITIONCONFIG                                           STD_ON
 #define COMM_SIZEOFNMLIGHTTIMEROFPCPARTITIONCONFIG                                                  STD_ON
 #define COMM_SIZEOFNMSTARTUPINDICATEDOFPCPARTITIONCONFIG                                            STD_ON
+#define COMM_SIZEOFPNCCHANNELMAPPINGOFPCPARTITIONCONFIG                                             STD_ON
+#define COMM_SIZEOFPNCOFPCPARTITIONCONFIG                                                           STD_ON
+#define COMM_SIZEOFPNCPSLEEPTIMEROFPCPARTITIONCONFIG                                                STD_ON
+#define COMM_SIZEOFPNCPBINDOFPCPARTITIONCONFIG                                                      STD_ON
+#define COMM_SIZEOFPNCPBOFPCPARTITIONCONFIG                                                         STD_ON
+#define COMM_SIZEOFPNCSIGNALINDOFPCPARTITIONCONFIG                                                  STD_ON
+#define COMM_SIZEOFPNCSIGNALOFPCPARTITIONCONFIG                                                     STD_ON
+#define COMM_SIZEOFPNCSIGNALVALUESOFPCPARTITIONCONFIG                                               STD_ON
+#define COMM_SIZEOFPNCTOCHANNELROUTINGSTATEOFPCPARTITIONCONFIG                                      STD_ON
 #define COMM_SIZEOFPOSTINITIALIZEDOFPCPARTITIONCONFIG                                               STD_ON
 #define COMM_SIZEOFUSERBYTEMASKOFPCPARTITIONCONFIG                                                  STD_ON
 #define COMM_SIZEOFUSEROFPCPARTITIONCONFIG                                                          STD_ON
+#define COMM_SIZEOFUSERPNCBYTEMASKOFPCPARTITIONCONFIG                                               STD_ON
 #define COMM_SIZEOFUSERREQFULLCOMOFPCPARTITIONCONFIG                                                STD_ON
+#define COMM_SIZEOFUSERREQPNCFULLCOMOFPCPARTITIONCONFIG                                             STD_ON
 #define COMM_USERBYTEMASKOFPCPARTITIONCONFIG                                                        STD_ON
 #define COMM_USEROFPCPARTITIONCONFIG                                                                STD_ON
+#define COMM_USERPNCBYTEMASKOFPCPARTITIONCONFIG                                                     STD_ON
 #define COMM_USERREQFULLCOMOFPCPARTITIONCONFIG                                                      STD_ON
+#define COMM_USERREQPNCFULLCOMOFPCPARTITIONCONFIG                                                   STD_ON
 /** 
   \}
 */ 
@@ -357,7 +405,11 @@
 */ 
 #define COMM_MIN_MINFULLCOMMODETIMER                                                                0u
 #define COMM_MIN_NMLIGHTTIMER                                                                       0u
+#define COMM_MIN_PNCPSLEEPTIMER                                                                     0u
+#define COMM_MIN_PNCSIGNALVALUES                                                                    0u
+#define COMM_MIN_PNCTOCHANNELROUTINGSTATE                                                           0u
 #define COMM_MIN_USERREQFULLCOM                                                                     0u
+#define COMM_MIN_USERREQPNCFULLCOM                                                                  0u
 /** 
   \}
 */ 
@@ -369,7 +421,11 @@
 */ 
 #define COMM_MAX_MINFULLCOMMODETIMER                                                                65535u
 #define COMM_MAX_NMLIGHTTIMER                                                                       65535u
+#define COMM_MAX_PNCPSLEEPTIMER                                                                     65535u
+#define COMM_MAX_PNCSIGNALVALUES                                                                    255u
+#define COMM_MAX_PNCTOCHANNELROUTINGSTATE                                                           255u
 #define COMM_MAX_USERREQFULLCOM                                                                     255u
+#define COMM_MAX_USERREQPNCFULLCOM                                                                  255u
 /** 
   \}
 */ 
@@ -379,10 +435,21 @@
   \brief  These defines are used to indicate unused indexes in data relations.
   \{
 */ 
+#define COMM_NO_PNCPBINDENDIDXOFCHANNELPB                                                           255u
+#define COMM_NO_PNCPBINDSTARTIDXOFCHANNELPB                                                         255u
 #define COMM_NO_USERREQFULLCOMENDIDXOFCHANNELPB                                                     255u
 #define COMM_NO_USERREQFULLCOMSTARTIDXOFCHANNELPB                                                   255u
+#define COMM_NO_PNCCHANNELMAPPINGENDIDXOFPNCPB                                                      255u
+#define COMM_NO_PNCCHANNELMAPPINGSTARTIDXOFPNCPB                                                    255u
+#define COMM_NO_PNCSIGNALINDENDIDXOFPNCPB                                                           255u
+#define COMM_NO_PNCSIGNALINDSTARTIDXOFPNCPB                                                         255u
+#define COMM_NO_CHANNELIDXOFPNCSIGNAL                                                               255u
+#define COMM_NO_PNCSIGNALVALUESENDIDXOFPNCSIGNAL                                                    255u
+#define COMM_NO_PNCSIGNALVALUESSTARTIDXOFPNCSIGNAL                                                  255u
 #define COMM_NO_USERBYTEMASKENDIDXOFUSER                                                            255u
 #define COMM_NO_USERBYTEMASKSTARTIDXOFUSER                                                          255u
+#define COMM_NO_USERPNCBYTEMASKENDIDXOFUSER                                                         255u
+#define COMM_NO_USERPNCBYTEMASKSTARTIDXOFUSER                                                       255u
 /** 
   \}
 */ 
@@ -398,10 +465,10 @@
 #define COMM_EXISTS_LIGHT_NMTYPEOFCHANNEL                                                           STD_ON
 #define COMM_EXISTS_NONE_NMTYPEOFCHANNEL                                                            STD_OFF
 #define COMM_EXISTS_LINSLAVE_NMTYPEOFCHANNEL                                                        STD_OFF
-#define COMM_EXISTS_EIRA_RX_TYPEOFPNCSIGNAL                                                         STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_EXISTS_EIRA_TX_TYPEOFPNCSIGNAL                                                         STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_EXISTS_ERA_RX_TYPEOFPNCSIGNAL                                                          STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define COMM_EXISTS_NOT_USED_IN_THIS_VARIANT_TYPEOFPNCSIGNAL                                        STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
+#define COMM_EXISTS_EIRA_RX_TYPEOFPNCSIGNAL                                                         STD_ON
+#define COMM_EXISTS_EIRA_TX_TYPEOFPNCSIGNAL                                                         STD_ON
+#define COMM_EXISTS_ERA_RX_TYPEOFPNCSIGNAL                                                          STD_OFF
+#define COMM_EXISTS_NOT_USED_IN_THIS_VARIANT_TYPEOFPNCSIGNAL                                        STD_OFF
 /** 
   \}
 */ 
@@ -413,6 +480,8 @@
 */ 
 #define COMM_FULL_NMTYPEOFCHANNEL                                                                   0x01u
 #define COMM_LIGHT_NMTYPEOFCHANNEL                                                                  0x03u
+#define COMM_EIRA_RX_TYPEOFPNCSIGNAL                                                                0x00u
+#define COMM_EIRA_TX_TYPEOFPNCSIGNAL                                                                0x01u
 /** 
   \}
 */ 
@@ -434,38 +503,87 @@
 #define COMM_ISDEF_REQUESTBUSSMMODEAPIOFCHANNEL                                                     STD_OFF
 #define COMM_ISDEF_SILENTSUPPORTOFCHANNEL                                                           STD_OFF
 #define COMM_ISDEF_WAKEUPSTATEOFCHANNEL                                                             STD_OFF
+#define COMM_ISDEF_PNCPBINDENDIDXOFCHANNELPB                                                        STD_OFF
+#define COMM_ISDEF_PNCPBINDSTARTIDXOFCHANNELPB                                                      STD_OFF
+#define COMM_ISDEF_PNCPBINDUSEDOFCHANNELPB                                                          STD_OFF
 #define COMM_ISDEF_USERREQFULLCOMENDIDXOFCHANNELPB                                                  STD_OFF
 #define COMM_ISDEF_USERREQFULLCOMSTARTIDXOFCHANNELPB                                                STD_OFF
 #define COMM_ISDEF_USERREQFULLCOMUSEDOFCHANNELPB                                                    STD_ON
+#define COMM_ISDEF_SYMBOLICNAMEVALUEOFEIRATXSIGNALINDIRECTION                                       STD_ON
 #define COMM_ISDEF_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                       STD_OFF
 #define COMM_ISDEF_PARTITIONSNVOFPARTITIONIDENTIFIERS                                               STD_OFF
+#define COMM_ISDEF_CLEARMASKOFPNC                                                                   STD_OFF
+#define COMM_ISDEF_PNCIDOFPNC                                                                       STD_OFF
+#define COMM_ISDEF_SETMASKOFPNC                                                                     STD_OFF
+#define COMM_ISDEF_PNCCHANNELMAPPING                                                                STD_ON
+#define COMM_ISDEF_PNCCHANNELMAPPINGENDIDXOFPNCPB                                                   STD_OFF
+#define COMM_ISDEF_PNCCHANNELMAPPINGSTARTIDXOFPNCPB                                                 STD_OFF
+#define COMM_ISDEF_PNCCHANNELMAPPINGUSEDOFPNCPB                                                     STD_ON
+#define COMM_ISDEF_PNCSIGNALINDENDIDXOFPNCPB                                                        STD_OFF
+#define COMM_ISDEF_PNCSIGNALINDSTARTIDXOFPNCPB                                                      STD_OFF
+#define COMM_ISDEF_PNCSIGNALINDUSEDOFPNCPB                                                          STD_ON
+#define COMM_ISDEF_SIGNALBYTEINDEXOFPNCPB                                                           STD_ON
+#define COMM_ISDEF_USERREQPNCFULLCOMENDIDXOFPNCPB                                                   STD_OFF
+#define COMM_ISDEF_USERREQPNCFULLCOMSTARTIDXOFPNCPB                                                 STD_OFF
+#define COMM_ISDEF_PNCPBIND                                                                         STD_OFF
+#define COMM_ISDEF_BUSTYPEIDOFPNCSIGNAL                                                             STD_ON
+#define COMM_ISDEF_CHANNELIDXOFPNCSIGNAL                                                            STD_OFF
+#define COMM_ISDEF_CHANNELUSEDOFPNCSIGNAL                                                           STD_OFF
+#define COMM_ISDEF_PNCSIGNALVALUESENDIDXOFPNCSIGNAL                                                 STD_OFF
+#define COMM_ISDEF_PNCSIGNALVALUESSTARTIDXOFPNCSIGNAL                                               STD_OFF
+#define COMM_ISDEF_PNCSIGNALVALUESUSEDOFPNCSIGNAL                                                   STD_ON
+#define COMM_ISDEF_TYPEOFPNCSIGNAL                                                                  STD_OFF
+#define COMM_ISDEF_PNCSIGNALIND                                                                     STD_ON
 #define COMM_ISDEF_PNCUSEROFUSER                                                                    STD_OFF
 #define COMM_ISDEF_USERBYTEMASKENDIDXOFUSER                                                         STD_OFF
 #define COMM_ISDEF_USERBYTEMASKSTARTIDXOFUSER                                                       STD_OFF
 #define COMM_ISDEF_USERBYTEMASKUSEDOFUSER                                                           STD_ON
+#define COMM_ISDEF_USERPNCBYTEMASKENDIDXOFUSER                                                      STD_OFF
+#define COMM_ISDEF_USERPNCBYTEMASKLENGTHOFUSER                                                      STD_OFF
+#define COMM_ISDEF_USERPNCBYTEMASKSTARTIDXOFUSER                                                    STD_OFF
+#define COMM_ISDEF_USERPNCBYTEMASKUSEDOFUSER                                                        STD_OFF
 #define COMM_ISDEF_CHANNELOFUSERBYTEMASK                                                            STD_OFF
-#define COMM_ISDEF_CLEARMASKOFUSERBYTEMASK                                                          STD_ON
-#define COMM_ISDEF_SETMASKOFUSERBYTEMASK                                                            STD_ON
+#define COMM_ISDEF_CLEARMASKOFUSERBYTEMASK                                                          STD_OFF
+#define COMM_ISDEF_SETMASKOFUSERBYTEMASK                                                            STD_OFF
 #define COMM_ISDEF_USERREQFULLCOMIDXOFUSERBYTEMASK                                                  STD_OFF
+#define COMM_ISDEF_CLEARMASKOFUSERPNCBYTEMASK                                                       STD_ON
+#define COMM_ISDEF_PNCIDOFUSERPNCBYTEMASK                                                           STD_OFF
+#define COMM_ISDEF_PNCIDXOFUSERPNCBYTEMASK                                                          STD_OFF
+#define COMM_ISDEF_SETMASKOFUSERPNCBYTEMASK                                                         STD_ON
+#define COMM_ISDEF_USERREQPNCFULLCOMIDXOFUSERPNCBYTEMASK                                            STD_OFF
 #define COMM_ISDEF_PCPARTITIONCONFIGOFPCCONFIG                                                      STD_ON
 #define COMM_ISDEF_PARTITIONIDENTIFIERSOFPCCONFIG                                                   STD_ON
 #define COMM_ISDEF_ACTIVECOMMODEOFPCPARTITIONCONFIG                                                 STD_ON
+#define COMM_ISDEF_ACTIVEPNCCOMMODEOFPCPARTITIONCONFIG                                              STD_ON
 #define COMM_ISDEF_BUSCOMMODEREQOFPCPARTITIONCONFIG                                                 STD_ON
+#define COMM_ISDEF_BUSPNCCOMMODEREQOFPCPARTITIONCONFIG                                              STD_ON
 #define COMM_ISDEF_BUSSMSTATEOFPCPARTITIONCONFIG                                                    STD_ON
 #define COMM_ISDEF_CHANNELOFPCPARTITIONCONFIG                                                       STD_ON
 #define COMM_ISDEF_CHANNELPBOFPCPARTITIONCONFIG                                                     STD_ON
 #define COMM_ISDEF_COMALLOWEDOFPCPARTITIONCONFIG                                                    STD_ON
 #define COMM_ISDEF_DCMREQUESTACTIVEOFPCPARTITIONCONFIG                                              STD_ON
 #define COMM_ISDEF_ECUMWAKEUPINDICATEDOFPCPARTITIONCONFIG                                           STD_ON
+#define COMM_ISDEF_EIRATXSIGNALINDIRECTIONOFPCPARTITIONCONFIG                                       STD_ON
 #define COMM_ISDEF_INHIBITIONOFPCPARTITIONCONFIG                                                    STD_ON
 #define COMM_ISDEF_INITSTATUSOFPCPARTITIONCONFIG                                                    STD_ON
 #define COMM_ISDEF_MINFULLCOMMODETIMEROFPCPARTITIONCONFIG                                           STD_ON
 #define COMM_ISDEF_NMLIGHTTIMEROFPCPARTITIONCONFIG                                                  STD_ON
 #define COMM_ISDEF_NMSTARTUPINDICATEDOFPCPARTITIONCONFIG                                            STD_ON
+#define COMM_ISDEF_PNCCHANNELMAPPINGOFPCPARTITIONCONFIG                                             STD_ON
+#define COMM_ISDEF_PNCOFPCPARTITIONCONFIG                                                           STD_ON
+#define COMM_ISDEF_PNCPSLEEPTIMEROFPCPARTITIONCONFIG                                                STD_ON
+#define COMM_ISDEF_PNCPBINDOFPCPARTITIONCONFIG                                                      STD_ON
+#define COMM_ISDEF_PNCPBOFPCPARTITIONCONFIG                                                         STD_ON
+#define COMM_ISDEF_PNCSIGNALINDOFPCPARTITIONCONFIG                                                  STD_ON
+#define COMM_ISDEF_PNCSIGNALOFPCPARTITIONCONFIG                                                     STD_ON
+#define COMM_ISDEF_PNCSIGNALVALUESOFPCPARTITIONCONFIG                                               STD_ON
+#define COMM_ISDEF_PNCTOCHANNELROUTINGSTATEOFPCPARTITIONCONFIG                                      STD_ON
 #define COMM_ISDEF_POSTINITIALIZEDOFPCPARTITIONCONFIG                                               STD_ON
 #define COMM_ISDEF_USERBYTEMASKOFPCPARTITIONCONFIG                                                  STD_ON
 #define COMM_ISDEF_USEROFPCPARTITIONCONFIG                                                          STD_ON
+#define COMM_ISDEF_USERPNCBYTEMASKOFPCPARTITIONCONFIG                                               STD_ON
 #define COMM_ISDEF_USERREQFULLCOMOFPCPARTITIONCONFIG                                                STD_ON
+#define COMM_ISDEF_USERREQPNCFULLCOMOFPCPARTITIONCONFIG                                             STD_ON
 /** 
   \}
 */ 
@@ -487,38 +605,87 @@
 #define COMM_EQ2_REQUESTBUSSMMODEAPIOFCHANNEL                                                       
 #define COMM_EQ2_SILENTSUPPORTOFCHANNEL                                                             
 #define COMM_EQ2_WAKEUPSTATEOFCHANNEL                                                               
+#define COMM_EQ2_PNCPBINDENDIDXOFCHANNELPB                                                          
+#define COMM_EQ2_PNCPBINDSTARTIDXOFCHANNELPB                                                        
+#define COMM_EQ2_PNCPBINDUSEDOFCHANNELPB                                                            
 #define COMM_EQ2_USERREQFULLCOMENDIDXOFCHANNELPB                                                    
 #define COMM_EQ2_USERREQFULLCOMSTARTIDXOFCHANNELPB                                                  
 #define COMM_EQ2_USERREQFULLCOMUSEDOFCHANNELPB                                                      TRUE
+#define COMM_EQ2_SYMBOLICNAMEVALUEOFEIRATXSIGNALINDIRECTION                                         ComConf_ComSignal_VCU_Tx_51Ch_NM_PNCData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_c1eb5e4b_Tx
 #define COMM_EQ2_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                         
 #define COMM_EQ2_PARTITIONSNVOFPARTITIONIDENTIFIERS                                                 
+#define COMM_EQ2_CLEARMASKOFPNC                                                                     
+#define COMM_EQ2_PNCIDOFPNC                                                                         
+#define COMM_EQ2_SETMASKOFPNC                                                                       
+#define COMM_EQ2_PNCCHANNELMAPPING                                                                  1u
+#define COMM_EQ2_PNCCHANNELMAPPINGENDIDXOFPNCPB                                                     
+#define COMM_EQ2_PNCCHANNELMAPPINGSTARTIDXOFPNCPB                                                   
+#define COMM_EQ2_PNCCHANNELMAPPINGUSEDOFPNCPB                                                       TRUE
+#define COMM_EQ2_PNCSIGNALINDENDIDXOFPNCPB                                                          
+#define COMM_EQ2_PNCSIGNALINDSTARTIDXOFPNCPB                                                        
+#define COMM_EQ2_PNCSIGNALINDUSEDOFPNCPB                                                            TRUE
+#define COMM_EQ2_SIGNALBYTEINDEXOFPNCPB                                                             1u
+#define COMM_EQ2_USERREQPNCFULLCOMENDIDXOFPNCPB                                                     
+#define COMM_EQ2_USERREQPNCFULLCOMSTARTIDXOFPNCPB                                                   
+#define COMM_EQ2_PNCPBIND                                                                           
+#define COMM_EQ2_BUSTYPEIDOFPNCSIGNAL                                                               0u
+#define COMM_EQ2_CHANNELIDXOFPNCSIGNAL                                                              
+#define COMM_EQ2_CHANNELUSEDOFPNCSIGNAL                                                             
+#define COMM_EQ2_PNCSIGNALVALUESENDIDXOFPNCSIGNAL                                                   
+#define COMM_EQ2_PNCSIGNALVALUESSTARTIDXOFPNCSIGNAL                                                 
+#define COMM_EQ2_PNCSIGNALVALUESUSEDOFPNCSIGNAL                                                     TRUE
+#define COMM_EQ2_TYPEOFPNCSIGNAL                                                                    
+#define COMM_EQ2_PNCSIGNALIND                                                                       1u
 #define COMM_EQ2_PNCUSEROFUSER                                                                      
 #define COMM_EQ2_USERBYTEMASKENDIDXOFUSER                                                           
 #define COMM_EQ2_USERBYTEMASKSTARTIDXOFUSER                                                         
 #define COMM_EQ2_USERBYTEMASKUSEDOFUSER                                                             TRUE
+#define COMM_EQ2_USERPNCBYTEMASKENDIDXOFUSER                                                        
+#define COMM_EQ2_USERPNCBYTEMASKLENGTHOFUSER                                                        
+#define COMM_EQ2_USERPNCBYTEMASKSTARTIDXOFUSER                                                      
+#define COMM_EQ2_USERPNCBYTEMASKUSEDOFUSER                                                          
 #define COMM_EQ2_CHANNELOFUSERBYTEMASK                                                              
-#define COMM_EQ2_CLEARMASKOFUSERBYTEMASK                                                            0xFEu
-#define COMM_EQ2_SETMASKOFUSERBYTEMASK                                                              0x01u
+#define COMM_EQ2_CLEARMASKOFUSERBYTEMASK                                                            
+#define COMM_EQ2_SETMASKOFUSERBYTEMASK                                                              
 #define COMM_EQ2_USERREQFULLCOMIDXOFUSERBYTEMASK                                                    
+#define COMM_EQ2_CLEARMASKOFUSERPNCBYTEMASK                                                         0xFEu
+#define COMM_EQ2_PNCIDOFUSERPNCBYTEMASK                                                             
+#define COMM_EQ2_PNCIDXOFUSERPNCBYTEMASK                                                            
+#define COMM_EQ2_SETMASKOFUSERPNCBYTEMASK                                                           0x01u
+#define COMM_EQ2_USERREQPNCFULLCOMIDXOFUSERPNCBYTEMASK                                              
 #define COMM_EQ2_PCPARTITIONCONFIGOFPCCONFIG                                                        ComM_PCPartitionConfig
 #define COMM_EQ2_PARTITIONIDENTIFIERSOFPCCONFIG                                                     ComM_PartitionIdentifiers
 #define COMM_EQ2_ACTIVECOMMODEOFPCPARTITIONCONFIG                                                   ComM_ActiveComMode.raw
+#define COMM_EQ2_ACTIVEPNCCOMMODEOFPCPARTITIONCONFIG                                                ComM_ActivePncComMode.raw
 #define COMM_EQ2_BUSCOMMODEREQOFPCPARTITIONCONFIG                                                   ComM_BusComModeReq.raw
+#define COMM_EQ2_BUSPNCCOMMODEREQOFPCPARTITIONCONFIG                                                ComM_BusPncComModeReq.raw
 #define COMM_EQ2_BUSSMSTATEOFPCPARTITIONCONFIG                                                      ComM_BusSmState.raw
 #define COMM_EQ2_CHANNELOFPCPARTITIONCONFIG                                                         ComM_Channel
 #define COMM_EQ2_CHANNELPBOFPCPARTITIONCONFIG                                                       ComM_ChannelPb
 #define COMM_EQ2_COMALLOWEDOFPCPARTITIONCONFIG                                                      ComM_ComAllowed.raw
 #define COMM_EQ2_DCMREQUESTACTIVEOFPCPARTITIONCONFIG                                                ComM_DcmRequestActive.raw
 #define COMM_EQ2_ECUMWAKEUPINDICATEDOFPCPARTITIONCONFIG                                             ComM_EcuMWakeUpIndicated
+#define COMM_EQ2_EIRATXSIGNALINDIRECTIONOFPCPARTITIONCONFIG                                         ComM_EiraTxSignalIndirection
 #define COMM_EQ2_INHIBITIONOFPCPARTITIONCONFIG                                                      (&(ComM_Inhibition))
 #define COMM_EQ2_INITSTATUSOFPCPARTITIONCONFIG                                                      (&(ComM_InitStatus))
 #define COMM_EQ2_MINFULLCOMMODETIMEROFPCPARTITIONCONFIG                                             ComM_MinFullComModeTimer.raw
 #define COMM_EQ2_NMLIGHTTIMEROFPCPARTITIONCONFIG                                                    ComM_NmLightTimer.raw
 #define COMM_EQ2_NMSTARTUPINDICATEDOFPCPARTITIONCONFIG                                              ComM_NmStartUpIndicated
+#define COMM_EQ2_PNCCHANNELMAPPINGOFPCPARTITIONCONFIG                                               ComM_PncChannelMapping
+#define COMM_EQ2_PNCOFPCPARTITIONCONFIG                                                             ComM_Pnc
+#define COMM_EQ2_PNCPSLEEPTIMEROFPCPARTITIONCONFIG                                                  ComM_PncPSleepTimer.raw
+#define COMM_EQ2_PNCPBINDOFPCPARTITIONCONFIG                                                        ComM_PncPbInd
+#define COMM_EQ2_PNCPBOFPCPARTITIONCONFIG                                                           ComM_PncPb
+#define COMM_EQ2_PNCSIGNALINDOFPCPARTITIONCONFIG                                                    ComM_PncSignalInd
+#define COMM_EQ2_PNCSIGNALOFPCPARTITIONCONFIG                                                       ComM_PncSignal
+#define COMM_EQ2_PNCSIGNALVALUESOFPCPARTITIONCONFIG                                                 ComM_PncSignalValues.raw
+#define COMM_EQ2_PNCTOCHANNELROUTINGSTATEOFPCPARTITIONCONFIG                                        ComM_PncToChannelRoutingState.raw
 #define COMM_EQ2_POSTINITIALIZEDOFPCPARTITIONCONFIG                                                 ComM_PostInitialized
 #define COMM_EQ2_USERBYTEMASKOFPCPARTITIONCONFIG                                                    ComM_UserByteMask
 #define COMM_EQ2_USEROFPCPARTITIONCONFIG                                                            ComM_User
+#define COMM_EQ2_USERPNCBYTEMASKOFPCPARTITIONCONFIG                                                 ComM_UserPncByteMask
 #define COMM_EQ2_USERREQFULLCOMOFPCPARTITIONCONFIG                                                  ComM_UserReqFullCom
+#define COMM_EQ2_USERREQPNCFULLCOMOFPCPARTITIONCONFIG                                               ComM_UserReqPncFullCom
 /** 
   \}
 */ 
@@ -605,11 +772,35 @@ typedef uint8_least ComM_ChannelPbIterType;
 /**   \brief  type used to iterate ComM_EcuMWakeUpIndicated */
 typedef uint8_least ComM_EcuMWakeUpIndicatedIterType;
 
+/**   \brief  type used to iterate ComM_EiraTxSignalIndirection */
+typedef uint8_least ComM_EiraTxSignalIndirectionIterType;
+
 /**   \brief  type used to iterate ComM_NmStartUpIndicated */
 typedef uint8_least ComM_NmStartUpIndicatedIterType;
 
 /**   \brief  type used to iterate ComM_PartitionIdentifiers */
 typedef uint8_least ComM_PartitionIdentifiersIterType;
+
+/**   \brief  type used to iterate ComM_Pnc */
+typedef uint8_least ComM_PncIterType;
+
+/**   \brief  type used to iterate ComM_PncChannelMapping */
+typedef uint8_least ComM_PncChannelMappingIterType;
+
+/**   \brief  type used to iterate ComM_PncPb */
+typedef uint8_least ComM_PncPbIterType;
+
+/**   \brief  type used to iterate ComM_PncPbInd */
+typedef uint8_least ComM_PncPbIndIterType;
+
+/**   \brief  type used to iterate ComM_PncSignal */
+typedef uint8_least ComM_PncSignalIterType;
+
+/**   \brief  type used to iterate ComM_PncSignalInd */
+typedef uint8_least ComM_PncSignalIndIterType;
+
+/**   \brief  type used to iterate ComM_PncSignalValues */
+typedef uint8_least ComM_PncSignalValuesIterType;
 
 /**   \brief  type used to iterate ComM_PostInitialized */
 typedef uint8_least ComM_PostInitializedIterType;
@@ -620,8 +811,14 @@ typedef uint8_least ComM_UserIterType;
 /**   \brief  type used to iterate ComM_UserByteMask */
 typedef uint8_least ComM_UserByteMaskIterType;
 
+/**   \brief  type used to iterate ComM_UserPncByteMask */
+typedef uint8_least ComM_UserPncByteMaskIterType;
+
 /**   \brief  type used to iterate ComM_UserReqFullCom */
 typedef uint8_least ComM_UserReqFullComIterType;
+
+/**   \brief  type used to iterate ComM_UserReqPncFullCom */
+typedef uint8_least ComM_UserReqPncFullComIterType;
 
 /**   \brief  type used to iterate ComM_PCPartitionConfig */
 typedef uint8_least ComM_PCPartitionConfigIterType;
@@ -638,8 +835,14 @@ typedef uint8_least ComM_PCPartitionConfigIterType;
 /**   \brief  type used to iterate ComM_ActiveComMode */
 typedef ComM_ChannelIterType ComM_ActiveComModeIterType;
 
+/**   \brief  type used to iterate ComM_ActivePncComMode */
+typedef ComM_PncIterType ComM_ActivePncComModeIterType;
+
 /**   \brief  type used to iterate ComM_BusComModeReq */
 typedef ComM_ChannelIterType ComM_BusComModeReqIterType;
+
+/**   \brief  type used to iterate ComM_BusPncComModeReq */
+typedef ComM_PncIterType ComM_BusPncComModeReqIterType;
 
 /**   \brief  type used to iterate ComM_BusSmState */
 typedef ComM_ChannelIterType ComM_BusSmStateIterType;
@@ -655,6 +858,12 @@ typedef ComM_ChannelIterType ComM_MinFullComModeTimerIterType;
 
 /**   \brief  type used to iterate ComM_NmLightTimer */
 typedef ComM_ChannelIterType ComM_NmLightTimerIterType;
+
+/**   \brief  type used to iterate ComM_PncPSleepTimer */
+typedef ComM_PncIterType ComM_PncPSleepTimerIterType;
+
+/**   \brief  type used to iterate ComM_PncToChannelRoutingState */
+typedef ComM_ChannelIterType ComM_PncToChannelRoutingStateIterType;
 
 /** 
   \}
@@ -692,6 +901,15 @@ typedef boolean ComM_SilentSupportOfChannelType;
 /**   \brief  value based type definition for ComM_WakeupStateOfChannel */
 typedef uint8 ComM_WakeupStateOfChannelType;
 
+/**   \brief  value based type definition for ComM_PncPbIndEndIdxOfChannelPb */
+typedef uint8 ComM_PncPbIndEndIdxOfChannelPbType;
+
+/**   \brief  value based type definition for ComM_PncPbIndStartIdxOfChannelPb */
+typedef uint8 ComM_PncPbIndStartIdxOfChannelPbType;
+
+/**   \brief  value based type definition for ComM_PncPbIndUsedOfChannelPb */
+typedef boolean ComM_PncPbIndUsedOfChannelPbType;
+
 /**   \brief  value based type definition for ComM_UserReqFullComEndIdxOfChannelPb */
 typedef uint8 ComM_UserReqFullComEndIdxOfChannelPbType;
 
@@ -725,14 +943,95 @@ typedef uint8 ComM_PCPartitionConfigIdxOfPartitionIdentifiersType;
 /**   \brief  value based type definition for ComM_PartitionSNVOfPartitionIdentifiers */
 typedef uint32 ComM_PartitionSNVOfPartitionIdentifiersType;
 
+/**   \brief  value based type definition for ComM_ClearMaskOfPnc */
+typedef uint8 ComM_ClearMaskOfPncType;
+
+/**   \brief  value based type definition for ComM_PncIdOfPnc */
+typedef uint8 ComM_PncIdOfPncType;
+
+/**   \brief  value based type definition for ComM_SetMaskOfPnc */
+typedef uint8 ComM_SetMaskOfPncType;
+
+/**   \brief  value based type definition for ComM_PncChannelMapping */
+typedef uint8 ComM_PncChannelMappingType;
+
+/**   \brief  value based type definition for ComM_PncPSleepTimer */
+typedef uint16 ComM_PncPSleepTimerType;
+
+/**   \brief  value based type definition for ComM_PncChannelMappingEndIdxOfPncPb */
+typedef uint8 ComM_PncChannelMappingEndIdxOfPncPbType;
+
+/**   \brief  value based type definition for ComM_PncChannelMappingStartIdxOfPncPb */
+typedef uint8 ComM_PncChannelMappingStartIdxOfPncPbType;
+
+/**   \brief  value based type definition for ComM_PncChannelMappingUsedOfPncPb */
+typedef boolean ComM_PncChannelMappingUsedOfPncPbType;
+
+/**   \brief  value based type definition for ComM_PncSignalIndEndIdxOfPncPb */
+typedef uint8 ComM_PncSignalIndEndIdxOfPncPbType;
+
+/**   \brief  value based type definition for ComM_PncSignalIndStartIdxOfPncPb */
+typedef uint8 ComM_PncSignalIndStartIdxOfPncPbType;
+
+/**   \brief  value based type definition for ComM_PncSignalIndUsedOfPncPb */
+typedef boolean ComM_PncSignalIndUsedOfPncPbType;
+
+/**   \brief  value based type definition for ComM_SignalByteIndexOfPncPb */
+typedef uint8 ComM_SignalByteIndexOfPncPbType;
+
+/**   \brief  value based type definition for ComM_UserReqPncFullComEndIdxOfPncPb */
+typedef uint8 ComM_UserReqPncFullComEndIdxOfPncPbType;
+
+/**   \brief  value based type definition for ComM_UserReqPncFullComStartIdxOfPncPb */
+typedef uint8 ComM_UserReqPncFullComStartIdxOfPncPbType;
+
+/**   \brief  value based type definition for ComM_PncPbInd */
+typedef uint8 ComM_PncPbIndType;
+
+/**   \brief  value based type definition for ComM_BusTypeIdOfPncSignal */
+typedef uint8 ComM_BusTypeIdOfPncSignalType;
+
+/**   \brief  value based type definition for ComM_ChannelIdxOfPncSignal */
+typedef uint8 ComM_ChannelIdxOfPncSignalType;
+
+/**   \brief  value based type definition for ComM_ChannelUsedOfPncSignal */
+typedef boolean ComM_ChannelUsedOfPncSignalType;
+
+/**   \brief  value based type definition for ComM_PncSignalValuesEndIdxOfPncSignal */
+typedef uint8 ComM_PncSignalValuesEndIdxOfPncSignalType;
+
+/**   \brief  value based type definition for ComM_PncSignalValuesStartIdxOfPncSignal */
+typedef uint8 ComM_PncSignalValuesStartIdxOfPncSignalType;
+
+/**   \brief  value based type definition for ComM_PncSignalValuesUsedOfPncSignal */
+typedef boolean ComM_PncSignalValuesUsedOfPncSignalType;
+
+/**   \brief  value based type definition for ComM_TypeOfPncSignal */
+typedef uint8 ComM_TypeOfPncSignalType;
+
+/**   \brief  value based type definition for ComM_PncSignalInd */
+typedef uint8 ComM_PncSignalIndType;
+
+/**   \brief  value based type definition for ComM_PncSignalValues */
+typedef uint8 ComM_PncSignalValuesType;
+
+/**   \brief  value based type definition for ComM_PncToChannelRoutingState */
+typedef uint8 ComM_PncToChannelRoutingStateType;
+
 /**   \brief  value based type definition for ComM_PostInitialized */
 typedef boolean ComM_PostInitializedType;
 
 /**   \brief  value based type definition for ComM_SizeOfActiveComMode */
 typedef uint8 ComM_SizeOfActiveComModeType;
 
+/**   \brief  value based type definition for ComM_SizeOfActivePncComMode */
+typedef uint8 ComM_SizeOfActivePncComModeType;
+
 /**   \brief  value based type definition for ComM_SizeOfBusComModeReq */
 typedef uint8 ComM_SizeOfBusComModeReqType;
+
+/**   \brief  value based type definition for ComM_SizeOfBusPncComModeReq */
+typedef uint8 ComM_SizeOfBusPncComModeReqType;
 
 /**   \brief  value based type definition for ComM_SizeOfBusSmState */
 typedef uint8 ComM_SizeOfBusSmStateType;
@@ -752,6 +1051,9 @@ typedef uint8 ComM_SizeOfDcmRequestActiveType;
 /**   \brief  value based type definition for ComM_SizeOfEcuMWakeUpIndicated */
 typedef uint8 ComM_SizeOfEcuMWakeUpIndicatedType;
 
+/**   \brief  value based type definition for ComM_SizeOfEiraTxSignalIndirection */
+typedef uint8 ComM_SizeOfEiraTxSignalIndirectionType;
+
 /**   \brief  value based type definition for ComM_SizeOfMinFullComModeTimer */
 typedef uint8 ComM_SizeOfMinFullComModeTimerType;
 
@@ -764,6 +1066,33 @@ typedef uint8 ComM_SizeOfNmStartUpIndicatedType;
 /**   \brief  value based type definition for ComM_SizeOfPartitionIdentifiers */
 typedef uint8 ComM_SizeOfPartitionIdentifiersType;
 
+/**   \brief  value based type definition for ComM_SizeOfPnc */
+typedef uint8 ComM_SizeOfPncType;
+
+/**   \brief  value based type definition for ComM_SizeOfPncChannelMapping */
+typedef uint8 ComM_SizeOfPncChannelMappingType;
+
+/**   \brief  value based type definition for ComM_SizeOfPncPSleepTimer */
+typedef uint8 ComM_SizeOfPncPSleepTimerType;
+
+/**   \brief  value based type definition for ComM_SizeOfPncPb */
+typedef uint8 ComM_SizeOfPncPbType;
+
+/**   \brief  value based type definition for ComM_SizeOfPncPbInd */
+typedef uint8 ComM_SizeOfPncPbIndType;
+
+/**   \brief  value based type definition for ComM_SizeOfPncSignal */
+typedef uint8 ComM_SizeOfPncSignalType;
+
+/**   \brief  value based type definition for ComM_SizeOfPncSignalInd */
+typedef uint8 ComM_SizeOfPncSignalIndType;
+
+/**   \brief  value based type definition for ComM_SizeOfPncSignalValues */
+typedef uint8 ComM_SizeOfPncSignalValuesType;
+
+/**   \brief  value based type definition for ComM_SizeOfPncToChannelRoutingState */
+typedef uint8 ComM_SizeOfPncToChannelRoutingStateType;
+
 /**   \brief  value based type definition for ComM_SizeOfPostInitialized */
 typedef uint8 ComM_SizeOfPostInitializedType;
 
@@ -773,8 +1102,14 @@ typedef uint8 ComM_SizeOfUserType;
 /**   \brief  value based type definition for ComM_SizeOfUserByteMask */
 typedef uint8 ComM_SizeOfUserByteMaskType;
 
+/**   \brief  value based type definition for ComM_SizeOfUserPncByteMask */
+typedef uint8 ComM_SizeOfUserPncByteMaskType;
+
 /**   \brief  value based type definition for ComM_SizeOfUserReqFullCom */
 typedef uint8 ComM_SizeOfUserReqFullComType;
+
+/**   \brief  value based type definition for ComM_SizeOfUserReqPncFullCom */
+typedef uint8 ComM_SizeOfUserReqPncFullComType;
 
 /**   \brief  value based type definition for ComM_PncUserOfUser */
 typedef boolean ComM_PncUserOfUserType;
@@ -788,6 +1123,18 @@ typedef uint8 ComM_UserByteMaskStartIdxOfUserType;
 /**   \brief  value based type definition for ComM_UserByteMaskUsedOfUser */
 typedef boolean ComM_UserByteMaskUsedOfUserType;
 
+/**   \brief  value based type definition for ComM_UserPncByteMaskEndIdxOfUser */
+typedef uint8 ComM_UserPncByteMaskEndIdxOfUserType;
+
+/**   \brief  value based type definition for ComM_UserPncByteMaskLengthOfUser */
+typedef uint8 ComM_UserPncByteMaskLengthOfUserType;
+
+/**   \brief  value based type definition for ComM_UserPncByteMaskStartIdxOfUser */
+typedef uint8 ComM_UserPncByteMaskStartIdxOfUserType;
+
+/**   \brief  value based type definition for ComM_UserPncByteMaskUsedOfUser */
+typedef boolean ComM_UserPncByteMaskUsedOfUserType;
+
 /**   \brief  value based type definition for ComM_ChannelOfUserByteMask */
 typedef uint8 ComM_ChannelOfUserByteMaskType;
 
@@ -800,8 +1147,26 @@ typedef uint8 ComM_SetMaskOfUserByteMaskType;
 /**   \brief  value based type definition for ComM_UserReqFullComIdxOfUserByteMask */
 typedef uint8 ComM_UserReqFullComIdxOfUserByteMaskType;
 
+/**   \brief  value based type definition for ComM_ClearMaskOfUserPncByteMask */
+typedef uint8 ComM_ClearMaskOfUserPncByteMaskType;
+
+/**   \brief  value based type definition for ComM_PncIDOfUserPncByteMask */
+typedef uint8 ComM_PncIDOfUserPncByteMaskType;
+
+/**   \brief  value based type definition for ComM_PncIdxOfUserPncByteMask */
+typedef uint8 ComM_PncIdxOfUserPncByteMaskType;
+
+/**   \brief  value based type definition for ComM_SetMaskOfUserPncByteMask */
+typedef uint8 ComM_SetMaskOfUserPncByteMaskType;
+
+/**   \brief  value based type definition for ComM_UserReqPncFullComIdxOfUserPncByteMask */
+typedef uint8 ComM_UserReqPncFullComIdxOfUserPncByteMaskType;
+
 /**   \brief  value based type definition for ComM_UserReqFullCom */
 typedef uint8 ComM_UserReqFullComType;
+
+/**   \brief  value based type definition for ComM_UserReqPncFullCom */
+typedef uint8 ComM_UserReqPncFullComType;
 
 /** 
   \}
@@ -842,9 +1207,17 @@ typedef struct sComM_ChannelType
 /**   \brief  type used in ComM_ChannelPb */
 typedef struct sComM_ChannelPbType
 {
+  ComM_PncPbIndEndIdxOfChannelPbType PncPbIndEndIdxOfChannelPb;  /**< the end index of the 0:n relation pointing to ComM_PncPbInd */
+  ComM_PncPbIndStartIdxOfChannelPbType PncPbIndStartIdxOfChannelPb;  /**< the start index of the 0:n relation pointing to ComM_PncPbInd */
   ComM_UserReqFullComEndIdxOfChannelPbType UserReqFullComEndIdxOfChannelPb;  /**< the end index of the 0:n relation pointing to ComM_UserReqFullCom */
   ComM_UserReqFullComStartIdxOfChannelPbType UserReqFullComStartIdxOfChannelPb;  /**< the start index of the 0:n relation pointing to ComM_UserReqFullCom */
 } ComM_ChannelPbType;
+
+/**   \brief  type used in ComM_EiraTxSignalIndirection */
+typedef struct sComM_EiraTxSignalIndirectionType
+{
+  uint8 ComM_EiraTxSignalIndirectionNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+} ComM_EiraTxSignalIndirectionType;
 
 /**   \brief  type used in ComM_PartitionIdentifiers */
 typedef struct sComM_PartitionIdentifiersType
@@ -853,20 +1226,61 @@ typedef struct sComM_PartitionIdentifiersType
   ComM_PCPartitionConfigIdxOfPartitionIdentifiersType PCPartitionConfigIdxOfPartitionIdentifiers;  /**< the index of the 1:1 relation pointing to ComM_PCPartitionConfig */
 } ComM_PartitionIdentifiersType;
 
+/**   \brief  type used in ComM_Pnc */
+typedef struct sComM_PncType
+{
+  ComM_ClearMaskOfPncType ClearMaskOfPnc;  /**< Clear mask for the partial network related signals (EIRA, ERA) */
+  ComM_PncIdOfPncType PncIdOfPnc;  /**< System ID of the partial network */
+  ComM_SetMaskOfPncType SetMaskOfPnc;  /**< Set mask for the partial network related signals (EIRA, ERA) */
+} ComM_PncType;
+
+/**   \brief  type used in ComM_PncPb */
+typedef struct sComM_PncPbType
+{
+  ComM_PncChannelMappingEndIdxOfPncPbType PncChannelMappingEndIdxOfPncPb;  /**< the end index of the 0:n relation pointing to ComM_PncChannelMapping */
+  ComM_PncChannelMappingStartIdxOfPncPbType PncChannelMappingStartIdxOfPncPb;  /**< the start index of the 0:n relation pointing to ComM_PncChannelMapping */
+  ComM_PncSignalIndEndIdxOfPncPbType PncSignalIndEndIdxOfPncPb;  /**< the end index of the 0:n relation pointing to ComM_PncSignalInd */
+  ComM_PncSignalIndStartIdxOfPncPbType PncSignalIndStartIdxOfPncPb;  /**< the start index of the 0:n relation pointing to ComM_PncSignalInd */
+  ComM_UserReqPncFullComEndIdxOfPncPbType UserReqPncFullComEndIdxOfPncPb;  /**< the end index of the 1:n relation pointing to ComM_UserReqPncFullCom */
+  ComM_UserReqPncFullComStartIdxOfPncPbType UserReqPncFullComStartIdxOfPncPb;  /**< the start index of the 1:n relation pointing to ComM_UserReqPncFullCom */
+} ComM_PncPbType;
+
+/**   \brief  type used in ComM_PncSignal */
+typedef struct sComM_PncSignalType
+{
+  ComM_ChannelIdxOfPncSignalType ChannelIdxOfPncSignal;  /**< the index of the 0:1 relation pointing to ComM_Channel */
+  ComM_PncSignalValuesEndIdxOfPncSignalType PncSignalValuesEndIdxOfPncSignal;  /**< the end index of the 0:n relation pointing to ComM_PncSignalValues */
+  ComM_PncSignalValuesStartIdxOfPncSignalType PncSignalValuesStartIdxOfPncSignal;  /**< the start index of the 0:n relation pointing to ComM_PncSignalValues */
+  ComM_TypeOfPncSignalType TypeOfPncSignal;  /**< Partial network signal type */
+} ComM_PncSignalType;
+
 /**   \brief  type used in ComM_User */
 typedef struct sComM_UserType
 {
   ComM_PncUserOfUserType PncUserOfUser;  /**< decides if a user is a partial network user or a direct channel user */
   ComM_UserByteMaskEndIdxOfUserType UserByteMaskEndIdxOfUser;  /**< the end index of the 0:n relation pointing to ComM_UserByteMask */
   ComM_UserByteMaskStartIdxOfUserType UserByteMaskStartIdxOfUser;  /**< the start index of the 0:n relation pointing to ComM_UserByteMask */
+  ComM_UserPncByteMaskEndIdxOfUserType UserPncByteMaskEndIdxOfUser;  /**< the end index of the 0:n relation pointing to ComM_UserPncByteMask */
+  ComM_UserPncByteMaskLengthOfUserType UserPncByteMaskLengthOfUser;  /**< the number of relations pointing to ComM_UserPncByteMask */
+  ComM_UserPncByteMaskStartIdxOfUserType UserPncByteMaskStartIdxOfUser;  /**< the start index of the 0:n relation pointing to ComM_UserPncByteMask */
 } ComM_UserType;
 
 /**   \brief  type used in ComM_UserByteMask */
 typedef struct sComM_UserByteMaskType
 {
   ComM_ChannelOfUserByteMaskType ChannelOfUserByteMask;  /**< ID of the channel which is requested by this entry. */
+  ComM_ClearMaskOfUserByteMaskType ClearMaskOfUserByteMask;  /**< Clear-mask for clearing the bit which corresponds to this user */
+  ComM_SetMaskOfUserByteMaskType SetMaskOfUserByteMask;  /**< Set-mask for setting the bit which corresponds to this user */
   ComM_UserReqFullComIdxOfUserByteMaskType UserReqFullComIdxOfUserByteMask;  /**< the index of the 1:1 relation pointing to ComM_UserReqFullCom */
 } ComM_UserByteMaskType;
+
+/**   \brief  type used in ComM_UserPncByteMask */
+typedef struct sComM_UserPncByteMaskType
+{
+  ComM_PncIDOfUserPncByteMaskType PncIDOfUserPncByteMask;  /**< System Id of the partial network which is requested by this entry */
+  ComM_PncIdxOfUserPncByteMaskType PncIdxOfUserPncByteMask;  /**< the index of the 1:1 relation pointing to ComM_Pnc */
+  ComM_UserReqPncFullComIdxOfUserPncByteMaskType UserReqPncFullComIdxOfUserPncByteMask;  /**< the index of the 1:1 relation pointing to ComM_UserReqPncFullCom */
+} ComM_UserPncByteMaskType;
 
 /** 
   \}
@@ -886,6 +1300,14 @@ typedef struct ComM_ActiveComModeStructSTag
   ComM_StateType ComMChannel_3;
 } ComM_ActiveComModeStructSType;
 
+/**   \brief  type to be used as symbolic data element access to ComM_ActivePncComMode in the partition context  */
+typedef struct ComM_ActivePncComModeStructSTag
+{
+  ComM_PncModeType ComMPnc_24;
+  ComM_PncModeType ComMPnc_26;
+  ComM_PncModeType ComMPnc_31;
+} ComM_ActivePncComModeStructSType;
+
 /**   \brief  type to be used as symbolic data element access to ComM_BusComModeReq in the partition context  */
 typedef struct ComM_BusComModeReqStructSTag
 {
@@ -894,6 +1316,14 @@ typedef struct ComM_BusComModeReqStructSTag
   ComM_StateType ComMChannel_2;
   ComM_StateType ComMChannel_3;
 } ComM_BusComModeReqStructSType;
+
+/**   \brief  type to be used as symbolic data element access to ComM_BusPncComModeReq in the partition context  */
+typedef struct ComM_BusPncComModeReqStructSTag
+{
+  ComM_PncModeType ComMPnc_24;
+  ComM_PncModeType ComMPnc_26;
+  ComM_PncModeType ComMPnc_31;
+} ComM_BusPncComModeReqStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_BusSmState in the partition context  */
 typedef struct ComM_BusSmStateStructSTag
@@ -940,6 +1370,30 @@ typedef struct ComM_NmLightTimerStructSTag
   ComM_NmLightTimerType ComMChannel_3;
 } ComM_NmLightTimerStructSType;
 
+/**   \brief  type to be used as symbolic data element access to ComM_PncPSleepTimer in the partition context  */
+typedef struct ComM_PncPSleepTimerStructSTag
+{
+  ComM_PncPSleepTimerType ComMPnc_24;
+  ComM_PncPSleepTimerType ComMPnc_26;
+  ComM_PncPSleepTimerType ComMPnc_31;
+} ComM_PncPSleepTimerStructSType;
+
+/**   \brief  type to be used as symbolic data element access to ComM_PncSignalValues in the partition context  */
+typedef struct ComM_PncSignalValuesStructSTag
+{
+  ComM_PncSignalValuesType ComM_ComConf_ComSignal_PNC_Can00_ComSignal_Rx[6];
+  ComM_PncSignalValuesType ComM_ComConf_ComSignal_VCU_Tx_51Ch_NM_PNCData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_c1eb5e4b_Tx[6];
+} ComM_PncSignalValuesStructSType;
+
+/**   \brief  type to be used as symbolic data element access to ComM_PncToChannelRoutingState in the partition context  */
+typedef struct ComM_PncToChannelRoutingStateStructSTag
+{
+  ComM_PncToChannelRoutingStateType ComMChannel_0;
+  ComM_PncToChannelRoutingStateType ComMChannel_1;
+  ComM_PncToChannelRoutingStateType ComMChannel_2;
+  ComM_PncToChannelRoutingStateType ComMChannel_3;
+} ComM_PncToChannelRoutingStateStructSType;
+
 /** 
   \}
 */ 
@@ -956,12 +1410,26 @@ typedef union ComM_ActiveComModeUTag
   ComM_ActiveComModeStructSType str;
 } ComM_ActiveComModeUType;
 
+/**   \brief  type to access ComM_ActivePncComMode in an index and symbol based style. */
+typedef union ComM_ActivePncComModeUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  ComM_PncModeType raw[3];
+  ComM_ActivePncComModeStructSType str;
+} ComM_ActivePncComModeUType;
+
 /**   \brief  type to access ComM_BusComModeReq in an index and symbol based style. */
 typedef union ComM_BusComModeReqUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
   ComM_StateType raw[4];
   ComM_BusComModeReqStructSType str;
 } ComM_BusComModeReqUType;
+
+/**   \brief  type to access ComM_BusPncComModeReq in an index and symbol based style. */
+typedef union ComM_BusPncComModeReqUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  ComM_PncModeType raw[3];
+  ComM_BusPncComModeReqStructSType str;
+} ComM_BusPncComModeReqUType;
 
 /**   \brief  type to access ComM_BusSmState in an index and symbol based style. */
 typedef union ComM_BusSmStateUTag
@@ -998,6 +1466,27 @@ typedef union ComM_NmLightTimerUTag
   ComM_NmLightTimerStructSType str;
 } ComM_NmLightTimerUType;
 
+/**   \brief  type to access ComM_PncPSleepTimer in an index and symbol based style. */
+typedef union ComM_PncPSleepTimerUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  ComM_PncPSleepTimerType raw[3];
+  ComM_PncPSleepTimerStructSType str;
+} ComM_PncPSleepTimerUType;
+
+/**   \brief  type to access ComM_PncSignalValues in an index and symbol based style. */
+typedef union ComM_PncSignalValuesUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  ComM_PncSignalValuesType raw[12];
+  ComM_PncSignalValuesStructSType str;
+} ComM_PncSignalValuesUType;
+
+/**   \brief  type to access ComM_PncToChannelRoutingState in an index and symbol based style. */
+typedef union ComM_PncToChannelRoutingStateUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  ComM_PncToChannelRoutingStateType raw[4];
+  ComM_PncToChannelRoutingStateStructSType str;
+} ComM_PncToChannelRoutingStateUType;
+
 /** 
   \}
 */ 
@@ -1010,8 +1499,14 @@ typedef union ComM_NmLightTimerUTag
 /**   \brief  type used to point to ComM_ActiveComMode */
 typedef P2VAR(ComM_StateType, TYPEDEF, COMM_VAR_NOINIT) ComM_ActiveComModePtrType;
 
+/**   \brief  type used to point to ComM_ActivePncComMode */
+typedef P2VAR(ComM_PncModeType, TYPEDEF, COMM_VAR_NOINIT) ComM_ActivePncComModePtrType;
+
 /**   \brief  type used to point to ComM_BusComModeReq */
 typedef P2VAR(ComM_StateType, TYPEDEF, COMM_VAR_NOINIT) ComM_BusComModeReqPtrType;
+
+/**   \brief  type used to point to ComM_BusPncComModeReq */
+typedef P2VAR(ComM_PncModeType, TYPEDEF, COMM_VAR_NOINIT) ComM_BusPncComModeReqPtrType;
 
 /**   \brief  type used to point to ComM_BusSmState */
 typedef P2VAR(ComM_ModeType, TYPEDEF, COMM_VAR_NOINIT) ComM_BusSmStatePtrType;
@@ -1031,6 +1526,9 @@ typedef P2VAR(ComM_DcmRequestActiveType, TYPEDEF, COMM_VAR_NOINIT) ComM_DcmReque
 /**   \brief  type used to point to ComM_EcuMWakeUpIndicated */
 typedef P2VAR(volatile ComM_EcuMWakeUpIndicatedType, TYPEDEF, COMM_VAR_NOINIT) ComM_EcuMWakeUpIndicatedPtrType;
 
+/**   \brief  type used to point to ComM_EiraTxSignalIndirection */
+typedef P2CONST(ComM_EiraTxSignalIndirectionType, TYPEDEF, COMM_CONST) ComM_EiraTxSignalIndirectionPtrType;
+
 /**   \brief  type used to point to ComM_Inhibition */
 typedef P2VAR(ComM_InhibitionType, TYPEDEF, COMM_NVM_DATA_NOINIT) ComM_InhibitionPtrType;
 
@@ -1049,6 +1547,33 @@ typedef P2VAR(volatile ComM_NmStartUpIndicatedType, TYPEDEF, COMM_VAR_NOINIT) Co
 /**   \brief  type used to point to ComM_PartitionIdentifiers */
 typedef P2CONST(ComM_PartitionIdentifiersType, TYPEDEF, COMM_CONST) ComM_PartitionIdentifiersPtrType;
 
+/**   \brief  type used to point to ComM_Pnc */
+typedef P2CONST(ComM_PncType, TYPEDEF, COMM_CONST) ComM_PncPtrType;
+
+/**   \brief  type used to point to ComM_PncChannelMapping */
+typedef P2CONST(ComM_PncChannelMappingType, TYPEDEF, COMM_CONST) ComM_PncChannelMappingPtrType;
+
+/**   \brief  type used to point to ComM_PncPSleepTimer */
+typedef P2VAR(ComM_PncPSleepTimerType, TYPEDEF, COMM_VAR_NOINIT) ComM_PncPSleepTimerPtrType;
+
+/**   \brief  type used to point to ComM_PncPb */
+typedef P2CONST(ComM_PncPbType, TYPEDEF, COMM_CONST) ComM_PncPbPtrType;
+
+/**   \brief  type used to point to ComM_PncPbInd */
+typedef P2CONST(ComM_PncPbIndType, TYPEDEF, COMM_CONST) ComM_PncPbIndPtrType;
+
+/**   \brief  type used to point to ComM_PncSignal */
+typedef P2CONST(ComM_PncSignalType, TYPEDEF, COMM_CONST) ComM_PncSignalPtrType;
+
+/**   \brief  type used to point to ComM_PncSignalInd */
+typedef P2CONST(ComM_PncSignalIndType, TYPEDEF, COMM_CONST) ComM_PncSignalIndPtrType;
+
+/**   \brief  type used to point to ComM_PncSignalValues */
+typedef P2VAR(ComM_PncSignalValuesType, TYPEDEF, COMM_VAR_NOINIT) ComM_PncSignalValuesPtrType;
+
+/**   \brief  type used to point to ComM_PncToChannelRoutingState */
+typedef P2VAR(ComM_PncToChannelRoutingStateType, TYPEDEF, COMM_VAR_NOINIT) ComM_PncToChannelRoutingStatePtrType;
+
 /**   \brief  type used to point to ComM_PostInitialized */
 typedef P2VAR(ComM_PostInitializedType, TYPEDEF, COMM_VAR_NOINIT) ComM_PostInitializedPtrType;
 
@@ -1058,8 +1583,14 @@ typedef P2CONST(ComM_UserType, TYPEDEF, COMM_CONST) ComM_UserPtrType;
 /**   \brief  type used to point to ComM_UserByteMask */
 typedef P2CONST(ComM_UserByteMaskType, TYPEDEF, COMM_CONST) ComM_UserByteMaskPtrType;
 
+/**   \brief  type used to point to ComM_UserPncByteMask */
+typedef P2CONST(ComM_UserPncByteMaskType, TYPEDEF, COMM_CONST) ComM_UserPncByteMaskPtrType;
+
 /**   \brief  type used to point to ComM_UserReqFullCom */
 typedef P2VAR(ComM_UserReqFullComType, TYPEDEF, COMM_VAR_NOINIT) ComM_UserReqFullComPtrType;
+
+/**   \brief  type used to point to ComM_UserReqPncFullCom */
+typedef P2VAR(ComM_UserReqPncFullComType, TYPEDEF, COMM_VAR_NOINIT) ComM_UserReqPncFullComPtrType;
 
 /** 
   \}
@@ -1154,6 +1685,8 @@ extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[4];
   \brief  Contains PostBuild configuration parameters of channels
   \details
   Element                   Description
+  PncPbIndEndIdx            the end index of the 0:n relation pointing to ComM_PncPbInd
+  PncPbIndStartIdx          the start index of the 0:n relation pointing to ComM_PncPbInd
   UserReqFullComEndIdx      the end index of the 0:n relation pointing to ComM_UserReqFullCom
   UserReqFullComStartIdx    the start index of the 0:n relation pointing to ComM_UserReqFullCom
 */ 
@@ -1189,22 +1722,112 @@ extern CONST(ComM_PartitionIdentifiersType, COMM_CONST) ComM_PartitionIdentifier
 /*lint -restore */
 
 /**********************************************************************************************************************
+  ComM_Pnc
+**********************************************************************************************************************/
+/** 
+  \var    ComM_Pnc
+  \brief  Contains PreCompile configuration parameters of partial networks
+  \details
+  Element      Description
+  ClearMask    Clear mask for the partial network related signals (EIRA, ERA)
+  PncId        System ID of the partial network
+  SetMask      Set mask for the partial network related signals (EIRA, ERA)
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_PncType, COMM_CONST) ComM_Pnc[3];
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_PncPb
+**********************************************************************************************************************/
+/** 
+  \var    ComM_PncPb
+  \brief  Contains PostBuild configuration parameters of partial networks
+  \details
+  Element                      Description
+  PncChannelMappingEndIdx      the end index of the 0:n relation pointing to ComM_PncChannelMapping
+  PncChannelMappingStartIdx    the start index of the 0:n relation pointing to ComM_PncChannelMapping
+  PncSignalIndEndIdx           the end index of the 0:n relation pointing to ComM_PncSignalInd
+  PncSignalIndStartIdx         the start index of the 0:n relation pointing to ComM_PncSignalInd
+  UserReqPncFullComEndIdx      the end index of the 1:n relation pointing to ComM_UserReqPncFullCom
+  UserReqPncFullComStartIdx    the start index of the 1:n relation pointing to ComM_UserReqPncFullCom
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_PncPbType, COMM_CONST) ComM_PncPb[3];
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_PncPbInd
+**********************************************************************************************************************/
+/** 
+  \var    ComM_PncPbInd
+  \brief  the indexes of the 1:1 sorted relation pointing to ComM_PncPb
+*/ 
+#define COMM_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_PncPbIndType, COMM_CONST) ComM_PncPbInd[3];
+#define COMM_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_PncSignal
+**********************************************************************************************************************/
+/** 
+  \var    ComM_PncSignal
+  \brief  Information about partial network signals (EIRA, ERA)
+  \details
+  Element                    Description
+  ChannelIdx                 the index of the 0:1 relation pointing to ComM_Channel
+  PncSignalValuesEndIdx      the end index of the 0:n relation pointing to ComM_PncSignalValues
+  PncSignalValuesStartIdx    the start index of the 0:n relation pointing to ComM_PncSignalValues
+  Type                       Partial network signal type
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[2];
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   ComM_User
 **********************************************************************************************************************/
 /** 
   \var    ComM_User
   \brief  Information about ComM users
   \details
-  Element                 Description
-  PncUser                 decides if a user is a partial network user or a direct channel user
-  UserByteMaskEndIdx      the end index of the 0:n relation pointing to ComM_UserByteMask
-  UserByteMaskStartIdx    the start index of the 0:n relation pointing to ComM_UserByteMask
+  Element                    Description
+  PncUser                    decides if a user is a partial network user or a direct channel user
+  UserByteMaskEndIdx         the end index of the 0:n relation pointing to ComM_UserByteMask
+  UserByteMaskStartIdx       the start index of the 0:n relation pointing to ComM_UserByteMask
+  UserPncByteMaskEndIdx      the end index of the 0:n relation pointing to ComM_UserPncByteMask
+  UserPncByteMaskLength      the number of relations pointing to ComM_UserPncByteMask
+  UserPncByteMaskStartIdx    the start index of the 0:n relation pointing to ComM_UserPncByteMask
 */ 
 #define COMM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserType, COMM_CONST) ComM_User[4];
+extern CONST(ComM_UserType, COMM_CONST) ComM_User[7];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1219,13 +1842,37 @@ extern CONST(ComM_UserType, COMM_CONST) ComM_User[4];
   \details
   Element              Description
   Channel              ID of the channel which is requested by this entry.
+  ClearMask            Clear-mask for clearing the bit which corresponds to this user
+  SetMask              Set-mask for setting the bit which corresponds to this user
   UserReqFullComIdx    the index of the 1:1 relation pointing to ComM_UserReqFullCom
 */ 
 #define COMM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[4];
+extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[7];
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_UserPncByteMask
+**********************************************************************************************************************/
+/** 
+  \var    ComM_UserPncByteMask
+  \brief  Each partial network user has N entries in this array (N = # pncs attached to this user). Each entry describes a Byte Position and a Mask for storing/clearing the user request in UserReqPncFullCom
+  \details
+  Element                 Description
+  PncID                   System Id of the partial network which is requested by this entry
+  PncIdx                  the index of the 1:1 relation pointing to ComM_Pnc
+  UserReqPncFullComIdx    the index of the 1:1 relation pointing to ComM_UserReqPncFullCom
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_UserPncByteMaskType, COMM_CONST) ComM_UserPncByteMask[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1249,6 +1896,23 @@ extern VAR(ComM_ActiveComModeUType, COMM_VAR_NOINIT) ComM_ActiveComMode;  /* PRQ
 /*lint -restore */
 
 /**********************************************************************************************************************
+  ComM_ActivePncComMode
+**********************************************************************************************************************/
+/** 
+  \var    ComM_ActivePncComMode
+  \brief  stores the current partial network state
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(ComM_ActivePncComModeUType, COMM_VAR_NOINIT) ComM_ActivePncComMode;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define COMM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   ComM_BusComModeReq
 **********************************************************************************************************************/
 /** 
@@ -1261,6 +1925,23 @@ extern VAR(ComM_ActiveComModeUType, COMM_VAR_NOINIT) ComM_ActiveComMode;  /* PRQ
 /*lint -restore */
 extern VAR(ComM_BusComModeReqUType, COMM_VAR_NOINIT) ComM_BusComModeReq;  /* PRQA S 0759 */  /* MD_CSL_Union */
 #define COMM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_BusPncComModeReq
+**********************************************************************************************************************/
+/** 
+  \var    ComM_BusPncComModeReq
+  \brief  Stores the partial network state requested by external requests
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(ComM_BusPncComModeReqUType, COMM_VAR_NOINIT) ComM_BusPncComModeReq;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -1419,6 +2100,53 @@ extern volatile VAR(ComM_NmStartUpIndicatedType, COMM_VAR_NOINIT) ComM_NmStartUp
 /*lint -restore */
 
 /**********************************************************************************************************************
+  ComM_PncPSleepTimer
+**********************************************************************************************************************/
+/** 
+  \var    ComM_PncPSleepTimer
+  \brief  partial network prepare sleep timer
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(ComM_PncPSleepTimerUType, COMM_VAR_NOINIT) ComM_PncPSleepTimer;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define COMM_STOP_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_PncSignalValues
+**********************************************************************************************************************/
+#define COMM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(ComM_PncSignalValuesUType, COMM_VAR_NOINIT) ComM_PncSignalValues;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define COMM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_PncToChannelRoutingState
+**********************************************************************************************************************/
+/** 
+  \var    ComM_PncToChannelRoutingState
+  \brief  Bit flags describing the current PNC Routing state per channel
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(ComM_PncToChannelRoutingStateUType, COMM_VAR_NOINIT) ComM_PncToChannelRoutingState;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define COMM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   ComM_PostInitialized
 **********************************************************************************************************************/
 /** 
@@ -1447,6 +2175,23 @@ extern VAR(ComM_PostInitializedType, COMM_VAR_NOINIT) ComM_PostInitialized[1];
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[4];
+#define COMM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_UserReqPncFullCom
+**********************************************************************************************************************/
+/** 
+  \var    ComM_UserReqPncFullCom
+  \brief  RAM array used to store user requests for PNCs as bitmasks. Each PNC 'owns' 1..n bytes in this array, depending on the number of users assigned to it.
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(ComM_UserReqPncFullComType, COMM_VAR_NOINIT) ComM_UserReqPncFullCom[3];
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

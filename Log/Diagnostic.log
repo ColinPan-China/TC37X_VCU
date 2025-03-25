@@ -1,1135 +1,1135 @@
-﻿[13:19:20] INFO   ----> Process of diagnostic specification
-[13:19:20] INFO   DDM-Version: 20.3.0 (Release)
-[13:19:20] INFO   Importing ODX file D:\TC377_Development\dev\TC37X_VCU\DBC\MyEcu.cdd, ECU: MyEcu, variant: Base_Variant
-[13:19:20] INFO   Selecting ECU 'MyEcu'  Variant 'Base_Variant'.
-[13:19:20] INFO   Selecting Manufacturer 'GENERIC'.
-[13:19:20] WARN   'GENERIC' was selected and 'Vector' was detected.
-[13:19:20] INFO   Importing Database information.
-[13:19:20] INFO   ----> Importing Variants
-[13:19:20] INFO   <---- Importing Variants
-[13:19:20] INFO   ----> Importing StateGroups
-[13:19:20] INFO   Importing StateMachine information.
-[13:19:20] INFO   <---- Importing StateGroups
-[13:19:20] INFO   ----> Importing Services
-[13:19:20] INFO   Importing Service '1001'.
-[13:19:20] INFO   Importing Service '1002'.
-[13:19:20] INFO   Importing Service '1003'.
-[13:19:20] INFO   Importing Service '1101'.
-[13:19:20] INFO   Importing Service '1103'.
-[13:19:20] INFO   Importing Service '14'.
-[13:19:20] INFO   Importing Service '1901'.
-[13:19:20] INFO   Importing Service '1902'.
-[13:19:20] INFO   Importing Service '1903'.
-[13:19:20] INFO   Importing Service '1904'.
-[13:19:20] INFO   Importing Service '1906'.
-[13:19:20] INFO   Importing Service '1907'.
-[13:19:20] INFO   Importing Service '1908'.
-[13:19:20] INFO   Importing Service '1909'.
-[13:19:20] INFO   Importing Service '190A'.
-[13:19:20] INFO   Importing Service '190B'.
-[13:19:20] INFO   Importing Service '190C'.
-[13:19:20] INFO   Importing Service '190D'.
-[13:19:20] INFO   Importing Service '190E'.
-[13:19:20] INFO   Importing Service '1914'.
-[13:19:20] INFO   Importing Service '220100'.
-[13:19:20] INFO   Importing Service '220101'.
-[13:19:20] INFO   Importing Service '220200'.
-[13:19:20] INFO   Importing Service '220300'.
-[13:19:20] INFO   Importing Service '220400'.
-[13:19:20] INFO   Importing Service '221024'.
-[13:19:20] INFO   Importing Service '22F180'.
-[13:19:20] INFO   Importing Service '22F187'.
-[13:19:20] INFO   Importing Service '22F189'.
-[13:19:20] INFO   Importing Service '22F18C'.
-[13:19:20] INFO   Importing Service '22F190'.
-[13:19:20] INFO   Importing Service '22F193'.
-[13:19:20] INFO   Importing Service '22F194'.
-[13:19:20] INFO   Importing Service '22F1A0'.
-[13:19:20] INFO   Importing Service '22F1A1'.
-[13:19:20] INFO   Importing Service '22F1A2'.
-[13:19:20] INFO   Importing Service '22F1A3'.
-[13:19:20] INFO   Importing Service '22F300'.
-[13:19:20] INFO   Importing Service '23'.
-[13:19:20] INFO   Importing Service '2701'.
-[13:19:20] INFO   Importing Service '2702'.
-[13:19:20] INFO   Importing Service '2703'.
-[13:19:20] INFO   Importing Service '2704'.
-[13:19:20] INFO   Importing Service '2800'.
-[13:19:20] INFO   Importing Service '2801'.
-[13:19:20] INFO   Importing Service '2802'.
-[13:19:20] INFO   Importing Service '2803'.
-[13:19:20] INFO   Importing Service '2C01F300'.
-[13:19:20] INFO   Importing Service '2C02F300'.
-[13:19:20] INFO   Importing Service '2C03'.
-[13:19:20] INFO   Importing Service '2C03F300'.
-[13:19:20] INFO   Importing Service '2E0100'.
-[13:19:20] INFO   Importing Service '2E0101'.
-[13:19:20] INFO   Importing Service '2E0200'.
-[13:19:20] INFO   Importing Service '2E1024'.
-[13:19:20] INFO   Importing Service '2EF180'.
-[13:19:20] INFO   Importing Service '2EF187'.
-[13:19:20] INFO   Importing Service '2EF189'.
-[13:19:20] INFO   Importing Service '2EF18C'.
-[13:19:20] INFO   Importing Service '2EF190'.
-[13:19:20] INFO   Importing Service '2EF193'.
-[13:19:20] INFO   Importing Service '2EF194'.
-[13:19:20] INFO   Importing Service '2EF1A0'.
-[13:19:20] INFO   Importing Service '2EF1A1'.
-[13:19:20] INFO   Importing Service '2EF1A2'.
-[13:19:20] INFO   Importing Service '2EF1A3'.
-[13:19:20] INFO   Importing Service '2F030000'.
-[13:19:20] INFO   Importing Service '2F030001'.
-[13:19:20] INFO   Importing Service '2F030002'.
-[13:19:20] INFO   Importing Service '2F030003'.
-[13:19:20] INFO   Importing Service '31010100'.
-[13:19:20] INFO   Importing Service '31010105'.
-[13:19:20] INFO   Importing Service '31020105'.
-[13:19:20] INFO   Importing Service '31030105'.
-[13:19:20] INFO   Importing Service '3D'.
-[13:19:20] INFO   Importing Service '3E00'.
-[13:19:20] INFO   Importing Service '8501'.
-[13:19:20] INFO   Importing Service '8502'.
-[13:19:20] INFO   <---- Importing Services
-[13:19:20] INFO   ----> Importing FaultMemory
-[13:19:20] INFO   Importing FaultMemory.
-[13:19:20] WARN   Could not extract DTC format.
-[13:19:20] INFO   <---- Importing FaultMemory
-[13:19:20] INFO   ----> Importing EnvironmentalConditions
-[13:19:20] INFO   <---- Importing EnvironmentalConditions
-[13:19:20] INFO   ----> Importing FreezeFrame
-[13:19:20] INFO   <---- Importing FreezeFrame
-[13:19:20] INFO   ----> Importing DiagSettings
-[13:19:20] INFO   Importing DiagSettings
-[13:19:20] INFO   <---- Importing DiagSettings
-[13:19:20] INFO   ----> Importing DataCompProps
-[13:19:20] INFO   <---- Importing DataCompProps
-[13:19:20] INFO   <<<<<<<<<<<<< ODX Import finished successfully after 0.390
-[13:19:20] INFO   Shaping imported model for diagnostic OEM 'GENERIC'
-[13:19:20] INFO    - Used Diagnostic OEM:  GENERIC
-[13:19:20] INFO    - Microsar:             true
-[13:19:20] INFO    - Meta-Ecuc-Export:     true
-[13:19:20] INFO   >>>>>>>>>>>>> SHAPING preparation >>>>>>>>>>>>>
-[13:19:20] INFO   <<<<<<<<<<<<< SHAPING ready after 0s (0ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> SHAPING started >>>>>>>>>>>>>
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep ServiceSelection >>>>>>>>>>>>>
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep ServiceSelection( completed in 0s (0ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep DataPreparation >>>>>>>>>>>>>
-[13:19:20] NOTE   At Ecu 
-[13:19:20] NOTE     - Shape Data Comp Collections
-[13:19:20] INFO   At Ecu 
-[13:19:20] INFO     - Shape Compu-Methods
-[13:19:20] INFO   At Ecu 
-[13:19:20] INFO     - Fix Unsigned Boolean
-[13:19:20] INFO     - Convert XInt24/XInt64 to Byte-Array
-[13:19:20] INFO   At Ecu 
-[13:19:20] INFO     - Set Compu-Scale Symbols
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep DataPreparation( completed in 0.016s (16ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep ServiceDefinition >>>>>>>>>>>>>
-[13:19:20] INFO   At Ecu 
-[13:19:20] INFO     - Finding duplicated services... 
-[13:19:20] INFO   Destroying duplicated services... 
-[13:19:20] INFO   At Connection 'CAN' 
-[13:19:20] INFO     - Set 'priority' to '4'
-[13:19:20] INFO   At Connection 'DoIP_ISO13400' 
-[13:19:20] INFO     - Set 'priority' to '4'
-[13:19:20] INFO   At Service 0x85 
-[13:19:20] INFO     - Set 'control option record present' to 'false'
-[13:19:20] INFO   At Service 0x22 SubService 0x100 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0x100 DevelopmentData_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0x100 DevelopmentData_Read
-[13:19:20] INFO   At Service 0x22 SubService 0x101 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0x101 DataDiagnosticIdentifier_DDI_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0x101 DataDiagnosticIdentifier_DDI_Read
-[13:19:20] INFO   At Service 0x22 SubService 0x200 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0x200 DID_0x0200_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0x200 DID_0x0200_Read
-[13:19:20] INFO   At Service 0x22 SubService 0x300 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0x300 DID_0x0300_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0x300 DID_0x0300_Read
-[13:19:20] INFO   At Service 0x22 SubService 0x400 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0x400 DID_0x0400_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0x400 DID_0x0400_Read
-[13:19:20] INFO   At Service 0x22 SubService 0x1024 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0x1024 VCU_DID_00_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0x1024 VCU_DID_00_Read
-[13:19:20] INFO   At Service 0x22 SubService 0xf180 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf180 Boot_Software_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf180 Boot_Software_Read
-[13:19:20] INFO   At Service 0x22 SubService 0xf187 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf187 Spare_Part_Number_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf187 Spare_Part_Number_Read
-[13:19:20] INFO   At Service 0x22 SubService 0xf189 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf189 EcuIdentification_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf189 EcuIdentification_Read
-[13:19:20] INFO   At Service 0x22 SubService 0xf18c 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf18c SerialNumber_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf18c SerialNumber_Read
-[13:19:20] INFO   At Service 0x22 SubService 0xf190 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf190 Vehicle_Identification_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf190 Vehicle_Identification_Read
-[13:19:20] INFO   At Service 0x22 SubService 0xf193 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf193 Hardware_Version_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf193 Hardware_Version_Read
-[13:19:20] INFO   At Service 0x22 SubService 0xf194 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf194 DID_0xF194_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf194 DID_0xF194_Read
-[13:19:20] INFO   At Service 0x22 SubService 0xf1a0 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf1a0 DID_0xF1A0_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf1a0 DID_0xF1A0_Read
-[13:19:20] INFO   At Service 0x22 SubService 0xf1a1 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf1a1 DID_0xF1A1_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf1a1 DID_0xF1A1_Read
-[13:19:20] INFO   At Service 0x22 SubService 0xf1a2 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf1a2 DID_0xF1A2_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf1a2 DID_0xF1A2_Read
-[13:19:20] INFO   At Service 0x22 SubService 0xf1a3 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf1a3 DID_0xF1A3_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf1a3 DID_0xF1A3_Read
-[13:19:20] INFO   At Service 0x22 SubService 0xf3 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [F3]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf3 0x0 New_Dynamically_Define_Non_Periodic_Data_Read
-[13:19:20] INFO     - Applying service definition shaping to protocol component [F3]
-[13:19:20] INFO     - Service has now new definition: 0x22 0xf300 New_Dynamically_Define_Non_Periodic_Data_Read
-[13:19:20] INFO   At Service 0x2c SubService 0x1 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [F3]
-[13:19:20] INFO     - Service has now new definition: 0x2c 0x1 0xf3 0x0 New_Dynamically_Define_Non_Periodic_Data_Define_By_Identifier
-[13:19:20] INFO     - Applying service definition shaping to protocol component [F3]
-[13:19:20] INFO     - Service has now new definition: 0x2c 0x1 0xf300 New_Dynamically_Define_Non_Periodic_Data_Define_By_Identifier
-[13:19:20] INFO   At Service 0x2c SubService 0x2 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [F3]
-[13:19:20] INFO     - Service has now new definition: 0x2c 0x2 0xf3 0x0 New_Dynamically_Define_Non_Periodic_Data_Define_By_Address
-[13:19:20] INFO     - Applying service definition shaping to protocol component [F3]
-[13:19:20] INFO     - Service has now new definition: 0x2c 0x2 0xf300 New_Dynamically_Define_Non_Periodic_Data_Define_By_Address
-[13:19:20] INFO   At Service 0x2c SubService 0x3 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [F3]
-[13:19:20] INFO     - Service has now new definition: 0x2c 0x3 0xf3 0x0 New_Dynamically_Define_Non_Periodic_Data_Clear
-[13:19:20] INFO     - Applying service definition shaping to protocol component [F3]
-[13:19:20] INFO     - Service has now new definition: 0x2c 0x3 0xf300 New_Dynamically_Define_Non_Periodic_Data_Clear
-[13:19:20] INFO   At Service 0x2e SubService 0x100 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0x100 DevelopmentData_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0x100 DevelopmentData_Write
-[13:19:20] INFO   At Service 0x2e SubService 0x101 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0x101 DataDiagnosticIdentifier_DDI_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0x101 DataDiagnosticIdentifier_DDI_Write
-[13:19:20] INFO   At Service 0x2e SubService 0x200 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0x200 DID_0x0200_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0x200 DID_0x0200_Write
-[13:19:20] INFO   At Service 0x2e SubService 0x1024 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0x1024 VCU_DID_00_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0x1024 VCU_DID_00_Write
-[13:19:20] INFO   At Service 0x2e SubService 0xf180 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf180 Boot_Software_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf180 Boot_Software_Write
-[13:19:20] INFO   At Service 0x2e SubService 0xf187 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf187 Spare_Part_Number_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf187 Spare_Part_Number_Write
-[13:19:20] INFO   At Service 0x2e SubService 0xf189 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf189 EcuIdentification_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf189 EcuIdentification_Write
-[13:19:20] INFO   At Service 0x2e SubService 0xf18c 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf18c SerialNumber_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf18c SerialNumber_Write
-[13:19:20] INFO   At Service 0x2e SubService 0xf190 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf190 Vehicle_Identification_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf190 Vehicle_Identification_Write
-[13:19:20] INFO   At Service 0x2e SubService 0xf193 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf193 Hardware_Version_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf193 Hardware_Version_Write
-[13:19:20] INFO   At Service 0x2e SubService 0xf194 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf194 DID_0xF194_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf194 DID_0xF194_Write
-[13:19:20] INFO   At Service 0x2e SubService 0xf1a0 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf1a0 DID_0xF1A0_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf1a0 DID_0xF1A0_Write
-[13:19:20] INFO   At Service 0x2e SubService 0xf1a1 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf1a1 DID_0xF1A1_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf1a1 DID_0xF1A1_Write
-[13:19:20] INFO   At Service 0x2e SubService 0xf1a2 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf1a2 DID_0xF1A2_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf1a2 DID_0xF1A2_Write
-[13:19:20] INFO   At Service 0x2e SubService 0xf1a3 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf1a3 DID_0xF1A3_Write
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2e 0xf1a3 DID_0xF1A3_Write
-[13:19:20] INFO   At Service 0x2f SubService 0x300 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2f 0x300 0x0 DID_0x0300_ReturnControl
-[13:19:20] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2f 0x300 0x0 DID_0x0300_ReturnControl
-[13:19:20] INFO   At Service 0x2f SubService 0x300 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2f 0x300 0x1 DID_0x0300_Reset
-[13:19:20] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2f 0x300 0x1 DID_0x0300_Reset
-[13:19:20] INFO   At Service 0x2f SubService 0x300 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2f 0x300 0x2 DID_0x0300_Freeze
-[13:19:20] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2f 0x300 0x2 DID_0x0300_Freeze
-[13:19:20] INFO   At Service 0x2f SubService 0x300 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2f 0x300 0x3 DID_0x0300_Control
-[13:19:20] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x2f 0x300 0x3 DID_0x0300_Control
-[13:19:20] INFO   At Service 0x31 SubService 0x1 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x31 0x1 0x100 New_Routine_Control_Start
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x31 0x1 0x100 New_Routine_Control_Start
-[13:19:20] INFO   At Service 0x31 SubService 0x1 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x31 0x1 0x105 Vcu_Roution_00_Start
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x31 0x1 0x105 Vcu_Roution_00_Start
-[13:19:20] INFO   At Service 0x31 SubService 0x2 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x31 0x2 0x105 Vcu_Roution_00_Stop
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x31 0x2 0x105 Vcu_Roution_00_Stop
-[13:19:20] INFO   At Service 0x31 SubService 0x3 
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x31 0x3 0x105 Vcu_Roution_00_Results
-[13:19:20] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
-[13:19:20] INFO     - Service has now new definition: 0x31 0x3 0x105 Vcu_Roution_00_Results
-[13:19:20] INFO   At Ecu 
-[13:19:20] INFO     - Finding duplicated sub-services... 
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep ServiceDefinition( completed in 0.015s (15ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep DataDefinition >>>>>>>>>>>>>
-[13:19:20] INFO   Service: 0x2e 0x100 DevelopmentData_Write shared data components linked to: Service: 0x22 0x100 DevelopmentData_Read !!!
-[13:19:20] INFO   Service: 0x2e 0x101 DataDiagnosticIdentifier_DDI_Write shared data components linked to: Service: 0x22 0x101 DataDiagnosticIdentifier_DDI_Read !!!
-[13:19:20] INFO   Service: 0x2e 0x200 DID_0x0200_Write shared data components linked to: Service: 0x22 0x200 DID_0x0200_Read !!!
-[13:19:20] INFO   Service: 0x2e 0x1024 VCU_DID_00_Write shared data components linked to: Service: 0x22 0x1024 VCU_DID_00_Read !!!
-[13:19:20] INFO   Service: 0x2e 0xf180 Boot_Software_Write shared data components linked to: Service: 0x22 0xf180 Boot_Software_Read !!!
-[13:19:20] INFO   Service: 0x2e 0xf187 Spare_Part_Number_Write shared data components linked to: Service: 0x22 0xf187 Spare_Part_Number_Read !!!
-[13:19:20] INFO   Service: 0x2e 0xf189 EcuIdentification_Write shared data components linked to: Service: 0x22 0xf189 EcuIdentification_Read !!!
-[13:19:20] INFO   Service: 0x2e 0xf18c SerialNumber_Write shared data components linked to: Service: 0x22 0xf18c SerialNumber_Read !!!
-[13:19:20] INFO   Service: 0x2e 0xf190 Vehicle_Identification_Write shared data components linked to: Service: 0x22 0xf190 Vehicle_Identification_Read !!!
-[13:19:20] INFO   Service: 0x2e 0xf193 Hardware_Version_Write shared data components linked to: Service: 0x22 0xf193 Hardware_Version_Read !!!
-[13:19:20] INFO   Service: 0x2e 0xf194 DID_0xF194_Write shared data components linked to: Service: 0x22 0xf194 DID_0xF194_Read !!!
-[13:19:20] INFO   Service: 0x2e 0xf1a0 DID_0xF1A0_Write shared data components linked to: Service: 0x22 0xf1a0 DID_0xF1A0_Read !!!
-[13:19:20] INFO   Service: 0x2e 0xf1a1 DID_0xF1A1_Write shared data components linked to: Service: 0x22 0xf1a1 DID_0xF1A1_Read !!!
-[13:19:20] INFO   Service: 0x2e 0xf1a2 DID_0xF1A2_Write shared data components linked to: Service: 0x22 0xf1a2 DID_0xF1A2_Read !!!
-[13:19:20] INFO   Service: 0x2e 0xf1a3 DID_0xF1A3_Write shared data components linked to: Service: 0x22 0xf1a3 DID_0xF1A3_Read !!!
-[13:19:20] NOTE   At Ecu 'MyEcu' 
-[13:19:20] NOTE     - Building Service Dids
-[13:19:20] NOTE     - Building Routines
-[13:19:20] NOTE     -  + Routine 'New_Routine_Control' created
-[13:19:20] NOTE     -  + Routine 'Vcu_Roution_00' created
-[13:19:20] INFO   At DTCStatusMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DtcAvailabilityMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At P2 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At P2Ex 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At P2 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At P2Ex 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At P2 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At P2Ex 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DTCStatusMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DTCStatusAvailabilityMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DtcFormatIdentifier 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DTCCount 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DTCSnapshotRecordNumber_Base_Variant_Data_Object 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At StatusOfDTC 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At StatusOfDTC 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DTC_Severity 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DTCStatusMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DtcAvailabilityMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DtcFormatIdentifier 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DTCCount 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DTC_Severity 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DTCStatusMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DtcStatusAvailabilityMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DtcStatusAvailabilityMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DTCStatusAvailabilityMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At StatusAvailabilityMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DTCStatusAvailabilityMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DTCAvailabilityMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DTCStatusAvailabilityMask 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At OperatingSystemVersion 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At CanDriverVersion 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At NmVersion 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DiagnosticModuleVersion 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At TransportLayerVersion 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DataDiagnosticIdentifier 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At Data 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DID_Data 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DID_Data 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DataRecord 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At NumberOfModules 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At Boot_Software_Identification 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At Spare_Part_Number 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At Part_Number 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At SerialNumber 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At VIN 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At Hardware_Version_Number 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At New_Data_Object 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At F1A0_Data 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At F1A1_Data 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At F1A2_Data 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At F1A3_Data 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DataRecord 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At SecuritySeed 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At SecurityKey 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At Security_Access_Data_Record 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At SecuritySeed 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At SecurityKey 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At Communciation_Type 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At Communciation_Type 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At Communciation_Type 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At Communciation_Type 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At ALFID 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DID_Data 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DID_Data 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DID_Data 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DID_Data 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At DID_Data 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At New_Data_Object 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At New_Data_Object 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At New_Data_Object 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At New_Data_Object 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] INFO   At New_Data_Object 
-[13:19:20] INFO     - Trying to remove attribute 'FaultmemoryData'
-[13:19:20] INFO     - Removeing attribute 'FaultmemoryData'
-[13:19:20] NOTE   At Ecu 
-[13:19:20] NOTE     - Shape Routine Parameter Names
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep DataDefinition( completed in 0.016s (16ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep DataIdentifier >>>>>>>>>>>>>
-[13:19:20] INFO   At Did 0xf190 - 'Vehicle_Identification' 
-[13:19:20] INFO     - Set DID property 'IsVIN' to 'true'
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep DataIdentifier( completed in 0s (0ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep Service >>>>>>>>>>>>>
-[13:19:20] NOTE   At Ecu 
-[13:19:20] NOTE     - Building Diagnostic Event Memories
-[13:19:20] NOTE     - Checking Diagnostic Event Memories
-[13:19:20] INFO   At Service 0x10 
-[13:19:20] INFO     - Qualifier changed from 'DefaultSession_Start' to 'DiagSessionControl'
-[13:19:20] INFO     - Service action qualifier set to 'SessionControl'
-[13:19:20] INFO   At Service 0x10 SubService 0x1 
-[13:19:20] INFO     - SubService action qualifier set to 'StartSession'
-[13:19:20] INFO   At Service 0x10 SubService 0x2 
-[13:19:20] INFO     - SubService action qualifier set to 'StartSession'
-[13:19:20] INFO   At Service 0x10 SubService 0x3 
-[13:19:20] INFO     - SubService action qualifier set to 'StartSession'
-[13:19:20] INFO   At Service 0x10 SubService 0x1 
-[13:19:20] INFO     - Qualifier changed from 'DefaultSession_Start' to 'Default'
-[13:19:20] INFO   At Service 0x10 SubService 0x2 
-[13:19:20] INFO     - Qualifier changed from 'ProgrammingSession_Start' to 'Programming'
-[13:19:20] INFO   At Service 0x10 SubService 0x3 
-[13:19:20] INFO     - Qualifier changed from 'ExtendedDiagnosticSession_Start' to 'Extended'
-[13:19:20] INFO   At Service 0x11 
-[13:19:20] INFO     - Qualifier changed from 'Hard_Reset_Reset' to 'EcuReset'
-[13:19:20] INFO   At Service 0x11 SubService 0x1 
-[13:19:20] INFO     - SubService action qualifier set to 'EcuReset'
-[13:19:20] INFO   At Service 0x11 SubService 0x3 
-[13:19:20] INFO     - SubService action qualifier set to 'EcuReset'
-[13:19:20] INFO   At Service 0x11 SubService 0x1 
-[13:19:20] INFO     - Qualifier changed from 'Hard_Reset_Reset' to 'Hard'
-[13:19:20] INFO   At Service 0x11 SubService 0x3 
-[13:19:20] INFO     - Qualifier changed from 'Soft_Reset_Reset' to 'Soft'
-[13:19:20] INFO   At Service 0x14 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_Clear' to 'ClearDiagInfo'
-[13:19:20] INFO   At Service 0x14 SubService 
-[13:19:20] INFO     - SubService action qualifier set to 'Clear'
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_Clear' to 'ClearDiagInfo'
-[13:19:20] INFO   At Service 0x19 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_ReadAllIdentified' to 'ReadDtcInfo'
-[13:19:20] INFO   At Service 0x19 SubService 0x2 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0x1 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0x3 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0x4 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0x6 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0x7 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0x8 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0x9 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0xa 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0xb 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0xc 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0xd 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0xe 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0x14 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDtc'
-[13:19:20] INFO   At Service 0x19 SubService 0x1 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_ReadNumber' to 'RNODTCBSM'
-[13:19:20] INFO   At Service 0x19 SubService 0x2 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_ReadAllIdentified' to 'RDTCBSM'
-[13:19:20] INFO   At Service 0x19 SubService 0x3 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_Read_snapshot_ID' to 'RDTCSSI'
-[13:19:20] INFO   At Service 0x19 SubService 0x4 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_Read_snapshot_record' to 'RDTCSSBDTC'
-[13:19:20] INFO   At Service 0x19 SubService 0x6 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_Read_extended_data_record' to 'RDTCEDRBDN'
-[13:19:20] INFO   At Service 0x19 SubService 0x7 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_Report_nbr_of_DTC_bei_severity' to 'RNODTCBSMR'
-[13:19:20] INFO   At Service 0x19 SubService 0x8 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_Read_DTC_by_severity' to 'RDTCBSMR'
-[13:19:20] INFO   At Service 0x19 SubService 0x9 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_Read_severity_information' to 'RSIODTC'
-[13:19:20] INFO   At Service 0x19 SubService 0xa 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_ReadAllSupported' to 'RSUPDTC'
-[13:19:20] INFO   At Service 0x19 SubService 0xb 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_Read_first_test_failed_DTC' to 'RFTFDTC'
-[13:19:20] INFO   At Service 0x19 SubService 0xc 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_Read_first_confirmed_DTC' to 'RFCDTC'
-[13:19:20] INFO   At Service 0x19 SubService 0xd 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_Read_most_recent_test_failed_DTC' to 'RMRTFDTC'
-[13:19:20] INFO   At Service 0x19 SubService 0xe 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_Read_most_recent_confirmed_DTC' to 'RMRCDTC'
-[13:19:20] INFO   At Service 0x19 SubService 0x14 
-[13:19:20] INFO     - Qualifier changed from 'FaultMemory_Read_fault_detection_counter' to 'RDTCFDC'
-[13:19:20] INFO   At Service 0x22 
-[13:19:20] INFO     - Qualifier changed from 'DevelopmentData_Read' to 'ReadDataById'
-[13:19:20] INFO     - Service action qualifier set to 'Read'
-[13:19:20] INFO   At Service 0x22 SubService 0x100 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0x101 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0x200 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0x300 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0x400 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0x1024 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0xf180 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0xf187 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0xf189 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0xf18c 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0xf190 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0xf193 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0xf194 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0xf1a0 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0xf1a1 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0xf1a2 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0xf1a3 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x22 SubService 0xf300 
-[13:19:20] INFO     - SubService action qualifier set to 'ReadDid'
-[13:19:20] INFO   At Service 0x23 
-[13:19:20] INFO     - Qualifier changed from 'Memory_Read' to 'ReadMemoryByAddress'
-[13:19:20] INFO   At Service 0x23 SubService 
-[13:19:20] INFO     - SubService action qualifier set to 'Read'
-[13:19:20] INFO   At Service 0x27 
-[13:19:20] INFO     - Qualifier changed from 'SeedLevel1_Request' to 'SecurityAccess'
-[13:19:20] INFO     - Service action qualifier set to 'SecurityAccess'
-[13:19:20] INFO   At Service 0x27 SubService 0x2 
-[13:19:20] INFO     - SubService action qualifier set to 'SendKey'
-[13:19:20] INFO   At Service 0x27 SubService 0x4 
-[13:19:20] INFO     - SubService action qualifier set to 'SendKey'
-[13:19:20] INFO   At Service 0x27 SubService 0x1 
-[13:19:20] INFO     - SubService action qualifier set to 'GetSeed'
-[13:19:20] INFO   At Service 0x27 SubService 0x3 
-[13:19:20] INFO     - SubService action qualifier set to 'GetSeed'
-[13:19:20] INFO   At Service 0x28 
-[13:19:20] INFO     - Qualifier changed from 'EnableRxAndEnableTx_Control' to 'CommunicationControl'
-[13:19:20] INFO   At Service 0x28 SubService 0x0 
-[13:19:20] INFO     - SubService action qualifier set to 'CommCtrl'
-[13:19:20] INFO   At Service 0x28 SubService 0x1 
-[13:19:20] INFO     - SubService action qualifier set to 'CommCtrl'
-[13:19:20] INFO   At Service 0x28 SubService 0x2 
-[13:19:20] INFO     - SubService action qualifier set to 'CommCtrl'
-[13:19:20] INFO   At Service 0x28 SubService 0x3 
-[13:19:20] INFO     - SubService action qualifier set to 'CommCtrl'
-[13:19:20] INFO   At Service 0x28 SubService 0x0 
-[13:19:20] INFO     - Qualifier changed from 'EnableRxAndEnableTx_Control' to 'EnableRxAndTx'
-[13:19:20] INFO   At Service 0x28 SubService 0x1 
-[13:19:20] INFO     - Qualifier changed from 'EnableRxAndDisableTx_Control' to 'EnableRxAndDisableTx'
-[13:19:20] INFO   At Service 0x28 SubService 0x2 
-[13:19:20] INFO     - Qualifier changed from 'DisableRxAndEnableTx_Control' to 'DisableRxAndEnableTx'
-[13:19:20] INFO   At Service 0x28 SubService 0x3 
-[13:19:20] INFO     - Qualifier changed from 'DisableRxAndDisableTx_Control' to 'DisableRxAndTx'
-[13:19:20] INFO   At Service 0x2c 
-[13:19:20] INFO     - Spec changed from '12' to 'DynamicallyDefine'(4)
-[13:19:20] INFO     - Qualifier changed from 'New_Dynamically_Define_Non_Periodic_Data_Define_By_Identifier' to 'DynamicallyDefineDataId'
-[13:19:20] INFO   At Service 0x2c SubService 0x1 
-[13:19:20] INFO     - SubService action qualifier set to 'DynDefById'
-[13:19:20] INFO   At Service 0x2c SubService 0x2 
-[13:19:20] INFO     - SubService action qualifier set to 'DynDefByAddr'
-[13:19:20] INFO   At Service 0x2c SubService 0x3 
-[13:19:20] INFO     - SubService action qualifier set to 'DynDefClr'
-[13:19:20] INFO   At Service 0x2c SubService 0x3 
-[13:19:20] INFO     - SubService action qualifier set to 'DynDefClr'
-[13:19:20] INFO   At Service 0x2e 
-[13:19:20] INFO     - Qualifier changed from 'DevelopmentData_Write' to 'WriteDataById'
-[13:19:20] INFO     - Service action qualifier set to 'Write'
-[13:19:20] INFO   At Service 0x2e SubService 0x100 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0x101 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0x200 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0x1024 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0xf180 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0xf187 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0xf189 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0xf18c 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0xf190 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0xf193 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0xf194 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0xf1a0 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0xf1a1 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0xf1a2 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2e SubService 0xf1a3 
-[13:19:20] INFO     - SubService action qualifier set to 'WriteDid'
-[13:19:20] INFO   At Service 0x2f 
-[13:19:20] INFO     - Qualifier changed from 'DID_0x0300_ReturnControl' to 'IoControlById'
-[13:19:20] INFO     - Service action qualifier set to 'IoCtrl'
-[13:19:20] INFO   At Service 0x2f SubService 0x300 0x0 
-[13:19:20] INFO     - SubService action qualifier set to 'IoCtrlRetCtrlToEcu'
-[13:19:20] INFO   At Service 0x2f SubService 0x300 0x1 
-[13:19:20] INFO     - SubService action qualifier set to 'IoCtrlRstToDefault'
-[13:19:20] INFO   At Service 0x2f SubService 0x300 0x2 
-[13:19:20] INFO     - SubService action qualifier set to 'IoCtrlFrzCurrState'
-[13:19:20] INFO   At Service 0x2f SubService 0x300 0x3 
-[13:19:20] INFO     - SubService action qualifier set to 'IoCtrlShortTermAdj'
-[13:19:20] INFO   At Service 0x31 
-[13:19:20] INFO     - Qualifier changed from 'New_Routine_Control_Start' to 'RoutineControl'
-[13:19:20] INFO   At Service 0x31 SubService 0x1 
-[13:19:20] INFO     - SubService action qualifier set to 'RtnCtrlStart'
-[13:19:20] INFO   At Service 0x31 SubService 0x1 
-[13:19:20] INFO     - SubService action qualifier set to 'RtnCtrlStart'
-[13:19:20] INFO   At Service 0x31 SubService 0x2 
-[13:19:20] INFO     - SubService action qualifier set to 'RtnCtrlStop'
-[13:19:20] INFO   At Service 0x31 SubService 0x3 
-[13:19:20] INFO     - SubService action qualifier set to 'RtnCtrlReqRes'
-[13:19:20] INFO   At Service 0x3d 
-[13:19:20] INFO     - Qualifier changed from 'Memory_Write' to 'WriteMemoryByAddress'
-[13:19:20] INFO   At Service 0x3d SubService 
-[13:19:20] INFO     - SubService action qualifier set to 'Write'
-[13:19:20] INFO   At Service 0x3e 
-[13:19:20] INFO     - Qualifier changed from 'TesterPresent_Send' to 'TesterPresent'
-[13:19:20] INFO   At Service 0x3e SubService 0x0 
-[13:19:20] INFO     - SubService action qualifier set to 'Send'
-[13:19:20] INFO     - Qualifier changed from 'TesterPresent_Send' to 'TesterPresent'
-[13:19:20] INFO   At Service 0x85 
-[13:19:20] INFO     - Spec changed from '12' to 'FaultMemory'(2)
-[13:19:20] INFO     - Qualifier changed from 'ControlDTCSetting_On' to 'ControlDtcSetting'
-[13:19:20] INFO   At Service 0x85 SubService 0x1 
-[13:19:20] INFO     - SubService action qualifier set to 'ControlDtcSetting'
-[13:19:20] INFO   At Service 0x85 SubService 0x2 
-[13:19:20] INFO     - SubService action qualifier set to 'ControlDtcSetting'
-[13:19:20] INFO   At Service 0x85 SubService 0x1 
-[13:19:20] INFO     - Qualifier changed from 'ControlDTCSetting_On' to 'Enable'
-[13:19:20] INFO   At Service 0x85 SubService 0x2 
-[13:19:20] INFO     - Qualifier changed from 'ControlDTCSetting_Off' to 'Disable'
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep Service( completed in 0.016s (16ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep StateMachine >>>>>>>>>>>>>
-[13:19:20] NOTE   At Ecu 
-[13:19:20] NOTE     - Merging Environmental Modes
-[13:19:20] NOTE     - Merging Environmental Dids
-[13:19:20] NOTE     - Merging Environmental Rules
-[13:19:20] NOTE     - Merging Access Conditions
-[13:19:20] NOTE     - Building Diagnostic Sessions
-[13:19:20] NOTE     -  + Session 'Default' created
-[13:19:20] NOTE     -  + Session 'Programming' created
-[13:19:20] NOTE     -  + Session 'Extended' created
-[13:19:20] WARN     - Service 0x27 0x2 not allowed in its own state 'UnlockedL1'
-[13:19:20] INFO     - The service execution for this session state will be enabled
-[13:19:20] WARN     - Service 0x27 0x4 not allowed in its own state 'Level_3'
-[13:19:20] INFO     - The service execution for this session state will be enabled
-[13:19:20] NOTE     - Building Diagnostic Securities
-[13:19:20] NOTE     -  + Security 'UnlockedL1' created
-[13:19:20] NOTE     -  + Security 'Level_3' created
-[13:19:20] NOTE     - Building Authorizations
-[13:19:20] NOTE     - Building Environmental Conditions
-[13:19:20] NOTE     - Building Access Conditions
-[13:19:20] NOTE     -  + Access Cond '|' created
-[13:19:20] NOTE     -  + Access Cond 'S02;S03|' created
-[13:19:20] NOTE     -  + Access Cond 'S03|' created
-[13:19:20] NOTE   At Ecu 
-[13:19:20] NOTE     - Building Access Conditions - finshed
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep StateMachine( completed in 0s (0ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep StateMachine2 >>>>>>>>>>>>>
-[13:19:20] INFO   At Security 0x1 [serviceAttr(MaxAttemptsToDelay):  exists] 
-[13:19:20] INFO     - Set property 'NumFailed' to '3'
-[13:19:20] INFO   At Security 0x1 [serviceAttr(DelayTimeMs):  exists] 
-[13:19:20] INFO     - Set property 'DelayTime' to '10000'
-[13:19:20] INFO   At Security 0x1 [serviceAttr(DelayTimeOnPowerOnMs):  exists] 
-[13:19:20] INFO     - Set property 'BootDelayTime' to '0'
-[13:19:20] INFO   At Security 0x2 [serviceAttr(MaxAttemptsToDelay):  exists] 
-[13:19:20] INFO     - Set property 'NumFailed' to '3'
-[13:19:20] INFO   At Security 0x2 [serviceAttr(DelayTimeMs):  exists] 
-[13:19:20] INFO     - Set property 'DelayTime' to '10000'
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep StateMachine2( completed in 0s (0ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep StateMachine3 >>>>>>>>>>>>>
-[13:19:20] INFO   At Session 0x1 [P2Time is Null] 
-[13:19:20] INFO     - Set property 'P2Time' to '50'
-[13:19:20] INFO   At Session 0x1 [P2ExTime is Null] 
-[13:19:20] INFO     - Set property 'P2ExTime' to '5000'
-[13:19:20] INFO   At Session 0x2 [P2Time is Null] 
-[13:19:20] INFO     - Set property 'P2Time' to '50'
-[13:19:20] INFO   At Session 0x2 [P2ExTime is Null] 
-[13:19:20] INFO     - Set property 'P2ExTime' to '5000'
-[13:19:20] INFO   At Session 0x3 [P2Time is Null] 
-[13:19:20] INFO     - Set property 'P2Time' to '50'
-[13:19:20] INFO   At Session 0x3 [P2ExTime is Null] 
-[13:19:20] INFO     - Set property 'P2ExTime' to '5000'
-[13:19:20] INFO   At Session 0x1 [JumpToBoot is Null] 
-[13:19:20] INFO     - Set property 'JumpToBoot' to 'noBoot'
-[13:19:20] INFO     - Set Reset-to-FBL to false
-[13:19:20] INFO   At Session 0x3 [JumpToBoot is Null] 
-[13:19:20] INFO     - Set property 'JumpToBoot' to 'noBoot'
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep StateMachine3( completed in 0s (0ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep Settings >>>>>>>>>>>>>
-[13:19:20] INFO   At Ecu 'MyEcu' 
-[13:19:20] INFO     - Set 'periodic rate slow' to '1000'
-[13:19:20] INFO     - Set 'periodic rate medium' to '100'
-[13:19:20] INFO     - Set 'periodic rate fast' to '20'
-[13:19:20] INFO     - Set 'maximum number of dynamically defined dids' to '5'
-[13:19:20] INFO     - Set 'storage of dynamically defined dids' to 'volatile'
-[13:19:20] INFO     - Set 'check access of dynamically defined dids' to 'false'
-[13:19:20] INFO   At Ecu 'MyEcu' Obd2 (DEM): false 
-[13:19:20] INFO     - Set ecu property 'ObdSupport' to 'none'
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep Settings( completed in 0s (0ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep FaultMemory >>>>>>>>>>>>>
-[13:19:20] INFO   At DTC 0x4 
-[13:19:20] INFO     - Set DTC-Prop 'DtcType' to default 'Fault'
-[13:19:20] INFO     - Set DTC-Prop 'Priority' to '4'
-[13:19:20] INFO     - Set DTC-Prop 'AgingCycle' to 'DEM_POWER'
-[13:19:20] INFO     - Set DTC-Prop 'AgingCount' to '40'
-[13:19:20] INFO   At DTC 0x4 
-[13:19:20] INFO     - Set DTC-Prop 'AgingAllowed' to 'true'
-[13:19:20] INFO     - Set DTC-Prop 'Severity' to '0'
-[13:19:20] INFO   At DTC 0x202 
-[13:19:20] INFO     - Set DTC-Prop 'DtcType' to default 'Fault'
-[13:19:20] INFO     - Set DTC-Prop 'Priority' to '1'
-[13:19:20] INFO     - Set DTC-Prop 'AgingCycle' to 'DEM_POWER'
-[13:19:20] INFO     - Set DTC-Prop 'AgingCount' to '40'
-[13:19:20] INFO   At DTC 0x202 
-[13:19:20] INFO     - Set DTC-Prop 'AgingAllowed' to 'true'
-[13:19:20] INFO     - Set DTC-Prop 'Severity' to '0'
-[13:19:20] INFO   At DTC 0x303 
-[13:19:20] INFO     - Set DTC-Prop 'DtcType' to default 'Fault'
-[13:19:20] INFO     - Set DTC-Prop 'Priority' to '2'
-[13:19:20] INFO     - Set DTC-Prop 'AgingCycle' to 'DEM_POWER'
-[13:19:20] INFO     - Set DTC-Prop 'AgingCount' to '40'
-[13:19:20] INFO   At DTC 0x303 
-[13:19:20] INFO     - Set DTC-Prop 'AgingAllowed' to 'true'
-[13:19:20] INFO     - Set DTC-Prop 'Severity' to '0'
-[13:19:20] INFO   At DTC 0xd00104 
-[13:19:20] INFO     - Set DTC-Prop 'DtcType' to default 'Fault'
-[13:19:20] INFO     - Set DTC-Prop 'Priority' to '3'
-[13:19:20] INFO     - Set DTC-Prop 'AgingCycle' to 'DEM_POWER'
-[13:19:20] INFO     - Set DTC-Prop 'AgingCount' to '40'
-[13:19:20] INFO   At DTC 0xd00104 
-[13:19:20] INFO     - Set DTC-Prop 'AgingAllowed' to 'true'
-[13:19:20] INFO     - Set DTC-Prop 'Severity' to '0'
-[13:19:20] INFO   At Faultmemory  
-[13:19:20] INFO     - Set fault memory property 'ecgNaming' to 'singleElem'
-[13:19:20] INFO   At Service 0x19 SubService 0x2 
-[13:19:20] INFO     - Set primary memory property 'StatAvailMask' to '255'
-[13:19:20] INFO   At Service 0x19 SubService 0x4 
-[13:19:20] INFO     - Set primary memory property 'SsrNumeration' to 'Calculated'
-[13:19:20] INFO     - Set primary memory property 'useMaxSsrCount' to 'true'
-[13:19:20] INFO   At Event-Memory  
-[13:19:20] INFO     - Set primary memory property 'ssrUpdatable' to 'true'
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep FaultMemory( completed in 0.015s (15ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep FaultMemory2 >>>>>>>>>>>>>
-[13:19:20] NOTE   At Ecu 'MyEcu' 
-[13:19:20] NOTE     - Building DidSets
-[13:19:20] NOTE   At Ecu 'MyEcu' EventImport: false 
-[13:19:20] NOTE     - Building Events
-[13:19:20] INFO   At Occurence_Counter 
-[13:19:20] INFO     - Set property 'DemDataType' to 'OccCtr'
-[13:19:20] INFO   At Fault_Aging_Counter 
-[13:19:20] INFO     - Set property 'DemDataType' to 'AgingCtrDowncnt'
-[13:19:20] INFO   At Fault_Aging_Counte_Up 
-[13:19:20] INFO     - Set property 'DemDataType' to 'AgingCtrUpcnt'
-[13:19:20] INFO   At Event 'DTC_0X000004_Event' EventKind is Null 
-[13:19:20] INFO     - Set Event-Prop 'EventKind' to 'SWC' using 'updatable'
-[13:19:20] INFO   At Event 'DTC_0X000004_Event' EventImport: false 
-[13:19:20] INFO     - Set Event-Prop 'OpCycle' to 'DEM_POWER'
-[13:19:20] INFO     - Set Event-Prop 'EventFailureCount' to '3'
-[13:19:20] INFO   At Event 'DTC_0X000002_Event' EventKind is Null 
-[13:19:20] INFO     - Set Event-Prop 'EventKind' to 'SWC' using 'updatable'
-[13:19:20] INFO   At Event 'DTC_0X000002_Event' EventImport: false 
-[13:19:20] INFO     - Set Event-Prop 'OpCycle' to 'DEM_POWER'
-[13:19:20] INFO     - Set Event-Prop 'EventFailureCount' to '3'
-[13:19:20] INFO   At Event 'DTC_0X000003_Event' EventKind is Null 
-[13:19:20] INFO     - Set Event-Prop 'EventKind' to 'SWC' using 'updatable'
-[13:19:20] INFO   At Event 'DTC_0X000003_Event' EventImport: false 
-[13:19:20] INFO     - Set Event-Prop 'OpCycle' to 'DEM_POWER'
-[13:19:20] INFO     - Set Event-Prop 'EventFailureCount' to '3'
-[13:19:20] INFO   At Event 'CAN00_BUSOFF_Event' EventKind is Null 
-[13:19:20] INFO     - Set Event-Prop 'EventKind' to 'SWC' using 'updatable'
-[13:19:20] INFO   At Event 'CAN00_BUSOFF_Event' EventImport: false 
-[13:19:20] INFO     - Set Event-Prop 'OpCycle' to 'DEM_POWER'
-[13:19:20] INFO     - Set Event-Prop 'EventFailureCount' to '3'
-[13:19:20] INFO   At DTC 0x4 
-[13:19:20] INFO     - Set Event-Prop 'InitMonitor' to 'false'
-[13:19:20] INFO   At DTC 0x4 IS_ANYOBD: FALSE EventImport: false 
-[13:19:20] INFO     - Warning Indicator 'WarningIndicator' with type 'Warning' created
-[13:19:20] INFO     - Set Event-Prop 'WarnIndicator' to 'WarningIndicator' using 'Warning'
-[13:19:20] INFO   At DTC 0x202 
-[13:19:20] INFO     - Set Event-Prop 'InitMonitor' to 'false'
-[13:19:20] INFO   At DTC 0x202 IS_ANYOBD: FALSE EventImport: false 
-[13:19:20] INFO     - Set Event-Prop 'WarnIndicator' to 'WarningIndicator' using 'Warning'
-[13:19:20] INFO   At DTC 0x202 EventImport: false 
-[13:19:20] INFO     - Set Event-Prop 'EnableCond' to 'Example_EnableCondition1, Example_EnableCondition2'
-[13:19:20] INFO   At DTC 0x303 
-[13:19:20] INFO     - Set Event-Prop 'InitMonitor' to 'false'
-[13:19:20] INFO   At DTC 0x303 IS_ANYOBD: FALSE EventImport: false 
-[13:19:20] INFO     - Set Event-Prop 'WarnIndicator' to 'WarningIndicator' using 'Warning'
-[13:19:20] INFO   At DTC 0x303 EventImport: false 
-[13:19:20] INFO     - Set Event-Prop 'EnableCond' to 'Example_EnableCondition1'
-[13:19:20] INFO   At DTC 0xd00104 
-[13:19:20] INFO     - Set Event-Prop 'InitMonitor' to 'false'
-[13:19:20] INFO   At DTC 0xd00104 IS_ANYOBD: FALSE EventImport: false 
-[13:19:20] INFO     - Set Event-Prop 'WarnIndicator' to 'WarningIndicator' using 'Warning'
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep FaultMemory2( completed in 0s (0ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep FaultMemory3 >>>>>>>>>>>>>
-[13:19:20] INFO   At DTC 0x4 SsrNumeration: calculated MaxSsrCount: NULL 
-[13:19:20] INFO     - Set DTC-Prop 'MaxSsrCount' to '2'
-[13:19:20] INFO   At DTC 0x4 UseMaxSsrCount: TRUE 
-[13:19:20] INFO     - Clear DTC-Prop 'SnapshotRecs'
-[13:19:20] INFO   At DTC 0x4 EventImport: false 
-[13:19:20] INFO     - Set Event-Prop 'DebounceType' to 'Counter'
-[13:19:20] INFO   At DTC 0x202 SsrNumeration: calculated MaxSsrCount: NULL 
-[13:19:20] INFO     - Set DTC-Prop 'MaxSsrCount' to '2'
-[13:19:20] INFO   At DTC 0x202 UseMaxSsrCount: TRUE 
-[13:19:20] INFO     - Clear DTC-Prop 'SnapshotRecs'
-[13:19:20] INFO   At DTC 0x202 EventImport: false 
-[13:19:20] INFO     - Set Event-Prop 'DebounceType' to 'Counter'
-[13:19:20] INFO   At DTC 0x303 SsrNumeration: calculated MaxSsrCount: NULL 
-[13:19:20] INFO     - Set DTC-Prop 'MaxSsrCount' to '2'
-[13:19:20] INFO   At DTC 0x303 UseMaxSsrCount: TRUE 
-[13:19:20] INFO     - Clear DTC-Prop 'SnapshotRecs'
-[13:19:20] INFO   At DTC 0x303 EventImport: false 
-[13:19:20] INFO     - Set Event-Prop 'DebounceType' to 'Counter'
-[13:19:20] INFO   At DTC 0xd00104 SsrNumeration: calculated MaxSsrCount: NULL 
-[13:19:20] INFO     - Set DTC-Prop 'MaxSsrCount' to '2'
-[13:19:20] INFO   At DTC 0xd00104 UseMaxSsrCount: TRUE 
-[13:19:20] INFO     - Clear DTC-Prop 'SnapshotRecs'
-[13:19:20] INFO   At DTC 0xd00104 EventImport: false 
-[13:19:20] INFO     - Set Event-Prop 'DebounceType' to 'Counter'
-[13:19:20] INFO   At Event 'DTC_0X000004_Event' EventImport: false DebounceType == Counter 
-[13:19:20] INFO     - Set Event-Prop 'JumpUp' to 'Yes'
-[13:19:20] INFO     - Set Event-Prop 'JumpDown' to 'No'
-[13:19:20] INFO     - Set Event-Prop 'IncStepSize' to '1'
-[13:19:20] INFO     - Set Event-Prop 'DecStepSize' to '1'
-[13:19:20] INFO     - Set Event-Prop 'FailedThreshold' to '40'
-[13:19:20] INFO     - Set Event-Prop 'Register' to '40'
-[13:19:20] INFO     - Fix Event 'Register' with calculation 'NegIfPos'
-[13:19:20] INFO     - Set Event-Prop 'PassedThreshold' to '-40'
-[13:19:20] INFO   At Event 'DTC_0X000002_Event' EventImport: false DebounceType == Counter 
-[13:19:20] INFO     - Set Event-Prop 'JumpUp' to 'Yes'
-[13:19:20] INFO     - Set Event-Prop 'JumpDown' to 'No'
-[13:19:20] INFO     - Set Event-Prop 'IncStepSize' to '1'
-[13:19:20] INFO     - Set Event-Prop 'DecStepSize' to '1'
-[13:19:20] INFO     - Set Event-Prop 'FailedThreshold' to '40'
-[13:19:20] INFO     - Set Event-Prop 'Register' to '40'
-[13:19:20] INFO     - Fix Event 'Register' with calculation 'NegIfPos'
-[13:19:20] INFO     - Set Event-Prop 'PassedThreshold' to '-40'
-[13:19:20] INFO   At Event 'DTC_0X000003_Event' EventImport: false DebounceType == Counter 
-[13:19:20] INFO     - Set Event-Prop 'JumpUp' to 'No'
-[13:19:20] INFO     - Set Event-Prop 'JumpDown' to 'No'
-[13:19:20] INFO     - Set Event-Prop 'IncStepSize' to '32'
-[13:19:20] INFO     - Set Event-Prop 'DecStepSize' to '32'
-[13:19:20] INFO     - Set Event-Prop 'FailedThreshold' to '40'
-[13:19:20] INFO     - Set Event-Prop 'Register' to '40'
-[13:19:20] INFO     - Fix Event 'Register' with calculation 'NegIfPos'
-[13:19:20] INFO     - Set Event-Prop 'PassedThreshold' to '-40'
-[13:19:20] INFO   At Event 'CAN00_BUSOFF_Event' EventImport: false DebounceType == Counter 
-[13:19:20] INFO     - Set Event-Prop 'JumpUp' to 'Yes'
-[13:19:20] INFO     - Set Event-Prop 'JumpDown' to 'No'
-[13:19:20] INFO     - Set Event-Prop 'IncStepSize' to '1'
-[13:19:20] INFO     - Set Event-Prop 'DecStepSize' to '1'
-[13:19:20] INFO     - Set Event-Prop 'FailedThreshold' to '40'
-[13:19:20] INFO     - Set Event-Prop 'Register' to '40'
-[13:19:20] INFO     - Fix Event 'Register' with calculation 'NegIfPos'
-[13:19:20] INFO     - Set Event-Prop 'PassedThreshold' to '-40'
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep FaultMemory3( completed in 0s (0ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep FaultMemory4 >>>>>>>>>>>>>
-[13:19:20] INFO   At Event 'DTC_0X000004_Event' Microsar: true 
-[13:19:20] INFO     - Set Event-Prop 'HealingCycle' to 'DEM_POWER' using 'Power'
-[13:19:20] INFO   At Event 'DTC_0X000002_Event' Microsar: true 
-[13:19:20] INFO     - Set Event-Prop 'HealingCycle' to 'DEM_POWER' using 'Power'
-[13:19:20] INFO   At Event 'DTC_0X000003_Event' Microsar: true 
-[13:19:20] INFO     - Set Event-Prop 'HealingCycle' to 'DEM_POWER' using 'Power'
-[13:19:20] INFO   At Event 'CAN00_BUSOFF_Event' Microsar: true 
-[13:19:20] INFO     - Set Event-Prop 'HealingCycle' to 'DEM_POWER' using 'Power'
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep FaultMemory4( completed in 0s (0ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep FaultMemory5 >>>>>>>>>>>>>
-[13:19:20] INFO   At Ecu 'MyEcu' 
-[13:19:20] INFO     - Merging Debounce Algorithms
-[13:19:20] INFO        - Algorithm 'DTC_0X000004_DebounceAlgorithmProperties' has 2 dublicate(s)
-[13:19:20] INFO     - Merging Operation Cycles
-[13:19:20] INFO     - Merging Warning Indicators
-[13:19:20] INFO     - Merging Enable/Storage/Clear Conditions
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep FaultMemory5( completed in 0s (0ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep Obd >>>>>>>>>>>>>
-[13:19:20] NOTE   At Ecu 'MyEcu' 
-[13:19:20] NOTE     - Deleting OBD Sub-Services for Pids
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep Obd( completed in 0s (0ms) <<<<<<<<<<<<<
-[13:19:20] INFO   >>>>>>>>>>>>> ShapingStep CleanUp >>>>>>>>>>>>>
-[13:19:20] INFO   At Ecu 
-[13:19:20] INFO     - Finding duplicated sub-services in clean-up... 
-[13:19:20] NOTE   At Ecu 'MyEcu' 
-[13:19:20] NOTE     - Removing unused snapshot record 0x1 from SSR-Pool
-[13:19:20] NOTE     - Removing unused snapshot record 0x2 from SSR-Pool
-[13:19:20] INFO   <<<<<<<<<<<<< ShapingStep CleanUp( completed in 0s (0ms) <<<<<<<<<<<<<
-[13:19:20] INFO   <<<<<<<<<<<<< SHAPING finished after 0.078s (78ms) <<<<<<<<<<<<<
-[13:19:20] WARN   Calling obsolete AR-Shaper
-[13:19:20] INFO   Exporting ECUC module configurations to file: C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-9477800\DiagnosticsImportService\1741929560101-0\DiagnosticsDescriptionData9093797392378841556.xml
-[13:19:20] INFO   ----> Create ECUC from imported diagnostic data.
-[13:19:20] NOTE   Using EcucEx-Parameter 'DemDidQualifierMode' = 'R19' (default)
-[13:19:20] NOTE   Using EcucEx-Parameter 'DcmQualifierMode' = 'R19' (default)
-[13:19:20] INFO   ----> STEP 1: Create ECUC model.
-[13:19:20] INFO   Creating Dcm module configuration...
-[13:19:20] INFO   Creating Dem module configuration...
-[13:19:20] INFO   <---- STEP 1: Finished.
-[13:19:20] INFO   ----> STEP 2: Postprocess created ECUC model.
-[13:19:20] INFO   ----> Decorate imported object qualifiers/shortnames
-[13:19:20] INFO   <---- Finished decorating qualifiers/shortnames
-[13:19:20] INFO   ----> Transform imported object qualifiers/shortnames to match AUTOSAR IDENTIFIER pattern restriction (except length limit)
-[13:19:20] INFO   <---- Finished transforming shortnames
-[13:19:20] INFO   ----> Ensure uniqueness of container shortnames within their scope
-[13:19:20] INFO   <---- Finished ensuring uniqueness of container shortnames
-[13:19:20] INFO   ----> Truncate shortnames whose length exceeds the 128 character limit for AUTOSAR shortnames
-[13:19:20] INFO   <---- Finished truncating shortnames
-[13:19:20] INFO   ----> Resolve reference parameters
-[13:19:20] INFO   <---- Finished resolving reference parameters
-[13:19:20] INFO   <---- STEP 2: Finished.
-[13:19:20] INFO   ----> STEP 3: Serialize ECUC model to XML.
-[13:19:20] INFO   <---- STEP 3: Finished.
-[13:19:20] INFO   <---- Finished creation of ECUC from imported diagnostic data.
-[13:19:20] INFO   <<<<<<<<<<<<< Meta-EcuC Export finished after 0.016
-[13:19:20] INFO   <---- Process of diagnostic specification.
+﻿[10:26:46] INFO   ----> Process of diagnostic specification
+[10:26:46] INFO   DDM-Version: 20.3.0 (Release)
+[10:26:46] INFO   Importing ODX file D:\TC377_Development\dev\TC37X_VCU\DBC\MyEcu.cdd, ECU: MyEcu, variant: Base_Variant
+[10:26:47] INFO   Selecting ECU 'MyEcu'  Variant 'Base_Variant'.
+[10:26:47] INFO   Selecting Manufacturer 'GENERIC'.
+[10:26:47] WARN   'GENERIC' was selected and 'Vector' was detected.
+[10:26:47] INFO   Importing Database information.
+[10:26:47] INFO   ----> Importing Variants
+[10:26:47] INFO   <---- Importing Variants
+[10:26:47] INFO   ----> Importing StateGroups
+[10:26:47] INFO   Importing StateMachine information.
+[10:26:47] INFO   <---- Importing StateGroups
+[10:26:47] INFO   ----> Importing Services
+[10:26:47] INFO   Importing Service '1001'.
+[10:26:47] INFO   Importing Service '1002'.
+[10:26:47] INFO   Importing Service '1003'.
+[10:26:47] INFO   Importing Service '1101'.
+[10:26:47] INFO   Importing Service '1103'.
+[10:26:47] INFO   Importing Service '14'.
+[10:26:47] INFO   Importing Service '1901'.
+[10:26:47] INFO   Importing Service '1902'.
+[10:26:47] INFO   Importing Service '1903'.
+[10:26:47] INFO   Importing Service '1904'.
+[10:26:47] INFO   Importing Service '1906'.
+[10:26:47] INFO   Importing Service '1907'.
+[10:26:47] INFO   Importing Service '1908'.
+[10:26:47] INFO   Importing Service '1909'.
+[10:26:47] INFO   Importing Service '190A'.
+[10:26:47] INFO   Importing Service '190B'.
+[10:26:47] INFO   Importing Service '190C'.
+[10:26:47] INFO   Importing Service '190D'.
+[10:26:47] INFO   Importing Service '190E'.
+[10:26:47] INFO   Importing Service '1914'.
+[10:26:47] INFO   Importing Service '220100'.
+[10:26:47] INFO   Importing Service '220101'.
+[10:26:47] INFO   Importing Service '220200'.
+[10:26:47] INFO   Importing Service '220300'.
+[10:26:47] INFO   Importing Service '220400'.
+[10:26:47] INFO   Importing Service '221024'.
+[10:26:47] INFO   Importing Service '22F180'.
+[10:26:47] INFO   Importing Service '22F187'.
+[10:26:47] INFO   Importing Service '22F189'.
+[10:26:47] INFO   Importing Service '22F18C'.
+[10:26:47] INFO   Importing Service '22F190'.
+[10:26:47] INFO   Importing Service '22F193'.
+[10:26:47] INFO   Importing Service '22F194'.
+[10:26:47] INFO   Importing Service '22F1A0'.
+[10:26:47] INFO   Importing Service '22F1A1'.
+[10:26:47] INFO   Importing Service '22F1A2'.
+[10:26:47] INFO   Importing Service '22F1A3'.
+[10:26:47] INFO   Importing Service '22F300'.
+[10:26:47] INFO   Importing Service '23'.
+[10:26:47] INFO   Importing Service '2701'.
+[10:26:47] INFO   Importing Service '2702'.
+[10:26:47] INFO   Importing Service '2703'.
+[10:26:47] INFO   Importing Service '2704'.
+[10:26:47] INFO   Importing Service '2800'.
+[10:26:47] INFO   Importing Service '2801'.
+[10:26:47] INFO   Importing Service '2802'.
+[10:26:47] INFO   Importing Service '2803'.
+[10:26:47] INFO   Importing Service '2C01F300'.
+[10:26:47] INFO   Importing Service '2C02F300'.
+[10:26:47] INFO   Importing Service '2C03'.
+[10:26:47] INFO   Importing Service '2C03F300'.
+[10:26:47] INFO   Importing Service '2E0100'.
+[10:26:47] INFO   Importing Service '2E0101'.
+[10:26:47] INFO   Importing Service '2E0200'.
+[10:26:47] INFO   Importing Service '2E1024'.
+[10:26:47] INFO   Importing Service '2EF180'.
+[10:26:47] INFO   Importing Service '2EF187'.
+[10:26:47] INFO   Importing Service '2EF189'.
+[10:26:47] INFO   Importing Service '2EF18C'.
+[10:26:47] INFO   Importing Service '2EF190'.
+[10:26:47] INFO   Importing Service '2EF193'.
+[10:26:47] INFO   Importing Service '2EF194'.
+[10:26:47] INFO   Importing Service '2EF1A0'.
+[10:26:47] INFO   Importing Service '2EF1A1'.
+[10:26:47] INFO   Importing Service '2EF1A2'.
+[10:26:47] INFO   Importing Service '2EF1A3'.
+[10:26:47] INFO   Importing Service '2F030000'.
+[10:26:47] INFO   Importing Service '2F030001'.
+[10:26:47] INFO   Importing Service '2F030002'.
+[10:26:47] INFO   Importing Service '2F030003'.
+[10:26:47] INFO   Importing Service '31010100'.
+[10:26:47] INFO   Importing Service '31010105'.
+[10:26:47] INFO   Importing Service '31020105'.
+[10:26:47] INFO   Importing Service '31030105'.
+[10:26:47] INFO   Importing Service '3D'.
+[10:26:47] INFO   Importing Service '3E00'.
+[10:26:47] INFO   Importing Service '8501'.
+[10:26:47] INFO   Importing Service '8502'.
+[10:26:47] INFO   <---- Importing Services
+[10:26:47] INFO   ----> Importing FaultMemory
+[10:26:47] INFO   Importing FaultMemory.
+[10:26:47] WARN   Could not extract DTC format.
+[10:26:47] INFO   <---- Importing FaultMemory
+[10:26:47] INFO   ----> Importing EnvironmentalConditions
+[10:26:47] INFO   <---- Importing EnvironmentalConditions
+[10:26:47] INFO   ----> Importing FreezeFrame
+[10:26:47] INFO   <---- Importing FreezeFrame
+[10:26:47] INFO   ----> Importing DiagSettings
+[10:26:47] INFO   Importing DiagSettings
+[10:26:47] INFO   <---- Importing DiagSettings
+[10:26:47] INFO   ----> Importing DataCompProps
+[10:26:47] INFO   <---- Importing DataCompProps
+[10:26:47] INFO   <<<<<<<<<<<<< ODX Import finished successfully after 0.344
+[10:26:47] INFO   Shaping imported model for diagnostic OEM 'GENERIC'
+[10:26:47] INFO    - Used Diagnostic OEM:  GENERIC
+[10:26:47] INFO    - Microsar:             true
+[10:26:47] INFO    - Meta-Ecuc-Export:     true
+[10:26:47] INFO   >>>>>>>>>>>>> SHAPING preparation >>>>>>>>>>>>>
+[10:26:47] INFO   <<<<<<<<<<<<< SHAPING ready after 0s (0ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> SHAPING started >>>>>>>>>>>>>
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep ServiceSelection >>>>>>>>>>>>>
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep ServiceSelection( completed in 0s (0ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep DataPreparation >>>>>>>>>>>>>
+[10:26:47] NOTE   At Ecu 
+[10:26:47] NOTE     - Shape Data Comp Collections
+[10:26:47] INFO   At Ecu 
+[10:26:47] INFO     - Shape Compu-Methods
+[10:26:47] INFO   At Ecu 
+[10:26:47] INFO     - Fix Unsigned Boolean
+[10:26:47] INFO     - Convert XInt24/XInt64 to Byte-Array
+[10:26:47] INFO   At Ecu 
+[10:26:47] INFO     - Set Compu-Scale Symbols
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep DataPreparation( completed in 0.015s (15ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep ServiceDefinition >>>>>>>>>>>>>
+[10:26:47] INFO   At Ecu 
+[10:26:47] INFO     - Finding duplicated services... 
+[10:26:47] INFO   Destroying duplicated services... 
+[10:26:47] INFO   At Connection 'CAN' 
+[10:26:47] INFO     - Set 'priority' to '4'
+[10:26:47] INFO   At Connection 'DoIP_ISO13400' 
+[10:26:47] INFO     - Set 'priority' to '4'
+[10:26:47] INFO   At Service 0x85 
+[10:26:47] INFO     - Set 'control option record present' to 'false'
+[10:26:47] INFO   At Service 0x22 SubService 0x100 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0x100 DevelopmentData_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0x100 DevelopmentData_Read
+[10:26:47] INFO   At Service 0x22 SubService 0x101 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0x101 DataDiagnosticIdentifier_DDI_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0x101 DataDiagnosticIdentifier_DDI_Read
+[10:26:47] INFO   At Service 0x22 SubService 0x200 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0x200 DID_0x0200_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0x200 DID_0x0200_Read
+[10:26:47] INFO   At Service 0x22 SubService 0x300 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0x300 DID_0x0300_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0x300 DID_0x0300_Read
+[10:26:47] INFO   At Service 0x22 SubService 0x400 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0x400 DID_0x0400_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0x400 DID_0x0400_Read
+[10:26:47] INFO   At Service 0x22 SubService 0x1024 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0x1024 VCU_DID_00_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0x1024 VCU_DID_00_Read
+[10:26:47] INFO   At Service 0x22 SubService 0xf180 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf180 Boot_Software_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf180 Boot_Software_Read
+[10:26:47] INFO   At Service 0x22 SubService 0xf187 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf187 Spare_Part_Number_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf187 Spare_Part_Number_Read
+[10:26:47] INFO   At Service 0x22 SubService 0xf189 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf189 EcuIdentification_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf189 EcuIdentification_Read
+[10:26:47] INFO   At Service 0x22 SubService 0xf18c 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf18c SerialNumber_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf18c SerialNumber_Read
+[10:26:47] INFO   At Service 0x22 SubService 0xf190 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf190 Vehicle_Identification_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf190 Vehicle_Identification_Read
+[10:26:47] INFO   At Service 0x22 SubService 0xf193 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf193 Hardware_Version_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf193 Hardware_Version_Read
+[10:26:47] INFO   At Service 0x22 SubService 0xf194 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf194 DID_0xF194_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf194 DID_0xF194_Read
+[10:26:47] INFO   At Service 0x22 SubService 0xf1a0 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf1a0 DID_0xF1A0_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf1a0 DID_0xF1A0_Read
+[10:26:47] INFO   At Service 0x22 SubService 0xf1a1 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf1a1 DID_0xF1A1_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf1a1 DID_0xF1A1_Read
+[10:26:47] INFO   At Service 0x22 SubService 0xf1a2 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf1a2 DID_0xF1A2_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf1a2 DID_0xF1A2_Read
+[10:26:47] INFO   At Service 0x22 SubService 0xf1a3 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf1a3 DID_0xF1A3_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf1a3 DID_0xF1A3_Read
+[10:26:47] INFO   At Service 0x22 SubService 0xf3 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [F3]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf3 0x0 New_Dynamically_Define_Non_Periodic_Data_Read
+[10:26:47] INFO     - Applying service definition shaping to protocol component [F3]
+[10:26:47] INFO     - Service has now new definition: 0x22 0xf300 New_Dynamically_Define_Non_Periodic_Data_Read
+[10:26:47] INFO   At Service 0x2c SubService 0x1 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [F3]
+[10:26:47] INFO     - Service has now new definition: 0x2c 0x1 0xf3 0x0 New_Dynamically_Define_Non_Periodic_Data_Define_By_Identifier
+[10:26:47] INFO     - Applying service definition shaping to protocol component [F3]
+[10:26:47] INFO     - Service has now new definition: 0x2c 0x1 0xf300 New_Dynamically_Define_Non_Periodic_Data_Define_By_Identifier
+[10:26:47] INFO   At Service 0x2c SubService 0x2 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [F3]
+[10:26:47] INFO     - Service has now new definition: 0x2c 0x2 0xf3 0x0 New_Dynamically_Define_Non_Periodic_Data_Define_By_Address
+[10:26:47] INFO     - Applying service definition shaping to protocol component [F3]
+[10:26:47] INFO     - Service has now new definition: 0x2c 0x2 0xf300 New_Dynamically_Define_Non_Periodic_Data_Define_By_Address
+[10:26:47] INFO   At Service 0x2c SubService 0x3 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [F3]
+[10:26:47] INFO     - Service has now new definition: 0x2c 0x3 0xf3 0x0 New_Dynamically_Define_Non_Periodic_Data_Clear
+[10:26:47] INFO     - Applying service definition shaping to protocol component [F3]
+[10:26:47] INFO     - Service has now new definition: 0x2c 0x3 0xf300 New_Dynamically_Define_Non_Periodic_Data_Clear
+[10:26:47] INFO   At Service 0x2e SubService 0x100 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0x100 DevelopmentData_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0x100 DevelopmentData_Write
+[10:26:47] INFO   At Service 0x2e SubService 0x101 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0x101 DataDiagnosticIdentifier_DDI_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0x101 DataDiagnosticIdentifier_DDI_Write
+[10:26:47] INFO   At Service 0x2e SubService 0x200 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0x200 DID_0x0200_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0x200 DID_0x0200_Write
+[10:26:47] INFO   At Service 0x2e SubService 0x1024 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0x1024 VCU_DID_00_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0x1024 VCU_DID_00_Write
+[10:26:47] INFO   At Service 0x2e SubService 0xf180 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf180 Boot_Software_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf180 Boot_Software_Write
+[10:26:47] INFO   At Service 0x2e SubService 0xf187 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf187 Spare_Part_Number_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf187 Spare_Part_Number_Write
+[10:26:47] INFO   At Service 0x2e SubService 0xf189 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf189 EcuIdentification_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf189 EcuIdentification_Write
+[10:26:47] INFO   At Service 0x2e SubService 0xf18c 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf18c SerialNumber_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf18c SerialNumber_Write
+[10:26:47] INFO   At Service 0x2e SubService 0xf190 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf190 Vehicle_Identification_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf190 Vehicle_Identification_Write
+[10:26:47] INFO   At Service 0x2e SubService 0xf193 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf193 Hardware_Version_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf193 Hardware_Version_Write
+[10:26:47] INFO   At Service 0x2e SubService 0xf194 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf194 DID_0xF194_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf194 DID_0xF194_Write
+[10:26:47] INFO   At Service 0x2e SubService 0xf1a0 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf1a0 DID_0xF1A0_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf1a0 DID_0xF1A0_Write
+[10:26:47] INFO   At Service 0x2e SubService 0xf1a1 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf1a1 DID_0xF1A1_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf1a1 DID_0xF1A1_Write
+[10:26:47] INFO   At Service 0x2e SubService 0xf1a2 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf1a2 DID_0xF1A2_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf1a2 DID_0xF1A2_Write
+[10:26:47] INFO   At Service 0x2e SubService 0xf1a3 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf1a3 DID_0xF1A3_Write
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RecordDataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2e 0xf1a3 DID_0xF1A3_Write
+[10:26:47] INFO   At Service 0x2f SubService 0x300 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2f 0x300 0x0 DID_0x0300_ReturnControl
+[10:26:47] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2f 0x300 0x0 DID_0x0300_ReturnControl
+[10:26:47] INFO   At Service 0x2f SubService 0x300 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2f 0x300 0x1 DID_0x0300_Reset
+[10:26:47] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2f 0x300 0x1 DID_0x0300_Reset
+[10:26:47] INFO   At Service 0x2f SubService 0x300 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2f 0x300 0x2 DID_0x0300_Freeze
+[10:26:47] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2f 0x300 0x2 DID_0x0300_Freeze
+[10:26:47] INFO   At Service 0x2f SubService 0x300 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2f 0x300 0x3 DID_0x0300_Control
+[10:26:47] INFO     - Applying service definition shaping to protocol component [DataIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x2f 0x300 0x3 DID_0x0300_Control
+[10:26:47] INFO   At Service 0x31 SubService 0x1 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x31 0x1 0x100 New_Routine_Control_Start
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x31 0x1 0x100 New_Routine_Control_Start
+[10:26:47] INFO   At Service 0x31 SubService 0x1 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x31 0x1 0x105 Vcu_Roution_00_Start
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x31 0x1 0x105 Vcu_Roution_00_Start
+[10:26:47] INFO   At Service 0x31 SubService 0x2 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x31 0x2 0x105 Vcu_Roution_00_Stop
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x31 0x2 0x105 Vcu_Roution_00_Stop
+[10:26:47] INFO   At Service 0x31 SubService 0x3 
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x31 0x3 0x105 Vcu_Roution_00_Results
+[10:26:47] INFO     - Applying service definition shaping to protocol component [RoutineIdentifier]
+[10:26:47] INFO     - Service has now new definition: 0x31 0x3 0x105 Vcu_Roution_00_Results
+[10:26:47] INFO   At Ecu 
+[10:26:47] INFO     - Finding duplicated sub-services... 
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep ServiceDefinition( completed in 0.016s (16ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep DataDefinition >>>>>>>>>>>>>
+[10:26:47] INFO   Service: 0x2e 0x100 DevelopmentData_Write shared data components linked to: Service: 0x22 0x100 DevelopmentData_Read !!!
+[10:26:47] INFO   Service: 0x2e 0x101 DataDiagnosticIdentifier_DDI_Write shared data components linked to: Service: 0x22 0x101 DataDiagnosticIdentifier_DDI_Read !!!
+[10:26:47] INFO   Service: 0x2e 0x200 DID_0x0200_Write shared data components linked to: Service: 0x22 0x200 DID_0x0200_Read !!!
+[10:26:47] INFO   Service: 0x2e 0x1024 VCU_DID_00_Write shared data components linked to: Service: 0x22 0x1024 VCU_DID_00_Read !!!
+[10:26:47] INFO   Service: 0x2e 0xf180 Boot_Software_Write shared data components linked to: Service: 0x22 0xf180 Boot_Software_Read !!!
+[10:26:47] INFO   Service: 0x2e 0xf187 Spare_Part_Number_Write shared data components linked to: Service: 0x22 0xf187 Spare_Part_Number_Read !!!
+[10:26:47] INFO   Service: 0x2e 0xf189 EcuIdentification_Write shared data components linked to: Service: 0x22 0xf189 EcuIdentification_Read !!!
+[10:26:47] INFO   Service: 0x2e 0xf18c SerialNumber_Write shared data components linked to: Service: 0x22 0xf18c SerialNumber_Read !!!
+[10:26:47] INFO   Service: 0x2e 0xf190 Vehicle_Identification_Write shared data components linked to: Service: 0x22 0xf190 Vehicle_Identification_Read !!!
+[10:26:47] INFO   Service: 0x2e 0xf193 Hardware_Version_Write shared data components linked to: Service: 0x22 0xf193 Hardware_Version_Read !!!
+[10:26:47] INFO   Service: 0x2e 0xf194 DID_0xF194_Write shared data components linked to: Service: 0x22 0xf194 DID_0xF194_Read !!!
+[10:26:47] INFO   Service: 0x2e 0xf1a0 DID_0xF1A0_Write shared data components linked to: Service: 0x22 0xf1a0 DID_0xF1A0_Read !!!
+[10:26:47] INFO   Service: 0x2e 0xf1a1 DID_0xF1A1_Write shared data components linked to: Service: 0x22 0xf1a1 DID_0xF1A1_Read !!!
+[10:26:47] INFO   Service: 0x2e 0xf1a2 DID_0xF1A2_Write shared data components linked to: Service: 0x22 0xf1a2 DID_0xF1A2_Read !!!
+[10:26:47] INFO   Service: 0x2e 0xf1a3 DID_0xF1A3_Write shared data components linked to: Service: 0x22 0xf1a3 DID_0xF1A3_Read !!!
+[10:26:47] NOTE   At Ecu 'MyEcu' 
+[10:26:47] NOTE     - Building Service Dids
+[10:26:47] NOTE     - Building Routines
+[10:26:47] NOTE     -  + Routine 'New_Routine_Control' created
+[10:26:47] NOTE     -  + Routine 'Vcu_Roution_00' created
+[10:26:47] INFO   At DTCStatusMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DtcAvailabilityMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At P2 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At P2Ex 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At P2 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At P2Ex 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At P2 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At P2Ex 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DTCStatusMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DTCStatusAvailabilityMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DtcFormatIdentifier 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DTCCount 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DTCSnapshotRecordNumber_Base_Variant_Data_Object 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At StatusOfDTC 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At StatusOfDTC 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DTC_Severity 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DTCStatusMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DtcAvailabilityMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DtcFormatIdentifier 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DTCCount 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DTC_Severity 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DTCStatusMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DtcStatusAvailabilityMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DtcStatusAvailabilityMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DTCStatusAvailabilityMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At StatusAvailabilityMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DTCStatusAvailabilityMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DTCAvailabilityMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DTCStatusAvailabilityMask 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At OperatingSystemVersion 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At CanDriverVersion 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At NmVersion 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DiagnosticModuleVersion 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At TransportLayerVersion 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DataDiagnosticIdentifier 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At Data 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DID_Data 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DID_Data 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DataRecord 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At NumberOfModules 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At Boot_Software_Identification 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At Spare_Part_Number 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At Part_Number 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At SerialNumber 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At VIN 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At Hardware_Version_Number 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At New_Data_Object 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At F1A0_Data 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At F1A1_Data 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At F1A2_Data 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At F1A3_Data 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DataRecord 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At SecuritySeed 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At SecurityKey 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At Security_Access_Data_Record 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At SecuritySeed 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At SecurityKey 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At Communciation_Type 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At Communciation_Type 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At Communciation_Type 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At Communciation_Type 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At ALFID 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DID_Data 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DID_Data 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DID_Data 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DID_Data 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At DID_Data 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At New_Data_Object 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At New_Data_Object 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At New_Data_Object 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At New_Data_Object 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] INFO   At New_Data_Object 
+[10:26:47] INFO     - Trying to remove attribute 'FaultmemoryData'
+[10:26:47] INFO     - Removeing attribute 'FaultmemoryData'
+[10:26:47] NOTE   At Ecu 
+[10:26:47] NOTE     - Shape Routine Parameter Names
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep DataDefinition( completed in 0s (0ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep DataIdentifier >>>>>>>>>>>>>
+[10:26:47] INFO   At Did 0xf190 - 'Vehicle_Identification' 
+[10:26:47] INFO     - Set DID property 'IsVIN' to 'true'
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep DataIdentifier( completed in 0.015s (15ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep Service >>>>>>>>>>>>>
+[10:26:47] NOTE   At Ecu 
+[10:26:47] NOTE     - Building Diagnostic Event Memories
+[10:26:47] NOTE     - Checking Diagnostic Event Memories
+[10:26:47] INFO   At Service 0x10 
+[10:26:47] INFO     - Qualifier changed from 'DefaultSession_Start' to 'DiagSessionControl'
+[10:26:47] INFO     - Service action qualifier set to 'SessionControl'
+[10:26:47] INFO   At Service 0x10 SubService 0x1 
+[10:26:47] INFO     - SubService action qualifier set to 'StartSession'
+[10:26:47] INFO   At Service 0x10 SubService 0x2 
+[10:26:47] INFO     - SubService action qualifier set to 'StartSession'
+[10:26:47] INFO   At Service 0x10 SubService 0x3 
+[10:26:47] INFO     - SubService action qualifier set to 'StartSession'
+[10:26:47] INFO   At Service 0x10 SubService 0x1 
+[10:26:47] INFO     - Qualifier changed from 'DefaultSession_Start' to 'Default'
+[10:26:47] INFO   At Service 0x10 SubService 0x2 
+[10:26:47] INFO     - Qualifier changed from 'ProgrammingSession_Start' to 'Programming'
+[10:26:47] INFO   At Service 0x10 SubService 0x3 
+[10:26:47] INFO     - Qualifier changed from 'ExtendedDiagnosticSession_Start' to 'Extended'
+[10:26:47] INFO   At Service 0x11 
+[10:26:47] INFO     - Qualifier changed from 'Hard_Reset_Reset' to 'EcuReset'
+[10:26:47] INFO   At Service 0x11 SubService 0x1 
+[10:26:47] INFO     - SubService action qualifier set to 'EcuReset'
+[10:26:47] INFO   At Service 0x11 SubService 0x3 
+[10:26:47] INFO     - SubService action qualifier set to 'EcuReset'
+[10:26:47] INFO   At Service 0x11 SubService 0x1 
+[10:26:47] INFO     - Qualifier changed from 'Hard_Reset_Reset' to 'Hard'
+[10:26:47] INFO   At Service 0x11 SubService 0x3 
+[10:26:47] INFO     - Qualifier changed from 'Soft_Reset_Reset' to 'Soft'
+[10:26:47] INFO   At Service 0x14 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_Clear' to 'ClearDiagInfo'
+[10:26:47] INFO   At Service 0x14 SubService 
+[10:26:47] INFO     - SubService action qualifier set to 'Clear'
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_Clear' to 'ClearDiagInfo'
+[10:26:47] INFO   At Service 0x19 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_ReadAllIdentified' to 'ReadDtcInfo'
+[10:26:47] INFO   At Service 0x19 SubService 0x2 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0x1 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0x3 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0x4 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0x6 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0x7 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0x8 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0x9 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0xa 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0xb 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0xc 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0xd 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0xe 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0x14 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDtc'
+[10:26:47] INFO   At Service 0x19 SubService 0x1 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_ReadNumber' to 'RNODTCBSM'
+[10:26:47] INFO   At Service 0x19 SubService 0x2 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_ReadAllIdentified' to 'RDTCBSM'
+[10:26:47] INFO   At Service 0x19 SubService 0x3 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_Read_snapshot_ID' to 'RDTCSSI'
+[10:26:47] INFO   At Service 0x19 SubService 0x4 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_Read_snapshot_record' to 'RDTCSSBDTC'
+[10:26:47] INFO   At Service 0x19 SubService 0x6 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_Read_extended_data_record' to 'RDTCEDRBDN'
+[10:26:47] INFO   At Service 0x19 SubService 0x7 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_Report_nbr_of_DTC_bei_severity' to 'RNODTCBSMR'
+[10:26:47] INFO   At Service 0x19 SubService 0x8 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_Read_DTC_by_severity' to 'RDTCBSMR'
+[10:26:47] INFO   At Service 0x19 SubService 0x9 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_Read_severity_information' to 'RSIODTC'
+[10:26:47] INFO   At Service 0x19 SubService 0xa 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_ReadAllSupported' to 'RSUPDTC'
+[10:26:47] INFO   At Service 0x19 SubService 0xb 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_Read_first_test_failed_DTC' to 'RFTFDTC'
+[10:26:47] INFO   At Service 0x19 SubService 0xc 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_Read_first_confirmed_DTC' to 'RFCDTC'
+[10:26:47] INFO   At Service 0x19 SubService 0xd 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_Read_most_recent_test_failed_DTC' to 'RMRTFDTC'
+[10:26:47] INFO   At Service 0x19 SubService 0xe 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_Read_most_recent_confirmed_DTC' to 'RMRCDTC'
+[10:26:47] INFO   At Service 0x19 SubService 0x14 
+[10:26:47] INFO     - Qualifier changed from 'FaultMemory_Read_fault_detection_counter' to 'RDTCFDC'
+[10:26:47] INFO   At Service 0x22 
+[10:26:47] INFO     - Qualifier changed from 'DevelopmentData_Read' to 'ReadDataById'
+[10:26:47] INFO     - Service action qualifier set to 'Read'
+[10:26:47] INFO   At Service 0x22 SubService 0x100 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0x101 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0x200 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0x300 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0x400 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0x1024 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0xf180 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0xf187 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0xf189 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0xf18c 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0xf190 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0xf193 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0xf194 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0xf1a0 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0xf1a1 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0xf1a2 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0xf1a3 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x22 SubService 0xf300 
+[10:26:47] INFO     - SubService action qualifier set to 'ReadDid'
+[10:26:47] INFO   At Service 0x23 
+[10:26:47] INFO     - Qualifier changed from 'Memory_Read' to 'ReadMemoryByAddress'
+[10:26:47] INFO   At Service 0x23 SubService 
+[10:26:47] INFO     - SubService action qualifier set to 'Read'
+[10:26:47] INFO   At Service 0x27 
+[10:26:47] INFO     - Qualifier changed from 'SeedLevel1_Request' to 'SecurityAccess'
+[10:26:47] INFO     - Service action qualifier set to 'SecurityAccess'
+[10:26:47] INFO   At Service 0x27 SubService 0x2 
+[10:26:47] INFO     - SubService action qualifier set to 'SendKey'
+[10:26:47] INFO   At Service 0x27 SubService 0x4 
+[10:26:47] INFO     - SubService action qualifier set to 'SendKey'
+[10:26:47] INFO   At Service 0x27 SubService 0x1 
+[10:26:47] INFO     - SubService action qualifier set to 'GetSeed'
+[10:26:47] INFO   At Service 0x27 SubService 0x3 
+[10:26:47] INFO     - SubService action qualifier set to 'GetSeed'
+[10:26:47] INFO   At Service 0x28 
+[10:26:47] INFO     - Qualifier changed from 'EnableRxAndEnableTx_Control' to 'CommunicationControl'
+[10:26:47] INFO   At Service 0x28 SubService 0x0 
+[10:26:47] INFO     - SubService action qualifier set to 'CommCtrl'
+[10:26:47] INFO   At Service 0x28 SubService 0x1 
+[10:26:47] INFO     - SubService action qualifier set to 'CommCtrl'
+[10:26:47] INFO   At Service 0x28 SubService 0x2 
+[10:26:47] INFO     - SubService action qualifier set to 'CommCtrl'
+[10:26:47] INFO   At Service 0x28 SubService 0x3 
+[10:26:47] INFO     - SubService action qualifier set to 'CommCtrl'
+[10:26:47] INFO   At Service 0x28 SubService 0x0 
+[10:26:47] INFO     - Qualifier changed from 'EnableRxAndEnableTx_Control' to 'EnableRxAndTx'
+[10:26:47] INFO   At Service 0x28 SubService 0x1 
+[10:26:47] INFO     - Qualifier changed from 'EnableRxAndDisableTx_Control' to 'EnableRxAndDisableTx'
+[10:26:47] INFO   At Service 0x28 SubService 0x2 
+[10:26:47] INFO     - Qualifier changed from 'DisableRxAndEnableTx_Control' to 'DisableRxAndEnableTx'
+[10:26:47] INFO   At Service 0x28 SubService 0x3 
+[10:26:47] INFO     - Qualifier changed from 'DisableRxAndDisableTx_Control' to 'DisableRxAndTx'
+[10:26:47] INFO   At Service 0x2c 
+[10:26:47] INFO     - Spec changed from '12' to 'DynamicallyDefine'(4)
+[10:26:47] INFO     - Qualifier changed from 'New_Dynamically_Define_Non_Periodic_Data_Define_By_Identifier' to 'DynamicallyDefineDataId'
+[10:26:47] INFO   At Service 0x2c SubService 0x1 
+[10:26:47] INFO     - SubService action qualifier set to 'DynDefById'
+[10:26:47] INFO   At Service 0x2c SubService 0x2 
+[10:26:47] INFO     - SubService action qualifier set to 'DynDefByAddr'
+[10:26:47] INFO   At Service 0x2c SubService 0x3 
+[10:26:47] INFO     - SubService action qualifier set to 'DynDefClr'
+[10:26:47] INFO   At Service 0x2c SubService 0x3 
+[10:26:47] INFO     - SubService action qualifier set to 'DynDefClr'
+[10:26:47] INFO   At Service 0x2e 
+[10:26:47] INFO     - Qualifier changed from 'DevelopmentData_Write' to 'WriteDataById'
+[10:26:47] INFO     - Service action qualifier set to 'Write'
+[10:26:47] INFO   At Service 0x2e SubService 0x100 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0x101 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0x200 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0x1024 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0xf180 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0xf187 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0xf189 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0xf18c 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0xf190 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0xf193 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0xf194 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0xf1a0 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0xf1a1 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0xf1a2 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2e SubService 0xf1a3 
+[10:26:47] INFO     - SubService action qualifier set to 'WriteDid'
+[10:26:47] INFO   At Service 0x2f 
+[10:26:47] INFO     - Qualifier changed from 'DID_0x0300_ReturnControl' to 'IoControlById'
+[10:26:47] INFO     - Service action qualifier set to 'IoCtrl'
+[10:26:47] INFO   At Service 0x2f SubService 0x300 0x0 
+[10:26:47] INFO     - SubService action qualifier set to 'IoCtrlRetCtrlToEcu'
+[10:26:47] INFO   At Service 0x2f SubService 0x300 0x1 
+[10:26:47] INFO     - SubService action qualifier set to 'IoCtrlRstToDefault'
+[10:26:47] INFO   At Service 0x2f SubService 0x300 0x2 
+[10:26:47] INFO     - SubService action qualifier set to 'IoCtrlFrzCurrState'
+[10:26:47] INFO   At Service 0x2f SubService 0x300 0x3 
+[10:26:47] INFO     - SubService action qualifier set to 'IoCtrlShortTermAdj'
+[10:26:47] INFO   At Service 0x31 
+[10:26:47] INFO     - Qualifier changed from 'New_Routine_Control_Start' to 'RoutineControl'
+[10:26:47] INFO   At Service 0x31 SubService 0x1 
+[10:26:47] INFO     - SubService action qualifier set to 'RtnCtrlStart'
+[10:26:47] INFO   At Service 0x31 SubService 0x1 
+[10:26:47] INFO     - SubService action qualifier set to 'RtnCtrlStart'
+[10:26:47] INFO   At Service 0x31 SubService 0x2 
+[10:26:47] INFO     - SubService action qualifier set to 'RtnCtrlStop'
+[10:26:47] INFO   At Service 0x31 SubService 0x3 
+[10:26:47] INFO     - SubService action qualifier set to 'RtnCtrlReqRes'
+[10:26:47] INFO   At Service 0x3d 
+[10:26:47] INFO     - Qualifier changed from 'Memory_Write' to 'WriteMemoryByAddress'
+[10:26:47] INFO   At Service 0x3d SubService 
+[10:26:47] INFO     - SubService action qualifier set to 'Write'
+[10:26:47] INFO   At Service 0x3e 
+[10:26:47] INFO     - Qualifier changed from 'TesterPresent_Send' to 'TesterPresent'
+[10:26:47] INFO   At Service 0x3e SubService 0x0 
+[10:26:47] INFO     - SubService action qualifier set to 'Send'
+[10:26:47] INFO     - Qualifier changed from 'TesterPresent_Send' to 'TesterPresent'
+[10:26:47] INFO   At Service 0x85 
+[10:26:47] INFO     - Spec changed from '12' to 'FaultMemory'(2)
+[10:26:47] INFO     - Qualifier changed from 'ControlDTCSetting_On' to 'ControlDtcSetting'
+[10:26:47] INFO   At Service 0x85 SubService 0x1 
+[10:26:47] INFO     - SubService action qualifier set to 'ControlDtcSetting'
+[10:26:47] INFO   At Service 0x85 SubService 0x2 
+[10:26:47] INFO     - SubService action qualifier set to 'ControlDtcSetting'
+[10:26:47] INFO   At Service 0x85 SubService 0x1 
+[10:26:47] INFO     - Qualifier changed from 'ControlDTCSetting_On' to 'Enable'
+[10:26:47] INFO   At Service 0x85 SubService 0x2 
+[10:26:47] INFO     - Qualifier changed from 'ControlDTCSetting_Off' to 'Disable'
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep Service( completed in 0.016s (16ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep StateMachine >>>>>>>>>>>>>
+[10:26:47] NOTE   At Ecu 
+[10:26:47] NOTE     - Merging Environmental Modes
+[10:26:47] NOTE     - Merging Environmental Dids
+[10:26:47] NOTE     - Merging Environmental Rules
+[10:26:47] NOTE     - Merging Access Conditions
+[10:26:47] NOTE     - Building Diagnostic Sessions
+[10:26:47] NOTE     -  + Session 'Default' created
+[10:26:47] NOTE     -  + Session 'Programming' created
+[10:26:47] NOTE     -  + Session 'Extended' created
+[10:26:47] WARN     - Service 0x27 0x2 not allowed in its own state 'UnlockedL1'
+[10:26:47] INFO     - The service execution for this session state will be enabled
+[10:26:47] WARN     - Service 0x27 0x4 not allowed in its own state 'Level_3'
+[10:26:47] INFO     - The service execution for this session state will be enabled
+[10:26:47] NOTE     - Building Diagnostic Securities
+[10:26:47] NOTE     -  + Security 'UnlockedL1' created
+[10:26:47] NOTE     -  + Security 'Level_3' created
+[10:26:47] NOTE     - Building Authorizations
+[10:26:47] NOTE     - Building Environmental Conditions
+[10:26:47] NOTE     - Building Access Conditions
+[10:26:47] NOTE     -  + Access Cond '|' created
+[10:26:47] NOTE     -  + Access Cond 'S02;S03|' created
+[10:26:47] NOTE     -  + Access Cond 'S03|' created
+[10:26:47] NOTE   At Ecu 
+[10:26:47] NOTE     - Building Access Conditions - finshed
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep StateMachine( completed in 0s (0ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep StateMachine2 >>>>>>>>>>>>>
+[10:26:47] INFO   At Security 0x1 [serviceAttr(MaxAttemptsToDelay):  exists] 
+[10:26:47] INFO     - Set property 'NumFailed' to '3'
+[10:26:47] INFO   At Security 0x1 [serviceAttr(DelayTimeMs):  exists] 
+[10:26:47] INFO     - Set property 'DelayTime' to '10000'
+[10:26:47] INFO   At Security 0x1 [serviceAttr(DelayTimeOnPowerOnMs):  exists] 
+[10:26:47] INFO     - Set property 'BootDelayTime' to '0'
+[10:26:47] INFO   At Security 0x2 [serviceAttr(MaxAttemptsToDelay):  exists] 
+[10:26:47] INFO     - Set property 'NumFailed' to '3'
+[10:26:47] INFO   At Security 0x2 [serviceAttr(DelayTimeMs):  exists] 
+[10:26:47] INFO     - Set property 'DelayTime' to '10000'
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep StateMachine2( completed in 0s (0ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep StateMachine3 >>>>>>>>>>>>>
+[10:26:47] INFO   At Session 0x1 [P2Time is Null] 
+[10:26:47] INFO     - Set property 'P2Time' to '50'
+[10:26:47] INFO   At Session 0x1 [P2ExTime is Null] 
+[10:26:47] INFO     - Set property 'P2ExTime' to '5000'
+[10:26:47] INFO   At Session 0x2 [P2Time is Null] 
+[10:26:47] INFO     - Set property 'P2Time' to '50'
+[10:26:47] INFO   At Session 0x2 [P2ExTime is Null] 
+[10:26:47] INFO     - Set property 'P2ExTime' to '5000'
+[10:26:47] INFO   At Session 0x3 [P2Time is Null] 
+[10:26:47] INFO     - Set property 'P2Time' to '50'
+[10:26:47] INFO   At Session 0x3 [P2ExTime is Null] 
+[10:26:47] INFO     - Set property 'P2ExTime' to '5000'
+[10:26:47] INFO   At Session 0x1 [JumpToBoot is Null] 
+[10:26:47] INFO     - Set property 'JumpToBoot' to 'noBoot'
+[10:26:47] INFO     - Set Reset-to-FBL to false
+[10:26:47] INFO   At Session 0x3 [JumpToBoot is Null] 
+[10:26:47] INFO     - Set property 'JumpToBoot' to 'noBoot'
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep StateMachine3( completed in 0s (0ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep Settings >>>>>>>>>>>>>
+[10:26:47] INFO   At Ecu 'MyEcu' 
+[10:26:47] INFO     - Set 'periodic rate slow' to '1000'
+[10:26:47] INFO     - Set 'periodic rate medium' to '100'
+[10:26:47] INFO     - Set 'periodic rate fast' to '20'
+[10:26:47] INFO     - Set 'maximum number of dynamically defined dids' to '5'
+[10:26:47] INFO     - Set 'storage of dynamically defined dids' to 'volatile'
+[10:26:47] INFO     - Set 'check access of dynamically defined dids' to 'false'
+[10:26:47] INFO   At Ecu 'MyEcu' Obd2 (DEM): false 
+[10:26:47] INFO     - Set ecu property 'ObdSupport' to 'none'
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep Settings( completed in 0s (0ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep FaultMemory >>>>>>>>>>>>>
+[10:26:47] INFO   At DTC 0x4 
+[10:26:47] INFO     - Set DTC-Prop 'DtcType' to default 'Fault'
+[10:26:47] INFO     - Set DTC-Prop 'Priority' to '4'
+[10:26:47] INFO     - Set DTC-Prop 'AgingCycle' to 'DEM_POWER'
+[10:26:47] INFO     - Set DTC-Prop 'AgingCount' to '40'
+[10:26:47] INFO   At DTC 0x4 
+[10:26:47] INFO     - Set DTC-Prop 'AgingAllowed' to 'true'
+[10:26:47] INFO     - Set DTC-Prop 'Severity' to '0'
+[10:26:47] INFO   At DTC 0x202 
+[10:26:47] INFO     - Set DTC-Prop 'DtcType' to default 'Fault'
+[10:26:47] INFO     - Set DTC-Prop 'Priority' to '1'
+[10:26:47] INFO     - Set DTC-Prop 'AgingCycle' to 'DEM_POWER'
+[10:26:47] INFO     - Set DTC-Prop 'AgingCount' to '40'
+[10:26:47] INFO   At DTC 0x202 
+[10:26:47] INFO     - Set DTC-Prop 'AgingAllowed' to 'true'
+[10:26:47] INFO     - Set DTC-Prop 'Severity' to '0'
+[10:26:47] INFO   At DTC 0x303 
+[10:26:47] INFO     - Set DTC-Prop 'DtcType' to default 'Fault'
+[10:26:47] INFO     - Set DTC-Prop 'Priority' to '2'
+[10:26:47] INFO     - Set DTC-Prop 'AgingCycle' to 'DEM_POWER'
+[10:26:47] INFO     - Set DTC-Prop 'AgingCount' to '40'
+[10:26:47] INFO   At DTC 0x303 
+[10:26:47] INFO     - Set DTC-Prop 'AgingAllowed' to 'true'
+[10:26:47] INFO     - Set DTC-Prop 'Severity' to '0'
+[10:26:47] INFO   At DTC 0xd00104 
+[10:26:47] INFO     - Set DTC-Prop 'DtcType' to default 'Fault'
+[10:26:47] INFO     - Set DTC-Prop 'Priority' to '3'
+[10:26:47] INFO     - Set DTC-Prop 'AgingCycle' to 'DEM_POWER'
+[10:26:47] INFO     - Set DTC-Prop 'AgingCount' to '40'
+[10:26:47] INFO   At DTC 0xd00104 
+[10:26:47] INFO     - Set DTC-Prop 'AgingAllowed' to 'true'
+[10:26:47] INFO     - Set DTC-Prop 'Severity' to '0'
+[10:26:47] INFO   At Faultmemory  
+[10:26:47] INFO     - Set fault memory property 'ecgNaming' to 'singleElem'
+[10:26:47] INFO   At Service 0x19 SubService 0x2 
+[10:26:47] INFO     - Set primary memory property 'StatAvailMask' to '255'
+[10:26:47] INFO   At Service 0x19 SubService 0x4 
+[10:26:47] INFO     - Set primary memory property 'SsrNumeration' to 'Calculated'
+[10:26:47] INFO     - Set primary memory property 'useMaxSsrCount' to 'true'
+[10:26:47] INFO   At Event-Memory  
+[10:26:47] INFO     - Set primary memory property 'ssrUpdatable' to 'true'
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep FaultMemory( completed in 0.016s (16ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep FaultMemory2 >>>>>>>>>>>>>
+[10:26:47] NOTE   At Ecu 'MyEcu' 
+[10:26:47] NOTE     - Building DidSets
+[10:26:47] NOTE   At Ecu 'MyEcu' EventImport: false 
+[10:26:47] NOTE     - Building Events
+[10:26:47] INFO   At Occurence_Counter 
+[10:26:47] INFO     - Set property 'DemDataType' to 'OccCtr'
+[10:26:47] INFO   At Fault_Aging_Counter 
+[10:26:47] INFO     - Set property 'DemDataType' to 'AgingCtrDowncnt'
+[10:26:47] INFO   At Fault_Aging_Counte_Up 
+[10:26:47] INFO     - Set property 'DemDataType' to 'AgingCtrUpcnt'
+[10:26:47] INFO   At Event 'DTC_0X000004_Event' EventKind is Null 
+[10:26:47] INFO     - Set Event-Prop 'EventKind' to 'SWC' using 'updatable'
+[10:26:47] INFO   At Event 'DTC_0X000004_Event' EventImport: false 
+[10:26:47] INFO     - Set Event-Prop 'OpCycle' to 'DEM_POWER'
+[10:26:47] INFO     - Set Event-Prop 'EventFailureCount' to '3'
+[10:26:47] INFO   At Event 'DTC_0X000002_Event' EventKind is Null 
+[10:26:47] INFO     - Set Event-Prop 'EventKind' to 'SWC' using 'updatable'
+[10:26:47] INFO   At Event 'DTC_0X000002_Event' EventImport: false 
+[10:26:47] INFO     - Set Event-Prop 'OpCycle' to 'DEM_POWER'
+[10:26:47] INFO     - Set Event-Prop 'EventFailureCount' to '3'
+[10:26:47] INFO   At Event 'DTC_0X000003_Event' EventKind is Null 
+[10:26:47] INFO     - Set Event-Prop 'EventKind' to 'SWC' using 'updatable'
+[10:26:47] INFO   At Event 'DTC_0X000003_Event' EventImport: false 
+[10:26:47] INFO     - Set Event-Prop 'OpCycle' to 'DEM_POWER'
+[10:26:47] INFO     - Set Event-Prop 'EventFailureCount' to '3'
+[10:26:47] INFO   At Event 'CAN00_BUSOFF_Event' EventKind is Null 
+[10:26:47] INFO     - Set Event-Prop 'EventKind' to 'SWC' using 'updatable'
+[10:26:47] INFO   At Event 'CAN00_BUSOFF_Event' EventImport: false 
+[10:26:47] INFO     - Set Event-Prop 'OpCycle' to 'DEM_POWER'
+[10:26:47] INFO     - Set Event-Prop 'EventFailureCount' to '3'
+[10:26:47] INFO   At DTC 0x4 
+[10:26:47] INFO     - Set Event-Prop 'InitMonitor' to 'false'
+[10:26:47] INFO   At DTC 0x4 IS_ANYOBD: FALSE EventImport: false 
+[10:26:47] INFO     - Warning Indicator 'WarningIndicator' with type 'Warning' created
+[10:26:47] INFO     - Set Event-Prop 'WarnIndicator' to 'WarningIndicator' using 'Warning'
+[10:26:47] INFO   At DTC 0x202 
+[10:26:47] INFO     - Set Event-Prop 'InitMonitor' to 'false'
+[10:26:47] INFO   At DTC 0x202 IS_ANYOBD: FALSE EventImport: false 
+[10:26:47] INFO     - Set Event-Prop 'WarnIndicator' to 'WarningIndicator' using 'Warning'
+[10:26:47] INFO   At DTC 0x202 EventImport: false 
+[10:26:47] INFO     - Set Event-Prop 'EnableCond' to 'Example_EnableCondition1, Example_EnableCondition2'
+[10:26:47] INFO   At DTC 0x303 
+[10:26:47] INFO     - Set Event-Prop 'InitMonitor' to 'false'
+[10:26:47] INFO   At DTC 0x303 IS_ANYOBD: FALSE EventImport: false 
+[10:26:47] INFO     - Set Event-Prop 'WarnIndicator' to 'WarningIndicator' using 'Warning'
+[10:26:47] INFO   At DTC 0x303 EventImport: false 
+[10:26:47] INFO     - Set Event-Prop 'EnableCond' to 'Example_EnableCondition1'
+[10:26:47] INFO   At DTC 0xd00104 
+[10:26:47] INFO     - Set Event-Prop 'InitMonitor' to 'false'
+[10:26:47] INFO   At DTC 0xd00104 IS_ANYOBD: FALSE EventImport: false 
+[10:26:47] INFO     - Set Event-Prop 'WarnIndicator' to 'WarningIndicator' using 'Warning'
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep FaultMemory2( completed in 0s (0ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep FaultMemory3 >>>>>>>>>>>>>
+[10:26:47] INFO   At DTC 0x4 SsrNumeration: calculated MaxSsrCount: NULL 
+[10:26:47] INFO     - Set DTC-Prop 'MaxSsrCount' to '2'
+[10:26:47] INFO   At DTC 0x4 UseMaxSsrCount: TRUE 
+[10:26:47] INFO     - Clear DTC-Prop 'SnapshotRecs'
+[10:26:47] INFO   At DTC 0x4 EventImport: false 
+[10:26:47] INFO     - Set Event-Prop 'DebounceType' to 'Counter'
+[10:26:47] INFO   At DTC 0x202 SsrNumeration: calculated MaxSsrCount: NULL 
+[10:26:47] INFO     - Set DTC-Prop 'MaxSsrCount' to '2'
+[10:26:47] INFO   At DTC 0x202 UseMaxSsrCount: TRUE 
+[10:26:47] INFO     - Clear DTC-Prop 'SnapshotRecs'
+[10:26:47] INFO   At DTC 0x202 EventImport: false 
+[10:26:47] INFO     - Set Event-Prop 'DebounceType' to 'Counter'
+[10:26:47] INFO   At DTC 0x303 SsrNumeration: calculated MaxSsrCount: NULL 
+[10:26:47] INFO     - Set DTC-Prop 'MaxSsrCount' to '2'
+[10:26:47] INFO   At DTC 0x303 UseMaxSsrCount: TRUE 
+[10:26:47] INFO     - Clear DTC-Prop 'SnapshotRecs'
+[10:26:47] INFO   At DTC 0x303 EventImport: false 
+[10:26:47] INFO     - Set Event-Prop 'DebounceType' to 'Counter'
+[10:26:47] INFO   At DTC 0xd00104 SsrNumeration: calculated MaxSsrCount: NULL 
+[10:26:47] INFO     - Set DTC-Prop 'MaxSsrCount' to '2'
+[10:26:47] INFO   At DTC 0xd00104 UseMaxSsrCount: TRUE 
+[10:26:47] INFO     - Clear DTC-Prop 'SnapshotRecs'
+[10:26:47] INFO   At DTC 0xd00104 EventImport: false 
+[10:26:47] INFO     - Set Event-Prop 'DebounceType' to 'Counter'
+[10:26:47] INFO   At Event 'DTC_0X000004_Event' EventImport: false DebounceType == Counter 
+[10:26:47] INFO     - Set Event-Prop 'JumpUp' to 'Yes'
+[10:26:47] INFO     - Set Event-Prop 'JumpDown' to 'No'
+[10:26:47] INFO     - Set Event-Prop 'IncStepSize' to '1'
+[10:26:47] INFO     - Set Event-Prop 'DecStepSize' to '1'
+[10:26:47] INFO     - Set Event-Prop 'FailedThreshold' to '40'
+[10:26:47] INFO     - Set Event-Prop 'Register' to '40'
+[10:26:47] INFO     - Fix Event 'Register' with calculation 'NegIfPos'
+[10:26:47] INFO     - Set Event-Prop 'PassedThreshold' to '-40'
+[10:26:47] INFO   At Event 'DTC_0X000002_Event' EventImport: false DebounceType == Counter 
+[10:26:47] INFO     - Set Event-Prop 'JumpUp' to 'Yes'
+[10:26:47] INFO     - Set Event-Prop 'JumpDown' to 'No'
+[10:26:47] INFO     - Set Event-Prop 'IncStepSize' to '1'
+[10:26:47] INFO     - Set Event-Prop 'DecStepSize' to '1'
+[10:26:47] INFO     - Set Event-Prop 'FailedThreshold' to '40'
+[10:26:47] INFO     - Set Event-Prop 'Register' to '40'
+[10:26:47] INFO     - Fix Event 'Register' with calculation 'NegIfPos'
+[10:26:47] INFO     - Set Event-Prop 'PassedThreshold' to '-40'
+[10:26:47] INFO   At Event 'DTC_0X000003_Event' EventImport: false DebounceType == Counter 
+[10:26:47] INFO     - Set Event-Prop 'JumpUp' to 'No'
+[10:26:47] INFO     - Set Event-Prop 'JumpDown' to 'No'
+[10:26:47] INFO     - Set Event-Prop 'IncStepSize' to '32'
+[10:26:47] INFO     - Set Event-Prop 'DecStepSize' to '32'
+[10:26:47] INFO     - Set Event-Prop 'FailedThreshold' to '40'
+[10:26:47] INFO     - Set Event-Prop 'Register' to '40'
+[10:26:47] INFO     - Fix Event 'Register' with calculation 'NegIfPos'
+[10:26:47] INFO     - Set Event-Prop 'PassedThreshold' to '-40'
+[10:26:47] INFO   At Event 'CAN00_BUSOFF_Event' EventImport: false DebounceType == Counter 
+[10:26:47] INFO     - Set Event-Prop 'JumpUp' to 'Yes'
+[10:26:47] INFO     - Set Event-Prop 'JumpDown' to 'No'
+[10:26:47] INFO     - Set Event-Prop 'IncStepSize' to '1'
+[10:26:47] INFO     - Set Event-Prop 'DecStepSize' to '1'
+[10:26:47] INFO     - Set Event-Prop 'FailedThreshold' to '40'
+[10:26:47] INFO     - Set Event-Prop 'Register' to '40'
+[10:26:47] INFO     - Fix Event 'Register' with calculation 'NegIfPos'
+[10:26:47] INFO     - Set Event-Prop 'PassedThreshold' to '-40'
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep FaultMemory3( completed in 0s (0ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep FaultMemory4 >>>>>>>>>>>>>
+[10:26:47] INFO   At Event 'DTC_0X000004_Event' Microsar: true 
+[10:26:47] INFO     - Set Event-Prop 'HealingCycle' to 'DEM_POWER' using 'Power'
+[10:26:47] INFO   At Event 'DTC_0X000002_Event' Microsar: true 
+[10:26:47] INFO     - Set Event-Prop 'HealingCycle' to 'DEM_POWER' using 'Power'
+[10:26:47] INFO   At Event 'DTC_0X000003_Event' Microsar: true 
+[10:26:47] INFO     - Set Event-Prop 'HealingCycle' to 'DEM_POWER' using 'Power'
+[10:26:47] INFO   At Event 'CAN00_BUSOFF_Event' Microsar: true 
+[10:26:47] INFO     - Set Event-Prop 'HealingCycle' to 'DEM_POWER' using 'Power'
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep FaultMemory4( completed in 0s (0ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep FaultMemory5 >>>>>>>>>>>>>
+[10:26:47] INFO   At Ecu 'MyEcu' 
+[10:26:47] INFO     - Merging Debounce Algorithms
+[10:26:47] INFO        - Algorithm 'DTC_0X000004_DebounceAlgorithmProperties' has 2 dublicate(s)
+[10:26:47] INFO     - Merging Operation Cycles
+[10:26:47] INFO     - Merging Warning Indicators
+[10:26:47] INFO     - Merging Enable/Storage/Clear Conditions
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep FaultMemory5( completed in 0s (0ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep Obd >>>>>>>>>>>>>
+[10:26:47] NOTE   At Ecu 'MyEcu' 
+[10:26:47] NOTE     - Deleting OBD Sub-Services for Pids
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep Obd( completed in 0s (0ms) <<<<<<<<<<<<<
+[10:26:47] INFO   >>>>>>>>>>>>> ShapingStep CleanUp >>>>>>>>>>>>>
+[10:26:47] INFO   At Ecu 
+[10:26:47] INFO     - Finding duplicated sub-services in clean-up... 
+[10:26:47] NOTE   At Ecu 'MyEcu' 
+[10:26:47] NOTE     - Removing unused snapshot record 0x1 from SSR-Pool
+[10:26:47] NOTE     - Removing unused snapshot record 0x2 from SSR-Pool
+[10:26:47] INFO   <<<<<<<<<<<<< ShapingStep CleanUp( completed in 0s (0ms) <<<<<<<<<<<<<
+[10:26:47] INFO   <<<<<<<<<<<<< SHAPING finished after 0.078s (78ms) <<<<<<<<<<<<<
+[10:26:47] WARN   Calling obsolete AR-Shaper
+[10:26:47] INFO   Exporting ECUC module configurations to file: C:\Users\Colin Pan\AppData\Local\Temp\DaVinci\Cfg-9390305\DiagnosticsImportService\1742869606698-0\DiagnosticsDescriptionData6250116954558413374.xml
+[10:26:47] INFO   ----> Create ECUC from imported diagnostic data.
+[10:26:47] NOTE   Using EcucEx-Parameter 'DemDidQualifierMode' = 'R19' (default)
+[10:26:47] NOTE   Using EcucEx-Parameter 'DcmQualifierMode' = 'R19' (default)
+[10:26:47] INFO   ----> STEP 1: Create ECUC model.
+[10:26:47] INFO   Creating Dcm module configuration...
+[10:26:47] INFO   Creating Dem module configuration...
+[10:26:47] INFO   <---- STEP 1: Finished.
+[10:26:47] INFO   ----> STEP 2: Postprocess created ECUC model.
+[10:26:47] INFO   ----> Decorate imported object qualifiers/shortnames
+[10:26:47] INFO   <---- Finished decorating qualifiers/shortnames
+[10:26:47] INFO   ----> Transform imported object qualifiers/shortnames to match AUTOSAR IDENTIFIER pattern restriction (except length limit)
+[10:26:47] INFO   <---- Finished transforming shortnames
+[10:26:47] INFO   ----> Ensure uniqueness of container shortnames within their scope
+[10:26:47] INFO   <---- Finished ensuring uniqueness of container shortnames
+[10:26:47] INFO   ----> Truncate shortnames whose length exceeds the 128 character limit for AUTOSAR shortnames
+[10:26:47] INFO   <---- Finished truncating shortnames
+[10:26:47] INFO   ----> Resolve reference parameters
+[10:26:47] INFO   <---- Finished resolving reference parameters
+[10:26:47] INFO   <---- STEP 2: Finished.
+[10:26:47] INFO   ----> STEP 3: Serialize ECUC model to XML.
+[10:26:47] INFO   <---- STEP 3: Finished.
+[10:26:47] INFO   <---- Finished creation of ECUC from imported diagnostic data.
+[10:26:47] INFO   <<<<<<<<<<<<< Meta-EcuC Export finished after 0.015
+[10:26:47] INFO   <---- Process of diagnostic specification.
