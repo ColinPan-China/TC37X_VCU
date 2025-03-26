@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Cfg.c
- *   Generation Time: 2025-03-19 13:54:58
+ *   Generation Time: 2025-03-26 14:33:01
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -193,7 +193,7 @@ CONST(EcuM_PartitionDataType, ECUM_CONST) EcuM_PartitionData[4] = {  /* PRQA S 1
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(EcuM_WakeupSourceListType, ECUM_CONST) EcuM_WakeupSourceList[9] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(EcuM_WakeupSourceListType, ECUM_CONST) EcuM_WakeupSourceList[10] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Channel                                                  Comment                                    Referable Keys */
   { /*     0 */ 255                                               },  /* [ECUM_WKSOURCE_POWER]          */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/ECUM_WKSOURCE_POWER, ECUM_WKSOURCE_POWER] */
   { /*     1 */ 255                                               },  /* [ECUM_WKSOURCE_RESET]          */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/ECUM_WKSOURCE_RESET, ECUM_WKSOURCE_RESET] */
@@ -203,7 +203,8 @@ CONST(EcuM_WakeupSourceListType, ECUM_CONST) EcuM_WakeupSourceList[9] = {  /* PR
   { /*     5 */ ComMConf_ComMChannel_CN_KAMA_FP_EPT_0303_275b3e6e },  /* [CN_KAMA_FP_EPT_0303_275b3e6e] */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_KAMA_FP_EPT_0303_275b3e6e, CN_KAMA_FP_EPT_0303_275b3e6e] */
   { /*     6 */ ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8  },  /* [CN_TC37X_VCU_CAN00_07b6c9c8]  */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_TC37X_VCU_CAN00_07b6c9c8, CN_TC37X_VCU_CAN00_07b6c9c8] */
   { /*     7 */ ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e  },  /* [CN_TC37X_VCU_CAN01_70b1f95e]  */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_TC37X_VCU_CAN01_70b1f95e, CN_TC37X_VCU_CAN01_70b1f95e] */
-  { /*     8 */ ComMConf_ComMChannel_CN_LIN00_b12a0454            }   /* [CN_LIN00_b12a0454]            */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_LIN00_b12a0454, CN_LIN00_b12a0454] */
+  { /*     8 */ ComMConf_ComMChannel_CN_TC37X_VCU_CAN03_9ebf9872  },  /* [CN_TC37X_VCU_CAN03_9ebf9872]  */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_TC37X_VCU_CAN03_9ebf9872, CN_TC37X_VCU_CAN03_9ebf9872] */
+  { /*     9 */ ComMConf_ComMChannel_CN_LIN00_b12a0454            }   /* [CN_LIN00_b12a0454]            */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_LIN00_b12a0454, CN_LIN00_b12a0454] */
 };
 #define ECUM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

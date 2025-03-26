@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cfg.h
- *   Generation Time: 2025-03-25 11:03:18
+ *   Generation Time: 2025-03-26 14:33:00
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -109,8 +109,8 @@
 #define COM_VERSION_INFO_API                 STD_OFF  /**< /ActiveEcuC/Com/ComGeneral[0:ComVersionInfoApi] */
 #define COM_GENERATED_DESCRIPTION_ROUTING    STD_OFF  /**< /ActiveEcuC/Com/ComGeneral[0:ComDescriptionRoutingCodeGeneration] */
 
-#define COM_LMGT_MAXIPDUGROUPVECTORBYTECNT   1U
-#define COM_SUPPORTED_IPDU_GROUPS            8uL  /**< /ActiveEcuC/Com/ComGeneral[0:ComSupportedIPduGroups] */
+#define COM_LMGT_MAXIPDUGROUPVECTORBYTECNT   2U
+#define COM_SUPPORTED_IPDU_GROUPS            10uL  /**< /ActiveEcuC/Com/ComGeneral[0:ComSupportedIPduGroups] */
 
 #define COM_RXIMMEDIATEFCTPTRCACHE           STD_OFF
 #define COM_RXIMMEDIATEFCTPTRCACHESIZE       0U
@@ -212,14 +212,22 @@
 #define ComConf_ComSignal_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx 69u
 #define ComConf_ComSignal_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx 70u
 #define ComConf_ComSignal_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx 71u
-#define ComConf_ComSignal_VcuRxMsg3_Sig0_oVcuRxMsg3_oTC37X_VCU_CAN01_28190d1d_Rx 72u
-#define ComConf_ComSignal_VcuRxMsg3_Sig1_oVcuRxMsg3_oTC37X_VCU_CAN01_4b1ed439_Rx 73u
-#define ComConf_ComSignal_VcuRxMsg3_Sig2_oVcuRxMsg3_oTC37X_VCU_CAN01_ee16bf55_Rx 74u
-#define ComConf_ComSignal_VcuRxMsg3_Sig3_oVcuRxMsg3_oTC37X_VCU_CAN01_8d116671_Rx 75u
-#define ComConf_ComSignal_VcuRxMsg4_Sig0_oVcuRxMsg4_oTC37X_VCU_CAN01_36b8b0fb_Rx 76u
-#define ComConf_ComSignal_VcuRxMsg4_Sig1_oVcuRxMsg4_oTC37X_VCU_CAN01_55bf69df_Rx 77u
-#define ComConf_ComSignal_VcuRxMsg4_Sig2_oVcuRxMsg4_oTC37X_VCU_CAN01_f0b702b3_Rx 78u
-#define ComConf_ComSignal_VcuRxMsg4_Sig3_oVcuRxMsg4_oTC37X_VCU_CAN01_93b0db97_Rx 79u
+#define ComConf_ComSignal_VcuRxMsg3_Sig0_oVcuCan03RxMsg1_oTC37X_VCU_CAN03_ab1f8c96_Rx 72u
+#define ComConf_ComSignal_VcuRxMsg3_Sig0_oVcuRxMsg3_oTC37X_VCU_CAN01_28190d1d_Rx 73u
+#define ComConf_ComSignal_VcuRxMsg3_Sig1_oVcuCan03RxMsg1_oTC37X_VCU_CAN03_8f9ddda0_Rx 74u
+#define ComConf_ComSignal_VcuRxMsg3_Sig1_oVcuRxMsg3_oTC37X_VCU_CAN01_4b1ed439_Rx 75u
+#define ComConf_ComSignal_VcuRxMsg3_Sig2_oVcuCan03RxMsg1_oTC37X_VCU_CAN03_e21b2efa_Rx 76u
+#define ComConf_ComSignal_VcuRxMsg3_Sig2_oVcuRxMsg3_oTC37X_VCU_CAN01_ee16bf55_Rx 77u
+#define ComConf_ComSignal_VcuRxMsg3_Sig3_oVcuCan03RxMsg1_oTC37X_VCU_CAN03_c6997fcc_Rx 78u
+#define ComConf_ComSignal_VcuRxMsg3_Sig3_oVcuRxMsg3_oTC37X_VCU_CAN01_8d116671_Rx 79u
+#define ComConf_ComSignal_VcuRxMsg4_Sig0_oVcuCan03RxMsg2_oTC37X_VCU_CAN03_735765ea_Rx 80u
+#define ComConf_ComSignal_VcuRxMsg4_Sig0_oVcuRxMsg4_oTC37X_VCU_CAN01_36b8b0fb_Rx 81u
+#define ComConf_ComSignal_VcuRxMsg4_Sig1_oVcuCan03RxMsg2_oTC37X_VCU_CAN03_57d534dc_Rx 82u
+#define ComConf_ComSignal_VcuRxMsg4_Sig1_oVcuRxMsg4_oTC37X_VCU_CAN01_55bf69df_Rx 83u
+#define ComConf_ComSignal_VcuRxMsg4_Sig2_oVcuCan03RxMsg2_oTC37X_VCU_CAN03_3a53c786_Rx 84u
+#define ComConf_ComSignal_VcuRxMsg4_Sig2_oVcuRxMsg4_oTC37X_VCU_CAN01_f0b702b3_Rx 85u
+#define ComConf_ComSignal_VcuRxMsg4_Sig3_oVcuCan03RxMsg2_oTC37X_VCU_CAN03_1ed196b0_Rx 86u
+#define ComConf_ComSignal_VcuRxMsg4_Sig3_oVcuRxMsg4_oTC37X_VCU_CAN01_93b0db97_Rx 87u
 /**\} */
 
 /**
@@ -292,22 +300,31 @@
 #define ComConf_ComSignal_Tohx_out_oVCU_Minor_01_oKAMA_FP_EPT_0303_63435844_Tx 59u
 #define ComConf_ComSignal_VCU_Tx_51Ch_NM_PNCData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_c1eb5e4b_Tx 60u
 #define ComConf_ComSignal_VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_eace6dfa_Tx 61u
-#define ComConf_ComSignal_VcuAdcTxMsg1_Sig0_oVcuAdcTxMsg1_oTC37X_VCU_CAN01_77707e8c_Tx 62u
-#define ComConf_ComSignal_VcuAdcTxMsg1_Sig1_oVcuAdcTxMsg1_oTC37X_VCU_CAN01_86aa7b26_Tx 63u
-#define ComConf_ComSignal_VcuAdcTxMsg1_Sig2_oVcuAdcTxMsg1_oTC37X_VCU_CAN01_4fb57399_Tx 64u
-#define ComConf_ComSignal_VcuAdcTxMsg1_Sig3_oVcuAdcTxMsg1_oTC37X_VCU_CAN01_be6f7633_Tx 65u
-#define ComConf_ComSignal_VcuAdcTxMsg2_Sig0_oVcuAdcTxMsg2_oTC37X_VCU_CAN01_c7979c8e_Tx 66u
-#define ComConf_ComSignal_VcuAdcTxMsg2_Sig1_oVcuAdcTxMsg2_oTC37X_VCU_CAN01_364d9924_Tx 67u
-#define ComConf_ComSignal_VcuAdcTxMsg2_Sig2_oVcuAdcTxMsg2_oTC37X_VCU_CAN01_ff52919b_Tx 68u
-#define ComConf_ComSignal_VcuAdcTxMsg2_Sig3_oVcuAdcTxMsg2_oTC37X_VCU_CAN01_0e889431_Tx 69u
-#define ComConf_ComSignal_VcuTxMsg1_Sig0_oVcuTxMsg1_oTC37X_VCU_CAN00_8243b9a9_Tx 70u
-#define ComConf_ComSignal_VcuTxMsg1_Sig1_oVcuTxMsg1_oTC37X_VCU_CAN00_e144608d_Tx 71u
-#define ComConf_ComSignal_VcuTxMsg1_Sig2_oVcuTxMsg1_oTC37X_VCU_CAN00_444c0be1_Tx 72u
-#define ComConf_ComSignal_VcuTxMsg1_Sig3_oVcuTxMsg1_oTC37X_VCU_CAN00_274bd2c5_Tx 73u
-#define ComConf_ComSignal_VcuTxMsg2_Sig0_oVcuTxMsg2_oTC37X_VCU_CAN00_05439791_Tx 74u
-#define ComConf_ComSignal_VcuTxMsg2_Sig1_oVcuTxMsg2_oTC37X_VCU_CAN00_66444eb5_Tx 75u
-#define ComConf_ComSignal_VcuTxMsg2_Sig2_oVcuTxMsg2_oTC37X_VCU_CAN00_c34c25d9_Tx 76u
-#define ComConf_ComSignal_VcuTxMsg2_Sig3_oVcuTxMsg2_oTC37X_VCU_CAN00_a04bfcfd_Tx 77u
+#define ComConf_ComSignal_VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_04c00cd6_Tx 62u
+#define ComConf_ComSignal_VcuAdcTxMsg1_Sig0_oVcuAdcTxMsg1_oTC37X_VCU_CAN01_77707e8c_Tx 63u
+#define ComConf_ComSignal_VcuAdcTxMsg1_Sig0_oVcuCan03TxMsg1_oTC37X_VCU_CAN03_1782ee05_Tx 64u
+#define ComConf_ComSignal_VcuAdcTxMsg1_Sig1_oVcuAdcTxMsg1_oTC37X_VCU_CAN01_86aa7b26_Tx 65u
+#define ComConf_ComSignal_VcuAdcTxMsg1_Sig1_oVcuCan03TxMsg1_oTC37X_VCU_CAN03_3300bf33_Tx 66u
+#define ComConf_ComSignal_VcuAdcTxMsg1_Sig2_oVcuAdcTxMsg1_oTC37X_VCU_CAN01_4fb57399_Tx 67u
+#define ComConf_ComSignal_VcuAdcTxMsg1_Sig2_oVcuCan03TxMsg1_oTC37X_VCU_CAN03_5e864c69_Tx 68u
+#define ComConf_ComSignal_VcuAdcTxMsg1_Sig3_oVcuAdcTxMsg1_oTC37X_VCU_CAN01_be6f7633_Tx 69u
+#define ComConf_ComSignal_VcuAdcTxMsg1_Sig3_oVcuCan03TxMsg1_oTC37X_VCU_CAN03_7a041d5f_Tx 70u
+#define ComConf_ComSignal_VcuAdcTxMsg2_Sig0_oVcuAdcTxMsg2_oTC37X_VCU_CAN01_c7979c8e_Tx 71u
+#define ComConf_ComSignal_VcuAdcTxMsg2_Sig0_oVcuCan03TxMsg2_oTC37X_VCU_CAN03_2e9f2f9c_Tx 72u
+#define ComConf_ComSignal_VcuAdcTxMsg2_Sig1_oVcuAdcTxMsg2_oTC37X_VCU_CAN01_364d9924_Tx 73u
+#define ComConf_ComSignal_VcuAdcTxMsg2_Sig1_oVcuCan03TxMsg2_oTC37X_VCU_CAN03_0a1d7eaa_Tx 74u
+#define ComConf_ComSignal_VcuAdcTxMsg2_Sig2_oVcuAdcTxMsg2_oTC37X_VCU_CAN01_ff52919b_Tx 75u
+#define ComConf_ComSignal_VcuAdcTxMsg2_Sig2_oVcuCan03TxMsg2_oTC37X_VCU_CAN03_679b8df0_Tx 76u
+#define ComConf_ComSignal_VcuAdcTxMsg2_Sig3_oVcuAdcTxMsg2_oTC37X_VCU_CAN01_0e889431_Tx 77u
+#define ComConf_ComSignal_VcuAdcTxMsg2_Sig3_oVcuCan03TxMsg2_oTC37X_VCU_CAN03_4319dcc6_Tx 78u
+#define ComConf_ComSignal_VcuTxMsg1_Sig0_oVcuTxMsg1_oTC37X_VCU_CAN00_8243b9a9_Tx 79u
+#define ComConf_ComSignal_VcuTxMsg1_Sig1_oVcuTxMsg1_oTC37X_VCU_CAN00_e144608d_Tx 80u
+#define ComConf_ComSignal_VcuTxMsg1_Sig2_oVcuTxMsg1_oTC37X_VCU_CAN00_444c0be1_Tx 81u
+#define ComConf_ComSignal_VcuTxMsg1_Sig3_oVcuTxMsg1_oTC37X_VCU_CAN00_274bd2c5_Tx 82u
+#define ComConf_ComSignal_VcuTxMsg2_Sig0_oVcuTxMsg2_oTC37X_VCU_CAN00_05439791_Tx 83u
+#define ComConf_ComSignal_VcuTxMsg2_Sig1_oVcuTxMsg2_oTC37X_VCU_CAN00_66444eb5_Tx 84u
+#define ComConf_ComSignal_VcuTxMsg2_Sig2_oVcuTxMsg2_oTC37X_VCU_CAN00_c34c25d9_Tx 85u
+#define ComConf_ComSignal_VcuTxMsg2_Sig3_oVcuTxMsg2_oTC37X_VCU_CAN00_a04bfcfd_Tx 86u
 /**\} */
 
 
@@ -331,6 +348,8 @@
 #define ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf         5u
 #define ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Rx_1837cb5c         6u
 #define ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda         7u
+#define ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN03_Rx_b23e03d7         8u
+#define ComConf_ComIPduGroup_VCU_oTC37X_VCU_CAN03_Tx_e464a451         9u
 /**\} */
 
 /**********************************************************************************************************************

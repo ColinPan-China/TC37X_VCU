@@ -26,6 +26,9 @@
               <FIBEX-ELEMENT-REF DEST="CAN-CLUSTER">/Cluster/TC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-CLUSTER">/Cluster/TC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="LIN-CLUSTER">/Cluster/LIN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
@@ -59,6 +62,12 @@
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oTC37X_VCU_CAN01_Tx</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oTC37X_VCU_CAN03_Rx</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oTC37X_VCU_CAN03_Tx</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Minor_01_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
@@ -74,10 +83,16 @@
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Rx_500h_NM_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Rx_500h_NM_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/Vcu_Uds_Func_Request_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
@@ -93,6 +108,18 @@
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuAdcTxMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuCan03RxMsg1_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuCan03RxMsg2_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuCan03TxMsg1_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuCan03TxMsg2_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
@@ -248,6 +275,18 @@
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuAdcTxMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03RxMsg1_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03RxMsg2_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03TxMsg1_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03TxMsg2_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
@@ -356,10 +395,16 @@
               <FIBEX-ELEMENT-REF DEST="NM-PDU">/PDU/VCU_Rx_500h_NM_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="NM-PDU">/PDU/VCU_Rx_500h_NM_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="NM-PDU">/PDU/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="NM-PDU">/PDU/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="NM-PDU">/PDU/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="N-PDU">/PDU/MasterReq_Tp_oLIN00</FIBEX-ELEMENT-REF>
@@ -752,28 +797,55 @@
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig0_oVcuAdcTxMsg1_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig0_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig1_oVcuAdcTxMsg1_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig1_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig2_oVcuAdcTxMsg1_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig2_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig3_oVcuAdcTxMsg1_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig3_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig0_oVcuAdcTxMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig0_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig1_oVcuAdcTxMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig1_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig2_oVcuAdcTxMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig2_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig3_oVcuAdcTxMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig3_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
@@ -800,25 +872,49 @@
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig0_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig0_oVcuRxMsg3_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig1_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig1_oVcuRxMsg3_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig2_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig2_oVcuRxMsg3_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig3_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig3_oVcuRxMsg3_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig0_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig0_oVcuRxMsg4_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig1_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig1_oVcuRxMsg4_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig2_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig2_oVcuRxMsg4_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig3_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig3_oVcuRxMsg4_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
@@ -980,12 +1076,73 @@
               <NM-USER-DATA-LENGTH>6</NM-USER-DATA-LENGTH>
               <NM-WAIT-BUS-SLEEP-TIME>2</NM-WAIT-BUS-SLEEP-TIME>
             </CAN-NM-CLUSTER>
+            <CAN-NM-CLUSTER>
+              <SHORT-NAME>TC37X_VCU_CAN03_CAN</SHORT-NAME>
+              <COMMUNICATION-CLUSTER-REF DEST="CAN-CLUSTER">/Cluster/TC37X_VCU_CAN03</COMMUNICATION-CLUSTER-REF>
+              <NM-CHANNEL-ID>2</NM-CHANNEL-ID>
+              <NM-NODES>
+                <CAN-NM-NODE>
+                  <SHORT-NAME>GWM</SHORT-NAME>
+                  <NM-IF-ECU-REF DEST="NM-ECU">/NM/NmConfig/GWM_CAN</NM-IF-ECU-REF>
+                  <NM-NODE-ID>28</NM-NODE-ID>
+                  <RX-NM-PDU-REFS>
+                    <RX-NM-PDU-REF DEST="NM-PDU">/PDU/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03</RX-NM-PDU-REF>
+                  </RX-NM-PDU-REFS>
+                  <TX-NM-PDU-REFS>
+                    <TX-NM-PDU-REF DEST="NM-PDU">/PDU/VCU_Rx_500h_NM_oTC37X_VCU_CAN03</TX-NM-PDU-REF>
+                  </TX-NM-PDU-REFS>
+                  <NM-MSG-CYCLE-OFFSET>0</NM-MSG-CYCLE-OFFSET>
+                  <NM-MSG-REDUCED-TIME>0.32</NM-MSG-REDUCED-TIME>
+                  <NM-RANGE-CONFIG>
+                    <LOWER-CAN-ID>1024</LOWER-CAN-ID>
+                    <UPPER-CAN-ID>1151</UPPER-CAN-ID>
+                  </NM-RANGE-CONFIG>
+                </CAN-NM-NODE>
+                <CAN-NM-NODE>
+                  <SHORT-NAME>Tester</SHORT-NAME>
+                  <NM-IF-ECU-REF DEST="NM-ECU">/NM/NmConfig/Tester_CAN</NM-IF-ECU-REF>
+                  <NM-NODE-ID>28</NM-NODE-ID>
+                  <NM-PASSIVE-MODE-ENABLED>true</NM-PASSIVE-MODE-ENABLED>
+                  <NM-MSG-CYCLE-OFFSET>0</NM-MSG-CYCLE-OFFSET>
+                  <NM-MSG-REDUCED-TIME>0.32</NM-MSG-REDUCED-TIME>
+                  <NM-RANGE-CONFIG>
+                    <LOWER-CAN-ID>1024</LOWER-CAN-ID>
+                    <UPPER-CAN-ID>1151</UPPER-CAN-ID>
+                  </NM-RANGE-CONFIG>
+                </CAN-NM-NODE>
+                <CAN-NM-NODE>
+                  <SHORT-NAME>VCU</SHORT-NAME>
+                  <CONTROLLER-REF DEST="CAN-COMMUNICATION-CONTROLLER">/ECU/VCU/CT_TC37X_VCU_CAN03</CONTROLLER-REF>
+                  <NM-IF-ECU-REF DEST="NM-ECU">/NM/NmConfig/VCU_CAN</NM-IF-ECU-REF>
+                  <NM-NODE-ID>28</NM-NODE-ID>
+                  <RX-NM-PDU-REFS>
+                    <RX-NM-PDU-REF DEST="NM-PDU">/PDU/VCU_Rx_500h_NM_oTC37X_VCU_CAN03</RX-NM-PDU-REF>
+                  </RX-NM-PDU-REFS>
+                  <TX-NM-PDU-REFS>
+                    <TX-NM-PDU-REF DEST="NM-PDU">/PDU/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03</TX-NM-PDU-REF>
+                  </TX-NM-PDU-REFS>
+                  <NM-MSG-CYCLE-OFFSET>0</NM-MSG-CYCLE-OFFSET>
+                  <NM-MSG-REDUCED-TIME>0.32</NM-MSG-REDUCED-TIME>
+                  <NM-RANGE-CONFIG>
+                    <LOWER-CAN-ID>1024</LOWER-CAN-ID>
+                    <UPPER-CAN-ID>1151</UPPER-CAN-ID>
+                  </NM-RANGE-CONFIG>
+                </CAN-NM-NODE>
+              </NM-NODES>
+              <NM-CBV-POSITION>1</NM-CBV-POSITION>
+              <NM-MSG-CYCLE-TIME>0.5</NM-MSG-CYCLE-TIME>
+              <NM-NETWORK-TIMEOUT>2</NM-NETWORK-TIMEOUT>
+              <NM-REPEAT-MESSAGE-TIME>1.5</NM-REPEAT-MESSAGE-TIME>
+              <NM-USER-DATA-LENGTH>6</NM-USER-DATA-LENGTH>
+              <NM-WAIT-BUS-SLEEP-TIME>2</NM-WAIT-BUS-SLEEP-TIME>
+            </CAN-NM-CLUSTER>
           </NM-CLUSTERS>
           <NM-CLUSTER-COUPLINGS>
             <CAN-NM-CLUSTER-COUPLING>
               <COUPLED-CLUSTER-REFS>
                 <COUPLED-CLUSTER-REF DEST="CAN-NM-CLUSTER">/NM/NmConfig/TC37X_VCU_CAN00_CAN</COUPLED-CLUSTER-REF>
                 <COUPLED-CLUSTER-REF DEST="CAN-NM-CLUSTER">/NM/NmConfig/TC37X_VCU_CAN01_CAN</COUPLED-CLUSTER-REF>
+                <COUPLED-CLUSTER-REF DEST="CAN-NM-CLUSTER">/NM/NmConfig/TC37X_VCU_CAN03_CAN</COUPLED-CLUSTER-REF>
               </COUPLED-CLUSTER-REFS>
             </CAN-NM-CLUSTER-COUPLING>
           </NM-CLUSTER-COUPLINGS>
@@ -2890,6 +3047,336 @@
             </CAN-CLUSTER-CONDITIONAL>
           </CAN-CLUSTER-VARIANTS>
         </CAN-CLUSTER>
+        <CAN-CLUSTER>
+          <SHORT-NAME>TC37X_VCU_CAN03</SHORT-NAME>
+          <LONG-NAME>
+            <L-4 L="FOR-ALL">VCU_CAN03</L-4>
+          </LONG-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV:ToolData">
+                <SD GID="DV:ToolName">Vector Legacy Database Converter</SD>
+                <SD GID="DV:ToolVersion">1.8.62.0</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <CAN-CLUSTER-VARIANTS>
+            <CAN-CLUSTER-CONDITIONAL>
+              <BAUDRATE>500000</BAUDRATE>
+              <PHYSICAL-CHANNELS>
+                <CAN-PHYSICAL-CHANNEL>
+                  <SHORT-NAME>CHNL</SHORT-NAME>
+                  <COMM-CONNECTORS>
+                    <COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                      <COMMUNICATION-CONNECTOR-REF DEST="CAN-COMMUNICATION-CONNECTOR">/ECU/VCU/CN_TC37X_VCU_CAN03</COMMUNICATION-CONNECTOR-REF>
+                    </COMMUNICATION-CONNECTOR-REF-CONDITIONAL>
+                  </COMM-CONNECTORS>
+                  <FRAME-TRIGGERINGS>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_VCU_Rx_500h_NM</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/FP_VCU_Rx_500h_NM_Rx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/VCU_Rx_500h_NM_oTC37X_VCU_CAN03</FRAME-REF>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>1280</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_VCU_Tx_51Ch_NM</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/FP_VCU_Tx_51Ch_NM_Tx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/PT_VCU_Tx_51Ch_NM</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>1308</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_VcuCan03RxMsg1</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/FP_VcuCan03RxMsg1_Rx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/VcuCan03RxMsg1_oTC37X_VCU_CAN03</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/PT_VcuCan03RxMsg1</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>530</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_VcuCan03RxMsg2</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/FP_VcuCan03RxMsg2_Rx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/VcuCan03RxMsg2_oTC37X_VCU_CAN03</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/PT_VcuCan03RxMsg2</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>531</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_VcuCan03TxMsg1</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/FP_VcuCan03TxMsg1_Tx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/VcuCan03TxMsg1_oTC37X_VCU_CAN03</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/PT_VcuCan03TxMsg1</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>274</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_VcuCan03TxMsg2</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/FP_VcuCan03TxMsg2_Tx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/VcuCan03TxMsg2_oTC37X_VCU_CAN03</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/PT_VcuCan03TxMsg2</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>275</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                  </FRAME-TRIGGERINGS>
+                  <I-SIGNAL-TRIGGERINGS>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuAdcTxMsg1_Sig0_oVcuCan03TxMsg1</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuAdcTxMsg1_Sig0_oVcuCan03TxMsg1_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig0_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuAdcTxMsg1_Sig1_oVcuCan03TxMsg1</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuAdcTxMsg1_Sig1_oVcuCan03TxMsg1_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig1_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuAdcTxMsg1_Sig2_oVcuCan03TxMsg1</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuAdcTxMsg1_Sig2_oVcuCan03TxMsg1_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig2_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuAdcTxMsg1_Sig3_oVcuCan03TxMsg1</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuAdcTxMsg1_Sig3_oVcuCan03TxMsg1_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig3_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuAdcTxMsg2_Sig0_oVcuCan03TxMsg2</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuAdcTxMsg2_Sig0_oVcuCan03TxMsg2_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig0_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuAdcTxMsg2_Sig1_oVcuCan03TxMsg2</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuAdcTxMsg2_Sig1_oVcuCan03TxMsg2_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig1_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuAdcTxMsg2_Sig2_oVcuCan03TxMsg2</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuAdcTxMsg2_Sig2_oVcuCan03TxMsg2_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig2_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuAdcTxMsg2_Sig3_oVcuCan03TxMsg2</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuAdcTxMsg2_Sig3_oVcuCan03TxMsg2_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig3_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuRxMsg3_Sig0_oVcuCan03RxMsg1</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuRxMsg3_Sig0_oVcuCan03RxMsg1_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig0_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuRxMsg3_Sig1_oVcuCan03RxMsg1</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuRxMsg3_Sig1_oVcuCan03RxMsg1_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig1_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuRxMsg3_Sig2_oVcuCan03RxMsg1</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuRxMsg3_Sig2_oVcuCan03RxMsg1_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig2_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuRxMsg3_Sig3_oVcuCan03RxMsg1</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuRxMsg3_Sig3_oVcuCan03RxMsg1_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig3_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuRxMsg4_Sig0_oVcuCan03RxMsg2</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuRxMsg4_Sig0_oVcuCan03RxMsg2_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig0_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuRxMsg4_Sig1_oVcuCan03RxMsg2</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuRxMsg4_Sig1_oVcuCan03RxMsg2_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig1_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuRxMsg4_Sig2_oVcuCan03RxMsg2</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuRxMsg4_Sig2_oVcuCan03RxMsg2_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig2_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_VcuRxMsg4_Sig3_oVcuCan03RxMsg2</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/SP_VcuRxMsg4_Sig3_oVcuCan03RxMsg2_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig3_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                  </I-SIGNAL-TRIGGERINGS>
+                  <PDU-TRIGGERINGS>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_VCU_Tx_51Ch_NM</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/PP_VCU_Tx_51Ch_NM_Tx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="NM-PDU">/PDU/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03</I-PDU-REF>
+                      <I-SIGNAL-TRIGGERINGS>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                      </I-SIGNAL-TRIGGERINGS>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_VcuCan03RxMsg1</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/PP_VcuCan03RxMsg1_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03RxMsg1_oTC37X_VCU_CAN03</I-PDU-REF>
+                      <I-SIGNAL-TRIGGERINGS>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuRxMsg3_Sig0_oVcuCan03RxMsg1</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuRxMsg3_Sig1_oVcuCan03RxMsg1</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuRxMsg3_Sig2_oVcuCan03RxMsg1</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuRxMsg3_Sig3_oVcuCan03RxMsg1</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                      </I-SIGNAL-TRIGGERINGS>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_VcuCan03RxMsg2</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/PP_VcuCan03RxMsg2_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03RxMsg2_oTC37X_VCU_CAN03</I-PDU-REF>
+                      <I-SIGNAL-TRIGGERINGS>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuRxMsg4_Sig0_oVcuCan03RxMsg2</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuRxMsg4_Sig1_oVcuCan03RxMsg2</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuRxMsg4_Sig2_oVcuCan03RxMsg2</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuRxMsg4_Sig3_oVcuCan03RxMsg2</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                      </I-SIGNAL-TRIGGERINGS>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_VcuCan03TxMsg1</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/PP_VcuCan03TxMsg1_Tx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03TxMsg1_oTC37X_VCU_CAN03</I-PDU-REF>
+                      <I-SIGNAL-TRIGGERINGS>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuAdcTxMsg1_Sig0_oVcuCan03TxMsg1</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuAdcTxMsg1_Sig1_oVcuCan03TxMsg1</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuAdcTxMsg1_Sig2_oVcuCan03TxMsg1</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuAdcTxMsg1_Sig3_oVcuCan03TxMsg1</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                      </I-SIGNAL-TRIGGERINGS>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_VcuCan03TxMsg2</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN03/PP_VcuCan03TxMsg2_Tx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03TxMsg2_oTC37X_VCU_CAN03</I-PDU-REF>
+                      <I-SIGNAL-TRIGGERINGS>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuAdcTxMsg2_Sig0_oVcuCan03TxMsg2</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuAdcTxMsg2_Sig1_oVcuCan03TxMsg2</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuAdcTxMsg2_Sig2_oVcuCan03TxMsg2</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN03/CHNL/ST_VcuAdcTxMsg2_Sig3_oVcuCan03TxMsg2</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                      </I-SIGNAL-TRIGGERINGS>
+                    </PDU-TRIGGERING>
+                  </PDU-TRIGGERINGS>
+                </CAN-PHYSICAL-CHANNEL>
+              </PHYSICAL-CHANNELS>
+              <PROTOCOL-NAME>CAN</PROTOCOL-NAME>
+            </CAN-CLUSTER-CONDITIONAL>
+          </CAN-CLUSTER-VARIANTS>
+        </CAN-CLUSTER>
         <LIN-CLUSTER>
           <SHORT-NAME>LIN00</SHORT-NAME>
           <LONG-NAME>
@@ -4241,6 +4728,8 @@
             <ASSOCIATED-COM-I-PDU-GROUP-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oTC37X_VCU_CAN00_Tx</ASSOCIATED-COM-I-PDU-GROUP-REF>
             <ASSOCIATED-COM-I-PDU-GROUP-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oTC37X_VCU_CAN01_Rx</ASSOCIATED-COM-I-PDU-GROUP-REF>
             <ASSOCIATED-COM-I-PDU-GROUP-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oTC37X_VCU_CAN01_Tx</ASSOCIATED-COM-I-PDU-GROUP-REF>
+            <ASSOCIATED-COM-I-PDU-GROUP-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oTC37X_VCU_CAN03_Rx</ASSOCIATED-COM-I-PDU-GROUP-REF>
+            <ASSOCIATED-COM-I-PDU-GROUP-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oTC37X_VCU_CAN03_Tx</ASSOCIATED-COM-I-PDU-GROUP-REF>
           </ASSOCIATED-COM-I-PDU-GROUP-REFS>
           <COMM-CONTROLLERS>
             <CAN-COMMUNICATION-CONTROLLER>
@@ -4257,6 +4746,12 @@
             </CAN-COMMUNICATION-CONTROLLER>
             <CAN-COMMUNICATION-CONTROLLER>
               <SHORT-NAME>CT_TC37X_VCU_CAN01</SHORT-NAME>
+              <CAN-COMMUNICATION-CONTROLLER-VARIANTS>
+                <CAN-COMMUNICATION-CONTROLLER-CONDITIONAL/>
+              </CAN-COMMUNICATION-CONTROLLER-VARIANTS>
+            </CAN-COMMUNICATION-CONTROLLER>
+            <CAN-COMMUNICATION-CONTROLLER>
+              <SHORT-NAME>CT_TC37X_VCU_CAN03</SHORT-NAME>
               <CAN-COMMUNICATION-CONTROLLER-VARIANTS>
                 <CAN-COMMUNICATION-CONTROLLER-CONDITIONAL/>
               </CAN-COMMUNICATION-CONTROLLER-VARIANTS>
@@ -4953,6 +5448,148 @@
                 </I-SIGNAL-PORT>
               </ECU-COMM-PORT-INSTANCES>
             </CAN-COMMUNICATION-CONNECTOR>
+            <CAN-COMMUNICATION-CONNECTOR>
+              <SHORT-NAME>CN_TC37X_VCU_CAN03</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:BusNmType">
+                    <SD GID="CanNm">true</SD>
+                    <SD GID="OSEK_Nm">false</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <COMM-CONTROLLER-REF DEST="CAN-COMMUNICATION-CONTROLLER">/ECU/VCU/CT_TC37X_VCU_CAN03</COMM-CONTROLLER-REF>
+              <ECU-COMM-PORT-INSTANCES>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_VCU_Rx_500h_NM_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_VCU_Tx_51Ch_NM_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_VcuCan03RxMsg1_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_VcuCan03RxMsg2_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_VcuCan03TxMsg1_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_VcuCan03TxMsg2_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_VCU_Tx_51Ch_NM_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_VcuCan03RxMsg1_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_VcuCan03RxMsg2_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_VcuCan03TxMsg1_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_VcuCan03TxMsg2_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuAdcTxMsg1_Sig0_oVcuCan03TxMsg1_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuAdcTxMsg1_Sig1_oVcuCan03TxMsg1_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuAdcTxMsg1_Sig2_oVcuCan03TxMsg1_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuAdcTxMsg1_Sig3_oVcuCan03TxMsg1_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuAdcTxMsg2_Sig0_oVcuCan03TxMsg2_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuAdcTxMsg2_Sig1_oVcuCan03TxMsg2_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuAdcTxMsg2_Sig2_oVcuCan03TxMsg2_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuAdcTxMsg2_Sig3_oVcuCan03TxMsg2_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuRxMsg3_Sig0_oVcuCan03RxMsg1_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuRxMsg3_Sig1_oVcuCan03RxMsg1_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuRxMsg3_Sig2_oVcuCan03RxMsg1_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuRxMsg3_Sig3_oVcuCan03RxMsg1_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuRxMsg4_Sig0_oVcuCan03RxMsg2_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuRxMsg4_Sig1_oVcuCan03RxMsg2_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuRxMsg4_Sig2_oVcuCan03RxMsg2_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_VcuRxMsg4_Sig3_oVcuCan03RxMsg2_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+              </ECU-COMM-PORT-INSTANCES>
+            </CAN-COMMUNICATION-CONNECTOR>
             <LIN-COMMUNICATION-CONNECTOR>
               <SHORT-NAME>CN_LIN00</SHORT-NAME>
               <COMM-CONTROLLER-REF DEST="LIN-MASTER">/ECU/VCU/CT_LIN00</COMM-CONTROLLER-REF>
@@ -5602,6 +6239,30 @@
             </I-SIGNAL-I-PDU-REF-CONDITIONAL>
           </I-SIGNAL-I-PDUS>
         </I-SIGNAL-I-PDU-GROUP>
+        <I-SIGNAL-I-PDU-GROUP>
+          <SHORT-NAME>VCU_oTC37X_VCU_CAN03_Rx</SHORT-NAME>
+          <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+          <I-SIGNAL-I-PDUS>
+            <I-SIGNAL-I-PDU-REF-CONDITIONAL>
+              <I-SIGNAL-I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03RxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-I-PDU-REF>
+            </I-SIGNAL-I-PDU-REF-CONDITIONAL>
+            <I-SIGNAL-I-PDU-REF-CONDITIONAL>
+              <I-SIGNAL-I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03RxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-I-PDU-REF>
+            </I-SIGNAL-I-PDU-REF-CONDITIONAL>
+          </I-SIGNAL-I-PDUS>
+        </I-SIGNAL-I-PDU-GROUP>
+        <I-SIGNAL-I-PDU-GROUP>
+          <SHORT-NAME>VCU_oTC37X_VCU_CAN03_Tx</SHORT-NAME>
+          <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+          <I-SIGNAL-I-PDUS>
+            <I-SIGNAL-I-PDU-REF-CONDITIONAL>
+              <I-SIGNAL-I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03TxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-I-PDU-REF>
+            </I-SIGNAL-I-PDU-REF-CONDITIONAL>
+            <I-SIGNAL-I-PDU-REF-CONDITIONAL>
+              <I-SIGNAL-I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03TxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-I-PDU-REF>
+            </I-SIGNAL-I-PDU-REF-CONDITIONAL>
+          </I-SIGNAL-I-PDUS>
+        </I-SIGNAL-I-PDU-GROUP>
       </ELEMENTS>
     </AR-PACKAGE>
     <AR-PACKAGE>
@@ -5668,6 +6329,18 @@
           </PDU-TO-FRAME-MAPPINGS>
         </CAN-FRAME>
         <CAN-FRAME>
+          <SHORT-NAME>VCU_Rx_500h_NM_oTC37X_VCU_CAN03</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>VCU_Rx_500h_NM</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="NM-PDU">/PDU/VCU_Rx_500h_NM_oTC37X_VCU_CAN03</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
           <SHORT-NAME>VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00</SHORT-NAME>
           <FRAME-LENGTH>8</FRAME-LENGTH>
           <PDU-TO-FRAME-MAPPINGS>
@@ -5687,6 +6360,18 @@
               <SHORT-NAME>VCU_Tx_51Ch_NM</SHORT-NAME>
               <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
               <PDU-REF DEST="NM-PDU">/PDU/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>VCU_Tx_51Ch_NM</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="NM-PDU">/PDU/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03</PDU-REF>
               <START-POSITION>0</START-POSITION>
             </PDU-TO-FRAME-MAPPING>
           </PDU-TO-FRAME-MAPPINGS>
@@ -5747,6 +6432,54 @@
               <SHORT-NAME>VcuAdcTxMsg2</SHORT-NAME>
               <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
               <PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuAdcTxMsg2_oTC37X_VCU_CAN01</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>VcuCan03RxMsg1_oTC37X_VCU_CAN03</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>VcuCan03RxMsg1</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03RxMsg1_oTC37X_VCU_CAN03</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>VcuCan03RxMsg2_oTC37X_VCU_CAN03</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>VcuCan03RxMsg2</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03RxMsg2_oTC37X_VCU_CAN03</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>VcuCan03TxMsg1_oTC37X_VCU_CAN03</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>VcuCan03TxMsg1</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03TxMsg1_oTC37X_VCU_CAN03</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>VcuCan03TxMsg2_oTC37X_VCU_CAN03</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>VcuCan03TxMsg2</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan03TxMsg2_oTC37X_VCU_CAN03</PDU-REF>
               <START-POSITION>0</START-POSITION>
             </PDU-TO-FRAME-MAPPING>
           </PDU-TO-FRAME-MAPPINGS>
@@ -7037,6 +7770,254 @@
           <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
         </I-SIGNAL-I-PDU>
         <I-SIGNAL-I-PDU>
+          <SHORT-NAME>VcuCan03RxMsg1_oTC37X_VCU_CAN03</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+          <I-PDU-TIMING-SPECIFICATIONS>
+            <I-PDU-TIMING>
+              <MINIMUM-DELAY>0</MINIMUM-DELAY>
+              <TRANSMISSION-MODE-DECLARATION>
+                <TRANSMISSION-MODE-FALSE-TIMING>
+                  <CYCLIC-TIMING>
+                    <TIME-OFFSET>
+                      <VALUE>0</VALUE>
+                    </TIME-OFFSET>
+                    <TIME-PERIOD>
+                      <VALUE>0.5</VALUE>
+                    </TIME-PERIOD>
+                  </CYCLIC-TIMING>
+                </TRANSMISSION-MODE-FALSE-TIMING>
+                <TRANSMISSION-MODE-TRUE-TIMING>
+                  <CYCLIC-TIMING>
+                    <TIME-OFFSET>
+                      <VALUE>0</VALUE>
+                    </TIME-OFFSET>
+                    <TIME-PERIOD>
+                      <VALUE>0.5</VALUE>
+                    </TIME-PERIOD>
+                  </CYCLIC-TIMING>
+                </TRANSMISSION-MODE-TRUE-TIMING>
+              </TRANSMISSION-MODE-DECLARATION>
+            </I-PDU-TIMING>
+          </I-PDU-TIMING-SPECIFICATIONS>
+          <I-SIGNAL-TO-PDU-MAPPINGS>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuRxMsg3_Sig0</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig0_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>0</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuRxMsg3_Sig1</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig1_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>16</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuRxMsg3_Sig2</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig2_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>32</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuRxMsg3_Sig3</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg3_Sig3_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>48</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+          </I-SIGNAL-TO-PDU-MAPPINGS>
+          <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+        </I-SIGNAL-I-PDU>
+        <I-SIGNAL-I-PDU>
+          <SHORT-NAME>VcuCan03RxMsg2_oTC37X_VCU_CAN03</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+          <I-PDU-TIMING-SPECIFICATIONS>
+            <I-PDU-TIMING>
+              <MINIMUM-DELAY>0</MINIMUM-DELAY>
+              <TRANSMISSION-MODE-DECLARATION>
+                <TRANSMISSION-MODE-FALSE-TIMING>
+                  <CYCLIC-TIMING>
+                    <TIME-OFFSET>
+                      <VALUE>0</VALUE>
+                    </TIME-OFFSET>
+                    <TIME-PERIOD>
+                      <VALUE>0.5</VALUE>
+                    </TIME-PERIOD>
+                  </CYCLIC-TIMING>
+                </TRANSMISSION-MODE-FALSE-TIMING>
+                <TRANSMISSION-MODE-TRUE-TIMING>
+                  <CYCLIC-TIMING>
+                    <TIME-OFFSET>
+                      <VALUE>0</VALUE>
+                    </TIME-OFFSET>
+                    <TIME-PERIOD>
+                      <VALUE>0.5</VALUE>
+                    </TIME-PERIOD>
+                  </CYCLIC-TIMING>
+                </TRANSMISSION-MODE-TRUE-TIMING>
+              </TRANSMISSION-MODE-DECLARATION>
+            </I-PDU-TIMING>
+          </I-PDU-TIMING-SPECIFICATIONS>
+          <I-SIGNAL-TO-PDU-MAPPINGS>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuRxMsg4_Sig0</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig0_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>0</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuRxMsg4_Sig1</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig1_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>16</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuRxMsg4_Sig2</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig2_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>32</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuRxMsg4_Sig3</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig3_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>48</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+          </I-SIGNAL-TO-PDU-MAPPINGS>
+          <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+        </I-SIGNAL-I-PDU>
+        <I-SIGNAL-I-PDU>
+          <SHORT-NAME>VcuCan03TxMsg1_oTC37X_VCU_CAN03</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+          <I-PDU-TIMING-SPECIFICATIONS>
+            <I-PDU-TIMING>
+              <MINIMUM-DELAY>0</MINIMUM-DELAY>
+              <TRANSMISSION-MODE-DECLARATION>
+                <TRANSMISSION-MODE-FALSE-TIMING>
+                  <CYCLIC-TIMING>
+                    <TIME-OFFSET>
+                      <VALUE>0</VALUE>
+                    </TIME-OFFSET>
+                    <TIME-PERIOD>
+                      <VALUE>0.5</VALUE>
+                    </TIME-PERIOD>
+                  </CYCLIC-TIMING>
+                </TRANSMISSION-MODE-FALSE-TIMING>
+                <TRANSMISSION-MODE-TRUE-TIMING>
+                  <CYCLIC-TIMING>
+                    <TIME-OFFSET>
+                      <VALUE>0</VALUE>
+                    </TIME-OFFSET>
+                    <TIME-PERIOD>
+                      <VALUE>0.5</VALUE>
+                    </TIME-PERIOD>
+                  </CYCLIC-TIMING>
+                </TRANSMISSION-MODE-TRUE-TIMING>
+              </TRANSMISSION-MODE-DECLARATION>
+            </I-PDU-TIMING>
+          </I-PDU-TIMING-SPECIFICATIONS>
+          <I-SIGNAL-TO-PDU-MAPPINGS>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuAdcTxMsg1_Sig0</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig0_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>0</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuAdcTxMsg1_Sig1</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig1_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>16</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuAdcTxMsg1_Sig2</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig2_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>32</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuAdcTxMsg1_Sig3</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg1_Sig3_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>48</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+          </I-SIGNAL-TO-PDU-MAPPINGS>
+          <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+        </I-SIGNAL-I-PDU>
+        <I-SIGNAL-I-PDU>
+          <SHORT-NAME>VcuCan03TxMsg2_oTC37X_VCU_CAN03</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+          <I-PDU-TIMING-SPECIFICATIONS>
+            <I-PDU-TIMING>
+              <MINIMUM-DELAY>0</MINIMUM-DELAY>
+              <TRANSMISSION-MODE-DECLARATION>
+                <TRANSMISSION-MODE-FALSE-TIMING>
+                  <CYCLIC-TIMING>
+                    <TIME-OFFSET>
+                      <VALUE>0</VALUE>
+                    </TIME-OFFSET>
+                    <TIME-PERIOD>
+                      <VALUE>0.5</VALUE>
+                    </TIME-PERIOD>
+                  </CYCLIC-TIMING>
+                </TRANSMISSION-MODE-FALSE-TIMING>
+                <TRANSMISSION-MODE-TRUE-TIMING>
+                  <CYCLIC-TIMING>
+                    <TIME-OFFSET>
+                      <VALUE>0</VALUE>
+                    </TIME-OFFSET>
+                    <TIME-PERIOD>
+                      <VALUE>0.5</VALUE>
+                    </TIME-PERIOD>
+                  </CYCLIC-TIMING>
+                </TRANSMISSION-MODE-TRUE-TIMING>
+              </TRANSMISSION-MODE-DECLARATION>
+            </I-PDU-TIMING>
+          </I-PDU-TIMING-SPECIFICATIONS>
+          <I-SIGNAL-TO-PDU-MAPPINGS>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuAdcTxMsg2_Sig0</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig0_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>0</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuAdcTxMsg2_Sig1</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig1_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>16</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuAdcTxMsg2_Sig2</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig2_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>32</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VcuAdcTxMsg2_Sig3</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VcuAdcTxMsg2_Sig3_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>48</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+          </I-SIGNAL-TO-PDU-MAPPINGS>
+          <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+        </I-SIGNAL-I-PDU>
+        <I-SIGNAL-I-PDU>
           <SHORT-NAME>VcuRxMsg1_oTC37X_VCU_CAN00</SHORT-NAME>
           <LENGTH>8</LENGTH>
           <I-PDU-TIMING-SPECIFICATIONS>
@@ -8139,6 +9120,11 @@
           <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
         </NM-PDU>
         <NM-PDU>
+          <SHORT-NAME>VCU_Rx_500h_NM_oTC37X_VCU_CAN03</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+          <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+        </NM-PDU>
+        <NM-PDU>
           <SHORT-NAME>VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00</SHORT-NAME>
           <LENGTH>8</LENGTH>
           <I-SIGNAL-TO-I-PDU-MAPPINGS>
@@ -8159,6 +9145,20 @@
             <I-SIGNAL-TO-I-PDU-MAPPING>
               <SHORT-NAME>VCU_Tx_51Ch_NM_UserData</SHORT-NAME>
               <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>OPAQUE</PACKING-BYTE-ORDER>
+              <START-POSITION>16</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+          </I-SIGNAL-TO-I-PDU-MAPPINGS>
+          <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+        </NM-PDU>
+        <NM-PDU>
+          <SHORT-NAME>VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+          <I-SIGNAL-TO-I-PDU-MAPPINGS>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>VCU_Tx_51Ch_NM_UserData</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN03</I-SIGNAL-REF>
               <PACKING-BYTE-ORDER>OPAQUE</PACKING-BYTE-ORDER>
               <START-POSITION>16</START-POSITION>
               <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
@@ -10610,7 +11610,64 @@
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_Tx_51Ch_NM_UserData</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
+          <SHORT-NAME>VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN03</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>ARRAY</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <ARRAY-VALUE-SPECIFICATION>
+              <ELEMENTS>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>0</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>0</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>0</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>0</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>0</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>0</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+              </ELEMENTS>
+            </ARRAY-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>48</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/uint8_6_none</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_Tx_51Ch_NM_UserData</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
           <SHORT-NAME>VcuAdcTxMsg1_Sig0_oVcuAdcTxMsg1_oTC37X_VCU_CAN01</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuAdcTxMsg1_Sig0</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>VcuAdcTxMsg1_Sig0_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</SHORT-NAME>
           <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
           <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
           <INIT-VALUE>
@@ -10648,7 +11705,45 @@
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuAdcTxMsg1_Sig1</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
+          <SHORT-NAME>VcuAdcTxMsg1_Sig1_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuAdcTxMsg1_Sig1</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
           <SHORT-NAME>VcuAdcTxMsg1_Sig2_oVcuAdcTxMsg1_oTC37X_VCU_CAN01</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuAdcTxMsg1_Sig2</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>VcuAdcTxMsg1_Sig2_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</SHORT-NAME>
           <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
           <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
           <INIT-VALUE>
@@ -10686,7 +11781,45 @@
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuAdcTxMsg1_Sig3</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
+          <SHORT-NAME>VcuAdcTxMsg1_Sig3_oVcuCan03TxMsg1_oTC37X_VCU_CAN03</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuAdcTxMsg1_Sig3</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
           <SHORT-NAME>VcuAdcTxMsg2_Sig0_oVcuAdcTxMsg2_oTC37X_VCU_CAN01</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuAdcTxMsg2_Sig0</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>VcuAdcTxMsg2_Sig0_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</SHORT-NAME>
           <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
           <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
           <INIT-VALUE>
@@ -10724,6 +11857,25 @@
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuAdcTxMsg2_Sig1</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
+          <SHORT-NAME>VcuAdcTxMsg2_Sig1_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuAdcTxMsg2_Sig1</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
           <SHORT-NAME>VcuAdcTxMsg2_Sig2_oVcuAdcTxMsg2_oTC37X_VCU_CAN01</SHORT-NAME>
           <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
           <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
@@ -10743,7 +11895,45 @@
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuAdcTxMsg2_Sig2</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
+          <SHORT-NAME>VcuAdcTxMsg2_Sig2_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuAdcTxMsg2_Sig2</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
           <SHORT-NAME>VcuAdcTxMsg2_Sig3_oVcuAdcTxMsg2_oTC37X_VCU_CAN01</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuAdcTxMsg2_Sig3</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>VcuAdcTxMsg2_Sig3_oVcuCan03TxMsg2_oTC37X_VCU_CAN03</SHORT-NAME>
           <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
           <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
           <INIT-VALUE>
@@ -10914,6 +12104,25 @@
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg2_Sig3</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
+          <SHORT-NAME>VcuRxMsg3_Sig0_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg3_Sig0</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
           <SHORT-NAME>VcuRxMsg3_Sig0_oVcuRxMsg3_oTC37X_VCU_CAN01</SHORT-NAME>
           <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
           <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
@@ -10931,6 +12140,25 @@
             </SW-DATA-DEF-PROPS-VARIANTS>
           </NETWORK-REPRESENTATION-PROPS>
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg3_Sig0</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>VcuRxMsg3_Sig1_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg3_Sig1</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
           <SHORT-NAME>VcuRxMsg3_Sig1_oVcuRxMsg3_oTC37X_VCU_CAN01</SHORT-NAME>
@@ -10952,6 +12180,25 @@
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg3_Sig1</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
+          <SHORT-NAME>VcuRxMsg3_Sig2_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg3_Sig2</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
           <SHORT-NAME>VcuRxMsg3_Sig2_oVcuRxMsg3_oTC37X_VCU_CAN01</SHORT-NAME>
           <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
           <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
@@ -10969,6 +12216,25 @@
             </SW-DATA-DEF-PROPS-VARIANTS>
           </NETWORK-REPRESENTATION-PROPS>
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg3_Sig2</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>VcuRxMsg3_Sig3_oVcuCan03RxMsg1_oTC37X_VCU_CAN03</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg3_Sig3</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
           <SHORT-NAME>VcuRxMsg3_Sig3_oVcuRxMsg3_oTC37X_VCU_CAN01</SHORT-NAME>
@@ -10990,6 +12256,25 @@
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg3_Sig3</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
+          <SHORT-NAME>VcuRxMsg4_Sig0_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg4_Sig0</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
           <SHORT-NAME>VcuRxMsg4_Sig0_oVcuRxMsg4_oTC37X_VCU_CAN01</SHORT-NAME>
           <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
           <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
@@ -11007,6 +12292,25 @@
             </SW-DATA-DEF-PROPS-VARIANTS>
           </NETWORK-REPRESENTATION-PROPS>
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg4_Sig0</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>VcuRxMsg4_Sig1_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg4_Sig1</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
           <SHORT-NAME>VcuRxMsg4_Sig1_oVcuRxMsg4_oTC37X_VCU_CAN01</SHORT-NAME>
@@ -11028,6 +12332,25 @@
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg4_Sig1</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
+          <SHORT-NAME>VcuRxMsg4_Sig2_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg4_Sig2</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
           <SHORT-NAME>VcuRxMsg4_Sig2_oVcuRxMsg4_oTC37X_VCU_CAN01</SHORT-NAME>
           <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
           <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
@@ -11045,6 +12368,25 @@
             </SW-DATA-DEF-PROPS-VARIANTS>
           </NETWORK-REPRESENTATION-PROPS>
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg4_Sig2</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>VcuRxMsg4_Sig3_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg4_Sig3</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
           <SHORT-NAME>VcuRxMsg4_Sig3_oVcuRxMsg4_oTC37X_VCU_CAN01</SHORT-NAME>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2025-03-25 11:03:18
+ *   Generation Time: 2025-03-26 14:33:00
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -138,11 +138,11 @@
 #define BSWM_VERSION_INFO_API                STD_OFF
 #define BSWM_COMM_PNC_SUPPORT                STD_ON
 #define BSWM_COMM_INITIATE_RESET             STD_OFF
-#define BSWM_CHANNEL_COUNT                   4u
-#define BSWM_WAKEUP_SOURCE_COUNT             9u
+#define BSWM_CHANNEL_COUNT                   5u
+#define BSWM_WAKEUP_SOURCE_COUNT             10u
 #define BSWM_IPDU_GROUP_CONTROL              STD_ON
 #define BSWM_ECUM_MODE_HANDLING              STD_OFF
-#define BSWM_IPDUGROUPVECTORSIZE             1u
+#define BSWM_IPDUGROUPVECTORSIZE             2u
 #define BSWM_MULTIPARTITION                  STD_OFF
 
 
@@ -174,18 +174,21 @@
 #define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE (17) 
 #define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE (18) 
 #define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF (19) 
-#define BswMConf_BswMRule_ESH_DemInit (20) 
-#define BswMConf_BswMRule_ESH_InitToWakeup (21) 
-#define BswMConf_BswMRule_ESH_PostRun (22) 
-#define BswMConf_BswMRule_ESH_PostRunNested (23) 
-#define BswMConf_BswMRule_ESH_PostRunToPrepNested (24) 
-#define BswMConf_BswMRule_ESH_PrepToWait (25) 
-#define BswMConf_BswMRule_ESH_RunToPostRun (26) 
-#define BswMConf_BswMRule_ESH_RunToPostRunNested (27) 
-#define BswMConf_BswMRule_ESH_WaitToShutdown (28) 
-#define BswMConf_BswMRule_ESH_WaitToWakeup (29) 
-#define BswMConf_BswMRule_ESH_WakeupToPrep (30) 
-#define BswMConf_BswMRule_ESH_WakeupToRun (31) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX (20) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX_DM (21) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_TX (22) 
+#define BswMConf_BswMRule_ESH_DemInit (23) 
+#define BswMConf_BswMRule_ESH_InitToWakeup (24) 
+#define BswMConf_BswMRule_ESH_PostRun (25) 
+#define BswMConf_BswMRule_ESH_PostRunNested (26) 
+#define BswMConf_BswMRule_ESH_PostRunToPrepNested (27) 
+#define BswMConf_BswMRule_ESH_PrepToWait (28) 
+#define BswMConf_BswMRule_ESH_RunToPostRun (29) 
+#define BswMConf_BswMRule_ESH_RunToPostRunNested (30) 
+#define BswMConf_BswMRule_ESH_WaitToShutdown (31) 
+#define BswMConf_BswMRule_ESH_WaitToWakeup (32) 
+#define BswMConf_BswMRule_ESH_WakeupToPrep (33) 
+#define BswMConf_BswMRule_ESH_WakeupToRun (34) 
 
 
 /* -----------------------------------------------------------------------------
@@ -780,8 +783,8 @@
 #define BSWM_EQ2_EXTERNALIDOFCOMMCHANNELMAPPING                                                     
 #define BSWM_EQ2_INITVALUEOFCOMMCHANNELMAPPING                                                      COMM_NO_COMMUNICATION
 #define BSWM_EQ2_EXTERNALIDOFDCMCOMMAPPING                                                          ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8
-#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFDCMCOMMAPPING                                                 4u
-#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFDCMCOMMAPPING                                               3u
+#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFDCMCOMMAPPING                                                 5u
+#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFDCMCOMMAPPING                                               4u
 #define BSWM_EQ2_IMMEDIATEUSERUSEDOFDCMCOMMAPPING                                                   TRUE
 #define BSWM_EQ2_INITVALUEOFDCMCOMMAPPING                                                           DCM_ENABLE_RX_TX_NORM_NM
 #define BSWM_EQ2_RULESIDXOFDEFERREDRULES                                                            
@@ -797,14 +800,14 @@
 #define BSWM_EQ2_RULESINDUSEDOFIMMEDIATEUSER                                                        
 #define BSWM_EQ2_INITGENVARANDINITAL                                                                
 #define BSWM_EQ2_EXTERNALIDOFLINSMMAPPING                                                           ComMConf_ComMChannel_CN_LIN00_b12a0454
-#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFLINSMMAPPING                                                  9u
-#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFLINSMMAPPING                                                8u
+#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFLINSMMAPPING                                                  10u
+#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFLINSMMAPPING                                                9u
 #define BSWM_EQ2_IMMEDIATEUSERUSEDOFLINSMMAPPING                                                    TRUE
 #define BSWM_EQ2_INITVALUEOFLINSMMAPPING                                                            LINSM_BSWM_NO_COM
 #define BSWM_EQ2_MODENOTIFICATIONFCT                                                                
 #define BSWM_EQ2_EXTERNALIDOFNMMAPPING                                                              ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8
-#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFNMMAPPING                                                     10u
-#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFNMMAPPING                                                   9u
+#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFNMMAPPING                                                     11u
+#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFNMMAPPING                                                   10u
 #define BSWM_EQ2_IMMEDIATEUSERUSEDOFNMMAPPING                                                       TRUE
 #define BSWM_EQ2_INITVALUEOFNMMAPPING                                                               NM_STATE_BUS_SLEEP
 #define BSWM_EQ2_EXTERNALIDOFNVMJOBMAPPING                                                          NVM_SERVICE_ID_WRITEALL
@@ -1407,6 +1410,12 @@ typedef struct BswM_ActionListQueueStructSTag
   BswM_ActionListQueueType AL_CC_AL_CN_KAMA_FP_EPT_0303_275b3e6e_Disable_DM;
   BswM_ActionListQueueType AL_CC_AL_CN_KAMA_FP_EPT_0303_275b3e6e_Enable_DM;
   BswM_ActionListQueueType AL_ESH_AL_DemInit;
+  BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_RX_Disable;
+  BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_RX_EnableNoinit;
+  BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_Disable_DM;
+  BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_Enable_DM;
+  BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_TX_Disable;
+  BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_TX_EnableNoinit;
 } BswM_ActionListQueueStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_RuleStates in the partition context  */
@@ -1444,6 +1453,9 @@ typedef struct BswM_RuleStatesStructSTag
   BswM_RuleStatesType R_CC_CN_KAMA_FP_EPT_0303_275b3e6e_TX;
   BswM_RuleStatesType R_CC_CN_KAMA_FP_EPT_0303_275b3e6e_RX_DM;
   BswM_RuleStatesType R_ESH_DemInit;
+  BswM_RuleStatesType R_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX;
+  BswM_RuleStatesType R_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX_DM;
+  BswM_RuleStatesType R_CC_CN_TC37X_VCU_CAN03_9ebf9872_TX;
 } BswM_RuleStatesStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_TimerState in the partition context  */
@@ -1474,14 +1486,14 @@ typedef struct BswM_TimerValueStructSTag
 /**   \brief  type to access BswM_ActionListQueue in an index and symbol based style. */
 typedef union BswM_ActionListQueueUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_ActionListQueueType raw[41];
+  BswM_ActionListQueueType raw[47];
   BswM_ActionListQueueStructSType str;
 } BswM_ActionListQueueUType;
 
 /**   \brief  type to access BswM_RuleStates in an index and symbol based style. */
 typedef union BswM_RuleStatesUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_RuleStatesType raw[32];
+  BswM_RuleStatesType raw[35];
   BswM_RuleStatesStructSType str;
 } BswM_RuleStatesUType;
 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Private_Cfg.h
- *   Generation Time: 2025-03-25 11:22:05
+ *   Generation Time: 2025-03-26 14:33:01
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -85,8 +85,8 @@
 #define ComM_GetPncSignalValuesOfPCPartitionConfig(partitionIndex)                                  ComM_PncSignalValues.raw  /**< the pointer to ComM_PncSignalValues */
 #define ComM_GetPncToChannelRoutingStateOfPCPartitionConfig(partitionIndex)                         ComM_PncToChannelRoutingState.raw  /**< the pointer to ComM_PncToChannelRoutingState */
 #define ComM_GetPostInitializedOfPCPartitionConfig(partitionIndex)                                  ComM_PostInitialized  /**< the pointer to ComM_PostInitialized */
-#define ComM_GetSizeOfChannelOfPCPartitionConfig()                                                  4u  /**< the number of accomplishable value elements in ComM_Channel */
-#define ComM_GetSizeOfChannelPbOfPCPartitionConfig()                                                4u  /**< the number of accomplishable value elements in ComM_ChannelPb */
+#define ComM_GetSizeOfChannelOfPCPartitionConfig()                                                  5u  /**< the number of accomplishable value elements in ComM_Channel */
+#define ComM_GetSizeOfChannelPbOfPCPartitionConfig()                                                5u  /**< the number of accomplishable value elements in ComM_ChannelPb */
 #define ComM_GetSizeOfEcuMWakeUpIndicatedOfPCPartitionConfig(partitionIndex)                        1u  /**< the number of accomplishable value elements in ComM_EcuMWakeUpIndicated */
 #define ComM_GetSizeOfEiraTxSignalIndirectionOfPCPartitionConfig()                                  2u  /**< the number of accomplishable value elements in ComM_EiraTxSignalIndirection */
 #define ComM_GetSizeOfNmStartUpIndicatedOfPCPartitionConfig(partitionIndex)                         1u  /**< the number of accomplishable value elements in ComM_NmStartUpIndicated */
@@ -98,10 +98,10 @@
 #define ComM_GetSizeOfPncSignalOfPCPartitionConfig()                                                2u  /**< the number of accomplishable value elements in ComM_PncSignal */
 #define ComM_GetSizeOfPncSignalValuesOfPCPartitionConfig(partitionIndex)                            12u  /**< the number of accomplishable value elements in ComM_PncSignalValues */
 #define ComM_GetSizeOfPostInitializedOfPCPartitionConfig(partitionIndex)                            1u  /**< the number of accomplishable value elements in ComM_PostInitialized */
-#define ComM_GetSizeOfUserByteMaskOfPCPartitionConfig()                                             7u  /**< the number of accomplishable value elements in ComM_UserByteMask */
-#define ComM_GetSizeOfUserOfPCPartitionConfig()                                                     7u  /**< the number of accomplishable value elements in ComM_User */
+#define ComM_GetSizeOfUserByteMaskOfPCPartitionConfig()                                             8u  /**< the number of accomplishable value elements in ComM_UserByteMask */
+#define ComM_GetSizeOfUserOfPCPartitionConfig()                                                     8u  /**< the number of accomplishable value elements in ComM_User */
 #define ComM_GetSizeOfUserPncByteMaskOfPCPartitionConfig()                                          3u  /**< the number of accomplishable value elements in ComM_UserPncByteMask */
-#define ComM_GetSizeOfUserReqFullComOfPCPartitionConfig(partitionIndex)                             4u  /**< the number of accomplishable value elements in ComM_UserReqFullCom */
+#define ComM_GetSizeOfUserReqFullComOfPCPartitionConfig(partitionIndex)                             5u  /**< the number of accomplishable value elements in ComM_UserReqFullCom */
 #define ComM_GetSizeOfUserReqPncFullComOfPCPartitionConfig(partitionIndex)                          3u  /**< the number of accomplishable value elements in ComM_UserReqPncFullCom */
 #define ComM_GetUserByteMaskOfPCPartitionConfig()                                                   ComM_UserByteMask  /**< the pointer to ComM_UserByteMask */
 #define ComM_GetUserOfPCPartitionConfig()                                                           ComM_User  /**< the pointer to ComM_User */
@@ -652,7 +652,7 @@
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[4];
+extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[5];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -675,7 +675,7 @@ extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[4];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[4];
+extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[5];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -808,7 +808,7 @@ extern CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[2];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserType, COMM_CONST) ComM_User[7];
+extern CONST(ComM_UserType, COMM_CONST) ComM_User[8];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -831,7 +831,7 @@ extern CONST(ComM_UserType, COMM_CONST) ComM_User[7];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[7];
+extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[8];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1155,7 +1155,7 @@ extern VAR(ComM_PostInitializedType, COMM_VAR_NOINIT) ComM_PostInitialized[1];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[4];
+extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[5];
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

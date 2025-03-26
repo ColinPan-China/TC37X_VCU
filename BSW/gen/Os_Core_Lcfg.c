@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Lcfg.c
- *   Generation Time: 2025-03-19 15:20:34
+ *   Generation Time: 2025-03-26 14:33:01
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -271,6 +271,7 @@ OS_LOCAL CONST(Os_IsrConfigRefType, OS_CONST) OsCfg_Core_OsCore0_IsrRefs[OS_CFG_
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN2TX_ISR), 
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_CanIsr_0), 
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_CanIsr_1), 
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_CanIsr_3), 
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_CanIsr_4), 
   OS_TIMER_CASTCONFIG_TIMERISR_2_ISR(OsCfg_Isr_CounterIsr_SystemTimer0), 
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_DMACH10SR_ISR), 
