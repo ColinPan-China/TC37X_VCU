@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanNm_Cfg.h
- *   Generation Time: 2025-03-26 14:33:01
+ *   Generation Time: 2025-04-17 15:07:05
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -221,7 +221,7 @@
 */ 
 #define CANNM_CHANNELCONFIG                                           STD_ON
 #define CANNM_ACTIVEWAKEUPBITENABLEDOFCHANNELCONFIG                   STD_ON
-#define CANNM_ALLMESSAGESKEEPAWAKEOFCHANNELCONFIG                     STD_ON
+#define CANNM_ALLMESSAGESKEEPAWAKEOFCHANNELCONFIG                     STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.AllMessagesKeepAwake' Reason: 'the value of CanNm_AllMessagesKeepAwakeOfChannelConfig is always 'false' due to this, the array is deactivated.' */
 #define CANNM_BUSLOADREDUCTIONACTIVEOFCHANNELCONFIG                   STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.BusLoadReductionActive' Reason: 'BusLoadReduction is disabled' */
 #define CANNM_CARWAKEUPBITMASKOFCHANNELCONFIG                         STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.CarWakeUpBitMask' Reason: 'CarWupRx is disabled' */
 #define CANNM_CARWAKEUPBYTEPOSITIONOFCHANNELCONFIG                    STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.CarWakeUpBytePosition' Reason: 'CarWupRx is disabled' */
@@ -509,7 +509,6 @@
   \{
 */ 
 #define CANNM_ISDEF_ACTIVEWAKEUPBITENABLEDOFCHANNELCONFIG             STD_OFF
-#define CANNM_ISDEF_ALLMESSAGESKEEPAWAKEOFCHANNELCONFIG               STD_OFF
 #define CANNM_ISDEF_CHANNELIDOFCHANNELCONFIG                          STD_OFF
 #define CANNM_ISDEF_COMCONTROLENABLEDOFCHANNELCONFIG                  STD_OFF
 #define CANNM_ISDEF_IMMEDIATENMCYCLETIMEOFCHANNELCONFIG               STD_OFF
@@ -594,7 +593,6 @@
   \{
 */ 
 #define CANNM_EQ2_ACTIVEWAKEUPBITENABLEDOFCHANNELCONFIG               
-#define CANNM_EQ2_ALLMESSAGESKEEPAWAKEOFCHANNELCONFIG                 
 #define CANNM_EQ2_CHANNELIDOFCHANNELCONFIG                            
 #define CANNM_EQ2_COMCONTROLENABLEDOFCHANNELCONFIG                    
 #define CANNM_EQ2_IMMEDIATENMCYCLETIMEOFCHANNELCONFIG                 
@@ -821,7 +819,6 @@
   \{
 */ 
 #define CanNm_IsActiveWakeUpBitEnabledOfChannelConfig(Index)          ((CanNm_GetChannelConfigOfPCConfig()[(Index)].ActiveWakeUpBitEnabledOfChannelConfig) != FALSE)
-#define CanNm_IsAllMessagesKeepAwakeOfChannelConfig(Index)            ((CanNm_GetChannelConfigOfPCConfig()[(Index)].AllMessagesKeepAwakeOfChannelConfig) != FALSE)
 #define CanNm_GetChannelIdOfChannelConfig(Index)                      ((NetworkHandleType)CanNm_GetChannelConfigOfPCConfig()[(Index)].ChannelIdOfChannelConfig)
 #define CanNm_IsComControlEnabledOfChannelConfig(Index)               ((CanNm_GetChannelConfigOfPCConfig()[(Index)].ComControlEnabledOfChannelConfig) != FALSE)
 #define CanNm_GetImmediateNmCycleTimeOfChannelConfig(Index)           (CanNm_GetChannelConfigOfPCConfig()[(Index)].ImmediateNmCycleTimeOfChannelConfig)
@@ -987,7 +984,6 @@
 */ 
 #define CanNm_HasChannelConfig()                                      (TRUE != FALSE)
 #define CanNm_HasActiveWakeUpBitEnabledOfChannelConfig()              (TRUE != FALSE)
-#define CanNm_HasAllMessagesKeepAwakeOfChannelConfig()                (TRUE != FALSE)
 #define CanNm_HasChannelIdOfChannelConfig()                           (TRUE != FALSE)
 #define CanNm_HasComControlEnabledOfChannelConfig()                   (TRUE != FALSE)
 #define CanNm_HasImmediateNmCycleTimeOfChannelConfig()                (TRUE != FALSE)
@@ -1348,9 +1344,6 @@ typedef CanNm_ChannelConfigIterType CanNm_WaitBusSleepTimerIterType;
 /**   \brief  value based type definition for CanNm_ActiveWakeUpBitEnabledOfChannelConfig */
 typedef boolean CanNm_ActiveWakeUpBitEnabledOfChannelConfigType;
 
-/**   \brief  value based type definition for CanNm_AllMessagesKeepAwakeOfChannelConfig */
-typedef boolean CanNm_AllMessagesKeepAwakeOfChannelConfigType;
-
 /**   \brief  value based type definition for CanNm_ChannelIdOfChannelConfig */
 typedef uint8 CanNm_ChannelIdOfChannelConfigType;
 
@@ -1662,7 +1655,6 @@ typedef uint16 CanNm_WaitBusSleepTimerType;
 typedef struct sCanNm_ChannelConfigType
 {
   CanNm_ActiveWakeUpBitEnabledOfChannelConfigType ActiveWakeUpBitEnabledOfChannelConfig;  /**< Determines if Active WUP Bit Handling is active or not */
-  CanNm_AllMessagesKeepAwakeOfChannelConfigType AllMessagesKeepAwakeOfChannelConfig;  /**< Determines if all NM PDUs are relevant or not */
   CanNm_ComControlEnabledOfChannelConfigType ComControlEnabledOfChannelConfig;  /**< Determines if Com Control is active or not */
   CanNm_NodeIdEnabledOfChannelConfigType NodeIdEnabledOfChannelConfig;  /**< Determines if Node Ids are enabled or not */
   CanNm_ChannelIdOfChannelConfigType ChannelIdOfChannelConfig;  /**< Channel ID configured for the respective instance of the NM. */
@@ -2170,7 +2162,6 @@ typedef CanNm_PCConfigType CanNm_ConfigType;  /**< A structure type is present f
   \details
   Element                     Description
   ActiveWakeUpBitEnabled      Determines if Active WUP Bit Handling is active or not
-  AllMessagesKeepAwake        Determines if all NM PDUs are relevant or not
   ComControlEnabled           Determines if Com Control is active or not
   NodeIdEnabled               Determines if Node Ids are enabled or not
   ChannelId                   Channel ID configured for the respective instance of the NM.

@@ -465,6 +465,9 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
 
     Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_NO_COMMUNICATION);
 
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC24,COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC26,COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC31,COMM_NO_COMMUNICATION);
     Rte_Write_Request_ESH_RunRequest_0_requestedMode(0);
   }
 
