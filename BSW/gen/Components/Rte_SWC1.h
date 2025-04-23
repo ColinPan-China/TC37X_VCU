@@ -51,12 +51,12 @@ extern "C"
 /**********************************************************************************************************************
  * extern declaration of RTE buffers for optimized macro implementation
  *********************************************************************************************************************/
-#  define RTE_START_SEC_VAR_OsApplication_INIT_UNSPECIFIED
+#  define RTE_START_SEC_VAR_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern VAR(BswM_ESH_RunRequest, RTE_VAR_INIT) Rte_SWC1_Request_ESH_RunRequest_0_requestedMode;
 
-#  define RTE_STOP_SEC_VAR_OsApplication_INIT_UNSPECIFIED
+#  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 # endif /* !defined(RTE_CORE) */

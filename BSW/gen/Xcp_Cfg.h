@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Xcp_Cfg.h
- *   Generation Time: 2024-11-06 16:55:50
+ *   Generation Time: 2025-04-23 11:05:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2

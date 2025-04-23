@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Resource_Lcfg.c
- *   Generation Time: 2025-03-19 13:54:58
+ *   Generation Time: 2025-04-23 11:05:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -117,7 +117,7 @@ CONST(Os_ResourceConfigType, OS_CONST) OsCfg_Resource_OsResource0 =
   /* .Lock            = */
   {
     /* .Dyn                   = */ OS_RESOURCE_CASTDYN_RESOURCE_2_LOCK(OsCfg_Resource_OsResource0_Dyn),
-    /* .AccessingApplications = */ (OS_APPID2MASK(OsApplication) | OS_APPID2MASK(SystemApplication_OsCore0)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
+    /* .AccessingApplications = */ OS_APPID2MASK(SystemApplication_OsCore0),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
     /* .Type                  = */ OS_LOCKTYPE_RESOURCE_STANDARD
   },
   /* .Core            = */ &OsCfg_Core_OsCore0,
@@ -144,7 +144,7 @@ CONST(Os_ResourceConfigType, OS_CONST) OsCfg_Resource_OsResource1 =
   },
   /* .Core            = */ &OsCfg_Core_OsCore1,
   /* .ResourceId      = */ OsResource1,
-  /* .CeilingPriority = */ 4
+  /* .CeilingPriority = */ 1
 };
 
 #define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
@@ -166,7 +166,7 @@ CONST(Os_ResourceConfigType, OS_CONST) OsCfg_Resource_OsResource2 =
   },
   /* .Core            = */ &OsCfg_Core_OsCore2,
   /* .ResourceId      = */ OsResource2,
-  /* .CeilingPriority = */ 4
+  /* .CeilingPriority = */ 1
 };
 
 #define OS_STOP_SEC_CORE2_CONST_UNSPECIFIED

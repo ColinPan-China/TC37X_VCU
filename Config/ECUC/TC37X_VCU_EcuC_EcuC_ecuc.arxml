@@ -6166,33 +6166,6 @@
               <SHORT-NAME>EcucPartitionCollection</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EcuC/EcucPartitionCollection</DEFINITION-REF>
               <SUB-CONTAINERS>
-                <ECUC-CONTAINER-VALUE UUID="3b9dc260-0896-42fc-834c-f0baa7dd9b68">
-                  <SHORT-NAME>EcucPartition_Det</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EcuC/EcucPartitionCollection/EcucPartition</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionBswModuleExecution</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EcuC/EcucPartitionCollection/EcucPartition/PartitionCanBeRestarted</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/EcuC/EcucPartitionCollection/EcucPartition/ASIL</DEFINITION-REF>
-                      <VALUE>A</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-INSTANCE-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/MICROSAR/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
-                      <VALUE-IREF>
-                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Det</TARGET-REF>
-                      </VALUE-IREF>
-                    </ECUC-INSTANCE-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="f1f42d99-9a3c-4b29-9ac9-7f83cb40655b">
                   <SHORT-NAME>EcucPartition_OsCore0_Swc</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EcuC/EcucPartitionCollection/EcucPartition</DEFINITION-REF>
@@ -6216,6 +6189,13 @@
                       <VALUE-IREF>
                         <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
                         <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Os_OsCore0_swc</TARGET-REF>
+                      </VALUE-IREF>
+                    </ECUC-INSTANCE-REFERENCE-VALUE>
+                    <ECUC-INSTANCE-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INSTANCE-REFERENCE-DEF">/MICROSAR/EcuC/EcucPartitionCollection/EcucPartition/EcucPartitionSoftwareComponentInstanceRef</DEFINITION-REF>
+                      <VALUE-IREF>
+                        <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                        <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Det</TARGET-REF>
                       </VALUE-IREF>
                     </ECUC-INSTANCE-REFERENCE-VALUE>
                   </REFERENCE-VALUES>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_XSignal_Lcfg.h
- *   Generation Time: 2025-03-19 15:20:35
+ *   Generation Time: 2025-04-23 11:05:20
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2

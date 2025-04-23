@@ -97,18 +97,17 @@ section_layout mpe:vtc:linear
     {
       section "OS_STACKS_CORE0_VAR_NOINIT_SEC" (blocksize = 2, attributes = rw)
       {
-        select "[.]bss.OS_STACK_ASWTASK_VAR_NOINIT";
-        select "[.]bss.OS_STACK_BSW_TASK_VAR_NOINIT";
+        select "[.]bss.OS_STACK_CORE0_ASWTASK_VAR_NOINIT";
+        select "[.]bss.OS_STACK_CORE0_BSWTASK_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_ERROR_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_INIT_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_ISR_CORE_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_KERNEL_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_SHUTDOWN_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO0_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO4294967295_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO49_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO50_VAR_NOINIT";
-        select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO63_VAR_NOINIT";
-        select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO66_VAR_NOINIT";
       }
     }
     group OS_STACKS_CORE0_VAR_NOINIT_PAD (align = 1)
@@ -1661,28 +1660,14 @@ section_layout mpe:vtc:linear
   {
     group OS_OsApplication_VAR_FAST_INIT_ROM (ordered, contiguous, fill, align = 16)
     {
-      section "OS_OsApplication_VAR_FAST_INIT_ROM_SEC" (fill, blocksize = 2, attributes = rx)
-      {
-        group (load_addr)
-        {
-          select "[.]zdata.OS_OsApplication_VAR_FAST";
-          select "[.]zdata.OS_OsApplication_VAR_FAST_NOCACHE";
-        }
-      }
+      reserved "OS_OsApplication_VAR_FAST_INIT_ROM" (size = 0);
     }
     "_OS_OsApplication_VAR_FAST_INIT_ROM_START" = "_lc_gb_OS_OsApplication_VAR_FAST_INIT_ROM";
     "_OS_OsApplication_VAR_FAST_INIT_ROM_LIMIT" = "_lc_ge_OS_OsApplication_VAR_FAST_INIT_ROM";
 
     group OS_OsApplication_VAR_INIT_ROM (ordered, contiguous, fill, align = 16)
     {
-      section "OS_OsApplication_VAR_INIT_ROM_SEC" (fill, blocksize = 2, attributes = rx)
-      {
-        group (load_addr)
-        {
-          select "[.]data.OS_OsApplication_VAR";
-          select "[.]data.OS_OsApplication_VAR_NOCACHE";
-        }
-      }
+      reserved "OS_OsApplication_VAR_INIT_ROM" (size = 0);
     }
     "_OS_OsApplication_VAR_INIT_ROM_START" = "_lc_gb_OS_OsApplication_VAR_INIT_ROM";
     "_OS_OsApplication_VAR_INIT_ROM_LIMIT" = "_lc_ge_OS_OsApplication_VAR_INIT_ROM";
@@ -1693,11 +1678,7 @@ section_layout mpe:vtc:linear
   {
     group OS_OsApplication_VAR_FAST_INIT (ordered, contiguous, fill, align = 16)
     {
-      section "OS_OsApplication_VAR_FAST_INIT_SEC" (blocksize = 2, attributes = rw)
-      {
-        select "[.]zdata.OS_OsApplication_VAR_FAST";
-        select "[.]zdata.OS_OsApplication_VAR_FAST_NOCACHE";
-      }
+      reserved "OS_OsApplication_VAR_FAST_INIT" (size = 0);
     }
     group OS_OsApplication_VAR_FAST_INIT_PAD (align = 4)
     {
@@ -1709,11 +1690,7 @@ section_layout mpe:vtc:linear
 
     group OS_OsApplication_VAR_FAST_NOINIT (ordered, contiguous, fill, align = 16)
     {
-      section "OS_OsApplication_VAR_FAST_NOINIT_SEC" (blocksize = 2, attributes = rw)
-      {
-        select "[.]zbss.OS_OsApplication_VAR_FAST_NOCACHE_NOINIT";
-        select "[.]zbss.OS_OsApplication_VAR_FAST_NOINIT";
-      }
+      reserved "OS_OsApplication_VAR_FAST_NOINIT" (size = 0);
     }
     group OS_OsApplication_VAR_FAST_NOINIT_PAD (align = 1)
     {
@@ -1725,11 +1702,7 @@ section_layout mpe:vtc:linear
 
     group OS_OsApplication_VAR_FAST_ZERO_INIT (ordered, contiguous, fill, align = 16)
     {
-      section "OS_OsApplication_VAR_FAST_ZERO_INIT_SEC" (blocksize = 2, attributes = rw)
-      {
-        select "[.]*.OS_OsApplication_VAR_FAST_NOCACHE_ZERO_INIT";
-        select "[.]*.OS_OsApplication_VAR_FAST_ZERO_INIT";
-      }
+      reserved "OS_OsApplication_VAR_FAST_ZERO_INIT" (size = 0);
     }
     group OS_OsApplication_VAR_FAST_ZERO_INIT_PAD (align = 4)
     {
@@ -1741,11 +1714,7 @@ section_layout mpe:vtc:linear
 
     group OS_OsApplication_VAR_FAST_ZERO_INIT_bss (ordered, contiguous, fill, align = 16)
     {
-      section "OS_OsApplication_VAR_FAST_ZERO_INIT_bss_SEC" (blocksize = 2, attributes = rw)
-      {
-        select "[.]*.OS_OsApplication_VAR_FAST_NOCACHE_ZERO_INIT_bss";
-        select "[.]*.OS_OsApplication_VAR_FAST_ZERO_INIT_bss";
-      }
+      reserved "OS_OsApplication_VAR_FAST_ZERO_INIT_bss" (size = 0);
     }
     group OS_OsApplication_VAR_FAST_ZERO_INIT_bss_PAD (align = 4)
     {
@@ -1757,11 +1726,7 @@ section_layout mpe:vtc:linear
 
     group OS_OsApplication_VAR_INIT (ordered, contiguous, fill, align = 16)
     {
-      section "OS_OsApplication_VAR_INIT_SEC" (blocksize = 2, attributes = rw)
-      {
-        select "[.]data.OS_OsApplication_VAR";
-        select "[.]data.OS_OsApplication_VAR_NOCACHE";
-      }
+      reserved "OS_OsApplication_VAR_INIT" (size = 0);
     }
     group OS_OsApplication_VAR_INIT_PAD (align = 4)
     {
@@ -1773,11 +1738,7 @@ section_layout mpe:vtc:linear
 
     group OS_OsApplication_VAR_NOINIT (ordered, contiguous, fill, align = 16)
     {
-      section "OS_OsApplication_VAR_NOINIT_SEC" (blocksize = 2, attributes = rw)
-      {
-        select "[.]bss.OS_OsApplication_VAR_NOCACHE_NOINIT";
-        select "[.]bss.OS_OsApplication_VAR_NOINIT";
-      }
+      reserved "OS_OsApplication_VAR_NOINIT" (size = 0);
     }
     group OS_OsApplication_VAR_NOINIT_PAD (align = 1)
     {
@@ -1789,11 +1750,7 @@ section_layout mpe:vtc:linear
 
     group OS_OsApplication_VAR_ZERO_INIT (ordered, contiguous, fill, align = 16)
     {
-      section "OS_OsApplication_VAR_ZERO_INIT_SEC" (blocksize = 2, attributes = rw)
-      {
-        select "[.]*.OS_OsApplication_VAR_NOCACHE_ZERO_INIT";
-        select "[.]*.OS_OsApplication_VAR_ZERO_INIT";
-      }
+      reserved "OS_OsApplication_VAR_ZERO_INIT" (size = 0);
     }
     group OS_OsApplication_VAR_ZERO_INIT_PAD (align = 4)
     {
@@ -1805,11 +1762,7 @@ section_layout mpe:vtc:linear
 
     group OS_OsApplication_VAR_ZERO_INIT_bss (ordered, contiguous, fill, align = 16)
     {
-      section "OS_OsApplication_VAR_ZERO_INIT_bss_SEC" (blocksize = 2, attributes = rw)
-      {
-        select "[.]*.OS_OsApplication_VAR_NOCACHE_ZERO_INIT_bss";
-        select "[.]*.OS_OsApplication_VAR_ZERO_INIT_bss";
-      }
+      reserved "OS_OsApplication_VAR_ZERO_INIT_bss" (size = 0);
     }
     group OS_OsApplication_VAR_ZERO_INIT_bss_PAD (align = 4)
     {
@@ -1842,13 +1795,12 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_ASCLIN2ERR_ISR_CODE";
         select "[.]text.OS_ASCLIN2RX_ISR_CODE";
         select "[.]text.OS_ASCLIN2TX_ISR_CODE";
-        select "[.]text.OS_Asw_Init_CODE";
-        select "[.]text.OS_AswTask_CODE";
-        select "[.]text.OS_Bsw_Task_CODE";
         select "[.]text.OS_CanIsr_0_CODE";
         select "[.]text.OS_CanIsr_1_CODE";
         select "[.]text.OS_CanIsr_3_CODE";
         select "[.]text.OS_CanIsr_4_CODE";
+        select "[.]text.OS_Core0_AswInit_CODE";
+        select "[.]text.OS_Core0_AswTask_CODE";
         select "[.]text.OS_Core0_BswTask_CODE";
         select "[.]text.OS_Core1_AswInit_CODE";
         select "[.]text.OS_Core1_AswTask_CODE";
@@ -1889,11 +1841,7 @@ section_layout mpe:vtc:linear
   {
     group OS_USER_CONST (ordered, contiguous, fill)
     {
-      section "OS_USER_CONST_SEC" (fill, blocksize = 2, attributes = rx)
-      {
-        select "[.]rodata.OS_OsApplication_CONST";
-        select "[.]zrodata.OS_OsApplication_CONST_FAST";
-      }
+      reserved "OS_USER_CONST" (size = 0);
     }
     group OS_USER_CONST_PAD (align = 1)
     {

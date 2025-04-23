@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Cfg.h
- *   Generation Time: 2024-11-21 09:52:36
+ *   Generation Time: 2025-04-23 11:05:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -111,10 +111,10 @@
 # define OS_CFG_EVENT                            (STD_ON)
 
 /* Event masks */
-# define Rte_Ev_Cyclic2_Bsw_Task_0_10ms     ((EventMaskType)1uLL)
-# define Rte_Ev_Cyclic2_Bsw_Task_0_20ms     ((EventMaskType)2uLL)
-# define Rte_Ev_Cyclic2_Bsw_Task_0_5ms     ((EventMaskType)4uLL)
-# define Rte_Ev_Cyclic_AswTask_0_10ms     ((EventMaskType)1uLL)
+# define Rte_Ev_Cyclic2_Core0_BswTask_0_10ms     ((EventMaskType)1uLL)
+# define Rte_Ev_Cyclic2_Core0_BswTask_0_20ms     ((EventMaskType)2uLL)
+# define Rte_Ev_Cyclic2_Core0_BswTask_0_5ms     ((EventMaskType)4uLL)
+# define Rte_Ev_Cyclic_Core0_AswTask_0_10ms     ((EventMaskType)1uLL)
 # define Rte_Ev_Run_Com_SWC_Com_Runnable_2ms     ((EventMaskType)2uLL)
 # define Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification     ((EventMaskType)4uLL)
 # define Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification     ((EventMaskType)8uLL)

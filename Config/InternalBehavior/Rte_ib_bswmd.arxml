@@ -84,7 +84,7 @@
               </MEMORY-SECTION>
               <MEMORY-SECTION UUID="4ededeb0-4fa3-41b7-958f-c7d11dc052be">
                 <SHORT-NAME>VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED</SHORT-NAME>
-                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/OsApplication_VAR_NO_INIT</SW-ADDRMETHOD-REF>
+                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/SystemApplication_OsCore0_VAR_NO_INIT</SW-ADDRMETHOD-REF>
               </MEMORY-SECTION>
               <MEMORY-SECTION UUID="ee21fe70-f1ea-4334-b426-61388a65052c">
                 <SHORT-NAME>DCM_APPL_CODE</SHORT-NAME>
@@ -133,34 +133,6 @@
               <MEMORY-SECTION UUID="16722440-9570-48ee-9f46-a79faf21b57b">
                 <SHORT-NAME>OS_OSCORE2_SWC_APPL_CODE</SHORT-NAME>
                 <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/MICROSAR_MemMap/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
-              </MEMORY-SECTION>
-              <MEMORY-SECTION UUID="f3394e61-9a03-4d0f-b1b4-e8063e6e47c8">
-                <SHORT-NAME>VAR_OsApplication_NOINIT_UNSPECIFIED</SHORT-NAME>
-                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/OsApplication_VAR_NO_INIT</SW-ADDRMETHOD-REF>
-              </MEMORY-SECTION>
-              <MEMORY-SECTION UUID="51f3e28d-f869-4b32-ab6c-c8d2e90f859d">
-                <SHORT-NAME>VAR_OsApplication_NOCACHE_NOINIT_UNSPECIFIED</SHORT-NAME>
-                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/OsApplication_VAR_NOCACHE_NO_INIT</SW-ADDRMETHOD-REF>
-              </MEMORY-SECTION>
-              <MEMORY-SECTION UUID="7281e647-458b-484a-bcc9-8aa391a36701">
-                <SHORT-NAME>VAR_OsApplication_ZERO_INIT_UNSPECIFIED</SHORT-NAME>
-                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/OsApplication_VAR_INIT</SW-ADDRMETHOD-REF>
-              </MEMORY-SECTION>
-              <MEMORY-SECTION UUID="27f0e524-a12d-43e6-8aa3-372eeff24383">
-                <SHORT-NAME>VAR_OsApplication_NOCACHE_ZERO_INIT_UNSPECIFIED</SHORT-NAME>
-                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/OsApplication_VAR_NOCACHE_INIT</SW-ADDRMETHOD-REF>
-              </MEMORY-SECTION>
-              <MEMORY-SECTION UUID="c5e243d6-4e79-4780-84f1-cf1db4bc7f7e">
-                <SHORT-NAME>VAR_OsApplication_NOCACHE_ZERO_INIT_8BIT</SHORT-NAME>
-                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/OsApplication_VAR_NOCACHE_INIT</SW-ADDRMETHOD-REF>
-              </MEMORY-SECTION>
-              <MEMORY-SECTION UUID="27a33093-d677-447b-b69c-3f53894ebf43">
-                <SHORT-NAME>VAR_OsApplication_INIT_UNSPECIFIED</SHORT-NAME>
-                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/OsApplication_VAR_INIT</SW-ADDRMETHOD-REF>
-              </MEMORY-SECTION>
-              <MEMORY-SECTION UUID="b0eee98f-a571-4bee-b7f3-1dd5765d6592">
-                <SHORT-NAME>VAR_OsApplication_NOCACHE_INIT_UNSPECIFIED</SHORT-NAME>
-                <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/MICROSAR/Os_ib_bswmd/SwAddrMethods/OsApplication_VAR_NOCACHE_INIT</SW-ADDRMETHOD-REF>
               </MEMORY-SECTION>
               <MEMORY-SECTION UUID="27e1be0c-73f1-4c7d-9979-ee5e32c1068f">
                 <SHORT-NAME>VAR_SystemApplication_OsCore0_NOINIT_UNSPECIFIED</SHORT-NAME>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Cfg.h
- *   Generation Time: 2025-03-26 14:33:01
+ *   Generation Time: 2025-04-23 11:05:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -66,11 +66,11 @@
 # define OS_CFG_COREPHYSICALID_COUNT                             (3uL)
 
 /* Number of core objects: OsCore0 */
-# define OS_CFG_NUM_CORE_OSCORE0_APPS             (1uL)
+# define OS_CFG_NUM_CORE_OSCORE0_APPS             (0uL)
 # define OS_CFG_NUM_CORE_OSCORE0_HOOKS            (3uL)
 # define OS_CFG_NUM_CORE_OSCORE0_IOCS             (0uL)
 # define OS_CFG_NUM_CORE_OSCORE0_RESOURCES        (1uL)
-# define OS_CFG_NUM_CORE_OSCORE0_STACKS           (12uL)
+# define OS_CFG_NUM_CORE_OSCORE0_STACKS           (11uL)
 # define OS_CFG_NUM_CORE_OSCORE0_ISRS             (24uL)
 
 /* Number of core objects: OsCore1 */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Lcfg.c
- *   Generation Time: 2025-03-26 14:33:01
+ *   Generation Time: 2025-04-23 11:05:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -213,7 +213,6 @@ OS_LOCAL CONST(Os_HookConfigRefType, OS_CONST) OsCfg_Core_OsCore0_HookRefs[OS_CF
 /*! Object reference table for core applications: OsCore0 */
 OS_LOCAL CONST(Os_AppConfigRefType, OS_CONST) OsCfg_Core_OsCore0_AppRefs[OS_CFG_NUM_CORE_OSCORE0_APPS + 1u] =
 {
-  (Os_AppConfigRefType) &OsCfg_App_OsApplication,
   NULL_PTR
 };
 
@@ -239,18 +238,17 @@ OS_LOCAL CONST(Os_ResourceConfigRefType, OS_CONST) OsCfg_Core_OsCore0_ResourceRe
 /*! Object reference table for core stacks: OsCore0 */
 OS_LOCAL CONST(Os_StackConfigRefType, OS_CONST) OsCfg_Core_OsCore0_StackRefs[OS_CFG_NUM_CORE_OSCORE0_STACKS + 1u] =
 {
-  (Os_StackConfigRefType) &OsCfg_Stack_AswTask,
-  (Os_StackConfigRefType) &OsCfg_Stack_Bsw_Task,
+  (Os_StackConfigRefType) &OsCfg_Stack_Core0_AswTask,
+  (Os_StackConfigRefType) &OsCfg_Stack_Core0_BswTask,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Error,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Init,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Isr_Core,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Kernel,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Shutdown,
+  (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio0,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio4294967295,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio49,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio50,
-  (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio63,
-  (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio66,
   NULL_PTR
 };
 

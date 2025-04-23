@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Cfg.h
- *   Generation Time: 2025-03-19 13:54:58
+ *   Generation Time: 2025-04-23 11:05:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -125,7 +125,7 @@
 #define ECUM_RESETMODECOUNT                                           (4u)
 #define ECUM_SHUTDOWNCAUSECOUNT                                       (4u)
 #define ECUM_NUMBER_OF_CORES                                          (3u)
-#define ECUM_NUMBER_OF_OS_APPLICATIONS                                (4u)
+#define ECUM_NUMBER_OF_OS_APPLICATIONS                                (3u)
 
 #define ECUM_CORE_ID_STARTUP                                          OS_CORE_ID_MASTER
 #define ECUM_CORE_ID_BSW                                              OS_CORE_ID_0
@@ -265,7 +265,7 @@ typedef EcuM_CoreStatusType *EcuM_CoreStatusArrayType;
 #define ECUM_ISDEF_CORESTATUS                                         STD_OFF
 #define ECUM_ISDEF_FUNCTIONOFDRIVERINITONE                            STD_OFF
 #define ECUM_ISDEF_APPLICATIONOFPARTITIONDATA                         STD_OFF
-#define ECUM_ISDEF_ECUMPARTITIONOFPARTITIONDATA                       STD_OFF
+#define ECUM_ISDEF_ECUMPARTITIONOFPARTITIONDATA                       STD_ON
 #define ECUM_ISDEF_RESOURCEOFPARTITIONDATA                            STD_OFF
 #define ECUM_ISDEF_CHANNELOFWAKEUPSOURCELIST                          STD_OFF
 #define ECUM_ISDEF_CORESTATUSOFPCCONFIG                               STD_ON
@@ -285,7 +285,7 @@ typedef EcuM_CoreStatusType *EcuM_CoreStatusArrayType;
 #define ECUM_EQ2_CORESTATUS                                           
 #define ECUM_EQ2_FUNCTIONOFDRIVERINITONE                              
 #define ECUM_EQ2_APPLICATIONOFPARTITIONDATA                           
-#define ECUM_EQ2_ECUMPARTITIONOFPARTITIONDATA                         
+#define ECUM_EQ2_ECUMPARTITIONOFPARTITIONDATA                         TRUE
 #define ECUM_EQ2_RESOURCEOFPARTITIONDATA                              
 #define ECUM_EQ2_CHANNELOFWAKEUPSOURCELIST                            
 #define ECUM_EQ2_CORESTATUSOFPCCONFIG                                 EcuM_CoreStatus
@@ -446,7 +446,6 @@ typedef struct sEcuM_DriverInitOneType
 /**   \brief  type used in EcuM_PartitionData */
 typedef struct sEcuM_PartitionDataType
 {
-  EcuM_EcuMPartitionOfPartitionDataType EcuMPartitionOfPartitionData;  /**< Set to true for the partitions with active BswM */
   EcuM_ApplicationOfPartitionDataType ApplicationOfPartitionData;  /**<  */
   EcuM_ResourceOfPartitionDataType ResourceOfPartitionData;
 } EcuM_PartitionDataType;

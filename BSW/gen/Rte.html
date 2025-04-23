@@ -179,7 +179,6 @@ SWC1_MemMap.h<br>
 Rte_Compiler_Cfg.h<br>
 usrostyp.h<br>
 Rte.c<br>
-Rte_OsApplication.c<br>
 Rte_SystemApplication_OsCore0.c<br>
 Rte_SystemApplication_OsCore1.c<br>
 Rte_SystemApplication_OsCore2.c<br>
@@ -270,26 +269,20 @@ CONST Size: 101 Bytes<br>
 <TD><B>Priority</B></TD>
 </TR>
 <TR>
-<TD>AswTask</TD>
-<TD>Extended</TD>
-<TD>FULL</TD>
-<TD>64</TD>
-</TR>
-<TR>
-<TD>Asw_Init</TD>
+<TD>Core0_AswInit</TD>
 <TD>Basic</TD>
 <TD>FULL</TD>
-<TD>63</TD>
+<TD>0</TD>
 </TR>
 <TR>
-<TD>Bsw_Task</TD>
+<TD>Core0_AswTask</TD>
 <TD>Extended</TD>
 <TD>FULL</TD>
-<TD>65</TD>
+<TD>0</TD>
 </TR>
 <TR>
 <TD>Core0_BswTask</TD>
-<TD>Basic</TD>
+<TD>Extended</TD>
 <TD>FULL</TD>
 <TD>66</TD>
 </TR>
@@ -345,44 +338,44 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>BswM_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 20ms</TD>
 <TD>ComM_MainFunction_0</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_20ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 20ms</TD>
 <TD>ComM_MainFunction_1</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_20ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 20ms</TD>
 <TD>ComM_MainFunction_2</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_20ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 20ms</TD>
 <TD>ComM_MainFunction_3</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_20ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 20ms</TD>
 <TD>ComM_MainFunction_4</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_20ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_CN_KAMA_FP_EPT_0303_b67fd6a6::GetCurrentComMode</TD>
@@ -835,21 +828,21 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 2ms</TD>
 <TD>Com_Runnable_2ms</TD>
-<TD>AswTask</TD>
+<TD>Core0_AswTask</TD>
 <TD>Rte_Ev_Run_Com_SWC_Com_Runnable_2ms</TD>
 <TD>Rte_Al_TE_Com_SWC_Com_Runnable_2ms</TD>
 </TR>
 <TR>
 <TD><B>DataReceivedEvent</B> Com_SWC::VcuRxMsg1_Sig0::VcuRxMsg1_Sig0</TD>
 <TD>Rte_Msg200h_Rx_Notification</TD>
-<TD>AswTask</TD>
+<TD>Core0_AswTask</TD>
 <TD>Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification</TD>
 <TD>n/a</TD>
 </TR>
 <TR>
 <TD><B>DataReceivedEvent</B> Com_SWC::VcuRxMsg2_Sig0::VcuRxMsg2_Sig0</TD>
 <TD>Rte_Msg201h_Rx_Notification</TD>
-<TD>AswTask</TD>
+<TD>Core0_AswTask</TD>
 <TD>Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification</TD>
 <TD>n/a</TD>
 </TR>
@@ -912,16 +905,16 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>InitEvent</B></TD>
 <TD>DIAG_SWC_Init</TD>
-<TD>Asw_Init</TD>
+<TD>Core0_AswInit</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>DTCMonitorRunnable_10ms</TD>
-<TD>AswTask</TD>
-<TD>Rte_Ev_Cyclic_AswTask_0_10ms</TD>
-<TD>Rte_Al_TE_AswTask_0_10ms</TD>
+<TD>Core0_AswTask</TD>
+<TD>Rte_Ev_Cyclic_Core0_AswTask_0_10ms</TD>
+<TD>Rte_Al_TE_Core0_AswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> DIAG_SWC::DataServices_VCU_DID_00_DataRecord::ConditionCheckRead</TD>
@@ -996,9 +989,9 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Dcm_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> Dcm::DCMServices::GetActiveProtocol</TD>
@@ -1052,9 +1045,9 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Dem_MasterMainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> DemMaster_0::GeneralEvtInfo::GetDTCOfEvent</TD>
@@ -1206,9 +1199,9 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Dem_SatelliteMainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> DemSatellite_0::Event_DTC_0X000002::GetDTCOfEvent</TD>
@@ -1830,7 +1823,7 @@ CONST Size: 101 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>EcuM_MainFunction</TD>
 <TD>Core0_BswTask</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
 <TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
@@ -1885,16 +1878,16 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>InitEvent</B></TD>
 <TD>IoHwAb_SWC_Init</TD>
-<TD>Asw_Init</TD>
+<TD>Core0_AswInit</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>IoHwAb_SWC_Runnable</TD>
-<TD>AswTask</TD>
-<TD>Rte_Ev_Cyclic_AswTask_0_10ms</TD>
-<TD>Rte_Al_TE_AswTask_0_10ms</TD>
+<TD>Core0_AswTask</TD>
+<TD>Rte_Ev_Cyclic_Core0_AswTask_0_10ms</TD>
+<TD>Rte_Al_TE_Core0_AswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_AttemptCounter::EraseBlock</TD>
@@ -1962,9 +1955,9 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>NvM_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_AttemptCounter::ReadBlock</TD>
@@ -2116,14 +2109,14 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>DataReceivedEvent</B> NvM_SWC::NvM_Data_IF_UserData1_Recv::Element_UserData1</TD>
 <TD>NvM_SWC_UserData1_Runnable</TD>
-<TD>AswTask</TD>
+<TD>Core0_AswTask</TD>
 <TD>Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable</TD>
 <TD>n/a</TD>
 </TR>
 <TR>
 <TD><B>DataReceivedEvent</B> NvM_SWC::NvM_Data_IF_UserData2_Rcev::Element_UserData2</TD>
 <TD>NvM_SWC_UserData2_Runnable</TD>
-<TD>AswTask</TD>
+<TD>Core0_AswTask</TD>
 <TD>Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable</TD>
 <TD>n/a</TD>
 </TR>
@@ -2172,14 +2165,14 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 1s</TD>
 <TD>Led_Runnable1000ms</TD>
-<TD>AswTask</TD>
+<TD>Core0_AswTask</TD>
 <TD>Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms</TD>
 <TD>Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms</TD>
 </TR>
 <TR>
 <TD><B>InitEvent</B></TD>
 <TD>PowerMng_SWC_Init</TD>
-<TD>Asw_Init</TD>
+<TD>Core0_AswInit</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
 </TR>
@@ -2200,16 +2193,16 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>InitEvent</B></TD>
 <TD>SWC1_Init</TD>
-<TD>Asw_Init</TD>
+<TD>Core0_AswInit</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>SWC1_Runnable10ms</TD>
-<TD>AswTask</TD>
-<TD>Rte_Ev_Cyclic_AswTask_0_10ms</TD>
-<TD>Rte_Al_TE_AswTask_0_10ms</TD>
+<TD>Core0_AswTask</TD>
+<TD>Rte_Ev_Cyclic_Core0_AswTask_0_10ms</TD>
+<TD>Rte_Al_TE_Core0_AswTask_0_10ms</TD>
 </TR>
 </TABLE>
 <br>
@@ -2224,127 +2217,127 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>BswM_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Can_MainFunction_BusOff</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Can_MainFunction_Mode</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Can_MainFunction_Wakeup</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>CanNm_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>CanSM_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>CanTp_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_5ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_5ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_5ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Com_MainFunctionRx_ComMainFunctionRx</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Com_MainFunctionTx_ComMainFunctionTx</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 20ms</TD>
 <TD>ComM_MainFunction_0</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_20ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 20ms</TD>
 <TD>ComM_MainFunction_1</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_20ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 20ms</TD>
 <TD>ComM_MainFunction_2</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_20ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 20ms</TD>
 <TD>ComM_MainFunction_3</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_20ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 20ms</TD>
 <TD>ComM_MainFunction_4</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_20ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Dcm_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Dem_MasterMainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Dem_SatelliteMainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>EcuM_MainFunction</TD>
 <TD>Core0_BswTask</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
 <TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
@@ -2364,65 +2357,65 @@ CONST Size: 101 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Fee_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Fls_17_Dmu_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>LinIf_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_5ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_5ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_5ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>LinSM_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>NvM_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Rte_ComSendSignalProxyPeriodic</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>Spi_MainFunction_Handling</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_5ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_5ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_5ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>CanXcp_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_5ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_5ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_5ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>Xcp_MainFunction</TD>
-<TD>Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Bsw_Task_0_5ms</TD>
-<TD>Rte_Al_TE2_Bsw_Task_0_5ms</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_5ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_5ms</TD>
 </TR>
 </TABLE>
 <P ALIGN=LEFT>

@@ -45,7 +45,6 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void);
 
 /* Extended Life-Cycle API */
 FUNC(void, RTE_CODE) Rte_InitMemory(void);
-FUNC(void, RTE_CODE) Rte_InitMemory_OsApplication(void);
 FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore0(void);
 FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore1(void);
 FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore2(void);

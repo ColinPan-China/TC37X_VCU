@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Cfg.c
- *   Generation Time: 2025-03-26 14:33:01
+ *   Generation Time: 2025-04-23 11:05:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -158,21 +158,19 @@ CONST(EcuM_DriverInitOneType, ECUM_CONST) EcuM_DriverInitOne[1] = {  /* PRQA S 1
   \var    EcuM_PartitionData
   \brief  Contains all parameters configured for initialization of partitions.
   \details
-  Element          Description
-  EcuMPartition    Set to true for the partitions with active BswM
-  Application      
-  Resource     
+  Element        Description
+  Application    
+  Resource   
 */ 
 #define ECUM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(EcuM_PartitionDataType, ECUM_CONST) EcuM_PartitionData[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    EcuMPartition  Application                Resource    */
-  { /*     0 */          TRUE, SystemApplication_OsCore0, OsResource0 },
-  { /*     1 */         FALSE, OsApplication            , 0xFF        },
-  { /*     2 */          TRUE, SystemApplication_OsCore1, OsResource1 },
-  { /*     3 */          TRUE, SystemApplication_OsCore2, OsResource2 }
+CONST(EcuM_PartitionDataType, ECUM_CONST) EcuM_PartitionData[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    Application                Resource    */
+  { /*     0 */ SystemApplication_OsCore0, OsResource0 },
+  { /*     1 */ SystemApplication_OsCore1, OsResource1 },
+  { /*     2 */ SystemApplication_OsCore2, OsResource2 }
 };
 #define ECUM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

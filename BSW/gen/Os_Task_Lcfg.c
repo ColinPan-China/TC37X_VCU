@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Task_Lcfg.c
- *   Generation Time: 2025-03-19 13:54:58
+ *   Generation Time: 2025-04-23 11:05:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -84,14 +84,11 @@
 #define OS_START_SEC_CORE0_VAR_NOINIT_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-/*! Dynamic task data: AswTask */
-OS_LOCAL VAR(Os_TaskType, OS_VAR_NOINIT) OsCfg_Task_AswTask_Dyn;
+/*! Dynamic task data: Core0_AswInit */
+OS_LOCAL VAR(Os_TaskType, OS_VAR_NOINIT) OsCfg_Task_Core0_AswInit_Dyn;
 
-/*! Dynamic task data: Asw_Init */
-OS_LOCAL VAR(Os_TaskType, OS_VAR_NOINIT) OsCfg_Task_Asw_Init_Dyn;
-
-/*! Dynamic task data: Bsw_Task */
-OS_LOCAL VAR(Os_TaskType, OS_VAR_NOINIT) OsCfg_Task_Bsw_Task_Dyn;
+/*! Dynamic task data: Core0_AswTask */
+OS_LOCAL VAR(Os_TaskType, OS_VAR_NOINIT) OsCfg_Task_Core0_AswTask_Dyn;
 
 /*! Dynamic task data: Core0_BswTask */
 OS_LOCAL VAR(Os_TaskType, OS_VAR_NOINIT) OsCfg_Task_Core0_BswTask_Dyn;
@@ -171,16 +168,16 @@ OS_LOCAL VAR(Os_TaskType, OS_VAR_NOINIT) OsCfg_Task_IdleTask_OsCore2_Dyn;
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
-/*! Task configuration data: AswTask */
-CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_AswTask =
+/*! Task configuration data: Core0_AswInit */
+CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core0_AswInit =
 {
   /* .Thread                 = */
   {
-    /* .ContextConfig         = */ &OsCfg_Hal_Context_AswTask,
-    /* .Context               = */ &OsCfg_Hal_Context_AswTask_Dyn,
-    /* .Stack                 = */ &OsCfg_Stack_AswTask,
-    /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_AswTask_Dyn),
-    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_Core0_AswInit,
+    /* .Context               = */ &OsCfg_Hal_Context_Core0_AswInit_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Task_Prio0,
+    /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_Core0_AswInit_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore0,
     /* .Core                  = */ &OsCfg_Core_OsCore0,
     /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
     /* .TimeProtConfig        = */ NULL_PTR,
@@ -193,47 +190,12 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_AswTask =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)2uL,
-  /* .TaskId                 = */ AswTask,
-  /* .RunningPriority        = */ (Os_TaskPrioType)2uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)6uL,
+  /* .TaskId                 = */ Core0_AswInit,
+  /* .RunningPriority        = */ (Os_TaskPrioType)6uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OS_APPMODE_NONE,
-    /* .AccessingApplications = */ (OS_APPID2MASK(OsApplication) | OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
-  /* .NumSchEventsRoundRobin = */ 0uL,
-  /* .RoundRobinEnabled      = */ FALSE,
-  /* .IsExtended             = */ (boolean)TRUE,
-  /* .StackSharing           = */ OS_TASKSCHEDULE_ALLOWED
-};
-
-
-/*! Task configuration data: Asw_Init */
-CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Asw_Init =
-{
-  /* .Thread                 = */
-  {
-    /* .ContextConfig         = */ &OsCfg_Hal_Context_Asw_Init,
-    /* .Context               = */ &OsCfg_Hal_Context_Asw_Init_Dyn,
-    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Task_Prio63,
-    /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_Asw_Init_Dyn),
-    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
-    /* .Core                  = */ &OsCfg_Core_OsCore0,
-    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
-    /* .TimeProtConfig        = */ NULL_PTR,
-    /* .MpAccessRightsInitial = */ NULL_PTR,
-    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
-    /* .Trace                 = */ NULL_PTR,
-    /* .FpuContext            = */ NULL_PTR,
-    /* .InitialCallContext    = */ OS_CALLCONTEXT_TASK,
-    /* .PreThreadHook         = */ &Os_TaskCallPreTaskHook,
-    /* .InitDuringStartUp     = */ TRUE,
-    /* .UsesFpu               = */ FALSE
-  },
-  /* .HomePriority           = */ (Os_TaskPrioType)3uL,
-  /* .TaskId                 = */ Asw_Init,
-  /* .RunningPriority        = */ (Os_TaskPrioType)3uL,
-  /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
-  /* .AutostartModes         = */ OS_APPMODE_NONE,
-    /* .AccessingApplications = */ (OS_APPID2MASK(OsApplication) | OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
+    /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
   /* .NumSchEventsRoundRobin = */ 0uL,
   /* .RoundRobinEnabled      = */ FALSE,
   /* .IsExtended             = */ (boolean)FALSE,
@@ -241,16 +203,16 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Asw_Init =
 };
 
 
-/*! Task configuration data: Bsw_Task */
-CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Bsw_Task =
+/*! Task configuration data: Core0_AswTask */
+CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core0_AswTask =
 {
   /* .Thread                 = */
   {
-    /* .ContextConfig         = */ &OsCfg_Hal_Context_Bsw_Task,
-    /* .Context               = */ &OsCfg_Hal_Context_Bsw_Task_Dyn,
-    /* .Stack                 = */ &OsCfg_Stack_Bsw_Task,
-    /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_Bsw_Task_Dyn),
-    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_Core0_AswTask,
+    /* .Context               = */ &OsCfg_Hal_Context_Core0_AswTask_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_Core0_AswTask,
+    /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_Core0_AswTask_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore0,
     /* .Core                  = */ &OsCfg_Core_OsCore0,
     /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
     /* .TimeProtConfig        = */ NULL_PTR,
@@ -263,12 +225,12 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Bsw_Task =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)1uL,
-  /* .TaskId                 = */ Bsw_Task,
-  /* .RunningPriority        = */ (Os_TaskPrioType)1uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)6uL,
+  /* .TaskId                 = */ Core0_AswTask,
+  /* .RunningPriority        = */ (Os_TaskPrioType)6uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OS_APPMODE_NONE,
-    /* .AccessingApplications = */ (OS_APPID2MASK(OsApplication) | OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
+    /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
   /* .NumSchEventsRoundRobin = */ 0uL,
   /* .RoundRobinEnabled      = */ FALSE,
   /* .IsExtended             = */ (boolean)TRUE,
@@ -283,7 +245,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core0_BswTask =
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_Core0_BswTask,
     /* .Context               = */ &OsCfg_Hal_Context_Core0_BswTask_Dyn,
-    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Task_Prio66,
+    /* .Stack                 = */ &OsCfg_Stack_Core0_BswTask,
     /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_Core0_BswTask_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore0,
     /* .Core                  = */ &OsCfg_Core_OsCore0,
@@ -306,7 +268,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core0_BswTask =
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
   /* .NumSchEventsRoundRobin = */ 0uL,
   /* .RoundRobinEnabled      = */ FALSE,
-  /* .IsExtended             = */ (boolean)FALSE,
+  /* .IsExtended             = */ (boolean)TRUE,
   /* .StackSharing           = */ OS_TASKSCHEDULE_ALLOWED
 };
 
@@ -333,9 +295,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Default_Init_Task =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)7uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)4uL,
   /* .TaskId                 = */ Default_Init_Task,
-  /* .RunningPriority        = */ (Os_TaskPrioType)7uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)4uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OSDEFAULTAPPMODE,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -368,9 +330,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Default_Init_Task_Trusted =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)8uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)5uL,
   /* .TaskId                 = */ Default_Init_Task_Trusted,
-  /* .RunningPriority        = */ (Os_TaskPrioType)8uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)5uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OSDEFAULTAPPMODE,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -403,9 +365,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_IdleTask_OsCore0 =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)9uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)7uL,
   /* .TaskId                 = */ IdleTask_OsCore0,
-  /* .RunningPriority        = */ (Os_TaskPrioType)9uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)7uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OS_APPMODE_ANY,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -445,9 +407,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core1_AswInit =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)4uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)1uL,
   /* .TaskId                 = */ Core1_AswInit,
-  /* .RunningPriority        = */ (Os_TaskPrioType)4uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)1uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OS_APPMODE_NONE,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -480,9 +442,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core1_AswTask =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)5uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)2uL,
   /* .TaskId                 = */ Core1_AswTask,
-  /* .RunningPriority        = */ (Os_TaskPrioType)5uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)2uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OS_APPMODE_NONE,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -515,9 +477,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core1_BswTask =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)6uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)3uL,
   /* .TaskId                 = */ Core1_BswTask,
-  /* .RunningPriority        = */ (Os_TaskPrioType)6uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)3uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OS_APPMODE_NONE,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -550,9 +512,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Default_Init_Task_Core1 =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)7uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)4uL,
   /* .TaskId                 = */ Default_Init_Task_Core1,
-  /* .RunningPriority        = */ (Os_TaskPrioType)7uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)4uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OSDEFAULTAPPMODE,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -585,9 +547,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Default_Init_Task_Core1_Trusted =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)8uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)5uL,
   /* .TaskId                 = */ Default_Init_Task_Core1_Trusted,
-  /* .RunningPriority        = */ (Os_TaskPrioType)8uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)5uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OSDEFAULTAPPMODE,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -620,9 +582,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_IdleTask_OsCore1 =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)9uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)7uL,
   /* .TaskId                 = */ IdleTask_OsCore1,
-  /* .RunningPriority        = */ (Os_TaskPrioType)9uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)7uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OS_APPMODE_ANY,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -662,9 +624,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core2_AswInit =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)4uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)1uL,
   /* .TaskId                 = */ Core2_AswInit,
-  /* .RunningPriority        = */ (Os_TaskPrioType)4uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)1uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OS_APPMODE_NONE,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -697,9 +659,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core2_AswTask =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)5uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)2uL,
   /* .TaskId                 = */ Core2_AswTask,
-  /* .RunningPriority        = */ (Os_TaskPrioType)5uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)2uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OS_APPMODE_NONE,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -732,9 +694,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core2_BswTask =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)6uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)3uL,
   /* .TaskId                 = */ Core2_BswTask,
-  /* .RunningPriority        = */ (Os_TaskPrioType)6uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)3uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OS_APPMODE_NONE,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -767,9 +729,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Default_Init_Task_Core2 =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)7uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)4uL,
   /* .TaskId                 = */ Default_Init_Task_Core2,
-  /* .RunningPriority        = */ (Os_TaskPrioType)7uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)4uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OSDEFAULTAPPMODE,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -802,9 +764,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Default_Init_Task_Core2_Trusted =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)8uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)5uL,
   /* .TaskId                 = */ Default_Init_Task_Core2_Trusted,
-  /* .RunningPriority        = */ (Os_TaskPrioType)8uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)5uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OSDEFAULTAPPMODE,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -837,9 +799,9 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_IdleTask_OsCore2 =
     /* .InitDuringStartUp     = */ TRUE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .HomePriority           = */ (Os_TaskPrioType)9uL,
+  /* .HomePriority           = */ (Os_TaskPrioType)7uL,
   /* .TaskId                 = */ IdleTask_OsCore2,
-  /* .RunningPriority        = */ (Os_TaskPrioType)9uL,
+  /* .RunningPriority        = */ (Os_TaskPrioType)7uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OS_APPMODE_ANY,
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
@@ -859,9 +821,8 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_IdleTask_OsCore2 =
 /*! Object reference table for tasks. */
 CONSTP2CONST(Os_TaskConfigType, OS_CONST, OS_CONST) OsCfg_TaskRefs[OS_TASKID_COUNT + 1] =   /* PRQA S 4521 */ /* MD_Os_Rule10.1_4521 */
 {
-  OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_AswTask),
-  OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Asw_Init),
-  OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Bsw_Task),
+  OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Core0_AswInit),
+  OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Core0_AswTask),
   OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Core0_BswTask),
   OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Core1_AswInit),
   OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Core1_AswTask),

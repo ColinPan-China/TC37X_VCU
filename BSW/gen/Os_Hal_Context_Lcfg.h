@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Context_Lcfg.h
- *   Generation Time: 2025-03-26 14:33:01
+ *   Generation Time: 2025-04-23 11:05:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -152,16 +152,12 @@ extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Leve
 /*! HAL dynamic ISR2 level context data: Level24 */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level24_Dyn;
 
-/*! HAL dynamic task context data: AswTask */
-extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_AswTask_Dyn;
+/*! HAL dynamic task context data: Core0_AswInit */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Core0_AswInit_Dyn;
 
 
-/*! HAL dynamic task context data: Asw_Init */
-extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Asw_Init_Dyn;
-
-
-/*! HAL dynamic task context data: Bsw_Task */
-extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Bsw_Task_Dyn;
+/*! HAL dynamic task context data: Core0_AswTask */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Core0_AswTask_Dyn;
 
 
 /*! HAL dynamic task context data: Core0_BswTask */
@@ -373,14 +369,11 @@ extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_QSPI3PT_ISR;
 /*! HAL ISR2 context configuration data: XSignalIsr_OsCore0 */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_XSignalIsr_OsCore0;
 
-/*! HAL task context configuration data: AswTask */
-extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_AswTask;
+/*! HAL task context configuration data: Core0_AswInit */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core0_AswInit;
 
-/*! HAL task context configuration data: Asw_Init */
-extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Asw_Init;
-
-/*! HAL task context configuration data: Bsw_Task */
-extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Bsw_Task;
+/*! HAL task context configuration data: Core0_AswTask */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core0_AswTask;
 
 /*! HAL task context configuration data: Core0_BswTask */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core0_BswTask;

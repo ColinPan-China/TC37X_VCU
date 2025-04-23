@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Lcfg.h
- *   Generation Time: 2025-03-26 14:33:01
+ *   Generation Time: 2025-04-23 11:05:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -76,39 +76,27 @@
  *  GLOBAL FUNCTION PROTOTYPES
  *********************************************************************************************************************/
 
-# define OS_START_SEC_AswTask_CODE
+# define OS_START_SEC_Core0_AswInit_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /**********************************************************************************************************************
- *  AswTask()
+ *  Core0_AswInit()
  *********************************************************************************************************************/
-extern FUNC(void, OS_ASWTASK_CODE) Os_Task_AswTask(void);
+extern FUNC(void, OS_CORE0_ASWINIT_CODE) Os_Task_Core0_AswInit(void);
 
-# define OS_STOP_SEC_AswTask_CODE
+# define OS_STOP_SEC_Core0_AswInit_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
-# define OS_START_SEC_Asw_Init_CODE
+# define OS_START_SEC_Core0_AswTask_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /**********************************************************************************************************************
- *  Asw_Init()
+ *  Core0_AswTask()
  *********************************************************************************************************************/
-extern FUNC(void, OS_ASW_INIT_CODE) Os_Task_Asw_Init(void);
+extern FUNC(void, OS_CORE0_ASWTASK_CODE) Os_Task_Core0_AswTask(void);
 
-# define OS_STOP_SEC_Asw_Init_CODE
-# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
-# define OS_START_SEC_Bsw_Task_CODE
-# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-/**********************************************************************************************************************
- *  Bsw_Task()
- *********************************************************************************************************************/
-extern FUNC(void, OS_BSW_TASK_CODE) Os_Task_Bsw_Task(void);
-
-# define OS_STOP_SEC_Bsw_Task_CODE
+# define OS_STOP_SEC_Core0_AswTask_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
