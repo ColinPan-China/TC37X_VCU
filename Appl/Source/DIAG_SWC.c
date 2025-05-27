@@ -723,7 +723,7 @@ FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void) /* PRQA S 0624, 3206 */ 
       Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
       Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
     }
-//    Rte_Call_EnableCond_KL15_High_SetEnableCondition( TRUE );
+    Rte_Call_EnableCond_KL15_High_SetEnableCondition( TRUE );
   }
   else
   {
@@ -735,10 +735,10 @@ FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void) /* PRQA S 0624, 3206 */ 
       Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(DEM_CYCLE_STATE_END);
       Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(DEM_CYCLE_STATE_END);
     }
-//    Rte_Call_EnableCond_KL15_High_SetEnableCondition( FALSE );
+    Rte_Call_EnableCond_KL15_High_SetEnableCondition( FALSE );
   }
 
- if(  DTC_FailCnt > 0 )
+  if(  DTC_FailCnt > 0 )
   {
     Rte_Call_Event_DTC_0x000002_SetEventStatus(DEM_EVENT_STATUS_FAILED);
     Rte_Call_Event_DTC_0x000003_SetEventStatus(DEM_EVENT_STATUS_FAILED);
@@ -753,7 +753,6 @@ FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void) /* PRQA S 0624, 3206 */ 
     Rte_Call_Event_CAN01_ComLost_SetEventStatus(DEM_EVENT_STATUS_PASSED);
   }
 
-//  Dem_SetEventStatus( 4, 3 );
 
   if(  DTC_PassCnt > 0 )
   {
@@ -763,11 +762,6 @@ FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void) /* PRQA S 0624, 3206 */ 
   }
   Rte_Call_Event_DTC_0x000002_GetEventStatus(&DTC_Status_0002);
   Rte_Call_Event_DTC_0x000003_GetEventStatus(&DTC_Status_0003);
-
-
-  if( DTC_Storage > 0 )
-  {
-  }
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

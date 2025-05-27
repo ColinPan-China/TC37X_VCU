@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Lcfg.h
- *   Generation Time: 2025-05-26 17:45:11
+ *   Generation Time: 2025-05-27 10:52:11
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -846,7 +846,7 @@
 #define DEM_CFG_ISDEF_DTRTABLEIND                                                                   STD_OFF
 #define DEM_CFG_ISDEF_INDEXOFENABLECONDITIONGROUPTABLE                                              STD_OFF
 #define DEM_CFG_ISDEF_ENABLECONDITIONGROUPTABLEIND                                                  STD_OFF
-#define DEM_CFG_ISDEF_FULFILLEDATINITOFENABLECONDITIONINITTABLE                                     STD_ON
+#define DEM_CFG_ISDEF_FULFILLEDATINITOFENABLECONDITIONINITTABLE                                     STD_OFF
 #define DEM_CFG_ISDEF_ENABLECONDITIONGROUPTABLEINDENDIDXOFENABLECONDITIONTABLE                      STD_OFF
 #define DEM_CFG_ISDEF_ENABLECONDITIONGROUPTABLEINDSTARTIDXOFENABLECONDITIONTABLE                    STD_OFF
 #define DEM_CFG_ISDEF_ENABLECONDITIONGROUPTABLEINDUSEDOFENABLECONDITIONTABLE                        STD_ON
@@ -1176,7 +1176,7 @@
 #define DEM_CFG_EQ2_DTRTABLEIND                                                                     
 #define DEM_CFG_EQ2_INDEXOFENABLECONDITIONGROUPTABLE                                                
 #define DEM_CFG_EQ2_ENABLECONDITIONGROUPTABLEIND                                                    
-#define DEM_CFG_EQ2_FULFILLEDATINITOFENABLECONDITIONINITTABLE                                       TRUE
+#define DEM_CFG_EQ2_FULFILLEDATINITOFENABLECONDITIONINITTABLE                                       
 #define DEM_CFG_EQ2_ENABLECONDITIONGROUPTABLEINDENDIDXOFENABLECONDITIONTABLE                        
 #define DEM_CFG_EQ2_ENABLECONDITIONGROUPTABLEINDSTARTIDXOFENABLECONDITIONTABLE                      
 #define DEM_CFG_EQ2_ENABLECONDITIONGROUPTABLEINDUSEDOFENABLECONDITIONTABLE                          TRUE
@@ -2048,6 +2048,7 @@
 #define Dem_Cfg_GetEnableConditionGroupCounter(Index)                                               (Dem_Cfg_GetEnableConditionGroupCounterOfPCConfig()[(Index)])
 #define Dem_Cfg_GetEnableConditionGroupState(Index)                                                 (Dem_Cfg_GetEnableConditionGroupStateOfPCConfig()[(Index)])
 #define Dem_Cfg_GetEnableConditionGroupTableInd(Index)                                              (Dem_Cfg_GetEnableConditionGroupTableIndOfPCConfig()[(Index)])
+#define Dem_Cfg_IsFulfilledAtInitOfEnableConditionInitTable(Index)                                  ((Dem_Cfg_GetEnableConditionInitTableOfPCConfig()[(Index)].FulfilledAtInitOfEnableConditionInitTable) != FALSE)
 #define Dem_Cfg_GetEnableConditionGroupTableIndEndIdxOfEnableConditionTable(Index)                  (Dem_Cfg_GetEnableConditionTableOfPCConfig()[(Index)].EnableConditionGroupTableIndEndIdxOfEnableConditionTable)
 #define Dem_Cfg_GetEnableConditionGroupTableIndStartIdxOfEnableConditionTable(Index)                (Dem_Cfg_GetEnableConditionTableOfPCConfig()[(Index)].EnableConditionGroupTableIndStartIdxOfEnableConditionTable)
 #define Dem_Cfg_GetEventAvailableData()                                                             (NULL_PTR)
@@ -2194,7 +2195,6 @@
 #define Dem_Cfg_GetDtcSeverityOfDtcTable(Index)                                                     0u
 #define Dem_Cfg_IsImmediateNvStorageOfDtcTable(Index)                                               (((boolean)(Dem_Cfg_GetFunctionalUnitOfDtcTable(Index) == 0u)) != FALSE)
 #define Dem_Cfg_GetIndexOfEnableConditionGroupTable(Index)                                          ((Dem_Cfg_IndexOfEnableConditionGroupTableType)((Index)))  /**< Dummy - contains always the index of this element (self) */
-#define Dem_Cfg_IsFulfilledAtInitOfEnableConditionInitTable(Index)                                  (((TRUE)) != FALSE)  /**< Initial value: 'FALSE' condition is not fulfilled, 'TRUE' condition is fulfilled */
 #define Dem_Cfg_IsEnableConditionGroupTableIndUsedOfEnableConditionTable(Index)                     (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Dem_Cfg_EnableConditionGroupTableInd */
 #define Dem_Cfg_IsEventAvailableDefault(Index)                                                      (((TRUE)) != FALSE)
 #define Dem_Cfg_IsEventAvailableInVariant(Index)                                                    (((TRUE)) != FALSE)
@@ -4732,7 +4732,7 @@ typedef struct sDem_Cfg_EnableConditionGroupTableType
 /**   \brief  type used in Dem_Cfg_EnableConditionInitTable */
 typedef struct sDem_Cfg_EnableConditionInitTableType
 {
-  uint8 Dem_Cfg_EnableConditionInitTableNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  Dem_Cfg_FulfilledAtInitOfEnableConditionInitTableType FulfilledAtInitOfEnableConditionInitTable;  /**< Initial value: 'FALSE' condition is not fulfilled, 'TRUE' condition is fulfilled */
 } Dem_Cfg_EnableConditionInitTableType;
 
 /**   \brief  type used in Dem_Cfg_EnableConditionTable */
@@ -5456,6 +5456,25 @@ extern CONST(Dem_Cfg_DtcTableType, DEM_CONST) Dem_Cfg_DtcTable[6];
 /*lint -restore */
 extern CONST(Dem_Cfg_EnableConditionGroupTableIndType, DEM_CONST) Dem_Cfg_EnableConditionGroupTableInd[8];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
 #define DEM_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Dem_Cfg_EnableConditionInitTable
+**********************************************************************************************************************/
+/** 
+  \var    Dem_Cfg_EnableConditionInitTable
+  \details
+  Element            Description
+  FulfilledAtInit    Initial value: 'FALSE' condition is not fulfilled, 'TRUE' condition is fulfilled
+*/ 
+#define DEM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(Dem_Cfg_EnableConditionInitTableType, DEM_CONST) Dem_Cfg_EnableConditionInitTable[4];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
+#define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
