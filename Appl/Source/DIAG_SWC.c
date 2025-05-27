@@ -362,6 +362,8 @@
  * Per-Instance Memory:
  * ====================
  *   uint8 *Rte_Pim_NvBlockNeed_AttemptCounter_MirrorBlock(void)
+ *   uint8 *Rte_Pim_NvBlockNeed_DID_F193_MirrorBlock(void)
+ *     Returnvalue: uint8* is of type NvM_Arry4Bytes
  *   uint8 *Rte_Pim_NvBlockNeed_DiagDID_00_MirrorBlock(void)
  *     Returnvalue: uint8* is of type NvM_Arry4Bytes
  *
@@ -370,6 +372,8 @@
  *   SW-C local Calibration Parameters:
  *   ----------------------------------
  *   uint8 Rte_CData_NvBlockNeed_AttemptCounter_DefaultValue(void)
+ *   uint8 *Rte_CData_NvBlockNeed_DID_F193_DefaultValue(void)
+ *     Returnvalue: uint8* is of type NvM_Arry4Bytes
  *   uint8 *Rte_CData_NvBlockNeed_DiagDID_00_DefaultValue(void)
  *     Returnvalue: uint8* is of type NvM_Arry4Bytes
  *
@@ -762,6 +766,180 @@ FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void) /* PRQA S 0624, 3206 */ 
   }
   Rte_Call_Event_DTC_0x000002_GetEventStatus(&DTC_Status_0002);
   Rte_Call_Event_DTC_0x000003_GetEventStatus(&DTC_Status_0003);
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: DataServices_Hardware_Version_Hardware_Version_Number_ConditionCheckRead
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <ConditionCheckRead> of PortPrototype <DataServices_Hardware_Version_Hardware_Version_Number>
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType DataServices_Hardware_Version_Hardware_Version_Number_ConditionCheckRead(Dcm_OpStatusType OpStatus, Dcm_NegativeResponseCodeType *ErrorCode)
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_DataServices_Hardware_Version_Hardware_Version_Number_DCM_E_PENDING
+ *   RTE_E_DataServices_Hardware_Version_Hardware_Version_Number_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: DataServices_Hardware_Version_Hardware_Version_Number_ConditionCheckRead_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_Hardware_Version_Hardware_Version_Number_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: DataServices_Hardware_Version_Hardware_Version_Number_ConditionCheckRead (returns application error)
+ *********************************************************************************************************************/
+
+  return RTE_E_OK;
+//  return RTE_E_INVALID;
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: DataServices_Hardware_Version_Hardware_Version_Number_ReadData
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <ReadData> of PortPrototype <DataServices_Hardware_Version_Hardware_Version_Number>
+ *
+ **********************************************************************************************************************
+ *
+ * Service Calls:
+ * ==============
+ *   Service Invocation:
+ *   -------------------
+ *   Std_ReturnType Rte_Call_PS_DIAG_SWC_NvBlockNeed_DID_F193_ReadBlock(dtRef_VOID DstPtr)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_Defs_E_NOT_OK
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType DataServices_Hardware_Version_Hardware_Version_Number_ReadData(Dcm_OpStatusType OpStatus, uint8 *Data)
+ *     Argument Data: uint8* is of type Dcm_Data4ByteType
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_DataServices_Hardware_Version_Hardware_Version_Number_DCM_E_PENDING
+ *   RTE_E_DataServices_Hardware_Version_Hardware_Version_Number_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: DataServices_Hardware_Version_Hardware_Version_Number_ReadData_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_Hardware_Version_Hardware_Version_Number_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: DataServices_Hardware_Version_Hardware_Version_Number_ReadData (returns application error)
+ *********************************************************************************************************************/
+  Data[0] = Rte_DIAG_SWC_NvBlockNeed_DID_F193_MirrorBlock[0];
+  Data[1] = Rte_DIAG_SWC_NvBlockNeed_DID_F193_MirrorBlock[1];
+  Data[2] = Rte_DIAG_SWC_NvBlockNeed_DID_F193_MirrorBlock[2];
+  Data[3] = Rte_DIAG_SWC_NvBlockNeed_DID_F193_MirrorBlock[3];
+  return RTE_E_OK;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: DataServices_Hardware_Version_Hardware_Version_Number_WriteData
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered by server invocation for OperationPrototype <WriteData> of PortPrototype <DataServices_Hardware_Version_Hardware_Version_Number>
+ *
+ **********************************************************************************************************************
+ *
+ * Service Calls:
+ * ==============
+ *   Service Invocation:
+ *   -------------------
+ *   Std_ReturnType Rte_Call_PS_DIAG_SWC_NvBlockNeed_DID_F193_SetRamBlockStatus(boolean RamBlockStatus)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_Defs_E_NOT_OK
+ *   Std_ReturnType Rte_Call_PS_DIAG_SWC_NvBlockNeed_DID_F193_WriteBlock(dtRef_const_VOID SrcPtr)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_Defs_E_NOT_OK
+ *
+ **********************************************************************************************************************
+ *
+ * Runnable prototype:
+ * ===================
+ *   Std_ReturnType DataServices_Hardware_Version_Hardware_Version_Number_WriteData(const uint8 *Data, Dcm_OpStatusType OpStatus, Dcm_NegativeResponseCodeType *ErrorCode)
+ *     Argument Data: uint8* is of type Dcm_Data4ByteType
+ *
+ **********************************************************************************************************************
+ *
+ * Available Application Errors:
+ * =============================
+ *   RTE_E_DataServices_Hardware_Version_Hardware_Version_Number_DCM_E_PENDING
+ *   RTE_E_DataServices_Hardware_Version_Hardware_Version_Number_E_NOT_OK
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: DataServices_Hardware_Version_Hardware_Version_Number_WriteData_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_Hardware_Version_Hardware_Version_Number_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: DataServices_Hardware_Version_Hardware_Version_Number_WriteData (returns application error)
+ *********************************************************************************************************************/
+  Rte_DIAG_SWC_NvBlockNeed_DID_F193_MirrorBlock[0] = Data[0];
+  Rte_DIAG_SWC_NvBlockNeed_DID_F193_MirrorBlock[1] = Data[1];
+  Rte_DIAG_SWC_NvBlockNeed_DID_F193_MirrorBlock[2] = Data[2];
+  Rte_DIAG_SWC_NvBlockNeed_DID_F193_MirrorBlock[3] = Data[3];
+
+  Rte_Call_PS_DIAG_SWC_NvBlockNeed_DID_F193_SetRamBlockStatus(TRUE);
+  return RTE_E_OK;
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

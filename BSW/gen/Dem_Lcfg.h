@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Lcfg.h
- *   Generation Time: 2025-05-27 10:52:11
+ *   Generation Time: 2025-05-27 15:00:49
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -1682,7 +1682,7 @@
 #define DEM_A2L_MAX_SIZE_STDENV_RECORD                                0uL          /* largest, configured StdEnvData */ 
 
  /*  NvRamBlock size configured in the NvM module  */ 
-#define DEM_CFG_ADMIN_DATABLOCK_SIZE                                  8u           /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_ADMIN */ 
+#define DEM_CFG_ADMIN_DATABLOCK_SIZE                                  12u          /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_ADMIN */ 
 #define DEM_CFG_STATUS_DATABLOCK_SIZE                                 20u          /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_STATUS */ 
 #define DEM_CFG_PRIMARY_DATABLOCK_SIZE                                36u          /* Size of the NvM block (NvM/NvMBlockDescriptor/NvMNvBlockLength) that's referenced via DemNvRamBlockId/DemNvRamBlockIdRef and has DemNvRamBlockId/DemNvRamBlockIdType=DEM_NVBLOCK_PRIMARY */ 
 

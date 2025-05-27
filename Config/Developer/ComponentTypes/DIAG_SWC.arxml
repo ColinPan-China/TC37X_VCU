@@ -496,6 +496,65 @@
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/EnableCondition</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6EF5814E-8D89-481F-9DDF-2755F62E68D4">
+              <SHORT-NAME>PS_DIAG_SWC_NvBlockNeed_DID_F193</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/GetErrorStatus</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/SetRamBlockStatus</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/ReadBlock</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/WriteBlock</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/RestoreBlockDefaults</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/InvalidateNvBlock</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/EraseBlock</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="5F870030-1B17-436E-B50D-F2D0EEEEF737">
+              <SHORT-NAME>DataServices_Hardware_Version_Hardware_Version_Number</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Hardware_Version_Hardware_Version_Number/ReadData</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Hardware_Version_Hardware_Version_Number/ConditionCheckRead</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Hardware_Version_Hardware_Version_Number/WriteData</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DataServices_Hardware_Version_Hardware_Version_Number</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
           </PORTS>
           <INTERNAL-BEHAVIORS>
             <SWC-INTERNAL-BEHAVIOR UUID="9769A5E0-D1CD-49AB-890E-9641785FFDCC">
@@ -506,7 +565,7 @@
                   <SW-DATA-DEF-PROPS>
                     <SW-DATA-DEF-PROPS-VARIANTS>
                       <SW-DATA-DEF-PROPS-CONDITIONAL>
-                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                        <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
                       </SW-DATA-DEF-PROPS-CONDITIONAL>
                     </SW-DATA-DEF-PROPS-VARIANTS>
                   </SW-DATA-DEF-PROPS>
@@ -522,6 +581,17 @@
                     </SW-DATA-DEF-PROPS-VARIANTS>
                   </SW-DATA-DEF-PROPS>
                   <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                </VARIABLE-DATA-PROTOTYPE>
+                <VARIABLE-DATA-PROTOTYPE UUID="5AC023BD-96EE-4425-A07C-CE4DBFDF0869">
+                  <SHORT-NAME>NvBlockNeed_DID_F193_MirrorBlock</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/NvM_Arry4Bytes</TYPE-TREF>
                 </VARIABLE-DATA-PROTOTYPE>
               </AR-TYPED-PER-INSTANCE-MEMORYS>
               <EVENTS>
@@ -644,6 +714,30 @@
                   <OPERATION-IREF>
                     <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/CBReadData_DID_0xf1a3_F1A3_Data</CONTEXT-P-PORT-REF>
                     <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/CSDataServices_DID_0xf1a3_F1A3_Data/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="D3134342-7086-40B0-ADAD-2E7F5F75DD76">
+                  <SHORT-NAME>OIT_DataServices_Hardware_Version_Hardware_Version_Number_WriteData_DataServices_Hardware_Version_Hardware_Version_Numbe125FF288</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/DataServices_Hardware_Version_Hardware_Version_Number_WriteData</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/DataServices_Hardware_Version_Hardware_Version_Number</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Hardware_Version_Hardware_Version_Number/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="D0CB3E4E-7AAF-461A-A624-D1A9BC82E23D">
+                  <SHORT-NAME>OIT_DataServices_Hardware_Version_Hardware_Version_Number_ConditionCheckRead_DataServices_Hardware_Version_Hardware_Vers10245F7A</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/DataServices_Hardware_Version_Hardware_Version_Number_ConditionCheckRead</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/DataServices_Hardware_Version_Hardware_Version_Number</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Hardware_Version_Hardware_Version_Number/ConditionCheckRead</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="F177A409-6342-479B-AD38-86DCE94CA63D">
+                  <SHORT-NAME>OIT_DataServices_Hardware_Version_Hardware_Version_Number_ReadData_DataServices_Hardware_Version_Hardware_Version_Number62630144</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/DataServices_Hardware_Version_Hardware_Version_Number_ReadData</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/DataServices_Hardware_Version_Hardware_Version_Number</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Hardware_Version_Hardware_Version_Number/ReadData</TARGET-PROVIDED-OPERATION-REF>
                   </OPERATION-IREF>
                 </OPERATION-INVOKED-EVENT>
               </EVENTS>
@@ -913,6 +1007,40 @@
                 <RUNNABLE-ENTITY UUID="F37773C4-9EEB-4962-945A-C0003DA313FF">
                   <SHORT-NAME>CBReadData_DID_0xf1a3_F1A3_Data_ReadData</SHORT-NAME>
                 </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="6BBDBFD9-0316-4B59-BF87-42833635E0FE">
+                  <SHORT-NAME>DataServices_Hardware_Version_Hardware_Version_Number_WriteData</SHORT-NAME>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="241D490A-F10C-404A-9D9A-3E4781B87D13">
+                      <SHORT-NAME>SC_PS_DIAG_SWC_NvBlockNeed_DID_F193_WriteBlock</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/PS_DIAG_SWC_NvBlockNeed_DID_F193</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/WriteBlock</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="A329E7FA-0E6A-4667-BF88-8D3265DFCD9A">
+                      <SHORT-NAME>SC_PS_DIAG_SWC_NvBlockNeed_DID_F193_SetRamBlockStatus</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/PS_DIAG_SWC_NvBlockNeed_DID_F193</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/SetRamBlockStatus</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="4AA16019-4CA9-474A-BE37-36D138038F52">
+                  <SHORT-NAME>DataServices_Hardware_Version_Hardware_Version_Number_ConditionCheckRead</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="97C37B9F-8661-4387-A158-950F3BA3DDD1">
+                  <SHORT-NAME>DataServices_Hardware_Version_Hardware_Version_Number_ReadData</SHORT-NAME>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="B56BF993-B568-4638-B78A-98B0865D9253">
+                      <SHORT-NAME>SC_PS_DIAG_SWC_NvBlockNeed_DID_F193_ReadBlock</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/PS_DIAG_SWC_NvBlockNeed_DID_F193</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/NvM_swc/Interfaces/NvMService_AC3_SRBS_Defs/ReadBlock</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                </RUNNABLE-ENTITY>
               </RUNNABLES>
               <SERVICE-DEPENDENCYS>
                 <SWC-SERVICE-DEPENDENCY UUID="B0C63B94-0EBB-4D3A-A369-A55820B76806">
@@ -998,6 +1126,44 @@
                     </NV-BLOCK-NEEDS>
                   </SERVICE-NEEDS>
                 </SWC-SERVICE-DEPENDENCY>
+                <SWC-SERVICE-DEPENDENCY UUID="F1480E9D-04F2-47CC-A90E-2142C942F0BD">
+                  <SHORT-NAME>NvBlockNeed_DID_F193</SHORT-NAME>
+                  <ASSIGNED-DATAS>
+                    <ROLE-BASED-DATA-ASSIGNMENT>
+                      <ROLE>ramBlock</ROLE>
+                      <USED-DATA-ELEMENT>
+                        <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/NvBlockNeed_DID_F193_MirrorBlock</LOCAL-VARIABLE-REF>
+                      </USED-DATA-ELEMENT>
+                    </ROLE-BASED-DATA-ASSIGNMENT>
+                    <ROLE-BASED-DATA-ASSIGNMENT>
+                      <ROLE>defaultValue</ROLE>
+                      <USED-PARAMETER-ELEMENT>
+                        <LOCAL-PARAMETER-REF DEST="PARAMETER-DATA-PROTOTYPE">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/NvBlockNeed_DID_F193_DefaultValue</LOCAL-PARAMETER-REF>
+                      </USED-PARAMETER-ELEMENT>
+                    </ROLE-BASED-DATA-ASSIGNMENT>
+                  </ASSIGNED-DATAS>
+                  <SERVICE-NEEDS>
+                    <NV-BLOCK-NEEDS UUID="54D402D6-3F5C-4C84-924E-633390D1F051">
+                      <SHORT-NAME>NvBlockNeed</SHORT-NAME>
+                      <CALC-RAM-BLOCK-CRC>false</CALC-RAM-BLOCK-CRC>
+                      <CHECK-STATIC-BLOCK-ID>false</CHECK-STATIC-BLOCK-ID>
+                      <N-DATA-SETS>0</N-DATA-SETS>
+                      <RAM-BLOCK-STATUS-CONTROL>API</RAM-BLOCK-STATUS-CONTROL>
+                      <READONLY>false</READONLY>
+                      <RELIABILITY>NO-PROTECTION</RELIABILITY>
+                      <RESISTANT-TO-CHANGED-SW>true</RESISTANT-TO-CHANGED-SW>
+                      <RESTORE-AT-START>true</RESTORE-AT-START>
+                      <STORE-AT-SHUTDOWN>true</STORE-AT-SHUTDOWN>
+                      <STORE-CYCLIC>false</STORE-CYCLIC>
+                      <STORE-EMERGENCY>false</STORE-EMERGENCY>
+                      <STORE-IMMEDIATE>false</STORE-IMMEDIATE>
+                      <USE-AUTO-VALIDATION-AT-SHUT-DOWN>false</USE-AUTO-VALIDATION-AT-SHUT-DOWN>
+                      <USE-CRC-COMP-MECHANISM>false</USE-CRC-COMP-MECHANISM>
+                      <WRITE-ONLY-ONCE>false</WRITE-ONLY-ONCE>
+                      <WRITE-VERIFICATION>false</WRITE-VERIFICATION>
+                    </NV-BLOCK-NEEDS>
+                  </SERVICE-NEEDS>
+                </SWC-SERVICE-DEPENDENCY>
               </SERVICE-DEPENDENCYS>
               <SHARED-PARAMETERS>
                 <PARAMETER-DATA-PROTOTYPE UUID="1225A8CE-C8F7-458C-82E8-29465A1983C9">
@@ -1043,6 +1209,35 @@
                     <NUMERICAL-VALUE-SPECIFICATION>
                       <VALUE>0</VALUE>
                     </NUMERICAL-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </PARAMETER-DATA-PROTOTYPE>
+                <PARAMETER-DATA-PROTOTYPE UUID="837E2EDF-9037-4BC6-9C18-7FA7C888E99D">
+                  <SHORT-NAME>NvBlockNeed_DID_F193_DefaultValue</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/NvM_Arry4Bytes</TYPE-TREF>
+                  <INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
                   </INIT-VALUE>
                 </PARAMETER-DATA-PROTOTYPE>
               </SHARED-PARAMETERS>

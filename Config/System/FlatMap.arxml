@@ -2541,6 +2541,26 @@
                                     <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Core1App_SWC</TARGET-REF>
                                   </ECU-EXTRACT-REFERENCE-IREF>
                                 </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="f8461321-74be-4a64-8452-aa6eb5a3510a">
+                                  <SHORT-NAME>DIAG_SWC_NvBlockNeed_DID_F193</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:NvBlockNeeds">
+                                        <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/DIAG_SWC_NvBlockNeed_DID_F193</SDX-REF>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:NvBlockNeeds</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <CONTEXT-ELEMENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SWC-SERVICE-DEPENDENCY">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/NvBlockNeed_DID_F193</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
                               </INSTANCES>
                             </FLAT-MAP>
                           </ELEMENTS>

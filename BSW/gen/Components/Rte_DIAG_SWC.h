@@ -99,6 +99,9 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_GetErrorStatus(NvM_BlockIdType parg0
 #  define Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(arg1) (Dem_SetOperationCycleState((uint8)1, arg1))
 #  define Rte_Call_OpCycle_WarmUpCycle_GetOperationCycleState(arg1) (RTE_E_UNCONNECTED)
 #  define Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(arg1) (RTE_E_UNCONNECTED)
+#  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DID_F193_ReadBlock(arg1) (NvM_ReadBlock((NvM_BlockIdType)14, arg1))
+#  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DID_F193_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)14, arg1))
+#  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DID_F193_WriteBlock(arg1) (NvM_WriteBlock((NvM_BlockIdType)14, arg1))
 #  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_GetErrorStatus(arg1) (NvM_GetErrorStatus((NvM_BlockIdType)12, arg1))
 #  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_ReadBlock(arg1) (NvM_ReadBlock((NvM_BlockIdType)12, arg1))
 #  define Rte_Call_PS_DIAG_SWC_NvBlockNeed_DiagDID_00_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)12, arg1))
@@ -114,6 +117,7 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_GetErrorStatus(NvM_BlockIdType parg0
 #   include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern CONST(uint8, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvBlockNeed_AttemptCounter_DefaultValue;
+extern CONST(NvM_Arry4Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvBlockNeed_DID_F193_DefaultValue;
 extern CONST(NvM_Arry4Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_DefaultValue;
 
 #   define RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
@@ -122,6 +126,8 @@ extern CONST(NvM_Arry4Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvB
 #  endif
 
 #  define Rte_CData_NvBlockNeed_AttemptCounter_DefaultValue() (Rte_DIAG_SWC_NvBlockNeed_AttemptCounter_DefaultValue)
+
+#  define Rte_CData_NvBlockNeed_DID_F193_DefaultValue() (&(Rte_DIAG_SWC_NvBlockNeed_DID_F193_DefaultValue[0]))
 
 #  define Rte_CData_NvBlockNeed_DiagDID_00_DefaultValue() (&(Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_DefaultValue[0]))
 
@@ -134,6 +140,7 @@ extern CONST(NvM_Arry4Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvB
 #   include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern VAR(uint8, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNeed_AttemptCounter_MirrorBlock;
+extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNeed_DID_F193_MirrorBlock;
 extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock;
 
 #   define RTE_STOP_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
@@ -144,6 +151,12 @@ extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNe
 /* PRQA S 3453 L1 */ /* MD_MSR_FctLikeMacro */
 #  define Rte_Pim_NvBlockNeed_AttemptCounter_MirrorBlock() \
   (&Rte_DIAG_SWC_NvBlockNeed_AttemptCounter_MirrorBlock)
+/* PRQA L:L1 */
+
+/* PRQA S 3453 L1 */ /* MD_MSR_FctLikeMacro */
+#  define Rte_Pim_NvBlockNeed_DID_F193_MirrorBlock() (&((*RtePim_NvBlockNeed_DID_F193_MirrorBlock())[0]))
+#  define RtePim_NvBlockNeed_DID_F193_MirrorBlock() \
+  (&Rte_DIAG_SWC_NvBlockNeed_DID_F193_MirrorBlock)
 /* PRQA L:L1 */
 
 /* PRQA S 3453 L1 */ /* MD_MSR_FctLikeMacro */
@@ -170,6 +183,9 @@ extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNe
 #  define RTE_RUNNABLE_CBReadData_DID_0xf1a3_F1A3_Data_ReadData CBReadData_DID_0xf1a3_F1A3_Data_ReadData
 #  define RTE_RUNNABLE_DIAG_SWC_Init DIAG_SWC_Init
 #  define RTE_RUNNABLE_DTCMonitorRunnable_10ms DTCMonitorRunnable_10ms
+#  define RTE_RUNNABLE_DataServices_Hardware_Version_Hardware_Version_Number_ConditionCheckRead DataServices_Hardware_Version_Hardware_Version_Number_ConditionCheckRead
+#  define RTE_RUNNABLE_DataServices_Hardware_Version_Hardware_Version_Number_ReadData DataServices_Hardware_Version_Hardware_Version_Number_ReadData
+#  define RTE_RUNNABLE_DataServices_Hardware_Version_Hardware_Version_Number_WriteData DataServices_Hardware_Version_Hardware_Version_Number_WriteData
 #  define RTE_RUNNABLE_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead DataServices_VCU_DID_00_DataRecord_ConditionCheckRead
 #  define RTE_RUNNABLE_DataServices_VCU_DID_00_DataRecord_ReadData DataServices_VCU_DID_00_DataRecord_ReadData
 #  define RTE_RUNNABLE_DataServices_VCU_DID_00_DataRecord_WriteData DataServices_VCU_DID_00_DataRecord_WriteData
@@ -188,6 +204,9 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a2_F1A2_Data_ReadData(P2V
 FUNC(Std_ReturnType, DIAG_SWC_CODE) CBReadData_DID_0xf1a3_F1A3_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(void, DIAG_SWC_CODE) DIAG_SWC_Init(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
+FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_Hardware_Version_Hardware_Version_Number_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_Hardware_Version_Hardware_Version_Number_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_Hardware_Version_Hardware_Version_Number_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_VCU_DID_00_DataRecord_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_VCU_DID_00_DataRecord_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_VCU_DID_00_DataRecord_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
@@ -215,6 +234,10 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_SetSecurityAttemptCou
 #  define RTE_E_CSDataServices_DID_0xf1a2_F1A2_Data_E_NOT_OK (1U)
 
 #  define RTE_E_CSDataServices_DID_0xf1a3_F1A3_Data_E_NOT_OK (1U)
+
+#  define RTE_E_DataServices_Hardware_Version_Hardware_Version_Number_DCM_E_PENDING (10U)
+
+#  define RTE_E_DataServices_Hardware_Version_Hardware_Version_Number_E_NOT_OK (1U)
 
 #  define RTE_E_DataServices_VCU_DID_00_DataRecord_DCM_E_PENDING (10U)
 
