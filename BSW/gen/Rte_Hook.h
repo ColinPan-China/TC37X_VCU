@@ -28,6 +28,12 @@
  *
  * Not configured:
  *
+ *  Rte_CallHook_DIAG_SWC_EnableCond_KL15_High_SetEnableCondition_Return
+ *  Rte_CallHook_DIAG_SWC_EnableCond_KL15_High_SetEnableCondition_Start
+ *  Rte_CallHook_DIAG_SWC_Event_CAN01_ComLost_GetEventStatus_Return
+ *  Rte_CallHook_DIAG_SWC_Event_CAN01_ComLost_GetEventStatus_Start
+ *  Rte_CallHook_DIAG_SWC_Event_CAN01_ComLost_SetEventStatus_Return
+ *  Rte_CallHook_DIAG_SWC_Event_CAN01_ComLost_SetEventStatus_Start
  *  Rte_CallHook_DIAG_SWC_Event_DTC_0x000002_GetEventStatus_Return
  *  Rte_CallHook_DIAG_SWC_Event_DTC_0x000002_GetEventStatus_Start
  *  Rte_CallHook_DIAG_SWC_Event_DTC_0x000002_SetEventStatus_Return

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Cfg.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-05-26 15:35:36
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -217,7 +217,7 @@
 #define DEM_CFG_SUPPORT_COMPATIBILITY                                      STD_OFF      /* Vector extension - /Dem/DemGeneral/DemCompatibilitySwitch */ 
 #define DEM_CFG_SUPPORT_CONFIRMED_STORAGE_FREEZE_FRAME                     STD_OFF      /* ((DEM_CFG_HAS_OBDII_ENABLED == STD_OFF) && (DEM_CFG_SUPPORT_WWHOBD == STD_OFF)) */ 
 #define DEM_CFG_SUPPORT_CONFIRMED_VISIBLE_FREEZE_FRAME                     STD_OFF      /* ((DEM_CFG_HAS_OBDII_ENABLED == STD_OFF) && (DEM_CFG_SUPPORT_WWHOBD == STD_OFF)) */ 
-#define DEM_CFG_SUPPORT_CYCLE_IGNITION                                     STD_OFF      /* Autodetected - STD_ON: cycle type is referenced by any *CycleRef or the /Dem/DemGeneral/DemRestartCycleOnInitRef parameter, STD_OFF: cycle type is not referenced. The '*CycleRef' params are (here 0 refs): /Dem/DemConfigSet/DemEventParameter/DemEventClass/DemAgingCycleRef, ~/DemOperationCycleRef, ~/DemIndicatorAttribute/DemIndicatorFailureCycleRef and ~/DemIndicatorAttribute/DemIndicatorHealingCycleRef. */ 
+#define DEM_CFG_SUPPORT_CYCLE_IGNITION                                     STD_ON       /* Autodetected - STD_ON: cycle type is referenced by any *CycleRef or the /Dem/DemGeneral/DemRestartCycleOnInitRef parameter, STD_OFF: cycle type is not referenced. The '*CycleRef' params are (here 2 refs): /Dem/DemConfigSet/DemEventParameter/DemEventClass/DemAgingCycleRef, ~/DemOperationCycleRef, ~/DemIndicatorAttribute/DemIndicatorFailureCycleRef and ~/DemIndicatorAttribute/DemIndicatorHealingCycleRef. */ 
 #define DEM_CFG_SUPPORT_CYCLE_IGNITION_HYBRID                              STD_OFF      /* Autodetected - STD_ON: any /Dem/DemGeneral/DemOperationCycle/DemOperationCycleType == DEM_OPCYC_IGNITION_HYBRID exists, STD_OFF: else. */ 
 #define DEM_CFG_SUPPORT_CYCLE_OBD_DCY                                      STD_OFF      /* Autodetected - STD_ON: cycle type is referenced by any *CycleRef or the /Dem/DemGeneral/DemRestartCycleOnInitRef parameter, STD_OFF: cycle type is not referenced. The '*CycleRef' params are (here 0 refs): /Dem/DemConfigSet/DemEventParameter/DemEventClass/DemAgingCycleRef, ~/DemOperationCycleRef, ~/DemIndicatorAttribute/DemIndicatorFailureCycleRef and ~/DemIndicatorAttribute/DemIndicatorHealingCycleRef. */ 
 #define DEM_CFG_SUPPORT_CYCLE_OTHER                                        STD_OFF      /* Autodetected - STD_ON: cycle type is referenced by any *CycleRef or the /Dem/DemGeneral/DemRestartCycleOnInitRef parameter, STD_OFF: cycle type is not referenced. The '*CycleRef' params are (here 0 refs): /Dem/DemConfigSet/DemEventParameter/DemEventClass/DemAgingCycleRef, ~/DemOperationCycleRef, ~/DemIndicatorAttribute/DemIndicatorFailureCycleRef and ~/DemIndicatorAttribute/DemIndicatorHealingCycleRef. */ 

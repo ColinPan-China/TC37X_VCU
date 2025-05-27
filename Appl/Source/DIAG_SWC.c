@@ -663,6 +663,15 @@ FUNC(void, DIAG_SWC_CODE) DIAG_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * ==============
  *   Service Invocation:
  *   -------------------
+ *   Std_ReturnType Rte_Call_EnableCond_KL15_High_SetEnableCondition(boolean ConditionFulfilled)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_EnableCondition_E_NOT_OK
+ *   Std_ReturnType Rte_Call_Event_CAN01_ComLost_GetEventStatus(Dem_UdsStatusByteType *UDSStatusByte)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_DiagnosticMonitor_E_NOT_OK
+ *   Std_ReturnType Rte_Call_Event_CAN01_ComLost_SetEventStatus(Dem_EventStatusType EventStatus)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_DiagnosticMonitor_E_NOT_OK
  *   Std_ReturnType Rte_Call_Event_DTC_0x000002_GetEventStatus(Dem_UdsStatusByteType *UDSStatusByte)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_DiagnosticMonitor_E_NOT_OK
@@ -675,6 +684,12 @@ FUNC(void, DIAG_SWC_CODE) DIAG_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  *   Std_ReturnType Rte_Call_Event_DTC_0x000003_SetEventStatus(Dem_EventStatusType EventStatus)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_DiagnosticMonitor_E_NOT_OK
+ *   Std_ReturnType Rte_Call_OpCycle_IgnitionCycle_GetOperationCycleState(Dem_OperationCycleStateType *CycleState)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_OperationCycle_E_NOT_OK, RTE_E_OperationCycle_E_OK
+ *   Std_ReturnType Rte_Call_OpCycle_IgnitionCycle_SetOperationCycleState(Dem_OperationCycleStateType CycleState)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_OperationCycle_E_NOT_OK, RTE_E_OperationCycle_E_OK
  *
  *********************************************************************************************************************/
 /**********************************************************************************************************************
@@ -687,6 +702,7 @@ uint8 DTC_Storage     = 0;
 uint8 DTC_Status_0002 = 0;
 uint8 DTC_Status_0003 = 0;
 uint8 CurOpCycleSts   = 0;
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -707,6 +723,7 @@ FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void) /* PRQA S 0624, 3206 */ 
       Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
       Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(DEM_CYCLE_STATE_START);
     }
+//    Rte_Call_EnableCond_KL15_High_SetEnableCondition( TRUE );
   }
   else
   {
@@ -718,6 +735,7 @@ FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void) /* PRQA S 0624, 3206 */ 
       Rte_Call_OpCycle_PowerCycle_SetOperationCycleState(DEM_CYCLE_STATE_END);
       Rte_Call_OpCycle_WarmUpCycle_SetOperationCycleState(DEM_CYCLE_STATE_END);
     }
+//    Rte_Call_EnableCond_KL15_High_SetEnableCondition( FALSE );
   }
 
  if(  DTC_FailCnt > 0 )
@@ -726,6 +744,15 @@ FUNC(void, DIAG_SWC_CODE) DTCMonitorRunnable_10ms(void) /* PRQA S 0624, 3206 */ 
     Rte_Call_Event_DTC_0x000003_SetEventStatus(DEM_EVENT_STATUS_FAILED);
 //    DTC_FailCnt--;
   }
+  if( GetMsg200hTimeout() )
+  {
+    Rte_Call_Event_CAN01_ComLost_SetEventStatus(DEM_EVENT_STATUS_FAILED);
+  }
+  else
+  {
+    Rte_Call_Event_CAN01_ComLost_SetEventStatus(DEM_EVENT_STATUS_PASSED);
+  }
+
 //  Dem_SetEventStatus( 4, 3 );
 
   if(  DTC_PassCnt > 0 )

@@ -42,7 +42,7 @@
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 #include "Adc_Sample.h"
-
+#include "CDD_MyApp.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -225,7 +225,6 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_2ms(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  * Symbol: Rte_Msg200h_Rx_Notification_doc
  *********************************************************************************************************************/
 
-
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -248,6 +247,7 @@ FUNC(void, Com_SWC_CODE) Rte_Msg200h_Rx_Notification(void) /* PRQA S 0624, 3206 
 
   Rte_Read_Com_SWC_VcuRxMsg1_Sig3_VcuRxMsg1_Sig3( &data );
   Rte_Write_Com_SWC_VcuTxMsg1_Sig3_VcuTxMsg1_Sig3( data );
+  SetMsg200hTimeout(0);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
