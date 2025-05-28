@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-05-28 16:48:05
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -511,13 +511,13 @@
 #define COMM_ISDEF_USERREQFULLCOMENDIDXOFCHANNELPB                                                  STD_OFF
 #define COMM_ISDEF_USERREQFULLCOMSTARTIDXOFCHANNELPB                                                STD_OFF
 #define COMM_ISDEF_USERREQFULLCOMUSEDOFCHANNELPB                                                    STD_ON
-#define COMM_ISDEF_SYMBOLICNAMEVALUEOFEIRATXSIGNALINDIRECTION                                       STD_ON
+#define COMM_ISDEF_SYMBOLICNAMEVALUEOFEIRATXSIGNALINDIRECTION                                       STD_OFF
 #define COMM_ISDEF_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                       STD_OFF
 #define COMM_ISDEF_PARTITIONSNVOFPARTITIONIDENTIFIERS                                               STD_OFF
 #define COMM_ISDEF_CLEARMASKOFPNC                                                                   STD_OFF
 #define COMM_ISDEF_PNCIDOFPNC                                                                       STD_OFF
 #define COMM_ISDEF_SETMASKOFPNC                                                                     STD_OFF
-#define COMM_ISDEF_PNCCHANNELMAPPING                                                                STD_ON
+#define COMM_ISDEF_PNCCHANNELMAPPING                                                                STD_OFF
 #define COMM_ISDEF_PNCCHANNELMAPPINGENDIDXOFPNCPB                                                   STD_OFF
 #define COMM_ISDEF_PNCCHANNELMAPPINGSTARTIDXOFPNCPB                                                 STD_OFF
 #define COMM_ISDEF_PNCCHANNELMAPPINGUSEDOFPNCPB                                                     STD_ON
@@ -535,7 +535,7 @@
 #define COMM_ISDEF_PNCSIGNALVALUESSTARTIDXOFPNCSIGNAL                                               STD_OFF
 #define COMM_ISDEF_PNCSIGNALVALUESUSEDOFPNCSIGNAL                                                   STD_ON
 #define COMM_ISDEF_TYPEOFPNCSIGNAL                                                                  STD_OFF
-#define COMM_ISDEF_PNCSIGNALIND                                                                     STD_ON
+#define COMM_ISDEF_PNCSIGNALIND                                                                     STD_OFF
 #define COMM_ISDEF_PNCUSEROFUSER                                                                    STD_OFF
 #define COMM_ISDEF_USERBYTEMASKENDIDXOFUSER                                                         STD_OFF
 #define COMM_ISDEF_USERBYTEMASKSTARTIDXOFUSER                                                       STD_OFF
@@ -613,13 +613,13 @@
 #define COMM_EQ2_USERREQFULLCOMENDIDXOFCHANNELPB                                                    
 #define COMM_EQ2_USERREQFULLCOMSTARTIDXOFCHANNELPB                                                  
 #define COMM_EQ2_USERREQFULLCOMUSEDOFCHANNELPB                                                      TRUE
-#define COMM_EQ2_SYMBOLICNAMEVALUEOFEIRATXSIGNALINDIRECTION                                         ComConf_ComSignal_VCU_Tx_51Ch_NM_PNCData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_c1eb5e4b_Tx
+#define COMM_EQ2_SYMBOLICNAMEVALUEOFEIRATXSIGNALINDIRECTION                                         
 #define COMM_EQ2_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                         
 #define COMM_EQ2_PARTITIONSNVOFPARTITIONIDENTIFIERS                                                 
 #define COMM_EQ2_CLEARMASKOFPNC                                                                     
 #define COMM_EQ2_PNCIDOFPNC                                                                         
 #define COMM_EQ2_SETMASKOFPNC                                                                       
-#define COMM_EQ2_PNCCHANNELMAPPING                                                                  1u
+#define COMM_EQ2_PNCCHANNELMAPPING                                                                  
 #define COMM_EQ2_PNCCHANNELMAPPINGENDIDXOFPNCPB                                                     
 #define COMM_EQ2_PNCCHANNELMAPPINGSTARTIDXOFPNCPB                                                   
 #define COMM_EQ2_PNCCHANNELMAPPINGUSEDOFPNCPB                                                       TRUE
@@ -637,7 +637,7 @@
 #define COMM_EQ2_PNCSIGNALVALUESSTARTIDXOFPNCSIGNAL                                                 
 #define COMM_EQ2_PNCSIGNALVALUESUSEDOFPNCSIGNAL                                                     TRUE
 #define COMM_EQ2_TYPEOFPNCSIGNAL                                                                    
-#define COMM_EQ2_PNCSIGNALIND                                                                       1u
+#define COMM_EQ2_PNCSIGNALIND                                                                       
 #define COMM_EQ2_PNCUSEROFUSER                                                                      
 #define COMM_EQ2_USERBYTEMASKENDIDXOFUSER                                                           
 #define COMM_EQ2_USERBYTEMASKSTARTIDXOFUSER                                                         
@@ -1218,7 +1218,7 @@ typedef struct sComM_ChannelPbType
 /**   \brief  type used in ComM_EiraTxSignalIndirection */
 typedef struct sComM_EiraTxSignalIndirectionType
 {
-  uint8 ComM_EiraTxSignalIndirectionNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  Com_SignalIdType SymbolicNameValueOfEiraTxSignalIndirection;  /**< SymbolicNameValue of Tx Eira Signal */
 } ComM_EiraTxSignalIndirectionType;
 
 /**   \brief  type used in ComM_PartitionIdentifiers */
@@ -1392,6 +1392,7 @@ typedef struct ComM_PncSignalValuesStructSTag
 {
   ComM_PncSignalValuesType ComM_ComConf_ComSignal_PNC_Can00_ComSignal_Rx[6];
   ComM_PncSignalValuesType ComM_ComConf_ComSignal_VCU_Tx_51Ch_NM_PNCData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_c1eb5e4b_Tx[6];
+  ComM_PncSignalValuesType ComM_ComConf_ComSignal_VCU_Tx_51Ch_NM_UserData_oVCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_eace6dfa_Tx[6];
 } ComM_PncSignalValuesStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_PncToChannelRoutingState in the partition context  */
@@ -1486,7 +1487,7 @@ typedef union ComM_PncPSleepTimerUTag
 /**   \brief  type to access ComM_PncSignalValues in an index and symbol based style. */
 typedef union ComM_PncSignalValuesUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_PncSignalValuesType raw[12];
+  ComM_PncSignalValuesType raw[18];
   ComM_PncSignalValuesStructSType str;
 } ComM_PncSignalValuesUType;
 
@@ -1711,6 +1712,26 @@ extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[5];
 /*lint -restore */
 
 /**********************************************************************************************************************
+  ComM_EiraTxSignalIndirection
+**********************************************************************************************************************/
+/** 
+  \var    ComM_EiraTxSignalIndirection
+  \brief  Indirection of internal signal id to the actual Eira Tx Symbolic Name Value
+  \details
+  Element              Description
+  SymbolicNameValue    SymbolicNameValue of Tx Eira Signal
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_EiraTxSignalIndirectionType, COMM_CONST) ComM_EiraTxSignalIndirection[3];
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   ComM_PartitionIdentifiers
 **********************************************************************************************************************/
 /** 
@@ -1749,6 +1770,19 @@ extern CONST(ComM_PartitionIdentifiersType, COMM_CONST) ComM_PartitionIdentifier
 /*lint -restore */
 extern CONST(ComM_PncType, COMM_CONST) ComM_Pnc[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_PncChannelMapping
+**********************************************************************************************************************/
+#define COMM_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_PncChannelMappingType, COMM_CONST) ComM_PncChannelMapping[3];
+#define COMM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -1812,8 +1846,25 @@ extern CONST(ComM_PncPbIndType, COMM_CONST) ComM_PncPbInd[3];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[2];
+extern CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_PncSignalInd
+**********************************************************************************************************************/
+/** 
+  \var    ComM_PncSignalInd
+  \brief  the indexes of the 1:1 sorted relation pointing to ComM_PncSignal
+*/ 
+#define COMM_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_PncSignalIndType, COMM_CONST) ComM_PncSignalInd[3];
+#define COMM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

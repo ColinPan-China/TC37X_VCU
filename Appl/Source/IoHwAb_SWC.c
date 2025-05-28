@@ -50,6 +50,7 @@
 #include "TJA1145.h"
 #include "Dio.h"
 #include "PwmIf.h"
+#include "CanNm.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -99,6 +100,10 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_9_IN2, 1 );
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_10_IN3, 1 );
 
+  /*Enable PN message filter.*/
+  CanNm_SetPnMessageFilterEnabled(0,1);
+  CanNm_SetPnMessageFilterEnabled(1,1);
+  
   PwnIf_Start();
 //  Tja1145_GoSleep();
 /**********************************************************************************************************************
