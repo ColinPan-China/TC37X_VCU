@@ -30,6 +30,7 @@ extern "C" {
 # include "SchM_McalLib_Type.h"
 
 # include "Os.h" /* PRQA S 0828, 0883 */ /* MD_MSR_Dir1.1, MD_Rte_Os */
+# include "Ioc.h"
 
 # define SchM_Enter_McalLib_CpuEndInit() SuspendAllInterrupts()  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
 

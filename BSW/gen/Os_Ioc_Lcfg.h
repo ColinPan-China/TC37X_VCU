@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Ioc_Lcfg.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-05-30 16:20:15
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -69,6 +69,26 @@
 /**********************************************************************************************************************
  *  GLOBAL CONSTANT DATA PROTOTYPES
  *********************************************************************************************************************/
+
+# define OS_START_SEC_CORE0_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! IOC core configuration data: OsCore0 */
+extern CONST(Os_IocWriteConfigType, OS_CONST) OsCfg_IocSend_Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes;
+
+# define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_CORE1_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! IOC core configuration data: OsCore1 */
+extern CONST(Os_IocReadConfigType, OS_CONST) OsCfg_IocRecv_Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes;
+
+# define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 
 /**********************************************************************************************************************
  *  GLOBAL FUNCTION PROTOTYPES

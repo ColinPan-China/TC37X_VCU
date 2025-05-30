@@ -300,3 +300,19 @@
       ALARM = Rte_Al_TE3_EcuM_EcuM_MainFunction;
       CORE = 2;
   };
+
+  IOCCOMMUNICATION Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes {
+     DATA_PROPERTIES = DATA_PROPERTIES{
+        INDEX = 0;
+        INIT_VALUE = "Rte_IocInitValue_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes";
+        DataType = "IDT_Arry8Bytes";
+      };
+
+     RECEIVER_PROPERTIES = RECEIVER_PROPERTIES{
+        APPLICATION = SystemApplication_OsCore1;
+     };
+
+     SENDER_PROPERTIES = SENDER_PROPERTIES{
+        APPLICATION = SystemApplication_OsCore0;
+     };
+  };

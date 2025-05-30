@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Ioc.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-05-30 16:20:14
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -47,6 +47,8 @@
 /* Os hal dependencies */
 
 /* User file includes */
+# include "Rte.h"
+# include "usrostyp.h"
 
 
 /**********************************************************************************************************************
@@ -54,12 +56,12 @@
  *********************************************************************************************************************/
 
 /*! IOC function return types */
-# define IOC_E_OK                                ((Std_ReturnType)         0)
-# define IOC_E_NOK                               ((Std_ReturnType)         1)
-# define IOC_E_NO_DATA                           ((Std_ReturnType)       131)
-# define IOC_E_LOST_DATA                         ((Std_ReturnType)        64)
-# define IOC_E_LIMIT                             ((Std_ReturnType)       130)
-# define IOC_E_CHANNEL                           ((Std_ReturnType) IOC_E_NOK)
+# define IOC_E_OK                                (RTE_E_OK          )
+# define IOC_E_NOK                               ((Std_ReturnType) 1)
+# define IOC_E_NO_DATA                           (RTE_E_NO_DATA     )
+# define IOC_E_LOST_DATA                         (RTE_E_LOST_DATA   )
+# define IOC_E_LIMIT                             (RTE_E_LIMIT       )
+# define IOC_E_CHANNEL                           (IOC_E_NOK         )
 
 
 /**********************************************************************************************************************
@@ -85,6 +87,40 @@
 
 # define OS_START_SEC_CODE
 # include "Os_MemMap_OsCode.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  IocRead_Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes()
+ *********************************************************************************************************************/
+/*! \brief        Reads the data from the IOC.
+ *  \details      -
+ *  \param[out]   Arg0  Data read from the IOC. Parameter must not be NULL.
+ *  \returns      For further information see Os_IocRead().
+ *  \context      TASK|ISR2
+ *  \reentrant    TRUE if concurrent access is prevented by configuration.
+ *  \synchronous  TRUE
+ *  \pre          Channel is initialized.
+ *********************************************************************************************************************/
+Std_ReturnType IocRead_Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes
+(
+  IDT_Arry8Bytes *Arg0
+);
+
+/**********************************************************************************************************************
+ *  IocWrite_Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes()
+ *********************************************************************************************************************/
+/*! \brief        Writes the given data to the IOC.
+ *  \details      -
+ *  \param[in]    Arg0  The data to write to the IOC. Parameter must not be NULL.
+ *  \returns      For further information see Os_IocWrite().
+ *  \context      TASK|ISR2
+ *  \reentrant    TRUE if concurrent access is prevented by configuration.
+ *  \synchronous  TRUE
+ *  \pre          -
+ *********************************************************************************************************************/
+Std_ReturnType IocWrite_Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes
+(
+  const IDT_Arry8Bytes *Arg0
+);
 
 
 /**********************************************************************************************************************

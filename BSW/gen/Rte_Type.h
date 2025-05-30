@@ -216,6 +216,9 @@ typedef uint8 Dcm_Data4ByteType[4];
 # define Rte_TypeDef_Dem_MaxDataValueType
 typedef uint8 Dem_MaxDataValueType[2];
 
+# define Rte_TypeDef_IDT_Arry8Bytes
+typedef uint8 IDT_Arry8Bytes[8];
+
 # define Rte_TypeDef_NvM_Array10Bytes
 typedef uint8 NvM_Array10Bytes[10];
 
@@ -412,12 +415,21 @@ typedef uint8 Dem_OperationCycleIdType;
 # define RTE_START_SEC_CONST_UNSPECIFIED
 # include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+extern CONST(IDT_Arry8Bytes, RTE_CONST) Rte_C_IDT_Arry8Bytes_0;
+
 extern CONST(NvM_Array10Bytes, RTE_CONST) Rte_C_NvM_Array10Bytes_0;
 
 extern CONST(NvM_Array32Bytes, RTE_CONST) Rte_C_NvM_Array32Bytes_0;
 
 # define RTE_STOP_SEC_CONST_UNSPECIFIED
 # include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ * IOC Init Constant value definitions
+ *********************************************************************************************************************/
+
+# define Rte_IocInitValue_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes Rte_C_IDT_Arry8Bytes_0
+
 # include "Rte_DataHandleType.h"
 
 # ifdef RTE_MICROSAR_PIM_EXPORT

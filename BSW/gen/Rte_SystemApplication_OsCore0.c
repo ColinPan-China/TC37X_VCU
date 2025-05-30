@@ -29,6 +29,7 @@
 
 #define RTE_CORE
 #include "Os.h" /* PRQA S 0828, 0883 */ /* MD_MSR_Dir1.1, MD_Rte_Os */
+#include "Ioc.h"
 #include "Rte_Type.h"
 #include "Rte_Main.h"
 
@@ -726,6 +727,15 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
   ret |= Com_SendSignal(ComConf_ComSignal_VcuTxMsg2_Sig3_oVcuTxMsg2_oTC37X_VCU_CAN00_a04bfcfd_Tx, (&data)); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_IoHwAb_SWC_P_Arry8Bytes_DEP_Arry8Bytes(P2CONST(uint8, AUTOMATIC, RTE_IOHWAB_SWC_APPL_DATA) data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  (void)IocWrite_Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes((P2CONST(IDT_Arry8Bytes, AUTOMATIC, RTE_CODE))data); /* PRQA S 0310 */ /* MD_Rte_0310 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -2088,6 +2098,11 @@ TASK(Core0_BswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable *
  *********************************************************************************************************************/
 
 /* module specific MISRA deviations:
+   MD_Rte_0310:  MISRA rule: Rule11.3
+     Reason:     APIs called by Rte use complex array data types whereas Rte is called with base types.
+     Risk:       No functional risk.
+     Prevention: Not required.
+
    MD_Rte_0314:  MISRA rule: Dir1.1
      Reason:     Pointer cast to void because a direct byte access is necessary.
      Risk:       No functional risk. Only a cast to void is performed.

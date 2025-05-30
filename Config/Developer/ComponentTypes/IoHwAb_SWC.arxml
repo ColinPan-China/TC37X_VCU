@@ -7,6 +7,54 @@
       <ELEMENTS>
         <ECU-ABSTRACTION-SW-COMPONENT-TYPE UUID="131259DF-AC35-4DE4-9686-94C3C6297399">
           <SHORT-NAME>IoHwAb_SWC</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="28780A68-17CD-41B1-8FFF-168FCD6685E5">
+              <SHORT-NAME>P_Arry8Bytes</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/P_Arry8Bytes/DEP_Arry8Bytes</DATA-ELEMENT-REF>
+                  <INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/P_Arry8Bytes</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
           <INTERNAL-BEHAVIORS>
             <SWC-INTERNAL-BEHAVIOR UUID="380B93FE-59BC-405F-9344-44EE6174A485">
               <SHORT-NAME>IoHwAb_SWC_InternalBehavior</SHORT-NAME>
@@ -25,6 +73,17 @@
                 <RUNNABLE-ENTITY UUID="75C72223-3C68-4221-837F-846175CAA652">
                   <SHORT-NAME>IoHwAb_SWC_Runnable</SHORT-NAME>
                   <MINIMUM-START-INTERVAL>0.01</MINIMUM-START-INTERVAL>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="BAEF0364-F157-438A-B6C7-AE56E57CFAC1">
+                      <SHORT-NAME>SEND_P_Arry8Bytes_DEP_Arry8Bytes</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/IoHwAb_SWC/P_Arry8Bytes</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/P_Arry8Bytes/DEP_Arry8Bytes</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="DE90FACC-758E-4EDD-AECC-7B4B2D239490">
                   <SHORT-NAME>IoHwAb_SWC_Init</SHORT-NAME>

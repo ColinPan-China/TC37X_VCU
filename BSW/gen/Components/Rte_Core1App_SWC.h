@@ -46,6 +46,29 @@ extern "C"
 # include "Rte_DataHandleType.h"
 
 
+# define RTE_START_SEC_CODE
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ * API prototypes
+ *********************************************************************************************************************/
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes(P2VAR(uint8, AUTOMATIC, RTE_CORE1APP_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+
+# define RTE_STOP_SEC_CODE
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# ifndef RTE_CORE
+
+/**********************************************************************************************************************
+ * Rte_Read_<p>_<d> (explicit S/R communication with isQueued = false)
+ *********************************************************************************************************************/
+#  define Rte_Read_P_Arry8Bytes_DEP_Arry8Bytes Rte_Read_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes
+
+
+# endif /* !defined(RTE_CORE) */
+
+
 # define Core1App_SWC_START_SEC_CODE
 # include "Core1App_SWC_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -75,6 +98,12 @@ FUNC(void, Core1App_SWC_CODE) Core1App_SWC_Init(void); /* PRQA S 3451, 0786, 344
  *********************************************************************************************************************/
 
 /* module specific MISRA deviations:
+   MD_Rte_0624:  MISRA rule: Rule8.3
+     Reason:     This MISRA violation is a consequence from the RTE requirements [SWS_Rte_01007] [SWS_Rte_01150].
+                 The typedefs are never used in the same context.
+     Risk:       No functional risk. Only a cast to uint8* is performed.
+     Prevention: Not required.
+
    MD_Rte_0786:  MISRA rule: Rule5.5
      Reason:     Same macro and idintifier names in first 63 characters are required to meet AUTOSAR spec.
      Risk:       No functional risk.

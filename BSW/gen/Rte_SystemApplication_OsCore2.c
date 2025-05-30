@@ -29,6 +29,7 @@
 
 #define RTE_CORE
 #include "Os.h" /* PRQA S 0828, 0883 */ /* MD_MSR_Dir1.1, MD_Rte_Os */
+#include "Ioc.h"
 #include "Rte_Type.h"
 #include "Rte_Main.h"
 

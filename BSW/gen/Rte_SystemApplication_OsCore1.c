@@ -29,6 +29,7 @@
 
 #define RTE_CORE
 #include "Os.h" /* PRQA S 0828, 0883 */ /* MD_MSR_Dir1.1, MD_Rte_Os */
+#include "Ioc.h"
 #include "Rte_Type.h"
 #include "Rte_Main.h"
 
@@ -242,6 +243,20 @@ FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore1(void)
 
 
 /**********************************************************************************************************************
+ * Internal/External Rx connections
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes(P2VAR(uint8, AUTOMATIC, RTE_CORE1APP_SWC_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  (void)IocRead_Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes((P2VAR(IDT_Arry8Bytes, AUTOMATIC, RTE_APPL_DATA))data); /* PRQA S 0310 */ /* MD_Rte_0310 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+
+/**********************************************************************************************************************
  * Task bodies for RTE controlled tasks
  *********************************************************************************************************************/
 
@@ -297,9 +312,19 @@ TASK(Core1_BswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable *
  *********************************************************************************************************************/
 
 /* module specific MISRA deviations:
+   MD_Rte_0310:  MISRA rule: Rule11.3
+     Reason:     APIs called by Rte use complex array data types whereas Rte is called with base types.
+     Risk:       No functional risk.
+     Prevention: Not required.
+
    MD_Rte_2987:  MISRA rule: Rule2.2
      Reason:     Used to simplify code generation.
      Risk:       No functional risk. There is no side effect.
+     Prevention: Not required.
+
+   MD_Rte_3206:  MISRA rule: Rule2.7
+     Reason:     The parameter are not used by the code in all possible code variants.
+     Risk:       No functional risk.
      Prevention: Not required.
 
    MD_Rte_3408:  MISRA rule: Rule8.4

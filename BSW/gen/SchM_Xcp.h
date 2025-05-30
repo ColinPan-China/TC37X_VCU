@@ -30,6 +30,7 @@ extern "C" {
 # include "SchM_Xcp_Type.h"
 
 # include "Os.h" /* PRQA S 0828, 0883 */ /* MD_MSR_Dir1.1, MD_Rte_Os */
+# include "Ioc.h"
 
 # define XCP_START_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

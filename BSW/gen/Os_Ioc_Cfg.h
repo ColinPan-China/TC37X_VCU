@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Ioc_Cfg.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-05-30 16:20:15
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -48,10 +48,14 @@
  *********************************************************************************************************************/
 
 /*! Defines whether IOC is active (STD_ON) or not (STD_OFF). */
-# define OS_CFG_IOC                              (STD_OFF)
+# define OS_CFG_IOC                              (STD_ON)
 
 /*! Defines whether IOC callbacks are configured (STD_ON) or not (STD_OFF). */
 # define OS_CFG_IOC_HAS_CALLBACKS                (STD_OFF)
+
+/* IOC communication defines: Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes */
+# define OS_CFG_SIZE_IOC_RTE_CORE1APP_SWC_P_ARRY8BYTES_DEP_ARRY8BYTES_BUFFER       (0uL)
+# define OS_CFG_NUM_IOC_RTE_CORE1APP_SWC_P_ARRY8BYTES_DEP_ARRY8BYTES_CALLBACKS     (0uL)
 
 
 /**********************************************************************************************************************

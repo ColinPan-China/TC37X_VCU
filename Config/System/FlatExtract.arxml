@@ -4363,6 +4363,28 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_Hardware_Version_Hardware_Version_Number</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="04d1dc68-5aa4-48f2-9f9f-d1d0f3b7d615">
+                                  <SHORT-NAME>IoHwAb_SWC_P_Arry8Bytes_Core1App_SWC_P_Arry8Bytes</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/IoHwAb_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/IoHwAb_SWC/P_Arry8Bytes</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Core1App_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Core1App_SWC/P_Arry8Bytes</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -4590,6 +4612,7 @@
                                     <SD GID="8DFD5382-3504-4548-8290-F4BECB874FA1">/ComponentTypes/Core1App_SWC</SD>
                                     <SD GID="2E8AF6D6-BE47-4121-A7ED-95DC0940CD83">/ComponentTypes/Core1App_SWC/Core1App_SWC_InternalBehavior/Core1App_SWC_InitEvent</SD>
                                     <SD GID="CC6B0BED-4E6B-4C3D-83C1-F77F6625ED0A">/ComponentTypes/Core1App_SWC/Core1App_SWC_InternalBehavior/TMT_Core1App_Runnable100ms</SD>
+                                    <SD GID="468F0D88-CECC-46ED-A9B5-89843F970449">/ComponentTypes/Core1App_SWC/P_Arry8Bytes</SD>
                                     <SD GID="3C106474-F686-421B-AF5C-BAB5A7146F5E">/ComponentTypes/Core1App_SWC_Implementation</SD>
                                     <SD GID="DC0DDB34-B898-4098-8939-AD20B40EAD5D">/ComponentTypes/Core2App_SWC</SD>
                                     <SD GID="EC95D494-858D-455A-96C1-1840B2831ED9">/ComponentTypes/Core2App_SWC/Core2App_SWC_InternalBehavior/Core2App_SWC_InitEvent</SD>
@@ -4642,6 +4665,7 @@
                                     <SD GID="131259DF-AC35-4DE4-9686-94C3C6297399">/ComponentTypes/IoHwAb_SWC</SD>
                                     <SD GID="3BA5A63D-F666-4886-AFA6-FD454CFD7666">/ComponentTypes/IoHwAb_SWC/IoHwAb_SWC_InternalBehavior/IoHwAb_SWC_InitEvent</SD>
                                     <SD GID="345F9D28-1C42-4083-9465-B901D76C94D1">/ComponentTypes/IoHwAb_SWC/IoHwAb_SWC_InternalBehavior/TMT_IoHwAb_SWC_Runnable</SD>
+                                    <SD GID="28780A68-17CD-41B1-8FFF-168FCD6685E5">/ComponentTypes/IoHwAb_SWC/P_Arry8Bytes</SD>
                                     <SD GID="BC0DFF7D-5391-424E-9DFB-F588D6FA0F1B">/ComponentTypes/IoHwAb_SWC_Implementation</SD>
                                     <SD GID="F46DC447-48FA-40AC-B556-211DADA7BA16">/ComponentTypes/NvM_SWC</SD>
                                     <SD GID="5E1541CE-CA73-4331-B1E5-015754C9C331">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData1</SD>

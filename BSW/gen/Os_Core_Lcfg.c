@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Lcfg.c
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-05-30 16:20:14
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -219,6 +219,7 @@ OS_LOCAL CONST(Os_AppConfigRefType, OS_CONST) OsCfg_Core_OsCore0_AppRefs[OS_CFG_
 /*! Object reference table for core IOC communications: OsCore0 */
 OS_LOCAL CONST(Os_IocConfigRefType, OS_CONST) OsCfg_Core_OsCore0_IocRefs[OS_CFG_NUM_CORE_OSCORE0_IOCS + 1u] =
 {
+  OS_IOC_CASTCONFIG_IOCWRITE_2_IOC(OsCfg_IocSend_Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes),
   NULL_PTR
 };
 
@@ -359,6 +360,7 @@ OS_LOCAL CONST(Os_AppConfigRefType, OS_CONST) OsCfg_Core_OsCore1_AppRefs[OS_CFG_
 /*! Object reference table for core IOC communications: OsCore1 */
 OS_LOCAL CONST(Os_IocConfigRefType, OS_CONST) OsCfg_Core_OsCore1_IocRefs[OS_CFG_NUM_CORE_OSCORE1_IOCS + 1u] =
 {
+  OS_IOC_CASTCONFIG_IOCREAD_2_IOC(OsCfg_IocRecv_Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes),
   NULL_PTR
 };
 
@@ -580,6 +582,7 @@ CONST(Os_CoreAsrConfigType, OS_CONST) OsCfg_Core_OsCore2 =
 /*! Object reference table for system spinlocks. */
 OS_LOCAL CONST(Os_SpinlockConfigRefType, OS_CONST) OsCfg_SystemSpinlockRefs[OS_CFG_NUM_SYSTEM_SPINLOCKS + 1u] =
 {
+  &OsCfg_Spinlock_IocSpinlock_Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes,
   NULL_PTR
 };
 

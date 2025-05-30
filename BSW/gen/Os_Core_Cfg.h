@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Cfg.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-05-30 16:20:14
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -60,7 +60,7 @@
 # define OS_CFG_NUM_ISRLEVELS                                    (24uL)
 
 /*! Number of all spinlocks. */
-# define OS_CFG_NUM_SYSTEM_SPINLOCKS                             (0uL)
+# define OS_CFG_NUM_SYSTEM_SPINLOCKS                             (1uL)
 
 /*! Number of physical core identifiers. */
 # define OS_CFG_COREPHYSICALID_COUNT                             (3uL)
@@ -68,7 +68,7 @@
 /* Number of core objects: OsCore0 */
 # define OS_CFG_NUM_CORE_OSCORE0_APPS             (0uL)
 # define OS_CFG_NUM_CORE_OSCORE0_HOOKS            (3uL)
-# define OS_CFG_NUM_CORE_OSCORE0_IOCS             (0uL)
+# define OS_CFG_NUM_CORE_OSCORE0_IOCS             (1uL)
 # define OS_CFG_NUM_CORE_OSCORE0_RESOURCES        (1uL)
 # define OS_CFG_NUM_CORE_OSCORE0_STACKS           (11uL)
 # define OS_CFG_NUM_CORE_OSCORE0_ISRS             (24uL)
@@ -76,7 +76,7 @@
 /* Number of core objects: OsCore1 */
 # define OS_CFG_NUM_CORE_OSCORE1_APPS             (0uL)
 # define OS_CFG_NUM_CORE_OSCORE1_HOOKS            (3uL)
-# define OS_CFG_NUM_CORE_OSCORE1_IOCS             (0uL)
+# define OS_CFG_NUM_CORE_OSCORE1_IOCS             (1uL)
 # define OS_CFG_NUM_CORE_OSCORE1_RESOURCES        (1uL)
 # define OS_CFG_NUM_CORE_OSCORE1_STACKS           (11uL)
 # define OS_CFG_NUM_CORE_OSCORE1_ISRS             (2uL)

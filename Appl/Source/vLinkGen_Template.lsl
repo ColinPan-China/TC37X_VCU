@@ -1097,6 +1097,7 @@ section_layout mpe:vtc:linear
         select "[.]zbss.OS_BARRIER_CORE0_VAR_FAST_NOCACHE_NOINIT";
         select "[.]zbss.OS_BARRIER_CORE1_VAR_FAST_NOCACHE_NOINIT";
         select "[.]zbss.OS_BARRIER_CORE2_VAR_FAST_NOCACHE_NOINIT";
+        select "[.]zbss.OS_CORESHARED_0X00000003_VAR_FAST_NOCACHE_NOINIT";
         select "[.]zbss.OS_CORESTATUS_CORE0_VAR_FAST_NOCACHE_NOINIT";
         select "[.]zbss.OS_CORESTATUS_CORE1_VAR_FAST_NOCACHE_NOINIT";
         select "[.]zbss.OS_CORESTATUS_CORE2_VAR_FAST_NOCACHE_NOINIT";
@@ -1136,6 +1137,7 @@ section_layout mpe:vtc:linear
         select "[.]bss.OS_BARRIER_CORE0_VAR_NOCACHE_NOINIT";
         select "[.]bss.OS_BARRIER_CORE1_VAR_NOCACHE_NOINIT";
         select "[.]bss.OS_BARRIER_CORE2_VAR_NOCACHE_NOINIT";
+        select "[.]bss.OS_CORESHARED_0X00000003_VAR_NOCACHE_NOINIT";
         select "[.]bss.OS_CORESTATUS_CORE0_VAR_NOCACHE_NOINIT";
         select "[.]bss.OS_CORESTATUS_CORE1_VAR_NOCACHE_NOINIT";
         select "[.]bss.OS_CORESTATUS_CORE2_VAR_NOCACHE_NOINIT";

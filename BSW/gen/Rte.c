@@ -29,6 +29,7 @@
 
 #define RTE_CORE
 #include "Os.h" /* PRQA S 0828, 0883 */ /* MD_MSR_Dir1.1, MD_Rte_Os */
+#include "Ioc.h"
 #include "Rte_Type.h"
 #include "Rte_Main.h"
 
@@ -165,6 +166,11 @@ volatile VAR(uint8, RTE_VAR_ZERO_INIT_NOCACHE) Rte_InitState_2 = RTE_STATE_UNINI
 #define RTE_START_SEC_CONST_UNSPECIFIED
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+/* PRQA S 1514, 1533 L1 */ /* MD_Rte_1514, MD_Rte_1533 */
+CONST(IDT_Arry8Bytes, RTE_CONST) Rte_C_IDT_Arry8Bytes_0 = {
+  0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U
+};
+/* PRQA L:L1 */
 /* PRQA S 1514, 1533 L1 */ /* MD_Rte_1514, MD_Rte_1533 */
 CONST(NvM_Array10Bytes, RTE_CONST) Rte_C_NvM_Array10Bytes_0 = {
   0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U

@@ -30,6 +30,7 @@ extern "C" {
 # include "SchM_LinTrcv_30_Tle7259_Type.h"
 
 # include "Os.h" /* PRQA S 0828, 0883 */ /* MD_MSR_Dir1.1, MD_Rte_Os */
+# include "Ioc.h"
 
 # define SchM_Enter_LinTrcv_30_Tle7259_LINTRCV_30_TLE7259_EXCLUSIVE_AREA_0() SuspendAllInterrupts()  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
 

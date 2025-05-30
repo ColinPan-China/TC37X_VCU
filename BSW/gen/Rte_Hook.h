@@ -362,6 +362,8 @@
  *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2_Start
  *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3_Return
  *  Rte_ReadHook_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3_Start
+ *  Rte_ReadHook_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes_Return
+ *  Rte_ReadHook_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes_Start
  *  Rte_ReadHook_SWC1_NvM_Data_IF_UserData1_Recv_Element_UserData1_Return
  *  Rte_ReadHook_SWC1_NvM_Data_IF_UserData1_Recv_Element_UserData1_Start
  *  Rte_ReadHook_SWC1_NvM_Data_IF_UserData2_Recv_Element_UserData2_Return
@@ -722,6 +724,8 @@
  *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig2_VcuTxMsg2_Sig2_Start
  *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3_Return
  *  Rte_WriteHook_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3_Start
+ *  Rte_WriteHook_IoHwAb_SWC_P_Arry8Bytes_DEP_Arry8Bytes_Return
+ *  Rte_WriteHook_IoHwAb_SWC_P_Arry8Bytes_DEP_Arry8Bytes_Start
  *  Rte_WriteHook_SWC1_NvM_Data_IF_UserData1_Send_Element_UserData1_Return
  *  Rte_WriteHook_SWC1_NvM_Data_IF_UserData1_Send_Element_UserData1_Start
  *  Rte_WriteHook_SWC1_NvM_Data_IF_UserData2_Send_Element_UserData2_Return
@@ -1238,6 +1242,7 @@
 # define RTE_HOOK_H
 
 # include "Os.h" /* PRQA S 0828, 0883 */ /* MD_MSR_Dir1.1, MD_Rte_Os */
+# include "Ioc.h"
 
 # include "Rte_Type.h"
 # include "Rte_Cfg.h"

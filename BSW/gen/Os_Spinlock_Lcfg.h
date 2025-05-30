@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Spinlock_Lcfg.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-05-30 16:20:15
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -70,6 +70,9 @@
 
 # define OS_START_SEC_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Spinlock configuration data: IocSpinlock_Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes */
+extern CONST(Os_SpinlockConfigType, OS_CONST) OsCfg_Spinlock_IocSpinlock_Rte_Core1App_SWC_P_Arry8Bytes_DEP_Arry8Bytes;
 
 /*! Object reference table for spinlocks. */
 extern CONSTP2CONST(Os_SpinlockConfigType, OS_CONST, OS_CONST) OsCfg_SpinlockRefs[OS_SPINLOCKID_COUNT + 1];  /* PRQA S 4521 */ /* MD_Os_Rule10.1_4521 */
