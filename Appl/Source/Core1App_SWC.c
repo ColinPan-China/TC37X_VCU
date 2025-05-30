@@ -91,7 +91,7 @@
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: Core1App_Runnable100ms_doc
  *********************************************************************************************************************/
-
+uint8 RcvArry[16];
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
@@ -103,7 +103,7 @@ FUNC(void, Core1App_SWC_CODE) Core1App_Runnable100ms(void) /* PRQA S 0624, 3206 
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Core1App_Runnable100ms
  *********************************************************************************************************************/
-
+ Rte_Read_P_Arry8Bytes_DEP_Arry8Bytes(RcvArry);
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

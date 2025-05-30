@@ -152,6 +152,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
  * Symbol: IoHwAb_SWC_Runnable_doc
  *********************************************************************************************************************/
 uint8 sts_SV = 0;
+uint8 SendArry[8] = { 1,2,3,4,5,6,7,8 };
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -177,6 +178,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
   {
     sts_SV = 0;
   }
+  Rte_Write_P_Arry8Bytes_DEP_Arry8Bytes(SendArry);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
