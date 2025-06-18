@@ -218,6 +218,14 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_20ms(void) /* PRQA S 0624, 3206 */ /* MD_R
  *********************************************************************************************************************/
   Appdata.VCU_ActDriveMode = 1;
   Appdata.VCU_ActiveEnergyProfile = 1;
+  Appdata.VCU_ActiveRgnBrkProfile = 1;
+  Appdata.VCU_BMS_Control_of_NegRelay = 1;
+  Appdata.VCU_BMSTargetThermLevel = 1;
+  Appdata.VCU_Chargestatus =1;
+  Appdata.VCU_DrvModSwitchWarn =1;
+  Appdata.VCU_HVStatus = 1;
+  Appdata.VCU_IsomeasurmentSwitch = 1;
+  Appdata.VCU_RequestedModeBMS = 1;
   E2EPW_Write_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group(&Appdata);
 
 /**********************************************************************************************************************
