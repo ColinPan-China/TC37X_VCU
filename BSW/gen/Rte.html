@@ -255,8 +255,8 @@ Rte_Needs.ecuc.arxml<br>
 Note: This resource usage calculation assumes that the "Boolean" data type is based on uint8 base type.<br>
       Further on padding bytes for structs are not considered, which depends on the compiler settings.<br>
 <br>
-RAM   Size: 67 Bytes<br>
-CONST Size: 113 Bytes<br>
+RAM   Size: 68 Bytes<br>
+CONST Size: 133 Bytes<br>
 <br>
 <P ALIGN=LEFT>
 <A HREF="#refBack"><FONT SIZE=4 FACE="Verdana, Arial, Helvetica" COLOR="#B70032">Back</FONT></A><br>
@@ -826,11 +826,25 @@ CONST Size: 113 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>TimingEvent</B> Cyclic 20ms</TD>
+<TD>Com_Runnable_20ms</TD>
+<TD>Core0_AswTask</TD>
+<TD>Rte_Ev_Run_Com_SWC_Com_Runnable_20ms</TD>
+<TD>Rte_Al_TE_Com_SWC_Com_Runnable_20ms</TD>
+</TR>
+<TR>
 <TD><B>TimingEvent</B> Cyclic 2ms</TD>
 <TD>Com_Runnable_2ms</TD>
 <TD>Core0_AswTask</TD>
 <TD>Rte_Ev_Run_Com_SWC_Com_Runnable_2ms</TD>
 <TD>Rte_Al_TE_Com_SWC_Com_Runnable_2ms</TD>
+</TR>
+<TR>
+<TD><B>InitEvent</B></TD>
+<TD>Com_SWC_Init</TD>
+<TD>Core0_AswInit</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
 </TR>
 <TR>
 <TD><B>DataReceivedEvent</B> Com_SWC::VcuRxMsg1_Sig0::VcuRxMsg1_Sig0</TD>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-06-18 09:54:39
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -144,17 +144,18 @@
 #define PduRConf_PduRDestPdu_EXV_2_VCU_oLIN00_85f64a15_Rx_b894d38e_Rx 2u
 #define PduRConf_PduRDestPdu_HVCH_Rsp01_oLIN00_d50f5fa3_Rx_aa2a3f7d_Rx 3u
 #define PduRConf_PduRDestPdu_HVCH_Rsp02_oLIN00_a3ea669e_Rx_90a9658c_Rx 4u
-#define PduRConf_PduRDestPdu_PMP2_Sts_oLIN00_200c907c_Rx_9a742e46_Rx  5u
-#define PduRConf_PduRDestPdu_PMP3_Sts_oLIN00_4e808b3d_Rx_43cea622_Rx  6u
-#define PduRConf_PduRDestPdu_PduRDestPdu                              7u
-#define PduRConf_PduRDestPdu_SVA_VCU_STD_oLIN00_4f0795ef_Rx_166cd16c_Rx 8u
-#define PduRConf_PduRDestPdu_VCU_Minor_03_oKAMA_FP_EPT_0303_d9755fba_Rx_7341a555_Rx 9u
-#define PduRConf_PduRDestPdu_VcuCan03RxMsg1_oTC37X_VCU_CAN03_4dd213bb_Rx_4e610413_Rx 10u
-#define PduRConf_PduRDestPdu_VcuCan03RxMsg2_oTC37X_VCU_CAN03_84e608b6_Rx_a2204cbf_Rx 11u
-#define PduRConf_PduRDestPdu_VcuRxMsg1_oTC37X_VCU_CAN00_4589bbed_Rx_6711bd67_Rx 12u
-#define PduRConf_PduRDestPdu_VcuRxMsg2_oTC37X_VCU_CAN00_8cbda0e0_Rx_803efadc_Rx 13u
-#define PduRConf_PduRDestPdu_VcuRxMsg3_oTC37X_VCU_CAN01_5bb4c01a_Rx_3905054b_Rx 14u
-#define PduRConf_PduRDestPdu_VcuRxMsg4_oTC37X_VCU_CAN01_55be06ba_Rx_f5b46736_Rx 15u
+#define PduRConf_PduRDestPdu_IBS_Status_06_oTC37X_VCU_CAN01_42ebfd51_Rx_9f9167b2_Rx 5u
+#define PduRConf_PduRDestPdu_PMP2_Sts_oLIN00_200c907c_Rx_9a742e46_Rx  6u
+#define PduRConf_PduRDestPdu_PMP3_Sts_oLIN00_4e808b3d_Rx_43cea622_Rx  7u
+#define PduRConf_PduRDestPdu_PduRDestPdu                              8u
+#define PduRConf_PduRDestPdu_SVA_VCU_STD_oLIN00_4f0795ef_Rx_166cd16c_Rx 9u
+#define PduRConf_PduRDestPdu_VCU_Minor_03_oKAMA_FP_EPT_0303_d9755fba_Rx_7341a555_Rx 10u
+#define PduRConf_PduRDestPdu_VcuCan03RxMsg1_oTC37X_VCU_CAN03_4dd213bb_Rx_4e610413_Rx 11u
+#define PduRConf_PduRDestPdu_VcuCan03RxMsg2_oTC37X_VCU_CAN03_84e608b6_Rx_a2204cbf_Rx 12u
+#define PduRConf_PduRDestPdu_VcuRxMsg1_oTC37X_VCU_CAN00_4589bbed_Rx_6711bd67_Rx 13u
+#define PduRConf_PduRDestPdu_VcuRxMsg2_oTC37X_VCU_CAN00_8cbda0e0_Rx_803efadc_Rx 14u
+#define PduRConf_PduRDestPdu_VcuRxMsg3_oTC37X_VCU_CAN01_5bb4c01a_Rx_3905054b_Rx 15u
+#define PduRConf_PduRDestPdu_VcuRxMsg4_oTC37X_VCU_CAN01_55be06ba_Rx_f5b46736_Rx 16u
 /**\} */
 
 /**
@@ -165,22 +166,23 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRSrcPdu_PduRSrcPdu                                7u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_4e610413                       10u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_9a742e46                       5u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_43cea622                       6u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu                                8u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_4e610413                       11u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_9a742e46                       6u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_9f9167b2                       5u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_43cea622                       7u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_90a9658c                       4u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_166cd16c                       8u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_166cd16c                       9u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_718a1cfb                       1u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_803efadc                       13u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_6711bd67                       12u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_7341a555                       9u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_3905054b                       14u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_a2204cbf                       11u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_803efadc                       14u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_6711bd67                       13u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_7341a555                       10u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_3905054b                       15u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_a2204cbf                       12u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_aa2a3f7d                       3u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_b894d38e                       2u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_c3f2be6b                       0u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_f5b46736                       15u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_f5b46736                       16u
 /**\} */
 
 /**
@@ -191,32 +193,33 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_1a8748e9                       25u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_2ad7995b                       8u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_2ba30332                       10u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_3e8314bc                       9u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_3ef2d11c                       16u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_1a8748e9                       26u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_2ad7995b                       9u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_2ba30332                       11u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_3e8314bc                       10u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_3ef2d11c                       17u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_4bd8719a                       1u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_6a17111c                       2u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_6c0ea6d2                       13u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_8c9b3cfc                       21u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_15ef524a                       18u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_23c89b9b                       17u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_27dcf988                       22u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_73c8c9ca                       5u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_91ca29f5                       3u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_91d52164                       23u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_96b222db                       15u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_886ac60a                       19u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_69924b1b                       24u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_275934e8                       20u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_6c0ea6d2                       14u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_8c9b3cfc                       22u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_15ef524a                       19u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_23c89b9b                       18u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_27dcf988                       23u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_73c8c9ca                       6u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_91ca29f5                       4u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_91d52164                       24u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_96b222db                       16u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_886ac60a                       20u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_69924b1b                       25u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_275934e8                       21u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_0361509d                       0u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_9414725b                       4u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_a59b3a32                       14u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_a98c9d8b                       6u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_b06eca36                       7u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_df42a212                       12u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_f8c9b934                       11u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_9414725b                       5u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_a59b3a32                       15u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_a98c9d8b                       7u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_b06eca36                       8u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_b24d57d8                       3u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_df42a212                       13u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_f8c9b934                       12u
 /**\} */
 
 /**
@@ -230,28 +233,29 @@
 #define PduRConf_PduRDestPdu_EDCU_EXV2_oLIN00_18b050dc_Tx             0u
 #define PduRConf_PduRDestPdu_PMP_Cmd_oLIN00_6d889c97_Tx               1u
 #define PduRConf_PduRDestPdu_TCU_HVCH_Cmd_oLIN00_ddc31229_Tx          2u
-#define PduRConf_PduRDestPdu_VCU_EXV_1_oLIN00_58a890ac_Tx             3u
-#define PduRConf_PduRDestPdu_VCU_EXV_2_oLIN00_2e4da991_Tx             4u
-#define PduRConf_PduRDestPdu_VCU_Minor_01_oKAMA_FP_EPT_0303_45280963_Tx 5u
-#define PduRConf_PduRDestPdu_VCU_Minor_02_oKAMA_FP_EPT_0303_7ae377f6_Tx 6u
-#define PduRConf_PduRDestPdu_VCU_SVA_CMD_oLIN00_89e2bb7b_Tx           7u
-#define PduRConf_PduRDestPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_c6a20a7f_Tx_2ad7995b_Tx 8u
-#define PduRConf_PduRDestPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_b1a53ae9_Tx_3e8314bc_Tx 9u
-#define PduRConf_PduRDestPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_5fab5bc5_Tx_2ba30332_Tx 10u
-#define PduRConf_PduRDestPdu_VcuAdcTxMsg1_oTC37X_VCU_CAN01_6685c7bf_Tx 11u
-#define PduRConf_PduRDestPdu_VcuAdcTxMsg2_oTC37X_VCU_CAN01_afb1dcb2_Tx 12u
-#define PduRConf_PduRDestPdu_VcuCan03TxMsg1_oTC37X_VCU_CAN03_c0767973_Tx 13u
-#define PduRConf_PduRDestPdu_VcuCan03TxMsg2_oTC37X_VCU_CAN03_0942627e_Tx 14u
-#define PduRConf_PduRDestPdu_VcuTxIoMsg1_oTC37X_VCU_CAN00_869e33bc_Tx 15u
-#define PduRConf_PduRDestPdu_VcuTxIoMsg2_oTC37X_VCU_CAN00_4faa28b1_Tx 16u
-#define PduRConf_PduRDestPdu_VcuTxIoMsg3_oTC37X_VCU_CAN00_08b9de4a_Tx 17u
-#define PduRConf_PduRDestPdu_VcuTxIoMsg4_oTC37X_VCU_CAN00_06b318ea_Tx 18u
-#define PduRConf_PduRDestPdu_VcuTxIoMsg5_oTC37X_VCU_CAN00_41a0ee11_Tx 19u
-#define PduRConf_PduRDestPdu_VcuTxIoMsg6_oTC37X_VCU_CAN00_8894f51c_Tx 20u
-#define PduRConf_PduRDestPdu_VcuTxIoMsg7_oTC37X_VCU_CAN00_cf8703e7_Tx 21u
-#define PduRConf_PduRDestPdu_VcuTxIoMsg8_oTC37X_VCU_CAN00_9481785c_Tx 22u
-#define PduRConf_PduRDestPdu_VcuTxMsg1_oTC37X_VCU_CAN00_c82dd125_Tx   23u
-#define PduRConf_PduRDestPdu_VcuTxMsg2_oTC37X_VCU_CAN00_0119ca28_Tx   24u
+#define PduRConf_PduRDestPdu_VCU_BMS_oTC37X_VCU_CAN01_a21ab632_Tx     3u
+#define PduRConf_PduRDestPdu_VCU_EXV_1_oLIN00_58a890ac_Tx             4u
+#define PduRConf_PduRDestPdu_VCU_EXV_2_oLIN00_2e4da991_Tx             5u
+#define PduRConf_PduRDestPdu_VCU_Minor_01_oKAMA_FP_EPT_0303_45280963_Tx 6u
+#define PduRConf_PduRDestPdu_VCU_Minor_02_oKAMA_FP_EPT_0303_7ae377f6_Tx 7u
+#define PduRConf_PduRDestPdu_VCU_SVA_CMD_oLIN00_89e2bb7b_Tx           8u
+#define PduRConf_PduRDestPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_c6a20a7f_Tx_2ad7995b_Tx 9u
+#define PduRConf_PduRDestPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_b1a53ae9_Tx_3e8314bc_Tx 10u
+#define PduRConf_PduRDestPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_5fab5bc5_Tx_2ba30332_Tx 11u
+#define PduRConf_PduRDestPdu_VcuAdcTxMsg1_oTC37X_VCU_CAN01_6685c7bf_Tx 12u
+#define PduRConf_PduRDestPdu_VcuAdcTxMsg2_oTC37X_VCU_CAN01_afb1dcb2_Tx 13u
+#define PduRConf_PduRDestPdu_VcuCan03TxMsg1_oTC37X_VCU_CAN03_c0767973_Tx 14u
+#define PduRConf_PduRDestPdu_VcuCan03TxMsg2_oTC37X_VCU_CAN03_0942627e_Tx 15u
+#define PduRConf_PduRDestPdu_VcuTxIoMsg1_oTC37X_VCU_CAN00_869e33bc_Tx 16u
+#define PduRConf_PduRDestPdu_VcuTxIoMsg2_oTC37X_VCU_CAN00_4faa28b1_Tx 17u
+#define PduRConf_PduRDestPdu_VcuTxIoMsg3_oTC37X_VCU_CAN00_08b9de4a_Tx 18u
+#define PduRConf_PduRDestPdu_VcuTxIoMsg4_oTC37X_VCU_CAN00_06b318ea_Tx 19u
+#define PduRConf_PduRDestPdu_VcuTxIoMsg5_oTC37X_VCU_CAN00_41a0ee11_Tx 20u
+#define PduRConf_PduRDestPdu_VcuTxIoMsg6_oTC37X_VCU_CAN00_8894f51c_Tx 21u
+#define PduRConf_PduRDestPdu_VcuTxIoMsg7_oTC37X_VCU_CAN00_cf8703e7_Tx 22u
+#define PduRConf_PduRDestPdu_VcuTxIoMsg8_oTC37X_VCU_CAN00_9481785c_Tx 23u
+#define PduRConf_PduRDestPdu_VcuTxMsg1_oTC37X_VCU_CAN00_c82dd125_Tx   24u
+#define PduRConf_PduRDestPdu_VcuTxMsg2_oTC37X_VCU_CAN00_0119ca28_Tx   25u
 /**\} */
 
 /**

@@ -43,12 +43,23 @@
 // TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
       AUTOSTART = FALSE:"@RO@";
       EVENT = Rte_Ev_Cyclic_Core0_AswTask_0_10ms:"@RO@";
+      EVENT = Rte_Ev_Run_Com_SWC_Com_Runnable_20ms:"@RO@";
       EVENT = Rte_Ev_Run_Com_SWC_Com_Runnable_2ms:"@RO@";
       EVENT = Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification:"@RO@";
       EVENT = Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification:"@RO@";
       EVENT = Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable:"@RO@";
       EVENT = Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable:"@RO@";
       EVENT = Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms:"@RO@";
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_Com_SWC_Com_Runnable_20ms {
+      COUNTER = SystemTimer_Core0;
+      ACTION = SETEVENT
+      {
+         TASK = Core0_AswTask;
+         EVENT = Rte_Ev_Run_Com_SWC_Com_Runnable_20ms;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_Com_SWC_Com_Runnable_2ms {
@@ -224,6 +235,10 @@
       MASK = AUTO;
    }:"@ROC@@NR@";
 
+   EVENT Rte_Ev_Run_Com_SWC_Com_Runnable_20ms {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
    EVENT Rte_Ev_Run_Com_SWC_Com_Runnable_2ms {
       MASK = AUTO;
    }:"@ROC@@NR@";
@@ -259,6 +274,7 @@
 //      HAS_RESTARTTASK = FALSE;
       TASK = Core0_AswInit;
       TASK = Core0_AswTask;
+      ALARM = Rte_Al_TE_Com_SWC_Com_Runnable_20ms;
       ALARM = Rte_Al_TE_Com_SWC_Com_Runnable_2ms;
       ALARM = Rte_Al_TE_Core0_AswTask_0_10ms;
       ALARM = Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms;

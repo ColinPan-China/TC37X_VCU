@@ -64,15 +64,50 @@ BO_ 1280 VCU_Rx_500h_NM: 8 GWM
  SG_ VCU_Rx_500h_NM_UserData : 16|48@1+ (1,0) [0|0] ""  VCU
  SG_ VCU_Rx_500h_NM_CBV : 8|8@1+ (1,0) [0|0] ""  VCU
  SG_ VCU_Rx_500h_NM_NodeId : 0|8@1+ (1,0) [0|0] ""  VCU
- 
- 
- 
- 
+
 BO_ 1308 VCU_Tx_51Ch_NM: 8 VCU
  SG_ VCU_Tx_51Ch_NM_UserData : 16|48@1+ (1,0) [0|0] ""  GWM
  SG_ VCU_Tx_51Ch_NM_CBV : 8|8@1+ (1,0) [0|0] ""  GWM
  SG_ VCU_Tx_51Ch_NM_NodeId : 0|8@1+ (1,0) [0|0] ""  GWM
 
+BO_ 209 VCU_BMS: 8 VCU
+ SG_ Checksum_0D1 : 7|8@0+ (1,0) [0|255] ""  GWM
+ SG_ MessageCounter_0D1 : 11|4@0+ (1,0) [0|15] ""  GWM
+ SG_ VCU_IsomeasurmentSwitch : 14|1@0+ (1,0) [0|1] ""  GWM
+ SG_ VCU_RequestedModeBMS : 23|3@0+ (1,0) [0|7] ""  GWM
+ SG_ VCU_HVStatus : 31|4@0+ (1,0) [0|5] ""  GWM
+ SG_ VCU_Chargestatus : 27|4@0+ (1,0) [0|14] ""  GWM
+ SG_ VCU_LimitLevel : 39|2@0+ (1,0) [0|3] ""  GWM
+ SG_ VCU_ActDriveMode : 37|3@0+ (1,0) [0|4] ""  GWM
+ SG_ VCU_DrvModSwitchWarn : 34|3@0+ (1,0) [0|7] ""  GWM
+ SG_ VCU_ActiveEnergyProfile : 47|3@0+ (1,0) [0|7] ""  GWM
+ SG_ VCU_ActiveRgnBrkProfile : 44|3@0+ (1,0) [0|7] ""  GWM
+ SG_ VCU_RegenBrakeLightReqVld : 41|1@0+ (1,0) [0|1] ""  GWM
+ SG_ VCU_RegenBrakeLightRequest : 40|1@0+ (1,0) [0|1] ""  GWM
+ SG_ VCU_BMSTargetThermLevel : 55|2@0+ (1,0) [0|3] ""  GWM
+ SG_ VCU_BMS_Control_of_NegRelay : 53|2@0+ (1,0) [0|2] ""  GWM
+
+BO_ 188 IBS_Status_06: 8 GWM
+ SG_ Checksum_0BC : 7|8@0+ (1,0) [0|255] ""  VCU
+ SG_ MessageCounter_0BC : 11|4@0+ (1,0) [0|15] ""  VCU
+ SG_ IBS_HBAActive : 46|1@0+ (1,0) [0|1] ""  VCU
+ SG_ IBS_ESCOffSts : 45|1@0+ (1,0) [0|1] ""  VCU
+ SG_ IBS_RWUActive : 44|1@0+ (1,0) [0|1] ""  VCU
+ SG_ IBS_RWUAvailable : 43|1@0+ (1,0) [0|1] ""  VCU
+ SG_ IBS_MaintenaceMode : 42|1@0+ (1,0) [0|1] ""  VCU
+ SG_ IBS_RollerbenchMode : 41|1@0+ (1,0) [0|1] ""  VCU
+ SG_ IBS_FactoryMode : 40|1@0+ (1,0) [0|1] ""  VCU
+ SG_ IBS_AVHSts : 55|2@0+ (1,0) [0|2] ""  VCU
+ SG_ IBS_ESClampdisplay : 53|2@0+ (1,0) [0|2] ""  VCU
+ SG_ IBS_HDCSts : 51|2@0+ (1,0) [0|2] ""  VCU
+ SG_ IBS_BrakeFluidWarning : 49|2@0+ (1,0) [0|3] ""  VCU
+ SG_ IBS_EPBFailureStatus : 63|2@0+ (1,0) [0|3] ""  VCU
+ SG_ IBS_TireMonSysSts : 61|1@0+ (1,0) [0|1] ""  VCU
+ SG_ IBS_TPMS_ResetSts : 60|1@0+ (1,0) [0|1] ""  VCU
+ SG_ IBS_TireWarnReLe : 59|1@0+ (1,0) [0|1] ""  VCU
+ SG_ IBS_TireWarnReRi : 58|1@0+ (1,0) [0|1] ""  VCU
+ SG_ IBS_TireWarnFrntLe : 57|1@0+ (1,0) [0|1] ""  VCU
+ SG_ IBS_TireWarnFrntRi : 56|1@0+ (1,0) [0|1] ""  VCU
 
 
 BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
@@ -163,26 +198,34 @@ BA_DEF_DEF_  "DiagState" "no";
 BA_DEF_DEF_  "DiagResponse" "no";
 BA_DEF_DEF_  "DiagRequest" "no";
 BA_DEF_DEF_  "DBName" "";
-BA_ "NmAsrWaitBusSleepTime" 2000;
-BA_ "Baudrate" 500000;
-BA_ "BusType" "CAN";
-BA_ "NmType" "NmAsr";
 BA_ "Manufacturer" "Vector";
+BA_ "NmType" "NmAsr";
+BA_ "BusType" "CAN";
+BA_ "Baudrate" 500000;
+BA_ "NmAsrWaitBusSleepTime" 2000;
 BA_ "DBName" "TC37X_VCU_CAN01";
-BA_ "VFrameFormat" BO_ 515 0;
 BA_ "GenMsgCycleTime" BO_ 515 500;
-BA_ "VFrameFormat" BO_ 514 0;
+BA_ "VFrameFormat" BO_ 515 0;
 BA_ "GenMsgCycleTime" BO_ 514 500;
-BA_ "VFrameFormat" BO_ 259 0;
+BA_ "VFrameFormat" BO_ 514 0;
 BA_ "GenMsgCycleTime" BO_ 259 500;
-BA_ "VFrameFormat" BO_ 258 0;
+BA_ "VFrameFormat" BO_ 259 0;
 BA_ "GenMsgCycleTime" BO_ 258 500;
-BA_ "VFrameFormat" BO_ 1280 0;
-BA_ "GenMsgCycleTime" BO_ 1280 500;
-BA_ "NmAsrMessage" BO_ 1280 1;
+BA_ "VFrameFormat" BO_ 258 0;
 BA_ "NmMessage" BO_ 1280 1;
-BA_ "VFrameFormat" BO_ 1308 0;
-BA_ "GenMsgCycleTime" BO_ 1308 500;
-BA_ "NmAsrMessage" BO_ 1308 1;
+BA_ "NmAsrMessage" BO_ 1280 1;
+BA_ "GenMsgCycleTime" BO_ 1280 500;
+BA_ "VFrameFormat" BO_ 1280 0;
 BA_ "NmMessage" BO_ 1308 1;
+BA_ "NmAsrMessage" BO_ 1308 1;
+BA_ "GenMsgCycleTime" BO_ 1308 500;
+BA_ "VFrameFormat" BO_ 1308 0;
+BA_ "VFrameFormat" BO_ 209 0;
+BA_ "GenMsgILSupport" BO_ 209 1;
+BA_ "GenMsgCycleTime" BO_ 209 20;
+BA_ "VFrameFormat" BO_ 188 0;
+BA_ "GenMsgILSupport" BO_ 188 1;
+BA_ "GenMsgCycleTime" BO_ 188 20;
+SIG_GROUP_ 209 VCU_BMS_Signal_Group 1 : Checksum_0D1 MessageCounter_0D1 VCU_IsomeasurmentSwitch VCU_RequestedModeBMS VCU_HVStatus VCU_Chargestatus VCU_LimitLevel VCU_ActDriveMode VCU_DrvModSwitchWarn VCU_ActiveEnergyProfile VCU_ActiveRgnBrkProfile VCU_RegenBrakeLightReqVld VCU_RegenBrakeLightRequest VCU_BMSTargetThermLevel VCU_BMS_Control_of_NegRelay;
+SIG_GROUP_ 188 IBS_Status_06_Signal_Group 1 : Checksum_0BC MessageCounter_0BC IBS_HBAActive IBS_ESCOffSts IBS_RWUActive IBS_RWUAvailable IBS_MaintenaceMode IBS_RollerbenchMode IBS_FactoryMode IBS_AVHSts IBS_ESClampdisplay IBS_HDCSts IBS_BrakeFluidWarning IBS_EPBFailureStatus IBS_TireMonSysSts IBS_TPMS_ResetSts IBS_TireWarnReLe IBS_TireWarnReRi IBS_TireWarnFrntLe IBS_TireWarnFrntRi;
 

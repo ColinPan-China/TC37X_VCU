@@ -37,6 +37,7 @@
  * COM Callbacks for Rx Indication
  *********************************************************************************************************************/
 
+FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_Status_06_Signal_Group_oIBS_Status_06_oTC37X_VCU_CAN01_481059d9_Rx(void);
 FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx(void);
 FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx(void);
 FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx(void);

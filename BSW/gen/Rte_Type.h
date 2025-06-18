@@ -39,6 +39,12 @@ typedef EventMaskType Rte_EventMaskType;
  * Data type definitions
  *********************************************************************************************************************/
 
+# define Rte_TypeDef_Checksum_0BC
+typedef uint8 Checksum_0BC;
+
+# define Rte_TypeDef_Checksum_0D1
+typedef uint8 Checksum_0D1;
+
 # define Rte_TypeDef_ECC_PMP2_SpdSet
 typedef uint8 ECC_PMP2_SpdSet;
 
@@ -141,6 +147,105 @@ typedef sint16 EXT_A_IN8;
 # define Rte_TypeDef_EXT_A_IN9
 typedef sint16 EXT_A_IN9;
 
+# define Rte_TypeDef_IBS_AVHSts
+typedef uint8 IBS_AVHSts;
+
+# define Rte_TypeDef_IBS_BrakeFluidWarning
+typedef uint8 IBS_BrakeFluidWarning;
+
+# define Rte_TypeDef_IBS_EPBFailureStatus
+typedef uint8 IBS_EPBFailureStatus;
+
+# define Rte_TypeDef_IBS_ESCOffSts
+typedef boolean IBS_ESCOffSts;
+
+# define Rte_TypeDef_IBS_ESClampdisplay
+typedef uint8 IBS_ESClampdisplay;
+
+# define Rte_TypeDef_IBS_FactoryMode
+typedef boolean IBS_FactoryMode;
+
+# define Rte_TypeDef_IBS_HBAActive
+typedef boolean IBS_HBAActive;
+
+# define Rte_TypeDef_IBS_HDCSts
+typedef uint8 IBS_HDCSts;
+
+# define Rte_TypeDef_IBS_MaintenaceMode
+typedef boolean IBS_MaintenaceMode;
+
+# define Rte_TypeDef_IBS_RWUActive
+typedef boolean IBS_RWUActive;
+
+# define Rte_TypeDef_IBS_RWUAvailable
+typedef boolean IBS_RWUAvailable;
+
+# define Rte_TypeDef_IBS_RollerbenchMode
+typedef boolean IBS_RollerbenchMode;
+
+# define Rte_TypeDef_IBS_TPMS_ResetSts
+typedef boolean IBS_TPMS_ResetSts;
+
+# define Rte_TypeDef_IBS_TireMonSysSts
+typedef boolean IBS_TireMonSysSts;
+
+# define Rte_TypeDef_IBS_TireWarnFrntLe
+typedef boolean IBS_TireWarnFrntLe;
+
+# define Rte_TypeDef_IBS_TireWarnFrntRi
+typedef boolean IBS_TireWarnFrntRi;
+
+# define Rte_TypeDef_IBS_TireWarnReLe
+typedef boolean IBS_TireWarnReLe;
+
+# define Rte_TypeDef_IBS_TireWarnReRi
+typedef boolean IBS_TireWarnReRi;
+
+# define Rte_TypeDef_MessageCounter_0BC
+typedef uint8 MessageCounter_0BC;
+
+# define Rte_TypeDef_MessageCounter_0D1
+typedef uint8 MessageCounter_0D1;
+
+# define Rte_TypeDef_VCU_ActDriveMode
+typedef uint8 VCU_ActDriveMode;
+
+# define Rte_TypeDef_VCU_ActiveEnergyProfile
+typedef uint8 VCU_ActiveEnergyProfile;
+
+# define Rte_TypeDef_VCU_ActiveRgnBrkProfile
+typedef uint8 VCU_ActiveRgnBrkProfile;
+
+# define Rte_TypeDef_VCU_BMSTargetThermLevel
+typedef uint8 VCU_BMSTargetThermLevel;
+
+# define Rte_TypeDef_VCU_BMS_Control_of_NegRelay
+typedef uint8 VCU_BMS_Control_of_NegRelay;
+
+# define Rte_TypeDef_VCU_Chargestatus
+typedef uint8 VCU_Chargestatus;
+
+# define Rte_TypeDef_VCU_DrvModSwitchWarn
+typedef uint8 VCU_DrvModSwitchWarn;
+
+# define Rte_TypeDef_VCU_HVStatus
+typedef uint8 VCU_HVStatus;
+
+# define Rte_TypeDef_VCU_IsomeasurmentSwitch
+typedef boolean VCU_IsomeasurmentSwitch;
+
+# define Rte_TypeDef_VCU_LimitLevel
+typedef uint8 VCU_LimitLevel;
+
+# define Rte_TypeDef_VCU_RegenBrakeLightReqVld
+typedef boolean VCU_RegenBrakeLightReqVld;
+
+# define Rte_TypeDef_VCU_RegenBrakeLightRequest
+typedef boolean VCU_RegenBrakeLightRequest;
+
+# define Rte_TypeDef_VCU_RequestedModeBMS
+typedef uint8 VCU_RequestedModeBMS;
+
 # define Rte_TypeDef_VcuRxMsg1_Sig0
 typedef sint16 VcuRxMsg1_Sig0;
 
@@ -227,6 +332,51 @@ typedef uint8 NvM_Array32Bytes[32];
 
 # define Rte_TypeDef_NvM_Arry4Bytes
 typedef uint8 NvM_Arry4Bytes[4];
+
+# define Rte_TypeDef_SG_IBS_Status_06_Signal_Group
+typedef struct
+{
+  Checksum_0BC Checksum_0BC;
+  IBS_AVHSts IBS_AVHSts;
+  IBS_BrakeFluidWarning IBS_BrakeFluidWarning;
+  IBS_EPBFailureStatus IBS_EPBFailureStatus;
+  IBS_ESClampdisplay IBS_ESClampdisplay;
+  IBS_ESCOffSts IBS_ESCOffSts;
+  IBS_FactoryMode IBS_FactoryMode;
+  IBS_HBAActive IBS_HBAActive;
+  IBS_HDCSts IBS_HDCSts;
+  IBS_MaintenaceMode IBS_MaintenaceMode;
+  IBS_RollerbenchMode IBS_RollerbenchMode;
+  IBS_RWUActive IBS_RWUActive;
+  IBS_RWUAvailable IBS_RWUAvailable;
+  IBS_TireMonSysSts IBS_TireMonSysSts;
+  IBS_TireWarnFrntLe IBS_TireWarnFrntLe;
+  IBS_TireWarnFrntRi IBS_TireWarnFrntRi;
+  IBS_TireWarnReLe IBS_TireWarnReLe;
+  IBS_TireWarnReRi IBS_TireWarnReRi;
+  IBS_TPMS_ResetSts IBS_TPMS_ResetSts;
+  MessageCounter_0BC MessageCounter_0BC;
+} SG_IBS_Status_06_Signal_Group;
+
+# define Rte_TypeDef_SG_VCU_BMS_Signal_Group
+typedef struct
+{
+  Checksum_0D1 Checksum_0D1;
+  MessageCounter_0D1 MessageCounter_0D1;
+  VCU_ActDriveMode VCU_ActDriveMode;
+  VCU_ActiveEnergyProfile VCU_ActiveEnergyProfile;
+  VCU_ActiveRgnBrkProfile VCU_ActiveRgnBrkProfile;
+  VCU_BMS_Control_of_NegRelay VCU_BMS_Control_of_NegRelay;
+  VCU_BMSTargetThermLevel VCU_BMSTargetThermLevel;
+  VCU_Chargestatus VCU_Chargestatus;
+  VCU_DrvModSwitchWarn VCU_DrvModSwitchWarn;
+  VCU_HVStatus VCU_HVStatus;
+  VCU_IsomeasurmentSwitch VCU_IsomeasurmentSwitch;
+  VCU_LimitLevel VCU_LimitLevel;
+  VCU_RegenBrakeLightRequest VCU_RegenBrakeLightRequest;
+  VCU_RegenBrakeLightReqVld VCU_RegenBrakeLightReqVld;
+  VCU_RequestedModeBMS VCU_RequestedModeBMS;
+} SG_VCU_BMS_Signal_Group;
 
 # define Rte_TypeDef_BswM_ESH_Mode
 typedef uint8 BswM_ESH_Mode;
@@ -421,6 +571,8 @@ extern CONST(NvM_Array10Bytes, RTE_CONST) Rte_C_NvM_Array10Bytes_0;
 
 extern CONST(NvM_Array32Bytes, RTE_CONST) Rte_C_NvM_Array32Bytes_0;
 
+extern CONST(SG_IBS_Status_06_Signal_Group, RTE_CONST) Rte_C_SG_IBS_Status_06_Signal_Group_0;
+
 # define RTE_STOP_SEC_CONST_UNSPECIFIED
 # include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -585,6 +737,24 @@ extern VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwit
 
 
 # endif /* defined(RTE_CORE) */
+
+/**********************************************************************************************************************
+ * extern declaration of RTE Update Flags for optimized macro implementation
+ *********************************************************************************************************************/
+typedef struct
+{
+  Rte_BitType Rte_RxUpdate_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group : 1;
+  Rte_BitType Rte_RxUpdate_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group_Sender : 1;
+} Rte_SystemApplication_OsCore0_RxUpdateFlagsType;
+
+# define RTE_START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(Rte_SystemApplication_OsCore0_RxUpdateFlagsType, RTE_VAR_ZERO_INIT) Rte_SystemApplication_OsCore0_RxUpdateFlags;
+
+# define RTE_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 
 #endif /* RTE_TYPE_H */
 

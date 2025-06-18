@@ -205,6 +205,25 @@ VAR(Rte_SystemApplication_OsCore0_RxTimeoutFlagsType, RTE_VAR_ZERO_INIT) Rte_Sys
 
 
 /**********************************************************************************************************************
+ * Update Flags for each Receiver with enableUpdate != 0
+ *********************************************************************************************************************/
+
+#define RTE_START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+VAR(Rte_SystemApplication_OsCore0_RxUpdateFlagsType, RTE_VAR_ZERO_INIT) Rte_SystemApplication_OsCore0_RxUpdateFlags = {
+  0U,
+  0U
+};
+
+#define RTE_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define Rte_SystemApplication_OsCore0_RxUpdateFlagsInit() (Rte_MemClr(&Rte_SystemApplication_OsCore0_RxUpdateFlags, sizeof(Rte_SystemApplication_OsCore0_RxUpdateFlagsType)))
+
+
+/**********************************************************************************************************************
  * Prototypes for Runnable Entities of Nv Block Components
  *********************************************************************************************************************/
 
@@ -334,6 +353,9 @@ FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore0(void)
 {
   /* reset Rx Timeout Flags */
   Rte_SystemApplication_OsCore0_RxTimeoutFlagsInit(); /* PRQA S 0315 */ /* MD_Rte_0315 */
+
+  /* initialize flags for update handling */
+  Rte_SystemApplication_OsCore0_RxUpdateFlagsInit(); /* PRQA S 0315 */ /* MD_Rte_0315 */
 
   /* set default values for internal data */
   Rte_SWC1_Request_ESH_RunRequest_0_requestedMode = 0U;
@@ -659,6 +681,30 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN9_EXT_A_IN9(EXT_A_IN9 d
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
 
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group(P2CONST(SG_VCU_BMS_Signal_Group, AUTOMATIC, RTE_COM_SWC_APPL_DATA) data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_Checksum_0D1_oVCU_BMS_oTC37X_VCU_CAN01_71598f6f_Tx, &(*(data)).Checksum_0D1); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_MessageCounter_0D1_oVCU_BMS_oTC37X_VCU_CAN01_4500c00c_Tx, &(*(data)).MessageCounter_0D1); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_VCU_ActDriveMode_oVCU_BMS_oTC37X_VCU_CAN01_1e026d66_Tx, &(*(data)).VCU_ActDriveMode); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_VCU_ActiveEnergyProfile_oVCU_BMS_oTC37X_VCU_CAN01_22cbfa40_Tx, &(*(data)).VCU_ActiveEnergyProfile); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_VCU_ActiveRgnBrkProfile_oVCU_BMS_oTC37X_VCU_CAN01_0363ef69_Tx, &(*(data)).VCU_ActiveRgnBrkProfile); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_VCU_BMSTargetThermLevel_oVCU_BMS_oTC37X_VCU_CAN01_a0eafa9e_Tx, &(*(data)).VCU_BMSTargetThermLevel); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_VCU_BMS_Control_of_NegRelay_oVCU_BMS_oTC37X_VCU_CAN01_bc6cb144_Tx, &(*(data)).VCU_BMS_Control_of_NegRelay); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_VCU_Chargestatus_oVCU_BMS_oTC37X_VCU_CAN01_1130fda5_Tx, &(*(data)).VCU_Chargestatus); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_VCU_DrvModSwitchWarn_oVCU_BMS_oTC37X_VCU_CAN01_e4aabe75_Tx, &(*(data)).VCU_DrvModSwitchWarn); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_VCU_HVStatus_oVCU_BMS_oTC37X_VCU_CAN01_2f506c79_Tx, &(*(data)).VCU_HVStatus); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_VCU_IsomeasurmentSwitch_oVCU_BMS_oTC37X_VCU_CAN01_911803f5_Tx, &(*(data)).VCU_IsomeasurmentSwitch); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_VCU_LimitLevel_oVCU_BMS_oTC37X_VCU_CAN01_2fc74514_Tx, &(*(data)).VCU_LimitLevel); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_VCU_RegenBrakeLightReqVld_oVCU_BMS_oTC37X_VCU_CAN01_d4db7fa5_Tx, &(*(data)).VCU_RegenBrakeLightReqVld); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_VCU_RegenBrakeLightRequest_oVCU_BMS_oTC37X_VCU_CAN01_3252df12_Tx, &(*(data)).VCU_RegenBrakeLightRequest); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignal(ComConf_ComGroupSignal_VCU_RequestedModeBMS_oVCU_BMS_oTC37X_VCU_CAN01_1d4d6e47_Tx, &(*(data)).VCU_RequestedModeBMS); /* PRQA S 0315, 1340, 2986 */ /* MD_Rte_0315, MD_Rte_1340, MD_Rte_2986 */
+  ret |= Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_BMS_Signal_Group_oVCU_BMS_oTC37X_VCU_CAN01_c4ef97e6_Tx); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+
+  return ret;
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0(VcuTxMsg1_Sig0 data) /* PRQA S 1505, 2982 */ /* MD_MSR_Rule8.7, MD_Rte_2982 */
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
@@ -799,6 +845,38 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_ESH_RunRequest_1_requestedM
   *data = 0U;
 
   return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group(P2VAR(SG_IBS_Status_06_Signal_Group, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+  ret = Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_IBS_Status_06_Signal_Group_oIBS_Status_06_oTC37X_VCU_CAN01_481059d9_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_Checksum_0BC_oIBS_Status_06_oTC37X_VCU_CAN01_586aa482_Rx, &(*(data)).Checksum_0BC); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_AVHSts_oIBS_Status_06_oTC37X_VCU_CAN01_3d334918_Rx, &(*(data)).IBS_AVHSts); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_BrakeFluidWarning_oIBS_Status_06_oTC37X_VCU_CAN01_4cdf2121_Rx, &(*(data)).IBS_BrakeFluidWarning); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_EPBFailureStatus_oIBS_Status_06_oTC37X_VCU_CAN01_ba4d18ec_Rx, &(*(data)).IBS_EPBFailureStatus); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_ESCOffSts_oIBS_Status_06_oTC37X_VCU_CAN01_8a954749_Rx, &(*(data)).IBS_ESCOffSts); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_ESClampdisplay_oIBS_Status_06_oTC37X_VCU_CAN01_d7918b4f_Rx, &(*(data)).IBS_ESClampdisplay); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_FactoryMode_oIBS_Status_06_oTC37X_VCU_CAN01_a9ca1443_Rx, &(*(data)).IBS_FactoryMode); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_HBAActive_oIBS_Status_06_oTC37X_VCU_CAN01_35d2723b_Rx, &(*(data)).IBS_HBAActive); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_HDCSts_oIBS_Status_06_oTC37X_VCU_CAN01_ab37f07e_Rx, &(*(data)).IBS_HDCSts); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_MaintenaceMode_oIBS_Status_06_oTC37X_VCU_CAN01_896255a7_Rx, &(*(data)).IBS_MaintenaceMode); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_RWUActive_oIBS_Status_06_oTC37X_VCU_CAN01_10c4a4b9_Rx, &(*(data)).IBS_RWUActive); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_RWUAvailable_oIBS_Status_06_oTC37X_VCU_CAN01_7502d327_Rx, &(*(data)).IBS_RWUAvailable); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_RollerbenchMode_oIBS_Status_06_oTC37X_VCU_CAN01_c388d2a8_Rx, &(*(data)).IBS_RollerbenchMode); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_TPMS_ResetSts_oIBS_Status_06_oTC37X_VCU_CAN01_63f516d0_Rx, &(*(data)).IBS_TPMS_ResetSts); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_TireMonSysSts_oIBS_Status_06_oTC37X_VCU_CAN01_16b044b2_Rx, &(*(data)).IBS_TireMonSysSts); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_TireWarnFrntLe_oIBS_Status_06_oTC37X_VCU_CAN01_1e67f6ea_Rx, &(*(data)).IBS_TireWarnFrntLe); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_TireWarnFrntRi_oIBS_Status_06_oTC37X_VCU_CAN01_a8904419_Rx, &(*(data)).IBS_TireWarnFrntRi); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_TireWarnReLe_oIBS_Status_06_oTC37X_VCU_CAN01_38e70e6d_Rx, &(*(data)).IBS_TireWarnReLe); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_TireWarnReRi_oIBS_Status_06_oTC37X_VCU_CAN01_8e10bc9e_Rx, &(*(data)).IBS_TireWarnReRi); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  ret |= Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0BC_oIBS_Status_06_oTC37X_VCU_CAN01_99ce1b8a_Rx, &(*(data)).MessageCounter_0BC); /* PRQA S 0315, 2986 */ /* MD_Rte_0315, MD_Rte_2986 */
+  Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group = Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group_Sender;
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
+
+  return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0(P2VAR(VcuRxMsg1_Sig0, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
@@ -1891,6 +1969,9 @@ TASK(Core0_AswInit) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable *
   /* call runnable */
   DIAG_SWC_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
+  /* call runnable */
+  Com_SWC_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
   (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
@@ -1905,9 +1986,9 @@ TASK(Core0_AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable *
 
   for(;;)
   {
-    (void)WaitEvent(Rte_Ev_Cyclic_Core0_AswTask_0_10ms | Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)WaitEvent(Rte_Ev_Cyclic_Core0_AswTask_0_10ms | Rte_Ev_Run_Com_SWC_Com_Runnable_20ms | Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)GetEvent(Core0_AswTask, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Cyclic_Core0_AswTask_0_10ms | Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Cyclic_Core0_AswTask_0_10ms | Rte_Ev_Run_Com_SWC_Com_Runnable_20ms | Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     if ((ev & Rte_Ev_Cyclic_Core0_AswTask_0_10ms) != (EventMaskType)0)
     {
@@ -1958,6 +2039,12 @@ TASK(Core0_AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable *
 
       /* call runnable */
       DTCMonitorRunnable_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Run_Com_SWC_Com_Runnable_20ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      Com_Runnable_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

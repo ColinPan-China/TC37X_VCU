@@ -1,0 +1,204 @@
+/** Generated code, do not change!
+ ** Written by Protection Wrapper Generator (V 2.0.1)
+ ** Module: E2EPW_Com_SWC_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group_tx.c
+ ** Wed, 18-Jun-2025, 09:58:56
+ **/
+
+/**********************************************************
+ * MISRA RULE 14.1 VIOLATION:
+ * Error Message : Msg(4:1503) The function '<name>' is
+ *   defined but is not used within this project.
+ * Justification : Library functions
+ **********************************************************/
+/* PRQA S 1503 EOF */
+/**********************************************************
+ * MISRA RULE 19.1 VIOLATION:
+ * Error Message : Msg(4:5087) #include statements in a
+ *   file should only be preceded by other preprocessor
+ *   directives or comments.
+ * Justification : Inclusion of MemMap file is AUTOSAR
+ *   specific
+ **********************************************************/
+/* PRQA S 5087 EOF */
+#include "Rte_Com_SWC.h"
+#include "E2EPW_Marshal_SG_VCU_BMS_Signal_Group.h"
+#include "E2EPW_Com_SWC_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group_tx.h"
+#ifndef STATIC
+    #define STATIC static
+#endif
+
+#define Com_SWC_START_SEC_VAR_INIT_UNSPECIFIED
+#include "Com_SWC_MemMap.h"
+
+STATIC VAR (E2E_P01ProtectStateType, Com_SWC_VAR_INIT)
+    StateVal_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group =
+{
+    0  /* Counter */
+};
+
+STATIC P2VAR ( E2E_P01ProtectStateType
+             , Com_SWC_VAR_INIT
+             , Com_SWC_VAR_INIT
+             )
+    State_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group =
+        &StateVal_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group;
+
+#define Com_SWC_STOP_SEC_VAR_INIT_UNSPECIFIED
+#include "Com_SWC_MemMap.h"
+
+#define Com_SWC_START_SEC_VAR_NOINIT_UNSPECIFIED
+#include "Com_SWC_MemMap.h"
+/**********************************************************
+ * MISRA RULE 8.7 VIOLATION:
+ * Error Message : Msg(4:3218) File scope static,
+ * 'ppa_..', only accessed in one function.
+ * Justification : Extracted from function for 
+ *   MemMap (MemMap defines cannot be stacked).
+ **********************************************************/
+/* PRQA S 3218 2 */
+STATIC VAR (uint8, Com_SWC_VAR_NOINIT)
+    ppa_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group_au8 [8];
+
+#define Com_SWC_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+#include "Com_SWC_MemMap.h"
+
+#define Com_SWC_START_SEC_CONST_UNSPECIFIED
+#include "Com_SWC_MemMap.h"
+/**********************************************************
+ * MISRA RULE 8.7 VIOLATION:
+ * Error Message : Msg(4:3218) File scope static,
+ * 'ConfigVal_..', only accessed in one function.
+ * Justification : Extracted from function for 
+ *   MemMap (MemMap defines cannot be stacked).
+ **********************************************************/
+/* PRQA S 3218 2 */
+STATIC CONST (E2E_P01ConfigType, Com_SWC_CONST)
+    ConfigVal_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group =
+{
+      8
+    , 0
+    , 209
+    , 12
+    , E2E_P01_DATAID_BOTH
+    , 64
+    , 1
+    , 14
+    , 1
+};
+
+#define Com_SWC_STOP_SEC_CONST_UNSPECIFIED
+#include "Com_SWC_MemMap.h"
+
+#define Com_SWC_START_SEC_CODE
+#include "Com_SWC_MemMap.h"
+
+/**********************************************************
+ * Function name: E2EPW_Init_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group_tx ()
+ * Description:   Initialize the E2Elib transmission-state.
+ * Parameter:     None
+ * Return value:  None
+ * Remarks:       Call this function after an application or
+ *                communication startup or reset and prior
+ *                to any other E2EPW API-call.
+ **********************************************************/
+FUNC (void, Com_SWC_CODE) E2EPW_WriteInit_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group (void)
+{
+    State_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group = &StateVal_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group;
+    State_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group->Counter = 0;
+}
+
+/**********************************************************
+ * Function name: E2EPW_Get_SenderState_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group ()
+ * Description:   Returns a pointer to the current E2Elib
+ *                transmission-state.
+ * Parameter:     None
+ * Return value:  The current E2Elib transmission-status
+ * Remarks:       Can be used to manipulate the state.
+ *                Use this function with care.
+ **********************************************************/
+FUNC_P2VAR ( E2E_P01ProtectStateType
+           , Com_SWC_VAR_NOINIT
+           , Com_SWC_CODE
+           )
+    E2EPW_Get_ProtectState_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group (void)
+{
+    return State_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group;
+}
+
+/**********************************************************
+ * Function name: E2EPW_Write_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group (SG_VCU_BMS_Signal_Group *  AppData);
+ * Description:   Protects data with E2Elib, transmits it
+ *                with Rte_Write_<p>_<o> and return an
+ *                error-code.
+ *   Parameter AppData:
+ *                The data to be protected and transmitted.
+ * Return value:  Error-code
+ * Remarks:       None
+ **********************************************************/
+FUNC (uint32, Com_SWC_CODE) E2EPW_Write_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group
+    (P2VAR (SG_VCU_BMS_Signal_Group, AUTOMATIC, Com_SWC_VAR_INIT) AppData)
+{
+    VAR (uint8, AUTOMATIC) ret_u8;
+
+    VAR (uint32, AUTOMATIC) status_ok_u32 =
+          (0       <<24)  /* unused */
+        | (E2E_E_OK<<16)  /* Protection Wrapper */
+        | (RTE_E_OK<<8)   /* Rte_Write */
+        | (E2E_E_OK);     /* E2E_..Protect */
+    VAR (uint32, AUTOMATIC) status_u32 = status_ok_u32;
+
+    P2CONST (E2E_P01ConfigType, AUTOMATIC, Com_SWC_CONST)
+        Config_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group = &ConfigVal_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group;
+
+    if (AppData == NULL_PTR)
+    {
+        ret_u8 = E2E_E_INPUTERR_NULL;
+        status_u32 &= 0xFF00FFFFU;
+        status_u32 |= (((uint32)ret_u8)<<16);
+    }
+
+    if (status_u32 == status_ok_u32)
+    {
+        E2EPW_Marshal_SG_VCU_BMS_Signal_Group ( AppData, ppa_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group_au8 );
+    }
+
+    if (status_u32 == status_ok_u32)
+    {
+        ret_u8 = E2E_P01Protect
+                     ( Config_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group
+                     , State_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group
+                     , ppa_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group_au8
+                     );
+        status_u32 &= 0xFFFFFF00U;
+        status_u32 |= (ret_u8);
+    }
+
+    if (status_u32 == status_ok_u32)
+    {
+        uint16 crcoffset_u16 = Config_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group->CRCOffset/8;
+        uint16 cntoffset_u16 = Config_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group->CounterOffset/8;
+/**********************************************************
+ * MISRA RULE 1.2 VIOLATION:
+ * Error Message : Msg(7:0505) [U] Dereferencing pointer
+ *   value that is apparently NULL.
+ * Justification : AppData is checked for NULL above.
+ *   Value does not change from check to here
+ **********************************************************/
+/* PRQA S 505 1*/
+        AppData->Checksum_0D1 = ppa_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group_au8[crcoffset_u16];
+        AppData->MessageCounter_0D1 = (ppa_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group_au8[cntoffset_u16] & 0x0F);
+    }
+
+    if (status_u32 == status_ok_u32)
+    {
+        ret_u8 = Rte_Write_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group ( AppData );
+        status_u32 &= 0xFFFF00FFU;
+        status_u32 |= (((uint32)ret_u8)<<8);
+    }
+
+    return status_u32;
+}
+
+#define Com_SWC_STOP_SEC_CODE
+#include "Com_SWC_MemMap.h"
+/*  << EOF >>  */

@@ -43,6 +43,8 @@
  *********************************************************************************************************************/
 #include "Adc_Sample.h"
 #include "CDD_MyApp.h"
+#include "E2EPW_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group_rx.h"
+#include "E2EPW_Com_SWC_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group_tx.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -56,6 +58,8 @@
  *
  * Primitive Types:
  * ================
+ * Checksum_0BC: Integer in interval [0...255]
+ * Checksum_0D1: Integer in interval [0...255]
  * ECC_PMP2_SpdSet: Integer in interval [0...100]
  * ECC_PMP3_SpdSet: Integer in interval [0...100]
  * EXT10_Valid: Integer in interval [0...1]
@@ -90,6 +94,39 @@
  * EXT_A_IN7: Integer in interval [-256...255]
  * EXT_A_IN8: Integer in interval [-32768...32767]
  * EXT_A_IN9: Integer in interval [-256...255]
+ * IBS_AVHSts: Integer in interval [0...255]
+ * IBS_BrakeFluidWarning: Integer in interval [0...255]
+ * IBS_EPBFailureStatus: Integer in interval [0...255]
+ * IBS_ESCOffSts: Boolean
+ * IBS_ESClampdisplay: Integer in interval [0...255]
+ * IBS_FactoryMode: Boolean
+ * IBS_HBAActive: Boolean
+ * IBS_HDCSts: Integer in interval [0...255]
+ * IBS_MaintenaceMode: Boolean
+ * IBS_RWUActive: Boolean
+ * IBS_RWUAvailable: Boolean
+ * IBS_RollerbenchMode: Boolean
+ * IBS_TPMS_ResetSts: Boolean
+ * IBS_TireMonSysSts: Boolean
+ * IBS_TireWarnFrntLe: Boolean
+ * IBS_TireWarnFrntRi: Boolean
+ * IBS_TireWarnReLe: Boolean
+ * IBS_TireWarnReRi: Boolean
+ * MessageCounter_0BC: Integer in interval [0...255]
+ * MessageCounter_0D1: Integer in interval [0...255]
+ * VCU_ActDriveMode: Integer in interval [0...255]
+ * VCU_ActiveEnergyProfile: Integer in interval [0...255]
+ * VCU_ActiveRgnBrkProfile: Integer in interval [0...255]
+ * VCU_BMSTargetThermLevel: Integer in interval [0...255]
+ * VCU_BMS_Control_of_NegRelay: Integer in interval [0...255]
+ * VCU_Chargestatus: Integer in interval [0...255]
+ * VCU_DrvModSwitchWarn: Integer in interval [0...255]
+ * VCU_HVStatus: Integer in interval [0...255]
+ * VCU_IsomeasurmentSwitch: Boolean
+ * VCU_LimitLevel: Integer in interval [0...255]
+ * VCU_RegenBrakeLightReqVld: Boolean
+ * VCU_RegenBrakeLightRequest: Boolean
+ * VCU_RequestedModeBMS: Integer in interval [0...255]
  * VcuRxMsg1_Sig0: Integer in interval [-32768...32767]
  * VcuRxMsg1_Sig1: Integer in interval [-32768...32767]
  * VcuRxMsg1_Sig2: Integer in interval [-32768...32767]
@@ -107,11 +144,86 @@
  * VcuTxMsg2_Sig2: Integer in interval [-32768...32767]
  * VcuTxMsg2_Sig3: Integer in interval [-32768...32767]
  *
+ * Record Types:
+ * =============
+ * SG_IBS_Status_06_Signal_Group: Record with elements
+ *   Checksum_0BC of type Checksum_0BC
+ *   IBS_AVHSts of type IBS_AVHSts
+ *   IBS_BrakeFluidWarning of type IBS_BrakeFluidWarning
+ *   IBS_EPBFailureStatus of type IBS_EPBFailureStatus
+ *   IBS_ESClampdisplay of type IBS_ESClampdisplay
+ *   IBS_ESCOffSts of type IBS_ESCOffSts
+ *   IBS_FactoryMode of type IBS_FactoryMode
+ *   IBS_HBAActive of type IBS_HBAActive
+ *   IBS_HDCSts of type IBS_HDCSts
+ *   IBS_MaintenaceMode of type IBS_MaintenaceMode
+ *   IBS_RollerbenchMode of type IBS_RollerbenchMode
+ *   IBS_RWUActive of type IBS_RWUActive
+ *   IBS_RWUAvailable of type IBS_RWUAvailable
+ *   IBS_TireMonSysSts of type IBS_TireMonSysSts
+ *   IBS_TireWarnFrntLe of type IBS_TireWarnFrntLe
+ *   IBS_TireWarnFrntRi of type IBS_TireWarnFrntRi
+ *   IBS_TireWarnReLe of type IBS_TireWarnReLe
+ *   IBS_TireWarnReRi of type IBS_TireWarnReRi
+ *   IBS_TPMS_ResetSts of type IBS_TPMS_ResetSts
+ *   MessageCounter_0BC of type MessageCounter_0BC
+ * SG_VCU_BMS_Signal_Group: Record with elements
+ *   Checksum_0D1 of type Checksum_0D1
+ *   MessageCounter_0D1 of type MessageCounter_0D1
+ *   VCU_ActDriveMode of type VCU_ActDriveMode
+ *   VCU_ActiveEnergyProfile of type VCU_ActiveEnergyProfile
+ *   VCU_ActiveRgnBrkProfile of type VCU_ActiveRgnBrkProfile
+ *   VCU_BMS_Control_of_NegRelay of type VCU_BMS_Control_of_NegRelay
+ *   VCU_BMSTargetThermLevel of type VCU_BMSTargetThermLevel
+ *   VCU_Chargestatus of type VCU_Chargestatus
+ *   VCU_DrvModSwitchWarn of type VCU_DrvModSwitchWarn
+ *   VCU_HVStatus of type VCU_HVStatus
+ *   VCU_IsomeasurmentSwitch of type VCU_IsomeasurmentSwitch
+ *   VCU_LimitLevel of type VCU_LimitLevel
+ *   VCU_RegenBrakeLightRequest of type VCU_RegenBrakeLightRequest
+ *   VCU_RegenBrakeLightReqVld of type VCU_RegenBrakeLightReqVld
+ *   VCU_RequestedModeBMS of type VCU_RequestedModeBMS
+ *
  *********************************************************************************************************************/
 
 
 #define Com_SWC_START_SEC_CODE
 #include "Com_SWC_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: Com_Runnable_20ms
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered on TimingEvent every 20ms
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: Com_Runnable_20ms_doc
+ *********************************************************************************************************************/
+SG_VCU_BMS_Signal_Group Appdata;
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(void, Com_SWC_CODE) Com_Runnable_20ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: Com_Runnable_20ms
+ *********************************************************************************************************************/
+  Appdata.VCU_ActDriveMode = 1;
+  Appdata.VCU_ActiveEnergyProfile = 1;
+  E2EPW_Write_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group(&Appdata);
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
 
 /**********************************************************************************************************************
  *
@@ -128,6 +240,7 @@
  * =================
  *   Explicit S/R API:
  *   -----------------
+ *   Std_ReturnType Rte_Read_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group(SG_IBS_Status_06_Signal_Group *data)
  *   Std_ReturnType Rte_Read_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0(VcuRxMsg1_Sig0 *data)
  *   Std_ReturnType Rte_Read_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1(VcuRxMsg1_Sig1 *data)
  *   Std_ReturnType Rte_Read_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2(VcuRxMsg1_Sig2 *data)
@@ -136,6 +249,7 @@
  *   Std_ReturnType Rte_Read_VcuRxMsg2_Sig1_VcuRxMsg2_Sig1(VcuRxMsg2_Sig1 *data)
  *   Std_ReturnType Rte_Read_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2(VcuRxMsg2_Sig2 *data)
  *   Std_ReturnType Rte_Read_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3(VcuRxMsg2_Sig3 *data)
+ *   boolean Rte_IsUpdated_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group(void)
  *
  * Output Interfaces:
  * ==================
@@ -175,6 +289,7 @@
  *   Std_ReturnType Rte_Write_EXT_A_IN7_EXT_A_IN7(EXT_A_IN7 data)
  *   Std_ReturnType Rte_Write_EXT_A_IN8_EXT_A_IN8(EXT_A_IN8 data)
  *   Std_ReturnType Rte_Write_EXT_A_IN9_EXT_A_IN9(EXT_A_IN9 data)
+ *   Std_ReturnType Rte_Write_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group(const SG_VCU_BMS_Signal_Group *data)
  *   Std_ReturnType Rte_Write_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0(VcuTxMsg1_Sig0 data)
  *   Std_ReturnType Rte_Write_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1(VcuTxMsg1_Sig1 data)
  *   Std_ReturnType Rte_Write_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2(VcuTxMsg1_Sig2 data)
@@ -204,6 +319,38 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_2ms(void) /* PRQA S 0624, 3206 */ /* MD_Rt
   ExtTempUpdate();
   Rte_Write_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet(SpeedSet);
   Rte_Write_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet(SpeedSet);
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: Com_SWC_Init
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed once after the RTE is started
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: Com_SWC_Init_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(void, Com_SWC_CODE) Com_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: Com_SWC_Init
+ *********************************************************************************************************************/
+  E2EPW_WriteInit_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group();
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

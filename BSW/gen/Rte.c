@@ -182,6 +182,11 @@ CONST(NvM_Array32Bytes, RTE_CONST) Rte_C_NvM_Array32Bytes_0 = {
   0U, 0U, 0U
 };
 /* PRQA L:L1 */
+/* PRQA S 1514, 1533 L1 */ /* MD_Rte_1514, MD_Rte_1533 */
+CONST(SG_IBS_Status_06_Signal_Group, RTE_CONST) Rte_C_SG_IBS_Status_06_Signal_Group_0 = {
+  0U, 0U, 0U, 0U, 0U, FALSE, FALSE, FALSE, 0U, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, 0U
+};
+/* PRQA L:L1 */
 
 #define RTE_STOP_SEC_CONST_UNSPECIFIED
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -553,6 +558,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
     /* activate the alarms used for TimingEvents */
     (void)SetRelAlarm(Rte_Al_TE_Core2App_SWC_Core2App_Runnable100ms, RTE_MSEC_SystemTimer_Core2(0) + (TickType)1, RTE_MSEC_SystemTimer_Core2(100)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Core1App_SWC_Core1App_Runnable100ms, RTE_MSEC_SystemTimer_Core1(0) + (TickType)1, RTE_MSEC_SystemTimer_Core1(100)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_Com_SWC_Com_Runnable_20ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(20)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Com_SWC_Com_Runnable_2ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(2)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Core0_AswTask_0_10ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms, RTE_SEC_SystemTimer_Core0(0) + (TickType)1, RTE_SEC_SystemTimer_Core0(1)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
@@ -587,6 +593,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void)
   {
     Rte_StartTiming_InitState = RTE_STATE_UNINIT;
     /* deactivate alarms */
+    (void)CancelAlarm(Rte_Al_TE_Com_SWC_Com_Runnable_20ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Com_SWC_Com_Runnable_2ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Core0_AswTask_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms); /* PRQA S 3417 */ /* MD_Rte_Os */
@@ -1085,6 +1092,17 @@ FUNC(void, RTE_CODE) SchM_Exit_Spi_SyncLock(void)
  * COM-Callbacks for DataReceivedEvent triggered runnables, inter-ECU client/server communication, for queued com. and for Rx timeout / Rx inv. flag (reset)
  *********************************************************************************************************************/
 
+FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_Status_06_Signal_Group_oIBS_Status_06_oTC37X_VCU_CAN01_481059d9_Rx(void)
+{
+
+  if (Rte_InitState == RTE_STATE_INIT)
+  {
+    Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group_Sender = !Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
+  }
+} /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
+
 FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx(void)
 {
 
@@ -1414,6 +1432,11 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_NvMNotifyJobFinished_NvM_SWC_NVBlockDescripto
    MD_Rte_3408:  MISRA rule: Rule8.4
      Reason:     For the purpose of monitoring during calibration or debugging it is necessary to use non-static declarations.
                  This is covered in the MISRA C compliance section of the Rte specification.
+     Risk:       No functional risk.
+     Prevention: Not required.
+
+   MD_Rte_4116:  MISRA rule: Rule12.6
+     Reason:     Operand can only be 0 or 1 in special case of queue size equal to 1.
      Risk:       No functional risk.
      Prevention: Not required.
 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cbk.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-06-18 09:54:38
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -61,17 +61,18 @@
 #define ComConf_ComIPdu_EXV_2_VCU_oLIN00_1e4a3daf_Rx                  2u
 #define ComConf_ComIPdu_HVCH_Rsp01_oLIN00_a6e33eef_Rx                 3u
 #define ComConf_ComIPdu_HVCH_Rsp02_oLIN00_286c390c_Rx                 4u
-#define ComConf_ComIPdu_PMP2_Sts_oLIN00_cab90b6b_Rx                   5u
-#define ComConf_ComIPdu_PMP3_Sts_oLIN00_511c4704_Rx                   6u
-#define ComConf_ComIPdu_PNC_ComIPdu_CanNm2Com_Rx                      7u
-#define ComConf_ComIPdu_SVA_VCU_STD_oLIN00_4526aa1c_Rx                8u
-#define ComConf_ComIPdu_VCU_Minor_03_oKAMA_FP_EPT_0303_4d74a41f_Rx    9u
-#define ComConf_ComIPdu_VcuCan03RxMsg1_oTC37X_VCU_CAN03_77e3a75f_Rx   10u
-#define ComConf_ComIPdu_VcuCan03RxMsg2_oTC37X_VCU_CAN03_9d657a3d_Rx   11u
-#define ComConf_ComIPdu_VcuRxMsg1_oTC37X_VCU_CAN00_78805594_Rx        12u
-#define ComConf_ComIPdu_VcuRxMsg2_oTC37X_VCU_CAN00_920688f6_Rx        13u
-#define ComConf_ComIPdu_VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx        14u
-#define ComConf_ComIPdu_VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx        15u
+#define ComConf_ComIPdu_IBS_Status_06_oTC37X_VCU_CAN01_aba4c259_Rx    5u
+#define ComConf_ComIPdu_PMP2_Sts_oLIN00_cab90b6b_Rx                   6u
+#define ComConf_ComIPdu_PMP3_Sts_oLIN00_511c4704_Rx                   7u
+#define ComConf_ComIPdu_PNC_ComIPdu_CanNm2Com_Rx                      8u
+#define ComConf_ComIPdu_SVA_VCU_STD_oLIN00_4526aa1c_Rx                9u
+#define ComConf_ComIPdu_VCU_Minor_03_oKAMA_FP_EPT_0303_4d74a41f_Rx    10u
+#define ComConf_ComIPdu_VcuCan03RxMsg1_oTC37X_VCU_CAN03_77e3a75f_Rx   11u
+#define ComConf_ComIPdu_VcuCan03RxMsg2_oTC37X_VCU_CAN03_9d657a3d_Rx   12u
+#define ComConf_ComIPdu_VcuRxMsg1_oTC37X_VCU_CAN00_78805594_Rx        13u
+#define ComConf_ComIPdu_VcuRxMsg2_oTC37X_VCU_CAN00_920688f6_Rx        14u
+#define ComConf_ComIPdu_VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx        15u
+#define ComConf_ComIPdu_VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx        16u
 /**\} */
 
 /**
@@ -85,28 +86,29 @@
 #define ComConf_ComIPdu_EDCU_EXV2_oLIN00_1f8750a5_Tx                  0u
 #define ComConf_ComIPdu_PMP_Cmd_oLIN00_3912b28b_Tx                    1u
 #define ComConf_ComIPdu_TCU_HVCH_Cmd_oLIN00_385d5651_Tx               2u
-#define ComConf_ComIPdu_VCU_EXV_1_oLIN00_50eec975_Tx                  3u
-#define ComConf_ComIPdu_VCU_EXV_2_oLIN00_de61ce96_Tx                  4u
-#define ComConf_ComIPdu_VCU_Minor_01_oKAMA_FP_EPT_0303_39c0a2ee_Tx    5u
-#define ComConf_ComIPdu_VCU_Minor_02_oKAMA_FP_EPT_0303_9a962447_Tx    6u
-#define ComConf_ComIPdu_VCU_SVA_CMD_oLIN00_756d14f6_Tx                7u
-#define ComConf_ComIPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_c6a20a7f_Tx   8u
-#define ComConf_ComIPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_b1a53ae9_Tx   9u
-#define ComConf_ComIPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_5fab5bc5_Tx   10u
-#define ComConf_ComIPdu_VcuAdcTxMsg1_oTC37X_VCU_CAN01_fda515ee_Tx     11u
-#define ComConf_ComIPdu_VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx     12u
-#define ComConf_ComIPdu_VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx   13u
-#define ComConf_ComIPdu_VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx   14u
-#define ComConf_ComIPdu_VcuTxIoMsg1_oTC37X_VCU_CAN00_54884add_Tx      15u
-#define ComConf_ComIPdu_VcuTxIoMsg2_oTC37X_VCU_CAN00_be0e97bf_Tx      16u
-#define ComConf_ComIPdu_VcuTxIoMsg3_oTC37X_VCU_CAN00_515c215e_Tx      17u
-#define ComConf_ComIPdu_VcuTxIoMsg4_oTC37X_VCU_CAN00_b0722b3a_Tx      18u
-#define ComConf_ComIPdu_VcuTxIoMsg5_oTC37X_VCU_CAN00_5f209ddb_Tx      19u
-#define ComConf_ComIPdu_VcuTxIoMsg6_oTC37X_VCU_CAN00_b5a640b9_Tx      20u
-#define ComConf_ComIPdu_VcuTxIoMsg7_oTC37X_VCU_CAN00_5af4f658_Tx      21u
-#define ComConf_ComIPdu_VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx      22u
-#define ComConf_ComIPdu_VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx        23u
-#define ComConf_ComIPdu_VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx        24u
+#define ComConf_ComIPdu_VCU_BMS_oTC37X_VCU_CAN01_cfeb4f02_Tx          3u
+#define ComConf_ComIPdu_VCU_EXV_1_oLIN00_50eec975_Tx                  4u
+#define ComConf_ComIPdu_VCU_EXV_2_oLIN00_de61ce96_Tx                  5u
+#define ComConf_ComIPdu_VCU_Minor_01_oKAMA_FP_EPT_0303_39c0a2ee_Tx    6u
+#define ComConf_ComIPdu_VCU_Minor_02_oKAMA_FP_EPT_0303_9a962447_Tx    7u
+#define ComConf_ComIPdu_VCU_SVA_CMD_oLIN00_756d14f6_Tx                8u
+#define ComConf_ComIPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_c6a20a7f_Tx   9u
+#define ComConf_ComIPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_b1a53ae9_Tx   10u
+#define ComConf_ComIPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_5fab5bc5_Tx   11u
+#define ComConf_ComIPdu_VcuAdcTxMsg1_oTC37X_VCU_CAN01_fda515ee_Tx     12u
+#define ComConf_ComIPdu_VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx     13u
+#define ComConf_ComIPdu_VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx   14u
+#define ComConf_ComIPdu_VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx   15u
+#define ComConf_ComIPdu_VcuTxIoMsg1_oTC37X_VCU_CAN00_54884add_Tx      16u
+#define ComConf_ComIPdu_VcuTxIoMsg2_oTC37X_VCU_CAN00_be0e97bf_Tx      17u
+#define ComConf_ComIPdu_VcuTxIoMsg3_oTC37X_VCU_CAN00_515c215e_Tx      18u
+#define ComConf_ComIPdu_VcuTxIoMsg4_oTC37X_VCU_CAN00_b0722b3a_Tx      19u
+#define ComConf_ComIPdu_VcuTxIoMsg5_oTC37X_VCU_CAN00_5f209ddb_Tx      20u
+#define ComConf_ComIPdu_VcuTxIoMsg6_oTC37X_VCU_CAN00_b5a640b9_Tx      21u
+#define ComConf_ComIPdu_VcuTxIoMsg7_oTC37X_VCU_CAN00_5af4f658_Tx      22u
+#define ComConf_ComIPdu_VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx      23u
+#define ComConf_ComIPdu_VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx        24u
+#define ComConf_ComIPdu_VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx        25u
 /**\} */
 
 /**********************************************************************************************************************

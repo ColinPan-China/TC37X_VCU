@@ -110,6 +110,7 @@ extern "C"
 /**********************************************************************************************************************
  * API prototypes
  *********************************************************************************************************************/
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group(P2VAR(SG_IBS_Status_06_Signal_Group, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0(P2VAR(VcuRxMsg1_Sig0, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1(P2VAR(VcuRxMsg1_Sig1, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_Com_SWC_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2(P2VAR(VcuRxMsg1_Sig2, AUTOMATIC, RTE_COM_SWC_APPL_VAR) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
@@ -152,6 +153,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN6_EXT_A_IN6(EXT_A_IN6 d
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN7_EXT_A_IN7(EXT_A_IN7 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN8_EXT_A_IN8(EXT_A_IN8 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN9_EXT_A_IN9(EXT_A_IN9 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group(P2CONST(SG_VCU_BMS_Signal_Group, AUTOMATIC, RTE_COM_SWC_APPL_DATA) data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0(VcuTxMsg1_Sig0 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1(VcuTxMsg1_Sig1 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2(VcuTxMsg1_Sig2 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
@@ -170,6 +172,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
 /**********************************************************************************************************************
  * Rte_Read_<p>_<d> (explicit S/R communication with isQueued = false)
  *********************************************************************************************************************/
+#  define Rte_Read_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group Rte_Read_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group
 #  define Rte_Read_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0 Rte_Read_Com_SWC_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0
 #  define Rte_Read_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1 Rte_Read_Com_SWC_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1
 #  define Rte_Read_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2 Rte_Read_Com_SWC_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2
@@ -178,6 +181,13 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
 #  define Rte_Read_VcuRxMsg2_Sig1_VcuRxMsg2_Sig1 Rte_Read_Com_SWC_VcuRxMsg2_Sig1_VcuRxMsg2_Sig1
 #  define Rte_Read_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2 Rte_Read_Com_SWC_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2
 #  define Rte_Read_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3 Rte_Read_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3
+
+
+/**********************************************************************************************************************
+ * Rte_IsUpdated_<p>_<d> (explicit S/R communication with isQueued = false)
+ *********************************************************************************************************************/
+#  define Rte_IsUpdated_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group Rte_IsUpdated_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group
+#  define Rte_IsUpdated_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group() (Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group != Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_Com_SWC_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group_Sender)
 
 
 /**********************************************************************************************************************
@@ -217,6 +227,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
 #  define Rte_Write_EXT_A_IN7_EXT_A_IN7 Rte_Write_Com_SWC_EXT_A_IN7_EXT_A_IN7
 #  define Rte_Write_EXT_A_IN8_EXT_A_IN8 Rte_Write_Com_SWC_EXT_A_IN8_EXT_A_IN8
 #  define Rte_Write_EXT_A_IN9_EXT_A_IN9 Rte_Write_Com_SWC_EXT_A_IN9_EXT_A_IN9
+#  define Rte_Write_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group Rte_Write_Com_SWC_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group
 #  define Rte_Write_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0 Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0
 #  define Rte_Write_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1 Rte_Write_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1
 #  define Rte_Write_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2 Rte_Write_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2
@@ -238,12 +249,16 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
  *********************************************************************************************************************/
 
 # ifndef RTE_CORE
+#  define RTE_RUNNABLE_Com_Runnable_20ms Com_Runnable_20ms
 #  define RTE_RUNNABLE_Com_Runnable_2ms Com_Runnable_2ms
+#  define RTE_RUNNABLE_Com_SWC_Init Com_SWC_Init
 #  define RTE_RUNNABLE_Rte_Msg200h_Rx_Notification Rte_Msg200h_Rx_Notification
 #  define RTE_RUNNABLE_Rte_Msg201h_Rx_Notification Rte_Msg201h_Rx_Notification
 # endif
 
+FUNC(void, Com_SWC_CODE) Com_Runnable_20ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Com_SWC_CODE) Com_Runnable_2ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
+FUNC(void, Com_SWC_CODE) Com_SWC_Init(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Com_SWC_CODE) Rte_Msg200h_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Com_SWC_CODE) Rte_Msg201h_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 

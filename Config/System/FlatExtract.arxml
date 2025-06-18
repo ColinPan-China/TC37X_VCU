@@ -959,6 +959,129 @@
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg4_Sig3_oVcuCan03RxMsg2_oTC37X_VCU_CAN03</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/IBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/IBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0BC_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0D1_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_AVHSts_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_BrakeFluidWarning_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_EPBFailureStatus_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_ESClampdisplay_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_ESCOffSts_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_FactoryMode_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_HBAActive_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_HDCSts_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_MaintenaceMode_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RollerbenchMode_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RWUActive_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RWUAvailable_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TireMonSysSts_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TireWarnFrntLe_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TireWarnFrntRi_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TireWarnReLe_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TireWarnReRi_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TPMS_ResetSts_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0BC_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0D1_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_ActDriveMode_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_ActiveEnergyProfile_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_ActiveRgnBrkProfile_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_BMS_Control_of_NegRelay_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_BMSTargetThermLevel_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_Chargestatus_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_DrvModSwitchWarn_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_HVStatus_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_IsomeasurmentSwitch_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_LimitLevel_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_RegenBrakeLightRequest_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_RegenBrakeLightReqVld_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_RequestedModeBMS_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_IBS_Status_06_Signal_Group_oIBS_Status_06_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_VCU_BMS_Signal_Group_oVCU_BMS_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
                               </FIBEX-ELEMENTS>
                               <MAPPINGS>
                                 <SYSTEM-MAPPING UUID="19079e91-2a91-4fa6-9093-7c1b6ba64cfd">
@@ -1364,6 +1487,174 @@
                                       </DATA-ELEMENT-IREF>
                                       <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/ECC_PMP3_SpdSet</SYSTEM-SIGNAL-REF>
                                     </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_IBS_Status_06_Signal_Group</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_IBS_Status_06_Signal_Group/SG_IBS_Status_06_Signal_Group</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SIGNAL-GROUP-REF DEST="SYSTEM-SIGNAL-GROUP">/Signal/SG_IBS_Status_06_Signal_Group</SIGNAL-GROUP-REF>
+                                      <TYPE-MAPPING>
+                                        <SENDER-REC-RECORD-TYPE-MAPPING>
+                                          <RECORD-ELEMENT-MAPPINGS>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_HDCSts</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_HDCSts</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_TireWarnFrntRi</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_TireWarnFrntRi</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_RollerbenchMode</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_RollerbenchMode</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_TireWarnReLe</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_TireWarnReLe</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_TPMS_ResetSts</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_TPMS_ResetSts</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_AVHSts</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_AVHSts</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_TireWarnFrntLe</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_TireWarnFrntLe</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/Checksum_0BC</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Checksum_0BC</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_TireWarnReRi</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_TireWarnReRi</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/MessageCounter_0BC</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/MessageCounter_0BC</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_HBAActive</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_HBAActive</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_EPBFailureStatus</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_EPBFailureStatus</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_TireMonSysSts</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_TireMonSysSts</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_RWUAvailable</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_RWUAvailable</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_RWUActive</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_RWUActive</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_FactoryMode</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_FactoryMode</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_ESCOffSts</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_ESCOffSts</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_BrakeFluidWarning</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_BrakeFluidWarning</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_ESClampdisplay</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_ESClampdisplay</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_MaintenaceMode</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/IBS_MaintenaceMode</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                          </RECORD-ELEMENT-MAPPINGS>
+                                        </SENDER-REC-RECORD-TYPE-MAPPING>
+                                      </TYPE-MAPPING>
+                                    </SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_VCU_BMS_Signal_Group</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_VCU_BMS_Signal_Group/SG_VCU_BMS_Signal_Group</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SIGNAL-GROUP-REF DEST="SYSTEM-SIGNAL-GROUP">/Signal/SG_VCU_BMS_Signal_Group</SIGNAL-GROUP-REF>
+                                      <TYPE-MAPPING>
+                                        <SENDER-REC-RECORD-TYPE-MAPPING>
+                                          <RECORD-ELEMENT-MAPPINGS>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_ActDriveMode</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_ActDriveMode</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_RequestedModeBMS</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_RequestedModeBMS</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_BMSTargetThermLevel</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_BMSTargetThermLevel</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/MessageCounter_0D1</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/MessageCounter_0D1</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_DrvModSwitchWarn</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_DrvModSwitchWarn</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_HVStatus</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_HVStatus</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_ActiveEnergyProfile</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_ActiveEnergyProfile</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_ActiveRgnBrkProfile</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_ActiveRgnBrkProfile</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_RegenBrakeLightRequest</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_RegenBrakeLightRequest</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/Checksum_0D1</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Checksum_0D1</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_RegenBrakeLightReqVld</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_RegenBrakeLightReqVld</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_IsomeasurmentSwitch</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_IsomeasurmentSwitch</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_Chargestatus</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_Chargestatus</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_BMS_Control_of_NegRelay</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_BMS_Control_of_NegRelay</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                            <SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                              <IMPLEMENTATION-RECORD-ELEMENT-REF DEST="IMPLEMENTATION-DATA-TYPE-ELEMENT">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_LimitLevel</IMPLEMENTATION-RECORD-ELEMENT-REF>
+                                              <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VCU_LimitLevel</SYSTEM-SIGNAL-REF>
+                                            </SENDER-REC-RECORD-ELEMENT-MAPPING>
+                                          </RECORD-ELEMENT-MAPPINGS>
+                                        </SENDER-REC-RECORD-TYPE-MAPPING>
+                                      </TYPE-MAPPING>
+                                    </SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING>
                                   </DATA-MAPPINGS>
                                 </SYSTEM-MAPPING>
                               </MAPPINGS>
@@ -2696,6 +2987,204 @@
                                     </NONQUEUED-SENDER-COM-SPEC>
                                   </PROVIDED-COM-SPECS>
                                   <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/ECC_PMP3_SpdSet</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <R-PORT-PROTOTYPE UUID="c08d0686-e1ea-4bb3-beab-2e10422bed1f">
+                                  <SHORT-NAME>SG_IBS_Status_06_Signal_Group</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <REQUIRED-COM-SPECS>
+                                    <NONQUEUED-RECEIVER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_IBS_Status_06_Signal_Group/SG_IBS_Status_06_Signal_Group</DATA-ELEMENT-REF>
+                                      <USES-END-TO-END-PROTECTION>true</USES-END-TO-END-PROTECTION>
+                                      <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                      <ENABLE-UPDATE>true</ENABLE-UPDATE>
+                                      <INIT-VALUE>
+                                        <RECORD-VALUE-SPECIFICATION>
+                                          <FIELDS>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>Checksum_0BC</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_AVHSts</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_BrakeFluidWarning</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_EPBFailureStatus</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_ESClampdisplay</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_ESCOffSts</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_FactoryMode</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_HBAActive</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_HDCSts</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_MaintenaceMode</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_RollerbenchMode</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_RWUActive</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_RWUAvailable</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_TireMonSysSts</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_TireWarnFrntLe</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_TireWarnFrntRi</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_TireWarnReLe</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_TireWarnReRi</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>IBS_TPMS_ResetSts</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>MessageCounter_0BC</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                          </FIELDS>
+                                        </RECORD-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-RECEIVER-COM-SPEC>
+                                  </REQUIRED-COM-SPECS>
+                                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_IBS_Status_06_Signal_Group</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="0512561e-750c-4a44-ba91-f2875350f7a7">
+                                  <SHORT-NAME>SG_VCU_BMS_Signal_Group</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_VCU_BMS_Signal_Group/SG_VCU_BMS_Signal_Group</DATA-ELEMENT-REF>
+                                      <USES-END-TO-END-PROTECTION>true</USES-END-TO-END-PROTECTION>
+                                      <INIT-VALUE>
+                                        <RECORD-VALUE-SPECIFICATION>
+                                          <FIELDS>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>Checksum_0D1</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>MessageCounter_0D1</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>VCU_ActDriveMode</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>VCU_ActiveEnergyProfile</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>VCU_ActiveRgnBrkProfile</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>VCU_BMS_Control_of_NegRelay</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>VCU_BMSTargetThermLevel</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>VCU_Chargestatus</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>VCU_DrvModSwitchWarn</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>VCU_HVStatus</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>VCU_IsomeasurmentSwitch</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>VCU_LimitLevel</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>VCU_RegenBrakeLightRequest</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>VCU_RegenBrakeLightReqVld</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                            <NUMERICAL-VALUE-SPECIFICATION>
+                                              <SHORT-LABEL>VCU_RequestedModeBMS</SHORT-LABEL>
+                                              <VALUE>0</VALUE>
+                                            </NUMERICAL-VALUE-SPECIFICATION>
+                                          </FIELDS>
+                                        </RECORD-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/SG_VCU_BMS_Signal_Group</PROVIDED-INTERFACE-TREF>
                                 </P-PORT-PROTOTYPE>
                               </PORTS>
                               <COMPONENTS>
@@ -4385,6 +4874,48 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Core1App_SWC/P_Arry8Bytes</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="14676b2a-541f-4171-9e2c-d9aa118463e6">
+                                  <SHORT-NAME>SG_IBS_Status_06_Signal_Group_Com_SWC_SG_IBS_Status_06_Signal_Group</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/SG_IBS_Status_06_Signal_Group</TARGET-R-PORT-REF>
+                                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_IBS_Status_06_Signal_Group</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="c7b453d6-2c3c-4ab5-90e9-1510a16df2ba">
+                                  <SHORT-NAME>Com_SWC_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/SG_VCU_BMS_Signal_Group</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_VCU_BMS_Signal_Group</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -4394,6 +4925,74 @@
                                   <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
                                 </ANNOTATION>
                               </ANNOTATIONS>
+                              <END-TO-END-PROTECTIONS>
+                                <END-TO-END-PROTECTION UUID="d3910648-83af-403d-94dc-c0b148751922">
+                                  <SHORT-NAME>ECU_Composition_SG_IBS_Status_06_Signal_Group_SG_IBS_Status_06_Signal_Group_delegated</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:E2ESync</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <END-TO-END-PROFILE>
+                                    <CATEGORY>PROFILE_01</CATEGORY>
+                                    <DATA-IDS>
+                                      <DATA-ID>188</DATA-ID>
+                                    </DATA-IDS>
+                                    <DATA-ID-MODE>0</DATA-ID-MODE>
+                                    <DATA-LENGTH>64</DATA-LENGTH>
+                                    <MAX-DELTA-COUNTER-INIT>1</MAX-DELTA-COUNTER-INIT>
+                                    <CRC-OFFSET>0</CRC-OFFSET>
+                                    <COUNTER-OFFSET>8</COUNTER-OFFSET>
+                                    <MAX-NO-NEW-OR-REPEATED-DATA>14</MAX-NO-NEW-OR-REPEATED-DATA>
+                                    <SYNC-COUNTER-INIT>1</SYNC-COUNTER-INIT>
+                                    <DATA-ID-NIBBLE-OFFSET>0</DATA-ID-NIBBLE-OFFSET>
+                                  </END-TO-END-PROFILE>
+                                  <END-TO-END-PROTECTION-VARIABLE-PROTOTYPES>
+                                    <END-TO-END-PROTECTION-VARIABLE-PROTOTYPE>
+                                      <RECEIVER-IREFS>
+                                        <RECEIVER-IREF>
+                                          <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                          <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                          <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/SG_IBS_Status_06_Signal_Group</CONTEXT-PORT-REF>
+                                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_IBS_Status_06_Signal_Group/SG_IBS_Status_06_Signal_Group</TARGET-DATA-PROTOTYPE-REF>
+                                        </RECEIVER-IREF>
+                                      </RECEIVER-IREFS>
+                                    </END-TO-END-PROTECTION-VARIABLE-PROTOTYPE>
+                                  </END-TO-END-PROTECTION-VARIABLE-PROTOTYPES>
+                                </END-TO-END-PROTECTION>
+                                <END-TO-END-PROTECTION UUID="709b1b53-0235-4f9e-af92-28b054747d48">
+                                  <SHORT-NAME>ECU_Composition_SG_VCU_BMS_Signal_Group_SG_VCU_BMS_Signal_Group_delegated</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:E2ESync</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <END-TO-END-PROFILE>
+                                    <CATEGORY>PROFILE_01</CATEGORY>
+                                    <DATA-IDS>
+                                      <DATA-ID>209</DATA-ID>
+                                    </DATA-IDS>
+                                    <DATA-ID-MODE>0</DATA-ID-MODE>
+                                    <DATA-LENGTH>64</DATA-LENGTH>
+                                    <MAX-DELTA-COUNTER-INIT>1</MAX-DELTA-COUNTER-INIT>
+                                    <CRC-OFFSET>0</CRC-OFFSET>
+                                    <COUNTER-OFFSET>8</COUNTER-OFFSET>
+                                    <MAX-NO-NEW-OR-REPEATED-DATA>14</MAX-NO-NEW-OR-REPEATED-DATA>
+                                    <SYNC-COUNTER-INIT>1</SYNC-COUNTER-INIT>
+                                    <DATA-ID-NIBBLE-OFFSET>0</DATA-ID-NIBBLE-OFFSET>
+                                  </END-TO-END-PROFILE>
+                                  <END-TO-END-PROTECTION-VARIABLE-PROTOTYPES>
+                                    <END-TO-END-PROTECTION-VARIABLE-PROTOTYPE>
+                                      <SENDER-IREF>
+                                        <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/SG_VCU_BMS_Signal_Group</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/SG_VCU_BMS_Signal_Group/SG_VCU_BMS_Signal_Group</TARGET-DATA-PROTOTYPE-REF>
+                                      </SENDER-IREF>
+                                    </END-TO-END-PROTECTION-VARIABLE-PROTOTYPE>
+                                  </END-TO-END-PROTECTION-VARIABLE-PROTOTYPES>
+                                </END-TO-END-PROTECTION>
+                              </END-TO-END-PROTECTIONS>
                             </END-TO-END-PROTECTION-SET>
                             <PORT-INTERFACE-MAPPING-SET UUID="8dd08a7c-77f6-4240-a3ee-efb5e126f15c">
                               <SHORT-NAME>PORTINTERFACEMAPPINGSET</SHORT-NAME>
@@ -4533,6 +5132,8 @@
                                     <SD GID="47514b26-f847-4842-977c-f858023fd092">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Os_OsCore1_swc</SD>
                                     <SD GID="e62ca0d0-0d3d-4746-a455-504e2f76056a">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Os_OsCore2_swc</SD>
                                     <SD GID="119e04d4-6f68-4049-aba2-5fe9bff177dd">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/PowerMng_SWC</SD>
+                                    <SD GID="c08d0686-e1ea-4bb3-beab-2e10422bed1f">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_IBS_Status_06_Signal_Group</SD>
+                                    <SD GID="0512561e-750c-4a44-ba91-f2875350f7a7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_VCU_BMS_Signal_Group</SD>
                                     <SD GID="905f0a6c-c4e3-4618-98f4-e4a4659c1740">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</SD>
                                     <SD GID="aac382ca-6582-41e4-9242-9125729d6bee">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1NvMService_AC3_SRBS_NvBlockNeed_UserData3NvM_PS_SWC1NvBlockNeed_UserData3</SD>
                                     <SD GID="f21847bf-315f-4194-96b6-4f2ae6b238e6">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig0</SD>
@@ -4555,8 +5156,10 @@
                                     <SD GID="fc4604e8-c272-49f9-87c4-e9772ecf6401">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM</SD>
                                     <SD GID="305b1449-26cf-4075-9b6a-d48b38b7a5fe">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</SD>
                                     <SD GID="B0B3BBD8-627F-420D-97B3-AF512CEDE6E2">/ComponentTypes/Com_SWC</SD>
+                                    <SD GID="B84E3CB7-EA88-46C5-B97A-5AAD25A8F5A5">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/Com_SWC_InitEvent</SD>
                                     <SD GID="18984354-BF8F-45C4-965A-3B02BE16E306">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/DRT_Rte_Msg200h_Rx_Notification_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0</SD>
                                     <SD GID="B745682D-5619-4AEA-8D86-22D3FB6C8B51">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/DRT_Rte_Msg201h_Rx_Notification_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0</SD>
+                                    <SD GID="808A42D1-BBD6-40E7-9B39-4D86570090BE">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/TMT_Com_Runnable_20ms</SD>
                                     <SD GID="7B4FE19D-2362-4205-878E-EA969B8AAAE0">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/TMT_Com_Runnable_2ms</SD>
                                     <SD GID="9E15A807-3BB0-4253-BF08-878616B3C49F">/ComponentTypes/Com_SWC/ECC_PMP2_SpdSet</SD>
                                     <SD GID="D3C64840-E388-4626-AA62-5B229E9417C3">/ComponentTypes/Com_SWC/ECC_PMP3_SpdSet</SD>
@@ -4592,6 +5195,8 @@
                                     <SD GID="CA5F9C8B-5A9E-4556-A3B1-CEEEAAF612D2">/ComponentTypes/Com_SWC/EXT_A_IN7</SD>
                                     <SD GID="996E5995-98CD-471C-9AB4-0CB85E0180D3">/ComponentTypes/Com_SWC/EXT_A_IN8</SD>
                                     <SD GID="3D203BAF-C20F-4A88-BDD2-991A815B4FB6">/ComponentTypes/Com_SWC/EXT_A_IN9</SD>
+                                    <SD GID="DD0FB435-9470-4C49-8965-E6D78C749E17">/ComponentTypes/Com_SWC/SG_IBS_Status_06_Signal_Group</SD>
+                                    <SD GID="2C359F23-6FDA-4565-AE7C-568E08634272">/ComponentTypes/Com_SWC/SG_VCU_BMS_Signal_Group</SD>
                                     <SD GID="2B38A963-B12A-4B3B-99F1-761F2BA00419">/ComponentTypes/Com_SWC/VcuRxMsg1_Sig0</SD>
                                     <SD GID="F7EA310B-9838-4D38-9F19-715F9C7EA0D7">/ComponentTypes/Com_SWC/VcuRxMsg1_Sig1</SD>
                                     <SD GID="E57B5C9C-FA03-409E-AB77-E95E730373B9">/ComponentTypes/Com_SWC/VcuRxMsg1_Sig2</SD>
@@ -4711,6 +5316,41 @@
                                     <SD GID="5116B6B9-1DC0-46E5-93C8-8202C0C95F01">/ComponentTypes/SWC1/UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
                                     <SD GID="906BAA60-A823-490D-BB92-0A9E6A4A07EE">/ComponentTypes/SWC1/UR_CN_TC37X_VCU_CAN03_5a834971</SD>
                                     <SD GID="66263F43-3F17-4564-9D9F-6367B86E68F2">/ComponentTypes/SWC1_Implementation</SD>
+                                    <SD GID="F021F2DC-DA4E-4DF1-9DB9-4885A1BADC07">/DataTypes/SG_IBS_Status_06_Signal_Group/Checksum_0BC</SD>
+                                    <SD GID="3D788008-6F9C-4B20-ABA6-56B24D2C0D6A">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_AVHSts</SD>
+                                    <SD GID="5DB43918-F408-41D9-B897-E8BD2A32EA64">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_BrakeFluidWarning</SD>
+                                    <SD GID="6ADD3B29-7738-42BC-A9CA-809E46DA6BDE">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_EPBFailureStatus</SD>
+                                    <SD GID="E26757E1-AC46-416E-B1D6-737163DE4A0D">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_ESCOffSts</SD>
+                                    <SD GID="E348F423-FFC4-44B4-AB84-336ABE716826">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_ESClampdisplay</SD>
+                                    <SD GID="E683517F-4368-4012-A914-EDFE3B34ED46">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_FactoryMode</SD>
+                                    <SD GID="94ABE007-AACE-46AD-8412-21AA6239389F">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_HBAActive</SD>
+                                    <SD GID="4047F267-7B81-4B0D-AF56-4D90A2DDD030">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_HDCSts</SD>
+                                    <SD GID="8572A6ED-027B-45F6-9A55-06FD6518B644">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_MaintenaceMode</SD>
+                                    <SD GID="66AA383F-5EC5-4F14-BA56-3C3883D7F9D4">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_RWUActive</SD>
+                                    <SD GID="5DD86C13-D980-43AB-81EF-AE2F3042ED53">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_RWUAvailable</SD>
+                                    <SD GID="CE9D08AA-F848-4AE9-8B6D-AD1A1451C039">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_RollerbenchMode</SD>
+                                    <SD GID="142DA0EF-7435-43A1-A676-7A79B90C20B0">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_TPMS_ResetSts</SD>
+                                    <SD GID="D44E1655-2981-4295-B724-243F945DEA92">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_TireMonSysSts</SD>
+                                    <SD GID="A596E79C-D2B1-4348-A8C9-B9BBCFF14FE1">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_TireWarnFrntLe</SD>
+                                    <SD GID="2523265A-108F-487D-95EC-7963800C24DE">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_TireWarnFrntRi</SD>
+                                    <SD GID="BF8F6D40-D9A5-4AB9-B913-3F0F00A1189A">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_TireWarnReLe</SD>
+                                    <SD GID="8C8BC22F-8024-424D-8C2B-8A8D06F1FC87">/DataTypes/SG_IBS_Status_06_Signal_Group/IBS_TireWarnReRi</SD>
+                                    <SD GID="894A4690-1C0D-4473-A9AC-C99E7E75465E">/DataTypes/SG_IBS_Status_06_Signal_Group/MessageCounter_0BC</SD>
+                                    <SD GID="3408A392-497D-41F6-93BF-2ADE33181AA6">/DataTypes/SG_VCU_BMS_Signal_Group/Checksum_0D1</SD>
+                                    <SD GID="675E16E0-A4CF-40B9-974D-8EC7346C32ED">/DataTypes/SG_VCU_BMS_Signal_Group/MessageCounter_0D1</SD>
+                                    <SD GID="A5A4FDBD-DBBA-41E5-B97D-712F1AE37D3A">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_ActDriveMode</SD>
+                                    <SD GID="F3EB6636-9A8C-4135-A8D5-5E51F9F174AD">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_ActiveEnergyProfile</SD>
+                                    <SD GID="FBDECDD7-F22A-4CFD-84B2-CD1D08ED5D37">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_ActiveRgnBrkProfile</SD>
+                                    <SD GID="FCA04727-F3F6-4983-A26E-5506C47F7D27">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_BMSTargetThermLevel</SD>
+                                    <SD GID="52B8736A-1DC7-4C28-B8D1-EE195B8667E3">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_BMS_Control_of_NegRelay</SD>
+                                    <SD GID="A5957089-D06F-44D0-9AE8-3B0DBC0D6116">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_Chargestatus</SD>
+                                    <SD GID="9A17DB76-7362-4612-A387-EA37E96D848B">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_DrvModSwitchWarn</SD>
+                                    <SD GID="9D512174-90D3-4D27-AB85-970A5501A6E4">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_HVStatus</SD>
+                                    <SD GID="463078F1-9E8E-4EDE-AEA8-931BA7E5DF2D">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_IsomeasurmentSwitch</SD>
+                                    <SD GID="72517447-6BEE-4134-B620-75EAFDE1AE95">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_LimitLevel</SD>
+                                    <SD GID="D910D2B0-C197-426F-A272-2C772E64EC08">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_RegenBrakeLightReqVld</SD>
+                                    <SD GID="E51AFBE6-DACA-410C-BCC1-44E906D86D92">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_RegenBrakeLightRequest</SD>
+                                    <SD GID="715B5908-D80D-4724-BFF2-9F215D520554">/DataTypes/SG_VCU_BMS_Signal_Group/VCU_RequestedModeBMS</SD>
                                     <SD GID="83E5C50F-A163-4FAE-8F88-D29CE937AFED">/ECUCompositionTypes/ECU_Composition</SD>
                                     <SD GID="9D6277BB-1E37-4BB9-B185-1DD2BA210E54">/ECUCompositionTypes/ECU_Composition/Com_SWC</SD>
                                     <SD GID="25EA7E03-0209-4335-90B2-E01273F5460A">/ECUCompositionTypes/ECU_Composition/Core1App_SWC</SD>
@@ -4753,6 +5393,8 @@
                                     <SD GID="C0FE9D92-FF59-4055-8330-C5C650BFCCB7">/ECUCompositionTypes/ECU_Composition/IoHwAb_SWC</SD>
                                     <SD GID="1C873E85-20CE-48A0-A60A-BB516A3AF1EE">/ECUCompositionTypes/ECU_Composition/NvM_SWC</SD>
                                     <SD GID="7077C59A-EDFF-4EBD-992B-AD0A5D0AD472">/ECUCompositionTypes/ECU_Composition/PowerMng_SWC</SD>
+                                    <SD GID="4467933A-7F85-4AFE-8D91-0AB885CBCB92">/ECUCompositionTypes/ECU_Composition/SG_IBS_Status_06_Signal_Group</SD>
+                                    <SD GID="9842DCDC-981F-4071-AE1B-12F3830E5297">/ECUCompositionTypes/ECU_Composition/SG_VCU_BMS_Signal_Group</SD>
                                     <SD GID="45326E4B-4115-4A85-8FF4-E06F7BAE2F7C">/ECUCompositionTypes/ECU_Composition/SWC1</SD>
                                     <SD GID="CCA9B82C-DD01-490F-A421-2766B59E79A5">/ECUCompositionTypes/ECU_Composition/VcuRxMsg1_Sig0</SD>
                                     <SD GID="64C125A9-FFAC-4390-817D-5ED013E75B7A">/ECUCompositionTypes/ECU_Composition/VcuRxMsg1_Sig1</SD>
@@ -5541,6 +6183,10 @@
                                     <SD GID="E8715ADE-922F-467F-A921-84B146486767">/PortInterfaces/EXT_A_IN8/EXT_A_IN8</SD>
                                     <SD GID="48C7AF0E-8610-447F-9306-2F13C0117BEB">/PortInterfaces/EXT_A_IN9</SD>
                                     <SD GID="EB862DEE-F820-4208-A0A3-3F61BDA20CA2">/PortInterfaces/EXT_A_IN9/EXT_A_IN9</SD>
+                                    <SD GID="38937501-142A-410F-A0C5-389666AD0256">/PortInterfaces/SG_IBS_Status_06_Signal_Group</SD>
+                                    <SD GID="583543D6-979F-4C5C-A50B-7FE1C774EDE4">/PortInterfaces/SG_IBS_Status_06_Signal_Group/SG_IBS_Status_06_Signal_Group</SD>
+                                    <SD GID="61F8FDAB-07B2-42A2-AC45-74EBE7F6A489">/PortInterfaces/SG_VCU_BMS_Signal_Group</SD>
+                                    <SD GID="9126CC8C-F787-412B-860C-6CAC7C0A86D8">/PortInterfaces/SG_VCU_BMS_Signal_Group/SG_VCU_BMS_Signal_Group</SD>
                                     <SD GID="C4F4B726-402E-46AD-8CC8-B98CBDBB242F">/PortInterfaces/VcuRxMsg1_Sig0</SD>
                                     <SD GID="7AA69DA4-77A3-4A49-B0A5-D1304B0FC31D">/PortInterfaces/VcuRxMsg1_Sig0/VcuRxMsg1_Sig0</SD>
                                     <SD GID="7F54F57D-E7B9-43B7-A530-EFA73672D6EB">/PortInterfaces/VcuRxMsg1_Sig1</SD>
