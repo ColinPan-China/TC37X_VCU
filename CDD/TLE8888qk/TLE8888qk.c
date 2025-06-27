@@ -65,7 +65,8 @@
 #define CMD_DDCONFIG(n, d)	CMD_W(0x57 + ((n) & 0x03), d)
 #define CMD_OECONFIG(n, d)	CMD_W(0x5b + ((n) & 0x03), d)
 #define CMD_OECONFIG_READ(n)	CMD_R(0x5b + ((n) & 0x03))
-
+#define CMD_WR_WDRENG(d) CMD_W(0x64, d)
+#define CMD_RD_WDRENG()   CMD_R(0x64)
 /* Control registers */
 #define CMD_CONT(n, d)		CMD_W(0x7b + ((n) & 0x03), d)
 
@@ -75,6 +76,8 @@
 #define FWD_PERIOD_MS		      (20)
 #define WWD_PERIOD_MS		      (110)
 #define WWD_TASK_PERIOD_MS		(10)
+
+#define EXTWDG_RESETEN		    (FALSE)
 
 typedef enum
 {
@@ -151,6 +154,12 @@ TLE8888qk_CfgType TLE8888qk_CfgTable[] =
   { CMD_INCONFIG(2,0X12),   0,  0 },//Input11 assign to OUT23
   { CMD_INCONFIG(3,0X13),   0,  0 },//Input12 assign to OUT24
 #endif
+
+//Watchdog Reset Enable
+#if EXTWDG_RESETEN
+  { CMD_WR_WDRENG(0x1F),    0,  0 },
+#endif
+
   { CMD_BRICONFIG(0,0xFF),  0,  0 },
   { CMD_OECONFIG(2,0xF0),   0,  0 },
   { CMD_CONT(2,0xF0),       0,  0 },
@@ -164,6 +173,7 @@ TLE8888qk_CfgType TLE8888qk_DiagTable[] =
   { CMD_OECONFIG_READ(2),  0,  0 },
   { CMD_OPSTAT(0),         0,  0 },
   { CMD_OPSTAT(1),         0,  0 }, 
+  { CMD_RD_WDRENG(),       0,  0 }, 
 };
 
 #define TLE8888QK_CFGCNT (sizeof(TLE8888qk_CfgTable)/sizeof(TLE8888qk_CfgType))
