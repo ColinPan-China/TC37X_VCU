@@ -80,13 +80,6 @@ derivative mpe
     size = 2095616; /* 2 MiB */
     map (dest=bus:local_bus, dest_offset = 0x80400600, size = 2095616);
   }
-  memory RegionBlock_BMHD0
-  {
-    mau = 8;
-    type = rom;
-    size = 512; /* 512 Byte */
-    map (dest=bus:local_bus, dest_offset = 0xAF400000, size = 512);
-  }
 }
 
 section_layout mpe:vtc:linear
@@ -203,24 +196,6 @@ section_layout mpe:vtc:linear
     "_Startup_Code_ALL_START" = "_Startup_Code_START";
     "_Startup_Code_ALL_END" = "_Startup_Code_END";
     "_Startup_Code_ALL_LIMIT" = "_Startup_Code_LIMIT";
-  }
-
-  group BMHD0_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_BMHD0)
-  {
-    group BMHD0 (ordered, contiguous, fill, align = 4)
-    {
-      section "BMHD0_SEC" (fill, blocksize = 2, attributes = rx)
-      {
-        select "[.]rodata.BMHD0";
-      }
-    }
-    "_BMHD0_START" = "_lc_gb_BMHD0";
-    "_BMHD0_END" = ("_lc_ge_BMHD0" == 0) ? 0 : "_lc_ge_BMHD0" - 1;
-    "_BMHD0_LIMIT" = "_lc_ge_BMHD0";
-
-    "_BMHD0_ALL_START" = "_BMHD0_START";
-    "_BMHD0_ALL_END" = "_BMHD0_END";
-    "_BMHD0_ALL_LIMIT" = "_BMHD0_LIMIT";
   }
 
   group CSA_CORE0_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_0_DSPR_Core0)
