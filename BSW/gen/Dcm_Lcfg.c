@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Lcfg.c
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-07-10 13:50:14
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -945,9 +945,9 @@ CONST(Dcm_CfgDiagSvc2ProtMapMemType, DCM_CONST) Dcm_CfgDiagSvcId2ProtMap[15]=
 /*! Service 0x10 sub-service properties table  */
 CONST(Dcm_CfgSvc10SubFuncInfoType, DCM_CONST) Dcm_CfgSvc10SubFuncInfo[3]=
 {
-   { { 50u, 500u}} /* Session ID: 0x01 */
-  ,{ { 50u, 500u}} /* Session ID: 0x02 */
-  ,{ { 50u, 500u}} /* Session ID: 0x03 */
+   { { 50u, 500u}, 0u} /* Session ID: 0x01 */
+  ,{ { 50u, 500u}, 2u} /* Session ID: 0x02 */
+  ,{ { 50u, 500u}, 0u} /* Session ID: 0x03 */
 };
 /*! Indirection from service 0x10 sub functions to execution pre conditions */
 CONST(Dcm_CfgStateRefMemType, DCM_CONST) Dcm_CfgSvc10SubFuncExecPrecondTable[3]=

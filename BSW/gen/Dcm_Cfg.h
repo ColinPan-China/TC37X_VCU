@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Cfg.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-07-10 13:50:14
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -202,7 +202,7 @@
 /*! Support final response after reset from FBL */
 # define DCM_DIAG_JUMPFROMFBL_ENABLED                                          STD_ON
 /*! Support jump to the FBL */
-# define DCM_DIAG_JUMPTOFBL_ENABLED                                            STD_OFF
+# define DCM_DIAG_JUMPTOFBL_ENABLED                                            STD_ON
 /*! Suppression of NRC 0x7E, 0x7F on functional requests */
 # define DCM_DIAG_SUPPRESS_NRC_7F_7E_ENABLED                                   STD_ON
 /*! BswM notification for updated application */
@@ -272,9 +272,9 @@
 /*! Diagnostic service 0x10 handled by DCM */
 # define DCM_SVC_10_SUPPORT_ENABLED                                            STD_ON
 /*! Support jump to bootloader */
-# define DCM_SVC_10_JMP2BOOT_ENABLED                                           STD_OFF
+# define DCM_SVC_10_JMP2BOOT_ENABLED                                           STD_ON
 /*! Reset the ECU before the final response is sent */
-# define DCM_SVC_10_RST2BOOT_HIS_ENABLED                                       STD_ON
+# define DCM_SVC_10_RST2BOOT_HIS_ENABLED                                       STD_OFF
 /*! Diagnostic service 0x11 handled by DCM */
 # define DCM_SVC_11_SUPPORT_ENABLED                                            STD_ON
 # define DCM_SVC_11_ECU_RESET_ENABLED                                          STD_ON

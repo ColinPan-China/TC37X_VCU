@@ -16,6 +16,9 @@ FUNC(Dcm_ReturnReadMemoryType, DCM_CALLOUT_CODE) Dcm_ReadMemory(
   Dcm_ProgConditionsPtrType progConditions
   )
   {
+    uint32 *pBootRefshFlg = (uint32*)(0XB0025000);
+    *pBootRefshFlg = 0x5AA5A55A;
+    Mcu_PerformReset();
 	  return 0;
   }
   
