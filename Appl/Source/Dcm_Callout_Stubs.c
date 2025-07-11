@@ -16,9 +16,31 @@ FUNC(Dcm_ReturnReadMemoryType, DCM_CALLOUT_CODE) Dcm_ReadMemory(
   Dcm_ProgConditionsPtrType progConditions
   )
   {
-    uint32 *pBootRefshFlg = (uint32*)(0XB0025000);
-    *pBootRefshFlg = 0x5AA5A55A;
-    Mcu_PerformReset();
+
+    Std_ReturnType retVal = DCM_E_NOT_OK;
+
+    if(NULL_PTR != progConditions)
+    {
+        if( (progConditions->ReprogrammingRequest == TRUE) &&
+            (progConditions->Sid == 0x10) &&
+            (progConditions->ResponseRequired == FALSE) &&
+            (progConditions->SubFuncId == 0x02) )
+        {
+            uint32 *pBootRefshFlg = (uint32*)(0XB0025000);
+            *pBootRefshFlg = 0x5AA5A55A;
+            Mcu_PerformReset();
+            retVal = DCM_E_OK;
+        }
+        if (progConditions->ReprogrammingRequest == FALSE)
+        {
+            retVal = DCM_E_OK;
+        }
+    }
+    else
+    {
+        /* NOK returned */
+    }
+
 	  return 0;
   }
   

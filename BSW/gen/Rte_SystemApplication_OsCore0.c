@@ -170,6 +170,25 @@ VAR(NvM_Array10Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_SWC1_NvBlockNeed_UserDa
 
 #define RTE_STOP_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+/**********************************************************************************************************************
+ * TxAck/ModeSwitchAck Flags
+ *********************************************************************************************************************/
+
+
+#define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+VAR(Rte_SystemApplication_OsCore0_AckFlagsType, RTE_VAR_INIT) Rte_SystemApplication_OsCore0_AckFlags = {
+  1,
+};
+
+#define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define Rte_SystemApplication_OsCore0_AckFlagsInit() (Rte_MemClr(&Rte_SystemApplication_OsCore0_AckFlags, sizeof(Rte_SystemApplication_OsCore0_AckFlagsType)))
 /**********************************************************************************************************************
  * Defines for Rte_ComSendSignalProxy
  *********************************************************************************************************************/
@@ -236,6 +255,37 @@ RTE_LOCAL FUNC(void, RTE_CODE) Rte_NvM_SWC_NvM_SWC_UserData2_Runnable_NvM_SWC_Us
 #define RTE_STOP_SEC_CODE
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+
+/**********************************************************************************************************************
+ * RTE internal IOC replacements
+ *********************************************************************************************************************/
+
+#define RTE_START_SEC_VAR_SystemApplication_OsCore0_NOINIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+VAR(uint8, RTE_VAR_NOINIT) Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_Queue[1]; /* PRQA S 1514 */ /* MD_Rte_1514 */
+
+#define RTE_STOP_SEC_VAR_SystemApplication_OsCore0_NOINIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#define RTE_START_SEC_VAR_SystemApplication_OsCore0_INIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+VAR(uint32, RTE_VAR_INIT) Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_tail = 0;
+
+#define RTE_STOP_SEC_VAR_SystemApplication_OsCore0_INIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define RTE_START_SEC_VAR_SystemApplication_OsCore0_ZERO_INIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+VAR(uint32, RTE_VAR_ZERO_INIT) Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_head = 0;
+
+#define RTE_STOP_SEC_VAR_SystemApplication_OsCore0_ZERO_INIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
 #define RTE_START_SEC_CODE
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -243,6 +293,7 @@ FUNC(void, RTE_CODE) Rte_MemClr(P2VAR(void, AUTOMATIC, RTE_VAR_NOINIT) ptr, uint
 FUNC(void, RTE_CODE) Rte_MemCpy(P2VAR(void, AUTOMATIC, RTE_APPL_VAR) destination, P2CONST(void, AUTOMATIC, RTE_APPL_DATA) source, uint32_least num); /* PRQA S 1505, 3408 */ /* MD_MSR_Rule8.7, MD_Rte_3408 */
 FUNC(void, RTE_CODE) Rte_MemCpy32(P2VAR(void, AUTOMATIC, RTE_APPL_VAR) destination, P2CONST(void, AUTOMATIC, RTE_APPL_DATA) source, uint32_least num); /* PRQA S 1505, 3408 */ /* MD_MSR_Rule8.7, MD_Rte_3408 */
 FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
+FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_Dcm_DcmEcuReset(Dcm_EcuResetType mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
 
 #define RTE_STOP_SEC_CODE
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -255,6 +306,12 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
 #define RTE_START_SEC_VAR_INIT_UNSPECIFIED
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_BswM_ESH_Mode_STARTUP; /* PRQA S 3408 */ /* MD_Rte_3408 */
+#define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+VAR(Dcm_EcuResetType, RTE_VAR_INIT) Rte_ModeMachine_Dcm_DcmEcuReset_DcmEcuReset = RTE_MODE_Dcm_DcmEcuReset_NONE; /* PRQA S 3408 */ /* MD_Rte_3408 */
 #define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -348,6 +405,25 @@ VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM
 #define RTE_START_SEC_CODE
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+FUNC(Rte_EventMaskType, RTE_CODE) Rte_GetModeEntryEventMask_Dcm_DcmEcuReset_DcmEcuReset(Dcm_EcuResetType mode)
+{
+  Rte_EventMaskType eventMask;
+  switch (mode)
+  {
+    case 0U:
+      eventMask = Rte_Ev_Run_DIAG_SWC_EcuReset_JumpFBL; /* EXECUTE */
+      break;
+    case 2U:
+      eventMask = Rte_Ev_Run_DIAG_SWC_EcuReset_JumpFBL; /* JUMPTOBOOTLOADER */
+      break;
+    default: /* COV_RTE_MISRA */
+      eventMask = (Rte_EventMaskType)0U;
+      break;
+  }
+
+  return eventMask;
+}
+
 
 FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore0(void)
 {
@@ -364,10 +440,19 @@ FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore0(void)
   Rte_MemCpy(Rte_NvM_SWC_NVBlockDescriptor_UserData1, Rte_C_NvM_Array10Bytes_0, sizeof(NvM_Array10Bytes)); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
   Rte_MemCpy32(Rte_NvM_SWC_NVBlockDescriptor_UserData2, Rte_C_NvM_Array32Bytes_0, sizeof(NvM_Array32Bytes)); /* PRQA S 0314, 0315, 0316 */ /* MD_Rte_0314, MD_Rte_0315, MD_Rte_0316 */
 
+  /* reset Tx Ack Flags */
+  Rte_SystemApplication_OsCore0_AckFlagsInit(); /* PRQA S 0315 */ /* MD_Rte_0315 */
+  Rte_SystemApplication_OsCore0_AckFlags.Rte_ModeSwitchAck_Dcm_DcmEcuReset_DcmEcuReset_Ack = 1U;
+
   /* mode management initialization part 1 */
 
   Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_BswM_ESH_Mode_STARTUP;
+  Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_Queue[0U] = RTE_MODE_Dcm_DcmEcuReset_NONE;
 
+  Rte_ModeMachine_Dcm_DcmEcuReset_DcmEcuReset = RTE_MODE_Dcm_DcmEcuReset_NONE;
+
+  Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_tail = 0;
+  Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_head = 0;
 }
 
 
@@ -1809,6 +1894,47 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a3_F1A
 
 
 /**********************************************************************************************************************
+ * RTE internal IOC replacements
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_IocSend_Rte_M_Dcm_DcmEcuReset_DcmEcuReset(CONST(uint8, RTE_CONST) data0)
+{
+  Std_ReturnType result = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  if (Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_head != Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_tail)
+  {
+    result = RTE_E_LIMIT;
+  }
+  else
+  {
+    Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_tail = !Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_tail; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+
+    Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_Queue[0] = data0;
+  }
+
+  return result;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_IocReceive_Rte_M_Dcm_DcmEcuReset_DcmEcuReset(P2VAR(uint8, AUTOMATIC, RTE_APPL_DATA) data0)
+{
+  Std_ReturnType result;
+
+  if (Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_tail == Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_head)
+  {
+    result = RTE_E_NO_DATA;
+  }
+  else
+  {
+    Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_head = !Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_head; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    *data0 = Rte_ioc_Rte_M_Dcm_DcmEcuReset_DcmEcuReset_Queue[0];
+    result = RTE_E_OK;
+  }
+  return result;
+}
+
+
+
+/**********************************************************************************************************************
  * Mode Switch API (Rte_Switch)
  *********************************************************************************************************************/
 
@@ -1855,14 +1981,38 @@ FUNC(BswM_ESH_Mode, RTE_CODE) Rte_Mode_BswM_Notification_ESH_ModeNotification_Bs
 
 
 /**********************************************************************************************************************
+ * Mode reading API (Rte_Mode)
+ *********************************************************************************************************************/
+
+FUNC(uint8, RTE_CODE) Rte_Mode_DIAG_SWC_DcmEcuReset_DcmEcuReset(void) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 curMode;
+  if (Rte_SystemApplication_OsCore0_AckFlags.Rte_ModeSwitchAck_Dcm_DcmEcuReset_DcmEcuReset_Ack == 0U)
+  {
+    curMode = RTE_TRANSITION_DIAG_SWC_DcmEcuReset;
+  }
+  else
+  {
+    curMode = Rte_ModeMachine_Dcm_DcmEcuReset_DcmEcuReset;
+  }
+  return curMode;
+}
+
+
+/**********************************************************************************************************************
  * Transmission/Mode Switch Acknowledgement handling (Rte_Feedback/Rte_SwitchAck)
  *********************************************************************************************************************/
 
 FUNC(Std_ReturnType, RTE_CODE) Rte_SwitchAck_Dcm_DcmEcuReset_DcmEcuReset(void)
 {
+  Std_ReturnType ret = RTE_E_TRANSMIT_ACK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
-//  return RTE_E_UNCONNECTED;
-  return RTE_E_TRANSMIT_ACK;
+  if (Rte_SystemApplication_OsCore0_AckFlags.Rte_ModeSwitchAck_Dcm_DcmEcuReset_DcmEcuReset_Ack == 0U)
+  {
+    ret = RTE_E_NO_DATA;
+  }
+
+  return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 
@@ -1897,14 +2047,56 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmDiagnosticSessionControl_DcmDia
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmEcuReset_DcmEcuReset(Dcm_EcuResetType nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmEcuReset_DcmEcuReset(Dcm_EcuResetType nextMode) /* PRQA S 1505 */ /* MD_MSR_Rule8.7 */
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
-  nextMode = nextMode;
+  uint8 internalIndexNextMode = Rte_GetInternalModeIndex_Dcm_DcmEcuReset(nextMode);
+  uint8 internalIndexCurrentMode;
+  Dcm_EcuResetType currentMode;
+  SuspendOSInterrupts();
+  currentMode = Rte_ModeMachine_Dcm_DcmEcuReset_DcmEcuReset;
+  internalIndexCurrentMode = Rte_GetInternalModeIndex_Dcm_DcmEcuReset(currentMode);
+  if (internalIndexNextMode >= 7U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else if (Rte_SystemApplication_OsCore0_AckFlags.Rte_ModeSwitchAck_Dcm_DcmEcuReset_DcmEcuReset_Ack == 0U)
+  {
+    ret = RTE_E_LIMIT;
+    ResumeOSInterrupts();
+  }
+  else if (internalIndexCurrentMode >= 7U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else
+  {
+    Rte_EventMaskType ModeSwitchEventMask;
+
+    ModeSwitchEventMask = Rte_GetModeEntryEventMask_Dcm_DcmEcuReset_DcmEcuReset(internalIndexNextMode); /* PRQA S 2986 */ /* MD_Rte_2986 */
+
+    if (ModeSwitchEventMask != (Rte_EventMaskType)0)
+    {
+      ret = Rte_IocSend_Rte_M_Dcm_DcmEcuReset_DcmEcuReset(nextMode);
+
+      Rte_SystemApplication_OsCore0_AckFlags.Rte_ModeSwitchAck_Dcm_DcmEcuReset_DcmEcuReset_Ack = 0U;
+      ResumeOSInterrupts();
+
+      (void)SetEvent(Core0_AswTask, ModeSwitchEventMask); /* PRQA S 3417 */ /* MD_Rte_Os */
+    }
+    else
+    {
+      Rte_ModeMachine_Dcm_DcmEcuReset_DcmEcuReset = nextMode;
+      Rte_SystemApplication_OsCore0_AckFlags.Rte_ModeSwitchAck_Dcm_DcmEcuReset_DcmEcuReset_Ack = 1U;
+      ResumeOSInterrupts();
+    }
+  }
 
   return ret;
-}
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 /**********************************************************************************************************************
  * Runnable Entities for Nv Block Components
@@ -1987,9 +2179,9 @@ TASK(Core0_AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable *
 
   for(;;)
   {
-    (void)WaitEvent(Rte_Ev_Cyclic_Core0_AswTask_0_10ms | Rte_Ev_Run_Com_SWC_Com_Runnable_20ms | Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)WaitEvent(Rte_Ev_Cyclic_Core0_AswTask_0_10ms | Rte_Ev_Run_Com_SWC_Com_Runnable_20ms | Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_DIAG_SWC_EcuReset_JumpFBL | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)GetEvent(Core0_AswTask, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Cyclic_Core0_AswTask_0_10ms | Rte_Ev_Run_Com_SWC_Com_Runnable_20ms | Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Cyclic_Core0_AswTask_0_10ms | Rte_Ev_Run_Com_SWC_Com_Runnable_20ms | Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_DIAG_SWC_EcuReset_JumpFBL | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     if ((ev & Rte_Ev_Cyclic_Core0_AswTask_0_10ms) != (EventMaskType)0)
     {
@@ -2046,6 +2238,28 @@ TASK(Core0_AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable *
     {
       /* call runnable */
       Com_Runnable_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Run_DIAG_SWC_EcuReset_JumpFBL) != (EventMaskType)0)
+    {
+      /* call runnable */
+      EcuReset_JumpFBL(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if (((ev & Rte_Ev_Run_DIAG_SWC_EcuReset_JumpFBL) != (EventMaskType)0) && (Rte_SystemApplication_OsCore0_AckFlags.Rte_ModeSwitchAck_Dcm_DcmEcuReset_DcmEcuReset_Ack == 0U))
+    {
+      Dcm_EcuResetType nextMode = 0U; /* PRQA S 2982 */ /* MD_Rte_2982 */
+
+      Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
+      (void)Rte_IocReceive_Rte_M_Dcm_DcmEcuReset_DcmEcuReset(&nextMode);
+
+      Rte_ModeMachine_Dcm_DcmEcuReset_DcmEcuReset = nextMode;
+
+      Rte_SystemApplication_OsCore0_AckFlags.Rte_ModeSwitchAck_Dcm_DcmEcuReset_DcmEcuReset_Ack = 1U;
+
+      Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
+
+
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -2257,6 +2471,11 @@ TASK(Core0_BswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable *
      Risk:       No functional risk.
      Prevention: Not required.
 
+   MD_Rte_4116:  MISRA rule: Rule12.6
+     Reason:     Operand can only be 0 or 1 in special case of queue size equal to 1.
+     Risk:       No functional risk.
+     Prevention: Not required.
+
    MD_Rte_Os:
      Reason:     This justification is used as summary justification for all deviations caused by the MICROSAR OS
                  which is for testing of the RTE. Those deviations are no issues in the RTE code.
@@ -2270,3 +2489,14 @@ TASK(Core0_BswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable *
      Prevention: Not required.
 
 */
+
+/**********************************************************************************************************************
+ Code coverage justifications
+ *********************************************************************************************************************/
+
+/* COV_JUSTIFICATION_BEGIN
+   \ID COV_RTE_MISRA
+     \ACCEPT XX
+     \REASON [COV_MSR_MISRA]
+
+COV_JUSTIFICATION_END */

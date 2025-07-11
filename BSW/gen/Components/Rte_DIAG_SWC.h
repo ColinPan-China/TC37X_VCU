@@ -46,7 +46,25 @@ extern "C"
 # include "Rte_DataHandleType.h"
 
 
+# define RTE_START_SEC_CODE
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ * API prototypes
+ *********************************************************************************************************************/
+FUNC(uint8, RTE_CODE) Rte_Mode_DIAG_SWC_DcmEcuReset_DcmEcuReset(void);
+
+# define RTE_STOP_SEC_CODE
+# include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
 # ifndef RTE_CORE
+
+/**********************************************************************************************************************
+ * Rte_Mode_<p>_<m>
+ *********************************************************************************************************************/
+#  define Rte_Mode_DcmEcuReset_DcmEcuReset Rte_Mode_DIAG_SWC_DcmEcuReset_DcmEcuReset
+
 
 /**********************************************************************************************************************
  * Rte_Call_<p>_<o> (unmapped) for synchronous C/S communication
@@ -70,6 +88,14 @@ FUNC(Std_ReturnType, RTE_DEMSATELLITE_0_APPL_CODE) Dem_SetEventStatus(Dem_EventI
 #  define RTE_STOP_SEC_DEMSATELLITE_0_APPL_CODE
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+#  define RTE_START_SEC_ECUM_APPL_CODE
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+FUNC(Std_ReturnType, RTE_ECUM_APPL_CODE) EcuM_SelectShutdownTarget(EcuM_StateType targetState, EcuM_ModeType resetSleepMode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+
+#  define RTE_STOP_SEC_ECUM_APPL_CODE
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 #  define RTE_START_SEC_NVM_APPL_CODE
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -81,6 +107,7 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_GetErrorStatus(NvM_BlockIdType parg0
 #  define RTE_STOP_SEC_NVM_APPL_CODE
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+#  define Rte_Call_EcuM_ShutdownTarget_SelectShutdownTarget EcuM_SelectShutdownTarget
 #  define Rte_Call_EnableCond_KL15_High_SetEnableCondition(arg1) (Dem_SetEnableCondition((uint8)3, arg1))
 #  define Rte_Call_Event_CAN01_ComLost_GetEventStatus(arg1) (Dem_GetEventUdsStatus((Dem_EventIdType)5, arg1))
 #  define Rte_Call_Event_CAN01_ComLost_SetEventStatus(arg1) (Dem_SetEventStatus((Dem_EventIdType)5, arg1))
@@ -189,6 +216,7 @@ extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNe
 #  define RTE_RUNNABLE_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead DataServices_VCU_DID_00_DataRecord_ConditionCheckRead
 #  define RTE_RUNNABLE_DataServices_VCU_DID_00_DataRecord_ReadData DataServices_VCU_DID_00_DataRecord_ReadData
 #  define RTE_RUNNABLE_DataServices_VCU_DID_00_DataRecord_WriteData DataServices_VCU_DID_00_DataRecord_WriteData
+#  define RTE_RUNNABLE_EcuReset_JumpFBL EcuReset_JumpFBL
 #  define RTE_RUNNABLE_RoutineServices_Vcu_Roution_00_RequestResults RoutineServices_Vcu_Roution_00_RequestResults
 #  define RTE_RUNNABLE_RoutineServices_Vcu_Roution_00_Start RoutineServices_Vcu_Roution_00_Start
 #  define RTE_RUNNABLE_RoutineServices_Vcu_Roution_00_Stop RoutineServices_Vcu_Roution_00_Stop
@@ -210,6 +238,7 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_Hardware_Version_Hardware_Versi
 FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_VCU_DID_00_DataRecord_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_VCU_DID_00_DataRecord_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) DataServices_VCU_DID_00_DataRecord_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DIAG_SWC_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(void, DIAG_SWC_CODE) EcuReset_JumpFBL(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_RequestResults(Dcm_OpStatusType OpStatus, P2VAR(Dcm_RequestDataOut_Vcu_Roution_00_Out_New_Data_ObjectType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Out_New_Data_Object, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_Start(Dcm_StartDataIn_Vcu_Roution_00_In_New_Data_ObjectType In_New_Data_Object, Dcm_OpStatusType OpStatus, P2VAR(Dcm_StartDataOut_Vcu_Roution_00_Out_New_Data_ObjectType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Out_New_Data_Object, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, DIAG_SWC_CODE) RoutineServices_Vcu_Roution_00_Stop(Dcm_StopDataIn_Vcu_Roution_00_In_New_Data_ObjectType In_New_Data_Object, Dcm_OpStatusType OpStatus, P2VAR(Dcm_StopDataOut_Vcu_Roution_00_Out_New_Data_ObjectType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) Out_New_Data_Object, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DIAG_SWC_APPL_VAR) ErrorCode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
@@ -244,6 +273,8 @@ FUNC(Std_ReturnType, DIAG_SWC_CODE) SecurityAccess_Level_3_SetSecurityAttemptCou
 #  define RTE_E_DataServices_VCU_DID_00_DataRecord_E_NOT_OK (1U)
 
 #  define RTE_E_DiagnosticMonitor_E_NOT_OK (1U)
+
+#  define RTE_E_EcuM_ShutdownTarget_E_NOT_OK (1U)
 
 #  define RTE_E_EnableCondition_E_NOT_OK (1U)
 

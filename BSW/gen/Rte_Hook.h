@@ -28,6 +28,8 @@
  *
  * Not configured:
  *
+ *  Rte_CallHook_DIAG_SWC_EcuM_ShutdownTarget_SelectShutdownTarget_Return
+ *  Rte_CallHook_DIAG_SWC_EcuM_ShutdownTarget_SelectShutdownTarget_Start
  *  Rte_CallHook_DIAG_SWC_EnableCond_KL15_High_SetEnableCondition_Return
  *  Rte_CallHook_DIAG_SWC_EnableCond_KL15_High_SetEnableCondition_Start
  *  Rte_CallHook_DIAG_SWC_Event_CAN01_ComLost_GetEventStatus_Return
@@ -484,6 +486,8 @@
  *  Rte_Runnable_DIAG_SWC_DataServices_VCU_DID_00_DataRecord_ReadData_Start
  *  Rte_Runnable_DIAG_SWC_DataServices_VCU_DID_00_DataRecord_WriteData_Return
  *  Rte_Runnable_DIAG_SWC_DataServices_VCU_DID_00_DataRecord_WriteData_Start
+ *  Rte_Runnable_DIAG_SWC_EcuReset_JumpFBL_Return
+ *  Rte_Runnable_DIAG_SWC_EcuReset_JumpFBL_Start
  *  Rte_Runnable_DIAG_SWC_RoutineServices_Vcu_Roution_00_RequestResults_Return
  *  Rte_Runnable_DIAG_SWC_RoutineServices_Vcu_Roution_00_RequestResults_Start
  *  Rte_Runnable_DIAG_SWC_RoutineServices_Vcu_Roution_00_Start_Return

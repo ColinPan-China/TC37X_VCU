@@ -4916,6 +4916,28 @@
                                   </INNER-PORT-IREF>
                                   <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SG_VCU_BMS_Signal_Group</OUTER-PORT-REF>
                                 </DELEGATION-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="60a76314-c280-4b84-bf4a-176ef830b9a8">
+                                  <SHORT-NAME>EcuM_EcuM_ShutdownTarget_DIAG_SWC_EcuM_ShutdownTarget</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EcuM</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/EcuM_swc/ComponentTypes/EcuM/EcuM_ShutdownTarget</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/EcuM_ShutdownTarget</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="5fef0e87-4984-4244-bce6-1e63365929b1">
+                                  <SHORT-NAME>Dcm_DcmEcuReset_DIAG_SWC_DcmEcuReset</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmEcuReset</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/DIAG_SWC/DcmEcuReset</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -5080,6 +5102,7 @@
                                     <SD GID="0717b7af-3271-4777-bc6a-7eeada190008">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_DataServices_Hardware_Version_Hardware_Version_Number_Dcm_DataServices_Hardware_Version_Hardware_Version_Number</SD>
                                     <SD GID="64ec4541-e8b7-481b-aad1-872429f16a36">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounterNvM_PS_DIAG_SWC_NvBlockNeed_AttemptCounter</SD>
                                     <SD GID="52f38fb1-f1fa-4839-bd5d-87d5584a122e">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</SD>
+                                    <SD GID="5fef0e87-4984-4244-bce6-1e63365929b1">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm_DcmEcuReset_DIAG_SWC_DcmEcuReset</SD>
                                     <SD GID="dbd7af71-8f1f-4737-b93f-d0ed84b9ef39">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</SD>
                                     <SD GID="02e973f9-a9c9-4e36-b05b-b2ef3a8bcfe3">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0_EnableCond_KL15_High_DIAG_SWC_EnableCond_KL15_High</SD>
                                     <SD GID="f51ebd17-bd17-4adb-affa-770366c61ecb">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0_OpCycle_IgnitionCycle_DIAG_SWC_OpCycle_IgnitionCycle</SD>
@@ -5124,6 +5147,7 @@
                                     <SD GID="4c7fad01-95d8-4446-aae9-543d7219ede5">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN8</SD>
                                     <SD GID="0598a95d-0fcb-4ff7-b4f5-ed8cd5a70a2a">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN9</SD>
                                     <SD GID="3976e9f4-1667-4e85-89f1-31f8167f45a7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EcuM</SD>
+                                    <SD GID="60a76314-c280-4b84-bf4a-176ef830b9a8">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EcuM_EcuM_ShutdownTarget_DIAG_SWC_EcuM_ShutdownTarget</SD>
                                     <SD GID="b7599610-a9d2-49fd-aa65-b43b7038f13c">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/IoHwAb_SWC</SD>
                                     <SD GID="bd2d7ed1-0cf5-42f4-a90f-8057441c91be">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM</SD>
                                     <SD GID="c21785b6-0d1c-4916-b861-b7afeaedc9b8">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM_PS_DIAG_SWC_NvBlockNeed_DID_F193_DIAG_SWC_PS_DIAG_SWC_NvBlockNeed_DID_F193</SD>
@@ -5229,6 +5253,8 @@
                                     <SD GID="CF9C7E55-DA50-4F79-B51D-998FBB343B58">/ComponentTypes/DIAG_SWC/CBReadData_DID_0xf1a2_F1A2_Data</SD>
                                     <SD GID="9AFE7BDB-7A4F-42A3-A671-9DCD477F2C1B">/ComponentTypes/DIAG_SWC/CBReadData_DID_0xf1a3_F1A3_Data</SD>
                                     <SD GID="E1479815-5FEF-4896-9F58-551F83D07826">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/DIAG_SWC_InitEvent</SD>
+                                    <SD GID="247B027D-6D39-4410-A90D-B2C491848A08">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/MST_EcuReset_JumpFBL_0</SD>
+                                    <SD GID="8106A93B-087E-4EFA-8980-CA974A05556A">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/MST_EcuReset_JumpFBL_1</SD>
                                     <SD GID="2EFA0735-93F0-46E5-B722-78F12C1C44A3">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/NvBlockNeed_AttemptCounter</SD>
                                     <SD GID="F1480E9D-04F2-47CC-A90E-2142C942F0BD">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/NvBlockNeed_DID_F193</SD>
                                     <SD GID="B0C63B94-0EBB-4D3A-A369-A55820B76806">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/NvBlockNeed_DiagDID_00</SD>
@@ -5252,6 +5278,8 @@
                                     <SD GID="578A7505-0BEB-4C97-8B28-3D6105B5A55B">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/TMT_DTCMonitorRunnable_10ms</SD>
                                     <SD GID="5F870030-1B17-436E-B50D-F2D0EEEEF737">/ComponentTypes/DIAG_SWC/DataServices_Hardware_Version_Hardware_Version_Number</SD>
                                     <SD GID="C7C2A11E-09A8-42E1-B046-A5C65679E1C5">/ComponentTypes/DIAG_SWC/DataServices_VCU_DID_00_DataRecord</SD>
+                                    <SD GID="807204C1-C4E5-423A-BEB3-E0429367B365">/ComponentTypes/DIAG_SWC/DcmEcuReset</SD>
+                                    <SD GID="3B923D75-197F-4B0A-897D-7669A2C28FAF">/ComponentTypes/DIAG_SWC/EcuM_ShutdownTarget</SD>
                                     <SD GID="960A5C32-E657-4D9C-9EDE-5ADCF55A5806">/ComponentTypes/DIAG_SWC/EnableCond_KL15_High</SD>
                                     <SD GID="FC4EF1E4-EFD1-49C1-8AC7-9EAA59940AB9">/ComponentTypes/DIAG_SWC/Event_CAN01_ComLost</SD>
                                     <SD GID="38B68986-F484-48BB-BB6F-854BEDFBB6BC">/ComponentTypes/DIAG_SWC/Event_DTC_0x000002</SD>
@@ -5575,6 +5603,7 @@
                                     <SD GID="4e65b62f-4fc8-4f1c-be00-5ac6365669ae">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="22df0f95-8e4f-419b-8023-b15fb7c39b04">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmControlDtcSetting</SD>
                                     <SD GID="ed1e2bf8-296c-4ef7-a639-2d84feed9e66">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmDiagnosticSessionControl</SD>
+                                    <SD GID="b4cad90b-33a8-4135-8b0f-4fb563f61e6b">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmEcuReset</SD>
                                     <SD GID="b8d3fa7a-7b0c-4f84-a474-4c9eb594cc11">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior</SD>
                                     <SD GID="13b667ea-00e1-4b49-96b1-10f0de11ecea">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/Dcm_MainFunction</SD>
                                     <SD GID="3b044e79-0e4e-48d4-b70a-5733508c1e13">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior/GetActiveProtocol</SD>

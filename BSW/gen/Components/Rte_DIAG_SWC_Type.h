@@ -498,6 +498,34 @@ extern "C"
 #   define DEM_UDS_STATUS_WIR_BflLn 1U
 #  endif
 
+#  ifndef EcuMConf_EcuMResetMode_ECUM_RESET_MCU
+#   define EcuMConf_EcuMResetMode_ECUM_RESET_MCU (0U)
+#  endif
+
+#  ifndef EcuMConf_EcuMResetMode_ECUM_RESET_WDG
+#   define EcuMConf_EcuMResetMode_ECUM_RESET_WDG (1U)
+#  endif
+
+#  ifndef EcuMConf_EcuMResetMode_ECUM_RESET_IO
+#   define EcuMConf_EcuMResetMode_ECUM_RESET_IO (2U)
+#  endif
+
+#  ifndef EcuMConf_EcuMResetMode_ECUM_RESET_WAKEUP
+#   define EcuMConf_EcuMResetMode_ECUM_RESET_WAKEUP (3U)
+#  endif
+
+#  ifndef ECUM_STATE_SLEEP
+#   define ECUM_STATE_SLEEP (80U)
+#  endif
+
+#  ifndef ECUM_STATE_OFF
+#   define ECUM_STATE_OFF (128U)
+#  endif
+
+#  ifndef ECUM_STATE_RESET
+#   define ECUM_STATE_RESET (144U)
+#  endif
+
 #  ifndef NVM_REQ_OK
 #   define NVM_REQ_OK (0U)
 #  endif
@@ -535,6 +563,48 @@ extern "C"
 #  endif
 
 # endif /* RTE_CORE */
+
+
+/**********************************************************************************************************************
+ * Definitions for Mode Management
+ *********************************************************************************************************************/
+# ifndef RTE_MODETYPE_DcmEcuReset
+#  define RTE_MODETYPE_DcmEcuReset
+typedef uint8 Rte_ModeType_DcmEcuReset;
+# endif
+
+# define RTE_MODE_DIAG_SWC_DcmEcuReset_NONE (0U)
+# ifndef RTE_MODE_DcmEcuReset_NONE
+#  define RTE_MODE_DcmEcuReset_NONE (0U)
+# endif
+# define RTE_MODE_DIAG_SWC_DcmEcuReset_HARD (1U)
+# ifndef RTE_MODE_DcmEcuReset_HARD
+#  define RTE_MODE_DcmEcuReset_HARD (1U)
+# endif
+# define RTE_MODE_DIAG_SWC_DcmEcuReset_KEYONOFF (2U)
+# ifndef RTE_MODE_DcmEcuReset_KEYONOFF
+#  define RTE_MODE_DcmEcuReset_KEYONOFF (2U)
+# endif
+# define RTE_MODE_DIAG_SWC_DcmEcuReset_SOFT (3U)
+# ifndef RTE_MODE_DcmEcuReset_SOFT
+#  define RTE_MODE_DcmEcuReset_SOFT (3U)
+# endif
+# define RTE_MODE_DIAG_SWC_DcmEcuReset_JUMPTOBOOTLOADER (4U)
+# ifndef RTE_MODE_DcmEcuReset_JUMPTOBOOTLOADER
+#  define RTE_MODE_DcmEcuReset_JUMPTOBOOTLOADER (4U)
+# endif
+# define RTE_MODE_DIAG_SWC_DcmEcuReset_JUMPTOSYSSUPPLIERBOOTLOADER (5U)
+# ifndef RTE_MODE_DcmEcuReset_JUMPTOSYSSUPPLIERBOOTLOADER
+#  define RTE_MODE_DcmEcuReset_JUMPTOSYSSUPPLIERBOOTLOADER (5U)
+# endif
+# define RTE_MODE_DIAG_SWC_DcmEcuReset_EXECUTE (6U)
+# ifndef RTE_MODE_DcmEcuReset_EXECUTE
+#  define RTE_MODE_DcmEcuReset_EXECUTE (6U)
+# endif
+# define RTE_TRANSITION_DIAG_SWC_DcmEcuReset (7U)
+# ifndef RTE_TRANSITION_DcmEcuReset
+#  define RTE_TRANSITION_DcmEcuReset (7U)
+# endif
 
 # ifdef __cplusplus
 } /* extern "C" */
