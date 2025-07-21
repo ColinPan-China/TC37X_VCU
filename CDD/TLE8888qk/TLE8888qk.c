@@ -445,7 +445,8 @@ void TLE8888qk_WwdgFeed()
 	TLE8888qk_SpiTransmit(CMD_WWDSERVICECMD, NULL_PTR);
 }
 
-uint8 sts_bridge = 0;
+uint8 sts_bridge  = 0;
+uint16 OutTimer   = 0;
 void TLE8888qk_Config() 
 {
 
@@ -461,18 +462,26 @@ void TLE8888qk_Config()
   }
 
   /*Direct IO control*/
-  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P2_0_IN12, sts_bridge);
-  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P2_1_IN11, sts_bridge);
-  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P2_2_IN10, sts_bridge);
-  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P2_3_IN9,  sts_bridge);
-  if( sts_bridge == 0 )
+  OutTimer++;
+  if( OutTimer >= 50 )
   {
-    sts_bridge = 1;
+    OutTimer = 0;
+    Dio_WriteChannel(DioConf_DioChannel_DioChannel_P2_0_IN12, 0);//24
+    Dio_WriteChannel(DioConf_DioChannel_DioChannel_P2_1_IN11, 0);//23
+    Dio_WriteChannel(DioConf_DioChannel_DioChannel_P2_2_IN10, sts_bridge);//22
+    Dio_WriteChannel(DioConf_DioChannel_DioChannel_P2_3_IN9,  sts_bridge);//21
+
+    if( sts_bridge == 0 )
+    {
+      sts_bridge = 1;
+    }
+    else
+    {
+      sts_bridge = 0;
+    }
   }
-  else
-  {
-    sts_bridge = 0;
-  }
+
+
   /*Direct IO control*/
 
 }
