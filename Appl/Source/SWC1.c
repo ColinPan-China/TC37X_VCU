@@ -425,19 +425,8 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * Symbol: SWC1_Runnable10ms
  *********************************************************************************************************************/
 //Lin_DemoFunction();
-	if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )//( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_12_KL15) == 0 )  
-  {
-    ShutdownTimer = 0;
-  }
-  else
-  {
-    if( ShutdownTimer < 500 )
-    {
-      ShutdownTimer++;
-    }
-  }
 
-  if( ShutdownTimer < 500 )
+  if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )
   {
     Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
     Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_FULL_COMMUNICATION );
