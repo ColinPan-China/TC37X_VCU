@@ -203,6 +203,7 @@ FUNC(void, ECUM_CODE) EcuM_AL_SwitchOff(void)
  *********************************************************************************************************************/
   /* Add implementation of EcuM_AL_SwitchOff() */
   Dio_WriteChannel(DioConf_DioChannel_DioChannel_P10_8_KEY,0);
+  while(1);
 //  Mcu_ClearWakeupCause(0xFFFFFFFF);
 //  Mcu_SetMode(MCU_STANDBY);
   return;
