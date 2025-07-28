@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dem_Lcfg.c
- *   Generation Time: 2025-05-27 10:43:05
+ *   Generation Time: 2025-07-28 09:15:32
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -511,14 +511,14 @@ CONST(Dem_Cfg_FreezeFrameTableType, DEM_CONST) Dem_Cfg_FreezeFrameTable[3] = {  
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Dem_Cfg_MemoryBlockIdType, DEM_CONST) Dem_Cfg_MemoryBlockId[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index     MemoryBlockId                                                           Comment */
-  /*     0 */ NvMConf_NvMBlockDescriptor_NvM_DEM_AdminData /*NvMBlockId=2*/      ,  /* [DemNvRamBlockId_DEM_AdminData] */
-  /*     1 */ NvMConf_NvMBlockDescriptor_NvM_DEM_StatusData /*NvMBlockId=8*/     ,  /* [DemNvRamBlockId_DEM_StatusData] */
-  /*     2 */ NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_0 /*NvMBlockId=3*/ ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_0] */
-  /*     3 */ NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_1 /*NvMBlockId=7*/ ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_1] */
-  /*     4 */ NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_2 /*NvMBlockId=4*/ ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_2] */
-  /*     5 */ NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_3 /*NvMBlockId=5*/ ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_3] */
-  /*     6 */ NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_4 /*NvMBlockId=6*/    /* [DemNvRamBlockId_DEM_PrimaryEntry_4] */
+  /* Index     MemoryBlockId                                                          Comment */
+  /*     0 */ NvMConf_NvMBlockDescriptor_DemAdminDataBlock /*NvMBlockId=8*/     ,  /* [Dem_AdminData] */
+  /*     1 */ NvMConf_NvMBlockDescriptor_DemStatusDataBlock /*NvMBlockId=9*/    ,  /* [Dem_StatusData] */
+  /*     2 */ NvMConf_NvMBlockDescriptor_DemPrimaryDataBlock0 /*NvMBlockId=10*/ ,  /* [Dem_PrimaryEntry0] */
+  /*     3 */ NvMConf_NvMBlockDescriptor_DemPrimaryDataBlock1 /*NvMBlockId=11*/ ,  /* [Dem_PrimaryEntry1] */
+  /*     4 */ NvMConf_NvMBlockDescriptor_DemPrimaryDataBlock2 /*NvMBlockId=12*/ ,  /* [Dem_PrimaryEntry2] */
+  /*     5 */ NvMConf_NvMBlockDescriptor_DemPrimaryDataBlock3 /*NvMBlockId=13*/ ,  /* [Dem_PrimaryEntry3] */
+  /*     6 */ NvMConf_NvMBlockDescriptor_DemPrimaryDataBlock4 /*NvMBlockId=14*/    /* [Dem_PrimaryEntry4] */
 };
 #define DEM_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
@@ -538,13 +538,13 @@ CONST(Dem_Cfg_MemoryBlockIdType, DEM_CONST) Dem_Cfg_MemoryBlockId[7] = {  /* PRQ
 /*lint -restore */
 CONST(Dem_Cfg_MemoryEntryHandleType, DEM_CONST) Dem_Cfg_MemoryBlockIdToMemoryEntryId[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     MemoryBlockIdToMemoryEntryId        Comment */
-  /*     0 */ DEM_MEMORYENTRY_HANDLE_INVALID ,  /* [DemNvRamBlockId_DEM_AdminData] */
-  /*     1 */ DEM_MEMORYENTRY_HANDLE_INVALID ,  /* [DemNvRamBlockId_DEM_StatusData] */
-  /*     2 */ 0u                             ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_0] */
-  /*     3 */ 1u                             ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_1] */
-  /*     4 */ 2u                             ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_2] */
-  /*     5 */ 3u                             ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_3] */
-  /*     6 */ 4u                                /* [DemNvRamBlockId_DEM_PrimaryEntry_4] */
+  /*     0 */ DEM_MEMORYENTRY_HANDLE_INVALID ,  /* [Dem_AdminData] */
+  /*     1 */ DEM_MEMORYENTRY_HANDLE_INVALID ,  /* [Dem_StatusData] */
+  /*     2 */ 0u                             ,  /* [Dem_PrimaryEntry0] */
+  /*     3 */ 1u                             ,  /* [Dem_PrimaryEntry1] */
+  /*     4 */ 2u                             ,  /* [Dem_PrimaryEntry2] */
+  /*     5 */ 3u                             ,  /* [Dem_PrimaryEntry3] */
+  /*     6 */ 4u                                /* [Dem_PrimaryEntry4] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -564,13 +564,13 @@ CONST(Dem_Cfg_MemoryEntryHandleType, DEM_CONST) Dem_Cfg_MemoryBlockIdToMemoryEnt
 /*lint -restore */
 CONST(Dem_NvDataPtrType, DEM_CONST) Dem_Cfg_MemoryDataPtr[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     MemoryDataPtr                                                                                  Comment */
-  /*     0 */ (Dem_NvDataPtrType) &Dem_Cfg_GetAdminData()        /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_AdminData] */
-  /*     1 */ (Dem_NvDataPtrType) &Dem_Cfg_GetStatusData()       /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_StatusData] */
-  /*     2 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_0()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_0] */
-  /*     3 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_1()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_1] */
-  /*     4 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_2()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_2] */
-  /*     5 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_3()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_3] */
-  /*     6 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_4()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */   /* [DemNvRamBlockId_DEM_PrimaryEntry_4] */
+  /*     0 */ (Dem_NvDataPtrType) &Dem_Cfg_GetAdminData()        /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [Dem_AdminData] */
+  /*     1 */ (Dem_NvDataPtrType) &Dem_Cfg_GetStatusData()       /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [Dem_StatusData] */
+  /*     2 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_0()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [Dem_PrimaryEntry0] */
+  /*     3 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_1()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [Dem_PrimaryEntry1] */
+  /*     4 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_2()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [Dem_PrimaryEntry2] */
+  /*     5 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_3()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [Dem_PrimaryEntry3] */
+  /*     6 */ (Dem_NvDataPtrType) &Dem_Cfg_GetPrimaryEntry_4()   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */   /* [Dem_PrimaryEntry4] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -590,13 +590,13 @@ CONST(Dem_NvDataPtrType, DEM_CONST) Dem_Cfg_MemoryDataPtr[7] = {  /* PRQA S 1514
 /*lint -restore */
 CONST(Dem_Cfg_MemoryDataSizeType, DEM_CONST) Dem_Cfg_MemoryDataSize[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     MemoryDataSize                                                        Comment */
-  /*     0 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetAdminData())      ,  /* [DemNvRamBlockId_DEM_AdminData] */
-  /*     1 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetStatusData())     ,  /* [DemNvRamBlockId_DEM_StatusData] */
-  /*     2 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_0()) ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_0] */
-  /*     3 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_1()) ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_1] */
-  /*     4 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_2()) ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_2] */
-  /*     5 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_3()) ,  /* [DemNvRamBlockId_DEM_PrimaryEntry_3] */
-  /*     6 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_4())    /* [DemNvRamBlockId_DEM_PrimaryEntry_4] */
+  /*     0 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetAdminData())      ,  /* [Dem_AdminData] */
+  /*     1 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetStatusData())     ,  /* [Dem_StatusData] */
+  /*     2 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_0()) ,  /* [Dem_PrimaryEntry0] */
+  /*     3 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_1()) ,  /* [Dem_PrimaryEntry1] */
+  /*     4 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_2()) ,  /* [Dem_PrimaryEntry2] */
+  /*     5 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_3()) ,  /* [Dem_PrimaryEntry3] */
+  /*     6 */ (Dem_Cfg_MemoryDataSizeType) sizeof(Dem_Cfg_GetPrimaryEntry_4())    /* [Dem_PrimaryEntry4] */
 };
 #define DEM_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
@@ -616,11 +616,11 @@ CONST(Dem_Cfg_MemoryDataSizeType, DEM_CONST) Dem_Cfg_MemoryDataSize[7] = {  /* P
 /*lint -restore */
 CONST(Dem_SharedMemoryEntryPtrType, DEM_CONST) Dem_Cfg_MemoryEntry[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     MemoryEntry                                                                                          Comment */
-  /*     0 */ &Dem_Cfg_GetPrimaryEntry_0()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_0] */
-  /*     1 */ &Dem_Cfg_GetPrimaryEntry_1()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_1] */
-  /*     2 */ &Dem_Cfg_GetPrimaryEntry_2()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_2] */
-  /*     3 */ &Dem_Cfg_GetPrimaryEntry_3()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_3] */
-  /*     4 */ &Dem_Cfg_GetPrimaryEntry_4()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [DemNvRamBlockId_DEM_PrimaryEntry_4] */
+  /*     0 */ &Dem_Cfg_GetPrimaryEntry_0()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [Dem_PrimaryEntry0] */
+  /*     1 */ &Dem_Cfg_GetPrimaryEntry_1()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [Dem_PrimaryEntry1] */
+  /*     2 */ &Dem_Cfg_GetPrimaryEntry_2()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [Dem_PrimaryEntry2] */
+  /*     3 */ &Dem_Cfg_GetPrimaryEntry_3()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [Dem_PrimaryEntry3] */
+  /*     4 */ &Dem_Cfg_GetPrimaryEntry_4()                             /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */,  /* [Dem_PrimaryEntry4] */
   /*     5 */ &Dem_Cfg_GetReadoutBuffer(0).ReadOutBufferData[0].Data   /* PRQA S 0310 */ /* MD_DEM_11.4_nvm */   /* [Dem_Cfg_ReadoutBuffer[0].ReadOutBufferData[0].Data] */
 };
 #define DEM_STOP_SEC_CONST_UNSPECIFIED

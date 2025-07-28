@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: NvM_Cfg.h
- *   Generation Time: 2025-05-27 14:39:11
+ *   Generation Time: 2025-07-28 09:15:32
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -134,19 +134,19 @@ typedef union
  */
 #define NvMConf___MultiBlockRequest (0u) 
 #define NvMConf_NvMBlockDescriptor_NvMConfigBlock (1u) 
-#define NvMConf_NvMBlockDescriptor_NvM_DEM_AdminData (2u) 
-#define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_0 (3u) 
-#define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_2 (4u) 
-#define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_3 (5u) 
-#define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_4 (6u) 
-#define NvMConf_NvMBlockDescriptor_NvM_DEM_PrimaryEntry_1 (7u) 
-#define NvMConf_NvMBlockDescriptor_NvM_DEM_StatusData (8u) 
-#define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData1 (9u) 
-#define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2 (10u) 
-#define NvMConf_NvMBlockDescriptor_SWC1NvBlockNeed_UserData3 (11u) 
-#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_DiagDID_00 (12u) 
-#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_AttemptCounter (13u) 
-#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_DID_F193 (14u) 
+#define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData1 (2u) 
+#define NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2 (3u) 
+#define NvMConf_NvMBlockDescriptor_SWC1NvBlockNeed_UserData3 (4u) 
+#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_DiagDID_00 (5u) 
+#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_AttemptCounter (6u) 
+#define NvMConf_NvMBlockDescriptor_DIAG_SWC_NvBlockNeed_DID_F193 (7u) 
+#define NvMConf_NvMBlockDescriptor_DemAdminDataBlock (8u) 
+#define NvMConf_NvMBlockDescriptor_DemStatusDataBlock (9u) 
+#define NvMConf_NvMBlockDescriptor_DemPrimaryDataBlock0 (10u) 
+#define NvMConf_NvMBlockDescriptor_DemPrimaryDataBlock1 (11u) 
+#define NvMConf_NvMBlockDescriptor_DemPrimaryDataBlock2 (12u) 
+#define NvMConf_NvMBlockDescriptor_DemPrimaryDataBlock3 (13u) 
+#define NvMConf_NvMBlockDescriptor_DemPrimaryDataBlock4 (14u) 
 
 
 /* CONST_DESCRIPTOR_TABLE contains all block relevant data, including the compiled config ID

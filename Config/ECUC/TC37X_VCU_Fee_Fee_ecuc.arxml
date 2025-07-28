@@ -426,12 +426,12 @@
               </REFERENCE-VALUES>
             </ECUC-CONTAINER-VALUE>
             <ECUC-CONTAINER-VALUE UUID="4d21169b-ce27-4742-9d4d-fc7ef9cae95e">
-              <SHORT-NAME>FeeBlockConfiguration_DEM_PrimaryEntry_0</SHORT-NAME>
+              <SHORT-NAME>Fee_DemPrimaryDataBlock0</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration</DEFINITION-REF>
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeBlockNumber</DEFINITION-REF>
-                  <VALUE>176</VALUE>
+                  <VALUE>32</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeQsBlockInstances</DEFINITION-REF>
@@ -466,7 +466,7 @@
               </REFERENCE-VALUES>
             </ECUC-CONTAINER-VALUE>
             <ECUC-CONTAINER-VALUE UUID="68af0aed-693b-4edb-b025-daa013b58da7">
-              <SHORT-NAME>FeeBlockConfiguration_DEM_PrimaryEntry_1</SHORT-NAME>
+              <SHORT-NAME>Fee_DemPrimaryDataBlock1</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration</DEFINITION-REF>
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
@@ -511,7 +511,7 @@
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeBlockNumber</DEFINITION-REF>
-                  <VALUE>128</VALUE>
+                  <VALUE>256</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeQsBlockInstances</DEFINITION-REF>
@@ -626,7 +626,7 @@
               </REFERENCE-VALUES>
             </ECUC-CONTAINER-VALUE>
             <ECUC-CONTAINER-VALUE UUID="f79e2b6f-5ea0-4579-b551-8632b4907e08">
-              <SHORT-NAME>FeeBlockConfiguration_DEM_PrimaryEntry_2</SHORT-NAME>
+              <SHORT-NAME>Fee_DemPrimaryDataBlock2</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration</DEFINITION-REF>
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
@@ -666,7 +666,7 @@
               </REFERENCE-VALUES>
             </ECUC-CONTAINER-VALUE>
             <ECUC-CONTAINER-VALUE UUID="273d0c2b-0eab-4831-8fd4-0cd3ca838722">
-              <SHORT-NAME>FeeBlockConfiguration_DEM_PrimaryEntry_3</SHORT-NAME>
+              <SHORT-NAME>Fee_DemPrimaryDataBlock3</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration</DEFINITION-REF>
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
@@ -706,12 +706,12 @@
               </REFERENCE-VALUES>
             </ECUC-CONTAINER-VALUE>
             <ECUC-CONTAINER-VALUE UUID="598cbfa8-2d34-47fe-8b53-5925035d9370">
-              <SHORT-NAME>FeeBlockConfiguration_DEM_PrimaryEntry_4</SHORT-NAME>
+              <SHORT-NAME>Fee_DemPrimaryDataBlock4</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration</DEFINITION-REF>
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeBlockNumber</DEFINITION-REF>
-                  <VALUE>32</VALUE>
+                  <VALUE>240</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeQsBlockInstances</DEFINITION-REF>
@@ -768,6 +768,86 @@
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeBlockSize</DEFINITION-REF>
                   <VALUE>4</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeImmediateData</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeNumberOfWriteCycles</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeDeviceIndex</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Fls/Fls/FlsGeneral</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="2ff89d98-e739-42a5-9eef-66085602f9ff">
+              <SHORT-NAME>Fee_DemAdminDataBlock</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeBlockNumber</DEFINITION-REF>
+                  <VALUE>176</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeQsBlockInstances</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeQsBlockAddress</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeQuasiStaticManager</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeBlockSize</DEFINITION-REF>
+                  <VALUE>14</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeImmediateData</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeNumberOfWriteCycles</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeDeviceIndex</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Fls/Fls/FlsGeneral</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="d0d3531b-a5fb-44a8-bcf9-b200a9c424c2">
+              <SHORT-NAME>Fee_DemStatusDataBlock</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeBlockNumber</DEFINITION-REF>
+                  <VALUE>128</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeQsBlockInstances</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeQsBlockAddress</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeQuasiStaticManager</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeBlockSize</DEFINITION-REF>
+                  <VALUE>22</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Fee/FeeBlockConfiguration/FeeImmediateData</DEFINITION-REF>

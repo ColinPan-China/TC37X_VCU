@@ -1440,62 +1440,6 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="05922d99-442c-443b-b866-906cdec89dfe">
-                  <SHORT-NAME>DemNvRamBlockId_DEM_PrimaryEntry_0</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdType</DEFINITION-REF>
-                      <VALUE>DEM_NVBLOCK_PRIMARY</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdIndex</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/NvM_DEM_PrimaryEntry_0</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="95a4531f-da08-402f-be06-c1f5cbc854f7">
-                  <SHORT-NAME>DemNvRamBlockId_DEM_PrimaryEntry_1</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdType</DEFINITION-REF>
-                      <VALUE>DEM_NVBLOCK_PRIMARY</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdIndex</DEFINITION-REF>
-                      <VALUE>1</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/NvM_DEM_PrimaryEntry_1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="97b9313c-1592-45fc-b4e6-ef476dce1265">
-                  <SHORT-NAME>DemNvRamBlockId_DEM_StatusData</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdType</DEFINITION-REF>
-                      <VALUE>DEM_NVBLOCK_STATUS</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/NvM_DEM_StatusData</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="f6d2bd81-4401-46f7-8f3e-c892a0811825">
                   <SHORT-NAME>ExtendedDataRecord0x02_Fault_Aging_Counte_Up</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemDataClass</DEFINITION-REF>
@@ -1824,26 +1768,6 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="747911ce-ac39-400a-8c28-2b94c442876e">
-                  <SHORT-NAME>DemNvRamBlockId_DEM_PrimaryEntry_2</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdType</DEFINITION-REF>
-                      <VALUE>DEM_NVBLOCK_PRIMARY</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdIndex</DEFINITION-REF>
-                      <VALUE>2</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/NvM_DEM_PrimaryEntry_2</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="06047b0f-efc4-4fec-b83b-f5a9c2b45d6b">
                   <SHORT-NAME>DemGlobalFreezeFrame</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemGlobalFreezeFrame</DEFINITION-REF>
@@ -1932,26 +1856,6 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="d51b1d0f-c367-4001-a026-3bf772a936c0">
-                  <SHORT-NAME>DemNvRamBlockId_DEM_PrimaryEntry_3</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdType</DEFINITION-REF>
-                      <VALUE>DEM_NVBLOCK_PRIMARY</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdIndex</DEFINITION-REF>
-                      <VALUE>3</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/NvM_DEM_PrimaryEntry_3</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="a31396a8-b099-4814-bbd1-8a5751125722">
                   <SHORT-NAME>IgnitionCycle</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemOperationCycle</DEFINITION-REF>
@@ -1994,8 +1898,8 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="852614fe-6275-47e6-8f9a-54602266f7aa">
-                  <SHORT-NAME>DemNvRamBlockId_DEM_AdminData</SHORT-NAME>
+                <ECUC-CONTAINER-VALUE UUID="f08cb1d4-0077-4b37-9e29-52ab9ad7302e">
+                  <SHORT-NAME>Dem_AdminData</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId</DEFINITION-REF>
                   <PARAMETER-VALUES>
                     <ECUC-TEXTUAL-PARAM-VALUE>
@@ -2006,12 +1910,108 @@
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/NvM_DEM_AdminData</VALUE-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/DemAdminDataBlock</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="6139189f-ba7f-434a-a0cc-9af66cfcba4d">
-                  <SHORT-NAME>DemNvRamBlockId_DEM_PrimaryEntry_4</SHORT-NAME>
+                <ECUC-CONTAINER-VALUE UUID="93ccf6d6-d97c-4fd9-b997-8f8c0cb5df39">
+                  <SHORT-NAME>Dem_StatusData</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdType</DEFINITION-REF>
+                      <VALUE>DEM_NVBLOCK_STATUS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/DemStatusDataBlock</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="3cc9ae38-5b18-49ae-8db4-f03992488732">
+                  <SHORT-NAME>Dem_PrimaryEntry0</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdType</DEFINITION-REF>
+                      <VALUE>DEM_NVBLOCK_PRIMARY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdIndex</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/DemPrimaryDataBlock0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="345e96f3-040c-4343-9fe0-0a5c079abf33">
+                  <SHORT-NAME>Dem_PrimaryEntry1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdType</DEFINITION-REF>
+                      <VALUE>DEM_NVBLOCK_PRIMARY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdIndex</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/DemPrimaryDataBlock1</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="d7534155-9a67-4e59-a4fc-b9d587472d01">
+                  <SHORT-NAME>Dem_PrimaryEntry2</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdType</DEFINITION-REF>
+                      <VALUE>DEM_NVBLOCK_PRIMARY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdIndex</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/DemPrimaryDataBlock2</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="5615af6a-0c97-46d9-9c70-c5d059f1958d">
+                  <SHORT-NAME>Dem_PrimaryEntry3</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdType</DEFINITION-REF>
+                      <VALUE>DEM_NVBLOCK_PRIMARY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdIndex</DEFINITION-REF>
+                      <VALUE>3</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/DemPrimaryDataBlock3</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="1c6f20b7-d06a-41d4-bdb5-a40d27958b73">
+                  <SHORT-NAME>Dem_PrimaryEntry4</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId</DEFINITION-REF>
                   <PARAMETER-VALUES>
                     <ECUC-TEXTUAL-PARAM-VALUE>
@@ -2026,7 +2026,7 @@
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/Dem/DemGeneral/DemNvRamBlockId/DemNvRamBlockIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/NvM_DEM_PrimaryEntry_4</VALUE-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/NvM/DemPrimaryDataBlock4</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
