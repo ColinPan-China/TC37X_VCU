@@ -412,10 +412,10 @@ void Lin_DemoFunction(void)
 {
 	Std_ReturnType Ret1;
 	Std_ReturnType Ret2;
-	Ret1 = Lin_17_AscLin_SendFrame(Lin_17_AscLinConf_LinChannel_LinChannel_0, &Lin_Pdu[0]);
+	Ret1 = Lin_17_AscLin_SendFrame(Lin_17_AscLinConf_LinChannel_LinChannel_LIN4, &Lin_Pdu[0]);
 	 do
 	 {
-	 	Ret2 = Lin_17_AscLin_GetStatus(Lin_17_AscLinConf_LinChannel_LinChannel_0,(uint8**)&SlaveSduPtr);
+	 	Ret2 = Lin_17_AscLin_GetStatus(Lin_17_AscLinConf_LinChannel_LinChannel_LIN4,(uint8**)&SlaveSduPtr);
 	 	if ((Ret1 != LIN_TX_BUSY) && (Ret1 != LIN_TX_OK))
 	 	{
 	 		break;
@@ -433,7 +433,7 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: SWC1_Runnable10ms
  *********************************************************************************************************************/
-//Lin_DemoFunction();
+  Lin_DemoFunction();
 	if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )//( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_12_KL15) == 0 )  
   {
     ShutdownTimer = 0;

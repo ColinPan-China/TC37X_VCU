@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.c
- *   Generation Time: 2025-07-30 09:42:59
+ *   Generation Time: 2025-07-30 14:05:36
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -118,6 +118,15 @@ OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_ASCLIN2RX_ISR_Dyn;
 
 /*! Dynamic ISR data: ASCLIN2TX_ISR */
 OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_ASCLIN2TX_ISR_Dyn;
+
+/*! Dynamic ISR data: ASCLIN4ERR_ISR */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_ASCLIN4ERR_ISR_Dyn;
+
+/*! Dynamic ISR data: ASCLIN4RX_ISR */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_ASCLIN4RX_ISR_Dyn;
+
+/*! Dynamic ISR data: ASCLIN4TX_ISR */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_ASCLIN4TX_ISR_Dyn;
 
 /*! Dynamic ISR data: CanIsr_0 */
 OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_CanIsr_0_Dyn;
@@ -590,6 +599,111 @@ CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ASCLIN2TX_ISR =
   /* .IsEnabledOnInitialization = */ TRUE
 }
 ;
+/*! ISR configuration data: ASCLIN4ERR_ISR */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ASCLIN4ERR_ISR_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_ASCLIN4ERR_ISR,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_ASCLIN4ERR_ISR,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ASCLIN4ERR_ISR =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_ASCLIN4ERR_ISR,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level21_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_ASCLIN4ERR_ISR_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_ASCLIN4ERR_ISR_HwConfig,
+  /* .IsrId                     = */ ASCLIN4ERR_ISR,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
+/*! ISR configuration data: ASCLIN4RX_ISR */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ASCLIN4RX_ISR_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_ASCLIN4RX_ISR,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_ASCLIN4RX_ISR,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ASCLIN4RX_ISR =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_ASCLIN4RX_ISR,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level20_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_ASCLIN4RX_ISR_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_ASCLIN4RX_ISR_HwConfig,
+  /* .IsrId                     = */ ASCLIN4RX_ISR,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
+/*! ISR configuration data: ASCLIN4TX_ISR */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ASCLIN4TX_ISR_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_ASCLIN4TX_ISR,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_ASCLIN4TX_ISR,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ASCLIN4TX_ISR =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_ASCLIN4TX_ISR,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level19_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_ASCLIN4TX_ISR_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_ASCLIN4TX_ISR_HwConfig,
+  /* .IsrId                     = */ ASCLIN4TX_ISR,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
 /*! ISR configuration data: CanIsr_0 */
 CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_CanIsr_0_HwConfig =
 {
@@ -818,7 +932,7 @@ CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_DMACH10SR_ISR =
   /* .Thread   = */
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_DMACH10SR_ISR,
-    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level21_Dyn,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level24_Dyn,
     /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
     /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_DMACH10SR_ISR_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
@@ -853,7 +967,7 @@ CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_DMACH11SR_ISR =
   /* .Thread   = */
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_DMACH11SR_ISR,
-    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level22_Dyn,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level25_Dyn,
     /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
     /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_DMACH11SR_ISR_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
@@ -888,7 +1002,7 @@ CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_GTMTOM1SR3_ISR =
   /* .Thread   = */
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_GTMTOM1SR3_ISR,
-    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level23_Dyn,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level26_Dyn,
     /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
     /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_GTMTOM1SR3_ISR_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
@@ -923,7 +1037,7 @@ CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_GTMTOM1SR4_ISR =
   /* .Thread   = */
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_GTMTOM1SR4_ISR,
-    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level24_Dyn,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level27_Dyn,
     /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
     /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_GTMTOM1SR4_ISR_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
@@ -958,7 +1072,7 @@ CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_QSPI3ERR_ISR =
   /* .Thread   = */
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_QSPI3ERR_ISR,
-    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level19_Dyn,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level22_Dyn,
     /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
     /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_QSPI3ERR_ISR_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
@@ -993,7 +1107,7 @@ CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_QSPI3PT_ISR =
   /* .Thread   = */
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_QSPI3PT_ISR,
-    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level20_Dyn,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level23_Dyn,
     /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
     /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_QSPI3PT_ISR_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
@@ -1036,6 +1150,9 @@ CONSTP2CONST(Os_IsrConfigType, OS_CONST, OS_CONST) OsCfg_IsrRefs[OS_ISRID_COUNT 
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN2ERR_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN2RX_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN2TX_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN4ERR_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN4RX_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN4TX_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_CanIsr_0),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_CanIsr_1),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_CanIsr_3),
