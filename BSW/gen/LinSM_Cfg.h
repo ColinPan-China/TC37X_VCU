@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinSM_Cfg.h
- *   Generation Time: 2025-02-06 17:04:00
+ *   Generation Time: 2025-07-29 16:22:56
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -379,7 +379,7 @@
 #define LinSM_GetRequestedComModeOfPCConfig()                                                       LinSM_RequestedComMode.raw  /**< the pointer to LinSM_RequestedComMode */
 #define LinSM_GetSilenceAfterWakeupTimerOfPCConfig()                                                LinSM_SilenceAfterWakeupTimer.raw  /**< the pointer to LinSM_SilenceAfterWakeupTimer */
 #define LinSM_GetSizeOfChannelConfigOfPCConfig()                                                    1u  /**< the number of accomplishable value elements in LinSM_ChannelConfig */
-#define LinSM_GetSizeOfComMToLinSMChannelOfPCConfig()                                               4u  /**< the number of accomplishable value elements in LinSM_ComMToLinSMChannel */
+#define LinSM_GetSizeOfComMToLinSMChannelOfPCConfig()                                               5u  /**< the number of accomplishable value elements in LinSM_ComMToLinSMChannel */
 #define LinSM_GetWakeUpRetryCounterOfPCConfig()                                                     LinSM_WakeUpRetryCounter.raw  /**< the pointer to LinSM_WakeUpRetryCounter */
 /** 
   \}
@@ -909,7 +909,7 @@ typedef LinSM_PCConfigType LinSM_ConfigType;  /**< A structure type is present f
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(LinSM_ComMToLinSMChannelType, LINSM_CONST) LinSM_ComMToLinSMChannel[4];
+extern CONST(LinSM_ComMToLinSMChannelType, LINSM_CONST) LinSM_ComMToLinSMChannel[5];
 #define LINSM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

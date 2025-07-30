@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.h
- *   Generation Time: 2025-02-18 10:19:38
+ *   Generation Time: 2025-07-29 16:22:57
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -132,6 +132,10 @@ extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_CanIsr_1;
 /*! ISR configuration data: CanIsr_4 */
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_CanIsr_4_HwConfig;
 extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_CanIsr_4;
+
+/*! ISR configuration data: CanIsr_6 */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_CanIsr_6_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_CanIsr_6;
 
 /*! ISR configuration data: CounterIsr_SystemTimer */
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer_HwConfig;

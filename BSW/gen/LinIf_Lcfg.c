@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinIf_Lcfg.c
- *   Generation Time: 2025-01-16 10:23:51
+ *   Generation Time: 2025-07-29 16:22:56
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -134,7 +134,7 @@ CONST(LinIf_ChannelConfigType, LINIF_CONST) LinIf_ChannelConfig[1] = {  /* PRQA 
 /*lint -restore */
 CONST(LinIf_ChannelIndTableType, LINIF_CONST) LinIf_ChannelIndTable[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    LinChannelIndex                               SystemChannelIndex                             */
-  { /*     0 */ 0 /* LinConf_LinChannel_CN_LIN00_b12a0454 */, 3 /* ComMConf_ComMChannel_CN_LIN00_b12a0454 */ }
+  { /*     0 */ 0 /* LinConf_LinChannel_CN_LIN00_b12a0454 */, 4 /* ComMConf_ComMChannel_CN_LIN00_b12a0454 */ }
 };
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -156,7 +156,7 @@ CONST(LinIf_ChannelIndTableType, LINIF_CONST) LinIf_ChannelIndTable[1] = {  /* P
 /*lint -restore */
 CONST(LinIf_ChannelToDrvWakeupInfoType, LINIF_CONST) LinIf_ChannelToDrvWakeupInfo[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    LinWakeupSource */
-  { /*     0 */         0x0100u }
+  { /*     0 */         0x0200u }
 };
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -480,12 +480,13 @@ CONST(LinIf_ScheduleTableListIndType, LINIF_CONST) LinIf_ScheduleTableListInd[2]
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(LinIf_SystemToLinIfChannelType, LINIF_CONST) LinIf_SystemToLinIfChannel[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(LinIf_SystemToLinIfChannelType, LINIF_CONST) LinIf_SystemToLinIfChannel[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    LinIfChannelIndex                                                                       */
   { /*     0 */                                                       255U /* 0xFF -> No Lin channel */ },
   { /*     1 */                                                       255U /* 0xFF -> No Lin channel */ },
   { /*     2 */                                                       255U /* 0xFF -> No Lin channel */ },
-  { /*     3 */ 0U /* ComMConf_ComMChannel_CN_LIN00_b12a0454 -> LinIfConf_LinIfChannel_CHNL_45618847 */ }
+  { /*     3 */                                                       255U /* 0xFF -> No Lin channel */ },
+  { /*     4 */ 0U /* ComMConf_ComMChannel_CN_LIN00_b12a0454 -> LinIfConf_LinIfChannel_CHNL_45618847 */ }
 };
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinSM_Cfg.c
- *   Generation Time: 2025-01-16 10:23:51
+ *   Generation Time: 2025-07-29 16:22:56
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -72,12 +72,13 @@
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(LinSM_ComMToLinSMChannelType, LINSM_CONST) LinSM_ComMToLinSMChannel[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(LinSM_ComMToLinSMChannelType, LINSM_CONST) LinSM_ComMToLinSMChannel[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     ComMToLinSMChannel               Referable Keys */
   /*     0 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
   /*     1 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
   /*     2 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
-  /*     3 */                           0u   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN00_b12a0454] */
+  /*     3 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
+  /*     4 */                           0u   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN00_b12a0454] */
 };
 #define LINSM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
