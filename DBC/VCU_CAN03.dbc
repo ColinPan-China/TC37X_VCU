@@ -1,0 +1,179 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: GWM VCU Tester
+
+
+BO_ 531 VcuCan03RxMsg2: 8 GWM
+ SG_ VcuRxMsg4_Sig3 : 48|16@1- (1,0) [0|0] ""  VCU
+ SG_ VcuRxMsg4_Sig2 : 32|16@1- (1,0) [0|0] ""  VCU
+ SG_ VcuRxMsg4_Sig1 : 16|16@1- (1,0) [0|0] ""  VCU
+ SG_ VcuRxMsg4_Sig0 : 0|16@1- (1,0) [0|0] ""  VCU
+
+BO_ 530 VcuCan03RxMsg1: 8 GWM
+ SG_ VcuRxMsg3_Sig3 : 48|16@1- (1,0) [0|0] ""  VCU
+ SG_ VcuRxMsg3_Sig2 : 32|16@1- (1,0) [0|0] ""  VCU
+ SG_ VcuRxMsg3_Sig1 : 16|16@1- (1,0) [0|0] ""  VCU
+ SG_ VcuRxMsg3_Sig0 : 0|16@1- (1,0) [0|0] ""  VCU
+
+BO_ 275 VcuCan03TxMsg2: 8 VCU
+ SG_ VcuAdcTxMsg2_Sig3 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ VcuAdcTxMsg2_Sig2 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ VcuAdcTxMsg2_Sig1 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ VcuAdcTxMsg2_Sig0 : 0|16@1- (1,0) [0|0] ""  GWM
+
+BO_ 274 VcuCan03TxMsg1: 8 VCU
+ SG_ VcuAdcTxMsg1_Sig3 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ VcuAdcTxMsg1_Sig2 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ VcuAdcTxMsg1_Sig1 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ VcuAdcTxMsg1_Sig0 : 0|16@1- (1,0) [0|0] ""  GWM
+
+BO_ 1280 VCU_Rx_500h_NM: 8 GWM
+ SG_ VCU_Rx_500h_NM : 0|64@1+ (1,0) [0|0] ""  VCU
+ 
+BO_ 1308 VCU_Tx_51Ch_NM: 8 VCU
+ SG_ VCU_Tx_51Ch_NM : 0|64@1+ (1,0) [0|0] ""  GWM
+
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","NoMsgSendType","NotUsed";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigCycleTimeActive" INT 0 0;
+BA_DEF_ SG_  "GenSigCycleTime" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed";
+BA_DEF_  "Baudrate" INT 0 1000000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_ BO_  "TpTxIndex" INT 0 255;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NmStationAddress" HEX 0 255;
+BA_DEF_ BU_  "NmNode" ENUM  "no","yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "no","yes";
+BA_DEF_  "NmAsrWaitBusSleepTime" INT 0 65535;
+BA_DEF_  "NmAsrTimeoutTime" INT 1 65535;
+BA_DEF_  "NmAsrRepeatMessageTime" INT 0 65535;
+BA_DEF_ BU_  "NmAsrNodeIdentifier" HEX 0 255;
+BA_DEF_ BU_  "NmAsrNode" ENUM  "no","yes";
+BA_DEF_  "NmAsrMessageCount" INT 1 256;
+BA_DEF_ BO_  "NmAsrMessage" ENUM  "no","yes";
+BA_DEF_ BU_  "NmAsrCanMsgReducedTime" INT 1 65535;
+BA_DEF_  "NmAsrCanMsgCycleTime" INT 1 65535;
+BA_DEF_ BU_  "NmAsrCanMsgCycleOffset" INT 0 65535;
+BA_DEF_  "NmAsrBaseAddress" HEX 0 2047;
+BA_DEF_ BU_  "ILUsed" ENUM  "no","yes";
+BA_DEF_  "ILTxTimeout" INT 0 65535;
+BA_DEF_ SG_  "GenSigTimeoutValue" INT 0 65535;
+BA_DEF_ SG_  "GenSigTimeoutTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "no","yes";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 65535;
+BA_DEF_ BO_  "DiagUudtResponse" ENUM  "false","true";
+BA_DEF_ BO_  "DiagUudResponse" ENUM  "False","True";
+BA_DEF_ BO_  "DiagState" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "no","yes";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_DEF_  "VFrameFormat" "ExtendedCAN_FD";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigCycleTimeActive" 0;
+BA_DEF_DEF_  "GenSigCycleTime" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "Manufacturer" "Vector";
+BA_DEF_DEF_  "TpTxIndex" 0;
+BA_DEF_DEF_  "NodeLayerModules" " ";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "no";
+BA_DEF_DEF_  "NmMessage" "no";
+BA_DEF_DEF_  "NmAsrWaitBusSleepTime" 2000;
+BA_DEF_DEF_  "NmAsrTimeoutTime" 2000;
+BA_DEF_DEF_  "NmAsrRepeatMessageTime" 1500;
+BA_DEF_DEF_  "NmAsrNodeIdentifier" 28;
+BA_DEF_DEF_  "NmAsrNode" "yes";
+BA_DEF_DEF_  "NmAsrMessageCount" 128;
+BA_DEF_DEF_  "NmAsrMessage" "no";
+BA_DEF_DEF_  "NmAsrCanMsgReducedTime" 320;
+BA_DEF_DEF_  "NmAsrCanMsgCycleTime" 500;
+BA_DEF_DEF_  "NmAsrCanMsgCycleOffset" 0;
+BA_DEF_DEF_  "NmAsrBaseAddress" 1024;
+BA_DEF_DEF_  "ILUsed" "yes";
+BA_DEF_DEF_  "ILTxTimeout" 0;
+BA_DEF_DEF_  "GenSigTimeoutValue" 0;
+BA_DEF_DEF_  "GenSigTimeoutTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "yes";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "DiagUudtResponse" "false";
+BA_DEF_DEF_  "DiagUudResponse" "False";
+BA_DEF_DEF_  "DiagState" "no";
+BA_DEF_DEF_  "DiagResponse" "no";
+BA_DEF_DEF_  "DiagRequest" "no";
+BA_DEF_DEF_  "DBName" "";
+BA_ "NmAsrWaitBusSleepTime" 2000;
+BA_ "Baudrate" 500000;
+BA_ "BusType" "CAN";
+BA_ "NmType" "NmAsr";
+BA_ "Manufacturer" "Vector";
+BA_ "DBName" "TC37X_VCU_CAN03";
+BA_ "VFrameFormat" BO_ 531 0;
+BA_ "GenMsgCycleTime" BO_ 531 500;
+BA_ "VFrameFormat" BO_ 530 0;
+BA_ "GenMsgCycleTime" BO_ 530 500;
+BA_ "VFrameFormat" BO_ 275 0;
+BA_ "GenMsgCycleTime" BO_ 275 500;
+BA_ "VFrameFormat" BO_ 274 0;
+BA_ "GenMsgCycleTime" BO_ 274 500;
+BA_ "VFrameFormat" BO_ 1280 0;
+BA_ "GenMsgCycleTime" BO_ 1280 500;
+BA_ "NmAsrMessage" BO_ 1280 1;
+BA_ "NmMessage" BO_ 1280 1;
+BA_ "VFrameFormat" BO_ 1308 0;
+BA_ "GenMsgCycleTime" BO_ 1308 500;
+BA_ "NmAsrMessage" BO_ 1308 1;
+BA_ "NmMessage" BO_ 1308 1;
+

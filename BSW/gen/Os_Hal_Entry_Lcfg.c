@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Entry_Lcfg.c
- *   Generation Time: 2025-07-29 16:22:57
+ *   Generation Time: 2025-07-30 09:42:59
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -136,7 +136,7 @@ Os_Hal_UnhandledInterruptEntry(0, 20)
 Os_Hal_UnhandledInterruptEntry(0, 21)
 Os_Hal_UnhandledInterruptEntry(0, 22)
 Os_Hal_UnhandledInterruptEntry(0, 23)
-Os_Hal_UnhandledInterruptEntry(0, 24)
+Os_Hal_Cat2InterruptEntry(0, 24, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CanIsr_3)
 Os_Hal_UnhandledInterruptEntry(0, 25)
 Os_Hal_UnhandledInterruptEntry(0, 26)
 Os_Hal_UnhandledInterruptEntry(0, 27)

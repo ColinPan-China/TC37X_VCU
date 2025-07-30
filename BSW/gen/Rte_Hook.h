@@ -258,6 +258,10 @@
  *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN01_5e76994c_GetCurrentComMode_Start
  *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode_Return
  *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode_Start
+ *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN03_5a834971_GetCurrentComMode_Return
+ *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN03_5a834971_GetCurrentComMode_Start
+ *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN03_5a834971_RequestComMode_Return
+ *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN03_5a834971_RequestComMode_Start
  *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN12_74cffd8f_GetCurrentComMode_Return
  *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN12_74cffd8f_GetCurrentComMode_Start
  *  Rte_CallHook_SWC1_UR_CN_TC37X_VCU_CAN12_74cffd8f_RequestComMode_Return
@@ -368,6 +372,8 @@
  *  Rte_Runnable_ComM_ComM_MainFunction_3_Start
  *  Rte_Runnable_ComM_ComM_MainFunction_4_Return
  *  Rte_Runnable_ComM_ComM_MainFunction_4_Start
+ *  Rte_Runnable_ComM_ComM_MainFunction_5_Return
+ *  Rte_Runnable_ComM_ComM_MainFunction_5_Start
  *  Rte_Runnable_ComM_GetCurrentComMode_Return
  *  Rte_Runnable_ComM_GetCurrentComMode_Start
  *  Rte_Runnable_ComM_GetInhibitionStatus_Return
@@ -1166,6 +1172,8 @@
  *  SchM_Schedulable_ComM_ComM_MainFunction_3_Start
  *  SchM_Schedulable_ComM_ComM_MainFunction_4_Return
  *  SchM_Schedulable_ComM_ComM_MainFunction_4_Start
+ *  SchM_Schedulable_ComM_ComM_MainFunction_5_Return
+ *  SchM_Schedulable_ComM_ComM_MainFunction_5_Start
  *  SchM_Schedulable_Com_Com_MainFunctionRx_ComMainFunctionRx_Return
  *  SchM_Schedulable_Com_Com_MainFunctionRx_ComMainFunctionRx_Start
  *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_Return

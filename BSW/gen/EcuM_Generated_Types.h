@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Generated_Types.h
- *   Generation Time: 2025-07-29 16:22:56
+ *   Generation Time: 2025-07-30 09:42:59
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -56,8 +56,9 @@
 #define EcuMConf_EcuMWakeupSource_CN_KAMA_FP_EPT_0303_275b3e6e (5uL) 
 #define EcuMConf_EcuMWakeupSource_CN_TC37X_VCU_CAN00_07b6c9c8  (6uL) 
 #define EcuMConf_EcuMWakeupSource_CN_TC37X_VCU_CAN01_70b1f95e  (7uL) 
-#define EcuMConf_EcuMWakeupSource_CN_TC37X_VCU_CAN12_f0a399a5  (8uL) 
-#define EcuMConf_EcuMWakeupSource_CN_LIN00_b12a0454            (9uL) 
+#define EcuMConf_EcuMWakeupSource_CN_TC37X_VCU_CAN03_9ebf9872  (8uL) 
+#define EcuMConf_EcuMWakeupSource_CN_TC37X_VCU_CAN12_f0a399a5  (9uL) 
+#define EcuMConf_EcuMWakeupSource_CN_LIN00_b12a0454            (10uL) 
 
  
 /* ------------------------------------- Range of EcuM_WakeupSourceType -------------------------------------------- */
@@ -71,8 +72,9 @@
 #define ECUM_WKSOURCE_CN_KAMA_FP_EPT_0303_275b3e6e (EcuM_WakeupSourceType)(32uL) 
 #define ECUM_WKSOURCE_CN_TC37X_VCU_CAN00_07b6c9c8  (EcuM_WakeupSourceType)(64uL) 
 #define ECUM_WKSOURCE_CN_TC37X_VCU_CAN01_70b1f95e  (EcuM_WakeupSourceType)(128uL) 
-#define ECUM_WKSOURCE_CN_TC37X_VCU_CAN12_f0a399a5  (EcuM_WakeupSourceType)(256uL) 
-#define ECUM_WKSOURCE_CN_LIN00_b12a0454            (EcuM_WakeupSourceType)(512uL) 
+#define ECUM_WKSOURCE_CN_TC37X_VCU_CAN03_9ebf9872  (EcuM_WakeupSourceType)(256uL) 
+#define ECUM_WKSOURCE_CN_TC37X_VCU_CAN12_f0a399a5  (EcuM_WakeupSourceType)(512uL) 
+#define ECUM_WKSOURCE_CN_LIN00_b12a0454            (EcuM_WakeupSourceType)(1024uL) 
 
 
 

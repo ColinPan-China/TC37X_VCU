@@ -394,6 +394,19 @@
           <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
           <BASE-TYPE-ENCODING>BOOLEAN</BASE-TYPE-ENCODING>
         </SW-BASE-TYPE>
+        <SW-BASE-TYPE UUID="6402133E-310A-48B0-8B77-1F1CA619A039">
+          <SHORT-NAME>uint8_6_none</SHORT-NAME>
+          <CATEGORY>FIXED_LENGTH</CATEGORY>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV_SDG">
+                <SD GID="DV_ReadOnly">1</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+          <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+        </SW-BASE-TYPE>
       </ELEMENTS>
       <AR-PACKAGES>
         <AR-PACKAGE UUID="F803B517-CFFA-4CBA-A2BC-B6F2F4B47D61">
@@ -3725,6 +3738,24 @@
                   <INTERNAL-CONSTRS>
                     <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
                     <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR UUID="7423FBC1-639A-43AC-9BD5-5141947AC131">
+              <SHORT-NAME>DC_VCU_Tx_51Ch_NM_UserData</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">281474976710655</UPPER-LIMIT>
                   </INTERNAL-CONSTRS>
                 </DATA-CONSTR-RULE>
               </DATA-CONSTR-RULES>
@@ -8353,6 +8384,17 @@
             </COMPU-METHOD>
             <COMPU-METHOD UUID="CDD4BF13-07D7-4E25-988D-8F91BFE5F339">
               <SHORT-NAME>CM_VcuCan12TxMsg2_Sig3</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+            </COMPU-METHOD>
+            <COMPU-METHOD UUID="C03C2DB3-4A71-4E87-BDBB-F88D059703B0">
+              <SHORT-NAME>CM_VCU_Tx_51Ch_NM_UserData</SHORT-NAME>
               <CATEGORY>IDENTICAL</CATEGORY>
               <ADMIN-DATA>
                 <SDGS>
