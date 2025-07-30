@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinSM_Cfg.h
- *   Generation Time: 2025-07-30 09:42:59
+ *   Generation Time: 2025-07-30 15:10:24
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -114,8 +114,10 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define LinSMConf_LinSMSchedule_CHNL_8e3d5be2_a66eb9f7                0u
 #define LinSMConf_LinSMSchedule_CHNL_45618847_32a17f26                0u
 #define LinSMConf_LinSMSchedule_TCU_LIN_Schedule_740f8639             1u
+#define LinSMConf_LinSMSchedule_Vcu_Lin0_Schedule_0e999bb4            1u
 /**\} */
 
 
@@ -233,11 +235,11 @@
   \brief  If all values in a CONST array or an element in a CONST array of structs are equal, the define is STD_ON else STD_OFF.
   \{
 */ 
-#define LINSM_ISDEF_COMMCHANNELHANDLEOFCHANNELCONFIG                                                STD_ON
+#define LINSM_ISDEF_COMMCHANNELHANDLEOFCHANNELCONFIG                                                STD_OFF
 #define LINSM_ISDEF_CONFIRMATIONTIMEOUTOFCHANNELCONFIG                                              STD_ON
 #define LINSM_ISDEF_MASTERNODETYPEOFCHANNELCONFIG                                                   STD_ON
 #define LINSM_ISDEF_SLEEPSUPPORTOFCHANNELCONFIG                                                     STD_ON
-#define LINSM_ISDEF_TRANSCEIVERHANDLINGOFCHANNELCONFIG                                              STD_ON
+#define LINSM_ISDEF_TRANSCEIVERHANDLINGOFCHANNELCONFIG                                              STD_OFF
 #define LINSM_ISDEF_SCHEDULETABLEIDRANGEOFCHANNELPOSTBUILDCONFIG                                    STD_ON
 #define LINSM_ISDEF_COMMTOLINSMCHANNEL                                                              STD_OFF
 #define LINSM_ISDEF_CHANNELCONFIGOFPCCONFIG                                                         STD_ON
@@ -260,11 +262,11 @@
   \brief  If all values in a CONST array or an element in a CONST array of structs are equal, the define contains the always equals value.
   \{
 */ 
-#define LINSM_EQ2_COMMCHANNELHANDLEOFCHANNELCONFIG                                                  ComMConf_ComMChannel_CN_LIN00_b12a0454
+#define LINSM_EQ2_COMMCHANNELHANDLEOFCHANNELCONFIG                                                  
 #define LINSM_EQ2_CONFIRMATIONTIMEOUTOFCHANNELCONFIG                                                100u
 #define LINSM_EQ2_MASTERNODETYPEOFCHANNELCONFIG                                                     TRUE
 #define LINSM_EQ2_SLEEPSUPPORTOFCHANNELCONFIG                                                       TRUE
-#define LINSM_EQ2_TRANSCEIVERHANDLINGOFCHANNELCONFIG                                                LINSM_TRCV_SLEEP
+#define LINSM_EQ2_TRANSCEIVERHANDLINGOFCHANNELCONFIG                                                
 #define LINSM_EQ2_SCHEDULETABLEIDRANGEOFCHANNELPOSTBUILDCONFIG                                      2u
 #define LINSM_EQ2_COMMTOLINSMCHANNEL                                                                
 #define LINSM_EQ2_CHANNELCONFIGOFPCCONFIG                                                           LinSM_ChannelConfig
@@ -378,8 +380,8 @@
 #define LinSM_GetNegativeConfirmationOfPCConfig()                                                   LinSM_NegativeConfirmation.raw  /**< the pointer to LinSM_NegativeConfirmation */
 #define LinSM_GetRequestedComModeOfPCConfig()                                                       LinSM_RequestedComMode.raw  /**< the pointer to LinSM_RequestedComMode */
 #define LinSM_GetSilenceAfterWakeupTimerOfPCConfig()                                                LinSM_SilenceAfterWakeupTimer.raw  /**< the pointer to LinSM_SilenceAfterWakeupTimer */
-#define LinSM_GetSizeOfChannelConfigOfPCConfig()                                                    1u  /**< the number of accomplishable value elements in LinSM_ChannelConfig */
-#define LinSM_GetSizeOfComMToLinSMChannelOfPCConfig()                                               6u  /**< the number of accomplishable value elements in LinSM_ComMToLinSMChannel */
+#define LinSM_GetSizeOfChannelConfigOfPCConfig()                                                    2u  /**< the number of accomplishable value elements in LinSM_ChannelConfig */
+#define LinSM_GetSizeOfComMToLinSMChannelOfPCConfig()                                               7u  /**< the number of accomplishable value elements in LinSM_ComMToLinSMChannel */
 #define LinSM_GetWakeUpRetryCounterOfPCConfig()                                                     LinSM_WakeUpRetryCounter.raw  /**< the pointer to LinSM_WakeUpRetryCounter */
 /** 
   \}
@@ -406,6 +408,8 @@
   \brief  These macros can be used to read CONST and VAR data.
   \{
 */ 
+#define LinSM_GetComMChannelHandleOfChannelConfig(Index)                                            ((NetworkHandleType)LinSM_GetChannelConfigOfPCConfig()[(Index)].ComMChannelHandleOfChannelConfig)
+#define LinSM_GetTransceiverHandlingOfChannelConfig(Index)                                          (LinSM_GetChannelConfigOfPCConfig()[(Index)].TransceiverHandlingOfChannelConfig)
 #define LinSM_GetComMToLinSMChannel(Index)                                                          (LinSM_GetComMToLinSMChannelOfPCConfig()[(Index)])
 #define LinSM_GetComState(Index)                                                                    (LinSM_GetComStateOfPCConfig()[(Index)])
 #define LinSM_GetConfirmationTimer(Index)                                                           (LinSM_GetConfirmationTimerOfPCConfig()[(Index)])
@@ -424,11 +428,9 @@
   \brief  These macros can be used to read deduplicated data elements.
   \{
 */ 
-#define LinSM_GetComMChannelHandleOfChannelConfig(Index)                                            ComMConf_ComMChannel_CN_LIN00_b12a0454
 #define LinSM_GetConfirmationTimeoutOfChannelConfig(Index)                                          100u
 #define LinSM_IsMasterNodeTypeOfChannelConfig(Index)                                                (((TRUE)) != FALSE)
 #define LinSM_IsSleepSupportOfChannelConfig(Index)                                                  (((TRUE)) != FALSE)
-#define LinSM_GetTransceiverHandlingOfChannelConfig(Index)                                          LINSM_TRCV_SLEEP
 #define LinSM_GetScheduleTableIdRangeOfChannelPostBuildConfig(Index)                                2u
 #define LinSM_GetSizeOfChannelConfig()                                                              LinSM_GetSizeOfChannelConfigOfPCConfig()
 #define LinSM_GetSizeOfComMToLinSMChannel()                                                         LinSM_GetSizeOfComMToLinSMChannelOfPCConfig()
@@ -712,7 +714,8 @@ typedef uint8 LinSM_WakeUpRetryCounterType;
 /**   \brief  type used in LinSM_ChannelConfig */
 typedef struct sLinSM_ChannelConfigType
 {
-  uint8 LinSM_ChannelConfigNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  LinSM_ComMChannelHandleOfChannelConfigType ComMChannelHandleOfChannelConfig;
+  LinSM_TransceiverHandlingOfChannelConfigType TransceiverHandlingOfChannelConfig;
 } LinSM_ChannelConfigType;
 
 /**   \brief  type used in LinSM_ChannelPostBuildConfig */
@@ -734,42 +737,49 @@ typedef struct sLinSM_ChannelPostBuildConfigType
 typedef struct LinSM_ComStateStructSTag
 {
   ComM_ModeType CHNL_45618847;
+  ComM_ModeType CHNL_8e3d5be2;
 } LinSM_ComStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to LinSM_ConfirmationTimer */
 typedef struct LinSM_ConfirmationTimerStructSTag
 {
   LinSM_ConfirmationTimerType CHNL_45618847;
+  LinSM_ConfirmationTimerType CHNL_8e3d5be2;
 } LinSM_ConfirmationTimerStructSType;
 
 /**   \brief  type to be used as symbolic data element access to LinSM_DesiredConfirmation */
 typedef struct LinSM_DesiredConfirmationStructSTag
 {
   LinSM_DesiredConfirmationType CHNL_45618847;
+  LinSM_DesiredConfirmationType CHNL_8e3d5be2;
 } LinSM_DesiredConfirmationStructSType;
 
 /**   \brief  type to be used as symbolic data element access to LinSM_NegativeConfirmation */
 typedef struct LinSM_NegativeConfirmationStructSTag
 {
   LinSM_NegativeConfirmationType CHNL_45618847;
+  LinSM_NegativeConfirmationType CHNL_8e3d5be2;
 } LinSM_NegativeConfirmationStructSType;
 
 /**   \brief  type to be used as symbolic data element access to LinSM_RequestedComMode */
 typedef struct LinSM_RequestedComModeStructSTag
 {
   LinSM_RequestedComModeType CHNL_45618847;
+  LinSM_RequestedComModeType CHNL_8e3d5be2;
 } LinSM_RequestedComModeStructSType;
 
 /**   \brief  type to be used as symbolic data element access to LinSM_SilenceAfterWakeupTimer */
 typedef struct LinSM_SilenceAfterWakeupTimerStructSTag
 {
   LinSM_SilenceAfterWakeupTimerType CHNL_45618847;
+  LinSM_SilenceAfterWakeupTimerType CHNL_8e3d5be2;
 } LinSM_SilenceAfterWakeupTimerStructSType;
 
 /**   \brief  type to be used as symbolic data element access to LinSM_WakeUpRetryCounter */
 typedef struct LinSM_WakeUpRetryCounterStructSTag
 {
   LinSM_WakeUpRetryCounterType CHNL_45618847;
+  LinSM_WakeUpRetryCounterType CHNL_8e3d5be2;
 } LinSM_WakeUpRetryCounterStructSType;
 
 /** 
@@ -784,49 +794,49 @@ typedef struct LinSM_WakeUpRetryCounterStructSTag
 /**   \brief  type to access LinSM_ComState in an index and symbol based style. */
 typedef union LinSM_ComStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_ModeType raw[1];
+  ComM_ModeType raw[2];
   LinSM_ComStateStructSType str;
 } LinSM_ComStateUType;
 
 /**   \brief  type to access LinSM_ConfirmationTimer in an index and symbol based style. */
 typedef union LinSM_ConfirmationTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  LinSM_ConfirmationTimerType raw[1];
+  LinSM_ConfirmationTimerType raw[2];
   LinSM_ConfirmationTimerStructSType str;
 } LinSM_ConfirmationTimerUType;
 
 /**   \brief  type to access LinSM_DesiredConfirmation in an index and symbol based style. */
 typedef union LinSM_DesiredConfirmationUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  LinSM_DesiredConfirmationType raw[1];
+  LinSM_DesiredConfirmationType raw[2];
   LinSM_DesiredConfirmationStructSType str;
 } LinSM_DesiredConfirmationUType;
 
 /**   \brief  type to access LinSM_NegativeConfirmation in an index and symbol based style. */
 typedef union LinSM_NegativeConfirmationUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  LinSM_NegativeConfirmationType raw[1];
+  LinSM_NegativeConfirmationType raw[2];
   LinSM_NegativeConfirmationStructSType str;
 } LinSM_NegativeConfirmationUType;
 
 /**   \brief  type to access LinSM_RequestedComMode in an index and symbol based style. */
 typedef union LinSM_RequestedComModeUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  LinSM_RequestedComModeType raw[1];
+  LinSM_RequestedComModeType raw[2];
   LinSM_RequestedComModeStructSType str;
 } LinSM_RequestedComModeUType;
 
 /**   \brief  type to access LinSM_SilenceAfterWakeupTimer in an index and symbol based style. */
 typedef union LinSM_SilenceAfterWakeupTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  LinSM_SilenceAfterWakeupTimerType raw[1];
+  LinSM_SilenceAfterWakeupTimerType raw[2];
   LinSM_SilenceAfterWakeupTimerStructSType str;
 } LinSM_SilenceAfterWakeupTimerUType;
 
 /**   \brief  type to access LinSM_WakeUpRetryCounter in an index and symbol based style. */
 typedef union LinSM_WakeUpRetryCounterUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  LinSM_WakeUpRetryCounterType raw[1];
+  LinSM_WakeUpRetryCounterType raw[2];
   LinSM_WakeUpRetryCounterStructSType str;
 } LinSM_WakeUpRetryCounterUType;
 
@@ -903,13 +913,33 @@ typedef LinSM_PCConfigType LinSM_ConfigType;  /**< A structure type is present f
   SECTION: GLOBAL DATA PROTOTYPES
 **********************************************************************************************************************/
 /**********************************************************************************************************************
+  LinSM_ChannelConfig
+**********************************************************************************************************************/
+/** 
+  \var    LinSM_ChannelConfig
+  \details
+  Element                Description
+  ComMChannelHandle  
+  TransceiverHandling
+*/ 
+#define LINSM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(LinSM_ChannelConfigType, LINSM_CONST) LinSM_ChannelConfig[2];
+#define LINSM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   LinSM_ComMToLinSMChannel
 **********************************************************************************************************************/
 #define LINSM_START_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(LinSM_ComMToLinSMChannelType, LINSM_CONST) LinSM_ComMToLinSMChannel[6];
+extern CONST(LinSM_ComMToLinSMChannelType, LINSM_CONST) LinSM_ComMToLinSMChannel[7];
 #define LINSM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

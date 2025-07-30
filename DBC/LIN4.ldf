@@ -1,0 +1,145 @@
+/*************************************************************************************/
+//
+
+// Description: 
+
+// Created: 
+
+// Author: 
+
+// Version: 
+
+// Vehicle Project: 
+
+//
+
+/*************************************************************************************/
+
+
+
+LIN_description_file;
+LIN_protocol_version = "2.1" ;
+LIN_language_version = "2.1" ;
+LIN_speed = 19.2 kbps ;
+
+Nodes {
+  Master: VCU, 5 ms, 0.1 ms ;
+  Slaves: GWM ;
+}
+Signals{
+	Vcu_Lin0_TxMsg1_Sig0: 8, 0, VCU, GWM ;
+	Vcu_Lin0_TxMsg1_Sig1: 8, 0, VCU, GWM ;
+	Vcu_Lin0_TxMsg1_Sig2: 8, 0, VCU, GWM ;
+	Vcu_Lin0_TxMsg1_Sig3: 8, 0, VCU, GWM ;
+	Vcu_Lin0_TxMsg2_Sig0: 8, 0, VCU, GWM ;
+	Vcu_Lin0_TxMsg2_Sig1: 8, 0, VCU, GWM ;
+	Vcu_Lin0_TxMsg2_Sig2: 8, 0, VCU, GWM ;
+	Vcu_Lin0_TxMsg2_Sig3: 8, 0, VCU, GWM ;
+	Vcu_Lin0_RxMsg1_Sig0: 8, 0, GWM, VCU ;
+	Vcu_Lin0_RxMsg1_Sig1: 8, 0, GWM, VCU ;
+	Vcu_Lin0_RxMsg1_Sig2: 8, 0, GWM, VCU ;
+	Vcu_Lin0_RxMsg1_Sig3: 8, 0, GWM, VCU ;
+	Vcu_Lin0_RxMsg2_Sig0: 8, 0, GWM, VCU ;
+	Vcu_Lin0_RxMsg2_Sig1: 8, 0, GWM, VCU ;
+	Vcu_Lin0_RxMsg2_Sig2: 8, 0, GWM, VCU ;
+	Vcu_Lin0_RxMsg2_Sig3: 8, 0, GWM, VCU ;
+}
+
+Diagnostic_signals {
+	MasterReqB0: 8, 0 ;
+	MasterReqB1: 8, 0 ;
+	MasterReqB2: 8, 0 ;
+	MasterReqB3: 8, 0 ;
+	MasterReqB4: 8, 0 ;
+	MasterReqB5: 8, 0 ;
+	MasterReqB6: 8, 0 ;
+	MasterReqB7: 8, 0 ;
+	SlaveRespB0: 8, 0 ;
+	SlaveRespB1: 8, 0 ;
+	SlaveRespB2: 8, 0 ;
+	SlaveRespB3: 8, 0 ;
+	SlaveRespB4: 8, 0 ;
+	SlaveRespB5: 8, 0 ;
+	SlaveRespB6: 8, 0 ;
+	SlaveRespB7: 8, 0 ;
+}
+
+Frames{
+	Vcu_Lin0_TxMsg1: 30, VCU, 8{
+		Vcu_Lin0_TxMsg1_Sig0, 0;
+		Vcu_Lin0_TxMsg1_Sig1, 8;
+		Vcu_Lin0_TxMsg1_Sig2, 16;
+		Vcu_Lin0_TxMsg1_Sig3, 24;
+	}
+	Vcu_Lin0_TxMsg2: 31, VCU, 8{
+		Vcu_Lin0_TxMsg2_Sig0, 0;
+		Vcu_Lin0_TxMsg2_Sig1, 8;
+		Vcu_Lin0_TxMsg2_Sig2, 16;
+		Vcu_Lin0_TxMsg2_Sig3, 24;
+	}
+	Vcu_Lin0_RxMsg1: 32, GWM, 8{
+		Vcu_Lin0_RxMsg1_Sig1, 0;
+		Vcu_Lin0_RxMsg1_Sig0, 8;
+		Vcu_Lin0_RxMsg2_Sig2, 16;
+		Vcu_Lin0_RxMsg2_Sig3, 24;
+	}
+	Vcu_Lin0_RxMsg2: 33, GWM, 8{
+		Vcu_Lin0_RxMsg2_Sig0, 0;
+		Vcu_Lin0_RxMsg2_Sig1, 8;
+		Vcu_Lin0_RxMsg2_Sig2, 16;
+		Vcu_Lin0_RxMsg2_Sig3, 32;
+	}
+}
+
+
+
+Diagnostic_frames {
+	MasterReq: 0x3c {
+		MasterReqB0, 0;
+		MasterReqB1, 8;
+		MasterReqB2, 16;
+		MasterReqB3, 24;
+		MasterReqB4, 32;
+		MasterReqB5, 40;
+		MasterReqB6, 48;
+		MasterReqB7, 56;
+	}
+	SlaveResp: 0x3d {
+		SlaveRespB0, 0;
+		SlaveRespB1, 8;
+		SlaveRespB2, 16;
+		SlaveRespB3, 24;
+		SlaveRespB4, 32;
+		SlaveRespB5, 40;
+		SlaveRespB6, 48;
+		SlaveRespB7, 56;
+	}
+}
+
+Node_attributes {
+	GWM{
+		LIN_protocol = "2.1" ;
+		configured_NAD = 0x52 ;
+		initial_NAD = 0x52 ;
+		product_id = 0x0, 0x0, 0x0 ;
+		P2_min = 50 ms ;
+		ST_min = 0 ms ;
+		N_As_timeout = 1000 ms ;
+		N_Cr_timeout = 1000 ms ;
+		configurable_frames{
+			Vcu_Lin0_TxMsg1 ;
+			Vcu_Lin0_TxMsg2 ;
+			Vcu_Lin0_RxMsg1 ;
+			Vcu_Lin0_RxMsg2 ;
+		}
+	}
+}
+
+Schedule_tables {
+ Vcu_Lin0_Schedule{
+	Vcu_Lin0_TxMsg1 delay 20 ms ;
+	Vcu_Lin0_TxMsg2 delay 20 ms ;
+	Vcu_Lin0_RxMsg1 delay 20 ms ;
+	Vcu_Lin0_RxMsg2 delay 20 ms ;
+ }
+}

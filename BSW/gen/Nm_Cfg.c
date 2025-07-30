@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.c
- *   Generation Time: 2025-07-30 09:42:59
+ *   Generation Time: 2025-07-30 15:10:24
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -192,14 +192,15 @@ CONST(Nm_PartitionIdentifiersType, NM_CONST) Nm_PartitionIdentifiers[1] = {  /* 
 /*lint -save -esym(961, 19.1) */
 #include "Nm_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Nm_SysToNmChIndType, NM_CONST) Nm_SysToNmChInd[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Nm_SysToNmChIndType, NM_CONST) Nm_SysToNmChInd[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     SysToNmChInd        */
   /*     0 */  NM_NO_SYSTONMCHIND,
   /*     1 */                  0u,
   /*     2 */                  1u,
   /*     3 */                  2u,
   /*     4 */                  3u,
-  /*     5 */  NM_NO_SYSTONMCHIND
+  /*     5 */  NM_NO_SYSTONMCHIND,
+  /*     6 */  NM_NO_SYSTONMCHIND
 };
 #define NM_STOP_SEC_CONST_8
 /*lint -save -esym(961, 19.1) */

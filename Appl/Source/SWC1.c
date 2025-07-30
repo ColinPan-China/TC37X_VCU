@@ -350,6 +350,12 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  *   Std_ReturnType Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(ComM_ModeType ComMode)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
+ *   Std_ReturnType Rte_Call_UR_CN_LIN01_778f96a0_GetCurrentComMode(ComM_ModeType *ComMode)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_ComM_UserRequest_E_NOT_OK
+ *   Std_ReturnType Rte_Call_UR_CN_LIN01_778f96a0_RequestComMode(ComM_ModeType ComMode)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
  *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_GetCurrentComMode(ComM_ModeType *ComMode)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_NOT_OK
@@ -433,7 +439,7 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: SWC1_Runnable10ms
  *********************************************************************************************************************/
-  Lin_DemoFunction();
+//  Lin_DemoFunction();
 	if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )//( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_12_KL15) == 0 )  
   {
     ShutdownTimer = 0;
@@ -456,6 +462,7 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
     Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_RequestComMode(COMM_FULL_COMMUNICATION);
 
     Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_FULL_COMMUNICATION);
+    Rte_Call_UR_CN_LIN01_778f96a0_RequestComMode(COMM_FULL_COMMUNICATION);
   }
   else/* Mcu go shutdown */
   {
@@ -472,7 +479,7 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
     Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode( COMM_NO_COMMUNICATION );
 
     Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_NO_COMMUNICATION);
-
+    Rte_Call_UR_CN_LIN01_778f96a0_RequestComMode(COMM_NO_COMMUNICATION);
     Rte_Write_Request_ESH_RunRequest_0_requestedMode(0);
   }
 

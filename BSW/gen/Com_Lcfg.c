@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Lcfg.c
- *   Generation Time: 2025-07-30 09:42:58
+ *   Generation Time: 2025-07-30 15:10:24
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -111,7 +111,7 @@
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_ActivatableRxComIPdusType, COM_CONST) Com_ActivatableRxComIPdus[17] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_ActivatableRxComIPdusType, COM_CONST) Com_ActivatableRxComIPdus[19] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    PartitionsActivatableRxComIPdusStructIdx */
   { /*     0 */                                       0u },
   { /*     1 */                                       0u },
@@ -129,7 +129,9 @@ CONST(Com_ActivatableRxComIPdusType, COM_CONST) Com_ActivatableRxComIPdus[17] = 
   { /*    13 */                                       0u },
   { /*    14 */                                       0u },
   { /*    15 */                                       0u },
-  { /*    16 */                                       0u }
+  { /*    16 */                                       0u },
+  { /*    17 */                                       0u },
+  { /*    18 */                                       0u }
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -150,7 +152,7 @@ CONST(Com_ActivatableRxComIPdusType, COM_CONST) Com_ActivatableRxComIPdus[17] = 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_ActivatableTxComIPdusType, COM_CONST) Com_ActivatableTxComIPdus[24] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_ActivatableTxComIPdusType, COM_CONST) Com_ActivatableTxComIPdus[26] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    PartitionsActivatableTxComIPdusStructIdx */
   { /*     0 */                                       0u },
   { /*     1 */                                       0u },
@@ -175,7 +177,9 @@ CONST(Com_ActivatableTxComIPdusType, COM_CONST) Com_ActivatableTxComIPdus[24] = 
   { /*    20 */                                       0u },
   { /*    21 */                                       0u },
   { /*    22 */                                       0u },
-  { /*    23 */                                       0u }
+  { /*    23 */                                       0u },
+  { /*    24 */                                       0u },
+  { /*    25 */                                       0u }
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -264,7 +268,7 @@ CONST(Com_ConstValueUInt8Type, COM_CONST) Com_ConstValueUInt8[3] = {  /* PRQA S 
   /* Index     ConstValueUInt8      Referable Keys */
   /*     0 */            0x03u,  /* [/ActiveEcuC/Com/ComConfig/TCU_HVCH_On_Rq_oTCU_HVCH_Cmd_oLIN00_9f442eaf_TxInvValue] */
   /*     1 */            0x32u,  /* [/ActiveEcuC/Com/ComConfig/HVCH_DutyCycle_oHVCH_Rsp01_oLIN00_ad1e6a22_RxInitValue] */
-  /*     2 */            0x00u   /* [/ActiveEcuC/Com/ComConfig/A_I_Actuator_With_F_B_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_0324126f_RxInitValue, /ActiveEcuC/Com/ComConfig/Blockage_Fault_STA_oSVA_VCU_STD_oLIN00_6c89246f_RxInitValue, /ActiveEcuC/Com/ComConfig/Breakage_Fault_STA_oSVA_VCU_STD_oLIN00_a3ac9cf8_RxInitValue, /ActiveEcuC/Com/ComConfig/COOLING_FAN_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_282b4f5d_RxInitValue, /ActiveEcuC/Com/ComConfig/Calibration_sta_oSVA_VCU_STD_oLIN00_dcb4af08_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV1_CurrentInitState_oEXV_1_VCU_oLIN00_beca31e2_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV1_FaultState_oEXV_1_VCU_oLIN00_72ff14f0_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV1_ResponseError_oEXV_1_VCU_oLIN00_cbce9ad1_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV1_RunState_oEXV_1_VCU_oLIN00_f0dc555f_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV1_TemperatureWarn_oEXV_1_VCU_oLIN00_a3317e4b_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV1_VoltageState_oEXV_1_VCU_oLIN00_31bbfd77_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_CurrentInitState_oEXV_2_VCU_oLIN00_adb498ec_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_FaultState_oEXV_2_VCU_oLIN00_41c0e318_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_Fault_Stat_oEXV2_Status_oLIN00_ab6350b6_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_OvrTemp_Warn_oEXV2_Status_oLIN00_ba77659e_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_ResponseError_oEXV_2_VCU_oLIN00_e747f934_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_RunState_oEXV_2_VCU_oLIN00_859c8088_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_Run_Stat_oEXV2_Status_oLIN00_0e992e12_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_TemperatureWarn_oEXV_2_VCU_oLIN00_5f7c92a2_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_Volt_Stat_oEXV2_Status_oLIN00_c8727eb0_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_VoltageState_oEXV_2_VCU_oLIN00_8f3a2738_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_curInit_Stat_oEXV2_Status_oLIN00_b0ace0f5_RxInitValue, /ActiveEcuC/Com/ComConfig/HVAC_Blower_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_ea1e3327_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_CurrSens_Flt_oHVCH_Rsp01_oLIN00_09f7bc74_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_ExtPwrSup_Flt_oHVCH_Rsp01_oLIN00_28926933_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_HV_DC_curr_oHVCH_Rsp01_oLIN00_f613e39d_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_HV_Voltage_Valid_oHVCH_Rsp01_oLIN00_2914831e_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_HV_voltage_oHVCH_Rsp01_oLIN00_3d3da318_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_IntelTemp_oHVCH_Rsp02_oLIN00_2b487110_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_InternalPCBTemp_oHVCH_Rsp01_oLIN00_398b53e8_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_LIN_Flt_oHVCH_Rsp01_oLIN00_9aaa25bf_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_MediumTemp_oHVCH_Rsp01_oLIN00_a3387de4_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_Off_ShrtCurr_oHVCH_Rsp01_oLIN00_bf58ab45_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_RsErr_oHVCH_Rsp01_oLIN00_527b0f8f_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_Status_oHVCH_Rsp01_oLIN00_60afdc75_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_TempLim_oHVCH_Rsp01_oLIN00_d22e6add_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_TempSens_Flt_oHVCH_Rsp01_oLIN00_66cb2c71_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_defectHeaterCircuits_oHVCH_Rsp01_oLIN00_61948e74_RxInitValue, /ActiveEcuC/Com/ComConfig/LIN_Resp_Error_sta_oSVA_VCU_STD_oLIN00_47f7ca93_RxInitValue, /ActiveEcuC/Com/ComConfig/Mode_Actuator_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_b0a0ba91_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_PumpDryRunningSta_oPMP2_Sts_oLIN00_3e217a22_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_PumpInputVolt_oPMP2_Sts_oLIN00_1fa0a533_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_PumpMotorSta_oPMP2_Sts_oLIN00_d6d3ab88_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_PumpPowerSta_oPMP2_Sts_oLIN00_1d0f1319_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_PumpTempSta_oPMP2_Sts_oLIN00_81f2fa55_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_RESP_ERROR_oPMP2_Sts_oLIN00_67b666eb_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_RealRPM_oPMP2_Sts_oLIN00_86d75572_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_PumpDryRunningSta_oPMP3_Sts_oLIN00_30f4e2d8_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_PumpInputVolt_oPMP3_Sts_oLIN00_75dfecf6_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_PumpMotorSta_oPMP3_Sts_oLIN00_43910f36_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_PumpPowerSta_oPMP3_Sts_oLIN00_884db7a7_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_PumpTempSta_oPMP3_Sts_oLIN00_26375532_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_RESP_ERROR_oPMP3_Sts_oLIN00_9f14f3a0_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_RealRPM_oPMP3_Sts_oLIN00_fa6fbf8a_RxInitValue, /ActiveEcuC/Com/ComConfig/RsErr_EXV2_oEXV2_Status_oLIN00_5c35655a_RxInitValue, /ActiveEcuC/Com/ComConfig/SV1_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_a1028998_RxInitValue, /ActiveEcuC/Com/ComConfig/SV2_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_424b3e3a_RxInitValue, /ActiveEcuC/Com/ComConfig/SV3_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_aa5cae9b_RxInitValue] */
+  /*     2 */            0x00u   /* [/ActiveEcuC/Com/ComConfig/A_I_Actuator_With_F_B_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_0324126f_RxInitValue, /ActiveEcuC/Com/ComConfig/Blockage_Fault_STA_oSVA_VCU_STD_oLIN00_6c89246f_RxInitValue, /ActiveEcuC/Com/ComConfig/Breakage_Fault_STA_oSVA_VCU_STD_oLIN00_a3ac9cf8_RxInitValue, /ActiveEcuC/Com/ComConfig/COOLING_FAN_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_282b4f5d_RxInitValue, /ActiveEcuC/Com/ComConfig/Calibration_sta_oSVA_VCU_STD_oLIN00_dcb4af08_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV1_CurrentInitState_oEXV_1_VCU_oLIN00_beca31e2_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV1_FaultState_oEXV_1_VCU_oLIN00_72ff14f0_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV1_ResponseError_oEXV_1_VCU_oLIN00_cbce9ad1_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV1_RunState_oEXV_1_VCU_oLIN00_f0dc555f_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV1_TemperatureWarn_oEXV_1_VCU_oLIN00_a3317e4b_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV1_VoltageState_oEXV_1_VCU_oLIN00_31bbfd77_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_CurrentInitState_oEXV_2_VCU_oLIN00_adb498ec_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_FaultState_oEXV_2_VCU_oLIN00_41c0e318_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_Fault_Stat_oEXV2_Status_oLIN00_ab6350b6_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_OvrTemp_Warn_oEXV2_Status_oLIN00_ba77659e_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_ResponseError_oEXV_2_VCU_oLIN00_e747f934_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_RunState_oEXV_2_VCU_oLIN00_859c8088_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_Run_Stat_oEXV2_Status_oLIN00_0e992e12_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_TemperatureWarn_oEXV_2_VCU_oLIN00_5f7c92a2_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_Volt_Stat_oEXV2_Status_oLIN00_c8727eb0_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_VoltageState_oEXV_2_VCU_oLIN00_8f3a2738_RxInitValue, /ActiveEcuC/Com/ComConfig/EXV2_curInit_Stat_oEXV2_Status_oLIN00_b0ace0f5_RxInitValue, /ActiveEcuC/Com/ComConfig/HVAC_Blower_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_ea1e3327_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_CurrSens_Flt_oHVCH_Rsp01_oLIN00_09f7bc74_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_ExtPwrSup_Flt_oHVCH_Rsp01_oLIN00_28926933_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_HV_DC_curr_oHVCH_Rsp01_oLIN00_f613e39d_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_HV_Voltage_Valid_oHVCH_Rsp01_oLIN00_2914831e_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_HV_voltage_oHVCH_Rsp01_oLIN00_3d3da318_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_IntelTemp_oHVCH_Rsp02_oLIN00_2b487110_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_InternalPCBTemp_oHVCH_Rsp01_oLIN00_398b53e8_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_LIN_Flt_oHVCH_Rsp01_oLIN00_9aaa25bf_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_MediumTemp_oHVCH_Rsp01_oLIN00_a3387de4_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_Off_ShrtCurr_oHVCH_Rsp01_oLIN00_bf58ab45_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_RsErr_oHVCH_Rsp01_oLIN00_527b0f8f_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_Status_oHVCH_Rsp01_oLIN00_60afdc75_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_TempLim_oHVCH_Rsp01_oLIN00_d22e6add_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_TempSens_Flt_oHVCH_Rsp01_oLIN00_66cb2c71_RxInitValue, /ActiveEcuC/Com/ComConfig/HVCH_defectHeaterCircuits_oHVCH_Rsp01_oLIN00_61948e74_RxInitValue, /ActiveEcuC/Com/ComConfig/LIN_Resp_Error_sta_oSVA_VCU_STD_oLIN00_47f7ca93_RxInitValue, /ActiveEcuC/Com/ComConfig/Mode_Actuator_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_b0a0ba91_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_PumpDryRunningSta_oPMP2_Sts_oLIN00_3e217a22_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_PumpInputVolt_oPMP2_Sts_oLIN00_1fa0a533_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_PumpMotorSta_oPMP2_Sts_oLIN00_d6d3ab88_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_PumpPowerSta_oPMP2_Sts_oLIN00_1d0f1319_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_PumpTempSta_oPMP2_Sts_oLIN00_81f2fa55_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_RESP_ERROR_oPMP2_Sts_oLIN00_67b666eb_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP2_RealRPM_oPMP2_Sts_oLIN00_86d75572_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_PumpDryRunningSta_oPMP3_Sts_oLIN00_30f4e2d8_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_PumpInputVolt_oPMP3_Sts_oLIN00_75dfecf6_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_PumpMotorSta_oPMP3_Sts_oLIN00_43910f36_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_PumpPowerSta_oPMP3_Sts_oLIN00_884db7a7_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_PumpTempSta_oPMP3_Sts_oLIN00_26375532_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_RESP_ERROR_oPMP3_Sts_oLIN00_9f14f3a0_RxInitValue, /ActiveEcuC/Com/ComConfig/PMP3_RealRPM_oPMP3_Sts_oLIN00_fa6fbf8a_RxInitValue, /ActiveEcuC/Com/ComConfig/RsErr_EXV2_oEXV2_Status_oLIN00_5c35655a_RxInitValue, /ActiveEcuC/Com/ComConfig/SV1_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_a1028998_RxInitValue, /ActiveEcuC/Com/ComConfig/SV2_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_424b3e3a_RxInitValue, /ActiveEcuC/Com/ComConfig/SV3_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_aa5cae9b_RxInitValue, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_Sig0_oVcu_Lin0_RxMsg1_oLIN01_6c375668_RxInitValue, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_Sig1_oVcu_Lin0_RxMsg1_oLIN01_c9bcc666_RxInitValue, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig0_oVcu_Lin0_RxMsg2_oLIN01_a6197493_RxInitValue, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig1_oVcu_Lin0_RxMsg2_oLIN01_0392e49d_RxInitValue, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig2_oVcu_Lin0_RxMsg1_oLIN01_b8f0552d_RxInitValue, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig2_oVcu_Lin0_RxMsg2_oLIN01_367f52ce_RxInitValue, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig3_oVcu_Lin0_RxMsg1_oLIN01_1d7bc523_RxInitValue, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig3_oVcu_Lin0_RxMsg2_oLIN01_93f4c2c0_RxInitValue] */
 };
 #define COM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -326,20 +330,22 @@ CONST(Com_MainFunctionTxStructType, COM_CONST) Com_MainFunctionTxStruct[1] = {  
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_PduGrpVectorType, COM_CONST) Com_PduGrpVector[12] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_PduGrpVectorType, COM_CONST) Com_PduGrpVector[14] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     PduGrpVector      Referable Keys */
-  /*     0 */         0x20u,  /* [/ActiveEcuC/Com/ComConfig/VcuTxIoMsg1_oTC37X_VCU_CAN00_54884add_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg2_oTC37X_VCU_CAN00_be0e97bf_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg3_oTC37X_VCU_CAN00_515c215e_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg4_oTC37X_VCU_CAN00_b0722b3a_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg5_oTC37X_VCU_CAN00_5f209ddb_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg6_oTC37X_VCU_CAN00_b5a640b9_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg7_oTC37X_VCU_CAN00_5af4f658_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
-  /*     1 */         0x40u,  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx, /ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
-  /*     2 */         0x10u,  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg1_oTC37X_VCU_CAN00_78805594_Rx, /ActiveEcuC/Com/ComConfig/VcuRxMsg2_oTC37X_VCU_CAN00_920688f6_Rx] */
-  /*     3 */         0x80u,  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxMsg1_oTC37X_VCU_CAN01_fda515ee_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx] */
+  /*     0 */         0x80u,  /* [/ActiveEcuC/Com/ComConfig/VcuTxIoMsg1_oTC37X_VCU_CAN00_54884add_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg2_oTC37X_VCU_CAN00_be0e97bf_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg3_oTC37X_VCU_CAN00_515c215e_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg4_oTC37X_VCU_CAN00_b0722b3a_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg5_oTC37X_VCU_CAN00_5f209ddb_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg6_oTC37X_VCU_CAN00_b5a640b9_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg7_oTC37X_VCU_CAN00_5af4f658_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
+  /*     1 */         0x40u,  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg1_oTC37X_VCU_CAN00_78805594_Rx, /ActiveEcuC/Com/ComConfig/VcuRxMsg2_oTC37X_VCU_CAN00_920688f6_Rx] */
+  /*     2 */         0x00u,  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx, /ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
+  /*     3 */         0x01u,  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx, /ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx, /ActiveEcuC/Com/ComConfig/VCU_Minor_03_oKAMA_FP_EPT_0303_4d74a41f_Rx] */
   /*     4 */         0x00u,  /* [/ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oTC37X_VCU_CAN12_d09b21db_Tx, /ActiveEcuC/Com/ComConfig/VcuCan12TxMsg2_oTC37X_VCU_CAN12_3a1dfcb9_Tx] */
-  /*     5 */         0x08u,  /* [/ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oTC37X_VCU_CAN12_d09b21db_Tx, /ActiveEcuC/Com/ComConfig/VcuCan12TxMsg2_oTC37X_VCU_CAN12_3a1dfcb9_Tx, /ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx, /ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx] */
+  /*     5 */         0x20u,  /* [/ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oTC37X_VCU_CAN12_d09b21db_Tx, /ActiveEcuC/Com/ComConfig/VcuCan12TxMsg2_oTC37X_VCU_CAN12_3a1dfcb9_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
   /*     6 */         0x00u,  /* [/ActiveEcuC/Com/ComConfig/VcuCan12RxMsg3_oTC37X_VCU_CAN12_38853822_Rx, /ActiveEcuC/Com/ComConfig/VcuCan12RxMsg4_oTC37X_VCU_CAN12_d9ab3246_Rx] */
-  /*     7 */         0x04u,  /* [/ActiveEcuC/Com/ComConfig/VcuCan12RxMsg3_oTC37X_VCU_CAN12_38853822_Rx, /ActiveEcuC/Com/ComConfig/VcuCan12RxMsg4_oTC37X_VCU_CAN12_d9ab3246_Rx, /ActiveEcuC/Com/ComConfig/EXV2_Status_oLIN00_d5e93929_Rx, /ActiveEcuC/Com/ComConfig/EXV_1_VCU_oLIN00_69d4ef5f_Rx, /ActiveEcuC/Com/ComConfig/EXV_2_VCU_oLIN00_1e4a3daf_Rx, /ActiveEcuC/Com/ComConfig/HVCH_Rsp01_oLIN00_a6e33eef_Rx, /ActiveEcuC/Com/ComConfig/HVCH_Rsp02_oLIN00_286c390c_Rx, /ActiveEcuC/Com/ComConfig/PMP2_Sts_oLIN00_cab90b6b_Rx, /ActiveEcuC/Com/ComConfig/PMP3_Sts_oLIN00_511c4704_Rx, /ActiveEcuC/Com/ComConfig/SVA_VCU_STD_oLIN00_4526aa1c_Rx] */
+  /*     7 */         0x10u,  /* [/ActiveEcuC/Com/ComConfig/VcuCan12RxMsg3_oTC37X_VCU_CAN12_38853822_Rx, /ActiveEcuC/Com/ComConfig/VcuCan12RxMsg4_oTC37X_VCU_CAN12_d9ab3246_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
   /*     8 */         0x00u,  /* [/ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx] */
-  /*     9 */         0x02u,  /* [/ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx, /ActiveEcuC/Com/ComConfig/VCU_Minor_01_oKAMA_FP_EPT_0303_39c0a2ee_Tx, /ActiveEcuC/Com/ComConfig/VCU_Minor_02_oKAMA_FP_EPT_0303_9a962447_Tx] */
+  /*     9 */         0x08u,  /* [/ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx, /ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx, /ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx] */
   /*    10 */         0x00u,  /* [/ActiveEcuC/Com/ComConfig/VcuCan03RxMsg1_oTC37X_VCU_CAN03_77e3a75f_Rx, /ActiveEcuC/Com/ComConfig/VcuCan03RxMsg2_oTC37X_VCU_CAN03_9d657a3d_Rx] */
-  /*    11 */         0x01u   /* [/ActiveEcuC/Com/ComConfig/VcuCan03RxMsg1_oTC37X_VCU_CAN03_77e3a75f_Rx, /ActiveEcuC/Com/ComConfig/VcuCan03RxMsg2_oTC37X_VCU_CAN03_9d657a3d_Rx, /ActiveEcuC/Com/ComConfig/VCU_Minor_03_oKAMA_FP_EPT_0303_4d74a41f_Rx] */
+  /*    11 */         0x04u,  /* [/ActiveEcuC/Com/ComConfig/VcuCan03RxMsg1_oTC37X_VCU_CAN03_77e3a75f_Rx, /ActiveEcuC/Com/ComConfig/VcuCan03RxMsg2_oTC37X_VCU_CAN03_9d657a3d_Rx, /ActiveEcuC/Com/ComConfig/EXV2_Status_oLIN00_d5e93929_Rx, /ActiveEcuC/Com/ComConfig/EXV_1_VCU_oLIN00_69d4ef5f_Rx, /ActiveEcuC/Com/ComConfig/EXV_2_VCU_oLIN00_1e4a3daf_Rx, /ActiveEcuC/Com/ComConfig/HVCH_Rsp01_oLIN00_a6e33eef_Rx, /ActiveEcuC/Com/ComConfig/HVCH_Rsp02_oLIN00_286c390c_Rx, /ActiveEcuC/Com/ComConfig/PMP2_Sts_oLIN00_cab90b6b_Rx, /ActiveEcuC/Com/ComConfig/PMP3_Sts_oLIN00_511c4704_Rx, /ActiveEcuC/Com/ComConfig/SVA_VCU_STD_oLIN00_4526aa1c_Rx] */
+  /*    12 */         0x00u,  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxMsg1_oTC37X_VCU_CAN01_fda515ee_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx] */
+  /*    13 */         0x02u   /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxMsg1_oTC37X_VCU_CAN01_fda515ee_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx, /ActiveEcuC/Com/ComConfig/VCU_Minor_01_oKAMA_FP_EPT_0303_39c0a2ee_Tx, /ActiveEcuC/Com/ComConfig/VCU_Minor_02_oKAMA_FP_EPT_0303_9a962447_Tx] */
 };
 #define COM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -370,7 +376,7 @@ CONST(Com_PduGrpVectorType, COM_CONST) Com_PduGrpVector[12] = {  /* PRQA S 1514,
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_RxAccessInfoType, COM_CONST) Com_RxAccessInfo[95] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_RxAccessInfoType, COM_CONST) Com_RxAccessInfo[103] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    InitValueUsed  ApplType                           BitLength  BitPosition  BufferIdx  BusAcc                              ByteLength  InitValueIdx  RxPduInfoIdx  RxTOutInfoIdx                       StartByteInPduPosition        Referable Keys */
   { /*     0 */          TRUE,  COM_UINT8_APPLTYPEOFRXACCESSINFO,        2u,          3u,        0u,      COM_NBIT_BUSACCOFRXACCESSINFO,         0u,           2u,           8u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     0u },  /* [/ActiveEcuC/Com/ComConfig/A_I_Actuator_With_F_B_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_0324126f_Rx, /ActiveEcuC/Com/ComConfig/VCU_Minor_03_oKAMA_FP_EPT_0303_4d74a41f_Rx] */
   { /*     1 */          TRUE, COM_UINT16_APPLTYPEOFRXACCESSINFO,       12u,          8u,        0u, COM_NBITNBYTE_BUSACCOFRXACCESSINFO,         1u,           0u,           7u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     1u },  /* [/ActiveEcuC/Com/ComConfig/Act_Pos_sta_oSVA_VCU_STD_oLIN00_642c9ffa_Rx, /ActiveEcuC/Com/ComConfig/SVA_VCU_STD_oLIN00_4526aa1c_Rx] */
@@ -467,7 +473,16 @@ CONST(Com_RxAccessInfoType, COM_CONST) Com_RxAccessInfo[95] = {  /* PRQA S 1514,
   { /*    91 */          TRUE, COM_SINT16_APPLTYPEOFRXACCESSINFO,       16u,         32u,       28u,     COM_NBYTE_BUSACCOFRXACCESSINFO,         2u,           0u,          10u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     4u },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_Sig2_oVcuCan03RxMsg2_oTC37X_VCU_CAN03_3a53c786_Rx, /ActiveEcuC/Com/ComConfig/VcuCan03RxMsg2_oTC37X_VCU_CAN03_9d657a3d_Rx] */
   { /*    92 */          TRUE, COM_SINT16_APPLTYPEOFRXACCESSINFO,       16u,         32u,       29u,     COM_NBYTE_BUSACCOFRXACCESSINFO,         2u,           0u,          16u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     4u },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_Sig2_oVcuRxMsg4_oTC37X_VCU_CAN01_f0b702b3_Rx, /ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
   { /*    93 */          TRUE, COM_SINT16_APPLTYPEOFRXACCESSINFO,       16u,         48u,       30u,     COM_NBYTE_BUSACCOFRXACCESSINFO,         2u,           0u,          10u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     6u },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_Sig3_oVcuCan03RxMsg2_oTC37X_VCU_CAN03_1ed196b0_Rx, /ActiveEcuC/Com/ComConfig/VcuCan03RxMsg2_oTC37X_VCU_CAN03_9d657a3d_Rx] */
-  { /*    94 */          TRUE, COM_SINT16_APPLTYPEOFRXACCESSINFO,       16u,         48u,       31u,     COM_NBYTE_BUSACCOFRXACCESSINFO,         2u,           0u,          16u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     6u }   /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_Sig3_oVcuRxMsg4_oTC37X_VCU_CAN01_93b0db97_Rx, /ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
+  { /*    94 */          TRUE, COM_SINT16_APPLTYPEOFRXACCESSINFO,       16u,         48u,       31u,     COM_NBYTE_BUSACCOFRXACCESSINFO,         2u,           0u,          16u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     6u },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_Sig3_oVcuRxMsg4_oTC37X_VCU_CAN01_93b0db97_Rx, /ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
+  { /*    95 */          TRUE,  COM_UINT8_APPLTYPEOFRXACCESSINFO,        8u,          8u,       59u,      COM_BYTE_BUSACCOFRXACCESSINFO,         1u,           2u,          17u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     1u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_Sig0_oVcu_Lin0_RxMsg1_oLIN01_6c375668_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  { /*    96 */          TRUE,  COM_UINT8_APPLTYPEOFRXACCESSINFO,        8u,          0u,       60u,      COM_BYTE_BUSACCOFRXACCESSINFO,         1u,           2u,          17u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     0u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_Sig1_oVcu_Lin0_RxMsg1_oLIN01_c9bcc666_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  { /*    97 */          TRUE,  COM_UINT8_APPLTYPEOFRXACCESSINFO,        8u,          0u,       61u,      COM_BYTE_BUSACCOFRXACCESSINFO,         1u,           2u,          18u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     0u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig0_oVcu_Lin0_RxMsg2_oLIN01_a6197493_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
+  { /*    98 */          TRUE,  COM_UINT8_APPLTYPEOFRXACCESSINFO,        8u,          8u,       62u,      COM_BYTE_BUSACCOFRXACCESSINFO,         1u,           2u,          18u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     1u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig1_oVcu_Lin0_RxMsg2_oLIN01_0392e49d_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
+  { /*    99 */          TRUE,  COM_UINT8_APPLTYPEOFRXACCESSINFO,        8u,         16u,       63u,      COM_BYTE_BUSACCOFRXACCESSINFO,         1u,           2u,          17u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     2u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig2_oVcu_Lin0_RxMsg1_oLIN01_b8f0552d_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+    /* Index    InitValueUsed  ApplType                           BitLength  BitPosition  BufferIdx  BusAcc                              ByteLength  InitValueIdx  RxPduInfoIdx  RxTOutInfoIdx                       StartByteInPduPosition        Referable Keys */
+  { /*   100 */          TRUE,  COM_UINT8_APPLTYPEOFRXACCESSINFO,        8u,         16u,       64u,      COM_BYTE_BUSACCOFRXACCESSINFO,         1u,           2u,          18u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     2u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig2_oVcu_Lin0_RxMsg2_oLIN01_367f52ce_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
+  { /*   101 */          TRUE,  COM_UINT8_APPLTYPEOFRXACCESSINFO,        8u,         24u,       65u,      COM_BYTE_BUSACCOFRXACCESSINFO,         1u,           2u,          17u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     3u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig3_oVcu_Lin0_RxMsg1_oLIN01_1d7bc523_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  { /*   102 */          TRUE,  COM_UINT8_APPLTYPEOFRXACCESSINFO,        8u,         32u,       66u,      COM_BYTE_BUSACCOFRXACCESSINFO,         1u,           2u,          18u, COM_NO_RXTOUTINFOIDXOFRXACCESSINFO,                     4u }   /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig3_oVcu_Lin0_RxMsg2_oLIN01_93f4c2c0_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -485,7 +500,7 @@ CONST(Com_RxAccessInfoType, COM_CONST) Com_RxAccessInfo[95] = {  /* PRQA S 1514,
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_RxAccessInfoIndType, COM_CONST) Com_RxAccessInfoInd[95] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_RxAccessInfoIndType, COM_CONST) Com_RxAccessInfoInd[103] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     RxAccessInfoInd      Referable Keys */
   /*     0 */              16u,  /* [/ActiveEcuC/Com/ComConfig/EXV2_Status_oLIN00_d5e93929_Rx] */
   /*     1 */              17u,  /* [/ActiveEcuC/Com/ComConfig/EXV2_Status_oLIN00_d5e93929_Rx] */
@@ -582,7 +597,16 @@ CONST(Com_RxAccessInfoIndType, COM_CONST) Com_RxAccessInfoInd[95] = {  /* PRQA S
   /*    91 */              88u,  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
   /*    92 */              90u,  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
   /*    93 */              92u,  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
-  /*    94 */              94u   /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
+  /*    94 */              94u,  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
+  /*    95 */              95u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  /*    96 */              96u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  /*    97 */              99u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  /*    98 */             101u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  /*    99 */              97u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
+  /* Index     RxAccessInfoInd      Referable Keys */
+  /*   100 */              98u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
+  /*   101 */             100u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
+  /*   102 */             102u   /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
 };
 #define COM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -640,25 +664,27 @@ CONST(ComRxCbkType, COM_CONST) Com_RxCbkFuncPtr[8] = {  /* PRQA S 1514, 1533 */ 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_RxPduInfoType, COM_CONST) Com_RxPduInfo[17] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_RxPduInfoType, COM_CONST) Com_RxPduInfo[19] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    MainFunctionRxStructUsed  RxTOutInfoUsed  PartitionsRxStructIdx  PduGrpVectorEndIdx  PduGrpVectorStartIdx  RxDefPduBufferStartIdx  RxSigInfoEndIdx  RxSigInfoStartIdx  RxTOutInfoIdx                    RxTOutInfoIndEndIdx                    RxTOutInfoIndStartIdx                          Referable Keys */
-  { /*     0 */                     TRUE,          FALSE,                    0u,                 8u,                   7u,                     0u,              7u,                0u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/EXV2_Status_oLIN00_d5e93929_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
-  { /*     1 */                     TRUE,          FALSE,                    0u,                 8u,                   7u,                     8u,             14u,                7u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/EXV_1_VCU_oLIN00_69d4ef5f_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
-  { /*     2 */                     TRUE,          FALSE,                    0u,                 8u,                   7u,                    16u,             21u,               14u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/EXV_2_VCU_oLIN00_1e4a3daf_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
-  { /*     3 */                     TRUE,          FALSE,                    0u,                 8u,                   7u,                    24u,             36u,               21u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/HVCH_Rsp01_oLIN00_a6e33eef_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
-  { /*     4 */                     TRUE,          FALSE,                    0u,                 8u,                   7u,                    32u,             37u,               36u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/HVCH_Rsp02_oLIN00_286c390c_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
-  { /*     5 */                     TRUE,          FALSE,                    0u,                 8u,                   7u,                    40u,             44u,               37u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/PMP2_Sts_oLIN00_cab90b6b_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
-  { /*     6 */                     TRUE,          FALSE,                    0u,                 8u,                   7u,                    48u,             51u,               44u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/PMP3_Sts_oLIN00_511c4704_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
-  { /*     7 */                     TRUE,          FALSE,                    0u,                 8u,                   7u,                    56u,             56u,               51u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/SVA_VCU_STD_oLIN00_4526aa1c_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
-  { /*     8 */                     TRUE,          FALSE,                    0u,                12u,                  11u,                    64u,             63u,               56u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/VCU_Minor_03_oKAMA_FP_EPT_0303_4d74a41f_Rx, /ActiveEcuC/Com/ComConfig/VCU_oKAMA_FP_EPT_0303_Rx_07e8d111, ComMainFunctionRx] */
+  { /*     0 */                     TRUE,          FALSE,                    0u,                12u,                  11u,                     0u,              7u,                0u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/EXV2_Status_oLIN00_d5e93929_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
+  { /*     1 */                     TRUE,          FALSE,                    0u,                12u,                  11u,                     8u,             14u,                7u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/EXV_1_VCU_oLIN00_69d4ef5f_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
+  { /*     2 */                     TRUE,          FALSE,                    0u,                12u,                  11u,                    16u,             21u,               14u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/EXV_2_VCU_oLIN00_1e4a3daf_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
+  { /*     3 */                     TRUE,          FALSE,                    0u,                12u,                  11u,                    24u,             36u,               21u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/HVCH_Rsp01_oLIN00_a6e33eef_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
+  { /*     4 */                     TRUE,          FALSE,                    0u,                12u,                  11u,                    32u,             37u,               36u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/HVCH_Rsp02_oLIN00_286c390c_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
+  { /*     5 */                     TRUE,          FALSE,                    0u,                12u,                  11u,                    40u,             44u,               37u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/PMP2_Sts_oLIN00_cab90b6b_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
+  { /*     6 */                     TRUE,          FALSE,                    0u,                12u,                  11u,                    48u,             51u,               44u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/PMP3_Sts_oLIN00_511c4704_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
+  { /*     7 */                     TRUE,          FALSE,                    0u,                12u,                  11u,                    56u,             56u,               51u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/SVA_VCU_STD_oLIN00_4526aa1c_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
+  { /*     8 */                     TRUE,          FALSE,                    0u,                 4u,                   3u,                    64u,             63u,               56u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/VCU_Minor_03_oKAMA_FP_EPT_0303_4d74a41f_Rx, /ActiveEcuC/Com/ComConfig/VCU_oKAMA_FP_EPT_0303_Rx_07e8d111, ComMainFunctionRx] */
   { /*     9 */                     TRUE,          FALSE,                    0u,                12u,                  10u,                    72u,             67u,               63u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/VcuCan03RxMsg1_oTC37X_VCU_CAN03_77e3a75f_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN03_Rx_b23e03d7, ComMainFunctionRx] */
   { /*    10 */                     TRUE,          FALSE,                    0u,                12u,                  10u,                    80u,             71u,               67u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/VcuCan03RxMsg2_oTC37X_VCU_CAN03_9d657a3d_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN03_Rx_b23e03d7, ComMainFunctionRx] */
   { /*    11 */                     TRUE,          FALSE,                    0u,                 8u,                   6u,                    88u,             75u,               71u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/VcuCan12RxMsg3_oTC37X_VCU_CAN12_38853822_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN12_Rx_37e24d02, ComMainFunctionRx] */
   { /*    12 */                     TRUE,          FALSE,                    0u,                 8u,                   6u,                    96u,             79u,               75u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/VcuCan12RxMsg4_oTC37X_VCU_CAN12_d9ab3246_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN12_Rx_37e24d02, ComMainFunctionRx] */
-  { /*    13 */                     TRUE,           TRUE,                    0u,                 3u,                   2u,                   104u,             83u,               79u,                              0u,                                    1u,                                      0u },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg1_oTC37X_VCU_CAN00_78805594_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Rx_a08bac39, ComMainFunctionRx] */
-  { /*    14 */                     TRUE,           TRUE,                    0u,                 3u,                   2u,                   112u,             87u,               83u,                              1u,                                    2u,                                      1u },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg2_oTC37X_VCU_CAN00_920688f6_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Rx_a08bac39, ComMainFunctionRx] */
-  { /*    15 */                     TRUE,          FALSE,                    0u,                 2u,                   1u,                   120u,             91u,               87u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN01_Rx_1837cb5c, ComMainFunctionRx] */
-  { /*    16 */                     TRUE,          FALSE,                    0u,                 2u,                   1u,                   128u,             95u,               91u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO }   /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN01_Rx_1837cb5c, ComMainFunctionRx] */
+  { /*    13 */                     TRUE,           TRUE,                    0u,                 2u,                   1u,                   104u,             83u,               79u,                              0u,                                    1u,                                      0u },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg1_oTC37X_VCU_CAN00_78805594_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Rx_a08bac39, ComMainFunctionRx] */
+  { /*    14 */                     TRUE,           TRUE,                    0u,                 2u,                   1u,                   112u,             87u,               83u,                              1u,                                    2u,                                      1u },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg2_oTC37X_VCU_CAN00_920688f6_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Rx_a08bac39, ComMainFunctionRx] */
+  { /*    15 */                     TRUE,          FALSE,                    0u,                 4u,                   2u,                   120u,             91u,               87u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN01_Rx_1837cb5c, ComMainFunctionRx] */
+  { /*    16 */                     TRUE,          FALSE,                    0u,                 4u,                   2u,                   128u,             95u,               91u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN01_Rx_1837cb5c, ComMainFunctionRx] */
+  { /*    17 */                     TRUE,          FALSE,                    0u,                 8u,                   7u,                   136u,             99u,               95u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN01_Rx_f3219b36, ComMainFunctionRx] */
+  { /*    18 */                     TRUE,          FALSE,                    0u,                 8u,                   7u,                   144u,            103u,               99u, COM_NO_RXTOUTINFOIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDENDIDXOFRXPDUINFO, COM_NO_RXTOUTINFOINDSTARTIDXOFRXPDUINFO }   /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN01_Rx_f3219b36, ComMainFunctionRx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -684,7 +710,7 @@ CONST(Com_RxPduInfoType, COM_CONST) Com_RxPduInfo[17] = {  /* PRQA S 1514, 1533 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_RxSigInfoType, COM_CONST) Com_RxSigInfo[95] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_RxSigInfoType, COM_CONST) Com_RxSigInfo[103] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    RxTOutInfoUsed  RxAccessInfoIdx  RxCbkFuncPtrAckIdx                    RxTOutInfoIdx                    SignalProcessing                          ValidDlc        Referable Keys */
   { /*     0 */          FALSE,             16u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       2u },  /* [/ActiveEcuC/Com/ComConfig/EXV2_Status_oLIN00_d5e93929_Rx] */
   { /*     1 */          FALSE,             17u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       2u },  /* [/ActiveEcuC/Com/ComConfig/EXV2_Status_oLIN00_d5e93929_Rx] */
@@ -781,7 +807,16 @@ CONST(Com_RxSigInfoType, COM_CONST) Com_RxSigInfo[95] = {  /* PRQA S 1514, 1533 
   { /*    91 */          FALSE,             88u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       2u },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
   { /*    92 */          FALSE,             90u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       4u },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
   { /*    93 */          FALSE,             92u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       6u },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
-  { /*    94 */          FALSE,             94u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       8u }   /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
+  { /*    94 */          FALSE,             94u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       8u },  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
+  { /*    95 */          FALSE,             95u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       2u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  { /*    96 */          FALSE,             96u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       1u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  { /*    97 */          FALSE,             99u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       3u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  { /*    98 */          FALSE,            101u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       4u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  { /*    99 */          FALSE,             97u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       1u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
+    /* Index    RxTOutInfoUsed  RxAccessInfoIdx  RxCbkFuncPtrAckIdx                    RxTOutInfoIdx                    SignalProcessing                          ValidDlc        Referable Keys */
+  { /*   100 */          FALSE,             98u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       2u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
+  { /*   101 */          FALSE,            100u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       3u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
+  { /*   102 */          FALSE,            102u, COM_NO_RXCBKFUNCPTRACKIDXOFRXSIGINFO, COM_NO_RXTOUTINFOIDXOFRXSIGINFO, COM_DEFERRED_SIGNALPROCESSINGOFRXSIGINFO,       5u }   /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -870,7 +905,7 @@ CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[3] = {  /* PRQA S 1514, 15
     /* Index    TimePeriod        Referable Keys */
   { /*     0 */        50u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxMsg1_oTC37X_VCU_CAN01_fda515ee_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx, /ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oTC37X_VCU_CAN12_d09b21db_Tx, /ActiveEcuC/Com/ComConfig/VcuCan12TxMsg2_oTC37X_VCU_CAN12_3a1dfcb9_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg1_oTC37X_VCU_CAN00_54884add_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg2_oTC37X_VCU_CAN00_be0e97bf_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg3_oTC37X_VCU_CAN00_515c215e_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg4_oTC37X_VCU_CAN00_b0722b3a_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg5_oTC37X_VCU_CAN00_5f209ddb_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg6_oTC37X_VCU_CAN00_b5a640b9_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg7_oTC37X_VCU_CAN00_5af4f658_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
   { /*     1 */         2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Minor_01_oKAMA_FP_EPT_0303_39c0a2ee_Tx, /ActiveEcuC/Com/ComConfig/VCU_Minor_02_oKAMA_FP_EPT_0303_9a962447_Tx] */
-  { /*     2 */         0u }   /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx, /ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx] */
+  { /*     2 */         0u }   /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx, /ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -893,7 +928,7 @@ CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[3] = {  /* PRQA S 1514, 15
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[24] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[26] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    InitMode  TxModeFalseIdx  TxModeTrueIdx        Referable Keys */
   { /*     0 */     TRUE,             2u,            3u },  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx] */
   { /*     1 */     TRUE,             2u,            3u },  /* [/ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx] */
@@ -918,7 +953,9 @@ CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[24] = {  /* PRQA S 1514, 153
   { /*    20 */     TRUE,             0u,            1u },  /* [/ActiveEcuC/Com/ComConfig/VcuTxIoMsg7_oTC37X_VCU_CAN00_5af4f658_Tx] */
   { /*    21 */     TRUE,             0u,            1u },  /* [/ActiveEcuC/Com/ComConfig/VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx] */
   { /*    22 */     TRUE,             0u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx] */
-  { /*    23 */     TRUE,             0u,            0u }   /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
+  { /*    23 */     TRUE,             0u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
+  { /*    24 */     TRUE,             2u,            3u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  { /*    25 */     TRUE,             2u,            3u }   /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -945,7 +982,7 @@ CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[4] = {  /* PRQA S 1514, 1533
   { /*     0 */        11u,        50u },  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
   { /*     1 */         1u,        50u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxMsg1_oTC37X_VCU_CAN01_fda515ee_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx, /ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oTC37X_VCU_CAN12_d09b21db_Tx, /ActiveEcuC/Com/ComConfig/VcuCan12TxMsg2_oTC37X_VCU_CAN12_3a1dfcb9_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg1_oTC37X_VCU_CAN00_54884add_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg2_oTC37X_VCU_CAN00_be0e97bf_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg3_oTC37X_VCU_CAN00_515c215e_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg4_oTC37X_VCU_CAN00_b0722b3a_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg5_oTC37X_VCU_CAN00_5f209ddb_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg6_oTC37X_VCU_CAN00_b5a640b9_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg7_oTC37X_VCU_CAN00_5af4f658_Tx, /ActiveEcuC/Com/ComConfig/VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx] */
   { /*     2 */         1u,         2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Minor_01_oKAMA_FP_EPT_0303_39c0a2ee_Tx, /ActiveEcuC/Com/ComConfig/VCU_Minor_02_oKAMA_FP_EPT_0303_9a962447_Tx] */
-  { /*     3 */         1u,         0u }   /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx, /ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx] */
+  { /*     3 */         1u,         0u }   /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx, /ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -972,18 +1009,18 @@ CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[4] = {  /* PRQA S 1514, 1533
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[24] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[26] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    TxBufferUsed  PartitionsTxStructIdx  PduGrpVectorEndIdx  PduGrpVectorStartIdx  TxBufferLength  TxPduInitValueEndIdx  TxPduInitValueStartIdx        Referable Keys */
-  { /*     0 */         TRUE,                    0u,                 6u,                   5u,             8u,                   8u,                     0u },  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
-  { /*     1 */         TRUE,                    0u,                 6u,                   5u,             8u,                  16u,                     8u },  /* [/ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
-  { /*     2 */         TRUE,                    0u,                 6u,                   5u,             4u,                  20u,                    16u },  /* [/ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
-  { /*     3 */         TRUE,                    0u,                 6u,                   5u,             8u,                  28u,                    20u },  /* [/ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
-  { /*     4 */         TRUE,                    0u,                 6u,                   5u,             8u,                  36u,                    28u },  /* [/ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
-  { /*     5 */         TRUE,                    0u,                10u,                   9u,             8u,                  44u,                    36u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Minor_01_oKAMA_FP_EPT_0303_39c0a2ee_Tx, /ActiveEcuC/Com/ComConfig/VCU_oKAMA_FP_EPT_0303_Tx_51b27697, ComMainFunctionTx] */
-  { /*     6 */         TRUE,                    0u,                10u,                   9u,             8u,                  52u,                    44u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Minor_02_oKAMA_FP_EPT_0303_9a962447_Tx, /ActiveEcuC/Com/ComConfig/VCU_oKAMA_FP_EPT_0303_Tx_51b27697, ComMainFunctionTx] */
-  { /*     7 */         TRUE,                    0u,                 6u,                   5u,             8u,                  60u,                    52u },  /* [/ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
-  { /*     8 */         TRUE,                    0u,                 4u,                   3u,             8u,                  68u,                    60u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxMsg1_oTC37X_VCU_CAN01_fda515ee_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda, ComMainFunctionTx] */
-  { /*     9 */         TRUE,                    0u,                 4u,                   3u,             8u,                  76u,                    68u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda, ComMainFunctionTx] */
+  { /*     0 */         TRUE,                    0u,                10u,                   9u,             8u,                   8u,                     0u },  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
+  { /*     1 */         TRUE,                    0u,                10u,                   9u,             8u,                  16u,                     8u },  /* [/ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
+  { /*     2 */         TRUE,                    0u,                10u,                   9u,             4u,                  20u,                    16u },  /* [/ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
+  { /*     3 */         TRUE,                    0u,                10u,                   9u,             8u,                  28u,                    20u },  /* [/ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
+  { /*     4 */         TRUE,                    0u,                10u,                   9u,             8u,                  36u,                    28u },  /* [/ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
+  { /*     5 */         TRUE,                    0u,                14u,                  13u,             8u,                  44u,                    36u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Minor_01_oKAMA_FP_EPT_0303_39c0a2ee_Tx, /ActiveEcuC/Com/ComConfig/VCU_oKAMA_FP_EPT_0303_Tx_51b27697, ComMainFunctionTx] */
+  { /*     6 */         TRUE,                    0u,                14u,                  13u,             8u,                  52u,                    44u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Minor_02_oKAMA_FP_EPT_0303_9a962447_Tx, /ActiveEcuC/Com/ComConfig/VCU_oKAMA_FP_EPT_0303_Tx_51b27697, ComMainFunctionTx] */
+  { /*     7 */         TRUE,                    0u,                10u,                   9u,             8u,                  60u,                    52u },  /* [/ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
+  { /*     8 */         TRUE,                    0u,                14u,                  12u,             8u,                  68u,                    60u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxMsg1_oTC37X_VCU_CAN01_fda515ee_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda, ComMainFunctionTx] */
+  { /*     9 */         TRUE,                    0u,                14u,                  12u,             8u,                  76u,                    68u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxMsg2_oTC37X_VCU_CAN01_1723c88c_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN01_Tx_4e6d6cda, ComMainFunctionTx] */
   { /*    10 */         TRUE,                    0u,                10u,                   8u,             8u,                  84u,                    76u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN03_Tx_e464a451, ComMainFunctionTx] */
   { /*    11 */         TRUE,                    0u,                10u,                   8u,             8u,                  92u,                    84u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN03_Tx_e464a451, ComMainFunctionTx] */
   { /*    12 */         TRUE,                    0u,                 6u,                   4u,             8u,                 100u,                    92u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oTC37X_VCU_CAN12_d09b21db_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN12_Tx_61b8ea84, ComMainFunctionTx] */
@@ -997,7 +1034,9 @@ CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[24] = {  /* PRQA S 1514, 1533 
   { /*    20 */         TRUE,                    0u,                 1u,                   0u,             8u,                 164u,                   156u },  /* [/ActiveEcuC/Com/ComConfig/VcuTxIoMsg7_oTC37X_VCU_CAN00_5af4f658_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf, ComMainFunctionTx] */
   { /*    21 */         TRUE,                    0u,                 1u,                   0u,             8u,                 172u,                   164u },  /* [/ActiveEcuC/Com/ComConfig/VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf, ComMainFunctionTx] */
   { /*    22 */         TRUE,                    0u,                 1u,                   0u,             8u,                 180u,                   172u },  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf, ComMainFunctionTx] */
-  { /*    23 */         TRUE,                    0u,                 1u,                   0u,             8u,                 188u,                   180u }   /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf, ComMainFunctionTx] */
+  { /*    23 */         TRUE,                    0u,                 1u,                   0u,             8u,                 188u,                   180u },  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf, ComMainFunctionTx] */
+  { /*    24 */         TRUE,                    0u,                 6u,                   5u,             8u,                 196u,                   188u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN01_Tx_a57b3cb0, ComMainFunctionTx] */
+  { /*    25 */         TRUE,                    0u,                 6u,                   5u,             8u,                 204u,                   196u }   /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN01_Tx_a57b3cb0, ComMainFunctionTx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -1015,7 +1054,7 @@ CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[24] = {  /* PRQA S 1514, 1533 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[188] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[204] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     TxPduInitValue      Referable Keys */
   /*     0 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx] */
   /*     1 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx] */
@@ -1207,7 +1246,24 @@ CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[188] = {  /* PRQA S 
   /*   184 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
   /*   185 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
   /*   186 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
-  /*   187 */           0x00u   /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
+  /*   187 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
+  /*   188 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*   189 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*   190 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*   191 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*   192 */           0xFFu,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*   193 */           0xFFu,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*   194 */           0xFFu,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*   195 */           0xFFu,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*   196 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
+  /*   197 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
+  /*   198 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
+  /*   199 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
+  /* Index     TxPduInitValue      Referable Keys */
+  /*   200 */           0xFFu,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
+  /*   201 */           0xFFu,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
+  /*   202 */           0xFFu,  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
+  /*   203 */           0xFFu   /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
 };
 #define COM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1237,7 +1293,7 @@ CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[188] = {  /* PRQA S 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxSigInfoType, COM_CONST) Com_TxSigInfo[92] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxSigInfoType, COM_CONST) Com_TxSigInfo[100] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    ApplType                        BitLength  BitPosition  BusAcc                           ByteLength  InvValueIdx                    StartByteInPduPosition  TxBufferEndIdx  TxBufferStartIdx  TxPduInfoIdx        Referable Keys */
   { /*     0 */  COM_UINT8_APPLTYPEOFTXSIGINFO,        6u,          2u,      COM_NBIT_BUSACCOFTXSIGINFO,         0u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     0u,            37u,              36u,           5u },  /* [/ActiveEcuC/Com/ComConfig/A_I_F_B_oVCU_Minor_01_oKAMA_FP_EPT_0303_576573ee_Tx, /ActiveEcuC/Com/ComConfig/VCU_Minor_01_oKAMA_FP_EPT_0303_39c0a2ee_Tx] */
   { /*     1 */  COM_UINT8_APPLTYPEOFTXSIGINFO,        6u,         18u,      COM_NBIT_BUSACCOFTXSIGINFO,         0u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     2u,            47u,              46u,           6u },  /* [/ActiveEcuC/Com/ComConfig/COMP_Pdis_oVCU_Minor_02_oKAMA_FP_EPT_0303_4bfdbd85_Tx, /ActiveEcuC/Com/ComConfig/VCU_Minor_02_oKAMA_FP_EPT_0303_9a962447_Tx] */
@@ -1331,7 +1387,15 @@ CONST(Com_TxSigInfoType, COM_CONST) Com_TxSigInfo[92] = {  /* PRQA S 1514, 1533 
   { /*    88 */ COM_SINT16_APPLTYPEOFTXSIGINFO,       16u,          0u,     COM_NBYTE_BUSACCOFTXSIGINFO,         2u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     0u,           182u,             180u,          23u },  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_Sig0_oVcuTxMsg2_oTC37X_VCU_CAN00_05439791_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
   { /*    89 */ COM_SINT16_APPLTYPEOFTXSIGINFO,       16u,         16u,     COM_NBYTE_BUSACCOFTXSIGINFO,         2u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     2u,           184u,             182u,          23u },  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_Sig1_oVcuTxMsg2_oTC37X_VCU_CAN00_66444eb5_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
   { /*    90 */ COM_SINT16_APPLTYPEOFTXSIGINFO,       16u,         32u,     COM_NBYTE_BUSACCOFTXSIGINFO,         2u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     4u,           186u,             184u,          23u },  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_Sig2_oVcuTxMsg2_oTC37X_VCU_CAN00_c34c25d9_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
-  { /*    91 */ COM_SINT16_APPLTYPEOFTXSIGINFO,       16u,         48u,     COM_NBYTE_BUSACCOFTXSIGINFO,         2u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     6u,           188u,             186u,          23u }   /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_Sig3_oVcuTxMsg2_oTC37X_VCU_CAN00_a04bfcfd_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
+  { /*    91 */ COM_SINT16_APPLTYPEOFTXSIGINFO,       16u,         48u,     COM_NBYTE_BUSACCOFTXSIGINFO,         2u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     6u,           188u,             186u,          23u },  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_Sig3_oVcuTxMsg2_oTC37X_VCU_CAN00_a04bfcfd_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
+  { /*    92 */  COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,          0u,      COM_BYTE_BUSACCOFTXSIGINFO,         1u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     0u,           189u,             188u,          24u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_Sig0_oVcu_Lin0_TxMsg1_oLIN01_0005f3c6_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  { /*    93 */  COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,          8u,      COM_BYTE_BUSACCOFTXSIGINFO,         1u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     1u,           190u,             189u,          24u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_Sig1_oVcu_Lin0_TxMsg1_oLIN01_a58e63c8_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  { /*    94 */  COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,         16u,      COM_BYTE_BUSACCOFTXSIGINFO,         1u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     2u,           191u,             190u,          24u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_Sig2_oVcu_Lin0_TxMsg1_oLIN01_9063d59b_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  { /*    95 */  COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,         24u,      COM_BYTE_BUSACCOFTXSIGINFO,         1u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     3u,           192u,             191u,          24u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_Sig3_oVcu_Lin0_TxMsg1_oLIN01_35e84595_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  { /*    96 */  COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,          0u,      COM_BYTE_BUSACCOFTXSIGINFO,         1u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     0u,           197u,             196u,          25u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_Sig0_oVcu_Lin0_TxMsg2_oLIN01_ca2bd13d_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
+  { /*    97 */  COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,          8u,      COM_BYTE_BUSACCOFTXSIGINFO,         1u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     1u,           198u,             197u,          25u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_Sig1_oVcu_Lin0_TxMsg2_oLIN01_6fa04133_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
+  { /*    98 */  COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,         16u,      COM_BYTE_BUSACCOFTXSIGINFO,         1u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     2u,           199u,             198u,          25u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_Sig2_oVcu_Lin0_TxMsg2_oLIN01_5a4df760_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
+  { /*    99 */  COM_UINT8_APPLTYPEOFTXSIGINFO,        8u,         24u,      COM_BYTE_BUSACCOFTXSIGINFO,         1u, COM_NO_INVVALUEIDXOFTXSIGINFO,                     3u,           200u,             199u,          25u }   /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_Sig3_oVcu_Lin0_TxMsg2_oLIN01_ffc6676e_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -1375,6 +1439,8 @@ VAR(Com_CurrentTxModeUType, COM_VAR_NOINIT) Com_CurrentTxMode;  /* PRQA S 0759, 
   /*    21 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx] */
   /*    22 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx] */
   /*    23 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
+  /*    24 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*    25 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1418,6 +1484,8 @@ VAR(Com_CycleTimeCntUType, COM_VAR_NOINIT) Com_CycleTimeCnt;  /* PRQA S 0759, 15
   /*    21 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx] */
   /*    22 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx] */
   /*    23 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
+  /*    24 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*    25 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1461,6 +1529,8 @@ VAR(Com_CyclicSendRequestUType, COM_VAR_NOINIT) Com_CyclicSendRequest;  /* PRQA 
   /*    21 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx] */
   /*    22 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx] */
   /*    23 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
+  /*    24 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*    25 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1497,6 +1567,8 @@ VAR(Com_HandleRxPduDeferredUType, COM_VAR_NOINIT) Com_HandleRxPduDeferred;  /* P
   /*    14 */  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg2_oTC37X_VCU_CAN00_920688f6_Rx] */
   /*    15 */  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx] */
   /*    16 */  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
+  /*    17 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  /*    18 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
 
 #define COM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
@@ -1584,6 +1656,13 @@ VAR(Com_RxDefPduBufferUType, COM_VAR_NOINIT) Com_RxDefPduBuffer;  /* PRQA S 0759
   /*   128 */  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
   /*   ... */  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
   /*   135 */  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx] */
+  /* Index        Referable Keys */
+  /*   136 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  /*   ... */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  /*   143 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx] */
+  /*   144 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
+  /*   ... */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
+  /*   151 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1674,7 +1753,7 @@ VAR(Com_RxPduDmStateType, COM_VAR_NOINIT) Com_RxPduDmState[2];  /* PRQA S 1514, 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_RxPduGrpActiveType, COM_VAR_NOINIT) Com_RxPduGrpActive[17];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_RxPduGrpActiveType, COM_VAR_NOINIT) Com_RxPduGrpActive[19];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Com/ComConfig/EXV2_Status_oLIN00_d5e93929_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
   /*     1 */  /* [/ActiveEcuC/Com/ComConfig/EXV_1_VCU_oLIN00_69d4ef5f_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Rx_4b9dfc53, ComMainFunctionRx] */
@@ -1693,6 +1772,8 @@ VAR(Com_RxPduGrpActiveType, COM_VAR_NOINIT) Com_RxPduGrpActive[17];  /* PRQA S 1
   /*    14 */  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg2_oTC37X_VCU_CAN00_920688f6_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Rx_a08bac39, ComMainFunctionRx] */
   /*    15 */  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN01_Rx_1837cb5c, ComMainFunctionRx] */
   /*    16 */  /* [/ActiveEcuC/Com/ComConfig/VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN01_Rx_1837cb5c, ComMainFunctionRx] */
+  /*    17 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN01_Rx_f3219b36, ComMainFunctionRx] */
+  /*    18 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx, /ActiveEcuC/Com/ComConfig/VCU_oLIN01_Rx_f3219b36, ComMainFunctionRx] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1784,7 +1865,7 @@ VAR(Com_RxSigBufferUInt16Type, COM_VAR_NOINIT) Com_RxSigBufferUInt16[4];  /* PRQ
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_RxSigBufferUInt8Type, COM_VAR_NOINIT) Com_RxSigBufferUInt8[59];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_RxSigBufferUInt8Type, COM_VAR_NOINIT) Com_RxSigBufferUInt8[67];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Com/ComConfig/A_I_Actuator_With_F_B_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_0324126f_Rx, /ActiveEcuC/Com/ComConfig/A_I_Actuator_With_F_B_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_0324126f_Rx_RxSignalBufferRouting] */
   /*     1 */  /* [/ActiveEcuC/Com/ComConfig/Blockage_Fault_STA_oSVA_VCU_STD_oLIN00_6c89246f_Rx, /ActiveEcuC/Com/ComConfig/Blockage_Fault_STA_oSVA_VCU_STD_oLIN00_6c89246f_Rx_RxSignalBufferRouting] */
@@ -1846,6 +1927,14 @@ VAR(Com_RxSigBufferUInt8Type, COM_VAR_NOINIT) Com_RxSigBufferUInt8[59];  /* PRQA
   /*    56 */  /* [/ActiveEcuC/Com/ComConfig/SV1_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_a1028998_Rx, /ActiveEcuC/Com/ComConfig/SV1_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_a1028998_Rx_RxSignalBufferRouting] */
   /*    57 */  /* [/ActiveEcuC/Com/ComConfig/SV2_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_424b3e3a_Rx, /ActiveEcuC/Com/ComConfig/SV2_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_424b3e3a_Rx_RxSignalBufferRouting] */
   /*    58 */  /* [/ActiveEcuC/Com/ComConfig/SV3_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_aa5cae9b_Rx, /ActiveEcuC/Com/ComConfig/SV3_request_oVCU_Minor_03_oKAMA_FP_EPT_0303_aa5cae9b_Rx_RxSignalBufferRouting] */
+  /*    59 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_Sig0_oVcu_Lin0_RxMsg1_oLIN01_6c375668_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_Sig0_oVcu_Lin0_RxMsg1_oLIN01_6c375668_Rx_RxSignalBufferRouting] */
+  /*    60 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_Sig1_oVcu_Lin0_RxMsg1_oLIN01_c9bcc666_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg1_Sig1_oVcu_Lin0_RxMsg1_oLIN01_c9bcc666_Rx_RxSignalBufferRouting] */
+  /*    61 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig0_oVcu_Lin0_RxMsg2_oLIN01_a6197493_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig0_oVcu_Lin0_RxMsg2_oLIN01_a6197493_Rx_RxSignalBufferRouting] */
+  /*    62 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig1_oVcu_Lin0_RxMsg2_oLIN01_0392e49d_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig1_oVcu_Lin0_RxMsg2_oLIN01_0392e49d_Rx_RxSignalBufferRouting] */
+  /*    63 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig2_oVcu_Lin0_RxMsg1_oLIN01_b8f0552d_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig2_oVcu_Lin0_RxMsg1_oLIN01_b8f0552d_Rx_RxSignalBufferRouting] */
+  /*    64 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig2_oVcu_Lin0_RxMsg2_oLIN01_367f52ce_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig2_oVcu_Lin0_RxMsg2_oLIN01_367f52ce_Rx_RxSignalBufferRouting] */
+  /*    65 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig3_oVcu_Lin0_RxMsg1_oLIN01_1d7bc523_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig3_oVcu_Lin0_RxMsg1_oLIN01_1d7bc523_Rx_RxSignalBufferRouting] */
+  /*    66 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig3_oVcu_Lin0_RxMsg2_oLIN01_93f4c2c0_Rx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_RxMsg2_Sig3_oVcu_Lin0_RxMsg2_oLIN01_93f4c2c0_Rx_RxSignalBufferRouting] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1910,6 +1999,8 @@ VAR(Com_TransmitRequestUType, COM_VAR_NOINIT) Com_TransmitRequest;  /* PRQA S 07
   /*    21 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx] */
   /*    22 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx] */
   /*    23 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx] */
+  /*    24 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*    25 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1927,7 +2018,7 @@ VAR(Com_TransmitRequestUType, COM_VAR_NOINIT) Com_TransmitRequest;  /* PRQA S 07
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_TxBufferType, COM_VAR_NOINIT) Com_TxBuffer[188];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_TxBufferType, COM_VAR_NOINIT) Com_TxBuffer[204];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/EDCU_EXV2_Cmd_Set_Rq_oEDCU_EXV2_oLIN00_66e5876a_Tx] */
   /*     1 */  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/EDCU_EXV2_Cmd_Set_Rq_oEDCU_EXV2_oLIN00_66e5876a_Tx] */
@@ -2114,6 +2205,20 @@ VAR(Com_TxBufferType, COM_VAR_NOINIT) Com_TxBuffer[188];  /* PRQA S 1514, 1533 *
   /*   185 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg2_Sig2_oVcuTxMsg2_oTC37X_VCU_CAN00_c34c25d9_Tx] */
   /*   186 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg2_Sig3_oVcuTxMsg2_oTC37X_VCU_CAN00_a04bfcfd_Tx] */
   /*   187 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx, /ActiveEcuC/Com/ComConfig/VcuTxMsg2_Sig3_oVcuTxMsg2_oTC37X_VCU_CAN00_a04bfcfd_Tx] */
+  /*   188 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_Sig0_oVcu_Lin0_TxMsg1_oLIN01_0005f3c6_Tx] */
+  /*   189 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_Sig1_oVcu_Lin0_TxMsg1_oLIN01_a58e63c8_Tx] */
+  /*   190 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_Sig2_oVcu_Lin0_TxMsg1_oLIN01_9063d59b_Tx] */
+  /*   191 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_Sig3_oVcu_Lin0_TxMsg1_oLIN01_35e84595_Tx] */
+  /*   192 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*   ... */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*   195 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  /*   196 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_Sig0_oVcu_Lin0_TxMsg2_oLIN01_ca2bd13d_Tx] */
+  /*   197 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_Sig1_oVcu_Lin0_TxMsg2_oLIN01_6fa04133_Tx] */
+  /*   198 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_Sig2_oVcu_Lin0_TxMsg2_oLIN01_5a4df760_Tx] */
+  /*   199 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_Sig3_oVcu_Lin0_TxMsg2_oLIN01_ffc6676e_Tx] */
+  /*   200 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
+  /*   ... */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
+  /*   203 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -2147,7 +2252,7 @@ VAR(Com_TxIPduGroupISRLockCounterUType, COM_VAR_NOINIT) Com_TxIPduGroupISRLockCo
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_TxPduGrpActiveType, COM_VAR_NOINIT) Com_TxPduGrpActive[24];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_TxPduGrpActiveType, COM_VAR_NOINIT) Com_TxPduGrpActive[26];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
   /*     1 */  /* [/ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
@@ -2173,6 +2278,8 @@ VAR(Com_TxPduGrpActiveType, COM_VAR_NOINIT) Com_TxPduGrpActive[24];  /* PRQA S 1
   /*    21 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf, ComMainFunctionTx] */
   /*    22 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf, ComMainFunctionTx] */
   /*    23 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf, ComMainFunctionTx] */
+  /*    24 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN01_Tx_a57b3cb0, ComMainFunctionTx] */
+  /*    25 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN01_Tx_a57b3cb0, ComMainFunctionTx] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -2206,7 +2313,7 @@ VAR(Com_TxProcessingISRLockCounterUType, COM_VAR_NOINIT) Com_TxProcessingISRLock
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_TxSduLengthType, COM_VAR_NOINIT) Com_TxSduLength[24];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_TxSduLengthType, COM_VAR_NOINIT) Com_TxSduLength[26];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
   /*     1 */  /* [/ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN00_Tx_1dc75bd5, ComMainFunctionTx] */
@@ -2232,6 +2339,8 @@ VAR(Com_TxSduLengthType, COM_VAR_NOINIT) Com_TxSduLength[24];  /* PRQA S 1514, 1
   /*    21 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxIoMsg8_oTC37X_VCU_CAN00_ac8b5230_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf, ComMainFunctionTx] */
   /*    22 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg1_oTC37X_VCU_CAN00_954a27ee_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf, ComMainFunctionTx] */
   /*    23 */  /* [/ActiveEcuC/Com/ComConfig/VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx, /ActiveEcuC/Com/ComConfig/VCU_oTC37X_VCU_CAN00_Tx_f6d10bbf, ComMainFunctionTx] */
+  /*    24 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN01_Tx_a57b3cb0, ComMainFunctionTx] */
+  /*    25 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx, /ActiveEcuC/Com/ComConfig/VCU_oLIN01_Tx_a57b3cb0, ComMainFunctionTx] */
 
 #define COM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */

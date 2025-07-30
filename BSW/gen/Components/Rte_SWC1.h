@@ -131,6 +131,8 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_WriteBlock(NvM_BlockIdType parg0, dt
 #  define Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_GetCurrentComMode(arg1) (ComM_GetCurrentComMode((ComM_UserHandleType)0, arg1))
 #  define Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)0, arg1))
 #  define Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)5, arg1))
+#  define Rte_Call_UR_CN_LIN01_778f96a0_GetCurrentComMode(arg1) (ComM_GetCurrentComMode((ComM_UserHandleType)6, arg1))
+#  define Rte_Call_UR_CN_LIN01_778f96a0_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)6, arg1))
 #  define Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_GetCurrentComMode(arg1) (ComM_GetCurrentComMode((ComM_UserHandleType)1, arg1))
 #  define Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)1, arg1))
 #  define Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_GetCurrentComMode(arg1) (ComM_GetCurrentComMode((ComM_UserHandleType)2, arg1))

@@ -3006,6 +3006,9 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 
       /* call runnable */
       ComM_MainFunction_5(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+      /* call runnable */
+      ComM_MainFunction_6(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

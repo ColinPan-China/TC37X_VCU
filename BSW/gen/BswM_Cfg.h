@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2025-07-30 09:42:59
+ *   Generation Time: 2025-07-30 15:10:24
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -138,8 +138,8 @@
 #define BSWM_VERSION_INFO_API                STD_OFF
 #define BSWM_COMM_PNC_SUPPORT                STD_OFF
 #define BSWM_COMM_INITIATE_RESET             STD_OFF
-#define BSWM_CHANNEL_COUNT                   6u
-#define BSWM_WAKEUP_SOURCE_COUNT             11u
+#define BSWM_CHANNEL_COUNT                   7u
+#define BSWM_WAKEUP_SOURCE_COUNT             12u
 #define BSWM_IPDU_GROUP_CONTROL              STD_ON
 #define BSWM_ECUM_MODE_HANDLING              STD_OFF
 #define BSWM_IPDUGROUPVECTORSIZE             2u
@@ -158,40 +158,42 @@
 #define BswMConf_BswMRule_CC_CN_KAMA_FP_EPT_0303_275b3e6e_RX_DM (1) 
 #define BswMConf_BswMRule_CC_CN_KAMA_FP_EPT_0303_275b3e6e_TX (2) 
 #define BswMConf_BswMRule_CC_CN_LIN00_b12a0454_StartSchedule (3) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_BUSOFF_SILENT (4) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_NO_COM (5) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX (6) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX_DM (7) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_DISABLE (8) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_ENABLE (9) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_ENABLE_BUSOFF (10) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_NM_DISABLE (11) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_NM_ENABLE (12) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT (13) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM (14) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX (15) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM (16) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE (17) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE (18) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF (19) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX (20) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX_DM (21) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_TX (22) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN12_f0a399a5_RX (23) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN12_f0a399a5_RX_DM (24) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN12_f0a399a5_TX (25) 
-#define BswMConf_BswMRule_ESH_DemInit (26) 
-#define BswMConf_BswMRule_ESH_InitToWakeup (27) 
-#define BswMConf_BswMRule_ESH_PostRun (28) 
-#define BswMConf_BswMRule_ESH_PostRunNested (29) 
-#define BswMConf_BswMRule_ESH_PostRunToPrepNested (30) 
-#define BswMConf_BswMRule_ESH_PrepToWait (31) 
-#define BswMConf_BswMRule_ESH_RunToPostRun (32) 
-#define BswMConf_BswMRule_ESH_RunToPostRunNested (33) 
-#define BswMConf_BswMRule_ESH_WaitToShutdown (34) 
-#define BswMConf_BswMRule_ESH_WaitToWakeup (35) 
-#define BswMConf_BswMRule_ESH_WakeupToPrep (36) 
-#define BswMConf_BswMRule_ESH_WakeupToRun (37) 
+#define BswMConf_BswMRule_CC_CN_LIN01_c62d34c2_StartSchedule (4) 
+#define BswMConf_BswMRule_CC_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4 (5) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_BUSOFF_SILENT (6) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_NO_COM (7) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX (8) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX_DM (9) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_DISABLE (10) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_ENABLE (11) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_ENABLE_BUSOFF (12) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_NM_DISABLE (13) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_NM_ENABLE (14) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT (15) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM (16) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX (17) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM (18) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE (19) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE (20) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF (21) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX (22) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX_DM (23) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_TX (24) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN12_f0a399a5_RX (25) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN12_f0a399a5_RX_DM (26) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN12_f0a399a5_TX (27) 
+#define BswMConf_BswMRule_ESH_DemInit (28) 
+#define BswMConf_BswMRule_ESH_InitToWakeup (29) 
+#define BswMConf_BswMRule_ESH_PostRun (30) 
+#define BswMConf_BswMRule_ESH_PostRunNested (31) 
+#define BswMConf_BswMRule_ESH_PostRunToPrepNested (32) 
+#define BswMConf_BswMRule_ESH_PrepToWait (33) 
+#define BswMConf_BswMRule_ESH_RunToPostRun (34) 
+#define BswMConf_BswMRule_ESH_RunToPostRunNested (35) 
+#define BswMConf_BswMRule_ESH_WaitToShutdown (36) 
+#define BswMConf_BswMRule_ESH_WaitToWakeup (37) 
+#define BswMConf_BswMRule_ESH_WakeupToPrep (38) 
+#define BswMConf_BswMRule_ESH_WakeupToRun (39) 
 
 
 /* -----------------------------------------------------------------------------
@@ -378,13 +380,13 @@
 #define BSWM_IMMEDIATEUSERUSEDOFLINSCHEDULEENDMAPPING                                               STD_OFF  /**< Deactivateable: 'BswM_LinScheduleEndMapping.ImmediateUserUsed' Reason: 'No Mode Request for BswMLinScheduleEndNotification configured.' */
 #define BSWM_INITVALUEOFLINSCHEDULEENDMAPPING                                                       STD_OFF  /**< Deactivateable: 'BswM_LinScheduleEndMapping.InitValue' Reason: 'No Mode Request for BswMLinScheduleEndNotification configured.' */
 #define BSWM_LINSCHEDULEENDSTATE                                                                    STD_OFF  /**< Deactivateable: 'BswM_LinScheduleEndState' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define BSWM_LINSCHEDULEMAPPING                                                                     STD_OFF  /**< Deactivateable: 'BswM_LinScheduleMapping' Reason: 'No Mode Request for BswMLinScheduleIndication configured.' */
-#define BSWM_EXTERNALIDOFLINSCHEDULEMAPPING                                                         STD_OFF  /**< Deactivateable: 'BswM_LinScheduleMapping.ExternalId' Reason: 'No Mode Request for BswMLinScheduleIndication configured.' */
-#define BSWM_IMMEDIATEUSERENDIDXOFLINSCHEDULEMAPPING                                                STD_OFF  /**< Deactivateable: 'BswM_LinScheduleMapping.ImmediateUserEndIdx' Reason: 'No Mode Request for BswMLinScheduleIndication configured.' */
-#define BSWM_IMMEDIATEUSERSTARTIDXOFLINSCHEDULEMAPPING                                              STD_OFF  /**< Deactivateable: 'BswM_LinScheduleMapping.ImmediateUserStartIdx' Reason: 'No Mode Request for BswMLinScheduleIndication configured.' */
-#define BSWM_IMMEDIATEUSERUSEDOFLINSCHEDULEMAPPING                                                  STD_OFF  /**< Deactivateable: 'BswM_LinScheduleMapping.ImmediateUserUsed' Reason: 'No Mode Request for BswMLinScheduleIndication configured.' */
-#define BSWM_INITVALUEOFLINSCHEDULEMAPPING                                                          STD_OFF  /**< Deactivateable: 'BswM_LinScheduleMapping.InitValue' Reason: 'No Mode Request for BswMLinScheduleIndication configured.' */
-#define BSWM_LINSCHEDULESTATE                                                                       STD_OFF  /**< Deactivateable: 'BswM_LinScheduleState' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
+#define BSWM_LINSCHEDULEMAPPING                                                                     STD_ON
+#define BSWM_EXTERNALIDOFLINSCHEDULEMAPPING                                                         STD_ON
+#define BSWM_IMMEDIATEUSERENDIDXOFLINSCHEDULEMAPPING                                                STD_ON
+#define BSWM_IMMEDIATEUSERSTARTIDXOFLINSCHEDULEMAPPING                                              STD_ON
+#define BSWM_IMMEDIATEUSERUSEDOFLINSCHEDULEMAPPING                                                  STD_ON
+#define BSWM_INITVALUEOFLINSCHEDULEMAPPING                                                          STD_ON
+#define BSWM_LINSCHEDULESTATE                                                                       STD_ON
 #define BSWM_LINTPMAPPING                                                                           STD_OFF  /**< Deactivateable: 'BswM_LinTPMapping' Reason: 'No Mode Request for BswMLinTpModeRequest configured.' */
 #define BSWM_EXTERNALIDOFLINTPMAPPING                                                               STD_OFF  /**< Deactivateable: 'BswM_LinTPMapping.ExternalId' Reason: 'No Mode Request for BswMLinTpModeRequest configured.' */
 #define BSWM_IMMEDIATEUSERENDIDXOFLINTPMAPPING                                                      STD_OFF  /**< Deactivateable: 'BswM_LinTPMapping.ImmediateUserEndIdx' Reason: 'No Mode Request for BswMLinTpModeRequest configured.' */
@@ -527,6 +529,8 @@
 #define BSWM_SIZEOFINITGENVARANDINITAL                                                              STD_ON
 #define BSWM_SIZEOFLINSMMAPPING                                                                     STD_ON
 #define BSWM_SIZEOFLINSMSTATE                                                                       STD_ON
+#define BSWM_SIZEOFLINSCHEDULEMAPPING                                                               STD_ON
+#define BSWM_SIZEOFLINSCHEDULESTATE                                                                 STD_ON
 #define BSWM_SIZEOFMODENOTIFICATIONFCT                                                              STD_ON
 #define BSWM_SIZEOFMODEREQUESTQUEUE                                                                 STD_ON
 #define BSWM_SIZEOFNMMAPPING                                                                        STD_ON
@@ -574,6 +578,8 @@
 #define BSWM_INITIALIZEDOFPCPARTITIONCONFIG                                                         STD_ON
 #define BSWM_LINSMMAPPINGOFPCPARTITIONCONFIG                                                        STD_ON
 #define BSWM_LINSMSTATEOFPCPARTITIONCONFIG                                                          STD_ON
+#define BSWM_LINSCHEDULEMAPPINGOFPCPARTITIONCONFIG                                                  STD_ON
+#define BSWM_LINSCHEDULESTATEOFPCPARTITIONCONFIG                                                    STD_ON
 #define BSWM_MODENOTIFICATIONFCTOFPCPARTITIONCONFIG                                                 STD_ON
 #define BSWM_MODEREQUESTQUEUEOFPCPARTITIONCONFIG                                                    STD_ON
 #define BSWM_NMMAPPINGOFPCPARTITIONCONFIG                                                           STD_ON
@@ -600,6 +606,8 @@
 #define BSWM_SIZEOFINITGENVARANDINITALOFPCPARTITIONCONFIG                                           STD_ON
 #define BSWM_SIZEOFLINSMMAPPINGOFPCPARTITIONCONFIG                                                  STD_ON
 #define BSWM_SIZEOFLINSMSTATEOFPCPARTITIONCONFIG                                                    STD_ON
+#define BSWM_SIZEOFLINSCHEDULEMAPPINGOFPCPARTITIONCONFIG                                            STD_ON
+#define BSWM_SIZEOFLINSCHEDULESTATEOFPCPARTITIONCONFIG                                              STD_ON
 #define BSWM_SIZEOFMODENOTIFICATIONFCTOFPCPARTITIONCONFIG                                           STD_ON
 #define BSWM_SIZEOFMODEREQUESTQUEUEOFPCPARTITIONCONFIG                                              STD_ON
 #define BSWM_SIZEOFNMMAPPINGOFPCPARTITIONCONFIG                                                     STD_ON
@@ -666,6 +674,8 @@
 #define BSWM_NO_RULESINDSTARTIDXOFIMMEDIATEUSER                                                     255u
 #define BSWM_NO_IMMEDIATEUSERENDIDXOFLINSMMAPPING                                                   255u
 #define BSWM_NO_IMMEDIATEUSERSTARTIDXOFLINSMMAPPING                                                 255u
+#define BSWM_NO_IMMEDIATEUSERENDIDXOFLINSCHEDULEMAPPING                                             255u
+#define BSWM_NO_IMMEDIATEUSERSTARTIDXOFLINSCHEDULEMAPPING                                           255u
 #define BSWM_NO_IMMEDIATEUSERENDIDXOFNMMAPPING                                                      255u
 #define BSWM_NO_IMMEDIATEUSERSTARTIDXOFNMMAPPING                                                    255u
 #define BSWM_NO_IDOFRULES                                                                           255u
@@ -714,11 +724,16 @@
 #define BSWM_ISDEF_RULESINDSTARTIDXOFIMMEDIATEUSER                                                  STD_OFF
 #define BSWM_ISDEF_RULESINDUSEDOFIMMEDIATEUSER                                                      STD_OFF
 #define BSWM_ISDEF_INITGENVARANDINITAL                                                              STD_OFF
-#define BSWM_ISDEF_EXTERNALIDOFLINSMMAPPING                                                         STD_ON
-#define BSWM_ISDEF_IMMEDIATEUSERENDIDXOFLINSMMAPPING                                                STD_ON
-#define BSWM_ISDEF_IMMEDIATEUSERSTARTIDXOFLINSMMAPPING                                              STD_ON
+#define BSWM_ISDEF_EXTERNALIDOFLINSMMAPPING                                                         STD_OFF
+#define BSWM_ISDEF_IMMEDIATEUSERENDIDXOFLINSMMAPPING                                                STD_OFF
+#define BSWM_ISDEF_IMMEDIATEUSERSTARTIDXOFLINSMMAPPING                                              STD_OFF
 #define BSWM_ISDEF_IMMEDIATEUSERUSEDOFLINSMMAPPING                                                  STD_ON
 #define BSWM_ISDEF_INITVALUEOFLINSMMAPPING                                                          STD_ON
+#define BSWM_ISDEF_EXTERNALIDOFLINSCHEDULEMAPPING                                                   STD_ON
+#define BSWM_ISDEF_IMMEDIATEUSERENDIDXOFLINSCHEDULEMAPPING                                          STD_ON
+#define BSWM_ISDEF_IMMEDIATEUSERSTARTIDXOFLINSCHEDULEMAPPING                                        STD_ON
+#define BSWM_ISDEF_IMMEDIATEUSERUSEDOFLINSCHEDULEMAPPING                                            STD_ON
+#define BSWM_ISDEF_INITVALUEOFLINSCHEDULEMAPPING                                                    STD_ON
 #define BSWM_ISDEF_MODENOTIFICATIONFCT                                                              STD_OFF
 #define BSWM_ISDEF_EXTERNALIDOFNMMAPPING                                                            STD_ON
 #define BSWM_ISDEF_IMMEDIATEUSERENDIDXOFNMMAPPING                                                   STD_ON
@@ -754,6 +769,8 @@
 #define BSWM_ISDEF_INITIALIZEDOFPCPARTITIONCONFIG                                                   STD_ON
 #define BSWM_ISDEF_LINSMMAPPINGOFPCPARTITIONCONFIG                                                  STD_ON
 #define BSWM_ISDEF_LINSMSTATEOFPCPARTITIONCONFIG                                                    STD_ON
+#define BSWM_ISDEF_LINSCHEDULEMAPPINGOFPCPARTITIONCONFIG                                            STD_ON
+#define BSWM_ISDEF_LINSCHEDULESTATEOFPCPARTITIONCONFIG                                              STD_ON
 #define BSWM_ISDEF_MODENOTIFICATIONFCTOFPCPARTITIONCONFIG                                           STD_ON
 #define BSWM_ISDEF_MODEREQUESTQUEUEOFPCPARTITIONCONFIG                                              STD_ON
 #define BSWM_ISDEF_NMMAPPINGOFPCPARTITIONCONFIG                                                     STD_ON
@@ -802,15 +819,20 @@
 #define BSWM_EQ2_RULESINDSTARTIDXOFIMMEDIATEUSER                                                    
 #define BSWM_EQ2_RULESINDUSEDOFIMMEDIATEUSER                                                        
 #define BSWM_EQ2_INITGENVARANDINITAL                                                                
-#define BSWM_EQ2_EXTERNALIDOFLINSMMAPPING                                                           ComMConf_ComMChannel_CN_LIN00_b12a0454
-#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFLINSMMAPPING                                                  11u
-#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFLINSMMAPPING                                                10u
+#define BSWM_EQ2_EXTERNALIDOFLINSMMAPPING                                                           
+#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFLINSMMAPPING                                                  
+#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFLINSMMAPPING                                                
 #define BSWM_EQ2_IMMEDIATEUSERUSEDOFLINSMMAPPING                                                    TRUE
 #define BSWM_EQ2_INITVALUEOFLINSMMAPPING                                                            LINSM_BSWM_NO_COM
+#define BSWM_EQ2_EXTERNALIDOFLINSCHEDULEMAPPING                                                     ComMConf_ComMChannel_CN_LIN01_c62d34c2
+#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFLINSCHEDULEMAPPING                                            11u
+#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFLINSCHEDULEMAPPING                                          10u
+#define BSWM_EQ2_IMMEDIATEUSERUSEDOFLINSCHEDULEMAPPING                                              TRUE
+#define BSWM_EQ2_INITVALUEOFLINSCHEDULEMAPPING                                                      0
 #define BSWM_EQ2_MODENOTIFICATIONFCT                                                                
 #define BSWM_EQ2_EXTERNALIDOFNMMAPPING                                                              ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8
-#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFNMMAPPING                                                     12u
-#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFNMMAPPING                                                   11u
+#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFNMMAPPING                                                     14u
+#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFNMMAPPING                                                   13u
 #define BSWM_EQ2_IMMEDIATEUSERUSEDOFNMMAPPING                                                       TRUE
 #define BSWM_EQ2_INITVALUEOFNMMAPPING                                                               NM_STATE_BUS_SLEEP
 #define BSWM_EQ2_EXTERNALIDOFNVMJOBMAPPING                                                          NVM_SERVICE_ID_WRITEALL
@@ -842,6 +864,8 @@
 #define BSWM_EQ2_INITIALIZEDOFPCPARTITIONCONFIG                                                     (&(BswM_Initialized))
 #define BSWM_EQ2_LINSMMAPPINGOFPCPARTITIONCONFIG                                                    BswM_LinSMMapping
 #define BSWM_EQ2_LINSMSTATEOFPCPARTITIONCONFIG                                                      BswM_LinSMState
+#define BSWM_EQ2_LINSCHEDULEMAPPINGOFPCPARTITIONCONFIG                                              BswM_LinScheduleMapping
+#define BSWM_EQ2_LINSCHEDULESTATEOFPCPARTITIONCONFIG                                                BswM_LinScheduleState
 #define BSWM_EQ2_MODENOTIFICATIONFCTOFPCPARTITIONCONFIG                                             BswM_ModeNotificationFct
 #define BSWM_EQ2_MODEREQUESTQUEUEOFPCPARTITIONCONFIG                                                BswM_ModeRequestQueue
 #define BSWM_EQ2_NMMAPPINGOFPCPARTITIONCONFIG                                                       BswM_NmMapping
@@ -971,6 +995,12 @@ typedef uint8_least BswM_LinSMMappingIterType;
 
 /**   \brief  type used to iterate BswM_LinSMState */
 typedef uint8_least BswM_LinSMStateIterType;
+
+/**   \brief  type used to iterate BswM_LinScheduleMapping */
+typedef uint8_least BswM_LinScheduleMappingIterType;
+
+/**   \brief  type used to iterate BswM_LinScheduleState */
+typedef uint8_least BswM_LinScheduleStateIterType;
 
 /**   \brief  type used to iterate BswM_ModeNotificationFct */
 typedef uint8_least BswM_ModeNotificationFctIterType;
@@ -1113,6 +1143,18 @@ typedef uint8 BswM_ImmediateUserStartIdxOfLinSMMappingType;
 /**   \brief  value based type definition for BswM_ImmediateUserUsedOfLinSMMapping */
 typedef boolean BswM_ImmediateUserUsedOfLinSMMappingType;
 
+/**   \brief  value based type definition for BswM_ExternalIdOfLinScheduleMapping */
+typedef uint32 BswM_ExternalIdOfLinScheduleMappingType;
+
+/**   \brief  value based type definition for BswM_ImmediateUserEndIdxOfLinScheduleMapping */
+typedef uint8 BswM_ImmediateUserEndIdxOfLinScheduleMappingType;
+
+/**   \brief  value based type definition for BswM_ImmediateUserStartIdxOfLinScheduleMapping */
+typedef uint8 BswM_ImmediateUserStartIdxOfLinScheduleMappingType;
+
+/**   \brief  value based type definition for BswM_ImmediateUserUsedOfLinScheduleMapping */
+typedef boolean BswM_ImmediateUserUsedOfLinScheduleMappingType;
+
 /**   \brief  value based type definition for BswM_ModeRequestQueue */
 typedef uint8 BswM_ModeRequestQueueType;
 
@@ -1202,6 +1244,12 @@ typedef uint8 BswM_SizeOfLinSMMappingType;
 
 /**   \brief  value based type definition for BswM_SizeOfLinSMState */
 typedef uint8 BswM_SizeOfLinSMStateType;
+
+/**   \brief  value based type definition for BswM_SizeOfLinScheduleMapping */
+typedef uint8 BswM_SizeOfLinScheduleMappingType;
+
+/**   \brief  value based type definition for BswM_SizeOfLinScheduleState */
+typedef uint8 BswM_SizeOfLinScheduleStateType;
 
 /**   \brief  value based type definition for BswM_SizeOfModeNotificationFct */
 typedef uint8 BswM_SizeOfModeNotificationFctType;
@@ -1329,8 +1377,16 @@ typedef struct sBswM_ImmediateUserType
 /**   \brief  type used in BswM_LinSMMapping */
 typedef struct sBswM_LinSMMappingType
 {
-  uint8 BswM_LinSMMappingNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  BswM_ExternalIdOfLinSMMappingType ExternalIdOfLinSMMapping;  /**< External id of BswMLinSMIndication. */
+  BswM_ImmediateUserEndIdxOfLinSMMappingType ImmediateUserEndIdxOfLinSMMapping;  /**< the end index of the 0:n relation pointing to BswM_ImmediateUser */
+  BswM_ImmediateUserStartIdxOfLinSMMappingType ImmediateUserStartIdxOfLinSMMapping;  /**< the start index of the 0:n relation pointing to BswM_ImmediateUser */
 } BswM_LinSMMappingType;
+
+/**   \brief  type used in BswM_LinScheduleMapping */
+typedef struct sBswM_LinScheduleMappingType
+{
+  uint8 BswM_LinScheduleMappingNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+} BswM_LinScheduleMappingType;
 
 /**   \brief  type used in BswM_NmMapping */
 typedef struct sBswM_NmMappingType
@@ -1425,6 +1481,9 @@ typedef struct BswM_ActionListQueueStructSTag
   BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_Enable_DM;
   BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_TX_Disable;
   BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_TX_EnableNoinit;
+  BswM_ActionListQueueType AL_CC_AL_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4_Disable;
+  BswM_ActionListQueueType AL_CC_AL_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4_Enable;
+  BswM_ActionListQueueType AL_CC_AL_CN_LIN01_c62d34c2_LinScheduleSwitch;
 } BswM_ActionListQueueStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_RuleStates in the partition context  */
@@ -1468,6 +1527,8 @@ typedef struct BswM_RuleStatesStructSTag
   BswM_RuleStatesType R_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX;
   BswM_RuleStatesType R_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX_DM;
   BswM_RuleStatesType R_CC_CN_TC37X_VCU_CAN03_9ebf9872_TX;
+  BswM_RuleStatesType R_CC_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4;
+  BswM_RuleStatesType R_CC_CN_LIN01_c62d34c2_StartSchedule;
 } BswM_RuleStatesStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_TimerState in the partition context  */
@@ -1498,14 +1559,14 @@ typedef struct BswM_TimerValueStructSTag
 /**   \brief  type to access BswM_ActionListQueue in an index and symbol based style. */
 typedef union BswM_ActionListQueueUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_ActionListQueueType raw[53];
+  BswM_ActionListQueueType raw[56];
   BswM_ActionListQueueStructSType str;
 } BswM_ActionListQueueUType;
 
 /**   \brief  type to access BswM_RuleStates in an index and symbol based style. */
 typedef union BswM_RuleStatesUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_RuleStatesType raw[38];
+  BswM_RuleStatesType raw[40];
   BswM_RuleStatesStructSType str;
 } BswM_RuleStatesUType;
 
@@ -1582,6 +1643,12 @@ typedef P2CONST(BswM_LinSMMappingType, TYPEDEF, BSWM_CONST) BswM_LinSMMappingPtr
 
 /**   \brief  type used to point to BswM_LinSMState */
 typedef P2VAR(LinSM_ModeType, TYPEDEF, BSWM_VAR_NOINIT) BswM_LinSMStatePtrType;
+
+/**   \brief  type used to point to BswM_LinScheduleMapping */
+typedef P2CONST(BswM_LinScheduleMappingType, TYPEDEF, BSWM_CONST) BswM_LinScheduleMappingPtrType;
+
+/**   \brief  type used to point to BswM_LinScheduleState */
+typedef P2VAR(LinIf_SchHandleType, TYPEDEF, BSWM_VAR_NOINIT) BswM_LinScheduleStatePtrType;
 
 /**   \brief  type used to point to BswM_ModeNotificationFct */
 typedef P2CONST(BswM_PartitionFunctionType, TYPEDEF, BSWM_CONST) BswM_ModeNotificationFctPtrType;
