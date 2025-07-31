@@ -134,6 +134,11 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
   Adc_SampleMain();
   TLE8888qk_Main();
   PwnIf_Main();
+
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P20_11_TLE_DIR, 1);
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P20_12_TLE_PWM, sts_SV );
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P20_13_TLE_DIS, 0 );
+
 //  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_7_IN0, sts_SV );
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, sts_SV );
 //  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_9_IN2, sts_SV );
@@ -146,6 +151,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
   {
     sts_SV = 0;
   }
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
