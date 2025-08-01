@@ -150,9 +150,22 @@ TLE8888qk_CfgType TLE8888qk_CfgTable[] =
   { CMD_INCONFIG(1,0X11),   0,  0 },//Input10 assign to OUT22
   { CMD_INCONFIG(2,0X12),   0,  0 },//Input11 assign to OUT23
   { CMD_INCONFIG(3,0X13),   0,  0 },//Input12 assign to OUT24
+
+  /*LOWOUT1-4,direct pin control*/
+  { CMD_DDCONFIG(0,0X0F),   0,  0 },
+
 #endif
   { CMD_BRICONFIG(0,0xFF),  0,  0 },
   { CMD_OECONFIG(2,0xF0),   0,  0 },
+
+  /*Enable LOWOut14,Out16*/
+  { CMD_OECONFIG(1,0xA0),   0,  0 },
+  { CMD_CONT(1,0xA0),       0,  0 },
+
+  /*Enable LOWOUT8*/
+  { CMD_OECONFIG(0,0x80),   0,  0 },
+  { CMD_CONT(0,0x80),       0,  0 },
+
   { CMD_CONT(2,0xF0),       0,  0 },
 };
 

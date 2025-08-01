@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2025-07-30 15:10:24
+ *   Generation Time: 2025-08-01 11:00:55
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -402,7 +402,7 @@
 #define COMM_EXISTS_FULL_NMTYPEOFCHANNEL                                                            STD_ON
 #define COMM_EXISTS_PASSIVE_NMTYPEOFCHANNEL                                                         STD_OFF
 #define COMM_EXISTS_LIGHT_NMTYPEOFCHANNEL                                                           STD_ON
-#define COMM_EXISTS_NONE_NMTYPEOFCHANNEL                                                            STD_ON
+#define COMM_EXISTS_NONE_NMTYPEOFCHANNEL                                                            STD_OFF
 #define COMM_EXISTS_LINSLAVE_NMTYPEOFCHANNEL                                                        STD_OFF
 #define COMM_EXISTS_EIRA_RX_TYPEOFPNCSIGNAL                                                         STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define COMM_EXISTS_EIRA_TX_TYPEOFPNCSIGNAL                                                         STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
@@ -419,7 +419,6 @@
 */ 
 #define COMM_FULL_NMTYPEOFCHANNEL                                                                   0x01u
 #define COMM_LIGHT_NMTYPEOFCHANNEL                                                                  0x03u
-#define COMM_NONE_NMTYPEOFCHANNEL                                                                   0x04u
 /** 
   \}
 */ 
