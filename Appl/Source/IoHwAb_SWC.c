@@ -121,6 +121,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
  * Symbol: IoHwAb_SWC_Runnable_doc
  *********************************************************************************************************************/
 uint8 sts_SV = 0;
+static volatile uint8 Tle525En_Read; 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -135,14 +136,20 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
   TLE8888qk_Main();
   PwnIf_Main();
 
+  /*TLE9210*/
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P20_11_TLE_DIR, 1);
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P20_12_TLE_PWM, sts_SV );
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P20_13_TLE_DIS, 0 );
 
-//  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_7_IN0, sts_SV );
+  /*TLE4252D*/
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P10_7_TLE4252_EN, sts_SV );
+  Tle525En_Read = Dio_ReadChannel( DioConf_DioChannel_DioChannel_P10_7_TLE4252_EN );
+
+  /*BTS7210*/
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_7_IN0, sts_SV );
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, sts_SV );
-//  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_9_IN2, sts_SV );
-//  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_10_IN3, sts_SV );
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_9_IN2, sts_SV );
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_10_IN3, sts_SV );
   if( sts_SV == 0 )
   {
     sts_SV = 1;
