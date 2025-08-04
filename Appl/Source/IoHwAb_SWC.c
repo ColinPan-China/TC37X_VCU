@@ -50,6 +50,7 @@
 #include "TJA1145.h"
 #include "Dio.h"
 #include "PwmIf.h"
+#include "TLE94108ES.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -101,6 +102,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
 
   PwnIf_Start();
 //  Tja1145_GoSleep();
+  Tle94108es_Init();
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

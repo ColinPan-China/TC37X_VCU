@@ -200,10 +200,6 @@ void SpiSeq_TLE8888_Notify()
 {
 }
 
-void SpiSequence_TLE9410_SPI1_Notify()
-{
-}
-
 void  chip_reset();
 void  TLE8888qk_Config(); 
 void  TLE8888qk_Init();
