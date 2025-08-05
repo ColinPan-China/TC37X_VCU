@@ -1,10 +1,15 @@
 #include "Pwm_17_GtmCcu6.h"
 #include "PwmIf.h"
 
-#define PWM_DEFAULT_PERIOD1  (10U)
-#define PWM_DEFAULT_PERIOD2  (20U)
+#define PWM_DEFAULT_PERIOD1  (10U)//unit:MS
+#define PWM_DEFAULT_PERIOD2  (20U)//unit:MS
 
-uint32 DutyTick[2] = { 0x4000, 0x4000 };
+
+#define PWM_CLOCK_FRE        (20U)//unit:MS
+
+
+
+uint32 DutyTick[2] = { 0x4000, 0x4000 };//8000是100%
 
 
 #pragma align 32
@@ -31,8 +36,8 @@ uint32 PwmOut2Period_Cur = 0;
 
 void PwnIf_Start()
 {
-//    Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT1,8000,0x4000);//Period:1s/100Mhz*256*8000
-//    Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT2,8000,0x4000);  
+    Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT1,8000,0x4000);//Period:1s/100Mhz*256*8000
+    Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT2,16000,0x4000);  
 }
 
 void PwnIf_SetDuty(uint8 PwmCh,uint8 Duty)
@@ -43,6 +48,9 @@ void PwnIf_SetDuty(uint8 PwmCh,uint8 Duty)
 
 void PwnIf_Main()
 {
+    PwnIf_Start();
+
+    #if 0
     uint32 periodtick = 0;
     if( PwmOutPeriod_Set_Flash1[0]!= PwmOut1Period_Cur )
     {
@@ -56,5 +64,6 @@ void PwnIf_Main()
         periodtick = PwmOutPeriod_Set_Flash1[1]*390625/1000;
         Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT2,periodtick,DutyTick[1]);  
         PwmOut2Period_Cur = PwmOutPeriod_Set_Flash1[1];
-    }   
+    }
+    #endif   
 }

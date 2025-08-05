@@ -61,7 +61,7 @@ void Tle94108es_Init()
   /*Set  PWM Channel 1 100HZ */
   Tle94108es_WriteReg(PWM_CH_FREQ_CTRL,0x02u);
 
-  /*Set  PWM Channel 1 100HZ */
+  /*Enable Output */
   Tle94108es_WriteReg(HB_ACT_1_CTRL,0xFFu);
   Tle94108es_WriteReg(HB_ACT_2_CTRL,0xFFu);
 }
