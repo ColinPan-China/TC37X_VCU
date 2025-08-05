@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 6.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2025-07-30, 14:12:09      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2025-08-05, 13:56:20      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b180321-0610        !!!IGNORE-LINE!!!                   ** 
 **                                                                            **
@@ -1765,8 +1765,8 @@ Container : Irq GTM interruptConfiguration
 #define IRQ_GTM_TOM0_SR7_TOS        (IRQ_TOS_CPU0)
 /* GTM TOM1 interrupt Category Setting */  
 
-#define IRQ_GTM_TOM1_SR0_CAT        (IRQ_CAT1)
-#define IRQ_GTM_TOM1_SR1_CAT        (IRQ_CAT1)
+#define IRQ_GTM_TOM1_SR0_CAT        (IRQ_CAT2)
+#define IRQ_GTM_TOM1_SR1_CAT        (IRQ_CAT2)
 #define IRQ_GTM_TOM1_SR2_CAT        (IRQ_CAT1)
 #define IRQ_GTM_TOM1_SR3_CAT        (IRQ_CAT2)
 #define IRQ_GTM_TOM1_SR4_CAT        (IRQ_CAT2)
@@ -1775,8 +1775,8 @@ Container : Irq GTM interruptConfiguration
 #define IRQ_GTM_TOM1_SR7_CAT        (IRQ_CAT1)
 
 /* GTM TOM1 interrupt Priority Setting */  
-#define IRQ_GTM_TOM1_SR0_PRIO       0x0
-#define IRQ_GTM_TOM1_SR1_PRIO       0x0
+#define IRQ_GTM_TOM1_SR0_PRIO       0x7b
+#define IRQ_GTM_TOM1_SR1_PRIO       0x7c
 #define IRQ_GTM_TOM1_SR2_PRIO       0x0
 #define IRQ_GTM_TOM1_SR3_PRIO       0x79
 #define IRQ_GTM_TOM1_SR4_PRIO       0x7a

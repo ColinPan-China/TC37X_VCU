@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_25.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2025-08-04, 16:02:50       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2025-08-05, 13:55:20       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b180321-0610           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -429,13 +429,13 @@ static const Mcu_GtmConfigType Mcu_kGtmConfiguration_Config =
     /*Toutsel 0 value*/
     0x00000000U,
     /*Toutsel 1 value*/
-    0x01100000U,
+    0x01100110U,
     /*Toutsel 2 value*/
     0x00000000U,
     /*Toutsel 3 value*/
     0x44000000U,
     /*Toutsel 4 value*/
-    0x00045400U,
+    0x00040400U,
     /*Toutsel 5 value*/
     0x00000000U,
     /*Toutsel 6 value*/
@@ -470,13 +470,13 @@ static const Mcu_GtmConfigType Mcu_kGtmConfiguration_Config =
     /*Toutsel 0 mask value*/
     0x00000000U,
     /*Toutsel 1 mask value*/
-    0x0ff00000U,
+    0x0ff00ff0U,
     /*Toutsel 2 mask value*/
     0x00000000U,
     /*Toutsel 3 mask value*/
     0xff000000U,
     /*Toutsel 4 mask value*/
-    0x000ffff0U,
+    0x000f0ff0U,
     /*Toutsel 5 mask value*/
     0x00000000U,
     /*Toutsel 6 mask value*/

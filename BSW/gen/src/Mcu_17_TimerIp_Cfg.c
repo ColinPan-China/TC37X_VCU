@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 17.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2025-08-04, 16:02:50     !!!IGNORE-LINE!!!                    **
+**  DATE, TIME: 2025-08-05, 13:55:20     !!!IGNORE-LINE!!!                    **
 **                                                                            **
 **  GENERATOR : Build b180321-0610         !!!IGNORE-LINE!!!                  **
 **                                                                            **
@@ -334,8 +334,8 @@ Mcu_17_Gtm_TomChUserData[MCU_17_GTM_NO_OF_TOM_MODULES][MCU_17_GTM_NO_OF_TOM_CHAN
   },
   /* TOM Module 1 */
   {
-    0x0000,
-    0x0000,
+    0x0203,
+    0x0303,
     0x0000,
     0x0103,
     0x0003,

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.c
- *   Generation Time: 2025-07-30 14:05:36
+ *   Generation Time: 2025-08-05 13:49:04
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -151,6 +151,12 @@ OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_DMACH10SR_ISR_Dyn;
 
 /*! Dynamic ISR data: DMACH11SR_ISR */
 OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_DMACH11SR_ISR_Dyn;
+
+/*! Dynamic ISR data: GTMTOM1SR0_ISR */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_GTMTOM1SR0_ISR_Dyn;
+
+/*! Dynamic ISR data: GTMTOM1SR1_ISR */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_GTMTOM1SR1_ISR_Dyn;
 
 /*! Dynamic ISR data: GTMTOM1SR3_ISR */
 OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_GTMTOM1SR3_ISR_Dyn;
@@ -988,6 +994,76 @@ CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_DMACH11SR_ISR =
   /* .IsEnabledOnInitialization = */ TRUE
 }
 ;
+/*! ISR configuration data: GTMTOM1SR0_ISR */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_GTMTOM1SR0_ISR_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_GTMTOM1SR0_ISR,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_GTMTOM1SR0_ISR,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_GTMTOM1SR0_ISR =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_GTMTOM1SR0_ISR,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level28_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_GTMTOM1SR0_ISR_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_GTMTOM1SR0_ISR_HwConfig,
+  /* .IsrId                     = */ GTMTOM1SR0_ISR,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
+/*! ISR configuration data: GTMTOM1SR1_ISR */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_GTMTOM1SR1_ISR_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_GTMTOM1SR1_ISR,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_GTMTOM1SR1_ISR,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_GTMTOM1SR1_ISR =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_GTMTOM1SR1_ISR,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level29_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_GTMTOM1SR1_ISR_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_GTMTOM1SR1_ISR_HwConfig,
+  /* .IsrId                     = */ GTMTOM1SR1_ISR,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
 /*! ISR configuration data: GTMTOM1SR3_ISR */
 CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_GTMTOM1SR3_ISR_HwConfig =
 {
@@ -1161,6 +1237,8 @@ CONSTP2CONST(Os_IsrConfigType, OS_CONST, OS_CONST) OsCfg_IsrRefs[OS_ISRID_COUNT 
   OS_TIMER_CASTCONFIG_TIMERISR_2_ISR(OsCfg_Isr_CounterIsr_SystemTimer),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_DMACH10SR_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_DMACH11SR_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_GTMTOM1SR0_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_GTMTOM1SR1_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_GTMTOM1SR3_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_GTMTOM1SR4_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_QSPI3ERR_ISR),

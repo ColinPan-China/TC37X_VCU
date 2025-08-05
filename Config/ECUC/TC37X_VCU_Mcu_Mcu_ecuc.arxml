@@ -2113,7 +2113,7 @@
                           <PARAMETER-VALUES>
                             <ECUC-TEXTUAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Mcu/McuHardwareResourceAllocationConf/McuGtmAllocationConf/McuGtmTomAllocationConf/McuGtmTomChannelAllocationConf/McuGtmTomChannelAllocationConf</DEFINITION-REF>
-                              <VALUE>GTM_TOM_CHANNEL_NOT_USED</VALUE>
+                              <VALUE>GTM_TOM_CHANNEL_USED_BY_PWM</VALUE>
                             </ECUC-TEXTUAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Mcu/McuHardwareResourceAllocationConf/McuGtmAllocationConf/McuGtmTomAllocationConf/McuGtmTomChannelAllocationConf/McuTomChannelEventHandledByDsadc</DEFINITION-REF>
@@ -2127,7 +2127,7 @@
                           <PARAMETER-VALUES>
                             <ECUC-TEXTUAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Mcu/McuHardwareResourceAllocationConf/McuGtmAllocationConf/McuGtmTomAllocationConf/McuGtmTomChannelAllocationConf/McuGtmTomChannelAllocationConf</DEFINITION-REF>
-                              <VALUE>GTM_TOM_CHANNEL_NOT_USED</VALUE>
+                              <VALUE>GTM_TOM_CHANNEL_USED_BY_PWM</VALUE>
                             </ECUC-TEXTUAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Mcu/McuHardwareResourceAllocationConf/McuGtmAllocationConf/McuGtmTomAllocationConf/McuGtmTomChannelAllocationConf/McuTomChannelEventHandledByDsadc</DEFINITION-REF>
@@ -4459,7 +4459,7 @@
                           <PARAMETER-VALUES>
                             <ECUC-TEXTUAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Mcu/McuModuleConfiguration/GtmGlobalConfiguration/GtmTomGlobalConf/GtmTomChannelConf/GtmTimerPortPinSelect</DEFINITION-REF>
-                              <VALUE>NONE</VALUE>
+                              <VALUE>TOUT9_SELB_1_PORT00_PIN0</VALUE>
                             </ECUC-TEXTUAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Mcu/McuModuleConfiguration/GtmGlobalConfiguration/GtmTomGlobalConf/GtmTomChannelConf/GtmTomChInternalTriggerEnable</DEFINITION-REF>
@@ -4477,7 +4477,7 @@
                           <PARAMETER-VALUES>
                             <ECUC-TEXTUAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Mcu/McuModuleConfiguration/GtmGlobalConfiguration/GtmTomGlobalConf/GtmTomChannelConf/GtmTimerPortPinSelect</DEFINITION-REF>
-                              <VALUE>TOUT35_SELF_5_PORT33_PIN13</VALUE>
+                              <VALUE>TOUT10_SELB_1_PORT00_PIN1</VALUE>
                             </ECUC-TEXTUAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Mcu/McuModuleConfiguration/GtmGlobalConfiguration/GtmTomGlobalConf/GtmTomChannelConf/GtmTomChInternalTriggerEnable</DEFINITION-REF>

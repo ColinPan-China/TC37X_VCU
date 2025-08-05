@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_17.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2025-08-04, 16:02:52              !!!IGNORE-LINE !!!          **
+**  DATE, TIME: 2025-08-05, 13:55:20              !!!IGNORE-LINE !!!          **
 **                                                                            **
 **  GENERATOR : Build b180321-0610                !!!IGNORE-LINE !!!          **
 **                                                                            **
@@ -168,10 +168,12 @@ without safegaurd. It complies to Autosar guidelines. */
 before MemMap inclusion. It complies to Autosar guidelines. */
 #include "Pwm_17_GtmCcu6_MemMap.h"
   
-static const uint8 Pwm_ChannelIndexMap [2] =
+static const uint8 Pwm_ChannelIndexMap [4] =
 {
   0x0U,
   0x1U,
+  0x2U,
+  0x3U,
 };
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
@@ -203,7 +205,7 @@ without safegaurd. It complies to Autosar guidelines. */
 before MemMap inclusion It complies to Autosar guidelines. */
 #include "Pwm_17_GtmCcu6_MemMap.h"
         
-static const Mcu_17_Gtm_TomAtomChConfigType Pwm_kChannelConfigGtm_Core0[2] = 
+static const Mcu_17_Gtm_TomAtomChConfigType Pwm_kChannelConfigGtm_Core0[4] = 
 {
   {
     MCU_GTM_TIMER_TOM, /* Timer Type (TOM/ATOM)*/
@@ -231,13 +233,39 @@ static const Mcu_17_Gtm_TomAtomChConfigType Pwm_kChannelConfigGtm_Core0[2] =
     0x0U,/* portpinout*/
     0x80U /* Period,Duty Interrupt and mode*/
   },
+  {
+    MCU_GTM_TIMER_TOM, /* Timer Type (TOM/ATOM)*/
+    /* Bit[15:8] - Module number Bit[7:0] - Channel number*/
+    0x100U,
+    0x2800U, /* Channel Control Register*/
+    0x190U, /* CN0 in ticks */
+    0x190U, /* CM0 in ticks */
+    0xc8U, /* CM1 in ticks */
+    0x190U, /* SR0 in ticks */
+    0xc8U, /* SR1 in ticks */
+    0x0U,/* portpinout*/
+    0x80U /* Period,Duty Interrupt and mode*/
+  },
+  {
+    MCU_GTM_TIMER_TOM, /* Timer Type (TOM/ATOM)*/
+    /* Bit[15:8] - Module number Bit[7:0] - Channel number*/
+    0x101U,
+    0x2800U, /* Channel Control Register*/
+    0x190U, /* CN0 in ticks */
+    0x190U, /* CM0 in ticks */
+    0xc8U, /* CM1 in ticks */
+    0x190U, /* SR0 in ticks */
+    0xc8U, /* SR1 in ticks */
+    0x0U,/* portpinout*/
+    0x80U /* Period,Duty Interrupt and mode*/
+  },
 };
       
 static const Pwm_17_GtmCcu6_ChannelConfigType Pwm_kChannelConfigurationCore0[] =
 {
 /*******************************************************************************
 *  Channel Number        : 0
-*  Channel Symbolic Name : Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT1
+*  Channel Symbolic Name : Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_P00_5
 *  Channel Class         : PWM_VARIABLE_PERIOD
 *******************************************************************************/
   {
@@ -260,7 +288,7 @@ static const Pwm_17_GtmCcu6_ChannelConfigType Pwm_kChannelConfigurationCore0[] =
   },
 /*******************************************************************************
 *  Channel Number        : 1
-*  Channel Symbolic Name : Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_OUT2
+*  Channel Symbolic Name : Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_P00_4
 *  Channel Class         : PWM_VARIABLE_PERIOD
 *******************************************************************************/
   {
@@ -281,11 +309,57 @@ static const Pwm_17_GtmCcu6_ChannelConfigType Pwm_kChannelConfigurationCore0[] =
     /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
     * by violating this MISRA rule. */
   },
+/*******************************************************************************
+*  Channel Number        : 2
+*  Channel Symbolic Name : Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_P00_0
+*  Channel Class         : PWM_VARIABLE_PERIOD
+*******************************************************************************/
+  {
+    2, /* Pwm logical channel ID */
+    0, /* Timer used GTM:0/CCU6:1 */
+    Pwm_lConfigChannel(
+      0U,/* The notification flag to enable GTM interrupts to trigger DSADC */
+      0U,/* Channel reset from other channel or not*/
+      PWM_17_GTMCCU6_VARIABLE_PERIOD,/* Channel Class */
+      PWM_17_GTMCCU6_NON_COHERENT,/* Coherency */
+      PWM_17_GTMCCU6_LOW, /* channel Idle state */
+      PWM_17_GTMCCU6_HIGH  /* channel polarity */
+    ),
+    (Pwm_17_GtmCcu6_PeriodType)0x190, /* Default Period */
+    (uint32)0xc8, /* Default Duty Cycle */
+    (uint32)0x0, /* Shift Value */
+    (const void*)&Pwm_kChannelConfigGtm_Core0[2]
+    /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
+    * by violating this MISRA rule. */
+  },
+/*******************************************************************************
+*  Channel Number        : 3
+*  Channel Symbolic Name : Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_P00_1
+*  Channel Class         : PWM_VARIABLE_PERIOD
+*******************************************************************************/
+  {
+    3, /* Pwm logical channel ID */
+    0, /* Timer used GTM:0/CCU6:1 */
+    Pwm_lConfigChannel(
+      0U,/* The notification flag to enable GTM interrupts to trigger DSADC */
+      0U,/* Channel reset from other channel or not*/
+      PWM_17_GTMCCU6_VARIABLE_PERIOD,/* Channel Class */
+      PWM_17_GTMCCU6_NON_COHERENT,/* Coherency */
+      PWM_17_GTMCCU6_LOW, /* channel Idle state */
+      PWM_17_GTMCCU6_HIGH  /* channel polarity */
+    ),
+    (Pwm_17_GtmCcu6_PeriodType)0x190, /* Default Period */
+    (uint32)0xc8, /* Default Duty Cycle */
+    (uint32)0x0, /* Shift Value */
+    (const void*)&Pwm_kChannelConfigGtm_Core0[3]
+    /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
+    * by violating this MISRA rule. */
+  },
 };
       
 static const Pwm_17_GtmCcu6_CoreConfigType Pwm_CoreConfigCore0 =
 { 
-  (Pwm_17_GtmCcu6_ChannelType)2U,
+  (Pwm_17_GtmCcu6_ChannelType)4U,
   (const Pwm_17_GtmCcu6_ChannelConfigType*)&Pwm_kChannelConfigurationCore0[0]
 };
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
