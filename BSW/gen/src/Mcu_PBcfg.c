@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_25.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2025-08-06, 14:05:26       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2025-08-06, 14:36:29       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b180321-0610           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -209,7 +209,7 @@ static const Mcu_GtmClusterConfigType Mcu_kGtmClusterConfigPtr_Config[6] =
   /*GTM Cluster_0 configuration*/
   {
     /*GTM cluster TIM/TOM/ATOM enable settings*/
-    0x00000001U,
+    0x00000000U,
     /*GTM cluster config clock settings*/
     0x00000000U,
     /*GTM cluster fixed clock settings*/

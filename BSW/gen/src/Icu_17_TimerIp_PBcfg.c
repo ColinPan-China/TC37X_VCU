@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 15.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2025-08-06, 14:05:25             !!!IGNORE-LINE!!!            **
+**  DATE, TIME: 2025-08-06, 14:36:29             !!!IGNORE-LINE!!!            **
 **                                                                            **
 **  GENERATOR : Build b180321-0610               !!!IGNORE-LINE!!!            **
 **                                                                            **
@@ -314,7 +314,6 @@ Uses depends upon configuration done in configuration tool*/
 **                       Function Declarations                                **
 *******************************************************************************/
 /******************************************************************************/
-extern void ICU_P21_2_Notify (void);
 /******************************************************************************/
 /*******************************************************************************
 **                      Global Constant Definitions                           **
@@ -351,20 +350,20 @@ static const Icu_17_TimerIp_ChannelConfigType Icu_17_TimerIp_kChannelConfigCore_
 {
   {
     /* ICU Channel 0 */
-    &ICU_P21_2_Notify,/*Notification-function name*/
+    (Icu_17_TimerIp_NotifiPtrType)0,/*Notification-function name*/
     {
-      (uint8)ICU_17_TIMERIP_MODE_SIGNAL_EDGE_DETECT,/*Measurement Mode*/
+      (uint8)ICU_17_TIMERIP_MODE_SIGNAL_MEASUREMENT,/*Measurement Mode*/
       (uint8)ICU_17_TIMERIP_BOTH_EDGES,/*Default Start Edge */
-      (uint8)0U,/*Measurement Property*/
-      ICU_WAKEUPCAPABLE,/*Wakeup capability*/
+      (uint8)ICU_17_TIMERIP_DUTY_CYCLE,/*Measurement Property*/
+      ICU_NOT_WAKEUPCAPABLE,/*Wakeup capability*/
       /* Assigned Hardware Resource Number */
       /* MISRA2012_RULE_10_4_JUSTIFICATION: No side effects foreseen
       by violating this MISRA rule.*/
       /* MISRA2012_RULE_10_1_JUSTIFICATION: No side effects foreseen
       by violating this MISRA rule. */
-      (uint16)0U,
+      (uint16)20U,
       (uint8)ICU_17_TIMERIP_GTM_OPTION, /* Assigned Hw Unit */
-      7, /* PinSelection */
+      8, /* PinSelection */
       0U,/* Reserved */
       0U,/* Filtering time for rising edge */
       0U,/* Filtering time for falling edge */
@@ -403,47 +402,6 @@ static const Icu_17_TimerIp_ChannelConfigType Icu_17_TimerIp_kChannelConfigCore_
       by violating this MISRA rule.*/
       /* MISRA2012_RULE_10_1_JUSTIFICATION: No side effects foreseen
       by violating this MISRA rule. */
-      (uint16)20U,
-      (uint8)ICU_17_TIMERIP_GTM_OPTION, /* Assigned Hw Unit */
-      8, /* PinSelection */
-      0U,/* Reserved */
-      0U,/* Filtering time for rising edge */
-      0U,/* Filtering time for falling edge */
-      0U, /* Overflow ISR threshold */
-      ICU_GTM_INTERRUPT_LEVEL_MODE,/* TIM interrupt mode/ CCU6 Int Node */
-      ICU_GTM_CONFIGURABLE_CLOCK_0, /* Channel Clock Select */
-      ICU_TIMEBASE_TBU_TS0,  /* Gpr0 input select for the Tim channel */
-      0U, /* Enables Filter for the Channel */
-      /*Decides the filter Counter frequency for the TIM Channel */
-      ICU_GTM_CONFIGURABLE_CLOCK_0,
-      /*Decides the filter mode for rising Edge of the TIM Channel Input */
-      ICU_IMMEDIATE_EDGE_PROPAGATION_MODE,
-      /*Decides the filter mode for falling Edge of the TIM Channel Input */
-      ICU_IMMEDIATE_EDGE_PROPAGATION_MODE,
-      /*Input channel select : current chl or previous chl */
-      ICU_INPUT_OF_CURRENT_TIM_CHANNEL
-    },
-    #if (ICU_17_TIMERIP_REPORT_WAKEUP_SOURCE == STD_ON)
-    {
-      0U /*Not applicable*/
-    },
-    #endif
-    /* Ram needed for this channel */
-    1U
-  },
-  {
-    /* ICU Channel 2 */
-    (Icu_17_TimerIp_NotifiPtrType)0,/*Notification-function name*/
-    {
-      (uint8)ICU_17_TIMERIP_MODE_SIGNAL_MEASUREMENT,/*Measurement Mode*/
-      (uint8)ICU_17_TIMERIP_BOTH_EDGES,/*Default Start Edge */
-      (uint8)ICU_17_TIMERIP_DUTY_CYCLE,/*Measurement Property*/
-      ICU_NOT_WAKEUPCAPABLE,/*Wakeup capability*/
-      /* Assigned Hardware Resource Number */
-      /* MISRA2012_RULE_10_4_JUSTIFICATION: No side effects foreseen
-      by violating this MISRA rule.*/
-      /* MISRA2012_RULE_10_1_JUSTIFICATION: No side effects foreseen
-      by violating this MISRA rule. */
       (uint16)22U,
       (uint8)ICU_17_TIMERIP_GTM_OPTION, /* Assigned Hw Unit */
       8, /* PinSelection */
@@ -470,7 +428,7 @@ static const Icu_17_TimerIp_ChannelConfigType Icu_17_TimerIp_kChannelConfigCore_
     },
     #endif
     /* Ram needed for this channel */
-    2U
+    1U
   }
 };
 
@@ -488,9 +446,9 @@ static const Icu_17_TimerIp_CoreConfigType Icu_17_TimerIp_kConfigCore_0 =
   /* Pointer to Channel Configuration structure */
   &Icu_17_TimerIp_kChannelConfigCore_0[0],
   /* MaxChannelCore */
-  3,
+  2,
   /* chunks of union required */
-  3,
+  2,
 };
 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -569,8 +527,7 @@ const Icu_17_TimerIp_ConfigType Icu_17_TimerIp_Config =
   #if (ICU_17_TIMERIP_SINGLE_CORE == STD_OFF)
   {
     (uint16)(ICU_CORE0 | (uint8)0),
-    (uint16)(ICU_CORE0 | (uint8)1),
-    (uint16)(ICU_CORE0 | (uint8)2)
+    (uint16)(ICU_CORE0 | (uint8)1)
   },
   #endif
 };

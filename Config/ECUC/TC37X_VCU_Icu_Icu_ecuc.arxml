@@ -62,124 +62,10 @@
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuMaxChannel</DEFINITION-REF>
-                  <VALUE>3</VALUE>
+                  <VALUE>2</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
               </PARAMETER-VALUES>
               <SUB-CONTAINERS>
-                <ECUC-CONTAINER-VALUE UUID="a9aa4e5d-ec36-4137-bd7c-4bc9c91f33d8">
-                  <SHORT-NAME>IcuChannel_P21_2</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/IcuAssignedHwUnit</DEFINITION-REF>
-                      <VALUE>GTM</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/IcuChannelId</DEFINITION-REF>
-                      <VALUE>0</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/IcuDefaultStartEdge</DEFINITION-REF>
-                      <VALUE>ICU_BOTH_EDGES</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/IcuMeasurementMode</DEFINITION-REF>
-                      <VALUE>ICU_MODE_SIGNAL_EDGE_DETECT</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/IcuWakeupCapability</DEFINITION-REF>
-                      <VALUE>true</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="b54d2833-8c32-4ec2-b08d-c800b623596b">
-                      <SHORT-NAME>GtmTimerInputConfiguration_0</SHORT-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration</DEFINITION-REF>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/GtmTimerUsed</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Mcu/Mcu/McuHardwareResourceAllocationConf_0/McuGtmAllocationConf_0/McuGtmTimAllocationConf_0/McuGtmTimChannelAllocationConf_0</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="72906170-a4ec-43f8-8360-c0bb7e8b9363">
-                          <SHORT-NAME>TimChannelFilterConfig</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelFilterConfig</DEFINITION-REF>
-                          <PARAMETER-VALUES>
-                            <ECUC-TEXTUAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelFilterConfig/TimChFilterCounterFreqSelect</DEFINITION-REF>
-                              <VALUE>GTM_CONFIGURABLE_CLOCK_0</VALUE>
-                            </ECUC-TEXTUAL-PARAM-VALUE>
-                            <ECUC-TEXTUAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelFilterConfig/TimChFilterModeForFallingEdge</DEFINITION-REF>
-                              <VALUE>IMMEDIATE_EDGE_PROPAGATION_MODE</VALUE>
-                            </ECUC-TEXTUAL-PARAM-VALUE>
-                            <ECUC-TEXTUAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelFilterConfig/TimChFilterModeForRisingEdge</DEFINITION-REF>
-                              <VALUE>IMMEDIATE_EDGE_PROPAGATION_MODE</VALUE>
-                            </ECUC-TEXTUAL-PARAM-VALUE>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelFilterConfig/TimChFilterTimeForFallingEdge</DEFINITION-REF>
-                              <VALUE>0</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelFilterConfig/TimChFilterTimeForRisingEdge</DEFINITION-REF>
-                              <VALUE>0</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelFilterConfig/TimChannelFilterEnable</DEFINITION-REF>
-                              <VALUE>false</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                          </PARAMETER-VALUES>
-                        </ECUC-CONTAINER-VALUE>
-                        <ECUC-CONTAINER-VALUE UUID="0fe15567-a9b8-423b-bef9-3131ed879171">
-                          <SHORT-NAME>TimChannelGeneral</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelGeneral</DEFINITION-REF>
-                          <PARAMETER-VALUES>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelGeneral/OverflowISRThreshold</DEFINITION-REF>
-                              <VALUE>0</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                            <ECUC-TEXTUAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelGeneral/TimChannelClockSelect</DEFINITION-REF>
-                              <VALUE>GTM_CONFIGURABLE_CLOCK_0</VALUE>
-                            </ECUC-TEXTUAL-PARAM-VALUE>
-                            <ECUC-TEXTUAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelGeneral/TimChannelGpr0InputSelect</DEFINITION-REF>
-                              <VALUE>TIMEBASE_TBU_TS0</VALUE>
-                            </ECUC-TEXTUAL-PARAM-VALUE>
-                            <ECUC-TEXTUAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelGeneral/TimChannelInputSelect</DEFINITION-REF>
-                              <VALUE>INPUT_OF_CURRENT_TIM_CHANNEL</VALUE>
-                            </ECUC-TEXTUAL-PARAM-VALUE>
-                            <ECUC-TEXTUAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelGeneral/TimChannelPortPinSelect</DEFINITION-REF>
-                              <VALUE>SEL7_PORT21_PIN2</VALUE>
-                            </ECUC-TEXTUAL-PARAM-VALUE>
-                            <ECUC-TEXTUAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/GtmTimerInputConfiguration/TimChannelGeneral/TimInterruptMode</DEFINITION-REF>
-                              <VALUE>GTM_INTERRUPT_LEVEL_MODE</VALUE>
-                            </ECUC-TEXTUAL-PARAM-VALUE>
-                          </PARAMETER-VALUES>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="e00e158b-9257-484d-abf0-2b1190713512">
-                      <SHORT-NAME>IcuSignalEdgeDetection_0</SHORT-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/IcuSignalEdgeDetection</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/IcuSignalEdgeDetection/IcuSignalNotification</DEFINITION-REF>
-                          <VALUE>ICU_P21_2_Notify</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="84175ac0-3e05-43ae-ac7e-8b2978035367">
-                      <SHORT-NAME>IcuWakeup_0</SHORT-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/IcuWakeup</DEFINITION-REF>
-                    </ECUC-CONTAINER-VALUE>
-                  </SUB-CONTAINERS>
-                </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="6d658d7a-2a92-4b13-8505-c6871c9fe816">
                   <SHORT-NAME>IcuChannel_P34_2</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel</DEFINITION-REF>
@@ -190,7 +76,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/IcuChannelId</DEFINITION-REF>
-                      <VALUE>1</VALUE>
+                      <VALUE>0</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/IcuDefaultStartEdge</DEFINITION-REF>
@@ -300,7 +186,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/IcuChannelId</DEFINITION-REF>
-                      <VALUE>2</VALUE>
+                      <VALUE>1</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Icu/IcuConfigSet/IcuChannel/IcuDefaultStartEdge</DEFINITION-REF>
