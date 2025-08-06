@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 1.30.0_11.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2025-08-05, 14:01:18          !!!IGNORE-LINE !!!              **
+**  DATE, TIME: 2025-08-06, 14:05:26          !!!IGNORE-LINE !!!              **
 **                                                                            **
 **  GENERATOR : Build b180321-0610            !!!IGNORE-LINE !!!              **
 **                                                                            **
@@ -3122,13 +3122,13 @@ static const Port_n_ConfigType Port_kConfiguration[] =
     ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin 2*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
-    ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin 3*/
+    ((uint8)PORT_PIN_IN | PORT_PIN_IN_NO_PULL | PORT_PIN_MODE_GPIO),/*Pin 3*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
     ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin 4*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
-    ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin 5*/
+    ((uint8)PORT_PIN_IN | PORT_PIN_IN_NO_PULL | PORT_PIN_MODE_GPIO),/*Pin 5*/
     (PORT_PIN_DEFAULT),/*Pin 6*/
     (PORT_PIN_DEFAULT),/*Pin 7*/
     (PORT_PIN_DEFAULT),/*Pin 8*/
@@ -3234,13 +3234,13 @@ static const Port_n_ConfigType Port_kConfiguration[] =
       ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin2*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
-      ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin3*/
+      ((uint8)PORT_PIN_IN | PORT_PIN_IN_NO_PULL | PORT_PIN_MODE_GPIO),/*Pin3*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
       ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin4*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
-      ((uint8)PORT_PIN_IN | PORT_PIN_IN_PULL_UP | PORT_PIN_MODE_GPIO),/*Pin5*/
+      ((uint8)PORT_PIN_IN | PORT_PIN_IN_NO_PULL | PORT_PIN_MODE_GPIO),/*Pin5*/
       (PORT_PIN_DEFAULT),/*Pin6*/
       (PORT_PIN_DEFAULT),/*Pin7*/
       (PORT_PIN_DEFAULT),/*Pin8*/

@@ -63,6 +63,7 @@
 #include "SchM_EcuM.h"
 #include "SchM_Fee.h"
 #include "SchM_Fls_17_Dmu.h"
+#include "SchM_Icu_17_TimerIp.h"
 #include "SchM_Irq.h"
 #include "SchM_LinIf.h"
 #include "SchM_LinSM.h"
@@ -2182,6 +2183,110 @@ FUNC(void, RTE_CODE) SchM_Enter_Fls_17_Dmu_Write(void)
 }
 
 FUNC(void, RTE_CODE) SchM_Exit_Fls_17_Dmu_Write(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Icu_17_TimerIp_CcuInterruptHandle(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Icu_17_TimerIp_CcuInterruptHandle(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Icu_17_TimerIp_CcuVariableupdate(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Icu_17_TimerIp_CcuVariableupdate(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Icu_17_TimerIp_EnableNotification(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Icu_17_TimerIp_EnableNotification(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Icu_17_TimerIp_EnableWakeup(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Icu_17_TimerIp_EnableWakeup(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Icu_17_TimerIp_GtmEnableEdgeCount(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Icu_17_TimerIp_GtmEnableEdgeCount(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Icu_17_TimerIp_GtmGetDutyCycle(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Icu_17_TimerIp_GtmGetDutyCycle(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Icu_17_TimerIp_ResetEdgeCount(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Icu_17_TimerIp_ResetEdgeCount(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Icu_17_TimerIp_SetActivationCondition(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Icu_17_TimerIp_SetActivationCondition(void)
 {
   /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
   ResumeAllInterrupts();

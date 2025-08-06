@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 17.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2025-08-05, 13:55:20     !!!IGNORE-LINE!!!                    **
+**  DATE, TIME: 2025-08-06, 14:05:26     !!!IGNORE-LINE!!!                    **
 **                                                                            **
 **  GENERATOR : Build b180321-0610         !!!IGNORE-LINE!!!                  **
 **                                                                            **
@@ -237,7 +237,7 @@ Mcu_17_Gtm_TimChUserData[MCU_17_GTM_NO_OF_TIM_MODULES][MCU_17_GTM_NO_OF_TIM_CHAN
 {
   /* TIM Module 0 */
   {
-    0x0000,
+    0x0005,
     0x0000,
     0x0000,
     0x0000,
@@ -263,9 +263,9 @@ Mcu_17_Gtm_TimChUserData[MCU_17_GTM_NO_OF_TIM_MODULES][MCU_17_GTM_NO_OF_TIM_CHAN
     0x0000,
     0x0000,
     0x0000,
+    0x0105,
     0x0000,
-    0x0000,
-    0x0000,
+    0x0205,
     0x0000
   },
   /* TIM Module 3 */

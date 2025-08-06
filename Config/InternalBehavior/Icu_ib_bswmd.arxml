@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="33022ff3-f082-4548-ab3c-90793765f2d3">
+      <SHORT-NAME>AURIX2G</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="7e118c10-0a18-49f2-9978-33759fe5e7c2">
+          <SHORT-NAME>EcucDefs</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="7729f6de-43ee-4710-a4ab-21d40eaa9376">
+              <SHORT-NAME>Icu_ib_bswmd</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="0a93cd6a-73e7-477a-862f-7304c7593d20">
+                  <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+                  <ELEMENTS>
+                    <BSW-MODULE-DESCRIPTION UUID="5a696729-683f-4fc0-9588-3c2e18bdb170">
+                      <SHORT-NAME>Icu</SHORT-NAME>
+                      <INTERNAL-BEHAVIORS>
+                        <BSW-INTERNAL-BEHAVIOR UUID="ccab49e0-37cd-498f-b7a5-a24c419167cb">
+                          <SHORT-NAME>IcuBehavior</SHORT-NAME>
+                          <EXCLUSIVE-AREAS>
+                            <EXCLUSIVE-AREA UUID="8ebae7e2-1dce-4ab7-9051-c9774e03ce59">
+                              <SHORT-NAME>EnableWakeup</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="25714caf-36e1-49c1-b75d-25a9d9dd4c92">
+                              <SHORT-NAME>EnableNotification</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="53231f34-da2d-435b-9ff3-013745271416">
+                              <SHORT-NAME>ResetEdgeCount</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="829d2f1d-9137-47e1-a8ed-9f97246d64bb">
+                              <SHORT-NAME>CcuInterruptHandle</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="88aa609a-1263-4142-bc23-9f6e2c0246d2">
+                              <SHORT-NAME>CcuVariableupdate</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="53053566-4448-4948-9d36-a59957f5bc60">
+                              <SHORT-NAME>GtmEnableEdgeCount</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="0218aa34-984a-4b5e-8ef9-a2f572979554">
+                              <SHORT-NAME>SetActivationCondition</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                            <EXCLUSIVE-AREA UUID="b543ac2d-5c06-430a-b4f5-c6031d671250">
+                              <SHORT-NAME>GtmGetDutyCycle</SHORT-NAME>
+                            </EXCLUSIVE-AREA>
+                          </EXCLUSIVE-AREAS>
+                        </BSW-INTERNAL-BEHAVIOR>
+                      </INTERNAL-BEHAVIORS>
+                    </BSW-MODULE-DESCRIPTION>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

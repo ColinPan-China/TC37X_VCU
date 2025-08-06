@@ -16,7 +16,7 @@
 **                                                                           **
 **  VERSION   : 1.40.0_11.0.0                                                **
 **                                                                           **
-**  DATE, TIME: 2025-08-05, 13:56:20          !!!IGNORE-LINE!!!               **
+**  DATE, TIME: 2025-08-06, 13:23:20          !!!IGNORE-LINE!!!               **
 **                                                                           **
 **  GENERATOR : Build b180321-0610            !!!IGNORE-LINE!!!               **
 **                                                                           **
@@ -83,7 +83,10 @@
                                             <BSW-MODULE-ENTRY-REF-CONDITIONAL>
                   <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G_Irq/BswModuleEntrys/IrqGtm_Init</BSW-MODULE-ENTRY-REF>
                 </BSW-MODULE-ENTRY-REF-CONDITIONAL>
-                                                                                                              <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                                                                  <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G_Irq/BswModuleEntrys/IrqScu_Init</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
                   <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G_Irq/BswModuleEntrys/IrqSpi_Init</BSW-MODULE-ENTRY-REF>
                 </BSW-MODULE-ENTRY-REF-CONDITIONAL>
                                           </PROVIDED-ENTRYS>
@@ -122,7 +125,12 @@
                       <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
                       <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G_Irq/BswModuleEntrys/IrqDma_Init</IMPLEMENTED-ENTRY-REF>
                     </BSW-CALLED-ENTITY>
-                                                                          <BSW-CALLED-ENTITY>
+                                                        <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>IrqScu_Init</SHORT-NAME>
+                      <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G_Irq/BswModuleEntrys/IrqScu_Init</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                                                        <BSW-CALLED-ENTITY>
                       <SHORT-NAME>IrqDmu_Init</SHORT-NAME>
                       <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
                       <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G_Irq/BswModuleEntrys/IrqDmu_Init</IMPLEMENTED-ENTRY-REF>
@@ -198,7 +206,15 @@
               <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
               <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
             </BSW-MODULE-ENTRY>
-                                                         <BSW-MODULE-ENTRY>
+                                       <BSW-MODULE-ENTRY>
+              <SHORT-NAME>IrqScu_Init</SHORT-NAME>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+                                       <BSW-MODULE-ENTRY>
               <SHORT-NAME>IrqSpi_Init</SHORT-NAME>
               <IS-REENTRANT>false</IS-REENTRANT>
               <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>

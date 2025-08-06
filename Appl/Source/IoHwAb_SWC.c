@@ -51,6 +51,7 @@
 #include "Dio.h"
 #include "PwmIf.h"
 #include "TLE94108ES.h"
+#include "Icu_17_TimerIp.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -72,7 +73,26 @@
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: IoHwAb_SWC_Init_doc
  *********************************************************************************************************************/
+Icu_17_TimerIp_DutyCycleType ICU_Val1;
+Icu_17_TimerIp_DutyCycleType ICU_Val2;
+uint8 MessureFlg = 0;
+void ICU_P34_2_Notify()
+{
+  Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_2, &ICU_Val1);
+//  Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_4, &ICU_Val2);
+}
 
+void ICU_P34_4_Notify()
+{
+//  Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_2, &ICU_Val1);
+  Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_4, &ICU_Val2);
+}
+
+void ICU_P21_2_Notify()
+{
+//  Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_2, &ICU_Val1);
+//  Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_4, &ICU_Val2);
+}
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -100,6 +120,18 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_9_IN2, 1 );
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_10_IN3, 1 );
 
+
+    Icu_17_TimerIp_StartSignalMeasurement(IcuConf_IcuChannel_IcuChannel_P34_2);
+    Icu_17_TimerIp_StartSignalMeasurement(IcuConf_IcuChannel_IcuChannel_P34_4);
+
+
+  #if 0
+  Icu_17_TimerIp_EnableNotification(IcuConf_IcuChannel_IcuChannel_P34_2);
+  Icu_17_TimerIp_EnableEdgeDetection(IcuConf_IcuChannel_IcuChannel_P34_2);
+  Icu_17_TimerIp_EnableNotification(IcuConf_IcuChannel_IcuChannel_P34_4);
+  Icu_17_TimerIp_EnableEdgeDetection(IcuConf_IcuChannel_IcuChannel_P34_4);
+  #endif
+
   PwnIf_Start();
 //  Tja1145_GoSleep();
   Tle94108es_Init();
@@ -123,7 +155,8 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
  * Symbol: IoHwAb_SWC_Runnable_doc
  *********************************************************************************************************************/
 uint8 sts_SV = 0;
-//static volatile uint8 Tle525En_Read; 
+
+uint8 TIMER = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -155,17 +188,25 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
 
   /*TLE8888QK LOW_OUT1*/
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P2_11_IN1, 1 );
-
-
-  if( sts_SV == 0 )
+  if(MessureFlg == 1 )
   {
-    sts_SV = 1;
+    MessureFlg = 0;
+    Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_2, &ICU_Val1);
+    Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_4, &ICU_Val2);
   }
-  else
+  TIMER++;
+  if( TIMER >= 10 )
   {
-    sts_SV = 0;
+    TIMER = 0;
+    if( sts_SV == 0 )
+    {
+      sts_SV = 1;
+    }
+    else
+    {
+      sts_SV = 0;
+    }
   }
-
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

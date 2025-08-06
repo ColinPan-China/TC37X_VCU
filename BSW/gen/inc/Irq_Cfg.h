@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 6.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2025-08-05, 13:56:20      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2025-08-06, 13:23:20      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b180321-0610        !!!IGNORE-LINE!!!                   ** 
 **                                                                            **
@@ -1467,9 +1467,9 @@ Container : Irq GTM interruptConfiguration
 #define IRQ_GTM_TIM2_SR1_CAT        (IRQ_CAT1)
 #define IRQ_GTM_TIM2_SR2_CAT        (IRQ_CAT1)
 #define IRQ_GTM_TIM2_SR3_CAT        (IRQ_CAT1)
-#define IRQ_GTM_TIM2_SR4_CAT        (IRQ_CAT1)
+#define IRQ_GTM_TIM2_SR4_CAT        (IRQ_CAT2)
 #define IRQ_GTM_TIM2_SR5_CAT        (IRQ_CAT1)
-#define IRQ_GTM_TIM2_SR6_CAT        (IRQ_CAT1)
+#define IRQ_GTM_TIM2_SR6_CAT        (IRQ_CAT2)
 #define IRQ_GTM_TIM2_SR7_CAT        (IRQ_CAT1)
 
 /* GTM TIM2 interrupt Priority Setting */  
@@ -1477,9 +1477,9 @@ Container : Irq GTM interruptConfiguration
 #define IRQ_GTM_TIM2_SR1_PRIO       0x0
 #define IRQ_GTM_TIM2_SR2_PRIO       0x0
 #define IRQ_GTM_TIM2_SR3_PRIO       0x0
-#define IRQ_GTM_TIM2_SR4_PRIO       0x0
+#define IRQ_GTM_TIM2_SR4_PRIO       0x3a
 #define IRQ_GTM_TIM2_SR5_PRIO       0x0
-#define IRQ_GTM_TIM2_SR6_PRIO       0x0
+#define IRQ_GTM_TIM2_SR6_PRIO       0x3b
 #define IRQ_GTM_TIM2_SR7_PRIO       0x0
 
 /* GTM TIM2 interrupt type of service Setting */ 
@@ -2663,7 +2663,7 @@ Container : I2C interrupt Configuration
 #define IRQ_DMU_HOST_EXIST          (STD_ON)
 #define IRQ_DMU_FSI_EXIST          (STD_ON)
 
-#define IRQ_SCU_EXIST               (STD_OFF)
+#define IRQ_SCU_EXIST               (STD_ON)
 
 #define IRQ_GPSRGROUP_EXIST         (STD_ON)
 #define IRQ_GPSRGROUP0_EXIST        (STD_ON)

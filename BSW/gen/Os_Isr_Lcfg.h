@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.h
- *   Generation Time: 2025-08-05 13:49:04
+ *   Generation Time: 2025-08-06 13:18:53
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -164,6 +164,14 @@ extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_DMACH10SR_ISR;
 /*! ISR configuration data: DMACH11SR_ISR */
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_DMACH11SR_ISR_HwConfig;
 extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_DMACH11SR_ISR;
+
+/*! ISR configuration data: GTMTIM2SR4_ISR */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_GTMTIM2SR4_ISR_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_GTMTIM2SR4_ISR;
+
+/*! ISR configuration data: GTMTIM2SR6_ISR */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_GTMTIM2SR6_ISR_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_GTMTIM2SR6_ISR;
 
 /*! ISR configuration data: GTMTOM1SR0_ISR */
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_GTMTOM1SR0_ISR_HwConfig;

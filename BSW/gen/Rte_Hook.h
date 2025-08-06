@@ -846,6 +846,22 @@
  *  SchM_EnterHook_Fls_17_Dmu_UserContentCount_Start
  *  SchM_EnterHook_Fls_17_Dmu_Write_Return
  *  SchM_EnterHook_Fls_17_Dmu_Write_Start
+ *  SchM_EnterHook_Icu_17_TimerIp_CcuInterruptHandle_Return
+ *  SchM_EnterHook_Icu_17_TimerIp_CcuInterruptHandle_Start
+ *  SchM_EnterHook_Icu_17_TimerIp_CcuVariableupdate_Return
+ *  SchM_EnterHook_Icu_17_TimerIp_CcuVariableupdate_Start
+ *  SchM_EnterHook_Icu_17_TimerIp_EnableNotification_Return
+ *  SchM_EnterHook_Icu_17_TimerIp_EnableNotification_Start
+ *  SchM_EnterHook_Icu_17_TimerIp_EnableWakeup_Return
+ *  SchM_EnterHook_Icu_17_TimerIp_EnableWakeup_Start
+ *  SchM_EnterHook_Icu_17_TimerIp_GtmEnableEdgeCount_Return
+ *  SchM_EnterHook_Icu_17_TimerIp_GtmEnableEdgeCount_Start
+ *  SchM_EnterHook_Icu_17_TimerIp_GtmGetDutyCycle_Return
+ *  SchM_EnterHook_Icu_17_TimerIp_GtmGetDutyCycle_Start
+ *  SchM_EnterHook_Icu_17_TimerIp_ResetEdgeCount_Return
+ *  SchM_EnterHook_Icu_17_TimerIp_ResetEdgeCount_Start
+ *  SchM_EnterHook_Icu_17_TimerIp_SetActivationCondition_Return
+ *  SchM_EnterHook_Icu_17_TimerIp_SetActivationCondition_Start
  *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_1_Return
@@ -1070,6 +1086,22 @@
  *  SchM_ExitHook_Fls_17_Dmu_UserContentCount_Start
  *  SchM_ExitHook_Fls_17_Dmu_Write_Return
  *  SchM_ExitHook_Fls_17_Dmu_Write_Start
+ *  SchM_ExitHook_Icu_17_TimerIp_CcuInterruptHandle_Return
+ *  SchM_ExitHook_Icu_17_TimerIp_CcuInterruptHandle_Start
+ *  SchM_ExitHook_Icu_17_TimerIp_CcuVariableupdate_Return
+ *  SchM_ExitHook_Icu_17_TimerIp_CcuVariableupdate_Start
+ *  SchM_ExitHook_Icu_17_TimerIp_EnableNotification_Return
+ *  SchM_ExitHook_Icu_17_TimerIp_EnableNotification_Start
+ *  SchM_ExitHook_Icu_17_TimerIp_EnableWakeup_Return
+ *  SchM_ExitHook_Icu_17_TimerIp_EnableWakeup_Start
+ *  SchM_ExitHook_Icu_17_TimerIp_GtmEnableEdgeCount_Return
+ *  SchM_ExitHook_Icu_17_TimerIp_GtmEnableEdgeCount_Start
+ *  SchM_ExitHook_Icu_17_TimerIp_GtmGetDutyCycle_Return
+ *  SchM_ExitHook_Icu_17_TimerIp_GtmGetDutyCycle_Start
+ *  SchM_ExitHook_Icu_17_TimerIp_ResetEdgeCount_Return
+ *  SchM_ExitHook_Icu_17_TimerIp_ResetEdgeCount_Start
+ *  SchM_ExitHook_Icu_17_TimerIp_SetActivationCondition_Return
+ *  SchM_ExitHook_Icu_17_TimerIp_SetActivationCondition_Start
  *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_1_Return

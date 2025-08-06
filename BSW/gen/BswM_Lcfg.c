@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Lcfg.c
- *   Generation Time: 2025-07-30 15:10:25
+ *   Generation Time: 2025-08-06 10:59:23
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -1710,6 +1710,9 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_INIT_AL_Initialize(Bs
   /*lint -restore */
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
   Fee_Init(&Fee_Config);
+  /*lint -restore */
+  /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
+  Icu_17_TimerIp_Init(&Icu_17_TimerIp_Config);
   /*lint -restore */
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
   LinTrcv_30_Tle7259_Init(LinTrcv_30_Tle7259_Config_Ptr);

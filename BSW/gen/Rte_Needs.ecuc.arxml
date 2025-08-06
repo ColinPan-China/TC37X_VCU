@@ -1027,6 +1027,12 @@
                             </SUB-CONTAINERS>
                         </ECUC-CONTAINER-VALUE>
                         <ECUC-CONTAINER-VALUE>
+                            <SHORT-NAME>Icu</SHORT-NAME>
+                            <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteBswModuleInstance</DEFINITION-REF>
+                            <SUB-CONTAINERS>
+                            </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
                             <SHORT-NAME>Irq</SHORT-NAME>
                             <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteBswModuleInstance</DEFINITION-REF>
                             <SUB-CONTAINERS>
