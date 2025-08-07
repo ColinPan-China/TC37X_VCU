@@ -777,87 +777,6 @@
                                   <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/TMM_EXV2_PositionRequest_oVCU_EXV_2_oLIN00</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-CLUSTER">/Cluster/KAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oKAMA_FP_EPT_0303_Rx</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oKAMA_FP_EPT_0303_Tx</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Minor_01_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Minor_02_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Minor_03_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_Minor_01_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_Minor_02_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_Minor_03_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/A_I_Actuator_With_F_B_request_oVCU_Minor_03_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/A_I_F_B_oVCU_Minor_01_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/COMP_Pdis_oVCU_Minor_02_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/COMP_Psuc_oVCU_Minor_02_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/COMP_Tdis_oVCU_Minor_02_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/COMP_Tsuc_oVCU_Minor_02_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/COOLING_FAN_request_oVCU_Minor_03_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/HVAC_Blower_request_oVCU_Minor_03_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Mode_Actuator_request_oVCU_Minor_03_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MODE_F_B_oVCU_Minor_01_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/SV1_request_oVCU_Minor_03_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/SV2_request_oVCU_Minor_03_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/SV3_request_oVCU_Minor_03_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tamb_oVCU_Minor_01_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tevap_Tchiller_out_oVCU_Minor_01_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tincar_oVCU_Minor_02_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tohx_in_oVCU_Minor_01_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tohx_out_oVCU_Minor_01_oKAMA_FP_EPT_0303</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="CAN-CLUSTER">/Cluster/TC37X_VCU_CAN12</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
@@ -1147,6 +1066,1155 @@
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Vcu_Lin0_TxMsg2_Sig3_oVcu_Lin0_TxMsg2_oLIN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-TP-CONFIG">/TP/ATOM_CANFD_Matrix_CH_V600_202502_CAN</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-CLUSTER">/Cluster/ATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oATOM_CANFD_Matrix_CH_V600_202502_Rx</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oATOM_CANFD_Matrix_CH_V600_202502_Tx</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/ACU_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/ACU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/ACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/ADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/ADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/ADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/ADCU_APS_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/ADCU_DA_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/IBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/IBS_APS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/IBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/IBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/IBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/IBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/IBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/IBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/IBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/IBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/IBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/NM_CGW_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/NM_VCU_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/SGW_17_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_04_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/ACU_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/ACU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/ACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/ADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/ADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/ADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/ADCU_APS_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/ADCU_DA_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/IBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/IBS_APS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/IBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/IBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/IBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/IBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/IBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/IBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/IBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/IBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/IBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/SGW_17_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_04_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="NM-PDU">/PDU/NM_CGW_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="NM-PDU">/PDU/NM_VCU_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_CrashOutputSts_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_CrashOutputStsValid_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_DriverSeatBeltSts_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_DriverSeatBeltStsValid_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_DriverWarningLampSts_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_LatA_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_LatAStatus_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_LgtA_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_LgtAStatus_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_PassengerAirbagSts_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_PassengerSeatBeltSts_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_PassengerSeatBeltStsValid_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_PassengerSts_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_PassengerWarningLampSts_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_RLSeatBeltStatusValid_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_RRSeatBeltStatusValid_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_SecondLeftSeatBeltSts_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_SecondLeftSts_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_SecondRightSeatBeltSts_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_SecondRightSts_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_WarningLampSts_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_YawRate_oACU_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ACU_YawRateStatus_oACU_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_ACC_Mode_oADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_ACCDA_HandsOFF_Warning_oADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_ACCDA_SYS_Failure_oADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_AEB_AWB_Level_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_AEB_AWB_Req_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_AEB_Decel_Cmd_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_AEB_Prefill_CMD_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_AEB_State_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_AEB_Stop_Req_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_AEBReq_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_AEBWarningSts_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_APS_Stop_Req_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_APSComfBrkReq_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_APSCrlModeReq_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_APSCrlReq_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_APSCrlTypReq_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_APSDistanceStop_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_APSMaxSpeedReq_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_DA_Mode_oADCU_DA_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_FCW_State_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_Parking_CtrlSts_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_Parking_Mode_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_RemoteParkingMode_oADCU_APS_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/ADCU_TargetGear_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_090_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_094_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_095_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_097_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0B0_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0B1_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0B2_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0B3_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0B4_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0B7_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0B8_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0B9_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0BA_oIBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0BC_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0D1_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0D2_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0D3_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0E0_oADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0E2_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0E4_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0E6_oADCU_DA_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0F5_oACU_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_0F6_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_317_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Checksum_318_oVCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_ABPActive_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_ABPAvailable_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_ABSActive_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_ABSFault_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_AEBActive_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_AEBAvailable_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_APS_Avl_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_APSComfortAvl_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_APSCrlReqEcho_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_APSEmergenyAvl_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_APSModeEcho_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_APSTrqReqActive_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_AVHAvailable_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_AVHSts_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_AWBActive_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_AWBAvailable_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_BrakeFluidWarning_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_BrakeLightRequest_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_BrakePedalStatus_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_BrakePedalStatusValid_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_BrakePushrodStroke_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_BrakeTypEcho_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_CddActive_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_CddAvailable_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_CddError_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_CDPActive_oIBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_CDPAvailable_oIBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_DTCActive_oIBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_DTCFault_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_EBDActive_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_EBDFault_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_EPBControllerSts_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_EPBFailureLamp_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_EPBFailureStatus_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_EPBFunctionLamp_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_EPBTextdisplay_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_EPBworkingSts_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_ESClampdisplay_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_ESCOffSts_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_FactoryMode_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_FLMovingDirection_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_FLWheelPulseCounter_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_FLWheelSpeed_Fault_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_FLWheelSpeed_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_FRMovingDirection_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_FRWheelPulseCounter_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_FRWheelSpeed_Fault_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_FRWheelSpeed_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_HazWarnReq_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_HBAActive_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_HDCAvailable_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_HDCSts_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_HHCActive_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_HHCAvailable_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_MaintenaceMode_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_MasterCylinderPressure_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_PlungerPressure_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RBSStatus_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RLMovingDirection_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RLWheelPulseCounter_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RLWheelSpeed_Fault_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RLWheelSpeed_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RollerbenchMode_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RRMovingDirection_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RRWheelPulseCounter_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RRWheelSpeed_Fault_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RRWheelSpeed_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RWUActive_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_RWUAvailable_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_SystemStatus_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TargetGearReq_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TCSActive_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TCSFault_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TireMonSysSts_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TireWarnFrntLe_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TireWarnFrntRi_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TireWarnReLe_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TireWarnReRi_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_TPMS_ResetSts_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_VCU_DecelerationReqActive_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_VCU_DecelerationRequest_Available_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_VDCActive_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_VDCFault_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_VehicleSpeed_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_VehicleSpeedValid_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_VehicleStandstill_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_VehicleStandstill_Valid_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_VlcActive_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_VlcAvalible_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_VlcError_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_WLTorqueAPSReq_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_WLTorqueAPSReqValid_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_WLTorqueIncrReq_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_WLTorqueIncrReqSts_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_WLTorqueRBSReq_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_WLTorqueRBSReqValid_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_WLTorqueRedReq_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_WLTorqueRedReqSts_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_WLTorqueVLCReq_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/IBS_WLTorqueVLCReqValid_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_090_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_094_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_095_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_097_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0B0_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0B1_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0B2_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0B3_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0B4_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0B7_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0B8_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0B9_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0BA_oIBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0BC_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0D1_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0D2_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0D3_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0E0_oADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0E2_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0E4_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0E6_oADCU_DA_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0F5_oACU_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_0F6_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_317_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/MessageCounter_318_oVCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/SGW_BLESystemReadyReq_oSGW_17_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_AccelerationPedal_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_AccelerationPedalValid_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_ActDriveMode_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_ActualGear_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_ADASOverride_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_APSTorqueRequestActive_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_APSTorqueRequestAvailable_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_BMS_Control_of_PosRelay_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_BMSTargetThermLevel_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_BrakeCompensateStatus_oVCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_BrakeCompensateWarn_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_BrakepedalStatus_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_BS_Current_oVCU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_BS_IBSBatSOC_oVCU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_BS_IndicatorSts_oVCU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_BS_LV_Batt_oVCU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_ChargeEndReason_oVCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_ChargeProcessComment_oVCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_ChargeStatus_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_CriSysFailure_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_DCDCFail_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_DCFCCurrent_oVCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_DecelerationReq_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_DecelerationReqactive_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_DischargeEndReason_oVCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_DischargeEndSoc_oVCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_Display_Cur_oVCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_Display_Power_oVCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_DriveMotOvrTemp_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_DriverTorqueRequest_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_DrvModSwitchWarn_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_EnergyManagementWarn_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_EnergyV2L_oVCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_EPBReq_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_ForwardVmaxAllowed_oVCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_ForwardVmaxlimitStatus_oVCU_04_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_HVBatCriFail_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_HVBatOvrTemp_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_HVConnectFault_oVCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_HVILError_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_HVInsulResFault_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_HVStatus_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_InvldGearSel_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_IsoMeasurementSwitch_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_Kickdown_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_KL15eOn_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_LimitLevel_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_LimpHome_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_ManuallyUnlockComment_oVCU_04_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_maxChargeSOC_oVCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_MCU_FaultLampReq_oVCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_MCUDesiredTorque_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_MCUSurgeDamperState_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_MemoryChargeFault_oVCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_MileagelowRemind_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_MotorActualTorque_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_MotorActualTorqueValid_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_OPStandstillReq_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_PlugStatus_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_PWTErrorLevel_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_ReachLimitStd_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_RegenBrakeLightRequest_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_RegenBrakeLightReqVld_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_RegenTorqueCap_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_RegenTorqueCapValid_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_RegStatus_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_RemainChrgTime_oVCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_RequestedModeBMS_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_RequestedModeMCU_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_SystemReady_oVCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_TargetGear_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_TCSActive_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_TorqueRequestActive_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_TorqueRequestAvailable_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_TrqThresholdDampgCtl_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_VehicleSpeed_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_VehicleSpeedValid_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_VirtualACPedal_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_VirtualACPedalValid_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_VLCTorqueRequestActive_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_VLCTorqueRequestAvailable_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_WakeUpStatus_oVCU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_WheelTrqACT_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VCU_WheelTrqACTValid_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_ACU_01_SigGroup_oACU_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_ACU_02_SigGroup_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_ACU_info_SigGroup_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_ADCU_ACC_02_SigGroup_oADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_ADCU_AEB_01_SigGroup_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_ADCU_APS_01_SigGroup_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_ADCU_APS_02_SigGroup_oADCU_APS_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_ADCU_DA_SigGroup_oADCU_DA_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_IBS_ACC_SigGroup_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_IBS_APS_SigGroup_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_IBS_Status_01_SigGroup_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_IBS_Status_02_SigGroup_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_IBS_Status_03_SigGroup_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_IBS_Status_04_SigGroup_oIBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_IBS_Status_06_SigGroup_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_IBS_Torque_SigGroup_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_IBS_VCU_MotorControl_SigGroup_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_IBS_WheelSpeed_01_SigGroup_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_IBS_WheelSpeed_02_SigGroup_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_SGW_17_SigGroup_oSGW_17_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_VCU_02_SigGroup_oVCU_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_VCU_03_SigGroup_oVCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_VCU_04_SigGroup_oVCU_04_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_VCU_AccPedal_SigGroup_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_VCU_BMS_SigGroup_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_VCU_Chassis_01_SigGroup_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_VCU_HMIsignals_01_SigGroup_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_VCU_HMIsignals_02_SigGroup_oVCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_VCU_IBS_01_SigGroup_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_VCU_MCU_03_SigGroup_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-GROUP">/ISignal/SG_VCU_PlugInChrgInfo_SigGroup_oVCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                               </FIBEX-ELEMENTS>
                               <MAPPINGS>
@@ -4272,17 +5340,6 @@
                                   </INNER-PORT-IREF>
                                   <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN10</OUTER-PORT-REF>
                                 </DELEGATION-SW-CONNECTOR>
-                                <ASSEMBLY-SW-CONNECTOR UUID="8c0b11bd-9a0e-45f9-8efe-072ca5d80387">
-                                  <SHORT-NAME>ComM_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_SWC1_UR_CN_KAMA_FP_EPT_0303_b67fd6a6</SHORT-NAME>
-                                  <PROVIDER-IREF>
-                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</CONTEXT-COMPONENT-REF>
-                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_KAMA_FP_EPT_0303_b67fd6a6</TARGET-P-PORT-REF>
-                                  </PROVIDER-IREF>
-                                  <REQUESTER-IREF>
-                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
-                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_KAMA_FP_EPT_0303_b67fd6a6</TARGET-R-PORT-REF>
-                                  </REQUESTER-IREF>
-                                </ASSEMBLY-SW-CONNECTOR>
                                 <ASSEMBLY-SW-CONNECTOR UUID="3fdd918c-645a-4515-a163-6f7b78c24061">
                                   <SHORT-NAME>ComM_UR_CN_LIN00_984dfd9e_SWC1_UR_CN_LIN00_984dfd9e</SHORT-NAME>
                                   <PROVIDER-IREF>
@@ -4521,8 +5578,6 @@
                                     <SD GID="aec45a66-7d62-401f-ab86-3c3322ae0d8e">/AURIX2G/EcucDefs/Fls_ib_bswmd/BswModuleDescriptions/Fls/FlsBehavior/UserContentCount</SD>
                                     <SD GID="7c6b568e-9b2a-4ccf-8caf-05d4e07c0163">/AURIX2G/EcucDefs/Fls_ib_bswmd/BswModuleDescriptions/Fls/FlsBehavior/Write</SD>
                                     <SD GID="8d0711b8-1a46-4e14-bcce-6f66baf35339">/AURIX2G/EcucDefs/Fls_ib_bswmd/BswModuleDescriptions/Fls_17_Dmu_MainFunction</SD>
-                                    <SD GID="7729f6de-43ee-4710-a4ab-21d40eaa9376">/AURIX2G/EcucDefs/Icu_ib_bswmd</SD>
-                                    <SD GID="0a93cd6a-73e7-477a-862f-7304c7593d20">/AURIX2G/EcucDefs/Icu_ib_bswmd/BswModuleDescriptions</SD>
                                     <SD GID="ccab49e0-37cd-498f-b7a5-a24c419167cb">/AURIX2G/EcucDefs/Icu_ib_bswmd/BswModuleDescriptions/Icu/IcuBehavior</SD>
                                     <SD GID="829d2f1d-9137-47e1-a8ed-9f97246d64bb">/AURIX2G/EcucDefs/Icu_ib_bswmd/BswModuleDescriptions/Icu/IcuBehavior/CcuInterruptHandle</SD>
                                     <SD GID="88aa609a-1263-4142-bc23-9f6e2c0246d2">/AURIX2G/EcucDefs/Icu_ib_bswmd/BswModuleDescriptions/Icu/IcuBehavior/CcuVariableupdate</SD>
@@ -4563,21 +5618,12 @@
                                     <SD GID="39242ab4-cb01-4a20-913a-bba37be83fbb">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE</SD>
                                     <SD GID="b0560f92-2d31-4daa-896f-70e823156344">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/BswM</SD>
                                     <SD GID="274f233c-196e-4efd-8537-a049df7a976a">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</SD>
-                                    <SD GID="6bddcec5-4b14-45af-b28c-9533682add6e">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_LIN01_778f96a0_SWC1_UR_CN_LIN01_778f96a0</SD>
-                                    <SD GID="db67f7ac-8e25-4db3-af3f-4982357f3105">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_TC37X_VCU_CAN03_5a834971_SWC1_UR_CN_TC37X_VCU_CAN03_5a834971</SD>
-                                    <SD GID="10bfda06-8b86-4f91-b51f-f5b31dbb3c36">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_TC37X_VCU_CAN12_74cffd8f_SWC1_UR_CN_TC37X_VCU_CAN12_74cffd8f</SD>
                                     <SD GID="d6107833-7ec4-46b6-bd77-dc484cc238be">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</SD>
                                     <SD GID="c7476a1f-c034-404b-b974-33b412a9cd72">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC</SD>
-                                    <SD GID="0322021c-e24a-4ca4-a30d-185fbf48de7d">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_CBReadData_DID_0xf1a0_F1A0_Data_DemMaster_0_CBReadData_DID_0xf1a0_F1A0_Data</SD>
-                                    <SD GID="f4385bee-0ed6-452c-a9a7-d66b95abf79d">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_CBReadData_DID_0xf1a1_F1A1_Data_DemMaster_0_CBReadData_DID_0xf1a1_F1A1_Data</SD>
-                                    <SD GID="598cfcf3-796f-429b-b43f-757712f86bb7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_CBReadData_DID_0xf1a2_F1A2_Data_DemMaster_0_CBReadData_DID_0xf1a2_F1A2_Data</SD>
-                                    <SD GID="914a1609-f14c-4905-a14a-ed723f7dd195">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_CBReadData_DID_0xf1a3_F1A3_Data_DemMaster_0_CBReadData_DID_0xf1a3_F1A3_Data</SD>
                                     <SD GID="64ec4541-e8b7-481b-aad1-872429f16a36">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DIAG_SWC_NvMService_AC3_SRBS_NvBlockNeed_AttemptCounterNvM_PS_DIAG_SWC_NvBlockNeed_AttemptCounter</SD>
                                     <SD GID="52f38fb1-f1fa-4839-bd5d-87d5584a122e">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</SD>
                                     <SD GID="dbd7af71-8f1f-4737-b93f-d0ed84b9ef39">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</SD>
                                     <SD GID="9d4b98fd-81ab-4d03-b31e-e07a3534b100">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0</SD>
-                                    <SD GID="d7b21e05-cab3-4de5-b8ec-6a550574f329">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0_Event_DTC_0X000002_DIAG_SWC_Event_DTC_0x000002</SD>
-                                    <SD GID="157c9c00-4508-44b7-91a5-84c2574927b6">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0_Event_DTC_0X000003_DIAG_SWC_Event_DTC_0x000003</SD>
                                     <SD GID="4a3c82ce-02b8-4cbb-8b2d-980bb76def98">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP2_SpdSet</SD>
                                     <SD GID="0af8978f-f997-41fc-9840-9cd4e416e976">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP3_SpdSet</SD>
                                     <SD GID="ec5099ee-8e43-4553-8915-3481bc1d0215">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT10_Valid</SD>
@@ -4836,8 +5882,6 @@
                                     <SD GID="6ECA40B2-7D2F-49B9-A1D2-69B4A0D71C75">/ECUCompositionTypes/ECU_Composition/VcuTxMsg2_Sig1</SD>
                                     <SD GID="4256A3AB-FE8B-4F53-95AD-B0CB1C8F6F4D">/ECUCompositionTypes/ECU_Composition/VcuTxMsg2_Sig2</SD>
                                     <SD GID="09DBD232-679B-4F47-B048-2A6ED1601C86">/ECUCompositionTypes/ECU_Composition/VcuTxMsg2_Sig3</SD>
-                                    <SD GID="70731945-37f0-4d94-a5ea-a27540615c37">/Icu</SD>
-                                    <SD GID="fdc9fc9f-01fa-4222-a91b-0418377a6c33">/Icu</SD>
                                     <SD GID="9dc56e5f-8feb-4e00-a64f-ce6a14257cc4">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior</SD>
                                     <SD GID="134ddf31-5a5b-49d6-9d4e-ab18f2cb0112">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BSWM_EXCLUSIVE_AREA_0</SD>
                                     <SD GID="100cfe33-58ed-4dcb-b870-86e07a3a734b">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BswM_MainFunction</SD>
@@ -4874,56 +5918,56 @@
                                     <SD GID="e8734859-8ae4-4a9e-9db3-e8ba6cffb1cc">/MICROSAR/BswM_swc/Interfaces/BswM_MSI_ESH_RunRequest/BswM_MDGP_ESH_RunRequest</SD>
                                     <SD GID="255c5012-5426-484c-a853-7cf1dd229a94">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest</SD>
                                     <SD GID="4d5ec514-e820-47f8-8518-f3dbf0905dae">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest/requestedMode</SD>
-                                    <SD GID="b53e4f2d-9b8b-4b55-bd1d-6a3969617aa1">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_KAMA_FP_EPT_0303_b67fd6a6</SD>
+                                    <SD GID="bbf01af8-ec79-4454-8b9c-02ba1f062d73">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0</SD>
                                     <SD GID="d61866aa-e364-480d-ab63-a6c4824c2748">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="e48c7722-53bc-4f9f-9212-4b42d21ec74e">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_LIN01_778f96a0</SD>
                                     <SD GID="23456fdc-f7ad-49c1-9c3b-598ac832089c">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="a5364b02-7699-465a-81e0-efe6c80b6e71">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
                                     <SD GID="86189dcf-17c0-4324-9c1b-277d3f2182e2">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_TC37X_VCU_CAN03_5a834971</SD>
                                     <SD GID="3c80526e-dacc-4dcd-bda3-cf5a86066db6">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_TC37X_VCU_CAN12_74cffd8f</SD>
-                                    <SD GID="8ad933c5-974d-4ad8-9b9b-e4cd6950479b">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_KAMA_FP_EPT_0303_275b3e6e</SD>
+                                    <SD GID="128006f2-88a9-41dc-88a0-d13f40f2acb3">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</SD>
                                     <SD GID="72214d33-46e3-40ea-8805-6c7333b485df">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_LIN00_b12a0454</SD>
                                     <SD GID="6c458fd7-2ad0-45d8-b816-3f748d3f76d8">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_LIN01_c62d34c2</SD>
                                     <SD GID="5e890fa0-13ec-43cb-bf41-1c6645ad4a73">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="927222ee-5046-4173-9d87-a2223195ab8d">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_TC37X_VCU_CAN01_70b1f95e</SD>
                                     <SD GID="50aee12f-ea64-47ea-9f09-163d4a128977">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_TC37X_VCU_CAN03_9ebf9872</SD>
                                     <SD GID="ab51528f-4289-4b23-a804-90766006eef4">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_TC37X_VCU_CAN12_f0a399a5</SD>
-                                    <SD GID="ddaa5211-ed2b-4df8-9f49-358aaf4b019d">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_KAMA_FP_EPT_0303_275b3e6e</SD>
+                                    <SD GID="f627f3b0-72df-4412-b3b0-5cf4aae5620d">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</SD>
                                     <SD GID="d2e1bce0-d15d-4147-baff-bd2979b05649">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_LIN00_b12a0454</SD>
                                     <SD GID="6f7b0a77-2f84-4e78-94ab-57d6851445e0">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_LIN01_c62d34c2</SD>
                                     <SD GID="21e2617c-9710-4c9d-8d72-16d64d4fc480">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="6a26548f-955a-4ead-8655-ff0aff864c59">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_TC37X_VCU_CAN01_70b1f95e</SD>
                                     <SD GID="94640ebe-4309-4c04-9f35-844ad1b298f3">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_TC37X_VCU_CAN03_9ebf9872</SD>
                                     <SD GID="13e9a5a4-09cb-43dd-812b-010d57621dca">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_TC37X_VCU_CAN12_f0a399a5</SD>
-                                    <SD GID="01127df1-4a32-4e6e-82ef-20e052714dd2">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_KAMA_FP_EPT_0303_b67fd6a6</SD>
+                                    <SD GID="fb2587f9-2c64-43df-8650-23bfa3aafb53">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0</SD>
                                     <SD GID="454c9a4b-45e3-4fb1-9b6c-f035bfb7e878">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="639ce619-4b51-4bf0-97ad-24dbd76a8358">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_LIN01_778f96a0</SD>
                                     <SD GID="8bf1c7f1-6ee3-442d-aaac-4d290efda5ac">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="5de38e1f-417a-459d-a711-5336fc927989">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
                                     <SD GID="8870a4b7-de5e-47b4-9626-08c5513fcf4f">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_TC37X_VCU_CAN03_5a834971</SD>
                                     <SD GID="d2576644-7a6a-4966-bb68-cd8124b9a39c">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_TC37X_VCU_CAN12_74cffd8f</SD>
-                                    <SD GID="5fd5aae7-cd76-4809-b4be-40935ff008f4">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_KAMA_FP_EPT_0303_b67fd6a6</SD>
+                                    <SD GID="2854df47-d043-4de9-bccc-2304ebc2807f">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0</SD>
                                     <SD GID="ab0aeb48-b011-4179-92dd-62ceb2bf5410">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="a2cb020e-9d49-46a0-97bf-7e69fd765d79">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_LIN01_778f96a0</SD>
                                     <SD GID="2669447e-1154-419a-aa58-2b9bd1cd6009">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="bff9ee43-9af4-4da1-a83c-00d0e9dc97d1">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
                                     <SD GID="af774e8c-3a3d-4cbb-b0df-e562b5eaf9e6">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_TC37X_VCU_CAN03_5a834971</SD>
                                     <SD GID="a9d21fc2-eba2-4c05-a07e-cddb927807f2">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_TC37X_VCU_CAN12_74cffd8f</SD>
-                                    <SD GID="7e54de55-cb28-4473-9a01-74d7c695ba3c">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_KAMA_FP_EPT_0303_275b3e6e</SD>
+                                    <SD GID="67e1ea30-787d-41c7-8223-a8575c6f6c11">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</SD>
                                     <SD GID="c760f995-41a1-4169-bde7-8a8310f63f7e">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_LIN00_b12a0454</SD>
                                     <SD GID="57d34c59-097b-4a02-8909-b1ca6ea6d030">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_LIN01_c62d34c2</SD>
                                     <SD GID="29c05688-a08e-49c6-ba26-a39635214f50">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="7fde4a71-9331-43f5-b52e-7129eee1c273">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_TC37X_VCU_CAN01_70b1f95e</SD>
                                     <SD GID="fcdb958c-a73a-4069-bd94-60d069f1d8d4">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_TC37X_VCU_CAN03_9ebf9872</SD>
                                     <SD GID="b6697756-e508-4870-89f9-f4dc68e3baf8">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_TC37X_VCU_CAN12_f0a399a5</SD>
-                                    <SD GID="fd004539-5419-4f68-b06f-8a3c8dd59e87">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_KAMA_FP_EPT_0303_275b3e6e</SD>
+                                    <SD GID="eeb9c834-a803-4614-9e44-ecc53f6c0222">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</SD>
                                     <SD GID="3d54a772-ac84-42be-a9e4-8c5fbf8fd026">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_LIN00_b12a0454</SD>
                                     <SD GID="67ecc2fe-fb61-4255-95f7-d9b082727bcc">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_LIN01_c62d34c2</SD>
                                     <SD GID="cf9247b4-21f0-4476-a171-834c6032e746">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="e9920a52-92e5-447d-ab28-46b9ffc788ee">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_TC37X_VCU_CAN01_70b1f95e</SD>
                                     <SD GID="06ca20df-9af2-4497-9705-2313be75f27d">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_TC37X_VCU_CAN03_9ebf9872</SD>
                                     <SD GID="0182279d-b226-41bb-a511-983a6899619d">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_TC37X_VCU_CAN12_f0a399a5</SD>
-                                    <SD GID="79c115a0-feca-4777-aa33-82f31e17fd3f">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_KAMA_FP_EPT_0303_b67fd6a6</SD>
+                                    <SD GID="76152b9e-51f9-4730-b299-7710ac15aa5a">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0</SD>
                                     <SD GID="3a7ace68-f286-41fc-8824-5f2b6181f66d">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="26381cbb-3296-429e-bcf6-fd51ed2f5737">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_LIN01_778f96a0</SD>
                                     <SD GID="a79c2142-00a2-4471-ae46-c0bca0868254">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
@@ -4936,7 +5980,6 @@
                                     <SD GID="2dce854d-c1af-4150-a22d-786c38a93bd8">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/Timer_ComM_MainFunction_4</SD>
                                     <SD GID="3d3f2abf-718a-4a8b-b319-9c5fbc7d09d3">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/Timer_ComM_MainFunction_5</SD>
                                     <SD GID="f9cc18f6-ec18-4bf7-ba2d-f03ad66a9151">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/Timer_ComM_MainFunction_6</SD>
-                                    <SD GID="5019eb48-cda0-4796-980e-cd1bfb84c712">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_KAMA_FP_EPT_0303_b67fd6a6</SD>
                                     <SD GID="f6e01367-ebd5-40d0-8f91-21c6257b8af9">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="2ee4d9b5-0c81-4cec-8b68-82ce1011ff03">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_LIN01_778f96a0</SD>
                                     <SD GID="ab1e5b41-3baa-4fcf-aec5-44c99b7466d5">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
@@ -5587,8 +6630,6 @@
                                     <SD GID="29D8C45D-AD65-4ADB-A8C0-9051D3BA8EB3">/Predefined_DEV/PortInterfaces/NvSWC_NvMService_AC3_SRBS_DS_Defs/E_NOT_OK</SD>
                                     <SD GID="B0DF499C-5446-40C9-BA84-69FE6BBA9AFA">/Predefined_DEV/PortInterfaces/NvSWC_NvMService_AC3_SRBS_Defs/E_NOT_OK</SD>
                                     <SD GID="6C11D3FD-1F97-4F18-9F28-AEBD06095420">/Predefined_DEV/PortInterfaces/NvSWC_NvMService_SRBS/E_NOT_OK</SD>
-                                    <SD GID="8f0f48ad-9bf4-47e5-9918-54fcbaf783da">/Pwm</SD>
-                                    <SD GID="5ccab80e-88a4-4890-9a48-13c48fe5b196">/Spi</SD>
                                     <SD GID="E6FF58E5-F6B9-478A-BECA-DAB2EAADEAA0">/VehicleProject/System/EcuSwComposition</SD>
                                   </SDG>
                                 </SDGS>

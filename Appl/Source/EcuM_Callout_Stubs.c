@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2025-07-30 15:10:24
+ *   Generation Time: 2025-08-07 16:35:01
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -54,20 +54,20 @@
  *  All configured EcuM Wakeup Sources (as bitmasks) for usage in Callouts
  *********************************************************************************************************************/
 /*
- * ECUM_WKSOURCE_NONE                         (EcuM_WakeupSourceType)(0x00000000uL) 
- * ECUM_WKSOURCE_ALL_SOURCES                  (EcuM_WakeupSourceType)(~((EcuM_WakeupSourceType)0x00UL)) 
- * ECUM_WKSOURCE_POWER                        (EcuM_WakeupSourceType)(1uL) 
- * ECUM_WKSOURCE_RESET                        (EcuM_WakeupSourceType)(2uL) 
- * ECUM_WKSOURCE_INTERNAL_RESET               (EcuM_WakeupSourceType)(4uL) 
- * ECUM_WKSOURCE_INTERNAL_WDG                 (EcuM_WakeupSourceType)(8uL) 
- * ECUM_WKSOURCE_EXTERNAL_WDG                 (EcuM_WakeupSourceType)(16uL) 
- * ECUM_WKSOURCE_CN_KAMA_FP_EPT_0303_275b3e6e (EcuM_WakeupSourceType)(32uL) 
- * ECUM_WKSOURCE_CN_TC37X_VCU_CAN00_07b6c9c8  (EcuM_WakeupSourceType)(64uL) 
- * ECUM_WKSOURCE_CN_TC37X_VCU_CAN01_70b1f95e  (EcuM_WakeupSourceType)(128uL) 
- * ECUM_WKSOURCE_CN_TC37X_VCU_CAN03_9ebf9872  (EcuM_WakeupSourceType)(256uL) 
- * ECUM_WKSOURCE_CN_TC37X_VCU_CAN12_f0a399a5  (EcuM_WakeupSourceType)(512uL) 
- * ECUM_WKSOURCE_CN_LIN00_b12a0454            (EcuM_WakeupSourceType)(1024uL) 
- * ECUM_WKSOURCE_CN_LIN01_c62d34c2            (EcuM_WakeupSourceType)(2048uL) 
+ * ECUM_WKSOURCE_NONE                                         (EcuM_WakeupSourceType)(0x00000000uL) 
+ * ECUM_WKSOURCE_ALL_SOURCES                                  (EcuM_WakeupSourceType)(~((EcuM_WakeupSourceType)0x00UL)) 
+ * ECUM_WKSOURCE_POWER                                        (EcuM_WakeupSourceType)(1uL) 
+ * ECUM_WKSOURCE_RESET                                        (EcuM_WakeupSourceType)(2uL) 
+ * ECUM_WKSOURCE_INTERNAL_RESET                               (EcuM_WakeupSourceType)(4uL) 
+ * ECUM_WKSOURCE_INTERNAL_WDG                                 (EcuM_WakeupSourceType)(8uL) 
+ * ECUM_WKSOURCE_EXTERNAL_WDG                                 (EcuM_WakeupSourceType)(16uL) 
+ * ECUM_WKSOURCE_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac (EcuM_WakeupSourceType)(32uL) 
+ * ECUM_WKSOURCE_CN_TC37X_VCU_CAN00_07b6c9c8                  (EcuM_WakeupSourceType)(64uL) 
+ * ECUM_WKSOURCE_CN_TC37X_VCU_CAN01_70b1f95e                  (EcuM_WakeupSourceType)(128uL) 
+ * ECUM_WKSOURCE_CN_TC37X_VCU_CAN03_9ebf9872                  (EcuM_WakeupSourceType)(256uL) 
+ * ECUM_WKSOURCE_CN_TC37X_VCU_CAN12_f0a399a5                  (EcuM_WakeupSourceType)(512uL) 
+ * ECUM_WKSOURCE_CN_LIN00_b12a0454                            (EcuM_WakeupSourceType)(1024uL) 
+ * ECUM_WKSOURCE_CN_LIN01_c62d34c2                            (EcuM_WakeupSourceType)(2048uL) 
  */
 
 /**********************************************************************************************************************

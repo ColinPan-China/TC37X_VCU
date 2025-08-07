@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.c
- *   Generation Time: 2025-07-30 15:10:24
+ *   Generation Time: 2025-08-07 16:37:02
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -113,12 +113,13 @@ CONST(Nm_CallbackFunction, NM_CONST) Nm_CarWakeUpCallbackFctPtr = NULL_PTR;  /* 
 /*lint -save -esym(961, 19.1) */
 #include "Nm_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Nm_ChannelConfigType, NM_CONST) Nm_ChannelConfig[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    NmChannelId                                       NmFunctionTableIdx  PartitionConfigIdx  PduRxIndication        Referable Keys */
-  { /*     0 */ ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8,                 0u,                 0u, NULL_PTR        },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN00_07b6c9c8] */
-  { /*     1 */ ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e,                 0u,                 0u, NULL_PTR        },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  { /*     2 */ ComMConf_ComMChannel_CN_TC37X_VCU_CAN03_9ebf9872,                 0u,                 0u, NULL_PTR        },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
-  { /*     3 */ ComMConf_ComMChannel_CN_TC37X_VCU_CAN12_f0a399a5,                 0u,                 0u, NULL_PTR        }   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN12_f0a399a5] */
+CONST(Nm_ChannelConfigType, NM_CONST) Nm_ChannelConfig[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    NmChannelId                                                        NmFunctionTableIdx  PartitionConfigIdx  PduRxIndication        Referable Keys */
+  { /*     0 */ ComMConf_ComMChannel_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac,                 0u,                 0u, NULL_PTR        },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
+  { /*     1 */                  ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8,                 0u,                 0u, NULL_PTR        },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN00_07b6c9c8] */
+  { /*     2 */                  ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e,                 0u,                 0u, NULL_PTR        },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
+  { /*     3 */                  ComMConf_ComMChannel_CN_TC37X_VCU_CAN03_9ebf9872,                 0u,                 0u, NULL_PTR        },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
+  { /*     4 */                  ComMConf_ComMChannel_CN_TC37X_VCU_CAN12_f0a399a5,                 0u,                 0u, NULL_PTR        }   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN12_f0a399a5] */
 };
 #define NM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -194,11 +195,11 @@ CONST(Nm_PartitionIdentifiersType, NM_CONST) Nm_PartitionIdentifiers[1] = {  /* 
 /*lint -restore */
 CONST(Nm_SysToNmChIndType, NM_CONST) Nm_SysToNmChInd[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     SysToNmChInd        */
-  /*     0 */  NM_NO_SYSTONMCHIND,
-  /*     1 */                  0u,
-  /*     2 */                  1u,
-  /*     3 */                  2u,
-  /*     4 */                  3u,
+  /*     0 */                  0u,
+  /*     1 */                  1u,
+  /*     2 */                  2u,
+  /*     3 */                  3u,
+  /*     4 */                  4u,
   /*     5 */  NM_NO_SYSTONMCHIND,
   /*     6 */  NM_NO_SYSTONMCHIND
 };

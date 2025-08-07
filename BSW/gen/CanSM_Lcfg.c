@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanSM_Lcfg.c
- *   Generation Time: 2025-07-30 09:42:58
+ *   Generation Time: 2025-08-07 16:35:01
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -65,9 +65,9 @@ CONST(CanSM_ChannelConfigType, CANSM_CONST) CanSM_ChannelConfig[5] = {  /* PRQA 
     /* Index    NetworkHandle  DemEventId_BusOff_                     */
   { /*     0 */            1u, DemConf_DemEventParameter_CAN00_BUSOFF },
   { /*     1 */            2u, 0xFFu                                  },
-  { /*     2 */            0u, 0xFFu                                  },
-  { /*     3 */            4u, 0xFFu                                  },
-  { /*     4 */            3u, 0xFFu                                  }
+  { /*     2 */            4u, 0xFFu                                  },
+  { /*     3 */            3u, 0xFFu                                  },
+  { /*     4 */            0u, 0xFFu                                  }
 };
 #define CANSM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

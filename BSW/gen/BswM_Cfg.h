@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2025-07-30 15:10:24
+ *   Generation Time: 2025-08-07 16:35:00
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -154,9 +154,9 @@
 /* -----------------------------------------------------------------------------
     &&&~ RULE DEFINES
  ----------------------------------------------------------------------------- */
-#define BswMConf_BswMRule_CC_CN_KAMA_FP_EPT_0303_275b3e6e_RX (0) 
-#define BswMConf_BswMRule_CC_CN_KAMA_FP_EPT_0303_275b3e6e_RX_DM (1) 
-#define BswMConf_BswMRule_CC_CN_KAMA_FP_EPT_0303_275b3e6e_TX (2) 
+#define BswMConf_BswMRule_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX (0) 
+#define BswMConf_BswMRule_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX_DM (1) 
+#define BswMConf_BswMRule_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_TX (2) 
 #define BswMConf_BswMRule_CC_CN_LIN00_b12a0454_StartSchedule (3) 
 #define BswMConf_BswMRule_CC_CN_LIN01_c62d34c2_StartSchedule (4) 
 #define BswMConf_BswMRule_CC_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4 (5) 
@@ -1462,12 +1462,6 @@ typedef struct BswM_ActionListQueueStructSTag
   BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_Disable;
   BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableNoinit;
   BswM_ActionListQueueType AL_CC_AL_CN_LIN00_b12a0454_LinScheduleSwitch;
-  BswM_ActionListQueueType AL_CC_AL_CN_KAMA_FP_EPT_0303_275b3e6e_RX_Disable;
-  BswM_ActionListQueueType AL_CC_AL_CN_KAMA_FP_EPT_0303_275b3e6e_RX_EnableNoinit;
-  BswM_ActionListQueueType AL_CC_AL_CN_KAMA_FP_EPT_0303_275b3e6e_TX_Disable;
-  BswM_ActionListQueueType AL_CC_AL_CN_KAMA_FP_EPT_0303_275b3e6e_TX_EnableNoinit;
-  BswM_ActionListQueueType AL_CC_AL_CN_KAMA_FP_EPT_0303_275b3e6e_Disable_DM;
-  BswM_ActionListQueueType AL_CC_AL_CN_KAMA_FP_EPT_0303_275b3e6e_Enable_DM;
   BswM_ActionListQueueType AL_ESH_AL_DemInit;
   BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN12_f0a399a5_Disable_DM;
   BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN12_f0a399a5_Enable_DM;
@@ -1484,6 +1478,12 @@ typedef struct BswM_ActionListQueueStructSTag
   BswM_ActionListQueueType AL_CC_AL_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4_Disable;
   BswM_ActionListQueueType AL_CC_AL_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4_Enable;
   BswM_ActionListQueueType AL_CC_AL_CN_LIN01_c62d34c2_LinScheduleSwitch;
+  BswM_ActionListQueueType AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX_Disable;
+  BswM_ActionListQueueType AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX_EnableNoinit;
+  BswM_ActionListQueueType AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_TX_Disable;
+  BswM_ActionListQueueType AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_TX_EnableNoinit;
+  BswM_ActionListQueueType AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_Disable_DM;
+  BswM_ActionListQueueType AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_Enable_DM;
 } BswM_ActionListQueueStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_RuleStates in the partition context  */
@@ -1517,9 +1517,6 @@ typedef struct BswM_RuleStatesStructSTag
   BswM_RuleStatesType R_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE;
   BswM_RuleStatesType R_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF;
   BswM_RuleStatesType R_CC_CN_LIN00_b12a0454_StartSchedule;
-  BswM_RuleStatesType R_CC_CN_KAMA_FP_EPT_0303_275b3e6e_RX;
-  BswM_RuleStatesType R_CC_CN_KAMA_FP_EPT_0303_275b3e6e_TX;
-  BswM_RuleStatesType R_CC_CN_KAMA_FP_EPT_0303_275b3e6e_RX_DM;
   BswM_RuleStatesType R_ESH_DemInit;
   BswM_RuleStatesType R_CC_CN_TC37X_VCU_CAN12_f0a399a5_RX_DM;
   BswM_RuleStatesType R_CC_CN_TC37X_VCU_CAN12_f0a399a5_RX;
@@ -1529,6 +1526,9 @@ typedef struct BswM_RuleStatesStructSTag
   BswM_RuleStatesType R_CC_CN_TC37X_VCU_CAN03_9ebf9872_TX;
   BswM_RuleStatesType R_CC_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4;
   BswM_RuleStatesType R_CC_CN_LIN01_c62d34c2_StartSchedule;
+  BswM_RuleStatesType R_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX;
+  BswM_RuleStatesType R_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_TX;
+  BswM_RuleStatesType R_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX_DM;
 } BswM_RuleStatesStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_TimerState in the partition context  */

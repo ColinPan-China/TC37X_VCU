@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Lcfg.c
- *   Generation Time: 2025-08-01 11:00:56
+ *   Generation Time: 2025-08-07 16:35:00
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -109,7 +109,7 @@
 /*lint -restore */
 CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    BusType            NmSupport  SilentSupport  MinFullComTime  NmLightDuration  NmType                      WakeupState                      GetCurrentBusSMModeApi   RequestBusSMModeApi         Referable Keys */
-  { /*     0 */ COMM_BUS_TYPE_CAN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_0] */
+  { /*     0 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_0] */
   { /*     1 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_1] */
   { /*     2 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_2] */
   { /*     3 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_3] */
@@ -194,7 +194,7 @@ CONST(ComM_PartitionIdentifiersType, COMM_CONST) ComM_PartitionIdentifiers[1] = 
 /*lint -restore */
 CONST(ComM_UserType, COMM_CONST) ComM_User[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    PncUser  UserByteMaskEndIdx  UserByteMaskStartIdx        Comment */
-  { /*     0 */   FALSE,                 1u,                   0u },  /* [CN_KAMA_FP_EPT_0303_b67fd6a6] */
+  { /*     0 */   FALSE,                 1u,                   0u },  /* [CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0] */
   { /*     1 */   FALSE,                 2u,                   1u },  /* [CN_TC37X_VCU_CAN00_b1b4f272] */
   { /*     2 */   FALSE,                 3u,                   2u },  /* [CN_TC37X_VCU_CAN01_5e76994c] */
   { /*     3 */   FALSE,                 4u,                   3u },  /* [CN_TC37X_VCU_CAN03_5a834971] */
@@ -224,7 +224,7 @@ CONST(ComM_UserType, COMM_CONST) ComM_User[7] = {  /* PRQA S 1514, 1533 */  /* M
 /*lint -restore */
 CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Channel  UserReqFullComIdx        Referable Keys */
-  { /*     0 */      0u,                0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_KAMA_FP_EPT_0303_b67fd6a6] */
+  { /*     0 */      0u,                0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0] */
   { /*     1 */      1u,                1u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN00_b1b4f272] */
   { /*     2 */      2u,                2u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_5e76994c] */
   { /*     3 */      3u,                3u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_5a834971] */
