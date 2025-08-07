@@ -340,7 +340,7 @@
   <Characteristics>
     <Characteristic>
       <InterfaceDatas />
-      <Address>-2147478071</Address>
+      <Address>-2146428121</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -355,7 +355,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>-2147478071</BaseAddress>
+      <BaseAddress>-2146428121</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Deposit>__UBYTE_S</Deposit>
@@ -365,7 +365,7 @@
     </Characteristic>
     <Characteristic>
       <InterfaceDatas />
-      <Address>1879089598</Address>
+      <Address>1879093120</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <Format>%0.15</Format>
       <DefaultFloat>IEEE_FLOAT</DefaultFloat>
@@ -380,7 +380,7 @@
       <State>0</State>
       <DataType>UBYTE</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879089598</BaseAddress>
+      <BaseAddress>1879093120</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <Deposit>__UBYTE_S</Deposit>
@@ -390,7 +390,7 @@
     </Characteristic>
     <Characteristic>
       <InterfaceDatas />
-      <Address>-2147482112</Address>
+      <Address>-2146433504</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <DisplayIdentifier />
       <Format>%0.15</Format>
@@ -407,7 +407,7 @@
       <State>0</State>
       <DataType>ULONG</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>-2147482112</BaseAddress>
+      <BaseAddress>-2146433504</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <CalibrationAccess />
@@ -418,7 +418,7 @@
     </Characteristic>
     <Characteristic>
       <InterfaceDatas />
-      <Address>-2147482108</Address>
+      <Address>-2146433500</Address>
       <Conversion>DEFAULT_CM</Conversion>
       <DisplayIdentifier />
       <Format>%0.15</Format>
@@ -435,7 +435,7 @@
       <State>0</State>
       <DataType>ULONG</DataType>
       <ManualFlag>false</ManualFlag>
-      <BaseAddress>-2147482108</BaseAddress>
+      <BaseAddress>-2146433500</BaseAddress>
       <IndividualOffsetAddress>0</IndividualOffsetAddress>
       <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
       <CalibrationAccess />
@@ -444,209 +444,411 @@
       <Type>VALUE</Type>
       <BitMask>-1</BitMask>
     </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089492</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Bts7xx_HS1_En</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Bts7xx_HS1_En</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Bts7xx_HS1_En</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Bts7xx_HS1_En</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089492</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089493</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Bts7xx_HS2_En</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Bts7xx_HS2_En</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Bts7xx_HS2_En</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Bts7xx_HS2_En</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089493</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089494</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Bts7xx_HS3_En</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Bts7xx_HS3_En</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Bts7xx_HS3_En</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Bts7xx_HS3_En</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089494</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089495</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Bts7xx_HS4_En</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Bts7xx_HS4_En</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Bts7xx_HS4_En</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Bts7xx_HS4_En</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089495</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089499</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Tle4252d_en</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Tle4252d_en</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Tle4252d_en</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Tle4252d_en</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089499</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089488</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Tle888qk_Lout01_En</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Tle888qk_Lout01_En</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Lout01_En</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Lout01_En</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089488</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089489</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Tle888qk_Lout08_En</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Tle888qk_Lout08_En</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Lout08_En</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Lout08_En</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089489</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089490</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Tle888qk_Lout14_En</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Tle888qk_Lout14_En</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Lout14_En</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Lout14_En</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089490</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089491</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Tle888qk_Lout16_En</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Tle888qk_Lout16_En</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Lout16_En</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Lout16_En</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089491</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089484</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Tle888qk_Out21_En</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Tle888qk_Out21_En</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Out21_En</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Out21_En</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089484</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089485</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Tle888qk_Out22_En</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Tle888qk_Out22_En</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Out22_En</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Out22_En</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089485</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089486</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Tle888qk_Out23_En</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Tle888qk_Out23_En</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Out23_En</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Out23_En</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089486</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089487</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Tle888qk_Out24_En</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Tle888qk_Out24_En</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Out24_En</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Tle888qk_Out24_En</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089487</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089496</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Tle9201_Dir</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Tle9201_Dir</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Tle9201_Dir</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Tle9201_Dir</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089496</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089498</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Tle9201_Dis</Name>
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Tle9201_Dis</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Tle9201_Dis</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Tle9201_Dis</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089498</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
+    <Characteristic>
+      <InterfaceDatas />
+      <Address>1879089497</Address>
+      <Conversion>DEFAULT_CM</Conversion>
+      <DisplayIdentifier />
+      <Format>%0.15</Format>
+      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
+      <LowerLimit>0</LowerLimit>
+      <UpperLimit>255</UpperLimit>
+      <ExtendedLowerLimit>0</ExtendedLowerLimit>
+      <ExtendedUpperLimit>255</ExtendedUpperLimit>
+      <Name>SensorMng.c_SensorMngCtrlVal_Tle9201_Pwm</Name>
+      <LongIdentifier />
+      <Symbol>SensorMng.c_SensorMngCtrlVal_Tle9201_Pwm</Symbol>
+      <KeyName>SensorMng.c|SensorMngCtrlVal|Tle9201_Pwm</KeyName>
+      <OriginalName>SensorMng.c|SensorMngCtrlVal|Tle9201_Pwm</OriginalName>
+      <State>0</State>
+      <DataType>UBYTE</DataType>
+      <ManualFlag>false</ManualFlag>
+      <BaseAddress>1879089497</BaseAddress>
+      <IndividualOffsetAddress>0</IndividualOffsetAddress>
+      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
+      <CalibrationAccess />
+      <Deposit>__UBYTE_S</Deposit>
+      <MaxDiff>0</MaxDiff>
+      <Type>VALUE</Type>
+      <BitMask>255</BitMask>
+    </Characteristic>
   </Characteristics>
-  <Measurements>
-    <Measurement>
-      <InterfaceDatas />
-      <Address>1879096562</Address>
-      <Conversion>DEFAULT_CM</Conversion>
-      <Format>%0.15</Format>
-      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
-      <LowerLimit>0</LowerLimit>
-      <UpperLimit>255</UpperLimit>
-      <ExtendedLowerLimit>0</ExtendedLowerLimit>
-      <ExtendedUpperLimit>255</ExtendedUpperLimit>
-      <Name>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._0</Name>
-      <Symbol>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._0</Symbol>
-      <KeyName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._0</KeyName>
-      <OriginalName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._0</OriginalName>
-      <State>0</State>
-      <DataType>UBYTE</DataType>
-      <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879096562</BaseAddress>
-      <IndividualOffsetAddress>0</IndividualOffsetAddress>
-      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
-      <Accuracy>0</Accuracy>
-      <BitMask>255</BitMask>
-      <Resolution>0</Resolution>
-    </Measurement>
-    <Measurement>
-      <InterfaceDatas />
-      <Address>1879096563</Address>
-      <Conversion>DEFAULT_CM</Conversion>
-      <Format>%0.15</Format>
-      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
-      <LowerLimit>0</LowerLimit>
-      <UpperLimit>255</UpperLimit>
-      <ExtendedLowerLimit>0</ExtendedLowerLimit>
-      <ExtendedUpperLimit>255</ExtendedUpperLimit>
-      <Name>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._1</Name>
-      <Symbol>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._1</Symbol>
-      <KeyName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._1</KeyName>
-      <OriginalName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._1</OriginalName>
-      <State>0</State>
-      <DataType>UBYTE</DataType>
-      <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879096563</BaseAddress>
-      <IndividualOffsetAddress>0</IndividualOffsetAddress>
-      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
-      <Accuracy>0</Accuracy>
-      <BitMask>255</BitMask>
-      <Resolution>0</Resolution>
-    </Measurement>
-    <Measurement>
-      <InterfaceDatas />
-      <Address>1879096564</Address>
-      <Conversion>DEFAULT_CM</Conversion>
-      <Format>%0.15</Format>
-      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
-      <LowerLimit>0</LowerLimit>
-      <UpperLimit>255</UpperLimit>
-      <ExtendedLowerLimit>0</ExtendedLowerLimit>
-      <ExtendedUpperLimit>255</ExtendedUpperLimit>
-      <Name>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._2</Name>
-      <Symbol>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._2</Symbol>
-      <KeyName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._2</KeyName>
-      <OriginalName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._2</OriginalName>
-      <State>0</State>
-      <DataType>UBYTE</DataType>
-      <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879096564</BaseAddress>
-      <IndividualOffsetAddress>0</IndividualOffsetAddress>
-      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
-      <Accuracy>0</Accuracy>
-      <BitMask>255</BitMask>
-      <Resolution>0</Resolution>
-    </Measurement>
-    <Measurement>
-      <InterfaceDatas />
-      <Address>1879096565</Address>
-      <Conversion>DEFAULT_CM</Conversion>
-      <Format>%0.15</Format>
-      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
-      <LowerLimit>0</LowerLimit>
-      <UpperLimit>255</UpperLimit>
-      <ExtendedLowerLimit>0</ExtendedLowerLimit>
-      <ExtendedUpperLimit>255</ExtendedUpperLimit>
-      <Name>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._3</Name>
-      <Symbol>Rte.c_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock_Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._3</Symbol>
-      <KeyName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._3</KeyName>
-      <OriginalName>Rte.c|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock|Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock._3</OriginalName>
-      <State>0</State>
-      <DataType>UBYTE</DataType>
-      <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879096565</BaseAddress>
-      <IndividualOffsetAddress>0</IndividualOffsetAddress>
-      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
-      <Accuracy>0</Accuracy>
-      <BitMask>255</BitMask>
-      <Resolution>0</Resolution>
-    </Measurement>
-    <Measurement>
-      <InterfaceDatas />
-      <Address>1879089672</Address>
-      <Conversion>DEFAULT_CM</Conversion>
-      <DisplayIdentifier />
-      <Format>%0.15</Format>
-      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
-      <LowerLimit>0</LowerLimit>
-      <UpperLimit>255</UpperLimit>
-      <ExtendedLowerLimit>0</ExtendedLowerLimit>
-      <ExtendedUpperLimit>255</ExtendedUpperLimit>
-      <Name>SWC1.c_XcpCnt</Name>
-      <LongIdentifier />
-      <Symbol>SWC1.c_XcpCnt</Symbol>
-      <KeyName>SWC1.c|XcpCnt</KeyName>
-      <OriginalName>SWC1.c|XcpCnt</OriginalName>
-      <State>0</State>
-      <DataType>UBYTE</DataType>
-      <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879089672</BaseAddress>
-      <IndividualOffsetAddress>0</IndividualOffsetAddress>
-      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
-      <Accuracy>0</Accuracy>
-      <BitMask>255</BitMask>
-      <Resolution>0</Resolution>
-    </Measurement>
-    <Measurement>
-      <InterfaceDatas />
-      <Address>1879089665</Address>
-      <Conversion>DEFAULT_CM</Conversion>
-      <DisplayIdentifier />
-      <Format>%0.15</Format>
-      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
-      <LowerLimit>0</LowerLimit>
-      <UpperLimit>255</UpperLimit>
-      <ExtendedLowerLimit>0</ExtendedLowerLimit>
-      <ExtendedUpperLimit>255</ExtendedUpperLimit>
-      <Name>DIAG_SWC.c_DTC_Status_0002</Name>
-      <LongIdentifier />
-      <Symbol>DIAG_SWC.c_DTC_Status_0002</Symbol>
-      <KeyName>DIAG_SWC.c|DTC_Status_0002</KeyName>
-      <OriginalName>DIAG_SWC.c|DTC_Status_0002</OriginalName>
-      <State>0</State>
-      <DataType>UBYTE</DataType>
-      <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879089665</BaseAddress>
-      <IndividualOffsetAddress>0</IndividualOffsetAddress>
-      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
-      <Accuracy>0</Accuracy>
-      <BitMask>255</BitMask>
-      <Resolution>0</Resolution>
-    </Measurement>
-    <Measurement>
-      <InterfaceDatas />
-      <Address>1879089666</Address>
-      <Conversion>DEFAULT_CM</Conversion>
-      <DisplayIdentifier />
-      <Format>%0.15</Format>
-      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
-      <LowerLimit>0</LowerLimit>
-      <UpperLimit>255</UpperLimit>
-      <ExtendedLowerLimit>0</ExtendedLowerLimit>
-      <ExtendedUpperLimit>255</ExtendedUpperLimit>
-      <Name>DIAG_SWC.c_DTC_Status_0003</Name>
-      <LongIdentifier />
-      <Symbol>DIAG_SWC.c_DTC_Status_0003</Symbol>
-      <KeyName>DIAG_SWC.c|DTC_Status_0003</KeyName>
-      <OriginalName>DIAG_SWC.c|DTC_Status_0003</OriginalName>
-      <State>0</State>
-      <DataType>UBYTE</DataType>
-      <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879089666</BaseAddress>
-      <IndividualOffsetAddress>0</IndividualOffsetAddress>
-      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
-      <Accuracy>0</Accuracy>
-      <BitMask>255</BitMask>
-      <Resolution>0</Resolution>
-    </Measurement>
-    <Measurement>
-      <InterfaceDatas />
-      <Address>1879089664</Address>
-      <Conversion>DEFAULT_CM</Conversion>
-      <DisplayIdentifier />
-      <Format>%0.15</Format>
-      <DefaultFloat>IEEE_FLOAT</DefaultFloat>
-      <LowerLimit>0</LowerLimit>
-      <UpperLimit>255</UpperLimit>
-      <ExtendedLowerLimit>0</ExtendedLowerLimit>
-      <ExtendedUpperLimit>255</ExtendedUpperLimit>
-      <Name>DIAG_SWC.c_DTC_FailCnt</Name>
-      <LongIdentifier />
-      <Symbol>DIAG_SWC.c_DTC_FailCnt</Symbol>
-      <KeyName>DIAG_SWC.c|DTC_FailCnt</KeyName>
-      <OriginalName>DIAG_SWC.c|DTC_FailCnt</OriginalName>
-      <State>0</State>
-      <DataType>UBYTE</DataType>
-      <ManualFlag>false</ManualFlag>
-      <BaseAddress>1879089664</BaseAddress>
-      <IndividualOffsetAddress>0</IndividualOffsetAddress>
-      <VariableUpdateType>FULL_UPDATE</VariableUpdateType>
-      <Accuracy>0</Accuracy>
-      <BitMask>255</BitMask>
-      <Resolution>0</Resolution>
-    </Measurement>
-  </Measurements>
+  <Measurements />
   <ConversionMethods>
     <ConversionMethod>
       <Name>DEFAULT_CM</Name>
@@ -706,6 +908,9 @@
     <string>Dma_MoveEngineListType</string>
     <string>ExtAdcInputType</string>
     <string>Fee_QsBlock_StateType</string>
+    <string>Icu_17_TimerIp_ActivationType</string>
+    <string>Icu_17_TimerIp_InputStateType</string>
+    <string>Icu_17_TimerIp_ModeType</string>
     <string>IdleModeType</string>
     <string>IfxCpu_OverlayAddressMask</string>
     <string>IfxCpu_OverlayMemorySelect</string>
@@ -930,7 +1135,7 @@
   <DefaultIndexMode>ROW_DIR</DefaultIndexMode>
   <Description />
   <ByteOrder>MSB_LAST</ByteOrder>
-  <AssociatedFileName>D:\TC377_Development\dev\TC37X_VCU\Debug\TC37X.elf</AssociatedFileName>
+  <AssociatedFileName>D:\TC377_Development\NEW_DCU_Dev\TC37X_VCU\Debug\TC37X.elf</AssociatedFileName>
   <AssociatedFiletype>ELF</AssociatedFiletype>
   <GlobalOffsetAddress>0</GlobalOffsetAddress>
   <VerbalConversionTables />
