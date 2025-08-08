@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 8.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2025-08-08, 14:56:13            !!!IGNORE-LINE!!!             **
+**  DATE, TIME: 2025-08-08, 15:35:10            !!!IGNORE-LINE!!!             **
 **                                                                            **
 **  GENERATOR : Build b180321-0610              !!!IGNORE-LINE!!!             **
 **                                                                            **
@@ -299,7 +299,7 @@ static const Adc_GroupDefType Adc_kHwUnit11GrpAdcGroup_11_Config[8]=
    without safegaurd. It complies to Autosar guidelines. */ 
 #include "Adc_MemMap.h"
 /**Group Definition of AdcGroup_8- ID256 of HW Unit 8 */
-static const Adc_GroupDefType Adc_kHwUnit8GrpAdcGroup_8_Config[8]=
+static const Adc_GroupDefType Adc_kHwUnit8GrpAdcGroup_8_Config[16]=
 {
   /*AS Logical Channel*/ /*Analog Channel*/ /*Result Register*/
   {  0U,                   0U,                0U  },
@@ -309,7 +309,15 @@ static const Adc_GroupDefType Adc_kHwUnit8GrpAdcGroup_8_Config[8]=
   {  4U,                   4U,                4U  },
   {  5U,                   5U,                5U  },
   {  6U,                   6U,                6U  },
-  {  7U,                   7U,                7U  }
+  {  7U,                   7U,                7U  },
+  {  8U,                   8U,                8U  },
+  {  9U,                   9U,                9U  },
+  {  10U,                   10U,                10U  },
+  {  11U,                   11U,                11U  },
+  {  12U,                   12U,                12U  },
+  {  13U,                   13U,                13U  },
+  {  14U,                   14U,                14U  },
+  {  15U,                   15U,                15U  }
 };
 /* MISRA2012_RULE_5_1_JUSTIFICATION:Compiler supports macro names going beyond 
    32 chars and this macro is used only inside the ADC module*/
@@ -804,9 +812,9 @@ static const Adc_GroupCfgType Adc_kHwUnit8Grp_Config[1]=
     /* Configuration value for G8REQTM register*/
     0x00000000U,
     /*Bit Mask for all the analog channels configured for the group*/
-    0x00ffU,
+    0xffffU,
     /*Bit Mask for all the result registers configured for the group*/
-    0x00ffU,
+    0xffffU,
     /*Bit Mask for all the analog channels configured for synchronous conversion*/
     0x0000U,
     /*Bit Mask for all the result registers configured for synchronous conversion*/
@@ -819,7 +827,7 @@ static const Adc_GroupCfgType Adc_kHwUnit8Grp_Config[1]=
     ADC_OTHER_HW_USED, /*HW peripheral used for Trigger*/
     ADC_OTHER_HW_USED, /*HW peripheral used for Gate*/
     0U, /*Priority Level for the group*/
-    8U, /*Channel Count for the group*/
+    16U, /*Channel Count for the group*/
     0U /*Limit Check enabled for the group*/
   }
 };
@@ -1268,7 +1276,7 @@ static const Adc_ChannelCfgType Adc_kHwUnit11Ch_Config[8]=
 /* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
    without safegaurd. It complies to Autosar guidelines. */ 
 #include "Adc_MemMap.h"
-static const Adc_ChannelCfgType Adc_kHwUnit8Ch_Config[8]=
+static const Adc_ChannelCfgType Adc_kHwUnit8Ch_Config[16]=
 {
   {
     0x00000000U, /*Configuration value for the G8CHCTR0 register*/
@@ -1316,6 +1324,54 @@ static const Adc_ChannelCfgType Adc_kHwUnit8Ch_Config[8]=
     0x00000000U, /*Configuration value for the G8CHCTR7 register*/
     0x00000000U, /*Configuration value for the G8BOUND register*/
     7U, /*Analog Channel number for the corresponding Logical Channel*/
+    0U /*Limit Check channel or not */
+  },
+  {
+    0x00000000U, /*Configuration value for the G8CHCTR8 register*/
+    0x00000000U, /*Configuration value for the G8BOUND register*/
+    8U, /*Analog Channel number for the corresponding Logical Channel*/
+    0U /*Limit Check channel or not */
+  },
+  {
+    0x00000000U, /*Configuration value for the G8CHCTR9 register*/
+    0x00000000U, /*Configuration value for the G8BOUND register*/
+    9U, /*Analog Channel number for the corresponding Logical Channel*/
+    0U /*Limit Check channel or not */
+  },
+  {
+    0x00000000U, /*Configuration value for the G8CHCTR10 register*/
+    0x00000000U, /*Configuration value for the G8BOUND register*/
+    10U, /*Analog Channel number for the corresponding Logical Channel*/
+    0U /*Limit Check channel or not */
+  },
+  {
+    0x00000000U, /*Configuration value for the G8CHCTR11 register*/
+    0x00000000U, /*Configuration value for the G8BOUND register*/
+    11U, /*Analog Channel number for the corresponding Logical Channel*/
+    0U /*Limit Check channel or not */
+  },
+  {
+    0x00000000U, /*Configuration value for the G8CHCTR12 register*/
+    0x00000000U, /*Configuration value for the G8BOUND register*/
+    12U, /*Analog Channel number for the corresponding Logical Channel*/
+    0U /*Limit Check channel or not */
+  },
+  {
+    0x00000000U, /*Configuration value for the G8CHCTR13 register*/
+    0x00000000U, /*Configuration value for the G8BOUND register*/
+    13U, /*Analog Channel number for the corresponding Logical Channel*/
+    0U /*Limit Check channel or not */
+  },
+  {
+    0x00000000U, /*Configuration value for the G8CHCTR14 register*/
+    0x00000000U, /*Configuration value for the G8BOUND register*/
+    14U, /*Analog Channel number for the corresponding Logical Channel*/
+    0U /*Limit Check channel or not */
+  },
+  {
+    0x00000000U, /*Configuration value for the G8CHCTR15 register*/
+    0x00000000U, /*Configuration value for the G8BOUND register*/
+    15U, /*Analog Channel number for the corresponding Logical Channel*/
     0U /*Limit Check channel or not */
   }
 };
@@ -1861,7 +1917,7 @@ static const Adc_HwUnitCfgType Adc_kHwUnit8_Config=
 
 static const Adc_GlobalCfgType Adc_kGlob_Config=
 {
-  0x00000000U, /*Configuration value for GLOBCFG register */
+  0x00002000U, /*Configuration value for GLOBCFG register */
   0x00000000U, /*Configuration value for GLOBICLASS0 register */
   0x00000000U /*Configuration value for GLOBICLASS1 register */
 };

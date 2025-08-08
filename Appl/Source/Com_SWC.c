@@ -327,7 +327,12 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_2ms(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: Com_Runnable_500ms_doc
  *********************************************************************************************************************/
-
+extern uint16 ADC_SW_GRP0_RES[8];
+extern uint16 ADC_SW_GRP1_RES[8];
+extern uint16 ADC_SW_GRP2_RES[8];
+extern uint16 ADC_SW_GRP3_RES[8];
+extern uint16 ADC_SW_GRP11_RES[8];
+extern uint16 ADC_SW_GRP8_RES[16];
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
@@ -339,59 +344,59 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_500ms(void) /* PRQA S 0624, 3206 */ /* MD_
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Com_Runnable_500ms
  *********************************************************************************************************************/
-    Rte_Write_AN0_AN0(0);
-    Rte_Write_AN1_AN1(1);
-    Rte_Write_AN2_AN2(2);
-    Rte_Write_AN3_AN3(3);
-    Rte_Write_AN4_AN4(4);
-    Rte_Write_AN5_AN5(5);
-    Rte_Write_AN6_AN6(6);
-    Rte_Write_AN7_AN7(7);
+    Rte_Write_AN0_AN0(ADC_SW_GRP0_RES[0]*5000/4096);
+    Rte_Write_AN1_AN1(ADC_SW_GRP0_RES[1]*5000/4096);
+    Rte_Write_AN2_AN2(ADC_SW_GRP0_RES[2]*5000/4096);
+    Rte_Write_AN3_AN3(ADC_SW_GRP0_RES[3]*5000/4096);
+    Rte_Write_AN4_AN4(ADC_SW_GRP0_RES[4]*5000/4096);
+    Rte_Write_AN5_AN5(ADC_SW_GRP0_RES[5]*5000/4096);
+    Rte_Write_AN6_AN6(ADC_SW_GRP0_RES[6]*5000/4096);
+    Rte_Write_AN7_AN7(ADC_SW_GRP0_RES[7]*5000/4096);
 
-    Rte_Write_AN8_AN8(8);
-    Rte_Write_AN9_AN9(9);
-    Rte_Write_AN10_AN10(10);
-    Rte_Write_AN11_AN11(11);
-    Rte_Write_AN12_AN12(12);
-    Rte_Write_AN13_AN13(13);
-    Rte_Write_AN14_AN14(14);
-    Rte_Write_AN15_AN15(15);
+    Rte_Write_AN8_AN8(ADC_SW_GRP1_RES[0]*5000/4096);
+    Rte_Write_AN9_AN9(ADC_SW_GRP1_RES[1]*5000/4096);
+    Rte_Write_AN10_AN10(ADC_SW_GRP1_RES[2]*5000/4096);
+    Rte_Write_AN11_AN11(ADC_SW_GRP1_RES[3]*5000/4096);
+    Rte_Write_AN12_AN12(ADC_SW_GRP1_RES[4]*5000/4096);
+    Rte_Write_AN13_AN13(ADC_SW_GRP1_RES[5]*5000/4096);
+    Rte_Write_AN14_AN14(ADC_SW_GRP1_RES[6]*5000/4096);
+    Rte_Write_AN15_AN15(ADC_SW_GRP1_RES[7]*5000/4096);
 
-    Rte_Write_AN16_AN16(16);
-    Rte_Write_AN17_AN17(17);
-    Rte_Write_AN18_AN18(18);
-    Rte_Write_AN19_AN19(19);
-    Rte_Write_AN20_AN20(20);
-    Rte_Write_AN21_AN21(21);
-    Rte_Write_AN22_AN22(22);
-    Rte_Write_AN23_AN23(23);
+    Rte_Write_AN16_AN16(ADC_SW_GRP2_RES[9]*5000/4096);
+    Rte_Write_AN17_AN17(ADC_SW_GRP2_RES[1]*5000/4096);
+    Rte_Write_AN18_AN18(ADC_SW_GRP2_RES[2]*5000/4096);
+    Rte_Write_AN19_AN19(ADC_SW_GRP2_RES[3]*5000/4096);
+    Rte_Write_AN20_AN20(ADC_SW_GRP2_RES[4]*5000/4096);
+    Rte_Write_AN21_AN21(ADC_SW_GRP2_RES[5]*5000/4096);
+    Rte_Write_AN22_AN22(ADC_SW_GRP2_RES[6]*5000/4096);
+    Rte_Write_AN23_AN23(ADC_SW_GRP2_RES[7]*5000/4096);
 
-    Rte_Write_AN24_AN24(24);
-    Rte_Write_AN25_AN25(25);
-    Rte_Write_AN26_AN26(26);
-    Rte_Write_AN27_AN27(27);
-    Rte_Write_AN28_AN28(28);
-    Rte_Write_AN29_AN29(29);
-    Rte_Write_AN30_AN30(30);
-    Rte_Write_AN31_AN31(31);
+    Rte_Write_AN24_AN24(ADC_SW_GRP3_RES[0]*5000/4096);
+    Rte_Write_AN25_AN25(ADC_SW_GRP3_RES[1]*5000/4096);
+    Rte_Write_AN26_AN26(ADC_SW_GRP3_RES[2]*5000/4096);
+    Rte_Write_AN27_AN27(ADC_SW_GRP3_RES[3]*5000/4096);
+    Rte_Write_AN28_AN28(ADC_SW_GRP3_RES[4]*5000/4096);
+    Rte_Write_AN29_AN29(ADC_SW_GRP3_RES[5]*5000/4096);
+    Rte_Write_AN30_AN30(ADC_SW_GRP3_RES[6]*5000/4096);
+    Rte_Write_AN31_AN31(ADC_SW_GRP3_RES[7]*5000/4096);
 
-    Rte_Write_AN32_AN32(32);
-    Rte_Write_AN33_AN33(33);
-    Rte_Write_AN34_AN34(34);
-    Rte_Write_AN35_AN35(35);
-    Rte_Write_AN36_AN36(36);
-    Rte_Write_AN37_AN37(37);
-    Rte_Write_AN38_AN38(38);
-    Rte_Write_AN39_AN39(39);
+    Rte_Write_AN32_AN32(ADC_SW_GRP8_RES[0]*5000/4096);
+    Rte_Write_AN33_AN33(ADC_SW_GRP8_RES[1]*5000/4096);
+    Rte_Write_AN34_AN34(ADC_SW_GRP8_RES[2]*5000/4096);
+    Rte_Write_AN35_AN35(ADC_SW_GRP8_RES[3]*5000/4096);
+    Rte_Write_AN36_AN36(ADC_SW_GRP8_RES[4]*5000/4096);
+    Rte_Write_AN37_AN37(ADC_SW_GRP8_RES[5]*5000/4096);
+    Rte_Write_AN38_AN38(ADC_SW_GRP8_RES[6]*5000/4096);
+    Rte_Write_AN39_AN39(ADC_SW_GRP8_RES[7]*5000/4096);
 
-    Rte_Write_AN40_AN40(40);
-    Rte_Write_AN41_AN41(41);
-    Rte_Write_AN42_AN42(42);
-    Rte_Write_AN43_AN43(43);
-    Rte_Write_AN44_AN44(44);
-    Rte_Write_AN45_AN45(45);
-    Rte_Write_AN46_AN46(46);
-    Rte_Write_AN47_AN47(47);
+    Rte_Write_AN40_AN40(ADC_SW_GRP8_RES[8]*5000/4096);
+    Rte_Write_AN41_AN41(ADC_SW_GRP8_RES[9]*5000/4096);
+    Rte_Write_AN42_AN42(ADC_SW_GRP8_RES[10]*5000/4096);
+    Rte_Write_AN43_AN43(ADC_SW_GRP8_RES[11]*5000/4096);
+    Rte_Write_AN44_AN44(ADC_SW_GRP8_RES[12]*5000/4096);
+    Rte_Write_AN45_AN45(ADC_SW_GRP8_RES[13]*5000/4096);
+    Rte_Write_AN46_AN46(ADC_SW_GRP8_RES[14]*5000/4096);
+    Rte_Write_AN47_AN47(ADC_SW_GRP8_RES[15]*5000/4096);
 
 
 /**********************************************************************************************************************
