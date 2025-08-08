@@ -48,17 +48,77 @@ BO_ 514 VcuRxMsg3: 8 GWM
  SG_ VcuRxMsg3_Sig1 : 16|16@1- (1,0) [0|0] ""  VCU
  SG_ VcuRxMsg3_Sig0 : 0|16@1- (1,0) [0|0] ""  VCU
 
-BO_ 259 VcuAdcTxMsg2: 8 VCU
- SG_ VcuAdcTxMsg2_Sig3 : 48|16@1- (1,0) [0|0] ""  GWM
- SG_ VcuAdcTxMsg2_Sig2 : 32|16@1- (1,0) [0|0] ""  GWM
- SG_ VcuAdcTxMsg2_Sig1 : 16|16@1- (1,0) [0|0] ""  GWM
- SG_ VcuAdcTxMsg2_Sig0 : 0|16@1- (1,0) [0|0] ""  GWM
+BO_ 269 VcuAdcTxG8Msg3: 8 VCU
+ SG_ AN47 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN46 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN45 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN44 : 0|16@1- (1,0) [0|0] ""  GWM
 
-BO_ 258 VcuAdcTxMsg1: 8 VCU
- SG_ VcuAdcTxMsg1_Sig3 : 48|16@1- (1,0) [0|0] ""  GWM
- SG_ VcuAdcTxMsg1_Sig2 : 32|16@1- (1,0) [0|0] ""  GWM
- SG_ VcuAdcTxMsg1_Sig1 : 16|16@1- (1,0) [0|0] ""  GWM
- SG_ VcuAdcTxMsg1_Sig0 : 0|16@1- (1,0) [0|0] ""  GWM
+BO_ 268 VcuAdcTxG8Msg2: 8 VCU
+ SG_ AN43 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN42 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN41 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN40 : 0|16@1- (1,0) [0|0] ""  GWM
+
+BO_ 267 VcuAdcTxG8Msg1: 8 VCU
+ SG_ AN39 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN38 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN37 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN36 : 0|16@1- (1,0) [0|0] ""  GWM
+
+BO_ 266 VcuAdcTxG8Msg0: 8 VCU
+ SG_ AN35 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN34 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN33 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN32 : 0|16@1- (1,0) [0|0] ""  GWM
+
+BO_ 265 VcuAdcTxG3Msg1: 8 VCU
+ SG_ AN31 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN30 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN29 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN28 : 0|16@1- (1,0) [0|0] ""  GWM
+
+BO_ 264 VcuAdcTxG3Msg0: 8 VCU
+ SG_ AN27 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN26 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN25 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN24 : 0|16@1- (1,0) [0|0] ""  GWM
+
+BO_ 263 VcuAdcTxG2Msg1: 8 VCU
+ SG_ AN23 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN22 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN21 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN20 : 0|16@1- (1,0) [0|0] ""  GWM
+
+BO_ 262 VcuAdcTxG2Msg0: 8 VCU
+ SG_ AN19 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN18 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN17 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN16 : 0|16@1- (1,0) [0|0] ""  GWM
+
+BO_ 261 VcuAdcTxG1Msg1: 8 VCU
+ SG_ AN15 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN14 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN13 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN12 : 0|16@1- (1,0) [0|0] ""  GWM
+
+BO_ 260 VcuAdcTxG1Msg0: 8 VCU
+ SG_ AN11 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN10 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN9 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN8 : 0|16@1- (1,0) [0|0] ""  GWM
+
+BO_ 259 VcuAdcTxG0Msg1: 8 VCU
+ SG_ AN7 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN6 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN5 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN4 : 0|16@1- (1,0) [0|0] ""  GWM
+
+BO_ 258 VcuAdcTxG0Msg0: 8 VCU
+ SG_ AN3 : 48|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN2 : 32|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN1 : 16|16@1- (1,0) [0|0] ""  GWM
+ SG_ AN0 : 0|16@1- (1,0) [0|0] ""  GWM
 
 BO_ 1280 VCU_Rx_500h_NM: 8 GWM
  SG_ VCU_Rx_500h_NM : 0|64@1+ (1,0) [0|0] ""  VCU
@@ -166,6 +226,26 @@ BA_ "VFrameFormat" BO_ 515 0;
 BA_ "GenMsgCycleTime" BO_ 515 500;
 BA_ "VFrameFormat" BO_ 514 0;
 BA_ "GenMsgCycleTime" BO_ 514 500;
+BA_ "GenMsgCycleTime" BO_ 269 500;
+BA_ "VFrameFormat" BO_ 269 0;
+BA_ "GenMsgCycleTime" BO_ 268 500;
+BA_ "VFrameFormat" BO_ 268 0;
+BA_ "GenMsgCycleTime" BO_ 267 500;
+BA_ "VFrameFormat" BO_ 267 0;
+BA_ "GenMsgCycleTime" BO_ 266 500;
+BA_ "VFrameFormat" BO_ 266 0;
+BA_ "GenMsgCycleTime" BO_ 265 500;
+BA_ "VFrameFormat" BO_ 265 0;
+BA_ "GenMsgCycleTime" BO_ 264 500;
+BA_ "VFrameFormat" BO_ 264 0;
+BA_ "GenMsgCycleTime" BO_ 263 500;
+BA_ "VFrameFormat" BO_ 263 0;
+BA_ "GenMsgCycleTime" BO_ 262 500;
+BA_ "VFrameFormat" BO_ 262 0;
+BA_ "GenMsgCycleTime" BO_ 261 500;
+BA_ "VFrameFormat" BO_ 261 0;
+BA_ "GenMsgCycleTime" BO_ 260 500;
+BA_ "VFrameFormat" BO_ 260 0;
 BA_ "VFrameFormat" BO_ 259 0;
 BA_ "GenMsgCycleTime" BO_ 259 500;
 BA_ "VFrameFormat" BO_ 258 0;
