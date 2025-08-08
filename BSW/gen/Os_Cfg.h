@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Cfg.h
- *   Generation Time: 2024-11-21 09:52:36
+ *   Generation Time: 2025-08-08 14:56:16
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -116,11 +116,12 @@
 # define Rte_Ev_Cyclic2_Bsw_Task_0_5ms     ((EventMaskType)4uLL)
 # define Rte_Ev_Cyclic_AswTask_0_10ms     ((EventMaskType)1uLL)
 # define Rte_Ev_Run_Com_SWC_Com_Runnable_2ms     ((EventMaskType)2uLL)
-# define Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification     ((EventMaskType)4uLL)
-# define Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification     ((EventMaskType)8uLL)
-# define Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable     ((EventMaskType)16uLL)
-# define Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable     ((EventMaskType)32uLL)
-# define Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms     ((EventMaskType)64uLL)
+# define Rte_Ev_Run_Com_SWC_Com_Runnable_500ms     ((EventMaskType)4uLL)
+# define Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification     ((EventMaskType)8uLL)
+# define Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification     ((EventMaskType)16uLL)
+# define Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable     ((EventMaskType)32uLL)
+# define Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable     ((EventMaskType)64uLL)
+# define Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms     ((EventMaskType)128uLL)
 
 /* Software counter timing macros */
 

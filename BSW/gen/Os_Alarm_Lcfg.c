@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Alarm_Lcfg.c
- *   Generation Time: 2024-11-21 09:52:36
+ *   Generation Time: 2025-08-08 14:56:16
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -89,6 +89,9 @@ OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_AswTask_0_10ms_D
 
 /*! Dynamic alarm data: Rte_Al_TE_Com_SWC_Com_Runnable_2ms */
 OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Com_SWC_Com_Runnable_2ms_Dyn;
+
+/*! Dynamic alarm data: Rte_Al_TE_Com_SWC_Com_Runnable_500ms */
+OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Com_SWC_Com_Runnable_500ms_Dyn;
 
 /*! Dynamic alarm data: Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms */
 OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms_Dyn;
@@ -239,6 +242,32 @@ CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Com_SWC_Com_Ru
 };
 
 
+/*! Alarm configuration data: Rte_Al_TE_Com_SWC_Com_Runnable_500ms */
+CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Com_SWC_Com_Runnable_500ms =
+{
+  /* .Alarm = */
+  {
+    /* .Job                   = */
+    {
+      /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE_Com_SWC_Com_Runnable_500ms_Dyn),
+      /* .Counter  = */ OS_COUNTER_CASTCONFIG_TIMERPFRT_2_COUNTER(OsCfg_Counter_SystemTimer),
+      /* .Callback = */ Os_AlarmActionSetEvent
+    },
+    /* .Autostart             = */
+    {
+      /* .AlarmTime        = */ 0uL, /* 0.0 sec */
+      /* .Cycle            = */ 0uL, /* 0.0 sec */
+      /* .ApplicationModes = */ OS_APPMODE_NONE,
+      /* .AlarmMode        = */ OS_ALARMMODE_ABSOLUTE
+    },
+    /* .AccessingApplications = */ (OS_APPID2MASK(OsApplication) | OS_APPID2MASK(SystemApplication_OsCore0)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication
+  },
+  /* .Task  = */ &OsCfg_Task_AswTask,
+  /* .Mask  = */ Rte_Ev_Run_Com_SWC_Com_Runnable_500ms
+};
+
+
 /*! Alarm configuration data: Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms */
 CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms =
 {
@@ -279,6 +308,7 @@ CONSTP2CONST(Os_AlarmConfigType, OS_CONST, OS_CONST) OsCfg_AlarmRefs[OS_ALARMID_
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_Bsw_Task_0_5ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_AswTask_0_10ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Com_SWC_Com_Runnable_2ms),
+  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Com_SWC_Com_Runnable_500ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms),
   NULL_PTR
 };

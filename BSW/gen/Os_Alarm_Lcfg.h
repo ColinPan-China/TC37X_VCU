@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Alarm_Lcfg.h
- *   Generation Time: 2024-11-21 09:52:36
+ *   Generation Time: 2025-08-08 14:56:16
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -88,6 +88,9 @@ extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_AswTask
 
 /*! Alarm configuration data: Rte_Al_TE_Com_SWC_Com_Runnable_2ms */
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Com_SWC_Com_Runnable_2ms;
+
+/*! Alarm configuration data: Rte_Al_TE_Com_SWC_Com_Runnable_500ms */
+extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Com_SWC_Com_Runnable_500ms;
 
 /*! Alarm configuration data: Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms */
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms;

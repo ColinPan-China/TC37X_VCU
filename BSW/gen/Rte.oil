@@ -36,6 +36,7 @@
       AUTOSTART = FALSE:"@RO@";
       EVENT = Rte_Ev_Cyclic_AswTask_0_10ms:"@RO@";
       EVENT = Rte_Ev_Run_Com_SWC_Com_Runnable_2ms:"@RO@";
+      EVENT = Rte_Ev_Run_Com_SWC_Com_Runnable_500ms:"@RO@";
       EVENT = Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification:"@RO@";
       EVENT = Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification:"@RO@";
       EVENT = Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable:"@RO@";
@@ -59,6 +60,16 @@
       {
          TASK = AswTask;
          EVENT = Rte_Ev_Run_Com_SWC_Com_Runnable_2ms;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_Com_SWC_Com_Runnable_500ms {
+      COUNTER = SystemTimer;
+      ACTION = SETEVENT
+      {
+         TASK = AswTask;
+         EVENT = Rte_Ev_Run_Com_SWC_Com_Runnable_500ms;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
@@ -139,6 +150,10 @@
    }:"@ROC@@NR@";
 
    EVENT Rte_Ev_Run_Com_SWC_Com_Runnable_2ms {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
+   EVENT Rte_Ev_Run_Com_SWC_Com_Runnable_500ms {
       MASK = AUTO;
    }:"@ROC@@NR@";
 

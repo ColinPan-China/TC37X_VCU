@@ -39,6 +39,150 @@ typedef EventMaskType Rte_EventMaskType;
  * Data type definitions
  *********************************************************************************************************************/
 
+# define Rte_TypeDef_AN0
+typedef sint16 AN0;
+
+# define Rte_TypeDef_AN1
+typedef sint16 AN1;
+
+# define Rte_TypeDef_AN10
+typedef sint16 AN10;
+
+# define Rte_TypeDef_AN11
+typedef sint16 AN11;
+
+# define Rte_TypeDef_AN12
+typedef sint16 AN12;
+
+# define Rte_TypeDef_AN13
+typedef sint16 AN13;
+
+# define Rte_TypeDef_AN14
+typedef sint16 AN14;
+
+# define Rte_TypeDef_AN15
+typedef sint16 AN15;
+
+# define Rte_TypeDef_AN16
+typedef sint16 AN16;
+
+# define Rte_TypeDef_AN17
+typedef sint16 AN17;
+
+# define Rte_TypeDef_AN18
+typedef sint16 AN18;
+
+# define Rte_TypeDef_AN19
+typedef sint16 AN19;
+
+# define Rte_TypeDef_AN2
+typedef sint16 AN2;
+
+# define Rte_TypeDef_AN20
+typedef sint16 AN20;
+
+# define Rte_TypeDef_AN21
+typedef sint16 AN21;
+
+# define Rte_TypeDef_AN22
+typedef sint16 AN22;
+
+# define Rte_TypeDef_AN23
+typedef sint16 AN23;
+
+# define Rte_TypeDef_AN24
+typedef sint16 AN24;
+
+# define Rte_TypeDef_AN25
+typedef sint16 AN25;
+
+# define Rte_TypeDef_AN26
+typedef sint16 AN26;
+
+# define Rte_TypeDef_AN27
+typedef sint16 AN27;
+
+# define Rte_TypeDef_AN28
+typedef sint16 AN28;
+
+# define Rte_TypeDef_AN29
+typedef sint16 AN29;
+
+# define Rte_TypeDef_AN3
+typedef sint16 AN3;
+
+# define Rte_TypeDef_AN30
+typedef sint16 AN30;
+
+# define Rte_TypeDef_AN31
+typedef sint16 AN31;
+
+# define Rte_TypeDef_AN32
+typedef sint16 AN32;
+
+# define Rte_TypeDef_AN33
+typedef sint16 AN33;
+
+# define Rte_TypeDef_AN34
+typedef sint16 AN34;
+
+# define Rte_TypeDef_AN35
+typedef sint16 AN35;
+
+# define Rte_TypeDef_AN36
+typedef sint16 AN36;
+
+# define Rte_TypeDef_AN37
+typedef sint16 AN37;
+
+# define Rte_TypeDef_AN38
+typedef sint16 AN38;
+
+# define Rte_TypeDef_AN39
+typedef sint16 AN39;
+
+# define Rte_TypeDef_AN4
+typedef sint16 AN4;
+
+# define Rte_TypeDef_AN40
+typedef sint16 AN40;
+
+# define Rte_TypeDef_AN41
+typedef sint16 AN41;
+
+# define Rte_TypeDef_AN42
+typedef sint16 AN42;
+
+# define Rte_TypeDef_AN43
+typedef sint16 AN43;
+
+# define Rte_TypeDef_AN44
+typedef sint16 AN44;
+
+# define Rte_TypeDef_AN45
+typedef sint16 AN45;
+
+# define Rte_TypeDef_AN46
+typedef sint16 AN46;
+
+# define Rte_TypeDef_AN47
+typedef sint16 AN47;
+
+# define Rte_TypeDef_AN5
+typedef sint16 AN5;
+
+# define Rte_TypeDef_AN6
+typedef sint16 AN6;
+
+# define Rte_TypeDef_AN7
+typedef sint16 AN7;
+
+# define Rte_TypeDef_AN8
+typedef sint16 AN8;
+
+# define Rte_TypeDef_AN9
+typedef sint16 AN9;
+
 # define Rte_TypeDef_ECC_PMP2_SpdSet
 typedef uint8 ECC_PMP2_SpdSet;
 

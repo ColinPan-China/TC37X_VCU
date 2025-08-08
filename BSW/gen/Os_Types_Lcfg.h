@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2025-08-06 14:36:34
+ *   Generation Time: 2025-08-08 14:56:16
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -104,6 +104,7 @@
 #define Rte_Al_TE2_Bsw_Task_0_5ms Rte_Al_TE2_Bsw_Task_0_5ms
 #define Rte_Al_TE_AswTask_0_10ms Rte_Al_TE_AswTask_0_10ms
 #define Rte_Al_TE_Com_SWC_Com_Runnable_2ms Rte_Al_TE_Com_SWC_Com_Runnable_2ms
+#define Rte_Al_TE_Com_SWC_Com_Runnable_500ms Rte_Al_TE_Com_SWC_Com_Runnable_500ms
 #define Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms
 
 /* Counter identifiers. */
@@ -217,8 +218,9 @@ typedef enum
   Rte_Al_TE2_Bsw_Task_0_5ms = 2,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_AswTask_0_10ms = 3,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_Com_SWC_Com_Runnable_2ms = 4,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ALARMID_COUNT = 6
+  Rte_Al_TE_Com_SWC_Com_Runnable_500ms = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms = 6,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ALARMID_COUNT = 7
 } AlarmType;
 
 /*! Counter identifiers. */

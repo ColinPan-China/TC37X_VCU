@@ -56,6 +56,54 @@
  *
  * Primitive Types:
  * ================
+ * AN0: Integer in interval [-32768...32767]
+ * AN1: Integer in interval [-32768...32767]
+ * AN10: Integer in interval [-32768...32767]
+ * AN11: Integer in interval [-32768...32767]
+ * AN12: Integer in interval [-32768...32767]
+ * AN13: Integer in interval [-32768...32767]
+ * AN14: Integer in interval [-32768...32767]
+ * AN15: Integer in interval [-32768...32767]
+ * AN16: Integer in interval [-32768...32767]
+ * AN17: Integer in interval [-32768...32767]
+ * AN18: Integer in interval [-32768...32767]
+ * AN19: Integer in interval [-32768...32767]
+ * AN2: Integer in interval [-32768...32767]
+ * AN20: Integer in interval [-32768...32767]
+ * AN21: Integer in interval [-32768...32767]
+ * AN22: Integer in interval [-32768...32767]
+ * AN23: Integer in interval [-32768...32767]
+ * AN24: Integer in interval [-32768...32767]
+ * AN25: Integer in interval [-32768...32767]
+ * AN26: Integer in interval [-32768...32767]
+ * AN27: Integer in interval [-32768...32767]
+ * AN28: Integer in interval [-32768...32767]
+ * AN29: Integer in interval [-32768...32767]
+ * AN3: Integer in interval [-32768...32767]
+ * AN30: Integer in interval [-32768...32767]
+ * AN31: Integer in interval [-32768...32767]
+ * AN32: Integer in interval [-32768...32767]
+ * AN33: Integer in interval [-32768...32767]
+ * AN34: Integer in interval [-32768...32767]
+ * AN35: Integer in interval [-32768...32767]
+ * AN36: Integer in interval [-32768...32767]
+ * AN37: Integer in interval [-32768...32767]
+ * AN38: Integer in interval [-32768...32767]
+ * AN39: Integer in interval [-32768...32767]
+ * AN4: Integer in interval [-32768...32767]
+ * AN40: Integer in interval [-32768...32767]
+ * AN41: Integer in interval [-32768...32767]
+ * AN42: Integer in interval [-32768...32767]
+ * AN43: Integer in interval [-32768...32767]
+ * AN44: Integer in interval [-32768...32767]
+ * AN45: Integer in interval [-32768...32767]
+ * AN46: Integer in interval [-32768...32767]
+ * AN47: Integer in interval [-32768...32767]
+ * AN5: Integer in interval [-32768...32767]
+ * AN6: Integer in interval [-32768...32767]
+ * AN7: Integer in interval [-32768...32767]
+ * AN8: Integer in interval [-32768...32767]
+ * AN9: Integer in interval [-32768...32767]
  * ECC_PMP2_SpdSet: Integer in interval [0...100]
  * ECC_PMP3_SpdSet: Integer in interval [0...100]
  * EXT10_Valid: Integer in interval [0...1]
@@ -204,6 +252,147 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_2ms(void) /* PRQA S 0624, 3206 */ /* MD_Rt
   ExtTempUpdate();
   Rte_Write_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet(SpeedSet);
   Rte_Write_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet(SpeedSet);
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: Com_Runnable_500ms
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered on TimingEvent every 500ms
+ *
+ **********************************************************************************************************************
+ *
+ * Output Interfaces:
+ * ==================
+ *   Explicit S/R API:
+ *   -----------------
+ *   Std_ReturnType Rte_Write_AN0_AN0(AN0 data)
+ *   Std_ReturnType Rte_Write_AN1_AN1(AN1 data)
+ *   Std_ReturnType Rte_Write_AN10_AN10(AN10 data)
+ *   Std_ReturnType Rte_Write_AN11_AN11(AN11 data)
+ *   Std_ReturnType Rte_Write_AN12_AN12(AN12 data)
+ *   Std_ReturnType Rte_Write_AN13_AN13(AN13 data)
+ *   Std_ReturnType Rte_Write_AN14_AN14(AN14 data)
+ *   Std_ReturnType Rte_Write_AN15_AN15(AN15 data)
+ *   Std_ReturnType Rte_Write_AN16_AN16(AN16 data)
+ *   Std_ReturnType Rte_Write_AN17_AN17(AN17 data)
+ *   Std_ReturnType Rte_Write_AN18_AN18(AN18 data)
+ *   Std_ReturnType Rte_Write_AN19_AN19(AN19 data)
+ *   Std_ReturnType Rte_Write_AN2_AN2(AN2 data)
+ *   Std_ReturnType Rte_Write_AN20_AN20(AN20 data)
+ *   Std_ReturnType Rte_Write_AN21_AN21(AN21 data)
+ *   Std_ReturnType Rte_Write_AN22_AN22(AN22 data)
+ *   Std_ReturnType Rte_Write_AN23_AN23(AN23 data)
+ *   Std_ReturnType Rte_Write_AN24_AN24(AN24 data)
+ *   Std_ReturnType Rte_Write_AN25_AN25(AN25 data)
+ *   Std_ReturnType Rte_Write_AN26_AN26(AN26 data)
+ *   Std_ReturnType Rte_Write_AN27_AN27(AN27 data)
+ *   Std_ReturnType Rte_Write_AN28_AN28(AN28 data)
+ *   Std_ReturnType Rte_Write_AN29_AN29(AN29 data)
+ *   Std_ReturnType Rte_Write_AN3_AN3(AN3 data)
+ *   Std_ReturnType Rte_Write_AN30_AN30(AN30 data)
+ *   Std_ReturnType Rte_Write_AN31_AN31(AN31 data)
+ *   Std_ReturnType Rte_Write_AN32_AN32(AN32 data)
+ *   Std_ReturnType Rte_Write_AN33_AN33(AN33 data)
+ *   Std_ReturnType Rte_Write_AN34_AN34(AN34 data)
+ *   Std_ReturnType Rte_Write_AN35_AN35(AN35 data)
+ *   Std_ReturnType Rte_Write_AN36_AN36(AN36 data)
+ *   Std_ReturnType Rte_Write_AN37_AN37(AN37 data)
+ *   Std_ReturnType Rte_Write_AN38_AN38(AN38 data)
+ *   Std_ReturnType Rte_Write_AN39_AN39(AN39 data)
+ *   Std_ReturnType Rte_Write_AN4_AN4(AN4 data)
+ *   Std_ReturnType Rte_Write_AN40_AN40(AN40 data)
+ *   Std_ReturnType Rte_Write_AN41_AN41(AN41 data)
+ *   Std_ReturnType Rte_Write_AN42_AN42(AN42 data)
+ *   Std_ReturnType Rte_Write_AN43_AN43(AN43 data)
+ *   Std_ReturnType Rte_Write_AN44_AN44(AN44 data)
+ *   Std_ReturnType Rte_Write_AN45_AN45(AN45 data)
+ *   Std_ReturnType Rte_Write_AN46_AN46(AN46 data)
+ *   Std_ReturnType Rte_Write_AN47_AN47(AN47 data)
+ *   Std_ReturnType Rte_Write_AN5_AN5(AN5 data)
+ *   Std_ReturnType Rte_Write_AN6_AN6(AN6 data)
+ *   Std_ReturnType Rte_Write_AN7_AN7(AN7 data)
+ *   Std_ReturnType Rte_Write_AN8_AN8(AN8 data)
+ *   Std_ReturnType Rte_Write_AN9_AN9(AN9 data)
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: Com_Runnable_500ms_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(void, Com_SWC_CODE) Com_Runnable_500ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: Com_Runnable_500ms
+ *********************************************************************************************************************/
+    Rte_Write_AN0_AN0(0);
+    Rte_Write_AN1_AN1(1);
+    Rte_Write_AN2_AN2(2);
+    Rte_Write_AN3_AN3(3);
+    Rte_Write_AN4_AN4(4);
+    Rte_Write_AN5_AN5(5);
+    Rte_Write_AN6_AN6(6);
+    Rte_Write_AN7_AN7(7);
+
+    Rte_Write_AN8_AN8(8);
+    Rte_Write_AN9_AN9(9);
+    Rte_Write_AN10_AN10(10);
+    Rte_Write_AN11_AN11(11);
+    Rte_Write_AN12_AN12(12);
+    Rte_Write_AN13_AN13(13);
+    Rte_Write_AN14_AN14(14);
+    Rte_Write_AN15_AN15(15);
+
+    Rte_Write_AN16_AN16(16);
+    Rte_Write_AN17_AN17(17);
+    Rte_Write_AN18_AN18(18);
+    Rte_Write_AN19_AN19(19);
+    Rte_Write_AN20_AN20(20);
+    Rte_Write_AN21_AN21(21);
+    Rte_Write_AN22_AN22(22);
+    Rte_Write_AN23_AN23(23);
+
+    Rte_Write_AN24_AN24(24);
+    Rte_Write_AN25_AN25(25);
+    Rte_Write_AN26_AN26(26);
+    Rte_Write_AN27_AN27(27);
+    Rte_Write_AN28_AN28(28);
+    Rte_Write_AN29_AN29(29);
+    Rte_Write_AN30_AN30(30);
+    Rte_Write_AN31_AN31(31);
+
+    Rte_Write_AN32_AN32(32);
+    Rte_Write_AN33_AN33(33);
+    Rte_Write_AN34_AN34(34);
+    Rte_Write_AN35_AN35(35);
+    Rte_Write_AN36_AN36(36);
+    Rte_Write_AN37_AN37(37);
+    Rte_Write_AN38_AN38(38);
+    Rte_Write_AN39_AN39(39);
+
+    Rte_Write_AN40_AN40(40);
+    Rte_Write_AN41_AN41(41);
+    Rte_Write_AN42_AN42(42);
+    Rte_Write_AN43_AN43(43);
+    Rte_Write_AN44_AN44(44);
+    Rte_Write_AN45_AN45(45);
+    Rte_Write_AN46_AN46(46);
+    Rte_Write_AN47_AN47(47);
+
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
