@@ -79,6 +79,8 @@ volatile SensorMngIoType SensorMngIoTbl[] =
 uint8 bridgeCfg     = 0;
 uint8 bridgeCfg_old = 0;
 
+volatile uint8 Ext_D_In2;
+
 void SensorMngMain()
 {
     uint8 tbl_index = 0;
@@ -98,4 +100,6 @@ void SensorMngMain()
         TLE8888qk_SpiTransmit(CMD_BRICONFIG(0,bridgeCfg), NULL_PTR);
         bridgeCfg_old = bridgeCfg;
     }
+
+    Ext_D_In2 =  Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_0_EXT_D_IN2);
 }
