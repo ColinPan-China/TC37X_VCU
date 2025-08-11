@@ -14,6 +14,16 @@
 #define KL15_HIGH_LEVEL (1)
 #define KL15_LOW_LEVEL  (0)
 
+typedef struct AdcValSample
+{
+  uint16 AdcCompleteFlag;
+  uint16 AdcChannelResult[16];
+  uint16 AdcChAveResult[16];
+  uint16 AdcSampleCnt;
+  uint16 AdcChannelResultPoll[8][16];
+  Adc_GroupType Group;
+}AdcValSampleType;
+
 extern void Adc_SampleInit();
 
 extern void Adc_SampleMain();

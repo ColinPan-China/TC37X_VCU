@@ -19,12 +19,6 @@ typedef enum
   EXT_A_IN15,
 }ExtAdcInputType;
 
-typedef struct AdcValSample
-{
-  uint16 AdcCompleteFlag;
-  uint16 AdcChannelResult[16];
-  Adc_GroupType Group;
-}AdcValSampleType;
 
 typedef struct TempAdConvert
 {
@@ -333,6 +327,38 @@ void Adc_SampleInit()
   AdcValSampleInfo_Table[5].Group = AdcConf_AdcGroup_AdcGroup_8;
 }
 
+
+uint16 AverageCal(uint16* Arry, uint8 len)
+{
+  uint16 i,max,min,sum;
+
+  uint16 average;
+
+  sum=0;
+
+  max = Arry[0];
+
+  min=Arry[0];
+
+  for( i = 0; i <len; i++ )
+  {
+    if( max < Arry[i])
+    {
+      max=Arry[i];
+    }
+
+    if(min>Arry[i])
+    {
+      min=Arry[i];
+    }
+    sum=sum+Arry[i];
+  }
+  average = (sum-max-min)/(len-2);
+
+  return average;
+}
+
+uint16 AdcResultAve[8];
 void Adc_SampleMain()
 {
   uint8 index = 0;
@@ -340,7 +366,7 @@ void Adc_SampleMain()
   uint32 tmpY = 0;
   uint32 tmpZ = 0;
   uint16 CurAdVal = 0x00u;
-
+  uint8 index_Filt;
   /*Get ADC result from ADC Driver  */
   for(index = 0; index < (sizeof(AdcValSampleInfo_Table)/sizeof(AdcValSampleInfo_Table[0]));index++ )
   {
@@ -348,6 +374,30 @@ void Adc_SampleMain()
     {
       AdcValSampleInfo_Table[index].AdcCompleteFlag = FALSE;
       Adc_ReadGroup(AdcValSampleInfo_Table[index].Group, AdcValSampleInfo_Table[index].AdcChannelResult);
+      
+      VStdMemCpy( AdcValSampleInfo_Table[index].AdcChannelResultPoll[AdcValSampleInfo_Table[index].AdcSampleCnt],AdcValSampleInfo_Table[index].AdcChannelResult, 32 );
+      if( AdcValSampleInfo_Table[index].AdcSampleCnt == 7 )
+      {
+        AdcValSampleInfo_Table[index].AdcSampleCnt = 0;
+        for( index_Filt = 0; index_Filt < 16; index_Filt++ )
+        {
+          AdcResultAve[0] = AdcValSampleInfo_Table[index].AdcChannelResultPoll[0][index_Filt];
+          AdcResultAve[1] = AdcValSampleInfo_Table[index].AdcChannelResultPoll[1][index_Filt];
+          AdcResultAve[2] = AdcValSampleInfo_Table[index].AdcChannelResultPoll[2][index_Filt];
+          AdcResultAve[3] = AdcValSampleInfo_Table[index].AdcChannelResultPoll[3][index_Filt];
+          AdcResultAve[4] = AdcValSampleInfo_Table[index].AdcChannelResultPoll[4][index_Filt];
+          AdcResultAve[5] = AdcValSampleInfo_Table[index].AdcChannelResultPoll[5][index_Filt];
+          AdcResultAve[6] = AdcValSampleInfo_Table[index].AdcChannelResultPoll[6][index_Filt];
+          AdcResultAve[7] = AdcValSampleInfo_Table[index].AdcChannelResultPoll[7][index_Filt];
+
+          AdcValSampleInfo_Table[index].AdcChAveResult[index_Filt] = AverageCal(AdcResultAve,8);
+        }
+      }
+      else
+      {
+        AdcValSampleInfo_Table[index].AdcSampleCnt++;
+      }
+
       Adc_StartGroupConversion(AdcValSampleInfo_Table[index].Group);
     }
   }
