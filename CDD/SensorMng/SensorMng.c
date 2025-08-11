@@ -79,7 +79,7 @@ volatile SensorMngIoType SensorMngIoTbl[] =
 uint8 bridgeCfg     = 0;
 uint8 bridgeCfg_old = 0;
 
-volatile uint8 Ext_D_In2;
+uint8 Ext_D_In2;
 
 void SensorMngMain()
 {
@@ -102,4 +102,8 @@ void SensorMngMain()
     }
 
     Ext_D_In2 =  Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_0_EXT_D_IN2);
+    if( Ext_D_In2 == 0 )
+    {
+        NOP();
+    }
 }

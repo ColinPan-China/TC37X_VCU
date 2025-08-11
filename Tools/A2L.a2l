@@ -924,6 +924,13 @@ OVERLOAD_INDICATION_EVENT: This means an event is set, when an overload occurs*/
       FORMAT "%.15"
     /end CHARACTERISTIC
 
+    /begin MEASUREMENT SensorMng.c_Ext_D_In2 ""
+      UBYTE DEFAULT_CM 0 0 0 255
+      ECU_ADDRESS 0x7000A964
+      ECU_ADDRESS_EXTENSION 0x0
+      FORMAT "%.15"
+    /end MEASUREMENT
+
     /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Bts7xx_HS1_En ""
       VALUE 0x7000A89C __UBYTE_S 0 DEFAULT_CM 0 255
       ECU_ADDRESS_EXTENSION 0x0
