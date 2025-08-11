@@ -29447,6 +29447,17 @@
               <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
               <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
             </UNIT>
+            <UNIT UUID="6C8BF128-1EAB-4E59-A351-72569F76E089">
+              <SHORT-NAME>U_mV</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DISPLAY-NAME>mV</DISPLAY-NAME>
+            </UNIT>
           </ELEMENTS>
         </AR-PACKAGE>
       </AR-PACKAGES>

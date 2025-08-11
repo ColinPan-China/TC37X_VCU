@@ -33484,6 +33484,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN0</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN0</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33496,6 +33497,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN1</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN1</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33508,6 +33510,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN10</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN10</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33520,6 +33523,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN11</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN11</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33532,6 +33536,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN12</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN12</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33544,6 +33549,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN13</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN13</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33556,6 +33562,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN14</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN14</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33568,6 +33575,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN15</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN15</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33580,6 +33588,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN16</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN16</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33592,6 +33601,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN17</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN17</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33604,6 +33614,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN18</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN18</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33616,6 +33627,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN19</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN19</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33628,6 +33640,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN2</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN2</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33640,6 +33653,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN20</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN20</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33652,6 +33666,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN21</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN21</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33664,6 +33679,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN22</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN22</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33676,6 +33692,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN23</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN23</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33688,6 +33705,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN24</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN24</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33700,6 +33718,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN25</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN25</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33712,6 +33731,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN26</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN26</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33724,6 +33744,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN27</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN27</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33736,6 +33757,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN28</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN28</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33748,6 +33770,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN29</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN29</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33760,6 +33783,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN3</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN3</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33772,6 +33796,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN30</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN30</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33784,6 +33809,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN31</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN31</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33796,6 +33822,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN32</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN32</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33808,6 +33835,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN33</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN33</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33820,6 +33848,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN34</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN34</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33832,6 +33861,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN35</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN35</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33844,6 +33874,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN36</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN36</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33856,6 +33887,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN37</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN37</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33868,6 +33900,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN38</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN38</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33880,6 +33913,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN39</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN39</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33892,6 +33926,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN4</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN4</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33904,6 +33939,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN40</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN40</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33916,6 +33952,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN41</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN41</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33928,6 +33965,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN42</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN42</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33940,6 +33978,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN43</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN43</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33952,6 +33991,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN44</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN44</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33964,6 +34004,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN45</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN45</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33976,6 +34017,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN46</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN46</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -33988,6 +34030,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN47</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN47</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -34000,6 +34043,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN5</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN5</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -34012,6 +34056,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN6</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN6</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -34024,6 +34069,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN7</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN7</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -34036,6 +34082,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN8</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN8</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -34048,6 +34095,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_AN9</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_AN9</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_mV</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
