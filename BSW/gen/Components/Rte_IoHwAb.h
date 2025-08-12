@@ -10,7 +10,7 @@
  *  -------------------------------------------------------------------------------------------------------------------
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
- *             File:  Rte_PowerMng_SWC.h
+ *             File:  Rte_IoHwAb.h
  *           Config:  TC37X_VCU.dpa
  *      ECU-Project:  TC37X_VCU
  *
@@ -18,12 +18,12 @@
  *                    RTE Core Version 1.26.0
  *          License:  CBD2101138
  *
- *      Description:  Application header file for SW-C <PowerMng_SWC>
+ *      Description:  Application header file for SW-C <IoHwAb>
  *********************************************************************************************************************/
 
 /* double include prevention */
-#ifndef RTE_POWERMNG_SWC_H
-# define RTE_POWERMNG_SWC_H
+#ifndef RTE_IOHWAB_H
+# define RTE_IOHWAB_H
 
 # ifndef RTE_CORE
 #  ifdef RTE_APPLICATION_HEADER_FILE
@@ -42,45 +42,25 @@ extern "C"
 
 /* include files */
 
-# include "Rte_PowerMng_SWC_Type.h"
+# include "Rte_IoHwAb_Type.h"
 # include "Rte_DataHandleType.h"
 
 
-# ifndef RTE_CORE
-
-/**********************************************************************************************************************
- * Rte_Call_<p>_<o> (unmapped) for synchronous C/S communication
- *********************************************************************************************************************/
-#  define RTE_START_SEC_IOHWAB_APPL_CODE
-#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-FUNC(Std_ReturnType, RTE_IOHWAB_APPL_CODE) IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel(IOHWAB_UINT16 ChannelId, IOHWAB_UINT8 Level); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-
-#  define RTE_STOP_SEC_IOHWAB_APPL_CODE
-#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-#  define Rte_Call_IoHwAbCSPortInterface_IoHwAb_Dio_WriteChannel IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel
-
-# endif /* !defined(RTE_CORE) */
-
-
-# define PowerMng_SWC_START_SEC_CODE
-# include "PowerMng_SWC_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+# define IoHwAb_START_SEC_CODE
+# include "IoHwAb_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /**********************************************************************************************************************
  * Runnable entities
  *********************************************************************************************************************/
 
 # ifndef RTE_CORE
-#  define RTE_RUNNABLE_Led_Runnable1000ms Led_Runnable1000ms
-#  define RTE_RUNNABLE_PowerMng_SWC_Init PowerMng_SWC_Init
+#  define RTE_RUNNABLE_IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel
 # endif
 
-FUNC(void, PowerMng_SWC_CODE) Led_Runnable1000ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
-FUNC(void, PowerMng_SWC_CODE) PowerMng_SWC_Init(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
+FUNC(Std_ReturnType, IoHwAb_CODE) IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel(IOHWAB_UINT16 ChannelId, IOHWAB_UINT8 Level); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 
-# define PowerMng_SWC_STOP_SEC_CODE
-# include "PowerMng_SWC_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+# define IoHwAb_STOP_SEC_CODE
+# include "IoHwAb_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
 # ifndef RTE_CORE
@@ -95,7 +75,7 @@ FUNC(void, PowerMng_SWC_CODE) PowerMng_SWC_Init(void); /* PRQA S 3451, 0786, 344
 } /* extern "C" */
 # endif /* __cplusplus */
 
-#endif /* RTE_POWERMNG_SWC_H */
+#endif /* RTE_IOHWAB_H */
 
 /**********************************************************************************************************************
  MISRA 2012 violations and justifications
@@ -114,11 +94,6 @@ FUNC(void, PowerMng_SWC_CODE) PowerMng_SWC_Init(void); /* PRQA S 3451, 0786, 344
      Prevention: Not required.
 
    MD_Rte_3449:  MISRA rule: Rule8.5
-     Reason:     Schedulable entities are declared by the RTE and also by the BSW modules.
-     Risk:       No functional risk.
-     Prevention: Not required.
-
-   MD_Rte_3451:  MISRA rule: Rule8.5
      Reason:     Schedulable entities are declared by the RTE and also by the BSW modules.
      Risk:       No functional risk.
      Prevention: Not required.

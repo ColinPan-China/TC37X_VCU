@@ -35,6 +35,32 @@
  * DO NOT CHANGE THIS COMMENT!           << End of version logging area >>                  DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 
+/**********************************************************************************************************************
+ *
+ * AUTOSAR Modelling Object Descriptions
+ *
+ **********************************************************************************************************************
+ *
+ * Data Types:
+ * ===========
+ * IOHWAB_UINT16
+ *   uint16 represents integers with a minimum value of 0 and a maximum value of 65535.
+ *      The order-relation on uint16 is: x < y if y - x is positive.
+ *      uint16 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 1267, +10000.
+ *
+ * IOHWAB_UINT8
+ *   uint8 represents integers with a minimum value of 0 and a maximum value of 255.
+ *      The order-relation on uint8 is: x < y if y - x is positive.
+ *      uint8 has a lexical representation consisting of a finite-length sequence 
+ *      of decimal digits (#x30-#x39).
+ *      
+ *      For example: 1, 0, 126, +10.
+ *
+ *********************************************************************************************************************/
+
 #include "Rte_PowerMng_SWC.h"
 
 
@@ -49,6 +75,22 @@
  *********************************************************************************************************************/
 
 
+/**********************************************************************************************************************
+ *
+ * Used AUTOSAR Data Types
+ *
+ **********************************************************************************************************************
+ *
+ * Primitive Types:
+ * ================
+ * IOHWAB_UINT16: Integer in interval [0...65535]
+ * IOHWAB_UINT8: Integer in interval [0...255]
+ * uint16: Integer in interval [0...65535] (standard type)
+ * uint8: Integer in interval [0...255] (standard type)
+ *
+ *********************************************************************************************************************/
+
+
 #define PowerMng_SWC_START_SEC_CODE
 #include "PowerMng_SWC_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -60,6 +102,16 @@
  *
  * Executed if at least one of the following trigger conditions occurred:
  *   - triggered on TimingEvent every 1s
+ *
+ **********************************************************************************************************************
+ *
+ * Client/Server Interfaces:
+ * =========================
+ *   Server Invocation:
+ *   ------------------
+ *   Std_ReturnType Rte_Call_IoHwAbCSPortInterface_IoHwAb_Dio_WriteChannel(IOHWAB_UINT16 ChannelId, IOHWAB_UINT8 Level)
+ *     Synchronous Server Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_IoHwAbCSPortInterface_IoHwAbApplicationError
  *
  *********************************************************************************************************************/
 /**********************************************************************************************************************

@@ -7,6 +7,24 @@
       <ELEMENTS>
         <APPLICATION-SW-COMPONENT-TYPE UUID="29235893-9986-4707-871E-62CD9E51F0C7">
           <SHORT-NAME>PowerMng_SWC</SHORT-NAME>
+          <PORTS>
+            <R-PORT-PROTOTYPE UUID="459FFD6C-B14E-4D71-9166-38EF082E7AA9">
+              <SHORT-NAME>IoHwAbCSPortInterface</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSPortInterface/IoHwAb_Dio_WriteChannel</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSPortInterface</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
           <INTERNAL-BEHAVIORS>
             <SWC-INTERNAL-BEHAVIOR UUID="D74A65DD-5005-4007-9BD1-A0217F2E9C18">
               <SHORT-NAME>PowerMng_SWC_InternalBehavior</SHORT-NAME>
@@ -24,6 +42,15 @@
               <RUNNABLES>
                 <RUNNABLE-ENTITY UUID="31C1F274-32FB-46F8-88A8-F1536B35D093">
                   <SHORT-NAME>Led_Runnable1000ms</SHORT-NAME>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="EA220767-D0CD-4A38-B84A-A8F665A16991">
+                      <SHORT-NAME>SC_IoHwAbCSPortInterface_IoHwAb_Dio_WriteChannel</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/PowerMng_SWC/IoHwAbCSPortInterface</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSPortInterface/IoHwAb_Dio_WriteChannel</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="54B9A1DB-8353-4103-911D-69F52583D2F4">
                   <SHORT-NAME>PowerMng_SWC_Init</SHORT-NAME>

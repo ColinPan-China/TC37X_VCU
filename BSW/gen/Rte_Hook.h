@@ -236,6 +236,8 @@
  *  Rte_CallHook_DemSatellite_0_CBReadData_DID_0xf1a2_F1A2_Data_ReadData_Start
  *  Rte_CallHook_DemSatellite_0_CBReadData_DID_0xf1a3_F1A3_Data_ReadData_Return
  *  Rte_CallHook_DemSatellite_0_CBReadData_DID_0xf1a3_F1A3_Data_ReadData_Start
+ *  Rte_CallHook_PowerMng_SWC_IoHwAbCSPortInterface_IoHwAb_Dio_WriteChannel_Return
+ *  Rte_CallHook_PowerMng_SWC_IoHwAbCSPortInterface_IoHwAb_Dio_WriteChannel_Start
  *  Rte_CallHook_SWC1_NvMService_AC3_SRBS_NvBlockNeed_UserData3_ReadBlock_Return
  *  Rte_CallHook_SWC1_NvMService_AC3_SRBS_NvBlockNeed_UserData3_ReadBlock_Start
  *  Rte_CallHook_SWC1_NvMService_AC3_SRBS_NvBlockNeed_UserData3_SetRamBlockStatus_Return
@@ -594,6 +596,8 @@
  *  Rte_Runnable_EcuM_SelectShutdownCause_Start
  *  Rte_Runnable_EcuM_SelectShutdownTarget_Return
  *  Rte_Runnable_EcuM_SelectShutdownTarget_Start
+ *  Rte_Runnable_IoHwAb_IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel_Return
+ *  Rte_Runnable_IoHwAb_IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel_Start
  *  Rte_Runnable_IoHwAb_SWC_IoHwAb_SWC_Init_Return
  *  Rte_Runnable_IoHwAb_SWC_IoHwAb_SWC_Init_Start
  *  Rte_Runnable_IoHwAb_SWC_IoHwAb_SWC_Runnable_Return
