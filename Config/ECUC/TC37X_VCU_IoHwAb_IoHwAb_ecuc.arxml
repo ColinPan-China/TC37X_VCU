@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ActiveEcuC</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="8f3a05c9-b83a-4ab7-ac4e-9ef571f20497">
+          <SHORT-NAME>IoHwAb</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/IoHwAb</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/MICROSAR/IoHwAb_Impl</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="597d45a1-7c68-4c63-aacf-5cc35ec89154">
+              <SHORT-NAME>IoHwAbDatatypes</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="c9def144-41c5-497b-805a-371498a99a15">
+                  <SHORT-NAME>float64</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType/IoHwAbBaseDataType</DEFINITION-REF>
+                      <VALUE>IOHWAB_FLOAT64</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="fc4efc2f-a115-44a6-9699-331ed539a7cc">
+                  <SHORT-NAME>float32</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType/IoHwAbBaseDataType</DEFINITION-REF>
+                      <VALUE>IOHWAB_FLOAT32</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="99ac79d6-a7b9-42f1-a9bd-068fe1e97f69">
+                  <SHORT-NAME>sint32</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType/IoHwAbBaseDataType</DEFINITION-REF>
+                      <VALUE>IOHWAB_SINT32</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="1dc156a5-064a-4f12-94f9-36ce7bafc115">
+                  <SHORT-NAME>sint16</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType/IoHwAbBaseDataType</DEFINITION-REF>
+                      <VALUE>IOHWAB_SINT16</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="395a0618-ec44-4de9-91d2-9df0ac8c0479">
+                  <SHORT-NAME>sint8</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType/IoHwAbBaseDataType</DEFINITION-REF>
+                      <VALUE>IOHWAB_SINT8</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="18cf685e-00ca-4786-9eff-f3cdfc8a071b">
+                  <SHORT-NAME>uint32</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType/IoHwAbBaseDataType</DEFINITION-REF>
+                      <VALUE>IOHWAB_UINT32</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="9f9297c6-6757-4151-8936-229299f024a8">
+                  <SHORT-NAME>uint16</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType/IoHwAbBaseDataType</DEFINITION-REF>
+                      <VALUE>IOHWAB_UINT16</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="7515a411-5efe-45c7-9e38-126f88e3d8b6">
+                  <SHORT-NAME>uint8</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType/IoHwAbBaseDataType</DEFINITION-REF>
+                      <VALUE>IOHWAB_UINT8</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="9754ea99-7216-4c1f-a929-716c5c65f69b">
+                  <SHORT-NAME>boolean</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbBaseType/IoHwAbBaseDataType</DEFINITION-REF>
+                      <VALUE>IOHWAB_BOOL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="d76f3d81-4275-4b9b-8be9-20cf6fb1a7f3">
+                  <SHORT-NAME>IoHwAbImplementationTypes</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbDatatypes/IoHwAbImplementationTypes</DEFINITION-REF>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="4e543aea-c704-4e8c-ba5e-0e67fa72f735">
+              <SHORT-NAME>IoHwAbGeneral</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbGeneral/IoHwAbDevErrorDetect</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbGeneral/IoHwAbVersionInfoApi</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbGeneral/IoHwAbUseInitFunction</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="14cefc22-9a11-4af8-9ada-6aa81a2cb142">
+              <SHORT-NAME>IoHwAbCSPortInterface</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortInterface</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortInterface/IoHwAbTemplate</DEFINITION-REF>
+                  <VALUE>IoHwAb_Template_None</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="db0c304b-5bc1-455f-88a3-053863d05d34">
+                  <SHORT-NAME>IoHwAb_Dio_WriteChannel</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortInterface/IoHwAbOperation</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="27b9ad5e-e2ed-40f2-9d6e-2de09451d66d">
+                      <SHORT-NAME>ChannelId</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortInterface/IoHwAbOperation/IoHwAbOperationArgument</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortInterface/IoHwAbOperation/IoHwAbOperationArgument/IoHwAbArgDirection</DEFINITION-REF>
+                          <VALUE>IOHWAB_IN</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortInterface/IoHwAbOperation/IoHwAbOperationArgument/IoHwAbOperationArgumentPosition</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortInterface/IoHwAbOperation/IoHwAbOperationArgument/IoHwAbArgTypeRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/IoHwAb/IoHwAbDatatypes/uint16</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="5d10c24b-6f76-4aff-944c-0d62d2109e54">
+                      <SHORT-NAME>Level</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortInterface/IoHwAbOperation/IoHwAbOperationArgument</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortInterface/IoHwAbOperation/IoHwAbOperationArgument/IoHwAbArgDirection</DEFINITION-REF>
+                          <VALUE>IOHWAB_IN</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortInterface/IoHwAbOperation/IoHwAbOperationArgument/IoHwAbOperationArgumentPosition</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortInterface/IoHwAbOperation/IoHwAbOperationArgument/IoHwAbArgTypeRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/IoHwAb/IoHwAbDatatypes/uint8</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="b5b88518-d0cd-4084-bb9c-ca97c91d7411">
+                  <SHORT-NAME>IoHwAbApplicationError</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortInterface/IoHwAbApplicationError</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortInterface/IoHwAbApplicationError/IoHwAbErrorCode</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="7ef68f03-f141-4305-acbd-da15b4b977e6">
+              <SHORT-NAME>IoHwAbCSPortPrototype</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortPrototype</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortPrototype/IoHwAbCSDirection</DEFINITION-REF>
+                  <VALUE>IOHWAB_SERVER</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/IoHwAb/IoHwAbCSPortPrototype/IoHwAbCSPortInterfaceRef</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/IoHwAb/IoHwAbCSPortInterface</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

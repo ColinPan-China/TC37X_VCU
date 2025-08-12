@@ -546,6 +546,12 @@ typedef uint32 TimeInMicrosecondsType;
 #  define Rte_TypeDef_Dem_OperationCycleIdType
 typedef uint8 Dem_OperationCycleIdType;
 
+#  define Rte_TypeDef_IOHWAB_UINT16
+typedef uint16 IOHWAB_UINT16;
+
+#  define Rte_TypeDef_IOHWAB_UINT8
+typedef uint8 IOHWAB_UINT8;
+
 # endif
 
 

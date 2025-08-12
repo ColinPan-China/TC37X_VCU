@@ -64,6 +64,7 @@
 #include "SchM_Fee.h"
 #include "SchM_Fls_17_Dmu.h"
 #include "SchM_Icu_17_TimerIp.h"
+#include "SchM_IoHwAb.h"
 #include "SchM_Irq.h"
 #include "SchM_LinIf.h"
 #include "SchM_LinSM.h"

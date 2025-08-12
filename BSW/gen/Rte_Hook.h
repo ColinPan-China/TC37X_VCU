@@ -1008,6 +1008,8 @@
  *  SchM_EnterHook_Icu_17_TimerIp_ResetEdgeCount_Start
  *  SchM_EnterHook_Icu_17_TimerIp_SetActivationCondition_Return
  *  SchM_EnterHook_Icu_17_TimerIp_SetActivationCondition_Start
+ *  SchM_EnterHook_IoHwAb_IOHWAB_EXCLUSIVE_AREA_0_Return
+ *  SchM_EnterHook_IoHwAb_IOHWAB_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_1_Return
@@ -1248,6 +1250,8 @@
  *  SchM_ExitHook_Icu_17_TimerIp_ResetEdgeCount_Start
  *  SchM_ExitHook_Icu_17_TimerIp_SetActivationCondition_Return
  *  SchM_ExitHook_Icu_17_TimerIp_SetActivationCondition_Start
+ *  SchM_ExitHook_IoHwAb_IOHWAB_EXCLUSIVE_AREA_0_Return
+ *  SchM_ExitHook_IoHwAb_IOHWAB_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_1_Return
