@@ -202,6 +202,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
   }
 #endif
 
+#if 0  //PWM 输入测量的测试代码
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, sts_SV );
   TIMER++;
   if( TIMER >= 10 )
@@ -216,7 +217,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
       sts_SV = 0;
     }
   }
-
+#endif
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
