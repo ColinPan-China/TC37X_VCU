@@ -92,6 +92,9 @@ TLE8888qk_CfgType TLE8888qk_CfgTable[] =
   { CMD_OECONFIG(0,0x80),   0,  0 },
   { CMD_CONT(0,0x80),       0,  0 },
 
+//  { CMD_OECONFIG(3,0x0F),   0,  0 },IG1-IG4
+//  { CMD_CONT(3,0x0F),       0,  0 },
+
   { CMD_CONT(2,0xF0),       0,  0 },
 };
 

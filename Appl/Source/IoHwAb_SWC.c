@@ -147,6 +147,14 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
 
   SensorMngMain();
 
+  /*ICU Measurement*/
+  MessureFlg++;
+  if(MessureFlg >= 50 )
+  {
+    MessureFlg = 0;
+    Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_2, &ICU_Val1);
+    Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_4, &ICU_Val2);
+  }
   #if 0
   /*TLE9210*/
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P20_11_TLE_DIR, 1);
