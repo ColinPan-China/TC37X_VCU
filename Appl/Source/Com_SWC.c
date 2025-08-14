@@ -42,7 +42,7 @@
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 #include "Adc_Sample.h"
-
+#include "SensorMng.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -104,6 +104,10 @@
  * AN7: Integer in interval [-32768...32767]
  * AN8: Integer in interval [-32768...32767]
  * AN9: Integer in interval [-32768...32767]
+ * Bts7xx_HS1_En: Integer in interval [-128...127]
+ * Bts7xx_HS2_En: Integer in interval [-128...127]
+ * Bts7xx_HS3_En: Integer in interval [-128...127]
+ * Bts7xx_HS4_En: Integer in interval [-128...127]
  * ECC_PMP2_SpdSet: Integer in interval [0...100]
  * ECC_PMP3_SpdSet: Integer in interval [0...100]
  * EXT10_Valid: Integer in interval [0...1]
@@ -138,6 +142,18 @@
  * EXT_A_IN7: Integer in interval [-256...255]
  * EXT_A_IN8: Integer in interval [-32768...32767]
  * EXT_A_IN9: Integer in interval [-256...255]
+ * Tle4252d_en: Integer in interval [-128...127]
+ * Tle888qk_Out21BriCfg: Integer in interval [-128...127]
+ * Tle888qk_Out21_En: Integer in interval [-128...127]
+ * Tle888qk_Out22BriCfg: Integer in interval [-128...127]
+ * Tle888qk_Out22_En: Integer in interval [-128...127]
+ * Tle888qk_Out23BriCfg: Integer in interval [-128...127]
+ * Tle888qk_Out23_En: Integer in interval [-128...127]
+ * Tle888qk_Out24BriCfg: Integer in interval [-128...127]
+ * Tle888qk_Out24_En: Integer in interval [-128...127]
+ * Tle9201_Dir: Integer in interval [-128...127]
+ * Tle9201_Dis: Integer in interval [-128...127]
+ * Tle9201_Pwm: Integer in interval [-128...127]
  * VcuRxMsg1_Sig0: Integer in interval [-32768...32767]
  * VcuRxMsg1_Sig1: Integer in interval [-32768...32767]
  * VcuRxMsg1_Sig2: Integer in interval [-32768...32767]
@@ -176,6 +192,22 @@
  * =================
  *   Explicit S/R API:
  *   -----------------
+ *   Std_ReturnType Rte_Read_Bts7xx_HS1_En_Bts7xx_HS1_En(Bts7xx_HS1_En *data)
+ *   Std_ReturnType Rte_Read_Bts7xx_HS2_En_Bts7xx_HS2_En(Bts7xx_HS2_En *data)
+ *   Std_ReturnType Rte_Read_Bts7xx_HS3_En_Bts7xx_HS3_En(Bts7xx_HS3_En *data)
+ *   Std_ReturnType Rte_Read_Bts7xx_HS4_En_Bts7xx_HS4_En(Bts7xx_HS4_En *data)
+ *   Std_ReturnType Rte_Read_Tle4252d_en_Tle4252d_en(Tle4252d_en *data)
+ *   Std_ReturnType Rte_Read_Tle888qk_Out21BriCfg_Tle888qk_Out21BriCfg(Tle888qk_Out21BriCfg *data)
+ *   Std_ReturnType Rte_Read_Tle888qk_Out21_En_Tle888qk_Out21_En(Tle888qk_Out21_En *data)
+ *   Std_ReturnType Rte_Read_Tle888qk_Out22BriCfg_Tle888qk_Out22BriCfg(Tle888qk_Out22BriCfg *data)
+ *   Std_ReturnType Rte_Read_Tle888qk_Out22_En_Tle888qk_Out22_En(Tle888qk_Out22_En *data)
+ *   Std_ReturnType Rte_Read_Tle888qk_Out23BriCfg_Tle888qk_Out23BriCfg(Tle888qk_Out23BriCfg *data)
+ *   Std_ReturnType Rte_Read_Tle888qk_Out23_En_Tle888qk_Out23_En(Tle888qk_Out23_En *data)
+ *   Std_ReturnType Rte_Read_Tle888qk_Out24BriCfg_Tle888qk_Out24BriCfg(Tle888qk_Out24BriCfg *data)
+ *   Std_ReturnType Rte_Read_Tle888qk_Out24_En_Tle888qk_Out24_En(Tle888qk_Out24_En *data)
+ *   Std_ReturnType Rte_Read_Tle9201_Dir_Tle9201_Dir(Tle9201_Dir *data)
+ *   Std_ReturnType Rte_Read_Tle9201_Dis_Tle9201_Dis(Tle9201_Dis *data)
+ *   Std_ReturnType Rte_Read_Tle9201_Pwm_Tle9201_Pwm(Tle9201_Pwm *data)
  *   Std_ReturnType Rte_Read_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0(VcuRxMsg1_Sig0 *data)
  *   Std_ReturnType Rte_Read_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1(VcuRxMsg1_Sig1 *data)
  *   Std_ReturnType Rte_Read_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2(VcuRxMsg1_Sig2 *data)
@@ -239,6 +271,7 @@
  *********************************************************************************************************************/
 void ExtTempUpdate();
 uint8 SpeedSet = 0;
+extern volatile SensorMngCtrlType SensorMngCtrlVal;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -252,7 +285,6 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_2ms(void) /* PRQA S 0624, 3206 */ /* MD_Rt
   ExtTempUpdate();
   Rte_Write_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet(SpeedSet);
   Rte_Write_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet(SpeedSet);
-
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -452,6 +484,88 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_500ms(void) /* PRQA S 0624, 3206 */ /* MD_
     Rte_Write_AN45_AN45(AdcValSampleInfo_Table[5].AdcChAveResult[13]*5000/4095);
     Rte_Write_AN46_AN46(AdcValSampleInfo_Table[5].AdcChAveResult[14]*5000/4095);
     Rte_Write_AN47_AN47(AdcValSampleInfo_Table[5].AdcChAveResult[15]*5000/4095);
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: Rte_Msg10Eh_Rx_Notification
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered on DataReceivedEvent for DataElementPrototype <Tle888qk_Out21_En> of PortPrototype <Tle888qk_Out21_En>
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: Rte_Msg10Eh_Rx_Notification_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(void, Com_SWC_CODE) Rte_Msg10Eh_Rx_Notification(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: Rte_Msg10Eh_Rx_Notification
+ *********************************************************************************************************************/
+  Rte_Read_Tle888qk_Out21_En_Tle888qk_Out21_En(&SensorMngCtrlVal.Tle888qk_Out21_En);
+  Rte_Read_Tle888qk_Out22_En_Tle888qk_Out22_En(&SensorMngCtrlVal.Tle888qk_Out22_En);
+  Rte_Read_Tle888qk_Out23_En_Tle888qk_Out23_En(&SensorMngCtrlVal.Tle888qk_Out23_En);
+  Rte_Read_Tle888qk_Out24_En_Tle888qk_Out24_En(&SensorMngCtrlVal.Tle888qk_Out24_En);
+
+  Rte_Read_Tle888qk_Out21BriCfg_Tle888qk_Out21BriCfg(&SensorMngCtrlVal.Tle888qk_Out21BriCfg);
+  Rte_Read_Tle888qk_Out22BriCfg_Tle888qk_Out22BriCfg(&SensorMngCtrlVal.Tle888qk_Out22BriCfg);
+  Rte_Read_Tle888qk_Out23BriCfg_Tle888qk_Out23BriCfg(&SensorMngCtrlVal.Tle888qk_Out23BriCfg);
+  Rte_Read_Tle888qk_Out24BriCfg_Tle888qk_Out24BriCfg(&SensorMngCtrlVal.Tle888qk_Out24BriCfg);
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: Rte_Msg10Fh_Rx_Notification
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered on DataReceivedEvent for DataElementPrototype <Bts7xx_HS1_En> of PortPrototype <Bts7xx_HS1_En>
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: Rte_Msg10Fh_Rx_Notification_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(void, Com_SWC_CODE) Rte_Msg10Fh_Rx_Notification(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: Rte_Msg10Fh_Rx_Notification
+ *********************************************************************************************************************/
+  Rte_Read_Bts7xx_HS1_En_Bts7xx_HS1_En(&SensorMngCtrlVal.Bts7xx_HS1_En);
+  Rte_Read_Bts7xx_HS2_En_Bts7xx_HS2_En(&SensorMngCtrlVal.Bts7xx_HS2_En);
+  Rte_Read_Bts7xx_HS3_En_Bts7xx_HS3_En(&SensorMngCtrlVal.Bts7xx_HS3_En);
+  Rte_Read_Bts7xx_HS4_En_Bts7xx_HS4_En(&SensorMngCtrlVal.Bts7xx_HS4_En);
+
+  Rte_Read_Tle4252d_en_Tle4252d_en(&SensorMngCtrlVal.Tle4252d_en);
+  Rte_Read_Tle9201_Dir_Tle9201_Dir(&SensorMngCtrlVal.Tle9201_Dir);
+  Rte_Read_Tle9201_Dis_Tle9201_Dis(&SensorMngCtrlVal.Tle9201_Dis);
+  Rte_Read_Tle9201_Pwm_Tle9201_Pwm(&SensorMngCtrlVal.Tle9201_Pwm);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

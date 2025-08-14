@@ -45,6 +45,13 @@ extern "C"
 # include "Rte_Com_SWC_Type.h"
 # include "Rte_DataHandleType.h"
 
+# ifndef RTE_CORE
+
+#  include "Com.h"
+
+
+# endif /* !defined(RTE_CORE) */
+
 
 # ifndef RTE_CORE
 /**********************************************************************************************************************
@@ -99,6 +106,10 @@ extern "C"
 #  define Rte_InitValue_AN7_AN7 (0)
 #  define Rte_InitValue_AN8_AN8 (0)
 #  define Rte_InitValue_AN9_AN9 (0)
+#  define Rte_InitValue_Bts7xx_HS1_En_Bts7xx_HS1_En (0)
+#  define Rte_InitValue_Bts7xx_HS2_En_Bts7xx_HS2_En (0)
+#  define Rte_InitValue_Bts7xx_HS3_En_Bts7xx_HS3_En (0)
+#  define Rte_InitValue_Bts7xx_HS4_En_Bts7xx_HS4_En (0)
 #  define Rte_InitValue_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet (0U)
 #  define Rte_InitValue_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet (0U)
 #  define Rte_InitValue_EXT10_Valid_EXT10_Valid (0U)
@@ -133,6 +144,18 @@ extern "C"
 #  define Rte_InitValue_EXT_A_IN7_EXT_A_IN7 (0)
 #  define Rte_InitValue_EXT_A_IN8_EXT_A_IN8 (0)
 #  define Rte_InitValue_EXT_A_IN9_EXT_A_IN9 (0)
+#  define Rte_InitValue_Tle4252d_en_Tle4252d_en (0)
+#  define Rte_InitValue_Tle888qk_Out21BriCfg_Tle888qk_Out21BriCfg (0)
+#  define Rte_InitValue_Tle888qk_Out21_En_Tle888qk_Out21_En (0)
+#  define Rte_InitValue_Tle888qk_Out22BriCfg_Tle888qk_Out22BriCfg (0)
+#  define Rte_InitValue_Tle888qk_Out22_En_Tle888qk_Out22_En (0)
+#  define Rte_InitValue_Tle888qk_Out23BriCfg_Tle888qk_Out23BriCfg (0)
+#  define Rte_InitValue_Tle888qk_Out23_En_Tle888qk_Out23_En (0)
+#  define Rte_InitValue_Tle888qk_Out24BriCfg_Tle888qk_Out24BriCfg (0)
+#  define Rte_InitValue_Tle888qk_Out24_En_Tle888qk_Out24_En (0)
+#  define Rte_InitValue_Tle9201_Dir_Tle9201_Dir (0)
+#  define Rte_InitValue_Tle9201_Dis_Tle9201_Dis (0)
+#  define Rte_InitValue_Tle9201_Pwm_Tle9201_Pwm (0)
 #  define Rte_InitValue_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0 (0)
 #  define Rte_InitValue_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1 (0)
 #  define Rte_InitValue_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2 (0)
@@ -266,6 +289,38 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
 /**********************************************************************************************************************
  * Rte_Read_<p>_<d> (explicit S/R communication with isQueued = false)
  *********************************************************************************************************************/
+#  define Rte_Read_Bts7xx_HS1_En_Bts7xx_HS1_En Rte_Read_Com_SWC_Bts7xx_HS1_En_Bts7xx_HS1_En
+#  define Rte_Read_Com_SWC_Bts7xx_HS1_En_Bts7xx_HS1_En(data) (Com_ReceiveSignal(ComConf_ComSignal_Bts7xx_HS1_En_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01_d0692a3c_Rx, (data)))
+#  define Rte_Read_Bts7xx_HS2_En_Bts7xx_HS2_En Rte_Read_Com_SWC_Bts7xx_HS2_En_Bts7xx_HS2_En
+#  define Rte_Read_Com_SWC_Bts7xx_HS2_En_Bts7xx_HS2_En(data) (Com_ReceiveSignal(ComConf_ComSignal_Bts7xx_HS2_En_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01_b48951c2_Rx, (data)))
+#  define Rte_Read_Bts7xx_HS3_En_Bts7xx_HS3_En Rte_Read_Com_SWC_Bts7xx_HS3_En_Bts7xx_HS3_En
+#  define Rte_Read_Com_SWC_Bts7xx_HS3_En_Bts7xx_HS3_En(data) (Com_ReceiveSignal(ComConf_ComSignal_Bts7xx_HS3_En_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01_21f98557_Rx, (data)))
+#  define Rte_Read_Bts7xx_HS4_En_Bts7xx_HS4_En Rte_Read_Com_SWC_Bts7xx_HS4_En_Bts7xx_HS4_En
+#  define Rte_Read_Com_SWC_Bts7xx_HS4_En_Bts7xx_HS4_En(data) (Com_ReceiveSignal(ComConf_ComSignal_Bts7xx_HS4_En_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01_7d49a63e_Rx, (data)))
+#  define Rte_Read_Tle4252d_en_Tle4252d_en Rte_Read_Com_SWC_Tle4252d_en_Tle4252d_en
+#  define Rte_Read_Com_SWC_Tle4252d_en_Tle4252d_en(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle4252d_en_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01_24c739a8_Rx, (data)))
+#  define Rte_Read_Tle888qk_Out21BriCfg_Tle888qk_Out21BriCfg Rte_Read_Com_SWC_Tle888qk_Out21BriCfg_Tle888qk_Out21BriCfg
+#  define Rte_Read_Com_SWC_Tle888qk_Out21BriCfg_Tle888qk_Out21BriCfg(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle888qk_Out21BriCfg_oVcuRxCtrlMsg0_oTC37X_VCU_CAN01_f4735e02_Rx, (data)))
+#  define Rte_Read_Tle888qk_Out21_En_Tle888qk_Out21_En Rte_Read_Com_SWC_Tle888qk_Out21_En_Tle888qk_Out21_En
+#  define Rte_Read_Com_SWC_Tle888qk_Out21_En_Tle888qk_Out21_En(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle888qk_Out21_En_oVcuRxCtrlMsg0_oTC37X_VCU_CAN01_fce8b2a9_Rx, (data)))
+#  define Rte_Read_Tle888qk_Out22BriCfg_Tle888qk_Out22BriCfg Rte_Read_Com_SWC_Tle888qk_Out22BriCfg_Tle888qk_Out22BriCfg
+#  define Rte_Read_Com_SWC_Tle888qk_Out22BriCfg_Tle888qk_Out22BriCfg(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle888qk_Out22BriCfg_oVcuRxCtrlMsg0_oTC37X_VCU_CAN01_27e842f9_Rx, (data)))
+#  define Rte_Read_Tle888qk_Out22_En_Tle888qk_Out22_En Rte_Read_Com_SWC_Tle888qk_Out22_En_Tle888qk_Out22_En
+#  define Rte_Read_Com_SWC_Tle888qk_Out22_En_Tle888qk_Out22_En(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle888qk_Out22_En_oVcuRxCtrlMsg0_oTC37X_VCU_CAN01_9808c957_Rx, (data)))
+#  define Rte_Read_Tle888qk_Out23BriCfg_Tle888qk_Out23BriCfg Rte_Read_Com_SWC_Tle888qk_Out23BriCfg_Tle888qk_Out23BriCfg
+#  define Rte_Read_Com_SWC_Tle888qk_Out23BriCfg_Tle888qk_Out23BriCfg(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle888qk_Out23BriCfg_oVcuRxCtrlMsg0_oTC37X_VCU_CAN01_69614950_Rx, (data)))
+#  define Rte_Read_Tle888qk_Out23_En_Tle888qk_Out23_En Rte_Read_Com_SWC_Tle888qk_Out23_En_Tle888qk_Out23_En
+#  define Rte_Read_Com_SWC_Tle888qk_Out23_En_Tle888qk_Out23_En(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle888qk_Out23_En_oVcuRxCtrlMsg0_oTC37X_VCU_CAN01_0d781dc2_Rx, (data)))
+#  define Rte_Read_Tle888qk_Out24BriCfg_Tle888qk_Out24BriCfg Rte_Read_Com_SWC_Tle888qk_Out24BriCfg_Tle888qk_Out24BriCfg
+#  define Rte_Read_Com_SWC_Tle888qk_Out24BriCfg_Tle888qk_Out24BriCfg(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle888qk_Out24BriCfg_oVcuRxCtrlMsg0_oTC37X_VCU_CAN01_5baf7d4e_Rx, (data)))
+#  define Rte_Read_Tle888qk_Out24_En_Tle888qk_Out24_En Rte_Read_Com_SWC_Tle888qk_Out24_En_Tle888qk_Out24_En
+#  define Rte_Read_Com_SWC_Tle888qk_Out24_En_Tle888qk_Out24_En(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle888qk_Out24_En_oVcuRxCtrlMsg0_oTC37X_VCU_CAN01_51c83eab_Rx, (data)))
+#  define Rte_Read_Tle9201_Dir_Tle9201_Dir Rte_Read_Com_SWC_Tle9201_Dir_Tle9201_Dir
+#  define Rte_Read_Com_SWC_Tle9201_Dir_Tle9201_Dir(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle9201_Dir_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01_4c38edaa_Rx, (data)))
+#  define Rte_Read_Tle9201_Dis_Tle9201_Dis Rte_Read_Com_SWC_Tle9201_Dis_Tle9201_Dis
+#  define Rte_Read_Com_SWC_Tle9201_Dis_Tle9201_Dis(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle9201_Dis_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01_7aca7d59_Rx, (data)))
+#  define Rte_Read_Tle9201_Pwm_Tle9201_Pwm Rte_Read_Com_SWC_Tle9201_Pwm_Tle9201_Pwm
+#  define Rte_Read_Com_SWC_Tle9201_Pwm_Tle9201_Pwm(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle9201_Pwm_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01_bf73fa17_Rx, (data)))
 #  define Rte_Read_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0 Rte_Read_Com_SWC_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0
 #  define Rte_Read_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1 Rte_Read_Com_SWC_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1
 #  define Rte_Read_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2 Rte_Read_Com_SWC_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2
@@ -384,12 +439,16 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
 # ifndef RTE_CORE
 #  define RTE_RUNNABLE_Com_Runnable_2ms Com_Runnable_2ms
 #  define RTE_RUNNABLE_Com_Runnable_500ms Com_Runnable_500ms
+#  define RTE_RUNNABLE_Rte_Msg10Eh_Rx_Notification Rte_Msg10Eh_Rx_Notification
+#  define RTE_RUNNABLE_Rte_Msg10Fh_Rx_Notification Rte_Msg10Fh_Rx_Notification
 #  define RTE_RUNNABLE_Rte_Msg200h_Rx_Notification Rte_Msg200h_Rx_Notification
 #  define RTE_RUNNABLE_Rte_Msg201h_Rx_Notification Rte_Msg201h_Rx_Notification
 # endif
 
 FUNC(void, Com_SWC_CODE) Com_Runnable_2ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Com_SWC_CODE) Com_Runnable_500ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
+FUNC(void, Com_SWC_CODE) Rte_Msg10Eh_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
+FUNC(void, Com_SWC_CODE) Rte_Msg10Fh_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Com_SWC_CODE) Rte_Msg200h_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Com_SWC_CODE) Rte_Msg201h_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 

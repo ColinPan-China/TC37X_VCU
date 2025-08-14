@@ -3028,6 +3028,26 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmEcuReset_DcmEcuReset(Dcm_EcuRes
  * COM-Callbacks for DataReceivedEvent triggered runnables, inter-ECU client/server communication, for queued com. and for Rx timeout / Rx inv. flag (reset)
  *********************************************************************************************************************/
 
+FUNC(void, RTE_CODE) Rte_COMCbk_Bts7xx_HS1_En_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01_d0692a3c_Rx(void)
+{
+
+  if (Rte_InitState == RTE_STATE_INIT)
+  {
+    /* scheduled trigger for runnables: Rte_Msg10Fh_Rx_Notification */
+    (void)SetEvent(AswTask, Rte_Ev_Run_Com_SWC_Rte_Msg10Fh_Rx_Notification); /* PRQA S 3417 */ /* MD_Rte_Os */
+  }
+} /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
+
+FUNC(void, RTE_CODE) Rte_COMCbk_Tle888qk_Out21_En_oVcuRxCtrlMsg0_oTC37X_VCU_CAN01_fce8b2a9_Rx(void)
+{
+
+  if (Rte_InitState == RTE_STATE_INIT)
+  {
+    /* scheduled trigger for runnables: Rte_Msg10Eh_Rx_Notification */
+    (void)SetEvent(AswTask, Rte_Ev_Run_Com_SWC_Rte_Msg10Eh_Rx_Notification); /* PRQA S 3417 */ /* MD_Rte_Os */
+  }
+} /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
+
 FUNC(void, RTE_CODE) Rte_COMCbk_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx(void)
 {
 
@@ -3338,9 +3358,9 @@ TASK(AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 
   for(;;)
   {
-    (void)WaitEvent(Rte_Ev_Cyclic_AswTask_0_10ms | Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Com_Runnable_500ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)WaitEvent(Rte_Ev_Cyclic_AswTask_0_10ms | Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Com_Runnable_500ms | Rte_Ev_Run_Com_SWC_Rte_Msg10Eh_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg10Fh_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)GetEvent(AswTask, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Cyclic_AswTask_0_10ms | Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Com_Runnable_500ms | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Cyclic_AswTask_0_10ms | Rte_Ev_Run_Com_SWC_Com_Runnable_2ms | Rte_Ev_Run_Com_SWC_Com_Runnable_500ms | Rte_Ev_Run_Com_SWC_Rte_Msg10Eh_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg10Fh_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification | Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable | Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable | Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     if ((ev & Rte_Ev_Cyclic_AswTask_0_10ms) != (EventMaskType)0)
     {
@@ -3403,6 +3423,18 @@ TASK(AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
     {
       /* call runnable */
       Com_Runnable_500ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Run_Com_SWC_Rte_Msg10Eh_Rx_Notification) != (EventMaskType)0)
+    {
+      /* call runnable */
+      Rte_Msg10Eh_Rx_Notification(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Run_Com_SWC_Rte_Msg10Fh_Rx_Notification) != (EventMaskType)0)
+    {
+      /* call runnable */
+      Rte_Msg10Fh_Rx_Notification(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

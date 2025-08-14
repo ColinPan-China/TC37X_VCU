@@ -48,6 +48,26 @@ BO_ 514 VcuRxMsg3: 8 GWM
  SG_ VcuRxMsg3_Sig1 : 16|16@1- (1,0) [0|0] ""  VCU
  SG_ VcuRxMsg3_Sig0 : 0|16@1- (1,0) [0|0] ""  VCU
 
+BO_ 271 VcuRxCtrlMsg1: 8 GWM
+ SG_ Bts7xx_HS4_En : 56|8@1- (1,0) [0|0] ""  VCU
+ SG_ Bts7xx_HS3_En : 48|8@1- (1,0) [0|0] ""  VCU
+ SG_ Bts7xx_HS2_En : 40|8@1- (1,0) [0|0] ""  VCU
+ SG_ Bts7xx_HS1_En : 32|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle9201_Dir : 24|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle9201_Pwm : 16|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle9201_Dis : 8|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle4252d_en : 0|8@1- (1,0) [0|0] ""  VCU
+ 
+BO_ 270 VcuRxCtrlMsg0: 8 GWM
+ SG_ Tle888qk_Out24BriCfg : 56|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle888qk_Out23BriCfg : 48|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle888qk_Out22BriCfg : 40|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle888qk_Out21BriCfg : 32|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle888qk_Out24_En : 24|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle888qk_Out23_En : 16|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle888qk_Out22_En : 8|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle888qk_Out21_En : 0|8@1- (1,0) [0|0] ""  VCU
+ 
 BO_ 269 VcuAdcTxG8Msg3: 8 VCU
  SG_ AN47 : 48|16@1- (1,0) [0|0] "mV"  GWM
  SG_ AN46 : 32|16@1- (1,0) [0|0] "mV"  GWM
@@ -258,4 +278,7 @@ BA_ "VFrameFormat" BO_ 1308 0;
 BA_ "GenMsgCycleTime" BO_ 1308 500;
 BA_ "NmAsrMessage" BO_ 1308 1;
 BA_ "NmMessage" BO_ 1308 1;
-
+BA_ "GenMsgCycleTime" BO_ 270 500;
+BA_ "VFrameFormat" BO_ 270 0;
+BA_ "GenMsgCycleTime" BO_ 271 500;
+BA_ "VFrameFormat" BO_ 271 0;

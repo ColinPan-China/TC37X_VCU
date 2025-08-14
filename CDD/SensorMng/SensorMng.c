@@ -13,37 +13,6 @@
 
 typedef struct
 {
-    uint8 Tle888qk_Out21_En;     /*IO*/
-    uint8 Tle888qk_Out22_En;     /*IO*/
-    uint8 Tle888qk_Out23_En;     /*IO*/
-    uint8 Tle888qk_Out24_En;     /*IO*/
-
-    uint8 Tle888qk_Lout01_En;   /*IO*/
-
-    uint8 Tle888qk_Lout08_En;   /*SPI*/
-    uint8 Tle888qk_Lout14_En;   /*SPI*/
-    uint8 Tle888qk_Lout16_En;   /*SPI*/
-
-    uint8 Bts7xx_HS1_En;        /*IO*/
-    uint8 Bts7xx_HS2_En;        /*IO*/
-    uint8 Bts7xx_HS3_En;        /*IO*/
-    uint8 Bts7xx_HS4_En;        /*IO*/
-
-    uint8 Tle9201_Dir;          /*IO*/
-    uint8 Tle9201_Pwm;          /*IO*/    
-    uint8 Tle9201_Dis;          /*IO*/
-
-    uint8 Tle4252d_en;          /*IO*/
-
-    uint8 Tle888qk_Out21BriCfg;          /*SPI*/
-    uint8 Tle888qk_Out22BriCfg;          /*SPI*/
-    uint8 Tle888qk_Out23BriCfg;          /*SPI*/
-    uint8 Tle888qk_Out24BriCfg;          /*SPI*/
-
-}SensorMngCtrlType;
-
-typedef struct
-{
     Dio_ChannelType DioChannel;
     uint8*          DioVal;
 }SensorMngIoType;
@@ -79,6 +48,9 @@ volatile SensorMngIoType SensorMngIoTbl[] =
 uint8 bridgeCfg     = 0;
 uint8 bridgeCfg_old = 0;
 
+uint8 LowOut14_16Cfg     = 0;
+uint8 LowOut14_16Cfg_old = 0;
+
 uint8 Ext_D_In2;
 
 void SensorMngMain()
@@ -100,6 +72,28 @@ void SensorMngMain()
         TLE8888qk_SpiTransmit(CMD_BRICONFIG(0,bridgeCfg), NULL_PTR);
         bridgeCfg_old = bridgeCfg;
     }
+
+    if( SensorMngCtrlVal.Tle888qk_Lout08_En != 0 )
+    {
+        TLE8888qk_SpiTransmit(CMD_CONT(0,0x80), NULL_PTR);
+    }
+    else
+    {
+        TLE8888qk_SpiTransmit(CMD_CONT(0,0x00), NULL_PTR);
+    }
+
+    LowOut14_16Cfg = ( (SensorMngCtrlVal.Tle888qk_Lout14_En != 0) ? ( 1<<5 ) : ( 0 ) )
+                   + ( (SensorMngCtrlVal.Tle888qk_Lout16_En != 0) ? ( 1<<7 ) : ( 0 ) );
+
+    if( LowOut14_16Cfg != LowOut14_16Cfg_old )
+    {
+        TLE8888qk_SpiTransmit(CMD_CONT(1,LowOut14_16Cfg), NULL_PTR);
+        LowOut14_16Cfg_old = LowOut14_16Cfg;
+    }
+    else
+    {
+        TLE8888qk_SpiTransmit(CMD_CONT(1,LowOut14_16Cfg), NULL_PTR);
+    }               
 
     Ext_D_In2 =  Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_0_EXT_D_IN2);
     if( Ext_D_In2 == 0 )

@@ -183,6 +183,18 @@ typedef sint16 AN8;
 # define Rte_TypeDef_AN9
 typedef sint16 AN9;
 
+# define Rte_TypeDef_Bts7xx_HS1_En
+typedef sint8 Bts7xx_HS1_En;
+
+# define Rte_TypeDef_Bts7xx_HS2_En
+typedef sint8 Bts7xx_HS2_En;
+
+# define Rte_TypeDef_Bts7xx_HS3_En
+typedef sint8 Bts7xx_HS3_En;
+
+# define Rte_TypeDef_Bts7xx_HS4_En
+typedef sint8 Bts7xx_HS4_En;
+
 # define Rte_TypeDef_ECC_PMP2_SpdSet
 typedef uint8 ECC_PMP2_SpdSet;
 
@@ -284,6 +296,42 @@ typedef sint16 EXT_A_IN8;
 
 # define Rte_TypeDef_EXT_A_IN9
 typedef sint16 EXT_A_IN9;
+
+# define Rte_TypeDef_Tle4252d_en
+typedef sint8 Tle4252d_en;
+
+# define Rte_TypeDef_Tle888qk_Out21BriCfg
+typedef sint8 Tle888qk_Out21BriCfg;
+
+# define Rte_TypeDef_Tle888qk_Out21_En
+typedef sint8 Tle888qk_Out21_En;
+
+# define Rte_TypeDef_Tle888qk_Out22BriCfg
+typedef sint8 Tle888qk_Out22BriCfg;
+
+# define Rte_TypeDef_Tle888qk_Out22_En
+typedef sint8 Tle888qk_Out22_En;
+
+# define Rte_TypeDef_Tle888qk_Out23BriCfg
+typedef sint8 Tle888qk_Out23BriCfg;
+
+# define Rte_TypeDef_Tle888qk_Out23_En
+typedef sint8 Tle888qk_Out23_En;
+
+# define Rte_TypeDef_Tle888qk_Out24BriCfg
+typedef sint8 Tle888qk_Out24BriCfg;
+
+# define Rte_TypeDef_Tle888qk_Out24_En
+typedef sint8 Tle888qk_Out24_En;
+
+# define Rte_TypeDef_Tle9201_Dir
+typedef sint8 Tle9201_Dir;
+
+# define Rte_TypeDef_Tle9201_Dis
+typedef sint8 Tle9201_Dis;
+
+# define Rte_TypeDef_Tle9201_Pwm
+typedef sint8 Tle9201_Pwm;
 
 # define Rte_TypeDef_VcuRxMsg1_Sig0
 typedef sint16 VcuRxMsg1_Sig0;
