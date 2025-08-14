@@ -144,7 +144,16 @@ extern "C"
 #  define Rte_InitValue_EXT_A_IN7_EXT_A_IN7 (0)
 #  define Rte_InitValue_EXT_A_IN8_EXT_A_IN8 (0)
 #  define Rte_InitValue_EXT_A_IN9_EXT_A_IN9 (0)
+#  define Rte_InitValue_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty (0)
+#  define Rte_InitValue_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period (0)
+#  define Rte_InitValue_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty (0)
+#  define Rte_InitValue_EXT_PWM_IN2_Period_EXT_PWM_IN2_Period (0)
+#  define Rte_InitValue_Ext_IN2_Ext_IN2 (0)
 #  define Rte_InitValue_Tle4252d_en_Tle4252d_en (0)
+#  define Rte_InitValue_Tle888qk_Lout14_En_Tle888qk_Lout14_En (0)
+#  define Rte_InitValue_Tle888qk_Lout16_En_Tle888qk_Lout16_En (0)
+#  define Rte_InitValue_Tle888qk_Lout1_En_Tle888qk_Lout1_En (0)
+#  define Rte_InitValue_Tle888qk_Lout8_En_Tle888qk_Lout8_En (0)
 #  define Rte_InitValue_Tle888qk_Out21BriCfg_Tle888qk_Out21BriCfg (0)
 #  define Rte_InitValue_Tle888qk_Out21_En_Tle888qk_Out21_En (0)
 #  define Rte_InitValue_Tle888qk_Out22BriCfg_Tle888qk_Out22BriCfg (0)
@@ -271,6 +280,11 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN6_EXT_A_IN6(EXT_A_IN6 d
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN7_EXT_A_IN7(EXT_A_IN7 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN8_EXT_A_IN8(EXT_A_IN8 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_A_IN9_EXT_A_IN9(EXT_A_IN9 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty(EXT_PWM_IN1_Duty data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period(EXT_PWM_IN1_Period data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty(EXT_PWM_IN2_Duty data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_PWM_IN2_Period_EXT_PWM_IN2_Period(EXT_PWM_IN2_Period data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_Ext_IN2_Ext_IN2(Ext_IN2 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0(VcuTxMsg1_Sig0 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1(VcuTxMsg1_Sig1 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2(VcuTxMsg1_Sig2 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
@@ -299,6 +313,14 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
 #  define Rte_Read_Com_SWC_Bts7xx_HS4_En_Bts7xx_HS4_En(data) (Com_ReceiveSignal(ComConf_ComSignal_Bts7xx_HS4_En_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01_7d49a63e_Rx, (data)))
 #  define Rte_Read_Tle4252d_en_Tle4252d_en Rte_Read_Com_SWC_Tle4252d_en_Tle4252d_en
 #  define Rte_Read_Com_SWC_Tle4252d_en_Tle4252d_en(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle4252d_en_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01_24c739a8_Rx, (data)))
+#  define Rte_Read_Tle888qk_Lout14_En_Tle888qk_Lout14_En Rte_Read_Com_SWC_Tle888qk_Lout14_En_Tle888qk_Lout14_En
+#  define Rte_Read_Com_SWC_Tle888qk_Lout14_En_Tle888qk_Lout14_En(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle888qk_Lout14_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01_a11e1e88_Rx, (data)))
+#  define Rte_Read_Tle888qk_Lout16_En_Tle888qk_Lout16_En Rte_Read_Com_SWC_Tle888qk_Lout16_En_Tle888qk_Lout16_En
+#  define Rte_Read_Com_SWC_Tle888qk_Lout16_En_Tle888qk_Lout16_En(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle888qk_Lout16_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01_508eb1e3_Rx, (data)))
+#  define Rte_Read_Tle888qk_Lout1_En_Tle888qk_Lout1_En Rte_Read_Com_SWC_Tle888qk_Lout1_En_Tle888qk_Lout1_En
+#  define Rte_Read_Com_SWC_Tle888qk_Lout1_En_Tle888qk_Lout1_En(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle888qk_Lout1_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01_0e3571fa_Rx, (data)))
+#  define Rte_Read_Tle888qk_Lout8_En_Tle888qk_Lout8_En Rte_Read_Com_SWC_Tle888qk_Lout8_En_Tle888qk_Lout8_En
+#  define Rte_Read_Com_SWC_Tle888qk_Lout8_En_Tle888qk_Lout8_En(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle888qk_Lout8_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01_ebe51441_Rx, (data)))
 #  define Rte_Read_Tle888qk_Out21BriCfg_Tle888qk_Out21BriCfg Rte_Read_Com_SWC_Tle888qk_Out21BriCfg_Tle888qk_Out21BriCfg
 #  define Rte_Read_Com_SWC_Tle888qk_Out21BriCfg_Tle888qk_Out21BriCfg(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle888qk_Out21BriCfg_oVcuRxCtrlMsg0_oTC37X_VCU_CAN01_f4735e02_Rx, (data)))
 #  define Rte_Read_Tle888qk_Out21_En_Tle888qk_Out21_En Rte_Read_Com_SWC_Tle888qk_Out21_En_Tle888qk_Out21_En
@@ -416,6 +438,11 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
 #  define Rte_Write_EXT_A_IN7_EXT_A_IN7 Rte_Write_Com_SWC_EXT_A_IN7_EXT_A_IN7
 #  define Rte_Write_EXT_A_IN8_EXT_A_IN8 Rte_Write_Com_SWC_EXT_A_IN8_EXT_A_IN8
 #  define Rte_Write_EXT_A_IN9_EXT_A_IN9 Rte_Write_Com_SWC_EXT_A_IN9_EXT_A_IN9
+#  define Rte_Write_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty Rte_Write_Com_SWC_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty
+#  define Rte_Write_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period Rte_Write_Com_SWC_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period
+#  define Rte_Write_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty Rte_Write_Com_SWC_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty
+#  define Rte_Write_EXT_PWM_IN2_Period_EXT_PWM_IN2_Period Rte_Write_Com_SWC_EXT_PWM_IN2_Period_EXT_PWM_IN2_Period
+#  define Rte_Write_Ext_IN2_Ext_IN2 Rte_Write_Com_SWC_Ext_IN2_Ext_IN2
 #  define Rte_Write_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0 Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0
 #  define Rte_Write_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1 Rte_Write_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1
 #  define Rte_Write_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2 Rte_Write_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2
@@ -441,6 +468,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(V
 #  define RTE_RUNNABLE_Com_Runnable_500ms Com_Runnable_500ms
 #  define RTE_RUNNABLE_Rte_Msg10Eh_Rx_Notification Rte_Msg10Eh_Rx_Notification
 #  define RTE_RUNNABLE_Rte_Msg10Fh_Rx_Notification Rte_Msg10Fh_Rx_Notification
+#  define RTE_RUNNABLE_Rte_Msg110h_Rx_Notification Rte_Msg110h_Rx_Notification
 #  define RTE_RUNNABLE_Rte_Msg200h_Rx_Notification Rte_Msg200h_Rx_Notification
 #  define RTE_RUNNABLE_Rte_Msg201h_Rx_Notification Rte_Msg201h_Rx_Notification
 # endif
@@ -449,6 +477,7 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_2ms(void); /* PRQA S 3451, 0786, 3449 */ /
 FUNC(void, Com_SWC_CODE) Com_Runnable_500ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Com_SWC_CODE) Rte_Msg10Eh_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Com_SWC_CODE) Rte_Msg10Fh_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
+FUNC(void, Com_SWC_CODE) Rte_Msg110h_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Com_SWC_CODE) Rte_Msg200h_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Com_SWC_CODE) Rte_Msg201h_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 

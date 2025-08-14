@@ -48,6 +48,19 @@ BO_ 514 VcuRxMsg3: 8 GWM
  SG_ VcuRxMsg3_Sig1 : 16|16@1- (1,0) [0|0] ""  VCU
  SG_ VcuRxMsg3_Sig0 : 0|16@1- (1,0) [0|0] ""  VCU
 
+BO_ 273 VcuMeasurementMsg0: 8 VCU
+ SG_ Ext_IN2 : 48|8@1- (1,0) [0|0] ""  GWM
+ SG_ EXT_PWM_IN2_Duty : 40|8@1- (1,0) [0|0] "%"  GWM
+ SG_ EXT_PWM_IN2_Period : 24|16@1- (1,0) [0|0] "ms"  GWM
+ SG_ EXT_PWM_IN1_Duty : 16|8@1- (1,0) [0|0] "%"  GWM
+ SG_ EXT_PWM_IN1_Period : 0|16@1- (1,0) [0|0] "ms"  GWM
+ 
+BO_ 272 VcuRxCtrlMsg2: 8 GW
+ SG_ Tle888qk_Lout16_En : 24|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle888qk_Lout14_En : 16|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle888qk_Lout8_En : 8|8@1- (1,0) [0|0] ""  VCU
+ SG_ Tle888qk_Lout1_En : 0|8@1- (1,0) [0|0] ""  VCU
+ 
 BO_ 271 VcuRxCtrlMsg1: 8 GWM
  SG_ Bts7xx_HS4_En : 56|8@1- (1,0) [0|0] ""  VCU
  SG_ Bts7xx_HS3_En : 48|8@1- (1,0) [0|0] ""  VCU
@@ -282,3 +295,7 @@ BA_ "GenMsgCycleTime" BO_ 270 500;
 BA_ "VFrameFormat" BO_ 270 0;
 BA_ "GenMsgCycleTime" BO_ 271 500;
 BA_ "VFrameFormat" BO_ 271 0;
+BA_ "GenMsgCycleTime" BO_ 272 500;
+BA_ "VFrameFormat" BO_ 272 0;
+BA_ "GenMsgCycleTime" BO_ 273 500;
+BA_ "VFrameFormat" BO_ 273 0;

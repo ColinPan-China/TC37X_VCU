@@ -76,7 +76,7 @@
  *********************************************************************************************************************/
 Icu_17_TimerIp_DutyCycleType ICU_Val1;
 Icu_17_TimerIp_DutyCycleType ICU_Val2;
-uint8 MessureFlg = 0;
+uint16 MessureFlg = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -149,11 +149,15 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
 
   /*ICU Measurement*/
   MessureFlg++;
-  if(MessureFlg >= 50 )
+  if(MessureFlg >= 100 )
   {
     MessureFlg = 0;
     Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_2, &ICU_Val1);
     Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_4, &ICU_Val2);
+    if( ICU_Val2.PeriodTime == 0 && ICU_Val1.PeriodTime == 0 )
+    {
+      NOP();
+    }
   }
   #if 0
   /*TLE9210*/
@@ -197,6 +201,23 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
     }
   }
 #endif
+
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, sts_SV );
+  TIMER++;
+  if( TIMER >= 10 )
+  {
+    TIMER = 0;
+    if( sts_SV == 0 )
+    {
+      sts_SV = 1;
+    }
+    else
+    {
+      sts_SV = 0;
+    }
+  }
+
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

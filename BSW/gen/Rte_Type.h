@@ -297,8 +297,35 @@ typedef sint16 EXT_A_IN8;
 # define Rte_TypeDef_EXT_A_IN9
 typedef sint16 EXT_A_IN9;
 
+# define Rte_TypeDef_EXT_PWM_IN1_Duty
+typedef sint8 EXT_PWM_IN1_Duty;
+
+# define Rte_TypeDef_EXT_PWM_IN1_Period
+typedef sint16 EXT_PWM_IN1_Period;
+
+# define Rte_TypeDef_EXT_PWM_IN2_Duty
+typedef sint8 EXT_PWM_IN2_Duty;
+
+# define Rte_TypeDef_EXT_PWM_IN2_Period
+typedef sint16 EXT_PWM_IN2_Period;
+
+# define Rte_TypeDef_Ext_IN2
+typedef sint8 Ext_IN2;
+
 # define Rte_TypeDef_Tle4252d_en
 typedef sint8 Tle4252d_en;
+
+# define Rte_TypeDef_Tle888qk_Lout14_En
+typedef sint8 Tle888qk_Lout14_En;
+
+# define Rte_TypeDef_Tle888qk_Lout16_En
+typedef sint8 Tle888qk_Lout16_En;
+
+# define Rte_TypeDef_Tle888qk_Lout1_En
+typedef sint8 Tle888qk_Lout1_En;
+
+# define Rte_TypeDef_Tle888qk_Lout8_En
+typedef sint8 Tle888qk_Lout8_En;
 
 # define Rte_TypeDef_Tle888qk_Out21BriCfg
 typedef sint8 Tle888qk_Out21BriCfg;

@@ -29,7 +29,7 @@ volatile SensorMngIoType SensorMngIoTbl[] =
     { DioConf_DioChannel_DioChannel_P2_11_IN1,          &SensorMngCtrlVal.Tle888qk_Lout01_En } ,
  
     { DioConf_DioChannel_DioChannel_P00_7_IN0,          &SensorMngCtrlVal.Bts7xx_HS1_En      },
-    { DioConf_DioChannel_DioChannel_P00_8_IN1,          &SensorMngCtrlVal.Bts7xx_HS2_En      },
+//    { DioConf_DioChannel_DioChannel_P00_8_IN1,          &SensorMngCtrlVal.Bts7xx_HS2_En      },
     { DioConf_DioChannel_DioChannel_P00_9_IN2,          &SensorMngCtrlVal.Bts7xx_HS3_En      },
     { DioConf_DioChannel_DioChannel_P00_10_IN3,         &SensorMngCtrlVal.Bts7xx_HS4_En      },
  

@@ -284,10 +284,16 @@
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuCan12TxMsg2_oTC37X_VCU_CAN12</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuRxCtrlMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuRxCtrlMsg1_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuRxCtrlMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
@@ -611,10 +617,16 @@
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuCan12TxMsg2_oTC37X_VCU_CAN12</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxCtrlMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxCtrlMsg1_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxCtrlMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
@@ -1229,6 +1241,21 @@
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN9_oVcuTxIoMsg5_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Ext_IN2_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN1_Duty_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN1_Period_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN2_Duty_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN2_Period_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT1_Valid_oVcuTxIoMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
@@ -1827,6 +1854,18 @@
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tle4252d_en_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout1_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout14_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout16_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+            </FIBEX-ELEMENT-REF-CONDITIONAL>
+            <FIBEX-ELEMENT-REF-CONDITIONAL>
+              <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout8_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
             </FIBEX-ELEMENT-REF-CONDITIONAL>
             <FIBEX-ELEMENT-REF-CONDITIONAL>
               <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Out21_En_oVcuRxCtrlMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
@@ -2628,6 +2667,18 @@
               <NM-CHANNEL-ID>1</NM-CHANNEL-ID>
               <NM-NODES>
                 <CAN-NM-NODE>
+                  <SHORT-NAME>GW</SHORT-NAME>
+                  <NM-IF-ECU-REF DEST="NM-ECU">/NM/NmConfig/GW_CAN</NM-IF-ECU-REF>
+                  <NM-NODE-ID>28</NM-NODE-ID>
+                  <NM-PASSIVE-MODE-ENABLED>true</NM-PASSIVE-MODE-ENABLED>
+                  <NM-MSG-CYCLE-OFFSET>0</NM-MSG-CYCLE-OFFSET>
+                  <NM-MSG-REDUCED-TIME>0.32</NM-MSG-REDUCED-TIME>
+                  <NM-RANGE-CONFIG>
+                    <LOWER-CAN-ID>1024</LOWER-CAN-ID>
+                    <UPPER-CAN-ID>1151</UPPER-CAN-ID>
+                  </NM-RANGE-CONFIG>
+                </CAN-NM-NODE>
+                <CAN-NM-NODE>
                   <SHORT-NAME>GWM</SHORT-NAME>
                   <NM-IF-ECU-REF DEST="NM-ECU">/NM/NmConfig/GWM_CAN</NM-IF-ECU-REF>
                   <NM-NODE-ID>28</NM-NODE-ID>
@@ -2849,6 +2900,15 @@
             </NM-ECU>
             <NM-ECU>
               <SHORT-NAME>EPS_CAN</SHORT-NAME>
+              <BUS-SPECIFIC-NM-ECU>
+                <CAN-NM-ECU/>
+              </BUS-SPECIFIC-NM-ECU>
+              <NM-NODE-ID-ENABLED>true</NM-NODE-ID-ENABLED>
+              <NM-PASSIVE-MODE-ENABLED>true</NM-PASSIVE-MODE-ENABLED>
+              <NM-USER-DATA-ENABLED>true</NM-USER-DATA-ENABLED>
+            </NM-ECU>
+            <NM-ECU>
+              <SHORT-NAME>GW_CAN</SHORT-NAME>
               <BUS-SPECIFIC-NM-ECU>
                 <CAN-NM-ECU/>
               </BUS-SPECIFIC-NM-ECU>
@@ -8431,6 +8491,20 @@ Revision:</L-2>
                       <IDENTIFIER>269</IDENTIFIER>
                     </CAN-FRAME-TRIGGERING>
                     <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_VcuMeasurementMsg0</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/FP_VcuMeasurementMsg0_Tx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/VcuMeasurementMsg0_oTC37X_VCU_CAN01</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/TC37X_VCU_CAN01/CHNL/PT_VcuMeasurementMsg0</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>273</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
                       <SHORT-NAME>FT_VcuRxCtrlMsg0</SHORT-NAME>
                       <FRAME-PORT-REFS>
                         <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/FP_VcuRxCtrlMsg0_Rx</FRAME-PORT-REF>
@@ -8457,6 +8531,20 @@ Revision:</L-2>
                       </PDU-TRIGGERINGS>
                       <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
                       <IDENTIFIER>271</IDENTIFIER>
+                    </CAN-FRAME-TRIGGERING>
+                    <CAN-FRAME-TRIGGERING>
+                      <SHORT-NAME>FT_VcuRxCtrlMsg2</SHORT-NAME>
+                      <FRAME-PORT-REFS>
+                        <FRAME-PORT-REF DEST="FRAME-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/FP_VcuRxCtrlMsg2_Rx</FRAME-PORT-REF>
+                      </FRAME-PORT-REFS>
+                      <FRAME-REF DEST="CAN-FRAME">/CanFrame/VcuRxCtrlMsg2_oTC37X_VCU_CAN01</FRAME-REF>
+                      <PDU-TRIGGERINGS>
+                        <PDU-TRIGGERING-REF-CONDITIONAL>
+                          <PDU-TRIGGERING-REF DEST="PDU-TRIGGERING">/Cluster/TC37X_VCU_CAN01/CHNL/PT_VcuRxCtrlMsg2</PDU-TRIGGERING-REF>
+                        </PDU-TRIGGERING-REF-CONDITIONAL>
+                      </PDU-TRIGGERINGS>
+                      <CAN-ADDRESSING-MODE>STANDARD</CAN-ADDRESSING-MODE>
+                      <IDENTIFIER>272</IDENTIFIER>
                     </CAN-FRAME-TRIGGERING>
                     <CAN-FRAME-TRIGGERING>
                       <SHORT-NAME>FT_VcuRxMsg3</SHORT-NAME>
@@ -8853,11 +8941,74 @@ Revision:</L-2>
                       <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Bts7xx_HS4_En_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01</I-SIGNAL-REF>
                     </I-SIGNAL-TRIGGERING>
                     <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_Ext_IN2_oVcuMeasurementMsg0</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/SP_Ext_IN2_oVcuMeasurementMsg0_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Ext_IN2_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_EXT_PWM_IN1_Duty_oVcuMeasurementMsg0</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/SP_EXT_PWM_IN1_Duty_oVcuMeasurementMsg0_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN1_Duty_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_EXT_PWM_IN1_Period_oVcuMeasurementMsg0</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/SP_EXT_PWM_IN1_Period_oVcuMeasurementMsg0_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN1_Period_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_EXT_PWM_IN2_Duty_oVcuMeasurementMsg0</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/SP_EXT_PWM_IN2_Duty_oVcuMeasurementMsg0_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN2_Duty_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_EXT_PWM_IN2_Period_oVcuMeasurementMsg0</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/SP_EXT_PWM_IN2_Period_oVcuMeasurementMsg0_Tx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN2_Period_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
                       <SHORT-NAME>ST_Tle4252d_en_oVcuRxCtrlMsg1</SHORT-NAME>
                       <I-SIGNAL-PORT-REFS>
                         <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/SP_Tle4252d_en_oVcuRxCtrlMsg1_Rx</I-SIGNAL-PORT-REF>
                       </I-SIGNAL-PORT-REFS>
                       <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Tle4252d_en_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_Tle888qk_Lout1_En_oVcuRxCtrlMsg2</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/SP_Tle888qk_Lout1_En_oVcuRxCtrlMsg2_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout1_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_Tle888qk_Lout14_En_oVcuRxCtrlMsg2</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/SP_Tle888qk_Lout14_En_oVcuRxCtrlMsg2_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout14_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_Tle888qk_Lout16_En_oVcuRxCtrlMsg2</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/SP_Tle888qk_Lout16_En_oVcuRxCtrlMsg2_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout16_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+                    </I-SIGNAL-TRIGGERING>
+                    <I-SIGNAL-TRIGGERING>
+                      <SHORT-NAME>ST_Tle888qk_Lout8_En_oVcuRxCtrlMsg2</SHORT-NAME>
+                      <I-SIGNAL-PORT-REFS>
+                        <I-SIGNAL-PORT-REF DEST="I-SIGNAL-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/SP_Tle888qk_Lout8_En_oVcuRxCtrlMsg2_Rx</I-SIGNAL-PORT-REF>
+                      </I-SIGNAL-PORT-REFS>
+                      <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout8_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</I-SIGNAL-REF>
                     </I-SIGNAL-TRIGGERING>
                     <I-SIGNAL-TRIGGERING>
                       <SHORT-NAME>ST_Tle888qk_Out21_En_oVcuRxCtrlMsg0</SHORT-NAME>
@@ -9247,6 +9398,30 @@ Revision:</L-2>
                       </I-SIGNAL-TRIGGERINGS>
                     </PDU-TRIGGERING>
                     <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_VcuMeasurementMsg0</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/PP_VcuMeasurementMsg0_Tx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuMeasurementMsg0_oTC37X_VCU_CAN01</I-PDU-REF>
+                      <I-SIGNAL-TRIGGERINGS>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN01/CHNL/ST_Ext_IN2_oVcuMeasurementMsg0</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN01/CHNL/ST_EXT_PWM_IN1_Duty_oVcuMeasurementMsg0</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN01/CHNL/ST_EXT_PWM_IN1_Period_oVcuMeasurementMsg0</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN01/CHNL/ST_EXT_PWM_IN2_Duty_oVcuMeasurementMsg0</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN01/CHNL/ST_EXT_PWM_IN2_Period_oVcuMeasurementMsg0</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                      </I-SIGNAL-TRIGGERINGS>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
                       <SHORT-NAME>PT_VcuRxCtrlMsg0</SHORT-NAME>
                       <I-PDU-PORT-REFS>
                         <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/PP_VcuRxCtrlMsg0_Rx</I-PDU-PORT-REF>
@@ -9309,6 +9484,27 @@ Revision:</L-2>
                         </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
                         <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
                           <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN01/CHNL/ST_Tle9201_Pwm_oVcuRxCtrlMsg1</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                      </I-SIGNAL-TRIGGERINGS>
+                    </PDU-TRIGGERING>
+                    <PDU-TRIGGERING>
+                      <SHORT-NAME>PT_VcuRxCtrlMsg2</SHORT-NAME>
+                      <I-PDU-PORT-REFS>
+                        <I-PDU-PORT-REF DEST="I-PDU-PORT">/ECU/VCU/CN_TC37X_VCU_CAN01/PP_VcuRxCtrlMsg2_Rx</I-PDU-PORT-REF>
+                      </I-PDU-PORT-REFS>
+                      <I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxCtrlMsg2_oTC37X_VCU_CAN01</I-PDU-REF>
+                      <I-SIGNAL-TRIGGERINGS>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN01/CHNL/ST_Tle888qk_Lout1_En_oVcuRxCtrlMsg2</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN01/CHNL/ST_Tle888qk_Lout14_En_oVcuRxCtrlMsg2</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN01/CHNL/ST_Tle888qk_Lout16_En_oVcuRxCtrlMsg2</I-SIGNAL-TRIGGERING-REF>
+                        </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                        <I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
+                          <I-SIGNAL-TRIGGERING-REF DEST="I-SIGNAL-TRIGGERING">/Cluster/TC37X_VCU_CAN01/CHNL/ST_Tle888qk_Lout8_En_oVcuRxCtrlMsg2</I-SIGNAL-TRIGGERING-REF>
                         </I-SIGNAL-TRIGGERING-REF-CONDITIONAL>
                       </I-SIGNAL-TRIGGERINGS>
                     </PDU-TRIGGERING>
@@ -13786,11 +13982,19 @@ Revision:</L-2>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
                 <FRAME-PORT>
+                  <SHORT-NAME>FP_VcuMeasurementMsg0_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
                   <SHORT-NAME>FP_VcuRxCtrlMsg0_Rx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
                 <FRAME-PORT>
                   <SHORT-NAME>FP_VcuRxCtrlMsg1_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </FRAME-PORT>
+                <FRAME-PORT>
+                  <SHORT-NAME>FP_VcuRxCtrlMsg2_Rx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </FRAME-PORT>
                 <FRAME-PORT>
@@ -13850,11 +14054,19 @@ Revision:</L-2>
                   <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
                 <I-PDU-PORT>
+                  <SHORT-NAME>PP_VcuMeasurementMsg0_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
                   <SHORT-NAME>PP_VcuRxCtrlMsg0_Rx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
                 <I-PDU-PORT>
                   <SHORT-NAME>PP_VcuRxCtrlMsg1_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                </I-PDU-PORT>
+                <I-PDU-PORT>
+                  <SHORT-NAME>PP_VcuRxCtrlMsg2_Rx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                 </I-PDU-PORT>
                 <I-PDU-PORT>
@@ -14126,7 +14338,52 @@ Revision:</L-2>
                   <TIMEOUT>0</TIMEOUT>
                 </I-SIGNAL-PORT>
                 <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_Ext_IN2_oVcuMeasurementMsg0_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_EXT_PWM_IN1_Duty_oVcuMeasurementMsg0_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_EXT_PWM_IN1_Period_oVcuMeasurementMsg0_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_EXT_PWM_IN2_Duty_oVcuMeasurementMsg0_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_EXT_PWM_IN2_Period_oVcuMeasurementMsg0_Tx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>OUT</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
                   <SHORT-NAME>SP_Tle4252d_en_oVcuRxCtrlMsg1_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_Tle888qk_Lout1_En_oVcuRxCtrlMsg2_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_Tle888qk_Lout14_En_oVcuRxCtrlMsg2_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_Tle888qk_Lout16_En_oVcuRxCtrlMsg2_Rx</SHORT-NAME>
+                  <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
+                  <TIMEOUT>0</TIMEOUT>
+                </I-SIGNAL-PORT>
+                <I-SIGNAL-PORT>
+                  <SHORT-NAME>SP_Tle888qk_Lout8_En_oVcuRxCtrlMsg2_Rx</SHORT-NAME>
                   <COMMUNICATION-DIRECTION>IN</COMMUNICATION-DIRECTION>
                   <TIMEOUT>0</TIMEOUT>
                 </I-SIGNAL-PORT>
@@ -15369,6 +15626,9 @@ Revision:</L-2>
               <I-SIGNAL-I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxCtrlMsg1_oTC37X_VCU_CAN01</I-SIGNAL-I-PDU-REF>
             </I-SIGNAL-I-PDU-REF-CONDITIONAL>
             <I-SIGNAL-I-PDU-REF-CONDITIONAL>
+              <I-SIGNAL-I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxCtrlMsg2_oTC37X_VCU_CAN01</I-SIGNAL-I-PDU-REF>
+            </I-SIGNAL-I-PDU-REF-CONDITIONAL>
+            <I-SIGNAL-I-PDU-REF-CONDITIONAL>
               <I-SIGNAL-I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxMsg3_oTC37X_VCU_CAN01</I-SIGNAL-I-PDU-REF>
             </I-SIGNAL-I-PDU-REF-CONDITIONAL>
             <I-SIGNAL-I-PDU-REF-CONDITIONAL>
@@ -15415,6 +15675,9 @@ Revision:</L-2>
             </I-SIGNAL-I-PDU-REF-CONDITIONAL>
             <I-SIGNAL-I-PDU-REF-CONDITIONAL>
               <I-SIGNAL-I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuAdcTxG8Msg3_oTC37X_VCU_CAN01</I-SIGNAL-I-PDU-REF>
+            </I-SIGNAL-I-PDU-REF-CONDITIONAL>
+            <I-SIGNAL-I-PDU-REF-CONDITIONAL>
+              <I-SIGNAL-I-PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuMeasurementMsg0_oTC37X_VCU_CAN01</I-SIGNAL-I-PDU-REF>
             </I-SIGNAL-I-PDU-REF-CONDITIONAL>
           </I-SIGNAL-I-PDUS>
         </I-SIGNAL-I-PDU-GROUP>
@@ -16240,6 +16503,18 @@ Revision:</L-2>
           </PDU-TO-FRAME-MAPPINGS>
         </CAN-FRAME>
         <CAN-FRAME>
+          <SHORT-NAME>VcuMeasurementMsg0_oTC37X_VCU_CAN01</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>VcuMeasurementMsg0</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuMeasurementMsg0_oTC37X_VCU_CAN01</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
           <SHORT-NAME>VcuRxCtrlMsg0_oTC37X_VCU_CAN01</SHORT-NAME>
           <FRAME-LENGTH>8</FRAME-LENGTH>
           <PDU-TO-FRAME-MAPPINGS>
@@ -16259,6 +16534,18 @@ Revision:</L-2>
               <SHORT-NAME>VcuRxCtrlMsg1</SHORT-NAME>
               <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
               <PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxCtrlMsg1_oTC37X_VCU_CAN01</PDU-REF>
+              <START-POSITION>0</START-POSITION>
+            </PDU-TO-FRAME-MAPPING>
+          </PDU-TO-FRAME-MAPPINGS>
+        </CAN-FRAME>
+        <CAN-FRAME>
+          <SHORT-NAME>VcuRxCtrlMsg2_oTC37X_VCU_CAN01</SHORT-NAME>
+          <FRAME-LENGTH>8</FRAME-LENGTH>
+          <PDU-TO-FRAME-MAPPINGS>
+            <PDU-TO-FRAME-MAPPING>
+              <SHORT-NAME>VcuRxCtrlMsg2</SHORT-NAME>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <PDU-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxCtrlMsg2_oTC37X_VCU_CAN01</PDU-REF>
               <START-POSITION>0</START-POSITION>
             </PDU-TO-FRAME-MAPPING>
           </PDU-TO-FRAME-MAPPINGS>
@@ -21828,6 +22115,75 @@ Revision:</L-2>
           <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
         </I-SIGNAL-I-PDU>
         <I-SIGNAL-I-PDU>
+          <SHORT-NAME>VcuMeasurementMsg0_oTC37X_VCU_CAN01</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+          <I-PDU-TIMING-SPECIFICATIONS>
+            <I-PDU-TIMING>
+              <MINIMUM-DELAY>0</MINIMUM-DELAY>
+              <TRANSMISSION-MODE-DECLARATION>
+                <TRANSMISSION-MODE-FALSE-TIMING>
+                  <CYCLIC-TIMING>
+                    <TIME-OFFSET>
+                      <VALUE>0</VALUE>
+                    </TIME-OFFSET>
+                    <TIME-PERIOD>
+                      <VALUE>0.5</VALUE>
+                    </TIME-PERIOD>
+                  </CYCLIC-TIMING>
+                </TRANSMISSION-MODE-FALSE-TIMING>
+                <TRANSMISSION-MODE-TRUE-TIMING>
+                  <CYCLIC-TIMING>
+                    <TIME-OFFSET>
+                      <VALUE>0</VALUE>
+                    </TIME-OFFSET>
+                    <TIME-PERIOD>
+                      <VALUE>0.5</VALUE>
+                    </TIME-PERIOD>
+                  </CYCLIC-TIMING>
+                </TRANSMISSION-MODE-TRUE-TIMING>
+              </TRANSMISSION-MODE-DECLARATION>
+            </I-PDU-TIMING>
+          </I-PDU-TIMING-SPECIFICATIONS>
+          <I-SIGNAL-TO-PDU-MAPPINGS>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>EXT_PWM_IN1_Period</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN1_Period_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>0</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>EXT_PWM_IN1_Duty</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN1_Duty_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>16</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>EXT_PWM_IN2_Period</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN2_Period_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>24</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>EXT_PWM_IN2_Duty</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN2_Duty_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>40</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>Ext_IN2</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Ext_IN2_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>48</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+          </I-SIGNAL-TO-PDU-MAPPINGS>
+          <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+        </I-SIGNAL-I-PDU>
+        <I-SIGNAL-I-PDU>
           <SHORT-NAME>VcuRxCtrlMsg0_oTC37X_VCU_CAN01</SHORT-NAME>
           <LENGTH>8</LENGTH>
           <I-PDU-TIMING-SPECIFICATIONS>
@@ -22002,6 +22358,68 @@ Revision:</L-2>
               <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Bts7xx_HS4_En_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01</I-SIGNAL-REF>
               <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
               <START-POSITION>56</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+          </I-SIGNAL-TO-PDU-MAPPINGS>
+          <UNUSED-BIT-PATTERN>0</UNUSED-BIT-PATTERN>
+        </I-SIGNAL-I-PDU>
+        <I-SIGNAL-I-PDU>
+          <SHORT-NAME>VcuRxCtrlMsg2_oTC37X_VCU_CAN01</SHORT-NAME>
+          <LENGTH>8</LENGTH>
+          <I-PDU-TIMING-SPECIFICATIONS>
+            <I-PDU-TIMING>
+              <MINIMUM-DELAY>0</MINIMUM-DELAY>
+              <TRANSMISSION-MODE-DECLARATION>
+                <TRANSMISSION-MODE-FALSE-TIMING>
+                  <CYCLIC-TIMING>
+                    <TIME-OFFSET>
+                      <VALUE>0</VALUE>
+                    </TIME-OFFSET>
+                    <TIME-PERIOD>
+                      <VALUE>0.5</VALUE>
+                    </TIME-PERIOD>
+                  </CYCLIC-TIMING>
+                </TRANSMISSION-MODE-FALSE-TIMING>
+                <TRANSMISSION-MODE-TRUE-TIMING>
+                  <CYCLIC-TIMING>
+                    <TIME-OFFSET>
+                      <VALUE>0</VALUE>
+                    </TIME-OFFSET>
+                    <TIME-PERIOD>
+                      <VALUE>0.5</VALUE>
+                    </TIME-PERIOD>
+                  </CYCLIC-TIMING>
+                </TRANSMISSION-MODE-TRUE-TIMING>
+              </TRANSMISSION-MODE-DECLARATION>
+            </I-PDU-TIMING>
+          </I-PDU-TIMING-SPECIFICATIONS>
+          <I-SIGNAL-TO-PDU-MAPPINGS>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>Tle888qk_Lout1_En</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout1_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>0</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>Tle888qk_Lout8_En</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout8_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>8</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>Tle888qk_Lout14_En</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout14_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>16</START-POSITION>
+              <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
+            </I-SIGNAL-TO-I-PDU-MAPPING>
+            <I-SIGNAL-TO-I-PDU-MAPPING>
+              <SHORT-NAME>Tle888qk_Lout16_En</SHORT-NAME>
+              <I-SIGNAL-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout16_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</I-SIGNAL-REF>
+              <PACKING-BYTE-ORDER>MOST-SIGNIFICANT-BYTE-LAST</PACKING-BYTE-ORDER>
+              <START-POSITION>24</START-POSITION>
               <TRANSFER-PROPERTY>PENDING</TRANSFER-PROPERTY>
             </I-SIGNAL-TO-I-PDU-MAPPING>
           </I-SIGNAL-TO-PDU-MAPPINGS>
@@ -26069,6 +26487,101 @@ Revision:</L-2>
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN9</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
+          <SHORT-NAME>Ext_IN2_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>8</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Ext_IN2</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>EXT_PWM_IN1_Duty_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>8</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_PWM_IN1_Duty</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>EXT_PWM_IN1_Period_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_PWM_IN1_Period</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>EXT_PWM_IN2_Duty_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>8</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_PWM_IN2_Duty</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>EXT_PWM_IN2_Period_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>16</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint16</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_PWM_IN2_Period</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
           <SHORT-NAME>EXT1_Valid_oVcuTxIoMsg1_oTC37X_VCU_CAN00</SHORT-NAME>
           <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
           <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
@@ -29872,6 +30385,82 @@ Revision:</L-2>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </NETWORK-REPRESENTATION-PROPS>
           <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Tle4252d_en</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>Tle888qk_Lout1_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>8</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Tle888qk_Lout1_En</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>Tle888qk_Lout14_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>8</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Tle888qk_Lout14_En</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>Tle888qk_Lout16_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>8</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Tle888qk_Lout16_En</SYSTEM-SIGNAL-REF>
+        </I-SIGNAL>
+        <I-SIGNAL>
+          <SHORT-NAME>Tle888qk_Lout8_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</SHORT-NAME>
+          <DATA-TYPE-POLICY>LEGACY</DATA-TYPE-POLICY>
+          <I-SIGNAL-TYPE>PRIMITIVE</I-SIGNAL-TYPE>
+          <INIT-VALUE>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>0</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </INIT-VALUE>
+          <LENGTH>8</LENGTH>
+          <NETWORK-REPRESENTATION-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <BASE-TYPE-REF DEST="SW-BASE-TYPE">/DataType/sint8</BASE-TYPE-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </NETWORK-REPRESENTATION-PROPS>
+          <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Tle888qk_Lout8_En</SYSTEM-SIGNAL-REF>
         </I-SIGNAL>
         <I-SIGNAL>
           <SHORT-NAME>Tle888qk_Out21_En_oVcuRxCtrlMsg0_oTC37X_VCU_CAN01</SHORT-NAME>
@@ -35328,6 +35917,61 @@ Revision:</L-2>
               </DATA-CONSTR-RULES>
             </DATA-CONSTR>
             <DATA-CONSTR>
+              <SHORT-NAME>DC_Ext_IN2</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-128</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">127</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>DC_EXT_PWM_IN1_Duty</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-128</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">127</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>DC_EXT_PWM_IN1_Period</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>DC_EXT_PWM_IN2_Duty</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-128</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">127</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>DC_EXT_PWM_IN2_Period</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
               <SHORT-NAME>DC_EXT1_Valid</SHORT-NAME>
               <DATA-CONSTR-RULES>
                 <DATA-CONSTR-RULE>
@@ -37562,6 +38206,50 @@ Revision:</L-2>
             </DATA-CONSTR>
             <DATA-CONSTR>
               <SHORT-NAME>DC_Tle4252d_en</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-128</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">127</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>DC_Tle888qk_Lout1_En</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-128</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">127</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>DC_Tle888qk_Lout14_En</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-128</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">127</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>DC_Tle888qk_Lout16_En</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-128</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">127</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>DC_Tle888qk_Lout8_En</SHORT-NAME>
               <DATA-CONSTR-RULES>
                 <DATA-CONSTR-RULE>
                   <INTERNAL-CONSTRS>
@@ -42470,6 +43158,26 @@ Revision:</L-2>
             </COMPU-METHOD>
             <COMPU-METHOD>
               <SHORT-NAME>CM_EXT_A_IN9</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>CM_Ext_IN2</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>CM_EXT_PWM_IN1_Duty</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>CM_EXT_PWM_IN1_Period</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>CM_EXT_PWM_IN2_Duty</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>CM_EXT_PWM_IN2_Period</SHORT-NAME>
               <CATEGORY>IDENTICAL</CATEGORY>
             </COMPU-METHOD>
             <COMPU-METHOD>
@@ -48513,6 +49221,22 @@ Revision:</L-2>
             </COMPU-METHOD>
             <COMPU-METHOD>
               <SHORT-NAME>CM_Tle4252d_en</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>CM_Tle888qk_Lout1_En</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>CM_Tle888qk_Lout14_En</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>CM_Tle888qk_Lout16_En</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>CM_Tle888qk_Lout8_En</SHORT-NAME>
               <CATEGORY>IDENTICAL</CATEGORY>
             </COMPU-METHOD>
             <COMPU-METHOD>
@@ -54855,6 +55579,10 @@ Revision:</L-2>
               <DISPLAY-NAME>mm</DISPLAY-NAME>
             </UNIT>
             <UNIT>
+              <SHORT-NAME>U_ms</SHORT-NAME>
+              <DISPLAY-NAME>ms</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
               <SHORT-NAME>U_mV</SHORT-NAME>
               <DISPLAY-NAME>mV</DISPLAY-NAME>
             </UNIT>
@@ -56978,6 +57706,70 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_EXT_A_IN9</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_A_IN9</DATA-CONSTR-REF>
                 <UNIT-REF DEST="UNIT">/DataType/Unit/U_C</UNIT-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>Ext_IN2</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_Ext_IN2</COMPU-METHOD-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_Ext_IN2</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>EXT_PWM_IN1_Duty</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_EXT_PWM_IN1_Duty</COMPU-METHOD-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_PWM_IN1_Duty</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_p</UNIT-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>EXT_PWM_IN1_Period</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_EXT_PWM_IN1_Period</COMPU-METHOD-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_PWM_IN1_Period</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_ms</UNIT-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>EXT_PWM_IN2_Duty</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_EXT_PWM_IN2_Duty</COMPU-METHOD-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_PWM_IN2_Duty</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_p</UNIT-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>EXT_PWM_IN2_Period</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_EXT_PWM_IN2_Period</COMPU-METHOD-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_PWM_IN2_Period</DATA-CONSTR-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_ms</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -59843,6 +60635,54 @@ ESP will detect other vehicle slip/slide situations, and brake individual wheels
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_Tle4252d_en</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_Tle4252d_en</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>Tle888qk_Lout1_En</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_Tle888qk_Lout1_En</COMPU-METHOD-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_Tle888qk_Lout1_En</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>Tle888qk_Lout14_En</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_Tle888qk_Lout14_En</COMPU-METHOD-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_Tle888qk_Lout14_En</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>Tle888qk_Lout16_En</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_Tle888qk_Lout16_En</COMPU-METHOD-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_Tle888qk_Lout16_En</DATA-CONSTR-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </PHYSICAL-PROPS>
+        </SYSTEM-SIGNAL>
+        <SYSTEM-SIGNAL>
+          <SHORT-NAME>Tle888qk_Lout8_En</SHORT-NAME>
+          <DYNAMIC-LENGTH>false</DYNAMIC-LENGTH>
+          <PHYSICAL-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_Tle888qk_Lout8_En</COMPU-METHOD-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_Tle888qk_Lout8_En</DATA-CONSTR-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>

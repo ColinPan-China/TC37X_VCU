@@ -43,6 +43,7 @@
  *********************************************************************************************************************/
 #include "Adc_Sample.h"
 #include "SensorMng.h"
+#include "Icu_17_TimerIp.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -142,7 +143,16 @@
  * EXT_A_IN7: Integer in interval [-256...255]
  * EXT_A_IN8: Integer in interval [-32768...32767]
  * EXT_A_IN9: Integer in interval [-256...255]
+ * EXT_PWM_IN1_Duty: Integer in interval [-128...127]
+ * EXT_PWM_IN1_Period: Integer in interval [-32768...32767]
+ * EXT_PWM_IN2_Duty: Integer in interval [-128...127]
+ * EXT_PWM_IN2_Period: Integer in interval [-32768...32767]
+ * Ext_IN2: Integer in interval [-128...127]
  * Tle4252d_en: Integer in interval [-128...127]
+ * Tle888qk_Lout14_En: Integer in interval [-128...127]
+ * Tle888qk_Lout16_En: Integer in interval [-128...127]
+ * Tle888qk_Lout1_En: Integer in interval [-128...127]
+ * Tle888qk_Lout8_En: Integer in interval [-128...127]
  * Tle888qk_Out21BriCfg: Integer in interval [-128...127]
  * Tle888qk_Out21_En: Integer in interval [-128...127]
  * Tle888qk_Out22BriCfg: Integer in interval [-128...127]
@@ -197,6 +207,10 @@
  *   Std_ReturnType Rte_Read_Bts7xx_HS3_En_Bts7xx_HS3_En(Bts7xx_HS3_En *data)
  *   Std_ReturnType Rte_Read_Bts7xx_HS4_En_Bts7xx_HS4_En(Bts7xx_HS4_En *data)
  *   Std_ReturnType Rte_Read_Tle4252d_en_Tle4252d_en(Tle4252d_en *data)
+ *   Std_ReturnType Rte_Read_Tle888qk_Lout14_En_Tle888qk_Lout14_En(Tle888qk_Lout14_En *data)
+ *   Std_ReturnType Rte_Read_Tle888qk_Lout16_En_Tle888qk_Lout16_En(Tle888qk_Lout16_En *data)
+ *   Std_ReturnType Rte_Read_Tle888qk_Lout1_En_Tle888qk_Lout1_En(Tle888qk_Lout1_En *data)
+ *   Std_ReturnType Rte_Read_Tle888qk_Lout8_En_Tle888qk_Lout8_En(Tle888qk_Lout8_En *data)
  *   Std_ReturnType Rte_Read_Tle888qk_Out21BriCfg_Tle888qk_Out21BriCfg(Tle888qk_Out21BriCfg *data)
  *   Std_ReturnType Rte_Read_Tle888qk_Out21_En_Tle888qk_Out21_En(Tle888qk_Out21_En *data)
  *   Std_ReturnType Rte_Read_Tle888qk_Out22BriCfg_Tle888qk_Out22BriCfg(Tle888qk_Out22BriCfg *data)
@@ -255,6 +269,11 @@
  *   Std_ReturnType Rte_Write_EXT_A_IN7_EXT_A_IN7(EXT_A_IN7 data)
  *   Std_ReturnType Rte_Write_EXT_A_IN8_EXT_A_IN8(EXT_A_IN8 data)
  *   Std_ReturnType Rte_Write_EXT_A_IN9_EXT_A_IN9(EXT_A_IN9 data)
+ *   Std_ReturnType Rte_Write_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty(EXT_PWM_IN1_Duty data)
+ *   Std_ReturnType Rte_Write_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period(EXT_PWM_IN1_Period data)
+ *   Std_ReturnType Rte_Write_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty(EXT_PWM_IN2_Duty data)
+ *   Std_ReturnType Rte_Write_EXT_PWM_IN2_Period_EXT_PWM_IN2_Period(EXT_PWM_IN2_Period data)
+ *   Std_ReturnType Rte_Write_Ext_IN2_Ext_IN2(Ext_IN2 data)
  *   Std_ReturnType Rte_Write_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0(VcuTxMsg1_Sig0 data)
  *   Std_ReturnType Rte_Write_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1(VcuTxMsg1_Sig1 data)
  *   Std_ReturnType Rte_Write_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2(VcuTxMsg1_Sig2 data)
@@ -272,6 +291,9 @@
 void ExtTempUpdate();
 uint8 SpeedSet = 0;
 extern volatile SensorMngCtrlType SensorMngCtrlVal;
+extern Icu_17_TimerIp_DutyCycleType ICU_Val1;
+extern Icu_17_TimerIp_DutyCycleType ICU_Val2;
+extern uint8 Ext_D_In2;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -484,6 +506,30 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_500ms(void) /* PRQA S 0624, 3206 */ /* MD_
     Rte_Write_AN45_AN45(AdcValSampleInfo_Table[5].AdcChAveResult[13]*5000/4095);
     Rte_Write_AN46_AN46(AdcValSampleInfo_Table[5].AdcChAveResult[14]*5000/4095);
     Rte_Write_AN47_AN47(AdcValSampleInfo_Table[5].AdcChAveResult[15]*5000/4095);
+
+  if( ICU_Val1.PeriodTime != 0 )
+  {
+    Rte_Write_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty(ICU_Val1.ActiveTime*100/ICU_Val1.PeriodTime);
+    Rte_Write_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period(ICU_Val1.PeriodTime/6250);
+  }
+  else
+  {
+    Rte_Write_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty(0);
+    Rte_Write_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period(0);
+  }
+
+  if( ICU_Val2.PeriodTime != 0 )
+  {
+    Rte_Write_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty(ICU_Val2.ActiveTime*100/ICU_Val2.PeriodTime);
+    Rte_Write_EXT_PWM_IN2_Period_EXT_PWM_IN2_Period(ICU_Val2.PeriodTime/6250);
+  }    
+  else
+  {
+    Rte_Write_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty(0);
+    Rte_Write_EXT_PWM_IN2_Period_EXT_PWM_IN2_Period(0);
+  }
+
+  Rte_Write_Ext_IN2_Ext_IN2(Ext_D_In2);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -566,6 +612,41 @@ FUNC(void, Com_SWC_CODE) Rte_Msg10Fh_Rx_Notification(void) /* PRQA S 0624, 3206 
   Rte_Read_Tle9201_Dir_Tle9201_Dir(&SensorMngCtrlVal.Tle9201_Dir);
   Rte_Read_Tle9201_Dis_Tle9201_Dis(&SensorMngCtrlVal.Tle9201_Dis);
   Rte_Read_Tle9201_Pwm_Tle9201_Pwm(&SensorMngCtrlVal.Tle9201_Pwm);
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: Rte_Msg110h_Rx_Notification
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered on DataReceivedEvent for DataElementPrototype <Tle888qk_Lout1_En> of PortPrototype <Tle888qk_Lout1_En>
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: Rte_Msg110h_Rx_Notification_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(void, Com_SWC_CODE) Rte_Msg110h_Rx_Notification(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: Rte_Msg110h_Rx_Notification
+ *********************************************************************************************************************/
+  Rte_Read_Tle888qk_Lout14_En_Tle888qk_Lout14_En(&SensorMngCtrlVal.Tle888qk_Lout14_En);
+  Rte_Read_Tle888qk_Lout16_En_Tle888qk_Lout16_En(&SensorMngCtrlVal.Tle888qk_Lout16_En);
+  Rte_Read_Tle888qk_Lout1_En_Tle888qk_Lout1_En(&SensorMngCtrlVal.Tle888qk_Lout01_En);
+  Rte_Read_Tle888qk_Lout8_En_Tle888qk_Lout8_En(&SensorMngCtrlVal.Tle888qk_Lout08_En);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

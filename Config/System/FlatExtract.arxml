@@ -2456,6 +2456,45 @@
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tle9201_Pwm_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuRxCtrlMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxCtrlMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Ext_IN2_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN1_Duty_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN1_Period_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN2_Duty_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_PWM_IN2_Period_oVcuMeasurementMsg0_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout1_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout14_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout16_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
+                                <FIBEX-ELEMENT-REF-CONDITIONAL>
+                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/Tle888qk_Lout8_En_oVcuRxCtrlMsg2_oTC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
+                                </FIBEX-ELEMENT-REF-CONDITIONAL>
                               </FIBEX-ELEMENTS>
                               <MAPPINGS>
                                 <SYSTEM-MAPPING UUID="19079e91-2a91-4fa6-9093-7c1b6ba64cfd">
@@ -3372,6 +3411,78 @@
                                         <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Tle888qk_Out24BriCfg/Tle888qk_Out24BriCfg</TARGET-DATA-PROTOTYPE-REF>
                                       </DATA-ELEMENT-IREF>
                                       <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Tle888qk_Out24BriCfg</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Ext_IN2</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Ext_IN2/Ext_IN2</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Ext_IN2</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN1_Duty</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_PWM_IN1_Duty/EXT_PWM_IN1_Duty</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_PWM_IN1_Duty</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN2_Duty</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_PWM_IN2_Duty/EXT_PWM_IN2_Duty</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_PWM_IN2_Duty</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN2_Period</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_PWM_IN2_Period/EXT_PWM_IN2_Period</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_PWM_IN2_Period</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN1_Period</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_PWM_IN1_Period/EXT_PWM_IN1_Period</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_PWM_IN1_Period</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Lout1_En</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Tle888qk_Lout1_En/Tle888qk_Lout1_En</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Tle888qk_Lout1_En</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Lout8_En</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Tle888qk_Lout8_En/Tle888qk_Lout8_En</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Tle888qk_Lout8_En</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Lout14_En</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Tle888qk_Lout14_En/Tle888qk_Lout14_En</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Tle888qk_Lout14_En</SYSTEM-SIGNAL-REF>
+                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
+                                      <DATA-ELEMENT-IREF>
+                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
+                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Lout16_En</CONTEXT-PORT-REF>
+                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Tle888qk_Lout16_En/Tle888qk_Lout16_En</TARGET-DATA-PROTOTYPE-REF>
+                                      </DATA-ELEMENT-IREF>
+                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/Tle888qk_Lout16_En</SYSTEM-SIGNAL-REF>
                                     </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
                                   </DATA-MAPPINGS>
                                 </SYSTEM-MAPPING>
@@ -6386,6 +6497,244 @@
                                   </REQUIRED-COM-SPECS>
                                   <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/Tle888qk_Out24BriCfg</REQUIRED-INTERFACE-TREF>
                                 </R-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="8172eb72-f2a4-4e1b-95ef-7a0545129450">
+                                  <SHORT-NAME>Ext_IN2</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Ext_IN2/Ext_IN2</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/Ext_IN2</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="bf5c7601-72f0-4f11-8b3d-d510d3a8471e">
+                                  <SHORT-NAME>EXT_PWM_IN1_Duty</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_PWM_IN1_Duty/EXT_PWM_IN1_Duty</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/EXT_PWM_IN1_Duty</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="cbd0dec9-94f7-40ed-8780-6a4f668616a9">
+                                  <SHORT-NAME>EXT_PWM_IN2_Duty</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_PWM_IN2_Duty/EXT_PWM_IN2_Duty</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/EXT_PWM_IN2_Duty</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="f74884c4-c48c-4d8b-a6e0-9ef0948d0f29">
+                                  <SHORT-NAME>EXT_PWM_IN2_Period</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_PWM_IN2_Period/EXT_PWM_IN2_Period</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/EXT_PWM_IN2_Period</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <P-PORT-PROTOTYPE UUID="415b142b-a532-4eed-bd23-1037b7e450ab">
+                                  <SHORT-NAME>EXT_PWM_IN1_Period</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDED-COM-SPECS>
+                                    <NONQUEUED-SENDER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_PWM_IN1_Period/EXT_PWM_IN1_Period</DATA-ELEMENT-REF>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-SENDER-COM-SPEC>
+                                  </PROVIDED-COM-SPECS>
+                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/EXT_PWM_IN1_Period</PROVIDED-INTERFACE-TREF>
+                                </P-PORT-PROTOTYPE>
+                                <R-PORT-PROTOTYPE UUID="c424a309-c46f-400a-bb61-6bea75f893e9">
+                                  <SHORT-NAME>Tle888qk_Lout1_En</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <REQUIRED-COM-SPECS>
+                                    <NONQUEUED-RECEIVER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Tle888qk_Lout1_En/Tle888qk_Lout1_En</DATA-ELEMENT-REF>
+                                      <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-RECEIVER-COM-SPEC>
+                                  </REQUIRED-COM-SPECS>
+                                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/Tle888qk_Lout1_En</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                                <R-PORT-PROTOTYPE UUID="1f50b897-1a31-4580-a709-63411fff5a84">
+                                  <SHORT-NAME>Tle888qk_Lout8_En</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <REQUIRED-COM-SPECS>
+                                    <NONQUEUED-RECEIVER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Tle888qk_Lout8_En/Tle888qk_Lout8_En</DATA-ELEMENT-REF>
+                                      <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-RECEIVER-COM-SPEC>
+                                  </REQUIRED-COM-SPECS>
+                                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/Tle888qk_Lout8_En</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                                <R-PORT-PROTOTYPE UUID="85bd442c-a7b5-494f-bdb5-01fb60c93c6f">
+                                  <SHORT-NAME>Tle888qk_Lout14_En</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <REQUIRED-COM-SPECS>
+                                    <NONQUEUED-RECEIVER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Tle888qk_Lout14_En/Tle888qk_Lout14_En</DATA-ELEMENT-REF>
+                                      <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-RECEIVER-COM-SPEC>
+                                  </REQUIRED-COM-SPECS>
+                                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/Tle888qk_Lout14_En</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
+                                <R-PORT-PROTOTYPE UUID="b92b8318-ea7a-4b6d-9850-496ac5546215">
+                                  <SHORT-NAME>Tle888qk_Lout16_En</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <REQUIRED-COM-SPECS>
+                                    <NONQUEUED-RECEIVER-COM-SPEC>
+                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/Tle888qk_Lout16_En/Tle888qk_Lout16_En</DATA-ELEMENT-REF>
+                                      <ALIVE-TIMEOUT>0</ALIVE-TIMEOUT>
+                                      <INIT-VALUE>
+                                        <NUMERICAL-VALUE-SPECIFICATION>
+                                          <VALUE>0</VALUE>
+                                        </NUMERICAL-VALUE-SPECIFICATION>
+                                      </INIT-VALUE>
+                                    </NONQUEUED-RECEIVER-COM-SPEC>
+                                  </REQUIRED-COM-SPECS>
+                                  <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/Tle888qk_Lout16_En</REQUIRED-INTERFACE-TREF>
+                                </R-PORT-PROTOTYPE>
                               </PORTS>
                               <COMPONENTS>
                                 <SW-COMPONENT-PROTOTYPE UUID="b0560f92-2d31-4daa-896f-70e823156344">
@@ -9339,6 +9688,195 @@
                                   </INNER-PORT-IREF>
                                   <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Out24BriCfg</OUTER-PORT-REF>
                                 </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="88c109d5-c7eb-48cd-8d52-72ffcd59c207">
+                                  <SHORT-NAME>Com_SWC_Ext_IN2_Ext_IN2</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/Ext_IN2</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Ext_IN2</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="e2380d4c-d742-4f86-a4c2-2fe43469163d">
+                                  <SHORT-NAME>Com_SWC_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/EXT_PWM_IN1_Duty</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN1_Duty</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="228fe4df-17d9-4109-a802-6f560f3ea4e3">
+                                  <SHORT-NAME>Com_SWC_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/EXT_PWM_IN2_Duty</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN2_Duty</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="8a041574-d193-4f88-af7b-514202aeb285">
+                                  <SHORT-NAME>Com_SWC_EXT_PWM_IN2_Period_EXT_PWM_IN2_Period</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/EXT_PWM_IN2_Period</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN2_Period</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="9712d41f-aec3-470e-8657-0f419d5c9ef5">
+                                  <SHORT-NAME>Com_SWC_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/EXT_PWM_IN1_Period</TARGET-P-PORT-REF>
+                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN1_Period</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="df80805c-2745-4137-bc52-967601ce3520">
+                                  <SHORT-NAME>Tle888qk_Lout1_En_Com_SWC_Tle888qk_Lout1_En</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/Tle888qk_Lout1_En</TARGET-R-PORT-REF>
+                                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Lout1_En</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="2079c2d2-a4df-4951-85f0-671fe6398898">
+                                  <SHORT-NAME>Tle888qk_Lout8_En_Com_SWC_Tle888qk_Lout8_En</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/Tle888qk_Lout8_En</TARGET-R-PORT-REF>
+                                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Lout8_En</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="25e013a1-dd3c-400c-9b45-423e23f547a3">
+                                  <SHORT-NAME>Tle888qk_Lout14_En_Com_SWC_Tle888qk_Lout14_En</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/Tle888qk_Lout14_En</TARGET-R-PORT-REF>
+                                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Lout14_En</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
+                                <DELEGATION-SW-CONNECTOR UUID="fdab7b7d-b227-430d-bcd9-6cd2f69ba562">
+                                  <SHORT-NAME>Tle888qk_Lout16_En_Com_SWC_Tle888qk_Lout16_En</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <INNER-PORT-IREF>
+                                    <R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
+                                      <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/Tle888qk_Lout16_En</TARGET-R-PORT-REF>
+                                    </R-PORT-IN-COMPOSITION-INSTANCE-REF>
+                                  </INNER-PORT-IREF>
+                                  <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Lout16_En</OUTER-PORT-REF>
+                                </DELEGATION-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -9524,7 +10062,12 @@
                                     <SD GID="bc2842c3-b1e7-4374-8f04-56680ed18b9d">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN7</SD>
                                     <SD GID="4c7fad01-95d8-4446-aae9-543d7219ede5">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN8</SD>
                                     <SD GID="0598a95d-0fcb-4ff7-b4f5-ed8cd5a70a2a">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN9</SD>
+                                    <SD GID="bf5c7601-72f0-4f11-8b3d-d510d3a8471e">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN1_Duty</SD>
+                                    <SD GID="415b142b-a532-4eed-bd23-1037b7e450ab">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN1_Period</SD>
+                                    <SD GID="cbd0dec9-94f7-40ed-8780-6a4f668616a9">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN2_Duty</SD>
+                                    <SD GID="f74884c4-c48c-4d8b-a6e0-9ef0948d0f29">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN2_Period</SD>
                                     <SD GID="3976e9f4-1667-4e85-89f1-31f8167f45a7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EcuM</SD>
+                                    <SD GID="8172eb72-f2a4-4e1b-95ef-7a0545129450">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Ext_IN2</SD>
                                     <SD GID="c2dfb752-e75e-4065-a92f-6d426855a37f">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/IoHwAb</SD>
                                     <SD GID="b7599610-a9d2-49fd-aa65-b43b7038f13c">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/IoHwAb_SWC</SD>
                                     <SD GID="bd2d7ed1-0cf5-42f4-a90f-8057441c91be">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM</SD>
@@ -9534,6 +10077,10 @@
                                     <SD GID="905f0a6c-c4e3-4618-98f4-e4a4659c1740">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</SD>
                                     <SD GID="aac382ca-6582-41e4-9242-9125729d6bee">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1NvMService_AC3_SRBS_NvBlockNeed_UserData3NvM_PS_SWC1NvBlockNeed_UserData3</SD>
                                     <SD GID="24f793bd-d2c5-4a88-bd55-8e211045641c">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle4252d_en</SD>
+                                    <SD GID="85bd442c-a7b5-494f-bdb5-01fb60c93c6f">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Lout14_En</SD>
+                                    <SD GID="b92b8318-ea7a-4b6d-9850-496ac5546215">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Lout16_En</SD>
+                                    <SD GID="c424a309-c46f-400a-bb61-6bea75f893e9">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Lout1_En</SD>
+                                    <SD GID="1f50b897-1a31-4580-a709-63411fff5a84">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Lout8_En</SD>
                                     <SD GID="617494ee-fef4-4740-a31b-0c3b3bd7d37c">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Out21BriCfg</SD>
                                     <SD GID="ee19610e-176f-437c-b65a-ec8da3b243ab">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Out21_En</SD>
                                     <SD GID="6052afde-30eb-4a42-be91-1e065c99ebef">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Out22BriCfg</SD>
@@ -9619,6 +10166,7 @@
                                     <SD GID="A15EE22A-CB0D-45E7-A2D6-54FE8BEE457E">/ComponentTypes/Com_SWC/Bts7xx_HS4_En</SD>
                                     <SD GID="63B0A264-02DA-4AA0-9226-75DC5B2707AA">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/DRT_Rte_Msg10Eh_Rx_Notification_Tle888qk_Out21_En_Tle888qk_Out21_En</SD>
                                     <SD GID="0E56E552-ECFE-412D-81ED-83A21946EA13">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/DRT_Rte_Msg10Fh_Rx_Notification_Bts7xx_HS1_En_Bts7xx_HS1_En</SD>
+                                    <SD GID="E89F308F-16BD-4773-926C-9BDD8427E102">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/DRT_Rte_Msg110h_Rx_Notification_Tle888qk_Lout1_En_Tle888qk_Lout1_En</SD>
                                     <SD GID="18984354-BF8F-45C4-965A-3B02BE16E306">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/DRT_Rte_Msg200h_Rx_Notification_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0</SD>
                                     <SD GID="B745682D-5619-4AEA-8D86-22D3FB6C8B51">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/DRT_Rte_Msg201h_Rx_Notification_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0</SD>
                                     <SD GID="DE3BBC92-0D89-4B36-8B14-2CCB30B0B703">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/TMT_Com_Runnable_20ms</SD>
@@ -9657,7 +10205,16 @@
                                     <SD GID="CA5F9C8B-5A9E-4556-A3B1-CEEEAAF612D2">/ComponentTypes/Com_SWC/EXT_A_IN7</SD>
                                     <SD GID="996E5995-98CD-471C-9AB4-0CB85E0180D3">/ComponentTypes/Com_SWC/EXT_A_IN8</SD>
                                     <SD GID="3D203BAF-C20F-4A88-BDD2-991A815B4FB6">/ComponentTypes/Com_SWC/EXT_A_IN9</SD>
+                                    <SD GID="C89FC7EA-02B2-44C3-AB42-AD37588AE5CF">/ComponentTypes/Com_SWC/EXT_PWM_IN1_Duty</SD>
+                                    <SD GID="EA469C37-1FBC-4677-A1F4-35ED994AE0CC">/ComponentTypes/Com_SWC/EXT_PWM_IN1_Period</SD>
+                                    <SD GID="2311912A-EBDB-481A-A7F9-FD1B34D9C9EC">/ComponentTypes/Com_SWC/EXT_PWM_IN2_Duty</SD>
+                                    <SD GID="7080AB0D-616A-4352-9725-F3DAC47D7EE1">/ComponentTypes/Com_SWC/EXT_PWM_IN2_Period</SD>
+                                    <SD GID="37B5EDA6-5466-4132-88CE-6C3400893C8D">/ComponentTypes/Com_SWC/Ext_IN2</SD>
                                     <SD GID="A1EC0CF0-2FE9-4ADE-861D-756A28832A0B">/ComponentTypes/Com_SWC/Tle4252d_en</SD>
+                                    <SD GID="AA4B9A53-665E-4FC8-B916-99B7BC771D69">/ComponentTypes/Com_SWC/Tle888qk_Lout14_En</SD>
+                                    <SD GID="DCA66A86-E862-48F4-827B-F40DC9D9AFF5">/ComponentTypes/Com_SWC/Tle888qk_Lout16_En</SD>
+                                    <SD GID="322B434D-DF8E-4E78-979D-3C31579EC143">/ComponentTypes/Com_SWC/Tle888qk_Lout1_En</SD>
+                                    <SD GID="A8A53434-6BC4-4EC0-AB0C-1AD2E1BB54F6">/ComponentTypes/Com_SWC/Tle888qk_Lout8_En</SD>
                                     <SD GID="0CC8D896-DCD9-4D36-A8E6-95AC0557E3E4">/ComponentTypes/Com_SWC/Tle888qk_Out21BriCfg</SD>
                                     <SD GID="D04F053A-EFDF-4615-AF27-B7B39DED7420">/ComponentTypes/Com_SWC/Tle888qk_Out21_En</SD>
                                     <SD GID="505F6E3C-6C63-454A-834A-D8A1E55D62D3">/ComponentTypes/Com_SWC/Tle888qk_Out22BriCfg</SD>
@@ -9861,12 +10418,21 @@
                                     <SD GID="E405C516-657A-408B-9278-88579D533F49">/ECUCompositionTypes/ECU_Composition/EXT_A_IN7</SD>
                                     <SD GID="CCFF1D01-91DF-45FD-ABEE-DC01597A3255">/ECUCompositionTypes/ECU_Composition/EXT_A_IN8</SD>
                                     <SD GID="ED5ECF7D-0B7E-4ECC-B967-73C08A12D856">/ECUCompositionTypes/ECU_Composition/EXT_A_IN9</SD>
+                                    <SD GID="1477B02D-AA9B-4778-AC8B-75C50AC2BD1C">/ECUCompositionTypes/ECU_Composition/EXT_PWM_IN1_Duty</SD>
+                                    <SD GID="7677545E-5EAC-4E4B-8C34-DAFA40CE655D">/ECUCompositionTypes/ECU_Composition/EXT_PWM_IN1_Period</SD>
+                                    <SD GID="A0F90F5D-F9FF-4B5E-8E21-195B7CC7161B">/ECUCompositionTypes/ECU_Composition/EXT_PWM_IN2_Duty</SD>
+                                    <SD GID="1B299100-AB66-492C-B7DD-A6BC6F8DC61E">/ECUCompositionTypes/ECU_Composition/EXT_PWM_IN2_Period</SD>
+                                    <SD GID="25ADDC9F-324B-4284-87ED-5C8934F9D389">/ECUCompositionTypes/ECU_Composition/Ext_IN2</SD>
                                     <SD GID="1CB31672-AB6A-4C7E-9B05-D9EBB78942AD">/ECUCompositionTypes/ECU_Composition/IoHwAb</SD>
                                     <SD GID="C0FE9D92-FF59-4055-8330-C5C650BFCCB7">/ECUCompositionTypes/ECU_Composition/IoHwAb_SWC</SD>
                                     <SD GID="1C873E85-20CE-48A0-A60A-BB516A3AF1EE">/ECUCompositionTypes/ECU_Composition/NvM_SWC</SD>
                                     <SD GID="7077C59A-EDFF-4EBD-992B-AD0A5D0AD472">/ECUCompositionTypes/ECU_Composition/PowerMng_SWC</SD>
                                     <SD GID="45326E4B-4115-4A85-8FF4-E06F7BAE2F7C">/ECUCompositionTypes/ECU_Composition/SWC1</SD>
                                     <SD GID="867D603A-C1E2-45B2-9F4D-9DBC715DA4CF">/ECUCompositionTypes/ECU_Composition/Tle4252d_en</SD>
+                                    <SD GID="43AF10EE-67F0-41AA-A6CE-27A0CAD77C8C">/ECUCompositionTypes/ECU_Composition/Tle888qk_Lout14_En</SD>
+                                    <SD GID="61740A06-46AE-425E-9D15-E17FAF9897FB">/ECUCompositionTypes/ECU_Composition/Tle888qk_Lout16_En</SD>
+                                    <SD GID="BED0E607-C581-42EA-B1B6-5193BAD1A9CE">/ECUCompositionTypes/ECU_Composition/Tle888qk_Lout1_En</SD>
+                                    <SD GID="E8CDB9A2-A496-44A8-B6D9-E49C40B47411">/ECUCompositionTypes/ECU_Composition/Tle888qk_Lout8_En</SD>
                                     <SD GID="671E9B59-FF9E-42D0-B3CE-A41813C50CE9">/ECUCompositionTypes/ECU_Composition/Tle888qk_Out21BriCfg</SD>
                                     <SD GID="6C1CEB73-8350-4EB7-888E-73F03FF532B2">/ECUCompositionTypes/ECU_Composition/Tle888qk_Out21_En</SD>
                                     <SD GID="F2E05BCD-9FA4-4749-9CAF-574C58F3E89D">/ECUCompositionTypes/ECU_Composition/Tle888qk_Out22BriCfg</SD>
@@ -10683,8 +11249,26 @@
                                     <SD GID="E8715ADE-922F-467F-A921-84B146486767">/PortInterfaces/EXT_A_IN8/EXT_A_IN8</SD>
                                     <SD GID="48C7AF0E-8610-447F-9306-2F13C0117BEB">/PortInterfaces/EXT_A_IN9</SD>
                                     <SD GID="EB862DEE-F820-4208-A0A3-3F61BDA20CA2">/PortInterfaces/EXT_A_IN9/EXT_A_IN9</SD>
+                                    <SD GID="ACABFFB6-3625-48AC-A123-C6933464ABB9">/PortInterfaces/EXT_PWM_IN1_Duty</SD>
+                                    <SD GID="B171829D-D5B7-44DF-BFE6-9A3788DC30CD">/PortInterfaces/EXT_PWM_IN1_Duty/EXT_PWM_IN1_Duty</SD>
+                                    <SD GID="1BAA7876-8E32-4B3D-B90B-3EED7A659B61">/PortInterfaces/EXT_PWM_IN1_Period</SD>
+                                    <SD GID="EFAB6FD2-858B-4A2E-9A1D-D367B0888F69">/PortInterfaces/EXT_PWM_IN1_Period/EXT_PWM_IN1_Period</SD>
+                                    <SD GID="285E182D-7BAC-46FA-8CCD-18606FBEBA55">/PortInterfaces/EXT_PWM_IN2_Duty</SD>
+                                    <SD GID="55604E85-D1CE-4CCB-9118-56DE40F67710">/PortInterfaces/EXT_PWM_IN2_Duty/EXT_PWM_IN2_Duty</SD>
+                                    <SD GID="2AF6A5D7-9BA2-4961-A1EE-4EA9392F4818">/PortInterfaces/EXT_PWM_IN2_Period</SD>
+                                    <SD GID="6BCFF31B-92A7-4B32-A5BD-88CF0A815DD8">/PortInterfaces/EXT_PWM_IN2_Period/EXT_PWM_IN2_Period</SD>
+                                    <SD GID="F2CC217F-ED07-469C-BFBA-25D05E37272C">/PortInterfaces/Ext_IN2</SD>
+                                    <SD GID="8712C683-912B-4E66-9666-D31F424A36AE">/PortInterfaces/Ext_IN2/Ext_IN2</SD>
                                     <SD GID="5921290F-BBCB-45F1-AEA0-4A9FDBF51CF5">/PortInterfaces/Tle4252d_en</SD>
                                     <SD GID="15A9E729-24C0-4BE6-97FB-F14C92B373CB">/PortInterfaces/Tle4252d_en/Tle4252d_en</SD>
+                                    <SD GID="0ADE8C58-FF98-4A22-A3A2-992A4D729ABF">/PortInterfaces/Tle888qk_Lout14_En</SD>
+                                    <SD GID="BDFF5E3C-7DCC-4A5B-94E8-C39B44F348C3">/PortInterfaces/Tle888qk_Lout14_En/Tle888qk_Lout14_En</SD>
+                                    <SD GID="FDD5C3E6-6EC4-4FC3-BC0B-1AC665CA1B10">/PortInterfaces/Tle888qk_Lout16_En</SD>
+                                    <SD GID="67F527BA-BD72-45AA-9F16-B282880CEB8E">/PortInterfaces/Tle888qk_Lout16_En/Tle888qk_Lout16_En</SD>
+                                    <SD GID="2FBA16C5-ABC9-4E9D-BA47-2F9EE8F8A375">/PortInterfaces/Tle888qk_Lout1_En</SD>
+                                    <SD GID="E094F944-C36C-41A6-9B1A-C36E61F48CA4">/PortInterfaces/Tle888qk_Lout1_En/Tle888qk_Lout1_En</SD>
+                                    <SD GID="2B48E316-8A09-47C0-A9CA-4BA535E8B82C">/PortInterfaces/Tle888qk_Lout8_En</SD>
+                                    <SD GID="76676976-5BD1-48E2-887A-676F578365FF">/PortInterfaces/Tle888qk_Lout8_En/Tle888qk_Lout8_En</SD>
                                     <SD GID="4B5FB792-BCF6-449D-A2F1-07EEB021C0A1">/PortInterfaces/Tle888qk_Out21BriCfg</SD>
                                     <SD GID="63269A9A-BE59-4364-B511-FF53795C700D">/PortInterfaces/Tle888qk_Out21BriCfg/Tle888qk_Out21BriCfg</SD>
                                     <SD GID="64E419F0-333B-4F71-9752-A02AB6EDE049">/PortInterfaces/Tle888qk_Out21_En</SD>
