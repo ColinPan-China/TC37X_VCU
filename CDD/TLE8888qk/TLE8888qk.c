@@ -86,16 +86,16 @@ TLE8888qk_CfgType TLE8888qk_CfgTable[] =
 
   /*Enable LOWOut14,Out16*/
   { CMD_OECONFIG(1,0xA0),   0,  0 },
-  { CMD_CONT(1,0xA0),       0,  0 },
+  { CMD_CONT(1,0x00),       0,  0 },
 
   /*Enable LOWOUT8*/
   { CMD_OECONFIG(0,0x80),   0,  0 },
-  { CMD_CONT(0,0x80),       0,  0 },
+  { CMD_CONT(0,0x00),       0,  0 },
 
 //  { CMD_OECONFIG(3,0x0F),   0,  0 },IG1-IG4
 //  { CMD_CONT(3,0x0F),       0,  0 },
 
-  { CMD_CONT(2,0xF0),       0,  0 },
+  { CMD_CONT(2,0x00),       0,  0 },
 };
 
 TLE8888qk_CfgType TLE8888qk_DiagTable[] =
