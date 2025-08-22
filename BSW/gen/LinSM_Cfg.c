@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinSM_Cfg.c
- *   Generation Time: 2025-07-30 15:10:24
+ *   Generation Time: 2025-08-22 15:59:34
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -79,10 +79,11 @@
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(LinSM_ChannelConfigType, LINSM_CONST) LinSM_ChannelConfig[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(LinSM_ChannelConfigType, LINSM_CONST) LinSM_ChannelConfig[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    ComMChannelHandle                       TransceiverHandling        Referable Keys */
   { /*     0 */ ComMConf_ComMChannel_CN_LIN00_b12a0454,    LINSM_TRCV_SLEEP },  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_45618847] */
-  { /*     1 */ ComMConf_ComMChannel_CN_LIN01_c62d34c2,     LINSM_TRCV_NONE }   /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_8e3d5be2] */
+  { /*     1 */ ComMConf_ComMChannel_CN_LIN01_c62d34c2,     LINSM_TRCV_NONE },  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_8e3d5be2] */
+  { /*     2 */ ComMConf_ComMChannel_CN_LIN02_5f246578,     LINSM_TRCV_NONE }   /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_08a9294c] */
 };
 #define LINSM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -96,7 +97,7 @@ CONST(LinSM_ChannelConfigType, LINSM_CONST) LinSM_ChannelConfig[2] = {  /* PRQA 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(LinSM_ComMToLinSMChannelType, LINSM_CONST) LinSM_ComMToLinSMChannel[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(LinSM_ComMToLinSMChannelType, LINSM_CONST) LinSM_ComMToLinSMChannel[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     ComMToLinSMChannel               Referable Keys */
   /*     0 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
   /*     1 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
@@ -104,7 +105,8 @@ CONST(LinSM_ComMToLinSMChannelType, LINSM_CONST) LinSM_ComMToLinSMChannel[7] = {
   /*     3 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
   /*     4 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
   /*     5 */                           0u,  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN00_b12a0454] */
-  /*     6 */                           1u   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN01_c62d34c2] */
+  /*     6 */                           1u,  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN01_c62d34c2] */
+  /*     7 */                           2u   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN02_5f246578] */
 };
 #define LINSM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -122,6 +124,7 @@ VAR(LinSM_ComStateUType, LINSM_VAR_NOINIT) LinSM_ComState;  /* PRQA S 0759, 1514
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_45618847] */
   /*     1 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_8e3d5be2] */
+  /*     2 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_08a9294c] */
 
 #define LINSM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -139,6 +142,7 @@ VAR(LinSM_ConfirmationTimerUType, LINSM_VAR_NOINIT) LinSM_ConfirmationTimer;  /*
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_45618847] */
   /*     1 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_8e3d5be2] */
+  /*     2 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_08a9294c] */
 
 #define LINSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -156,6 +160,7 @@ VAR(LinSM_DesiredConfirmationUType, LINSM_VAR_NOINIT) LinSM_DesiredConfirmation;
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_45618847] */
   /*     1 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_8e3d5be2] */
+  /*     2 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_08a9294c] */
 
 #define LINSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -186,6 +191,7 @@ VAR(LinSM_NegativeConfirmationUType, LINSM_VAR_NOINIT) LinSM_NegativeConfirmatio
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_45618847] */
   /*     1 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_8e3d5be2] */
+  /*     2 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_08a9294c] */
 
 #define LINSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -203,6 +209,7 @@ VAR(LinSM_RequestedComModeUType, LINSM_VAR_NOINIT) LinSM_RequestedComMode;  /* P
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_45618847] */
   /*     1 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_8e3d5be2] */
+  /*     2 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_08a9294c] */
 
 #define LINSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -220,6 +227,7 @@ VAR(LinSM_SilenceAfterWakeupTimerUType, LINSM_VAR_NOINIT) LinSM_SilenceAfterWake
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_45618847] */
   /*     1 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_8e3d5be2] */
+  /*     2 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_08a9294c] */
 
 #define LINSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -237,6 +245,7 @@ VAR(LinSM_WakeUpRetryCounterUType, LINSM_VAR_NOINIT) LinSM_WakeUpRetryCounter;  
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_45618847] */
   /*     1 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_8e3d5be2] */
+  /*     2 */  /* [/ActiveEcuC/LinSM/LinSMConfigSet/CHNL_08a9294c] */
 
 #define LINSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */

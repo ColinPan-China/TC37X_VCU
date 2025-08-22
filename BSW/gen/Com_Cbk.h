@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cbk.h
- *   Generation Time: 2025-08-14 14:36:01
+ *   Generation Time: 2025-08-22 15:59:34
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -97,6 +97,8 @@
 #define ComConf_ComIPdu_VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx        38u
 #define ComConf_ComIPdu_Vcu_Lin0_RxMsg1_oLIN01_24780c64_Rx            39u
 #define ComConf_ComIPdu_Vcu_Lin0_RxMsg2_oLIN01_aaf70b87_Rx            40u
+#define ComConf_ComIPdu_Vcu_Lin3_RxMsg1_oLIN02_ac0c37a7_Rx            41u
+#define ComConf_ComIPdu_Vcu_Lin3_RxMsg2_oLIN02_22833044_Rx            42u
 /**\} */
 
 /**
@@ -153,6 +155,8 @@
 #define ComConf_ComIPdu_VcuTxMsg2_oTC37X_VCU_CAN00_7fccfa8c_Tx        43u
 #define ComConf_ComIPdu_Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx            44u
 #define ComConf_ComIPdu_Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx            45u
+#define ComConf_ComIPdu_Vcu_Lin3_TxMsg1_oLIN02_0ce9e87a_Tx            46u
+#define ComConf_ComIPdu_Vcu_Lin3_TxMsg2_oLIN02_8266ef99_Tx            47u
 /**\} */
 
 /**********************************************************************************************************************

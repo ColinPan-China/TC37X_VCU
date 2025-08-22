@@ -141,7 +141,7 @@
                         </ECUC-TEXTUAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinCatConfig/IrqAsclinErrCatConfig/IrqAsclin3ErrCat</DEFINITION-REF>
-                          <VALUE>CAT1</VALUE>
+                          <VALUE>CAT2</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinCatConfig/IrqAsclinErrCatConfig/IrqAsclin4ErrCat</DEFINITION-REF>
@@ -243,7 +243,7 @@
                         </ECUC-TEXTUAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinCatConfig/IrqAsclinRxCatConfig/IrqAsclin3RxCat</DEFINITION-REF>
-                          <VALUE>CAT1</VALUE>
+                          <VALUE>CAT2</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinCatConfig/IrqAsclinRxCatConfig/IrqAsclin4RxCat</DEFINITION-REF>
@@ -345,7 +345,7 @@
                         </ECUC-TEXTUAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinCatConfig/IrqAsclinTxCatConfig/IrqAsclin3TxCat</DEFINITION-REF>
-                          <VALUE>CAT1</VALUE>
+                          <VALUE>CAT2</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinCatConfig/IrqAsclinTxCatConfig/IrqAsclin4TxCat</DEFINITION-REF>
@@ -453,7 +453,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinPrioConfig/IrqAsclinErrPrioConfig/IrqAsclin3ErrPrio</DEFINITION-REF>
-                          <VALUE>0</VALUE>
+                          <VALUE>100</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinPrioConfig/IrqAsclinErrPrioConfig/IrqAsclin4ErrPrio</DEFINITION-REF>
@@ -555,7 +555,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinPrioConfig/IrqAsclinRxPrioConfig/IrqAsclin3RxPrio</DEFINITION-REF>
-                          <VALUE>0</VALUE>
+                          <VALUE>101</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinPrioConfig/IrqAsclinRxPrioConfig/IrqAsclin4RxPrio</DEFINITION-REF>
@@ -657,7 +657,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinPrioConfig/IrqAsclinTxPrioConfig/IrqAsclin3TxPrio</DEFINITION-REF>
-                          <VALUE>0</VALUE>
+                          <VALUE>99</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinPrioConfig/IrqAsclinTxPrioConfig/IrqAsclin4TxPrio</DEFINITION-REF>

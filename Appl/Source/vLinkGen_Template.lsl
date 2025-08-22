@@ -1231,6 +1231,9 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_ASCLIN2ERR_ISR_CODE";
         select "[.]text.OS_ASCLIN2RX_ISR_CODE";
         select "[.]text.OS_ASCLIN2TX_ISR_CODE";
+        select "[.]text.OS_ASCLIN3ERR_ISR_CODE";
+        select "[.]text.OS_ASCLIN3RX_ISR_CODE";
+        select "[.]text.OS_ASCLIN3TX_ISR_CODE";
         select "[.]text.OS_ASCLIN4ERR_ISR_CODE";
         select "[.]text.OS_ASCLIN4RX_ISR_CODE";
         select "[.]text.OS_ASCLIN4TX_ISR_CODE";

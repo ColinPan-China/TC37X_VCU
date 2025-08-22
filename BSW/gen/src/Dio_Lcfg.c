@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 1.30.0_6.0.0                                                  **
 **                                                                            **
-**  DATE, TIME: 2025-08-14, 14:35:57       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2025-08-22, 15:59:29       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b180321-0610           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -132,7 +132,7 @@
     {
     /* Port23*/
       DIO_PORT_CONFIGURED,
-      (0x0020U)
+      (0x0060U)
     },
     {
     /* Port32*/

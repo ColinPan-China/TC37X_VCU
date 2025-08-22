@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2025-08-14 14:36:01
+ *   Generation Time: 2025-08-22 15:59:33
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -176,6 +176,8 @@
 #define PduRConf_PduRDestPdu_VcuRxMsg4_oTC37X_VCU_CAN01_55be06ba_Rx_f5b46736_Rx 38u
 #define PduRConf_PduRDestPdu_Vcu_Lin0_RxMsg1_oLIN01_079b7478_Rx_12331c6c_Rx 39u
 #define PduRConf_PduRDestPdu_Vcu_Lin0_RxMsg2_oLIN01_717e4d45_Rx_d314568e_Rx 40u
+#define PduRConf_PduRDestPdu_Vcu_Lin3_RxMsg1_oLIN02_f3fbb428_Rx_916b2dbb_Rx 41u
+#define PduRConf_PduRDestPdu_Vcu_Lin3_RxMsg2_oLIN02_851e8d15_Rx_3b03dfb1_Rx 42u
 /**\} */
 
 /**
@@ -188,6 +190,7 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_0a95646f                       31u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_0dbe25ba                       1u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_3b03dfb1                       42u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_4e239512                       21u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_4e610413                       28u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_6a5d743a                       18u
@@ -207,6 +210,7 @@
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_686bd310                       4u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_718a1cfb                       9u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_803efadc                       36u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_916b2dbb                       41u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_6711bd67                       35u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_12331c6c                       39u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_12481f07                       17u
@@ -239,7 +243,8 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_0a2b7a00                       18u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_0b6ac76d                       23u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_1a8748e9                       46u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_1a8748e9                       48u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_2efa4b01                       47u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_3ef2d11c                       35u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_4bd8719a                       1u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_4fcbec42                       24u
@@ -256,6 +261,7 @@
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_37fea4b2                       27u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_49c8436f                       8u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_75ceb29f                       17u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_78b4954c                       46u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_88d7da53                       28u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_91ca29f5                       9u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_91d52164                       42u
@@ -340,6 +346,8 @@
 #define PduRConf_PduRDestPdu_VcuTxMsg2_oTC37X_VCU_CAN00_0119ca28_Tx   43u
 #define PduRConf_PduRDestPdu_Vcu_Lin0_TxMsg1_oLIN01_02277a36_Tx       44u
 #define PduRConf_PduRDestPdu_Vcu_Lin0_TxMsg2_oLIN01_74c2430b_Tx       45u
+#define PduRConf_PduRDestPdu_Vcu_Lin3_TxMsg1_oLIN02_f647ba66_Tx       46u
+#define PduRConf_PduRDestPdu_Vcu_Lin3_TxMsg2_oLIN02_80a2835b_Tx       47u
 /**\} */
 
 /**

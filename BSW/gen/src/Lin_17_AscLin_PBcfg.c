@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_8.0.0                                                  **
 **                                                                            **
-**  DATE, TIME: 2025-07-30, 13:47:29      !!!IGNORE-LINE!!!               **
+**  DATE, TIME: 2025-08-22, 14:20:47      !!!IGNORE-LINE!!!               **
 **                                                                            **
 **  GENERATOR : Build b180321-0610          !!!IGNORE-LINE!!!               **
 **                                                                            **
@@ -83,8 +83,8 @@ static const uint8 Lin_17_AscLin_Hw_To_ChannelIdMap[LIN_17_ASCLIN_MAX_HW_UNIT] =
 {
     0xFFU,
     0U,
-    2U,
     0xFFU,
+    2U,
     1U,
     0xFFU,
     0xFFU,
@@ -181,9 +181,9 @@ static const Lin_17_AscLin_ChannelType  Lin_kChannelConfigurationCore0[3] =
         63U /* IOCR DEPTH value for wakeup detection */
     },
     0xFFU,                            /* EcuM Wakeup Source ID */
-    LIN_17_ASCLIN2,   /* Hw Module used */
+    LIN_17_ASCLIN3,   /* Hw Module used */
     LIN_17_ASCLIN_CHANNEL_WAKEUP_DISABLED,    /* Wakeup Support */
-    LIN_17_ASCLIN_SELECT_D,  /*Rx alternate pin select */
+    LIN_17_ASCLIN_SELECT_C,  /*Rx alternate pin select */
     2U   /*Logical channel Id */
   }
 };

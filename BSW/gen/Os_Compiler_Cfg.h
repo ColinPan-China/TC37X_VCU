@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Compiler_Cfg.h
- *   Generation Time: 2025-08-06 14:36:34
+ *   Generation Time: 2025-08-22 15:59:34
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -48,6 +48,9 @@
 # define OS_ASCLIN2ERR_ISR_CODE
 # define OS_ASCLIN2RX_ISR_CODE
 # define OS_ASCLIN2TX_ISR_CODE
+# define OS_ASCLIN3ERR_ISR_CODE
+# define OS_ASCLIN3RX_ISR_CODE
+# define OS_ASCLIN3TX_ISR_CODE
 # define OS_ASCLIN4ERR_ISR_CODE
 # define OS_ASCLIN4RX_ISR_CODE
 # define OS_ASCLIN4TX_ISR_CODE

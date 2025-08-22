@@ -106,7 +106,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
 
   Icu_17_TimerIp_StartSignalMeasurement(IcuConf_IcuChannel_IcuChannel_P34_2);
   Icu_17_TimerIp_StartSignalMeasurement(IcuConf_IcuChannel_IcuChannel_P34_4);
-
+  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P23_6_LIN_SLP,1);
   PwnIf_Start();
 //  Tja1145_GoSleep();
   Tle94108es_Init();

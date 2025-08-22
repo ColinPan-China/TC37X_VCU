@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.h
- *   Generation Time: 2025-08-06 14:36:34
+ *   Generation Time: 2025-08-22 15:59:35
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -120,6 +120,18 @@ extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ASCLIN2RX_ISR;
 /*! ISR configuration data: ASCLIN2TX_ISR */
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ASCLIN2TX_ISR_HwConfig;
 extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ASCLIN2TX_ISR;
+
+/*! ISR configuration data: ASCLIN3ERR_ISR */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ASCLIN3ERR_ISR_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ASCLIN3ERR_ISR;
+
+/*! ISR configuration data: ASCLIN3RX_ISR */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ASCLIN3RX_ISR_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ASCLIN3RX_ISR;
+
+/*! ISR configuration data: ASCLIN3TX_ISR */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ASCLIN3TX_ISR_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_ASCLIN3TX_ISR;
 
 /*! ISR configuration data: ASCLIN4ERR_ISR */
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_ASCLIN4ERR_ISR_HwConfig;
