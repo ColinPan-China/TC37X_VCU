@@ -191,6 +191,8 @@ FUNC(void, ECUM_CODE) EcuM_OnGoOffTwo(void)
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_OnGoOffTwo>                        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
   /* Add implementation of EcuM_OnGoOffTwo() */
+  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P23_5_LIN_SLP, 0);
+  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P23_6_LIN_SLP, 0);
   Tja1145_GoSleep();
   return;
 /**********************************************************************************************************************

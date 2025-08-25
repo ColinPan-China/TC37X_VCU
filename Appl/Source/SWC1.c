@@ -479,6 +479,8 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
     Rte_Call_UR_CN_TC37X_VCU_CAN12_74cffd8f_RequestComMode(COMM_NO_COMMUNICATION);
     Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode( COMM_NO_COMMUNICATION );
     ComM_RequestComMode(ComMConf_ComMChannel_CN_LIN02_5f246578, COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMChannel_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac, COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMChannel_CN_LIN02_5f246578, COMM_NO_COMMUNICATION);
     Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_NO_COMMUNICATION);
     Rte_Call_UR_CN_LIN01_778f96a0_RequestComMode(COMM_NO_COMMUNICATION);
     Rte_Write_Request_ESH_RunRequest_0_requestedMode(0);
