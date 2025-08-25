@@ -510,7 +510,7 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_500ms(void) /* PRQA S 0624, 3206 */ /* MD_
   if( ICU_Val1.PeriodTime != 0 )
   {
     Rte_Write_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty(ICU_Val1.ActiveTime*100/ICU_Val1.PeriodTime);
-    Rte_Write_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period(ICU_Val1.PeriodTime/6250);
+    Rte_Write_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period(ICU_Val1.PeriodTime*100/625);
   }
   else
   {
@@ -521,7 +521,7 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_500ms(void) /* PRQA S 0624, 3206 */ /* MD_
   if( ICU_Val2.PeriodTime != 0 )
   {
     Rte_Write_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty(ICU_Val2.ActiveTime*100/ICU_Val2.PeriodTime);
-    Rte_Write_EXT_PWM_IN2_Period_EXT_PWM_IN2_Period(ICU_Val2.PeriodTime/6250);
+    Rte_Write_EXT_PWM_IN2_Period_EXT_PWM_IN2_Period(ICU_Val2.PeriodTime*100/625);
   }    
   else
   {

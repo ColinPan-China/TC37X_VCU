@@ -51,9 +51,10 @@ BO_ 514 VcuRxMsg3: 8 GWM
 BO_ 273 VcuMeasurementMsg0: 8 VCU
  SG_ Ext_IN2 : 48|8@1- (1,0) [0|0] ""  GWM
  SG_ EXT_PWM_IN2_Duty : 40|8@1- (1,0) [0|0] "%"  GWM
- SG_ EXT_PWM_IN2_Period : 24|16@1- (1,0) [0|0] "ms"  GWM
+ SG_ EXT_PWM_IN2_Period : 24|16@1- (1,0) [0|0] "us"  GWM
  SG_ EXT_PWM_IN1_Duty : 16|8@1- (1,0) [0|0] "%"  GWM
- SG_ EXT_PWM_IN1_Period : 0|16@1- (1,0) [0|0] "ms"  GWM
+ SG_ EXT_PWM_IN1_Period : 0|16@1- (1,0) [0|0] "us"  GWM
+ SG_ EXT_PWM_IN1_Period : 0|16@1- (1,0) [0|0] "us"  GWM
  
 BO_ 272 VcuRxCtrlMsg2: 8 GW
  SG_ Tle888qk_Lout16_En : 24|8@1- (1,0) [0|0] ""  VCU
