@@ -144,7 +144,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
   Adc_SampleMain();
   TLE8888qk_Main();
   PwnIf_Main();
-
+  Tle94108es_Main();
   SensorMngMain();
 
   /*ICU Measurement*/

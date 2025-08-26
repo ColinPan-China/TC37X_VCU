@@ -45,7 +45,7 @@ void Tle94108es_ReadReg( uint8 addr, uint8* val )
   Tle94108es_SpiTransmit( TxBuf9410, RxBuf9410 );
   *val = RxBuf9410[1];
 }
-
+uint8 RD;
 void Tle94108es_Init()
 {
   /*Select  PWM Channel 1 */
@@ -62,11 +62,14 @@ void Tle94108es_Init()
   Tle94108es_WriteReg(PWM_CH_FREQ_CTRL,0x02u);
 
   /*Enable Output */
-  Tle94108es_WriteReg(HB_ACT_1_CTRL,0xFFu);
-  Tle94108es_WriteReg(HB_ACT_2_CTRL,0xFFu);
+  Tle94108es_WriteReg(HB_ACT_1_CTRL,0xAAu);
+  Tle94108es_WriteReg(HB_ACT_2_CTRL,0xAAu);
+
+  Tle94108es_ReadReg(CONFIG_CTRL,&RD);
 }
 
 void Tle94108es_Main()
 {
-	
+  Tle94108es_WriteReg(HB_ACT_1_CTRL,0xAAu);
+//  Tle94108es_WriteReg(HB_ACT_2_CTRL,0xAAu);
 }

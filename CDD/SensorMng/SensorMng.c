@@ -53,8 +53,32 @@ uint8 LowOut14_16Cfg_old = 0;
 
 uint8 Ext_D_In2;
 
+uint8 IN2;
+uint8 IN3;
+uint8 IN4;
+uint8 IN5;
+uint8 IN6;
+uint8 IN7;
+uint8 IN8;
+
+uint8 DSEL0;
+uint8 DSEL1;
+
+
 void SensorMngMain()
 {
+
+    Dio_WriteChannel( DioConf_DioChannel_DioChannel_P2_10_IN2, IN2 );
+    Dio_WriteChannel( DioConf_DioChannel_DioChannel_P2_9_IN3, IN3 );
+    Dio_WriteChannel( DioConf_DioChannel_DioChannel_P2_8_IN4, IN4 );
+    Dio_WriteChannel( DioConf_DioChannel_DioChannel_P2_7_IN5, IN5 );
+    Dio_WriteChannel( DioConf_DioChannel_DioChannel_P2_6_IN6, IN6 );
+    Dio_WriteChannel( DioConf_DioChannel_DioChannel_P2_5_IN7, IN7 );
+    Dio_WriteChannel( DioConf_DioChannel_DioChannel_P2_4_IN8, IN8 );
+
+    Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_11_DSEL0, DSEL0 );
+    Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_12_DSEL1, DSEL1 );
+
     uint8 tbl_index = 0;
 
     for( tbl_index = 0; tbl_index < SensorMngIoTbl_Len; tbl_index++ )

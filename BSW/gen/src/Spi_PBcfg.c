@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 15.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2025-08-25, 17:09:50  !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2025-08-26, 15:48:51  !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b180321-0610      !!!IGNORE-LINE!!!                   **
 **                                                                            **
@@ -530,8 +530,8 @@ static const Spi_JobConfigType Spi_kJobConfig_Core0[] =
     ),
     Spi_IdleLeadTrailParam(
     (1U), (4U), /* IPRE,IDLE:   IdleA/B delay = 1.0E-7s */
-    (1U), (4U), /* LPRE,LEAD:   Lead delay    = 1.0E-7s */
-    (1U), (4U),/* TPRE, TRAIL: Trail delay   = 1.0E-7s */
+    (2U), (4U), /* LPRE,LEAD:   Lead delay    = 4.0E-7s */
+    (2U), (4U),/* TPRE, TRAIL: Trail delay   = 4.0E-7s */
     (1U)
     ),
     SpiJob_TLE9410_SPI1_ChannelLinkPtr_Physical, /* Channel linked list Physical*/

@@ -92,8 +92,12 @@ TLE8888qk_CfgType TLE8888qk_CfgTable[] =
   { CMD_OECONFIG(0,0x80),   0,  0 },
   { CMD_CONT(0,0x00),       0,  0 },
 
-//  { CMD_OECONFIG(3,0x0F),   0,  0 },IG1-IG4
-//  { CMD_CONT(3,0x0F),       0,  0 },
+  /*LOWOUT1-4,direct pin control*/
+  { CMD_DDCONFIG(3,0X0F),   0,  0 },  
+  { CMD_OECONFIG(3,0x0F),   0,  0 },//IG1-IG4
+  { CMD_CONT(3,0x0F),       0,  0 },
+  
+
 
   { CMD_CONT(2,0x00),       0,  0 },
 };
