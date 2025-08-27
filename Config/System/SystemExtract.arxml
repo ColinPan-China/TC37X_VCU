@@ -57058,10 +57058,6 @@ Revision:</L-2>
               <DISPLAY-NAME>mm</DISPLAY-NAME>
             </UNIT>
             <UNIT>
-              <SHORT-NAME>U_ms</SHORT-NAME>
-              <DISPLAY-NAME>ms</DISPLAY-NAME>
-            </UNIT>
-            <UNIT>
               <SHORT-NAME>U_mV</SHORT-NAME>
               <DISPLAY-NAME>mV</DISPLAY-NAME>
             </UNIT>
@@ -57084,6 +57080,10 @@ Revision:</L-2>
             <UNIT>
               <SHORT-NAME>U_SED</SHORT-NAME>
               <DISPLAY-NAME>SED</DISPLAY-NAME>
+            </UNIT>
+            <UNIT>
+              <SHORT-NAME>U_us</SHORT-NAME>
+              <DISPLAY-NAME>us</DISPLAY-NAME>
             </UNIT>
             <UNIT>
               <SHORT-NAME>U_V</SHORT-NAME>
@@ -59222,7 +59222,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_EXT_PWM_IN1_Period</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_PWM_IN1_Period</DATA-CONSTR-REF>
-                <UNIT-REF DEST="UNIT">/DataType/Unit/U_ms</UNIT-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_us</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -59248,7 +59248,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_EXT_PWM_IN2_Period</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_PWM_IN2_Period</DATA-CONSTR-REF>
-                <UNIT-REF DEST="UNIT">/DataType/Unit/U_ms</UNIT-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_us</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>

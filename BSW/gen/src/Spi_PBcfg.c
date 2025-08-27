@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 15.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2025-08-26, 15:48:51  !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2025-08-27, 11:01:44  !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b180321-0610      !!!IGNORE-LINE!!!                   **
 **                                                                            **
@@ -761,7 +761,7 @@ static const Spi_ChannelConfigType Spi_kChannelConfig_Core0[] =
     0x00000000U,     /* Default data */
     0x1ffeU,         /* Number of Data Elements */
     SPI_EB_CHANNEL,  /* External Buffer Channel */
-    0x82U,            /* MSB[7], DataWidth=2[6:0] */
+    0x88U,            /* MSB[7], DataWidth=8[6:0] */
     SpiConf_SpiChannel_SpiChannel_TLE9201
   },
   /* EB Chnl[s] on QSPI3 core0*/

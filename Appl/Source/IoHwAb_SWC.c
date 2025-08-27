@@ -53,6 +53,7 @@
 #include "TLE94108ES.h"
 #include "Icu_17_TimerIp.h"
 #include "SensorMng.h"
+#include "TLE9201SG.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -110,6 +111,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
   PwnIf_Start();
 //  Tja1145_GoSleep();
   Tle94108es_Init();
+  Tle9201sg_Init();
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -145,6 +147,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
   TLE8888qk_Main();
   PwnIf_Main();
   Tle94108es_Main();
+  Tle9201sg_Main();
   SensorMngMain();
 
   /*ICU Measurement*/

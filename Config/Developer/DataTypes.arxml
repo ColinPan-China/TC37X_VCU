@@ -30618,6 +30618,17 @@
               <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
               <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
             </UNIT>
+            <UNIT UUID="21A02A60-805E-4536-8648-E515DC5BC2F8">
+              <SHORT-NAME>U_us</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV_SDG">
+                    <SD GID="DV_ReadOnly">1</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <DISPLAY-NAME>us</DISPLAY-NAME>
+            </UNIT>
           </ELEMENTS>
         </AR-PACKAGE>
       </AR-PACKAGES>

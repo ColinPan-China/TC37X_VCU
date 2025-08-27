@@ -37608,7 +37608,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_EXT_PWM_IN1_Period</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_PWM_IN1_Period</DATA-CONSTR-REF>
-                <UNIT-REF DEST="UNIT">/DataType/Unit/U_ms</UNIT-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_us</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
@@ -37634,7 +37634,7 @@ If this signal is set to anything other than 0, the IBS shall ignore any request
               <SW-DATA-DEF-PROPS-CONDITIONAL>
                 <COMPU-METHOD-REF DEST="COMPU-METHOD">/DataType/Semantics/CM_EXT_PWM_IN2_Period</COMPU-METHOD-REF>
                 <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataType/Constraint/DC_EXT_PWM_IN2_Period</DATA-CONSTR-REF>
-                <UNIT-REF DEST="UNIT">/DataType/Unit/U_ms</UNIT-REF>
+                <UNIT-REF DEST="UNIT">/DataType/Unit/U_us</UNIT-REF>
               </SW-DATA-DEF-PROPS-CONDITIONAL>
             </SW-DATA-DEF-PROPS-VARIANTS>
           </PHYSICAL-PROPS>
