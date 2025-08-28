@@ -156,6 +156,8 @@
 #define CMD_DDCONFIG(n, d)	CMD_W(0x57 + ((n) & 0x03), d)
 #define CMD_OECONFIG(n, d)	CMD_W(0x5b + ((n) & 0x03), d)
 #define CMD_OECONFIG_READ(n)	CMD_R(0x5b + ((n) & 0x03))
+#define CMD_WR_WDRENG(d) CMD_W(0x64, d)
+#define CMD_RD_WDRENG()   CMD_R(0x64)
 
 /* Control registers */
 #define CMD_CONT(n, d)		CMD_W(0x7b + ((n) & 0x03), d)

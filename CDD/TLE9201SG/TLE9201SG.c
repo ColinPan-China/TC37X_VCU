@@ -3,17 +3,22 @@
 #include "Dio.h"
 
 
-static uint8 u9210Tx = 0;
-static uint8 u9210Rx = 0;
-
-
-
 #define RD_DIA          (0x00u) // (0b000)  Read Diagnosis Register
 #define RES_DIA         (0x04u) // (0b100)  Reset Diagnosis Register
 #define RD_REV          (0x01u) // (0b001)  Read Device Revision Number
 #define RD_CTRL         (0x03u) // (0b011)  Read Control Register
 #define WR_CTRL         (0x07u) // (0b111)  Write Control - sets and returns Control Register values
 #define WR_CTRL_RD_DIA  (0x06u) // (0b110)  Write Control and Read Diagnosis- sets Control Register values and returns Diagnosis Register values
+
+
+uint8 TLE9201_Spi_Trans_Ok = 1;
+void SpiSeq_TLE9201_Notify()
+{
+  TLE9201_Spi_Trans_Ok = 1;
+}
+
+static uint8 u9210Tx = 0;
+static uint8 u9210Rx = 0;
 
 void Tle9201sg_SpiTransmit()
 {
@@ -30,7 +35,6 @@ void Tle9201sg_WriteReg( uint8 wrcmd, uint8 data )
   u9210Tx |= (data&0x1F);
 
   Tle9201sg_SpiTransmit();
-
 }
 
 void Tle9201sg_ReadReg( uint8 rdcmd, uint8* data )

@@ -2,6 +2,8 @@
 #include "vstdlib.h"
 #include "Dio.h"
 
+#define EXTWDG_RESETEN		    (FALSE)
+
 typedef enum
 {
   TLE8888QK_INIT_STATE = 0,
@@ -41,29 +43,14 @@ const uint8 tle8888_fwd_responses[16][4] =
 };
 
 /*Watchdog error count */
-uint8   wwd_err_cnt = 0;
-uint8   fwd_err_cnt = 0;
-uint8   tot_err_cnt = 0;
-uint8   initflg     = 0;
+uint8 wwd_err_cnt = 0;
+uint8 fwd_err_cnt = 0;
+uint8 tot_err_cnt = 0;
+uint8 Mon_Status  = 0;
 
 /*Watchdog timinmg count */
-uint32	wwd_ts = 0;
-uint32	fwd_ts = 0;
-
-/*Out21-24 config reg val */
-uint16 BRICONFIG0_Val  = 0;
-uint16 OEConfig2_Val   = 0;
-uint16 CMD_CONT_Val    = 0;
-uint16 bridiag0_Val    = 0;
-uint16 bridiag1_Val    = 0;
-
-/*Out21-24 config reg response val */
-uint16 bridge0_reg     = 0;
-uint16 oeconfig2_reg  = 0;
-uint16 cont2_reg      = 0;
-uint16 bridiag0       = 0;
-uint16 bridiag1       = 0;
-
+uint32  wwd_ts = 0;
+uint32  fwd_ts = 0;
 
 
 TLE8888qk_CfgType TLE8888qk_CfgTable[] =
@@ -76,6 +63,11 @@ TLE8888qk_CfgType TLE8888qk_CfgTable[] =
   { CMD_INCONFIG(1,0X11),   0,  0 },//Input10 assign to OUT22
   { CMD_INCONFIG(2,0X12),   0,  0 },//Input11 assign to OUT23
   { CMD_INCONFIG(3,0X13),   0,  0 },//Input12 assign to OUT24
+
+  //Watchdog Reset Enable
+#if EXTWDG_RESETEN
+  { CMD_WR_WDRENG(0x1F),    0,  0 },
+#endif
 
   /*LOWOUT1-4,direct pin control*/
   { CMD_DDCONFIG(0,0X0F),   0,  0 },
@@ -97,8 +89,6 @@ TLE8888qk_CfgType TLE8888qk_CfgTable[] =
   { CMD_OECONFIG(3,0x0F),   0,  0 },//IG1-IG4
   { CMD_CONT(3,0x0F),       0,  0 },
   
-
-
   { CMD_CONT(2,0x00),       0,  0 },
 };
 
@@ -117,17 +107,11 @@ TLE8888qk_CfgType TLE8888qk_DiagTable[] =
 
 
 uint8 CfgIndex  = 0;
-uint8 DiagIndex  = 0;
+uint8 DiagIndex = 0;
 
 Tle8888qk_State_e Tle8888qk_State = 0;
 
 uint8 SpiRxBuf_Tle8888[2]={0};
-
-uint8 TLE9201_Spi_Trans_Ok = 1;
-void SpiSeq_TLE9201_Notify()
-{
-  TLE9201_Spi_Trans_Ok = 1;
-}
 
 void SpiSeq_TLE8888_Notify()
 {
@@ -232,6 +216,8 @@ void chip_reset()
 void TLE8888qk_Main()
 {
 
+  Mon_Status = Dio_ReadChannel( DioConf_DioChannel_DioChannel_P33_8_MON ); 
+
   switch (Tle8888qk_State)
   {
     case TLE8888QK_INIT_STATE:
@@ -312,64 +298,6 @@ uint8 TLE8888qk_WdgFeed()
         return 0;
       }
       PMIC_DiagStatus();
-#if 0
-      if(initflg == 0)
-      {
-        initflg = 1;
-//        TLE8888qk_SpiTransmit(CMD_CHIP_UNLOCK, NULL_PTR);
-//        TLE8888qk_SpiTransmit(CMD_OE_SET, NULL_PTR);
-      }
-      else if(initflg == 1)
-      {
-        initflg = 2;
-//        TLE8888qk_SpiTransmit(CMD_BRICONFIG(0,0xFF),&bridge0_reg);
-//        TLE8888qk_SpiTransmit(CMD_BRICONFIG(0,0xFF),&bridge0_reg);
-      }
-      else if(initflg == 2)
-      {
-        initflg = 3;
-//		    TLE8888qk_SpiTransmit(CMD_OECONFIG(2,0xF0),&oeconfig2_reg);
-//		    TLE8888qk_SpiTransmit(CMD_OECONFIG(2,0xF0),&oeconfig2_reg); 
-      }
-      else if(initflg == 3)
-      {
-        initflg = 4;
-//        TLE8888qk_SpiTransmit(CMD_CONT(2,0xF0),&cont2_reg);
-//        TLE8888qk_SpiTransmit(CMD_CONT(2,0xF0),&cont2_reg);
-      }
-      else if(initflg == 4)
-      {
-        initflg = 5;
-        TLE8888qk_SpiTransmit(CMD_BRIDIAG(0),&bridiag0);
-        TLE8888qk_SpiTransmit(CMD_BRIDIAG(0),&bridiag0);
-      }
-      else if(initflg == 5)
-      {
-        initflg = 4;
-        TLE8888qk_SpiTransmit(CMD_BRIDIAG(1),&bridiag1);
-        TLE8888qk_SpiTransmit(CMD_BRIDIAG(1),&bridiag1);
-      }
-      else if(initflg == 6)
-      {
-        initflg = 7;
-        TLE8888qk_SpiTransmit(CMD_BRICONFIG_READ(0),&bridge0_reg);
-        TLE8888qk_SpiTransmit(CMD_BRICONFIG_READ(0),&bridge0_reg);
-      }
-      else if(initflg == 7)
-      {
-        initflg = 4;
-        TLE8888qk_SpiTransmit(CMD_OECONFIG_READ(2),&oeconfig2_reg);
-        TLE8888qk_SpiTransmit(CMD_OECONFIG_READ(2),&oeconfig2_reg);
-      }
-
-
-      BRICONFIG0_Val  = getDataFromResponse(bridge0_reg) & 0x7f;
-      OEConfig2_Val   = getDataFromResponse(oeconfig2_reg) & 0x7f;
-      CMD_CONT_Val    = getDataFromResponse(cont2_reg) & 0x7f;
-
-      bridiag0_Val   = getDataFromResponse(bridiag0) & 0x7f;
-      bridiag1_Val    = getDataFromResponse(bridiag1) & 0x7f;
-#endif
     }
   }
 
