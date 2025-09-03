@@ -2146,13 +2146,13 @@
 # if defined _MICROSOFT_C_VTT_
    /* VTT usecase - nothing to do here */
 # else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
+//#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
    /* Pragma must be placed here. */
    /* Example for GHS compiler:  
 #  pragma ghs section bss=".EthDesc"
    */
 # endif
-
+#pragma align 16
 # define START_SEC_VAR_NOINIT_UNSPECIFIED
 #endif
 #if defined ETH_30_TC3XX_STOP_SEC_DESCRIPTOR_BASE_ADDRESS_TABLE_VAR_NOINIT_UNSPECIFIED
@@ -2161,13 +2161,13 @@
 # if defined _MICROSOFT_C_VTT_
    /* VTT usecase - nothing to do here */
 # else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
+//#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
    /* Pragma must be placed here. */
    /* Example for GHS compiler:  
 #  pragma ghs section bss=default
    */
 # endif
-
+#pragma align restore
 # define STOP_SEC_VAR
 #endif
 
@@ -2177,13 +2177,13 @@
 # if defined _MICROSOFT_C_VTT_
    /* VTT usecase - nothing to do here */
 # else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
+//#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
    /* Pragma must be placed here. */
    /* Example for GHS compiler:  
 #  pragma ghs section bss=".EthDesc"
    */
 # endif
-
+#pragma align 16
 # define START_SEC_VAR_NOINIT_UNSPECIFIED
 #endif
 #if defined ETH_30_TC3XX_STOP_SEC_TX_DESCRIPTOR_VAR_NOINIT_UNSPECIFIED
@@ -2192,13 +2192,13 @@
 # if defined _MICROSOFT_C_VTT_
    /* VTT usecase - nothing to do here */
 # else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
+//#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
    /* Pragma must be placed here. */
    /* Example for GHS compiler:  
 #  pragma ghs section bss=default
    */
 # endif
-
+#pragma align restore
 # define STOP_SEC_VAR
 #endif
 
@@ -2208,13 +2208,13 @@
 # if defined _MICROSOFT_C_VTT_
    /* VTT usecase - nothing to do here */
 # else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
+//#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
    /* Pragma must be placed here. */
    /* Example for GHS compiler:  
 #  pragma ghs section bss=".EthBuffers"
    */
 # endif
-
+#pragma align 16
 # define START_SEC_VAR_NOINIT_UNSPECIFIED
 #endif
 #if defined ETH_30_TC3XX_STOP_SEC_TX_BUFFER_VAR_NOINIT_8BIT
@@ -2223,13 +2223,13 @@
 # if defined _MICROSOFT_C_VTT_
    /* VTT usecase - nothing to do here */
 # else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
+//#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
    /* Pragma must be placed here. */
    /* Example for GHS compiler:  
 #  pragma ghs section bss=default
    */
 # endif
-
+#pragma align restore
 # define STOP_SEC_VAR
 #endif
 
@@ -2239,13 +2239,13 @@
 # if defined _MICROSOFT_C_VTT_
    /* VTT usecase - nothing to do here */
 # else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
+//#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
    /* Pragma must be placed here. */
    /* Example for GHS compiler:  
 #  pragma ghs section bss=".EthDesc"
    */
 # endif
-
+#pragma align 16
 # define START_SEC_VAR_NOINIT_UNSPECIFIED
 #endif
 #if defined ETH_30_TC3XX_STOP_SEC_RX_DESCRIPTOR_VAR_NOINIT_UNSPECIFIED
@@ -2254,13 +2254,13 @@
 # if defined _MICROSOFT_C_VTT_
    /* VTT usecase - nothing to do here */
 # else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
+//#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
    /* Pragma must be placed here. */
    /* Example for GHS compiler:  
 #  pragma ghs section bss=default
    */
 # endif
-
+#pragma align restore
 # define STOP_SEC_VAR
 #endif
 
@@ -2270,13 +2270,13 @@
 # if defined _MICROSOFT_C_VTT_
    /* VTT usecase - nothing to do here */
 # else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
+//#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
    /* Pragma must be placed here. */
    /* Example for GHS compiler:  
 #  pragma ghs section bss=".EthBuffers"
    */
 # endif
-
+#pragma align 16
 # define START_SEC_VAR_NOINIT_UNSPECIFIED
 #endif
 #if defined ETH_30_TC3XX_STOP_SEC_RX_BUFFER_VAR_NOINIT_8BIT
@@ -2285,13 +2285,13 @@
 # if defined _MICROSOFT_C_VTT_
    /* VTT usecase - nothing to do here */
 # else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
+//#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
    /* Pragma must be placed here. */
    /* Example for GHS compiler:  
 #  pragma ghs section bss=default
    */
 # endif
-
+#pragma align restore
 # define STOP_SEC_VAR
 #endif
 

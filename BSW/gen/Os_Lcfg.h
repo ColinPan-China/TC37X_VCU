@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Lcfg.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-09-03 14:21:21
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -469,6 +469,30 @@ extern FUNC(void, OS_DMACH10SR_ISR_CODE) Os_Isr_DMACH10SR_ISR(void);
 extern FUNC(void, OS_DMACH11SR_ISR_CODE) Os_Isr_DMACH11SR_ISR(void);
 
 # define OS_STOP_SEC_DMACH11SR_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_EthIsr_EthCtrlConfig_ETHSR2_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  EthIsr_EthCtrlConfig_ETHSR2_ISR()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_ETHISR_ETHCTRLCONFIG_ETHSR2_ISR_CODE) Os_Isr_EthIsr_EthCtrlConfig_ETHSR2_ISR(void);
+
+# define OS_STOP_SEC_EthIsr_EthCtrlConfig_ETHSR2_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_EthIsr_EthCtrlConfig_ETHSR6_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  EthIsr_EthCtrlConfig_ETHSR6_ISR()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_ETHISR_ETHCTRLCONFIG_ETHSR6_ISR_CODE) Os_Isr_EthIsr_EthCtrlConfig_ETHSR6_ISR(void);
+
+# define OS_STOP_SEC_EthIsr_EthCtrlConfig_ETHSR6_ISR_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

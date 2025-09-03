@@ -51,6 +51,7 @@
 #include "Dio.h"
 #include "PwmIf.h"
 #include "CanNm.h"
+#include "RTL8211FI.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -122,6 +123,8 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
   CanNm_SetPnMessageFilterEnabled(1,1);
   
   PwnIf_Start();
+
+  Rtl8211_Init();
 //  Tja1145_GoSleep();
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
@@ -179,6 +182,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
     sts_SV = 0;
   }
   Rte_Write_P_Arry8Bytes_DEP_Arry8Bytes(SendArry);
+  Rtl8211_Main();
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

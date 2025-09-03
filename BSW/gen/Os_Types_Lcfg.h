@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2025-06-18 09:59:10
+ *   Generation Time: 2025-09-03 14:21:21
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -102,6 +102,8 @@
 #define CounterIsr_SystemTimer2 CounterIsr_SystemTimer2
 #define DMACH10SR_ISR DMACH10SR_ISR
 #define DMACH11SR_ISR DMACH11SR_ISR
+#define EthIsr_EthCtrlConfig_ETHSR2_ISR EthIsr_EthCtrlConfig_ETHSR2_ISR
+#define EthIsr_EthCtrlConfig_ETHSR6_ISR EthIsr_EthCtrlConfig_ETHSR6_ISR
 #define GTMTOM1SR3_ISR GTMTOM1SR3_ISR
 #define GTMTOM1SR4_ISR GTMTOM1SR4_ISR
 #define QSPI3ERR_ISR QSPI3ERR_ISR
@@ -231,14 +233,16 @@ typedef enum
   CounterIsr_SystemTimer2 = 18,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   DMACH10SR_ISR = 19,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   DMACH11SR_ISR = 20,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  GTMTOM1SR3_ISR = 21,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  GTMTOM1SR4_ISR = 22,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  QSPI3ERR_ISR = 23,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  QSPI3PT_ISR = 24,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  XSignalIsr_OsCore0 = 25,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  XSignalIsr_OsCore1 = 26,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  XSignalIsr_OsCore2 = 27,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ISRID_COUNT = 28,
+  EthIsr_EthCtrlConfig_ETHSR2_ISR = 21,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  EthIsr_EthCtrlConfig_ETHSR6_ISR = 22,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  GTMTOM1SR3_ISR = 23,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  GTMTOM1SR4_ISR = 24,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  QSPI3ERR_ISR = 25,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  QSPI3PT_ISR = 26,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore0 = 27,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore1 = 28,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore2 = 29,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ISRID_COUNT = 30,
   INVALID_ISR = OS_ISRID_COUNT
 } ISRType;
 

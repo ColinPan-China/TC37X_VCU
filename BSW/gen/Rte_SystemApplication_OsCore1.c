@@ -66,6 +66,7 @@
 #include "SchM_Dio.h"
 #include "SchM_Dma.h"
 #include "SchM_EcuM.h"
+#include "SchM_Eth_30_Tc3xx.h"
 #include "SchM_Fee.h"
 #include "SchM_Fls_17_Dmu.h"
 #include "SchM_Irq.h"

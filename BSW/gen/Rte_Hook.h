@@ -908,6 +908,14 @@
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_2_Start
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Return
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Start
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_MULTI_CORE_Return
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_MULTI_CORE_Start
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_Return
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_Start
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DISABLE_MAC_Return
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DISABLE_MAC_Start
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_MII_Return
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_MII_Start
  *  SchM_EnterHook_Fls_17_Dmu_Erase_Return
  *  SchM_EnterHook_Fls_17_Dmu_Erase_Start
  *  SchM_EnterHook_Fls_17_Dmu_Init_Return
@@ -1132,6 +1140,14 @@
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_2_Start
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Return
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Start
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_MULTI_CORE_Return
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_MULTI_CORE_Start
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_Return
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_Start
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DISABLE_MAC_Return
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DISABLE_MAC_Start
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_MII_Return
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_MII_Start
  *  SchM_ExitHook_Fls_17_Dmu_Erase_Return
  *  SchM_ExitHook_Fls_17_Dmu_Erase_Start
  *  SchM_ExitHook_Fls_17_Dmu_Init_Return
@@ -1264,6 +1280,8 @@
  *  SchM_Schedulable_Dem_Dem_SatelliteMainFunction_Start
  *  SchM_Schedulable_EcuM_EcuM_MainFunction_Return
  *  SchM_Schedulable_EcuM_EcuM_MainFunction_Start
+ *  SchM_Schedulable_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction_Return
+ *  SchM_Schedulable_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction_Start
  *  SchM_Schedulable_Fee_Fee_MainFunction_Return
  *  SchM_Schedulable_Fee_Fee_MainFunction_Start
  *  SchM_Schedulable_Fls_17_Dmu_Fls_17_Dmu_MainFunction_Return

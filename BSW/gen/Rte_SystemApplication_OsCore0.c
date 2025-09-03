@@ -66,6 +66,7 @@
 #include "SchM_Dio.h"
 #include "SchM_Dma.h"
 #include "SchM_EcuM.h"
+#include "SchM_Eth_30_Tc3xx.h"
 #include "SchM_Fee.h"
 #include "SchM_Fls_17_Dmu.h"
 #include "SchM_Irq.h"
@@ -2388,6 +2389,9 @@ TASK(Core0_BswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable *
 
       /* call runnable */
       ComM_MainFunction_4(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+      /* call schedulable entity */
+      Eth_30_Tc3xx_MainFunction();
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

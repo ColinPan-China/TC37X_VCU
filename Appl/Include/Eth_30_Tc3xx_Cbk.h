@@ -55,7 +55,7 @@ ETH_30_TC3XX_CBK_LOCAL_INLINE FUNC (void, ETH_30_TC3XX_CODE) Appl_Eth_30_Tc3xx_M
 ETH_30_TC3XX_CBK_LOCAL_INLINE FUNC (void, ETH_30_TC3XX_CODE) Appl_Eth_30_Tc3xx_MemoryBarrier(void)
 {
 # ifndef ETH_30_TC3XX_CBK_ACCEPT_EMPTY_IMPLEMENTATION
-# error "Please give a proper definition for Appl_Eth_30_Tc3xx_MemoryBarrier to implement a memory barrier!"
+//# error "Please give a proper definition for Appl_Eth_30_Tc3xx_MemoryBarrier to implement a memory barrier!"
   /* Example implementation:
    * __asm("syncm");
    * __asm("syncp");

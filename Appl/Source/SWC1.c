@@ -426,7 +426,7 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  *********************************************************************************************************************/
 //Lin_DemoFunction();
 
-  if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )
+  if(1)//( IoHwGetKL15Level() == KL15_HIGH_LEVEL )
   {
     Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
     Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_FULL_COMMUNICATION );

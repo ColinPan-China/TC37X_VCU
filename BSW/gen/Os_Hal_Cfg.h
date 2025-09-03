@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Cfg.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-09-03 14:21:21
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -92,6 +92,10 @@
 # define OS_ISR_DMACH10SR_ISR_LEVEL     (114)
 # define OS_ISR_DMACH11SR_ISR_CORE      (0)
 # define OS_ISR_DMACH11SR_ISR_LEVEL     (115)
+# define OS_ISR_ETHISR_ETHCTRLCONFIG_ETHSR2_ISR_CORE      (0)
+# define OS_ISR_ETHISR_ETHCTRLCONFIG_ETHSR2_ISR_LEVEL     (60)
+# define OS_ISR_ETHISR_ETHCTRLCONFIG_ETHSR6_ISR_CORE      (0)
+# define OS_ISR_ETHISR_ETHCTRLCONFIG_ETHSR6_ISR_LEVEL     (61)
 # define OS_ISR_GTMTOM1SR3_ISR_CORE      (0)
 # define OS_ISR_GTMTOM1SR3_ISR_LEVEL     (121)
 # define OS_ISR_GTMTOM1SR4_ISR_CORE      (0)

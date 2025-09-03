@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-09-03 14:21:21
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -148,6 +148,14 @@ extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_DMACH10SR_ISR;
 /*! ISR configuration data: DMACH11SR_ISR */
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_DMACH11SR_ISR_HwConfig;
 extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_DMACH11SR_ISR;
+
+/*! ISR configuration data: EthIsr_EthCtrlConfig_ETHSR2_ISR */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_EthIsr_EthCtrlConfig_ETHSR2_ISR_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_EthIsr_EthCtrlConfig_ETHSR2_ISR;
+
+/*! ISR configuration data: EthIsr_EthCtrlConfig_ETHSR6_ISR */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_EthIsr_EthCtrlConfig_ETHSR6_ISR_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_EthIsr_EthCtrlConfig_ETHSR6_ISR;
 
 /*! ISR configuration data: GTMTOM1SR3_ISR */
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_GTMTOM1SR3_ISR_HwConfig;

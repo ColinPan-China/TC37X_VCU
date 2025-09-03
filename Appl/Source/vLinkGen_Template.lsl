@@ -1794,6 +1794,8 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_DMACH10SR_ISR_CODE";
         select "[.]text.OS_DMACH11SR_ISR_CODE";
         select "[.]text.OS_ERRORHOOK_CODE";
+        select "[.]text.OS_EthIsr_EthCtrlConfig_ETHSR2_ISR_CODE";
+        select "[.]text.OS_EthIsr_EthCtrlConfig_ETHSR6_ISR_CODE";
         select "[.]text.OS_GTMTOM1SR3_ISR_CODE";
         select "[.]text.OS_GTMTOM1SR4_ISR_CODE";
         select "[.]text.OS_QSPI3ERR_ISR_CODE";
