@@ -201,6 +201,8 @@ SchM_Det.h<br>
 SchM_Dio.h<br>
 SchM_Dma.h<br>
 SchM_EcuM.h<br>
+SchM_EthIf.h<br>
+SchM_EthSM.h<br>
 SchM_EthTrcv_30_Generic.h<br>
 SchM_Eth_30_Tc3xx.h<br>
 SchM_Fee.h<br>
@@ -233,6 +235,8 @@ SchM_Det_Type.h<br>
 SchM_Dio_Type.h<br>
 SchM_Dma_Type.h<br>
 SchM_EcuM_Type.h<br>
+SchM_EthIf_Type.h<br>
+SchM_EthSM_Type.h<br>
 SchM_EthTrcv_30_Generic_Type.h<br>
 SchM_Eth_30_Tc3xx_Type.h<br>
 SchM_Fee_Type.h<br>
@@ -382,6 +386,13 @@ CONST Size: 133 Bytes<br>
 <TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
 </TR>
 <TR>
+<TD><B>TimingEvent</B> Cyclic 20ms</TD>
+<TD>ComM_MainFunction_5</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_20ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_CN_KAMA_FP_EPT_0303_b67fd6a6::GetCurrentComMode</TD>
 <TD>GetCurrentComMode</TD>
 <TD>n/a</TD>
@@ -411,6 +422,13 @@ CONST Size: 133 Bytes<br>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_CN_TC37X_VCU_CAN03_5a834971::GetCurrentComMode</TD>
+<TD>GetCurrentComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_ETH::GetCurrentComMode</TD>
 <TD>GetCurrentComMode</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -473,6 +491,13 @@ CONST Size: 133 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_ETH::GetCurrentPNCComMode</TD>
+<TD>GetCurrentPNCComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_PNC24::GetCurrentPNCComMode</TD>
 <TD>GetCurrentPNCComMode</TD>
 <TD>n/a</TD>
@@ -529,6 +554,13 @@ CONST Size: 133 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::CL_ComMChannel_ETH::GetInhibitionStatus</TD>
+<TD>GetInhibitionStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::CW_CN_KAMA_FP_EPT_0303_275b3e6e::GetInhibitionStatus</TD>
 <TD>GetInhibitionStatus</TD>
 <TD>n/a</TD>
@@ -564,6 +596,13 @@ CONST Size: 133 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::CW_ComMChannel_ETH::GetInhibitionStatus</TD>
+<TD>GetInhibitionStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_CN_KAMA_FP_EPT_0303_b67fd6a6::GetMaxComMode</TD>
 <TD>GetMaxComMode</TD>
 <TD>n/a</TD>
@@ -593,6 +632,13 @@ CONST Size: 133 Bytes<br>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_CN_TC37X_VCU_CAN03_5a834971::GetMaxComMode</TD>
+<TD>GetMaxComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_ETH::GetMaxComMode</TD>
 <TD>GetMaxComMode</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -655,6 +701,13 @@ CONST Size: 133 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_ETH::GetRequestedComMode</TD>
+<TD>GetRequestedComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_PNC24::GetRequestedComMode</TD>
 <TD>GetRequestedComMode</TD>
 <TD>n/a</TD>
@@ -711,6 +764,13 @@ CONST Size: 133 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::CL_ComMChannel_ETH::LimitChannelToNoComMode</TD>
+<TD>LimitChannelToNoComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::modeLimitation::LimitECUToNoComMode</TD>
 <TD>LimitECUToNoComMode</TD>
 <TD>n/a</TD>
@@ -753,6 +813,13 @@ CONST Size: 133 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::CW_ComMChannel_ETH::PreventWakeUp</TD>
+<TD>PreventWakeUp</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::modeLimitation::ReadInhibitCounter</TD>
 <TD>ReadInhibitCounter</TD>
 <TD>n/a</TD>
@@ -789,6 +856,13 @@ CONST Size: 133 Bytes<br>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_CN_TC37X_VCU_CAN03_5a834971::RequestComMode</TD>
+<TD>RequestComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_ETH::RequestComMode</TD>
 <TD>RequestComMode</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -2597,6 +2671,13 @@ CONST Size: 133 Bytes<br>
 <TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
 </TR>
 <TR>
+<TD><B>TimingEvent</B> Cyclic 20ms</TD>
+<TD>ComM_MainFunction_5</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_20ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
+</TR>
+<TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Dcm_MainFunction</TD>
 <TD>Core0_BswTask</TD>
@@ -2637,6 +2718,34 @@ CONST Size: 133 Bytes<br>
 <TD>Core2_BswTask</TD>
 <TD>n/a</TD>
 <TD>Rte_Al_TE3_EcuM_EcuM_MainFunction</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>EthIf_MainFunctionRx</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_5ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_5ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 25ms</TD>
+<TD>EthIf_MainFunctionState</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Run_EthIf_EthIf_MainFunctionState</TD>
+<TD>Rte_Al_TE_EthIf_EthIf_MainFunctionState</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>EthIf_MainFunctionTx</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_5ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_5ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 20ms</TD>
+<TD>EthSM_MainFunction</TD>
+<TD>Core0_BswTask</TD>
+<TD>Rte_Ev_Cyclic2_Core0_BswTask_0_20ms</TD>
+<TD>Rte_Al_TE2_Core0_BswTask_0_20ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 20ms</TD>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.h
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-09-04 13:43:28
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -154,7 +154,7 @@
 /*! Optimization that is turned ON if and only if no passively coordinated channel exists on a satellite partition. */
 #define NM_OPTIMIZE_NO_PASSIVE_COORD_ON_SATELLITE_PARTITION   STD_ON
 
-#define NM_SYS_CHANNELS_PC                             5u
+#define NM_SYS_CHANNELS_PC                             6u
 #define NM_NM_CHANNELS_PC                              3u
 #define NM_COORD_PC                                    0u
 #define NM_BUSNMS_PC                                   3u
@@ -516,7 +516,7 @@
 #define Nm_GetSizeOfChannelConfigOfPCPartitionConfig()                                              3u  /**< the number of accomplishable value elements in Nm_ChannelConfig */
 #define Nm_GetSizeOfNmFunctionTableOfPCPartitionConfig()                                            1u  /**< the number of accomplishable value elements in Nm_NmFunctionTable */
 #define Nm_GetSizeOfPostInitializedOfPCPartitionConfig(partitionIndex)                              1u  /**< the number of accomplishable value elements in Nm_PostInitialized */
-#define Nm_GetSizeOfSysToNmChIndOfPCPartitionConfig()                                               5u  /**< the number of accomplishable value elements in Nm_SysToNmChInd */
+#define Nm_GetSizeOfSysToNmChIndOfPCPartitionConfig()                                               6u  /**< the number of accomplishable value elements in Nm_SysToNmChInd */
 #define Nm_GetSysToNmChIndOfPCPartitionConfig()                                                     Nm_SysToNmChInd  /**< the pointer to Nm_SysToNmChInd */
 /** 
   \}
@@ -1014,7 +1014,7 @@ extern CONST(Nm_PartitionIdentifiersType, NM_CONST) Nm_PartitionIdentifiers[1];
 /*lint -save -esym(961, 19.1) */
 #include "Nm_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Nm_SysToNmChIndType, NM_CONST) Nm_SysToNmChInd[5];
+extern CONST(Nm_SysToNmChIndType, NM_CONST) Nm_SysToNmChInd[6];
 #define NM_STOP_SEC_CONST_8
 /*lint -save -esym(961, 19.1) */
 #include "Nm_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

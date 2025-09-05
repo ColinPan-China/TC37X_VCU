@@ -2,7 +2,7 @@
 # define RTL8211FI_H
 
 #include "Platform_Types.h"
-
+#include "Eth_30_Tc3xx.h"
 
 #define ETH_IP_PROTOCOL                         (0X0800U)
 #define ETH_ARP_PROTOCOL                        (0X0806U)
@@ -97,5 +97,11 @@
 
 extern void Rtl8211_Main();
 extern void EthRegCalculate();
+
+
+extern void Msn_RxIndication(uint8 a, uint16 b, boolean c, P2VAR(uint8, AUTOMATIC, ETHIF_APPL_VAR) d, P2VAR(uint8, AUTOMATIC, ETHIF_APPL_VAR) e, uint16 f);
+
+
+extern void Msn_TxConfirmation(uint8 a, uint8 b);
 
 #endif /* RTL8211FI_H */

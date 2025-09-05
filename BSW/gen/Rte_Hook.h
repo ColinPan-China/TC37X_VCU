@@ -420,6 +420,8 @@
  *  Rte_Runnable_ComM_ComM_MainFunction_3_Start
  *  Rte_Runnable_ComM_ComM_MainFunction_4_Return
  *  Rte_Runnable_ComM_ComM_MainFunction_4_Start
+ *  Rte_Runnable_ComM_ComM_MainFunction_5_Return
+ *  Rte_Runnable_ComM_ComM_MainFunction_5_Start
  *  Rte_Runnable_ComM_GetCurrentComMode_Return
  *  Rte_Runnable_ComM_GetCurrentComMode_Start
  *  Rte_Runnable_ComM_GetCurrentPNCComMode_Return
@@ -908,6 +910,16 @@
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_2_Start
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Return
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Start
+ *  SchM_EnterHook_EthIf_ETHIF_EXCLUSIVE_AREA_CTRL_INIT_Return
+ *  SchM_EnterHook_EthIf_ETHIF_EXCLUSIVE_AREA_CTRL_INIT_Start
+ *  SchM_EnterHook_EthIf_ETHIF_EXCLUSIVE_AREA_RXTX_STATS_Return
+ *  SchM_EnterHook_EthIf_ETHIF_EXCLUSIVE_AREA_RXTX_STATS_Start
+ *  SchM_EnterHook_EthIf_ETHIF_EXCLUSIVE_AREA_SET_CTRL_MODE_Return
+ *  SchM_EnterHook_EthIf_ETHIF_EXCLUSIVE_AREA_SET_CTRL_MODE_Start
+ *  SchM_EnterHook_EthIf_ETHIF_EXCLUSIVE_AREA_SIGNAL_QUALITY_Return
+ *  SchM_EnterHook_EthIf_ETHIF_EXCLUSIVE_AREA_SIGNAL_QUALITY_Start
+ *  SchM_EnterHook_EthIf_ETHIF_EXCLUSIVE_AREA_TX_MIRROR_ELEMENT_Return
+ *  SchM_EnterHook_EthIf_ETHIF_EXCLUSIVE_AREA_TX_MIRROR_ELEMENT_Start
  *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_MULTI_CORE_Return
  *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_MULTI_CORE_Start
  *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_Return
@@ -1140,6 +1152,16 @@
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_2_Start
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Return
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Start
+ *  SchM_ExitHook_EthIf_ETHIF_EXCLUSIVE_AREA_CTRL_INIT_Return
+ *  SchM_ExitHook_EthIf_ETHIF_EXCLUSIVE_AREA_CTRL_INIT_Start
+ *  SchM_ExitHook_EthIf_ETHIF_EXCLUSIVE_AREA_RXTX_STATS_Return
+ *  SchM_ExitHook_EthIf_ETHIF_EXCLUSIVE_AREA_RXTX_STATS_Start
+ *  SchM_ExitHook_EthIf_ETHIF_EXCLUSIVE_AREA_SET_CTRL_MODE_Return
+ *  SchM_ExitHook_EthIf_ETHIF_EXCLUSIVE_AREA_SET_CTRL_MODE_Start
+ *  SchM_ExitHook_EthIf_ETHIF_EXCLUSIVE_AREA_SIGNAL_QUALITY_Return
+ *  SchM_ExitHook_EthIf_ETHIF_EXCLUSIVE_AREA_SIGNAL_QUALITY_Start
+ *  SchM_ExitHook_EthIf_ETHIF_EXCLUSIVE_AREA_TX_MIRROR_ELEMENT_Return
+ *  SchM_ExitHook_EthIf_ETHIF_EXCLUSIVE_AREA_TX_MIRROR_ELEMENT_Start
  *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_MULTI_CORE_Return
  *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_MULTI_CORE_Start
  *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_Return
@@ -1268,6 +1290,8 @@
  *  SchM_Schedulable_ComM_ComM_MainFunction_3_Start
  *  SchM_Schedulable_ComM_ComM_MainFunction_4_Return
  *  SchM_Schedulable_ComM_ComM_MainFunction_4_Start
+ *  SchM_Schedulable_ComM_ComM_MainFunction_5_Return
+ *  SchM_Schedulable_ComM_ComM_MainFunction_5_Start
  *  SchM_Schedulable_Com_Com_MainFunctionRx_ComMainFunctionRx_Return
  *  SchM_Schedulable_Com_Com_MainFunctionRx_ComMainFunctionRx_Start
  *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_Return
@@ -1280,6 +1304,14 @@
  *  SchM_Schedulable_Dem_Dem_SatelliteMainFunction_Start
  *  SchM_Schedulable_EcuM_EcuM_MainFunction_Return
  *  SchM_Schedulable_EcuM_EcuM_MainFunction_Start
+ *  SchM_Schedulable_EthIf_EthIf_MainFunctionRx_Return
+ *  SchM_Schedulable_EthIf_EthIf_MainFunctionRx_Start
+ *  SchM_Schedulable_EthIf_EthIf_MainFunctionState_Return
+ *  SchM_Schedulable_EthIf_EthIf_MainFunctionState_Start
+ *  SchM_Schedulable_EthIf_EthIf_MainFunctionTx_Return
+ *  SchM_Schedulable_EthIf_EthIf_MainFunctionTx_Start
+ *  SchM_Schedulable_EthSM_EthSM_MainFunction_Return
+ *  SchM_Schedulable_EthSM_EthSM_MainFunction_Start
  *  SchM_Schedulable_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction_Return
  *  SchM_Schedulable_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction_Start
  *  SchM_Schedulable_Fee_Fee_MainFunction_Return

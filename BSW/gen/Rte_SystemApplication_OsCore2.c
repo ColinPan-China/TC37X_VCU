@@ -66,6 +66,8 @@
 #include "SchM_Dio.h"
 #include "SchM_Dma.h"
 #include "SchM_EcuM.h"
+#include "SchM_EthIf.h"
+#include "SchM_EthSM.h"
 #include "SchM_EthTrcv_30_Generic.h"
 #include "SchM_Eth_30_Tc3xx.h"
 #include "SchM_Fee.h"
@@ -219,6 +221,7 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_Dcm_DcmEcuReset(Dcm_EcuResetType 
 #define RTE_CONST_MSEC_SystemTimer_Core2_100 (100UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_2 (2UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_20 (20UL)
+#define RTE_CONST_MSEC_SystemTimer_Core0_25 (25UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_5 (5UL)
 
 #define RTE_CONST_SEC_SystemTimer_Core0_0 (0UL)

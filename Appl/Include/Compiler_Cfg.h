@@ -1469,6 +1469,59 @@
 
 
 /**********************************************************************************************************************
+ *  ETHIF START 
+ *********************************************************************************************************************/
+
+#define ETHIF_CODE
+#define ETHIF_CODE_ISR
+#define ETHIF_ETHCTRL_INLINE_CODE
+#define ETHIF_ETHTRCV_INLINE_CODE
+#define ETHIF_ETHSWT_INLINE_CODE
+#define ETHIF_GW_INLINE_CODE
+#define ETHIF_LINK_INLINE_CODE
+#define ETHIF_MIRROR_INLINE_CODE
+#define ETHIF_MODE_INLINE_CODE
+#define ETHIF_RX_INLINE_CODE
+#define ETHIF_STATS_INLINE_CODE
+#define ETHIF_TX_INLINE_CODE
+#define ETHIF_UTILS_INLINE_CODE
+#define ETHIF_ZEROCOPY_INLINE_CODE
+
+#define ETHIF_CONST
+
+#define ETHIF_APPL_VAR
+#define ETHIF_APPL_DATA
+#define ETHIF_APPL_CODE
+
+#define ETHIF_VAR_NOINIT
+#define ETHIF_VAR_NOINIT_FAST
+
+#define ETHIF_VAR_INIT
+
+/**********************************************************************************************************************
+ *  ETHIF END
+ *********************************************************************************************************************/ 
+
+/**********************************************************************************************************************
+ *  ETHSM START 
+ *********************************************************************************************************************/
+
+#define ETHSM_CODE
+
+#define ETHSM_CONST
+#define ETHSM_APPL_CONST
+#define ETHSM_PBCFG
+#define ETHSM_APPL_DATA
+
+#define ETHSM_VAR_NOINIT
+#define ETHSM_VAR_ZERO_INIT
+
+/**********************************************************************************************************************
+ *  ETHSM END
+ *********************************************************************************************************************/
+
+ 
+/**********************************************************************************************************************
  *  VSTDLIB START
  *********************************************************************************************************************/
 

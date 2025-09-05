@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2025-09-03 14:21:21
+ *   Generation Time: 2025-09-04 10:59:05
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -123,6 +123,7 @@
 #define Rte_Al_TE_Core0_AswTask_0_10ms Rte_Al_TE_Core0_AswTask_0_10ms
 #define Rte_Al_TE_Core1App_SWC_Core1App_Runnable100ms Rte_Al_TE_Core1App_SWC_Core1App_Runnable100ms
 #define Rte_Al_TE_Core2App_SWC_Core2App_Runnable100ms Rte_Al_TE_Core2App_SWC_Core2App_Runnable100ms
+#define Rte_Al_TE_EthIf_EthIf_MainFunctionState Rte_Al_TE_EthIf_EthIf_MainFunctionState
 #define Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms
 
 /* Counter identifiers. */
@@ -259,8 +260,9 @@ typedef enum
   Rte_Al_TE_Core0_AswTask_0_10ms = 7,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_Core1App_SWC_Core1App_Runnable100ms = 8,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_Core2App_SWC_Core2App_Runnable100ms = 9,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms = 10,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ALARMID_COUNT = 11
+  Rte_Al_TE_EthIf_EthIf_MainFunctionState = 10,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms = 11,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ALARMID_COUNT = 12
 } AlarmType;
 
 /*! Counter identifiers. */

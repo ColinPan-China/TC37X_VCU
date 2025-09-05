@@ -7479,6 +7479,324 @@
 
 
 /**********************************************************************************************************************
+ *  ETHIF START 
+ *********************************************************************************************************************/
+
+/*******  CODE sections **********************************************************************************************/
+
+#if defined ETHIF_START_SEC_CODE
+  #undef ETHIF_START_SEC_CODE                       /* PRQA S 0841 */
+  #define START_SEC_CODE                            /* mapped to default code section */
+#endif
+#if defined ETHIF_STOP_SEC_CODE
+  #undef ETHIF_STOP_SEC_CODE                        /* PRQA S 0841 */
+  #define STOP_SEC_CODE                             /* default code stop section */
+#endif
+
+#if defined ETHIF_START_SEC_CODE_ISR
+  #undef ETHIF_START_SEC_CODE_ISR                   /* PRQA S 0841 */
+  #define START_SEC_CODE_ISR                        /* mapped to default ISR code section */
+#endif
+#if defined ETHIF_STOP_SEC_CODE_ISR
+  #undef ETHIF_STOP_SEC_CODE_ISR                    /* PRQA S 0841 */
+  #define STOP_SEC_CODE                             /* default code stop section */
+#endif
+
+/*******  CONST sections  ********************************************************************************************/
+
+#if defined ETHIF_START_SEC_CONST_8BIT
+# undef ETHIF_START_SEC_CONST_8BIT                  /* PRQA S 0841 */
+# define START_SEC_CONST_8BIT
+#endif
+#if defined ETHIF_STOP_SEC_CONST_8BIT
+# undef ETHIF_STOP_SEC_CONST_8BIT                   /* PRQA S 0841 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined ETHIF_START_SEC_CONST_16BIT
+# undef ETHIF_START_SEC_CONST_16BIT                 /* PRQA S 0841 */
+# define START_SEC_CONST_16BIT
+#endif
+#if defined ETHIF_STOP_SEC_CONST_16BIT
+# undef ETHIF_STOP_SEC_CONST_16BIT                  /* PRQA S 0841 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined ETHIF_START_SEC_CONST_32BIT
+# undef ETHIF_START_SEC_CONST_32BIT                 /* PRQA S 0841 */
+# define START_SEC_CONST_32BIT
+#endif
+#if defined ETHIF_STOP_SEC_CONST_32BIT
+# undef ETHIF_STOP_SEC_CONST_32BIT                  /* PRQA S 0841 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined ETHIF_START_SEC_CONST_UNSPECIFIED
+# undef ETHIF_START_SEC_CONST_UNSPECIFIED           /* PRQA S 0841 */
+# define START_SEC_CONST_UNSPECIFIED
+#endif
+#if defined ETHIF_STOP_SEC_CONST_UNSPECIFIED
+# undef ETHIF_STOP_SEC_CONST_UNSPECIFIED            /* PRQA S 0841 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined ETHIF_START_SEC_PBCFG
+# undef ETHIF_START_SEC_PBCFG                       /* PRQA S 0841 */
+# define START_SEC_CONST_PBCFG
+#endif
+#if defined ETHIF_STOP_SEC_PBCFG
+# undef ETHIF_STOP_SEC_PBCFG                        /* PRQA S 0841 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined ETHIF_START_SEC_PBCFG_ROOT
+# undef ETHIF_START_SEC_PBCFG_ROOT                  /* PRQA S 0841 */
+# define START_SEC_CONST_PBCFG
+#endif
+#if defined ETHIF_STOP_SEC_PBCFG_ROOT
+# undef ETHIF_STOP_SEC_PBCFG_ROOT                   /* PRQA S 0841 */
+# define STOP_SEC_CONST
+#endif
+
+/*******  VAR sections  **********************************************************************************************/
+
+#if defined ETHIF_START_SEC_VAR_NOINIT_8BIT
+# undef ETHIF_START_SEC_VAR_NOINIT_8BIT             /* PRQA S 0841 */
+# define START_SEC_VAR_NOINIT_8BIT
+#endif
+#if defined ETHIF_STOP_SEC_VAR_NOINIT_8BIT
+# undef ETHIF_STOP_SEC_VAR_NOINIT_8BIT              /* PRQA S 0841 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHIF_START_SEC_VAR_NOINIT_16BIT
+# undef ETHIF_START_SEC_VAR_NOINIT_16BIT            /* PRQA S 0841 */
+# define START_SEC_VAR_NOINIT_16BIT
+#endif
+#if defined ETHIF_STOP_SEC_VAR_NOINIT_16BIT
+# undef ETHIF_STOP_SEC_VAR_NOINIT_16BIT             /* PRQA S 0841 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHIF_START_SEC_VAR_NOINIT_32BIT
+# undef ETHIF_START_SEC_VAR_NOINIT_32BIT            /* PRQA S 0841 */
+# define START_SEC_VAR_NOINIT_32BIT
+#endif
+#if defined ETHIF_STOP_SEC_VAR_NOINIT_32BIT
+# undef ETHIF_STOP_SEC_VAR_NOINIT_32BIT             /* PRQA S 0841 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHIF_START_SEC_VAR_NOINIT_UNSPECIFIED
+# undef ETHIF_START_SEC_VAR_NOINIT_UNSPECIFIED      /* PRQA S 0841 */
+# define START_SEC_VAR_NOINIT_UNSPECIFIED
+#endif
+#if defined ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+# undef ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED       /* PRQA S 0841 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHIF_START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# undef ETHIF_START_SEC_VAR_ZERO_INIT_UNSPECIFIED     /* PRQA S 0841 */
+# define START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+#endif
+#if defined ETHIF_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# undef ETHIF_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED      /* PRQA S 0841 */
+# define STOP_SEC_VAR
+#endif
+
+/**********************************************************************************************************************
+ *  ETHIF END
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ *  ETHSM START 
+ *********************************************************************************************************************/
+
+/*******  CODE sections **********************************************************************************************/
+
+#if defined ETHSM_START_SEC_CODE
+  #undef ETHSM_START_SEC_CODE                       /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define START_SEC_CODE                            /* mapped to default code section */
+#endif
+#if defined ETHSM_STOP_SEC_CODE
+  #undef ETHSM_STOP_SEC_CODE                        /* PRQA S 0841 */ /* MD_MSR_Undef */
+  #define STOP_SEC_CODE                             /* default code stop section */
+#endif
+
+/*******  CONST sections  ********************************************************************************************/
+
+#if defined ETHSM_START_SEC_CONST_8BIT
+# undef ETHSM_START_SEC_CONST_8BIT                  /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_8BIT
+#endif
+#if defined ETHSM_STOP_SEC_CONST_8BIT
+# undef ETHSM_STOP_SEC_CONST_8BIT                   /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST
+#endif
+
+#if defined ETHSM_START_SEC_CONST_16BIT
+# undef ETHSM_START_SEC_CONST_16BIT                 /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_16BIT
+#endif
+#if defined ETHSM_STOP_SEC_CONST_16BIT
+# undef ETHSM_STOP_SEC_CONST_16BIT                  /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST
+#endif
+
+#if defined ETHSM_START_SEC_CONST_32BIT
+# undef ETHSM_START_SEC_CONST_32BIT                 /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_32BIT
+#endif
+#if defined ETHSM_STOP_SEC_CONST_32BIT
+# undef ETHSM_STOP_SEC_CONST_32BIT                  /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST
+#endif
+
+#if defined ETHSM_START_SEC_CONST_UNSPECIFIED
+# undef ETHSM_START_SEC_CONST_UNSPECIFIED           /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_UNSPECIFIED
+#endif
+#if defined ETHSM_STOP_SEC_CONST_UNSPECIFIED
+# undef ETHSM_STOP_SEC_CONST_UNSPECIFIED            /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST
+#endif
+
+#if defined ETHSM_START_SEC_PBCFG
+# undef ETHSM_START_SEC_PBCFG                       /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_PBCFG
+#endif
+#if defined ETHSM_STOP_SEC_PBCFG
+# undef ETHSM_STOP_SEC_PBCFG                        /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST
+#endif
+
+#if defined ETHSM_START_SEC_PBCFG_ROOT
+# undef ETHSM_START_SEC_PBCFG_ROOT                  /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_PBCFG
+#endif
+#if defined ETHSM_STOP_SEC_PBCFG_ROOT
+# undef ETHSM_STOP_SEC_PBCFG_ROOT                   /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST
+#endif
+
+/*******  VAR sections  **********************************************************************************************/
+
+#if defined ETHSM_START_SEC_VAR_NOINIT_8BIT
+# undef ETHSM_START_SEC_VAR_NOINIT_8BIT             /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_NOINIT_8BIT
+#endif
+#if defined ETHSM_STOP_SEC_VAR_NOINIT_8BIT
+# undef ETHSM_STOP_SEC_VAR_NOINIT_8BIT              /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHSM_START_SEC_VAR_NOINIT_16BIT
+# undef ETHSM_START_SEC_VAR_NOINIT_16BIT            /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_NOINIT_16BIT
+#endif
+#if defined ETHSM_STOP_SEC_VAR_NOINIT_16BIT
+# undef ETHSM_STOP_SEC_VAR_NOINIT_16BIT             /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHSM_START_SEC_VAR_NOINIT_32BIT
+# undef ETHSM_START_SEC_VAR_NOINIT_32BIT            /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_NOINIT_32BIT
+#endif
+#if defined ETHSM_STOP_SEC_VAR_NOINIT_32BIT
+# undef ETHSM_STOP_SEC_VAR_NOINIT_32BIT             /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHSM_START_SEC_VAR_NOINIT_UNSPECIFIED
+# undef ETHSM_START_SEC_VAR_NOINIT_UNSPECIFIED      /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_NOINIT_UNSPECIFIED
+#endif
+#if defined ETHSM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+# undef ETHSM_STOP_SEC_VAR_NOINIT_UNSPECIFIED       /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHSM_START_SEC_VAR_INIT_8BIT
+# undef ETHSM_START_SEC_VAR_INIT_8BIT               /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_INIT_8BIT
+#endif
+#if defined ETHSM_STOP_SEC_VAR_INIT_8BIT
+# undef ETHSM_STOP_SEC_VAR_INIT_8BIT                /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHSM_START_SEC_VAR_INIT_16BIT
+# undef ETHSM_START_SEC_VAR_INIT_16BIT              /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_INIT_16BIT
+#endif
+#if defined ETHSM_STOP_SEC_VAR_INIT_16BIT
+# undef ETHSM_STOP_SEC_VAR_INIT_16BIT               /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHSM_START_SEC_VAR_INIT_32BIT
+# undef ETHSM_START_SEC_VAR_INIT_32BIT              /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_INIT_32BIT
+#endif
+#if defined ETHSM_STOP_SEC_VAR_INIT_32BIT
+# undef ETHSM_STOP_SEC_VAR_INIT_32BIT               /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHSM_START_SEC_VAR_INIT_UNSPECIFIED
+# undef ETHSM_START_SEC_VAR_INIT_UNSPECIFIED        /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_INIT_UNSPECIFIED
+#endif
+#if defined ETHSM_STOP_SEC_VAR_INIT_UNSPECIFIED
+# undef ETHSM_STOP_SEC_VAR_INIT_UNSPECIFIED         /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHSM_START_SEC_VAR_ZERO_INIT_8BIT
+# undef ETHSM_START_SEC_VAR_ZERO_INIT_8BIT          /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_ZERO_INIT_8BIT
+#endif
+#if defined ETHSM_STOP_SEC_VAR_ZERO_INIT_8BIT
+# undef ETHSM_STOP_SEC_VAR_ZERO_INIT_8BIT           /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHSM_START_SEC_VAR_ZERO_INIT_16BIT
+# undef ETHSM_START_SEC_VAR_ZERO_INIT_16BIT         /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_ZERO_INIT_16BIT
+#endif
+#if defined ETHSM_STOP_SEC_VAR_ZERO_INIT_16BIT
+# undef ETHSM_STOP_SEC_VAR_ZERO_INIT_16BIT          /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHSM_START_SEC_VAR_ZERO_INIT_32BIT
+# undef ETHSM_START_SEC_VAR_ZERO_INIT_32BIT         /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_ZERO_INIT_32BIT
+#endif
+#if defined ETHSM_STOP_SEC_VAR_ZERO_INIT_32BIT
+# undef ETHSM_STOP_SEC_VAR_ZERO_INIT_32BIT          /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+#if defined ETHSM_START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# undef ETHSM_START_SEC_VAR_ZERO_INIT_UNSPECIFIED   /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+#endif
+#if defined ETHSM_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# undef ETHSM_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED    /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+/**********************************************************************************************************************
+ *  ETHSM END
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
  *  VSTDLIB START
  *********************************************************************************************************************/
 

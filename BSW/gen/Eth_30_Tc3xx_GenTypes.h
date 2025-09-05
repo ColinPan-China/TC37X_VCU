@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Eth_30_Tc3xx_GenTypes.h
- *   Generation Time: 2025-09-03 14:21:20
+ *   Generation Time: 2025-09-04 16:09:32
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2

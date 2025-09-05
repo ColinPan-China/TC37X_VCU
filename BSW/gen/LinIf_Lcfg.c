@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinIf_Lcfg.c
- *   Generation Time: 2025-04-23 11:05:19
+ *   Generation Time: 2025-09-04 13:43:28
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -480,13 +480,14 @@ CONST(LinIf_ScheduleTableListIndType, LINIF_CONST) LinIf_ScheduleTableListInd[2]
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(LinIf_SystemToLinIfChannelType, LINIF_CONST) LinIf_SystemToLinIfChannel[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(LinIf_SystemToLinIfChannelType, LINIF_CONST) LinIf_SystemToLinIfChannel[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    LinIfChannelIndex                                                                       */
   { /*     0 */                                                       255U /* 0xFF -> No Lin channel */ },
   { /*     1 */                                                       255U /* 0xFF -> No Lin channel */ },
   { /*     2 */                                                       255U /* 0xFF -> No Lin channel */ },
   { /*     3 */                                                       255U /* 0xFF -> No Lin channel */ },
-  { /*     4 */ 0U /* ComMConf_ComMChannel_CN_LIN00_b12a0454 -> LinIfConf_LinIfChannel_CHNL_45618847 */ }
+  { /*     4 */ 0U /* ComMConf_ComMChannel_CN_LIN00_b12a0454 -> LinIfConf_LinIfChannel_CHNL_45618847 */ },
+  { /*     5 */                                                       255U /* 0xFF -> No Lin channel */ }
 };
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

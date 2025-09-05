@@ -479,6 +479,10 @@
                           <SHORT-NAME>ComM_MainFunction_4</SHORT-NAME>
                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM_MainFunction_4</IMPLEMENTED-ENTRY-REF>
                         </BSW-SCHEDULABLE-ENTITY>
+                        <BSW-SCHEDULABLE-ENTITY UUID="c71d1276-2248-468d-b327-da2584a5d5e6">
+                          <SHORT-NAME>ComM_MainFunction_5</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM_MainFunction_5</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
                       </ENTITYS>
                       <EVENTS>
                         <BSW-TIMING-EVENT UUID="73385784-e53c-43ff-bab7-2b136119ad62">
@@ -504,6 +508,11 @@
                         <BSW-TIMING-EVENT UUID="0e9b5ee8-4729-451e-a3a5-99b33e116957">
                           <SHORT-NAME>ComM_MainFunction_4TimingEvent0</SHORT-NAME>
                           <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM/ComMBehavior/ComM_MainFunction_4</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.02</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="d13297f3-6b46-4923-a155-28c17f15d963">
+                          <SHORT-NAME>ComM_MainFunction_5TimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM/ComMBehavior/ComM_MainFunction_5</STARTS-ON-EVENT-REF>
                           <PERIOD>0.02</PERIOD>
                         </BSW-TIMING-EVENT>
                       </EVENTS>
@@ -532,6 +541,11 @@
                 </BSW-MODULE-ENTRY>
                 <BSW-MODULE-ENTRY UUID="113ed619-2f04-472c-a38f-2077448b4801">
                   <SHORT-NAME>ComM_MainFunction_4</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="4495e266-6185-4dc6-af43-aa6006d5f5b7">
+                  <SHORT-NAME>ComM_MainFunction_5</SHORT-NAME>
                   <CALL-TYPE>SCHEDULED</CALL-TYPE>
                   <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
                 </BSW-MODULE-ENTRY>

@@ -66,6 +66,8 @@
 #include "SchM_Dio.h"
 #include "SchM_Dma.h"
 #include "SchM_EcuM.h"
+#include "SchM_EthIf.h"
+#include "SchM_EthSM.h"
 #include "SchM_EthTrcv_30_Generic.h"
 #include "SchM_Eth_30_Tc3xx.h"
 #include "SchM_Fee.h"
@@ -387,6 +389,7 @@ VAR(Dcm_EcuResetType, RTE_VAR_INIT) Rte_ModeMachine_Dcm_DcmEcuReset_DcmEcuReset 
 #define RTE_CONST_MSEC_SystemTimer_Core2_100 (100UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_2 (2UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_20 (20UL)
+#define RTE_CONST_MSEC_SystemTimer_Core0_25 (25UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_5 (5UL)
 
 #define RTE_CONST_SEC_SystemTimer_Core0_0 (0UL)
@@ -2277,9 +2280,9 @@ TASK(Core0_BswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable *
 
   for(;;)
   {
-    (void)WaitEvent(Rte_Ev_Cyclic2_Core0_BswTask_0_10ms | Rte_Ev_Cyclic2_Core0_BswTask_0_20ms | Rte_Ev_Cyclic2_Core0_BswTask_0_5ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)WaitEvent(Rte_Ev_Cyclic2_Core0_BswTask_0_10ms | Rte_Ev_Cyclic2_Core0_BswTask_0_20ms | Rte_Ev_Cyclic2_Core0_BswTask_0_5ms | Rte_Ev_Run_EthIf_EthIf_MainFunctionState); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)GetEvent(Core0_BswTask, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Cyclic2_Core0_BswTask_0_10ms | Rte_Ev_Cyclic2_Core0_BswTask_0_20ms | Rte_Ev_Cyclic2_Core0_BswTask_0_5ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Cyclic2_Core0_BswTask_0_10ms | Rte_Ev_Cyclic2_Core0_BswTask_0_20ms | Rte_Ev_Cyclic2_Core0_BswTask_0_5ms | Rte_Ev_Run_EthIf_EthIf_MainFunctionState)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     if ((ev & Rte_Ev_Cyclic2_Core0_BswTask_0_10ms) != (EventMaskType)0)
     {
@@ -2393,6 +2396,33 @@ TASK(Core0_BswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable *
 
       /* call schedulable entity */
       Eth_30_Tc3xx_MainFunction();
+    }
+
+    if ((ev & Rte_Ev_Cyclic2_Core0_BswTask_0_5ms) != (EventMaskType)0)
+    {
+      /* call schedulable entity */
+      EthIf_MainFunctionRx();
+    }
+
+    if ((ev & Rte_Ev_Run_EthIf_EthIf_MainFunctionState) != (EventMaskType)0)
+    {
+      /* call schedulable entity */
+      EthIf_MainFunctionState();
+    }
+
+    if ((ev & Rte_Ev_Cyclic2_Core0_BswTask_0_5ms) != (EventMaskType)0)
+    {
+      /* call schedulable entity */
+      EthIf_MainFunctionTx();
+    }
+
+    if ((ev & Rte_Ev_Cyclic2_Core0_BswTask_0_20ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      ComM_MainFunction_5(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+      /* call schedulable entity */
+      EthSM_MainFunction();
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

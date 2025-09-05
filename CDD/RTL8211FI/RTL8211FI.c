@@ -1,5 +1,7 @@
 #include "RTL8211FI.h"
-#include "Eth_30_Tc3xx.h"
+#include "EthIf.h"
+#include "Mcal_Compiler.h"
+
 
 uint16 phy_id1 = 0;
 uint16 phy_id2 = 0;
@@ -32,7 +34,7 @@ void local_GETH_PHY_Reset(uint8 phy_addr)
 void Rtl8211_Init()
 {
 
-    Eth_30_Tc3xx_ControllerInit(0,0);
+//    Eth_30_Tc3xx_ControllerInit(0,0);
 
   do
   {
@@ -131,12 +133,15 @@ void Tx_EthFrame (void)
 {
   uint16 LenBytePtr = ETH_TX_FRAME_LENGTH;
     /* Request the data buffer for frame Transmission */
-    Ret_ptb = Eth_30_Tc3xx_ProvideTxBuffer(0, &TmpBuffIdx, &TmpBuffPtr, &LenBytePtr);
+  Ret_ptb = EthIf_ProvideTxBuffer(0, 0, 0, &TmpBuffIdx, &TmpBuffPtr, &LenBytePtr);
   /* Application Layer fill the buffer with frame data*/
-  TxBufferFill(TmpBuffPtr, LenBytePtr);
-
-  /* Transmit already filled buffer using the BuffIdx*/
-  Ret_Tx = Eth_30_Tc3xx_Transmit(0, TmpBuffIdx,ETH_FRAME_TYPE_1, 1, LenBytePtr, &MacDestArpaddress[0]);
+  
+  if(Ret_ptb == 0)
+  {
+    TxBufferFill(TmpBuffPtr, LenBytePtr);
+    /* Transmit already filled buffer using the BuffIdx*/
+    Ret_Tx = EthIf_Transmit(0, TmpBuffIdx,ETH_FRAME_TYPE_1, 1, LenBytePtr, &MacDestArpaddress[0]);
+  }
 
 
 }
@@ -148,7 +153,7 @@ void Rtl8211_Main()
 
 
   Tx_EthFrame();
-  EthRegCalculate();
+//  EthRegCalculate();
 }
 
 
@@ -204,5 +209,27 @@ void EthRegCalculate()
   {
     pReg = (uint32*)(EthRegTbl[index].baseAddr +EthRegTbl[index].offsetVal);
     RegLocal[index] = *pReg;
+  }
+}
+
+
+static uint8 ETH_CNT = 0;
+void Msn_RxIndication(uint8 a, uint16 b, boolean c, P2VAR(uint8, AUTOMATIC, ETHIF_APPL_VAR) d, P2VAR(uint8, AUTOMATIC, ETHIF_APPL_VAR) e, uint16 f)
+{
+  ETH_CNT++;
+  if(ETH_CNT == 1)
+  {
+    NOP();
+  }
+}
+
+
+
+void Msn_TxConfirmation(uint8 a, uint8 b)
+{
+  ETH_CNT++;
+  if(ETH_CNT == 1)
+  {
+    NOP();
   }
 }

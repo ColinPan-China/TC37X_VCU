@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Cfg.h
- *   Generation Time: 2025-07-11 14:54:06
+ *   Generation Time: 2025-09-04 10:59:04
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -120,6 +120,7 @@
 # define Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification     ((EventMaskType)8uLL)
 # define Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification     ((EventMaskType)16uLL)
 # define Rte_Ev_Run_DIAG_SWC_EcuReset_JumpFBL     ((EventMaskType)32uLL)
+# define Rte_Ev_Run_EthIf_EthIf_MainFunctionState     ((EventMaskType)8uLL)
 # define Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable     ((EventMaskType)64uLL)
 # define Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData2_Runnable     ((EventMaskType)128uLL)
 # define Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms     ((EventMaskType)256uLL)

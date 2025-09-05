@@ -66,6 +66,8 @@
 #include "SchM_Dio.h"
 #include "SchM_Dma.h"
 #include "SchM_EcuM.h"
+#include "SchM_EthIf.h"
+#include "SchM_EthSM.h"
 #include "SchM_EthTrcv_30_Generic.h"
 #include "SchM_Eth_30_Tc3xx.h"
 #include "SchM_Fee.h"
@@ -407,6 +409,7 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_Dcm_DcmEcuReset(Dcm_EcuResetType 
 #define RTE_CONST_MSEC_SystemTimer_Core2_100 (100UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_2 (2UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_20 (20UL)
+#define RTE_CONST_MSEC_SystemTimer_Core0_25 (25UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_5 (5UL)
 
 #define RTE_CONST_SEC_SystemTimer_Core0_0 (0UL)
@@ -570,6 +573,7 @@ FUNC(void, RTE_CODE) SchM_StartTimingCore0(void)
   (void)SetRelAlarm(Rte_Al_TE2_Core0_BswTask_0_10ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(10)); /* PRQA S 3417 */ /* MD_Rte_Os */
   (void)SetRelAlarm(Rte_Al_TE2_Core0_BswTask_0_20ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(20)); /* PRQA S 3417 */ /* MD_Rte_Os */
   (void)SetRelAlarm(Rte_Al_TE2_Core0_BswTask_0_5ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(5)); /* PRQA S 3417 */ /* MD_Rte_Os */
+  (void)SetRelAlarm(Rte_Al_TE_EthIf_EthIf_MainFunctionState, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(25)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
 }
 
@@ -668,6 +672,7 @@ FUNC(void, RTE_CODE) SchM_Deinit(void)
     (void)CancelAlarm(Rte_Al_TE2_Core0_BswTask_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE2_Core0_BswTask_0_20ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE2_Core0_BswTask_0_5ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_EthIf_EthIf_MainFunctionState); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     Rte_InitState = RTE_STATE_UNINIT;
   }

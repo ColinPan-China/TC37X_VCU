@@ -102,6 +102,7 @@
       EVENT = Rte_Ev_Cyclic2_Core0_BswTask_0_10ms:"@RO@";
       EVENT = Rte_Ev_Cyclic2_Core0_BswTask_0_20ms:"@RO@";
       EVENT = Rte_Ev_Cyclic2_Core0_BswTask_0_5ms:"@RO@";
+      EVENT = Rte_Ev_Run_EthIf_EthIf_MainFunctionState:"@RO@";
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE2_Core0_BswTask_0_10ms {
@@ -130,6 +131,16 @@
       {
          TASK = Core0_BswTask;
          EVENT = Rte_Ev_Cyclic2_Core0_BswTask_0_5ms;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_EthIf_EthIf_MainFunctionState {
+      COUNTER = SystemTimer_Core0;
+      ACTION = SETEVENT
+      {
+         TASK = Core0_BswTask;
+         EVENT = Rte_Ev_Run_EthIf_EthIf_MainFunctionState;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
@@ -256,6 +267,10 @@
       MASK = AUTO;
    }:"@ROC@@NR@";
 
+   EVENT Rte_Ev_Run_EthIf_EthIf_MainFunctionState {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
    EVENT Rte_Ev_Run_NvM_SWC_NvM_SWC_UserData1_Runnable {
       MASK = AUTO;
    }:"@ROC@@NR@";
@@ -287,6 +302,7 @@
       ALARM = Rte_Al_TE2_Core0_BswTask_0_10ms;
       ALARM = Rte_Al_TE2_Core0_BswTask_0_20ms;
       ALARM = Rte_Al_TE2_Core0_BswTask_0_5ms;
+      ALARM = Rte_Al_TE_EthIf_EthIf_MainFunctionState;
       CORE = 0;
   };
 
