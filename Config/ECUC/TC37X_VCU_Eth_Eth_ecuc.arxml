@@ -189,11 +189,11 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthCtrlCsrClkRange</DEFINITION-REF>
-                      <VALUE>CLK_35_60_MHZ</VALUE>
+                      <VALUE>CLK_100_150_MHZ</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthCtrlPrtSpdSel</DEFINITION-REF>
-                      <VALUE>PS_1000_MBITS</VALUE>
+                      <VALUE>PS_100_MBITS</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthCtrlSkewTx</DEFINITION-REF>
@@ -355,7 +355,7 @@
                               <PARAMETER-VALUES>
                                 <ECUC-NUMERICAL-PARAM-VALUE>
                                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthInterruptMapping/EthInterruptServiceRoutine/EthIrqEventList/EthIrqHandlerPos</DEFINITION-REF>
-                                  <VALUE>0</VALUE>
+                                  <VALUE>1</VALUE>
                                 </ECUC-NUMERICAL-PARAM-VALUE>
                               </PARAMETER-VALUES>
                               <REFERENCE-VALUES>

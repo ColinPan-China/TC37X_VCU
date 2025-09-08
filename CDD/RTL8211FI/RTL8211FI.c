@@ -10,9 +10,14 @@ uint16 val = 0;
 uint16 reset_status = 0;
 uint8 Temp_Macaddress[6];
 uint8 Ret_SetMode = 0;
+
 void Timer_DelayMs(uint32 ms)
 {
-
+  ms++;
+  if( ms != 0)
+  {
+    NOP();
+  }
 }
 
 void local_GETH_PHY_Reset(uint8 phy_addr)
@@ -33,9 +38,6 @@ void local_GETH_PHY_Reset(uint8 phy_addr)
 
 void Rtl8211_Init()
 {
-
-//    Eth_30_Tc3xx_ControllerInit(0,0);
-
   do
   {
     /* Check Device Identification. */
@@ -84,7 +86,7 @@ void Rtl8211_Init()
   Eth_30_Tc3xx_ReadMii( 0, 1, MII_PHYSID1, &phy_id1);
   Eth_30_Tc3xx_ReadMii( 0, 1, MII_PHYSID2, &phy_id2);
   /* Configure Link Speed and Duplex mode in Ethernet transceiver (PHY) */
-  reg_value = BMCR_SPEED1000 | BMCR_FULLDPLX;
+  reg_value = BMCR_SPEED100 | BMCR_FULLDPLX;
   reset_status = Eth_30_Tc3xx_WriteMii(0, 1, MII_BMCR, reg_value);
 
   do
@@ -99,11 +101,6 @@ void Rtl8211_Init()
   /*Delay added since ETh_init takes time to stabilize */
   Timer_DelayMs(ETH_PHY_INIT_DURATION);
 
-
-
-  Eth_30_Tc3xx_GetPhysAddr((uint8)0, &Temp_Macaddress[0]);
-  Ret_SetMode = Eth_30_Tc3xx_SetControllerMode(0u, ETH_MODE_ACTIVE);
-
 }
 
 
@@ -111,6 +108,8 @@ void Rtl8211_Init()
 
 static Eth_BufIdxType TmpBuffIdx;
 static uint8* TmpBuffPtr;
+uint16 LenBytePtr = ETH_TX_FRAME_LENGTH;
+
 static uint8 MacDestArpaddress[6] =
 {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF}; /*Broadcast*/
 
@@ -126,11 +125,12 @@ void TxBufferFill(uint8 *pTxBuff, uint16 DataLen )
   return;
 }
 
-#if 1
+
 uint8 Ret_ptb = 0;
 uint8 Ret_Tx = 0;
 void Tx_EthFrame (void)
 {
+  #if 0
   uint16 LenBytePtr = ETH_TX_FRAME_LENGTH;
     /* Request the data buffer for frame Transmission */
   Ret_ptb = EthIf_ProvideTxBuffer(0, 0, 0, &TmpBuffIdx, &TmpBuffPtr, &LenBytePtr);
@@ -142,14 +142,30 @@ void Tx_EthFrame (void)
     /* Transmit already filled buffer using the BuffIdx*/
     Ret_Tx = EthIf_Transmit(0, TmpBuffIdx,ETH_FRAME_TYPE_1, 1, LenBytePtr, &MacDestArpaddress[0]);
   }
+ 
+  #else
+  /* Request the data buffer for frame Transmission */
+  Ret_ptb = Eth_30_Tc3xx_ProvideTxBuffer(0, &TmpBuffIdx, &TmpBuffPtr, &LenBytePtr);
+  if(Ret_ptb == 0)
+  {
+    LenBytePtr = ETH_TX_FRAME_LENGTH; 
 
+    /* Application Layer fill the buffer with frame data*/
+    TxBufferFill(TmpBuffPtr, LenBytePtr);
 
-}
+    /* Transmit already filled buffer using the BuffIdx*/
+    Ret_Tx = Eth_30_Tc3xx_Transmit(0, TmpBuffIdx,ETH_FRAME_TYPE_1, 1, LenBytePtr, &MacDestArpaddress[0]);
+
+  }
 #endif
-
-
+}
+uint8 RdMac = 0;
 void Rtl8211_Main()
 {
+  if(RdMac == 1)
+  {
+    Eth_30_Tc3xx_GetPhysAddr((uint8)0, &Temp_Macaddress[0]);
+  }
 
 
   Tx_EthFrame();

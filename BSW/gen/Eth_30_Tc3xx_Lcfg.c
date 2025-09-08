@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Eth_30_Tc3xx_Lcfg.c
- *   Generation Time: 2025-09-04 16:09:33
+ *   Generation Time: 2025-09-08 13:54:54
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -157,7 +157,7 @@ CONST(Eth_30_Tc3xx_EthCtrlType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_EthCtrl[1] = {
 /*lint -restore */
 CONST(Eth_30_Tc3xx_EthCtrlTc3xxType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_EthCtrlTc3xx[1] = {
     /* Index    PinRouting    CsrClockRange  EthCtrlMiiInterface  ArmPpsOnTimeEnabled */
-  { /*     0 */ 0x00400002uL,       0x0300u, ETH_RGMII_MODE     ,               FALSE }
+  { /*     0 */ 0x00400002uL,       0x0100u, ETH_RGMII_MODE     ,               FALSE }
 };
 #define ETH_30_TC3XX_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -280,7 +280,7 @@ CONST(Eth_30_Tc3xx_OptCalloutsType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_OptCallouts
 /*lint -restore */
 CONST(Eth_30_Tc3xx_RegDataType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_RegData[26] = {
     /* Index    Value         Offset   AccessMode                                              Referable Keys */
-  { /*     0 */ 0x00202440uL, 0x0000u,       ETH_30_TC3XX_USER_MODE_ACCESSMODEOFREGDATA },  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig] */
+  { /*     0 */ 0x0020E440uL, 0x0000u,       ETH_30_TC3XX_USER_MODE_ACCESSMODEOFREGDATA },  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig] */
   { /*     1 */ 0x00000000uL, 0x0004u,       ETH_30_TC3XX_USER_MODE_ACCESSMODEOFREGDATA },  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig] */
   { /*     2 */ 0x00000010uL, 0x0008u,       ETH_30_TC3XX_USER_MODE_ACCESSMODEOFREGDATA },  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig] */
   { /*     3 */ 0x00000000uL, 0x0070u,       ETH_30_TC3XX_USER_MODE_ACCESSMODEOFREGDATA },  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig] */
