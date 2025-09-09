@@ -74,6 +74,14 @@
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EthTrcv_Generic/EthTrcv/EthTrcvGeneral/EthTrcvCableDiagLoopCount</DEFINITION-REF>
                   <VALUE>10000</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/EthTrcv_Generic/EthTrcv/EthTrcvGeneral/EthTrcvMainFunctionPeriod</DEFINITION-REF>
+                  <VALUE>0.02</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EthTrcv_Generic/EthTrcv/EthTrcvGeneral/EthTrcvWakeUpCalloutIncludeFiles</DEFINITION-REF>
+                  <VALUE>RTL8211FI.h</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
               </PARAMETER-VALUES>
             </ECUC-CONTAINER-VALUE>
             <ECUC-CONTAINER-VALUE UUID="649e60de-44a0-4e2a-8028-8fd5098432b2">

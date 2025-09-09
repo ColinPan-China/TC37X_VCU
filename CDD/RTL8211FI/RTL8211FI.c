@@ -38,14 +38,14 @@ void local_GETH_PHY_Reset(uint8 phy_addr)
 
 void Rtl8211_Init()
 {
-  do
-  {
-    /* Check Device Identification. */
-    Eth_30_Tc3xx_ReadMii(0, 1, MII_PHYSID1, &phy_id1);
-    Eth_30_Tc3xx_ReadMii(0, 1, MII_PHYSID2, &phy_id2);
-  } while((phy_id1 != RTL8211F_PHY_ID1) && (phy_id2 != RTL8211F_PHY_ID2));
+//  do
+//  {
+//    /* Check Device Identification. */
+//    Eth_30_Tc3xx_ReadMii(0, 1, MII_PHYSID1, &phy_id1);
+//    Eth_30_Tc3xx_ReadMii(0, 1, MII_PHYSID2, &phy_id2);
+//  } while((phy_id1 != RTL8211F_PHY_ID1) && (phy_id2 != RTL8211F_PHY_ID2));
 
-  local_GETH_PHY_Reset(1);
+//  local_GETH_PHY_Reset(1);
   Timer_DelayMs(PHY_READ_DELAY);
 
   Eth_30_Tc3xx_WriteMii(0, 1, RTL8211F_PAGE_SELECT, 0xa43);
@@ -83,8 +83,8 @@ void Rtl8211_Init()
   Eth_30_Tc3xx_WriteMii(0, 1, RTL8211F_PAGE_SELECT, 0x0);
 
   /* Read Device ID from Ethernet transceiver(PHY) */
-  Eth_30_Tc3xx_ReadMii( 0, 1, MII_PHYSID1, &phy_id1);
-  Eth_30_Tc3xx_ReadMii( 0, 1, MII_PHYSID2, &phy_id2);
+//  Eth_30_Tc3xx_ReadMii( 0, 1, MII_PHYSID1, &phy_id1);
+//  Eth_30_Tc3xx_ReadMii( 0, 1, MII_PHYSID2, &phy_id2);
   /* Configure Link Speed and Duplex mode in Ethernet transceiver (PHY) */
   reg_value = BMCR_SPEED100 | BMCR_FULLDPLX;
   reset_status = Eth_30_Tc3xx_WriteMii(0, 1, MII_BMCR, reg_value);

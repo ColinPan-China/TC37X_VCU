@@ -124,7 +124,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
   
   PwnIf_Start();
 
-  Rtl8211_Init();
+//  Rtl8211_Init();
 //  Tja1145_GoSleep();
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

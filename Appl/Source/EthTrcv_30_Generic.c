@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthTrcv_30_Generic.c
- *   Generation Time: 2025-09-05 14:15:36
+ *   Generation Time: 2025-09-09 09:11:29
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -40,7 +40,7 @@
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK ETHTRCV_30_GENERIC_INCLUDES>
  *********************************************************************************************************************/
-
+#include "RTL8211FI.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
@@ -104,7 +104,7 @@
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK ETHTRCV_30_GENERIC_GLOBAL_DATA>
  *********************************************************************************************************************/
-
+uint8 EthTrcv_30_GnenricStatus = ETHTRCV_STATE_UNINIT;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
@@ -274,6 +274,19 @@ FUNC(void, ETHTRCV_30_GEN_CODE)EthTrcv_30_Gen_Init(
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EthTrcv_30_Gen_Init_LocalDataDeclaration>
  *********************************************************************************************************************/
+  uint16 reg_value = 0;
+
+  Eth_30_Tc3xx_WriteMii(0, 1, RTL8211F_PAGE_SELECT, 0xa43);
+  Eth_30_Tc3xx_ReadMii(0, 1, 0x19, &reg_value);
+ 
+  reg_value |= 0x1;
+  Eth_30_Tc3xx_WriteMii(0, 1, 0x19, reg_value);
+  Eth_30_Tc3xx_WriteMii(0, 1, RTL8211F_PAGE_SELECT, 0x0);
+
+  /* A PHY reset should be issued after setting this bits in PHYCR2 */
+  local_GETH_PHY_Reset(1);
+
+  EthTrcv_30_GnenricStatus = ETHTRCV_STATE_INIT;
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
@@ -385,7 +398,9 @@ FUNC(Std_ReturnType, ETHTRCV_30_GEN_CODE) EthTrcv_30_Gen_SetTransceiverMode(
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EthTrcv_30_Gen_SetTransceiverMode_LocalDataDefinition>
  *********************************************************************************************************************/
-  retVal = (Std_ReturnType)E_OK;
+  uint16 reg_value = 0;
+  uint16 val = 0;
+  uint16 reset_status = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
@@ -395,6 +410,37 @@ FUNC(Std_ReturnType, ETHTRCV_30_GEN_CODE) EthTrcv_30_Gen_SetTransceiverMode(
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EthTrcv_30_Gen_SetTransceiverMode_Implementation>
  *********************************************************************************************************************/
+  Eth_30_Tc3xx_WriteMii(0, 1, RTL8211F_PAGE_SELECT, 0xd08);
+  Eth_30_Tc3xx_ReadMii(0, 1, 0x11, &reg_value);
+
+  /* Adding TX-delay for RGMII mode*/
+  {
+    reg_value |= RTL8211F_TX_DELAY;
+  }
+
+  Eth_30_Tc3xx_WriteMii(0, 1, 0x11, reg_value);
+  /* restore to default page 0 */
+  Eth_30_Tc3xx_WriteMii(0, 1, RTL8211F_PAGE_SELECT, 0x0);
+
+  /* Disable green Ethernet */
+  Eth_30_Tc3xx_WriteMii(0, 1, RTL8211F_PAGE_SELECT, 0xa43);
+  Eth_30_Tc3xx_WriteMii(0, 1, 27, 0x8011);
+  Eth_30_Tc3xx_WriteMii(0, 1, 28, 0x573f);
+  Eth_30_Tc3xx_WriteMii(0, 1, RTL8211F_PAGE_SELECT, 0x0);
+
+  /* Set green LED for Link, yellow LED for Active */
+  Eth_30_Tc3xx_WriteMii(0, 1, RTL8211F_PAGE_SELECT, 0xd04);
+  Eth_30_Tc3xx_WriteMii(0, 1, 0x10, 0x617f);
+  Eth_30_Tc3xx_WriteMii(0, 1, RTL8211F_PAGE_SELECT, 0x0);
+
+  /* Read Device ID from Ethernet transceiver(PHY) */
+  //  Eth_30_Tc3xx_ReadMii( 0, 1, MII_PHYSID1, &phy_id1);
+  //  Eth_30_Tc3xx_ReadMii( 0, 1, MII_PHYSID2, &phy_id2);
+  /* Configure Link Speed and Duplex mode in Ethernet transceiver (PHY) */
+  reg_value = BMCR_SPEED100 | BMCR_FULLDPLX;
+  reset_status = Eth_30_Tc3xx_WriteMii(0, 1, MII_BMCR, reg_value);
+
+  retVal = (Std_ReturnType)E_OK;
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
@@ -532,7 +578,7 @@ FUNC(Std_ReturnType, ETHTRCV_30_GEN_CODE) EthTrcv_30_Gen_GetLinkState(
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EthTrcv_30_Gen_GetLinkState_LocalDataDeclaration>
  *********************************************************************************************************************/
- *LinkStatePtr = TRUE;
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
@@ -542,7 +588,7 @@ FUNC(Std_ReturnType, ETHTRCV_30_GEN_CODE) EthTrcv_30_Gen_GetLinkState(
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EthTrcv_30_Gen_GetLinkState_LocalDataDefinition>
  *********************************************************************************************************************/
-  retVal = (Std_ReturnType)E_OK;
+  uint16 val = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
@@ -552,7 +598,21 @@ FUNC(Std_ReturnType, ETHTRCV_30_GEN_CODE) EthTrcv_30_Gen_GetLinkState(
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EthTrcv_30_Gen_GetLinkState_Implementation>
  *********************************************************************************************************************/
+    /*Link Speed status */
+  Eth_30_Tc3xx_WriteMii(0, 1, RTL8211F_PAGE_SELECT, 0xa43);
+  Eth_30_Tc3xx_ReadMii(0, 1, RTL8211F_PHY_STATUS, &val);
+  Eth_30_Tc3xx_WriteMii(0, 1, RTL8211F_PAGE_SELECT, 0);
+  
+  if((val & RTL8211F_PHYSTAT_LINK) == 0x0004)
+  {
+    *LinkStatePtr = ETHTRCV_LINK_STATE_ACTIVE;
+  }
+  else
+  {
+    *LinkStatePtr = ETHTRCV_LINK_STATE_DOWN;
+  }
 
+  retVal = (Std_ReturnType)E_OK;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
