@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Cfg.h
- *   Generation Time: 2025-08-25 17:09:52
+ *   Generation Time: 2025-09-10 10:53:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -367,7 +367,7 @@
 #define CanConf_CanController_CT_TC37X_VCU_CAN00_22cb8fec             1u
 #define CanConf_CanController_CT_TC37X_VCU_CAN01_55ccbf7a             2u
 #define CanConf_CanController_CT_TC37X_VCU_CAN03_bbc2de56             3u
-#define CanConf_CanController_CT_TC37X_VCU_CAN12_d5dedf81             4u
+#define CanConf_CanController_CT_TC37X_VCU_CAN12_XCP_5a889f4b         4u
 /**\} */
 #define CanConf_CN_ATOM_CANFD_Matrix_CH_V600_202502_64375107_Rx 3u
 #define CanConf_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_Tx 2u
@@ -379,8 +379,8 @@
 #define CanConf_CN_TC37X_VCU_CAN01_70b1f95e_Tx 9u
 #define CanConf_CN_TC37X_VCU_CAN03_2b6502c6_Rx 12u
 #define CanConf_CN_TC37X_VCU_CAN03_9ebf9872_Tx 11u
-#define CanConf_CN_TC37X_VCU_CAN12_0529b638_Rx 14u
-#define CanConf_CN_TC37X_VCU_CAN12_f0a399a5_Tx 13u
+#define CanConf_CN_TC37X_VCU_CAN12_XCP_74d45e3b_Rx 14u
+#define CanConf_CN_TC37X_VCU_CAN12_XCP_d05a85ac_Tx 13u
 #define CanConf_CanHardwareObject_TX0 4u
 #define CanConf_CanHardwareObject_VcuRxMsg1_oTC37X_VCU_CAN00_c149044d_Rx 6u
 #define CanConf_CanHardwareObject_VcuRxMsg2_oTC37X_VCU_CAN00_de1782b6_Rx 7u
@@ -389,23 +389,23 @@
 #define CanConf_ControllerBaudrateConfig_CT_TC37X_VCU_CAN00_22cb8fec_CanControllerBaudrateConfig 0u
 #define CanConf_ControllerBaudrateConfig_CT_TC37X_VCU_CAN01_55ccbf7a_CanControllerBaudrateConfig 0u
 #define CanConf_ControllerBaudrateConfig_CT_TC37X_VCU_CAN03_bbc2de56_CanControllerBaudrateConfig 0u
-#define CanConf_ControllerBaudrateConfig_CT_TC37X_VCU_CAN12_d5dedf81_CanControllerBaudrateConfig 0u
+#define CanConf_ControllerBaudrateConfig_CT_TC37X_VCU_CAN12_XCP_5a889f4b_CanControllerBaudrateConfig 0u
 
 #define CanConf_MemorySection_RxBuffer_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292 0u
 #define CanConf_MemorySection_RxBuffer_CT_TC37X_VCU_CAN00_22cb8fec 3u
 #define CanConf_MemorySection_RxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a 6u
 #define CanConf_MemorySection_RxBuffer_CT_TC37X_VCU_CAN03_bbc2de56 9u
-#define CanConf_MemorySection_RxBuffer_CT_TC37X_VCU_CAN12_d5dedf81 12u
+#define CanConf_MemorySection_RxBuffer_CT_TC37X_VCU_CAN12_XCP_5a889f4b 12u
 #define CanConf_MemorySection_RxFifo_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292 1u
 #define CanConf_MemorySection_RxFifo_CT_TC37X_VCU_CAN00_22cb8fec 4u
 #define CanConf_MemorySection_RxFifo_CT_TC37X_VCU_CAN01_55ccbf7a 7u
 #define CanConf_MemorySection_RxFifo_CT_TC37X_VCU_CAN03_bbc2de56 10u
-#define CanConf_MemorySection_RxFifo_CT_TC37X_VCU_CAN12_d5dedf81 13u
+#define CanConf_MemorySection_RxFifo_CT_TC37X_VCU_CAN12_XCP_5a889f4b 13u
 #define CanConf_MemorySection_TxBuffer_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292 2u
 #define CanConf_MemorySection_TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec 5u
 #define CanConf_MemorySection_TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a 8u
 #define CanConf_MemorySection_TxBuffer_CT_TC37X_VCU_CAN03_bbc2de56 11u
-#define CanConf_MemorySection_TxBuffer_CT_TC37X_VCU_CAN12_d5dedf81 14u
+#define CanConf_MemorySection_TxBuffer_CT_TC37X_VCU_CAN12_XCP_5a889f4b 14u
 
 
 

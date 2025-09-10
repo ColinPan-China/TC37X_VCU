@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2025-08-25 16:08:57
+ *   Generation Time: 2025-09-10 10:53:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -152,7 +152,7 @@
 #define ComMConf_ComMUser_CN_TC37X_VCU_CAN00_b1b4f272                  1u 
 #define ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c                  2u 
 #define ComMConf_ComMUser_CN_TC37X_VCU_CAN03_5a834971                  3u 
-#define ComMConf_ComMUser_CN_TC37X_VCU_CAN12_74cffd8f                  4u 
+#define ComMConf_ComMUser_CN_TC37X_VCU_CAN12_XCP_0532158c              4u 
 
 
 /* -----------------------------------------------------------------------------
@@ -163,7 +163,7 @@
 #define ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8                  1u 
 #define ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e                  2u 
 #define ComMConf_ComMChannel_CN_TC37X_VCU_CAN03_9ebf9872                  3u 
-#define ComMConf_ComMChannel_CN_TC37X_VCU_CAN12_f0a399a5                  4u 
+#define ComMConf_ComMChannel_CN_TC37X_VCU_CAN12_XCP_d05a85ac              4u 
 #define ComMConf_ComMChannel_CN_LIN00_b12a0454                            5u 
 #define ComMConf_ComMChannel_CN_LIN01_c62d34c2                            6u 
 #define ComMConf_ComMChannel_CN_LIN02_5f246578                            7u 

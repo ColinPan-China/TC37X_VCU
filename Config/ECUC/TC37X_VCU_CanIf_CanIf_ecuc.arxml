@@ -84,33 +84,6 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="c3184bb7-c311-3b97-bd47-056cefe591fe">
-                  <SHORT-NAME>CT_TC37X_VCU_CAN12_d5dedf81</SHORT-NAME>
-                  <LONG-NAME>
-                    <L-4 L="FOR-ALL">CT_TC37X_VCU_CAN12</L-4>
-                  </LONG-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg/CanIfCtrlId</DEFINITION-REF>
-                      <VALUE>4</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg/CanIfCtrlWakeupSupport</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg/CanIfCtrlJ1939DynAddrSupport</DEFINITION-REF>
-                      <VALUE>DISABLED</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg/CanIfCtrlCanCtrlRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN12_d5dedf81</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="8fb2e224-8b84-359c-8b76-fd157d4b9655">
                   <SHORT-NAME>CT_TC37X_VCU_CAN03_bbc2de56</SHORT-NAME>
                   <LONG-NAME>
@@ -162,6 +135,33 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg/CanIfCtrlCanCtrlRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Can/CanConfigSet/CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="8aab857c-9159-3124-9e1c-d912f5c9408c">
+                  <SHORT-NAME>CT_TC37X_VCU_CAN12_XCP_5a889f4b</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">CT_TC37X_VCU_CAN12_XCP</L-4>
+                  </LONG-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg/CanIfCtrlId</DEFINITION-REF>
+                      <VALUE>4</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg/CanIfCtrlWakeupSupport</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg/CanIfCtrlJ1939DynAddrSupport</DEFINITION-REF>
+                      <VALUE>DISABLED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/CanIf/CanIfCtrlDrvCfg/CanIfCtrlCfg/CanIfCtrlCanCtrlRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Can/CanConfigSet/CT_TC37X_VCU_CAN12_XCP_5a889f4b</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
@@ -337,46 +337,6 @@
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="13fa1c86-7410-3054-abb9-5f37ba8a0087">
-                      <SHORT-NAME>CN_TC37X_VCU_CAN12_f0a399a5_Tx</SHORT-NAME>
-                      <LONG-NAME>
-                        <L-4 L="FOR-ALL">CN_TC37X_VCU_CAN12</L-4>
-                      </LONG-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg</DEFINITION-REF>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthCanCtrlIdRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_TC37X_VCU_CAN12_d5dedf81</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthIdSymRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN12_f0a399a5_Tx</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="2972c476-4007-39e7-b42a-06d28908cfd4">
-                      <SHORT-NAME>CN_TC37X_VCU_CAN12_0529b638_Rx</SHORT-NAME>
-                      <LONG-NAME>
-                        <L-4 L="FOR-ALL">CN_TC37X_VCU_CAN12</L-4>
-                      </LONG-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhSoftwareFilter</DEFINITION-REF>
-                          <VALUE>true</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhCanCtrlIdRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_TC37X_VCU_CAN12_d5dedf81</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhIdSymRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN12_0529b638_Rx</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                    </ECUC-CONTAINER-VALUE>
                     <ECUC-CONTAINER-VALUE UUID="066d5ae0-04d5-3bcf-9f1d-21c1a81d7f85">
                       <SHORT-NAME>CN_TC37X_VCU_CAN03_9ebf9872_Tx</SHORT-NAME>
                       <LONG-NAME>
@@ -485,6 +445,46 @@
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="a4329769-3124-3220-9721-8290beef8979">
+                      <SHORT-NAME>CN_TC37X_VCU_CAN12_XCP_d05a85ac_Tx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">CN_TC37X_VCU_CAN12_XCP</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_TC37X_VCU_CAN12_XCP_5a889f4b</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHthCfg/CanIfHthIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN12_XCP_d05a85ac_Tx</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="3abb9897-ed9b-38df-9b5b-2e8269a1d20c">
+                      <SHORT-NAME>CN_TC37X_VCU_CAN12_XCP_74d45e3b_Rx</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">CN_TC37X_VCU_CAN12_XCP</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhSoftwareFilter</DEFINITION-REF>
+                          <VALUE>true</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhCanCtrlIdRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfCtrlDrvCfg_7d254554/CT_TC37X_VCU_CAN12_XCP_5a889f4b</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfInitHohCfg/CanIfHrhCfg/CanIfHrhIdSymRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Can/CanConfigSet/CN_TC37X_VCU_CAN12_XCP_74d45e3b_Rx</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="bd8b355c-dc81-35cd-b1c3-f055ae8ac06d">
@@ -516,7 +516,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>23</VALUE>
+                      <VALUE>22</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -571,7 +571,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>26</VALUE>
+                      <VALUE>25</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
@@ -626,7 +626,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>25</VALUE>
+                      <VALUE>24</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
@@ -661,7 +661,7 @@
                   <PARAMETER-VALUES>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferSize</DEFINITION-REF>
-                      <VALUE>12</VALUE>
+                      <VALUE>11</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfTxBufferHandlingType</DEFINITION-REF>
@@ -669,7 +669,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfTxBufferMappedTxPdus</DEFINITION-REF>
-                      <VALUE>12</VALUE>
+                      <VALUE>11</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfTxBufferMaxPduLength</DEFINITION-REF>
@@ -712,7 +712,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>24</VALUE>
+                      <VALUE>23</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -767,7 +767,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>22</VALUE>
+                      <VALUE>21</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -850,116 +850,6 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>24</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadNotifyStatus</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDlcCheck</DEFINITION-REF>
-                      <VALUE>true</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduHrhIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfInitCfg/CanIfInitHohCfg/CN_TC37X_VCU_CAN00_c052b9c5_Rx</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VCU_Rx_500h_NM_oTC37X_VCU_CAN00_c4b96e15_Rx</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="ce97f7e6-c107-3338-9933-d9cb6e606677">
-                  <SHORT-NAME>XCP_Response_oTC37X_VCU_CAN00_933a9e7a_Tx</SHORT-NAME>
-                  <LONG-NAME>
-                    <L-4 L="FOR-ALL">XCP_Response_oTC37X_VCU_CAN00</L-4>
-                  </LONG-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
-                      <VALUE>1543</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
-                      <VALUE>STANDARD_CAN</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduDlc</DEFINITION-REF>
-                      <VALUE>8</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationName</DEFINITION-REF>
-                      <VALUE>Xcp_CanIfTxConfirmation</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
-                      <VALUE>XCP</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>13</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
-                      <VALUE>STATIC</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
-                      <VALUE>true</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_d841867f</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/XCP_Response_oTC37X_VCU_CAN00_34d2da2d_Tx</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="07f20b74-7efd-310c-8d00-df7b2669ac90">
-                  <SHORT-NAME>XCP_Request_oTC37X_VCU_CAN00_e22de59e_Rx</SHORT-NAME>
-                  <LONG-NAME>
-                    <L-4 L="FOR-ALL">XCP_Request_oTC37X_VCU_CAN00</L-4>
-                  </LONG-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
-                      <VALUE>1542</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdType</DEFINITION-REF>
-                      <VALUE>STANDARD_CAN</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDlc</DEFINITION-REF>
-                      <VALUE>8</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationName</DEFINITION-REF>
-                      <VALUE>Xcp_CanIfRxIndication</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationUL</DEFINITION-REF>
-                      <VALUE>XCP</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
                       <VALUE>23</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
@@ -982,7 +872,7 @@
                     </ECUC-REFERENCE-VALUE>
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/XCP_Request_oTC37X_VCU_CAN00_3c25b45e_Rx</VALUE-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VCU_Rx_500h_NM_oTC37X_VCU_CAN00_c4b96e15_Rx</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
@@ -1219,7 +1109,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>25</VALUE>
+                      <VALUE>24</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -1274,7 +1164,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>27</VALUE>
+                      <VALUE>26</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
@@ -1329,7 +1219,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>28</VALUE>
+                      <VALUE>27</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
@@ -1384,7 +1274,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>29</VALUE>
+                      <VALUE>28</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
@@ -1439,7 +1329,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>21</VALUE>
+                      <VALUE>20</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -1494,7 +1384,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>20</VALUE>
+                      <VALUE>19</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -1549,7 +1439,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>19</VALUE>
+                      <VALUE>18</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -1604,7 +1494,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>16</VALUE>
+                      <VALUE>15</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -1659,7 +1549,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>17</VALUE>
+                      <VALUE>16</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -1714,7 +1604,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>15</VALUE>
+                      <VALUE>14</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -1769,7 +1659,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>14</VALUE>
+                      <VALUE>13</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -1824,7 +1714,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>18</VALUE>
+                      <VALUE>17</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -1847,367 +1737,6 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VcuTxIoMsg4_oTC37X_VCU_CAN00_06b318ea_Tx</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="799cb7b6-c6d9-317b-94f2-44aa847d75f5">
-                  <SHORT-NAME>VCU_Tx_51Ch_NM_oTC37X_VCU_CAN12_6b4cd41f_Tx</SHORT-NAME>
-                  <LONG-NAME>
-                    <L-4 L="FOR-ALL">VCU_Tx_51Ch_NM_oTC37X_VCU_CAN12</L-4>
-                  </LONG-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
-                      <VALUE>1308</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
-                      <VALUE>STANDARD_CAN</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduDlc</DEFINITION-REF>
-                      <VALUE>8</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationName</DEFINITION-REF>
-                      <VALUE>CanNm_TxConfirmation</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
-                      <VALUE>CAN_NM</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>42</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
-                      <VALUE>STATIC</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
-                      <VALUE>true</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_33fe2cc0</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN12_8673ce21_Tx</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="bbc643d5-1996-3904-a590-576175884bc8">
-                  <SHORT-NAME>VcuCan12TxMsg1_oTC37X_VCU_CAN12_a82524bb_Tx</SHORT-NAME>
-                  <LONG-NAME>
-                    <L-4 L="FOR-ALL">VcuCan12TxMsg1_oTC37X_VCU_CAN12</L-4>
-                  </LONG-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
-                      <VALUE>53</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
-                      <VALUE>STANDARD_CAN</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduDlc</DEFINITION-REF>
-                      <VALUE>8</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationName</DEFINITION-REF>
-                      <VALUE>NULL_PTR</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
-                      <VALUE>NONE</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>43</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
-                      <VALUE>STATIC</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
-                      <VALUE>true</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_33fe2cc0</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VcuCan12TxMsg1_oTC37X_VCU_CAN12_2c92f390_Tx</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="2a6ed64b-fadc-3e35-86bb-9784bb18e675">
-                  <SHORT-NAME>VcuCan12RxMsg3_oTC37X_VCU_CAN12_b2a63007_Rx</SHORT-NAME>
-                  <LONG-NAME>
-                    <L-4 L="FOR-ALL">VcuCan12RxMsg3_oTC37X_VCU_CAN12</L-4>
-                  </LONG-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
-                      <VALUE>51</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdType</DEFINITION-REF>
-                      <VALUE>STANDARD_CAN</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDlc</DEFINITION-REF>
-                      <VALUE>8</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationName</DEFINITION-REF>
-                      <VALUE>PduR_CanIfRxIndication</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationUL</DEFINITION-REF>
-                      <VALUE>PDUR</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>37</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadNotifyStatus</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDlcCheck</DEFINITION-REF>
-                      <VALUE>true</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduHrhIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfInitCfg/CanIfInitHohCfg/CN_TC37X_VCU_CAN12_0529b638_Rx</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VcuCan12RxMsg3_oTC37X_VCU_CAN12_2f1174ae_Rx</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="7ee8f33e-4dc4-3110-a36c-17643784de75">
-                  <SHORT-NAME>VcuCan12TxMsg2_oTC37X_VCU_CAN12_eb168220_Tx</SHORT-NAME>
-                  <LONG-NAME>
-                    <L-4 L="FOR-ALL">VcuCan12TxMsg2_oTC37X_VCU_CAN12</L-4>
-                  </LONG-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
-                      <VALUE>52</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
-                      <VALUE>STANDARD_CAN</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduDlc</DEFINITION-REF>
-                      <VALUE>8</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationName</DEFINITION-REF>
-                      <VALUE>NULL_PTR</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
-                      <VALUE>NONE</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>44</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
-                      <VALUE>STATIC</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
-                      <VALUE>true</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_33fe2cc0</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VcuCan12TxMsg2_oTC37X_VCU_CAN12_e5a6e89d_Tx</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="19b24099-d3da-30ea-b311-0e7f14358e68">
-                  <SHORT-NAME>VCU_Rx_500h_NM_oTC37X_VCU_CAN12_12d706fd_Rx</SHORT-NAME>
-                  <LONG-NAME>
-                    <L-4 L="FOR-ALL">VCU_Rx_500h_NM_oTC37X_VCU_CAN12</L-4>
-                  </LONG-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
-                      <VALUE>1280</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdType</DEFINITION-REF>
-                      <VALUE>STANDARD_CAN</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDlc</DEFINITION-REF>
-                      <VALUE>8</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationName</DEFINITION-REF>
-                      <VALUE>CanNm_RxIndication</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationUL</DEFINITION-REF>
-                      <VALUE>CAN_NM</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>36</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadNotifyStatus</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDlcCheck</DEFINITION-REF>
-                      <VALUE>true</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduHrhIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfInitCfg/CanIfInitHohCfg/CN_TC37X_VCU_CAN12_0529b638_Rx</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VCU_Rx_500h_NM_oTC37X_VCU_CAN12_486a6e56_Rx</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="d497cfe1-942a-33d9-94c1-d276d118cf94">
-                  <SHORT-NAME>CHNL_33fe2cc0</SHORT-NAME>
-                  <LONG-NAME>
-                    <L-4 L="FOR-ALL">CHNL</L-4>
-                  </LONG-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferSize</DEFINITION-REF>
-                      <VALUE>3</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfTxBufferHandlingType</DEFINITION-REF>
-                      <VALUE>PRIO_BY_CANID</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfTxBufferMappedTxPdus</DEFINITION-REF>
-                      <VALUE>3</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfTxBufferMaxPduLength</DEFINITION-REF>
-                      <VALUE>8</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferHthRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfInitCfg/CanIfInitHohCfg/CN_TC37X_VCU_CAN12_f0a399a5_Tx</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="e0ee2b8d-101f-3807-89cd-88ad8df57768">
-                  <SHORT-NAME>VcuCan12RxMsg4_oTC37X_VCU_CAN12_0a2fe0b8_Rx</SHORT-NAME>
-                  <LONG-NAME>
-                    <L-4 L="FOR-ALL">VcuCan12RxMsg4_oTC37X_VCU_CAN12</L-4>
-                  </LONG-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
-                      <VALUE>50</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdType</DEFINITION-REF>
-                      <VALUE>STANDARD_CAN</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDlc</DEFINITION-REF>
-                      <VALUE>8</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationName</DEFINITION-REF>
-                      <VALUE>PduR_CanIfRxIndication</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationUL</DEFINITION-REF>
-                      <VALUE>PDUR</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>38</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadNotifyStatus</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDlcCheck</DEFINITION-REF>
-                      <VALUE>true</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduHrhIdRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfInitCfg/CanIfInitHohCfg/CN_TC37X_VCU_CAN12_0529b638_Rx</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VcuCan12RxMsg4_oTC37X_VCU_CAN12_211bb20e_Rx</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
@@ -2240,7 +1769,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>39</VALUE>
+                      <VALUE>38</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -2295,7 +1824,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>41</VALUE>
+                      <VALUE>40</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -2350,7 +1879,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>33</VALUE>
+                      <VALUE>32</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
@@ -2405,7 +1934,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>40</VALUE>
+                      <VALUE>39</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -2491,7 +2020,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>34</VALUE>
+                      <VALUE>33</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
@@ -2546,7 +2075,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>35</VALUE>
+                      <VALUE>34</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
@@ -4518,7 +4047,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>31</VALUE>
+                      <VALUE>30</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -4573,7 +4102,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>36</VALUE>
+                      <VALUE>35</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -4628,7 +4157,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>38</VALUE>
+                      <VALUE>37</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -4683,7 +4212,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>35</VALUE>
+                      <VALUE>34</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -4738,7 +4267,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>27</VALUE>
+                      <VALUE>26</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -4793,7 +4322,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>29</VALUE>
+                      <VALUE>28</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -4848,7 +4377,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>32</VALUE>
+                      <VALUE>31</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -4903,7 +4432,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>30</VALUE>
+                      <VALUE>29</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -4958,7 +4487,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>28</VALUE>
+                      <VALUE>27</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -5013,7 +4542,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>34</VALUE>
+                      <VALUE>33</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -5068,7 +4597,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>33</VALUE>
+                      <VALUE>32</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -5123,7 +4652,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>37</VALUE>
+                      <VALUE>36</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -5178,7 +4707,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>32</VALUE>
+                      <VALUE>31</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
@@ -5233,7 +4762,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>31</VALUE>
+                      <VALUE>30</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
@@ -5288,7 +4817,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
-                      <VALUE>30</VALUE>
+                      <VALUE>29</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
@@ -5343,7 +4872,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
-                      <VALUE>26</VALUE>
+                      <VALUE>25</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
@@ -5366,6 +4895,202 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VcuMeasurementMsg0_oTC37X_VCU_CAN01_d96481d0_Tx</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="a11dc023-3bad-366f-88e4-d023f71fc65f">
+                  <SHORT-NAME>XCP_Request_oTC37X_VCU_CAN12_XCP_6cbaea30_Rx</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">XCP_Request_oTC37X_VCU_CAN12_XCP</L-4>
+                  </LONG-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanId</DEFINITION-REF>
+                      <VALUE>2032</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDlc</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationName</DEFINITION-REF>
+                      <VALUE>Xcp_CanIfRxIndication</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduUserRxIndicationUL</DEFINITION-REF>
+                      <VALUE>XCP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduId</DEFINITION-REF>
+                      <VALUE>35</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadData</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduDlcCheck</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduHrhIdRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfInitCfg/CanIfInitHohCfg/CN_TC37X_VCU_CAN12_XCP_74d45e3b_Rx</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfRxPduCfg/CanIfRxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/XCP_Request_oTC37X_VCU_CAN12_XCP_52af259e_Rx</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="d8f02662-7801-3caa-aa3b-31f17434b817">
+                  <SHORT-NAME>XCP_Response_oTC37X_VCU_CAN12_XCP_f1f333ef_Tx</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">XCP_Response_oTC37X_VCU_CAN12_XCP</L-4>
+                  </LONG-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
+                      <VALUE>2033</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduDlc</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationName</DEFINITION-REF>
+                      <VALUE>Xcp_CanIfTxConfirmation</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
+                      <VALUE>XCP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
+                      <VALUE>41</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
+                      <VALUE>STATIC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_8132b304</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/XCP_Response_oTC37X_VCU_CAN12_XCP_931ee635_Tx</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="ed6085b5-adf9-37eb-8456-709ff5b890ea">
+                  <SHORT-NAME>VcuCan12TxMsg1_oTC37X_VCU_CAN12_XCP_7546ee7f_Tx</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">VcuCan12TxMsg1_oTC37X_VCU_CAN12_XCP</L-4>
+                  </LONG-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanId</DEFINITION-REF>
+                      <VALUE>53</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduCanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD_CAN</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduDlc</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationName</DEFINITION-REF>
+                      <VALUE>NULL_PTR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduUserTxConfirmationUL</DEFINITION-REF>
+                      <VALUE>NONE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduId</DEFINITION-REF>
+                      <VALUE>42</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduReadNotifyStatus</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduType</DEFINITION-REF>
+                      <VALUE>STATIC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduTruncation</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduBufferRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfInitCfg/CHNL_8132b304</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfTxPduCfg/CanIfTxPduRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/VcuCan12TxMsg1_oTC37X_VCU_CAN12_XCP_9cae793f_Tx</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="4fa20fbd-141d-38ed-9792-c0263762221f">
+                  <SHORT-NAME>CHNL_8132b304</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="FOR-ALL">CHNL</L-4>
+                  </LONG-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferSize</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfTxBufferHandlingType</DEFINITION-REF>
+                      <VALUE>NONE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfTxBufferMappedTxPdus</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfTxBufferMaxPduLength</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanIf/CanIfInitCfg/CanIfBufferCfg/CanIfBufferHthRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfInitCfg/CanIfInitHohCfg/CN_TC37X_VCU_CAN12_XCP_d05a85ac_Tx</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.h
- *   Generation Time: 2025-08-22 15:59:34
+ *   Generation Time: 2025-09-10 10:53:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -155,16 +155,15 @@
 #define NM_OPTIMIZE_NO_PASSIVE_COORD_ON_SATELLITE_PARTITION   STD_ON
 
 #define NM_SYS_CHANNELS_PC                             8u
-#define NM_NM_CHANNELS_PC                              5u
+#define NM_NM_CHANNELS_PC                              4u
 #define NM_COORD_PC                                    0u
-#define NM_BUSNMS_PC                                   5u
+#define NM_BUSNMS_PC                                   4u
 
 /* NmChannelId symbolic name defines */
 #define NmConf_NmChannelConfig_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac 0u 
 #define NmConf_NmChannelConfig_CN_TC37X_VCU_CAN00_07b6c9c8                  1u 
 #define NmConf_NmChannelConfig_CN_TC37X_VCU_CAN01_70b1f95e                  2u 
 #define NmConf_NmChannelConfig_CN_TC37X_VCU_CAN03_9ebf9872                  3u 
-#define NmConf_NmChannelConfig_CN_TC37X_VCU_CAN12_f0a399a5                  4u 
 
 
 
@@ -517,7 +516,7 @@
 #define Nm_GetInitializedOfPCPartitionConfig(partitionIndex)                                        (&(Nm_Initialized))  /**< the pointer to Nm_Initialized */
 #define Nm_GetNmFunctionTableOfPCPartitionConfig()                                                  Nm_NmFunctionTable  /**< the pointer to Nm_NmFunctionTable */
 #define Nm_GetPostInitializedOfPCPartitionConfig(partitionIndex)                                    Nm_PostInitialized  /**< the pointer to Nm_PostInitialized */
-#define Nm_GetSizeOfChannelConfigOfPCPartitionConfig()                                              5u  /**< the number of accomplishable value elements in Nm_ChannelConfig */
+#define Nm_GetSizeOfChannelConfigOfPCPartitionConfig()                                              4u  /**< the number of accomplishable value elements in Nm_ChannelConfig */
 #define Nm_GetSizeOfNmFunctionTableOfPCPartitionConfig()                                            1u  /**< the number of accomplishable value elements in Nm_NmFunctionTable */
 #define Nm_GetSizeOfPostInitializedOfPCPartitionConfig(partitionIndex)                              1u  /**< the number of accomplishable value elements in Nm_PostInitialized */
 #define Nm_GetSizeOfSysToNmChIndOfPCPartitionConfig()                                               8u  /**< the number of accomplishable value elements in Nm_SysToNmChInd */
@@ -955,7 +954,7 @@ extern CONST(Nm_CallbackFunction, NM_CONST) Nm_CarWakeUpCallbackFctPtr;
 /*lint -save -esym(961, 19.1) */
 #include "Nm_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Nm_ChannelConfigType, NM_CONST) Nm_ChannelConfig[5];
+extern CONST(Nm_ChannelConfigType, NM_CONST) Nm_ChannelConfig[4];
 #define NM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "Nm_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

@@ -20,7 +20,7 @@
  *  -------------------------------------------------------------------------------------------------------------------
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
- *              File: CanXcp_Lcfg.c
+ *              File: CanXcp_CT_TC37X_VCU_CAN12_XCP_5a889f4b_1542.a2l
  *   Generation Time: 2025-09-10 10:53:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
@@ -29,46 +29,53 @@
  *
  *********************************************************************************************************************/
 
-	
 
-#define CANXCP_LCFG_SOURCE
-
-#include "CanXcp_Lcfg.h"
-
-#include "CanIf.h" /* for CanIf symbolic name value defines */
-
- 
-
-/* -----------------------------------------------------------------------------
-    &&&~ CanXcp_PduField - 
- ----------------------------------------------------------------------------- */
-#define CANXCP_START_SEC_CONST_UNSPECIFIED
-#include "MemMap.h" /* PRQA S 5087 */  /* MD_MSR_MemMap */
-
-CONST(CanXcp_XcpPduType, CANXCP_PBCFG) CanXcp_PduIdField[CANXCP_NUMBER_OF_CHANNELS] =
-{
-  {
-    XcpConf_XcpRxPdu_XCP_Request_oTC37X_VCU_CAN12_XCP_52af259e_Rx, 
-    XcpConf_XcpTxPdu_XCP_Response_oTC37X_VCU_CAN12_XCP_931ee635_Tx, 
-    CanIfConf_CanIfTxPduCfg_XCP_Response_oTC37X_VCU_CAN12_XCP_f1f333ef_Tx, 
-    8u /*  MaxCto  */ , 
-    8u /*  MaxDto  */ , 
-    8u /*  PduSizeTx  */ 
-  } /*  CanXcpRxPduId CanXcpTxPduId CanIfTxPduId  */ 
-}; 
-
-/* -----------------------------------------------------------------------------
-    &&&~ CanXcp_Config - 
- ----------------------------------------------------------------------------- */
-
-CONST(CanXcp_ConfigType, CANXCP_PBCFG) CanXcp_Config = 
-{
-  CanXcp_PduIdField,
-  NULL_PTR,
-  1
-};
-
-#define CANXCP_STOP_SEC_CONST_UNSPECIFIED
-#include "MemMap.h" /* PRQA S 5087 */  /* MD_MSR_MemMap */
-
+    /begin XCP_ON_CAN
+      0x0102 /* XCP on CAN version */
+      CAN_ID_MASTER   1542 /* CMD/STIM */
+      CAN_ID_SLAVE    1543 /* RES/ERR/EV/SERV/DAQ */
+      BAUDRATE        500000 /* BAUDRATE */
+      SAMPLE_POINT    75 /* SAMPLE_POINT */
+      SAMPLE_RATE     SINGLE /* SAMPLE_RATE */
+      BTL_CYCLES      8 /* BTL_CYCLES */
+      SJW             2 /* length synchr. segment */
+            /begin PROTOCOL_LAYER 
+        0x0104 
+        2000
+        10000
+        2000
+        2000
+        2000
+        2000
+        0
+        8 /* kXcpMaxCto */
+        8 /* kXcpMaxDto */
+        BYTE_ORDER_MSB_LAST /* Byte Order */
+        ADDRESS_GRANULARITY_BYTE
+        OPTIONAL_CMD SET_MTA
+        OPTIONAL_CMD UPLOAD
+        OPTIONAL_CMD SHORT_UPLOAD
+        OPTIONAL_CMD DOWNLOAD
+        OPTIONAL_CMD DOWNLOAD_NEXT
+        OPTIONAL_CMD SHORT_DOWNLOAD
+        OPTIONAL_CMD MODIFY_BITS
+        OPTIONAL_CMD SET_CAL_PAGE
+        OPTIONAL_CMD GET_CAL_PAGE
+        OPTIONAL_CMD COPY_CAL_PAGE
+        OPTIONAL_CMD SET_DAQ_PTR
+        OPTIONAL_CMD WRITE_DAQ
+        OPTIONAL_CMD SET_DAQ_LIST_MODE
+        OPTIONAL_CMD GET_DAQ_LIST_MODE
+        OPTIONAL_CMD START_STOP_DAQ_LIST
+        OPTIONAL_CMD START_STOP_SYNCH
+        OPTIONAL_CMD GET_DAQ_PROCESSOR_INFO
+        OPTIONAL_CMD GET_DAQ_RESOLUTION_INFO
+        OPTIONAL_CMD GET_DAQ_EVENT_INFO
+        OPTIONAL_CMD FREE_DAQ
+        OPTIONAL_CMD ALLOC_DAQ
+        OPTIONAL_CMD ALLOC_ODT
+        OPTIONAL_CMD ALLOC_ODT_ENTRY
+        COMMUNICATION_MODE_SUPPORTED  BLOCK  
+      /end PROTOCOL_LAYER        
+    /end XCP_ON_CAN
 

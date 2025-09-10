@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanIf_Cfg.h
- *   Generation Time: 2025-08-14 14:36:01
+ *   Generation Time: 2025-09-10 10:53:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -208,7 +208,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIfConf_CanIfCtrlCfg_CT_TC37X_VCU_CAN00_22cb8fec                                          1u
 #define CanIfConf_CanIfCtrlCfg_CT_TC37X_VCU_CAN01_55ccbf7a                                          2u
 #define CanIfConf_CanIfCtrlCfg_CT_TC37X_VCU_CAN03_bbc2de56                                          3u
-#define CanIfConf_CanIfCtrlCfg_CT_TC37X_VCU_CAN12_d5dedf81                                          4u
+#define CanIfConf_CanIfCtrlCfg_CT_TC37X_VCU_CAN12_XCP_5a889f4b                                      4u
 
 
 
@@ -234,38 +234,36 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIfTxPduHnd_VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_033d9a67_Tx                      10u
 #define CanIfTxPduHnd_VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_7a39d019_Tx                      11u
 #define CanIfTxPduHnd_Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00_2ff8982b_Tx                              12u
-#define CanIfTxPduHnd_XCP_Response_oTC37X_VCU_CAN00_933a9e7a_Tx                                     13u
-#define CanIfTxPduHnd_VcuTxIoMsg8_oTC37X_VCU_CAN00_a52d2444_Tx                                      14u
-#define CanIfTxPduHnd_VcuTxIoMsg7_oTC37X_VCU_CAN00_b5f377a3_Tx                                      15u
-#define CanIfTxPduHnd_VcuTxIoMsg6_oTC37X_VCU_CAN00_92472de9_Tx                                      16u
-#define CanIfTxPduHnd_VcuTxIoMsg5_oTC37X_VCU_CAN00_fa9bc337_Tx                                      17u
-#define CanIfTxPduHnd_VcuTxIoMsg4_oTC37X_VCU_CAN00_dd2f997d_Tx                                      18u
-#define CanIfTxPduHnd_VcuTxIoMsg3_oTC37X_VCU_CAN00_2b221e8b_Tx                                      19u
-#define CanIfTxPduHnd_VcuTxIoMsg2_oTC37X_VCU_CAN00_0c9644c1_Tx                                      20u
-#define CanIfTxPduHnd_VcuTxIoMsg1_oTC37X_VCU_CAN00_644aaa1f_Tx                                      21u
-#define CanIfTxPduHnd_VcuTxMsg2_oTC37X_VCU_CAN00_674a89a8_Tx                                        22u
-#define CanIfTxPduHnd_VcuTxMsg1_oTC37X_VCU_CAN00_78140f53_Tx                                        23u
-#define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx                                   24u
-#define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_587183bc_Tx                                   25u
-#define CanIfTxPduHnd_VcuMeasurementMsg0_oTC37X_VCU_CAN01_b3a7d237_Tx                               26u
-#define CanIfTxPduHnd_VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_299915a8_Tx                                   27u
-#define CanIfTxPduHnd_VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_17778821_Tx                                   28u
-#define CanIfTxPduHnd_VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_54442eba_Tx                                   29u
-#define CanIfTxPduHnd_VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_6aaab333_Tx                                   30u
-#define CanIfTxPduHnd_VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_6e9c9e8d_Tx                                   31u
-#define CanIfTxPduHnd_VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_50720304_Tx                                   32u
-#define CanIfTxPduHnd_VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_0a9a8f56_Tx                                   33u
-#define CanIfTxPduHnd_VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_347412df_Tx                                   34u
-#define CanIfTxPduHnd_VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_a690bd3b_Tx                                   35u
-#define CanIfTxPduHnd_VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_987e20b2_Tx                                   36u
-#define CanIfTxPduHnd_VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_c296ace0_Tx                                   37u
-#define CanIfTxPduHnd_VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_fc783169_Tx                                   38u
-#define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_448b17d4_Tx                                   39u
-#define CanIfTxPduHnd_VcuCan03TxMsg2_oTC37X_VCU_CAN03_f7cb455b_Tx                                   40u
-#define CanIfTxPduHnd_VcuCan03TxMsg1_oTC37X_VCU_CAN03_b4f8e3c0_Tx                                   41u
-#define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN12_6b4cd41f_Tx                                   42u
-#define CanIfTxPduHnd_VcuCan12TxMsg1_oTC37X_VCU_CAN12_a82524bb_Tx                                   43u
-#define CanIfTxPduHnd_VcuCan12TxMsg2_oTC37X_VCU_CAN12_eb168220_Tx                                   44u
+#define CanIfTxPduHnd_VcuTxIoMsg8_oTC37X_VCU_CAN00_a52d2444_Tx                                      13u
+#define CanIfTxPduHnd_VcuTxIoMsg7_oTC37X_VCU_CAN00_b5f377a3_Tx                                      14u
+#define CanIfTxPduHnd_VcuTxIoMsg6_oTC37X_VCU_CAN00_92472de9_Tx                                      15u
+#define CanIfTxPduHnd_VcuTxIoMsg5_oTC37X_VCU_CAN00_fa9bc337_Tx                                      16u
+#define CanIfTxPduHnd_VcuTxIoMsg4_oTC37X_VCU_CAN00_dd2f997d_Tx                                      17u
+#define CanIfTxPduHnd_VcuTxIoMsg3_oTC37X_VCU_CAN00_2b221e8b_Tx                                      18u
+#define CanIfTxPduHnd_VcuTxIoMsg2_oTC37X_VCU_CAN00_0c9644c1_Tx                                      19u
+#define CanIfTxPduHnd_VcuTxIoMsg1_oTC37X_VCU_CAN00_644aaa1f_Tx                                      20u
+#define CanIfTxPduHnd_VcuTxMsg2_oTC37X_VCU_CAN00_674a89a8_Tx                                        21u
+#define CanIfTxPduHnd_VcuTxMsg1_oTC37X_VCU_CAN00_78140f53_Tx                                        22u
+#define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx                                   23u
+#define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_587183bc_Tx                                   24u
+#define CanIfTxPduHnd_VcuMeasurementMsg0_oTC37X_VCU_CAN01_b3a7d237_Tx                               25u
+#define CanIfTxPduHnd_VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_299915a8_Tx                                   26u
+#define CanIfTxPduHnd_VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_17778821_Tx                                   27u
+#define CanIfTxPduHnd_VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_54442eba_Tx                                   28u
+#define CanIfTxPduHnd_VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_6aaab333_Tx                                   29u
+#define CanIfTxPduHnd_VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_6e9c9e8d_Tx                                   30u
+#define CanIfTxPduHnd_VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_50720304_Tx                                   31u
+#define CanIfTxPduHnd_VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_0a9a8f56_Tx                                   32u
+#define CanIfTxPduHnd_VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_347412df_Tx                                   33u
+#define CanIfTxPduHnd_VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_a690bd3b_Tx                                   34u
+#define CanIfTxPduHnd_VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_987e20b2_Tx                                   35u
+#define CanIfTxPduHnd_VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_c296ace0_Tx                                   36u
+#define CanIfTxPduHnd_VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_fc783169_Tx                                   37u
+#define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_448b17d4_Tx                                   38u
+#define CanIfTxPduHnd_VcuCan03TxMsg2_oTC37X_VCU_CAN03_f7cb455b_Tx                                   39u
+#define CanIfTxPduHnd_VcuCan03TxMsg1_oTC37X_VCU_CAN03_b4f8e3c0_Tx                                   40u
+#define CanIfTxPduHnd_XCP_Response_oTC37X_VCU_CAN12_XCP_f1f333ef_Tx                                 41u
+#define CanIfTxPduHnd_VcuCan12TxMsg1_oTC37X_VCU_CAN12_XCP_7546ee7f_Tx                               42u
 
 
 /**********************************************************************************************************************
@@ -279,7 +277,6 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIfRxPduHnd_VCU_Rx_500h_NM_oTC37X_VCU_CAN00_2f971b6a_Rx                                   1u
 #define CanIfRxPduHnd_VCU_Rx_500h_NM_oTC37X_VCU_CAN01_21ea515e_Rx                                   2u
 #define CanIfRxPduHnd_VCU_Rx_500h_NM_oTC37X_VCU_CAN03_3d10c536_Rx                                   3u
-#define CanIfRxPduHnd_VCU_Rx_500h_NM_oTC37X_VCU_CAN12_12d706fd_Rx                                   4u
 /* Assigned to: CanTp_RxIndication*/
 #define CanIfRxPduHnd_Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00_fc9370a6_Rx                           0u
 #define CanIfRxPduHnd_Vcu_Uds_Func_Request_Tp_oTC37X_VCU_CAN00_b229a038_Rx                          1u
@@ -313,10 +310,8 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIfRxPduHnd_VcuRxCtrlMsg0_oTC37X_VCU_CAN01_6f777a62_Rx                                    26u
 #define CanIfRxPduHnd_VcuCan03RxMsg2_oTC37X_VCU_CAN03_90956af5_Rx                                   27u
 #define CanIfRxPduHnd_VcuCan03RxMsg1_oTC37X_VCU_CAN03_d3a6cc6e_Rx                                   28u
-#define CanIfRxPduHnd_VcuCan12RxMsg3_oTC37X_VCU_CAN12_b2a63007_Rx                                   29u
-#define CanIfRxPduHnd_VcuCan12RxMsg4_oTC37X_VCU_CAN12_0a2fe0b8_Rx                                   30u
 /* Assigned to: Xcp_CanIfRxIndication*/
-#define CanIfRxPduHnd_XCP_Request_oTC37X_VCU_CAN00_e22de59e_Rx                                      0u
+#define CanIfRxPduHnd_XCP_Request_oTC37X_VCU_CAN12_XCP_6cbaea30_Rx                                  0u
 
 
 
@@ -337,38 +332,36 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIfConf_CanIfTxPduCfg_VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_033d9a67_Tx            10u
 #define CanIfConf_CanIfTxPduCfg_VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_7a39d019_Tx            11u
 #define CanIfConf_CanIfTxPduCfg_Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00_2ff8982b_Tx                    12u
-#define CanIfConf_CanIfTxPduCfg_XCP_Response_oTC37X_VCU_CAN00_933a9e7a_Tx                           13u
-#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg8_oTC37X_VCU_CAN00_a52d2444_Tx                            14u
-#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg7_oTC37X_VCU_CAN00_b5f377a3_Tx                            15u
-#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg6_oTC37X_VCU_CAN00_92472de9_Tx                            16u
-#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg5_oTC37X_VCU_CAN00_fa9bc337_Tx                            17u
-#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg4_oTC37X_VCU_CAN00_dd2f997d_Tx                            18u
-#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg3_oTC37X_VCU_CAN00_2b221e8b_Tx                            19u
-#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg2_oTC37X_VCU_CAN00_0c9644c1_Tx                            20u
-#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg1_oTC37X_VCU_CAN00_644aaa1f_Tx                            21u
-#define CanIfConf_CanIfTxPduCfg_VcuTxMsg2_oTC37X_VCU_CAN00_674a89a8_Tx                              22u
-#define CanIfConf_CanIfTxPduCfg_VcuTxMsg1_oTC37X_VCU_CAN00_78140f53_Tx                              23u
-#define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx                         24u
-#define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_587183bc_Tx                         25u
-#define CanIfConf_CanIfTxPduCfg_VcuMeasurementMsg0_oTC37X_VCU_CAN01_b3a7d237_Tx                     26u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_299915a8_Tx                         27u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_17778821_Tx                         28u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_54442eba_Tx                         29u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_6aaab333_Tx                         30u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_6e9c9e8d_Tx                         31u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_50720304_Tx                         32u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_0a9a8f56_Tx                         33u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_347412df_Tx                         34u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_a690bd3b_Tx                         35u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_987e20b2_Tx                         36u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_c296ace0_Tx                         37u
-#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_fc783169_Tx                         38u
-#define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_448b17d4_Tx                         39u
-#define CanIfConf_CanIfTxPduCfg_VcuCan03TxMsg2_oTC37X_VCU_CAN03_f7cb455b_Tx                         40u
-#define CanIfConf_CanIfTxPduCfg_VcuCan03TxMsg1_oTC37X_VCU_CAN03_b4f8e3c0_Tx                         41u
-#define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN12_6b4cd41f_Tx                         42u
-#define CanIfConf_CanIfTxPduCfg_VcuCan12TxMsg1_oTC37X_VCU_CAN12_a82524bb_Tx                         43u
-#define CanIfConf_CanIfTxPduCfg_VcuCan12TxMsg2_oTC37X_VCU_CAN12_eb168220_Tx                         44u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg8_oTC37X_VCU_CAN00_a52d2444_Tx                            13u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg7_oTC37X_VCU_CAN00_b5f377a3_Tx                            14u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg6_oTC37X_VCU_CAN00_92472de9_Tx                            15u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg5_oTC37X_VCU_CAN00_fa9bc337_Tx                            16u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg4_oTC37X_VCU_CAN00_dd2f997d_Tx                            17u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg3_oTC37X_VCU_CAN00_2b221e8b_Tx                            18u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg2_oTC37X_VCU_CAN00_0c9644c1_Tx                            19u
+#define CanIfConf_CanIfTxPduCfg_VcuTxIoMsg1_oTC37X_VCU_CAN00_644aaa1f_Tx                            20u
+#define CanIfConf_CanIfTxPduCfg_VcuTxMsg2_oTC37X_VCU_CAN00_674a89a8_Tx                              21u
+#define CanIfConf_CanIfTxPduCfg_VcuTxMsg1_oTC37X_VCU_CAN00_78140f53_Tx                              22u
+#define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_560cc988_Tx                         23u
+#define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_587183bc_Tx                         24u
+#define CanIfConf_CanIfTxPduCfg_VcuMeasurementMsg0_oTC37X_VCU_CAN01_b3a7d237_Tx                     25u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_299915a8_Tx                         26u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_17778821_Tx                         27u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_54442eba_Tx                         28u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_6aaab333_Tx                         29u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_6e9c9e8d_Tx                         30u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_50720304_Tx                         31u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_0a9a8f56_Tx                         32u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_347412df_Tx                         33u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_a690bd3b_Tx                         34u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_987e20b2_Tx                         35u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_c296ace0_Tx                         36u
+#define CanIfConf_CanIfTxPduCfg_VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_fc783169_Tx                         37u
+#define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_448b17d4_Tx                         38u
+#define CanIfConf_CanIfTxPduCfg_VcuCan03TxMsg2_oTC37X_VCU_CAN03_f7cb455b_Tx                         39u
+#define CanIfConf_CanIfTxPduCfg_VcuCan03TxMsg1_oTC37X_VCU_CAN03_b4f8e3c0_Tx                         40u
+#define CanIfConf_CanIfTxPduCfg_XCP_Response_oTC37X_VCU_CAN12_XCP_f1f333ef_Tx                       41u
+#define CanIfConf_CanIfTxPduCfg_VcuCan12TxMsg1_oTC37X_VCU_CAN12_XCP_7546ee7f_Tx                     42u
 
 
 /**********************************************************************************************************************
@@ -398,22 +391,19 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIfConf_CanIfRxPduCfg_IBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502_0ce6310f_Rx  20u
 #define CanIfConf_CanIfRxPduCfg_Vcu_Uds_Phy_Request_Tp_oTC37X_VCU_CAN00_fc9370a6_Rx                 21u
 #define CanIfConf_CanIfRxPduCfg_Vcu_Uds_Func_Request_Tp_oTC37X_VCU_CAN00_b229a038_Rx                22u
-#define CanIfConf_CanIfRxPduCfg_XCP_Request_oTC37X_VCU_CAN00_e22de59e_Rx                            23u
-#define CanIfConf_CanIfRxPduCfg_VCU_Rx_500h_NM_oTC37X_VCU_CAN00_2f971b6a_Rx                         24u
-#define CanIfConf_CanIfRxPduCfg_VcuRxMsg2_oTC37X_VCU_CAN00_de1782b6_Rx                              25u
-#define CanIfConf_CanIfRxPduCfg_VcuRxMsg1_oTC37X_VCU_CAN00_c149044d_Rx                              26u
-#define CanIfConf_CanIfRxPduCfg_VCU_Rx_500h_NM_oTC37X_VCU_CAN01_21ea515e_Rx                         27u
-#define CanIfConf_CanIfRxPduCfg_VcuRxMsg4_oTC37X_VCU_CAN01_1d60377a_Rx                              28u
-#define CanIfConf_CanIfRxPduCfg_VcuRxMsg3_oTC37X_VCU_CAN01_29174725_Rx                              29u
-#define CanIfConf_CanIfRxPduCfg_VcuRxCtrlMsg2_oTC37X_VCU_CAN01_5bdcb8c3_Rx                          30u
-#define CanIfConf_CanIfRxPduCfg_VcuRxCtrlMsg1_oTC37X_VCU_CAN01_989a1812_Rx                          31u
-#define CanIfConf_CanIfRxPduCfg_VcuRxCtrlMsg0_oTC37X_VCU_CAN01_6f777a62_Rx                          32u
-#define CanIfConf_CanIfRxPduCfg_VCU_Rx_500h_NM_oTC37X_VCU_CAN03_3d10c536_Rx                         33u
-#define CanIfConf_CanIfRxPduCfg_VcuCan03RxMsg2_oTC37X_VCU_CAN03_90956af5_Rx                         34u
-#define CanIfConf_CanIfRxPduCfg_VcuCan03RxMsg1_oTC37X_VCU_CAN03_d3a6cc6e_Rx                         35u
-#define CanIfConf_CanIfRxPduCfg_VCU_Rx_500h_NM_oTC37X_VCU_CAN12_12d706fd_Rx                         36u
-#define CanIfConf_CanIfRxPduCfg_VcuCan12RxMsg3_oTC37X_VCU_CAN12_b2a63007_Rx                         37u
-#define CanIfConf_CanIfRxPduCfg_VcuCan12RxMsg4_oTC37X_VCU_CAN12_0a2fe0b8_Rx                         38u
+#define CanIfConf_CanIfRxPduCfg_VCU_Rx_500h_NM_oTC37X_VCU_CAN00_2f971b6a_Rx                         23u
+#define CanIfConf_CanIfRxPduCfg_VcuRxMsg2_oTC37X_VCU_CAN00_de1782b6_Rx                              24u
+#define CanIfConf_CanIfRxPduCfg_VcuRxMsg1_oTC37X_VCU_CAN00_c149044d_Rx                              25u
+#define CanIfConf_CanIfRxPduCfg_VCU_Rx_500h_NM_oTC37X_VCU_CAN01_21ea515e_Rx                         26u
+#define CanIfConf_CanIfRxPduCfg_VcuRxMsg4_oTC37X_VCU_CAN01_1d60377a_Rx                              27u
+#define CanIfConf_CanIfRxPduCfg_VcuRxMsg3_oTC37X_VCU_CAN01_29174725_Rx                              28u
+#define CanIfConf_CanIfRxPduCfg_VcuRxCtrlMsg2_oTC37X_VCU_CAN01_5bdcb8c3_Rx                          29u
+#define CanIfConf_CanIfRxPduCfg_VcuRxCtrlMsg1_oTC37X_VCU_CAN01_989a1812_Rx                          30u
+#define CanIfConf_CanIfRxPduCfg_VcuRxCtrlMsg0_oTC37X_VCU_CAN01_6f777a62_Rx                          31u
+#define CanIfConf_CanIfRxPduCfg_VCU_Rx_500h_NM_oTC37X_VCU_CAN03_3d10c536_Rx                         32u
+#define CanIfConf_CanIfRxPduCfg_VcuCan03RxMsg2_oTC37X_VCU_CAN03_90956af5_Rx                         33u
+#define CanIfConf_CanIfRxPduCfg_VcuCan03RxMsg1_oTC37X_VCU_CAN03_d3a6cc6e_Rx                         34u
+#define CanIfConf_CanIfRxPduCfg_XCP_Request_oTC37X_VCU_CAN12_XCP_6cbaea30_Rx                        35u
 
 
 
@@ -870,16 +860,16 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetSizeOfCanIfCtrlId2MappedTxBuffersConfigOfPCConfig()                                5u  /**< the number of accomplishable value elements in CanIf_CanIfCtrlId2MappedTxBuffersConfig */
 #define CanIf_GetSizeOfCtrlStatesOfPCConfig()                                                       5u  /**< the number of accomplishable value elements in CanIf_CtrlStates */
 #define CanIf_GetSizeOfMailBoxConfigOfPCConfig()                                                    15u  /**< the number of accomplishable value elements in CanIf_MailBoxConfig */
-#define CanIf_GetSizeOfMappedTxBuffersConfigOfPCConfig()                                            5u  /**< the number of accomplishable value elements in CanIf_MappedTxBuffersConfig */
+#define CanIf_GetSizeOfMappedTxBuffersConfigOfPCConfig()                                            4u  /**< the number of accomplishable value elements in CanIf_MappedTxBuffersConfig */
 #define CanIf_GetSizeOfRxIndicationFctListOfPCConfig()                                              5u  /**< the number of accomplishable value elements in CanIf_RxIndicationFctList */
-#define CanIf_GetSizeOfRxPduConfigOfPCConfig()                                                      39u  /**< the number of accomplishable value elements in CanIf_RxPduConfig */
-#define CanIf_GetSizeOfTxBufferPrioByCanIdBaseOfPCConfig()                                          5u  /**< the number of accomplishable value elements in CanIf_TxBufferPrioByCanIdBase */
-#define CanIf_GetSizeOfTxBufferPrioByCanIdByteQueueConfigOfPCConfig()                               5u  /**< the number of accomplishable value elements in CanIf_TxBufferPrioByCanIdByteQueueConfig */
-#define CanIf_GetSizeOfTxBufferPrioByCanIdByteQueueMappedTxPdusOfPCConfig()                         42u  /**< the number of accomplishable value elements in CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdus */
+#define CanIf_GetSizeOfRxPduConfigOfPCConfig()                                                      36u  /**< the number of accomplishable value elements in CanIf_RxPduConfig */
+#define CanIf_GetSizeOfTxBufferPrioByCanIdBaseOfPCConfig()                                          4u  /**< the number of accomplishable value elements in CanIf_TxBufferPrioByCanIdBase */
+#define CanIf_GetSizeOfTxBufferPrioByCanIdByteQueueConfigOfPCConfig()                               4u  /**< the number of accomplishable value elements in CanIf_TxBufferPrioByCanIdByteQueueConfig */
+#define CanIf_GetSizeOfTxBufferPrioByCanIdByteQueueMappedTxPdusOfPCConfig()                         38u  /**< the number of accomplishable value elements in CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdus */
 #define CanIf_GetSizeOfTxConfirmationFctListOfPCConfig()                                            4u  /**< the number of accomplishable value elements in CanIf_TxConfirmationFctList */
-#define CanIf_GetSizeOfTxPduConfigOfPCConfig()                                                      45u  /**< the number of accomplishable value elements in CanIf_TxPduConfig */
-#define CanIf_GetSizeOfTxPduQueueIndexOfPCConfig()                                                  45u  /**< the number of accomplishable value elements in CanIf_TxPduQueueIndex */
-#define CanIf_GetSizeOfTxQueueOfPCConfig()                                                          42u  /**< the number of accomplishable value elements in CanIf_TxQueue */
+#define CanIf_GetSizeOfTxPduConfigOfPCConfig()                                                      43u  /**< the number of accomplishable value elements in CanIf_TxPduConfig */
+#define CanIf_GetSizeOfTxPduQueueIndexOfPCConfig()                                                  43u  /**< the number of accomplishable value elements in CanIf_TxPduQueueIndex */
+#define CanIf_GetSizeOfTxQueueOfPCConfig()                                                          38u  /**< the number of accomplishable value elements in CanIf_TxQueue */
 #define CanIf_GetTxBufferPrioByCanIdBaseOfPCConfig()                                                CanIf_TxBufferPrioByCanIdBase.raw  /**< the pointer to CanIf_TxBufferPrioByCanIdBase */
 #define CanIf_GetTxBufferPrioByCanIdByteQueueConfigOfPCConfig()                                     CanIf_TxBufferPrioByCanIdByteQueueConfig  /**< the pointer to CanIf_TxBufferPrioByCanIdByteQueueConfig */
 #define CanIf_GetTxBufferPrioByCanIdByteQueueMappedTxPdusOfPCConfig()                               CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdus  /**< the pointer to CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdus */
@@ -1502,7 +1492,7 @@ typedef struct CanIf_CtrlStatesStructSTag
   CanIf_CtrlStatesType CT_TC37X_VCU_CAN00_22cb8fec;
   CanIf_CtrlStatesType CT_TC37X_VCU_CAN01_55ccbf7a;
   CanIf_CtrlStatesType CT_TC37X_VCU_CAN03_bbc2de56;
-  CanIf_CtrlStatesType CT_TC37X_VCU_CAN12_d5dedf81;
+  CanIf_CtrlStatesType CT_TC37X_VCU_CAN12_XCP_5a889f4b;
 } CanIf_CtrlStatesStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanIf_TxBufferPrioByCanIdBase */
@@ -1512,7 +1502,6 @@ typedef struct CanIf_TxBufferPrioByCanIdBaseStructSTag
   CanIf_TxBufferPrioByCanIdBaseType CHNL_d841867f;
   CanIf_TxBufferPrioByCanIdBaseType CHNL_131d55da;
   CanIf_TxBufferPrioByCanIdBaseType CHNL_5ed5f4d1;
-  CanIf_TxBufferPrioByCanIdBaseType CHNL_33fe2cc0;
 } CanIf_TxBufferPrioByCanIdBaseStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanIf_TxQueue */
@@ -1529,7 +1518,6 @@ typedef struct CanIf_TxQueueStructSTag
   CanIf_TxPrioByCanIdByteQueueType VCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_6e926372_Tx;
   CanIf_TxPrioByCanIdByteQueueType VCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_f1d5756e_Tx;
   CanIf_TxPrioByCanIdByteQueueType Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00_2ff8982b_Tx;
-  CanIf_TxPrioByCanIdByteQueueType XCP_Response_oTC37X_VCU_CAN00_933a9e7a_Tx;
   CanIf_TxPrioByCanIdByteQueueType VcuTxIoMsg8_oTC37X_VCU_CAN00_a52d2444_Tx;
   CanIf_TxPrioByCanIdByteQueueType VcuTxIoMsg7_oTC37X_VCU_CAN00_b5f377a3_Tx;
   CanIf_TxPrioByCanIdByteQueueType VcuTxIoMsg6_oTC37X_VCU_CAN00_92472de9_Tx;
@@ -1557,9 +1545,6 @@ typedef struct CanIf_TxQueueStructSTag
   CanIf_TxPrioByCanIdByteQueueType VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_448b17d4_Tx;
   CanIf_TxPrioByCanIdByteQueueType VcuCan03TxMsg2_oTC37X_VCU_CAN03_f7cb455b_Tx;
   CanIf_TxPrioByCanIdByteQueueType VcuCan03TxMsg1_oTC37X_VCU_CAN03_b4f8e3c0_Tx;
-  CanIf_TxPrioByCanIdByteQueueType VCU_Tx_51Ch_NM_oTC37X_VCU_CAN12_6b4cd41f_Tx;
-  CanIf_TxPrioByCanIdByteQueueType VcuCan12TxMsg1_oTC37X_VCU_CAN12_a82524bb_Tx;
-  CanIf_TxPrioByCanIdByteQueueType VcuCan12TxMsg2_oTC37X_VCU_CAN12_eb168220_Tx;
 } CanIf_TxQueueStructSType;
 
 /** 
@@ -1581,14 +1566,14 @@ typedef union CanIf_CtrlStatesUTag
 /**   \brief  type to access CanIf_TxBufferPrioByCanIdBase in an index and symbol based style. */
 typedef union CanIf_TxBufferPrioByCanIdBaseUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanIf_TxBufferPrioByCanIdBaseType raw[5];
+  CanIf_TxBufferPrioByCanIdBaseType raw[4];
   CanIf_TxBufferPrioByCanIdBaseStructSType str;
 } CanIf_TxBufferPrioByCanIdBaseUType;
 
 /**   \brief  type to access CanIf_TxQueue in an index and symbol based style. */
 typedef union CanIf_TxQueueUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanIf_TxPrioByCanIdByteQueueType raw[42];
+  CanIf_TxPrioByCanIdByteQueueType raw[38];
   CanIf_TxQueueStructSType str;
 } CanIf_TxQueueUType;
 
@@ -1772,7 +1757,7 @@ extern CONST(CanIf_MailBoxConfigType, CANIF_CONST) CanIf_MailBoxConfig[15];
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_MappedTxBuffersConfigType, CANIF_CONST) CanIf_MappedTxBuffersConfig[5];
+extern CONST(CanIf_MappedTxBuffersConfigType, CANIF_CONST) CanIf_MappedTxBuffersConfig[4];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1817,7 +1802,7 @@ extern CONST(CanIf_RxIndicationFctListType, CANIF_CONST) CanIf_RxIndicationFctLi
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_RxPduConfigType, CANIF_CONST) CanIf_RxPduConfig[39];
+extern CONST(CanIf_RxPduConfigType, CANIF_CONST) CanIf_RxPduConfig[36];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1840,7 +1825,7 @@ extern CONST(CanIf_RxPduConfigType, CANIF_CONST) CanIf_RxPduConfig[39];
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_TxBufferPrioByCanIdByteQueueConfigType, CANIF_CONST) CanIf_TxBufferPrioByCanIdByteQueueConfig[5];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
+extern CONST(CanIf_TxBufferPrioByCanIdByteQueueConfigType, CANIF_CONST) CanIf_TxBufferPrioByCanIdByteQueueConfig[4];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1860,7 +1845,7 @@ extern CONST(CanIf_TxBufferPrioByCanIdByteQueueConfigType, CANIF_CONST) CanIf_Tx
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdusType, CANIF_CONST) CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdus[42];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
+extern CONST(CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdusType, CANIF_CONST) CanIf_TxBufferPrioByCanIdByteQueueMappedTxPdus[38];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1903,7 +1888,7 @@ extern CONST(CanIf_TxConfirmationFctType, CANIF_CONST) CanIf_TxConfirmationFctLi
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[45];
+extern CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[43];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1924,7 +1909,7 @@ extern CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[45];
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_TxPduQueueIndexType, CANIF_CONST) CanIf_TxPduQueueIndex[45];
+extern CONST(CanIf_TxPduQueueIndexType, CANIF_CONST) CanIf_TxPduQueueIndex[43];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
