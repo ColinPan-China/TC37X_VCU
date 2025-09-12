@@ -37,15 +37,6 @@ BU_: GWM VCU Tester
 VAL_TABLE_ New_Value_Table_1 1 "Valid" 0 "Invalid" ;
 
 
-BO_ 1921 Vcu_Uds_Response: 8 VCU
- SG_ Uds_Resp : 7|64@0+ (1,0) [0|0] ""  Tester
-
-BO_ 1793 Vcu_Uds_Phy_Request: 8 Tester
- SG_ Uds_Phy_Req : 7|64@0+ (1,0) [0|0] ""  VCU
-
-BO_ 1792 Vcu_Uds_Func_Request: 8 Tester
- SG_ Uds_Func_Req : 7|64@0+ (1,0) [0|0] ""  VCU
-
 BO_ 513 VcuRxMsg2: 8 GWM
  SG_ VcuRxMsg2_Sig3 : 48|16@1- (1,0) [0|0] ""  VCU
  SG_ VcuRxMsg2_Sig2 : 32|16@1- (1,0) [0|0] ""  VCU
@@ -214,57 +205,42 @@ BA_DEF_DEF_  "DiagState" "no";
 BA_DEF_DEF_  "DiagResponse" "no";
 BA_DEF_DEF_  "DiagRequest" "no";
 BA_DEF_DEF_  "DBName" "";
-BA_ "Manufacturer" "Vector";
-BA_ "NmType" "NmAsr";
-BA_ "BusType" "CAN";
-BA_ "Baudrate" 500000;
 BA_ "NmAsrWaitBusSleepTime" 2000;
+BA_ "Baudrate" 500000;
+BA_ "BusType" "CAN";
+BA_ "NmType" "NmAsr";
+BA_ "Manufacturer" "Vector";
 BA_ "DBName" "TC37X_VCU_CAN00";
-BA_ "DiagResponse" BO_ 1921 1;
-BA_ "DiagUudResponse" BO_ 1921 1;
-BA_ "GenMsgILSupport" BO_ 1921 0;
-BA_ "GenMsgSendType" BO_ 1921 8;
-BA_ "VFrameFormat" BO_ 1921 0;
-BA_ "DiagRequest" BO_ 1793 1;
-BA_ "DiagUudResponse" BO_ 1793 1;
-BA_ "GenMsgILSupport" BO_ 1793 0;
-BA_ "GenMsgSendType" BO_ 1793 8;
-BA_ "VFrameFormat" BO_ 1793 0;
-BA_ "DiagState" BO_ 1792 1;
-BA_ "DiagUudtResponse" BO_ 1792 1;
-BA_ "GenMsgILSupport" BO_ 1792 0;
-BA_ "GenMsgSendType" BO_ 1792 8;
-BA_ "VFrameFormat" BO_ 1792 0;
-BA_ "GenMsgCycleTime" BO_ 513 500;
 BA_ "VFrameFormat" BO_ 513 0;
-BA_ "GenMsgCycleTime" BO_ 512 500;
+BA_ "GenMsgCycleTime" BO_ 513 500;
 BA_ "VFrameFormat" BO_ 512 0;
-BA_ "GenMsgCycleTime" BO_ 257 500;
+BA_ "GenMsgCycleTime" BO_ 512 500;
 BA_ "VFrameFormat" BO_ 257 0;
-BA_ "GenMsgCycleTime" BO_ 256 500;
+BA_ "GenMsgCycleTime" BO_ 257 500;
 BA_ "VFrameFormat" BO_ 256 0;
-BA_ "GenMsgCycleTime" BO_ 260 500;
+BA_ "GenMsgCycleTime" BO_ 256 500;
 BA_ "VFrameFormat" BO_ 260 0;
-BA_ "GenMsgCycleTime" BO_ 261 500;
+BA_ "GenMsgCycleTime" BO_ 260 500;
 BA_ "VFrameFormat" BO_ 261 0;
-BA_ "GenMsgCycleTime" BO_ 262 500;
+BA_ "GenMsgCycleTime" BO_ 261 500;
 BA_ "VFrameFormat" BO_ 262 0;
-BA_ "GenMsgCycleTime" BO_ 263 500;
+BA_ "GenMsgCycleTime" BO_ 262 500;
 BA_ "VFrameFormat" BO_ 263 0;
-BA_ "GenMsgCycleTime" BO_ 264 500;
+BA_ "GenMsgCycleTime" BO_ 263 500;
 BA_ "VFrameFormat" BO_ 264 0;
-BA_ "GenMsgCycleTime" BO_ 265 500;
+BA_ "GenMsgCycleTime" BO_ 264 500;
 BA_ "VFrameFormat" BO_ 265 0;
-BA_ "GenMsgCycleTime" BO_ 266 500;
+BA_ "GenMsgCycleTime" BO_ 265 500;
 BA_ "VFrameFormat" BO_ 266 0;
-BA_ "GenMsgCycleTime" BO_ 267 500;
+BA_ "GenMsgCycleTime" BO_ 266 500;
 BA_ "VFrameFormat" BO_ 267 0;
-BA_ "NmMessage" BO_ 1280 1;
-BA_ "NmAsrMessage" BO_ 1280 1;
-BA_ "GenMsgCycleTime" BO_ 1280 500;
+BA_ "GenMsgCycleTime" BO_ 267 500;
 BA_ "VFrameFormat" BO_ 1280 0;
-BA_ "NmMessage" BO_ 1308 1;
-BA_ "NmAsrMessage" BO_ 1308 1;
-BA_ "GenMsgCycleTime" BO_ 1308 500;
+BA_ "GenMsgCycleTime" BO_ 1280 500;
+BA_ "NmAsrMessage" BO_ 1280 1;
+BA_ "NmMessage" BO_ 1280 1;
 BA_ "VFrameFormat" BO_ 1308 0;
+BA_ "GenMsgCycleTime" BO_ 1308 500;
+BA_ "NmAsrMessage" BO_ 1308 1;
+BA_ "NmMessage" BO_ 1308 1;
 
