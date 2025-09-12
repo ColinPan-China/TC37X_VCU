@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Private_Cfg.h
- *   Generation Time: 2025-09-12 11:08:10
+ *   Generation Time: 2025-09-12 17:00:35
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -140,10 +140,10 @@
 #define BSWM_ID_RULE_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX_DM 27u 
 #define BSWM_ID_RULE_CC_CN_LIN02_5f246578_Vcu_Lin3_Schedule_bdb0899f       28u 
 #define BSWM_ID_RULE_CC_CN_LIN02_5f246578_StartSchedule                    29u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX                 30u 
-#define BSWM_ID_RULE_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX    31u 
-#define BSWM_ID_RULE_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_DM 32u 
-#define BSWM_ID_RULE_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX    33u 
+#define BSWM_ID_RULE_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX    30u 
+#define BSWM_ID_RULE_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_DM 31u 
+#define BSWM_ID_RULE_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX    32u 
+#define BSWM_ID_RULE_CC_CN_ATOM_CAN_XCP_f42a46d4_TX                        33u 
 
 #define BSWM_ID_AL_ESH_AL_RunToPostRun                                                0u 
 #define BSWM_ID_AL_ESH_AL_WaitForNvMToShutdown                                        1u 
@@ -187,14 +187,14 @@
 #define BSWM_ID_AL_CC_AL_CN_LIN02_5f246578_Vcu_Lin3_Schedule_bdb0899f_Disable         39u 
 #define BSWM_ID_AL_CC_AL_CN_LIN02_5f246578_Vcu_Lin3_Schedule_bdb0899f_Enable          40u 
 #define BSWM_ID_AL_CC_AL_CN_LIN02_5f246578_LinScheduleSwitch                          41u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX_Disable                   42u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX_EnableNoinit              43u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_Disable      44u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_EnableNoinit 45u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_Disable_DM      46u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_Enable_DM       47u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX_Disable      48u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX_EnableNoinit 49u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_Disable      42u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_EnableNoinit 43u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_Disable_DM      44u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_Enable_DM       45u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX_Disable      46u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX_EnableNoinit 47u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_XCP_f42a46d4_TX_Disable                          48u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_XCP_f42a46d4_TX_EnableNoinit                     49u 
 
 
 /**********************************************************************************************************************

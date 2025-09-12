@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanNm_Cfg.c
- *   Generation Time: 2025-09-12 11:08:09
+ *   Generation Time: 2025-09-12 17:00:33
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -170,9 +170,9 @@ CONST(CanNm_SysToNmChIndType, CANNM_CONST) CanNm_SysToNmChInd[8] = {  /* PRQA S 
   /* Index     SysToNmChInd           */
   /*     0 */                     0u,
   /*     1 */                     1u,
-  /*     2 */                     2u,
-  /*     3 */                     3u,
-  /*     4 */  CANNM_NO_SYSTONMCHIND,
+  /*     2 */  CANNM_NO_SYSTONMCHIND,
+  /*     3 */                     2u,
+  /*     4 */                     3u,
   /*     5 */  CANNM_NO_SYSTONMCHIND,
   /*     6 */  CANNM_NO_SYSTONMCHIND,
   /*     7 */  CANNM_NO_SYSTONMCHIND

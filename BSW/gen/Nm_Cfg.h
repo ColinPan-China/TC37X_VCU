@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.h
- *   Generation Time: 2025-09-12 11:08:09
+ *   Generation Time: 2025-09-12 17:00:35
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -162,8 +162,8 @@
 /* NmChannelId symbolic name defines */
 #define NmConf_NmChannelConfig_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac 0u 
 #define NmConf_NmChannelConfig_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d 1u 
-#define NmConf_NmChannelConfig_CN_TC37X_VCU_CAN01_70b1f95e                  2u 
-#define NmConf_NmChannelConfig_CN_TC37X_VCU_CAN03_9ebf9872                  3u 
+#define NmConf_NmChannelConfig_CN_TC37X_VCU_CAN01_70b1f95e                  3u 
+#define NmConf_NmChannelConfig_CN_TC37X_VCU_CAN03_9ebf9872                  4u 
 
 
 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanXcp_Lcfg.c
- *   Generation Time: 2025-09-10 10:53:51
+ *   Generation Time: 2025-09-12 17:00:34
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -48,9 +48,9 @@
 CONST(CanXcp_XcpPduType, CANXCP_PBCFG) CanXcp_PduIdField[CANXCP_NUMBER_OF_CHANNELS] =
 {
   {
-    XcpConf_XcpRxPdu_XCP_Request_oTC37X_VCU_CAN12_XCP_52af259e_Rx, 
-    XcpConf_XcpTxPdu_XCP_Response_oTC37X_VCU_CAN12_XCP_931ee635_Tx, 
-    CanIfConf_CanIfTxPduCfg_XCP_Response_oTC37X_VCU_CAN12_XCP_f1f333ef_Tx, 
+    XcpConf_XcpRxPdu_XCP_Request_oATOM_CAN_XCP_69ebf888_Rx, 
+    XcpConf_XcpTxPdu_XCP_Response_oATOM_CAN_XCP_0289d1df_Tx, 
+    CanIfConf_CanIfTxPduCfg_XCP_Response_oATOM_CAN_XCP_d6d6f7ba_Tx, 
     8u /*  MaxCto  */ , 
     8u /*  MaxDto  */ , 
     8u /*  PduSizeTx  */ 

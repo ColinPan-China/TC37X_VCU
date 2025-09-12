@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanXcp_Cfg.h
- *   Generation Time: 2025-09-10 10:53:51
+ *   Generation Time: 2025-09-12 17:00:33
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -55,7 +55,7 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define XcpConf_XcpTxPdu_XCP_Response_oTC37X_VCU_CAN12_XCP_931ee635_Tx 0
+#define XcpConf_XcpTxPdu_XCP_Response_oATOM_CAN_XCP_0289d1df_Tx       0
 /**\} */
 
 /* CanXcpRxPduId symbolic name defines */
@@ -69,7 +69,7 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define XcpConf_XcpRxPdu_XCP_Request_oTC37X_VCU_CAN12_XCP_52af259e_Rx 0
+#define XcpConf_XcpRxPdu_XCP_Request_oATOM_CAN_XCP_69ebf888_Rx        0
 /**\} */
 
 

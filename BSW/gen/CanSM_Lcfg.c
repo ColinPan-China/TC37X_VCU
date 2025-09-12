@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanSM_Lcfg.c
- *   Generation Time: 2025-09-12 11:08:08
+ *   Generation Time: 2025-09-12 17:00:34
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -62,11 +62,11 @@
 /*lint -restore */
 CONST(CanSM_ChannelConfigType, CANSM_CONST) CanSM_ChannelConfig[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    NetworkHandle */
-  { /*     0 */            2u },
-  { /*     1 */            3u },
+  { /*     0 */            3u },
+  { /*     1 */            4u },
   { /*     2 */            0u },
-  { /*     3 */            4u },
-  { /*     4 */            1u }
+  { /*     3 */            1u },
+  { /*     4 */            2u }
 };
 #define CANSM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

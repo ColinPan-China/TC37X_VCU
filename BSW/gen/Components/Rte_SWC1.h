@@ -133,10 +133,10 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_WriteBlock(NvM_BlockIdType parg0, dt
 #  define Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)5, arg1))
 #  define Rte_Call_UR_CN_LIN01_778f96a0_GetCurrentComMode(arg1) (ComM_GetCurrentComMode((ComM_UserHandleType)6, arg1))
 #  define Rte_Call_UR_CN_LIN01_778f96a0_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)6, arg1))
-#  define Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_GetCurrentComMode(arg1) (ComM_GetCurrentComMode((ComM_UserHandleType)2, arg1))
-#  define Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)2, arg1))
-#  define Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_GetCurrentComMode(arg1) (ComM_GetCurrentComMode((ComM_UserHandleType)3, arg1))
-#  define Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)3, arg1))
+#  define Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_GetCurrentComMode(arg1) (ComM_GetCurrentComMode((ComM_UserHandleType)3, arg1))
+#  define Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)3, arg1))
+#  define Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_GetCurrentComMode(arg1) (ComM_GetCurrentComMode((ComM_UserHandleType)4, arg1))
+#  define Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)4, arg1))
 
 /**********************************************************************************************************************
  * Rte_CData (SW-C local calibration parameters)

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2025-09-12 11:08:08
+ *   Generation Time: 2025-09-12 17:00:33
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -147,12 +147,12 @@
 
 #define ComMConf_ComMUser_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0 0u 
 #define ComMConf_ComMUser_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79 1u 
+#define ComMConf_ComMUser_CN_ATOM_CAN_XCP_ca35a39e                     2u 
 #define ComMConf_ComMUser_CN_LIN00_984dfd9e                            5u 
 #define ComMConf_ComMUser_CN_LIN01_778f96a0                            6u 
 #define ComMConf_ComMUser_CN_LIN02_9cb82da3                            7u 
-#define ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c                  2u 
-#define ComMConf_ComMUser_CN_TC37X_VCU_CAN03_5a834971                  3u 
-#define ComMConf_ComMUser_CN_TC37X_VCU_CAN12_XCP_0532158c              4u 
+#define ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c                  3u 
+#define ComMConf_ComMUser_CN_TC37X_VCU_CAN03_5a834971                  4u 
 
 
 /* -----------------------------------------------------------------------------
@@ -161,9 +161,9 @@
 
 #define ComMConf_ComMChannel_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac 0u 
 #define ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d 1u 
-#define ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e                  2u 
-#define ComMConf_ComMChannel_CN_TC37X_VCU_CAN03_9ebf9872                  3u 
-#define ComMConf_ComMChannel_CN_TC37X_VCU_CAN12_XCP_d05a85ac              4u 
+#define ComMConf_ComMChannel_CN_ATOM_CAN_XCP_f42a46d4                     2u 
+#define ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e                  3u 
+#define ComMConf_ComMChannel_CN_TC37X_VCU_CAN03_9ebf9872                  4u 
 #define ComMConf_ComMChannel_CN_LIN00_b12a0454                            5u 
 #define ComMConf_ComMChannel_CN_LIN01_c62d34c2                            6u 
 #define ComMConf_ComMChannel_CN_LIN02_5f246578                            7u 

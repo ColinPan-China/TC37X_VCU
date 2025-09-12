@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.c
- *   Generation Time: 2025-09-12 11:08:08
+ *   Generation Time: 2025-09-12 17:00:34
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -196,9 +196,9 @@ CONST(Nm_SysToNmChIndType, NM_CONST) Nm_SysToNmChInd[8] = {  /* PRQA S 1514, 153
   /* Index     SysToNmChInd        */
   /*     0 */                  0u,
   /*     1 */                  1u,
-  /*     2 */                  2u,
-  /*     3 */                  3u,
-  /*     4 */  NM_NO_SYSTONMCHIND,
+  /*     2 */  NM_NO_SYSTONMCHIND,
+  /*     3 */                  2u,
+  /*     4 */                  3u,
   /*     5 */  NM_NO_SYSTONMCHIND,
   /*     6 */  NM_NO_SYSTONMCHIND,
   /*     7 */  NM_NO_SYSTONMCHIND

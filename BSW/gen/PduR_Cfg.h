@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2025-09-12 11:08:08
+ *   Generation Time: 2025-09-12 17:00:35
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -374,6 +374,7 @@
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_9fc32995                       39u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_17f11187                       25u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_37fea4b2                       45u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_38cf320f                       49u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_49c8436f                       16u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_59ef7a2a                       0u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_75ceb29f                       35u
@@ -411,7 +412,6 @@
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_ec53c477                       9u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_ec659b26                       30u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_eeac2237                       8u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_f6f75974                       49u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_fd46d90f                       6u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_ff5e60c1                       51u
 /**\} */
@@ -471,7 +471,7 @@
 #define PduRConf_PduRDestPdu_VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_3c59975a_Tx 44u
 #define PduRConf_PduRDestPdu_VcuCan03TxMsg1_oTC37X_VCU_CAN03_c0767973_Tx 45u
 #define PduRConf_PduRDestPdu_VcuCan03TxMsg2_oTC37X_VCU_CAN03_0942627e_Tx 46u
-#define PduRConf_PduRDestPdu_VcuCan12TxMsg1_oTC37X_VCU_CAN12_XCP_9cae793f_Tx 47u
+#define PduRConf_PduRDestPdu_VcuCan12TxMsg1_oATOM_CAN_XCP_4049029a_Tx 47u
 #define PduRConf_PduRDestPdu_VcuMeasurementMsg0_oTC37X_VCU_CAN01_d96481d0_Tx 48u
 #define PduRConf_PduRDestPdu_Vcu_Lin0_TxMsg1_oLIN01_02277a36_Tx       49u
 #define PduRConf_PduRDestPdu_Vcu_Lin0_TxMsg2_oLIN01_74c2430b_Tx       50u

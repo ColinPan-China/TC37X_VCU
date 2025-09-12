@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Lcfg.h
- *   Generation Time: 2025-09-12 11:08:11
+ *   Generation Time: 2025-09-12 17:00:36
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -4355,7 +4355,7 @@ typedef struct Com_CurrentTxModeStructSTag
   Com_CurrentTxModeType VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx;
   Com_CurrentTxModeType VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx;
   Com_CurrentTxModeType VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx;
-  Com_CurrentTxModeType VcuCan12TxMsg1_oTC37X_VCU_CAN12_XCP_bc066198_Tx;
+  Com_CurrentTxModeType VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx;
   Com_CurrentTxModeType VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx;
   Com_CurrentTxModeType Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx;
   Com_CurrentTxModeType Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx;
@@ -4413,7 +4413,7 @@ typedef struct Com_CycleTimeCntStructSTag
   Com_CycleTimeCntType VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx;
   Com_CycleTimeCntType VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx;
   Com_CycleTimeCntType VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx;
-  Com_CycleTimeCntType VcuCan12TxMsg1_oTC37X_VCU_CAN12_XCP_bc066198_Tx;
+  Com_CycleTimeCntType VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx;
   Com_CycleTimeCntType VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx;
   Com_CycleTimeCntType Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx;
   Com_CycleTimeCntType Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx;
@@ -4471,7 +4471,7 @@ typedef struct Com_CyclicSendRequestStructSTag
   Com_CyclicSendRequestType VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx;
   Com_CyclicSendRequestType VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx;
   Com_CyclicSendRequestType VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx;
-  Com_CyclicSendRequestType VcuCan12TxMsg1_oTC37X_VCU_CAN12_XCP_bc066198_Tx;
+  Com_CyclicSendRequestType VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx;
   Com_CyclicSendRequestType VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx;
   Com_CyclicSendRequestType Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx;
   Com_CyclicSendRequestType Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx;
@@ -4767,7 +4767,7 @@ typedef struct Com_TransmitRequestStructSTag
   Com_TransmitRequestType VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx;
   Com_TransmitRequestType VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx;
   Com_TransmitRequestType VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx;
-  Com_TransmitRequestType VcuCan12TxMsg1_oTC37X_VCU_CAN12_XCP_bc066198_Tx;
+  Com_TransmitRequestType VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx;
   Com_TransmitRequestType VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx;
   Com_TransmitRequestType Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx;
   Com_TransmitRequestType Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx;

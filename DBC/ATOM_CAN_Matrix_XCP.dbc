@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: VCU Tester
+BU_: VCU Tester GWM
 
 
 BO_ 53 VcuCan12TxMsg1: 8 VCU
@@ -47,6 +47,8 @@ BO_ 2033 XCP_Response: 8 VCU
 
 BO_ 2032 XCP_Request: 8 Tester
  SG_ XCP_Request_Signal : 0|64@1+ (1,0) [0|1.844674407371E+019] ""  VCU
+
+
 
 BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
 BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 0;
@@ -110,6 +112,20 @@ BA_DEF_DEF_  "NmType" "";
 BA_DEF_DEF_  "Manufacturer" "Vector";
 BA_DEF_DEF_  "TpTxIndex" 0;
 BA_DEF_DEF_  "NodeLayerModules" " ";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "";
+BA_DEF_DEF_  "NmMessage" "";
+BA_DEF_DEF_  "NmAsrWaitBusSleepTime" 0;
+BA_DEF_DEF_  "NmAsrTimeoutTime" 1;
+BA_DEF_DEF_  "NmAsrRepeatMessageTime" 0;
+BA_DEF_DEF_  "NmAsrNodeIdentifier" 0;
+BA_DEF_DEF_  "NmAsrNode" "";
+BA_DEF_DEF_  "NmAsrMessageCount" 1;
+BA_DEF_DEF_  "NmAsrMessage" "";
+BA_DEF_DEF_  "NmAsrCanMsgReducedTime" 1;
+BA_DEF_DEF_  "NmAsrCanMsgCycleTime" 1;
+BA_DEF_DEF_  "NmAsrCanMsgCycleOffset" 0;
+BA_DEF_DEF_  "NmAsrBaseAddress" 0;
 BA_DEF_DEF_  "ILUsed" "yes";
 BA_DEF_DEF_  "ILTxTimeout" 0;
 BA_DEF_DEF_  "GenSigTimeoutValue" 0;
@@ -122,17 +138,16 @@ BA_DEF_DEF_  "DiagState" "no";
 BA_DEF_DEF_  "DiagResponse" "no";
 BA_DEF_DEF_  "DiagRequest" "no";
 BA_DEF_DEF_  "DBName" "";
-BA_ "Manufacturer" "Vector";
-
-BA_ "BusType" "CAN";
 BA_ "Baudrate" 500000;
-
-BA_ "DBName" "TC37X_VCU_CAN12_XCP";
-BA_ "VFrameFormat" BO_ 2033 0;
-BA_ "GenMsgILSupport" BO_ 2033 0;
-BA_ "GenMsgSendType" BO_ 2033 8;
-BA_ "VFrameFormat" BO_ 2032 0;
-BA_ "GenMsgILSupport" BO_ 2032 0;
-BA_ "GenMsgSendType" BO_ 2032 8;
-BA_ "VFrameFormat" BO_ 53 0;
+BA_ "BusType" "CAN";
+BA_ "Manufacturer" "Vector";
+BA_ "DBName" "ATOM_CAN_XCP";
 BA_ "GenMsgCycleTime" BO_ 53 500;
+BA_ "VFrameFormat" BO_ 53 0;
+BA_ "GenMsgSendType" BO_ 2033 8;
+BA_ "GenMsgILSupport" BO_ 2033 0;
+BA_ "VFrameFormat" BO_ 2033 0;
+BA_ "GenMsgSendType" BO_ 2032 8;
+BA_ "GenMsgILSupport" BO_ 2032 0;
+BA_ "VFrameFormat" BO_ 2032 0;
+

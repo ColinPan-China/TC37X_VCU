@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Lcfg.c
- *   Generation Time: 2025-09-12 11:08:09
+ *   Generation Time: 2025-09-12 17:00:34
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -111,9 +111,9 @@ CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[8] = {  /* PRQA S 1514, 1533 */
     /* Index    BusType            NmSupport  SilentSupport  MinFullComTime  NmLightDuration  NmType                      WakeupState                      GetCurrentBusSMModeApi   RequestBusSMModeApi         Referable Keys */
   { /*     0 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_0] */
   { /*     1 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_1] */
-  { /*     2 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_2] */
+  { /*     2 */ COMM_BUS_TYPE_CAN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_2] */
   { /*     3 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_3] */
-  { /*     4 */ COMM_BUS_TYPE_CAN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_4] */
+  { /*     4 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_4] */
   { /*     5 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode },  /* [ComMChannel_5] */
   { /*     6 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode },  /* [ComMChannel_6] */
   { /*     7 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode }   /* [ComMChannel_7] */
@@ -198,9 +198,9 @@ CONST(ComM_UserType, COMM_CONST) ComM_User[8] = {  /* PRQA S 1514, 1533 */  /* M
     /* Index    PncUser  UserByteMaskEndIdx  UserByteMaskStartIdx        Comment */
   { /*     0 */   FALSE,                 1u,                   0u },  /* [CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0] */
   { /*     1 */   FALSE,                 2u,                   1u },  /* [CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79] */
-  { /*     2 */   FALSE,                 3u,                   2u },  /* [CN_TC37X_VCU_CAN01_5e76994c] */
-  { /*     3 */   FALSE,                 4u,                   3u },  /* [CN_TC37X_VCU_CAN03_5a834971] */
-  { /*     4 */   FALSE,                 5u,                   4u },  /* [CN_TC37X_VCU_CAN12_XCP_0532158c] */
+  { /*     2 */   FALSE,                 3u,                   2u },  /* [CN_ATOM_CAN_XCP_ca35a39e] */
+  { /*     3 */   FALSE,                 4u,                   3u },  /* [CN_TC37X_VCU_CAN01_5e76994c] */
+  { /*     4 */   FALSE,                 5u,                   4u },  /* [CN_TC37X_VCU_CAN03_5a834971] */
   { /*     5 */   FALSE,                 6u,                   5u },  /* [CN_LIN00_984dfd9e] */
   { /*     6 */   FALSE,                 7u,                   6u },  /* [CN_LIN01_778f96a0] */
   { /*     7 */   FALSE,                 8u,                   7u }   /* [CN_LIN02_9cb82da3] */
@@ -229,9 +229,9 @@ CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[8] = {  /* PRQA S 151
     /* Index    Channel  UserReqFullComIdx        Referable Keys */
   { /*     0 */      0u,                0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0] */
   { /*     1 */      1u,                1u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79] */
-  { /*     2 */      2u,                2u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_5e76994c] */
-  { /*     3 */      3u,                3u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_5a834971] */
-  { /*     4 */      4u,                4u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN12_XCP_0532158c] */
+  { /*     2 */      2u,                2u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_XCP_ca35a39e] */
+  { /*     3 */      3u,                3u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_5e76994c] */
+  { /*     4 */      4u,                4u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_5a834971] */
   { /*     5 */      5u,                5u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN00_984dfd9e] */
   { /*     6 */      6u,                6u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN01_778f96a0] */
   { /*     7 */      7u,                7u }   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN02_9cb82da3] */
