@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Private_Cfg.h
- *   Generation Time: 2025-09-12 10:25:40
+ *   Generation Time: 2025-09-12 11:08:10
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -39,11 +39,11 @@
  ----------------------------------------------------------------------------- */
 #include "BswM_Cfg.h"
 #include "Com.h" 
-#include "Nm.h" 
 #include "Rte_BswM.h" 
 #include "EcuM.h" 
 #include "SchM_BswM.h" 
 #include "ComM.h" 
+#include "Nm.h" 
 #include "PduR.h" 
 #include "Can.h" 
 #include "CanIf.h" 
@@ -120,39 +120,30 @@
 #define BSWM_ID_RULE_ESH_PostRunNested                                     7u 
 #define BSWM_ID_RULE_ESH_PostRun                                           8u 
 #define BSWM_ID_RULE_ESH_PrepToWait                                        9u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_DISABLE             10u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX                     11u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_ENABLE              12u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_ENABLE_BUSOFF       13u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN00_07b6c9c8_NO_COM                 14u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN00_07b6c9c8_BUSOFF_SILENT          15u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX_DM                  16u 
-#define BSWM_ID_RULE_ESH_RunToPostRunNested                                17u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN00_NM_DISABLE                      18u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN00_NM_ENABLE                       19u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM                  20u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE              21u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM                 22u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX                     23u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT          24u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE             25u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF       26u 
-#define BSWM_ID_RULE_CC_CN_LIN00_b12a0454_StartSchedule                    27u 
-#define BSWM_ID_RULE_ESH_DemInit                                           28u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX                     29u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX_DM                  30u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN03_9ebf9872_TX                     31u 
-#define BSWM_ID_RULE_CC_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4       32u 
-#define BSWM_ID_RULE_CC_CN_LIN01_c62d34c2_StartSchedule                    33u 
-#define BSWM_ID_RULE_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX    34u 
-#define BSWM_ID_RULE_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_TX    35u 
-#define BSWM_ID_RULE_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX_DM 36u 
-#define BSWM_ID_RULE_CC_CN_LIN02_5f246578_Vcu_Lin3_Schedule_bdb0899f       37u 
-#define BSWM_ID_RULE_CC_CN_LIN02_5f246578_StartSchedule                    38u 
-#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX                 39u 
-#define BSWM_ID_RULE_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX    40u 
-#define BSWM_ID_RULE_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_DM 41u 
-#define BSWM_ID_RULE_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX    42u 
+#define BSWM_ID_RULE_ESH_RunToPostRunNested                                10u 
+#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM                  11u 
+#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE              12u 
+#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM                 13u 
+#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX                     14u 
+#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT          15u 
+#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE             16u 
+#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF       17u 
+#define BSWM_ID_RULE_CC_CN_LIN00_b12a0454_StartSchedule                    18u 
+#define BSWM_ID_RULE_ESH_DemInit                                           19u 
+#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX                     20u 
+#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX_DM                  21u 
+#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN03_9ebf9872_TX                     22u 
+#define BSWM_ID_RULE_CC_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4       23u 
+#define BSWM_ID_RULE_CC_CN_LIN01_c62d34c2_StartSchedule                    24u 
+#define BSWM_ID_RULE_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX    25u 
+#define BSWM_ID_RULE_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_TX    26u 
+#define BSWM_ID_RULE_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX_DM 27u 
+#define BSWM_ID_RULE_CC_CN_LIN02_5f246578_Vcu_Lin3_Schedule_bdb0899f       28u 
+#define BSWM_ID_RULE_CC_CN_LIN02_5f246578_StartSchedule                    29u 
+#define BSWM_ID_RULE_CC_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX                 30u 
+#define BSWM_ID_RULE_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX    31u 
+#define BSWM_ID_RULE_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_DM 32u 
+#define BSWM_ID_RULE_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX    33u 
 
 #define BSWM_ID_AL_ESH_AL_RunToPostRun                                                0u 
 #define BSWM_ID_AL_ESH_AL_WaitForNvMToShutdown                                        1u 
@@ -166,55 +157,44 @@
 #define BSWM_ID_AL_ESH_AL_ExitPostRun                                                 9u 
 #define BSWM_ID_AL_ESH_AL_PrepShutdownToWaitForNvM                                    10u 
 #define BSWM_ID_AL_INIT_AL_Initialize                                                 11u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN00_07b6c9c8_TX_Disable                       12u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN00_07b6c9c8_RX_Disable                       13u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN00_07b6c9c8_RX_EnableReinit                  14u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN00_07b6c9c8_TX_EnableReinit                  15u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN00_07b6c9c8_TX_EnableNoinit                  16u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN00_07b6c9c8_NO_COM                           17u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN00_07b6c9c8_BUSOFF_SILENT                    18u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN00_07b6c9c8_Disable_DM                       19u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN00_07b6c9c8_Enable_DM                        20u 
-#define BSWM_ID_AL_ESH_AL_ExitRun                                                     21u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN00_DISABLE_NM                                22u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN00_ENABLE_NM                                 23u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Disable_DM                       24u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Enable_DM                        25u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableReinit                  26u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM                           27u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_Disable                       28u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_EnableReinit                  29u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT                    30u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_Disable                       31u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableNoinit                  32u 
-#define BSWM_ID_AL_CC_AL_CN_LIN00_b12a0454_LinScheduleSwitch                          33u 
-#define BSWM_ID_AL_ESH_AL_DemInit                                                     34u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_RX_Disable                       35u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_RX_EnableNoinit                  36u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_Disable_DM                       37u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_Enable_DM                        38u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_TX_Disable                       39u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_TX_EnableNoinit                  40u 
-#define BSWM_ID_AL_CC_AL_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4_Disable         41u 
-#define BSWM_ID_AL_CC_AL_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4_Enable          42u 
-#define BSWM_ID_AL_CC_AL_CN_LIN01_c62d34c2_LinScheduleSwitch                          43u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX_Disable      44u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX_EnableNoinit 45u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_TX_Disable      46u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_TX_EnableNoinit 47u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_Disable_DM      48u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_Enable_DM       49u 
-#define BSWM_ID_AL_CC_AL_CN_LIN02_5f246578_Vcu_Lin3_Schedule_bdb0899f_Disable         50u 
-#define BSWM_ID_AL_CC_AL_CN_LIN02_5f246578_Vcu_Lin3_Schedule_bdb0899f_Enable          51u 
-#define BSWM_ID_AL_CC_AL_CN_LIN02_5f246578_LinScheduleSwitch                          52u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX_Disable                   53u 
-#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX_EnableNoinit              54u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_Disable      55u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_EnableNoinit 56u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_Disable_DM      57u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_Enable_DM       58u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX_Disable      59u 
-#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX_EnableNoinit 60u 
+#define BSWM_ID_AL_ESH_AL_ExitRun                                                     12u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Disable_DM                       13u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_Enable_DM                        14u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableReinit                  15u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM                           16u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_Disable                       17u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_RX_EnableReinit                  18u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT                    19u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_Disable                       20u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN01_70b1f95e_TX_EnableNoinit                  21u 
+#define BSWM_ID_AL_CC_AL_CN_LIN00_b12a0454_LinScheduleSwitch                          22u 
+#define BSWM_ID_AL_ESH_AL_DemInit                                                     23u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_RX_Disable                       24u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_RX_EnableNoinit                  25u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_Disable_DM                       26u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_Enable_DM                        27u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_TX_Disable                       28u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN03_9ebf9872_TX_EnableNoinit                  29u 
+#define BSWM_ID_AL_CC_AL_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4_Disable         30u 
+#define BSWM_ID_AL_CC_AL_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4_Enable          31u 
+#define BSWM_ID_AL_CC_AL_CN_LIN01_c62d34c2_LinScheduleSwitch                          32u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX_Disable      33u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX_EnableNoinit 34u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_TX_Disable      35u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_TX_EnableNoinit 36u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_Disable_DM      37u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_Enable_DM       38u 
+#define BSWM_ID_AL_CC_AL_CN_LIN02_5f246578_Vcu_Lin3_Schedule_bdb0899f_Disable         39u 
+#define BSWM_ID_AL_CC_AL_CN_LIN02_5f246578_Vcu_Lin3_Schedule_bdb0899f_Enable          40u 
+#define BSWM_ID_AL_CC_AL_CN_LIN02_5f246578_LinScheduleSwitch                          41u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX_Disable                   42u 
+#define BSWM_ID_AL_CC_AL_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX_EnableNoinit              43u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_Disable      44u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_EnableNoinit 45u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_Disable_DM      46u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_Enable_DM       47u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX_Disable      48u 
+#define BSWM_ID_AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX_EnableNoinit 49u 
 
 
 /**********************************************************************************************************************
@@ -243,8 +223,6 @@
 #define BswM_GetCanSMChannelStateOfPCPartitionConfig(partitionIndex)                                BswM_CanSMChannelState  /**< the pointer to BswM_CanSMChannelState */
 #define BswM_GetComMChannelMappingOfPCPartitionConfig(partitionIndex)                               BswM_ComMChannelMapping  /**< the pointer to BswM_ComMChannelMapping */
 #define BswM_GetComMChannelStateOfPCPartitionConfig(partitionIndex)                                 BswM_ComMChannelState  /**< the pointer to BswM_ComMChannelState */
-#define BswM_GetDcmComMappingOfPCPartitionConfig(partitionIndex)                                    BswM_DcmComMapping  /**< the pointer to BswM_DcmComMapping */
-#define BswM_GetDcmComStateOfPCPartitionConfig(partitionIndex)                                      BswM_DcmComState  /**< the pointer to BswM_DcmComState */
 #define BswM_GetDeferredRulesOfPCPartitionConfig(partitionIndex)                                    BswM_DeferredRules  /**< the pointer to BswM_DeferredRules */
 #define BswM_GetForcedActionListPriorityOfPCPartitionConfig(partitionIndex)                         (&(BswM_ForcedActionListPriority))  /**< the pointer to BswM_ForcedActionListPriority */
 #define BswM_GetGenericMappingOfPCPartitionConfig(partitionIndex)                                   BswM_GenericMapping  /**< the pointer to BswM_GenericMapping */
@@ -258,8 +236,6 @@
 #define BswM_GetLinScheduleStateOfPCPartitionConfig(partitionIndex)                                 BswM_LinScheduleState  /**< the pointer to BswM_LinScheduleState */
 #define BswM_GetModeNotificationFctOfPCPartitionConfig(partitionIndex)                              BswM_ModeNotificationFct  /**< the pointer to BswM_ModeNotificationFct */
 #define BswM_GetModeRequestQueueOfPCPartitionConfig(partitionIndex)                                 BswM_ModeRequestQueue  /**< the pointer to BswM_ModeRequestQueue */
-#define BswM_GetNmMappingOfPCPartitionConfig(partitionIndex)                                        BswM_NmMapping  /**< the pointer to BswM_NmMapping */
-#define BswM_GetNmStateOfPCPartitionConfig(partitionIndex)                                          BswM_NmState  /**< the pointer to BswM_NmState */
 #define BswM_GetNvMJobMappingOfPCPartitionConfig(partitionIndex)                                    BswM_NvMJobMapping  /**< the pointer to BswM_NvMJobMapping */
 #define BswM_GetNvMJobStateOfPCPartitionConfig(partitionIndex)                                      BswM_NvMJobState  /**< the pointer to BswM_NvMJobState */
 #define BswM_GetQueueSemaphoreOfPCPartitionConfig(partitionIndex)                                   (&(BswM_QueueSemaphore))  /**< the pointer to BswM_QueueSemaphore */
@@ -267,30 +243,26 @@
 #define BswM_GetRuleStatesOfPCPartitionConfig(partitionIndex)                                       BswM_RuleStates.raw  /**< the pointer to BswM_RuleStates */
 #define BswM_GetRulesIndOfPCPartitionConfig(partitionIndex)                                         BswM_RulesInd  /**< the pointer to BswM_RulesInd */
 #define BswM_GetRulesOfPCPartitionConfig(partitionIndex)                                            BswM_Rules  /**< the pointer to BswM_Rules */
-#define BswM_GetSizeOfActionListsOfPCPartitionConfig(partitionIndex)                                61u  /**< the number of accomplishable value elements in BswM_ActionLists */
-#define BswM_GetSizeOfCanSMChannelMappingOfPCPartitionConfig(partitionIndex)                        6u  /**< the number of accomplishable value elements in BswM_CanSMChannelMapping */
-#define BswM_GetSizeOfCanSMChannelStateOfPCPartitionConfig(partitionIndex)                          6u  /**< the number of accomplishable value elements in BswM_CanSMChannelState */
-#define BswM_GetSizeOfComMChannelMappingOfPCPartitionConfig(partitionIndex)                         9u  /**< the number of accomplishable value elements in BswM_ComMChannelMapping */
-#define BswM_GetSizeOfComMChannelStateOfPCPartitionConfig(partitionIndex)                           9u  /**< the number of accomplishable value elements in BswM_ComMChannelState */
-#define BswM_GetSizeOfDcmComMappingOfPCPartitionConfig(partitionIndex)                              1u  /**< the number of accomplishable value elements in BswM_DcmComMapping */
-#define BswM_GetSizeOfDcmComStateOfPCPartitionConfig(partitionIndex)                                1u  /**< the number of accomplishable value elements in BswM_DcmComState */
+#define BswM_GetSizeOfActionListsOfPCPartitionConfig(partitionIndex)                                50u  /**< the number of accomplishable value elements in BswM_ActionLists */
+#define BswM_GetSizeOfCanSMChannelMappingOfPCPartitionConfig(partitionIndex)                        5u  /**< the number of accomplishable value elements in BswM_CanSMChannelMapping */
+#define BswM_GetSizeOfCanSMChannelStateOfPCPartitionConfig(partitionIndex)                          5u  /**< the number of accomplishable value elements in BswM_CanSMChannelState */
+#define BswM_GetSizeOfComMChannelMappingOfPCPartitionConfig(partitionIndex)                         8u  /**< the number of accomplishable value elements in BswM_ComMChannelMapping */
+#define BswM_GetSizeOfComMChannelStateOfPCPartitionConfig(partitionIndex)                           8u  /**< the number of accomplishable value elements in BswM_ComMChannelState */
 #define BswM_GetSizeOfDeferredRulesOfPCPartitionConfig(partitionIndex)                              7u  /**< the number of accomplishable value elements in BswM_DeferredRules */
-#define BswM_GetSizeOfGenericMappingOfPCPartitionConfig(partitionIndex)                             6u  /**< the number of accomplishable value elements in BswM_GenericMapping */
-#define BswM_GetSizeOfGenericStateOfPCPartitionConfig(partitionIndex)                               6u  /**< the number of accomplishable value elements in BswM_GenericState */
-#define BswM_GetSizeOfImmediateUserOfPCPartitionConfig(partitionIndex)                              17u  /**< the number of accomplishable value elements in BswM_ImmediateUser */
+#define BswM_GetSizeOfGenericMappingOfPCPartitionConfig(partitionIndex)                             5u  /**< the number of accomplishable value elements in BswM_GenericMapping */
+#define BswM_GetSizeOfGenericStateOfPCPartitionConfig(partitionIndex)                               5u  /**< the number of accomplishable value elements in BswM_GenericState */
+#define BswM_GetSizeOfImmediateUserOfPCPartitionConfig(partitionIndex)                              13u  /**< the number of accomplishable value elements in BswM_ImmediateUser */
 #define BswM_GetSizeOfInitGenVarAndInitALOfPCPartitionConfig(partitionIndex)                        1u  /**< the number of accomplishable value elements in BswM_InitGenVarAndInitAL */
 #define BswM_GetSizeOfLinSMMappingOfPCPartitionConfig(partitionIndex)                               3u  /**< the number of accomplishable value elements in BswM_LinSMMapping */
 #define BswM_GetSizeOfLinSMStateOfPCPartitionConfig(partitionIndex)                                 3u  /**< the number of accomplishable value elements in BswM_LinSMState */
 #define BswM_GetSizeOfLinScheduleMappingOfPCPartitionConfig(partitionIndex)                         2u  /**< the number of accomplishable value elements in BswM_LinScheduleMapping */
 #define BswM_GetSizeOfLinScheduleStateOfPCPartitionConfig(partitionIndex)                           2u  /**< the number of accomplishable value elements in BswM_LinScheduleState */
 #define BswM_GetSizeOfModeNotificationFctOfPCPartitionConfig(partitionIndex)                        1u  /**< the number of accomplishable value elements in BswM_ModeNotificationFct */
-#define BswM_GetSizeOfNmMappingOfPCPartitionConfig(partitionIndex)                                  1u  /**< the number of accomplishable value elements in BswM_NmMapping */
-#define BswM_GetSizeOfNmStateOfPCPartitionConfig(partitionIndex)                                    1u  /**< the number of accomplishable value elements in BswM_NmState */
 #define BswM_GetSizeOfNvMJobMappingOfPCPartitionConfig(partitionIndex)                              1u  /**< the number of accomplishable value elements in BswM_NvMJobMapping */
 #define BswM_GetSizeOfNvMJobStateOfPCPartitionConfig(partitionIndex)                                1u  /**< the number of accomplishable value elements in BswM_NvMJobState */
-#define BswM_GetSizeOfRuleStatesOfPCPartitionConfig(partitionIndex)                                 43u  /**< the number of accomplishable value elements in BswM_RuleStates */
-#define BswM_GetSizeOfRulesIndOfPCPartitionConfig(partitionIndex)                                   56u  /**< the number of accomplishable value elements in BswM_RulesInd */
-#define BswM_GetSizeOfRulesOfPCPartitionConfig(partitionIndex)                                      43u  /**< the number of accomplishable value elements in BswM_Rules */
+#define BswM_GetSizeOfRuleStatesOfPCPartitionConfig(partitionIndex)                                 34u  /**< the number of accomplishable value elements in BswM_RuleStates */
+#define BswM_GetSizeOfRulesIndOfPCPartitionConfig(partitionIndex)                                   34u  /**< the number of accomplishable value elements in BswM_RulesInd */
+#define BswM_GetSizeOfRulesOfPCPartitionConfig(partitionIndex)                                      34u  /**< the number of accomplishable value elements in BswM_Rules */
 #define BswM_GetSizeOfSwcModeRequestUpdateFctOfPCPartitionConfig(partitionIndex)                    1u  /**< the number of accomplishable value elements in BswM_SwcModeRequestUpdateFct */
 #define BswM_GetSizeOfTimerStateOfPCPartitionConfig(partitionIndex)                                 3u  /**< the number of accomplishable value elements in BswM_TimerState */
 #define BswM_GetSizeOfTimerValueOfPCPartitionConfig(partitionIndex)                                 3u  /**< the number of accomplishable value elements in BswM_TimerValue */
@@ -325,7 +297,6 @@
 #define BswM_GetCanSMChannelState(Index, partitionIndex)                                            (BswM_GetCanSMChannelStateOfPCPartitionConfig(partitionIndex)[(Index)])
 #define BswM_GetExternalIdOfComMChannelMapping(Index, partitionIndex)                               (BswM_GetComMChannelMappingOfPCPartitionConfig(partitionIndex)[(Index)].ExternalIdOfComMChannelMapping)
 #define BswM_GetComMChannelState(Index, partitionIndex)                                             (BswM_GetComMChannelStateOfPCPartitionConfig(partitionIndex)[(Index)])
-#define BswM_GetDcmComState(Index, partitionIndex)                                                  (BswM_GetDcmComStateOfPCPartitionConfig(partitionIndex)[(Index)])
 #define BswM_GetRulesIdxOfDeferredRules(Index, partitionIndex)                                      (BswM_GetDeferredRulesOfPCPartitionConfig(partitionIndex)[(Index)].RulesIdxOfDeferredRules)
 #define BswM_GetForcedActionListPriority(partitionIndex)                                            ((*(BswM_GetForcedActionListPriorityOfPCPartitionConfig(partitionIndex))))
 #define BswM_GetExternalIdOfGenericMapping(Index, partitionIndex)                                   (BswM_GetGenericMappingOfPCPartitionConfig(partitionIndex)[(Index)].ExternalIdOfGenericMapping)
@@ -348,7 +319,6 @@
 #define BswM_GetLinScheduleState(Index, partitionIndex)                                             (BswM_GetLinScheduleStateOfPCPartitionConfig(partitionIndex)[(Index)])
 #define BswM_GetModeNotificationFct(Index, partitionIndex)                                          (BswM_GetModeNotificationFctOfPCPartitionConfig(partitionIndex)[(Index)])
 #define BswM_GetModeRequestQueue(Index, partitionIndex)                                             (BswM_GetModeRequestQueueOfPCPartitionConfig(partitionIndex)[(Index)])
-#define BswM_GetNmState(Index, partitionIndex)                                                      (BswM_GetNmStateOfPCPartitionConfig(partitionIndex)[(Index)])
 #define BswM_GetNvMJobState(Index, partitionIndex)                                                  (BswM_GetNvMJobStateOfPCPartitionConfig(partitionIndex)[(Index)])
 #define BswM_GetPCPartitionConfigIdxOfPartitionIdentifiers(Index)                                   (BswM_GetPartitionIdentifiersOfPCConfig()[(Index)].PCPartitionConfigIdxOfPartitionIdentifiers)
 #define BswM_GetPartitionSNVOfPartitionIdentifiers(Index)                                           (BswM_GetPartitionIdentifiersOfPCConfig()[(Index)].PartitionSNVOfPartitionIdentifiers)
@@ -385,22 +355,12 @@
 #define BswM_IsImmediateUserUsedOfCanSMChannelMapping(Index, partitionIndex)                        (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to BswM_ImmediateUser */
 #define BswM_GetInitValueOfCanSMChannelMapping(Index, partitionIndex)                               CANSM_BSWM_NO_COMMUNICATION  /**< Initialization value of port. */
 #define BswM_GetInitValueOfComMChannelMapping(Index, partitionIndex)                                COMM_NO_COMMUNICATION  /**< Initialization value of port. */
-#define BswM_GetExternalIdOfDcmComMapping(Index, partitionIndex)                                    ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8  /**< External id of BswMDcmComModeRequest. */
-#define BswM_GetImmediateUserEndIdxOfDcmComMapping(Index, partitionIndex)                           7u  /**< the end index of the 0:n relation pointing to BswM_ImmediateUser */
-#define BswM_GetImmediateUserStartIdxOfDcmComMapping(Index, partitionIndex)                         6u  /**< the start index of the 0:n relation pointing to BswM_ImmediateUser */
-#define BswM_IsImmediateUserUsedOfDcmComMapping(Index, partitionIndex)                              (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to BswM_ImmediateUser */
-#define BswM_GetInitValueOfDcmComMapping(Index, partitionIndex)                                     DCM_ENABLE_RX_TX_NORM_NM  /**< Initialization value of port. */
 #define BswM_IsImmediateUserUsedOfGenericMapping(Index, partitionIndex)                             (((boolean)(BswM_GetImmediateUserStartIdxOfGenericMapping(((Index)), (partitionIndex)) != BSWM_NO_IMMEDIATEUSERSTARTIDXOFGENERICMAPPING)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to BswM_ImmediateUser */
 #define BswM_IsRulesIndUsedOfImmediateUser(Index, partitionIndex)                                   (((boolean)(BswM_GetRulesIndStartIdxOfImmediateUser(((Index)), (partitionIndex)) != BSWM_NO_RULESINDSTARTIDXOFIMMEDIATEUSER)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to BswM_RulesInd */
 #define BswM_IsImmediateUserUsedOfLinSMMapping(Index, partitionIndex)                               (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to BswM_ImmediateUser */
 #define BswM_GetInitValueOfLinSMMapping(Index, partitionIndex)                                      LINSM_BSWM_NO_COM  /**< Initialization value of port. */
 #define BswM_IsImmediateUserUsedOfLinScheduleMapping(Index, partitionIndex)                         (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to BswM_ImmediateUser */
 #define BswM_GetInitValueOfLinScheduleMapping(Index, partitionIndex)                                0  /**< Initialization value of port. */
-#define BswM_GetExternalIdOfNmMapping(Index, partitionIndex)                                        ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8  /**< External id of BswMNmIndication. */
-#define BswM_GetImmediateUserEndIdxOfNmMapping(Index, partitionIndex)                               17u  /**< the end index of the 0:n relation pointing to BswM_ImmediateUser */
-#define BswM_GetImmediateUserStartIdxOfNmMapping(Index, partitionIndex)                             16u  /**< the start index of the 0:n relation pointing to BswM_ImmediateUser */
-#define BswM_IsImmediateUserUsedOfNmMapping(Index, partitionIndex)                                  (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to BswM_ImmediateUser */
-#define BswM_GetInitValueOfNmMapping(Index, partitionIndex)                                         NM_STATE_BUS_SLEEP  /**< Initialization value of port. */
 #define BswM_GetExternalIdOfNvMJobMapping(Index, partitionIndex)                                    NVM_SERVICE_ID_WRITEALL  /**< External id of BswMNvMJobModeIndication. */
 #define BswM_GetInitValueOfNvMJobMapping(Index, partitionIndex)                                     NVM_REQ_OK  /**< Initialization value of port. */
 #define BswM_GetSizeOfActionListQueue(partitionIndex)                                               BswM_GetSizeOfActionListQueueOfPCPartitionConfig(partitionIndex)
@@ -409,8 +369,6 @@
 #define BswM_GetSizeOfCanSMChannelState(partitionIndex)                                             BswM_GetSizeOfCanSMChannelStateOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfComMChannelMapping(partitionIndex)                                            BswM_GetSizeOfComMChannelMappingOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfComMChannelState(partitionIndex)                                              BswM_GetSizeOfComMChannelStateOfPCPartitionConfig(partitionIndex)
-#define BswM_GetSizeOfDcmComMapping(partitionIndex)                                                 BswM_GetSizeOfDcmComMappingOfPCPartitionConfig(partitionIndex)
-#define BswM_GetSizeOfDcmComState(partitionIndex)                                                   BswM_GetSizeOfDcmComStateOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfDeferredRules(partitionIndex)                                                 BswM_GetSizeOfDeferredRulesOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfGenericMapping(partitionIndex)                                                BswM_GetSizeOfGenericMappingOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfGenericState(partitionIndex)                                                  BswM_GetSizeOfGenericStateOfPCPartitionConfig(partitionIndex)
@@ -422,8 +380,6 @@
 #define BswM_GetSizeOfLinScheduleState(partitionIndex)                                              BswM_GetSizeOfLinScheduleStateOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfModeNotificationFct(partitionIndex)                                           BswM_GetSizeOfModeNotificationFctOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfModeRequestQueue(partitionIndex)                                              BswM_GetSizeOfModeRequestQueueOfPCPartitionConfig(partitionIndex)
-#define BswM_GetSizeOfNmMapping(partitionIndex)                                                     BswM_GetSizeOfNmMappingOfPCPartitionConfig(partitionIndex)
-#define BswM_GetSizeOfNmState(partitionIndex)                                                       BswM_GetSizeOfNmStateOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfNvMJobMapping(partitionIndex)                                                 BswM_GetSizeOfNvMJobMappingOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfNvMJobState(partitionIndex)                                                   BswM_GetSizeOfNvMJobStateOfPCPartitionConfig(partitionIndex)
 #define BswM_GetSizeOfPartitionIdentifiers()                                                        BswM_GetSizeOfPartitionIdentifiersOfPCConfig()
@@ -445,14 +401,12 @@
 #define BswM_SetActionListQueue(Index, Value, partitionIndex)                                       BswM_GetActionListQueueOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
 #define BswM_SetCanSMChannelState(Index, Value, partitionIndex)                                     BswM_GetCanSMChannelStateOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
 #define BswM_SetComMChannelState(Index, Value, partitionIndex)                                      BswM_GetComMChannelStateOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
-#define BswM_SetDcmComState(Index, Value, partitionIndex)                                           BswM_GetDcmComStateOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
 #define BswM_SetForcedActionListPriority(Value, partitionIndex)                                     (*(BswM_GetForcedActionListPriorityOfPCPartitionConfig(partitionIndex))) = (Value)
 #define BswM_SetGenericState(Index, Value, partitionIndex)                                          BswM_GetGenericStateOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
 #define BswM_SetInitialized(Value, partitionIndex)                                                  (*(BswM_GetInitializedOfPCPartitionConfig(partitionIndex))) = (Value)
 #define BswM_SetLinSMState(Index, Value, partitionIndex)                                            BswM_GetLinSMStateOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
 #define BswM_SetLinScheduleState(Index, Value, partitionIndex)                                      BswM_GetLinScheduleStateOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
 #define BswM_SetModeRequestQueue(Index, Value, partitionIndex)                                      BswM_GetModeRequestQueueOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
-#define BswM_SetNmState(Index, Value, partitionIndex)                                               BswM_GetNmStateOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
 #define BswM_SetNvMJobState(Index, Value, partitionIndex)                                           BswM_GetNvMJobStateOfPCPartitionConfig(partitionIndex)[(Index)] = (Value)
 #define BswM_SetQueueSemaphore(Value, partitionIndex)                                               (*(BswM_GetQueueSemaphoreOfPCPartitionConfig(partitionIndex))) = (Value)
 #define BswM_SetQueueWritten(Value, partitionIndex)                                                 (*(BswM_GetQueueWrittenOfPCPartitionConfig(partitionIndex))) = (Value)
@@ -482,13 +436,6 @@
 #define BswM_HasExternalIdOfComMChannelMapping(partitionIndex)                                      (TRUE != FALSE)
 #define BswM_HasInitValueOfComMChannelMapping(partitionIndex)                                       (TRUE != FALSE)
 #define BswM_HasComMChannelState(partitionIndex)                                                    (TRUE != FALSE)
-#define BswM_HasDcmComMapping(partitionIndex)                                                       (TRUE != FALSE)
-#define BswM_HasExternalIdOfDcmComMapping(partitionIndex)                                           (TRUE != FALSE)
-#define BswM_HasImmediateUserEndIdxOfDcmComMapping(partitionIndex)                                  (TRUE != FALSE)
-#define BswM_HasImmediateUserStartIdxOfDcmComMapping(partitionIndex)                                (TRUE != FALSE)
-#define BswM_HasImmediateUserUsedOfDcmComMapping(partitionIndex)                                    (TRUE != FALSE)
-#define BswM_HasInitValueOfDcmComMapping(partitionIndex)                                            (TRUE != FALSE)
-#define BswM_HasDcmComState(partitionIndex)                                                         (TRUE != FALSE)
 #define BswM_HasDeferredRules(partitionIndex)                                                       (TRUE != FALSE)
 #define BswM_HasRulesIdxOfDeferredRules(partitionIndex)                                             (TRUE != FALSE)
 #define BswM_HasForcedActionListPriority(partitionIndex)                                            (TRUE != FALSE)
@@ -523,13 +470,6 @@
 #define BswM_HasLinScheduleState(partitionIndex)                                                    (TRUE != FALSE)
 #define BswM_HasModeNotificationFct(partitionIndex)                                                 (TRUE != FALSE)
 #define BswM_HasModeRequestQueue(partitionIndex)                                                    (TRUE != FALSE)
-#define BswM_HasNmMapping(partitionIndex)                                                           (TRUE != FALSE)
-#define BswM_HasExternalIdOfNmMapping(partitionIndex)                                               (TRUE != FALSE)
-#define BswM_HasImmediateUserEndIdxOfNmMapping(partitionIndex)                                      (TRUE != FALSE)
-#define BswM_HasImmediateUserStartIdxOfNmMapping(partitionIndex)                                    (TRUE != FALSE)
-#define BswM_HasImmediateUserUsedOfNmMapping(partitionIndex)                                        (TRUE != FALSE)
-#define BswM_HasInitValueOfNmMapping(partitionIndex)                                                (TRUE != FALSE)
-#define BswM_HasNmState(partitionIndex)                                                             (TRUE != FALSE)
 #define BswM_HasNvMJobMapping(partitionIndex)                                                       (TRUE != FALSE)
 #define BswM_HasExternalIdOfNvMJobMapping(partitionIndex)                                           (TRUE != FALSE)
 #define BswM_HasInitValueOfNvMJobMapping(partitionIndex)                                            (TRUE != FALSE)
@@ -552,8 +492,6 @@
 #define BswM_HasSizeOfCanSMChannelState(partitionIndex)                                             (TRUE != FALSE)
 #define BswM_HasSizeOfComMChannelMapping(partitionIndex)                                            (TRUE != FALSE)
 #define BswM_HasSizeOfComMChannelState(partitionIndex)                                              (TRUE != FALSE)
-#define BswM_HasSizeOfDcmComMapping(partitionIndex)                                                 (TRUE != FALSE)
-#define BswM_HasSizeOfDcmComState(partitionIndex)                                                   (TRUE != FALSE)
 #define BswM_HasSizeOfDeferredRules(partitionIndex)                                                 (TRUE != FALSE)
 #define BswM_HasSizeOfGenericMapping(partitionIndex)                                                (TRUE != FALSE)
 #define BswM_HasSizeOfGenericState(partitionIndex)                                                  (TRUE != FALSE)
@@ -565,8 +503,6 @@
 #define BswM_HasSizeOfLinScheduleState(partitionIndex)                                              (TRUE != FALSE)
 #define BswM_HasSizeOfModeNotificationFct(partitionIndex)                                           (TRUE != FALSE)
 #define BswM_HasSizeOfModeRequestQueue(partitionIndex)                                              (TRUE != FALSE)
-#define BswM_HasSizeOfNmMapping(partitionIndex)                                                     (TRUE != FALSE)
-#define BswM_HasSizeOfNmState(partitionIndex)                                                       (TRUE != FALSE)
 #define BswM_HasSizeOfNvMJobMapping(partitionIndex)                                                 (TRUE != FALSE)
 #define BswM_HasSizeOfNvMJobState(partitionIndex)                                                   (TRUE != FALSE)
 #define BswM_HasSizeOfPartitionIdentifiers()                                                        (TRUE != FALSE)
@@ -590,8 +526,6 @@
 #define BswM_HasCanSMChannelStateOfPCPartitionConfig(partitionIndex)                                (TRUE != FALSE)
 #define BswM_HasComMChannelMappingOfPCPartitionConfig(partitionIndex)                               (TRUE != FALSE)
 #define BswM_HasComMChannelStateOfPCPartitionConfig(partitionIndex)                                 (TRUE != FALSE)
-#define BswM_HasDcmComMappingOfPCPartitionConfig(partitionIndex)                                    (TRUE != FALSE)
-#define BswM_HasDcmComStateOfPCPartitionConfig(partitionIndex)                                      (TRUE != FALSE)
 #define BswM_HasDeferredRulesOfPCPartitionConfig(partitionIndex)                                    (TRUE != FALSE)
 #define BswM_HasForcedActionListPriorityOfPCPartitionConfig(partitionIndex)                         (TRUE != FALSE)
 #define BswM_HasGenericMappingOfPCPartitionConfig(partitionIndex)                                   (TRUE != FALSE)
@@ -605,8 +539,6 @@
 #define BswM_HasLinScheduleStateOfPCPartitionConfig(partitionIndex)                                 (TRUE != FALSE)
 #define BswM_HasModeNotificationFctOfPCPartitionConfig(partitionIndex)                              (TRUE != FALSE)
 #define BswM_HasModeRequestQueueOfPCPartitionConfig(partitionIndex)                                 (TRUE != FALSE)
-#define BswM_HasNmMappingOfPCPartitionConfig(partitionIndex)                                        (TRUE != FALSE)
-#define BswM_HasNmStateOfPCPartitionConfig(partitionIndex)                                          (TRUE != FALSE)
 #define BswM_HasNvMJobMappingOfPCPartitionConfig(partitionIndex)                                    (TRUE != FALSE)
 #define BswM_HasNvMJobStateOfPCPartitionConfig(partitionIndex)                                      (TRUE != FALSE)
 #define BswM_HasQueueSemaphoreOfPCPartitionConfig(partitionIndex)                                   (TRUE != FALSE)
@@ -620,8 +552,6 @@
 #define BswM_HasSizeOfCanSMChannelStateOfPCPartitionConfig(partitionIndex)                          (TRUE != FALSE)
 #define BswM_HasSizeOfComMChannelMappingOfPCPartitionConfig(partitionIndex)                         (TRUE != FALSE)
 #define BswM_HasSizeOfComMChannelStateOfPCPartitionConfig(partitionIndex)                           (TRUE != FALSE)
-#define BswM_HasSizeOfDcmComMappingOfPCPartitionConfig(partitionIndex)                              (TRUE != FALSE)
-#define BswM_HasSizeOfDcmComStateOfPCPartitionConfig(partitionIndex)                                (TRUE != FALSE)
 #define BswM_HasSizeOfDeferredRulesOfPCPartitionConfig(partitionIndex)                              (TRUE != FALSE)
 #define BswM_HasSizeOfGenericMappingOfPCPartitionConfig(partitionIndex)                             (TRUE != FALSE)
 #define BswM_HasSizeOfGenericStateOfPCPartitionConfig(partitionIndex)                               (TRUE != FALSE)
@@ -633,8 +563,6 @@
 #define BswM_HasSizeOfLinScheduleStateOfPCPartitionConfig(partitionIndex)                           (TRUE != FALSE)
 #define BswM_HasSizeOfModeNotificationFctOfPCPartitionConfig(partitionIndex)                        (TRUE != FALSE)
 #define BswM_HasSizeOfModeRequestQueueOfPCPartitionConfig(partitionIndex)                           (TRUE != FALSE)
-#define BswM_HasSizeOfNmMappingOfPCPartitionConfig(partitionIndex)                                  (TRUE != FALSE)
-#define BswM_HasSizeOfNmStateOfPCPartitionConfig(partitionIndex)                                    (TRUE != FALSE)
 #define BswM_HasSizeOfNvMJobMappingOfPCPartitionConfig(partitionIndex)                              (TRUE != FALSE)
 #define BswM_HasSizeOfNvMJobStateOfPCPartitionConfig(partitionIndex)                                (TRUE != FALSE)
 #define BswM_HasSizeOfRuleStatesOfPCPartitionConfig(partitionIndex)                                 (TRUE != FALSE)
@@ -658,13 +586,11 @@
 #define BswM_IncActionListQueue(Index, partitionIndex)                                              BswM_GetActionListQueue(((Index)), (partitionIndex))++
 #define BswM_IncCanSMChannelState(Index, partitionIndex)                                            BswM_GetCanSMChannelState(((Index)), (partitionIndex))++
 #define BswM_IncComMChannelState(Index, partitionIndex)                                             BswM_GetComMChannelState(((Index)), (partitionIndex))++
-#define BswM_IncDcmComState(Index, partitionIndex)                                                  BswM_GetDcmComState(((Index)), (partitionIndex))++
 #define BswM_IncForcedActionListPriority(partitionIndex)                                            BswM_GetForcedActionListPriority(partitionIndex)++
 #define BswM_IncGenericState(Index, partitionIndex)                                                 BswM_GetGenericState(((Index)), (partitionIndex))++
 #define BswM_IncLinSMState(Index, partitionIndex)                                                   BswM_GetLinSMState(((Index)), (partitionIndex))++
 #define BswM_IncLinScheduleState(Index, partitionIndex)                                             BswM_GetLinScheduleState(((Index)), (partitionIndex))++
 #define BswM_IncModeRequestQueue(Index, partitionIndex)                                             BswM_GetModeRequestQueue(((Index)), (partitionIndex))++
-#define BswM_IncNmState(Index, partitionIndex)                                                      BswM_GetNmState(((Index)), (partitionIndex))++
 #define BswM_IncNvMJobState(Index, partitionIndex)                                                  BswM_GetNvMJobState(((Index)), (partitionIndex))++
 #define BswM_IncQueueSemaphore(partitionIndex)                                                      BswM_GetQueueSemaphore(partitionIndex)++
 #define BswM_IncRuleStates(Index, partitionIndex)                                                   BswM_GetRuleStates(((Index)), (partitionIndex))++
@@ -682,13 +608,11 @@
 #define BswM_DecActionListQueue(Index, partitionIndex)                                              BswM_GetActionListQueue(((Index)), (partitionIndex))--
 #define BswM_DecCanSMChannelState(Index, partitionIndex)                                            BswM_GetCanSMChannelState(((Index)), (partitionIndex))--
 #define BswM_DecComMChannelState(Index, partitionIndex)                                             BswM_GetComMChannelState(((Index)), (partitionIndex))--
-#define BswM_DecDcmComState(Index, partitionIndex)                                                  BswM_GetDcmComState(((Index)), (partitionIndex))--
 #define BswM_DecForcedActionListPriority(partitionIndex)                                            BswM_GetForcedActionListPriority(partitionIndex)--
 #define BswM_DecGenericState(Index, partitionIndex)                                                 BswM_GetGenericState(((Index)), (partitionIndex))--
 #define BswM_DecLinSMState(Index, partitionIndex)                                                   BswM_GetLinSMState(((Index)), (partitionIndex))--
 #define BswM_DecLinScheduleState(Index, partitionIndex)                                             BswM_GetLinScheduleState(((Index)), (partitionIndex))--
 #define BswM_DecModeRequestQueue(Index, partitionIndex)                                             BswM_GetModeRequestQueue(((Index)), (partitionIndex))--
-#define BswM_DecNmState(Index, partitionIndex)                                                      BswM_GetNmState(((Index)), (partitionIndex))--
 #define BswM_DecNvMJobState(Index, partitionIndex)                                                  BswM_GetNvMJobState(((Index)), (partitionIndex))--
 #define BswM_DecQueueSemaphore(partitionIndex)                                                      BswM_GetQueueSemaphore(partitionIndex)--
 #define BswM_DecRuleStates(Index, partitionIndex)                                                   BswM_GetRuleStates(((Index)), (partitionIndex))--
@@ -765,7 +689,7 @@
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[61];
+extern CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[50];
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -787,7 +711,7 @@ extern CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[61];
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(BswM_CanSMChannelMappingType, BSWM_CONST) BswM_CanSMChannelMapping[6];
+extern CONST(BswM_CanSMChannelMappingType, BSWM_CONST) BswM_CanSMChannelMapping[5];
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -807,7 +731,7 @@ extern CONST(BswM_CanSMChannelMappingType, BSWM_CONST) BswM_CanSMChannelMapping[
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(BswM_ComMChannelMappingType, BSWM_CONST) BswM_ComMChannelMapping[9];
+extern CONST(BswM_ComMChannelMappingType, BSWM_CONST) BswM_ComMChannelMapping[8];
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -849,7 +773,7 @@ extern CONST(BswM_DeferredRulesType, BSWM_CONST) BswM_DeferredRules[7];
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(BswM_GenericMappingType, BSWM_CONST) BswM_GenericMapping[6];
+extern CONST(BswM_GenericMappingType, BSWM_CONST) BswM_GenericMapping[5];
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -871,7 +795,7 @@ extern CONST(BswM_GenericMappingType, BSWM_CONST) BswM_GenericMapping[6];
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(BswM_ImmediateUserType, BSWM_CONST) BswM_ImmediateUser[17];
+extern CONST(BswM_ImmediateUserType, BSWM_CONST) BswM_ImmediateUser[13];
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -984,7 +908,7 @@ extern CONST(BswM_PartitionIdentifiersType, BSWM_CONST) BswM_PartitionIdentifier
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[43];
+extern CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[34];
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1001,7 +925,7 @@ extern CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[43];
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(BswM_RulesIndType, BSWM_CONST) BswM_RulesInd[56];
+extern CONST(BswM_RulesIndType, BSWM_CONST) BswM_RulesInd[34];
 #define BSWM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1048,7 +972,7 @@ extern VAR(BswM_ActionListQueueUType, BSWM_VAR_NOINIT) BswM_ActionListQueue;  /*
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(CanSM_BswMCurrentStateType, BSWM_VAR_NOINIT) BswM_CanSMChannelState[6];
+extern VAR(CanSM_BswMCurrentStateType, BSWM_VAR_NOINIT) BswM_CanSMChannelState[5];
 #define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1065,24 +989,7 @@ extern VAR(CanSM_BswMCurrentStateType, BSWM_VAR_NOINIT) BswM_CanSMChannelState[6
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(ComM_ModeType, BSWM_VAR_NOINIT) BswM_ComMChannelState[9];
-#define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
-/*lint -save -esym(961, 19.1) */
-#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-
-/**********************************************************************************************************************
-  BswM_DcmComState
-**********************************************************************************************************************/
-/** 
-  \var    BswM_DcmComState
-  \brief  Variable to store current mode of BswMDcmComModeRequest mode request ports.
-*/ 
-#define BSWM_START_SEC_VAR_NOINIT_UNSPECIFIED
-/*lint -save -esym(961, 19.1) */
-#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-extern VAR(Dcm_CommunicationModeType, BSWM_VAR_NOINIT) BswM_DcmComState[1];
+extern VAR(ComM_ModeType, BSWM_VAR_NOINIT) BswM_ComMChannelState[8];
 #define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1112,7 +1019,7 @@ extern VAR(BswM_ForcedActionListPriorityType, BSWM_VAR_NOINIT) BswM_ForcedAction
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(BswM_ModeType, BSWM_VAR_NOINIT) BswM_GenericState[6];
+extern VAR(BswM_ModeType, BSWM_VAR_NOINIT) BswM_GenericState[5];
 #define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1176,25 +1083,8 @@ extern VAR(LinIf_SchHandleType, BSWM_VAR_NOINIT) BswM_LinScheduleState[2];
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(BswM_ModeRequestQueueType, BSWM_VAR_NOINIT) BswM_ModeRequestQueue[17];
+extern VAR(BswM_ModeRequestQueueType, BSWM_VAR_NOINIT) BswM_ModeRequestQueue[13];
 #define BSWM_STOP_SEC_VAR_NOINIT_8BIT
-/*lint -save -esym(961, 19.1) */
-#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-
-/**********************************************************************************************************************
-  BswM_NmState
-**********************************************************************************************************************/
-/** 
-  \var    BswM_NmState
-  \brief  Variable to store current mode of BswMNmIndication mode request ports.
-*/ 
-#define BSWM_START_SEC_VAR_NOINIT_UNSPECIFIED
-/*lint -save -esym(961, 19.1) */
-#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-extern VAR(Nm_StateType, BSWM_VAR_NOINIT) BswM_NmState[1];
-#define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

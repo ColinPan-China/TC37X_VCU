@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanNm_Cfg.h
- *   Generation Time: 2025-09-12 10:25:40
+ *   Generation Time: 2025-09-12 11:08:09
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -48,7 +48,7 @@
  *  GLOBAL CONSTANT MACROS
  *********************************************************************************************************************/
 
-#define CANNM_NUMBER_OF_CANNM_CHANNELS        5u
+#define CANNM_NUMBER_OF_CANNM_CHANNELS        4u
 /* Symbolic name defines for CanNmTxPdus */
 
 
@@ -62,9 +62,8 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define CanNmConf_CanNmTxPdu_NM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_7321f2c3_Tx 0
 #define CanNmConf_CanNmTxPdu_NM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_16e84d4a_Tx 1
-#define CanNmConf_CanNmTxPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00_0aa0ce62_Tx 2
-#define CanNmConf_CanNmTxPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_9aba5863_Tx 3
-#define CanNmConf_CanNmTxPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_61fe7220_Tx 4
+#define CanNmConf_CanNmTxPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_9aba5863_Tx 2
+#define CanNmConf_CanNmTxPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_61fe7220_Tx 3
 /**\} */
 
 /* Symbolic name defines for CanNmTxUserDataPdus */
@@ -84,9 +83,8 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define CanNmConf_CanNmRxPdu_ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095_Rx 0
 #define CanNmConf_CanNmRxPdu_ATOM_CAN_Matrix_PT_V600_20250211_CAN_5212fbaf_Rx 1
-#define CanNmConf_CanNmRxPdu_CanNmRxPdu                               2
-#define CanNmConf_CanNmRxPdu_CanNmRxPdu_1                             3
-#define CanNmConf_CanNmRxPdu_CanNmRxPdu_002                           4
+#define CanNmConf_CanNmRxPdu_CanNmRxPdu_1                             2
+#define CanNmConf_CanNmRxPdu_CanNmRxPdu_002                           3
 /**\} */
 
 /* Options */
@@ -106,7 +104,7 @@
 #define CANNM_PDUR_CANNM_TXCONFIRMATION                 STD_OFF
 #define CANNM_CAR_WUP_RX_FEATURE_ENABLED                STD_OFF
 #define CANNM_CAR_WUP_FILTER_FEATURE_ENABLED            STD_OFF
-#define CANNM_IMMEDIATE_NM_TX_FEATURE_ENABLED           STD_ON
+#define CANNM_IMMEDIATE_NM_TX_FEATURE_ENABLED           STD_OFF
 #define CANNM_ACTIVE_WUP_BIT_FEATURE_ENABLED            STD_OFF
 #define CANNM_PN_FEATURE_ENABLED                        STD_OFF
 #define CANNM_PN_ERA_CALC_FEATURE_ENABLED               STD_OFF
@@ -224,8 +222,8 @@
 #define CANNM_COMCONTROLENABLEDOFCHANNELCONFIG                        STD_ON
 #define CANNM_CRIBITALWAYSENABLEDOFCHANNELCONFIG                      STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.CriBitAlwaysEnabled' Reason: 'the value of CanNm_CriBitAlwaysEnabledOfChannelConfig is always 'false' due to this, the array is deactivated.' */
 #define CANNM_ERRORWAITBUSSLEEPTIMEOFCHANNELCONFIG                    STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.ErrorWaitBusSleepTime' Reason: 'the value of CanNm_ErrorWaitBusSleepTimeOfChannelConfig is always '0' due to this, the array is deactivated.' */
-#define CANNM_IMMEDIATENMCYCLETIMEOFCHANNELCONFIG                     STD_ON
-#define CANNM_IMMEDIATENMTRANSMISSIONSOFCHANNELCONFIG                 STD_ON
+#define CANNM_IMMEDIATENMCYCLETIMEOFCHANNELCONFIG                     STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.ImmediateNmCycleTime' Reason: 'ImmediateNmTxFeature is disabled' */
+#define CANNM_IMMEDIATENMTRANSMISSIONSOFCHANNELCONFIG                 STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.ImmediateNmTransmissions' Reason: 'ImmediateNmTxFeature is disabled' */
 #define CANNM_IMMEDIATERESTARTENABLEDOFCHANNELCONFIG                  STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.ImmediateRestartEnabled' Reason: 'Immediate Restart is disabled' */
 #define CANNM_MSGCYCLETIMEOFCHANNELCONFIG                             STD_ON
 #define CANNM_MSGTIMEOUTTIMEOFCHANNELCONFIG                           STD_ON
@@ -247,7 +245,7 @@
 #define CANNM_COORDREADYTOSLEEPSTATE                                  STD_ON
 #define CANNM_FINALMAGICNUMBER                                        STD_OFF  /**< Deactivateable: 'CanNm_FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
 #define CANNM_GENERATORCOMPATIBILITYVERSION                           STD_OFF  /**< Deactivateable: 'CanNm_GeneratorCompatibilityVersion' Reason: 'Variant is not VARIANT-POST-BUILD-LOADABLE' */
-#define CANNM_IMMEDIATENMMSGCOUNT                                     STD_ON
+#define CANNM_IMMEDIATENMMSGCOUNT                                     STD_OFF  /**< Deactivateable: 'CanNm_ImmediateNmMsgCount' Reason: 'ImmediateNmTxFeature is disabled' */
 #define CANNM_IMMEDIATERESTARTFAILED                                  STD_OFF  /**< Deactivateable: 'CanNm_ImmediateRestartFailed' Reason: 'Immediate Restart is disabled' */
 #define CANNM_INITDATAHASHCODE                                        STD_OFF  /**< Deactivateable: 'CanNm_InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
 #define CANNM_MODULEINITIALIZED                                       STD_ON
@@ -324,7 +322,6 @@
 #define CANNM_SIZEOFCHANNELCONFIG                                     STD_ON
 #define CANNM_SIZEOFCOMMSTATE                                         STD_ON
 #define CANNM_SIZEOFCOORDREADYTOSLEEPSTATE                            STD_ON
-#define CANNM_SIZEOFIMMEDIATENMMSGCOUNT                               STD_ON
 #define CANNM_SIZEOFMSGCONFIRMATIONFLAG                               STD_ON
 #define CANNM_SIZEOFMSGINDICATIONFLAG                                 STD_ON
 #define CANNM_SIZEOFMSGTIMEOUTTIMER                                   STD_ON
@@ -351,7 +348,6 @@
 #define CANNM_COORDREADYTOSLEEPSTATEOFPCCONFIG                        STD_ON
 #define CANNM_FINALMAGICNUMBEROFPCCONFIG                              STD_OFF  /**< Deactivateable: 'CanNm_PCConfig.FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
 #define CANNM_GENERATORCOMPATIBILITYVERSIONOFPCCONFIG                 STD_OFF  /**< Deactivateable: 'CanNm_PCConfig.GeneratorCompatibilityVersion' Reason: 'Variant is not VARIANT-POST-BUILD-LOADABLE' */
-#define CANNM_IMMEDIATENMMSGCOUNTOFPCCONFIG                           STD_ON
 #define CANNM_INITDATAHASHCODEOFPCCONFIG                              STD_OFF  /**< Deactivateable: 'CanNm_PCConfig.InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
 #define CANNM_MODULEINITIALIZEDOFPCCONFIG                             STD_ON
 #define CANNM_MSGCONFIRMATIONFLAGOFPCCONFIG                           STD_ON
@@ -371,7 +367,6 @@
 #define CANNM_SIZEOFCHANNELCONFIGOFPCCONFIG                           STD_ON
 #define CANNM_SIZEOFCOMMSTATEOFPCCONFIG                               STD_ON
 #define CANNM_SIZEOFCOORDREADYTOSLEEPSTATEOFPCCONFIG                  STD_ON
-#define CANNM_SIZEOFIMMEDIATENMMSGCOUNTOFPCCONFIG                     STD_ON
 #define CANNM_SIZEOFMSGCONFIRMATIONFLAGOFPCCONFIG                     STD_ON
 #define CANNM_SIZEOFMSGINDICATIONFLAGOFPCCONFIG                       STD_ON
 #define CANNM_SIZEOFMSGTIMEOUTTIMEROFPCCONFIG                         STD_ON
@@ -403,7 +398,6 @@
 */ 
 #define CANNM_MIN_COMMSTATE                                           0u
 #define CANNM_MIN_COORDREADYTOSLEEPSTATE                              0u
-#define CANNM_MIN_IMMEDIATENMMSGCOUNT                                 0u
 #define CANNM_MIN_MSGTIMEOUTTIMER                                     0u
 #define CANNM_MIN_MSGTIMER                                            0u
 #define CANNM_MIN_NETWORKRESTARTFLAG                                  0u
@@ -426,7 +420,6 @@
 */ 
 #define CANNM_MAX_COMMSTATE                                           255u
 #define CANNM_MAX_COORDREADYTOSLEEPSTATE                              255u
-#define CANNM_MAX_IMMEDIATENMMSGCOUNT                                 255u
 #define CANNM_MAX_MSGTIMEOUTTIMER                                     65535u
 #define CANNM_MAX_MSGTIMER                                            65535u
 #define CANNM_MAX_NETWORKRESTARTFLAG                                  255u
@@ -472,8 +465,6 @@
 */ 
 #define CANNM_ISDEF_CHANNELIDOFCHANNELCONFIG                          STD_OFF
 #define CANNM_ISDEF_COMCONTROLENABLEDOFCHANNELCONFIG                  STD_OFF
-#define CANNM_ISDEF_IMMEDIATENMCYCLETIMEOFCHANNELCONFIG               STD_OFF
-#define CANNM_ISDEF_IMMEDIATENMTRANSMISSIONSOFCHANNELCONFIG           STD_OFF
 #define CANNM_ISDEF_MSGCYCLETIMEOFCHANNELCONFIG                       STD_OFF
 #define CANNM_ISDEF_MSGTIMEOUTTIMEOFCHANNELCONFIG                     STD_OFF
 #define CANNM_ISDEF_NODEIDENABLEDOFCHANNELCONFIG                      STD_OFF
@@ -514,7 +505,6 @@
 #define CANNM_ISDEF_CHANNELCONFIGOFPCCONFIG                           STD_ON
 #define CANNM_ISDEF_COMMSTATEOFPCCONFIG                               STD_ON
 #define CANNM_ISDEF_COORDREADYTOSLEEPSTATEOFPCCONFIG                  STD_ON
-#define CANNM_ISDEF_IMMEDIATENMMSGCOUNTOFPCCONFIG                     STD_ON
 #define CANNM_ISDEF_MODULEINITIALIZEDOFPCCONFIG                       STD_ON
 #define CANNM_ISDEF_MSGCONFIRMATIONFLAGOFPCCONFIG                     STD_ON
 #define CANNM_ISDEF_MSGINDICATIONFLAGOFPCCONFIG                       STD_ON
@@ -542,8 +532,6 @@
 */ 
 #define CANNM_EQ2_CHANNELIDOFCHANNELCONFIG                            
 #define CANNM_EQ2_COMCONTROLENABLEDOFCHANNELCONFIG                    
-#define CANNM_EQ2_IMMEDIATENMCYCLETIMEOFCHANNELCONFIG                 
-#define CANNM_EQ2_IMMEDIATENMTRANSMISSIONSOFCHANNELCONFIG             
 #define CANNM_EQ2_MSGCYCLETIMEOFCHANNELCONFIG                         
 #define CANNM_EQ2_MSGTIMEOUTTIMEOFCHANNELCONFIG                       
 #define CANNM_EQ2_NODEIDENABLEDOFCHANNELCONFIG                        
@@ -584,7 +572,6 @@
 #define CANNM_EQ2_CHANNELCONFIGOFPCCONFIG                             CanNm_ChannelConfig
 #define CANNM_EQ2_COMMSTATEOFPCCONFIG                                 CanNm_CommState.raw
 #define CANNM_EQ2_COORDREADYTOSLEEPSTATEOFPCCONFIG                    CanNm_CoordReadyToSleepState.raw
-#define CANNM_EQ2_IMMEDIATENMMSGCOUNTOFPCCONFIG                       CanNm_ImmediateNmMsgCount.raw
 #define CANNM_EQ2_MODULEINITIALIZEDOFPCCONFIG                         (&(CanNm_ModuleInitialized))
 #define CANNM_EQ2_MSGCONFIRMATIONFLAGOFPCCONFIG                       CanNm_MsgConfirmationFlag.raw
 #define CANNM_EQ2_MSGINDICATIONFLAGOFPCCONFIG                         CanNm_MsgIndicationFlag.raw
@@ -681,7 +668,6 @@
 #define CanNm_GetChannelConfigOfPCConfig()                            CanNm_ChannelConfig  /**< the pointer to CanNm_ChannelConfig */
 #define CanNm_GetCommStateOfPCConfig()                                CanNm_CommState.raw  /**< the pointer to CanNm_CommState */
 #define CanNm_GetCoordReadyToSleepStateOfPCConfig()                   CanNm_CoordReadyToSleepState.raw  /**< the pointer to CanNm_CoordReadyToSleepState */
-#define CanNm_GetImmediateNmMsgCountOfPCConfig()                      CanNm_ImmediateNmMsgCount.raw  /**< the pointer to CanNm_ImmediateNmMsgCount */
 #define CanNm_GetModuleInitializedOfPCConfig()                        (&(CanNm_ModuleInitialized))  /**< the pointer to CanNm_ModuleInitialized */
 #define CanNm_GetMsgConfirmationFlagOfPCConfig()                      CanNm_MsgConfirmationFlag.raw  /**< the pointer to CanNm_MsgConfirmationFlag */
 #define CanNm_GetMsgIndicationFlagOfPCConfig()                        CanNm_MsgIndicationFlag.raw  /**< the pointer to CanNm_MsgIndicationFlag */
@@ -692,10 +678,10 @@
 #define CanNm_GetPbChannelConfigOfPCConfig()                          CanNm_PbChannelConfig  /**< the pointer to CanNm_PbChannelConfig */
 #define CanNm_GetRepeatMsgTimerOfPCConfig()                           CanNm_RepeatMsgTimer.raw  /**< the pointer to CanNm_RepeatMsgTimer */
 #define CanNm_GetRxMessageDataOfPCConfig()                            CanNm_RxMessageData  /**< the pointer to CanNm_RxMessageData */
-#define CanNm_GetSizeOfChannelConfigOfPCConfig()                      5u  /**< the number of accomplishable value elements in CanNm_ChannelConfig */
-#define CanNm_GetSizeOfPbChannelConfigOfPCConfig()                    5u  /**< the number of accomplishable value elements in CanNm_PbChannelConfig */
-#define CanNm_GetSizeOfSysToNmChIndOfPCConfig()                       9u  /**< the number of accomplishable value elements in CanNm_SysToNmChInd */
-#define CanNm_GetSizeOfTxMessageDataOfPCConfig()                      40u  /**< the number of accomplishable value elements in CanNm_TxMessageData */
+#define CanNm_GetSizeOfChannelConfigOfPCConfig()                      4u  /**< the number of accomplishable value elements in CanNm_ChannelConfig */
+#define CanNm_GetSizeOfPbChannelConfigOfPCConfig()                    4u  /**< the number of accomplishable value elements in CanNm_PbChannelConfig */
+#define CanNm_GetSizeOfSysToNmChIndOfPCConfig()                       8u  /**< the number of accomplishable value elements in CanNm_SysToNmChInd */
+#define CanNm_GetSizeOfTxMessageDataOfPCConfig()                      32u  /**< the number of accomplishable value elements in CanNm_TxMessageData */
 #define CanNm_GetSysToNmChIndOfPCConfig()                             CanNm_SysToNmChInd  /**< the pointer to CanNm_SysToNmChInd */
 #define CanNm_GetTimeoutTimerOfPCConfig()                             CanNm_TimeoutTimer.raw  /**< the pointer to CanNm_TimeoutTimer */
 #define CanNm_GetTxControlStateOfPCConfig()                           CanNm_TxControlState.raw  /**< the pointer to CanNm_TxControlState */
@@ -713,7 +699,6 @@
 */ 
 #define CanNm_GetSizeOfCommStateOfPCConfig()                          CanNm_GetSizeOfChannelConfigOfPCConfig()  /**< the number of accomplishable value elements in CanNm_CommState */
 #define CanNm_GetSizeOfCoordReadyToSleepStateOfPCConfig()             CanNm_GetSizeOfChannelConfigOfPCConfig()  /**< the number of accomplishable value elements in CanNm_CoordReadyToSleepState */
-#define CanNm_GetSizeOfImmediateNmMsgCountOfPCConfig()                CanNm_GetSizeOfChannelConfigOfPCConfig()  /**< the number of accomplishable value elements in CanNm_ImmediateNmMsgCount */
 #define CanNm_GetSizeOfMsgConfirmationFlagOfPCConfig()                CanNm_GetSizeOfChannelConfigOfPCConfig()  /**< the number of accomplishable value elements in CanNm_MsgConfirmationFlag */
 #define CanNm_GetSizeOfMsgIndicationFlagOfPCConfig()                  CanNm_GetSizeOfChannelConfigOfPCConfig()  /**< the number of accomplishable value elements in CanNm_MsgIndicationFlag */
 #define CanNm_GetSizeOfMsgTimeoutTimerOfPCConfig()                    CanNm_GetSizeOfChannelConfigOfPCConfig()  /**< the number of accomplishable value elements in CanNm_MsgTimeoutTimer */
@@ -736,8 +721,6 @@
 */ 
 #define CanNm_GetChannelIdOfChannelConfig(Index)                      ((NetworkHandleType)CanNm_GetChannelConfigOfPCConfig()[(Index)].ChannelIdOfChannelConfig)
 #define CanNm_IsComControlEnabledOfChannelConfig(Index)               ((CanNm_GetChannelConfigOfPCConfig()[(Index)].ComControlEnabledOfChannelConfig) != FALSE)
-#define CanNm_GetImmediateNmCycleTimeOfChannelConfig(Index)           (CanNm_GetChannelConfigOfPCConfig()[(Index)].ImmediateNmCycleTimeOfChannelConfig)
-#define CanNm_GetImmediateNmTransmissionsOfChannelConfig(Index)       (CanNm_GetChannelConfigOfPCConfig()[(Index)].ImmediateNmTransmissionsOfChannelConfig)
 #define CanNm_GetMsgCycleTimeOfChannelConfig(Index)                   (CanNm_GetChannelConfigOfPCConfig()[(Index)].MsgCycleTimeOfChannelConfig)
 #define CanNm_GetMsgTimeoutTimeOfChannelConfig(Index)                 (CanNm_GetChannelConfigOfPCConfig()[(Index)].MsgTimeoutTimeOfChannelConfig)
 #define CanNm_IsNodeIdEnabledOfChannelConfig(Index)                   ((CanNm_GetChannelConfigOfPCConfig()[(Index)].NodeIdEnabledOfChannelConfig) != FALSE)
@@ -749,7 +732,6 @@
 #define CanNm_GetWaitBusSleepTimeOfChannelConfig(Index)               (CanNm_GetChannelConfigOfPCConfig()[(Index)].WaitBusSleepTimeOfChannelConfig)
 #define CanNm_GetCommState(Index)                                     (CanNm_GetCommStateOfPCConfig()[(Index)])
 #define CanNm_GetCoordReadyToSleepState(Index)                        (CanNm_GetCoordReadyToSleepStateOfPCConfig()[(Index)])
-#define CanNm_GetImmediateNmMsgCount(Index)                           (CanNm_GetImmediateNmMsgCountOfPCConfig()[(Index)])
 #define CanNm_IsModuleInitialized()                                   (((*(CanNm_GetModuleInitializedOfPCConfig()))) != FALSE)
 #define CanNm_IsMsgConfirmationFlag(Index)                            ((CanNm_GetMsgConfirmationFlagOfPCConfig()[(Index)]) != FALSE)
 #define CanNm_IsMsgIndicationFlag(Index)                              ((CanNm_GetMsgIndicationFlagOfPCConfig()[(Index)]) != FALSE)
@@ -804,7 +786,6 @@
 #define CanNm_GetSizeOfChannelConfig()                                CanNm_GetSizeOfChannelConfigOfPCConfig()
 #define CanNm_GetSizeOfCommState()                                    CanNm_GetSizeOfCommStateOfPCConfig()
 #define CanNm_GetSizeOfCoordReadyToSleepState()                       CanNm_GetSizeOfCoordReadyToSleepStateOfPCConfig()
-#define CanNm_GetSizeOfImmediateNmMsgCount()                          CanNm_GetSizeOfImmediateNmMsgCountOfPCConfig()
 #define CanNm_GetSizeOfMsgConfirmationFlag()                          CanNm_GetSizeOfMsgConfirmationFlagOfPCConfig()
 #define CanNm_GetSizeOfMsgIndicationFlag()                            CanNm_GetSizeOfMsgIndicationFlagOfPCConfig()
 #define CanNm_GetSizeOfMsgTimeoutTimer()                              CanNm_GetSizeOfMsgTimeoutTimerOfPCConfig()
@@ -830,7 +811,6 @@
 */ 
 #define CanNm_SetCommState(Index, Value)                              CanNm_GetCommStateOfPCConfig()[(Index)] = (Value)
 #define CanNm_SetCoordReadyToSleepState(Index, Value)                 CanNm_GetCoordReadyToSleepStateOfPCConfig()[(Index)] = (Value)
-#define CanNm_SetImmediateNmMsgCount(Index, Value)                    CanNm_GetImmediateNmMsgCountOfPCConfig()[(Index)] = (Value)
 #define CanNm_SetModuleInitialized(Value)                             (*(CanNm_GetModuleInitializedOfPCConfig())) = (Value)
 #define CanNm_SetMsgConfirmationFlag(Index, Value)                    CanNm_GetMsgConfirmationFlagOfPCConfig()[(Index)] = (Value)
 #define CanNm_SetMsgIndicationFlag(Index, Value)                      CanNm_GetMsgIndicationFlagOfPCConfig()[(Index)] = (Value)
@@ -869,8 +849,6 @@
 #define CanNm_HasChannelConfig()                                      (TRUE != FALSE)
 #define CanNm_HasChannelIdOfChannelConfig()                           (TRUE != FALSE)
 #define CanNm_HasComControlEnabledOfChannelConfig()                   (TRUE != FALSE)
-#define CanNm_HasImmediateNmCycleTimeOfChannelConfig()                (TRUE != FALSE)
-#define CanNm_HasImmediateNmTransmissionsOfChannelConfig()            (TRUE != FALSE)
 #define CanNm_HasMsgCycleTimeOfChannelConfig()                        (TRUE != FALSE)
 #define CanNm_HasMsgTimeoutTimeOfChannelConfig()                      (TRUE != FALSE)
 #define CanNm_HasNodeIdEnabledOfChannelConfig()                       (TRUE != FALSE)
@@ -882,7 +860,6 @@
 #define CanNm_HasWaitBusSleepTimeOfChannelConfig()                    (TRUE != FALSE)
 #define CanNm_HasCommState()                                          (TRUE != FALSE)
 #define CanNm_HasCoordReadyToSleepState()                             (TRUE != FALSE)
-#define CanNm_HasImmediateNmMsgCount()                                (TRUE != FALSE)
 #define CanNm_HasModuleInitialized()                                  (TRUE != FALSE)
 #define CanNm_HasMsgConfirmationFlag()                                (TRUE != FALSE)
 #define CanNm_HasMsgIndicationFlag()                                  (TRUE != FALSE)
@@ -923,7 +900,6 @@
 #define CanNm_HasSizeOfChannelConfig()                                (TRUE != FALSE)
 #define CanNm_HasSizeOfCommState()                                    (TRUE != FALSE)
 #define CanNm_HasSizeOfCoordReadyToSleepState()                       (TRUE != FALSE)
-#define CanNm_HasSizeOfImmediateNmMsgCount()                          (TRUE != FALSE)
 #define CanNm_HasSizeOfMsgConfirmationFlag()                          (TRUE != FALSE)
 #define CanNm_HasSizeOfMsgIndicationFlag()                            (TRUE != FALSE)
 #define CanNm_HasSizeOfMsgTimeoutTimer()                              (TRUE != FALSE)
@@ -948,7 +924,6 @@
 #define CanNm_HasChannelConfigOfPCConfig()                            (TRUE != FALSE)
 #define CanNm_HasCommStateOfPCConfig()                                (TRUE != FALSE)
 #define CanNm_HasCoordReadyToSleepStateOfPCConfig()                   (TRUE != FALSE)
-#define CanNm_HasImmediateNmMsgCountOfPCConfig()                      (TRUE != FALSE)
 #define CanNm_HasModuleInitializedOfPCConfig()                        (TRUE != FALSE)
 #define CanNm_HasMsgConfirmationFlagOfPCConfig()                      (TRUE != FALSE)
 #define CanNm_HasMsgIndicationFlagOfPCConfig()                        (TRUE != FALSE)
@@ -962,7 +937,6 @@
 #define CanNm_HasSizeOfChannelConfigOfPCConfig()                      (TRUE != FALSE)
 #define CanNm_HasSizeOfCommStateOfPCConfig()                          (TRUE != FALSE)
 #define CanNm_HasSizeOfCoordReadyToSleepStateOfPCConfig()             (TRUE != FALSE)
-#define CanNm_HasSizeOfImmediateNmMsgCountOfPCConfig()                (TRUE != FALSE)
 #define CanNm_HasSizeOfMsgConfirmationFlagOfPCConfig()                (TRUE != FALSE)
 #define CanNm_HasSizeOfMsgIndicationFlagOfPCConfig()                  (TRUE != FALSE)
 #define CanNm_HasSizeOfMsgTimeoutTimerOfPCConfig()                    (TRUE != FALSE)
@@ -994,7 +968,6 @@
 */ 
 #define CanNm_IncCommState(Index)                                     CanNm_GetCommState(Index)++
 #define CanNm_IncCoordReadyToSleepState(Index)                        CanNm_GetCoordReadyToSleepState(Index)++
-#define CanNm_IncImmediateNmMsgCount(Index)                           CanNm_GetImmediateNmMsgCount(Index)++
 #define CanNm_IncMsgTimeoutTimer(Index)                               CanNm_GetMsgTimeoutTimer(Index)++
 #define CanNm_IncMsgTimer(Index)                                      CanNm_GetMsgTimer(Index)++
 #define CanNm_IncNetworkRestartFlag(Index)                            CanNm_GetNetworkRestartFlag(Index)++
@@ -1017,7 +990,6 @@
 */ 
 #define CanNm_DecCommState(Index)                                     CanNm_GetCommState(Index)--
 #define CanNm_DecCoordReadyToSleepState(Index)                        CanNm_GetCoordReadyToSleepState(Index)--
-#define CanNm_DecImmediateNmMsgCount(Index)                           CanNm_GetImmediateNmMsgCount(Index)--
 #define CanNm_DecMsgTimeoutTimer(Index)                               CanNm_GetMsgTimeoutTimer(Index)--
 #define CanNm_DecMsgTimer(Index)                                      CanNm_GetMsgTimer(Index)--
 #define CanNm_DecNetworkRestartFlag(Index)                            CanNm_GetNetworkRestartFlag(Index)--
@@ -1108,9 +1080,6 @@ typedef CanNm_ChannelConfigIterType CanNm_CommStateIterType;
 /**   \brief  type used to iterate CanNm_CoordReadyToSleepState */
 typedef CanNm_ChannelConfigIterType CanNm_CoordReadyToSleepStateIterType;
 
-/**   \brief  type used to iterate CanNm_ImmediateNmMsgCount */
-typedef CanNm_ChannelConfigIterType CanNm_ImmediateNmMsgCountIterType;
-
 /**   \brief  type used to iterate CanNm_MsgConfirmationFlag */
 typedef CanNm_ChannelConfigIterType CanNm_MsgConfirmationFlagIterType;
 
@@ -1159,12 +1128,6 @@ typedef uint8 CanNm_ChannelIdOfChannelConfigType;
 /**   \brief  value based type definition for CanNm_ComControlEnabledOfChannelConfig */
 typedef boolean CanNm_ComControlEnabledOfChannelConfigType;
 
-/**   \brief  value based type definition for CanNm_ImmediateNmCycleTimeOfChannelConfig */
-typedef uint8 CanNm_ImmediateNmCycleTimeOfChannelConfigType;
-
-/**   \brief  value based type definition for CanNm_ImmediateNmTransmissionsOfChannelConfig */
-typedef uint8 CanNm_ImmediateNmTransmissionsOfChannelConfigType;
-
 /**   \brief  value based type definition for CanNm_MsgCycleTimeOfChannelConfig */
 typedef uint8 CanNm_MsgCycleTimeOfChannelConfigType;
 
@@ -1197,9 +1160,6 @@ typedef uint8 CanNm_CommStateType;
 
 /**   \brief  value based type definition for CanNm_CoordReadyToSleepState */
 typedef uint8 CanNm_CoordReadyToSleepStateType;
-
-/**   \brief  value based type definition for CanNm_ImmediateNmMsgCount */
-typedef uint8 CanNm_ImmediateNmMsgCountType;
 
 /**   \brief  value based type definition for CanNm_ModuleInitialized */
 typedef boolean CanNm_ModuleInitializedType;
@@ -1318,9 +1278,6 @@ typedef uint8 CanNm_SizeOfCommStateType;
 /**   \brief  value based type definition for CanNm_SizeOfCoordReadyToSleepState */
 typedef uint8 CanNm_SizeOfCoordReadyToSleepStateType;
 
-/**   \brief  value based type definition for CanNm_SizeOfImmediateNmMsgCount */
-typedef uint8 CanNm_SizeOfImmediateNmMsgCountType;
-
 /**   \brief  value based type definition for CanNm_SizeOfMsgConfirmationFlag */
 typedef uint8 CanNm_SizeOfMsgConfirmationFlagType;
 
@@ -1400,8 +1357,6 @@ typedef struct sCanNm_ChannelConfigType
   CanNm_ComControlEnabledOfChannelConfigType ComControlEnabledOfChannelConfig;  /**< Determines if Com Control is active or not */
   CanNm_NodeIdEnabledOfChannelConfigType NodeIdEnabledOfChannelConfig;  /**< Determines if Node Ids are enabled or not */
   CanNm_ChannelIdOfChannelConfigType ChannelIdOfChannelConfig;  /**< Channel ID configured for the respective instance of the NM. */
-  CanNm_ImmediateNmCycleTimeOfChannelConfigType ImmediateNmCycleTimeOfChannelConfig;  /**< Fast NM PDU Transmission Time during WUP */
-  CanNm_ImmediateNmTransmissionsOfChannelConfigType ImmediateNmTransmissionsOfChannelConfig;  /**< Number of fast NM PDU Transmissions during WUP */
   CanNm_MsgCycleTimeOfChannelConfigType MsgCycleTimeOfChannelConfig;  /**< Period of a NM message [ms]. It determines the periodic rate in the periodic transmission mode. */
   CanNm_MsgTimeoutTimeOfChannelConfigType MsgTimeoutTimeOfChannelConfig;  /**< Transmission Timeout [ms] of NM message. If there is no transmission confirmation by the CAN Interface within this timeout, the CAN NM module shall give an error notification. */
   CanNm_PduCbvPositionOfChannelConfigType PduCbvPositionOfChannelConfig;  /**< Control Bit Vector Position in the PDU */
@@ -1450,7 +1405,6 @@ typedef struct CanNm_CommStateStructSTag
 {
   CanNm_CommStateType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_CommStateType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_CommStateType CN_TC37X_VCU_CAN00_07b6c9c8;
   CanNm_CommStateType CN_TC37X_VCU_CAN01_70b1f95e;
   CanNm_CommStateType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_CommStateStructSType;
@@ -1460,27 +1414,15 @@ typedef struct CanNm_CoordReadyToSleepStateStructSTag
 {
   CanNm_CoordReadyToSleepStateType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_CoordReadyToSleepStateType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_CoordReadyToSleepStateType CN_TC37X_VCU_CAN00_07b6c9c8;
   CanNm_CoordReadyToSleepStateType CN_TC37X_VCU_CAN01_70b1f95e;
   CanNm_CoordReadyToSleepStateType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_CoordReadyToSleepStateStructSType;
-
-/**   \brief  type to be used as symbolic data element access to CanNm_ImmediateNmMsgCount */
-typedef struct CanNm_ImmediateNmMsgCountStructSTag
-{
-  CanNm_ImmediateNmMsgCountType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
-  CanNm_ImmediateNmMsgCountType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_ImmediateNmMsgCountType CN_TC37X_VCU_CAN00_07b6c9c8;
-  CanNm_ImmediateNmMsgCountType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_ImmediateNmMsgCountType CN_TC37X_VCU_CAN03_9ebf9872;
-} CanNm_ImmediateNmMsgCountStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_MsgConfirmationFlag */
 typedef struct CanNm_MsgConfirmationFlagStructSTag
 {
   CanNm_MsgConfirmationFlagType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_MsgConfirmationFlagType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_MsgConfirmationFlagType CN_TC37X_VCU_CAN00_07b6c9c8;
   CanNm_MsgConfirmationFlagType CN_TC37X_VCU_CAN01_70b1f95e;
   CanNm_MsgConfirmationFlagType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_MsgConfirmationFlagStructSType;
@@ -1490,7 +1432,6 @@ typedef struct CanNm_MsgIndicationFlagStructSTag
 {
   CanNm_MsgIndicationFlagType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_MsgIndicationFlagType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_MsgIndicationFlagType CN_TC37X_VCU_CAN00_07b6c9c8;
   CanNm_MsgIndicationFlagType CN_TC37X_VCU_CAN01_70b1f95e;
   CanNm_MsgIndicationFlagType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_MsgIndicationFlagStructSType;
@@ -1500,7 +1441,6 @@ typedef struct CanNm_MsgTimeoutTimerStructSTag
 {
   CanNm_MsgTimeoutTimerType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_MsgTimeoutTimerType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_MsgTimeoutTimerType CN_TC37X_VCU_CAN00_07b6c9c8;
   CanNm_MsgTimeoutTimerType CN_TC37X_VCU_CAN01_70b1f95e;
   CanNm_MsgTimeoutTimerType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_MsgTimeoutTimerStructSType;
@@ -1510,7 +1450,6 @@ typedef struct CanNm_MsgTimerStructSTag
 {
   CanNm_MsgTimerType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_MsgTimerType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_MsgTimerType CN_TC37X_VCU_CAN00_07b6c9c8;
   CanNm_MsgTimerType CN_TC37X_VCU_CAN01_70b1f95e;
   CanNm_MsgTimerType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_MsgTimerStructSType;
@@ -1520,7 +1459,6 @@ typedef struct CanNm_NetworkRestartFlagStructSTag
 {
   CanNm_NetworkRestartFlagType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_NetworkRestartFlagType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_NetworkRestartFlagType CN_TC37X_VCU_CAN00_07b6c9c8;
   CanNm_NetworkRestartFlagType CN_TC37X_VCU_CAN01_70b1f95e;
   CanNm_NetworkRestartFlagType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_NetworkRestartFlagStructSType;
@@ -1530,7 +1468,6 @@ typedef struct CanNm_NmStateStructSTag
 {
   CanNm_NmStateType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_NmStateType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_NmStateType CN_TC37X_VCU_CAN00_07b6c9c8;
   CanNm_NmStateType CN_TC37X_VCU_CAN01_70b1f95e;
   CanNm_NmStateType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_NmStateStructSType;
@@ -1540,7 +1477,6 @@ typedef struct CanNm_RepeatMsgTimerStructSTag
 {
   CanNm_RepeatMsgTimerType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_RepeatMsgTimerType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_RepeatMsgTimerType CN_TC37X_VCU_CAN00_07b6c9c8;
   CanNm_RepeatMsgTimerType CN_TC37X_VCU_CAN01_70b1f95e;
   CanNm_RepeatMsgTimerType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_RepeatMsgTimerStructSType;
@@ -1550,7 +1486,6 @@ typedef struct CanNm_TimeoutTimerStructSTag
 {
   CanNm_TimeoutTimerType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_TimeoutTimerType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_TimeoutTimerType CN_TC37X_VCU_CAN00_07b6c9c8;
   CanNm_TimeoutTimerType CN_TC37X_VCU_CAN01_70b1f95e;
   CanNm_TimeoutTimerType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_TimeoutTimerStructSType;
@@ -1560,7 +1495,6 @@ typedef struct CanNm_TxControlStateStructSTag
 {
   CanNm_TxControlStateType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_TxControlStateType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_TxControlStateType CN_TC37X_VCU_CAN00_07b6c9c8;
   CanNm_TxControlStateType CN_TC37X_VCU_CAN01_70b1f95e;
   CanNm_TxControlStateType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_TxControlStateStructSType;
@@ -1570,7 +1504,6 @@ typedef struct CanNm_TxControlStateRequestStructSTag
 {
   CanNm_TxControlStateRequestType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_TxControlStateRequestType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_TxControlStateRequestType CN_TC37X_VCU_CAN00_07b6c9c8;
   CanNm_TxControlStateRequestType CN_TC37X_VCU_CAN01_70b1f95e;
   CanNm_TxControlStateRequestType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_TxControlStateRequestStructSType;
@@ -1580,7 +1513,6 @@ typedef struct CanNm_WaitBusSleepTimerStructSTag
 {
   CanNm_WaitBusSleepTimerType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_WaitBusSleepTimerType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
-  CanNm_WaitBusSleepTimerType CN_TC37X_VCU_CAN00_07b6c9c8;
   CanNm_WaitBusSleepTimerType CN_TC37X_VCU_CAN01_70b1f95e;
   CanNm_WaitBusSleepTimerType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_WaitBusSleepTimerStructSType;
@@ -1597,98 +1529,91 @@ typedef struct CanNm_WaitBusSleepTimerStructSTag
 /**   \brief  type to access CanNm_CommState in an index and symbol based style. */
 typedef union CanNm_CommStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_CommStateType raw[5];
+  CanNm_CommStateType raw[4];
   CanNm_CommStateStructSType str;
 } CanNm_CommStateUType;
 
 /**   \brief  type to access CanNm_CoordReadyToSleepState in an index and symbol based style. */
 typedef union CanNm_CoordReadyToSleepStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_CoordReadyToSleepStateType raw[5];
+  CanNm_CoordReadyToSleepStateType raw[4];
   CanNm_CoordReadyToSleepStateStructSType str;
 } CanNm_CoordReadyToSleepStateUType;
-
-/**   \brief  type to access CanNm_ImmediateNmMsgCount in an index and symbol based style. */
-typedef union CanNm_ImmediateNmMsgCountUTag
-{  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_ImmediateNmMsgCountType raw[5];
-  CanNm_ImmediateNmMsgCountStructSType str;
-} CanNm_ImmediateNmMsgCountUType;
 
 /**   \brief  type to access CanNm_MsgConfirmationFlag in an index and symbol based style. */
 typedef union CanNm_MsgConfirmationFlagUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_MsgConfirmationFlagType raw[5];
+  CanNm_MsgConfirmationFlagType raw[4];
   CanNm_MsgConfirmationFlagStructSType str;
 } CanNm_MsgConfirmationFlagUType;
 
 /**   \brief  type to access CanNm_MsgIndicationFlag in an index and symbol based style. */
 typedef union CanNm_MsgIndicationFlagUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_MsgIndicationFlagType raw[5];
+  CanNm_MsgIndicationFlagType raw[4];
   CanNm_MsgIndicationFlagStructSType str;
 } CanNm_MsgIndicationFlagUType;
 
 /**   \brief  type to access CanNm_MsgTimeoutTimer in an index and symbol based style. */
 typedef union CanNm_MsgTimeoutTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_MsgTimeoutTimerType raw[5];
+  CanNm_MsgTimeoutTimerType raw[4];
   CanNm_MsgTimeoutTimerStructSType str;
 } CanNm_MsgTimeoutTimerUType;
 
 /**   \brief  type to access CanNm_MsgTimer in an index and symbol based style. */
 typedef union CanNm_MsgTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_MsgTimerType raw[5];
+  CanNm_MsgTimerType raw[4];
   CanNm_MsgTimerStructSType str;
 } CanNm_MsgTimerUType;
 
 /**   \brief  type to access CanNm_NetworkRestartFlag in an index and symbol based style. */
 typedef union CanNm_NetworkRestartFlagUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_NetworkRestartFlagType raw[5];
+  CanNm_NetworkRestartFlagType raw[4];
   CanNm_NetworkRestartFlagStructSType str;
 } CanNm_NetworkRestartFlagUType;
 
 /**   \brief  type to access CanNm_NmState in an index and symbol based style. */
 typedef union CanNm_NmStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_NmStateType raw[5];
+  CanNm_NmStateType raw[4];
   CanNm_NmStateStructSType str;
 } CanNm_NmStateUType;
 
 /**   \brief  type to access CanNm_RepeatMsgTimer in an index and symbol based style. */
 typedef union CanNm_RepeatMsgTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_RepeatMsgTimerType raw[5];
+  CanNm_RepeatMsgTimerType raw[4];
   CanNm_RepeatMsgTimerStructSType str;
 } CanNm_RepeatMsgTimerUType;
 
 /**   \brief  type to access CanNm_TimeoutTimer in an index and symbol based style. */
 typedef union CanNm_TimeoutTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_TimeoutTimerType raw[5];
+  CanNm_TimeoutTimerType raw[4];
   CanNm_TimeoutTimerStructSType str;
 } CanNm_TimeoutTimerUType;
 
 /**   \brief  type to access CanNm_TxControlState in an index and symbol based style. */
 typedef union CanNm_TxControlStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_TxControlStateType raw[5];
+  CanNm_TxControlStateType raw[4];
   CanNm_TxControlStateStructSType str;
 } CanNm_TxControlStateUType;
 
 /**   \brief  type to access CanNm_TxControlStateRequest in an index and symbol based style. */
 typedef union CanNm_TxControlStateRequestUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_TxControlStateRequestType raw[5];
+  CanNm_TxControlStateRequestType raw[4];
   CanNm_TxControlStateRequestStructSType str;
 } CanNm_TxControlStateRequestUType;
 
 /**   \brief  type to access CanNm_WaitBusSleepTimer in an index and symbol based style. */
 typedef union CanNm_WaitBusSleepTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_WaitBusSleepTimerType raw[5];
+  CanNm_WaitBusSleepTimerType raw[4];
   CanNm_WaitBusSleepTimerStructSType str;
 } CanNm_WaitBusSleepTimerUType;
 
@@ -1709,9 +1634,6 @@ typedef P2VAR(CanNm_CommStateType, TYPEDEF, CANNM_VAR_NOINIT) CanNm_CommStatePtr
 
 /**   \brief  type used to point to CanNm_CoordReadyToSleepState */
 typedef P2VAR(CanNm_CoordReadyToSleepStateType, TYPEDEF, CANNM_VAR_NOINIT) CanNm_CoordReadyToSleepStatePtrType;
-
-/**   \brief  type used to point to CanNm_ImmediateNmMsgCount */
-typedef P2VAR(CanNm_ImmediateNmMsgCountType, TYPEDEF, CANNM_VAR_NOINIT) CanNm_ImmediateNmMsgCountPtrType;
 
 /**   \brief  type used to point to CanNm_ModuleInitialized */
 typedef P2VAR(CanNm_ModuleInitializedType, TYPEDEF, CANNM_VAR_ZERO_INIT) CanNm_ModuleInitializedPtrType;
@@ -1806,26 +1728,24 @@ typedef CanNm_PCConfigType CanNm_ConfigType;  /**< A structure type is present f
 /** 
   \var    CanNm_ChannelConfig
   \details
-  Element                     Description
-  ComControlEnabled           Determines if Com Control is active or not
-  NodeIdEnabled               Determines if Node Ids are enabled or not
-  ChannelId                   Channel ID configured for the respective instance of the NM.
-  ImmediateNmCycleTime        Fast NM PDU Transmission Time during WUP
-  ImmediateNmTransmissions    Number of fast NM PDU Transmissions during WUP
-  MsgCycleTime                Period of a NM message [ms]. It determines the periodic rate in the periodic transmission mode.
-  MsgTimeoutTime              Transmission Timeout [ms] of NM message. If there is no transmission confirmation by the CAN Interface within this timeout, the CAN NM module shall give an error notification.
-  PduCbvPosition              Control Bit Vector Position in the PDU
-  PduNidPosition              Node ID Position in the PDU
-  RemoteSleepIndTime          Timeout for Remote Sleep Indication [ms].
-  RepeatMessageTime           Timeout for Repeat Message State [ms].
-  TimeoutTime                 Timeout for the NM messages [ms].
-  WaitBusSleepTime            Timeout for bus calm down phase [ms].
+  Element               Description
+  ComControlEnabled     Determines if Com Control is active or not
+  NodeIdEnabled         Determines if Node Ids are enabled or not
+  ChannelId             Channel ID configured for the respective instance of the NM.
+  MsgCycleTime          Period of a NM message [ms]. It determines the periodic rate in the periodic transmission mode.
+  MsgTimeoutTime        Transmission Timeout [ms] of NM message. If there is no transmission confirmation by the CAN Interface within this timeout, the CAN NM module shall give an error notification.
+  PduCbvPosition        Control Bit Vector Position in the PDU
+  PduNidPosition        Node ID Position in the PDU
+  RemoteSleepIndTime    Timeout for Remote Sleep Indication [ms].
+  RepeatMessageTime     Timeout for Repeat Message State [ms].
+  TimeoutTime           Timeout for the NM messages [ms].
+  WaitBusSleepTime      Timeout for bus calm down phase [ms].
 */ 
 #define CANNM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[5];
+extern CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[4];
 #define CANNM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1862,7 +1782,7 @@ extern CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanNm_PbChannelConfigType, CANNM_CONST) CanNm_PbChannelConfig[5];
+extern CONST(CanNm_PbChannelConfigType, CANNM_CONST) CanNm_PbChannelConfig[4];
 #define CANNM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1879,7 +1799,7 @@ extern CONST(CanNm_PbChannelConfigType, CANNM_CONST) CanNm_PbChannelConfig[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanNm_SysToNmChIndType, CANNM_CONST) CanNm_SysToNmChInd[9];
+extern CONST(CanNm_SysToNmChIndType, CANNM_CONST) CanNm_SysToNmChInd[8];
 #define CANNM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1914,19 +1834,6 @@ extern VAR(CanNm_CommStateUType, CANNM_VAR_NOINIT) CanNm_CommState;  /* PRQA S 0
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern VAR(CanNm_CoordReadyToSleepStateUType, CANNM_VAR_NOINIT) CanNm_CoordReadyToSleepState;  /* PRQA S 0759 */  /* MD_CSL_Union */
-#define CANNM_STOP_SEC_VAR_NOINIT_8BIT
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-
-/**********************************************************************************************************************
-  CanNm_ImmediateNmMsgCount
-**********************************************************************************************************************/
-#define CANNM_START_SEC_VAR_NOINIT_8BIT
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-extern VAR(CanNm_ImmediateNmMsgCountUType, CANNM_VAR_NOINIT) CanNm_ImmediateNmMsgCount;  /* PRQA S 0759 */  /* MD_CSL_Union */
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2059,7 +1966,7 @@ extern VAR(CanNm_RepeatMsgTimerUType, CANNM_VAR_NOINIT) CanNm_RepeatMsgTimer;  /
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(CanNm_RxMessageDataType, CANNM_VAR_NOINIT) CanNm_RxMessageData[40];
+extern VAR(CanNm_RxMessageDataType, CANNM_VAR_NOINIT) CanNm_RxMessageData[32];
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2123,7 +2030,7 @@ extern VAR(CanNm_TxControlStateRequestUType, CANNM_VAR_NOINIT) CanNm_TxControlSt
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(CanNm_TxMessageDataType, CANNM_VAR_NOINIT) CanNm_TxMessageData[40];
+extern VAR(CanNm_TxMessageDataType, CANNM_VAR_NOINIT) CanNm_TxMessageData[32];
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

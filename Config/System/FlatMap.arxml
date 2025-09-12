@@ -65,35 +65,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="b88ce1db-4eca-4a5f-8734-d9c9a31f8dd5">
                                   <SHORT-NAME>VcuRxMsg1_Sig0</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg1_Sig0</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuRxMsg1_Sig0</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig0/VcuRxMsg1_Sig0</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig0</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig0/VcuRxMsg1_Sig0</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="6d496971-ef10-4625-9224-f3dea73dc04b">
-                                  <SHORT-NAME>VcuRxMsg1_Sig0_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -110,35 +81,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="4f045035-6db1-4001-a874-a2833c4b7f9a">
                                   <SHORT-NAME>VcuRxMsg1_Sig2</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg1_Sig2</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuRxMsg1_Sig2</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig2/VcuRxMsg1_Sig2</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig2</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig2/VcuRxMsg1_Sig2</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="c59692ff-148f-4769-b361-e1f6fcd5bd81">
-                                  <SHORT-NAME>VcuRxMsg1_Sig2_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -155,35 +97,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="6da6a2fa-678c-47bb-811e-a915bc78801a">
                                   <SHORT-NAME>VcuRxMsg1_Sig1</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg1_Sig1</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuRxMsg1_Sig1</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig1/VcuRxMsg1_Sig1</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig1</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig1/VcuRxMsg1_Sig1</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="a90167a3-9c67-43c1-8507-69a9eca3ff39">
-                                  <SHORT-NAME>VcuRxMsg1_Sig1_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -200,35 +113,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="22585ac9-d895-419b-ac8a-ec5a9c4de061">
                                   <SHORT-NAME>VcuRxMsg2_Sig3</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg2_Sig3</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuRxMsg2_Sig3</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig3/VcuRxMsg2_Sig3</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig3</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig3/VcuRxMsg2_Sig3</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="b00f69d1-d017-4a84-8d75-dfa8119162a9">
-                                  <SHORT-NAME>VcuRxMsg2_Sig3_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -245,35 +129,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="9cf60628-9dad-4213-b835-1217a5f37952">
                                   <SHORT-NAME>VcuRxMsg1_Sig3</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg1_Sig3</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuRxMsg1_Sig3</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig3/VcuRxMsg1_Sig3</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig3</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig3/VcuRxMsg1_Sig3</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="51c0b0c3-9b85-4349-a86b-eb765315f146">
-                                  <SHORT-NAME>VcuRxMsg1_Sig3_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -290,35 +145,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="31333e69-3cfa-49d6-ad73-5a34938550c1">
                                   <SHORT-NAME>VcuRxMsg2_Sig0</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg2_Sig0</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuRxMsg2_Sig0</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig0/VcuRxMsg2_Sig0</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig0</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig0/VcuRxMsg2_Sig0</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="9991c6e0-5dab-4615-922e-33e7be14cceb">
-                                  <SHORT-NAME>VcuRxMsg2_Sig0_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -335,35 +161,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="a268c664-7298-4466-bc87-400f6742883f">
                                   <SHORT-NAME>VcuRxMsg2_Sig2</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg2_Sig2</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuRxMsg2_Sig2</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig2/VcuRxMsg2_Sig2</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig2</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig2/VcuRxMsg2_Sig2</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="ef2a2510-c505-4210-88d9-43a1b29fd3eb">
-                                  <SHORT-NAME>VcuRxMsg2_Sig2_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -380,35 +177,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="b92e08fa-c9ad-4074-a333-b0e303873823">
                                   <SHORT-NAME>VcuRxMsg2_Sig1</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg2_Sig1</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuRxMsg2_Sig1</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig1/VcuRxMsg2_Sig1</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig1</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig1/VcuRxMsg2_Sig1</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="f9b18f2d-7986-476a-bb2b-bd4cd5ff3ab7">
-                                  <SHORT-NAME>VcuRxMsg2_Sig1_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -425,35 +193,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="cb448dcd-0956-4d09-a807-7d0bb71a3e26">
                                   <SHORT-NAME>VcuTxMsg1_Sig1</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg1_Sig1</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuTxMsg1_Sig1</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig1/VcuTxMsg1_Sig1</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig1</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig1/VcuTxMsg1_Sig1</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="d5ae36b9-4031-4299-b841-f6bef5118a5b">
-                                  <SHORT-NAME>VcuTxMsg1_Sig1_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -470,35 +209,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="bee6e187-b87a-458f-833f-c289ddf28506">
                                   <SHORT-NAME>VcuTxMsg2_Sig1</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg2_Sig1</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuTxMsg2_Sig1</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig1/VcuTxMsg2_Sig1</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig1</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig1/VcuTxMsg2_Sig1</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="af27c567-bc47-4ed9-beab-a0e8bf1d1ec2">
-                                  <SHORT-NAME>VcuTxMsg2_Sig1_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -515,35 +225,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="ce866f83-2f64-4f67-9300-f0c2f7935f7e">
                                   <SHORT-NAME>VcuTxMsg2_Sig2</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg2_Sig2</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuTxMsg2_Sig2</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig2/VcuTxMsg2_Sig2</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig2</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig2/VcuTxMsg2_Sig2</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="4cc5d3d8-0fe7-4047-b618-afc49502e259">
-                                  <SHORT-NAME>VcuTxMsg2_Sig2_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -560,35 +241,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="c30649ac-2a5b-445e-adb7-8e2fe7cac62c">
                                   <SHORT-NAME>VcuTxMsg1_Sig3</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg1_Sig3</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuTxMsg1_Sig3</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig3/VcuTxMsg1_Sig3</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig3</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig3/VcuTxMsg1_Sig3</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="fa6736a5-6bc4-4953-ab44-dea9ccd4b0eb">
-                                  <SHORT-NAME>VcuTxMsg1_Sig3_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -605,35 +257,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="a99bab7e-1962-4e0c-b18f-c94674b0b5ed">
                                   <SHORT-NAME>VcuTxMsg2_Sig0</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg2_Sig0</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuTxMsg2_Sig0</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig0/VcuTxMsg2_Sig0</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig0</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig0/VcuTxMsg2_Sig0</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="82d1af19-7e47-441a-a032-f6c2b69795a4">
-                                  <SHORT-NAME>VcuTxMsg2_Sig0_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -650,35 +273,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="10423d9e-966b-4d88-b2bb-2a968ad84235">
                                   <SHORT-NAME>VcuTxMsg2_Sig3</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg2_Sig3</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuTxMsg2_Sig3</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig3/VcuTxMsg2_Sig3</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig3</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig3/VcuTxMsg2_Sig3</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="0c5d53e6-937c-44ba-ad9f-5967706eaa05">
-                                  <SHORT-NAME>VcuTxMsg2_Sig3_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -695,35 +289,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="e9688c7b-1433-426b-ab6b-d222f83f47b3">
                                   <SHORT-NAME>VcuTxMsg1_Sig2</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg1_Sig2</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuTxMsg1_Sig2</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig2/VcuTxMsg1_Sig2</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig2</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig2/VcuTxMsg1_Sig2</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="3f329778-3b46-47e3-a10d-809a48d245b0">
-                                  <SHORT-NAME>VcuTxMsg1_Sig2_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -740,35 +305,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="a0525b6d-7cd5-4209-adf8-e2c7bc9c68b9">
                                   <SHORT-NAME>VcuTxMsg1_Sig0</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg1_Sig0</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/VcuTxMsg1_Sig0</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig0/VcuTxMsg1_Sig0</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig0</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig0/VcuTxMsg1_Sig0</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="9bbe7e31-fea7-462d-b5e2-8aa759fe91fb">
-                                  <SHORT-NAME>VcuTxMsg1_Sig0_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -945,35 +481,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="503a39ab-75a8-4a34-834d-20812befda0e">
                                   <SHORT-NAME>EXT1_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT1_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT1_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT1_Valid/EXT1_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT1_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT1_Valid/EXT1_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="58ab5a1b-1ccf-4f4e-bd89-e577dfaff835">
-                                  <SHORT-NAME>EXT1_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -990,35 +497,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="374a87b9-08c3-43ea-a9bf-759698cd9527">
                                   <SHORT-NAME>EXT3_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT3_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT3_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT3_Valid/EXT3_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT3_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT3_Valid/EXT3_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="482270a8-7620-4165-bdc5-eb9cf571a8db">
-                                  <SHORT-NAME>EXT3_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1035,35 +513,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="b299de45-46ce-40dd-adec-8e3a6e708773">
                                   <SHORT-NAME>EXT_A_IN4</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN4</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN4</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN4/EXT_A_IN4</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN4</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN4/EXT_A_IN4</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="0983d554-bf61-4b00-88f0-86650667c19b">
-                                  <SHORT-NAME>EXT_A_IN4_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1080,35 +529,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="54404466-8b08-4fb6-92e7-791b5928ce83">
                                   <SHORT-NAME>EXT2_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT2_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT2_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT2_Valid/EXT2_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT2_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT2_Valid/EXT2_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="89862a55-8ac5-47ff-b9ca-def865a36802">
-                                  <SHORT-NAME>EXT2_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1125,35 +545,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="f572e017-b7cd-4f1d-986a-2181e8754f85">
                                   <SHORT-NAME>EXT4_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT4_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT4_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT4_Valid/EXT4_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT4_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT4_Valid/EXT4_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="7259cfe8-d875-4bac-8e87-9982ffd229d3">
-                                  <SHORT-NAME>EXT4_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1170,35 +561,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="82ce1393-5518-43c5-8a82-23692fd6ace7">
                                   <SHORT-NAME>EXT_A_IN1</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN1</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN1</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN1/EXT_A_IN1</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN1</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN1/EXT_A_IN1</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="40c659e2-8e07-4b35-b4f6-8fc9b0c15078">
-                                  <SHORT-NAME>EXT_A_IN1_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1215,35 +577,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="6701593d-3f71-4538-8cf0-d686fd2dfda1">
                                   <SHORT-NAME>EXT_A_IN2</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN2</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN2</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN2/EXT_A_IN2</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN2</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN2/EXT_A_IN2</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="e8865939-0353-459e-8a80-21179db95a99">
-                                  <SHORT-NAME>EXT_A_IN2_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1260,35 +593,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="7792f049-48d2-44b3-b9f1-a8b20c7da38f">
                                   <SHORT-NAME>EXT_A_IN3</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN3</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN3</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN3/EXT_A_IN3</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN3</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN3/EXT_A_IN3</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="a23092c7-10cf-4c1a-9411-6c9ef35b1879">
-                                  <SHORT-NAME>EXT_A_IN3_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1305,35 +609,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="1a361835-17d9-4456-b515-6ea2342c5135">
                                   <SHORT-NAME>EXT10_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT10_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT10_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT10_Valid/EXT10_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT10_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT10_Valid/EXT10_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="1ba8388b-2142-4a0c-bc19-906a39b5fe55">
-                                  <SHORT-NAME>EXT10_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1350,35 +625,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="fcf3697c-a2cf-4ec0-91b2-83fd443fdcd8">
                                   <SHORT-NAME>EXT12_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT12_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT12_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT12_Valid/EXT12_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT12_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT12_Valid/EXT12_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="0900f2d7-a238-4b72-bc98-58d1cfda3666">
-                                  <SHORT-NAME>EXT12_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1395,35 +641,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="6160503c-e969-45f2-b6f9-06dd0002e257">
                                   <SHORT-NAME>EXT15_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT15_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT15_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT15_Valid/EXT15_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT15_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT15_Valid/EXT15_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="ef59d707-a614-4624-a1a8-258750e801e9">
-                                  <SHORT-NAME>EXT15_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1440,35 +657,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="a99454fc-9bb4-4af3-8d1c-8b3245da54bc">
                                   <SHORT-NAME>EXT5_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT5_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT5_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT5_Valid/EXT5_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT5_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT5_Valid/EXT5_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="1ff2d243-2e92-4628-b3bf-d3d3f41c552a">
-                                  <SHORT-NAME>EXT5_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1485,35 +673,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="fefaeab0-bd0a-4aa9-aec2-9cdb5d86c0fa">
                                   <SHORT-NAME>EXT_A_IN15</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN15</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN15</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN15/EXT_A_IN15</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN15</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN15/EXT_A_IN15</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="3659ce86-dfb2-4d2b-96fb-448ac5bb1b9b">
-                                  <SHORT-NAME>EXT_A_IN15_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1530,35 +689,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="e330f152-1f1d-4515-af4c-b909714f9e07">
                                   <SHORT-NAME>EXT7_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT7_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT7_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT7_Valid/EXT7_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT7_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT7_Valid/EXT7_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="c7a61a9d-1b24-4f9a-861d-5f9f3d716ee8">
-                                  <SHORT-NAME>EXT7_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1575,35 +705,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="6806b926-4130-4ef7-9c00-3c249891b538">
                                   <SHORT-NAME>EXT_A_IN13</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN13</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN13</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN13/EXT_A_IN13</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN13</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN13/EXT_A_IN13</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="cc35ffad-6f07-4022-ac81-7dd3bfde5dd8">
-                                  <SHORT-NAME>EXT_A_IN13_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1620,35 +721,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="a77db68a-a818-4ff8-9d5b-f2fce6976fed">
                                   <SHORT-NAME>EXT_A_IN5</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN5</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN5</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN5/EXT_A_IN5</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN5</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN5/EXT_A_IN5</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="53582033-a86c-4e7d-aa6d-49673684b0ab">
-                                  <SHORT-NAME>EXT_A_IN5_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1665,35 +737,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="0f6c038e-71d0-40f6-84a7-d187aef6fc42">
                                   <SHORT-NAME>EXT6_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT6_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT6_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT6_Valid/EXT6_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT6_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT6_Valid/EXT6_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="121a1df6-8cca-4222-9ad1-b56ef9a6a6f4">
-                                  <SHORT-NAME>EXT6_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1710,35 +753,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="6b824ab5-bb11-4774-a1c9-80feb076a4dc">
                                   <SHORT-NAME>EXT_A_IN12</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN12</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN12</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN12/EXT_A_IN12</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN12</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN12/EXT_A_IN12</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="91b53702-691a-4f00-9a17-4f21afbc9fd8">
-                                  <SHORT-NAME>EXT_A_IN12_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1755,35 +769,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="a01afa9f-ccaf-41dd-b8c3-5925856b645e">
                                   <SHORT-NAME>EXT_A_IN7</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN7</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN7</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN7/EXT_A_IN7</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN7</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN7/EXT_A_IN7</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="76585115-0c3f-4ce7-82cd-6b5dbc3f1daa">
-                                  <SHORT-NAME>EXT_A_IN7_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1800,35 +785,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="a2420cdf-7202-4c0e-95b5-5c5e85224851">
                                   <SHORT-NAME>EXT13_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT13_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT13_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT13_Valid/EXT13_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT13_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT13_Valid/EXT13_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="d84cd4d1-51f1-4108-b863-840a95addfdf">
-                                  <SHORT-NAME>EXT13_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1845,35 +801,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="62dda28d-6f11-499b-893f-fbd3262485d7">
                                   <SHORT-NAME>EXT_A_IN9</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN9</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN9</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN9/EXT_A_IN9</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN9</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN9/EXT_A_IN9</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="863f338b-4ae5-42d3-9ff2-551f12443af3">
-                                  <SHORT-NAME>EXT_A_IN9_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1890,35 +817,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="3e36e5d6-78fc-4fed-839a-fa75fcdc1681">
                                   <SHORT-NAME>EXT9_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT9_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT9_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT9_Valid/EXT9_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT9_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT9_Valid/EXT9_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="ad25aa84-18d7-4cc0-a20f-fc5691a4fd3d">
-                                  <SHORT-NAME>EXT9_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1935,35 +833,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="5e5a6f01-f155-469b-bd23-52441ea0e3c2">
                                   <SHORT-NAME>EXT8_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT8_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT8_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT8_Valid/EXT8_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT8_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT8_Valid/EXT8_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="f72f6741-30f2-4b70-b277-b4119acff0c8">
-                                  <SHORT-NAME>EXT8_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -1980,35 +849,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="34b93b97-abdc-4858-b228-4665775d1134">
                                   <SHORT-NAME>EXT11_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT11_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT11_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT11_Valid/EXT11_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT11_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT11_Valid/EXT11_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="b6954ef8-879e-49bc-8440-9ddaedc4ffeb">
-                                  <SHORT-NAME>EXT11_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -2025,35 +865,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="a5a4edaa-c3fb-45f8-b2d0-039bf9b8b73f">
                                   <SHORT-NAME>EXT_A_IN6</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN6</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN6</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN6/EXT_A_IN6</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN6</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN6/EXT_A_IN6</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="e3cd43e0-d0aa-4d47-bf79-5605809ca4c9">
-                                  <SHORT-NAME>EXT_A_IN6_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -2070,35 +881,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="8c917ee4-fc26-485d-af9e-d335613b40ba">
                                   <SHORT-NAME>EXT16_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT16_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT16_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT16_Valid/EXT16_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT16_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT16_Valid/EXT16_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="9c23ceed-abfe-48a4-91b1-c1cfea5d71e8">
-                                  <SHORT-NAME>EXT16_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -2115,35 +897,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="178cbc13-5246-43e5-89b0-b7f388d94070">
                                   <SHORT-NAME>EXT14_Valid</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT14_Valid</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT14_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT14_Valid/EXT14_Valid</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT14_Valid</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT14_Valid/EXT14_Valid</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="e8febc56-a33e-4683-80dd-3bdda51a89ce">
-                                  <SHORT-NAME>EXT14_Valid_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -2160,35 +913,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="287f810f-c8b4-4a50-b7bc-c4e2f7082e31">
                                   <SHORT-NAME>EXT_A_IN16</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN16</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN16</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN16/EXT_A_IN16</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN16</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN16/EXT_A_IN16</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="dff23b1f-c661-44a0-9b89-4aad16c10645">
-                                  <SHORT-NAME>EXT_A_IN16_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -2205,35 +929,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="f1748c9c-34cf-4c1c-9ced-51bfeaa8c77b">
                                   <SHORT-NAME>EXT_A_IN11</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN11</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN11</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN11/EXT_A_IN11</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN11</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN11/EXT_A_IN11</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="7af347fb-6a12-4593-8361-2b5f34d1fa74">
-                                  <SHORT-NAME>EXT_A_IN11_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -2250,35 +945,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="a5a1b207-8a41-4921-aad1-2ca490ac03a5">
                                   <SHORT-NAME>EXT_A_IN8</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN8</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN8</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN8/EXT_A_IN8</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN8</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN8/EXT_A_IN8</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="055e6332-7327-4e9f-bdba-d77efa53ef04">
-                                  <SHORT-NAME>EXT_A_IN8_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -2295,35 +961,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="d59eb0aa-ab4e-4f1a-b214-4fc190667a33">
                                   <SHORT-NAME>EXT_A_IN14</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN14</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN14</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN14/EXT_A_IN14</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN14</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN14/EXT_A_IN14</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="d3a13586-e7ff-4e43-8620-3e12b5412869">
-                                  <SHORT-NAME>EXT_A_IN14_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
@@ -2340,35 +977,6 @@
                                 </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="affce82b-0df7-4d91-b110-5a1ac29bde73">
                                   <SHORT-NAME>EXT_A_IN10</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:CfgNamedRefs">
-                                        <SDG GID="DV:CfgFlattener">
-                                          <SDG GID="DV:CfgMappedSignalOrSignalGroup">
-                                            <SDX-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN10</SDX-REF>
-                                          </SDG>
-                                        </SDG>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/EXT_A_IN10</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN10/EXT_A_IN10</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <CONTEXT-ELEMENT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN10</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN10/EXT_A_IN10</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="71e4d222-bc15-4a63-ad14-e1b774fe2c43">
-                                  <SHORT-NAME>EXT_A_IN10_001</SHORT-NAME>
                                   <ANNOTATIONS>
                                     <ANNOTATION>
                                       <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>

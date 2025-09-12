@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Cfg.h
- *   Generation Time: 2025-09-12 10:25:41
+ *   Generation Time: 2025-09-12 11:08:09
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -487,7 +487,7 @@
 /*! Maximum number of connections */
 # define DCM_NET_MAX_NUM_CONNECTIONS                                            2u
 /*! Number of channels from main connections and ComControl channels */
-# define DCM_NET_MAX_NUM_ALL_COMM_CHANNELS                                        2u
+# define DCM_NET_MAX_NUM_ALL_COMM_CHANNELS                                        1u
 /*! The default DemClientId */
 # define DCM_NET_DEFAULT_DEM_CLIENTID                                          DemConf_DemClient_DemClient
 /*! The number of periodic messages to be sent within the delay time */
@@ -531,7 +531,7 @@
 /*! Size of table Dcm_CfgNetProtocolInfo */
 # define DCM_CFGNETPROTOCOLINFO_SIZE                                            1u
 /*! Size of table Dcm_CfgNetAllComMChannelMap */
-# define DCM_CFGNETALLCOMMCHANNELMAP_SIZE                                       2u
+# define DCM_CFGNETALLCOMMCHANNELMAP_SIZE                                       1u
 /*! Size of table Dcm_CfgNetConnComMChannelMap */
 # define DCM_CFGNETCONNCOMMCHANNELMAP_SIZE                                      1u
 /*! Size of table Dcm_CfgNetNetworkHandleLookUpTable */

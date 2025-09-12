@@ -22,19 +22,19 @@ uint8 Msg200h_Timeout = 0;
 
 FUNC(void, COM_APPL_CODE) Com_Msg200h_Timeout_Notification(void)
 {
-  Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0( Calib_Sig0[0] );
-  Rte_Write_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1( Calib_Sig0[0] );
-  Rte_Write_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2( Calib_Sig0[0] );
-  Rte_Write_Com_SWC_VcuTxMsg1_Sig3_VcuTxMsg1_Sig3( Calib_Sig0[0] );
+//  Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0( Calib_Sig0[0] );
+//  Rte_Write_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1( Calib_Sig0[0] );
+//  Rte_Write_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2( Calib_Sig0[0] );
+//  Rte_Write_Com_SWC_VcuTxMsg1_Sig3_VcuTxMsg1_Sig3( Calib_Sig0[0] );
   Msg200h_Timeout = 1;	
 }
 
 FUNC(void, COM_APPL_CODE) Com_Msg201h_Timeout_Notification(void)
 {
-  Rte_Write_Com_SWC_VcuTxMsg2_Sig0_VcuTxMsg2_Sig0( Calib_Sig1[0] );
-  Rte_Write_Com_SWC_VcuTxMsg2_Sig1_VcuTxMsg2_Sig1( Calib_Sig1[0] );
-  Rte_Write_Com_SWC_VcuTxMsg2_Sig2_VcuTxMsg2_Sig2( Calib_Sig1[0] );
-  Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3( Calib_Sig1[0] );
+//  Rte_Write_Com_SWC_VcuTxMsg2_Sig0_VcuTxMsg2_Sig0( Calib_Sig1[0] );
+//  Rte_Write_Com_SWC_VcuTxMsg2_Sig1_VcuTxMsg2_Sig1( Calib_Sig1[0] );
+//  Rte_Write_Com_SWC_VcuTxMsg2_Sig2_VcuTxMsg2_Sig2( Calib_Sig1[0] );
+//  Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3( Calib_Sig1[0] );
 }
 
 void SetMsg200hTimeout( uint8 val )

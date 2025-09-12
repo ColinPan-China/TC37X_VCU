@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Lcfg.c
- *   Generation Time: 2025-09-12 10:25:41
+ *   Generation Time: 2025-09-12 11:08:09
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -337,7 +337,7 @@ CONST(Dcm_CfgNetNetIdRefMemType, DCM_CONST) Dcm_CfgNetConnComMChannelMap[1]=
 CONST(Dcm_CfgNetNetIdRefMemType, DCM_CONST) Dcm_CfgNetComCtrlChannelListAll[2]=
 {
    1u
-  , 1u
+  , 0u
 };
 /*! Look up table of all supported transfer ALFIDs */
 CONST(uint8, DCM_CONST) Dcm_CfgFblMgrTransferAlfidLookUpTable[17]=
@@ -571,10 +571,9 @@ CONST(Dcm_CfgNetProtocolInfoType, DCM_CONST) Dcm_CfgNetProtocolInfo[1]=
    { {        0u,       0u},4095u, 3u, 0u,TRUE,0u,DemConf_DemClient_DemClient, 0u}
 };
 /*! Map of all relevant for DCM network handles */
-CONST(NetworkHandleType, DCM_CONST) Dcm_CfgNetAllComMChannelMap[2]=
+CONST(NetworkHandleType, DCM_CONST) Dcm_CfgNetAllComMChannelMap[1]=
 {
    ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d
-  ,ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8
 };
 /*! Look up table of DCM relevant network handles */
 CONST(NetworkHandleType, DCM_CONST) Dcm_CfgNetNetworkHandleLookUpTable[2]=
@@ -1486,29 +1485,6 @@ CONST(Dcm_CfgSvc85SubFuncInfoType, DCM_CONST) Dcm_CfgSvc85SubFuncInfo[2]=
 /**********************************************************************************************************************
  *  GLOBAL FUNCTIONS
  *********************************************************************************************************************/
-#define DCM_START_SEC_CODE
-#include "MemMap.h"                                                                                                                                  /* PRQA S 5087 */ /* MD_MSR_MemMap */
-/***********************************************************************************************************************
- *  Dcm_ModeOnComControlModeChange()
-***********************************************************************************************************************/
-/* Implements CDD Dcm_ModeOnComControlModeChange() */
-FUNC(void, DCM_CODE) Dcm_ModeOnComControlModeChange(NetworkHandleType channelId, Dcm_CommunicationModeType mode)
-{
-  switch(channelId)
-  {
-    case ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d:
-      ((void)(Rte_Switch_DcmCommunicationControl_ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_DcmCommunicationControl_ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d(mode)));
-      break;
-    case ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8:
-      ((void)(Rte_Switch_DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8_DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8(mode)));
-      break;
-    default: /* Just exit the switch case */
-      break;
-  }
-}
-#define DCM_STOP_SEC_CODE
-#include "MemMap.h"                                                                                                                                  /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
 #define DCM_START_SEC_CALLOUT_CODE
 #include "MemMap.h"                                                                                                                                  /* PRQA S 5087 */ /* MD_MSR_MemMap */
 /***********************************************************************************************************************

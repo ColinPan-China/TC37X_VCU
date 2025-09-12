@@ -30,99 +30,6 @@
                                   <FIBEX-ELEMENT-REF DEST="NM-CONFIG">/NM/NmConfig</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-CLUSTER">/Cluster/TC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oTC37X_VCU_CAN00_Rx</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU-GROUP">/IPDUGroup/VCU_oTC37X_VCU_CAN00_Tx</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Rx_500h_NM_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuRxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuTxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuRxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuTxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="NM-PDU">/PDU/VCU_Rx_500h_NM_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="NM-PDU">/PDU/VCU_Tx_51Ch_NM_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg1_Sig0_oVcuTxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg1_Sig1_oVcuTxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg1_Sig2_oVcuTxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg1_Sig3_oVcuTxMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg2_Sig0_oVcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg2_Sig1_oVcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg2_Sig2_oVcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/VcuTxMsg2_Sig3_oVcuTxMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="CAN-CLUSTER">/Cluster/TC37X_VCU_CAN01</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
@@ -208,150 +115,6 @@
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="N-PDU">/PDU/SlaveResp_Tp_oLIN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuTxIoMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuTxIoMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuTxIoMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuTxIoMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN1_oVcuTxIoMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN2_oVcuTxIoMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN3_oVcuTxIoMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN4_oVcuTxIoMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT1_Valid_oVcuTxIoMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT2_Valid_oVcuTxIoMsg1_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT3_Valid_oVcuTxIoMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT4_Valid_oVcuTxIoMsg2_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuTxIoMsg3_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuTxIoMsg4_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuTxIoMsg5_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuTxIoMsg6_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuTxIoMsg7_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="CAN-FRAME">/CanFrame/VcuTxIoMsg8_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuTxIoMsg3_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuTxIoMsg4_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuTxIoMsg5_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuTxIoMsg6_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuTxIoMsg7_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL-I-PDU">/PDU/VcuTxIoMsg8_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN10_oVcuTxIoMsg5_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN11_oVcuTxIoMsg6_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN12_oVcuTxIoMsg6_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN13_oVcuTxIoMsg7_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN14_oVcuTxIoMsg7_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN15_oVcuTxIoMsg8_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN16_oVcuTxIoMsg8_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN5_oVcuTxIoMsg3_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN6_oVcuTxIoMsg3_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN7_oVcuTxIoMsg4_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN8_oVcuTxIoMsg4_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT_A_IN9_oVcuTxIoMsg5_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT10_Valid_oVcuTxIoMsg5_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT11_Valid_oVcuTxIoMsg6_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT12_Valid_oVcuTxIoMsg6_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT13_Valid_oVcuTxIoMsg7_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT14_Valid_oVcuTxIoMsg7_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT15_Valid_oVcuTxIoMsg8_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT16_Valid_oVcuTxIoMsg8_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT5_Valid_oVcuTxIoMsg3_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT6_Valid_oVcuTxIoMsg3_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT7_Valid_oVcuTxIoMsg4_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT8_Valid_oVcuTxIoMsg4_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
-                                </FIBEX-ELEMENT-REF-CONDITIONAL>
-                                <FIBEX-ELEMENT-REF-CONDITIONAL>
-                                  <FIBEX-ELEMENT-REF DEST="I-SIGNAL">/ISignal/EXT9_Valid_oVcuTxIoMsg5_oTC37X_VCU_CAN00</FIBEX-ELEMENT-REF>
                                 </FIBEX-ELEMENT-REF-CONDITIONAL>
                                 <FIBEX-ELEMENT-REF-CONDITIONAL>
                                   <FIBEX-ELEMENT-REF DEST="LIN-UNCONDITIONAL-FRAME">/LinFrame/EDCU_EXV2_oLIN00</FIBEX-ELEMENT-REF>
@@ -4453,390 +4216,6 @@
                                     <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
                                       <DATA-ELEMENT-IREF>
                                         <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig0</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig0/VcuRxMsg1_Sig0</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg1_Sig0</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig2</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig2/VcuRxMsg1_Sig2</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg1_Sig2</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig1</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig1/VcuRxMsg1_Sig1</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg1_Sig1</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig3</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig3/VcuRxMsg2_Sig3</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg2_Sig3</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg1_Sig3</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg1_Sig3/VcuRxMsg1_Sig3</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg1_Sig3</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig0</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig0/VcuRxMsg2_Sig0</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg2_Sig0</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig2</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig2/VcuRxMsg2_Sig2</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg2_Sig2</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuRxMsg2_Sig1</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuRxMsg2_Sig1/VcuRxMsg2_Sig1</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuRxMsg2_Sig1</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig1</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig1/VcuTxMsg1_Sig1</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg1_Sig1</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig1</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig1/VcuTxMsg2_Sig1</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg2_Sig1</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig2</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig2/VcuTxMsg2_Sig2</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg2_Sig2</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig3</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig3/VcuTxMsg1_Sig3</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg1_Sig3</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig0</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig0/VcuTxMsg2_Sig0</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg2_Sig0</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg2_Sig3</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg2_Sig3/VcuTxMsg2_Sig3</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg2_Sig3</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig2</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig2/VcuTxMsg1_Sig2</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg1_Sig2</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/VcuTxMsg1_Sig0</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/VcuTxMsg1_Sig0/VcuTxMsg1_Sig0</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/VcuTxMsg1_Sig0</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT1_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT1_Valid/EXT1_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT1_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT3_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT3_Valid/EXT3_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT3_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN4</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN4/EXT_A_IN4</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN4</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT2_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT2_Valid/EXT2_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT2_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT4_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT4_Valid/EXT4_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT4_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN1</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN1/EXT_A_IN1</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN1</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN2</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN2/EXT_A_IN2</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN2</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN3</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN3/EXT_A_IN3</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN3</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT10_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT10_Valid/EXT10_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT10_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT12_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT12_Valid/EXT12_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT12_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT15_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT15_Valid/EXT15_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT15_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT5_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT5_Valid/EXT5_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT5_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN15</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN15/EXT_A_IN15</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN15</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT7_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT7_Valid/EXT7_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT7_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN13</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN13/EXT_A_IN13</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN13</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN5</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN5/EXT_A_IN5</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN5</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT6_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT6_Valid/EXT6_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT6_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN12</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN12/EXT_A_IN12</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN12</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN7</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN7/EXT_A_IN7</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN7</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT13_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT13_Valid/EXT13_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT13_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN9</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN9/EXT_A_IN9</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN9</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT9_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT9_Valid/EXT9_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT9_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT8_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT8_Valid/EXT8_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT8_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT11_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT11_Valid/EXT11_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT11_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN6</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN6/EXT_A_IN6</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN6</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT16_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT16_Valid/EXT16_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT16_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT14_Valid</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT14_Valid/EXT14_Valid</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT14_Valid</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN16</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN16/EXT_A_IN16</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN16</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN11</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN11/EXT_A_IN11</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN11</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN8</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN8/EXT_A_IN8</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN8</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN14</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN14/EXT_A_IN14</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN14</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
-                                        <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_A_IN10</CONTEXT-PORT-REF>
-                                        <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/EXT_A_IN10/EXT_A_IN10</TARGET-DATA-PROTOTYPE-REF>
-                                      </DATA-ELEMENT-IREF>
-                                      <SYSTEM-SIGNAL-REF DEST="SYSTEM-SIGNAL">/Signal/EXT_A_IN10</SYSTEM-SIGNAL-REF>
-                                    </SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                    <SENDER-RECEIVER-TO-SIGNAL-MAPPING>
-                                      <DATA-ELEMENT-IREF>
-                                        <CONTEXT-COMPOSITION-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-COMPOSITION-REF>
                                         <CONTEXT-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP2_SpdSet</CONTEXT-PORT-REF>
                                         <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP2_SpdSet/ECC_PMP2_SpdSet</TARGET-DATA-PROTOTYPE-REF>
                                       </DATA-ELEMENT-IREF>
@@ -8891,17 +8270,6 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Request_ESH_RunRequest_0</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
-                                <ASSEMBLY-SW-CONNECTOR UUID="2ff06897-3419-41ff-918e-dcb198635394">
-                                  <SHORT-NAME>ComM_UR_CN_TC37X_VCU_CAN00_b1b4f272_SWC1_UR_CN_TC37X_VCU_CAN00_b1b4f272</SHORT-NAME>
-                                  <PROVIDER-IREF>
-                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</CONTEXT-COMPONENT-REF>
-                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_TC37X_VCU_CAN00_b1b4f272</TARGET-P-PORT-REF>
-                                  </PROVIDER-IREF>
-                                  <REQUESTER-IREF>
-                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
-                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_TC37X_VCU_CAN00_b1b4f272</TARGET-R-PORT-REF>
-                                  </REQUESTER-IREF>
-                                </ASSEMBLY-SW-CONNECTOR>
                                 <DELEGATION-SW-CONNECTOR UUID="85182bfd-0dc5-4c10-a089-95d6c7451fbf">
                                   <SHORT-NAME>VcuRxMsg1_Sig0_Com_SWC_VcuRxMsg1_Sig0</SHORT-NAME>
                                   <ANNOTATIONS>
@@ -12342,7 +11710,6 @@
                                     <SD GID="d61866aa-e364-480d-ab63-a6c4824c2748">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="e48c7722-53bc-4f9f-9212-4b42d21ec74e">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_LIN01_778f96a0</SD>
                                     <SD GID="a472b61d-f8ff-4129-9f0f-945af10b5bd6">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_LIN02_9cb82da3</SD>
-                                    <SD GID="23456fdc-f7ad-49c1-9c3b-598ac832089c">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="a5364b02-7699-465a-81e0-efe6c80b6e71">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
                                     <SD GID="86189dcf-17c0-4324-9c1b-277d3f2182e2">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_TC37X_VCU_CAN03_5a834971</SD>
                                     <SD GID="fc7cc4f9-8c51-40a5-aa86-1476ee7c8a98">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetCurrentComMode_GetCurrentComMode_UR_CN_TC37X_VCU_CAN12_XCP_0532158c</SD>
@@ -12351,7 +11718,6 @@
                                     <SD GID="72214d33-46e3-40ea-8805-6c7333b485df">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_LIN00_b12a0454</SD>
                                     <SD GID="6c458fd7-2ad0-45d8-b816-3f748d3f76d8">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_LIN01_c62d34c2</SD>
                                     <SD GID="a5e8b62c-76f5-420f-9c77-4f625351b7a5">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_LIN02_5f246578</SD>
-                                    <SD GID="5e890fa0-13ec-43cb-bf41-1c6645ad4a73">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="927222ee-5046-4173-9d87-a2223195ab8d">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_TC37X_VCU_CAN01_70b1f95e</SD>
                                     <SD GID="50aee12f-ea64-47ea-9f09-163d4a128977">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_TC37X_VCU_CAN03_9ebf9872</SD>
                                     <SD GID="1bd03fb5-24e6-4f04-bb38-6e1ca3cfb62c">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CL_CN_TC37X_VCU_CAN12_XCP_d05a85ac</SD>
@@ -12360,7 +11726,6 @@
                                     <SD GID="d2e1bce0-d15d-4147-baff-bd2979b05649">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_LIN00_b12a0454</SD>
                                     <SD GID="6f7b0a77-2f84-4e78-94ab-57d6851445e0">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_LIN01_c62d34c2</SD>
                                     <SD GID="b597d27b-dfae-42aa-90b1-749a2a75bd53">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_LIN02_5f246578</SD>
-                                    <SD GID="21e2617c-9710-4c9d-8d72-16d64d4fc480">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="6a26548f-955a-4ead-8655-ff0aff864c59">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_TC37X_VCU_CAN01_70b1f95e</SD>
                                     <SD GID="94640ebe-4309-4c04-9f35-844ad1b298f3">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_TC37X_VCU_CAN03_9ebf9872</SD>
                                     <SD GID="fa85c29e-4c28-418f-9163-6c29b602e357">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetInhibitionStatus_GetInhibitionStatus_CW_CN_TC37X_VCU_CAN12_XCP_d05a85ac</SD>
@@ -12369,7 +11734,6 @@
                                     <SD GID="454c9a4b-45e3-4fb1-9b6c-f035bfb7e878">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="639ce619-4b51-4bf0-97ad-24dbd76a8358">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_LIN01_778f96a0</SD>
                                     <SD GID="aa274d38-6c4f-4a9d-b9ba-c5c70bae16ff">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_LIN02_9cb82da3</SD>
-                                    <SD GID="8bf1c7f1-6ee3-442d-aaac-4d290efda5ac">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="5de38e1f-417a-459d-a711-5336fc927989">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
                                     <SD GID="8870a4b7-de5e-47b4-9626-08c5513fcf4f">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_TC37X_VCU_CAN03_5a834971</SD>
                                     <SD GID="7433dfd0-d0b9-4aa7-8a84-d1a4bc5d5f11">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetMaxComMode_GetMaxComMode_UR_CN_TC37X_VCU_CAN12_XCP_0532158c</SD>
@@ -12378,7 +11742,6 @@
                                     <SD GID="ab0aeb48-b011-4179-92dd-62ceb2bf5410">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="a2cb020e-9d49-46a0-97bf-7e69fd765d79">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_LIN01_778f96a0</SD>
                                     <SD GID="09aea20d-5640-4338-8655-db085058c34a">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_LIN02_9cb82da3</SD>
-                                    <SD GID="2669447e-1154-419a-aa58-2b9bd1cd6009">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="bff9ee43-9af4-4da1-a83c-00d0e9dc97d1">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
                                     <SD GID="af774e8c-3a3d-4cbb-b0df-e562b5eaf9e6">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_TC37X_VCU_CAN03_5a834971</SD>
                                     <SD GID="e3a5e2d8-71b4-46a9-9c2f-990c32ade0b4">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventGetRequestedComMode_GetRequestedComMode_UR_CN_TC37X_VCU_CAN12_XCP_0532158c</SD>
@@ -12387,7 +11750,6 @@
                                     <SD GID="c760f995-41a1-4169-bde7-8a8310f63f7e">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_LIN00_b12a0454</SD>
                                     <SD GID="57d34c59-097b-4a02-8909-b1ca6ea6d030">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_LIN01_c62d34c2</SD>
                                     <SD GID="fd634ad5-0e34-474e-9cbb-dc32aa1f2c75">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_LIN02_5f246578</SD>
-                                    <SD GID="29c05688-a08e-49c6-ba26-a39635214f50">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="7fde4a71-9331-43f5-b52e-7129eee1c273">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_TC37X_VCU_CAN01_70b1f95e</SD>
                                     <SD GID="fcdb958c-a73a-4069-bd94-60d069f1d8d4">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_TC37X_VCU_CAN03_9ebf9872</SD>
                                     <SD GID="7288f4a8-e2c5-4d04-bb43-1d4d4477bec3">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_CN_TC37X_VCU_CAN12_XCP_d05a85ac</SD>
@@ -12396,7 +11758,6 @@
                                     <SD GID="3d54a772-ac84-42be-a9e4-8c5fbf8fd026">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_LIN00_b12a0454</SD>
                                     <SD GID="67ecc2fe-fb61-4255-95f7-d9b082727bcc">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_LIN01_c62d34c2</SD>
                                     <SD GID="c44d2508-ff81-4aa8-8dc1-58d1de4557ff">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_LIN02_5f246578</SD>
-                                    <SD GID="cf9247b4-21f0-4476-a171-834c6032e746">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="e9920a52-92e5-447d-ab28-46b9ffc788ee">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_TC37X_VCU_CAN01_70b1f95e</SD>
                                     <SD GID="06ca20df-9af2-4497-9705-2313be75f27d">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_TC37X_VCU_CAN03_9ebf9872</SD>
                                     <SD GID="a1d13d5f-f952-4071-8b71-fe8b367b7743">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventPreventWakeUp_PreventWakeUp_CW_CN_TC37X_VCU_CAN12_XCP_d05a85ac</SD>
@@ -12405,7 +11766,6 @@
                                     <SD GID="3a7ace68-f286-41fc-8824-5f2b6181f66d">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="26381cbb-3296-429e-bcf6-fd51ed2f5737">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_LIN01_778f96a0</SD>
                                     <SD GID="a351741b-bcf5-464a-83f4-28d5e5c51e88">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_LIN02_9cb82da3</SD>
-                                    <SD GID="a79c2142-00a2-4471-ae46-c0bca0868254">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="614f04a3-1522-46bc-8343-865f09895d24">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
                                     <SD GID="bbd7bb6d-030f-491a-a8d5-8f362d36d77e">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_TC37X_VCU_CAN03_5a834971</SD>
                                     <SD GID="aafe4090-a0e5-42f2-bf63-d322cdb9f9ab">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/OpEventRequestComMode_RequestComMode_UR_CN_TC37X_VCU_CAN12_XCP_0532158c</SD>
@@ -12416,10 +11776,8 @@
                                     <SD GID="3d3f2abf-718a-4a8b-b319-9c5fbc7d09d3">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/Timer_ComM_MainFunction_5</SD>
                                     <SD GID="f9cc18f6-ec18-4bf7-ba2d-f03ad66a9151">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/Timer_ComM_MainFunction_6</SD>
                                     <SD GID="e8074bd1-6604-4f07-9ccb-852f528abbb1">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/Timer_ComM_MainFunction_7</SD>
-                                    <SD GID="39cc1fcc-0a34-41af-9505-7d7f6b906819">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/Timer_ComM_MainFunction_8</SD>
                                     <SD GID="f6e01367-ebd5-40d0-8f91-21c6257b8af9">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_LIN00_984dfd9e</SD>
                                     <SD GID="2ee4d9b5-0c81-4cec-8b68-82ce1011ff03">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_LIN01_778f96a0</SD>
-                                    <SD GID="ab1e5b41-3baa-4fcf-aec5-44c99b7466d5">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_TC37X_VCU_CAN00_b1b4f272</SD>
                                     <SD GID="6d2f5e0a-126d-440d-a52c-2302c9dca7b4">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
                                     <SD GID="8a39ae54-b3df-446c-9d78-f7a968dde6e4">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_TC37X_VCU_CAN03_5a834971</SD>
                                     <SD GID="67ce1ed5-0cd8-4659-8ac8-43f5140ba846">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionRx_ComMainFunctionRx</SD>
@@ -12602,7 +11960,6 @@
                                     <SD GID="ea7b089a-419e-4c43-9d38-a251481244da">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_Write_Level4_OEM_Key_CRC</SD>
                                     <SD GID="cabc3ffd-5680-4a23-8c78-fb60e90cfd4f">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_Write_Level4_OEM_Key_OEM_Key_Value</SD>
                                     <SD GID="0a000870-2b49-44d6-9f2d-7b36e59a5b9f">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmCommunicationControl_ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d</SD>
-                                    <SD GID="4e65b62f-4fc8-4f1c-be00-5ac6365669ae">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="22df0f95-8e4f-419b-8023-b15fb7c39b04">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmControlDtcSetting</SD>
                                     <SD GID="ed1e2bf8-296c-4ef7-a639-2d84feed9e66">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmDiagnosticSessionControl</SD>
                                     <SD GID="b8d3fa7a-7b0c-4f84-a474-4c9eb594cc11">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmInternalBehavior</SD>
@@ -13589,8 +12946,6 @@
                                     <SD GID="c575ae83-2695-4018-a225-bcd6c1e00f51">/MICROSAR/Dcm_swc/Interfaces/DataServices_Write_Level4_OEM_Key_OEM_Key_Value/WriteData</SD>
                                     <SD GID="0c0be5d5-07e7-43b3-aede-7011adab717e">/MICROSAR/Dcm_swc/Interfaces/DcmCommunicationControl_ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d</SD>
                                     <SD GID="fbe09b16-58cb-4428-ae75-42f3aed1bde4">/MICROSAR/Dcm_swc/Interfaces/DcmCommunicationControl_ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d/DcmCommunicationControl_ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d</SD>
-                                    <SD GID="31efc7a6-1988-4e40-8649-1b358dfd9867">/MICROSAR/Dcm_swc/Interfaces/DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
-                                    <SD GID="c5a51cbf-d708-4eb9-a51b-59150e580461">/MICROSAR/Dcm_swc/Interfaces/DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8/DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8</SD>
                                     <SD GID="c9343d6e-ffaa-4434-8bf4-4bc90eb2df1c">/MICROSAR/Dcm_swc/Interfaces/DcmControlDtcSetting</SD>
                                     <SD GID="a80a2043-228d-4367-ac7f-d12acb5fa886">/MICROSAR/Dcm_swc/Interfaces/DcmControlDtcSetting/DcmControlDtcSetting</SD>
                                     <SD GID="bb0cc2e5-0657-4fdf-aa61-eff597c8841a">/MICROSAR/Dcm_swc/Interfaces/DcmDiagnosticSessionControl</SD>

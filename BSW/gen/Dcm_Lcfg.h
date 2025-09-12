@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Lcfg.h
- *   Generation Time: 2025-09-12 10:25:41
+ *   Generation Time: 2025-09-12 11:08:09
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -69,6 +69,7 @@
 /**********************************************************************************************************************
  *  GLOBAL FUNCTION MACROS
  *********************************************************************************************************************/
+# define Dcm_ModeOnComControlModeChange(channelId, mode)                       ((void)(Rte_Switch_DcmCommunicationControl_ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_DcmCommunicationControl_ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d(mode))) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
 # define Dcm_CfgWrapDidMgrDidLookUpTable(index)                                (Dcm_CfgDidMgrDidLookUpTable[(index)])                                /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
 # define Dcm_CfgWrapDidMgrDidInfo(index)                                       (&Dcm_CfgDidMgrDidInfo[(index)])                                      /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
 # define Dcm_CfgWrapDidMgrDidOpInfo(index)                                     (&Dcm_CfgDidMgrDidOpInfo[(index)])                                    /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
@@ -1217,19 +1218,6 @@ typedef struct DCM_CFGSVC85SUBFUNCINFOTYPE_TAG Dcm_CfgSvc85SubFuncInfoType;
  *********************************************************************************************************************/
 # define DCM_START_SEC_CODE
 # include "MemMap.h"                                                                                                                                 /* PRQA S 5087 */ /* MD_MSR_MemMap */
-/***********************************************************************************************************************
- *  Dcm_ModeOnComControlModeChange()
-***********************************************************************************************************************/
-/*! \brief         Notifies the SW-C(s) for a CommunicationControl state transition on the ComMChannel.
- *  \details       Uses the mode declaration group values e.g.
- *                 RTE_MODE_DcmCommunicationControl_DCM_DISABLE_RX_ENABLE_TX_NM.
- *  \param[in]     channelId  The channel identifier
- *  \param[in]     mode       The mode transited to
- *  \context       TASK
- *  \reentrant     FALSE
- *  \pre           -
-***********************************************************************************************************************/
-FUNC(void, DCM_CODE) Dcm_ModeOnComControlModeChange(NetworkHandleType channelId, Dcm_CommunicationModeType mode);
 # if (DCM_DIDMGR_SUPPORT_ENABLED == STD_ON)
 /**********************************************************************************************************************
  *  Dcm_DidMgrDidNoOp()
@@ -2606,7 +2594,7 @@ extern CONST(Dcm_CfgNetConnectionInfoType, DCM_CONST) Dcm_CfgNetConnectionInfo[2
 /*! DCM protocol descriptor */
 extern CONST(Dcm_CfgNetProtocolInfoType, DCM_CONST) Dcm_CfgNetProtocolInfo[1];
 /*! Map of all relevant for DCM network handles */
-extern CONST(NetworkHandleType, DCM_CONST) Dcm_CfgNetAllComMChannelMap[2];
+extern CONST(NetworkHandleType, DCM_CONST) Dcm_CfgNetAllComMChannelMap[1];
 /*! Look up table of DCM relevant network handles */
 extern CONST(NetworkHandleType, DCM_CONST) Dcm_CfgNetNetworkHandleLookUpTable[2];
 /*! Diagnostic service execution conditions */

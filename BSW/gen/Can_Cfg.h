@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Cfg.h
- *   Generation Time: 2025-09-12 10:25:39
+ *   Generation Time: 2025-09-12 11:08:09
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -302,7 +302,7 @@
 #define CAN_USE_OS_INTERRUPT_CONTROL         STD_ON
 
 /* Optimization */
-#define CAN_RX_FULLCAN_OBJECTS               STD_ON
+#define CAN_RX_FULLCAN_OBJECTS               STD_OFF
 #define CAN_TX_FULLCAN_OBJECTS               STD_ON
 #define CAN_RX_BASICCAN_OBJECTS              STD_ON
 #define CAN_EXTENDED_ID                      STD_OFF
@@ -330,22 +330,21 @@
  ----------------------------------------------------------------------------- */
 #ifndef C_DRV_INTERNAL
 # ifndef kCanNumberOfChannels
-#  define kCanNumberOfChannels               6u
+#  define kCanNumberOfChannels               5u
 # endif
 # ifndef kCanNumberOfHwChannels
-#  define kCanNumberOfHwChannels             6u
+#  define kCanNumberOfHwChannels             5u
 # endif
 #endif
 #ifndef kCanNumberOfUsedChannels /* ATK only */
-# define kCanNumberOfUsedChannels            6u
+# define kCanNumberOfUsedChannels            5u
 #endif
 
-#define kCanPhysToLogChannelIndex_0 3u
+#define kCanPhysToLogChannelIndex_0 2u
 #define kCanPhysToLogChannelIndex_1 1u
-#define kCanPhysToLogChannelIndex_2 2u
-#define kCanPhysToLogChannelIndex_3 4u
+#define kCanPhysToLogChannelIndex_3 3u
 #define kCanPhysToLogChannelIndex_4 0u
-#define kCanPhysToLogChannelIndex_6 5u
+#define kCanPhysToLogChannelIndex_6 4u
 
 #define kCanNumberOfPhysChannels             7u
 
@@ -366,10 +365,9 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define CanConf_CanController_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292 0u
 #define CanConf_CanController_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03 1u
-#define CanConf_CanController_CT_TC37X_VCU_CAN00_22cb8fec             2u
-#define CanConf_CanController_CT_TC37X_VCU_CAN01_55ccbf7a             3u
-#define CanConf_CanController_CT_TC37X_VCU_CAN03_bbc2de56             4u
-#define CanConf_CanController_CT_TC37X_VCU_CAN12_XCP_5a889f4b         5u
+#define CanConf_CanController_CT_TC37X_VCU_CAN01_55ccbf7a             2u
+#define CanConf_CanController_CT_TC37X_VCU_CAN03_bbc2de56             3u
+#define CanConf_CanController_CT_TC37X_VCU_CAN12_XCP_5a889f4b         4u
 /**\} */
 #define CanConf_CN_ATOM_CANFD_Matrix_CH_V600_202502_64375107_Rx 3u
 #define CanConf_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_Tx 2u
@@ -377,43 +375,34 @@
 #define CanConf_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_Tx_95h 1u
 #define CanConf_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_Tx 4u
 #define CanConf_CN_ATOM_CAN_Matrix_PT_V600_20250211_bde8b0ce_Rx 5u
-#define CanConf_CN_TC37X_VCU_CAN00_07b6c9c8_Tx 7u
-#define CanConf_CN_TC37X_VCU_CAN00_c052b9c5_Rx 10u
-#define CanConf_CN_TC37X_VCU_CAN01_2f90d2fb_Rx 12u
-#define CanConf_CN_TC37X_VCU_CAN01_70b1f95e_Tx 11u
-#define CanConf_CN_TC37X_VCU_CAN03_2b6502c6_Rx 14u
-#define CanConf_CN_TC37X_VCU_CAN03_9ebf9872_Tx 13u
-#define CanConf_CN_TC37X_VCU_CAN12_XCP_74d45e3b_Rx 16u
-#define CanConf_CN_TC37X_VCU_CAN12_XCP_d05a85ac_Tx 15u
-#define CanConf_CanHardwareObject_TX0 6u
-#define CanConf_CanHardwareObject_VcuRxMsg1_oTC37X_VCU_CAN00_c149044d_Rx 8u
-#define CanConf_CanHardwareObject_VcuRxMsg2_oTC37X_VCU_CAN00_de1782b6_Rx 9u
+#define CanConf_CN_TC37X_VCU_CAN01_2f90d2fb_Rx 7u
+#define CanConf_CN_TC37X_VCU_CAN01_70b1f95e_Tx 6u
+#define CanConf_CN_TC37X_VCU_CAN03_2b6502c6_Rx 9u
+#define CanConf_CN_TC37X_VCU_CAN03_9ebf9872_Tx 8u
+#define CanConf_CN_TC37X_VCU_CAN12_XCP_74d45e3b_Rx 11u
+#define CanConf_CN_TC37X_VCU_CAN12_XCP_d05a85ac_Tx 10u
 
 #define CanConf_ControllerBaudrateConfig_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292_CanControllerBaudrateConfig 0u
 #define CanConf_ControllerBaudrateConfig_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03_CanControllerBaudrateConfig 0u
-#define CanConf_ControllerBaudrateConfig_CT_TC37X_VCU_CAN00_22cb8fec_CanControllerBaudrateConfig 0u
 #define CanConf_ControllerBaudrateConfig_CT_TC37X_VCU_CAN01_55ccbf7a_CanControllerBaudrateConfig 0u
 #define CanConf_ControllerBaudrateConfig_CT_TC37X_VCU_CAN03_bbc2de56_CanControllerBaudrateConfig 0u
 #define CanConf_ControllerBaudrateConfig_CT_TC37X_VCU_CAN12_XCP_5a889f4b_CanControllerBaudrateConfig 0u
 
 #define CanConf_MemorySection_RxBuffer_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292 0u
 #define CanConf_MemorySection_RxBuffer_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03 3u
-#define CanConf_MemorySection_RxBuffer_CT_TC37X_VCU_CAN00_22cb8fec 6u
-#define CanConf_MemorySection_RxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a 9u
-#define CanConf_MemorySection_RxBuffer_CT_TC37X_VCU_CAN03_bbc2de56 12u
-#define CanConf_MemorySection_RxBuffer_CT_TC37X_VCU_CAN12_XCP_5a889f4b 15u
+#define CanConf_MemorySection_RxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a 6u
+#define CanConf_MemorySection_RxBuffer_CT_TC37X_VCU_CAN03_bbc2de56 9u
+#define CanConf_MemorySection_RxBuffer_CT_TC37X_VCU_CAN12_XCP_5a889f4b 12u
 #define CanConf_MemorySection_RxFifo_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292 1u
 #define CanConf_MemorySection_RxFifo_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03 4u
-#define CanConf_MemorySection_RxFifo_CT_TC37X_VCU_CAN00_22cb8fec 7u
-#define CanConf_MemorySection_RxFifo_CT_TC37X_VCU_CAN01_55ccbf7a 10u
-#define CanConf_MemorySection_RxFifo_CT_TC37X_VCU_CAN03_bbc2de56 13u
-#define CanConf_MemorySection_RxFifo_CT_TC37X_VCU_CAN12_XCP_5a889f4b 16u
+#define CanConf_MemorySection_RxFifo_CT_TC37X_VCU_CAN01_55ccbf7a 7u
+#define CanConf_MemorySection_RxFifo_CT_TC37X_VCU_CAN03_bbc2de56 10u
+#define CanConf_MemorySection_RxFifo_CT_TC37X_VCU_CAN12_XCP_5a889f4b 13u
 #define CanConf_MemorySection_TxBuffer_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292 2u
 #define CanConf_MemorySection_TxBuffer_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03 5u
-#define CanConf_MemorySection_TxBuffer_CT_TC37X_VCU_CAN00_22cb8fec 8u
-#define CanConf_MemorySection_TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a 11u
-#define CanConf_MemorySection_TxBuffer_CT_TC37X_VCU_CAN03_bbc2de56 14u
-#define CanConf_MemorySection_TxBuffer_CT_TC37X_VCU_CAN12_XCP_5a889f4b 17u
+#define CanConf_MemorySection_TxBuffer_CT_TC37X_VCU_CAN01_55ccbf7a 8u
+#define CanConf_MemorySection_TxBuffer_CT_TC37X_VCU_CAN03_bbc2de56 11u
+#define CanConf_MemorySection_TxBuffer_CT_TC37X_VCU_CAN12_XCP_5a889f4b 14u
 
 
 
@@ -459,7 +448,6 @@ typedef uint8 Can_OsIsrType;
 
 #define kCanISRPrio_0                     0x00000031uL
 #define kCanISRPrio_1                     0x00000000uL
-#define kCanISRPrio_2                     0x00000030uL
 #define kCanISRPrio_3                     0x00000000uL
 #define kCanISRPrio_4                     0x00000000uL
 #define kCanISRPrio_6                     0x00000000uL
@@ -543,10 +531,10 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define CAN_MAILBOXRXBASICLENGTHOFCONTROLLERCONFIG                    STD_ON
 #define CAN_MAILBOXRXBASICSTARTIDXOFCONTROLLERCONFIG                  STD_ON
 #define CAN_MAILBOXRXBASICUSEDOFCONTROLLERCONFIG                      STD_ON
-#define CAN_MAILBOXRXFULLENDIDXOFCONTROLLERCONFIG                     STD_ON
-#define CAN_MAILBOXRXFULLLENGTHOFCONTROLLERCONFIG                     STD_ON
-#define CAN_MAILBOXRXFULLSTARTIDXOFCONTROLLERCONFIG                   STD_ON
-#define CAN_MAILBOXRXFULLUSEDOFCONTROLLERCONFIG                       STD_ON
+#define CAN_MAILBOXRXFULLENDIDXOFCONTROLLERCONFIG                     STD_OFF  /**< Deactivateable: 'Can_ControllerConfig.MailboxRxFullEndIdx' Reason: 'the optional indirection is deactivated because MailboxRxFullUsedOfControllerConfig is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define CAN_MAILBOXRXFULLLENGTHOFCONTROLLERCONFIG                     STD_OFF  /**< Deactivateable: 'Can_ControllerConfig.MailboxRxFullLength' Reason: 'the optional indirection is deactivated because MailboxRxFullUsedOfControllerConfig is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define CAN_MAILBOXRXFULLSTARTIDXOFCONTROLLERCONFIG                   STD_OFF  /**< Deactivateable: 'Can_ControllerConfig.MailboxRxFullStartIdx' Reason: 'the optional indirection is deactivated because MailboxRxFullUsedOfControllerConfig is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define CAN_MAILBOXRXFULLUSEDOFCONTROLLERCONFIG                       STD_OFF  /**< Deactivateable: 'Can_ControllerConfig.MailboxRxFullUsed' Reason: 'the optional indirection is deactivated because MailboxRxFullUsedOfControllerConfig is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
 #define CAN_MAILBOXTXBASICENDIDXOFCONTROLLERCONFIG                    STD_ON
 #define CAN_MAILBOXTXBASICLENGTHOFCONTROLLERCONFIG                    STD_ON
 #define CAN_MAILBOXTXBASICSTARTIDXOFCONTROLLERCONFIG                  STD_ON
@@ -798,8 +786,6 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define CAN_NO_CANCONTROLLERDEFAULTBAUDRATEOFCONTROLLERCONFIG         65535u
 #define CAN_NO_MAILBOXRXBASICENDIDXOFCONTROLLERCONFIG                 255u
 #define CAN_NO_MAILBOXRXBASICSTARTIDXOFCONTROLLERCONFIG               255u
-#define CAN_NO_MAILBOXRXFULLENDIDXOFCONTROLLERCONFIG                  255u
-#define CAN_NO_MAILBOXRXFULLSTARTIDXOFCONTROLLERCONFIG                255u
 #define CAN_NO_MAILBOXTXBASICENDIDXOFCONTROLLERCONFIG                 255u
 #define CAN_NO_MAILBOXTXBASICSTARTIDXOFCONTROLLERCONFIG               255u
 #define CAN_NO_MAILBOXTXFULLENDIDXOFCONTROLLERCONFIG                  255u
@@ -829,7 +815,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define CAN_EXISTS_FD_RXTX_INITOBJECTFDBRSCONFIG                      STD_ON
 #define CAN_EXISTS_FD_RXONLY_INITOBJECTFDBRSCONFIG                    STD_OFF
 #define CAN_EXISTS_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX              STD_ON
-#define CAN_EXISTS_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX               STD_ON
+#define CAN_EXISTS_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX               STD_OFF
 #define CAN_EXISTS_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX              STD_ON
 #define CAN_EXISTS_TX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX               STD_ON
 #define CAN_EXISTS_UNUSED_CAN_TYPE_MAILBOXTYPEOFMAILBOX               STD_OFF
@@ -847,7 +833,6 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define CAN_NONE_INITOBJECTFDBRSCONFIG                                0x00u
 #define CAN_FD_RXTX_INITOBJECTFDBRSCONFIG                             0x01u
 #define CAN_RX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX                     0x00u
-#define CAN_RX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX                      0x01u
 #define CAN_TX_BASICCAN_TYPE_MAILBOXTYPEOFMAILBOX                     0x02u
 #define CAN_TX_FULLCAN_TYPE_MAILBOXTYPEOFMAILBOX                      0x03u
 /** 
@@ -875,10 +860,6 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define CAN_ISDEF_MAILBOXRXBASICLENGTHOFCONTROLLERCONFIG              STD_OFF
 #define CAN_ISDEF_MAILBOXRXBASICSTARTIDXOFCONTROLLERCONFIG            STD_OFF
 #define CAN_ISDEF_MAILBOXRXBASICUSEDOFCONTROLLERCONFIG                STD_OFF
-#define CAN_ISDEF_MAILBOXRXFULLENDIDXOFCONTROLLERCONFIG               STD_OFF
-#define CAN_ISDEF_MAILBOXRXFULLLENGTHOFCONTROLLERCONFIG               STD_OFF
-#define CAN_ISDEF_MAILBOXRXFULLSTARTIDXOFCONTROLLERCONFIG             STD_OFF
-#define CAN_ISDEF_MAILBOXRXFULLUSEDOFCONTROLLERCONFIG                 STD_OFF
 #define CAN_ISDEF_MAILBOXTXBASICENDIDXOFCONTROLLERCONFIG              STD_OFF
 #define CAN_ISDEF_MAILBOXTXBASICLENGTHOFCONTROLLERCONFIG              STD_OFF
 #define CAN_ISDEF_MAILBOXTXBASICSTARTIDXOFCONTROLLERCONFIG            STD_OFF
@@ -991,10 +972,6 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define CAN_EQ2_MAILBOXRXBASICLENGTHOFCONTROLLERCONFIG                
 #define CAN_EQ2_MAILBOXRXBASICSTARTIDXOFCONTROLLERCONFIG              
 #define CAN_EQ2_MAILBOXRXBASICUSEDOFCONTROLLERCONFIG                  
-#define CAN_EQ2_MAILBOXRXFULLENDIDXOFCONTROLLERCONFIG                 
-#define CAN_EQ2_MAILBOXRXFULLLENGTHOFCONTROLLERCONFIG                 
-#define CAN_EQ2_MAILBOXRXFULLSTARTIDXOFCONTROLLERCONFIG               
-#define CAN_EQ2_MAILBOXRXFULLUSEDOFCONTROLLERCONFIG                   
 #define CAN_EQ2_MAILBOXTXBASICENDIDXOFCONTROLLERCONFIG                
 #define CAN_EQ2_MAILBOXTXBASICLENGTHOFCONTROLLERCONFIG                
 #define CAN_EQ2_MAILBOXTXBASICSTARTIDXOFCONTROLLERCONFIG              
@@ -1179,7 +1156,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_GetBaseDll_GeneratorVersionOfPCConfig()                   0x0103u
 #define Can_GetBufferConfigOfPCConfig()                               Can_BufferConfig  /**< the pointer to Can_BufferConfig */
 #define Can_GetCAN_FD_NISOOfPCConfig()                                0x00u  /**< MCAN ISO/Bosch conformance */
-#define Can_GetCAN_NUMBER_OF_SRNOfPCConfig()                          0x06u  /**< Number of Service Request Nodes */
+#define Can_GetCAN_NUMBER_OF_SRNOfPCConfig()                          0x05u  /**< Number of Service Request Nodes */
 #define Can_GetC_ENABLE_MPC5700_MCAN_CREL_SSTEPOfPCConfig()           0x05u  /**< MCAN Release Sub Step */
 #define Can_GetC_ENABLE_MPC5700_MCAN_CREL_STEPOfPCConfig()            0x01u  /**< MCAN Release Step */
 #define Can_GetC_ENABLE_MPC5700_MCAN_MAJOR_CRELOfPCConfig()           0x03u  /**< MCAN Release Version */
@@ -1203,30 +1180,30 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_GetSIDFEOfPCConfig()                                      Can_SIDFE  /**< the pointer to Can_SIDFE */
 #define Can_GetSRN_AddressOfPCConfig()                                Can_SRN_Address  /**< the pointer to Can_SRN_Address */
 #define Can_GetShmAdrOfPCConfig()                                     Can_ShmAdr  /**< the pointer to Can_ShmAdr */
-#define Can_GetSizeOfActiveSendObjectOfPCConfig()                     9u  /**< the number of accomplishable value elements in Can_ActiveSendObject */
-#define Can_GetSizeOfBTPOfPCConfig()                                  6u  /**< the number of accomplishable value elements in Can_BTP */
-#define Can_GetSizeOfBufferConfigOfPCConfig()                         6u  /**< the number of accomplishable value elements in Can_BufferConfig */
-#define Can_GetSizeOfCanIfChannelIdOfPCConfig()                       6u  /**< the number of accomplishable value elements in Can_CanIfChannelId */
+#define Can_GetSizeOfActiveSendObjectOfPCConfig()                     7u  /**< the number of accomplishable value elements in Can_ActiveSendObject */
+#define Can_GetSizeOfBTPOfPCConfig()                                  5u  /**< the number of accomplishable value elements in Can_BTP */
+#define Can_GetSizeOfBufferConfigOfPCConfig()                         5u  /**< the number of accomplishable value elements in Can_BufferConfig */
+#define Can_GetSizeOfCanIfChannelIdOfPCConfig()                       5u  /**< the number of accomplishable value elements in Can_CanIfChannelId */
 #define Can_GetSizeOfCanSubSystemBaseAdrOfPCConfig()                  2u  /**< the number of accomplishable value elements in Can_CanSubSystemBaseAdr */
-#define Can_GetSizeOfControllerConfigOfPCConfig()                     6u  /**< the number of accomplishable value elements in Can_ControllerConfig */
-#define Can_GetSizeOfFBTPOfPCConfig()                                 6u  /**< the number of accomplishable value elements in Can_FBTP */
-#define Can_GetSizeOfGFCOfPCConfig()                                  6u  /**< the number of accomplishable value elements in Can_GFC */
-#define Can_GetSizeOfINT_PriorityOfPCConfig()                         6u  /**< the number of accomplishable value elements in Can_INT_Priority */
-#define Can_GetSizeOfINT_RoutingGroupOfPCConfig()                     6u  /**< the number of accomplishable value elements in Can_INT_RoutingGroup */
-#define Can_GetSizeOfInitObjectBaudrateOfPCConfig()                   6u  /**< the number of accomplishable value elements in Can_InitObjectBaudrate */
-#define Can_GetSizeOfInitObjectFdBrsConfigOfPCConfig()                6u  /**< the number of accomplishable value elements in Can_InitObjectFdBrsConfig */
-#define Can_GetSizeOfInitObjectStartIndexOfPCConfig()                 7u  /**< the number of accomplishable value elements in Can_InitObjectStartIndex */
-#define Can_GetSizeOfIsrOsIdOfPCConfig()                              6u  /**< the number of accomplishable value elements in Can_IsrOsId */
-#define Can_GetSizeOfMailboxOfPCConfig()                              17u  /**< the number of accomplishable value elements in Can_Mailbox */
-#define Can_GetSizeOfMemorySectionInfoOfPCConfig()                    6u  /**< the number of accomplishable value elements in Can_MemorySectionInfo */
-#define Can_GetSizeOfMemorySectionObjectsOfPCConfig()                 192u  /**< the number of accomplishable value elements in Can_MemorySectionObjects */
-#define Can_GetSizeOfSIDFCOfPCConfig()                                6u  /**< the number of accomplishable value elements in Can_SIDFC */
-#define Can_GetSizeOfSIDFEOfPCConfig()                                8u  /**< the number of accomplishable value elements in Can_SIDFE */
-#define Can_GetSizeOfSRN_AddressOfPCConfig()                          6u  /**< the number of accomplishable value elements in Can_SRN_Address */
-#define Can_GetSizeOfShmAdrOfPCConfig()                               6u  /**< the number of accomplishable value elements in Can_ShmAdr */
-#define Can_GetSizeOfTDCROfPCConfig()                                 6u  /**< the number of accomplishable value elements in Can_TDCR */
-#define Can_GetSizeOfXIDAMOfPCConfig()                                6u  /**< the number of accomplishable value elements in Can_XIDAM */
-#define Can_GetSizeOfXIDFCOfPCConfig()                                6u  /**< the number of accomplishable value elements in Can_XIDFC */
+#define Can_GetSizeOfControllerConfigOfPCConfig()                     5u  /**< the number of accomplishable value elements in Can_ControllerConfig */
+#define Can_GetSizeOfFBTPOfPCConfig()                                 5u  /**< the number of accomplishable value elements in Can_FBTP */
+#define Can_GetSizeOfGFCOfPCConfig()                                  5u  /**< the number of accomplishable value elements in Can_GFC */
+#define Can_GetSizeOfINT_PriorityOfPCConfig()                         5u  /**< the number of accomplishable value elements in Can_INT_Priority */
+#define Can_GetSizeOfINT_RoutingGroupOfPCConfig()                     5u  /**< the number of accomplishable value elements in Can_INT_RoutingGroup */
+#define Can_GetSizeOfInitObjectBaudrateOfPCConfig()                   5u  /**< the number of accomplishable value elements in Can_InitObjectBaudrate */
+#define Can_GetSizeOfInitObjectFdBrsConfigOfPCConfig()                5u  /**< the number of accomplishable value elements in Can_InitObjectFdBrsConfig */
+#define Can_GetSizeOfInitObjectStartIndexOfPCConfig()                 6u  /**< the number of accomplishable value elements in Can_InitObjectStartIndex */
+#define Can_GetSizeOfIsrOsIdOfPCConfig()                              5u  /**< the number of accomplishable value elements in Can_IsrOsId */
+#define Can_GetSizeOfMailboxOfPCConfig()                              12u  /**< the number of accomplishable value elements in Can_Mailbox */
+#define Can_GetSizeOfMemorySectionInfoOfPCConfig()                    5u  /**< the number of accomplishable value elements in Can_MemorySectionInfo */
+#define Can_GetSizeOfMemorySectionObjectsOfPCConfig()                 160u  /**< the number of accomplishable value elements in Can_MemorySectionObjects */
+#define Can_GetSizeOfSIDFCOfPCConfig()                                5u  /**< the number of accomplishable value elements in Can_SIDFC */
+#define Can_GetSizeOfSIDFEOfPCConfig()                                5u  /**< the number of accomplishable value elements in Can_SIDFE */
+#define Can_GetSizeOfSRN_AddressOfPCConfig()                          5u  /**< the number of accomplishable value elements in Can_SRN_Address */
+#define Can_GetSizeOfShmAdrOfPCConfig()                               5u  /**< the number of accomplishable value elements in Can_ShmAdr */
+#define Can_GetSizeOfTDCROfPCConfig()                                 5u  /**< the number of accomplishable value elements in Can_TDCR */
+#define Can_GetSizeOfXIDAMOfPCConfig()                                5u  /**< the number of accomplishable value elements in Can_XIDAM */
+#define Can_GetSizeOfXIDFCOfPCConfig()                                5u  /**< the number of accomplishable value elements in Can_XIDFC */
 #define Can_GetSizeOfXIDFEOfPCConfig()                                1u  /**< the number of accomplishable value elements in Can_XIDFE */
 #define Can_GetTDCROfPCConfig()                                       Can_TDCR  /**< the pointer to Can_TDCR */
 #define Can_GetXIDAMOfPCConfig()                                      Can_XIDAM  /**< the pointer to Can_XIDAM */
@@ -1268,9 +1245,6 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_GetMailboxRxBasicEndIdxOfControllerConfig(Index)          (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxRxBasicEndIdxOfControllerConfig)
 #define Can_GetMailboxRxBasicLengthOfControllerConfig(Index)          (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxRxBasicLengthOfControllerConfig)
 #define Can_GetMailboxRxBasicStartIdxOfControllerConfig(Index)        (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxRxBasicStartIdxOfControllerConfig)
-#define Can_GetMailboxRxFullEndIdxOfControllerConfig(Index)           (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxRxFullEndIdxOfControllerConfig)
-#define Can_GetMailboxRxFullLengthOfControllerConfig(Index)           (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxRxFullLengthOfControllerConfig)
-#define Can_GetMailboxRxFullStartIdxOfControllerConfig(Index)         (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxRxFullStartIdxOfControllerConfig)
 #define Can_GetMailboxTxBasicEndIdxOfControllerConfig(Index)          (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxTxBasicEndIdxOfControllerConfig)
 #define Can_GetMailboxTxBasicLengthOfControllerConfig(Index)          (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxTxBasicLengthOfControllerConfig)
 #define Can_GetMailboxTxBasicStartIdxOfControllerConfig(Index)        (Can_GetControllerConfigOfPCConfig()[(Index)].MailboxTxBasicStartIdxOfControllerConfig)
@@ -1361,7 +1335,6 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_GetC_ENABLE_MPC5700_MCAN_CREL_STEP()                      Can_GetC_ENABLE_MPC5700_MCAN_CREL_STEPOfPCConfig()
 #define Can_GetC_ENABLE_MPC5700_MCAN_MAJOR_CREL()                     Can_GetC_ENABLE_MPC5700_MCAN_MAJOR_CRELOfPCConfig()
 #define Can_IsMailboxRxBasicUsedOfControllerConfig(Index)             (((boolean)(Can_GetMailboxRxBasicLengthOfControllerConfig(Index) != 0u)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Can_Mailbox */
-#define Can_IsMailboxRxFullUsedOfControllerConfig(Index)              (((boolean)(Can_GetMailboxRxFullLengthOfControllerConfig(Index) != 0u)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Can_Mailbox */
 #define Can_IsMailboxTxBasicUsedOfControllerConfig(Index)             (((boolean)(Can_GetMailboxTxBasicLengthOfControllerConfig(Index) != 0u)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Can_Mailbox */
 #define Can_IsMailboxTxFullUsedOfControllerConfig(Index)              (((boolean)(Can_GetMailboxTxFullLengthOfControllerConfig(Index) != 0u)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Can_Mailbox */
 #define Can_GetPlatformDll_GeneratorVersion()                         Can_GetPlatformDll_GeneratorVersionOfPCConfig()
@@ -1455,10 +1428,6 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_HasMailboxRxBasicLengthOfControllerConfig()               (TRUE != FALSE)
 #define Can_HasMailboxRxBasicStartIdxOfControllerConfig()             (TRUE != FALSE)
 #define Can_HasMailboxRxBasicUsedOfControllerConfig()                 (TRUE != FALSE)
-#define Can_HasMailboxRxFullEndIdxOfControllerConfig()                (TRUE != FALSE)
-#define Can_HasMailboxRxFullLengthOfControllerConfig()                (TRUE != FALSE)
-#define Can_HasMailboxRxFullStartIdxOfControllerConfig()              (TRUE != FALSE)
-#define Can_HasMailboxRxFullUsedOfControllerConfig()                  (TRUE != FALSE)
 #define Can_HasMailboxTxBasicEndIdxOfControllerConfig()               (TRUE != FALSE)
 #define Can_HasMailboxTxBasicLengthOfControllerConfig()               (TRUE != FALSE)
 #define Can_HasMailboxTxBasicStartIdxOfControllerConfig()             (TRUE != FALSE)
@@ -1918,18 +1887,6 @@ typedef uint8 Can_MailboxRxBasicStartIdxOfControllerConfigType;
 /**   \brief  value based type definition for Can_MailboxRxBasicUsedOfControllerConfig */
 typedef boolean Can_MailboxRxBasicUsedOfControllerConfigType;
 
-/**   \brief  value based type definition for Can_MailboxRxFullEndIdxOfControllerConfig */
-typedef uint8 Can_MailboxRxFullEndIdxOfControllerConfigType;
-
-/**   \brief  value based type definition for Can_MailboxRxFullLengthOfControllerConfig */
-typedef uint8 Can_MailboxRxFullLengthOfControllerConfigType;
-
-/**   \brief  value based type definition for Can_MailboxRxFullStartIdxOfControllerConfig */
-typedef uint8 Can_MailboxRxFullStartIdxOfControllerConfigType;
-
-/**   \brief  value based type definition for Can_MailboxRxFullUsedOfControllerConfig */
-typedef boolean Can_MailboxRxFullUsedOfControllerConfigType;
-
 /**   \brief  value based type definition for Can_MailboxTxBasicEndIdxOfControllerConfig */
 typedef uint8 Can_MailboxTxBasicEndIdxOfControllerConfigType;
 
@@ -2060,7 +2017,7 @@ typedef uint8 Can_ControllerConfigIdxOfMailboxType;
 typedef uint8 Can_HwHandleOfMailboxType;
 
 /**   \brief  value based type definition for Can_IDValueOfMailbox */
-typedef uint16 Can_IDValueOfMailboxType;
+typedef uint8 Can_IDValueOfMailboxType;
 
 /**   \brief  value based type definition for Can_MailboxSizeOfMailbox */
 typedef uint8 Can_MailboxSizeOfMailboxType;
@@ -2090,7 +2047,7 @@ typedef uint8 Can_MailboxHandleOfMemorySectionObjectsType;
 typedef uint16 Can_PlatformDll_GeneratorVersionType;
 
 /**   \brief  value based type definition for Can_FLSSAOfSIDFC */
-typedef uint16 Can_FLSSAOfSIDFCType;
+typedef uint8 Can_FLSSAOfSIDFCType;
 
 /**   \brief  value based type definition for Can_LSSOfSIDFC */
 typedef uint8 Can_LSSOfSIDFCType;
@@ -2273,9 +2230,6 @@ typedef struct sCan_ControllerConfigType
   Can_MailboxRxBasicEndIdxOfControllerConfigType MailboxRxBasicEndIdxOfControllerConfig;  /**< the end index of the 0:n relation pointing to Can_Mailbox */
   Can_MailboxRxBasicLengthOfControllerConfigType MailboxRxBasicLengthOfControllerConfig;  /**< the number of relations pointing to Can_Mailbox */
   Can_MailboxRxBasicStartIdxOfControllerConfigType MailboxRxBasicStartIdxOfControllerConfig;  /**< the start index of the 0:n relation pointing to Can_Mailbox */
-  Can_MailboxRxFullEndIdxOfControllerConfigType MailboxRxFullEndIdxOfControllerConfig;  /**< the end index of the 0:n relation pointing to Can_Mailbox */
-  Can_MailboxRxFullLengthOfControllerConfigType MailboxRxFullLengthOfControllerConfig;  /**< the number of relations pointing to Can_Mailbox */
-  Can_MailboxRxFullStartIdxOfControllerConfigType MailboxRxFullStartIdxOfControllerConfig;  /**< the start index of the 0:n relation pointing to Can_Mailbox */
   Can_MailboxTxBasicEndIdxOfControllerConfigType MailboxTxBasicEndIdxOfControllerConfig;  /**< the end index of the 0:n relation pointing to Can_Mailbox */
   Can_MailboxTxBasicLengthOfControllerConfigType MailboxTxBasicLengthOfControllerConfig;  /**< the number of relations pointing to Can_Mailbox */
   Can_MailboxTxBasicStartIdxOfControllerConfigType MailboxTxBasicStartIdxOfControllerConfig;  /**< the start index of the 0:n relation pointing to Can_Mailbox */
@@ -2319,10 +2273,10 @@ typedef struct sCan_ControllerDataType
 /**   \brief  type used in Can_Mailbox */
 typedef struct sCan_MailboxType
 {
-  Can_IDValueOfMailboxType IDValueOfMailbox;
   Can_ActiveSendObjectOfMailboxType ActiveSendObjectOfMailbox;
   Can_ControllerConfigIdxOfMailboxType ControllerConfigIdxOfMailbox;  /**< the index of the 1:1 relation pointing to Can_ControllerConfig */
   Can_HwHandleOfMailboxType HwHandleOfMailbox;
+  Can_IDValueOfMailboxType IDValueOfMailbox;
   Can_MailboxSizeOfMailboxType MailboxSizeOfMailbox;
   Can_MailboxTypeOfMailboxType MailboxTypeOfMailbox;
   Can_MaxDataLenOfMailboxType MaxDataLenOfMailbox;
@@ -2526,7 +2480,7 @@ typedef Can_PCConfigType Can_ConfigType;  /**< A structure type is present for d
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_BTPType, CAN_CONST) Can_BTP[6];
+extern CONST(Can_BTPType, CAN_CONST) Can_BTP[5];
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2550,7 +2504,7 @@ extern CONST(Can_BTPType, CAN_CONST) Can_BTP[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_BufferConfigType, CAN_CONST) Can_BufferConfig[6];
+extern CONST(Can_BufferConfigType, CAN_CONST) Can_BufferConfig[5];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2567,7 +2521,7 @@ extern CONST(Can_BufferConfigType, CAN_CONST) Can_BufferConfig[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_CanIfChannelIdType, CAN_CONST) Can_CanIfChannelId[6];
+extern CONST(Can_CanIfChannelIdType, CAN_CONST) Can_CanIfChannelId[5];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2601,9 +2555,6 @@ extern CONST(Can_CanSubSystemBaseAdrType, CAN_CONST) Can_CanSubSystemBaseAdr[2];
   MailboxRxBasicEndIdx               the end index of the 0:n relation pointing to Can_Mailbox
   MailboxRxBasicLength               the number of relations pointing to Can_Mailbox
   MailboxRxBasicStartIdx             the start index of the 0:n relation pointing to Can_Mailbox
-  MailboxRxFullEndIdx                the end index of the 0:n relation pointing to Can_Mailbox
-  MailboxRxFullLength                the number of relations pointing to Can_Mailbox
-  MailboxRxFullStartIdx              the start index of the 0:n relation pointing to Can_Mailbox
   MailboxTxBasicEndIdx               the end index of the 0:n relation pointing to Can_Mailbox
   MailboxTxBasicLength               the number of relations pointing to Can_Mailbox
   MailboxTxBasicStartIdx             the start index of the 0:n relation pointing to Can_Mailbox
@@ -2626,7 +2577,7 @@ extern CONST(Can_CanSubSystemBaseAdrType, CAN_CONST) Can_CanSubSystemBaseAdr[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[6];
+extern CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[5];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2643,7 +2594,7 @@ extern CONST(Can_ControllerConfigType, CAN_CONST) Can_ControllerConfig[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_FBTPType, CAN_CONST) Can_FBTP[6];
+extern CONST(Can_FBTPType, CAN_CONST) Can_FBTP[5];
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2656,7 +2607,7 @@ extern CONST(Can_FBTPType, CAN_CONST) Can_FBTP[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_GFCType, CAN_CONST) Can_GFC[6];
+extern CONST(Can_GFCType, CAN_CONST) Can_GFC[5];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2673,7 +2624,7 @@ extern CONST(Can_GFCType, CAN_CONST) Can_GFC[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_INT_PriorityType, CAN_CONST) Can_INT_Priority[6];
+extern CONST(Can_INT_PriorityType, CAN_CONST) Can_INT_Priority[5];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2690,7 +2641,7 @@ extern CONST(Can_INT_PriorityType, CAN_CONST) Can_INT_Priority[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_INT_RoutingGroupType, CAN_CONST) Can_INT_RoutingGroup[6];
+extern CONST(Can_INT_RoutingGroupType, CAN_CONST) Can_INT_RoutingGroup[5];
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2707,7 +2658,7 @@ extern CONST(Can_INT_RoutingGroupType, CAN_CONST) Can_INT_RoutingGroup[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_InitObjectBaudrateType, CAN_CONST) Can_InitObjectBaudrate[6];
+extern CONST(Can_InitObjectBaudrateType, CAN_CONST) Can_InitObjectBaudrate[5];
 #define CAN_STOP_SEC_CONST_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2724,7 +2675,7 @@ extern CONST(Can_InitObjectBaudrateType, CAN_CONST) Can_InitObjectBaudrate[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_InitObjectFdBrsConfigType, CAN_CONST) Can_InitObjectFdBrsConfig[6];
+extern CONST(Can_InitObjectFdBrsConfigType, CAN_CONST) Can_InitObjectFdBrsConfig[5];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2741,7 +2692,7 @@ extern CONST(Can_InitObjectFdBrsConfigType, CAN_CONST) Can_InitObjectFdBrsConfig
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_InitObjectStartIndexType, CAN_CONST) Can_InitObjectStartIndex[7];
+extern CONST(Can_InitObjectStartIndexType, CAN_CONST) Can_InitObjectStartIndex[6];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2758,7 +2709,7 @@ extern CONST(Can_InitObjectStartIndexType, CAN_CONST) Can_InitObjectStartIndex[7
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_OsIsrType, CAN_CONST) Can_IsrOsId[6];
+extern CONST(Can_OsIsrType, CAN_CONST) Can_IsrOsId[5];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2772,10 +2723,10 @@ extern CONST(Can_OsIsrType, CAN_CONST) Can_IsrOsId[6];
   \brief  mailbox configuration (over all controllers)
   \details
   Element                Description
-  IDValue            
   ActiveSendObject   
   ControllerConfigIdx    the index of the 1:1 relation pointing to Can_ControllerConfig
   HwHandle           
+  IDValue            
   MailboxSize        
   MailboxType        
   MaxDataLen         
@@ -2785,7 +2736,7 @@ extern CONST(Can_OsIsrType, CAN_CONST) Can_IsrOsId[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[17];
+extern CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[12];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2805,7 +2756,7 @@ extern CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[17];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_MemorySectionInfoType, CAN_CONST) Can_MemorySectionInfo[6];
+extern CONST(Can_MemorySectionInfoType, CAN_CONST) Can_MemorySectionInfo[5];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2827,7 +2778,7 @@ extern CONST(Can_MemorySectionInfoType, CAN_CONST) Can_MemorySectionInfo[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_MemorySectionObjectsType, CAN_CONST) Can_MemorySectionObjects[192];
+extern CONST(Can_MemorySectionObjectsType, CAN_CONST) Can_MemorySectionObjects[160];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2850,7 +2801,7 @@ extern CONST(Can_MemorySectionObjectsType, CAN_CONST) Can_MemorySectionObjects[1
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_SIDFCType, CAN_CONST) Can_SIDFC[6];
+extern CONST(Can_SIDFCType, CAN_CONST) Can_SIDFC[5];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2867,7 +2818,7 @@ extern CONST(Can_SIDFCType, CAN_CONST) Can_SIDFC[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_SIDFEType, CAN_CONST) Can_SIDFE[8];
+extern CONST(Can_SIDFEType, CAN_CONST) Can_SIDFE[5];
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2884,7 +2835,7 @@ extern CONST(Can_SIDFEType, CAN_CONST) Can_SIDFE[8];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_SRN_AddressType, CAN_CONST) Can_SRN_Address[6];
+extern CONST(Can_SRN_AddressType, CAN_CONST) Can_SRN_Address[5];
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2912,7 +2863,7 @@ extern CONST(Can_SRN_AddressType, CAN_CONST) Can_SRN_Address[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_ShmAdrType, CAN_CONST) Can_ShmAdr[6];
+extern CONST(Can_ShmAdrType, CAN_CONST) Can_ShmAdr[5];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2929,7 +2880,7 @@ extern CONST(Can_ShmAdrType, CAN_CONST) Can_ShmAdr[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_TDCRType, CAN_CONST) Can_TDCR[6];
+extern CONST(Can_TDCRType, CAN_CONST) Can_TDCR[5];
 #define CAN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2942,7 +2893,7 @@ extern CONST(Can_TDCRType, CAN_CONST) Can_TDCR[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_XIDAMType, CAN_CONST) Can_XIDAM[6];
+extern CONST(Can_XIDAMType, CAN_CONST) Can_XIDAM[5];
 #define CAN_STOP_SEC_CONST_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2963,7 +2914,7 @@ extern CONST(Can_XIDAMType, CAN_CONST) Can_XIDAM[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_XIDFCType, CAN_CONST) Can_XIDFC[6];
+extern CONST(Can_XIDFCType, CAN_CONST) Can_XIDFC[5];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3005,7 +2956,7 @@ extern CONST(Can_XIDFEType, CAN_CONST) Can_XIDFE[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[9];
+extern VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[7];
 #define CAN_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3040,7 +2991,7 @@ extern VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[9];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Can_ControllerDataType, CAN_VAR_NOINIT) Can_ControllerData[6];
+extern VAR(Can_ControllerDataType, CAN_VAR_NOINIT) Can_ControllerData[5];
 #define CAN_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

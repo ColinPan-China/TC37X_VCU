@@ -790,27 +790,6 @@ extern VAR(BswM_ESH_RunRequest, RTE_VAR_NOINIT) Rte_SWC1_Request_ESH_RunRequest_
 #  define RTE_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-typedef struct
-{
-  Rte_BitType Rte_RxTimeout_VcuRxMsg1_Sig0_oVcuRxMsg1_oTC37X_VCU_CAN00_13cef464_Rx : 1;
-  Rte_BitType Rte_RxTimeout_VcuRxMsg1_Sig1_oVcuRxMsg1_oTC37X_VCU_CAN00_70c92d40_Rx : 1;
-  Rte_BitType Rte_RxTimeout_VcuRxMsg1_Sig2_oVcuRxMsg1_oTC37X_VCU_CAN00_d5c1462c_Rx : 1;
-  Rte_BitType Rte_RxTimeout_VcuRxMsg1_Sig3_oVcuRxMsg1_oTC37X_VCU_CAN00_b6c69f08_Rx : 1;
-  Rte_BitType Rte_RxTimeout_VcuRxMsg2_Sig0_oVcuRxMsg2_oTC37X_VCU_CAN00_94ceda5c_Rx : 1;
-  Rte_BitType Rte_RxTimeout_VcuRxMsg2_Sig1_oVcuRxMsg2_oTC37X_VCU_CAN00_f7c90378_Rx : 1;
-  Rte_BitType Rte_RxTimeout_VcuRxMsg2_Sig2_oVcuRxMsg2_oTC37X_VCU_CAN00_52c16814_Rx : 1;
-  Rte_BitType Rte_RxTimeout_VcuRxMsg2_Sig3_oVcuRxMsg2_oTC37X_VCU_CAN00_31c6b130_Rx : 1;
-} Rte_RxTimeoutFlagsType;
-
-#  define RTE_START_SEC_VAR_ZERO_INIT_UNSPECIFIED
-#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-extern VAR(Rte_RxTimeoutFlagsType, RTE_VAR_ZERO_INIT) Rte_RxTimeoutFlags;
-
-#  define RTE_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED
-#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
 
 # endif /* defined(RTE_CORE) */
 

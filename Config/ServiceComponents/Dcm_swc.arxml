@@ -2122,15 +2122,6 @@
                     <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MICROSAR/Dcm_swc/DcmDiagnosticSessionControl</TYPE-TREF>
                   </MODE-GROUP>
                 </MODE-SWITCH-INTERFACE>
-                <MODE-SWITCH-INTERFACE UUID="31efc7a6-1988-4e40-8649-1b358dfd9867">
-                  <SHORT-NAME>DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8</SHORT-NAME>
-                  <IS-SERVICE>true</IS-SERVICE>
-                  <SERVICE-KIND>DIAGNOSTIC-COMMUNICATION-MANAGER</SERVICE-KIND>
-                  <MODE-GROUP UUID="c5a51cbf-d708-4eb9-a51b-59150e580461">
-                    <SHORT-NAME>DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8</SHORT-NAME>
-                    <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MICROSAR/Dcm_swc/DcmCommunicationControl</TYPE-TREF>
-                  </MODE-GROUP>
-                </MODE-SWITCH-INTERFACE>
                 <CLIENT-SERVER-INTERFACE UUID="a03bad90-012b-4cb0-bcc6-bdc7845450c3">
                   <SHORT-NAME>DCMServices</SHORT-NAME>
                   <IS-SERVICE>true</IS-SERVICE>
@@ -16698,10 +16689,6 @@
                       <SHORT-NAME>DcmDiagnosticSessionControl</SHORT-NAME>
                       <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DcmDiagnosticSessionControl</PROVIDED-INTERFACE-TREF>
                     </P-PORT-PROTOTYPE>
-                    <P-PORT-PROTOTYPE UUID="4e65b62f-4fc8-4f1c-be00-5ac6365669ae">
-                      <SHORT-NAME>DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8</SHORT-NAME>
-                      <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8</PROVIDED-INTERFACE-TREF>
-                    </P-PORT-PROTOTYPE>
                     <P-PORT-PROTOTYPE UUID="efbe98fe-3fe2-4e3d-882c-671862616f53">
                       <SHORT-NAME>DCMServices</SHORT-NAME>
                       <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DCMServices</PROVIDED-INTERFACE-TREF>
@@ -19430,11 +19417,6 @@
                         <PORT-API-OPTION>
                           <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
                           <INDIRECT-API>false</INDIRECT-API>
-                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8</PORT-REF>
-                        </PORT-API-OPTION>
-                        <PORT-API-OPTION>
-                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
-                          <INDIRECT-API>false</INDIRECT-API>
                           <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DCMServices</PORT-REF>
                         </PORT-API-OPTION>
                         <PORT-API-OPTION>
@@ -20371,13 +20353,6 @@
                               <MODE-GROUP-IREF>
                                 <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmDiagnosticSessionControl</CONTEXT-P-PORT-REF>
                                 <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/Dcm_swc/Interfaces/DcmDiagnosticSessionControl/DcmDiagnosticSessionControl</TARGET-MODE-GROUP-REF>
-                              </MODE-GROUP-IREF>
-                            </MODE-SWITCH-POINT>
-                            <MODE-SWITCH-POINT UUID="ff3e16cd-6805-43d3-b994-9e1778f8277a">
-                              <SHORT-NAME>ModeSwitchPointDcm_MainFunction_DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8_DcmCommunicati_215e9f00</SHORT-NAME>
-                              <MODE-GROUP-IREF>
-                                <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8</CONTEXT-P-PORT-REF>
-                                <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/Dcm_swc/Interfaces/DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8/DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8</TARGET-MODE-GROUP-REF>
                               </MODE-GROUP-IREF>
                             </MODE-SWITCH-POINT>
                             <MODE-SWITCH-POINT UUID="05fd44ef-0c30-4ef7-b6bd-d8f315153a22">
