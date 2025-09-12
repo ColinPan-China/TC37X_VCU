@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Dcm_Cfg.h
- *   Generation Time: 2025-03-12 16:51:24
+ *   Generation Time: 2025-09-12 10:25:41
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -74,7 +74,7 @@
 /*! Support generic connections */
 # define DCM_NET_GENERIC_CONNECTION_ENABLED                                    STD_OFF
 /*! Protect against clients other than the one started the non-default session */
-# define DCM_NET_PROTECT_SESSION_OF_CLIENT_ENABLED                             STD_OFF
+# define DCM_NET_PROTECT_SESSION_OF_CLIENT_ENABLED                             STD_ON
 /*! Paged buffer support for DEM interfaces */
 # define DCM_DEMIF_PAGED_BUFFER_ENABLED                                        STD_ON
 /*! Paged buffer support */
@@ -104,7 +104,7 @@
 /*! Support security access delay on boot */
 # define DCM_STATE_SEC_DELAY_ON_BOOT_ENABLED                                   STD_OFF
 /*! Support SecurityGet-/SetAttemptCounter APIs */
-# define DCM_STATE_SEC_ATT_CNTR_EXT_STORAGE_ENABLED                            STD_ON
+# define DCM_STATE_SEC_ATT_CNTR_EXT_STORAGE_ENABLED                            STD_OFF
 /*! Support security fixed bytes */
 # define DCM_STATE_SECURITY_FIXED_BYTES_ENABLED                                STD_OFF
 /*! Support mulitple secuirty fixed bytes per security level */
@@ -136,7 +136,7 @@
 /*! Support DID ROE */
 # define DCM_DIDMGR_OP_INFO_ROE_ENABLED                                        STD_OFF
 /*! Support dynamically define DID additional information */
-# define DCM_DIDMGR_OP_INFO_DEFINE_ENABLED                                     STD_ON
+# define DCM_DIDMGR_OP_INFO_DEFINE_ENABLED                                     STD_OFF
 /*! The ConditionCheckRead operation on source items will be called */
 # define DCM_DIDMGR_DYNDID_SRCITEM_CHECK_COND_ENABLED                          STD_OFF
 /*! The session and security states as well as any configured mode conditions on source items will be validated */
@@ -156,19 +156,19 @@
 /*! Support DID ranges with gaps */
 # define DCM_DIDMGR_OPTYPE_RANGE_ISAVAIL_ENABLED                               STD_OFF
 /*! Support return control to ECU */
-# define DCM_DIDMGR_OPTYPE_IO_RETCTRL2ECU_ENABLED                              STD_ON
+# define DCM_DIDMGR_OPTYPE_IO_RETCTRL2ECU_ENABLED                              STD_OFF
 /*! Support short term adjustment */
-# define DCM_DIDMGR_OPTYPE_IO_SHRTTERMADJ_ENABLED                              STD_ON
+# define DCM_DIDMGR_OPTYPE_IO_SHRTTERMADJ_ENABLED                              STD_OFF
 /*! Support RID manager  */
 # define DCM_RIDMGR_SUPPORT_ENABLED                                            STD_ON
 /*! Support external RID look up filter */
 # define DCM_RIDMGR_EXTENDED_LOOKUP_ENABLED                                    STD_OFF
 /*! Support direct memory access */
-# define DCM_MEMMGR_SUPPORT_ENABLED                                            STD_ON
+# define DCM_MEMMGR_SUPPORT_ENABLED                                            STD_OFF
 /*! Support MID extensions on memory range */
 # define DCM_MEMMGR_MID_SUPPORT_ENABLED                                        STD_OFF
 /*! Support memory transfer via FBL */
-# define DCM_FBLMGR_SUPPORT_ENABLED                                            STD_OFF
+# define DCM_FBLMGR_SUPPORT_ENABLED                                            STD_ON
 /*! Support manager for OBD and UDS IDs */
 # define DCM_OBDUDSIDMGR_SUPPORT_ENABLED                                       STD_OFF
 /*! Support calibration for OBD and UDS IDs */
@@ -208,7 +208,7 @@
 /*! BswM notification for updated application */
 # define DCM_DIAG_NOTIF_BSWM_APPL_UPDATED_ENABLED                              STD_OFF
 /*! Reset to default session on any functionally requested OBD service */
-# define DCM_DIAG_RST2DEF_ON_FUNC_OBD_REQ_ENABLED                              STD_OFF
+# define DCM_DIAG_RST2DEF_ON_FUNC_OBD_REQ_ENABLED                              STD_ON
 /*! Support DCM state recovery */
 # define DCM_DIAG_STATE_RECOVERY_ENABLED                                       STD_OFF
 /*! Support RCR-RP transmission limitation */
@@ -294,20 +294,20 @@
 # define DCM_SVC_19_04_SUPPORT_ENABLED                                         STD_ON
 # define DCM_SVC_19_05_SUPPORT_ENABLED                                         STD_OFF
 # define DCM_SVC_19_06_SUPPORT_ENABLED                                         STD_ON
-# define DCM_SVC_19_07_SUPPORT_ENABLED                                         STD_ON
-# define DCM_SVC_19_08_SUPPORT_ENABLED                                         STD_ON
-# define DCM_SVC_19_09_SUPPORT_ENABLED                                         STD_ON
+# define DCM_SVC_19_07_SUPPORT_ENABLED                                         STD_OFF
+# define DCM_SVC_19_08_SUPPORT_ENABLED                                         STD_OFF
+# define DCM_SVC_19_09_SUPPORT_ENABLED                                         STD_OFF
 # define DCM_SVC_19_0A_SUPPORT_ENABLED                                         STD_ON
-# define DCM_SVC_19_0B_SUPPORT_ENABLED                                         STD_ON
-# define DCM_SVC_19_0C_SUPPORT_ENABLED                                         STD_ON
-# define DCM_SVC_19_0D_SUPPORT_ENABLED                                         STD_ON
-# define DCM_SVC_19_0E_SUPPORT_ENABLED                                         STD_ON
+# define DCM_SVC_19_0B_SUPPORT_ENABLED                                         STD_OFF
+# define DCM_SVC_19_0C_SUPPORT_ENABLED                                         STD_OFF
+# define DCM_SVC_19_0D_SUPPORT_ENABLED                                         STD_OFF
+# define DCM_SVC_19_0E_SUPPORT_ENABLED                                         STD_OFF
 # define DCM_SVC_19_0F_SUPPORT_ENABLED                                         STD_OFF
 # define DCM_SVC_19_10_SUPPORT_ENABLED                                         STD_OFF
 # define DCM_SVC_19_11_SUPPORT_ENABLED                                         STD_OFF
 # define DCM_SVC_19_12_SUPPORT_ENABLED                                         STD_OFF
 # define DCM_SVC_19_13_SUPPORT_ENABLED                                         STD_OFF
-# define DCM_SVC_19_14_SUPPORT_ENABLED                                         STD_ON
+# define DCM_SVC_19_14_SUPPORT_ENABLED                                         STD_OFF
 # define DCM_SVC_19_15_SUPPORT_ENABLED                                         STD_OFF
 # define DCM_SVC_19_16_SUPPORT_ENABLED                                         STD_OFF
 # define DCM_SVC_19_17_SUPPORT_ENABLED                                         STD_OFF
@@ -322,7 +322,7 @@
 /*! Diagnostic service 0x22 handled by DCM */
 # define DCM_SVC_22_SUPPORT_ENABLED                                            STD_ON
 /*! Diagnostic service 0x23 handled by DCM */
-# define DCM_SVC_23_SUPPORT_ENABLED                                            STD_ON
+# define DCM_SVC_23_SUPPORT_ENABLED                                            STD_OFF
 /*! Diagnostic service 0x24 handled by DCM */
 # define DCM_SVC_24_SUPPORT_ENABLED                                            STD_OFF
 /*! Diagnostic service 0x27 handled by DCM */
@@ -346,33 +346,33 @@
 /*! Diagnostic service 0x2A handled by DCM */
 # define DCM_SVC_2A_SUPPORT_ENABLED                                            STD_OFF
 /*! Diagnostic service 0x2C handled by DCM */
-# define DCM_SVC_2C_SUPPORT_ENABLED                                            STD_ON
+# define DCM_SVC_2C_SUPPORT_ENABLED                                            STD_OFF
 /*! Support dynamically define DID by identifier */
-# define DCM_SVC_2C_01_SUPPORT_ENABLED                                         STD_ON
+# define DCM_SVC_2C_01_SUPPORT_ENABLED                                         STD_OFF
 /*! Support dynamically define DID by memory address */
-# define DCM_SVC_2C_02_SUPPORT_ENABLED                                         STD_ON
+# define DCM_SVC_2C_02_SUPPORT_ENABLED                                         STD_OFF
 /*! Support clear dynamically defined DID */
-# define DCM_SVC_2C_03_SUPPORT_ENABLED                                         STD_ON
+# define DCM_SVC_2C_03_SUPPORT_ENABLED                                         STD_OFF
 /*! Support NvM persistence of dynamically defined DID */
 # define DCM_SVC_2C_NVRAM_SUPPORT_ENABLED                                      STD_OFF
 /*! Diagnostic service 0x2E handled by DCM */
 # define DCM_SVC_2E_SUPPORT_ENABLED                                            STD_ON
 /*! Diagnostic service 0x2F handled by DCM */
-# define DCM_SVC_2F_SUPPORT_ENABLED                                            STD_ON
+# define DCM_SVC_2F_SUPPORT_ENABLED                                            STD_OFF
 /*! Diagnostic service 0x31 handled by DCM */
 # define DCM_SVC_31_SUPPORT_ENABLED                                            STD_ON
 /*! Diagnostic service 0x34 handled by DCM */
-# define DCM_SVC_34_SUPPORT_ENABLED                                            STD_OFF
+# define DCM_SVC_34_SUPPORT_ENABLED                                            STD_ON
 /*! Diagnostic service 0x35 handled by DCM */
 # define DCM_SVC_35_SUPPORT_ENABLED                                            STD_OFF
 /*! Diagnostic service 0x36 handled by DCM */
-# define DCM_SVC_36_SUPPORT_ENABLED                                            STD_OFF
+# define DCM_SVC_36_SUPPORT_ENABLED                                            STD_ON
 /*! Diagnostic service 0x37 handled by DCM */
-# define DCM_SVC_37_SUPPORT_ENABLED                                            STD_OFF
+# define DCM_SVC_37_SUPPORT_ENABLED                                            STD_ON
 /*! Diagnostic service 0x38 handled by DCM */
 # define DCM_SVC_38_SUPPORT_ENABLED                                            STD_OFF
 /*! Diagnostic service 0x3D handled by DCM */
-# define DCM_SVC_3D_SUPPORT_ENABLED                                            STD_ON
+# define DCM_SVC_3D_SUPPORT_ENABLED                                            STD_OFF
 /*! Diagnostic service 0x3E handled by DCM */
 # define DCM_SVC_3E_SUPPORT_ENABLED                                            STD_ON
 /*! Diagnostic service 0x85 handled by DCM */
@@ -485,9 +485,9 @@
 /*! The maximum size of all configured buffers */
 # define DCM_NET_MAX_BUFFER_SIZE                                                 50u
 /*! Maximum number of connections */
-# define DCM_NET_MAX_NUM_CONNECTIONS                                            1u
+# define DCM_NET_MAX_NUM_CONNECTIONS                                            2u
 /*! Number of channels from main connections and ComControl channels */
-# define DCM_NET_MAX_NUM_ALL_COMM_CHANNELS                                        1u
+# define DCM_NET_MAX_NUM_ALL_COMM_CHANNELS                                        2u
 /*! The default DemClientId */
 # define DCM_NET_DEFAULT_DEM_CLIENTID                                          DemConf_DemClient_DemClient
 /*! The number of periodic messages to be sent within the delay time */
@@ -501,14 +501,19 @@
 /*!  ----- Symbolic name values for DCM protocols -----  */
 # define DcmConf_DcmDslProtocolRow_DcmDslProtocolRow_29812fbf                   3u
 /*!  ----- Symbolic name values for Rx PduIds -----  */
-# define DcmConf_DcmDslProtocolRx_Vcu_Uds_Func_Request_oTC37X_VCU_CAN00_21e26bac_Rx_f99a7a58  0u
-# define DcmConf_DcmDslProtocolRx_Vcu_Uds_Phy_Request_oTC37X_VCU_CAN00_d561dcee_Rx_7ba0ca16  1u
+# define DcmConf_DcmDslProtocolRx_DiagReq_ALL_oATOM_CAN_Matrix_PT_V600_20250211_8c8ad95e_Rx_003bd04d  0u
+# define DcmConf_DcmDslProtocolRx_DiagReq_FUN_oATOM_CAN_Matrix_PT_V600_20250211_f8649eb7_Rx_c25173e7  1u
+# define DcmConf_DcmDslProtocolRx_DiagReq_OBD_oATOM_CAN_Matrix_PT_V600_20250211_97cbed37_Rx_85440dd6  4u
+# define DcmConf_DcmDslProtocolRx_DiagReq_PT_oATOM_CAN_Matrix_PT_V600_20250211_35bae364_Rx_1636832d  2u
+# define DcmConf_DcmDslProtocolRx_DiagReq_VCU_OBD_oATOM_CAN_Matrix_PT_V600_20250211_39988d3e_Rx_28448685  5u
+# define DcmConf_DcmDslProtocolRx_DiagReq_VCU_oATOM_CAN_Matrix_PT_V600_20250211_bcb58cfd_Rx_931d17fc  3u
 /*!  ----- Symbolic name values for Tx PduIds -----  */
-# define DcmConf_DcmDslProtocolTx_Vcu_Uds_Response_oTC37X_VCU_CAN00_4d111be6_Tx_666acd3e  0u
+# define DcmConf_DcmDslProtocolTx_DiagResp_VCU_OBD_oATOM_CAN_Matrix_PT_V600_20250211_599d1fc3_Tx_9f6fe4de  1u
+# define DcmConf_DcmDslProtocolTx_DiagResp_VCU_oATOM_CAN_Matrix_PT_V600_20250211_6bab0738_Tx_f4157bca  0u
 /*! Number of receive PduIds */
-# define DCM_NET_NUM_RX_PDUIDS                                                  2u
+# define DCM_NET_NUM_RX_PDUIDS                                                  6u
 /*! Number of send PduIds */
-# define DCM_NET_NUM_TX_PDUIDS                                                  1u
+# define DCM_NET_NUM_TX_PDUIDS                                                  2u
 /*! The total number of configured protocols */
 # define DCM_NET_NUM_PROTOCOLS                                                  1u
 /*! The minimum RxPduID value of the CanTp */
@@ -518,15 +523,15 @@
 /*! The total number of CanTp RxPduIDs */
 # define DCM_NET_NUM_CANTP_RX_PDUIDS                                              0u
 /*! Size of table Dcm_CfgNetRxPduInfo */
-# define DCM_CFGNETRXPDUINFO_SIZE                                               2u
+# define DCM_CFGNETRXPDUINFO_SIZE                                               6u
 /*! Size of table Dcm_CfgNetTxPduInfo */
-# define DCM_CFGNETTXPDUINFO_SIZE                                               1u
+# define DCM_CFGNETTXPDUINFO_SIZE                                               2u
 /*! Size of table Dcm_CfgNetConnectionInfo */
-# define DCM_CFGNETCONNECTIONINFO_SIZE                                          1u
+# define DCM_CFGNETCONNECTIONINFO_SIZE                                          2u
 /*! Size of table Dcm_CfgNetProtocolInfo */
 # define DCM_CFGNETPROTOCOLINFO_SIZE                                            1u
 /*! Size of table Dcm_CfgNetAllComMChannelMap */
-# define DCM_CFGNETALLCOMMCHANNELMAP_SIZE                                       1u
+# define DCM_CFGNETALLCOMMCHANNELMAP_SIZE                                       2u
 /*! Size of table Dcm_CfgNetConnComMChannelMap */
 # define DCM_CFGNETCONNCOMMCHANNELMAP_SIZE                                      1u
 /*! Size of table Dcm_CfgNetNetworkHandleLookUpTable */
@@ -544,17 +549,17 @@
 /*! The mode rule reference for persisting the authentication state */
 # define DCM_MODE_AUTH_PERSIST_STATE_MODERULE_REF                                 0u
 /*! Number of session states */
-# define DCM_STATE_NUM_SESSION                                                  3u
+# define DCM_STATE_NUM_SESSION                                                  4u
 /*! Number of security access states */
-# define DCM_STATE_NUM_SECURITY                                                 3u
+# define DCM_STATE_NUM_SECURITY                                                 5u
 /*! Number of security levels (all security states except the "locked" one) */
-# define DCM_STATE_SECURITY_NUM_LEVELS                                          2u
+# define DCM_STATE_SECURITY_NUM_LEVELS                                          4u
 /*! Size of table Dcm_CfgStatePreconditions */
-# define DCM_CFGSTATEPRECONDITIONS_SIZE                                         3u
+# define DCM_CFGSTATEPRECONDITIONS_SIZE                                        15u
 /*! Size of table Dcm_CfgStateSessionInfo */
-# define DCM_CFGSTATESESSIONINFO_SIZE                                           3u
+# define DCM_CFGSTATESESSIONINFO_SIZE                                           4u
 /*! Size of table Dcm_CfgStateSecurityInfo */
-# define DCM_CFGSTATESECURITYINFO_SIZE                                          2u
+# define DCM_CFGSTATESECURITYINFO_SIZE                                          4u
 /*! Size of table Dcm_CfgStateSessionNotificationInfo */
 # define DCM_CFGSTATESESSIONNOTIFICATIONINFO_SIZE                               1u
 /*! Size of table Dcm_CfgStateSecurityNotificationInfo */
@@ -563,66 +568,61 @@
 # define DcmConf_DcmDspSessionRow_Default                                       1u
 # define DcmConf_DcmDspSessionRow_Programming                                   2u
 # define DcmConf_DcmDspSessionRow_Extended                                      3u
+# define DcmConf_DcmDspSessionRow_Coding_Session                               65u
 /*!  ----- Symbolic name values for Security -----  */
 # define DcmConf_DcmDspSecurity_Locked                                          0u
 # define DcmConf_DcmDspSecurityRow_UnlockedL1                                   1u
-# define DcmConf_DcmDspSecurityRow_Level_3                                      2u
+# define DcmConf_DcmDspSecurityRow_Unlocked_Level_2                             2u
+# define DcmConf_DcmDspSecurityRow_Unlocked_Level_3                             3u
+# define DcmConf_DcmDspSecurityRow_Unlocked_Level_4                             4u
 /*! Number of DID ranges */
 # define DCM_NUM_DID_RANGES                                                     0u
 /*! Read paged data page buffer size */
 # define DCM_DIDMGR_READ_PAGE_SIZE                                                    7u
 /*! Total number of DynDID items */
-# define DCM_NUM_DYNDID_ITEMS                                                     5u
+# define DCM_NUM_DYNDID_ITEMS                                                     0u
 /*! Number of dynamically defined DIDs */
-# define DCM_NUM_DYNDIDS                                                          1u
+# define DCM_NUM_DYNDIDS                                                          0u
 /*! Number of IO control DIDs */
-# define DCM_NUM_IODIDS                                                           1u
+# define DCM_NUM_IODIDS                                                           0u
 /*! Maximum size of an IO control DIDs CEMR to be passed to the application */
 # define DCM_DIDMGR_IODID_MAX_EXT_CEMR_SIZE                                       1u
 /*! Size of table Dcm_CfgDidMgrDidLookUpTable */
-# define DCM_CFGDIDMGRDIDLOOKUPTABLE_SIZE                                      19u
+# define DCM_CFGDIDMGRDIDLOOKUPTABLE_SIZE                                      51u
 /*! Size of table Dcm_CfgDidMgrDidRanges */
 # define DCM_CFGDIDMGRDIDRANGES_SIZE                                            1u
 /*! Size of table Dcm_CfgDidMgrRangeDidInfoRefs */
 # define DCM_CFGDIDMGRRANGEDIDINFOREFS_SIZE                                     1u
 /*! Size of table Dcm_CfgDidMgrDidInfo */
-# define DCM_CFGDIDMGRDIDINFO_SIZE                                             18u
+# define DCM_CFGDIDMGRDIDINFO_SIZE                                             50u
 /*! Size of table Dcm_CfgDidMgrDidOpInfo */
-# define DCM_CFGDIDMGRDIDOPINFO_SIZE                                           35u
+# define DCM_CFGDIDMGRDIDOPINFO_SIZE                                           56u
 /*! Size of table Dcm_CfgDidMgrDidOpClassInfo */
-# define DCM_CFGDIDMGRDIDOPCLASSINFO_SIZE                                      55u
+# define DCM_CFGDIDMGRDIDOPCLASSINFO_SIZE                                      103u
 /*! Size of table Dcm_CfgDidMgrSignalOpClassInfo */
-# define DCM_CFGDIDMGRSIGNALOPCLASSINFO_SIZE                                   69u
-/*! Size of table Dcm_CfgDidMgrOpInfoIoControl */
-# define DCM_CFGDIDMGROPINFOIOCONTROL_SIZE                                      1u
-/*! Size of table Dcm_CfgDidMgrOpInfoDefine */
-# define DCM_CFGDIDMGROPINFODEFINE_SIZE                                         1u
-/*! Size of table Dcm_CfgDidMgrOpInfoCombined */
-# define DCM_CFGDIDMGROPINFOCOMBINED_SIZE                                       1u
+# define DCM_CFGDIDMGRSIGNALOPCLASSINFO_SIZE                                    366u
 /*! Invalid value for Routine Info Byte */
 # define DCM_CFGRIDMGR_INVALID_ROUTINEINFOBYTE                                    0u
 /*! Size of table Dcm_CfgRidMgrRidLookUpTable */
-# define DCM_CFGRIDMGRRIDLOOKUPTABLE_SIZE                                       3u
+# define DCM_CFGRIDMGRRIDLOOKUPTABLE_SIZE                                       8u
 /*! Size of table Dcm_CfgRidMgrRidInfo */
-# define DCM_CFGRIDMGRRIDINFO_SIZE                                              2u
+# define DCM_CFGRIDMGRRIDINFO_SIZE                                              7u
 /*! Size of table Dcm_CfgRidMgrOpInfo */
-# define DCM_CFGRIDMGROPINFO_SIZE                                               4u
+# define DCM_CFGRIDMGROPINFO_SIZE                                               8u
 /*! Specifies total number of supported memory operations */
-# define DCM_MEMMGR_NUM_MEMORY_OPERATIONS                                       2u
+# define DCM_MEMMGR_NUM_MEMORY_OPERATIONS                                       0u
 /*! Specifies total number of memory ranges in single MID or no MID mode */
-# define DCM_MEMMGR_MEMMAP_NUM_ENTRIES                                            1u
-/*! Size of table Dcm_CfgMemMgrAlfidLookUpTable */
-# define DCM_CFGMEMMGRALFIDLOOKUPTABLE_SIZE                                    17u
-/*! Size of table Dcm_CfgMemMgrMidInfo */
-# define DCM_CFGMEMMGRMIDINFO_SIZE                                              1u
-/*! Size of table Dcm_CfgMemMgrMemMap */
-# define DCM_CFGMEMMGRMEMMAP_SIZE                                               1u
+# define DCM_MEMMGR_MEMMAP_NUM_ENTRIES                                            0u
 /*! Call out function for service 0x34 */
 # define DCM_PROCESS_REQUEST_DOWNLOAD                                          Dcm_ProcessRequestDownload
 /*! Call out function for service 0x36 */
 # define DCM_PROCESS_TRANSFER_DATA_WRITE                                       Dcm_ProcessTransferDataWrite
 /*! Call out function for service 0x37 */
 # define DCM_PROCESS_REQUEST_TRANSFER_EXIT                                     Dcm_ProcessRequestTransferExit
+/*! Size of table Dcm_CfgFblMgrTransferAlfidLookUpTable */
+# define DCM_CFGFBLMGRTRANSFERALFIDLOOKUPTABLE_SIZE                            17u
+/*! Size of table Dcm_CfgFblMgrTransferMidLookUpTable */
+# define DCM_CFGFBLMGRTRANSFERMIDLOOKUPTABLE_SIZE                               1u
 /*! Configured main function period time */
 # define DCM_TASK_CYCLE_MS                                                       10u
 /*! Configured keep alive time */
@@ -636,27 +636,27 @@
 /*! Specifies the NRC to be sent, once the maximum number of RCR-RP responses has been reached */
 # define DCM_DIAG_CANCEL_OP_NRC                                                DCM_E_GENERALREJECT
 /*! Specifies the reference to function that stops the repeater */
-# define DCM_DIAG_SERVICEINFO_REPEATEREND_IDX                                  15u
+# define DCM_DIAG_SERVICEINFO_REPEATEREND_IDX                                  17u
 /*! Size of table Dcm_CfgDiagSvcIdLookUpTable */
-# define DCM_CFGDIAGSVCIDLOOKUPTABLE_SIZE                                      16u
+# define DCM_CFGDIAGSVCIDLOOKUPTABLE_SIZE                                      18u
 /*! Size of table Dcm_CfgDiagSvcInitializers */
-# define DCM_CFGDIAGSVCINITIALIZERS_SIZE                                        4u
+# define DCM_CFGDIAGSVCINITIALIZERS_SIZE                                        2u
 /*! Size of table Dcm_CfgDiagServiceInfo */
-# define DCM_CFGDIAGSERVICEINFO_SIZE                                           16u
+# define DCM_CFGDIAGSERVICEINFO_SIZE                                           18u
 /*! Size of table Dcm_CfgDiagSvcIdExecPrecondTable */
-# define DCM_CFGDIAGSVCIDEXECPRECONDTABLE_SIZE                                 15u
+# define DCM_CFGDIAGSVCIDEXECPRECONDTABLE_SIZE                                 17u
 /*! Size of table Dcm_CfgDiagSvcPostProcessors */
-# define DCM_CFGDIAGSVCPOSTPROCESSORS_SIZE                                     11u
+# define DCM_CFGDIAGSVCPOSTPROCESSORS_SIZE                                      9u
 /*! Size of table Dcm_CfgDiagSvcUpdaters */
 # define DCM_CFGDIAGSVCUPDATERS_SIZE                                            3u
 /*! Size of table Dcm_CfgDiagSvcCancellers */
-# define DCM_CFGDIAGSVCCANCELLERS_SIZE                                          7u
+# define DCM_CFGDIAGSVCCANCELLERS_SIZE                                          6u
 /*! Size of table Dcm_CfgDiagOemNotificationInfo */
 # define DCM_CFGDIAGOEMNOTIFICATIONINFO_SIZE                                    1u
 /*! Size of table Dcm_CfgDiagSysNotificationInfo */
 # define DCM_CFGDIAGSYSNOTIFICATIONINFO_SIZE                                    1u
 /*! Size of table Dcm_CfgDiagSvcId2ProtMap */
-# define DCM_CFGDIAGSVCID2PROTMAP_SIZE                                         15u
+# define DCM_CFGDIAGSVCID2PROTMAP_SIZE                                         17u
 /*! Total number of configuration variants */
 # define DCM_VARMGR_NUM_CFG_VARIANTS                                              1u
 /*! Release specific variant magic number */
@@ -664,7 +664,7 @@
 /*! Release specific generator compatibility number */
 # define DCM_CFG_GEN_COMPATIBILITY_VERSION                                     0x0280u
 /*! Maximum numbers of Dids which could be handled in parallel. */
-# define DCM_RSRCMGR_DID_LOCK_LIST_SIZE                                         2u
+# define DCM_RSRCMGR_DID_LOCK_LIST_SIZE                                         1u
 /*! The deauthenticated role */
 # define DCM_AUTHMGR_DEAUTHENTICATED_ROLE                                      0x00000000u
 /*! Default session timeout for transition to deauthenticated state */
@@ -688,11 +688,11 @@
 /*! General NRC for authentication */
 # define DCM_AUTHMGR_GENERAL_NRC                                               0x00u
 /*! Size of table Dcm_CfgSvc10SubFuncLookUpTable */
-# define DCM_CFGSVC10SUBFUNCLOOKUPTABLE_SIZE                                    4u
+# define DCM_CFGSVC10SUBFUNCLOOKUPTABLE_SIZE                                    5u
 /*! Size of table Dcm_CfgSvc10SubFuncInfo */
-# define DCM_CFGSVC10SUBFUNCINFO_SIZE                                           3u
+# define DCM_CFGSVC10SUBFUNCINFO_SIZE                                           4u
 /*! Size of table Dcm_CfgSvc10SubFuncExecPrecondTable */
-# define DCM_CFGSVC10SUBFUNCEXECPRECONDTABLE_SIZE                               3u
+# define DCM_CFGSVC10SUBFUNCEXECPRECONDTABLE_SIZE                               4u
 /*! The ECU power down time */
 # define DCM_SVC_11_POWERDOWNTIME                                              255u
 /*! Size of table Dcm_CfgSvc11SubFuncLookUpTable */
@@ -706,31 +706,31 @@
 /*! Reference to the Dcm_CfgStatePreconditions[] entry */
 # define DCM_SVC_19_USERMEM_ID_PRECON_REF                                             0u
 /*! Size of table Dcm_CfgSvc19SubFuncLookUpTable */
-# define DCM_CFGSVC19SUBFUNCLOOKUPTABLE_SIZE                                   15u
+# define DCM_CFGSVC19SUBFUNCLOOKUPTABLE_SIZE                                    7u
 /*! Size of table Dcm_CfgSvc19SubFuncInfo */
-# define DCM_CFGSVC19SUBFUNCINFO_SIZE                                          14u
+# define DCM_CFGSVC19SUBFUNCINFO_SIZE                                           6u
 /*! Size of table Dcm_CfgSvc19SubFuncExecPrecondTable */
-# define DCM_CFGSVC19SUBFUNCEXECPRECONDTABLE_SIZE                              14u
+# define DCM_CFGSVC19SUBFUNCEXECPRECONDTABLE_SIZE                               6u
 /*! Specifies the maximum number of DIDs per single request service 0x22 */
 # define DCM_SVC_22_MAX_DID_LIST_LEN                                            5u
 /*! The total number of failed attempt counter monitors */
-# define DCM_SVC_27_NUM_ATTEMPT_COUNTERS                                        2u
+# define DCM_SVC_27_NUM_ATTEMPT_COUNTERS                                        4u
 /*! The total number of failed attempt timers */
-# define DCM_SVC_27_NUM_DELAY_TIMERS                                            2u
+# define DCM_SVC_27_NUM_DELAY_TIMERS                                            4u
 /*! Size of table Dcm_CfgSvc27SubFuncLookUpTable */
-# define DCM_CFGSVC27SUBFUNCLOOKUPTABLE_SIZE                                    5u
+# define DCM_CFGSVC27SUBFUNCLOOKUPTABLE_SIZE                                    9u
 /*! Size of table Dcm_CfgSvc27SubFuncInfo */
-# define DCM_CFGSVC27SUBFUNCINFO_SIZE                                           4u
+# define DCM_CFGSVC27SUBFUNCINFO_SIZE                                           8u
 /*! Size of table Dcm_CfgSvc27SecLevelInfo */
-# define DCM_CFGSVC27SECLEVELINFO_SIZE                                          2u
+# define DCM_CFGSVC27SECLEVELINFO_SIZE                                          4u
 /*! Size of table Dcm_CfgSvc27SubFuncExecPrecondTable */
-# define DCM_CFGSVC27SUBFUNCEXECPRECONDTABLE_SIZE                               4u
+# define DCM_CFGSVC27SUBFUNCEXECPRECONDTABLE_SIZE                               8u
 /*! Size of table Dcm_CfgSvc28SubFuncLookUpTable */
-# define DCM_CFGSVC28SUBFUNCLOOKUPTABLE_SIZE                                    5u
+# define DCM_CFGSVC28SUBFUNCLOOKUPTABLE_SIZE                                    3u
 /*! Size of table Dcm_CfgSvc28SubFuncInfo */
-# define DCM_CFGSVC28SUBFUNCINFO_SIZE                                           4u
+# define DCM_CFGSVC28SUBFUNCINFO_SIZE                                           2u
 /*! Size of table Dcm_CfgSvc28SubFuncExecPrecondTable */
-# define DCM_CFGSVC28SUBFUNCEXECPRECONDTABLE_SIZE                               4u
+# define DCM_CFGSVC28SUBFUNCEXECPRECONDTABLE_SIZE                               2u
 /*! Size of table Dcm_CfgSvc28MessageTypeLookUpTable */
 # define DCM_CFGSVC28MESSAGETYPELOOKUPTABLE_SIZE                                4u
 /*! Size of table Dcm_CfgSvc28SubNetIdLookUp */
@@ -738,13 +738,7 @@
 /*! Size of table Dcm_CfgSvc28SubNetIdMap */
 # define DCM_CFGSVC28SUBNETIDMAP_SIZE                                           2u
 /*! Specifies the buffers size needed for data extraction of a DDDID source item */
-# define DCM_SVC_2C_READ_BUFFER_SIZE                                             17u
-/*! Size of table Dcm_CfgSvc2CSubFuncLookUpTable */
-# define DCM_CFGSVC2CSUBFUNCLOOKUPTABLE_SIZE                                    4u
-/*! Size of table Dcm_CfgSvc2CSubFuncInfo */
-# define DCM_CFGSVC2CSUBFUNCINFO_SIZE                                           3u
-/*! Size of table Dcm_CfgSvc2CSubFuncExecPrecondTable */
-# define DCM_CFGSVC2CSUBFUNCEXECPRECONDTABLE_SIZE                               3u
+# define DCM_SVC_2C_READ_BUFFER_SIZE                                              0u
 /*! Buffer size for the routine parameter integrity */
 # define DCM_SVC_31_INTEGRITY_BUFFER_SIZE                                         1u
 /*! Size of table Dcm_CfgSvc3ESubFuncLookUpTable */

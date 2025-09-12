@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2025-09-10 10:53:51
+ *   Generation Time: 2025-09-12 10:25:40
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -138,11 +138,11 @@
 #define BSWM_VERSION_INFO_API                STD_OFF
 #define BSWM_COMM_PNC_SUPPORT                STD_OFF
 #define BSWM_COMM_INITIATE_RESET             STD_OFF
-#define BSWM_CHANNEL_COUNT                   8u
-#define BSWM_WAKEUP_SOURCE_COUNT             13u
+#define BSWM_CHANNEL_COUNT                   9u
+#define BSWM_WAKEUP_SOURCE_COUNT             14u
 #define BSWM_IPDU_GROUP_CONTROL              STD_ON
 #define BSWM_ECUM_MODE_HANDLING              STD_OFF
-#define BSWM_IPDUGROUPVECTORSIZE             2u
+#define BSWM_IPDUGROUPVECTORSIZE             3u
 #define BSWM_MULTIPARTITION                  STD_OFF
 
 
@@ -157,50 +157,53 @@
 #define BswMConf_BswMRule_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX (0) 
 #define BswMConf_BswMRule_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_RX_DM (1) 
 #define BswMConf_BswMRule_CC_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_TX (2) 
-#define BswMConf_BswMRule_CC_CN_LIN00_b12a0454_StartSchedule (3) 
-#define BswMConf_BswMRule_CC_CN_LIN01_c62d34c2_StartSchedule (4) 
-#define BswMConf_BswMRule_CC_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4 (5) 
-#define BswMConf_BswMRule_CC_CN_LIN02_5f246578_StartSchedule (6) 
-#define BswMConf_BswMRule_CC_CN_LIN02_5f246578_Vcu_Lin3_Schedule_bdb0899f (7) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_BUSOFF_SILENT (8) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_NO_COM (9) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX (10) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX_DM (11) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_DISABLE (12) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_ENABLE (13) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_ENABLE_BUSOFF (14) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_NM_DISABLE (15) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_NM_ENABLE (16) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT (17) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM (18) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX (19) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM (20) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE (21) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE (22) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF (23) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX (24) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX_DM (25) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_TX (26) 
-#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX (27) 
-#define BswMConf_BswMRule_ESH_DemInit (28) 
-#define BswMConf_BswMRule_ESH_InitToWakeup (29) 
-#define BswMConf_BswMRule_ESH_PostRun (30) 
-#define BswMConf_BswMRule_ESH_PostRunNested (31) 
-#define BswMConf_BswMRule_ESH_PostRunToPrepNested (32) 
-#define BswMConf_BswMRule_ESH_PrepToWait (33) 
-#define BswMConf_BswMRule_ESH_RunToPostRun (34) 
-#define BswMConf_BswMRule_ESH_RunToPostRunNested (35) 
-#define BswMConf_BswMRule_ESH_WaitToShutdown (36) 
-#define BswMConf_BswMRule_ESH_WaitToWakeup (37) 
-#define BswMConf_BswMRule_ESH_WakeupToPrep (38) 
-#define BswMConf_BswMRule_ESH_WakeupToRun (39) 
+#define BswMConf_BswMRule_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX (3) 
+#define BswMConf_BswMRule_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_DM (4) 
+#define BswMConf_BswMRule_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX (5) 
+#define BswMConf_BswMRule_CC_CN_LIN00_b12a0454_StartSchedule (6) 
+#define BswMConf_BswMRule_CC_CN_LIN01_c62d34c2_StartSchedule (7) 
+#define BswMConf_BswMRule_CC_CN_LIN01_c62d34c2_Vcu_Lin0_Schedule_0e999bb4 (8) 
+#define BswMConf_BswMRule_CC_CN_LIN02_5f246578_StartSchedule (9) 
+#define BswMConf_BswMRule_CC_CN_LIN02_5f246578_Vcu_Lin3_Schedule_bdb0899f (10) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_BUSOFF_SILENT (11) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_NO_COM (12) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX (13) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_RX_DM (14) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_DISABLE (15) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_ENABLE (16) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_07b6c9c8_TX_ENABLE_BUSOFF (17) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_NM_DISABLE (18) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN00_NM_ENABLE (19) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_BUSOFF_SILENT (20) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_NO_COM (21) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX (22) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_RX_DM (23) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_DISABLE (24) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE (25) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN01_70b1f95e_TX_ENABLE_BUSOFF (26) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX (27) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_RX_DM (28) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN03_9ebf9872_TX (29) 
+#define BswMConf_BswMRule_CC_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX (30) 
+#define BswMConf_BswMRule_ESH_DemInit (31) 
+#define BswMConf_BswMRule_ESH_InitToWakeup (32) 
+#define BswMConf_BswMRule_ESH_PostRun (33) 
+#define BswMConf_BswMRule_ESH_PostRunNested (34) 
+#define BswMConf_BswMRule_ESH_PostRunToPrepNested (35) 
+#define BswMConf_BswMRule_ESH_PrepToWait (36) 
+#define BswMConf_BswMRule_ESH_RunToPostRun (37) 
+#define BswMConf_BswMRule_ESH_RunToPostRunNested (38) 
+#define BswMConf_BswMRule_ESH_WaitToShutdown (39) 
+#define BswMConf_BswMRule_ESH_WaitToWakeup (40) 
+#define BswMConf_BswMRule_ESH_WakeupToPrep (41) 
+#define BswMConf_BswMRule_ESH_WakeupToRun (42) 
 
 
 /* -----------------------------------------------------------------------------
     &&&~ GENERIC DEFINES
  ----------------------------------------------------------------------------- */
-#define BSWM_GENERIC_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8 241u 
-#define BSWM_GENERIC_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e 242u 
+#define BSWM_GENERIC_CC_Generic_BusOff_CN_TC37X_VCU_CAN00_07b6c9c8 242u 
+#define BSWM_GENERIC_CC_Generic_BusOff_CN_TC37X_VCU_CAN01_70b1f95e 243u 
 #define BSWM_GENERIC_ESH_ComMPendingRequests                       232u 
 #define BSWM_GENERIC_ESH_DemInitStatus                             231u 
 #define BSWM_GENERIC_ESH_DemPostRunRequested                       233u 
@@ -803,8 +806,8 @@
 #define BSWM_EQ2_EXTERNALIDOFCOMMCHANNELMAPPING                                                     
 #define BSWM_EQ2_INITVALUEOFCOMMCHANNELMAPPING                                                      COMM_NO_COMMUNICATION
 #define BSWM_EQ2_EXTERNALIDOFDCMCOMMAPPING                                                          ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8
-#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFDCMCOMMAPPING                                                 6u
-#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFDCMCOMMAPPING                                               5u
+#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFDCMCOMMAPPING                                                 7u
+#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFDCMCOMMAPPING                                               6u
 #define BSWM_EQ2_IMMEDIATEUSERUSEDOFDCMCOMMAPPING                                                   TRUE
 #define BSWM_EQ2_INITVALUEOFDCMCOMMAPPING                                                           DCM_ENABLE_RX_TX_NORM_NM
 #define BSWM_EQ2_RULESIDXOFDEFERREDRULES                                                            
@@ -831,8 +834,8 @@
 #define BSWM_EQ2_INITVALUEOFLINSCHEDULEMAPPING                                                      0
 #define BSWM_EQ2_MODENOTIFICATIONFCT                                                                
 #define BSWM_EQ2_EXTERNALIDOFNMMAPPING                                                              ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8
-#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFNMMAPPING                                                     16u
-#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFNMMAPPING                                                   15u
+#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFNMMAPPING                                                     17u
+#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFNMMAPPING                                                   16u
 #define BSWM_EQ2_IMMEDIATEUSERUSEDOFNMMAPPING                                                       TRUE
 #define BSWM_EQ2_INITVALUEOFNMMAPPING                                                               NM_STATE_BUS_SLEEP
 #define BSWM_EQ2_EXTERNALIDOFNVMJOBMAPPING                                                          NVM_SERVICE_ID_WRITEALL
@@ -1485,6 +1488,12 @@ typedef struct BswM_ActionListQueueStructSTag
   BswM_ActionListQueueType AL_CC_AL_CN_LIN02_5f246578_LinScheduleSwitch;
   BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX_Disable;
   BswM_ActionListQueueType AL_CC_AL_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX_EnableNoinit;
+  BswM_ActionListQueueType AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_Disable;
+  BswM_ActionListQueueType AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_EnableNoinit;
+  BswM_ActionListQueueType AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_Disable_DM;
+  BswM_ActionListQueueType AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_Enable_DM;
+  BswM_ActionListQueueType AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX_Disable;
+  BswM_ActionListQueueType AL_CC_AL_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX_EnableNoinit;
 } BswM_ActionListQueueStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_RuleStates in the partition context  */
@@ -1530,6 +1539,9 @@ typedef struct BswM_RuleStatesStructSTag
   BswM_RuleStatesType R_CC_CN_LIN02_5f246578_Vcu_Lin3_Schedule_bdb0899f;
   BswM_RuleStatesType R_CC_CN_LIN02_5f246578_StartSchedule;
   BswM_RuleStatesType R_CC_CN_TC37X_VCU_CAN12_XCP_d05a85ac_TX;
+  BswM_RuleStatesType R_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX;
+  BswM_RuleStatesType R_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_RX_DM;
+  BswM_RuleStatesType R_CC_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_TX;
 } BswM_RuleStatesStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_TimerState in the partition context  */
@@ -1560,14 +1572,14 @@ typedef struct BswM_TimerValueStructSTag
 /**   \brief  type to access BswM_ActionListQueue in an index and symbol based style. */
 typedef union BswM_ActionListQueueUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_ActionListQueueType raw[55];
+  BswM_ActionListQueueType raw[61];
   BswM_ActionListQueueStructSType str;
 } BswM_ActionListQueueUType;
 
 /**   \brief  type to access BswM_RuleStates in an index and symbol based style. */
 typedef union BswM_RuleStatesUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_RuleStatesType raw[40];
+  BswM_RuleStatesType raw[43];
   BswM_RuleStatesStructSType str;
 } BswM_RuleStatesUType;
 

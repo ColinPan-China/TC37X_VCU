@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Types.h
- *   Generation Time: 2025-07-29 16:22:57
+ *   Generation Time: 2025-09-12 10:25:42
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -72,7 +72,7 @@ typedef uint16 Com_SignalGroupIdType;
 /** AUTOSAR COM PDU group object identifier. */
 typedef uint16 Com_IpduGroupIdType;
 
-typedef uint8 Com_IpduGroupVector[2];  /* COM_LMGT_MAXIPDUGROUPVECTORBYTECNT */
+typedef uint8 Com_IpduGroupVector[3];  /* COM_LMGT_MAXIPDUGROUPVECTORBYTECNT */
 
 /**********************************************************************************************************************
   GLOBAL DATA PROTOTYPES

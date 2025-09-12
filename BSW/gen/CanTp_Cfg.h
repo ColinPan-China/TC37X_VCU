@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanTp_Cfg.h
- *   Generation Time: 2024-10-28 14:08:02
+ *   Generation Time: 2025-09-12 10:25:39
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -95,7 +95,7 @@
 #define CANTP_DEV_ERROR_REPORT                                                 STD_ON 
 #define CANTP_TC                                                               STD_ON 
 #define CANTP_RC                                                               STD_OFF 
-#define CANTP_INVALID_HDL                                                      ((PduIdType) 255u) 
+#define CANTP_INVALID_HDL                                                      ((PduIdType) 65535u) 
 #define CANTP_TASK_CYCLE                                                       5u 
 
  /*  Global constant defines  */ 
@@ -104,9 +104,9 @@
 #define CANTP_MAX_PDU_METADATA_LENGTH                                          0u 
 #define CANTP_MAX_SDU_METADATA_LENGTH                                          0u 
 #define CANTP_NUM_RX_CHANNELS                                                  CanTp_GetSizeOfRxState() 
-#define CANTP_NUM_RX_SDUS                                                      2 
+#define CANTP_NUM_RX_SDUS                                                      6 
 #define CANTP_NUM_TX_CHANNELS                                                  CanTp_GetSizeOfTxState() 
-#define CANTP_NUM_TX_SDUS                                                      1 
+#define CANTP_NUM_TX_SDUS                                                      2 
 #define CANTP_SIZEOF_PDULENGTHTYPE                                             2 
 
  /*  Communication Type  */ 
@@ -150,7 +150,7 @@
 #define CANTP_TRANSMIT_QUEUE                                                   STD_OFF 
 #define CANTP_SUPPORT_LONG_FF                                                  STD_OFF 
 #define CANTP_PDUR_API_AR_VERSION                                              0x412 
-#define CANTP_SYNC_TRANSMIT                                                    STD_OFF 
+#define CANTP_SYNC_TRANSMIT                                                    STD_ON 
 #define CANTP_SUPPORT_CANFD                                                    STD_OFF 
 #define CANTP_STMIN_BY_APPL                                                    STD_OFF 
 #define CANTP_DCM_REQUEST_DETECT                                               STD_OFF 
@@ -179,29 +179,41 @@
 /* -----------------------------------------------------------------------------
     &&&~ Rx Sdu Handle IDs
 ----------------------------------------------------------------------------- */
-#define CanTpConf_CanTpRxNSdu_CanTpRxNSdu_fe7a15ff 0u 
-#define CanTpConf_CanTpRxNSdu_CanTpRxNSdu_c12348c5 1u 
+#define CanTpConf_CanTpRxNSdu_CanTpRxNSdu_09d1a149 0u 
+#define CanTpConf_CanTpRxNSdu_CanTpRxNSdu_1de5980a 1u 
+#define CanTpConf_CanTpRxNSdu_CanTpRxNSdu_ba12c012 2u 
+#define CanTpConf_CanTpRxNSdu_CanTpRxNSdu_3169c424 3u 
+#define CanTpConf_CanTpRxNSdu_CanTpRxNSdu_7765ad4f 4u 
+#define CanTpConf_CanTpRxNSdu_CanTpRxNSdu_a047006e 5u 
 
  
 /* -----------------------------------------------------------------------------
     &&&~ Tx Sdu Handle IDs
 ----------------------------------------------------------------------------- */
-#define CanTpConf_CanTpTxNSdu_CanTpTxNSdu_fe7a15ff 0u 
+#define CanTpConf_CanTpTxNSdu_CanTpTxNSdu_ba12c012 0u 
+#define CanTpConf_CanTpTxNSdu_CanTpTxNSdu_a047006e 1u 
 
 
 /* -----------------------------------------------------------------------------
     &&&~ Rx Pdu IDs
  ----------------------------------------------------------------------------- */
-#define CanTpConf_CanTpRxFcNPdu_CanTpRxFcNPdu_4116ec52 0u 
-#define CanTpConf_CanTpRxNPdu_CanTpRxNPdu_63ec38a0     0u 
-#define CanTpConf_CanTpRxNPdu_CanTpRxNPdu_257d590c     1u 
+#define CanTpConf_CanTpRxNPdu_CanTpRxNPdu_8a537d14     0u 
+#define CanTpConf_CanTpRxFcNPdu_CanTpRxFcNPdu_d9cc0b07 1u 
+#define CanTpConf_CanTpRxNPdu_CanTpRxNPdu_fb36dff5     1u 
+#define CanTpConf_CanTpRxFcNPdu_CanTpRxFcNPdu_341356c5 2u 
+#define CanTpConf_CanTpRxNPdu_CanTpRxNPdu_16e98237     2u 
+#define CanTpConf_CanTpRxNPdu_CanTpRxNPdu_4e4f92b2     3u 
+#define CanTpConf_CanTpRxNPdu_CanTpRxNPdu_0b84ecc7     4u 
+#define CanTpConf_CanTpRxNPdu_CanTpRxNPdu_822169b4     5u 
 
 
 /* -----------------------------------------------------------------------------
     &&&~ TxConfirmation Pdu IDs
  ----------------------------------------------------------------------------- */
-#define CanTpConf_CanTpTxFcNPdu_CanTpTxFcNPdu_63ec38a0 0u 
-#define CanTpConf_CanTpTxNPdu_CanTpTxNPdu_4116ec52     0u 
+#define CanTpConf_CanTpTxFcNPdu_CanTpTxFcNPdu_fb36dff5 0u 
+#define CanTpConf_CanTpTxNPdu_CanTpTxNPdu_d9cc0b07     0u 
+#define CanTpConf_CanTpTxFcNPdu_CanTpTxFcNPdu_16e98237 1u 
+#define CanTpConf_CanTpTxNPdu_CanTpTxNPdu_341356c5     1u 
 
 
 
@@ -488,15 +500,15 @@
 #define CANTP_ISDEF_RXSDUCFGUSEDOFRXSDUSNV2HDL                                                      STD_ON
 #define CANTP_ISDEF_CANTYPEOFTXSDUCFG                                                               STD_ON
 #define CANTP_ISDEF_CHANNELMODEOFTXSDUCFG                                                           STD_ON
-#define CANTP_ISDEF_LOLAYERTXPDUIDOFTXSDUCFG                                                        STD_ON
+#define CANTP_ISDEF_LOLAYERTXPDUIDOFTXSDUCFG                                                        STD_OFF
 #define CANTP_ISDEF_NASOFTXSDUCFG                                                                   STD_ON
 #define CANTP_ISDEF_NBSOFTXSDUCFG                                                                   STD_ON
 #define CANTP_ISDEF_NCSOFTXSDUCFG                                                                   STD_ON
 #define CANTP_ISDEF_PDUMETADATALENGTHOFTXSDUCFG                                                     STD_ON
-#define CANTP_ISDEF_PDURTXSDUIDOFTXSDUCFG                                                           STD_ON
+#define CANTP_ISDEF_PDURTXSDUIDOFTXSDUCFG                                                           STD_OFF
 #define CANTP_ISDEF_RXFCADDRESSOFTXSDUCFG                                                           STD_ON
-#define CANTP_ISDEF_RXFCPDUIDOFTXSDUCFG                                                             STD_ON
-#define CANTP_ISDEF_RXSDUCFGIDXOFTXSDUCFG                                                           STD_ON
+#define CANTP_ISDEF_RXFCPDUIDOFTXSDUCFG                                                             STD_OFF
+#define CANTP_ISDEF_RXSDUCFGIDXOFTXSDUCFG                                                           STD_OFF
 #define CANTP_ISDEF_RXSDUCFGUSEDOFTXSDUCFG                                                          STD_ON
 #define CANTP_ISDEF_SDUMETADATALENGTHOFTXSDUCFG                                                     STD_ON
 #define CANTP_ISDEF_TRANSMITCANCELLATIONOFTXSDUCFG                                                  STD_ON
@@ -504,10 +516,10 @@
 #define CANTP_ISDEF_TXADDRESSINGFORMATOFTXSDUCFG                                                    STD_ON
 #define CANTP_ISDEF_TXMAXPAYLOADLENGTHOFTXSDUCFG                                                    STD_ON
 #define CANTP_ISDEF_TXPADDINGACTIVATIONOFTXSDUCFG                                                   STD_ON
-#define CANTP_ISDEF_TXPDUCONFIRMATIONPDUIDOFTXSDUCFG                                                STD_ON
+#define CANTP_ISDEF_TXPDUCONFIRMATIONPDUIDOFTXSDUCFG                                                STD_OFF
 #define CANTP_ISDEF_TXTATYPEOFTXSDUCFG                                                              STD_ON
-#define CANTP_ISDEF_TXSDUCFGIND                                                                     STD_ON
-#define CANTP_ISDEF_TXSDUCFGIDXOFTXSDUSNV2HDL                                                       STD_ON
+#define CANTP_ISDEF_TXSDUCFGIND                                                                     STD_OFF
+#define CANTP_ISDEF_TXSDUCFGIDXOFTXSDUSNV2HDL                                                       STD_OFF
 #define CANTP_ISDEF_TXSDUCFGUSEDOFTXSDUSNV2HDL                                                      STD_ON
 #define CANTP_ISDEF_CALCBSOFPCCONFIG                                                                STD_ON
 #define CANTP_ISDEF_RXPDUMAPOFPCCONFIG                                                              STD_ON
@@ -566,15 +578,15 @@
 #define CANTP_EQ2_RXSDUCFGUSEDOFRXSDUSNV2HDL                                                        TRUE
 #define CANTP_EQ2_CANTYPEOFTXSDUCFG                                                                 CANTP_CAN20_CANTYPEOFTXSDUCFG
 #define CANTP_EQ2_CHANNELMODEOFTXSDUCFG                                                             CANTP_FULL_DUPLEX_CHANNELMODEOFTXSDUCFG
-#define CANTP_EQ2_LOLAYERTXPDUIDOFTXSDUCFG                                                          CanIfConf_CanIfTxPduCfg_Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00_2ff8982b_Tx
+#define CANTP_EQ2_LOLAYERTXPDUIDOFTXSDUCFG                                                          
 #define CANTP_EQ2_NASOFTXSDUCFG                                                                     21u
 #define CANTP_EQ2_NBSOFTXSDUCFG                                                                     101u
 #define CANTP_EQ2_NCSOFTXSDUCFG                                                                     41u
 #define CANTP_EQ2_PDUMETADATALENGTHOFTXSDUCFG                                                       0u
-#define CANTP_EQ2_PDURTXSDUIDOFTXSDUCFG                                                             PduRConf_PduRDestPdu_Vcu_Uds_Response_oTC37X_VCU_CAN00_39638a1a_Tx
+#define CANTP_EQ2_PDURTXSDUIDOFTXSDUCFG                                                             
 #define CANTP_EQ2_RXFCADDRESSOFTXSDUCFG                                                             255u
-#define CANTP_EQ2_RXFCPDUIDOFTXSDUCFG                                                               CanTpConf_CanTpRxFcNPdu_CanTpRxFcNPdu_4116ec52
-#define CANTP_EQ2_RXSDUCFGIDXOFTXSDUCFG                                                             0u
+#define CANTP_EQ2_RXFCPDUIDOFTXSDUCFG                                                               
+#define CANTP_EQ2_RXSDUCFGIDXOFTXSDUCFG                                                             
 #define CANTP_EQ2_RXSDUCFGUSEDOFTXSDUCFG                                                            TRUE
 #define CANTP_EQ2_SDUMETADATALENGTHOFTXSDUCFG                                                       0u
 #define CANTP_EQ2_TRANSMITCANCELLATIONOFTXSDUCFG                                                    FALSE
@@ -582,10 +594,10 @@
 #define CANTP_EQ2_TXADDRESSINGFORMATOFTXSDUCFG                                                      CANTP_NORMAL_ADDRESSING_TXADDRESSINGFORMATOFTXSDUCFG
 #define CANTP_EQ2_TXMAXPAYLOADLENGTHOFTXSDUCFG                                                      7u
 #define CANTP_EQ2_TXPADDINGACTIVATIONOFTXSDUCFG                                                     TRUE
-#define CANTP_EQ2_TXPDUCONFIRMATIONPDUIDOFTXSDUCFG                                                  CanTpConf_CanTpTxNPdu_CanTpTxNPdu_4116ec52
+#define CANTP_EQ2_TXPDUCONFIRMATIONPDUIDOFTXSDUCFG                                                  
 #define CANTP_EQ2_TXTATYPEOFTXSDUCFG                                                                CANTP_PHYSICAL_TXTATYPEOFTXSDUCFG
-#define CANTP_EQ2_TXSDUCFGIND                                                                       0u
-#define CANTP_EQ2_TXSDUCFGIDXOFTXSDUSNV2HDL                                                         0u
+#define CANTP_EQ2_TXSDUCFGIND                                                                       
+#define CANTP_EQ2_TXSDUCFGIDXOFTXSDUSNV2HDL                                                         
 #define CANTP_EQ2_TXSDUCFGUSEDOFTXSDUSNV2HDL                                                        TRUE
 #define CANTP_EQ2_CALCBSOFPCCONFIG                                                                  CanTp_CalcBS
 #define CANTP_EQ2_RXPDUMAPOFPCCONFIG                                                                CanTp_RxPduMap
@@ -661,17 +673,17 @@
 #define CanTp_GetRxSduCfgOfPCConfig()                                                               CanTp_RxSduCfg  /**< the pointer to CanTp_RxSduCfg */
 #define CanTp_GetRxSduSnv2HdlOfPCConfig()                                                           CanTp_RxSduSnv2Hdl  /**< the pointer to CanTp_RxSduSnv2Hdl */
 #define CanTp_GetRxStateOfPCConfig()                                                                CanTp_RxState  /**< the pointer to CanTp_RxState */
-#define CanTp_GetSizeOfCalcBSOfPCConfig()                                                           2u  /**< the number of accomplishable value elements in CanTp_CalcBS */
-#define CanTp_GetSizeOfRxPduMapOfPCConfig()                                                         2u  /**< the number of accomplishable value elements in CanTp_RxPduMap */
-#define CanTp_GetSizeOfRxSduCfgIndOfPCConfig()                                                      2u  /**< the number of accomplishable value elements in CanTp_RxSduCfgInd */
-#define CanTp_GetSizeOfRxSduCfgOfPCConfig()                                                         2u  /**< the number of accomplishable value elements in CanTp_RxSduCfg */
-#define CanTp_GetSizeOfRxSduSnv2HdlOfPCConfig()                                                     2u  /**< the number of accomplishable value elements in CanTp_RxSduSnv2Hdl */
-#define CanTp_GetSizeOfRxStateOfPCConfig()                                                          2u  /**< the number of accomplishable value elements in CanTp_RxState */
-#define CanTp_GetSizeOfTxSduCfgIndOfPCConfig()                                                      1u  /**< the number of accomplishable value elements in CanTp_TxSduCfgInd */
-#define CanTp_GetSizeOfTxSduCfgOfPCConfig()                                                         1u  /**< the number of accomplishable value elements in CanTp_TxSduCfg */
-#define CanTp_GetSizeOfTxSduSnv2HdlOfPCConfig()                                                     1u  /**< the number of accomplishable value elements in CanTp_TxSduSnv2Hdl */
-#define CanTp_GetSizeOfTxSemaphoresOfPCConfig()                                                     1u  /**< the number of accomplishable value elements in CanTp_TxSemaphores */
-#define CanTp_GetSizeOfTxStateOfPCConfig()                                                          1u  /**< the number of accomplishable value elements in CanTp_TxState */
+#define CanTp_GetSizeOfCalcBSOfPCConfig()                                                           6u  /**< the number of accomplishable value elements in CanTp_CalcBS */
+#define CanTp_GetSizeOfRxPduMapOfPCConfig()                                                         6u  /**< the number of accomplishable value elements in CanTp_RxPduMap */
+#define CanTp_GetSizeOfRxSduCfgIndOfPCConfig()                                                      6u  /**< the number of accomplishable value elements in CanTp_RxSduCfgInd */
+#define CanTp_GetSizeOfRxSduCfgOfPCConfig()                                                         6u  /**< the number of accomplishable value elements in CanTp_RxSduCfg */
+#define CanTp_GetSizeOfRxSduSnv2HdlOfPCConfig()                                                     6u  /**< the number of accomplishable value elements in CanTp_RxSduSnv2Hdl */
+#define CanTp_GetSizeOfRxStateOfPCConfig()                                                          6u  /**< the number of accomplishable value elements in CanTp_RxState */
+#define CanTp_GetSizeOfTxSduCfgIndOfPCConfig()                                                      2u  /**< the number of accomplishable value elements in CanTp_TxSduCfgInd */
+#define CanTp_GetSizeOfTxSduCfgOfPCConfig()                                                         2u  /**< the number of accomplishable value elements in CanTp_TxSduCfg */
+#define CanTp_GetSizeOfTxSduSnv2HdlOfPCConfig()                                                     2u  /**< the number of accomplishable value elements in CanTp_TxSduSnv2Hdl */
+#define CanTp_GetSizeOfTxSemaphoresOfPCConfig()                                                     2u  /**< the number of accomplishable value elements in CanTp_TxSemaphores */
+#define CanTp_GetSizeOfTxStateOfPCConfig()                                                          2u  /**< the number of accomplishable value elements in CanTp_TxState */
 #define CanTp_GetTxSduCfgIndOfPCConfig()                                                            CanTp_TxSduCfgInd  /**< the pointer to CanTp_TxSduCfgInd */
 #define CanTp_GetTxSduCfgOfPCConfig()                                                               CanTp_TxSduCfg  /**< the pointer to CanTp_TxSduCfg */
 #define CanTp_GetTxSduSnv2HdlOfPCConfig()                                                           CanTp_TxSduSnv2Hdl  /**< the pointer to CanTp_TxSduSnv2Hdl */
@@ -703,6 +715,13 @@
 #define CanTp_GetRxSduCfgInd(Index)                                                                 (CanTp_GetRxSduCfgIndOfPCConfig()[(Index)])
 #define CanTp_GetRxSduCfgIdxOfRxSduSnv2Hdl(Index)                                                   (CanTp_GetRxSduSnv2HdlOfPCConfig()[(Index)].RxSduCfgIdxOfRxSduSnv2Hdl)
 #define CanTp_GetRxState(Index)                                                                     (CanTp_GetRxStateOfPCConfig()[(Index)])
+#define CanTp_GetLoLayerTxPduIdOfTxSduCfg(Index)                                                    (CanTp_GetTxSduCfgOfPCConfig()[(Index)].LoLayerTxPduIdOfTxSduCfg)
+#define CanTp_GetPduRTxSduIdOfTxSduCfg(Index)                                                       (CanTp_GetTxSduCfgOfPCConfig()[(Index)].PduRTxSduIdOfTxSduCfg)
+#define CanTp_GetRxFcPduIdOfTxSduCfg(Index)                                                         (CanTp_GetTxSduCfgOfPCConfig()[(Index)].RxFcPduIdOfTxSduCfg)
+#define CanTp_GetRxSduCfgIdxOfTxSduCfg(Index)                                                       (CanTp_GetTxSduCfgOfPCConfig()[(Index)].RxSduCfgIdxOfTxSduCfg)
+#define CanTp_GetTxPduConfirmationPduIdOfTxSduCfg(Index)                                            (CanTp_GetTxSduCfgOfPCConfig()[(Index)].TxPduConfirmationPduIdOfTxSduCfg)
+#define CanTp_GetTxSduCfgInd(Index)                                                                 (CanTp_GetTxSduCfgIndOfPCConfig()[(Index)])
+#define CanTp_GetTxSduCfgIdxOfTxSduSnv2Hdl(Index)                                                   (CanTp_GetTxSduSnv2HdlOfPCConfig()[(Index)].TxSduCfgIdxOfTxSduSnv2Hdl)
 #define CanTp_GetTxSemaphores(Index)                                                                (CanTp_GetTxSemaphoresOfPCConfig()[(Index)])
 #define CanTp_GetTxState(Index)                                                                     (CanTp_GetTxStateOfPCConfig()[(Index)])
 /** 
@@ -748,15 +767,11 @@
 #define CanTp_GetSizeOfTxState()                                                                    CanTp_GetSizeOfTxStateOfPCConfig()
 #define CanTp_GetCanTypeOfTxSduCfg(Index)                                                           CANTP_CAN20_CANTYPEOFTXSDUCFG
 #define CanTp_GetChannelModeOfTxSduCfg(Index)                                                       CANTP_FULL_DUPLEX_CHANNELMODEOFTXSDUCFG
-#define CanTp_GetLoLayerTxPduIdOfTxSduCfg(Index)                                                    CanIfConf_CanIfTxPduCfg_Vcu_Uds_Response_Tp_oTC37X_VCU_CAN00_2ff8982b_Tx
 #define CanTp_GetNAsOfTxSduCfg(Index)                                                               21u
 #define CanTp_GetNBsOfTxSduCfg(Index)                                                               101u
 #define CanTp_GetNCsOfTxSduCfg(Index)                                                               41u
 #define CanTp_GetPduMetadataLengthOfTxSduCfg(Index)                                                 0u
-#define CanTp_GetPduRTxSduIdOfTxSduCfg(Index)                                                       PduRConf_PduRDestPdu_Vcu_Uds_Response_oTC37X_VCU_CAN00_39638a1a_Tx
 #define CanTp_GetRxFcAddressOfTxSduCfg(Index)                                                       255u
-#define CanTp_GetRxFcPduIdOfTxSduCfg(Index)                                                         CanTpConf_CanTpRxFcNPdu_CanTpRxFcNPdu_4116ec52
-#define CanTp_GetRxSduCfgIdxOfTxSduCfg(Index)                                                       0u  /**< the index of the 0:1 relation pointing to CanTp_RxSduCfg */
 #define CanTp_IsRxSduCfgUsedOfTxSduCfg(Index)                                                       (((TRUE)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to CanTp_RxSduCfg */
 #define CanTp_GetSduMetadataLengthOfTxSduCfg(Index)                                                 0u
 #define CanTp_IsTransmitCancellationOfTxSduCfg(Index)                                               (((FALSE)) != FALSE)
@@ -764,10 +779,7 @@
 #define CanTp_GetTxAddressingFormatOfTxSduCfg(Index)                                                CANTP_NORMAL_ADDRESSING_TXADDRESSINGFORMATOFTXSDUCFG
 #define CanTp_GetTxMaxPayloadLengthOfTxSduCfg(Index)                                                7u
 #define CanTp_IsTxPaddingActivationOfTxSduCfg(Index)                                                (((TRUE)) != FALSE)
-#define CanTp_GetTxPduConfirmationPduIdOfTxSduCfg(Index)                                            CanTpConf_CanTpTxNPdu_CanTpTxNPdu_4116ec52
 #define CanTp_GetTxTaTypeOfTxSduCfg(Index)                                                          CANTP_PHYSICAL_TXTATYPEOFTXSDUCFG
-#define CanTp_GetTxSduCfgInd(Index)                                                                 0u  /**< the indexes of the 1:1 sorted relation pointing to CanTp_TxSduCfg */
-#define CanTp_GetTxSduCfgIdxOfTxSduSnv2Hdl(Index)                                                   0u  /**< the index of the 0:1 relation pointing to CanTp_TxSduCfg */
 #define CanTp_IsTxSduCfgUsedOfTxSduSnv2Hdl(Index)                                                   (((TRUE)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to CanTp_TxSduCfg */
 /** 
   \}

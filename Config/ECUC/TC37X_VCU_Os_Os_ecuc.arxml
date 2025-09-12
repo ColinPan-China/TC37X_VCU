@@ -4151,7 +4151,7 @@ TC37X_ts_appx_V2.5.1.pdf 2018.04</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
               </PARAMETER-VALUES>
             </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE UUID="f59f02c2-16cb-4e43-ac37-f24be280c4a8">
+            <ECUC-CONTAINER-VALUE UUID="66be7096-73a9-46bf-821a-fb8060dc648c">
               <SHORT-NAME>CanIsr_2</SHORT-NAME>
               <ANNOTATIONS>
                 <ANNOTATION>
@@ -4173,7 +4173,7 @@ TC37X_ts_appx_V2.5.1.pdf 2018.04</VALUE>
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrInterruptPriority</DEFINITION-REF>
-                  <VALUE>34</VALUE>
+                  <VALUE>39</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-TEXTUAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Os/OsIsr/OsIsrCategory</DEFINITION-REF>

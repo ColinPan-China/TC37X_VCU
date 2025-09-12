@@ -52,10 +52,35 @@ extern "C"
 /**********************************************************************************************************************
  * API prototypes
  *********************************************************************************************************************/
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a0_F1A0_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a1_F1A1_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a2_F1A2_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a3_F1A3_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d01_Accelerator_pedal_sensor_1_voltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d01_Accelerator_pedal_sensor_2_voltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d01_VCU_AccelerationPedal_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d01_VCU_VehicleSpeed_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d05_POD_OBC_InputACVoltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d05_POD_OBC_OutputDCChargeCurrent_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d05_POD_OBC_OutputDCChargeVoltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d05_VCU_OBC_ChargeCurrentCommand_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d07_Electronic_lock_state_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d08_VCU_HVIL_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d09_New_Bit_Field_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d11_Mainrealy1_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d11_Mainrelay2_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a0_Ignition_Switch_Signal_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a1_Battery_Voltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a2_Total_Odometer_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a3_Vehicle_speed_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Day_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Hour_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Minute_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Month_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Second_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Year_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a5_VCU_HVStatus_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a6_SOC_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a7_Gear_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_ExtendedData_Fault_Aged_Counter_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_ExtendedData_Fault_Aging_Counter_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_ExtendedData_Fault_Ocurrence_Counter_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 
 # define RTE_STOP_SEC_CODE
 # include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -66,10 +91,35 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a3_F1A
 /**********************************************************************************************************************
  * Rte_Call_<p>_<o> (unmapped) for synchronous C/S communication
  *********************************************************************************************************************/
-#  define Rte_Call_CBReadData_DID_0xf1a0_F1A0_Data_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a0_F1A0_Data_ReadData
-#  define Rte_Call_CBReadData_DID_0xf1a1_F1A1_Data_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a1_F1A1_Data_ReadData
-#  define Rte_Call_CBReadData_DID_0xf1a2_F1A2_Data_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a2_F1A2_Data_ReadData
-#  define Rte_Call_CBReadData_DID_0xf1a3_F1A3_Data_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a3_F1A3_Data_ReadData
+#  define Rte_Call_CBReadData_DID_0x1d01_Accelerator_pedal_sensor_1_voltage_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0x1d01_Accelerator_pedal_sensor_1_voltage_ReadData
+#  define Rte_Call_CBReadData_DID_0x1d01_Accelerator_pedal_sensor_2_voltage_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0x1d01_Accelerator_pedal_sensor_2_voltage_ReadData
+#  define Rte_Call_CBReadData_DID_0x1d01_VCU_AccelerationPedal_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0x1d01_VCU_AccelerationPedal_ReadData
+#  define Rte_Call_CBReadData_DID_0x1d01_VCU_VehicleSpeed_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0x1d01_VCU_VehicleSpeed_ReadData
+#  define Rte_Call_CBReadData_DID_0x1d05_POD_OBC_InputACVoltage_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0x1d05_POD_OBC_InputACVoltage_ReadData
+#  define Rte_Call_CBReadData_DID_0x1d05_POD_OBC_OutputDCChargeCurrent_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0x1d05_POD_OBC_OutputDCChargeCurrent_ReadData
+#  define Rte_Call_CBReadData_DID_0x1d05_POD_OBC_OutputDCChargeVoltage_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0x1d05_POD_OBC_OutputDCChargeVoltage_ReadData
+#  define Rte_Call_CBReadData_DID_0x1d05_VCU_OBC_ChargeCurrentCommand_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0x1d05_VCU_OBC_ChargeCurrentCommand_ReadData
+#  define Rte_Call_CBReadData_DID_0x1d07_Electronic_lock_state_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0x1d07_Electronic_lock_state_ReadData
+#  define Rte_Call_CBReadData_DID_0x1d08_VCU_HVIL_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0x1d08_VCU_HVIL_ReadData
+#  define Rte_Call_CBReadData_DID_0x1d09_New_Bit_Field_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0x1d09_New_Bit_Field_ReadData
+#  define Rte_Call_CBReadData_DID_0x1d11_Mainrealy1_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0x1d11_Mainrealy1_ReadData
+#  define Rte_Call_CBReadData_DID_0x1d11_Mainrelay2_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0x1d11_Mainrelay2_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a0_Ignition_Switch_Signal_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a0_Ignition_Switch_Signal_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a1_Battery_Voltage_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a1_Battery_Voltage_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a2_Total_Odometer_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a2_Total_Odometer_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a3_Vehicle_speed_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a3_Vehicle_speed_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a4_Date_And_Time_Day_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Day_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a4_Date_And_Time_Hour_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Hour_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a4_Date_And_Time_Minute_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Minute_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a4_Date_And_Time_Month_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Month_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a4_Date_And_Time_Second_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Second_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a4_Date_And_Time_Year_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Year_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a5_VCU_HVStatus_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a5_VCU_HVStatus_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a6_SOC_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a6_SOC_ReadData
+#  define Rte_Call_CBReadData_DID_0xf1a7_Gear_ReadData Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a7_Gear_ReadData
+#  define Rte_Call_CBReadData_ExtendedData_Fault_Aged_Counter_ReadData Rte_Call_DemSatellite_0_CBReadData_ExtendedData_Fault_Aged_Counter_ReadData
+#  define Rte_Call_CBReadData_ExtendedData_Fault_Aging_Counter_ReadData Rte_Call_DemSatellite_0_CBReadData_ExtendedData_Fault_Aging_Counter_ReadData
+#  define Rte_Call_CBReadData_ExtendedData_Fault_Ocurrence_Counter_ReadData Rte_Call_DemSatellite_0_CBReadData_ExtendedData_Fault_Ocurrence_Counter_ReadData
 
 # endif /* !defined(RTE_CORE) */
 
@@ -124,13 +174,63 @@ FUNC(Std_ReturnType, DemSatellite_0_CODE) Dem_SetEventStatus(Dem_EventIdType par
  * Application errors
  *********************************************************************************************************************/
 
-#  define RTE_E_CSDataServices_DID_0xf1a0_F1A0_Data_E_NOT_OK (1U)
+#  define RTE_E_CSDataServices_DID_0x1d01_Accelerator_pedal_sensor_1_voltage_E_NOT_OK (1U)
 
-#  define RTE_E_CSDataServices_DID_0xf1a1_F1A1_Data_E_NOT_OK (1U)
+#  define RTE_E_CSDataServices_DID_0x1d01_Accelerator_pedal_sensor_2_voltage_E_NOT_OK (1U)
 
-#  define RTE_E_CSDataServices_DID_0xf1a2_F1A2_Data_E_NOT_OK (1U)
+#  define RTE_E_CSDataServices_DID_0x1d01_VCU_AccelerationPedal_E_NOT_OK (1U)
 
-#  define RTE_E_CSDataServices_DID_0xf1a3_F1A3_Data_E_NOT_OK (1U)
+#  define RTE_E_CSDataServices_DID_0x1d01_VCU_VehicleSpeed_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0x1d05_POD_OBC_InputACVoltage_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0x1d05_POD_OBC_OutputDCChargeCurrent_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0x1d05_POD_OBC_OutputDCChargeVoltage_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0x1d05_VCU_OBC_ChargeCurrentCommand_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0x1d07_Electronic_lock_state_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0x1d08_VCU_HVIL_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0x1d09_New_Bit_Field_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0x1d11_Mainrealy1_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0x1d11_Mainrelay2_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a0_Ignition_Switch_Signal_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a1_Battery_Voltage_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a2_Total_Odometer_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a3_Vehicle_speed_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a4_Date_And_Time_Day_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a4_Date_And_Time_Hour_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a4_Date_And_Time_Minute_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a4_Date_And_Time_Month_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a4_Date_And_Time_Second_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a4_Date_And_Time_Year_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a5_VCU_HVStatus_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a6_SOC_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_DID_0xf1a7_Gear_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_ExtendedData_Fault_Aged_Counter_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_ExtendedData_Fault_Aging_Counter_E_NOT_OK (1U)
+
+#  define RTE_E_CSDataServices_ExtendedData_Fault_Ocurrence_Counter_E_NOT_OK (1U)
 
 #  define RTE_E_DiagnosticInfo_DEM_BUFFER_TOO_SMALL (21U)
 

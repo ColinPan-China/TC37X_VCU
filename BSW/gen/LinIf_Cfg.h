@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinIf_Cfg.h
- *   Generation Time: 2025-08-22 15:59:34
+ *   Generation Time: 2025-09-12 10:25:39
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -721,7 +721,7 @@
 #define LinIf_GetSizeOfChannelConfigOfPCConfig()                                                    3u  /**< the number of accomplishable value elements in LinIf_ChannelConfig */
 #define LinIf_GetSizeOfChannelDataOfPCConfig()                                                      3u  /**< the number of accomplishable value elements in LinIf_ChannelData */
 #define LinIf_GetSizeOfMasterChannelDataOfPCConfig()                                                3u  /**< the number of accomplishable value elements in LinIf_MasterChannelData */
-#define LinIf_GetSizeOfSystemToLinIfChannelOfPCConfig()                                             8u  /**< the number of accomplishable value elements in LinIf_SystemToLinIfChannel */
+#define LinIf_GetSizeOfSystemToLinIfChannelOfPCConfig()                                             9u  /**< the number of accomplishable value elements in LinIf_SystemToLinIfChannel */
 #define LinIf_GetSlaveChannelConfigOfPCConfig()                                                     NULL_PTR  /**< the pointer to LinIf_SlaveChannelConfig */
 #define LinIf_GetSystemToLinIfChannelOfPCConfig()                                                   LinIf_SystemToLinIfChannel  /**< the pointer to LinIf_SystemToLinIfChannel */
 #define LinIf_GetUncTxFrmTotalNumberOfPCConfig()                                                    10u  /**< Number of unconditional Tx frames */
@@ -1822,7 +1822,7 @@ extern CONST(LinIf_ScheduleTableListIndType, LINIF_CONST) LinIf_ScheduleTableLis
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(LinIf_SystemToLinIfChannelType, LINIF_CONST) LinIf_SystemToLinIfChannel[8];
+extern CONST(LinIf_SystemToLinIfChannelType, LINIF_CONST) LinIf_SystemToLinIfChannel[9];
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

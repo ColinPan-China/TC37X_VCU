@@ -140,7 +140,7 @@ void LED_LightFunc()
 uint8 CmdNvm = 0;
 uint8 BuffRd[16];
 uint8 BuffWr[16];
-extern uint16 LED_In;
+//extern uint16 LED_In;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -151,7 +151,8 @@ FUNC(void, PowerMng_SWC_CODE) Led_Runnable1000ms(void) /* PRQA S 0624, 3206 */ /
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Led_Runnable1000ms
  *********************************************************************************************************************/
-  if(LED_In == 0x0A)/*LED ON*/
+#if 0
+ if(LED_In == 0x0A)/*LED ON*/
   {
     uint8 cnt = 0;
     for( cnt = 0; cnt < 4; cnt++ )
@@ -171,7 +172,7 @@ FUNC(void, PowerMng_SWC_CODE) Led_Runnable1000ms(void) /* PRQA S 0624, 3206 */ /
   {
     LED_LightFunc();
   }
-
+#endif
 /*  if(CmdNvm == 1)
   {
     VStdMemSet(BuffWr,0xAA,sizeof(BuffWr));

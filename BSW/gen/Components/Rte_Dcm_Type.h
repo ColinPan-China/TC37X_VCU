@@ -122,6 +122,10 @@ extern "C"
 #   define DCM_ENUM_EXTENDED_SESSION (3U)
 #  endif
 
+#  ifndef DCM_ENUM_Coding_Session
+#   define DCM_ENUM_Coding_Session (65U)
+#  endif
+
 #  ifndef DCM_ENUM_NONE
 #   define DCM_ENUM_NONE (0U)
 #  endif
@@ -550,6 +554,14 @@ extern "C"
 #   define DCM_SEC_LEV_L2 (2U)
 #  endif
 
+#  ifndef DCM_SEC_LEV_L3
+#   define DCM_SEC_LEV_L3 (3U)
+#  endif
+
+#  ifndef DCM_SEC_LEV_L4
+#   define DCM_SEC_LEV_L4 (4U)
+#  endif
+
 #  ifndef DCM_DEFAULT_SESSION
 #   define DCM_DEFAULT_SESSION (1U)
 #  endif
@@ -560,6 +572,10 @@ extern "C"
 
 #  ifndef DCM_EXTENDED_DIAGNOSTIC_SESSION
 #   define DCM_EXTENDED_DIAGNOSTIC_SESSION (3U)
+#  endif
+
+#  ifndef DCM_Coding_Session
+#   define DCM_Coding_Session (65U)
 #  endif
 
 # endif /* RTE_CORE */
@@ -662,6 +678,10 @@ typedef Dcm_EcuResetType Rte_ModeType_DcmEcuReset;
 # define RTE_MODE_Dcm_DcmDiagnosticSessionControl_EXTENDED_SESSION (3U)
 # ifndef RTE_MODE_DcmDiagnosticSessionControl_EXTENDED_SESSION
 #  define RTE_MODE_DcmDiagnosticSessionControl_EXTENDED_SESSION (3U)
+# endif
+# define RTE_MODE_Dcm_DcmDiagnosticSessionControl_Coding_Session (65U)
+# ifndef RTE_MODE_DcmDiagnosticSessionControl_Coding_Session
+#  define RTE_MODE_DcmDiagnosticSessionControl_Coding_Session (65U)
 # endif
 # define RTE_TRANSITION_Dcm_DcmDiagnosticSessionControl (255U)
 # ifndef RTE_TRANSITION_DcmDiagnosticSessionControl

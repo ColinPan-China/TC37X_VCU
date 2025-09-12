@@ -58,5 +58,68 @@ FUNC(Std_ReturnType, DCM_CALLOUT_CODE) DcmService_HardReset(
 }
 
 
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_DiagnosticService_0x01(
+  Dcm_OpStatusType opStatus,
+  Dcm_MsgContextPtrType pMsgContext,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  )
+{
+  
+}
+
+
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_DiagnosticService_0x09(
+  Dcm_OpStatusType opStatus,
+  Dcm_MsgContextPtrType pMsgContext,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  )
+{
+
+}
+
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_DiagnosticService_0x38(
+  Dcm_OpStatusType opStatus,
+  Dcm_MsgContextPtrType pMsgContext,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  )
+ {
+
+ } 
+
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_ProcessRequestDownload(
+  Dcm_OpStatusType OpStatus,
+  uint8  DataFormatIdentifier,
+  uint8  MemoryIdentifier,
+  uint32 MemoryAddress,
+  uint32 MemorySize,
+  P2VAR(uint32, AUTOMATIC, DCM_APPL_DATA) BlockLength,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  )
+{
+
+}
+
+FUNC(Dcm_ReturnWriteMemoryType, DCM_CALLOUT_CODE) Dcm_ProcessTransferDataWrite(
+  Dcm_OpStatusType OpStatus,
+  uint8  MemoryIdentifier,
+  uint32 MemoryAddress,
+  uint32 MemorySize,
+  P2CONST(uint8, AUTOMATIC, DCM_APPL_DATA) MemoryData,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  )
+ {
+
+ } 
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_ProcessRequestTransferExit(
+  Dcm_OpStatusType OpStatus,
+  P2CONST(uint8, AUTOMATIC, DCM_APPL_DATA) transferRequestParameterRecord,
+  uint32 transferRequestParameterRecordSize,
+  P2VAR(uint8, AUTOMATIC, DCM_APPL_DATA) transferResponseParameterRecord,
+  P2VAR(uint32, AUTOMATIC, DCM_APPL_DATA) transferResponseParameterRecordSize,
+  Dcm_NegativeResponseCodePtrType ErrorCode
+  )
+{
+
+}
 //ISR( LinIsr_Asclin_0 ){  }
 

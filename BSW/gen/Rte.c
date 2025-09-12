@@ -1646,7 +1646,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_SWC1_NvM_Data_IF_UserData2_Recv_Element_
  * Internal C/S connections
  *********************************************************************************************************************/
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Boot_Software_Boot_Software_Identification_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_AC_charging_parameter_POD_OBC_InputACVoltage_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1657,7 +1657,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Boot_Software_Boot_Soft
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Boot_Software_Boot_Software_Identification_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_AC_charging_parameter_POD_OBC_InputACVoltage_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1668,19 +1668,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Boot_Software_Boot_Soft
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Boot_Software_Boot_Software_Identification_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Boot_Software_NumberOfModules_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_AC_charging_parameter_POD_OBC_OutputDCChargeCurrent_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1691,7 +1679,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Boot_Software_NumberOfM
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Boot_Software_NumberOfModules_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_AC_charging_parameter_POD_OBC_OutputDCChargeCurrent_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1702,19 +1690,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Boot_Software_NumberOfM
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Boot_Software_NumberOfModules_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0200_Data_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_AC_charging_parameter_POD_OBC_OutputDCChargeVoltage_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1725,7 +1701,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0200_Data_Conditi
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0200_Data_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_AC_charging_parameter_POD_OBC_OutputDCChargeVoltage_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1736,19 +1712,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0200_Data_ReadDat
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0200_Data_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0300_DID_Data_FreezeCurrentState(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_AC_charging_parameter_VCU_OBC_ChargeCurrentCommand_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1759,7 +1723,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0300_DID_Data_Fre
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0300_DID_Data_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_AC_charging_parameter_VCU_OBC_ChargeCurrentCommand_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1770,7 +1734,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0300_DID_Data_Rea
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0300_DID_Data_ResetToDefault(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BSW_version_number_Major_release_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1781,41 +1745,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0300_DID_Data_Res
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0300_DID_Data_ReturnControlToECU(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0300_DID_Data_ShortTermAdjustment(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0400_DID_Data_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0400_DID_Data_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BSW_version_number_Major_release_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1826,7 +1756,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0x0400_DID_Data_Rea
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF194_1_New_Data_Object_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BSW_version_number_Minor_release_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1837,7 +1767,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF194_1_New_Data_O
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF194_1_New_Data_Object_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BSW_version_number_Minor_release_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1848,19 +1778,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF194_1_New_Data_O
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF194_1_New_Data_Object_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BSW_version_number_No_functional_content_change_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1871,7 +1789,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_Co
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BSW_version_number_No_functional_content_change_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1882,19 +1800,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_Re
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A0_F1A0_Data_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BS_base_information4_BS_SOC_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1905,7 +1811,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_Co
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BS_base_information4_BS_SOC_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1916,19 +1822,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_Re
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A1_F1A1_Data_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BS_base_information4_SOF_V1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1939,7 +1833,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_Co
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BS_base_information4_SOF_V1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1950,19 +1844,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_Re
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A2_F1A2_Data_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A3_F1A3_Data_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BS_base_information4_SOF_V2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1973,7 +1855,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A3_F1A3_Data_Co
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A3_F1A3_Data_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BS_base_information4_SOF_V2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -1984,19 +1866,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A3_F1A3_Data_Re
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DID_0xF1A3_F1A3_Data_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BS_base_information4_SOH_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2007,7 +1877,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DataDiagnosticIdentifie
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BS_base_information4_SOH_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2018,19 +1888,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DataDiagnosticIdentifie
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DataDiagnosticIdentifier_DDI_DataDiagnosticIdentifier_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_CanDriverVersion_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BS_base_information4_T_BATT_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2041,7 +1899,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_CanDriv
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_CanDriverVersion_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BS_base_information4_T_BATT_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2052,19 +1910,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_CanDriv
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_CanDriverVersion_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_DiagnosticModuleVersion_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BS_base_information4_VCU_BS_Hcurrent_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2075,7 +1921,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_Diagnos
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_DiagnosticModuleVersion_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_BS_base_information4_VCU_BS_Hcurrent_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2086,7 +1932,139 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_Diagnos
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_DiagnosticModuleVersion_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Battery_Voltage_Battery_Voltage_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Battery_Voltage_Battery_Voltage_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Bootloader_version_number_Major_release_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Bootloader_version_number_Major_release_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Bootloader_version_number_Minor_release_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Bootloader_version_number_Minor_release_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Bootloader_version_number_No_functional_content_change_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Bootloader_version_number_No_functional_content_change_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Chargestatus_Chargestatus_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Chargestatus_Chargestatus_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Coding_for_CDS_fingerprint_codingDate_byte_1_YY_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Coding_for_CDS_fingerprint_codingDate_byte_1_YY_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Coding_for_CDS_fingerprint_codingDate_byte_1_YY_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2098,7 +2076,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_Diagnos
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_NmVersion_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Coding_for_CDS_fingerprint_codingDate_byte_2_MM_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2109,7 +2087,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_NmVersi
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_NmVersion_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Coding_for_CDS_fingerprint_codingDate_byte_2_MM_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2120,41 +2098,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_NmVersi
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_NmVersion_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_OperatingSystemVersion_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_OperatingSystemVersion_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  OpStatus = OpStatus;
-  Data = Data;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_OperatingSystemVersion_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Coding_for_CDS_fingerprint_codingDate_byte_2_MM_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2166,7 +2110,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_Operati
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_TransportLayerVersion_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Coding_for_CDS_fingerprint_codingDate_byte_3_DD_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2177,7 +2121,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_Transpo
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_TransportLayerVersion_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Coding_for_CDS_fingerprint_codingDate_byte_3_DD_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2188,41 +2132,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_Transpo
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_TransportLayerVersion_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Part_Number_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Part_Number_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  OpStatus = OpStatus;
-  Data = Data;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Part_Number_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Coding_for_CDS_fingerprint_codingDate_byte_3_DD_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2234,7 +2144,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Part_
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Hardware_Version_Hardware_Version_Number_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Coding_for_CDS_fingerprint_repairShopCodeorTesterSerialNumber_byte_1_27_MSB_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2245,7 +2155,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Hardware_Version_Hardwa
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Hardware_Version_Hardware_Version_Number_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Coding_for_CDS_fingerprint_repairShopCodeorTesterSerialNumber_byte_1_27_MSB_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2256,41 +2166,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Hardware_Version_Hardwa
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Hardware_Version_Hardware_Version_Number_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  Data = Data;
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SerialNumber_SerialNumber_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  OpStatus = OpStatus;
-  ErrorCode = ErrorCode;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SerialNumber_SerialNumber_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
-{
-  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  OpStatus = OpStatus;
-  Data = Data;
-  /* call to server runnable removed as client is never triggered */
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SerialNumber_SerialNumber_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Coding_for_CDS_fingerprint_repairShopCodeorTesterSerialNumber_byte_1_27_MSB_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2302,7 +2178,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SerialNumber_SerialNumb
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Spare_Part_Number_Spare_Part_Number_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DC_Charging_port_Temperature_POD_DCInletTempA_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2313,7 +2189,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Spare_Part_Number_Spare
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Spare_Part_Number_Spare_Part_Number_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DC_Charging_port_Temperature_POD_DCInletTempA_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2324,7 +2200,337 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Spare_Part_Number_Spare
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Spare_Part_Number_Spare_Part_Number_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DC_Charging_port_Temperature_POD_DCInletTempB_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DC_Charging_port_Temperature_POD_DCInletTempB_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Date_And_Time_Date_And_Time_Day_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Date_And_Time_Date_And_Time_Day_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Date_And_Time_Date_And_Time_Hour_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Date_And_Time_Date_And_Time_Hour_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Date_And_Time_Date_And_Time_Minute_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Date_And_Time_Date_And_Time_Minute_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Date_And_Time_Date_And_Time_Month_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Date_And_Time_Date_And_Time_Month_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Date_And_Time_Date_And_Time_Second_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Date_And_Time_Date_And_Time_Second_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Date_And_Time_Date_And_Time_Year_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Date_And_Time_Date_And_Time_Year_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_Country_code_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_Country_code_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_Supplier_code_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_Supplier_code_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_Supplier_family_code_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_DevelopmentData_Supplier_family_code_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Driver_Mode_Driver_Mode_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Driver_Mode_Driver_Mode_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_ECU_application_software_ASW_version_number_Major_release_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_ECU_application_software_ASW_version_number_Major_release_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_ECU_application_software_ASW_version_number_Minor_release_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_ECU_application_software_ASW_version_number_Minor_release_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_ECU_application_software_ASW_version_number_No_functional_content_change_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_ECU_application_software_ASW_version_number_No_functional_content_change_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Detail_Code_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Detail_Code_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Detail_Code_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2336,7 +2542,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Spare_Part_Number_Spare
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Vehicle_Identification_VIN_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Execution_Package_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2347,7 +2553,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Vehicle_Identification_
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Vehicle_Identification_VIN_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Execution_Package_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2358,7 +2564,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Vehicle_Identification_
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Vehicle_Identification_VIN_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Execution_Package_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2370,11 +2576,3236 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Vehicle_Identification_
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_RoutineServices_New_Routine_Control_Start(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Group_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
   OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Group_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Group_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Specific_Vehicle_Code_WMI_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Specific_Vehicle_Code_WMI_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Specific_Vehicle_Code_WMI_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Subgroup_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Subgroup_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_EcuIdentification_Subgroup_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Electronic_lock_state_Electronic_lock_state_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Electronic_lock_state_Electronic_lock_state_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Gear_Gear_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Gear_Gear_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_HV_Status_and_Charging_Status_HV_status_and_charging_status_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_HV_Status_and_Charging_Status_HV_status_and_charging_status_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_HV_part_work_mode_HV_part_work_mode1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_HV_part_work_mode_HV_part_work_mode1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_HV_part_work_mode_HV_part_work_mode2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_HV_part_work_mode_HV_part_work_mode2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Last_service_date_Day_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Last_service_date_Day_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Last_service_date_Day_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Last_service_date_Month_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Last_service_date_Month_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Last_service_date_Month_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Last_service_date_Year_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Last_service_date_Year_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Last_service_date_Year_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_PWT_vehicle_fault_PWT_ErrorLevel1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_PWT_vehicle_fault_PWT_ErrorLevel1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_PWT_vehicle_fault_PWT_ErrorLevel2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_PWT_vehicle_fault_PWT_ErrorLevel2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_PWT_vehicle_fault_PWT_ErrorLevel3_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_PWT_vehicle_fault_PWT_ErrorLevel3_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_Part_Number_Detail_Code_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_Part_Number_Detail_Code_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_Part_Number_Execution_Package_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_Part_Number_Execution_Package_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_Part_Number_Group_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_Part_Number_Group_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_Part_Number_Specific_Vehicle_Code_WMI_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_Part_Number_Specific_Vehicle_Code_WMI_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_Part_Number_Subgroup_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_Part_Number_Subgroup_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_manufacturing_date_ECU_Manufacturing_Date_Day_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_manufacturing_date_ECU_Manufacturing_Date_Day_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_manufacturing_date_ECU_Manufacturing_Date_Month_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_manufacturing_date_ECU_Manufacturing_Date_Month_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_manufacturing_date_ECU_Manufacturing_Date_Year_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_ECU_manufacturing_date_ECU_Manufacturing_Date_Year_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Level1_OEM_Key_written_status_Read_Level1_OEM_Key_rewrite_counter_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Level1_OEM_Key_written_status_Read_Level1_OEM_Key_rewrite_counter_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Level2_OEM_Key_written_status_Read_Level2_OEM_Key_rewrite_counter_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Level2_OEM_Key_written_status_Read_Level2_OEM_Key_rewrite_counter_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Level3_OEM_Key_written_status_Read_Level3_OEM_Key_rewrite_counter_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Level3_OEM_Key_written_status_Read_Level3_OEM_Key_rewrite_counter_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Level4_OEM_Key_written_status_Read_Level4_OEM_Key_rewrite_counter_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Level4_OEM_Key_written_status_Read_Level4_OEM_Key_rewrite_counter_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Brute_Force_UDS_0x27_service_1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Brute_Force_UDS_0x27_service_1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Brute_Force_UDS_0x27_service_2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Brute_Force_UDS_0x27_service_2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Brute_Force_UDS_0x27_service_3_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Brute_Force_UDS_0x27_service_3_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Brute_Force_UDS_0x27_service_4_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Brute_Force_UDS_0x27_service_4_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Brute_Force_UDS_0x27_service_5_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Brute_Force_UDS_0x27_service_5_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Brute_Force_UDS_0x27_service_Event_occurr_0DEE2FAA_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Brute_Force_UDS_0x27_service_Event_occurr_0DEE2FAA_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Day_1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Day_1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Day_2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Day_2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Day_3_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Day_3_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Day_4_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Day_4_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Day_5_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Day_5_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Month_1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Month_1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Month_2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Month_2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Month_3_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Month_3_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Month_4_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Month_4_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Month_5_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Month_5_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Year_1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Year_1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Year_2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Year_2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Year_3_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Year_3_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Year_4_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Year_4_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Year_5_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Brute_Force_UDS_0x27_servic_Event_occurance_time_Year_5_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Day_1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Day_1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Day_2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Day_2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Day_3_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Day_3_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Day_4_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Day_4_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Day_5_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Day_5_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Month_1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Month_1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Month_2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Month_2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Month_3_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Month_3_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Month_4_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Month_4_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Month_5_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Month_5_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Year_1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Year_1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Year_2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Year_2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Year_3_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Year_3_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Year_4_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Year_4_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Year_5_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Event_occurance_time_Year_5_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Software_configuration_integrity_check_1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Software_configuration_integrity_check_1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Software_configuration_integrity_check_2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Software_configuration_integrity_check_2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Software_configuration_integrity_check_3_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Software_configuration_integrity_check_3_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Software_configuration_integrity_check_4_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Software_configuration_integrity_check_4_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Software_configuration_integrity_check_5_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Software_configuration_integrity_check_5_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Software_configuration_integrity_check_fa_B04CEA39_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Vehicle_Security_related_events_Software_configuration_inte_Software_configuration_integrity_check_fa_B04CEA39_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_CRC_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_CRC_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_CRC_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Format_Byte_High_Byte_0_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Format_Byte_High_Byte_0_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Format_Byte_High_Byte_0_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Format_Byte_High_Byte_1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Format_Byte_High_Byte_1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Format_Byte_High_Byte_1_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_0_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_0_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_0_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_1_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_2_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_3_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_3_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_3_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_4_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_4_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_4_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_5_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_5_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_5_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_7_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_7_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_CDS_Short_VIN_High_Byte_7_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Configuration_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Configuration_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Configuration_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Reserved1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Reserved1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Reserved1_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Reserved2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Reserved2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Reserved2_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Reserved3_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Reserved3_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Reserved3_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Version_Byte_0_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Version_Byte_0_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Version_Byte_0_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Version_Byte_1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Version_Byte_1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_coding_data_string_CDS_Version_Byte_1_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_complete_VIN_Vehicle_Description_Section_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_complete_VIN_Vehicle_Description_Section_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_complete_VIN_Vehicle_Description_Section_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_complete_VIN_Vehicle_Identification_Section_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_complete_VIN_Vehicle_Identification_Section_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_complete_VIN_Vehicle_Identification_Section_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_complete_VIN_World_Manufacturers_Identification_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_complete_VIN_World_Manufacturers_Identification_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_Write_complete_VIN_World_Manufacturers_Identification_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_active_diagnostic_session_Active_diagnostic_session_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Read_active_diagnostic_session_Active_diagnostic_session_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SOC_SOC_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SOC_SOC_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SerialNumber_ECU_Name_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SerialNumber_ECU_Name_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SerialNumber_ECU_index_number_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SerialNumber_ECU_index_number_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SerialNumber_ECU_production_date_in_DD_MM_YY_format_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SerialNumber_ECU_production_date_in_DD_MM_YY_format_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SerialNumber_Supplier_name_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_SerialNumber_Supplier_name_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Supplier_ECU_hardware_part_number_Changes_in_electronic_components_level_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Supplier_ECU_hardware_part_number_Changes_in_electronic_components_level_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Supplier_ECU_hardware_part_number_Major_release_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Supplier_ECU_hardware_part_number_Major_release_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Total_Odometer_Total_Odometer_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Total_Odometer_Total_Odometer_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Total_Odometer_VCU_Total_Odometer_VCU_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Total_Odometer_VCU_Total_Odometer_VCU_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Total_Odometer_VCU_Total_Odometer_VCU_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_AccPealparameter_Accelerator_pedal_sensor_1_voltage_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_AccPealparameter_Accelerator_pedal_sensor_1_voltage_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_AccPealparameter_Accelerator_pedal_sensor_2_voltage_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_AccPealparameter_Accelerator_pedal_sensor_2_voltage_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_AccPealparameter_VCU_AccelerationPedal_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_AccPealparameter_VCU_AccelerationPedal_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_AccPealparameter_VCU_VehicleSpeed_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_AccPealparameter_VCU_VehicleSpeed_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_HVStatus_VCU_HVStatus_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_HVStatus_VCU_HVStatus_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_HV_InterLock_PWM_pfrequency_VCU_HVIL_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_HV_InterLock_PWM_pfrequency_VCU_HVIL_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter1_MCUPowerLimit_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter1_MCUPowerLimit_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter1_VCU_DCDCPowerLimit_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter1_VCU_DCDCPowerLimit_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter1_VCU_DisChgPowerLimit_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter1_VCU_DisChgPowerLimit_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter1_VCU_TCUPowerAllowed_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter1_VCU_TCUPowerAllowed_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter2_BMSChgPowerLimit_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter2_BMSChgPowerLimit_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter2_BMSDisChgPowerLimit_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter2_BMSDisChgPowerLimit_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter2_MCUFeedbackPowerLimit_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter2_MCUFeedbackPowerLimit_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter3_ACSystemPower_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter3_ACSystemPower_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter3_DCDCPower_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter3_DCDCPower_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter3_MCUPower_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter3_MCUPower_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter3_PackPTCPower_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter3_PackPTCPower_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter3_V2LPower_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_PowerMaxAllowed_parameter3_V2LPower_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_Torque_parameter_Torque_MaxAllowed_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_Torque_parameter_Torque_MaxAllowed_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_Torque_parameter_Torque_MinAllowed_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_Torque_parameter_Torque_MinAllowed_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_Torque_parameter_VCU_MCUDesiredTorque_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_Torque_parameter_VCU_MCUDesiredTorque_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_Torque_parameter_VCU_RegenTorqueCap_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_Torque_parameter_VCU_RegenTorqueCap_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_control_S2_status_New_Bit_Field_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_control_S2_status_New_Bit_Field_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_control_main_relay_Mainrealy1_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_control_main_relay_Mainrealy1_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_control_main_relay_Mainrelay2_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_VCU_control_main_relay_Mainrelay2_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Vehicle_State_Ignition_Switch_Signal_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Vehicle_State_Ignition_Switch_Signal_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Vehicle_speed_Vehicle_speed_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Vehicle_speed_Vehicle_speed_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Write_Level1_OEM_Key_CRC_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Write_Level1_OEM_Key_OEM_Key_Value_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Write_Level2_OEM_Key_CRC_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Write_Level2_OEM_Key_OEM_Key_Value_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Write_Level3_OEM_Key_CRC_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Write_Level3_OEM_Key_OEM_Key_Value_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Write_Level4_OEM_Key_CRC_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_DataServices_Write_Level4_OEM_Key_OEM_Key_Value_WriteData(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_RoutineServices_CheckCodingState_Start(Dcm_OpStatusType OpStatus, P2VAR(Dcm_StartDataOut_CheckCodingState_Out_routineResultType, AUTOMATIC, RTE_DCM_APPL_VAR) Out_routineResult, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Out_routineResult = Out_routineResult;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_RoutineServices_CheckProgrammingDependencies_Start(Dcm_OpStatusType OpStatus, P2VAR(Dcm_StartDataOut_CheckProgrammingDependencies_Out_routineResultType, AUTOMATIC, RTE_DCM_APPL_VAR) Out_routineResult, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Out_routineResult = Out_routineResult;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_RoutineServices_CheckProgrammingPreCondition_Start(Dcm_OpStatusType OpStatus, P2VAR(Dcm_StartDataOut_CheckProgrammingPreCondition_Out_programmingPreConditionListArrayType, AUTOMATIC, RTE_DCM_APPL_VAR) Out_programmingPreConditionList, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Out_programmingPreConditionList = Out_programmingPreConditionList;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_RoutineServices_Check_Memory_Start(Dcm_StartDataIn_Check_Memory_In_checksumType In_checksum, Dcm_OpStatusType OpStatus, P2VAR(Dcm_StartDataOut_Check_Memory_Out_routineResultType, AUTOMATIC, RTE_DCM_APPL_VAR) Out_routineResult, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  In_checksum = In_checksum;
+  OpStatus = OpStatus;
+  Out_routineResult = Out_routineResult;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_RoutineServices_Erase_Memory_Start(Dcm_StartDataIn_Erase_Memory_In_addressAndLengthFormatIdentifierType In_addressAndLengthFormatIdentifier, Dcm_StartDataIn_Erase_Memory_In_memoryAddressType In_memoryAddress, Dcm_StartDataIn_Erase_Memory_In_memorySizeType In_memorySize, Dcm_OpStatusType OpStatus, P2VAR(Dcm_StartDataOut_Erase_Memory_Out_routineResultType, AUTOMATIC, RTE_DCM_APPL_VAR) Out_routineResult, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  In_addressAndLengthFormatIdentifier = In_addressAndLengthFormatIdentifier;
+  In_memoryAddress = In_memoryAddress;
+  In_memorySize = In_memorySize;
+  OpStatus = OpStatus;
+  Out_routineResult = Out_routineResult;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+} /* PRQA S 6060 */ /* MD_MSR_STPAR */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_RoutineServices_Erase_Mileage_Provisional_Parameter_Start(Dcm_OpStatusType OpStatus, P2VAR(Dcm_StartDataOut_Erase_Mileage_Provisional_Parameter_Out_routineResultType, AUTOMATIC, RTE_DCM_APPL_VAR) Out_routineResult, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Out_routineResult = Out_routineResult;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_RoutineServices_Turn_Off_HV_Turn_Off_Charging_Start(Dcm_OpStatusType OpStatus, P2VAR(Dcm_StartDataOut_Turn_Off_HV_Turn_Off_Charging_Out_routineResultType, AUTOMATIC, RTE_DCM_APPL_VAR) Out_routineResult, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Out_routineResult = Out_routineResult;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_RoutineServices_Turn_Off_HV_Turn_Off_Charging_Stop(Dcm_OpStatusType OpStatus, P2VAR(Dcm_StopDataOut_Turn_Off_HV_Turn_Off_Charging_Out_routineResultType, AUTOMATIC, RTE_DCM_APPL_VAR) Out_routineResult, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Out_routineResult = Out_routineResult;
   ErrorCode = ErrorCode;
   /* call to server runnable removed as client is never triggered */
 
@@ -2405,7 +5836,79 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_SecurityAccess_UnlockedL1_GetSeed(Dc
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a0_F1A0_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_SecurityAccess_Unlocked_Level_2_CompareKey(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Key, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Key = Key;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_SecurityAccess_Unlocked_Level_2_GetSeed(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Seed, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Seed = Seed;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_SecurityAccess_Unlocked_Level_3_CompareKey(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Key, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Key = Key;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_SecurityAccess_Unlocked_Level_3_GetSeed(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Seed, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Seed = Seed;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_SecurityAccess_Unlocked_Level_4_CompareKey(P2CONST(uint8, AUTOMATIC, RTE_DCM_APPL_DATA) Key, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Key = Key;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_SecurityAccess_Unlocked_Level_4_GetSeed(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) Seed, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Seed = Seed;
+  ErrorCode = ErrorCode;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0x1d01_Accelerator_pedal_sensor_1_voltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2415,7 +5918,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a0_F1A
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a1_F1A1_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0x1d01_Accelerator_pedal_sensor_2_voltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2425,7 +5928,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a1_F1A
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a2_F1A2_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0x1d01_VCU_AccelerationPedal_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -2435,7 +5938,547 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a2_F1A
   return ret;
 }
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a3_F1A3_Data_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0x1d01_VCU_VehicleSpeed_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0x1d05_POD_OBC_InputACVoltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0x1d05_POD_OBC_OutputDCChargeCurrent_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0x1d05_POD_OBC_OutputDCChargeVoltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0x1d05_VCU_OBC_ChargeCurrentCommand_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0x1d07_Electronic_lock_state_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0x1d08_VCU_HVIL_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0x1d09_New_Bit_Field_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0x1d11_Mainrealy1_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0x1d11_Mainrelay2_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0xf1a0_Ignition_Switch_Signal_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0xf1a1_Battery_Voltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0xf1a2_Total_Odometer_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0xf1a3_Vehicle_speed_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0xf1a4_Date_And_Time_Day_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0xf1a4_Date_And_Time_Hour_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0xf1a4_Date_And_Time_Minute_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0xf1a4_Date_And_Time_Month_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0xf1a4_Date_And_Time_Second_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0xf1a4_Date_And_Time_Year_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0xf1a5_VCU_HVStatus_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0xf1a6_SOC_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_DID_0xf1a7_Gear_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_ExtendedData_Fault_Aged_Counter_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_ExtendedData_Fault_Aging_Counter_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBReadData_ExtendedData_Fault_Ocurrence_Counter_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d01_Accelerator_pedal_sensor_1_voltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d01_Accelerator_pedal_sensor_2_voltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d01_VCU_AccelerationPedal_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d01_VCU_VehicleSpeed_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d05_POD_OBC_InputACVoltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d05_POD_OBC_OutputDCChargeCurrent_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d05_POD_OBC_OutputDCChargeVoltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d05_VCU_OBC_ChargeCurrentCommand_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d07_Electronic_lock_state_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d08_VCU_HVIL_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d09_New_Bit_Field_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d11_Mainrealy1_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0x1d11_Mainrelay2_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a0_Ignition_Switch_Signal_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a1_Battery_Voltage_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a2_Total_Odometer_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a3_Vehicle_speed_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Day_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Hour_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Minute_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Month_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Second_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a4_Date_And_Time_Year_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a5_VCU_HVStatus_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a6_SOC_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_DID_0xf1a7_Gear_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_ExtendedData_Fault_Aged_Counter_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_ExtendedData_Fault_Aging_Counter_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+  /* call to server runnable removed as client is never triggered */
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_ExtendedData_Fault_Ocurrence_Counter_ReadData(P2VAR(uint8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
 {
   Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -3031,6 +7074,15 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_SwitchAck_Dcm_DcmEcuReset_DcmEcuReset(void)
 /**********************************************************************************************************************
  * Mode Switch API (Rte_Switch)
  *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmCommunicationControl_ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_DcmCommunicationControl_ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d(Dcm_CommunicationModeType nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  nextMode = nextMode;
+
+  return ret;
+}
 
 FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8_DcmCommunicationControl_ComMConf_ComMChannel_CN_TC37X_VCU_CAN00_07b6c9c8(Dcm_CommunicationModeType nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
 {
@@ -3653,6 +7705,9 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 
       /* call runnable */
       ComM_MainFunction_7(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+      /* call runnable */
+      ComM_MainFunction_8(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

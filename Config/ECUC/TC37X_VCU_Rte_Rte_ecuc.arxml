@@ -2656,6 +2656,24 @@
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteMappedToTaskRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Bsw_Task</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteUsedOsEventRef</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Rte_Ev_Cyclic2_Bsw_Task_0_20ms</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteUsedOsAlarmRef</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Rte_Al_TE2_Bsw_Task_0_20ms</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="36f3f965-4816-4538-8af2-6e320242bdb9">
@@ -4013,6 +4031,24 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Rte/RteBswModuleInstance/RteBswEventToTaskMapping/RteBswMappedToTaskRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Bsw_Task</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Rte/RteBswModuleInstance/RteBswEventToTaskMapping/RteBswUsedOsEventRef</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Rte_Ev_Cyclic2_Bsw_Task_0_20ms</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Rte/RteBswModuleInstance/RteBswEventToTaskMapping/RteBswUsedOsAlarmRef</DEFINITION-REF>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Rte_Al_TE2_Bsw_Task_0_20ms</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
@@ -45994,102 +46030,6 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="9f302285-9752-4233-a898-d34549bee101">
-                  <SHORT-NAME>OIT_DataServices_VCU_DID_00_DataRecord_WriteData_DataServices_VCU_DID_00_DataRecord_WriteData</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_WriteData_DataServices_VCU_DID_00_DataRecord_WriteData</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="47098b58-514c-453e-8306-b7ff40a24786">
-                  <SHORT-NAME>OIT_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead_DataServices_VCU_DID_00_DataRecord_ConditionCheckRead</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="c832801d-fe58-4fb4-860f-df4889dbf47f">
-                  <SHORT-NAME>OIT_DataServices_VCU_DID_00_DataRecord_ReadData_DataServices_VCU_DID_00_DataRecord_ReadData</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_DataServices_VCU_DID_00_DataRecord_ReadData_DataServices_VCU_DID_00_DataRecord_ReadData</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="22284555-9040-4fa9-a568-30f8bf86ff7c">
-                  <SHORT-NAME>OIT_RoutineServices_Vcu_Roution_00_RequestResults_RoutineServices_Vcu_Roution_00_RequestResults</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_RoutineServices_Vcu_Roution_00_RequestResults_RoutineServices_Vcu_Roution_00_RequestResults</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="c72cc95d-ab00-4366-a430-9605506e55f3">
-                  <SHORT-NAME>OIT_RoutineServices_Vcu_Roution_00_Stop_RoutineServices_Vcu_Roution_00_Stop</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_RoutineServices_Vcu_Roution_00_Stop_RoutineServices_Vcu_Roution_00_Stop</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="531f578a-fee4-48c6-81e5-11a095c34d06">
-                  <SHORT-NAME>OIT_RoutineServices_Vcu_Roution_00_Start_RoutineServices_Vcu_Roution_00_Start</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_RoutineServices_Vcu_Roution_00_Start_RoutineServices_Vcu_Roution_00_Start</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="fe7d7fdc-b8e7-4e10-8bca-1d8d85480cb5">
                   <SHORT-NAME>DIAG_SWC_InitEvent</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
@@ -46156,70 +46096,6 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="dbbdb5ab-1168-4714-aeed-f28ae72cd0e9">
-                  <SHORT-NAME>OIT_SecurityAccess_Level_3_SetSecurityAttemptCounter_SecurityAccess_Level_3_SetSecurityAttemptCounter</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_SecurityAccess_Level_3_SetSecurityAttemptCounter_SecurityAccess_Level_3_SetSecurityAttemptCounter</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="1d8b41ca-c783-4ec7-a68e-589ce57aafc0">
-                  <SHORT-NAME>OIT_SecurityAccess_Level_3_GetSecurityAttemptCounter_SecurityAccess_Level_3_GetSecurityAttemptCounter</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_SecurityAccess_Level_3_GetSecurityAttemptCounter_SecurityAccess_Level_3_GetSecurityAttemptCounter</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="ca718a4a-8aa3-4325-b27a-093c50e51ba3">
-                  <SHORT-NAME>OIT_SecurityAccess_Level_3_CompareKey_SecurityAccess_Level_3_CompareKey</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_SecurityAccess_Level_3_CompareKey_SecurityAccess_Level_3_CompareKey</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="02ace649-1f78-46d9-99e1-b49ab0b03873">
-                  <SHORT-NAME>OIT_SecurityAccess_Level_3_GetSeed_SecurityAccess_Level_3_GetSeed</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_SecurityAccess_Level_3_GetSeed_SecurityAccess_Level_3_GetSeed</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="3a91bd80-2c27-4744-b620-69c30a78227d">
                   <SHORT-NAME>NvmBlock_DIAG_SWC_NvBlockNeed_AttemptCounter</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteNvRamAllocation</DEFINITION-REF>
@@ -46262,70 +46138,6 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteNvRamAllocation/RteSwNvRamMappingRef</DEFINITION-REF>
                       <VALUE-REF DEST="SWC-SERVICE-DEPENDENCY">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/NvBlockNeed_AttemptCounter</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="cda9c19d-2405-4ce9-9f82-0edb9dc1bb22">
-                  <SHORT-NAME>OIT_CBReadData_DID_0xf1a0_F1A0_Data_ReadData_CBReadData_DID_0xf1a0_F1A0_Data_ReadData</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_CBReadData_DID_0xf1a0_F1A0_Data_ReadData_CBReadData_DID_0xf1a0_F1A0_Data_ReadData</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="5bb277eb-6dff-47c3-87c0-7abb07bf7ccd">
-                  <SHORT-NAME>OIT_CBReadData_DID_0xf1a1_F1A1_Data_ReadData_CBReadData_DID_0xf1a1_F1A1_Data_ReadData</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_CBReadData_DID_0xf1a1_F1A1_Data_ReadData_CBReadData_DID_0xf1a1_F1A1_Data_ReadData</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="281d3711-fb5f-4c97-a912-a8c9cca81fae">
-                  <SHORT-NAME>OIT_CBReadData_DID_0xf1a2_F1A2_Data_ReadData_CBReadData_DID_0xf1a2_F1A2_Data_ReadData</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_CBReadData_DID_0xf1a2_F1A2_Data_ReadData_CBReadData_DID_0xf1a2_F1A2_Data_ReadData</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="f572f2fe-5dc9-416a-b1ba-6d7e60a5fcf4">
-                  <SHORT-NAME>OIT_CBReadData_DID_0xf1a3_F1A3_Data_ReadData_CBReadData_DID_0xf1a3_F1A3_Data_ReadData</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteImmediateRestart</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/Rte/RteSwComponentInstance/RteEventToTaskMapping/RteEventRef</DEFINITION-REF>
-                      <VALUE-REF DEST="OPERATION-INVOKED-EVENT">/ComponentTypes/DIAG_SWC/DIAG_SWC_InternalBehavior/OIT_CBReadData_DID_0xf1a3_F1A3_Data_ReadData_CBReadData_DID_0xf1a3_F1A3_Data_ReadData</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                 </ECUC-CONTAINER-VALUE>

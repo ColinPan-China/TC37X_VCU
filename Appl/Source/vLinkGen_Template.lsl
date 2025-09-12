@@ -1242,6 +1242,7 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_Bsw_Task_CODE";
         select "[.]text.OS_CanIsr_0_CODE";
         select "[.]text.OS_CanIsr_1_CODE";
+        select "[.]text.OS_CanIsr_2_CODE";
         select "[.]text.OS_CanIsr_3_CODE";
         select "[.]text.OS_CanIsr_4_CODE";
         select "[.]text.OS_CanIsr_6_CODE";
