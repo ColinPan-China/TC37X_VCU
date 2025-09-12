@@ -112,38 +112,6 @@ extern "C"
 #  define Rte_InitValue_Bts7xx_HS4_En_Bts7xx_HS4_En (0)
 #  define Rte_InitValue_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet (0U)
 #  define Rte_InitValue_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet (0U)
-#  define Rte_InitValue_EXT10_Valid_EXT10_Valid (0U)
-#  define Rte_InitValue_EXT11_Valid_EXT11_Valid (0U)
-#  define Rte_InitValue_EXT12_Valid_EXT12_Valid (0U)
-#  define Rte_InitValue_EXT13_Valid_EXT13_Valid (0U)
-#  define Rte_InitValue_EXT14_Valid_EXT14_Valid (0U)
-#  define Rte_InitValue_EXT15_Valid_EXT15_Valid (0U)
-#  define Rte_InitValue_EXT16_Valid_EXT16_Valid (0U)
-#  define Rte_InitValue_EXT1_Valid_EXT1_Valid (0U)
-#  define Rte_InitValue_EXT2_Valid_EXT2_Valid (0U)
-#  define Rte_InitValue_EXT3_Valid_EXT3_Valid (0U)
-#  define Rte_InitValue_EXT4_Valid_EXT4_Valid (0U)
-#  define Rte_InitValue_EXT5_Valid_EXT5_Valid (0U)
-#  define Rte_InitValue_EXT6_Valid_EXT6_Valid (0U)
-#  define Rte_InitValue_EXT7_Valid_EXT7_Valid (0U)
-#  define Rte_InitValue_EXT8_Valid_EXT8_Valid (0U)
-#  define Rte_InitValue_EXT9_Valid_EXT9_Valid (0U)
-#  define Rte_InitValue_EXT_A_IN1_EXT_A_IN1 (0)
-#  define Rte_InitValue_EXT_A_IN10_EXT_A_IN10 (0)
-#  define Rte_InitValue_EXT_A_IN11_EXT_A_IN11 (0)
-#  define Rte_InitValue_EXT_A_IN12_EXT_A_IN12 (0)
-#  define Rte_InitValue_EXT_A_IN13_EXT_A_IN13 (0)
-#  define Rte_InitValue_EXT_A_IN14_EXT_A_IN14 (0)
-#  define Rte_InitValue_EXT_A_IN15_EXT_A_IN15 (0)
-#  define Rte_InitValue_EXT_A_IN16_EXT_A_IN16 (0)
-#  define Rte_InitValue_EXT_A_IN2_EXT_A_IN2 (0)
-#  define Rte_InitValue_EXT_A_IN3_EXT_A_IN3 (0)
-#  define Rte_InitValue_EXT_A_IN4_EXT_A_IN4 (0)
-#  define Rte_InitValue_EXT_A_IN5_EXT_A_IN5 (0)
-#  define Rte_InitValue_EXT_A_IN6_EXT_A_IN6 (0)
-#  define Rte_InitValue_EXT_A_IN7_EXT_A_IN7 (0)
-#  define Rte_InitValue_EXT_A_IN8_EXT_A_IN8 (0)
-#  define Rte_InitValue_EXT_A_IN9_EXT_A_IN9 (0)
 #  define Rte_InitValue_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty (0)
 #  define Rte_InitValue_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period (0)
 #  define Rte_InitValue_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty (0)
@@ -165,22 +133,6 @@ extern "C"
 #  define Rte_InitValue_Tle9201_Dir_Tle9201_Dir (0)
 #  define Rte_InitValue_Tle9201_Dis_Tle9201_Dis (0)
 #  define Rte_InitValue_Tle9201_Pwm_Tle9201_Pwm (0)
-#  define Rte_InitValue_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0 (0)
-#  define Rte_InitValue_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1 (0)
-#  define Rte_InitValue_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2 (0)
-#  define Rte_InitValue_VcuRxMsg1_Sig3_VcuRxMsg1_Sig3 (0)
-#  define Rte_InitValue_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0 (0)
-#  define Rte_InitValue_VcuRxMsg2_Sig1_VcuRxMsg2_Sig1 (0)
-#  define Rte_InitValue_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2 (0)
-#  define Rte_InitValue_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3 (0)
-#  define Rte_InitValue_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0 (0)
-#  define Rte_InitValue_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1 (0)
-#  define Rte_InitValue_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2 (0)
-#  define Rte_InitValue_VcuTxMsg1_Sig3_VcuTxMsg1_Sig3 (0)
-#  define Rte_InitValue_VcuTxMsg2_Sig0_VcuTxMsg2_Sig0 (0)
-#  define Rte_InitValue_VcuTxMsg2_Sig1_VcuTxMsg2_Sig1 (0)
-#  define Rte_InitValue_VcuTxMsg2_Sig2_VcuTxMsg2_Sig2 (0)
-#  define Rte_InitValue_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3 (0)
 # endif
 
 
@@ -295,30 +247,6 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_Ext_IN2_Ext_IN2(Ext_IN2 data); 
 #  define Rte_Read_Com_SWC_Tle9201_Dis_Tle9201_Dis(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle9201_Dis_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01_7aca7d59_Rx, (data)))
 #  define Rte_Read_Tle9201_Pwm_Tle9201_Pwm Rte_Read_Com_SWC_Tle9201_Pwm_Tle9201_Pwm
 #  define Rte_Read_Com_SWC_Tle9201_Pwm_Tle9201_Pwm(data) (Com_ReceiveSignal(ComConf_ComSignal_Tle9201_Pwm_oVcuRxCtrlMsg1_oTC37X_VCU_CAN01_bf73fa17_Rx, (data)))
-#  define Rte_Read_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0 Rte_Read_Com_SWC_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0
-
-#  define Rte_Read_Com_SWC_VcuRxMsg1_Sig0_VcuRxMsg1_Sig0(data) (*(data) = 0, ((Std_ReturnType)RTE_E_UNCONNECTED))
-#  define Rte_Read_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1 Rte_Read_Com_SWC_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1
-
-#  define Rte_Read_Com_SWC_VcuRxMsg1_Sig1_VcuRxMsg1_Sig1(data) (*(data) = 0, ((Std_ReturnType)RTE_E_UNCONNECTED))
-#  define Rte_Read_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2 Rte_Read_Com_SWC_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2
-
-#  define Rte_Read_Com_SWC_VcuRxMsg1_Sig2_VcuRxMsg1_Sig2(data) (*(data) = 0, ((Std_ReturnType)RTE_E_UNCONNECTED))
-#  define Rte_Read_VcuRxMsg1_Sig3_VcuRxMsg1_Sig3 Rte_Read_Com_SWC_VcuRxMsg1_Sig3_VcuRxMsg1_Sig3
-
-#  define Rte_Read_Com_SWC_VcuRxMsg1_Sig3_VcuRxMsg1_Sig3(data) (*(data) = 0, ((Std_ReturnType)RTE_E_UNCONNECTED))
-#  define Rte_Read_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0 Rte_Read_Com_SWC_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0
-
-#  define Rte_Read_Com_SWC_VcuRxMsg2_Sig0_VcuRxMsg2_Sig0(data) (*(data) = 0, ((Std_ReturnType)RTE_E_UNCONNECTED))
-#  define Rte_Read_VcuRxMsg2_Sig1_VcuRxMsg2_Sig1 Rte_Read_Com_SWC_VcuRxMsg2_Sig1_VcuRxMsg2_Sig1
-
-#  define Rte_Read_Com_SWC_VcuRxMsg2_Sig1_VcuRxMsg2_Sig1(data) (*(data) = 0, ((Std_ReturnType)RTE_E_UNCONNECTED))
-#  define Rte_Read_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2 Rte_Read_Com_SWC_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2
-
-#  define Rte_Read_Com_SWC_VcuRxMsg2_Sig2_VcuRxMsg2_Sig2(data) (*(data) = 0, ((Std_ReturnType)RTE_E_UNCONNECTED))
-#  define Rte_Read_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3 Rte_Read_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3
-
-#  define Rte_Read_Com_SWC_VcuRxMsg2_Sig3_VcuRxMsg2_Sig3(data) (*(data) = 0, ((Std_ReturnType)RTE_E_UNCONNECTED))
 
 
 /**********************************************************************************************************************
@@ -374,91 +302,11 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_Ext_IN2_Ext_IN2(Ext_IN2 data); 
 #  define Rte_Write_AN9_AN9 Rte_Write_Com_SWC_AN9_AN9
 #  define Rte_Write_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet Rte_Write_Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet
 #  define Rte_Write_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet Rte_Write_Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet
-#  define Rte_Write_EXT10_Valid_EXT10_Valid Rte_Write_Com_SWC_EXT10_Valid_EXT10_Valid
-#  define Rte_Write_Com_SWC_EXT10_Valid_EXT10_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT11_Valid_EXT11_Valid Rte_Write_Com_SWC_EXT11_Valid_EXT11_Valid
-#  define Rte_Write_Com_SWC_EXT11_Valid_EXT11_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT12_Valid_EXT12_Valid Rte_Write_Com_SWC_EXT12_Valid_EXT12_Valid
-#  define Rte_Write_Com_SWC_EXT12_Valid_EXT12_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT13_Valid_EXT13_Valid Rte_Write_Com_SWC_EXT13_Valid_EXT13_Valid
-#  define Rte_Write_Com_SWC_EXT13_Valid_EXT13_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT14_Valid_EXT14_Valid Rte_Write_Com_SWC_EXT14_Valid_EXT14_Valid
-#  define Rte_Write_Com_SWC_EXT14_Valid_EXT14_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT15_Valid_EXT15_Valid Rte_Write_Com_SWC_EXT15_Valid_EXT15_Valid
-#  define Rte_Write_Com_SWC_EXT15_Valid_EXT15_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT16_Valid_EXT16_Valid Rte_Write_Com_SWC_EXT16_Valid_EXT16_Valid
-#  define Rte_Write_Com_SWC_EXT16_Valid_EXT16_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT1_Valid_EXT1_Valid Rte_Write_Com_SWC_EXT1_Valid_EXT1_Valid
-#  define Rte_Write_Com_SWC_EXT1_Valid_EXT1_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT2_Valid_EXT2_Valid Rte_Write_Com_SWC_EXT2_Valid_EXT2_Valid
-#  define Rte_Write_Com_SWC_EXT2_Valid_EXT2_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT3_Valid_EXT3_Valid Rte_Write_Com_SWC_EXT3_Valid_EXT3_Valid
-#  define Rte_Write_Com_SWC_EXT3_Valid_EXT3_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT4_Valid_EXT4_Valid Rte_Write_Com_SWC_EXT4_Valid_EXT4_Valid
-#  define Rte_Write_Com_SWC_EXT4_Valid_EXT4_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT5_Valid_EXT5_Valid Rte_Write_Com_SWC_EXT5_Valid_EXT5_Valid
-#  define Rte_Write_Com_SWC_EXT5_Valid_EXT5_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT6_Valid_EXT6_Valid Rte_Write_Com_SWC_EXT6_Valid_EXT6_Valid
-#  define Rte_Write_Com_SWC_EXT6_Valid_EXT6_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT7_Valid_EXT7_Valid Rte_Write_Com_SWC_EXT7_Valid_EXT7_Valid
-#  define Rte_Write_Com_SWC_EXT7_Valid_EXT7_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT8_Valid_EXT8_Valid Rte_Write_Com_SWC_EXT8_Valid_EXT8_Valid
-#  define Rte_Write_Com_SWC_EXT8_Valid_EXT8_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT9_Valid_EXT9_Valid Rte_Write_Com_SWC_EXT9_Valid_EXT9_Valid
-#  define Rte_Write_Com_SWC_EXT9_Valid_EXT9_Valid(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN1_EXT_A_IN1 Rte_Write_Com_SWC_EXT_A_IN1_EXT_A_IN1
-#  define Rte_Write_Com_SWC_EXT_A_IN1_EXT_A_IN1(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN10_EXT_A_IN10 Rte_Write_Com_SWC_EXT_A_IN10_EXT_A_IN10
-#  define Rte_Write_Com_SWC_EXT_A_IN10_EXT_A_IN10(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN11_EXT_A_IN11 Rte_Write_Com_SWC_EXT_A_IN11_EXT_A_IN11
-#  define Rte_Write_Com_SWC_EXT_A_IN11_EXT_A_IN11(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN12_EXT_A_IN12 Rte_Write_Com_SWC_EXT_A_IN12_EXT_A_IN12
-#  define Rte_Write_Com_SWC_EXT_A_IN12_EXT_A_IN12(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN13_EXT_A_IN13 Rte_Write_Com_SWC_EXT_A_IN13_EXT_A_IN13
-#  define Rte_Write_Com_SWC_EXT_A_IN13_EXT_A_IN13(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN14_EXT_A_IN14 Rte_Write_Com_SWC_EXT_A_IN14_EXT_A_IN14
-#  define Rte_Write_Com_SWC_EXT_A_IN14_EXT_A_IN14(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN15_EXT_A_IN15 Rte_Write_Com_SWC_EXT_A_IN15_EXT_A_IN15
-#  define Rte_Write_Com_SWC_EXT_A_IN15_EXT_A_IN15(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN16_EXT_A_IN16 Rte_Write_Com_SWC_EXT_A_IN16_EXT_A_IN16
-#  define Rte_Write_Com_SWC_EXT_A_IN16_EXT_A_IN16(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN2_EXT_A_IN2 Rte_Write_Com_SWC_EXT_A_IN2_EXT_A_IN2
-#  define Rte_Write_Com_SWC_EXT_A_IN2_EXT_A_IN2(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN3_EXT_A_IN3 Rte_Write_Com_SWC_EXT_A_IN3_EXT_A_IN3
-#  define Rte_Write_Com_SWC_EXT_A_IN3_EXT_A_IN3(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN4_EXT_A_IN4 Rte_Write_Com_SWC_EXT_A_IN4_EXT_A_IN4
-#  define Rte_Write_Com_SWC_EXT_A_IN4_EXT_A_IN4(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN5_EXT_A_IN5 Rte_Write_Com_SWC_EXT_A_IN5_EXT_A_IN5
-#  define Rte_Write_Com_SWC_EXT_A_IN5_EXT_A_IN5(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN6_EXT_A_IN6 Rte_Write_Com_SWC_EXT_A_IN6_EXT_A_IN6
-#  define Rte_Write_Com_SWC_EXT_A_IN6_EXT_A_IN6(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN7_EXT_A_IN7 Rte_Write_Com_SWC_EXT_A_IN7_EXT_A_IN7
-#  define Rte_Write_Com_SWC_EXT_A_IN7_EXT_A_IN7(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN8_EXT_A_IN8 Rte_Write_Com_SWC_EXT_A_IN8_EXT_A_IN8
-#  define Rte_Write_Com_SWC_EXT_A_IN8_EXT_A_IN8(data) (RTE_E_OK)
-#  define Rte_Write_EXT_A_IN9_EXT_A_IN9 Rte_Write_Com_SWC_EXT_A_IN9_EXT_A_IN9
-#  define Rte_Write_Com_SWC_EXT_A_IN9_EXT_A_IN9(data) (RTE_E_OK)
 #  define Rte_Write_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty Rte_Write_Com_SWC_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty
 #  define Rte_Write_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period Rte_Write_Com_SWC_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period
 #  define Rte_Write_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty Rte_Write_Com_SWC_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty
 #  define Rte_Write_EXT_PWM_IN2_Period_EXT_PWM_IN2_Period Rte_Write_Com_SWC_EXT_PWM_IN2_Period_EXT_PWM_IN2_Period
 #  define Rte_Write_Ext_IN2_Ext_IN2 Rte_Write_Com_SWC_Ext_IN2_Ext_IN2
-#  define Rte_Write_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0 Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0
-#  define Rte_Write_Com_SWC_VcuTxMsg1_Sig0_VcuTxMsg1_Sig0(data) (RTE_E_OK)
-#  define Rte_Write_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1 Rte_Write_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1
-#  define Rte_Write_Com_SWC_VcuTxMsg1_Sig1_VcuTxMsg1_Sig1(data) (RTE_E_OK)
-#  define Rte_Write_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2 Rte_Write_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2
-#  define Rte_Write_Com_SWC_VcuTxMsg1_Sig2_VcuTxMsg1_Sig2(data) (RTE_E_OK)
-#  define Rte_Write_VcuTxMsg1_Sig3_VcuTxMsg1_Sig3 Rte_Write_Com_SWC_VcuTxMsg1_Sig3_VcuTxMsg1_Sig3
-#  define Rte_Write_Com_SWC_VcuTxMsg1_Sig3_VcuTxMsg1_Sig3(data) (RTE_E_OK)
-#  define Rte_Write_VcuTxMsg2_Sig0_VcuTxMsg2_Sig0 Rte_Write_Com_SWC_VcuTxMsg2_Sig0_VcuTxMsg2_Sig0
-#  define Rte_Write_Com_SWC_VcuTxMsg2_Sig0_VcuTxMsg2_Sig0(data) (RTE_E_OK)
-#  define Rte_Write_VcuTxMsg2_Sig1_VcuTxMsg2_Sig1 Rte_Write_Com_SWC_VcuTxMsg2_Sig1_VcuTxMsg2_Sig1
-#  define Rte_Write_Com_SWC_VcuTxMsg2_Sig1_VcuTxMsg2_Sig1(data) (RTE_E_OK)
-#  define Rte_Write_VcuTxMsg2_Sig2_VcuTxMsg2_Sig2 Rte_Write_Com_SWC_VcuTxMsg2_Sig2_VcuTxMsg2_Sig2
-#  define Rte_Write_Com_SWC_VcuTxMsg2_Sig2_VcuTxMsg2_Sig2(data) (RTE_E_OK)
-#  define Rte_Write_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3 Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3
-#  define Rte_Write_Com_SWC_VcuTxMsg2_Sig3_VcuTxMsg2_Sig3(data) (RTE_E_OK)
 
 
 # endif /* !defined(RTE_CORE) */
@@ -477,8 +325,6 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_Ext_IN2_Ext_IN2(Ext_IN2 data); 
 #  define RTE_RUNNABLE_Rte_Msg10Eh_Rx_Notification Rte_Msg10Eh_Rx_Notification
 #  define RTE_RUNNABLE_Rte_Msg10Fh_Rx_Notification Rte_Msg10Fh_Rx_Notification
 #  define RTE_RUNNABLE_Rte_Msg110h_Rx_Notification Rte_Msg110h_Rx_Notification
-#  define RTE_RUNNABLE_Rte_Msg200h_Rx_Notification Rte_Msg200h_Rx_Notification
-#  define RTE_RUNNABLE_Rte_Msg201h_Rx_Notification Rte_Msg201h_Rx_Notification
 # endif
 
 FUNC(void, Com_SWC_CODE) Com_Runnable_2ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
@@ -486,8 +332,6 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_500ms(void); /* PRQA S 3451, 0786, 3449 */
 FUNC(void, Com_SWC_CODE) Rte_Msg10Eh_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Com_SWC_CODE) Rte_Msg10Fh_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Com_SWC_CODE) Rte_Msg110h_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
-FUNC(void, Com_SWC_CODE) Rte_Msg200h_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
-FUNC(void, Com_SWC_CODE) Rte_Msg201h_Rx_Notification(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 
 # define Com_SWC_STOP_SEC_CODE
 # include "Com_SWC_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

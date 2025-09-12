@@ -356,12 +356,6 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  *   Std_ReturnType Rte_Call_UR_CN_LIN01_778f96a0_RequestComMode(ComM_ModeType ComMode)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
- *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_GetCurrentComMode(ComM_ModeType *ComMode)
- *     Synchronous Service Invocation. Timeout: None
- *     Returned Application Errors: RTE_E_ComM_UserRequest_E_NOT_OK
- *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode(ComM_ModeType ComMode)
- *     Synchronous Service Invocation. Timeout: None
- *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
  *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_GetCurrentComMode(ComM_ModeType *ComMode)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_NOT_OK
@@ -372,12 +366,6 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_NOT_OK
  *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_RequestComMode(ComM_ModeType ComMode)
- *     Synchronous Service Invocation. Timeout: None
- *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
- *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN12_74cffd8f_GetCurrentComMode(ComM_ModeType *ComMode)
- *     Synchronous Service Invocation. Timeout: None
- *     Returned Application Errors: RTE_E_ComM_UserRequest_E_NOT_OK
- *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN12_74cffd8f_RequestComMode(ComM_ModeType ComMode)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
  *
@@ -454,9 +442,7 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
 
   if( ShutdownTimer < 500 )
   {
-    Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_FULL_COMMUNICATION );
     Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_FULL_COMMUNICATION );
-    Rte_Call_UR_CN_TC37X_VCU_CAN12_74cffd8f_RequestComMode(COMM_FULL_COMMUNICATION);
 
     Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(COMM_FULL_COMMUNICATION);
     Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_RequestComMode(COMM_FULL_COMMUNICATION);
@@ -470,20 +456,11 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
   }
   else/* Mcu go shutdown */
   {
-//    Dio_WriteChannel(DioConf_DioChannel_DioChannel_P23_5_LIN_SLP,0);
-//    Dio_WriteChannel(DioConf_DioChannel_DioChannel_P10_8_KEY,0);
-
-//    Tja1145_GoSleep();
-
-
-    Rte_Call_UR_CN_TC37X_VCU_CAN00_b1b4f272_RequestComMode( COMM_NO_COMMUNICATION );
     Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_NO_COMMUNICATION );
     Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_RequestComMode(COMM_NO_COMMUNICATION);
-    Rte_Call_UR_CN_TC37X_VCU_CAN12_74cffd8f_RequestComMode(COMM_NO_COMMUNICATION);
     Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode( COMM_NO_COMMUNICATION );
     ComM_RequestComMode(ComMConf_ComMChannel_CN_LIN02_5f246578, COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMChannel_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac, COMM_NO_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMChannel_CN_LIN02_5f246578, COMM_NO_COMMUNICATION);
     Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_NO_COMMUNICATION);
     Rte_Call_UR_CN_LIN01_778f96a0_RequestComMode(COMM_NO_COMMUNICATION);
     Rte_Write_Request_ESH_RunRequest_0_requestedMode(0);

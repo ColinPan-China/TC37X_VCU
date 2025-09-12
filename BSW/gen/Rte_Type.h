@@ -201,102 +201,6 @@ typedef uint8 ECC_PMP2_SpdSet;
 # define Rte_TypeDef_ECC_PMP3_SpdSet
 typedef uint8 ECC_PMP3_SpdSet;
 
-# define Rte_TypeDef_EXT10_Valid
-typedef uint16 EXT10_Valid;
-
-# define Rte_TypeDef_EXT11_Valid
-typedef uint16 EXT11_Valid;
-
-# define Rte_TypeDef_EXT12_Valid
-typedef uint16 EXT12_Valid;
-
-# define Rte_TypeDef_EXT13_Valid
-typedef uint16 EXT13_Valid;
-
-# define Rte_TypeDef_EXT14_Valid
-typedef uint16 EXT14_Valid;
-
-# define Rte_TypeDef_EXT15_Valid
-typedef uint16 EXT15_Valid;
-
-# define Rte_TypeDef_EXT16_Valid
-typedef uint16 EXT16_Valid;
-
-# define Rte_TypeDef_EXT1_Valid
-typedef uint16 EXT1_Valid;
-
-# define Rte_TypeDef_EXT2_Valid
-typedef uint16 EXT2_Valid;
-
-# define Rte_TypeDef_EXT3_Valid
-typedef uint16 EXT3_Valid;
-
-# define Rte_TypeDef_EXT4_Valid
-typedef uint16 EXT4_Valid;
-
-# define Rte_TypeDef_EXT5_Valid
-typedef uint16 EXT5_Valid;
-
-# define Rte_TypeDef_EXT6_Valid
-typedef uint16 EXT6_Valid;
-
-# define Rte_TypeDef_EXT7_Valid
-typedef uint16 EXT7_Valid;
-
-# define Rte_TypeDef_EXT8_Valid
-typedef uint16 EXT8_Valid;
-
-# define Rte_TypeDef_EXT9_Valid
-typedef uint16 EXT9_Valid;
-
-# define Rte_TypeDef_EXT_A_IN1
-typedef sint16 EXT_A_IN1;
-
-# define Rte_TypeDef_EXT_A_IN10
-typedef sint16 EXT_A_IN10;
-
-# define Rte_TypeDef_EXT_A_IN11
-typedef sint16 EXT_A_IN11;
-
-# define Rte_TypeDef_EXT_A_IN12
-typedef sint16 EXT_A_IN12;
-
-# define Rte_TypeDef_EXT_A_IN13
-typedef sint16 EXT_A_IN13;
-
-# define Rte_TypeDef_EXT_A_IN14
-typedef sint16 EXT_A_IN14;
-
-# define Rte_TypeDef_EXT_A_IN15
-typedef sint16 EXT_A_IN15;
-
-# define Rte_TypeDef_EXT_A_IN16
-typedef sint16 EXT_A_IN16;
-
-# define Rte_TypeDef_EXT_A_IN2
-typedef sint16 EXT_A_IN2;
-
-# define Rte_TypeDef_EXT_A_IN3
-typedef sint16 EXT_A_IN3;
-
-# define Rte_TypeDef_EXT_A_IN4
-typedef sint16 EXT_A_IN4;
-
-# define Rte_TypeDef_EXT_A_IN5
-typedef sint16 EXT_A_IN5;
-
-# define Rte_TypeDef_EXT_A_IN6
-typedef sint16 EXT_A_IN6;
-
-# define Rte_TypeDef_EXT_A_IN7
-typedef sint16 EXT_A_IN7;
-
-# define Rte_TypeDef_EXT_A_IN8
-typedef sint16 EXT_A_IN8;
-
-# define Rte_TypeDef_EXT_A_IN9
-typedef sint16 EXT_A_IN9;
-
 # define Rte_TypeDef_EXT_PWM_IN1_Duty
 typedef sint8 EXT_PWM_IN1_Duty;
 
@@ -360,54 +264,6 @@ typedef sint8 Tle9201_Dis;
 # define Rte_TypeDef_Tle9201_Pwm
 typedef sint8 Tle9201_Pwm;
 
-# define Rte_TypeDef_VcuRxMsg1_Sig0
-typedef sint16 VcuRxMsg1_Sig0;
-
-# define Rte_TypeDef_VcuRxMsg1_Sig1
-typedef sint16 VcuRxMsg1_Sig1;
-
-# define Rte_TypeDef_VcuRxMsg1_Sig2
-typedef sint16 VcuRxMsg1_Sig2;
-
-# define Rte_TypeDef_VcuRxMsg1_Sig3
-typedef sint16 VcuRxMsg1_Sig3;
-
-# define Rte_TypeDef_VcuRxMsg2_Sig0
-typedef sint16 VcuRxMsg2_Sig0;
-
-# define Rte_TypeDef_VcuRxMsg2_Sig1
-typedef sint16 VcuRxMsg2_Sig1;
-
-# define Rte_TypeDef_VcuRxMsg2_Sig2
-typedef sint16 VcuRxMsg2_Sig2;
-
-# define Rte_TypeDef_VcuRxMsg2_Sig3
-typedef sint16 VcuRxMsg2_Sig3;
-
-# define Rte_TypeDef_VcuTxMsg1_Sig0
-typedef sint16 VcuTxMsg1_Sig0;
-
-# define Rte_TypeDef_VcuTxMsg1_Sig1
-typedef sint16 VcuTxMsg1_Sig1;
-
-# define Rte_TypeDef_VcuTxMsg1_Sig2
-typedef sint16 VcuTxMsg1_Sig2;
-
-# define Rte_TypeDef_VcuTxMsg1_Sig3
-typedef sint16 VcuTxMsg1_Sig3;
-
-# define Rte_TypeDef_VcuTxMsg2_Sig0
-typedef sint16 VcuTxMsg2_Sig0;
-
-# define Rte_TypeDef_VcuTxMsg2_Sig1
-typedef sint16 VcuTxMsg2_Sig1;
-
-# define Rte_TypeDef_VcuTxMsg2_Sig2
-typedef sint16 VcuTxMsg2_Sig2;
-
-# define Rte_TypeDef_VcuTxMsg2_Sig3
-typedef sint16 VcuTxMsg2_Sig3;
-
 # define Rte_TypeDef_dtRef_VOID
 typedef void * dtRef_VOID;
 
@@ -455,9 +311,6 @@ typedef uint8 NvM_Array10Bytes[10];
 
 # define Rte_TypeDef_NvM_Array32Bytes
 typedef uint8 NvM_Array32Bytes[32];
-
-# define Rte_TypeDef_NvM_Arry4Bytes
-typedef uint8 NvM_Arry4Bytes[4];
 
 # define Rte_TypeDef_BswM_ESH_Mode
 typedef uint8 BswM_ESH_Mode;
@@ -681,6 +534,9 @@ typedef Dcm_StartDataOut_CheckProgrammingPreCondition_Out_programmingPreConditio
  * Unused Data type definitions
  *********************************************************************************************************************/
 
+#  define Rte_TypeDef_NvM_Arry4Bytes
+typedef uint8 NvM_Arry4Bytes[4];
+
 #  define Rte_TypeDef_Dem_OperationCycleIdType
 typedef uint8 Dem_OperationCycleIdType;
 
@@ -713,8 +569,6 @@ extern CONST(NvM_Array32Bytes, RTE_CONST) Rte_C_NvM_Array32Bytes_0;
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern CONST(uint16, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_SWC1_CalibrationParameter;
-extern CONST(uint8, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvBlockNeed_AttemptCounter_DefaultValue;
-extern CONST(NvM_Arry4Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_DefaultValue;
 extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1;
 extern CONST(NvM_Array32Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData2_ROM_NVBlockDescriptor_UserData2;
 extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_SWC1_NvBlockNeed_UserData3_DefaultValue;
@@ -729,8 +583,6 @@ extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_SWC1_NvBlo
 #  define RTE_START_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-extern VAR(uint8, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNeed_AttemptCounter_MirrorBlock;
-extern VAR(NvM_Arry4Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_MirrorBlock;
 extern VAR(NvM_Array10Bytes, RTE_VAR_DEFAULT_RTE_PIM_GROUP) Rte_SWC1_NvBlockNeed_UserData3_MirrorBlock;
 
 #  define RTE_STOP_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
@@ -767,8 +619,6 @@ typedef unsigned int Rte_BitType;
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern CONST(uint16, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_SWC1_CalibrationParameter; /* PRQA S 3408 */ /* MD_Rte_3408 */
-extern CONST(uint8, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvBlockNeed_AttemptCounter_DefaultValue; /* PRQA S 3408 */ /* MD_Rte_3408 */
-extern CONST(NvM_Arry4Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_DIAG_SWC_NvBlockNeed_DiagDID_00_DefaultValue; /* PRQA S 3408 */ /* MD_Rte_3408 */
 extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData1_ROM_NVBlockDescriptor_UserData1; /* PRQA S 3408 */ /* MD_Rte_3408 */
 extern CONST(NvM_Array32Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_NvM_SWC_NVBlockDescriptor_UserData2_ROM_NVBlockDescriptor_UserData2; /* PRQA S 3408 */ /* MD_Rte_3408 */
 extern CONST(NvM_Array10Bytes, RTE_CONST_DEFAULT_RTE_CDATA_GROUP) Rte_SWC1_NvBlockNeed_UserData3_DefaultValue; /* PRQA S 3408 */ /* MD_Rte_3408 */

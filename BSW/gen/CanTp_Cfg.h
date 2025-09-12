@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanTp_Cfg.h
- *   Generation Time: 2025-09-12 10:25:39
+ *   Generation Time: 2025-09-12 16:00:42
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -95,7 +95,7 @@
 #define CANTP_DEV_ERROR_REPORT                                                 STD_ON 
 #define CANTP_TC                                                               STD_ON 
 #define CANTP_RC                                                               STD_OFF 
-#define CANTP_INVALID_HDL                                                      ((PduIdType) 65535u) 
+#define CANTP_INVALID_HDL                                                      ((PduIdType) 255u) 
 #define CANTP_TASK_CYCLE                                                       5u 
 
  /*  Global constant defines  */ 

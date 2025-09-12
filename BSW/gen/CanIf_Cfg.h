@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanIf_Cfg.h
- *   Generation Time: 2025-09-12 13:44:47
+ *   Generation Time: 2025-09-12 16:00:44
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -187,8 +187,8 @@ typedef uint8 CanIf_TxBufferSizeType;
 /**********************************************************************************************************************
   \def  Invalid PDU handle
 **********************************************************************************************************************/
-#define CanIf_TxPduHnd_INVALID                             0xFFFFu
-#define CanIf_RxPduHnd_INVALID                             0xFFFFu
+#define CanIf_TxPduHnd_INVALID                             0xFFu
+#define CanIf_RxPduHnd_INVALID                             0xFFu
 
 
 /**********************************************************************************************************************
@@ -1571,9 +1571,9 @@ typedef struct sCanIf_RxIndicationFctListType
  * } */
 typedef struct sCanIf_RxPduConfigType
 {
-  CanIf_UpperPduIdOfRxPduConfigType UpperPduIdOfRxPduConfig;  /**< PDU ID defined by upper layer. */
   CanIf_RxPduCanIdOfRxPduConfigType RxPduCanIdOfRxPduConfig;  /**< Rx-PDU: CAN identifier. */
   CanIf_RxPduMaskOfRxPduConfigType RxPduMaskOfRxPduConfig;  /**< Rx-PDU: CAN identifier mask. */
+  CanIf_UpperPduIdOfRxPduConfigType UpperPduIdOfRxPduConfig;  /**< PDU ID defined by upper layer. */
   CanIf_RxIndicationFctListIdxOfRxPduConfigType RxIndicationFctListIdxOfRxPduConfig;  /**< the index of the 1:1 relation pointing to CanIf_RxIndicationFctList */
   CanIf_RxPduDlcOfRxPduConfigType RxPduDlcOfRxPduConfig;  /**< Rx-PDU length (DLC). */
 } CanIf_RxPduConfigType;
@@ -1605,8 +1605,8 @@ typedef struct sCanIf_TxBufferFifoConfigType
  * } */
 typedef struct sCanIf_TxPduConfigType
 {
-  CanIf_UpperLayerTxPduIdOfTxPduConfigType UpperLayerTxPduIdOfTxPduConfig;  /**< Upper layer handle-Id (8bit / 16bit). */
   CanIf_CanIdOfTxPduConfigType CanIdOfTxPduConfig;  /**< CAN identifier (16bit / 32bit). */
+  CanIf_UpperLayerTxPduIdOfTxPduConfigType UpperLayerTxPduIdOfTxPduConfig;  /**< Upper layer handle-Id (8bit / 16bit). */
   CanIf_IsTxPduTruncationOfTxPduConfigType IsTxPduTruncationOfTxPduConfig;  /**< TRUE: Truncation of Tx-PDU is enabled, FALSE: Truncation of Tx-PDU is disabled */
   CanIf_CtrlStatesIdxOfTxPduConfigType CtrlStatesIdxOfTxPduConfig;  /**< the index of the 1:1 relation pointing to CanIf_CtrlStates */
   CanIf_MailBoxConfigIdxOfTxPduConfigType MailBoxConfigIdxOfTxPduConfig;  /**< the index of the 1:1 relation pointing to CanIf_MailBoxConfig */
@@ -1912,9 +1912,9 @@ extern CONST(CanIf_RxIndicationFctListType, CANIF_CONST) CanIf_RxIndicationFctLi
   \brief  Rx-PDU configuration table.
   \details
   Element                   Description
-  UpperPduId                PDU ID defined by upper layer.
   RxPduCanId                Rx-PDU: CAN identifier.
   RxPduMask                 Rx-PDU: CAN identifier mask.
+  UpperPduId                PDU ID defined by upper layer.
   RxIndicationFctListIdx    the index of the 1:1 relation pointing to CanIf_RxIndicationFctList
   RxPduDlc                  Rx-PDU length (DLC).
 */ 
@@ -1979,8 +1979,8 @@ extern CONST(CanIf_TxConfirmationFctType, CANIF_CONST) CanIf_TxConfirmationFctLi
   \brief  Tx-PDUs - configuration.
   \details
   Element                     Description
-  UpperLayerTxPduId           Upper layer handle-Id (8bit / 16bit).
   CanId                       CAN identifier (16bit / 32bit).
+  UpperLayerTxPduId           Upper layer handle-Id (8bit / 16bit).
   IsTxPduTruncation           TRUE: Truncation of Tx-PDU is enabled, FALSE: Truncation of Tx-PDU is disabled
   CtrlStatesIdx               the index of the 1:1 relation pointing to CanIf_CtrlStates
   MailBoxConfigIdx            the index of the 1:1 relation pointing to CanIf_MailBoxConfig

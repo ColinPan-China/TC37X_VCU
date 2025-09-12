@@ -119,7 +119,6 @@ Contents
 Rte_BswM.h<br>
 Rte_ComM.h<br>
 Rte_Com_SWC.h<br>
-Rte_DIAG_SWC.h<br>
 Rte_Dcm.h<br>
 Rte_DemMaster_0.h<br>
 Rte_DemSatellite_0.h<br>
@@ -134,7 +133,6 @@ Rte_SWC1.h<br>
 Rte_BswM_Type.h<br>
 Rte_ComM_Type.h<br>
 Rte_Com_SWC_Type.h<br>
-Rte_DIAG_SWC_Type.h<br>
 Rte_Dcm_Type.h<br>
 Rte_DemMaster_0_Type.h<br>
 Rte_DemSatellite_0_Type.h<br>
@@ -157,7 +155,6 @@ Rte_Cbk.h<br>
 BswM_MemMap.h<br>
 ComM_MemMap.h<br>
 Com_SWC_MemMap.h<br>
-DIAG_SWC_MemMap.h<br>
 Dcm_MemMap.h<br>
 DemMaster_0_MemMap.h<br>
 DemSatellite_0_MemMap.h<br>
@@ -246,8 +243,8 @@ Rte_Needs.ecuc.arxml<br>
 Note: This resource usage calculation assumes that the "Boolean" data type is based on uint8 base type.<br>
       Further on padding bytes for structs are not considered, which depends on the compiler settings.<br>
 <br>
-RAM   Size: 60 Bytes<br>
-CONST Size: 101 Bytes<br>
+RAM   Size: 55 Bytes<br>
+CONST Size: 96 Bytes<br>
 <br>
 <P ALIGN=LEFT>
 <A HREF="#refBack"><FONT SIZE=4 FACE="Verdana, Arial, Helvetica" COLOR="#B70032">Back</FONT></A><br>
@@ -863,34 +860,6 @@ CONST Size: 101 Bytes<br>
 <TD>AswTask</TD>
 <TD>Rte_Ev_Run_Com_SWC_Rte_Msg110h_Rx_Notification</TD>
 <TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>DataReceivedEvent</B> Com_SWC::VcuRxMsg1_Sig0::VcuRxMsg1_Sig0</TD>
-<TD>Rte_Msg200h_Rx_Notification</TD>
-<TD>AswTask</TD>
-<TD>Rte_Ev_Run_Com_SWC_Rte_Msg200h_Rx_Notification</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>DataReceivedEvent</B> Com_SWC::VcuRxMsg2_Sig0::VcuRxMsg2_Sig0</TD>
-<TD>Rte_Msg201h_Rx_Notification</TD>
-<TD>AswTask</TD>
-<TD>Rte_Ev_Run_Com_SWC_Rte_Msg201h_Rx_Notification</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>InitEvent</B></TD>
-<TD>DIAG_SWC_Init</TD>
-<TD>Asw_Init</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>TimingEvent</B> Cyclic 10ms</TD>
-<TD>DTCMonitorRunnable_10ms</TD>
-<TD>AswTask</TD>
-<TD>Rte_Ev_Cyclic_AswTask_0_10ms</TD>
-<TD>Rte_Al_TE_AswTask_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
@@ -18281,20 +18250,6 @@ CONST Size: 101 Bytes<br>
 <TD>Rte_Al_TE_AswTask_0_10ms</TD>
 </TR>
 <TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_AttemptCounter::EraseBlock</TD>
-<TD>EraseBlock</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::EraseBlock</TD>
-<TD>EraseBlock</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
 <TD><B>OperationInvokedEvent</B> NvM::PS_SWC1NvBlockNeed_UserData3::EraseBlock</TD>
 <TD>EraseBlock</TD>
 <TD>n/a</TD>
@@ -18302,36 +18257,8 @@ CONST Size: 101 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_AttemptCounter::GetErrorStatus</TD>
-<TD>GetErrorStatus</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::GetErrorStatus</TD>
-<TD>GetErrorStatus</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
 <TD><B>OperationInvokedEvent</B> NvM::PS_SWC1NvBlockNeed_UserData3::GetErrorStatus</TD>
 <TD>GetErrorStatus</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_AttemptCounter::InvalidateNvBlock</TD>
-<TD>InvalidateNvBlock</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::InvalidateNvBlock</TD>
-<TD>InvalidateNvBlock</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -18351,36 +18278,8 @@ CONST Size: 101 Bytes<br>
 <TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
 </TR>
 <TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_AttemptCounter::ReadBlock</TD>
-<TD>ReadBlock</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::ReadBlock</TD>
-<TD>ReadBlock</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
 <TD><B>OperationInvokedEvent</B> NvM::PS_SWC1NvBlockNeed_UserData3::ReadBlock</TD>
 <TD>ReadBlock</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_AttemptCounter::RestoreBlockDefaults</TD>
-<TD>RestoreBlockDefaults</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::RestoreBlockDefaults</TD>
-<TD>RestoreBlockDefaults</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -18393,20 +18292,6 @@ CONST Size: 101 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
-<TD><B>OperationInvokedEvent</B> NvM::PAdmin_DIAG_SWC_NvBlockNeed_AttemptCounter::SetBlockProtection</TD>
-<TD>SetBlockProtection</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>OperationInvokedEvent</B> NvM::PAdmin_DIAG_SWC_NvBlockNeed_DiagDID_00::SetBlockProtection</TD>
-<TD>SetBlockProtection</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
 <TD><B>OperationInvokedEvent</B> NvM::PAdmin_SWC1NvBlockNeed_UserData3::SetBlockProtection</TD>
 <TD>SetBlockProtection</TD>
 <TD>n/a</TD>
@@ -18414,36 +18299,8 @@ CONST Size: 101 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_AttemptCounter::SetRamBlockStatus</TD>
-<TD>SetRamBlockStatus</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::SetRamBlockStatus</TD>
-<TD>SetRamBlockStatus</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
 <TD><B>OperationInvokedEvent</B> NvM::PS_SWC1NvBlockNeed_UserData3::SetRamBlockStatus</TD>
 <TD>SetRamBlockStatus</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_AttemptCounter::WriteBlock</TD>
-<TD>WriteBlock</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>OperationInvokedEvent</B> NvM::PS_DIAG_SWC_NvBlockNeed_DiagDID_00::WriteBlock</TD>
-<TD>WriteBlock</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>

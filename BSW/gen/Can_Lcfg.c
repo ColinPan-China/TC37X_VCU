@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Lcfg.c
- *   Generation Time: 2025-09-12 13:44:47
+ *   Generation Time: 2025-09-12 16:00:43
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -895,8 +895,8 @@ CONST(Can_XIDFEType, CAN_CONST) Can_XIDFE[1] = {  /* PRQA S 1514, 1533 */  /* MD
   \brief  temporary data for TX object
   \details
   Element    Description
-  Pdu        buffered PduId for confirmation or cancellation
   State      send state like cancelled or send activ
+  Pdu        buffered PduId for confirmation or cancellation
 */ 
 #define CAN_START_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

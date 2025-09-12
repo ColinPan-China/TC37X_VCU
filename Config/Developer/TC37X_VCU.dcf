@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <DCF ARSCHEMA="440_DEV">
 	<Version>1.0</Version>
 	<PROFILESETTINGS>ProfileSettings.xml</PROFILESETTINGS>
@@ -32,10 +32,6 @@
 	<FILEREF>
 		<ARXML>ComponentTypes\NvM_SWC.arxml</ARXML>
 		<DVG>ComponentTypes\NvM_SWC.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\DIAG_SWC.arxml</ARXML>
-		<DVG>ComponentTypes\DIAG_SWC.dvg</DVG>
 	</FILEREF>
 	<FILEREF>
 		<ARXML>ComponentTypes\IoHwAb_SWC.arxml</ARXML>

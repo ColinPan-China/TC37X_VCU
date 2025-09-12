@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Cfg.h
- *   Generation Time: 2025-09-12 13:44:46
+ *   Generation Time: 2025-09-12 16:00:42
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -759,7 +759,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
   \brief  These defines are used to implement against the maximum value in numerical based data.
   \{
 */ 
-#define CAN_MAX_PDUOFACTIVESENDOBJECT                                 65535u
+#define CAN_MAX_PDUOFACTIVESENDOBJECT                                 255u
 #define CAN_MAX_STATEOFACTIVESENDOBJECT                               65535u
 #define CAN_MAX_BUSOFFNOTIFICATIONOFCONTROLLERDATA                    255u
 #define CAN_MAX_BUSOFFTRANSITIONREQUESTOFCONTROLLERDATA               255u
@@ -2208,8 +2208,8 @@ typedef uint8 Can_EIDFE_1OfXIDFEType;
 /**   \brief  type used in Can_ActiveSendObject */
 typedef struct sCan_ActiveSendObjectType
 {
-  Can_PduOfActiveSendObjectType PduOfActiveSendObject;  /**< buffered PduId for confirmation or cancellation */
   Can_StateOfActiveSendObjectType StateOfActiveSendObject;  /**< send state like cancelled or send activ */
+  Can_PduOfActiveSendObjectType PduOfActiveSendObject;  /**< buffered PduId for confirmation or cancellation */
 } Can_ActiveSendObjectType;
 
 /**   \brief  type used in Can_BufferConfig */
@@ -2951,8 +2951,8 @@ extern CONST(Can_XIDFEType, CAN_CONST) Can_XIDFE[1];
   \brief  temporary data for TX object
   \details
   Element    Description
-  Pdu        buffered PduId for confirmation or cancellation
   State      send state like cancelled or send activ
+  Pdu        buffered PduId for confirmation or cancellation
 */ 
 #define CAN_START_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
