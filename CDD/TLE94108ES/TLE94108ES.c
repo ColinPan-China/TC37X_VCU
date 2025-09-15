@@ -25,51 +25,66 @@ void SpiSequence_TLE9410_SPI1_Notify()
 
 void Tle94108es_SpiTransmit(uint8 *tx_ptr, uint8 *rx_ptr)
 {
-  Spi_SetupEB(SpiConf_SpiChannel_SpiChannel_TLE9410_SPI1,(uint8*)&tx_ptr,rx_ptr,2);
+  Spi_SetupEB(SpiConf_SpiChannel_SpiChannel_TLE9410_SPI1,tx_ptr,rx_ptr,2);
   Spi_SyncTransmit(SpiConf_SpiSequence_SpiSequence_TLE9410_SPI1);
 }
+uint16 u16_txBuffer = 0;
 
 void Tle94108es_WriteReg( uint8 addr, uint8 val )
 {
+  VStdMemSet(TxBuf9410,0,sizeof(TxBuf9410));
+  VStdMemSet(RxBuf9410,0,sizeof(TxBuf9410));
+ 
   TxBuf9410[0] = addr;
   TxBuf9410[0] |= 0x80u;
   TxBuf9410[1] |= val;
 
-  Tle94108es_SpiTransmit( TxBuf9410, RxBuf9410 );
+  u16_txBuffer = ((uint16)((uint16)TxBuf9410[1] << 8)) | ((uint16)TxBuf9410[0]);
+
+  Tle94108es_SpiTransmit( &u16_txBuffer, RxBuf9410 );
 }
 
 void Tle94108es_ReadReg( uint8 addr, uint8* val )
 {
+  VStdMemSet(TxBuf9410,0,sizeof(TxBuf9410));
+  VStdMemSet(RxBuf9410,0,sizeof(TxBuf9410));
+
   TxBuf9410[0] = addr;
   TxBuf9410[0] &= 0x7Fu;
-  Tle94108es_SpiTransmit( TxBuf9410, RxBuf9410 );
+
+  u16_txBuffer = ((uint16)((uint16)TxBuf9410[1] << 8)) | ((uint16)TxBuf9410[0]);
+  Tle94108es_SpiTransmit( &u16_txBuffer, RxBuf9410 );
   *val = RxBuf9410[1];
 }
 uint8 RD;
+uint8 HB1_RD;
+uint8 ACT1_RD;
+
 void Tle94108es_Init()
 {
   /*Select  PWM Channel 1 */
-	Tle94108es_WriteReg(HB_MODE_1_CTRL,0x55u);
-  Tle94108es_WriteReg(HB_MODE_2_CTRL,0x55u);
+//	Tle94108es_WriteReg(HB_MODE_1_CTRL,0x55u);
+//  Tle94108es_WriteReg(HB_MODE_2_CTRL,0x55u);
 
   /*Set  PWM Channel 1 50%  duty cycle*/
-  Tle94108es_WriteReg(PWM1_DC_CTRL,0x7Fu);
+//  Tle94108es_WriteReg(PWM1_DC_CTRL,0x7Fu);
 
   /*Set  PWM Channel 1 100HZ */
-  Tle94108es_WriteReg(PWM_CH_FREQ_CTRL,0x02u);
+//  Tle94108es_WriteReg(PWM_CH_FREQ_CTRL,0x02u);
 
   /*Set  PWM Channel 1 100HZ */
-  Tle94108es_WriteReg(PWM_CH_FREQ_CTRL,0x02u);
+//  Tle94108es_WriteReg(PWM_CH_FREQ_CTRL,0x02u);
 
   /*Enable Output */
   Tle94108es_WriteReg(HB_ACT_1_CTRL,0xAAu);
-  Tle94108es_WriteReg(HB_ACT_2_CTRL,0xAAu);
+  Tle94108es_WriteReg(HB_ACT_2_CTRL,0x55u);
 
   Tle94108es_ReadReg(CONFIG_CTRL,&RD);
 }
 
 void Tle94108es_Main()
 {
-  Tle94108es_WriteReg(HB_ACT_1_CTRL,0xAAu);
-//  Tle94108es_WriteReg(HB_ACT_2_CTRL,0xAAu);
+  Tle94108es_ReadReg(CONFIG_CTRL,&RD);
+  Tle94108es_ReadReg(HB_MODE_1_CTRL,&HB1_RD);
+  Tle94108es_ReadReg(HB_ACT_1_CTRL,&ACT1_RD);
 }
