@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Cfg.h
- *   Generation Time: 2025-09-12 17:00:33
+ *   Generation Time: 2025-09-15 17:27:16
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -340,9 +340,9 @@
 # define kCanNumberOfUsedChannels            5u
 #endif
 
-#define kCanPhysToLogChannelIndex_0 3u
-#define kCanPhysToLogChannelIndex_1 1u
-#define kCanPhysToLogChannelIndex_3 4u
+#define kCanPhysToLogChannelIndex_0 4u
+#define kCanPhysToLogChannelIndex_1 3u
+#define kCanPhysToLogChannelIndex_3 1u
 #define kCanPhysToLogChannelIndex_4 0u
 #define kCanPhysToLogChannelIndex_6 2u
 
@@ -448,8 +448,8 @@ typedef ISRType Can_OsIsrType;
 typedef uint8 Can_OsIsrType;
 #endif
 
-#define kCanISRPrio_0                     0x00000031uL
-#define kCanISRPrio_1                     0x00000000uL
+#define kCanISRPrio_0                     0x00000000uL
+#define kCanISRPrio_1                     0x00000031uL
 #define kCanISRPrio_3                     0x00000000uL
 #define kCanISRPrio_4                     0x00000000uL
 #define kCanISRPrio_6                     0x00000000uL
