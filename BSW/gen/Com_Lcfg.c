@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Lcfg.c
- *   Generation Time: 2025-09-17 15:11:05
+ *   Generation Time: 2025-09-17 16:02:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -2306,51 +2306,63 @@ CONST(Com_RxSigInfoType, COM_CONST) Com_RxSigInfo[148] = {  /* PRQA S 1514, 1533
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxCyclicPduType, COM_CONST) Com_TxCyclicPdu[43] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxCyclicPduType, COM_CONST) Com_TxCyclicPdu[54] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    TxPduInfoIdx        Referable Keys */
   { /*     0 */           0u },  /* [/ActiveEcuC/Com/ComConfig/BCL_oJ1939_bms_e5f04d09_Tx, ComMainFunctionTx] */
   { /*     1 */           1u },  /* [/ActiveEcuC/Com/ComConfig/BCP_oJ1939_bms_ece2ed74_Tx, ComMainFunctionTx] */
-  { /*     2 */          17u },  /* [/ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CANFD_Matrix_CH_V600_202502_17bac731_Tx, ComMainFunctionTx] */
-  { /*     3 */          18u },  /* [/ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CAN_Matrix_PT_V600_20250211_28e7bea0_Tx, ComMainFunctionTx] */
-  { /*     4 */          19u },  /* [/ActiveEcuC/Com/ComConfig/VCU_03_oATOM_CANFD_Matrix_CH_V600_202502_d824d0f9_Tx, ComMainFunctionTx] */
-  { /*     5 */          20u },  /* [/ActiveEcuC/Com/ComConfig/VCU_04_oATOM_CANFD_Matrix_CH_V600_202502_db6dbd42_Tx, ComMainFunctionTx] */
-  { /*     6 */          21u },  /* [/ActiveEcuC/Com/ComConfig/VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_2baed31b_Tx, ComMainFunctionTx] */
-  { /*     7 */          22u },  /* [/ActiveEcuC/Com/ComConfig/VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_a07ded02_Tx, ComMainFunctionTx] */
-  { /*     8 */          23u },  /* [/ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_0d0df7a0_Tx, ComMainFunctionTx] */
-  { /*     9 */          24u },  /* [/ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_32508e31_Tx, ComMainFunctionTx] */
-  { /*    10 */          25u },  /* [/ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_1208e503_Tx, ComMainFunctionTx] */
-  { /*    11 */          26u },  /* [/ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CAN_Matrix_PT_V600_20250211_2d559c92_Tx, ComMainFunctionTx] */
-  { /*    12 */          27u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_d7fdb34f_Tx, ComMainFunctionTx] */
-  { /*    13 */          28u },  /* [/ActiveEcuC/Com/ComConfig/VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_2c28a723_Tx, ComMainFunctionTx] */
-  { /*    14 */          29u },  /* [/ActiveEcuC/Com/ComConfig/VCU_DiagInfor_oATOM_CAN_Matrix_PT_V600_20250211_ad82eb28_Tx, ComMainFunctionTx] */
-  { /*    15 */          32u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_f29a9fcc_Tx, ComMainFunctionTx] */
-  { /*    16 */          33u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502_7949a1d5_Tx, ComMainFunctionTx] */
-  { /*    17 */          34u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_4614d844_Tx, ComMainFunctionTx] */
-  { /*    18 */          35u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_898acf8c_Tx, ComMainFunctionTx] */
-  { /*    19 */          36u },  /* [/ActiveEcuC/Com/ComConfig/VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_4c086bc0_Tx, ComMainFunctionTx] */
-  { /*    20 */          37u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_fd5e64f0_Tx, ComMainFunctionTx] */
-  { /*    21 */          38u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_0d9d0aa9_Tx, ComMainFunctionTx] */
-  { /*    22 */          39u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CAN_Matrix_PT_V600_20250211_32c07338_Tx, ComMainFunctionTx] */
-  { /*    23 */          40u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_fe17094b_Tx, ComMainFunctionTx] */
-  { /*    24 */          41u },  /* [/ActiveEcuC/Com/ComConfig/VCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_28db6ecb_Tx, ComMainFunctionTx] */
-  { /*    25 */          42u },  /* [/ActiveEcuC/Com/ComConfig/VCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_20405e82_Tx, ComMainFunctionTx] */
-  { /*    26 */          45u },  /* [/ActiveEcuC/Com/ComConfig/VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_8e1c824e_Tx, ComMainFunctionTx] */
-  { /*    27 */          46u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_5798df68_Tx, ComMainFunctionTx] */
-  { /*    28 */          47u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_b8ca6989_Tx, ComMainFunctionTx] */
-  { /*    29 */          48u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_40b0bba8_Tx, ComMainFunctionTx] */
-  { /*    30 */          49u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_afe20d49_Tx, ComMainFunctionTx] */
-  { /*    31 */          50u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_79c816e8_Tx, ComMainFunctionTx] */
-  { /*    32 */          51u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_969aa009_Tx, ComMainFunctionTx] */
-  { /*    33 */          52u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_6ee07228_Tx, ComMainFunctionTx] */
-  { /*    34 */          53u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_81b2c4c9_Tx, ComMainFunctionTx] */
-  { /*    35 */          54u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_eedbf968_Tx, ComMainFunctionTx] */
-  { /*    36 */          55u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_01894f89_Tx, ComMainFunctionTx] */
-  { /*    37 */          56u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_eb0f92eb_Tx, ComMainFunctionTx] */
-  { /*    38 */          57u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx, ComMainFunctionTx] */
-  { /*    39 */          58u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx, ComMainFunctionTx] */
-  { /*    40 */          59u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx, ComMainFunctionTx] */
-  { /*    41 */          60u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx, ComMainFunctionTx] */
-  { /*    42 */          61u }   /* [/ActiveEcuC/Com/ComConfig/VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx, ComMainFunctionTx] */
+  { /*     2 */           2u },  /* [/ActiveEcuC/Com/ComConfig/BCS_oJ1939_bms_9b7c3f84_Tx, ComMainFunctionTx] */
+  { /*     3 */           3u },  /* [/ActiveEcuC/Com/ComConfig/BEM_oJ1939_bms_deb0debb_Tx, ComMainFunctionTx] */
+  { /*     4 */           4u },  /* [/ActiveEcuC/Com/ComConfig/BHM_oJ1939_bms_999cbec5_Tx, ComMainFunctionTx] */
+  { /*     5 */           5u },  /* [/ActiveEcuC/Com/ComConfig/BMT_oJ1939_bms_1502dabb_Tx, ComMainFunctionTx] */
+  { /*     6 */           6u },  /* [/ActiveEcuC/Com/ComConfig/BMV_oJ1939_bms_f9394424_Tx, ComMainFunctionTx] */
+  { /*     7 */           7u },  /* [/ActiveEcuC/Com/ComConfig/BRM_oJ1939_bms_17c47e39_Tx, ComMainFunctionTx] */
+  { /*     8 */           8u },  /* [/ActiveEcuC/Com/ComConfig/BRO_oJ1939_bms_fbffe0a6_Tx, ComMainFunctionTx] */
+  { /*     9 */           9u },  /* [/ActiveEcuC/Com/ComConfig/BSD_oJ1939_bms_57fb9d2d_Tx, ComMainFunctionTx] */
+  { /*    10 */          10u },  /* [/ActiveEcuC/Com/ComConfig/BSM_oJ1939_bms_ca52a7bc_Tx, ComMainFunctionTx] */
+  { /*    11 */          11u },  /* [/ActiveEcuC/Com/ComConfig/BSOC_oJ1939_bms_5e951453_Tx, ComMainFunctionTx] */
+  { /*    12 */          12u },  /* [/ActiveEcuC/Com/ComConfig/BST_oJ1939_bms_5be370d1_Tx, ComMainFunctionTx] */
+  { /*    13 */          17u },  /* [/ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CANFD_Matrix_CH_V600_202502_17bac731_Tx, ComMainFunctionTx] */
+  { /*    14 */          18u },  /* [/ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CAN_Matrix_PT_V600_20250211_28e7bea0_Tx, ComMainFunctionTx] */
+  { /*    15 */          19u },  /* [/ActiveEcuC/Com/ComConfig/VCU_03_oATOM_CANFD_Matrix_CH_V600_202502_d824d0f9_Tx, ComMainFunctionTx] */
+  { /*    16 */          20u },  /* [/ActiveEcuC/Com/ComConfig/VCU_04_oATOM_CANFD_Matrix_CH_V600_202502_db6dbd42_Tx, ComMainFunctionTx] */
+  { /*    17 */          21u },  /* [/ActiveEcuC/Com/ComConfig/VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_2baed31b_Tx, ComMainFunctionTx] */
+  { /*    18 */          22u },  /* [/ActiveEcuC/Com/ComConfig/VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_a07ded02_Tx, ComMainFunctionTx] */
+  { /*    19 */          23u },  /* [/ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_0d0df7a0_Tx, ComMainFunctionTx] */
+  { /*    20 */          24u },  /* [/ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_32508e31_Tx, ComMainFunctionTx] */
+  { /*    21 */          25u },  /* [/ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_1208e503_Tx, ComMainFunctionTx] */
+  { /*    22 */          26u },  /* [/ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CAN_Matrix_PT_V600_20250211_2d559c92_Tx, ComMainFunctionTx] */
+  { /*    23 */          27u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_d7fdb34f_Tx, ComMainFunctionTx] */
+  { /*    24 */          28u },  /* [/ActiveEcuC/Com/ComConfig/VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_2c28a723_Tx, ComMainFunctionTx] */
+  { /*    25 */          29u },  /* [/ActiveEcuC/Com/ComConfig/VCU_DiagInfor_oATOM_CAN_Matrix_PT_V600_20250211_ad82eb28_Tx, ComMainFunctionTx] */
+  { /*    26 */          32u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_f29a9fcc_Tx, ComMainFunctionTx] */
+  { /*    27 */          33u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502_7949a1d5_Tx, ComMainFunctionTx] */
+  { /*    28 */          34u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_4614d844_Tx, ComMainFunctionTx] */
+  { /*    29 */          35u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_898acf8c_Tx, ComMainFunctionTx] */
+  { /*    30 */          36u },  /* [/ActiveEcuC/Com/ComConfig/VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_4c086bc0_Tx, ComMainFunctionTx] */
+  { /*    31 */          37u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_fd5e64f0_Tx, ComMainFunctionTx] */
+  { /*    32 */          38u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_0d9d0aa9_Tx, ComMainFunctionTx] */
+  { /*    33 */          39u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CAN_Matrix_PT_V600_20250211_32c07338_Tx, ComMainFunctionTx] */
+  { /*    34 */          40u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_fe17094b_Tx, ComMainFunctionTx] */
+  { /*    35 */          41u },  /* [/ActiveEcuC/Com/ComConfig/VCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_28db6ecb_Tx, ComMainFunctionTx] */
+  { /*    36 */          42u },  /* [/ActiveEcuC/Com/ComConfig/VCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_20405e82_Tx, ComMainFunctionTx] */
+  { /*    37 */          45u },  /* [/ActiveEcuC/Com/ComConfig/VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_8e1c824e_Tx, ComMainFunctionTx] */
+  { /*    38 */          46u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_5798df68_Tx, ComMainFunctionTx] */
+  { /*    39 */          47u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_b8ca6989_Tx, ComMainFunctionTx] */
+  { /*    40 */          48u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_40b0bba8_Tx, ComMainFunctionTx] */
+  { /*    41 */          49u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_afe20d49_Tx, ComMainFunctionTx] */
+  { /*    42 */          50u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_79c816e8_Tx, ComMainFunctionTx] */
+  { /*    43 */          51u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_969aa009_Tx, ComMainFunctionTx] */
+  { /*    44 */          52u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_6ee07228_Tx, ComMainFunctionTx] */
+  { /*    45 */          53u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_81b2c4c9_Tx, ComMainFunctionTx] */
+  { /*    46 */          54u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_eedbf968_Tx, ComMainFunctionTx] */
+  { /*    47 */          55u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_01894f89_Tx, ComMainFunctionTx] */
+  { /*    48 */          56u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_eb0f92eb_Tx, ComMainFunctionTx] */
+  { /*    49 */          57u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx, ComMainFunctionTx] */
+    /* Index    TxPduInfoIdx        Referable Keys */
+  { /*    50 */          58u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx, ComMainFunctionTx] */
+  { /*    51 */          59u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx, ComMainFunctionTx] */
+  { /*    52 */          60u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx, ComMainFunctionTx] */
+  { /*    53 */          61u }   /* [/ActiveEcuC/Com/ComConfig/VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx, ComMainFunctionTx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -2365,24 +2377,26 @@ CONST(Com_TxCyclicPduType, COM_CONST) Com_TxCyclicPdu[43] = {  /* PRQA S 1514, 1
   \brief  Contains all relevant information for transmission mode false.
   \details
   Element       Description
-  Direct        TRUE if transmission mode contains a direct part.
   TimePeriod    Cycle time factor.
+  Direct        TRUE if transmission mode contains a direct part.
 */ 
 #define COM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[9] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    Direct  TimePeriod        Referable Keys */
-  { /*     0 */  FALSE,        50u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_5798df68_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_b8ca6989_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_40b0bba8_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_afe20d49_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_79c816e8_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_969aa009_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_6ee07228_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_81b2c4c9_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_eedbf968_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_01894f89_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_eb0f92eb_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx, /ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx, /ActiveEcuC/Com/ComConfig/VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx] */
-  { /*     1 */  FALSE,         5u },  /* [/ActiveEcuC/Com/ComConfig/VCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_28db6ecb_Tx] */
-  { /*     2 */  FALSE,         1u },  /* [/ActiveEcuC/Com/ComConfig/VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_4c086bc0_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_fd5e64f0_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_0d9d0aa9_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CAN_Matrix_PT_V600_20250211_32c07338_Tx] */
-  { /*     3 */  FALSE,       100u },  /* [/ActiveEcuC/Com/ComConfig/VCU_DiagInfor_oATOM_CAN_Matrix_PT_V600_20250211_ad82eb28_Tx] */
-  { /*     4 */  FALSE,         2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_0d0df7a0_Tx, /ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_32508e31_Tx, /ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_1208e503_Tx, /ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CAN_Matrix_PT_V600_20250211_2d559c92_Tx, /ActiveEcuC/Com/ComConfig/VCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_d7fdb34f_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_fe17094b_Tx] */
-  { /*     5 */  FALSE,        10u },  /* [/ActiveEcuC/Com/ComConfig/VCU_03_oATOM_CANFD_Matrix_CH_V600_202502_d824d0f9_Tx, /ActiveEcuC/Com/ComConfig/VCU_04_oATOM_CANFD_Matrix_CH_V600_202502_db6dbd42_Tx, /ActiveEcuC/Com/ComConfig/VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_2baed31b_Tx, /ActiveEcuC/Com/ComConfig/VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_a07ded02_Tx, /ActiveEcuC/Com/ComConfig/VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_2c28a723_Tx, /ActiveEcuC/Com/ComConfig/VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_8e1c824e_Tx] */
-  { /*     6 */  FALSE,        20u },  /* [/ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CANFD_Matrix_CH_V600_202502_17bac731_Tx, /ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CAN_Matrix_PT_V600_20250211_28e7bea0_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_f29a9fcc_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502_7949a1d5_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_4614d844_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_898acf8c_Tx, /ActiveEcuC/Com/ComConfig/VCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_20405e82_Tx] */
-  { /*     7 */  FALSE,         0u },  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx, /ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg1_oLIN02_0ce9e87a_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg2_oLIN02_8266ef99_Tx] */
-  { /*     8 */   TRUE,         0u }   /* [/ActiveEcuC/Com/ComConfig/BCL_oJ1939_bms_e5f04d09_Tx, /ActiveEcuC/Com/ComConfig/BCP_oJ1939_bms_ece2ed74_Tx, /ActiveEcuC/Com/ComConfig/BCS_oJ1939_bms_9b7c3f84_Tx, /ActiveEcuC/Com/ComConfig/BEM_oJ1939_bms_deb0debb_Tx, /ActiveEcuC/Com/ComConfig/BHM_oJ1939_bms_999cbec5_Tx, /ActiveEcuC/Com/ComConfig/BMT_oJ1939_bms_1502dabb_Tx, /ActiveEcuC/Com/ComConfig/BMV_oJ1939_bms_f9394424_Tx, /ActiveEcuC/Com/ComConfig/BRM_oJ1939_bms_17c47e39_Tx, /ActiveEcuC/Com/ComConfig/BRO_oJ1939_bms_fbffe0a6_Tx, /ActiveEcuC/Com/ComConfig/BSD_oJ1939_bms_57fb9d2d_Tx, /ActiveEcuC/Com/ComConfig/BSM_oJ1939_bms_ca52a7bc_Tx, /ActiveEcuC/Com/ComConfig/BSOC_oJ1939_bms_5e951453_Tx, /ActiveEcuC/Com/ComConfig/BST_oJ1939_bms_5be370d1_Tx, /ActiveEcuC/Com/ComConfig/Uds_EPT_Boot_Response_oATOM_CAN_Matrix_PT_V600_20250211_8bdda24d_Tx, /ActiveEcuC/Com/ComConfig/VCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_9b305e0d_Tx] */
+CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[11] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    TimePeriod  Direct        Referable Keys */
+  { /*     0 */         2u,  FALSE },  /* [/ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_0d0df7a0_Tx, /ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_32508e31_Tx, /ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_1208e503_Tx, /ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CAN_Matrix_PT_V600_20250211_2d559c92_Tx, /ActiveEcuC/Com/ComConfig/VCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_d7fdb34f_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_fe17094b_Tx] */
+  { /*     1 */        10u,  FALSE },  /* [/ActiveEcuC/Com/ComConfig/VCU_03_oATOM_CANFD_Matrix_CH_V600_202502_d824d0f9_Tx, /ActiveEcuC/Com/ComConfig/VCU_04_oATOM_CANFD_Matrix_CH_V600_202502_db6dbd42_Tx, /ActiveEcuC/Com/ComConfig/VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_2baed31b_Tx, /ActiveEcuC/Com/ComConfig/VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_a07ded02_Tx, /ActiveEcuC/Com/ComConfig/VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_2c28a723_Tx, /ActiveEcuC/Com/ComConfig/VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_8e1c824e_Tx] */
+  { /*     2 */        20u,  FALSE },  /* [/ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CANFD_Matrix_CH_V600_202502_17bac731_Tx, /ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CAN_Matrix_PT_V600_20250211_28e7bea0_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_f29a9fcc_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502_7949a1d5_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_4614d844_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_898acf8c_Tx, /ActiveEcuC/Com/ComConfig/VCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_20405e82_Tx] */
+  { /*     3 */         0u,   TRUE },  /* [/ActiveEcuC/Com/ComConfig/Uds_EPT_Boot_Response_oATOM_CAN_Matrix_PT_V600_20250211_8bdda24d_Tx, /ActiveEcuC/Com/ComConfig/VCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_9b305e0d_Tx] */
+  { /*     4 */         0u,  FALSE },  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx, /ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg1_oLIN02_0ce9e87a_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg2_oLIN02_8266ef99_Tx] */
+  { /*     5 */         1u,  FALSE },  /* [/ActiveEcuC/Com/ComConfig/BST_oJ1939_bms_5be370d1_Tx, /ActiveEcuC/Com/ComConfig/VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_4c086bc0_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_fd5e64f0_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_0d9d0aa9_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CAN_Matrix_PT_V600_20250211_32c07338_Tx] */
+  { /*     6 */       100u,  FALSE },  /* [/ActiveEcuC/Com/ComConfig/BSOC_oJ1939_bms_5e951453_Tx, /ActiveEcuC/Com/ComConfig/VCU_DiagInfor_oATOM_CAN_Matrix_PT_V600_20250211_ad82eb28_Tx] */
+  { /*     7 */      1000u,  FALSE },  /* [/ActiveEcuC/Com/ComConfig/BMT_oJ1939_bms_1502dabb_Tx, /ActiveEcuC/Com/ComConfig/BMV_oJ1939_bms_f9394424_Tx] */
+  { /*     8 */        25u,  FALSE },  /* [/ActiveEcuC/Com/ComConfig/BCS_oJ1939_bms_9b7c3f84_Tx, /ActiveEcuC/Com/ComConfig/BEM_oJ1939_bms_deb0debb_Tx, /ActiveEcuC/Com/ComConfig/BHM_oJ1939_bms_999cbec5_Tx, /ActiveEcuC/Com/ComConfig/BRM_oJ1939_bms_17c47e39_Tx, /ActiveEcuC/Com/ComConfig/BRO_oJ1939_bms_fbffe0a6_Tx, /ActiveEcuC/Com/ComConfig/BSD_oJ1939_bms_57fb9d2d_Tx, /ActiveEcuC/Com/ComConfig/BSM_oJ1939_bms_ca52a7bc_Tx] */
+  { /*     9 */        50u,  FALSE },  /* [/ActiveEcuC/Com/ComConfig/BCP_oJ1939_bms_ece2ed74_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_5798df68_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_b8ca6989_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_40b0bba8_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_afe20d49_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_79c816e8_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_969aa009_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_6ee07228_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_81b2c4c9_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_eedbf968_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_01894f89_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_eb0f92eb_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx, /ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx, /ActiveEcuC/Com/ComConfig/VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx] */
+  { /*    10 */         5u,  FALSE }   /* [/ActiveEcuC/Com/ComConfig/BCL_oJ1939_bms_e5f04d09_Tx, /ActiveEcuC/Com/ComConfig/VCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_28db6ecb_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -2407,73 +2421,73 @@ CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[9] = {  /* PRQA S 1514, 15
 /*lint -restore */
 CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[66] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    InitMode  TxModeFalseIdx  TxModeTrueIdx        Referable Keys */
-  { /*     0 */     TRUE,             8u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BCL_oJ1939_bms_e5f04d09_Tx] */
-  { /*     1 */     TRUE,             8u,            7u },  /* [/ActiveEcuC/Com/ComConfig/BCP_oJ1939_bms_ece2ed74_Tx] */
-  { /*     2 */     TRUE,             8u,            6u },  /* [/ActiveEcuC/Com/ComConfig/BCS_oJ1939_bms_9b7c3f84_Tx] */
-  { /*     3 */     TRUE,             8u,            6u },  /* [/ActiveEcuC/Com/ComConfig/BEM_oJ1939_bms_deb0debb_Tx] */
-  { /*     4 */     TRUE,             8u,            6u },  /* [/ActiveEcuC/Com/ComConfig/BHM_oJ1939_bms_999cbec5_Tx] */
-  { /*     5 */     TRUE,             8u,            6u },  /* [/ActiveEcuC/Com/ComConfig/BMT_oJ1939_bms_1502dabb_Tx] */
-  { /*     6 */     TRUE,             8u,            6u },  /* [/ActiveEcuC/Com/ComConfig/BMV_oJ1939_bms_f9394424_Tx] */
-  { /*     7 */     TRUE,             8u,            6u },  /* [/ActiveEcuC/Com/ComConfig/BRM_oJ1939_bms_17c47e39_Tx] */
-  { /*     8 */     TRUE,             8u,            6u },  /* [/ActiveEcuC/Com/ComConfig/BRO_oJ1939_bms_fbffe0a6_Tx] */
-  { /*     9 */     TRUE,             8u,            6u },  /* [/ActiveEcuC/Com/ComConfig/BSD_oJ1939_bms_57fb9d2d_Tx] */
-  { /*    10 */     TRUE,             8u,            6u },  /* [/ActiveEcuC/Com/ComConfig/BSM_oJ1939_bms_ca52a7bc_Tx] */
-  { /*    11 */     TRUE,             8u,            6u },  /* [/ActiveEcuC/Com/ComConfig/BSOC_oJ1939_bms_5e951453_Tx] */
-  { /*    12 */     TRUE,             8u,            6u },  /* [/ActiveEcuC/Com/ComConfig/BST_oJ1939_bms_5be370d1_Tx] */
-  { /*    13 */     TRUE,             7u,            5u },  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx] */
-  { /*    14 */     TRUE,             7u,            5u },  /* [/ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx] */
-  { /*    15 */     TRUE,             7u,            5u },  /* [/ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx] */
-  { /*    16 */     TRUE,             8u,            6u },  /* [/ActiveEcuC/Com/ComConfig/Uds_EPT_Boot_Response_oATOM_CAN_Matrix_PT_V600_20250211_8bdda24d_Tx] */
-  { /*    17 */     TRUE,             6u,            4u },  /* [/ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CANFD_Matrix_CH_V600_202502_17bac731_Tx] */
-  { /*    18 */     TRUE,             6u,            4u },  /* [/ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CAN_Matrix_PT_V600_20250211_28e7bea0_Tx] */
-  { /*    19 */     TRUE,             5u,            3u },  /* [/ActiveEcuC/Com/ComConfig/VCU_03_oATOM_CANFD_Matrix_CH_V600_202502_d824d0f9_Tx] */
-  { /*    20 */     TRUE,             5u,            3u },  /* [/ActiveEcuC/Com/ComConfig/VCU_04_oATOM_CANFD_Matrix_CH_V600_202502_db6dbd42_Tx] */
-  { /*    21 */     TRUE,             5u,            3u },  /* [/ActiveEcuC/Com/ComConfig/VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_2baed31b_Tx] */
-  { /*    22 */     TRUE,             5u,            3u },  /* [/ActiveEcuC/Com/ComConfig/VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_a07ded02_Tx] */
-  { /*    23 */     TRUE,             4u,            2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_0d0df7a0_Tx] */
-  { /*    24 */     TRUE,             4u,            2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_32508e31_Tx] */
-  { /*    25 */     TRUE,             4u,            2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_1208e503_Tx] */
-  { /*    26 */     TRUE,             4u,            2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CAN_Matrix_PT_V600_20250211_2d559c92_Tx] */
-  { /*    27 */     TRUE,             4u,            2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_d7fdb34f_Tx] */
-  { /*    28 */     TRUE,             5u,            3u },  /* [/ActiveEcuC/Com/ComConfig/VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_2c28a723_Tx] */
-  { /*    29 */     TRUE,             3u,            1u },  /* [/ActiveEcuC/Com/ComConfig/VCU_DiagInfor_oATOM_CAN_Matrix_PT_V600_20250211_ad82eb28_Tx] */
-  { /*    30 */     TRUE,             7u,            5u },  /* [/ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx] */
-  { /*    31 */     TRUE,             7u,            5u },  /* [/ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx] */
-  { /*    32 */     TRUE,             6u,            4u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_f29a9fcc_Tx] */
-  { /*    33 */     TRUE,             6u,            4u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502_7949a1d5_Tx] */
-  { /*    34 */     TRUE,             6u,            4u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_4614d844_Tx] */
-  { /*    35 */     TRUE,             6u,            4u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_898acf8c_Tx] */
-  { /*    36 */     TRUE,             2u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_4c086bc0_Tx] */
-  { /*    37 */     TRUE,             2u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_fd5e64f0_Tx] */
-  { /*    38 */     TRUE,             2u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_0d9d0aa9_Tx] */
-  { /*    39 */     TRUE,             2u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CAN_Matrix_PT_V600_20250211_32c07338_Tx] */
-  { /*    40 */     TRUE,             4u,            2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_fe17094b_Tx] */
-  { /*    41 */     TRUE,             1u,            8u },  /* [/ActiveEcuC/Com/ComConfig/VCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_28db6ecb_Tx] */
-  { /*    42 */     TRUE,             6u,            4u },  /* [/ActiveEcuC/Com/ComConfig/VCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_20405e82_Tx] */
-  { /*    43 */     TRUE,             7u,            5u },  /* [/ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx] */
-  { /*    44 */     TRUE,             8u,            6u },  /* [/ActiveEcuC/Com/ComConfig/VCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_9b305e0d_Tx] */
-  { /*    45 */     TRUE,             5u,            3u },  /* [/ActiveEcuC/Com/ComConfig/VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_8e1c824e_Tx] */
-  { /*    46 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_5798df68_Tx] */
-  { /*    47 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_b8ca6989_Tx] */
-  { /*    48 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_40b0bba8_Tx] */
-  { /*    49 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_afe20d49_Tx] */
+  { /*     0 */     TRUE,            10u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BCL_oJ1939_bms_e5f04d09_Tx] */
+  { /*     1 */     TRUE,             9u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BCP_oJ1939_bms_ece2ed74_Tx] */
+  { /*     2 */     TRUE,             8u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BCS_oJ1939_bms_9b7c3f84_Tx] */
+  { /*     3 */     TRUE,             8u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BEM_oJ1939_bms_deb0debb_Tx] */
+  { /*     4 */     TRUE,             8u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BHM_oJ1939_bms_999cbec5_Tx] */
+  { /*     5 */     TRUE,             7u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BMT_oJ1939_bms_1502dabb_Tx] */
+  { /*     6 */     TRUE,             7u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BMV_oJ1939_bms_f9394424_Tx] */
+  { /*     7 */     TRUE,             8u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BRM_oJ1939_bms_17c47e39_Tx] */
+  { /*     8 */     TRUE,             8u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BRO_oJ1939_bms_fbffe0a6_Tx] */
+  { /*     9 */     TRUE,             8u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BSD_oJ1939_bms_57fb9d2d_Tx] */
+  { /*    10 */     TRUE,             8u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BSM_oJ1939_bms_ca52a7bc_Tx] */
+  { /*    11 */     TRUE,             6u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BSOC_oJ1939_bms_5e951453_Tx] */
+  { /*    12 */     TRUE,             5u,            8u },  /* [/ActiveEcuC/Com/ComConfig/BST_oJ1939_bms_5be370d1_Tx] */
+  { /*    13 */     TRUE,             4u,            7u },  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx] */
+  { /*    14 */     TRUE,             4u,            7u },  /* [/ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx] */
+  { /*    15 */     TRUE,             4u,            7u },  /* [/ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx] */
+  { /*    16 */     TRUE,             3u,            8u },  /* [/ActiveEcuC/Com/ComConfig/Uds_EPT_Boot_Response_oATOM_CAN_Matrix_PT_V600_20250211_8bdda24d_Tx] */
+  { /*    17 */     TRUE,             2u,            6u },  /* [/ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CANFD_Matrix_CH_V600_202502_17bac731_Tx] */
+  { /*    18 */     TRUE,             2u,            6u },  /* [/ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CAN_Matrix_PT_V600_20250211_28e7bea0_Tx] */
+  { /*    19 */     TRUE,             1u,            5u },  /* [/ActiveEcuC/Com/ComConfig/VCU_03_oATOM_CANFD_Matrix_CH_V600_202502_d824d0f9_Tx] */
+  { /*    20 */     TRUE,             1u,            5u },  /* [/ActiveEcuC/Com/ComConfig/VCU_04_oATOM_CANFD_Matrix_CH_V600_202502_db6dbd42_Tx] */
+  { /*    21 */     TRUE,             1u,            5u },  /* [/ActiveEcuC/Com/ComConfig/VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_2baed31b_Tx] */
+  { /*    22 */     TRUE,             1u,            5u },  /* [/ActiveEcuC/Com/ComConfig/VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_a07ded02_Tx] */
+  { /*    23 */     TRUE,             0u,            4u },  /* [/ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_0d0df7a0_Tx] */
+  { /*    24 */     TRUE,             0u,            4u },  /* [/ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_32508e31_Tx] */
+  { /*    25 */     TRUE,             0u,            4u },  /* [/ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_1208e503_Tx] */
+  { /*    26 */     TRUE,             0u,            4u },  /* [/ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CAN_Matrix_PT_V600_20250211_2d559c92_Tx] */
+  { /*    27 */     TRUE,             0u,            4u },  /* [/ActiveEcuC/Com/ComConfig/VCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_d7fdb34f_Tx] */
+  { /*    28 */     TRUE,             1u,            5u },  /* [/ActiveEcuC/Com/ComConfig/VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_2c28a723_Tx] */
+  { /*    29 */     TRUE,             6u,            3u },  /* [/ActiveEcuC/Com/ComConfig/VCU_DiagInfor_oATOM_CAN_Matrix_PT_V600_20250211_ad82eb28_Tx] */
+  { /*    30 */     TRUE,             4u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx] */
+  { /*    31 */     TRUE,             4u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx] */
+  { /*    32 */     TRUE,             2u,            6u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_f29a9fcc_Tx] */
+  { /*    33 */     TRUE,             2u,            6u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502_7949a1d5_Tx] */
+  { /*    34 */     TRUE,             2u,            6u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_4614d844_Tx] */
+  { /*    35 */     TRUE,             2u,            6u },  /* [/ActiveEcuC/Com/ComConfig/VCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_898acf8c_Tx] */
+  { /*    36 */     TRUE,             5u,            2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_4c086bc0_Tx] */
+  { /*    37 */     TRUE,             5u,            2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_fd5e64f0_Tx] */
+  { /*    38 */     TRUE,             5u,            2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_0d9d0aa9_Tx] */
+  { /*    39 */     TRUE,             5u,            2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CAN_Matrix_PT_V600_20250211_32c07338_Tx] */
+  { /*    40 */     TRUE,             0u,            4u },  /* [/ActiveEcuC/Com/ComConfig/VCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_fe17094b_Tx] */
+  { /*    41 */     TRUE,            10u,            1u },  /* [/ActiveEcuC/Com/ComConfig/VCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_28db6ecb_Tx] */
+  { /*    42 */     TRUE,             2u,            6u },  /* [/ActiveEcuC/Com/ComConfig/VCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_20405e82_Tx] */
+  { /*    43 */     TRUE,             4u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx] */
+  { /*    44 */     TRUE,             3u,            8u },  /* [/ActiveEcuC/Com/ComConfig/VCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_9b305e0d_Tx] */
+  { /*    45 */     TRUE,             1u,            5u },  /* [/ActiveEcuC/Com/ComConfig/VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_8e1c824e_Tx] */
+  { /*    46 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_5798df68_Tx] */
+  { /*    47 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_b8ca6989_Tx] */
+  { /*    48 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_40b0bba8_Tx] */
+  { /*    49 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_afe20d49_Tx] */
     /* Index    InitMode  TxModeFalseIdx  TxModeTrueIdx        Referable Keys */
-  { /*    50 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_79c816e8_Tx] */
-  { /*    51 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_969aa009_Tx] */
-  { /*    52 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_6ee07228_Tx] */
-  { /*    53 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_81b2c4c9_Tx] */
-  { /*    54 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_eedbf968_Tx] */
-  { /*    55 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_01894f89_Tx] */
-  { /*    56 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_eb0f92eb_Tx] */
-  { /*    57 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx] */
-  { /*    58 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx] */
-  { /*    59 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx] */
-  { /*    60 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx] */
-  { /*    61 */     TRUE,             0u,            7u },  /* [/ActiveEcuC/Com/ComConfig/VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx] */
-  { /*    62 */     TRUE,             7u,            5u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
-  { /*    63 */     TRUE,             7u,            5u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
-  { /*    64 */     TRUE,             7u,            5u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg1_oLIN02_0ce9e87a_Tx] */
-  { /*    65 */     TRUE,             7u,            5u }   /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg2_oLIN02_8266ef99_Tx] */
+  { /*    50 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_79c816e8_Tx] */
+  { /*    51 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_969aa009_Tx] */
+  { /*    52 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_6ee07228_Tx] */
+  { /*    53 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_81b2c4c9_Tx] */
+  { /*    54 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_eedbf968_Tx] */
+  { /*    55 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_01894f89_Tx] */
+  { /*    56 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_eb0f92eb_Tx] */
+  { /*    57 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx] */
+  { /*    58 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx] */
+  { /*    59 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx] */
+  { /*    60 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx] */
+  { /*    61 */     TRUE,             9u,            0u },  /* [/ActiveEcuC/Com/ComConfig/VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx] */
+  { /*    62 */     TRUE,             4u,            7u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx] */
+  { /*    63 */     TRUE,             4u,            7u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx] */
+  { /*    64 */     TRUE,             4u,            7u },  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg1_oLIN02_0ce9e87a_Tx] */
+  { /*    65 */     TRUE,             4u,            7u }   /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg2_oLIN02_8266ef99_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -2497,15 +2511,15 @@ CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[66] = {  /* PRQA S 1514, 153
 /*lint -restore */
 CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[9] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Direct  TimePeriod        Referable Keys */
-  { /*     0 */  FALSE,         1u },  /* [/ActiveEcuC/Com/ComConfig/VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_4c086bc0_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_fd5e64f0_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_0d9d0aa9_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CAN_Matrix_PT_V600_20250211_32c07338_Tx] */
-  { /*     1 */  FALSE,       100u },  /* [/ActiveEcuC/Com/ComConfig/VCU_DiagInfor_oATOM_CAN_Matrix_PT_V600_20250211_ad82eb28_Tx] */
-  { /*     2 */  FALSE,         2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_0d0df7a0_Tx, /ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_32508e31_Tx, /ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_1208e503_Tx, /ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CAN_Matrix_PT_V600_20250211_2d559c92_Tx, /ActiveEcuC/Com/ComConfig/VCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_d7fdb34f_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_fe17094b_Tx] */
-  { /*     3 */  FALSE,        10u },  /* [/ActiveEcuC/Com/ComConfig/VCU_03_oATOM_CANFD_Matrix_CH_V600_202502_d824d0f9_Tx, /ActiveEcuC/Com/ComConfig/VCU_04_oATOM_CANFD_Matrix_CH_V600_202502_db6dbd42_Tx, /ActiveEcuC/Com/ComConfig/VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_2baed31b_Tx, /ActiveEcuC/Com/ComConfig/VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_a07ded02_Tx, /ActiveEcuC/Com/ComConfig/VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_2c28a723_Tx, /ActiveEcuC/Com/ComConfig/VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_8e1c824e_Tx] */
-  { /*     4 */  FALSE,        20u },  /* [/ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CANFD_Matrix_CH_V600_202502_17bac731_Tx, /ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CAN_Matrix_PT_V600_20250211_28e7bea0_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_f29a9fcc_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502_7949a1d5_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_4614d844_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_898acf8c_Tx, /ActiveEcuC/Com/ComConfig/VCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_20405e82_Tx] */
-  { /*     5 */  FALSE,         0u },  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx, /ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg1_oLIN02_0ce9e87a_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg2_oLIN02_8266ef99_Tx] */
-  { /*     6 */   TRUE,         0u },  /* [/ActiveEcuC/Com/ComConfig/BCS_oJ1939_bms_9b7c3f84_Tx, /ActiveEcuC/Com/ComConfig/BEM_oJ1939_bms_deb0debb_Tx, /ActiveEcuC/Com/ComConfig/BHM_oJ1939_bms_999cbec5_Tx, /ActiveEcuC/Com/ComConfig/BMT_oJ1939_bms_1502dabb_Tx, /ActiveEcuC/Com/ComConfig/BMV_oJ1939_bms_f9394424_Tx, /ActiveEcuC/Com/ComConfig/BRM_oJ1939_bms_17c47e39_Tx, /ActiveEcuC/Com/ComConfig/BRO_oJ1939_bms_fbffe0a6_Tx, /ActiveEcuC/Com/ComConfig/BSD_oJ1939_bms_57fb9d2d_Tx, /ActiveEcuC/Com/ComConfig/BSM_oJ1939_bms_ca52a7bc_Tx, /ActiveEcuC/Com/ComConfig/BSOC_oJ1939_bms_5e951453_Tx, /ActiveEcuC/Com/ComConfig/BST_oJ1939_bms_5be370d1_Tx, /ActiveEcuC/Com/ComConfig/Uds_EPT_Boot_Response_oATOM_CAN_Matrix_PT_V600_20250211_8bdda24d_Tx, /ActiveEcuC/Com/ComConfig/VCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_9b305e0d_Tx] */
-  { /*     7 */  FALSE,        50u },  /* [/ActiveEcuC/Com/ComConfig/BCP_oJ1939_bms_ece2ed74_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_5798df68_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_b8ca6989_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_40b0bba8_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_afe20d49_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_79c816e8_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_969aa009_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_6ee07228_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_81b2c4c9_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_eedbf968_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_01894f89_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_eb0f92eb_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx, /ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx, /ActiveEcuC/Com/ComConfig/VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx] */
-  { /*     8 */  FALSE,         5u }   /* [/ActiveEcuC/Com/ComConfig/BCL_oJ1939_bms_e5f04d09_Tx, /ActiveEcuC/Com/ComConfig/VCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_28db6ecb_Tx] */
+  { /*     0 */  FALSE,        50u },  /* [/ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_5798df68_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_b8ca6989_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_40b0bba8_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_afe20d49_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_79c816e8_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_969aa009_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_6ee07228_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_81b2c4c9_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_eedbf968_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_01894f89_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_eb0f92eb_Tx, /ActiveEcuC/Com/ComConfig/VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg1_oTC37X_VCU_CAN03_9a29d525_Tx, /ActiveEcuC/Com/ComConfig/VcuCan03TxMsg2_oTC37X_VCU_CAN03_70af0847_Tx, /ActiveEcuC/Com/ComConfig/VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx, /ActiveEcuC/Com/ComConfig/VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx] */
+  { /*     1 */  FALSE,         5u },  /* [/ActiveEcuC/Com/ComConfig/VCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_28db6ecb_Tx] */
+  { /*     2 */  FALSE,         1u },  /* [/ActiveEcuC/Com/ComConfig/VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_4c086bc0_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_fd5e64f0_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_0d9d0aa9_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_03_oATOM_CAN_Matrix_PT_V600_20250211_32c07338_Tx] */
+  { /*     3 */  FALSE,       100u },  /* [/ActiveEcuC/Com/ComConfig/VCU_DiagInfor_oATOM_CAN_Matrix_PT_V600_20250211_ad82eb28_Tx] */
+  { /*     4 */  FALSE,         2u },  /* [/ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_0d0df7a0_Tx, /ActiveEcuC/Com/ComConfig/VCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_32508e31_Tx, /ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_1208e503_Tx, /ActiveEcuC/Com/ComConfig/VCU_BMS_oATOM_CAN_Matrix_PT_V600_20250211_2d559c92_Tx, /ActiveEcuC/Com/ComConfig/VCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_d7fdb34f_Tx, /ActiveEcuC/Com/ComConfig/VCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_fe17094b_Tx] */
+  { /*     5 */  FALSE,        10u },  /* [/ActiveEcuC/Com/ComConfig/VCU_03_oATOM_CANFD_Matrix_CH_V600_202502_d824d0f9_Tx, /ActiveEcuC/Com/ComConfig/VCU_04_oATOM_CANFD_Matrix_CH_V600_202502_db6dbd42_Tx, /ActiveEcuC/Com/ComConfig/VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_2baed31b_Tx, /ActiveEcuC/Com/ComConfig/VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_a07ded02_Tx, /ActiveEcuC/Com/ComConfig/VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_2c28a723_Tx, /ActiveEcuC/Com/ComConfig/VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_8e1c824e_Tx] */
+  { /*     6 */  FALSE,        20u },  /* [/ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CANFD_Matrix_CH_V600_202502_17bac731_Tx, /ActiveEcuC/Com/ComConfig/VCU_02_oATOM_CAN_Matrix_PT_V600_20250211_28e7bea0_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_f29a9fcc_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502_7949a1d5_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_4614d844_Tx, /ActiveEcuC/Com/ComConfig/VCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_898acf8c_Tx, /ActiveEcuC/Com/ComConfig/VCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_20405e82_Tx] */
+  { /*     7 */  FALSE,         0u },  /* [/ActiveEcuC/Com/ComConfig/EDCU_EXV2_oLIN00_1f8750a5_Tx, /ActiveEcuC/Com/ComConfig/PMP_Cmd_oLIN00_3912b28b_Tx, /ActiveEcuC/Com/ComConfig/TCU_HVCH_Cmd_oLIN00_385d5651_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_1_oLIN00_50eec975_Tx, /ActiveEcuC/Com/ComConfig/VCU_EXV_2_oLIN00_de61ce96_Tx, /ActiveEcuC/Com/ComConfig/VCU_SVA_CMD_oLIN00_756d14f6_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg1_oLIN01_849dd3b9_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin0_TxMsg2_oLIN01_0a12d45a_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg1_oLIN02_0ce9e87a_Tx, /ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg2_oLIN02_8266ef99_Tx] */
+  { /*     8 */   TRUE,         0u }   /* [/ActiveEcuC/Com/ComConfig/BCL_oJ1939_bms_e5f04d09_Tx, /ActiveEcuC/Com/ComConfig/BCP_oJ1939_bms_ece2ed74_Tx, /ActiveEcuC/Com/ComConfig/BCS_oJ1939_bms_9b7c3f84_Tx, /ActiveEcuC/Com/ComConfig/BEM_oJ1939_bms_deb0debb_Tx, /ActiveEcuC/Com/ComConfig/BHM_oJ1939_bms_999cbec5_Tx, /ActiveEcuC/Com/ComConfig/BMT_oJ1939_bms_1502dabb_Tx, /ActiveEcuC/Com/ComConfig/BMV_oJ1939_bms_f9394424_Tx, /ActiveEcuC/Com/ComConfig/BRM_oJ1939_bms_17c47e39_Tx, /ActiveEcuC/Com/ComConfig/BRO_oJ1939_bms_fbffe0a6_Tx, /ActiveEcuC/Com/ComConfig/BSD_oJ1939_bms_57fb9d2d_Tx, /ActiveEcuC/Com/ComConfig/BSM_oJ1939_bms_ca52a7bc_Tx, /ActiveEcuC/Com/ComConfig/BSOC_oJ1939_bms_5e951453_Tx, /ActiveEcuC/Com/ComConfig/BST_oJ1939_bms_5be370d1_Tx, /ActiveEcuC/Com/ComConfig/Uds_EPT_Boot_Response_oATOM_CAN_Matrix_PT_V600_20250211_8bdda24d_Tx, /ActiveEcuC/Com/ComConfig/VCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_9b305e0d_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -4992,7 +5006,7 @@ VAR(Com_CurrentTxModeUType, COM_VAR_NOINIT) Com_CurrentTxMode;  /* PRQA S 0759, 
   \var    Com_CycleTimeCnt
   \brief  Current counter value of cyclic transmission.
 */ 
-#define COM_START_SEC_VAR_NOINIT_8BIT
+#define COM_START_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -5066,7 +5080,7 @@ VAR(Com_CycleTimeCntUType, COM_VAR_NOINIT) Com_CycleTimeCnt;  /* PRQA S 0759, 15
   /*    64 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg1_oLIN02_0ce9e87a_Tx] */
   /*    65 */  /* [/ActiveEcuC/Com/ComConfig/Vcu_Lin3_TxMsg2_oLIN02_8266ef99_Tx] */
 
-#define COM_STOP_SEC_VAR_NOINIT_8BIT
+#define COM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

@@ -54,6 +54,7 @@
 #include "Icu_17_TimerIp.h"
 #include "SensorMng.h"
 #include "TLE9201SG.h"
+#include "Com.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -133,6 +134,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Init(void) /* PRQA S 0624, 3206 */ /* MD_
  *********************************************************************************************************************/
 uint8 sts_SV = 0;
 uint8 TIMER = 0;
+static volatile uint8 Txmode = 1;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -162,65 +164,20 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable(void) /* PRQA S 0624, 3206 */ /*
       NOP();
     }
   }
-  #if 0
-  /*TLE9210*/
-  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P20_11_TLE_DIR, 1);
-  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P20_12_TLE_PWM, sts_SV );
-  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P20_13_TLE_DIS, 0 );
 
-  /*TLE4252D*/
-  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P10_7_TLE4252_EN, sts_SV );
-//  Tle525En_Read = Dio_ReadChannel( DioConf_DioChannel_DioChannel_P10_7_TLE4252_EN );
-
-  /*BTS7210*/
-  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_7_IN0, sts_SV );
-  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, sts_SV );
-  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_9_IN2, sts_SV );
-  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_10_IN3, sts_SV );
-
-  /*TLE8888QK LOW_OUT1*/
-  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P2_11_IN1, 1 );
-
-  /*ICU Measurement*/
-  if(MessureFlg == 1 )
-  {
-    MessureFlg = 0;
-    Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_2, &ICU_Val1);
-    Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_4, &ICU_Val2);
-  }
-
-
-  TIMER++;
-  if( TIMER >= 10 )
-  {
-    TIMER = 0;
-    if( sts_SV == 0 )
-    {
-      sts_SV = 1;
-    }
-    else
-    {
-      sts_SV = 0;
-    }
-  }
-#endif
-
-#if 0  //PWM 输入测量的测试代码
-  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, sts_SV );
-  TIMER++;
-  if( TIMER >= 10 )
-  {
-    TIMER = 0;
-    if( sts_SV == 0 )
-    {
-      sts_SV = 1;
-    }
-    else
-    {
-      sts_SV = 0;
-    }
-  }
-#endif
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BCL_oJ1939_bms_e5f04d09_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BCP_oJ1939_bms_ece2ed74_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BCS_oJ1939_bms_9b7c3f84_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BEM_oJ1939_bms_deb0debb_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BHM_oJ1939_bms_999cbec5_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BMT_oJ1939_bms_1502dabb_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BMV_oJ1939_bms_f9394424_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BRM_oJ1939_bms_17c47e39_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BRO_oJ1939_bms_fbffe0a6_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BSD_oJ1939_bms_57fb9d2d_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BSM_oJ1939_bms_ca52a7bc_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BSOC_oJ1939_bms_5e951453_Tx,  Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BST_oJ1939_bms_5be370d1_Tx,   Txmode );
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

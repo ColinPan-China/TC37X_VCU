@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Lcfg.h
- *   Generation Time: 2025-09-17 15:11:06
+ *   Generation Time: 2025-09-17 16:02:20
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -1077,7 +1077,7 @@
   \brief  These defines are used to implement against the maximum value in numerical based data.
   \{
 */ 
-#define COM_MAX_CYCLETIMECNT                                                                        255u
+#define COM_MAX_CYCLETIMECNT                                                                        65535u
 #define COM_MAX_HANDLERXPDUDEFERRED                                                                 65535u
 #define COM_MAX_RXDEFPDUBUFFER                                                                      255u
 #define COM_MAX_RXDEFERREDFCTPTRCACHE                                                               4294967295u
@@ -2082,10 +2082,10 @@
 #define Com_GetSizeOfTmpRxShdBufferUInt32OfPCConfig()                                               2u  /**< the number of accomplishable value elements in Com_TmpRxShdBufferUInt32 */
 #define Com_GetSizeOfTmpRxShdBufferUInt8OfPCConfig()                                                22u  /**< the number of accomplishable value elements in Com_TmpRxShdBufferUInt8 */
 #define Com_GetSizeOfTxBufferOfPCConfig()                                                           1250u  /**< the number of accomplishable value elements in Com_TxBuffer */
-#define Com_GetSizeOfTxCyclicPduOfMainFunctionTxIndOfPCConfig()                                     43u  /**< the number of accomplishable value elements in Com_TxCyclicPduOfMainFunctionTxInd */
-#define Com_GetSizeOfTxCyclicPduOfPCConfig()                                                        43u  /**< the number of accomplishable value elements in Com_TxCyclicPdu */
+#define Com_GetSizeOfTxCyclicPduOfMainFunctionTxIndOfPCConfig()                                     54u  /**< the number of accomplishable value elements in Com_TxCyclicPduOfMainFunctionTxInd */
+#define Com_GetSizeOfTxCyclicPduOfPCConfig()                                                        54u  /**< the number of accomplishable value elements in Com_TxCyclicPdu */
 #define Com_GetSizeOfTxIPduGroupISRLockCounterOfPCConfig()                                          1u  /**< the number of accomplishable value elements in Com_TxIPduGroupISRLockCounter */
-#define Com_GetSizeOfTxModeFalseOfPCConfig()                                                        9u  /**< the number of accomplishable value elements in Com_TxModeFalse */
+#define Com_GetSizeOfTxModeFalseOfPCConfig()                                                        11u  /**< the number of accomplishable value elements in Com_TxModeFalse */
 #define Com_GetSizeOfTxModeInfoOfPCConfig()                                                         66u  /**< the number of accomplishable value elements in Com_TxModeInfo */
 #define Com_GetSizeOfTxModeTrueOfPCConfig()                                                         9u  /**< the number of accomplishable value elements in Com_TxModeTrue */
 #define Com_GetSizeOfTxPduInfoOfMainFunctionTxIndOfPCConfig()                                       66u  /**< the number of accomplishable value elements in Com_TxPduInfoOfMainFunctionTxInd */
@@ -2326,7 +2326,7 @@
 #define Com_GetRxPduInfoOfMainFunctionRxIndEndIdxOfMainFunctionRxStruct(Index)                      ((Com_RxPduInfoOfMainFunctionRxIndEndIdxOfMainFunctionRxStructType)((((Com_RxPduInfoOfMainFunctionRxIndEndIdxOfMainFunctionRxStructType)(Index)) + 111u)))  /**< the end index of the 0:n relation pointing to Com_RxPduInfoOfMainFunctionRxInd */
 #define Com_GetRxPduInfoOfMainFunctionRxIndStartIdxOfMainFunctionRxStruct(Index)                    ((Com_RxPduInfoOfMainFunctionRxIndStartIdxOfMainFunctionRxStructType)((Index)))  /**< the start index of the 0:n relation pointing to Com_RxPduInfoOfMainFunctionRxInd */
 #define Com_IsRxPduInfoOfMainFunctionRxIndUsedOfMainFunctionRxStruct(Index)                         (((boolean)(Com_GetRxPduInfoOfMainFunctionRxIndStartIdxOfMainFunctionRxStruct(Index) != COM_NO_RXPDUINFOOFMAINFUNCTIONRXINDSTARTIDXOFMAINFUNCTIONRXSTRUCT)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_RxPduInfoOfMainFunctionRxInd */
-#define Com_GetTxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct(Index)                    ((Com_TxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)((((Com_TxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)(Index)) + 43u)))  /**< the end index of the 0:n relation pointing to Com_TxCyclicPduOfMainFunctionTxInd */
+#define Com_GetTxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct(Index)                    ((Com_TxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)((((Com_TxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)(Index)) + 54u)))  /**< the end index of the 0:n relation pointing to Com_TxCyclicPduOfMainFunctionTxInd */
 #define Com_GetTxCyclicPduOfMainFunctionTxIndStartIdxOfMainFunctionTxStruct(Index)                  ((Com_TxCyclicPduOfMainFunctionTxIndStartIdxOfMainFunctionTxStructType)((Index)))  /**< the start index of the 0:n relation pointing to Com_TxCyclicPduOfMainFunctionTxInd */
 #define Com_IsTxCyclicPduOfMainFunctionTxIndUsedOfMainFunctionTxStruct(Index)                       Com_IsTxPduInfoOfMainFunctionTxIndUsedOfMainFunctionTxStruct(Index)  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_TxCyclicPduOfMainFunctionTxInd */
 #define Com_GetTxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct(Index)                      ((Com_TxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)((((Com_TxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)(Index)) + 66u)))  /**< the end index of the 0:n relation pointing to Com_TxPduInfoOfMainFunctionTxInd */
@@ -3463,7 +3463,7 @@ typedef uint8 Com_ConstValueUInt8Type;
 typedef boolean Com_CurrentTxModeType;
 
 /**   \brief  value based type definition for Com_CycleTimeCnt */
-typedef uint8 Com_CycleTimeCntType;
+typedef uint16 Com_CycleTimeCntType;
 
 /**   \brief  value based type definition for Com_CyclicSendRequest */
 typedef boolean Com_CyclicSendRequestType;
@@ -4057,7 +4057,7 @@ typedef boolean Com_DirectOfTxModeFalseType;
 typedef boolean Com_PeriodicOfTxModeFalseType;
 
 /**   \brief  value based type definition for Com_TimePeriodOfTxModeFalse */
-typedef uint8 Com_TimePeriodOfTxModeFalseType;
+typedef uint16 Com_TimePeriodOfTxModeFalseType;
 
 /**   \brief  value based type definition for Com_InitModeOfTxModeInfo */
 typedef boolean Com_InitModeOfTxModeInfoType;
@@ -4484,8 +4484,8 @@ typedef struct sCom_TxCyclicPduType
 /**   \brief  type used in Com_TxModeFalse */
 typedef struct sCom_TxModeFalseType
 {
-  Com_DirectOfTxModeFalseType DirectOfTxModeFalse;  /**< TRUE if transmission mode contains a direct part. */
   Com_TimePeriodOfTxModeFalseType TimePeriodOfTxModeFalse;  /**< Cycle time factor. */
+  Com_DirectOfTxModeFalseType DirectOfTxModeFalse;  /**< TRUE if transmission mode contains a direct part. */
 } Com_TxModeFalseType;
 
 /**   \brief  type used in Com_TxModeInfo */
@@ -5955,7 +5955,7 @@ extern CONST(Com_RxSigInfoType, COM_CONST) Com_RxSigInfo[148];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Com_TxCyclicPduType, COM_CONST) Com_TxCyclicPdu[43];
+extern CONST(Com_TxCyclicPduType, COM_CONST) Com_TxCyclicPdu[54];
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -5969,14 +5969,14 @@ extern CONST(Com_TxCyclicPduType, COM_CONST) Com_TxCyclicPdu[43];
   \brief  Contains all relevant information for transmission mode false.
   \details
   Element       Description
-  Direct        TRUE if transmission mode contains a direct part.
   TimePeriod    Cycle time factor.
+  Direct        TRUE if transmission mode contains a direct part.
 */ 
 #define COM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[9];
+extern CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[11];
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6200,12 +6200,12 @@ extern VAR(Com_CurrentTxModeUType, COM_VAR_NOINIT) Com_CurrentTxMode;  /* PRQA S
   \var    Com_CycleTimeCnt
   \brief  Current counter value of cyclic transmission.
 */ 
-#define COM_START_SEC_VAR_NOINIT_8BIT
+#define COM_START_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern VAR(Com_CycleTimeCntUType, COM_VAR_NOINIT) Com_CycleTimeCnt;  /* PRQA S 0759 */  /* MD_CSL_Union */
-#define COM_STOP_SEC_VAR_NOINIT_8BIT
+#define COM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
