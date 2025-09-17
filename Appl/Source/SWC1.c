@@ -450,7 +450,7 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
     ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_XCP_ca35a39e, COMM_FULL_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMChannel_CN_LIN02_5f246578, COMM_FULL_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79, COMM_FULL_COMMUNICATION);
-
+    ComM_RequestComMode(ComMConf_ComMChannel_CN_J1939_bms_dea99804, COMM_FULL_COMMUNICATION);
     Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_FULL_COMMUNICATION);
     Rte_Call_UR_CN_LIN01_778f96a0_RequestComMode(COMM_FULL_COMMUNICATION);
   }

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2025-09-12 11:08:53
+ *   Generation Time: 2025-09-17 15:11:06
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -88,6 +88,7 @@
 #define ASCLIN4TX_ISR ASCLIN4TX_ISR
 #define CanIsr_0 CanIsr_0
 #define CanIsr_1 CanIsr_1
+#define CanIsr_2 CanIsr_2
 #define CanIsr_3 CanIsr_3
 #define CanIsr_4 CanIsr_4
 #define CanIsr_6 CanIsr_6
@@ -200,19 +201,20 @@ typedef enum
   ASCLIN4TX_ISR = 17,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   CanIsr_0 = 18,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   CanIsr_1 = 19,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CanIsr_3 = 20,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CanIsr_4 = 21,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CanIsr_6 = 22,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CounterIsr_SystemTimer = 23,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  DMACH10SR_ISR = 24,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  DMACH11SR_ISR = 25,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  GTMTOM1SR0_ISR = 26,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  GTMTOM1SR1_ISR = 27,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  GTMTOM1SR3_ISR = 28,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  GTMTOM1SR4_ISR = 29,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  QSPI3ERR_ISR = 30,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  QSPI3PT_ISR = 31,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ISRID_COUNT = 32,
+  CanIsr_2 = 20,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CanIsr_3 = 21,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CanIsr_4 = 22,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CanIsr_6 = 23,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CounterIsr_SystemTimer = 24,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  DMACH10SR_ISR = 25,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  DMACH11SR_ISR = 26,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  GTMTOM1SR0_ISR = 27,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  GTMTOM1SR1_ISR = 28,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  GTMTOM1SR3_ISR = 29,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  GTMTOM1SR4_ISR = 30,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  QSPI3ERR_ISR = 31,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  QSPI3PT_ISR = 32,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ISRID_COUNT = 33,
   INVALID_ISR = OS_ISRID_COUNT
 } ISRType;
 

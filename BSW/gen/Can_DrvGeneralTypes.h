@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_DrvGeneralTypes.h
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2025-09-17 15:11:03
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -37,7 +37,7 @@
  ----------------------------------------------------------------------------- */
 
 /* CAN416, CAN065_Conf */
-typedef VAR(uint16, TYPEDEF) Can_IdType;
+typedef VAR(uint32, TYPEDEF) Can_IdType;
 
 /* CAN429 */
 typedef VAR(uint8, TYPEDEF) Can_HwHandleType;

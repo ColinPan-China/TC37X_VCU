@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Com.h
- *   Generation Time: 2024-09-04 17:27:55
+ *   Generation Time: 2025-09-17 15:11:03
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -87,6 +87,8 @@
  * \note     The function is called by Com.
  *********************************************************************************************************************/
 FUNC(Std_ReturnType, PDUR_CODE) PduR_ComTransmit(PduIdType id, P2CONST(PduInfoType, AUTOMATIC, PDUR_APPL_DATA) info);
+
+
 
 
 

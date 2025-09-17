@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2025-09-12 17:00:34
+ *   Generation Time: 2025-09-17 15:11:03
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -66,9 +66,10 @@
  * ECUM_WKSOURCE_CN_ATOM_CAN_XCP_f42a46d4                     (EcuM_WakeupSourceType)(128uL) 
  * ECUM_WKSOURCE_CN_TC37X_VCU_CAN01_70b1f95e                  (EcuM_WakeupSourceType)(256uL) 
  * ECUM_WKSOURCE_CN_TC37X_VCU_CAN03_9ebf9872                  (EcuM_WakeupSourceType)(512uL) 
- * ECUM_WKSOURCE_CN_LIN00_b12a0454                            (EcuM_WakeupSourceType)(1024uL) 
- * ECUM_WKSOURCE_CN_LIN01_c62d34c2                            (EcuM_WakeupSourceType)(2048uL) 
- * ECUM_WKSOURCE_CN_LIN02_5f246578                            (EcuM_WakeupSourceType)(4096uL) 
+ * ECUM_WKSOURCE_CN_J1939_bms_dea99804                        (EcuM_WakeupSourceType)(1024uL) 
+ * ECUM_WKSOURCE_CN_LIN00_b12a0454                            (EcuM_WakeupSourceType)(2048uL) 
+ * ECUM_WKSOURCE_CN_LIN01_c62d34c2                            (EcuM_WakeupSourceType)(4096uL) 
+ * ECUM_WKSOURCE_CN_LIN02_5f246578                            (EcuM_WakeupSourceType)(8192uL) 
  */
 
 /**********************************************************************************************************************

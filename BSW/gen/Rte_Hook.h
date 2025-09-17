@@ -1084,6 +1084,8 @@
  *  Rte_Runnable_ComM_ComM_MainFunction_6_Start
  *  Rte_Runnable_ComM_ComM_MainFunction_7_Return
  *  Rte_Runnable_ComM_ComM_MainFunction_7_Start
+ *  Rte_Runnable_ComM_ComM_MainFunction_8_Return
+ *  Rte_Runnable_ComM_ComM_MainFunction_8_Start
  *  Rte_Runnable_ComM_GetCurrentComMode_Return
  *  Rte_Runnable_ComM_GetCurrentComMode_Start
  *  Rte_Runnable_ComM_GetInhibitionStatus_Return
@@ -1568,6 +1570,12 @@
  *  SchM_EnterHook_Icu_17_TimerIp_SetActivationCondition_Start
  *  SchM_EnterHook_IoHwAb_IOHWAB_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_IoHwAb_IOHWAB_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_J1939Tp_J1939TP_EXCLUSIVE_AREA_RXNSDULOCK_Return
+ *  SchM_EnterHook_J1939Tp_J1939TP_EXCLUSIVE_AREA_RXNSDULOCK_Start
+ *  SchM_EnterHook_J1939Tp_J1939TP_EXCLUSIVE_AREA_TXNPDULOCK_Return
+ *  SchM_EnterHook_J1939Tp_J1939TP_EXCLUSIVE_AREA_TXNPDULOCK_Start
+ *  SchM_EnterHook_J1939Tp_J1939TP_EXCLUSIVE_AREA_TXNSDULOCK_Return
+ *  SchM_EnterHook_J1939Tp_J1939TP_EXCLUSIVE_AREA_TXNSDULOCK_Start
  *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_LinIf_LINIF_EXCLUSIVE_AREA_1_Return
@@ -1810,6 +1818,12 @@
  *  SchM_ExitHook_Icu_17_TimerIp_SetActivationCondition_Start
  *  SchM_ExitHook_IoHwAb_IOHWAB_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_IoHwAb_IOHWAB_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_J1939Tp_J1939TP_EXCLUSIVE_AREA_RXNSDULOCK_Return
+ *  SchM_ExitHook_J1939Tp_J1939TP_EXCLUSIVE_AREA_RXNSDULOCK_Start
+ *  SchM_ExitHook_J1939Tp_J1939TP_EXCLUSIVE_AREA_TXNPDULOCK_Return
+ *  SchM_ExitHook_J1939Tp_J1939TP_EXCLUSIVE_AREA_TXNPDULOCK_Start
+ *  SchM_ExitHook_J1939Tp_J1939TP_EXCLUSIVE_AREA_TXNSDULOCK_Return
+ *  SchM_ExitHook_J1939Tp_J1939TP_EXCLUSIVE_AREA_TXNSDULOCK_Start
  *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_LinIf_LINIF_EXCLUSIVE_AREA_1_Return
@@ -1924,6 +1938,8 @@
  *  SchM_Schedulable_ComM_ComM_MainFunction_6_Start
  *  SchM_Schedulable_ComM_ComM_MainFunction_7_Return
  *  SchM_Schedulable_ComM_ComM_MainFunction_7_Start
+ *  SchM_Schedulable_ComM_ComM_MainFunction_8_Return
+ *  SchM_Schedulable_ComM_ComM_MainFunction_8_Start
  *  SchM_Schedulable_Com_Com_MainFunctionRx_ComMainFunctionRx_Return
  *  SchM_Schedulable_Com_Com_MainFunctionRx_ComMainFunctionRx_Start
  *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_Return
@@ -1940,6 +1956,8 @@
  *  SchM_Schedulable_Fee_Fee_MainFunction_Start
  *  SchM_Schedulable_Fls_17_Dmu_Fls_17_Dmu_MainFunction_Return
  *  SchM_Schedulable_Fls_17_Dmu_Fls_17_Dmu_MainFunction_Start
+ *  SchM_Schedulable_J1939Tp_J1939Tp_MainFunction_Return
+ *  SchM_Schedulable_J1939Tp_J1939Tp_MainFunction_Start
  *  SchM_Schedulable_LinIf_LinIf_MainFunction_Return
  *  SchM_Schedulable_LinIf_LinIf_MainFunction_Start
  *  SchM_Schedulable_LinSM_LinSM_MainFunction_Return

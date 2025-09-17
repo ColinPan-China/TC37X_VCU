@@ -190,6 +190,7 @@ SchM_Fls_17_Dmu.h<br>
 SchM_Icu_17_TimerIp.h<br>
 SchM_IoHwAb.h<br>
 SchM_Irq.h<br>
+SchM_J1939Tp.h<br>
 SchM_LinIf.h<br>
 SchM_LinSM.h<br>
 SchM_LinTrcv_30_Tle7259.h<br>
@@ -222,6 +223,7 @@ SchM_Fls_17_Dmu_Type.h<br>
 SchM_Icu_17_TimerIp_Type.h<br>
 SchM_IoHwAb_Type.h<br>
 SchM_Irq_Type.h<br>
+SchM_J1939Tp_Type.h<br>
 SchM_LinIf_Type.h<br>
 SchM_LinSM_Type.h<br>
 SchM_LinTrcv_30_Tle7259_Type.h<br>
@@ -351,6 +353,13 @@ CONST Size: 96 Bytes<br>
 <TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
 </TR>
 <TR>
+<TD><B>TimingEvent</B> Cyclic 20ms</TD>
+<TD>ComM_MainFunction_8</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0::GetCurrentComMode</TD>
 <TD>GetCurrentComMode</TD>
 <TD>n/a</TD>
@@ -366,6 +375,13 @@ CONST Size: 96 Bytes<br>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_CN_ATOM_CAN_XCP_ca35a39e::GetCurrentComMode</TD>
+<TD>GetCurrentComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_CN_J1939_bms_d26c50b6::GetCurrentComMode</TD>
 <TD>GetCurrentComMode</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -428,6 +444,13 @@ CONST Size: 96 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::CL_CN_J1939_bms_dea99804::GetInhibitionStatus</TD>
+<TD>GetInhibitionStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::CL_CN_LIN00_b12a0454::GetInhibitionStatus</TD>
 <TD>GetInhibitionStatus</TD>
 <TD>n/a</TD>
@@ -478,6 +501,13 @@ CONST Size: 96 Bytes<br>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> ComM::CW_CN_ATOM_CAN_XCP_f42a46d4::GetInhibitionStatus</TD>
+<TD>GetInhibitionStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::CW_CN_J1939_bms_dea99804::GetInhibitionStatus</TD>
 <TD>GetInhibitionStatus</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -540,6 +570,13 @@ CONST Size: 96 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_CN_J1939_bms_d26c50b6::GetMaxComMode</TD>
+<TD>GetMaxComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_CN_LIN00_984dfd9e::GetMaxComMode</TD>
 <TD>GetMaxComMode</TD>
 <TD>n/a</TD>
@@ -596,6 +633,13 @@ CONST Size: 96 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_CN_J1939_bms_d26c50b6::GetRequestedComMode</TD>
+<TD>GetRequestedComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_CN_LIN00_984dfd9e::GetRequestedComMode</TD>
 <TD>GetRequestedComMode</TD>
 <TD>n/a</TD>
@@ -646,6 +690,13 @@ CONST Size: 96 Bytes<br>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> ComM::CL_CN_ATOM_CAN_XCP_f42a46d4::LimitChannelToNoComMode</TD>
+<TD>LimitChannelToNoComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::CL_CN_J1939_bms_dea99804::LimitChannelToNoComMode</TD>
 <TD>LimitChannelToNoComMode</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -715,6 +766,13 @@ CONST Size: 96 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::CW_CN_J1939_bms_dea99804::PreventWakeUp</TD>
+<TD>PreventWakeUp</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::CW_CN_LIN00_b12a0454::PreventWakeUp</TD>
 <TD>PreventWakeUp</TD>
 <TD>n/a</TD>
@@ -772,6 +830,13 @@ CONST Size: 96 Bytes<br>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_CN_ATOM_CAN_XCP_ca35a39e::RequestComMode</TD>
+<TD>RequestComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_CN_J1939_bms_d26c50b6::RequestComMode</TD>
 <TD>RequestComMode</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -18554,6 +18619,13 @@ CONST Size: 96 Bytes<br>
 <TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
 </TR>
 <TR>
+<TD><B>TimingEvent</B> Cyclic 20ms</TD>
+<TD>ComM_MainFunction_8</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_20ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_20ms</TD>
+</TR>
+<TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Dcm_MainFunction</TD>
 <TD>Bsw_Task</TD>
@@ -18591,6 +18663,13 @@ CONST Size: 96 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Fls_17_Dmu_MainFunction</TD>
+<TD>Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>J1939Tp_MainFunction</TD>
 <TD>Bsw_Task</TD>
 <TD>Rte_Ev_Cyclic2_Bsw_Task_0_10ms</TD>
 <TD>Rte_Al_TE2_Bsw_Task_0_10ms</TD>

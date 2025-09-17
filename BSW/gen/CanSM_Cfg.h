@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanSM_Cfg.h
- *   Generation Time: 2025-09-12 11:08:08
+ *   Generation Time: 2025-09-17 15:19:46
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -147,7 +147,7 @@
 #define CanSM_GetChannelVarRecordOfPCConfig()                                                       CanSM_ChannelVarRecord  /**< the pointer to CanSM_ChannelVarRecord */
 #define CanSM_GetModeRequestRepetitionMaxOfPCConfig()                                               10u  /**< getCanSMModeRequestRepetitionMax */
 #define CanSM_GetModeRequestRepetitionTimeOfPCConfig()                                              10u  /**< periond of ModeRequest Repetition */
-#define CanSM_GetSizeOfChannelConfigOfPCConfig()                                                    5u  /**< the number of accomplishable value elements in CanSM_ChannelConfig */
+#define CanSM_GetSizeOfChannelConfigOfPCConfig()                                                    6u  /**< the number of accomplishable value elements in CanSM_ChannelConfig */
 /** 
   \}
 */ 
@@ -168,6 +168,7 @@
   \{
 */ 
 #define CanSM_IsBor_Tx_Confirmation_PollingOfChannelConfig(Index)                                     /**< Deactivateable: 'CanSM_ChannelConfig.Bor_Tx_Confirmation_Polling' Reason: 'the value of CanSM_Bor_Tx_Confirmation_PollingOfChannelConfig is always 'false' due to this, the array is deactivated.' */
+#define CanSM_GetControllerIdOfChannelConfig(Index)                                                 (CanSM_GetChannelConfigOfPCConfig()[(Index)].ControllerIdOfChannelConfig)
 #define CanSM_GetNetworkHandleOfChannelConfig(Index)                                                (CanSM_GetChannelConfigOfPCConfig()[(Index)].NetworkHandleOfChannelConfig)
 #define CanSM_IsPartial_Network_Trcv_SupportOfChannelConfig(Index)                                    /**< Deactivateable: 'CanSM_ChannelConfig.Partial_Network_Trcv_Support' Reason: 'the value of CanSM_Partial_Network_Trcv_SupportOfChannelConfig is always 'false' due to this, the array is deactivated.' */
 #define CanSM_IsPartial_Network_Wakeup_FilterOfChannelConfig(Index)                                   /**< Deactivateable: 'CanSM_ChannelConfig.Partial_Network_Wakeup_Filter' Reason: 'the value of CanSM_Partial_Network_Wakeup_FilterOfChannelConfig is always 'false' due to this, the array is deactivated.' */
@@ -189,7 +190,6 @@
 #define CanSM_GetBorTimeL1OfChannelConfig(Index)                                                    100u
 #define CanSM_GetBorTimeL2OfChannelConfig(Index)                                                    300u
 #define CanSM_GetBorTimeTxEnsuredOfChannelConfig(Index)                                             500u
-#define CanSM_GetControllerIdOfChannelConfig(Index)                                                 CanSM_GetNetworkHandleOfChannelConfig(Index)
 #define CanSM_GetDemEventId_BusOff_OfChannelConfig(Index)                                           0xFFu
 #define CanSM_GetDemEventId_ModeRequest_OfChannelConfig(Index)                                      0xFFu
 #define CanSM_IsTrcv_InActive_AtAll_NonPNCannelsOfChannelConfig(Index)                              (((TRUE)) != FALSE)  /**< Config feature which determines if Trvc is active at a Non PN channel */
@@ -556,6 +556,7 @@ typedef uint8 CanSM_SizeOfChannelVarRecordType;
 /**   \brief  type used in CanSM_ChannelConfig */
 typedef struct sCanSM_ChannelConfigType
 {
+  CanSM_ControllerIdOfChannelConfigType ControllerIdOfChannelConfig;
   CanSM_NetworkHandleOfChannelConfigType NetworkHandleOfChannelConfig;
 } CanSM_ChannelConfigType;
 
@@ -626,13 +627,14 @@ typedef CanSM_PCConfigType CanSM_ConfigType;  /**< A structure type is present f
   \var    CanSM_ChannelConfig
   \details
   Element          Description
+  ControllerId 
   NetworkHandle
 */ 
 #define CANSM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanSM_ChannelConfigType, CANSM_CONST) CanSM_ChannelConfig[5];
+extern CONST(CanSM_ChannelConfigType, CANSM_CONST) CanSM_ChannelConfig[6];
 #define CANSM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -645,7 +647,7 @@ extern CONST(CanSM_ChannelConfigType, CANSM_CONST) CanSM_ChannelConfig[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(CanSM_ChannelVarRecordType, CANSM_VAR_NOINIT) CanSM_ChannelVarRecord[5];
+extern VAR(CanSM_ChannelVarRecordType, CANSM_VAR_NOINIT) CanSM_ChannelVarRecord[6];
 #define CANSM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

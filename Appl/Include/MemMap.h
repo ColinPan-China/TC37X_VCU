@@ -7381,6 +7381,149 @@
  *********************************************************************************************************************/
 
 /**********************************************************************************************************************
+ *  J1939TP START
+ *********************************************************************************************************************/
+
+/*******  CODE sections **********************************************************************************************/
+
+#ifdef J1939TP_START_SEC_CODE
+# undef J1939TP_START_SEC_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CODE /* mapped to default code section */
+#endif
+#ifdef J1939TP_STOP_SEC_CODE
+# undef J1939TP_STOP_SEC_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CODE /* default code stop section */
+#endif
+
+
+/*******  CONST sections  ********************************************************************************************/
+
+/* CONST sections */
+
+#ifdef J1939TP_START_SEC_CONST_8BIT
+# undef J1939TP_START_SEC_CONST_8BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_8BIT /* mapped to default const 8bit section */
+#endif
+#ifdef J1939TP_STOP_SEC_CONST_8BIT
+# undef J1939TP_STOP_SEC_CONST_8BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST /* default const stop section */
+#endif
+
+#ifdef J1939TP_START_SEC_CONST_16BIT
+# undef J1939TP_START_SEC_CONST_16BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_16BIT
+#endif
+#ifdef J1939TP_STOP_SEC_CONST_16BIT
+# undef J1939TP_STOP_SEC_CONST_16BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST
+#endif
+
+#ifdef J1939TP_START_SEC_CONST_32BIT
+# undef J1939TP_START_SEC_CONST_32BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_32BIT
+#endif
+#ifdef J1939TP_STOP_SEC_CONST_32BIT
+# undef J1939TP_STOP_SEC_CONST_32BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST
+#endif
+
+#ifdef J1939TP_START_SEC_CONST_UNSPECIFIED
+# undef J1939TP_START_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_UNSPECIFIED
+#endif
+#ifdef J1939TP_STOP_SEC_CONST_UNSPECIFIED
+# undef J1939TP_STOP_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST
+#endif
+
+
+/* FAST CONST sections */
+
+
+/* Postbuild CFG CONST sections */
+
+#ifdef J1939TP_START_SEC_PBCFG
+# undef J1939TP_START_SEC_PBCFG /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CONST_PBCFG
+#endif
+#ifdef J1939TP_STOP_SEC_PBCFG
+# undef J1939TP_STOP_SEC_PBCFG /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CONST
+#endif
+
+
+/*******  VAR sections  **********************************************************************************************/
+
+/* VAR INIT sections */
+
+#ifdef J1939TP_START_SEC_VAR_ZERO_INIT_8BIT
+# undef J1939TP_START_SEC_VAR_ZERO_INIT_8BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_ZERO_INIT_8BIT
+#endif
+#ifdef J1939TP_STOP_SEC_VAR_ZERO_INIT_8BIT
+# undef J1939TP_STOP_SEC_VAR_ZERO_INIT_8BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR NOINIT sections */
+
+#ifdef J1939TP_START_SEC_VAR_NOINIT_UNSPECIFIED
+# undef J1939TP_START_SEC_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_NOINIT_UNSPECIFIED
+#endif
+#ifdef J1939TP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+# undef J1939TP_STOP_SEC_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+#ifdef J1939TP_START_SEC_VAR_NOINIT_8BIT
+# undef J1939TP_START_SEC_VAR_NOINIT_8BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_NOINIT_8BIT
+#endif
+#ifdef J1939TP_STOP_SEC_VAR_NOINIT_8BIT
+# undef J1939TP_STOP_SEC_VAR_NOINIT_8BIT /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR ZERO INIT sections */
+
+#ifdef J1939TP_START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# undef J1939TP_START_SEC_VAR_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+#endif
+#ifdef J1939TP_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED
+# undef J1939TP_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR FAST INIT sections */
+
+
+/* VAR FAST NOINIT sections */
+
+
+/* VAR FAST ZERO INIT sections */
+
+
+/* Postbuild CFG VAR sections */
+
+#ifdef J1939TP_START_SEC_VAR_PBCFG
+# undef J1939TP_START_SEC_VAR_PBCFG /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_VAR_PBCFG
+#endif
+#ifdef J1939TP_STOP_SEC_VAR_PBCFG
+# undef J1939TP_STOP_SEC_VAR_PBCFG /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_VAR
+#endif
+
+/**********************************************************************************************************************
+ *  J1939TP END
+ *********************************************************************************************************************/ 
+ 
+/**********************************************************************************************************************
  *  LIN TRANSCEIVER TLE7259 DRIVER START
  *********************************************************************************************************************/
 /*******  CODE sections **********************************************************************************************/
