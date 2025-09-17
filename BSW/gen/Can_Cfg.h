@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Cfg.h
- *   Generation Time: 2025-09-17 16:38:17
+ *   Generation Time: 2025-09-17 16:59:54
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -379,10 +379,11 @@
 #define CanConf_CN_ATOM_CAN_PT_Tx_96h 5u
 #define CanConf_CN_ATOM_CAN_XCP_bbd3e829_Rx 9u
 #define CanConf_CN_ATOM_CAN_XCP_f42a46d4_Tx 8u
-#define CanConf_CN_J1939_bms_96c04df9_Rx 11u
-#define CanConf_CN_J1939_bms_dea99804_Tx 10u
-#define CanConf_CN_TC37X_VCU_CAN01_2f90d2fb_Rx 13u
-#define CanConf_CN_TC37X_VCU_CAN01_70b1f95e_Tx 12u
+#define CanConf_CN_J1939_bms_101956F4h_Tx 10u
+#define CanConf_CN_J1939_bms_96c04df9_Rx 12u
+#define CanConf_CN_J1939_bms_dea99804_Tx 11u
+#define CanConf_CN_TC37X_VCU_CAN01_2f90d2fb_Rx 14u
+#define CanConf_CN_TC37X_VCU_CAN01_70b1f95e_Tx 13u
 
 #define CanConf_ControllerBaudrateConfig_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292_CanControllerBaudrateConfig 0u
 #define CanConf_ControllerBaudrateConfig_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03_CanControllerBaudrateConfig 0u
@@ -1190,7 +1191,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_GetSIDFEOfPCConfig()                                      Can_SIDFE  /**< the pointer to Can_SIDFE */
 #define Can_GetSRN_AddressOfPCConfig()                                Can_SRN_Address  /**< the pointer to Can_SRN_Address */
 #define Can_GetShmAdrOfPCConfig()                                     Can_ShmAdr  /**< the pointer to Can_ShmAdr */
-#define Can_GetSizeOfActiveSendObjectOfPCConfig()                     9u  /**< the number of accomplishable value elements in Can_ActiveSendObject */
+#define Can_GetSizeOfActiveSendObjectOfPCConfig()                     10u  /**< the number of accomplishable value elements in Can_ActiveSendObject */
 #define Can_GetSizeOfBTPOfPCConfig()                                  5u  /**< the number of accomplishable value elements in Can_BTP */
 #define Can_GetSizeOfBufferConfigOfPCConfig()                         5u  /**< the number of accomplishable value elements in Can_BufferConfig */
 #define Can_GetSizeOfCanIfChannelIdOfPCConfig()                       5u  /**< the number of accomplishable value elements in Can_CanIfChannelId */
@@ -1204,7 +1205,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_GetSizeOfInitObjectFdBrsConfigOfPCConfig()                5u  /**< the number of accomplishable value elements in Can_InitObjectFdBrsConfig */
 #define Can_GetSizeOfInitObjectStartIndexOfPCConfig()                 6u  /**< the number of accomplishable value elements in Can_InitObjectStartIndex */
 #define Can_GetSizeOfIsrOsIdOfPCConfig()                              5u  /**< the number of accomplishable value elements in Can_IsrOsId */
-#define Can_GetSizeOfMailboxOfPCConfig()                              14u  /**< the number of accomplishable value elements in Can_Mailbox */
+#define Can_GetSizeOfMailboxOfPCConfig()                              15u  /**< the number of accomplishable value elements in Can_Mailbox */
 #define Can_GetSizeOfMemorySectionInfoOfPCConfig()                    5u  /**< the number of accomplishable value elements in Can_MemorySectionInfo */
 #define Can_GetSizeOfMemorySectionObjectsOfPCConfig()                 160u  /**< the number of accomplishable value elements in Can_MemorySectionObjects */
 #define Can_GetSizeOfSIDFCOfPCConfig()                                5u  /**< the number of accomplishable value elements in Can_SIDFC */
@@ -2033,7 +2034,7 @@ typedef uint8 Can_ControllerConfigIdxOfMailboxType;
 typedef uint8 Can_HwHandleOfMailboxType;
 
 /**   \brief  value based type definition for Can_IDValueOfMailbox */
-typedef uint8 Can_IDValueOfMailboxType;
+typedef uint32 Can_IDValueOfMailboxType;
 
 /**   \brief  value based type definition for Can_MailboxSizeOfMailbox */
 typedef uint8 Can_MailboxSizeOfMailboxType;
@@ -2298,10 +2299,10 @@ typedef struct sCan_ControllerDataType
 /**   \brief  type used in Can_Mailbox */
 typedef struct sCan_MailboxType
 {
+  Can_IDValueOfMailboxType IDValueOfMailbox;
   Can_ActiveSendObjectOfMailboxType ActiveSendObjectOfMailbox;
   Can_ControllerConfigIdxOfMailboxType ControllerConfigIdxOfMailbox;  /**< the index of the 1:1 relation pointing to Can_ControllerConfig */
   Can_HwHandleOfMailboxType HwHandleOfMailbox;
-  Can_IDValueOfMailboxType IDValueOfMailbox;
   Can_MailboxSizeOfMailboxType MailboxSizeOfMailbox;
   Can_MailboxTypeOfMailboxType MailboxTypeOfMailbox;
   Can_MaxDataLenOfMailboxType MaxDataLenOfMailbox;
@@ -2750,10 +2751,10 @@ extern CONST(Can_OsIsrType, CAN_CONST) Can_IsrOsId[5];
   \brief  mailbox configuration (over all controllers)
   \details
   Element                Description
+  IDValue            
   ActiveSendObject   
   ControllerConfigIdx    the index of the 1:1 relation pointing to Can_ControllerConfig
   HwHandle           
-  IDValue            
   MailboxSize        
   MailboxType        
   MaxDataLen         
@@ -2763,7 +2764,7 @@ extern CONST(Can_OsIsrType, CAN_CONST) Can_IsrOsId[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[14];
+extern CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[15];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2985,7 +2986,7 @@ extern CONST(Can_XIDFEType, CAN_CONST) Can_XIDFE[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[9];
+extern VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[10];
 #define CAN_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

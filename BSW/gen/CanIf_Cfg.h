@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanIf_Cfg.h
- *   Generation Time: 2025-09-17 16:38:19
+ *   Generation Time: 2025-09-17 16:59:57
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -260,9 +260,9 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIfTxPduHnd_BSD_oJ1939_bms_fde044b7_Tx                                                    36u
 #define CanIfTxPduHnd_BSM_oJ1939_bms_9623b7f3_Tx                                                    37u
 #define CanIfTxPduHnd_BCL_oJ1939_bms_23e5ef2c_Tx                                                    38u
-#define CanIfTxPduHnd_BST_oJ1939_bms_4a4e2ee5_Tx                                                    39u
-#define CanIfTxPduHnd_BRO_oJ1939_bms_c539320a_Tx                                                    40u
-#define CanIfTxPduHnd_BEM_oJ1939_bms_b95b1f8b_Tx                                                    41u
+#define CanIfTxPduHnd_BRO_oJ1939_bms_c539320a_Tx                                                    39u
+#define CanIfTxPduHnd_BEM_oJ1939_bms_b95b1f8b_Tx                                                    40u
+#define CanIfTxPduHnd_BST_oJ1939_bms_4a4e2ee5_Tx                                                    41u
 #define CanIfTxPduHnd_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_587183bc_Tx                                   42u
 #define CanIfTxPduHnd_VcuMeasurementMsg0_oTC37X_VCU_CAN01_b3a7d237_Tx                               43u
 #define CanIfTxPduHnd_VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_299915a8_Tx                                   44u
@@ -444,9 +444,9 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIfConf_CanIfTxPduCfg_BSD_oJ1939_bms_fde044b7_Tx                                          36u
 #define CanIfConf_CanIfTxPduCfg_BSM_oJ1939_bms_9623b7f3_Tx                                          37u
 #define CanIfConf_CanIfTxPduCfg_BCL_oJ1939_bms_23e5ef2c_Tx                                          38u
-#define CanIfConf_CanIfTxPduCfg_BST_oJ1939_bms_4a4e2ee5_Tx                                          39u
-#define CanIfConf_CanIfTxPduCfg_BRO_oJ1939_bms_c539320a_Tx                                          40u
-#define CanIfConf_CanIfTxPduCfg_BEM_oJ1939_bms_b95b1f8b_Tx                                          41u
+#define CanIfConf_CanIfTxPduCfg_BRO_oJ1939_bms_c539320a_Tx                                          39u
+#define CanIfConf_CanIfTxPduCfg_BEM_oJ1939_bms_b95b1f8b_Tx                                          40u
+#define CanIfConf_CanIfTxPduCfg_BST_oJ1939_bms_4a4e2ee5_Tx                                          41u
 #define CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_587183bc_Tx                         42u
 #define CanIfConf_CanIfTxPduCfg_VcuMeasurementMsg0_oTC37X_VCU_CAN01_b3a7d237_Tx                     43u
 #define CanIfConf_CanIfTxPduCfg_VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_299915a8_Tx                         44u
@@ -1044,7 +1044,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetRxPduConfigOfPCConfig()                                                            CanIf_RxPduConfig  /**< the pointer to CanIf_RxPduConfig */
 #define CanIf_GetSizeOfCanIfCtrlId2MappedTxBuffersConfigOfPCConfig()                                5u  /**< the number of accomplishable value elements in CanIf_CanIfCtrlId2MappedTxBuffersConfig */
 #define CanIf_GetSizeOfCtrlStatesOfPCConfig()                                                       5u  /**< the number of accomplishable value elements in CanIf_CtrlStates */
-#define CanIf_GetSizeOfMailBoxConfigOfPCConfig()                                                    14u  /**< the number of accomplishable value elements in CanIf_MailBoxConfig */
+#define CanIf_GetSizeOfMailBoxConfigOfPCConfig()                                                    15u  /**< the number of accomplishable value elements in CanIf_MailBoxConfig */
 #define CanIf_GetSizeOfMappedTxBuffersConfigOfPCConfig()                                            3u  /**< the number of accomplishable value elements in CanIf_MappedTxBuffersConfig */
 #define CanIf_GetSizeOfRxIndicationFctListOfPCConfig()                                              6u  /**< the number of accomplishable value elements in CanIf_RxIndicationFctList */
 #define CanIf_GetSizeOfRxPduConfigOfPCConfig()                                                      108u  /**< the number of accomplishable value elements in CanIf_RxPduConfig */
@@ -1903,7 +1903,7 @@ extern CONST(CanIf_CtrlModeIndicationFctType, CANIF_CONST) CanIf_CtrlModeIndicat
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_MailBoxConfigType, CANIF_CONST) CanIf_MailBoxConfig[14];
+extern CONST(CanIf_MailBoxConfigType, CANIF_CONST) CanIf_MailBoxConfig[15];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
