@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanSM_Lcfg.c
- *   Generation Time: 2025-09-17 15:19:46
+ *   Generation Time: 2025-09-17 16:38:18
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -61,14 +61,13 @@
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanSM_ChannelConfigType, CANSM_CONST) CanSM_ChannelConfig[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(CanSM_ChannelConfigType, CANSM_CONST) CanSM_ChannelConfig[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    ControllerId  NetworkHandle */
   { /*     0 */           4u,            3u },
-  { /*     1 */           5u,            4u },
-  { /*     2 */           0u,            0u },
-  { /*     3 */           1u,            1u },
-  { /*     4 */           2u,            2u },
-  { /*     5 */           3u,            5u }
+  { /*     1 */           0u,            0u },
+  { /*     2 */           1u,            1u },
+  { /*     3 */           2u,            2u },
+  { /*     4 */           3u,            4u }
 };
 #define CANSM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -82,7 +81,7 @@ CONST(CanSM_ChannelConfigType, CANSM_CONST) CanSM_ChannelConfig[6] = {  /* PRQA 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(CanSM_ChannelVarRecordType, CANSM_VAR_NOINIT) CanSM_ChannelVarRecord[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(CanSM_ChannelVarRecordType, CANSM_VAR_NOINIT) CanSM_ChannelVarRecord[5];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define CANSM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

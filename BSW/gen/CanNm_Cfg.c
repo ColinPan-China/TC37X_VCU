@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanNm_Cfg.c
- *   Generation Time: 2025-09-17 15:11:03
+ *   Generation Time: 2025-09-17 16:38:18
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -100,12 +100,11 @@
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    ComControlEnabled  NodeIdEnabled  ChannelId                                                            MsgCycleTime  MsgTimeoutTime  PduCbvPosition    PduNidPosition    RemoteSleepIndTime  RepeatMessageTime  TimeoutTime  WaitBusSleepTime        Referable Keys */
   { /*     0 */             FALSE,         FALSE, NmConf_NmChannelConfig_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0,                 0u,              150u,        200u,             201u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   { /*     1 */              TRUE,          TRUE, NmConf_NmChannelConfig_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0,                 0u,              150u,        200u,             201u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
-  { /*     2 */             FALSE,         FALSE,                  NmConf_NmChannelConfig_CN_TC37X_VCU_CAN01_70b1f95e,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0,                 0u,              150u,        200u,             201u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  { /*     3 */             FALSE,         FALSE,                  NmConf_NmChannelConfig_CN_TC37X_VCU_CAN03_9ebf9872,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0,                 0u,              150u,        200u,             201u }   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
+  { /*     2 */             FALSE,         FALSE,                  NmConf_NmChannelConfig_CN_TC37X_VCU_CAN01_70b1f95e,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0,                 0u,              150u,        200u,             201u }   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
 };
 #define CANNM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -143,12 +142,11 @@ CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[4] = {  /* PRQA 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanNm_PbChannelConfigType, CANNM_CONST) CanNm_PbChannelConfig[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(CanNm_PbChannelConfigType, CANNM_CONST) CanNm_PbChannelConfig[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    MsgCycleOffset  NodeId  RxMessageDataEndIdx  RxMessageDataLength  RxMessageDataStartIdx  RxMessageData_CBVIdx  RxMessageData_NIDIdx  RxMessageData_UserDataEndIdx  RxMessageData_UserDataLength  RxMessageData_UserDataStartIdx  TxMessageDataEndIdx  TxMessageDataLength  TxMessageDataStartIdx  TxMessageData_CBVIdx  TxMessageData_NIDIdx  TxMessageData_UserDataEndIdx  TxMessageData_UserDataLength  TxMessageData_UserDataStartIdx  TxPduId                                                                             Referable Keys */
   { /*     0 */             0u,    28u,                  8u,                  8u,                    0u,                   1u,                   0u,                           8u,                           6u,                             2u,                  8u,                  8u,                    0u,                   1u,                   0u,                           8u,                           6u,                             2u, CanIfConf_CanIfTxPduCfg_NM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_4d937c12_Tx },  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095] */
   { /*     1 */             0u,    28u,                 16u,                  8u,                    8u,                   9u,                   8u,                          16u,                           6u,                            10u,                 16u,                  8u,                    8u,                   9u,                   8u,                          16u,                           6u,                            10u, CanIfConf_CanIfTxPduCfg_NM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_21d4212a_Tx },  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/ATOM_CAN_Matrix_PT_V600_20250211_CAN_5212fbaf] */
-  { /*     2 */             0u,    28u,                 24u,                  8u,                   16u,                  17u,                  16u,                          24u,                           6u,                            18u,                 24u,                  8u,                   16u,                  17u,                  16u,                          24u,                           6u,                            18u,          CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_587183bc_Tx },  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a] */
-  { /*     3 */             0u,    28u,                 32u,                  8u,                   24u,                  25u,                  24u,                          32u,                           6u,                            26u,                 32u,                  8u,                   24u,                  25u,                  24u,                          32u,                           6u,                            26u,          CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_448b17d4_Tx }   /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a] */
+  { /*     2 */             0u,    28u,                 24u,                  8u,                   16u,                  17u,                  16u,                          24u,                           6u,                            18u,                 24u,                  8u,                   16u,                  17u,                  16u,                          24u,                           6u,                            18u,          CanIfConf_CanIfTxPduCfg_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_587183bc_Tx }   /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a] */
 };
 #define CANNM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -166,17 +164,16 @@ CONST(CanNm_PbChannelConfigType, CANNM_CONST) CanNm_PbChannelConfig[4] = {  /* P
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanNm_SysToNmChIndType, CANNM_CONST) CanNm_SysToNmChInd[9] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(CanNm_SysToNmChIndType, CANNM_CONST) CanNm_SysToNmChInd[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     SysToNmChInd           */
   /*     0 */                     0u,
   /*     1 */                     1u,
   /*     2 */  CANNM_NO_SYSTONMCHIND,
   /*     3 */                     2u,
-  /*     4 */                     3u,
+  /*     4 */  CANNM_NO_SYSTONMCHIND,
   /*     5 */  CANNM_NO_SYSTONMCHIND,
   /*     6 */  CANNM_NO_SYSTONMCHIND,
-  /*     7 */  CANNM_NO_SYSTONMCHIND,
-  /*     8 */  CANNM_NO_SYSTONMCHIND
+  /*     7 */  CANNM_NO_SYSTONMCHIND
 };
 #define CANNM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -199,7 +196,6 @@ VAR(CanNm_CommStateUType, CANNM_VAR_NOINIT) CanNm_CommState;  /* PRQA S 0759, 15
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
   /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  /*     3 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -222,7 +218,6 @@ VAR(CanNm_CoordReadyToSleepStateUType, CANNM_VAR_NOINIT) CanNm_CoordReadyToSleep
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
   /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  /*     3 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -258,7 +253,6 @@ VAR(CanNm_MsgConfirmationFlagUType, CANNM_VAR_NOINIT) CanNm_MsgConfirmationFlag;
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
   /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  /*     3 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -281,7 +275,6 @@ VAR(CanNm_MsgIndicationFlagUType, CANNM_VAR_NOINIT) CanNm_MsgIndicationFlag;  /*
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
   /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  /*     3 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -300,7 +293,6 @@ VAR(CanNm_MsgTimeoutTimerUType, CANNM_VAR_NOINIT) CanNm_MsgTimeoutTimer;  /* PRQ
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
   /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  /*     3 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
@@ -323,7 +315,6 @@ VAR(CanNm_MsgTimerUType, CANNM_VAR_NOINIT) CanNm_MsgTimer;  /* PRQA S 0759, 1514
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
   /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  /*     3 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
@@ -342,7 +333,6 @@ VAR(CanNm_NetworkRestartFlagUType, CANNM_VAR_NOINIT) CanNm_NetworkRestartFlag;  
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
   /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  /*     3 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -365,7 +355,6 @@ VAR(CanNm_NmStateUType, CANNM_VAR_NOINIT) CanNm_NmState;  /* PRQA S 0759, 1514, 
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
   /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  /*     3 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -384,7 +373,6 @@ VAR(CanNm_RepeatMsgTimerUType, CANNM_VAR_NOINIT) CanNm_RepeatMsgTimer;  /* PRQA 
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
   /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  /*     3 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
@@ -398,7 +386,7 @@ VAR(CanNm_RepeatMsgTimerUType, CANNM_VAR_NOINIT) CanNm_RepeatMsgTimer;  /* PRQA 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(CanNm_RxMessageDataType, CANNM_VAR_NOINIT) CanNm_RxMessageData[32];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(CanNm_RxMessageDataType, CANNM_VAR_NOINIT) CanNm_RxMessageData[24];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095, /ActiveEcuC/CanNm/CanNmGlobalConfig/ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095_NID] */
   /*     1 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095, /ActiveEcuC/CanNm/CanNmGlobalConfig/ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095_CBV] */
@@ -415,11 +403,6 @@ VAR(CanNm_RxMessageDataType, CANNM_VAR_NOINIT) CanNm_RxMessageData[32];  /* PRQA
   /*    18 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a_UserData] */
   /*   ... */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a_UserData] */
   /*    23 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a_UserData] */
-  /*    24 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a_NID] */
-  /*    25 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a_CBV] */
-  /*    26 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a_UserData] */
-  /*   ... */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a_UserData] */
-  /*    31 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a_UserData] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -442,7 +425,6 @@ VAR(CanNm_TimeoutTimerUType, CANNM_VAR_NOINIT) CanNm_TimeoutTimer;  /* PRQA S 07
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
   /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  /*     3 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
@@ -465,7 +447,6 @@ VAR(CanNm_TxControlStateUType, CANNM_VAR_NOINIT) CanNm_TxControlState;  /* PRQA 
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
   /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  /*     3 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -488,7 +469,6 @@ VAR(CanNm_TxControlStateRequestUType, CANNM_VAR_NOINIT) CanNm_TxControlStateRequ
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
   /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  /*     3 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -502,7 +482,7 @@ VAR(CanNm_TxControlStateRequestUType, CANNM_VAR_NOINIT) CanNm_TxControlStateRequ
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(CanNm_TxMessageDataType, CANNM_VAR_NOINIT) CanNm_TxMessageData[32];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(CanNm_TxMessageDataType, CANNM_VAR_NOINIT) CanNm_TxMessageData[24];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095, /ActiveEcuC/CanNm/CanNmGlobalConfig/ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095_NID] */
   /*     1 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095, /ActiveEcuC/CanNm/CanNmGlobalConfig/ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095_CBV] */
@@ -519,11 +499,6 @@ VAR(CanNm_TxMessageDataType, CANNM_VAR_NOINIT) CanNm_TxMessageData[32];  /* PRQA
   /*    18 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a_UserData] */
   /*   ... */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a_UserData] */
   /*    23 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN01_CAN_f1ec184a_UserData] */
-  /*    24 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a_NID] */
-  /*    25 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a_CBV] */
-  /*    26 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a_UserData] */
-  /*   ... */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a_UserData] */
-  /*    31 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a, /ActiveEcuC/CanNm/CanNmGlobalConfig/TC37X_VCU_CAN03_CAN_8b2c4b2a_UserData] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -542,7 +517,6 @@ VAR(CanNm_WaitBusSleepTimerUType, CANNM_VAR_NOINIT) CanNm_WaitBusSleepTimer;  /*
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
   /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
-  /*     3 */  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN03_9ebf9872] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */

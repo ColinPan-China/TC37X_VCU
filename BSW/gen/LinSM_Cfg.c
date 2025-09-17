@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinSM_Cfg.c
- *   Generation Time: 2025-09-17 15:11:03
+ *   Generation Time: 2025-09-17 16:38:18
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -97,17 +97,16 @@ CONST(LinSM_ChannelConfigType, LINSM_CONST) LinSM_ChannelConfig[3] = {  /* PRQA 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(LinSM_ComMToLinSMChannelType, LINSM_CONST) LinSM_ComMToLinSMChannel[9] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(LinSM_ComMToLinSMChannelType, LINSM_CONST) LinSM_ComMToLinSMChannel[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     ComMToLinSMChannel               Referable Keys */
   /*     0 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
   /*     1 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
   /*     2 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
   /*     3 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
   /*     4 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
-  /*     5 */  LINSM_NO_COMMTOLINSMCHANNEL,  /* [No LinSM Channel] */
-  /*     6 */                           0u,  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN00_b12a0454] */
-  /*     7 */                           1u,  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN01_c62d34c2] */
-  /*     8 */                           2u   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN02_5f246578] */
+  /*     5 */                           0u,  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN00_b12a0454] */
+  /*     6 */                           1u,  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN01_c62d34c2] */
+  /*     7 */                           2u   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_LIN02_5f246578] */
 };
 #define LINSM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */

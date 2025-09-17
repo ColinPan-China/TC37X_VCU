@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanNm_Cfg.h
- *   Generation Time: 2025-09-17 15:11:03
+ *   Generation Time: 2025-09-17 16:38:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -48,7 +48,7 @@
  *  GLOBAL CONSTANT MACROS
  *********************************************************************************************************************/
 
-#define CANNM_NUMBER_OF_CANNM_CHANNELS        4u
+#define CANNM_NUMBER_OF_CANNM_CHANNELS        3u
 /* Symbolic name defines for CanNmTxPdus */
 
 
@@ -63,7 +63,6 @@
 #define CanNmConf_CanNmTxPdu_NM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_7321f2c3_Tx 0
 #define CanNmConf_CanNmTxPdu_NM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_16e84d4a_Tx 1
 #define CanNmConf_CanNmTxPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_9aba5863_Tx 2
-#define CanNmConf_CanNmTxPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN03_61fe7220_Tx 3
 /**\} */
 
 /* Symbolic name defines for CanNmTxUserDataPdus */
@@ -84,7 +83,6 @@
 #define CanNmConf_CanNmRxPdu_ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095_Rx 0
 #define CanNmConf_CanNmRxPdu_ATOM_CAN_Matrix_PT_V600_20250211_CAN_5212fbaf_Rx 1
 #define CanNmConf_CanNmRxPdu_CanNmRxPdu_1                             2
-#define CanNmConf_CanNmRxPdu_CanNmRxPdu_002                           3
 /**\} */
 
 /* Options */
@@ -678,10 +676,10 @@
 #define CanNm_GetPbChannelConfigOfPCConfig()                          CanNm_PbChannelConfig  /**< the pointer to CanNm_PbChannelConfig */
 #define CanNm_GetRepeatMsgTimerOfPCConfig()                           CanNm_RepeatMsgTimer.raw  /**< the pointer to CanNm_RepeatMsgTimer */
 #define CanNm_GetRxMessageDataOfPCConfig()                            CanNm_RxMessageData  /**< the pointer to CanNm_RxMessageData */
-#define CanNm_GetSizeOfChannelConfigOfPCConfig()                      4u  /**< the number of accomplishable value elements in CanNm_ChannelConfig */
-#define CanNm_GetSizeOfPbChannelConfigOfPCConfig()                    4u  /**< the number of accomplishable value elements in CanNm_PbChannelConfig */
-#define CanNm_GetSizeOfSysToNmChIndOfPCConfig()                       9u  /**< the number of accomplishable value elements in CanNm_SysToNmChInd */
-#define CanNm_GetSizeOfTxMessageDataOfPCConfig()                      32u  /**< the number of accomplishable value elements in CanNm_TxMessageData */
+#define CanNm_GetSizeOfChannelConfigOfPCConfig()                      3u  /**< the number of accomplishable value elements in CanNm_ChannelConfig */
+#define CanNm_GetSizeOfPbChannelConfigOfPCConfig()                    3u  /**< the number of accomplishable value elements in CanNm_PbChannelConfig */
+#define CanNm_GetSizeOfSysToNmChIndOfPCConfig()                       8u  /**< the number of accomplishable value elements in CanNm_SysToNmChInd */
+#define CanNm_GetSizeOfTxMessageDataOfPCConfig()                      24u  /**< the number of accomplishable value elements in CanNm_TxMessageData */
 #define CanNm_GetSysToNmChIndOfPCConfig()                             CanNm_SysToNmChInd  /**< the pointer to CanNm_SysToNmChInd */
 #define CanNm_GetTimeoutTimerOfPCConfig()                             CanNm_TimeoutTimer.raw  /**< the pointer to CanNm_TimeoutTimer */
 #define CanNm_GetTxControlStateOfPCConfig()                           CanNm_TxControlState.raw  /**< the pointer to CanNm_TxControlState */
@@ -1406,7 +1404,6 @@ typedef struct CanNm_CommStateStructSTag
   CanNm_CommStateType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_CommStateType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
   CanNm_CommStateType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_CommStateType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_CommStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_CoordReadyToSleepState */
@@ -1415,7 +1412,6 @@ typedef struct CanNm_CoordReadyToSleepStateStructSTag
   CanNm_CoordReadyToSleepStateType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_CoordReadyToSleepStateType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
   CanNm_CoordReadyToSleepStateType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_CoordReadyToSleepStateType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_CoordReadyToSleepStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_MsgConfirmationFlag */
@@ -1424,7 +1420,6 @@ typedef struct CanNm_MsgConfirmationFlagStructSTag
   CanNm_MsgConfirmationFlagType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_MsgConfirmationFlagType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
   CanNm_MsgConfirmationFlagType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_MsgConfirmationFlagType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_MsgConfirmationFlagStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_MsgIndicationFlag */
@@ -1433,7 +1428,6 @@ typedef struct CanNm_MsgIndicationFlagStructSTag
   CanNm_MsgIndicationFlagType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_MsgIndicationFlagType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
   CanNm_MsgIndicationFlagType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_MsgIndicationFlagType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_MsgIndicationFlagStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_MsgTimeoutTimer */
@@ -1442,7 +1436,6 @@ typedef struct CanNm_MsgTimeoutTimerStructSTag
   CanNm_MsgTimeoutTimerType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_MsgTimeoutTimerType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
   CanNm_MsgTimeoutTimerType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_MsgTimeoutTimerType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_MsgTimeoutTimerStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_MsgTimer */
@@ -1451,7 +1444,6 @@ typedef struct CanNm_MsgTimerStructSTag
   CanNm_MsgTimerType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_MsgTimerType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
   CanNm_MsgTimerType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_MsgTimerType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_MsgTimerStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_NetworkRestartFlag */
@@ -1460,7 +1452,6 @@ typedef struct CanNm_NetworkRestartFlagStructSTag
   CanNm_NetworkRestartFlagType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_NetworkRestartFlagType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
   CanNm_NetworkRestartFlagType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_NetworkRestartFlagType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_NetworkRestartFlagStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_NmState */
@@ -1469,7 +1460,6 @@ typedef struct CanNm_NmStateStructSTag
   CanNm_NmStateType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_NmStateType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
   CanNm_NmStateType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_NmStateType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_NmStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_RepeatMsgTimer */
@@ -1478,7 +1468,6 @@ typedef struct CanNm_RepeatMsgTimerStructSTag
   CanNm_RepeatMsgTimerType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_RepeatMsgTimerType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
   CanNm_RepeatMsgTimerType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_RepeatMsgTimerType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_RepeatMsgTimerStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_TimeoutTimer */
@@ -1487,7 +1476,6 @@ typedef struct CanNm_TimeoutTimerStructSTag
   CanNm_TimeoutTimerType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_TimeoutTimerType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
   CanNm_TimeoutTimerType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_TimeoutTimerType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_TimeoutTimerStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_TxControlState */
@@ -1496,7 +1484,6 @@ typedef struct CanNm_TxControlStateStructSTag
   CanNm_TxControlStateType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_TxControlStateType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
   CanNm_TxControlStateType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_TxControlStateType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_TxControlStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_TxControlStateRequest */
@@ -1505,7 +1492,6 @@ typedef struct CanNm_TxControlStateRequestStructSTag
   CanNm_TxControlStateRequestType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_TxControlStateRequestType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
   CanNm_TxControlStateRequestType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_TxControlStateRequestType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_TxControlStateRequestStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_WaitBusSleepTimer */
@@ -1514,7 +1500,6 @@ typedef struct CanNm_WaitBusSleepTimerStructSTag
   CanNm_WaitBusSleepTimerType CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac;
   CanNm_WaitBusSleepTimerType CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d;
   CanNm_WaitBusSleepTimerType CN_TC37X_VCU_CAN01_70b1f95e;
-  CanNm_WaitBusSleepTimerType CN_TC37X_VCU_CAN03_9ebf9872;
 } CanNm_WaitBusSleepTimerStructSType;
 
 /** 
@@ -1529,91 +1514,91 @@ typedef struct CanNm_WaitBusSleepTimerStructSTag
 /**   \brief  type to access CanNm_CommState in an index and symbol based style. */
 typedef union CanNm_CommStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_CommStateType raw[4];
+  CanNm_CommStateType raw[3];
   CanNm_CommStateStructSType str;
 } CanNm_CommStateUType;
 
 /**   \brief  type to access CanNm_CoordReadyToSleepState in an index and symbol based style. */
 typedef union CanNm_CoordReadyToSleepStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_CoordReadyToSleepStateType raw[4];
+  CanNm_CoordReadyToSleepStateType raw[3];
   CanNm_CoordReadyToSleepStateStructSType str;
 } CanNm_CoordReadyToSleepStateUType;
 
 /**   \brief  type to access CanNm_MsgConfirmationFlag in an index and symbol based style. */
 typedef union CanNm_MsgConfirmationFlagUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_MsgConfirmationFlagType raw[4];
+  CanNm_MsgConfirmationFlagType raw[3];
   CanNm_MsgConfirmationFlagStructSType str;
 } CanNm_MsgConfirmationFlagUType;
 
 /**   \brief  type to access CanNm_MsgIndicationFlag in an index and symbol based style. */
 typedef union CanNm_MsgIndicationFlagUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_MsgIndicationFlagType raw[4];
+  CanNm_MsgIndicationFlagType raw[3];
   CanNm_MsgIndicationFlagStructSType str;
 } CanNm_MsgIndicationFlagUType;
 
 /**   \brief  type to access CanNm_MsgTimeoutTimer in an index and symbol based style. */
 typedef union CanNm_MsgTimeoutTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_MsgTimeoutTimerType raw[4];
+  CanNm_MsgTimeoutTimerType raw[3];
   CanNm_MsgTimeoutTimerStructSType str;
 } CanNm_MsgTimeoutTimerUType;
 
 /**   \brief  type to access CanNm_MsgTimer in an index and symbol based style. */
 typedef union CanNm_MsgTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_MsgTimerType raw[4];
+  CanNm_MsgTimerType raw[3];
   CanNm_MsgTimerStructSType str;
 } CanNm_MsgTimerUType;
 
 /**   \brief  type to access CanNm_NetworkRestartFlag in an index and symbol based style. */
 typedef union CanNm_NetworkRestartFlagUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_NetworkRestartFlagType raw[4];
+  CanNm_NetworkRestartFlagType raw[3];
   CanNm_NetworkRestartFlagStructSType str;
 } CanNm_NetworkRestartFlagUType;
 
 /**   \brief  type to access CanNm_NmState in an index and symbol based style. */
 typedef union CanNm_NmStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_NmStateType raw[4];
+  CanNm_NmStateType raw[3];
   CanNm_NmStateStructSType str;
 } CanNm_NmStateUType;
 
 /**   \brief  type to access CanNm_RepeatMsgTimer in an index and symbol based style. */
 typedef union CanNm_RepeatMsgTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_RepeatMsgTimerType raw[4];
+  CanNm_RepeatMsgTimerType raw[3];
   CanNm_RepeatMsgTimerStructSType str;
 } CanNm_RepeatMsgTimerUType;
 
 /**   \brief  type to access CanNm_TimeoutTimer in an index and symbol based style. */
 typedef union CanNm_TimeoutTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_TimeoutTimerType raw[4];
+  CanNm_TimeoutTimerType raw[3];
   CanNm_TimeoutTimerStructSType str;
 } CanNm_TimeoutTimerUType;
 
 /**   \brief  type to access CanNm_TxControlState in an index and symbol based style. */
 typedef union CanNm_TxControlStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_TxControlStateType raw[4];
+  CanNm_TxControlStateType raw[3];
   CanNm_TxControlStateStructSType str;
 } CanNm_TxControlStateUType;
 
 /**   \brief  type to access CanNm_TxControlStateRequest in an index and symbol based style. */
 typedef union CanNm_TxControlStateRequestUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_TxControlStateRequestType raw[4];
+  CanNm_TxControlStateRequestType raw[3];
   CanNm_TxControlStateRequestStructSType str;
 } CanNm_TxControlStateRequestUType;
 
 /**   \brief  type to access CanNm_WaitBusSleepTimer in an index and symbol based style. */
 typedef union CanNm_WaitBusSleepTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanNm_WaitBusSleepTimerType raw[4];
+  CanNm_WaitBusSleepTimerType raw[3];
   CanNm_WaitBusSleepTimerStructSType str;
 } CanNm_WaitBusSleepTimerUType;
 
@@ -1745,7 +1730,7 @@ typedef CanNm_PCConfigType CanNm_ConfigType;  /**< A structure type is present f
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[4];
+extern CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[3];
 #define CANNM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1782,7 +1767,7 @@ extern CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[4];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanNm_PbChannelConfigType, CANNM_CONST) CanNm_PbChannelConfig[4];
+extern CONST(CanNm_PbChannelConfigType, CANNM_CONST) CanNm_PbChannelConfig[3];
 #define CANNM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1799,7 +1784,7 @@ extern CONST(CanNm_PbChannelConfigType, CANNM_CONST) CanNm_PbChannelConfig[4];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanNm_SysToNmChIndType, CANNM_CONST) CanNm_SysToNmChInd[9];
+extern CONST(CanNm_SysToNmChIndType, CANNM_CONST) CanNm_SysToNmChInd[8];
 #define CANNM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1966,7 +1951,7 @@ extern VAR(CanNm_RepeatMsgTimerUType, CANNM_VAR_NOINIT) CanNm_RepeatMsgTimer;  /
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(CanNm_RxMessageDataType, CANNM_VAR_NOINIT) CanNm_RxMessageData[32];
+extern VAR(CanNm_RxMessageDataType, CANNM_VAR_NOINIT) CanNm_RxMessageData[24];
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2030,7 +2015,7 @@ extern VAR(CanNm_TxControlStateRequestUType, CANNM_VAR_NOINIT) CanNm_TxControlSt
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(CanNm_TxMessageDataType, CANNM_VAR_NOINIT) CanNm_TxMessageData[32];
+extern VAR(CanNm_TxMessageDataType, CANNM_VAR_NOINIT) CanNm_TxMessageData[24];
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

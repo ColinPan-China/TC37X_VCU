@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: J1939Tp_Cfg.c
- *   Generation Time: 2025-09-17 15:11:03
+ *   Generation Time: 2025-09-17 16:38:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -196,12 +196,12 @@ CONST(J1939Tp_RxPduTxChannelTxChannelTableIndType, J1939TP_CONST) J1939Tp_RxPduT
 /*lint -restore */
 CONST(J1939Tp_TxChannelType, J1939TP_CONST) J1939Tp_TxChannel[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    ComMChannel  TxChannelTxNSduTxNSduTableIndEndIdx  TxChannelTxNSduTxNSduTableIndStartIdx  TxDa   TxMaxPacketsPerBlock  TxPduTxCmNPduIdx  TxPduTxDtNPduIdx  TxPri  TxProtocolType                                     TxSa         Referable Keys */
-  { /*     0 */          5u,                                  1u,                                    0u, 0x56u,                 255u,               0u,               1u, 0x06u, J1939TP_PROTOCOL_UNUSED_TXPROTOCOLTYPEOFTXCHANNEL, 0xF4u },  /* [/ActiveEcuC/J1939Tp/J1939TpConfiguration/J1939_bms_J1939_1f2dfa0e] */
-  { /*     1 */          5u,                                  2u,                                    1u, 0x56u,                 255u,               0u,               1u, 0x06u, J1939TP_PROTOCOL_UNUSED_TXPROTOCOLTYPEOFTXCHANNEL, 0xF4u },  /* [/ActiveEcuC/J1939Tp/J1939TpConfiguration/J1939_bms_J1939_537c2fa8] */
-  { /*     2 */          5u,                                  3u,                                    2u, 0x56u,                 255u,               0u,               1u, 0x06u, J1939TP_PROTOCOL_UNUSED_TXPROTOCOLTYPEOFTXCHANNEL, 0xF4u },  /* [/ActiveEcuC/J1939Tp/J1939TpConfiguration/J1939_bms_J1939_68b328fe] */
-  { /*     3 */          5u,                                  4u,                                    3u, 0x56u,                 255u,               0u,               1u, 0x06u, J1939TP_PROTOCOL_UNUSED_TXPROTOCOLTYPEOFTXCHANNEL, 0xF4u },  /* [/ActiveEcuC/J1939Tp/J1939TpConfiguration/J1939_bms_J1939_7d6881ae] */
-  { /*     4 */          5u,                                  5u,                                    4u, 0x56u,                 255u,               0u,               1u, 0x06u, J1939TP_PROTOCOL_UNUSED_TXPROTOCOLTYPEOFTXCHANNEL, 0xF4u },  /* [/ActiveEcuC/J1939Tp/J1939TpConfiguration/J1939_bms_J1939_91531f31] */
-  { /*     5 */          5u,                                  6u,                                    5u, 0x56u,                 255u,               0u,               1u, 0x06u, J1939TP_PROTOCOL_UNUSED_TXPROTOCOLTYPEOFTXCHANNEL, 0xF4u }   /* [/ActiveEcuC/J1939Tp/J1939TpConfiguration/J1939_bms_J1939_9395bbb3] */
+  { /*     0 */          4u,                                  1u,                                    0u, 0x56u,                 255u,               0u,               1u, 0x06u, J1939TP_PROTOCOL_UNUSED_TXPROTOCOLTYPEOFTXCHANNEL, 0xF4u },  /* [/ActiveEcuC/J1939Tp/J1939TpConfiguration/J1939_bms_J1939_1f2dfa0e] */
+  { /*     1 */          4u,                                  2u,                                    1u, 0x56u,                 255u,               0u,               1u, 0x06u, J1939TP_PROTOCOL_UNUSED_TXPROTOCOLTYPEOFTXCHANNEL, 0xF4u },  /* [/ActiveEcuC/J1939Tp/J1939TpConfiguration/J1939_bms_J1939_537c2fa8] */
+  { /*     2 */          4u,                                  3u,                                    2u, 0x56u,                 255u,               0u,               1u, 0x06u, J1939TP_PROTOCOL_UNUSED_TXPROTOCOLTYPEOFTXCHANNEL, 0xF4u },  /* [/ActiveEcuC/J1939Tp/J1939TpConfiguration/J1939_bms_J1939_68b328fe] */
+  { /*     3 */          4u,                                  4u,                                    3u, 0x56u,                 255u,               0u,               1u, 0x06u, J1939TP_PROTOCOL_UNUSED_TXPROTOCOLTYPEOFTXCHANNEL, 0xF4u },  /* [/ActiveEcuC/J1939Tp/J1939TpConfiguration/J1939_bms_J1939_7d6881ae] */
+  { /*     4 */          4u,                                  5u,                                    4u, 0x56u,                 255u,               0u,               1u, 0x06u, J1939TP_PROTOCOL_UNUSED_TXPROTOCOLTYPEOFTXCHANNEL, 0xF4u },  /* [/ActiveEcuC/J1939Tp/J1939TpConfiguration/J1939_bms_J1939_91531f31] */
+  { /*     5 */          4u,                                  6u,                                    5u, 0x56u,                 255u,               0u,               1u, 0x06u, J1939TP_PROTOCOL_UNUSED_TXPROTOCOLTYPEOFTXCHANNEL, 0xF4u }   /* [/ActiveEcuC/J1939Tp/J1939TpConfiguration/J1939_bms_J1939_9395bbb3] */
 };
 #define J1939TP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

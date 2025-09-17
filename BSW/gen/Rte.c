@@ -6972,9 +6972,6 @@ TASK(Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 
       /* call runnable */
       ComM_MainFunction_7(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-      /* call runnable */
-      ComM_MainFunction_8(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
     if ((ev & Rte_Ev_Cyclic2_Bsw_Task_0_10ms) != (EventMaskType)0)

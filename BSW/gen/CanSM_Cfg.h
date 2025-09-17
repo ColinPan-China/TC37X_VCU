@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanSM_Cfg.h
- *   Generation Time: 2025-09-17 15:19:46
+ *   Generation Time: 2025-09-17 16:38:18
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -147,7 +147,7 @@
 #define CanSM_GetChannelVarRecordOfPCConfig()                                                       CanSM_ChannelVarRecord  /**< the pointer to CanSM_ChannelVarRecord */
 #define CanSM_GetModeRequestRepetitionMaxOfPCConfig()                                               10u  /**< getCanSMModeRequestRepetitionMax */
 #define CanSM_GetModeRequestRepetitionTimeOfPCConfig()                                              10u  /**< periond of ModeRequest Repetition */
-#define CanSM_GetSizeOfChannelConfigOfPCConfig()                                                    6u  /**< the number of accomplishable value elements in CanSM_ChannelConfig */
+#define CanSM_GetSizeOfChannelConfigOfPCConfig()                                                    5u  /**< the number of accomplishable value elements in CanSM_ChannelConfig */
 /** 
   \}
 */ 
@@ -634,7 +634,7 @@ typedef CanSM_PCConfigType CanSM_ConfigType;  /**< A structure type is present f
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanSM_ChannelConfigType, CANSM_CONST) CanSM_ChannelConfig[6];
+extern CONST(CanSM_ChannelConfigType, CANSM_CONST) CanSM_ChannelConfig[5];
 #define CANSM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -647,7 +647,7 @@ extern CONST(CanSM_ChannelConfigType, CANSM_CONST) CanSM_ChannelConfig[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(CanSM_ChannelVarRecordType, CANSM_VAR_NOINIT) CanSM_ChannelVarRecord[6];
+extern VAR(CanSM_ChannelVarRecordType, CANSM_VAR_NOINIT) CanSM_ChannelVarRecord[5];
 #define CANSM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

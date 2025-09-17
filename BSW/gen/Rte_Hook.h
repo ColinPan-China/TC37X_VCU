@@ -1084,8 +1084,6 @@
  *  Rte_Runnable_ComM_ComM_MainFunction_6_Start
  *  Rte_Runnable_ComM_ComM_MainFunction_7_Return
  *  Rte_Runnable_ComM_ComM_MainFunction_7_Start
- *  Rte_Runnable_ComM_ComM_MainFunction_8_Return
- *  Rte_Runnable_ComM_ComM_MainFunction_8_Start
  *  Rte_Runnable_ComM_GetCurrentComMode_Return
  *  Rte_Runnable_ComM_GetCurrentComMode_Start
  *  Rte_Runnable_ComM_GetInhibitionStatus_Return
@@ -1938,8 +1936,6 @@
  *  SchM_Schedulable_ComM_ComM_MainFunction_6_Start
  *  SchM_Schedulable_ComM_ComM_MainFunction_7_Return
  *  SchM_Schedulable_ComM_ComM_MainFunction_7_Start
- *  SchM_Schedulable_ComM_ComM_MainFunction_8_Return
- *  SchM_Schedulable_ComM_ComM_MainFunction_8_Start
  *  SchM_Schedulable_Com_Com_MainFunctionRx_ComMainFunctionRx_Return
  *  SchM_Schedulable_Com_Com_MainFunctionRx_ComMainFunctionRx_Start
  *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_Return
