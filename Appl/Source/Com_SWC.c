@@ -109,8 +109,6 @@
  * Bts7xx_HS2_En: Integer in interval [-128...127]
  * Bts7xx_HS3_En: Integer in interval [-128...127]
  * Bts7xx_HS4_En: Integer in interval [-128...127]
- * ECC_PMP2_SpdSet: Integer in interval [0...100]
- * ECC_PMP3_SpdSet: Integer in interval [0...100]
  * EXT_PWM_IN1_Duty: Integer in interval [-128...127]
  * EXT_PWM_IN1_Period: Integer in interval [-32768...32767]
  * EXT_PWM_IN2_Duty: Integer in interval [-128...127]
@@ -179,8 +177,6 @@
  * ==================
  *   Explicit S/R API:
  *   -----------------
- *   Std_ReturnType Rte_Write_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet(ECC_PMP2_SpdSet data)
- *   Std_ReturnType Rte_Write_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet(ECC_PMP3_SpdSet data)
  *   Std_ReturnType Rte_Write_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty(EXT_PWM_IN1_Duty data)
  *   Std_ReturnType Rte_Write_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period(EXT_PWM_IN1_Period data)
  *   Std_ReturnType Rte_Write_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty(EXT_PWM_IN2_Duty data)
@@ -208,8 +204,8 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_2ms(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Com_Runnable_2ms
  *********************************************************************************************************************/
-//  Rte_Write_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet(SpeedSet);
-//  Rte_Write_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet(SpeedSet);
+
+ 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

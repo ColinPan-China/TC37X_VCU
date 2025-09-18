@@ -341,31 +341,31 @@ FUNC(void, SWC1_CODE) SWC1_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD
  *   Std_ReturnType Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_WriteBlock(dtRef_const_VOID SrcPtr)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_NvMService_AC3_SRBS_E_NOT_OK
- *   Std_ReturnType Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_GetCurrentComMode(ComM_ModeType *ComMode)
- *     Synchronous Service Invocation. Timeout: None
- *     Returned Application Errors: RTE_E_ComM_UserRequest_E_NOT_OK
- *   Std_ReturnType Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(ComM_ModeType ComMode)
+ *   Std_ReturnType Rte_Call_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0_RequestComMode(ComM_ModeType ComMode)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
- *   Std_ReturnType Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(ComM_ModeType ComMode)
+ *   Std_ReturnType Rte_Call_UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79_RequestComMode(ComM_ModeType ComMode)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
- *   Std_ReturnType Rte_Call_UR_CN_LIN01_778f96a0_GetCurrentComMode(ComM_ModeType *ComMode)
+ *   Std_ReturnType Rte_Call_UR_CN_ATOM_CAN_XCP_ca35a39e_RequestComMode(ComM_ModeType ComMode)
  *     Synchronous Service Invocation. Timeout: None
- *     Returned Application Errors: RTE_E_ComM_UserRequest_E_NOT_OK
- *   Std_ReturnType Rte_Call_UR_CN_LIN01_778f96a0_RequestComMode(ComM_ModeType ComMode)
+ *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
+ *   Std_ReturnType Rte_Call_UR_CN_ATOM_HWLIN1_b196509b_RequestComMode(ComM_ModeType ComMode)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
+ *   Std_ReturnType Rte_Call_UR_CN_ATOM_HWLIN3_b56380a6_RequestComMode(ComM_ModeType ComMode)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
+ *   Std_ReturnType Rte_Call_UR_CN_ATOM_HWLIN4_57bf9bdf_RequestComMode(ComM_ModeType ComMode)
+ *     Synchronous Service Invocation. Timeout: None
+ *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
+ *   Std_ReturnType Rte_Call_UR_CN_J1939_bms_d26c50b6_RequestComMode(ComM_ModeType ComMode)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
  *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_GetCurrentComMode(ComM_ModeType *ComMode)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_NOT_OK
  *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode(ComM_ModeType ComMode)
- *     Synchronous Service Invocation. Timeout: None
- *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
- *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_GetCurrentComMode(ComM_ModeType *ComMode)
- *     Synchronous Service Invocation. Timeout: None
- *     Returned Application Errors: RTE_E_ComM_UserRequest_E_NOT_OK
- *   Std_ReturnType Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_RequestComMode(ComM_ModeType ComMode)
  *     Synchronous Service Invocation. Timeout: None
  *     Returned Application Errors: RTE_E_ComM_UserRequest_E_MODE_LIMITATION, RTE_E_ComM_UserRequest_E_NOT_OK
  *
@@ -442,32 +442,27 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
 
   if( ShutdownTimer < 500 )
   {
-    Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_FULL_COMMUNICATION );
+    Rte_Call_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0_RequestComMode(COMM_FULL_COMMUNICATION);
+    Rte_Call_UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79_RequestComMode(COMM_FULL_COMMUNICATION);
+    Rte_Call_UR_CN_ATOM_CAN_XCP_ca35a39e_RequestComMode(COMM_FULL_COMMUNICATION);
+    Rte_Call_UR_CN_J1939_bms_d26c50b6_RequestComMode(COMM_FULL_COMMUNICATION);
+    Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode(COMM_FULL_COMMUNICATION);
 
-    Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(COMM_FULL_COMMUNICATION);
-    Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_RequestComMode(COMM_FULL_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMChannel_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac, COMM_FULL_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_XCP_ca35a39e, COMM_FULL_COMMUNICATION);
-
-
-    ComM_RequestComMode( ComMConf_ComMUser_CN_ATOM_HWLIN1_b196509b,COMM_FULL_COMMUNICATION);
-    ComM_RequestComMode( ComMConf_ComMUser_CN_ATOM_HWLIN3_b56380a6,COMM_FULL_COMMUNICATION);
-    ComM_RequestComMode( ComMConf_ComMUser_CN_ATOM_HWLIN4_57bf9bdf,COMM_FULL_COMMUNICATION);
-
-    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79, COMM_FULL_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMChannel_CN_J1939_bms_dea99804, COMM_FULL_COMMUNICATION);
-    Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_FULL_COMMUNICATION);
-    Rte_Call_UR_CN_LIN01_778f96a0_RequestComMode(COMM_FULL_COMMUNICATION);
+    Rte_Call_UR_CN_ATOM_HWLIN1_b196509b_RequestComMode(COMM_FULL_COMMUNICATION);
+    Rte_Call_UR_CN_ATOM_HWLIN3_b56380a6_RequestComMode(COMM_FULL_COMMUNICATION);
+    Rte_Call_UR_CN_ATOM_HWLIN4_57bf9bdf_RequestComMode(COMM_FULL_COMMUNICATION);
   }
   else/* Mcu go shutdown */
   {
-    Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode( COMM_NO_COMMUNICATION );
-    Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_RequestComMode(COMM_NO_COMMUNICATION);
-    Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode( COMM_NO_COMMUNICATION );
+    Rte_Call_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0_RequestComMode(COMM_NO_COMMUNICATION);
+    Rte_Call_UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79_RequestComMode(COMM_NO_COMMUNICATION);
+    Rte_Call_UR_CN_ATOM_CAN_XCP_ca35a39e_RequestComMode(COMM_NO_COMMUNICATION);
+    Rte_Call_UR_CN_J1939_bms_d26c50b6_RequestComMode(COMM_NO_COMMUNICATION);
+    Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode(COMM_NO_COMMUNICATION);
 
-    ComM_RequestComMode(ComMConf_ComMChannel_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac, COMM_NO_COMMUNICATION);
-    Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(COMM_NO_COMMUNICATION);
-    Rte_Call_UR_CN_LIN01_778f96a0_RequestComMode(COMM_NO_COMMUNICATION);
+    Rte_Call_UR_CN_ATOM_HWLIN1_b196509b_RequestComMode(COMM_NO_COMMUNICATION);
+    Rte_Call_UR_CN_ATOM_HWLIN3_b56380a6_RequestComMode(COMM_NO_COMMUNICATION);
+    Rte_Call_UR_CN_ATOM_HWLIN4_57bf9bdf_RequestComMode(COMM_NO_COMMUNICATION);
     Rte_Write_Request_ESH_RunRequest_0_requestedMode(0);
   }
 

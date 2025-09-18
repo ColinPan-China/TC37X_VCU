@@ -101,8 +101,8 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_SWC1_NvM_Data_IF_UserData2_Send_Element
 #  define RTE_START_SEC_COMM_APPL_CODE
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-FUNC(Std_ReturnType, RTE_COMM_APPL_CODE) ComM_GetCurrentComMode(ComM_UserHandleType parg0, P2VAR(ComM_ModeType, AUTOMATIC, RTE_COMM_APPL_VAR) ComMode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_COMM_APPL_CODE) ComM_RequestComMode(ComM_UserHandleType parg0, ComM_ModeType ComMode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, RTE_COMM_APPL_CODE) ComM_GetCurrentComMode(ComM_UserHandleType parg0, P2VAR(ComM_ModeType, AUTOMATIC, RTE_COMM_APPL_VAR) ComMode); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 
 #  define RTE_STOP_SEC_COMM_APPL_CODE
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -128,15 +128,15 @@ FUNC(Std_ReturnType, RTE_NVM_APPL_CODE) NvM_WriteBlock(NvM_BlockIdType parg0, dt
 #  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus((NvM_BlockIdType)10, arg1))
 #  define Rte_Call_NvMService_AC3_SRBS_NvBlockNeed_UserData3_WriteBlock(arg1) (NvM_WriteBlock((NvM_BlockIdType)10, arg1))
 #  define Rte_Call_NvSWC_UserData2_NvMService_AC3_SRBS_SetRamBlockStatus(arg1) (NvM_SetRamBlockStatus(NvMConf_NvMBlockDescriptor_NvM_SWC_NVBlockDescriptor_UserData2, arg1))
-#  define Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_GetCurrentComMode(arg1) (RTE_E_UNCONNECTED)
-#  define Rte_Call_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode(arg1) (RTE_E_UNCONNECTED)
-#  define Rte_Call_UR_CN_LIN00_984dfd9e_RequestComMode(arg1) (RTE_E_UNCONNECTED)
-#  define Rte_Call_UR_CN_LIN01_778f96a0_GetCurrentComMode(arg1) (RTE_E_UNCONNECTED)
-#  define Rte_Call_UR_CN_LIN01_778f96a0_RequestComMode(arg1) (RTE_E_UNCONNECTED)
+#  define Rte_Call_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)0, arg1))
+#  define Rte_Call_UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)1, arg1))
+#  define Rte_Call_UR_CN_ATOM_CAN_XCP_ca35a39e_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)2, arg1))
+#  define Rte_Call_UR_CN_ATOM_HWLIN1_b196509b_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)5, arg1))
+#  define Rte_Call_UR_CN_ATOM_HWLIN3_b56380a6_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)6, arg1))
+#  define Rte_Call_UR_CN_ATOM_HWLIN4_57bf9bdf_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)7, arg1))
+#  define Rte_Call_UR_CN_J1939_bms_d26c50b6_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)4, arg1))
 #  define Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_GetCurrentComMode(arg1) (ComM_GetCurrentComMode((ComM_UserHandleType)3, arg1))
 #  define Rte_Call_UR_CN_TC37X_VCU_CAN01_5e76994c_RequestComMode(arg1) (ComM_RequestComMode((ComM_UserHandleType)3, arg1))
-#  define Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_GetCurrentComMode(arg1) (RTE_E_UNCONNECTED)
-#  define Rte_Call_UR_CN_TC37X_VCU_CAN03_5a834971_RequestComMode(arg1) (RTE_E_UNCONNECTED)
 
 /**********************************************************************************************************************
  * Rte_CData (SW-C local calibration parameters)

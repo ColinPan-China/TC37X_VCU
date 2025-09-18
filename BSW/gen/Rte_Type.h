@@ -195,12 +195,6 @@ typedef sint8 Bts7xx_HS3_En;
 # define Rte_TypeDef_Bts7xx_HS4_En
 typedef sint8 Bts7xx_HS4_En;
 
-# define Rte_TypeDef_ECC_PMP2_SpdSet
-typedef uint8 ECC_PMP2_SpdSet;
-
-# define Rte_TypeDef_ECC_PMP3_SpdSet
-typedef uint8 ECC_PMP3_SpdSet;
-
 # define Rte_TypeDef_EXT_PWM_IN1_Duty
 typedef sint8 EXT_PWM_IN1_Duty;
 

@@ -8,48 +8,6 @@
         <APPLICATION-SW-COMPONENT-TYPE UUID="B0B3BBD8-627F-420D-97B3-AF512CEDE6E2">
           <SHORT-NAME>Com_SWC</SHORT-NAME>
           <PORTS>
-            <P-PORT-PROTOTYPE UUID="9E15A807-3BB0-4253-BF08-878616B3C49F">
-              <SHORT-NAME>ECC_PMP2_SpdSet</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV">
-                    <SD GID="DV:ImportModePreset">Keep</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <PROVIDED-COM-SPECS>
-                <NONQUEUED-SENDER-COM-SPEC>
-                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP2_SpdSet/ECC_PMP2_SpdSet</DATA-ELEMENT-REF>
-                  <INIT-VALUE>
-                    <NUMERICAL-VALUE-SPECIFICATION>
-                      <VALUE>0</VALUE>
-                    </NUMERICAL-VALUE-SPECIFICATION>
-                  </INIT-VALUE>
-                </NONQUEUED-SENDER-COM-SPEC>
-              </PROVIDED-COM-SPECS>
-              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/ECC_PMP2_SpdSet</PROVIDED-INTERFACE-TREF>
-            </P-PORT-PROTOTYPE>
-            <P-PORT-PROTOTYPE UUID="D3C64840-E388-4626-AA62-5B229E9417C3">
-              <SHORT-NAME>ECC_PMP3_SpdSet</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV">
-                    <SD GID="DV:ImportModePreset">Keep</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <PROVIDED-COM-SPECS>
-                <NONQUEUED-SENDER-COM-SPEC>
-                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP3_SpdSet/ECC_PMP3_SpdSet</DATA-ELEMENT-REF>
-                  <INIT-VALUE>
-                    <NUMERICAL-VALUE-SPECIFICATION>
-                      <VALUE>0</VALUE>
-                    </NUMERICAL-VALUE-SPECIFICATION>
-                  </INIT-VALUE>
-                </NONQUEUED-SENDER-COM-SPEC>
-              </PROVIDED-COM-SPECS>
-              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/ECC_PMP3_SpdSet</PROVIDED-INTERFACE-TREF>
-            </P-PORT-PROTOTYPE>
             <P-PORT-PROTOTYPE UUID="75E44A84-5907-4C86-BDFF-747851799B95">
               <SHORT-NAME>AN30</SHORT-NAME>
               <ADMIN-DATA>
@@ -1829,24 +1787,6 @@
                     </VARIABLE-ACCESS>
                   </DATA-RECEIVE-POINT-BY-ARGUMENTS>
                   <DATA-SEND-POINTS>
-                    <VARIABLE-ACCESS UUID="329E2AAC-B619-422F-92E6-C4BE5C9283EE">
-                      <SHORT-NAME>SEND_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet</SHORT-NAME>
-                      <ACCESSED-VARIABLE>
-                        <AUTOSAR-VARIABLE-IREF>
-                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/ECC_PMP2_SpdSet</PORT-PROTOTYPE-REF>
-                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP2_SpdSet/ECC_PMP2_SpdSet</TARGET-DATA-PROTOTYPE-REF>
-                        </AUTOSAR-VARIABLE-IREF>
-                      </ACCESSED-VARIABLE>
-                    </VARIABLE-ACCESS>
-                    <VARIABLE-ACCESS UUID="418C947A-799F-4826-9725-7189212548A6">
-                      <SHORT-NAME>SEND_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet</SHORT-NAME>
-                      <ACCESSED-VARIABLE>
-                        <AUTOSAR-VARIABLE-IREF>
-                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/ECC_PMP3_SpdSet</PORT-PROTOTYPE-REF>
-                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP3_SpdSet/ECC_PMP3_SpdSet</TARGET-DATA-PROTOTYPE-REF>
-                        </AUTOSAR-VARIABLE-IREF>
-                      </ACCESSED-VARIABLE>
-                    </VARIABLE-ACCESS>
                     <VARIABLE-ACCESS UUID="AFC675A7-8DB9-41A2-92D0-E2BE0C59539F">
                       <SHORT-NAME>SEND_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty</SHORT-NAME>
                       <ACCESSED-VARIABLE>

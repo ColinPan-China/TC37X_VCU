@@ -6725,58 +6725,6 @@
                                 </ANNOTATION>
                               </ANNOTATIONS>
                               <PORTS>
-                                <P-PORT-PROTOTYPE UUID="4a3c82ce-02b8-4cbb-8b2d-980bb76def98">
-                                  <SHORT-NAME>ECC_PMP2_SpdSet</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:DEV">
-                                        <SD GID="DV:ImportModePreset">Keep</SD>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <PROVIDED-COM-SPECS>
-                                    <NONQUEUED-SENDER-COM-SPEC>
-                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP2_SpdSet/ECC_PMP2_SpdSet</DATA-ELEMENT-REF>
-                                      <INIT-VALUE>
-                                        <NUMERICAL-VALUE-SPECIFICATION>
-                                          <VALUE>0</VALUE>
-                                        </NUMERICAL-VALUE-SPECIFICATION>
-                                      </INIT-VALUE>
-                                    </NONQUEUED-SENDER-COM-SPEC>
-                                  </PROVIDED-COM-SPECS>
-                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/ECC_PMP2_SpdSet</PROVIDED-INTERFACE-TREF>
-                                </P-PORT-PROTOTYPE>
-                                <P-PORT-PROTOTYPE UUID="0af8978f-f997-41fc-9840-9cd4e416e976">
-                                  <SHORT-NAME>ECC_PMP3_SpdSet</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:DEV">
-                                        <SD GID="DV:ImportModePreset">Keep</SD>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <PROVIDED-COM-SPECS>
-                                    <NONQUEUED-SENDER-COM-SPEC>
-                                      <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/ECC_PMP3_SpdSet/ECC_PMP3_SpdSet</DATA-ELEMENT-REF>
-                                      <INIT-VALUE>
-                                        <NUMERICAL-VALUE-SPECIFICATION>
-                                          <VALUE>0</VALUE>
-                                        </NUMERICAL-VALUE-SPECIFICATION>
-                                      </INIT-VALUE>
-                                    </NONQUEUED-SENDER-COM-SPEC>
-                                  </PROVIDED-COM-SPECS>
-                                  <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/PortInterfaces/ECC_PMP3_SpdSet</PROVIDED-INTERFACE-TREF>
-                                </P-PORT-PROTOTYPE>
                                 <P-PORT-PROTOTYPE UUID="168e824f-1c8c-4033-a53f-424fa2e2f298">
                                   <SHORT-NAME>AN30</SHORT-NAME>
                                   <ADMIN-DATA>
@@ -9029,48 +8977,6 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_TC37X_VCU_CAN01_5e76994c</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
-                                <DELEGATION-SW-CONNECTOR UUID="646706ec-4644-4ba1-a2eb-5294093c1b78">
-                                  <SHORT-NAME>Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet</SHORT-NAME>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                    <ANNOTATION>
-                                      <LABEL>
-                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
-                                      </LABEL>
-                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <INNER-PORT-IREF>
-                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
-                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
-                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/ECC_PMP2_SpdSet</TARGET-P-PORT-REF>
-                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
-                                  </INNER-PORT-IREF>
-                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP2_SpdSet</OUTER-PORT-REF>
-                                </DELEGATION-SW-CONNECTOR>
-                                <DELEGATION-SW-CONNECTOR UUID="f4da3258-0c23-4554-b0d3-0dfa07fd36e4">
-                                  <SHORT-NAME>Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet</SHORT-NAME>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                    <ANNOTATION>
-                                      <LABEL>
-                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
-                                      </LABEL>
-                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <INNER-PORT-IREF>
-                                    <P-PORT-IN-COMPOSITION-INSTANCE-REF>
-                                      <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</CONTEXT-COMPONENT-REF>
-                                      <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Com_SWC/ECC_PMP3_SpdSet</TARGET-P-PORT-REF>
-                                    </P-PORT-IN-COMPOSITION-INSTANCE-REF>
-                                  </INNER-PORT-IREF>
-                                  <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP3_SpdSet</OUTER-PORT-REF>
-                                </DELEGATION-SW-CONNECTOR>
                                 <DELEGATION-SW-CONNECTOR UUID="9888e79c-bb03-43da-aef4-deef66db9559">
                                   <SHORT-NAME>Com_SWC_AN30_AN30</SHORT-NAME>
                                   <ANNOTATIONS>
@@ -10626,6 +10532,83 @@
                                   </INNER-PORT-IREF>
                                   <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Tle888qk_Lout16_En</OUTER-PORT-REF>
                                 </DELEGATION-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="ca40cf33-5128-4ddb-ad8c-b996d064177d">
+                                  <SHORT-NAME>ComM_UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79_SWC1_UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="c26cee5c-9983-42ec-bf0d-c1a1507f292f">
+                                  <SHORT-NAME>ComM_UR_CN_ATOM_CAN_XCP_ca35a39e_SWC1_UR_CN_ATOM_CAN_XCP_ca35a39e</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_ATOM_CAN_XCP_ca35a39e</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_ATOM_CAN_XCP_ca35a39e</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="17bcee9f-6234-46f0-b676-1f12b238b627">
+                                  <SHORT-NAME>ComM_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0_SWC1_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="9e2432a6-96b8-4792-9536-458f85eb258e">
+                                  <SHORT-NAME>ComM_UR_CN_ATOM_HWLIN1_b196509b_SWC1_UR_CN_ATOM_HWLIN1_b196509b</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_ATOM_HWLIN1_b196509b</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_ATOM_HWLIN1_b196509b</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="0e1ab381-126d-497f-b0d6-2bf4f3bbd129">
+                                  <SHORT-NAME>ComM_UR_CN_ATOM_HWLIN3_b56380a6_SWC1_UR_CN_ATOM_HWLIN3_b56380a6</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_ATOM_HWLIN3_b56380a6</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_ATOM_HWLIN3_b56380a6</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="2e7011d3-b4b2-4c1f-8578-b6ccb4028388">
+                                  <SHORT-NAME>ComM_UR_CN_ATOM_HWLIN4_57bf9bdf_SWC1_UR_CN_ATOM_HWLIN4_57bf9bdf</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_ATOM_HWLIN4_57bf9bdf</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_ATOM_HWLIN4_57bf9bdf</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="00726d8d-17a4-4cb4-84b8-90fd4a21ae5a">
+                                  <SHORT-NAME>ComM_UR_CN_J1939_bms_d26c50b6_SWC1_UR_CN_J1939_bms_d26c50b6</SHORT-NAME>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_J1939_bms_d26c50b6</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/SWC1</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_J1939_bms_d26c50b6</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -10771,12 +10754,17 @@
                                     <SD GID="baefbe62-6ada-41eb-9019-6313a175dacd">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Bts7xx_HS3_En</SD>
                                     <SD GID="cdfe0bb9-6d3b-44b7-8d4e-60a3a9dcc8c3">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Bts7xx_HS4_En</SD>
                                     <SD GID="274f233c-196e-4efd-8537-a049df7a976a">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</SD>
+                                    <SD GID="17bcee9f-6234-46f0-b676-1f12b238b627">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0_SWC1_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0</SD>
+                                    <SD GID="ca40cf33-5128-4ddb-ad8c-b996d064177d">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79_SWC1_UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79</SD>
+                                    <SD GID="c26cee5c-9983-42ec-bf0d-c1a1507f292f">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_ATOM_CAN_XCP_ca35a39e_SWC1_UR_CN_ATOM_CAN_XCP_ca35a39e</SD>
+                                    <SD GID="9e2432a6-96b8-4792-9536-458f85eb258e">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_ATOM_HWLIN1_b196509b_SWC1_UR_CN_ATOM_HWLIN1_b196509b</SD>
+                                    <SD GID="0e1ab381-126d-497f-b0d6-2bf4f3bbd129">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_ATOM_HWLIN3_b56380a6_SWC1_UR_CN_ATOM_HWLIN3_b56380a6</SD>
+                                    <SD GID="2e7011d3-b4b2-4c1f-8578-b6ccb4028388">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_ATOM_HWLIN4_57bf9bdf_SWC1_UR_CN_ATOM_HWLIN4_57bf9bdf</SD>
+                                    <SD GID="00726d8d-17a4-4cb4-84b8-90fd4a21ae5a">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM_UR_CN_J1939_bms_d26c50b6_SWC1_UR_CN_J1939_bms_d26c50b6</SD>
                                     <SD GID="d6107833-7ec4-46b6-bd77-dc484cc238be">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Com_SWC</SD>
                                     <SD GID="52f38fb1-f1fa-4839-bd5d-87d5584a122e">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</SD>
                                     <SD GID="dbd7af71-8f1f-4737-b93f-d0ed84b9ef39">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemMaster_0</SD>
                                     <SD GID="9d4b98fd-81ab-4d03-b31e-e07a3534b100">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/DemSatellite_0</SD>
-                                    <SD GID="4a3c82ce-02b8-4cbb-8b2d-980bb76def98">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP2_SpdSet</SD>
-                                    <SD GID="0af8978f-f997-41fc-9840-9cd4e416e976">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ECC_PMP3_SpdSet</SD>
                                     <SD GID="bf5c7601-72f0-4f11-8b3d-d510d3a8471e">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN1_Duty</SD>
                                     <SD GID="415b142b-a532-4eed-bd23-1037b7e450ab">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN1_Period</SD>
                                     <SD GID="cbd0dec9-94f7-40ed-8780-6a4f668616a9">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN2_Duty</SD>
@@ -10868,8 +10856,6 @@
                                     <SD GID="E89F308F-16BD-4773-926C-9BDD8427E102">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/DRT_Rte_Msg110h_Rx_Notification_Tle888qk_Lout1_En_Tle888qk_Lout1_En</SD>
                                     <SD GID="DE3BBC92-0D89-4B36-8B14-2CCB30B0B703">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/TMT_Com_Runnable_20ms</SD>
                                     <SD GID="7B4FE19D-2362-4205-878E-EA969B8AAAE0">/ComponentTypes/Com_SWC/Com_SWC_InternalBehavior/TMT_Com_Runnable_2ms</SD>
-                                    <SD GID="9E15A807-3BB0-4253-BF08-878616B3C49F">/ComponentTypes/Com_SWC/ECC_PMP2_SpdSet</SD>
-                                    <SD GID="D3C64840-E388-4626-AA62-5B229E9417C3">/ComponentTypes/Com_SWC/ECC_PMP3_SpdSet</SD>
                                     <SD GID="C89FC7EA-02B2-44C3-AB42-AD37588AE5CF">/ComponentTypes/Com_SWC/EXT_PWM_IN1_Duty</SD>
                                     <SD GID="EA469C37-1FBC-4677-A1F4-35ED994AE0CC">/ComponentTypes/Com_SWC/EXT_PWM_IN1_Period</SD>
                                     <SD GID="2311912A-EBDB-481A-A7F9-FD1B34D9C9EC">/ComponentTypes/Com_SWC/EXT_PWM_IN2_Duty</SD>
@@ -10935,11 +10921,14 @@
                                     <SD GID="3FCA423F-7CD7-45EA-96C6-B0E1342CDE99">/ComponentTypes/SWC1/SWC1_InternalBehavior/OIT_NvSWC_NvMNotifyJobFinished_UserData2_JobFinished_NvSWC_NvMNotifyJobFinished_UserData2_JobFinished</SD>
                                     <SD GID="02DBAA78-6849-4155-8578-6FE38CB45AFA">/ComponentTypes/SWC1/SWC1_InternalBehavior/SWC1_InitEvent</SD>
                                     <SD GID="BB44E199-3151-4FAA-9617-E16CE2BFB43B">/ComponentTypes/SWC1/SWC1_InternalBehavior/TMT_SWC1_Runnable10ms</SD>
-                                    <SD GID="01AE8C63-B121-4EE9-B9D3-5D4FEC7A51D2">/ComponentTypes/SWC1/UR_CN_KAMA_FP_EPT_0303_b67fd6a6</SD>
-                                    <SD GID="5808E648-2FA2-4ED1-A6AF-7D1520F8F9EA">/ComponentTypes/SWC1/UR_CN_LIN00_984dfd9e</SD>
-                                    <SD GID="C4FC8941-0849-443D-92CC-62C83FAE361B">/ComponentTypes/SWC1/UR_CN_LIN01_778f96a0</SD>
+                                    <SD GID="5C70AD8A-641A-48E2-A077-CAE5DDB31223">/ComponentTypes/SWC1/UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0</SD>
+                                    <SD GID="23C7E751-6571-47B1-86E7-8F2C628543E5">/ComponentTypes/SWC1/UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79</SD>
+                                    <SD GID="7A03D259-CF42-4C4B-8283-7024CA536E2D">/ComponentTypes/SWC1/UR_CN_ATOM_CAN_XCP_ca35a39e</SD>
+                                    <SD GID="81BEC9D0-5C19-4B0F-8A6E-379D534996C2">/ComponentTypes/SWC1/UR_CN_ATOM_HWLIN1_b196509b</SD>
+                                    <SD GID="B22C5125-FFAC-4E5A-A9CE-A30EEEAC515C">/ComponentTypes/SWC1/UR_CN_ATOM_HWLIN3_b56380a6</SD>
+                                    <SD GID="282555FF-8F6E-4FDE-B64C-C151CDE90B74">/ComponentTypes/SWC1/UR_CN_ATOM_HWLIN4_57bf9bdf</SD>
+                                    <SD GID="359D2831-054A-4D51-A7FD-A7B6E0973231">/ComponentTypes/SWC1/UR_CN_J1939_bms_d26c50b6</SD>
                                     <SD GID="5116B6B9-1DC0-46E5-93C8-8202C0C95F01">/ComponentTypes/SWC1/UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
-                                    <SD GID="58916D29-3233-4AB5-9124-A50FBC641527">/ComponentTypes/SWC1/UR_CN_TC37X_VCU_CAN03_5a834971</SD>
                                     <SD GID="66263F43-3F17-4564-9D9F-6367B86E68F2">/ComponentTypes/SWC1_Implementation</SD>
                                     <SD GID="83E5C50F-A163-4FAE-8F88-D29CE937AFED">/ECUCompositionTypes/ECU_Composition</SD>
                                     <SD GID="52E231D6-C437-434D-92AD-C6E04E2DE619">/ECUCompositionTypes/ECU_Composition/AN0</SD>
@@ -10995,8 +10984,6 @@
                                     <SD GID="EC7D2EB6-B9C7-40FF-A7A9-0AD05521FC01">/ECUCompositionTypes/ECU_Composition/Bts7xx_HS3_En</SD>
                                     <SD GID="ABB0B0A2-1E8D-4B19-85FF-A5027A748318">/ECUCompositionTypes/ECU_Composition/Bts7xx_HS4_En</SD>
                                     <SD GID="9D6277BB-1E37-4BB9-B185-1DD2BA210E54">/ECUCompositionTypes/ECU_Composition/Com_SWC</SD>
-                                    <SD GID="DEBDDCDE-76BA-4587-B797-BF66350B513F">/ECUCompositionTypes/ECU_Composition/ECC_PMP2_SpdSet</SD>
-                                    <SD GID="7B3872EB-A0A5-4122-8ADB-E347E02ECA18">/ECUCompositionTypes/ECU_Composition/ECC_PMP3_SpdSet</SD>
                                     <SD GID="1477B02D-AA9B-4778-AC8B-75C50AC2BD1C">/ECUCompositionTypes/ECU_Composition/EXT_PWM_IN1_Duty</SD>
                                     <SD GID="7677545E-5EAC-4E4B-8C34-DAFA40CE655D">/ECUCompositionTypes/ECU_Composition/EXT_PWM_IN1_Period</SD>
                                     <SD GID="A0F90F5D-F9FF-4B5E-8E21-195B7CC7161B">/ECUCompositionTypes/ECU_Composition/EXT_PWM_IN2_Duty</SD>
@@ -11130,6 +11117,13 @@
                                     <SD GID="3d3f2abf-718a-4a8b-b319-9c5fbc7d09d3">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/Timer_ComM_MainFunction_5</SD>
                                     <SD GID="f9cc18f6-ec18-4bf7-ba2d-f03ad66a9151">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/Timer_ComM_MainFunction_6</SD>
                                     <SD GID="e8074bd1-6604-4f07-9ccb-852f528abbb1">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/Timer_ComM_MainFunction_7</SD>
+                                    <SD GID="1374e61d-9d7a-4933-8666-01e219fed3a5">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0</SD>
+                                    <SD GID="af2a2095-7bc5-4dd0-bfc2-f7695076e3c6">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79</SD>
+                                    <SD GID="34675e34-b32d-48d2-ac8c-54085bb3242a">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_ATOM_CAN_XCP_ca35a39e</SD>
+                                    <SD GID="8b92f04b-0025-4004-b704-1b3f6274b774">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_ATOM_HWLIN1_b196509b</SD>
+                                    <SD GID="3fe432f7-33bd-4f61-9f92-9e77e322b961">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_ATOM_HWLIN3_b56380a6</SD>
+                                    <SD GID="159ca5c7-c22d-47a8-8bc2-402f4433ccbe">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_ATOM_HWLIN4_57bf9bdf</SD>
+                                    <SD GID="b278881d-8c36-425a-813d-3737bfc6e421">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_J1939_bms_d26c50b6</SD>
                                     <SD GID="6d2f5e0a-126d-440d-a52c-2302c9dca7b4">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_CN_TC37X_VCU_CAN01_5e76994c</SD>
                                     <SD GID="67ce1ed5-0cd8-4659-8ac8-43f5140ba846">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionRx_ComMainFunctionRx</SD>
                                     <SD GID="f0154cf3-78b1-439c-8e4f-9030105fdde1">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionRx_ComMainFunctionRxTimingEvent0</SD>
@@ -15117,10 +15111,6 @@
                                     <SD GID="DB3D3D37-C21D-4643-A021-E7B40CED0AA4">/PortInterfaces/Bts7xx_HS3_En/Bts7xx_HS3_En</SD>
                                     <SD GID="69CA9E07-3709-47CE-A4E9-CE1327326BB8">/PortInterfaces/Bts7xx_HS4_En</SD>
                                     <SD GID="BA14808A-72D1-4912-8187-9DE6788FD71A">/PortInterfaces/Bts7xx_HS4_En/Bts7xx_HS4_En</SD>
-                                    <SD GID="451B48C1-80E0-4BBC-98DF-9E93219E10AC">/PortInterfaces/ECC_PMP2_SpdSet</SD>
-                                    <SD GID="5D2DAF0C-2CCA-4E17-9837-23DD546ABD58">/PortInterfaces/ECC_PMP2_SpdSet/ECC_PMP2_SpdSet</SD>
-                                    <SD GID="D37AB656-EC57-4825-9876-3B1A02E3066E">/PortInterfaces/ECC_PMP3_SpdSet</SD>
-                                    <SD GID="0077EB86-7BE2-4F86-8C42-66D78F572CAA">/PortInterfaces/ECC_PMP3_SpdSet/ECC_PMP3_SpdSet</SD>
                                     <SD GID="ACABFFB6-3625-48AC-A123-C6933464ABB9">/PortInterfaces/EXT_PWM_IN1_Duty</SD>
                                     <SD GID="B171829D-D5B7-44DF-BFE6-9A3788DC30CD">/PortInterfaces/EXT_PWM_IN1_Duty/EXT_PWM_IN1_Duty</SD>
                                     <SD GID="1BAA7876-8E32-4B3D-B90B-3EED7A659B61">/PortInterfaces/EXT_PWM_IN1_Period</SD>

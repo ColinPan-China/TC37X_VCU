@@ -317,8 +317,8 @@
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
-            <R-PORT-PROTOTYPE UUID="01AE8C63-B121-4EE9-B9D3-5D4FEC7A51D2">
-              <SHORT-NAME>UR_CN_KAMA_FP_EPT_0303_b67fd6a6</SHORT-NAME>
+            <R-PORT-PROTOTYPE UUID="23C7E751-6571-47B1-86E7-8F2C628543E5">
+              <SHORT-NAME>UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV:DEV">
@@ -342,8 +342,8 @@
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
-            <R-PORT-PROTOTYPE UUID="5808E648-2FA2-4ED1-A6AF-7D1520F8F9EA">
-              <SHORT-NAME>UR_CN_LIN00_984dfd9e</SHORT-NAME>
+            <R-PORT-PROTOTYPE UUID="7A03D259-CF42-4C4B-8283-7024CA536E2D">
+              <SHORT-NAME>UR_CN_ATOM_CAN_XCP_ca35a39e</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV:DEV">
@@ -367,8 +367,8 @@
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
-            <R-PORT-PROTOTYPE UUID="58916D29-3233-4AB5-9124-A50FBC641527">
-              <SHORT-NAME>UR_CN_TC37X_VCU_CAN03_5a834971</SHORT-NAME>
+            <R-PORT-PROTOTYPE UUID="5C70AD8A-641A-48E2-A077-CAE5DDB31223">
+              <SHORT-NAME>UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV:DEV">
@@ -392,8 +392,83 @@
               </REQUIRED-COM-SPECS>
               <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest</REQUIRED-INTERFACE-TREF>
             </R-PORT-PROTOTYPE>
-            <R-PORT-PROTOTYPE UUID="C4FC8941-0849-443D-92CC-62C83FAE361B">
-              <SHORT-NAME>UR_CN_LIN01_778f96a0</SHORT-NAME>
+            <R-PORT-PROTOTYPE UUID="81BEC9D0-5C19-4B0F-8A6E-379D534996C2">
+              <SHORT-NAME>UR_CN_ATOM_HWLIN1_b196509b</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetCurrentComMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetMaxComMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetRequestedComMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="B22C5125-FFAC-4E5A-A9CE-A30EEEAC515C">
+              <SHORT-NAME>UR_CN_ATOM_HWLIN3_b56380a6</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetCurrentComMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetMaxComMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetRequestedComMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="282555FF-8F6E-4FDE-B64C-C151CDE90B74">
+              <SHORT-NAME>UR_CN_ATOM_HWLIN4_57bf9bdf</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <REQUIRED-COM-SPECS>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetCurrentComMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetMaxComMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+                <CLIENT-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetRequestedComMode</OPERATION-REF>
+                </CLIENT-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="359D2831-054A-4D51-A7FD-A7B6E0973231">
+              <SHORT-NAME>UR_CN_J1939_bms_d26c50b6</SHORT-NAME>
               <ADMIN-DATA>
                 <SDGS>
                   <SDG GID="DV:DEV">
@@ -568,52 +643,52 @@
                         <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</TARGET-REQUIRED-OPERATION-REF>
                       </OPERATION-IREF>
                     </SYNCHRONOUS-SERVER-CALL-POINT>
-                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="EC427D20-BD37-4B33-B34E-710C283062D6">
-                      <SHORT-NAME>SC_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_GetCurrentComMode</SHORT-NAME>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="BFD9CB63-12E8-4885-A90A-B2FF32D1031F">
+                      <SHORT-NAME>SC_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0_RequestComMode</SHORT-NAME>
                       <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_KAMA_FP_EPT_0303_b67fd6a6</CONTEXT-R-PORT-REF>
-                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetCurrentComMode</TARGET-REQUIRED-OPERATION-REF>
-                      </OPERATION-IREF>
-                    </SYNCHRONOUS-SERVER-CALL-POINT>
-                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="3C990AA5-4947-4606-B644-3DB0B93C34F1">
-                      <SHORT-NAME>SC_UR_CN_KAMA_FP_EPT_0303_b67fd6a6_RequestComMode</SHORT-NAME>
-                      <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_KAMA_FP_EPT_0303_b67fd6a6</CONTEXT-R-PORT-REF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0</CONTEXT-R-PORT-REF>
                         <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</TARGET-REQUIRED-OPERATION-REF>
                       </OPERATION-IREF>
                     </SYNCHRONOUS-SERVER-CALL-POINT>
-                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="EC68510F-437B-456E-94C1-71C6B57A6B27">
-                      <SHORT-NAME>SC_UR_CN_LIN00_984dfd9e_RequestComMode</SHORT-NAME>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="F62E65DA-01B8-48E7-9303-C0315D508B98">
+                      <SHORT-NAME>SC_UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79_RequestComMode</SHORT-NAME>
                       <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_LIN00_984dfd9e</CONTEXT-R-PORT-REF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79</CONTEXT-R-PORT-REF>
                         <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</TARGET-REQUIRED-OPERATION-REF>
                       </OPERATION-IREF>
                     </SYNCHRONOUS-SERVER-CALL-POINT>
-                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="E7311012-4044-4575-B802-F4C2F6785AA0">
-                      <SHORT-NAME>SC_UR_CN_TC37X_VCU_CAN03_5a834971_GetCurrentComMode</SHORT-NAME>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="B9A4A773-FD56-42F1-96B9-6A02934C88C0">
+                      <SHORT-NAME>SC_UR_CN_ATOM_CAN_XCP_ca35a39e_RequestComMode</SHORT-NAME>
                       <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_TC37X_VCU_CAN03_5a834971</CONTEXT-R-PORT-REF>
-                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetCurrentComMode</TARGET-REQUIRED-OPERATION-REF>
-                      </OPERATION-IREF>
-                    </SYNCHRONOUS-SERVER-CALL-POINT>
-                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="E988AF66-E7CF-436B-8E76-03468046C8CA">
-                      <SHORT-NAME>SC_UR_CN_TC37X_VCU_CAN03_5a834971_RequestComMode</SHORT-NAME>
-                      <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_TC37X_VCU_CAN03_5a834971</CONTEXT-R-PORT-REF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_ATOM_CAN_XCP_ca35a39e</CONTEXT-R-PORT-REF>
                         <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</TARGET-REQUIRED-OPERATION-REF>
                       </OPERATION-IREF>
                     </SYNCHRONOUS-SERVER-CALL-POINT>
-                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="5B73C7C8-D848-44CE-B723-D9F9D5DAEAE5">
-                      <SHORT-NAME>SC_UR_CN_LIN01_778f96a0_GetCurrentComMode</SHORT-NAME>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="6A8C2167-B967-4036-9427-0FB4E584F90E">
+                      <SHORT-NAME>SC_UR_CN_ATOM_HWLIN1_b196509b_RequestComMode</SHORT-NAME>
                       <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_LIN01_778f96a0</CONTEXT-R-PORT-REF>
-                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetCurrentComMode</TARGET-REQUIRED-OPERATION-REF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_ATOM_HWLIN1_b196509b</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</TARGET-REQUIRED-OPERATION-REF>
                       </OPERATION-IREF>
                     </SYNCHRONOUS-SERVER-CALL-POINT>
-                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="E070F486-CB42-44B8-A0E1-01028641BE60">
-                      <SHORT-NAME>SC_UR_CN_LIN01_778f96a0_RequestComMode</SHORT-NAME>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="454D438C-37EA-4DA7-A80B-EB7B5FB3A7FE">
+                      <SHORT-NAME>SC_UR_CN_ATOM_HWLIN3_b56380a6_RequestComMode</SHORT-NAME>
                       <OPERATION-IREF>
-                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_LIN01_778f96a0</CONTEXT-R-PORT-REF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_ATOM_HWLIN3_b56380a6</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="E973C8E5-A02C-487A-AA76-EF061D83B0CB">
+                      <SHORT-NAME>SC_UR_CN_ATOM_HWLIN4_57bf9bdf_RequestComMode</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_ATOM_HWLIN4_57bf9bdf</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="A3BE509F-9319-43BC-AB71-E2A1A48E4D08">
+                      <SHORT-NAME>SC_UR_CN_J1939_bms_d26c50b6_RequestComMode</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_J1939_bms_d26c50b6</CONTEXT-R-PORT-REF>
                         <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</TARGET-REQUIRED-OPERATION-REF>
                       </OPERATION-IREF>
                     </SYNCHRONOUS-SERVER-CALL-POINT>

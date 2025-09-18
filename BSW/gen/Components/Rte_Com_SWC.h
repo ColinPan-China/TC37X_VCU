@@ -110,8 +110,6 @@ extern "C"
 #  define Rte_InitValue_Bts7xx_HS2_En_Bts7xx_HS2_En (0)
 #  define Rte_InitValue_Bts7xx_HS3_En_Bts7xx_HS3_En (0)
 #  define Rte_InitValue_Bts7xx_HS4_En_Bts7xx_HS4_En (0)
-#  define Rte_InitValue_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet (0U)
-#  define Rte_InitValue_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet (0U)
 #  define Rte_InitValue_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty (0)
 #  define Rte_InitValue_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period (0)
 #  define Rte_InitValue_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty (0)
@@ -298,10 +296,6 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_Ext_IN2_Ext_IN2(Ext_IN2 data); 
 #  define Rte_Write_AN7_AN7 Rte_Write_Com_SWC_AN7_AN7
 #  define Rte_Write_AN8_AN8 Rte_Write_Com_SWC_AN8_AN8
 #  define Rte_Write_AN9_AN9 Rte_Write_Com_SWC_AN9_AN9
-#  define Rte_Write_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet Rte_Write_Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet
-#  define Rte_Write_Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet(data) (RTE_E_OK)
-#  define Rte_Write_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet Rte_Write_Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet
-#  define Rte_Write_Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet(data) (RTE_E_OK)
 #  define Rte_Write_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty Rte_Write_Com_SWC_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty
 #  define Rte_Write_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period Rte_Write_Com_SWC_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period
 #  define Rte_Write_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty Rte_Write_Com_SWC_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty
