@@ -208,8 +208,8 @@ FUNC(void, Com_SWC_CODE) Com_Runnable_2ms(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Com_Runnable_2ms
  *********************************************************************************************************************/
-  Rte_Write_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet(SpeedSet);
-  Rte_Write_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet(SpeedSet);
+//  Rte_Write_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet(SpeedSet);
+//  Rte_Write_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet(SpeedSet);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

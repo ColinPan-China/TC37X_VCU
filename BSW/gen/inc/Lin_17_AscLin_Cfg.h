@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_7.0.0                                                  **
 **                                                                            **
-**  DATE, TIME: 2025-08-22, 14:20:47      !!!IGNORE-LINE!!!               **
+**  DATE, TIME: 2025-09-18, 11:07:16      !!!IGNORE-LINE!!!               **
 **                                                                            **
 **  GENERATOR : Build b180321-0610          !!!IGNORE-LINE!!!               **
 **                                                                            **
@@ -168,35 +168,6 @@ in generated code due to Autosar Naming constraints.*/
 #define Lin_17_AscLinConf_LinChannel_LinChannel_LIN1          (0U)
 #endif
 /*
-    Lin Channel : (LinChannel_LIN4)
-*/
-
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-in generated code due to Autosar Naming constraints.*/
-
-#ifndef Lin_17_AscLinConf_LinChannel_LinChannel_LIN4
-
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-in generated code due to Autosar Naming constraints.*/
-
-/* <!-- [cover parentID={F7E0ED21-7774-45fb-9AEC-47490C5AE1F9}]
-[/cover] --> */
-
-#define Lin_17_AscLinConf_LinChannel_LinChannel_LIN4          (1U)
-#endif
-/*
     Lin Channel : (LinChannel_LIN3)
 */
 
@@ -223,7 +194,36 @@ in generated code due to Autosar Naming constraints.*/
 /* <!-- [cover parentID={F7E0ED21-7774-45fb-9AEC-47490C5AE1F9}]
 [/cover] --> */
 
-#define Lin_17_AscLinConf_LinChannel_LinChannel_LIN3          (2U)
+#define Lin_17_AscLinConf_LinChannel_LinChannel_LIN3          (1U)
+#endif
+/*
+    Lin Channel : (LinChannel_LIN4)
+*/
+
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+
+#ifndef Lin_17_AscLinConf_LinChannel_LinChannel_LIN4
+
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+in generated code due to Autosar Naming constraints.*/
+
+/* <!-- [cover parentID={F7E0ED21-7774-45fb-9AEC-47490C5AE1F9}]
+[/cover] --> */
+
+#define Lin_17_AscLinConf_LinChannel_LinChannel_LIN4          (2U)
 #endif
 
 

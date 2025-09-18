@@ -1,0 +1,677 @@
+/*************************************************************************************/
+//
+
+// Description: 
+
+// Created: 
+
+// Author: 
+
+// Version: 
+
+// Vehicle Project: 
+
+//
+
+/*************************************************************************************/
+
+LIN_description_file;
+LIN_protocol_version = "2.1";
+LIN_language_version = "2.1";
+LIN_speed = 19.2 kbps;
+Channel_name = "ATOM_HWLIN1";
+
+Nodes {
+  Master: VCU, 5 ms, 0.1 ms ;
+  Slaves: BS, FRC ;
+}
+
+Signals {
+  DisChargeCurrWU_Ena: 1, 1, VCU, BS ;
+  ChargeCurrWU_Ena: 1, 1, VCU, BS ;
+  SOCWU_Ena: 1, 1, VCU, BS ;
+  DisChargeCurrWU_Treshold: 8, 145, VCU, BS ;
+  ChargeCurrWU_Treshold: 8, 30, VCU, BS ;
+  SOCWU_Treshold: 8, 70, VCU, BS ;
+  FRC_Vl_OV: 1, 0, FRC, VCU ;
+  FRC_Vl_UV: 1, 0, FRC, VCU ;
+  FRC_ComFtonNet: 1, 0, FRC, VCU ;
+  U_BATT: 14, 16383, BS, VCU ;
+  I_RANGE: 2, 3, BS, VCU ;
+  I_BATT: 16, 65535, BS, VCU ;
+  T_BATT: 8, 255, BS, VCU ;
+  IBATT_QUIESCENT: 8, 255, BS, VCU ;
+  Status_Current: 2, 0, BS, VCU ;
+  Status_Voltage: 2, 0, BS, VCU ;
+  Status_Temp: 2, 0, BS, VCU ;
+  ERROR_Commom: 1, 0, BS, VCU ;
+  ERROR_IDENT: 1, 0, BS, VCU ;
+  Resp_Error: 1, 0, BS, VCU ;
+  FLAG_INCONSISTENCY: 1, 0, BS, VCU ;
+  Q_Charge: 16, 65535, BS, VCU ;
+  Q_Discharge: 16, 65535, BS, VCU ;
+  VCU_ACU_DriverWarningLampSts: 2, 0, VCU, FRC ;
+  VCU_ACU_PassengerWarningLampSts: 2, 0, VCU, FRC ;
+  VCU_ACU_PassengerAirbagSts: 2, 0, VCU, FRC ;
+  VCU_DCM_FL_DoorFLSts: 1, 0, VCU, FRC ;
+  VCU_DCM_FR_DoorFRSts: 1, 0, VCU, FRC ;
+  VCU_DCM_RL_DoorRLSts: 1, 0, VCU, FRC ;
+  VCU_DCM_RR_DoorRRSts: 1, 0, VCU, FRC ;
+  VCU_BCM_FLSeatBeltRemindReq: 2, 0, VCU, FRC ;
+  VCU_BCM_FRSeatBeltRemindReq: 2, 0, VCU, FRC ;
+  VCU_BCM_RLSeatBeltRemindReq: 2, 0, VCU, FRC ;
+  VCU_BCM_RRSeatBeltRemindReq: 2, 0, VCU, FRC ;
+  VCU_IBS_SystemStatus: 3, 0, VCU, FRC ;
+  VCU_IBS_EBDFault: 1, 0, VCU, FRC ;
+  VCU_IBS_BrakeFluidWarning: 2, 0, VCU, FRC ;
+  VCU_IBS_RollerbenchMode: 1, 0, VCU, FRC ;
+  VCU_IVI_VrState: 1, 0, VCU, FRC ;
+  VCU_DCDCFail_LIN: 1, 0, VCU, FRC ;
+  VCU_HVBatOvrTemp_LIN: 1, 0, VCU, FRC ;
+  VCU_DriveMotOvrTemp_LIN: 1, 0, VCU, FRC ;
+  VCU_HVBatCriFail_LIN: 2, 0, VCU, FRC ;
+  VCU_CGW_VehicleState: 4, 0, VCU, FRC ;
+  VCU_ACU_WarningLampSts: 2, 0, VCU, FRC ;
+  VCU_IVI_BulbCheckSts: 1, 0, VCU, FRC ;
+  SOC: 8, 1, BS, VCU ;
+  SOF_Q: 8, 255, BS, VCU ;
+  SOF_V1: 8, 255, BS, VCU ;
+  SOF_V2: 8, 255, BS, VCU ;
+  SOH: 8, 255, BS, VCU ;
+  DisChargeCurrWU_Sts: 1, 1, BS, VCU ;
+  ChargeCurrWU_Sts: 1, 1, BS, VCU ;
+  SOCWU_Sts: 1, 1, BS, VCU ;
+  DisChargeCurrWU: 1, 0, BS, VCU ;
+  ChargeCurrWU: 1, 0, BS, VCU ;
+  SOCWU: 1, 0, BS, VCU ;
+  SOC_STATE: 2, 3, BS, VCU ;
+  SOF_Q_STATE: 2, 3, BS, VCU ;
+  SOF_V1_STATE: 2, 3, BS, VCU ;
+  SOF_V2_STATE: 2, 3, BS, VCU ;
+  SOH_STATE: 2, 3, BS, VCU ;
+  SOF_t_STATE: 2, 3, BS, VCU ;
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  BS_01: 52, BS, 8 {
+    U_BATT, 0 ;
+    I_RANGE, 14 ;
+    I_BATT, 16 ;
+    T_BATT, 32 ;
+    IBATT_QUIESCENT, 40 ;
+    Status_Current, 48 ;
+    Status_Voltage, 50 ;
+    Status_Temp, 52 ;
+    ERROR_Commom, 54 ;
+    ERROR_IDENT, 55 ;
+    Resp_Error, 56 ;
+    FLAG_INCONSISTENCY, 57 ;
+  }
+  BS_02: 53, BS, 8 {
+    SOC, 0 ;
+    SOF_Q, 8 ;
+    SOF_V1, 16 ;
+    SOF_V2, 24 ;
+    SOH, 32 ;
+    DisChargeCurrWU_Sts, 40 ;
+    ChargeCurrWU_Sts, 41 ;
+    SOCWU_Sts, 42 ;
+    DisChargeCurrWU, 43 ;
+    ChargeCurrWU, 44 ;
+    SOCWU, 45 ;
+    SOC_STATE, 50 ;
+    SOF_Q_STATE, 52 ;
+    SOF_V1_STATE, 54 ;
+    SOF_V2_STATE, 56 ;
+    SOH_STATE, 58 ;
+    SOF_t_STATE, 60 ;
+  }
+  BS_03: 54, BS, 8 {
+    Q_Charge, 0 ;
+    Q_Discharge, 16 ;
+  }
+  VCU_BS_01: 57, VCU, 8 {
+    DisChargeCurrWU_Ena, 0 ;
+    ChargeCurrWU_Ena, 1 ;
+    SOCWU_Ena, 2 ;
+    DisChargeCurrWU_Treshold, 8 ;
+    ChargeCurrWU_Treshold, 16 ;
+    SOCWU_Treshold, 24 ;
+  }
+  VCU_01: 37, VCU, 8 {
+    VCU_ACU_DriverWarningLampSts, 0 ;
+    VCU_ACU_PassengerWarningLampSts, 2 ;
+    VCU_ACU_PassengerAirbagSts, 4 ;
+    VCU_DCM_FL_DoorFLSts, 6 ;
+    VCU_DCM_FR_DoorFRSts, 7 ;
+    VCU_DCM_RL_DoorRLSts, 8 ;
+    VCU_DCM_RR_DoorRRSts, 9 ;
+    VCU_BCM_FLSeatBeltRemindReq, 10 ;
+    VCU_BCM_FRSeatBeltRemindReq, 12 ;
+    VCU_BCM_RLSeatBeltRemindReq, 14 ;
+    VCU_BCM_RRSeatBeltRemindReq, 16 ;
+    VCU_IBS_SystemStatus, 18 ;
+    VCU_IBS_EBDFault, 21 ;
+    VCU_IBS_BrakeFluidWarning, 22 ;
+    VCU_IBS_RollerbenchMode, 24 ;
+    VCU_IVI_VrState, 25 ;
+    VCU_DCDCFail_LIN, 27 ;
+    VCU_HVBatOvrTemp_LIN, 28 ;
+    VCU_DriveMotOvrTemp_LIN, 29 ;
+    VCU_HVBatCriFail_LIN, 30 ;
+    VCU_CGW_VehicleState, 36 ;
+    VCU_ACU_WarningLampSts, 41 ;
+    VCU_IVI_BulbCheckSts, 43 ;
+  }
+  FRC_01: 43, FRC, 8 {
+    FRC_Vl_OV, 0 ;
+    FRC_Vl_UV, 1 ;
+    FRC_ComFtonNet, 2 ;
+  }
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  BS{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x47 ;
+    initial_NAD = 0x47 ;
+    product_id = 0x0, 0x0, 0 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      BS_01 ;
+      BS_02 ;
+      BS_03 ;
+      VCU_BS_01 ;
+    }
+  }
+  FRC{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x58 ;
+    initial_NAD = 0x58 ;
+    product_id = 0x0, 0x0, 0 ;
+    response_error = FRC_ComFtonNet ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      VCU_01 ;
+      FRC_01 ;
+    }
+  }
+}
+
+Schedule_tables {
+ VCU_LIN_Schedule {
+    BS_01 delay 10 ms ;
+    BS_02 delay 10 ms ;
+    BS_03 delay 10 ms ;
+    VCU_BS_01 delay 10 ms ;
+    VCU_01 delay 10 ms ;
+    FRC_01 delay 80 ms ;
+  }
+ DiagRequestSchedule {
+    MasterReq delay 15 ms ;
+  }
+ DiagResponseSchedule {
+    SlaveResp delay 15 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  DisChargeCurrWU_Ena {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Disabled" ;
+    logical_value, 1, " Enabled" ;
+  }
+  ChargeCurrWU_Ena {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Disabled" ;
+    logical_value, 1, " Enabled" ;
+  }
+  SOCWU_Ena {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Disabled" ;
+    logical_value, 1, " Enabled" ;
+  }
+  DisChargeCurrWU_Treshold {
+    physical_value, 0, 250, 2, 10, "mA" ;
+  }
+  ChargeCurrWU_Treshold {
+    physical_value, 0, 250, 10, 0, "mA" ;
+  }
+  SOCWU_Treshold {
+    physical_value, 0, 80, 1, 0 ;
+  }
+  FRC_Vl_OV {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No error" ;
+    logical_value, 1, "Error" ;
+  }
+  FRC_Vl_UV {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No error" ;
+    logical_value, 1, "Error" ;
+  }
+  FRC_ComFtonNet {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No error" ;
+    logical_value, 1, "Error" ;
+  }
+  U_BATT {
+    physical_value, 0, 15360, 0.0009765625, 3, "2^(-10) V" ;
+  }
+  I_RANGE {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " -1,1A" ;
+    logical_value, 1, " -200,200A" ;
+    logical_value, 2, " -1500,1500A" ;
+    logical_value, 3, " Invalid" ;
+  }
+  I_BATT {
+    physical_value, 31744, 33792, 0.0009765625, -32 ;
+    physical_value, 7168, 58368, 0.0078125, -256 ;
+    physical_value, 8768, 56768, 0.0625, -2048 ;
+  }
+  T_BATT {
+    physical_value, 0, 145, 1, -40, "?°C" ;
+  }
+  IBATT_QUIESCENT {
+    physical_value, 0, 252, 0.00390625, 0, "2^(-8) A" ;
+    logical_value, 253, " Overflow" ;
+    logical_value, 254, " Out of bounds" ;
+    logical_value, 255, " Invalid" ;
+  }
+  Status_Current {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " No Error" ;
+    logical_value, 1, " Error Open circuit" ;
+    logical_value, 2, " HW defect(out of ranger or ADC defect)" ;
+    logical_value, 3, " LIN saturation(no HW defect)" ;
+  }
+  Status_Voltage {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " No Error" ;
+    logical_value, 1, " Error Open circuit" ;
+    logical_value, 2, " HW defect(ADC defect)" ;
+    logical_value, 3, " LIN saturation(no HW defect)" ;
+  }
+  Status_Temp {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " No Error" ;
+    logical_value, 1, " not used" ;
+    logical_value, 2, " HW defect(ADC defect)" ;
+    logical_value, 3, " LIN saturation(no HW defect)" ;
+  }
+  ERROR_Commom {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " No error" ;
+    logical_value, 1, " Error" ;
+  }
+  ERROR_IDENT {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " No error" ;
+    logical_value, 1, " Error" ;
+  }
+  Resp_Error {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " No error" ;
+    logical_value, 1, " Error" ;
+  }
+  FLAG_INCONSISTENCY {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " No error" ;
+    logical_value, 1, " Error" ;
+  }
+  Q_Charge {
+    physical_value, 0, 65534, 0.125, 0, "0.125 Ah" ;
+  }
+  Q_Discharge {
+    physical_value, 0, 65534, 0.125, 0, "0.125 Ah" ;
+  }
+  VCU_ACU_DriverWarningLampSts {
+    physical_value, 0, 2, 1, 0 ;
+    logical_value, 0, " OFF" ;
+    logical_value, 1, " ON" ;
+    logical_value, 2, " FLASH" ;
+  }
+  VCU_ACU_PassengerWarningLampSts {
+    physical_value, 0, 2, 1, 0 ;
+    logical_value, 0, " OFF" ;
+    logical_value, 1, " ON" ;
+    logical_value, 2, " FLASH" ;
+  }
+  VCU_ACU_PassengerAirbagSts {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " RESERVED" ;
+    logical_value, 1, " Disabled" ;
+    logical_value, 2, " Enabled" ;
+    logical_value, 3, " RESERVED" ;
+  }
+  VCU_DCM_FL_DoorFLSts {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Closed" ;
+    logical_value, 1, " Opened" ;
+  }
+  VCU_DCM_FR_DoorFRSts {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Closed" ;
+    logical_value, 1, " Opened" ;
+  }
+  VCU_DCM_RL_DoorRLSts {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Closed" ;
+    logical_value, 1, " Opened" ;
+  }
+  VCU_DCM_RR_DoorRRSts {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Closed" ;
+    logical_value, 1, " Opened" ;
+  }
+  VCU_BCM_FLSeatBeltRemindReq {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " No request" ;
+    logical_value, 1, " First level reminder" ;
+    logical_value, 2, " Second level reminder" ;
+    logical_value, 3, " Reserved" ;
+  }
+  VCU_BCM_FRSeatBeltRemindReq {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " No request" ;
+    logical_value, 1, " First level reminder" ;
+    logical_value, 2, " Second level reminder" ;
+    logical_value, 3, " Reserved" ;
+  }
+  VCU_BCM_RLSeatBeltRemindReq {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " No request" ;
+    logical_value, 1, " First level reminder" ;
+    logical_value, 2, " Second level reminder" ;
+    logical_value, 3, " Reserved" ;
+  }
+  VCU_BCM_RRSeatBeltRemindReq {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " No request" ;
+    logical_value, 1, " First level reminder" ;
+    logical_value, 2, " Second level reminder" ;
+    logical_value, 3, " Reserved" ;
+  }
+  VCU_IBS_SystemStatus {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, " Normal       " ;
+    logical_value, 1, " Degrade      " ;
+    logical_value, 2, " Partial    " ;
+    logical_value, 3, " Inhibit    " ;
+    logical_value, 4, "0x4~0x7,  Reserved" ;
+  }
+  VCU_IBS_EBDFault {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Noerror" ;
+    logical_value, 1, " Error" ;
+  }
+  VCU_IBS_BrakeFluidWarning {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " BRAKEFLUID_NORMAL_INIT_DEFAULT" ;
+    logical_value, 1, " BRAKEFLUID_EMPTY" ;
+    logical_value, 2, " RESERVED" ;
+    logical_value, 3, " RESERVED" ;
+  }
+  VCU_IBS_RollerbenchMode {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Not Active" ;
+    logical_value, 1, " Active" ;
+  }
+  VCU_IVI_VrState {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Inactive" ;
+    logical_value, 1, " Active" ;
+  }
+  VCU_DCDCFail_LIN {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " False" ;
+    logical_value, 1, " True" ;
+  }
+  VCU_HVBatOvrTemp_LIN {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " False" ;
+    logical_value, 1, " True" ;
+  }
+  VCU_DriveMotOvrTemp_LIN {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " False" ;
+    logical_value, 1, " True" ;
+  }
+  VCU_HVBatCriFail_LIN {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " False" ;
+    logical_value, 1, " Yellow" ;
+    logical_value, 2, " Red" ;
+    logical_value, 3, " Reserve" ;
+  }
+  VCU_CGW_VehicleState {
+    physical_value, 0, 8, 1, 0 ;
+    logical_value, 0, " Fully sleep" ;
+    logical_value, 1, " Invisible awake-CANwakeup" ;
+    logical_value, 2, " Reserve" ;
+    logical_value, 3, " Reserve" ;
+    logical_value, 4, " Invisible awake-OnlyHVon" ;
+    logical_value, 5, " Standby-Normal" ;
+    logical_value, 6, " Standby-OnlyLVon" ;
+    logical_value, 7, " Drive-Normal" ;
+    logical_value, 8, " Drive-LVFault" ;
+  }
+  VCU_ACU_WarningLampSts {
+    physical_value, 0, 2, 1, 0 ;
+    logical_value, 0, " OFF" ;
+    logical_value, 1, " ON" ;
+    logical_value, 2, " FLASH" ;
+  }
+  VCU_IVI_BulbCheckSts {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Not BulbCheck" ;
+    logical_value, 1, " BulbCheck" ;
+  }
+  SOC {
+    physical_value, 0, 100, 1, 0, "%" ;
+  }
+  SOF_Q {
+    physical_value, 0, 254, 0.5, 0, "0.5 Ah" ;
+  }
+  SOF_V1 {
+    physical_value, 0, 254, 0.0625, 0, "0.0625V" ;
+  }
+  SOF_V2 {
+    physical_value, 0, 254, 0.0625, 0, "0.0625V" ;
+  }
+  SOH {
+    physical_value, 0, 100, 1, 0, "%" ;
+  }
+  DisChargeCurrWU_Sts {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Disabled" ;
+    logical_value, 1, " Enabled" ;
+  }
+  ChargeCurrWU_Sts {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Disabled" ;
+    logical_value, 1, " Enabled" ;
+  }
+  SOCWU_Sts {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " Disabled" ;
+    logical_value, 1, " Enabled" ;
+  }
+  DisChargeCurrWU {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " No Wake Up with discharge current" ;
+    logical_value, 1, " Wake Up with discharge current" ;
+  }
+  ChargeCurrWU {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " No Wake Up with charge current" ;
+    logical_value, 1, " Wake Up with charge current" ;
+  }
+  SOCWU {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, " No Wake Up with Low SOC" ;
+    logical_value, 1, " Wake Up with Low SOC" ;
+  }
+  SOC_STATE {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " deviation higher 15%" ;
+    logical_value, 1, " deviation lower 15%" ;
+    logical_value, 2, " deviation lower 10%" ;
+    logical_value, 3, " invalid" ;
+  }
+  SOF_Q_STATE {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " deviation higher 15%" ;
+    logical_value, 1, " deviation lower 15%" ;
+    logical_value, 2, " deviation lower 10%" ;
+    logical_value, 3, " invalid" ;
+  }
+  SOF_V1_STATE {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " deviation higher 15%" ;
+    logical_value, 1, " deviation lower 15%" ;
+    logical_value, 2, " deviation lower 10%" ;
+    logical_value, 3, " invalid" ;
+  }
+  SOF_V2_STATE {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " deviation higher 15%" ;
+    logical_value, 1, " deviation lower 15%" ;
+    logical_value, 2, " deviation lower 10%" ;
+    logical_value, 3, " invalid" ;
+  }
+  SOH_STATE {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " deviation higher 15%" ;
+    logical_value, 1, " deviation lower 15%" ;
+    logical_value, 2, " deviation lower 10%" ;
+    logical_value, 3, " invalid" ;
+  }
+  SOF_t_STATE {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, " deviation higher 15%" ;
+    logical_value, 1, " deviation lower 15%" ;
+    logical_value, 2, " deviation lower 10%" ;
+    logical_value, 3, " invalid" ;
+  }
+}
+
+Signal_representation {
+  ChargeCurrWU: ChargeCurrWU ;
+  ChargeCurrWU_Ena: ChargeCurrWU_Ena ;
+  ChargeCurrWU_Sts: ChargeCurrWU_Sts ;
+  ChargeCurrWU_Treshold: ChargeCurrWU_Treshold ;
+  DisChargeCurrWU: DisChargeCurrWU ;
+  DisChargeCurrWU_Ena: DisChargeCurrWU_Ena ;
+  DisChargeCurrWU_Sts: DisChargeCurrWU_Sts ;
+  DisChargeCurrWU_Treshold: DisChargeCurrWU_Treshold ;
+  ERROR_Commom: ERROR_Commom ;
+  ERROR_IDENT: ERROR_IDENT ;
+  FLAG_INCONSISTENCY: FLAG_INCONSISTENCY ;
+  FRC_ComFtonNet: FRC_ComFtonNet ;
+  FRC_Vl_OV: FRC_Vl_OV ;
+  FRC_Vl_UV: FRC_Vl_UV ;
+  IBATT_QUIESCENT: IBATT_QUIESCENT ;
+  I_BATT: I_BATT ;
+  I_RANGE: I_RANGE ;
+  Q_Charge: Q_Charge ;
+  Q_Discharge: Q_Discharge ;
+  Resp_Error: Resp_Error ;
+  SOC: SOC ;
+  SOCWU: SOCWU ;
+  SOCWU_Ena: SOCWU_Ena ;
+  SOCWU_Sts: SOCWU_Sts ;
+  SOCWU_Treshold: SOCWU_Treshold ;
+  SOC_STATE: SOC_STATE ;
+  SOF_Q: SOF_Q ;
+  SOF_Q_STATE: SOF_Q_STATE ;
+  SOF_V1: SOF_V1 ;
+  SOF_V1_STATE: SOF_V1_STATE ;
+  SOF_V2: SOF_V2 ;
+  SOF_V2_STATE: SOF_V2_STATE ;
+  SOF_t_STATE: SOF_t_STATE ;
+  SOH: SOH ;
+  SOH_STATE: SOH_STATE ;
+  Status_Current: Status_Current ;
+  Status_Temp: Status_Temp ;
+  Status_Voltage: Status_Voltage ;
+  T_BATT: T_BATT ;
+  U_BATT: U_BATT ;
+  VCU_ACU_DriverWarningLampSts: VCU_ACU_DriverWarningLampSts ;
+  VCU_ACU_PassengerAirbagSts: VCU_ACU_PassengerAirbagSts ;
+  VCU_ACU_PassengerWarningLampSts: VCU_ACU_PassengerWarningLampSts ;
+  VCU_ACU_WarningLampSts: VCU_ACU_WarningLampSts ;
+  VCU_BCM_FLSeatBeltRemindReq: VCU_BCM_FLSeatBeltRemindReq ;
+  VCU_BCM_FRSeatBeltRemindReq: VCU_BCM_FRSeatBeltRemindReq ;
+  VCU_BCM_RLSeatBeltRemindReq: VCU_BCM_RLSeatBeltRemindReq ;
+  VCU_BCM_RRSeatBeltRemindReq: VCU_BCM_RRSeatBeltRemindReq ;
+  VCU_CGW_VehicleState: VCU_CGW_VehicleState ;
+  VCU_DCDCFail_LIN: VCU_DCDCFail_LIN ;
+  VCU_DCM_FL_DoorFLSts: VCU_DCM_FL_DoorFLSts ;
+  VCU_DCM_FR_DoorFRSts: VCU_DCM_FR_DoorFRSts ;
+  VCU_DCM_RL_DoorRLSts: VCU_DCM_RL_DoorRLSts ;
+  VCU_DCM_RR_DoorRRSts: VCU_DCM_RR_DoorRRSts ;
+  VCU_DriveMotOvrTemp_LIN: VCU_DriveMotOvrTemp_LIN ;
+  VCU_HVBatCriFail_LIN: VCU_HVBatCriFail_LIN ;
+  VCU_HVBatOvrTemp_LIN: VCU_HVBatOvrTemp_LIN ;
+  VCU_IBS_BrakeFluidWarning: VCU_IBS_BrakeFluidWarning ;
+  VCU_IBS_EBDFault: VCU_IBS_EBDFault ;
+  VCU_IBS_RollerbenchMode: VCU_IBS_RollerbenchMode ;
+  VCU_IBS_SystemStatus: VCU_IBS_SystemStatus ;
+  VCU_IVI_BulbCheckSts: VCU_IVI_BulbCheckSts ;
+  VCU_IVI_VrState: VCU_IVI_VrState ;
+}

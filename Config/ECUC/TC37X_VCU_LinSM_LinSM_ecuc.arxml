@@ -14,8 +14,8 @@
               <SHORT-NAME>LinSMConfigSet</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinSM/LinSMConfigSet</DEFINITION-REF>
               <SUB-CONTAINERS>
-                <ECUC-CONTAINER-VALUE UUID="b10e0704-b642-39d4-8c7d-f7f315fcd90b">
-                  <SHORT-NAME>CHNL_45618847</SHORT-NAME>
+                <ECUC-CONTAINER-VALUE UUID="6fb77420-39b1-3d7b-8f97-30b345ff4438">
+                  <SHORT-NAME>CHNL_a1e6ddd5</SHORT-NAME>
                   <LONG-NAME>
                     <L-4 L="FOR-ALL">CHNL</L-4>
                   </LONG-NAME>
@@ -35,22 +35,37 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMTransceiverHandling</DEFINITION-REF>
-                      <VALUE>true</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMTransceiverPassiveMode</DEFINITION-REF>
                       <VALUE>false</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMComMNetworkHandleRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_LIN00_b12a0454</VALUE-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_HWLIN1_64cfd50f</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="4db07d32-afd1-3b81-9ac6-d5ea7be24440">
-                      <SHORT-NAME>CHNL_45618847_32a17f26</SHORT-NAME>
+                    <ECUC-CONTAINER-VALUE UUID="7458d7b4-196e-37cb-95d9-104c83c522c6">
+                      <SHORT-NAME>DiagResponseSchedule_f0e03ba7</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">DiagResponseSchedule</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule/LinSMScheduleIndex</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule/LinSMScheduleIndexRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_a1e6ddd5/DiagResponseSchedule_f0e03ba7</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="188461e6-9d30-319f-b903-3f89a7d30cd1">
+                      <SHORT-NAME>CHNL_a1e6ddd5_53da5b68</SHORT-NAME>
                       <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule</DEFINITION-REF>
                       <PARAMETER-VALUES>
                         <ECUC-NUMERICAL-PARAM-VALUE>
@@ -61,14 +76,33 @@
                       <REFERENCE-VALUES>
                         <ECUC-REFERENCE-VALUE>
                           <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule/LinSMScheduleIndexRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/NULLSchedule_CHNL_45618847</VALUE-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_a1e6ddd5/NULLSchedule_CHNL_a1e6ddd5</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="c025f274-adb3-3b69-9a75-5f695e86579c">
-                      <SHORT-NAME>TCU_LIN_Schedule_740f8639</SHORT-NAME>
+                    <ECUC-CONTAINER-VALUE UUID="9e859f4c-1db1-3380-ae04-31749e87c867">
+                      <SHORT-NAME>VCU_LIN_Schedule_fbca640b</SHORT-NAME>
                       <LONG-NAME>
-                        <L-4 L="FOR-ALL">TCU_LIN_Schedule</L-4>
+                        <L-4 L="FOR-ALL">VCU_LIN_Schedule</L-4>
+                      </LONG-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule/LinSMScheduleIndex</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule/LinSMScheduleIndexRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_a1e6ddd5/VCU_LIN_Schedule_fbca640b</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="bcd1dc8c-c4f6-359f-b7ba-9e2fd7805825">
+                      <SHORT-NAME>DiagRequestSchedule_72b11ad9</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="FOR-ALL">DiagRequestSchedule</L-4>
                       </LONG-NAME>
                       <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule</DEFINITION-REF>
                       <PARAMETER-VALUES>
@@ -80,14 +114,14 @@
                       <REFERENCE-VALUES>
                         <ECUC-REFERENCE-VALUE>
                           <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule/LinSMScheduleIndexRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_45618847/TCU_LIN_Schedule_740f8639</VALUE-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_a1e6ddd5/DiagRequestSchedule_72b11ad9</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="5c3d7485-a692-3f14-bc0a-f170a7c3016b">
-                  <SHORT-NAME>CHNL_8e3d5be2</SHORT-NAME>
+                <ECUC-CONTAINER-VALUE UUID="71db0fbe-884b-3a9f-9b2d-ab3093ec07dc">
+                  <SHORT-NAME>CHNL_f12b4c66</SHORT-NAME>
                   <LONG-NAME>
                     <L-4 L="FOR-ALL">CHNL</L-4>
                   </LONG-NAME>
@@ -113,12 +147,12 @@
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMComMNetworkHandleRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_LIN01_c62d34c2</VALUE-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_HWLIN4_14a52180</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="e59aff23-a5e9-32d4-a1a9-d5559fcdefdf">
-                      <SHORT-NAME>CHNL_8e3d5be2_a66eb9f7</SHORT-NAME>
+                    <ECUC-CONTAINER-VALUE UUID="aa3a3c21-ce38-36d1-b1b2-563e0f089f43">
+                      <SHORT-NAME>CHNL_f12b4c66_5ac1747e</SHORT-NAME>
                       <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule</DEFINITION-REF>
                       <PARAMETER-VALUES>
                         <ECUC-NUMERICAL-PARAM-VALUE>
@@ -129,12 +163,12 @@
                       <REFERENCE-VALUES>
                         <ECUC-REFERENCE-VALUE>
                           <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule/LinSMScheduleIndexRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_8e3d5be2/NULLSchedule</VALUE-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_f12b4c66/NULLSchedule</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="21bc4b97-19fc-3ead-b0d3-961e4472bf62">
-                      <SHORT-NAME>Vcu_Lin0_Schedule_0e999bb4</SHORT-NAME>
+                    <ECUC-CONTAINER-VALUE UUID="ad87855d-980f-3722-9f02-c809f4de78ea">
+                      <SHORT-NAME>Vcu_Lin0_Schedule_7bfb014e</SHORT-NAME>
                       <LONG-NAME>
                         <L-4 L="FOR-ALL">Vcu_Lin0_Schedule</L-4>
                       </LONG-NAME>
@@ -148,14 +182,14 @@
                       <REFERENCE-VALUES>
                         <ECUC-REFERENCE-VALUE>
                           <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule/LinSMScheduleIndexRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_8e3d5be2/Vcu_Lin0_Schedule_0e999bb4</VALUE-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_f12b4c66/Vcu_Lin0_Schedule_7bfb014e</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE UUID="f5cb10f2-25e2-31ae-99e4-103bcc5fad6b">
-                  <SHORT-NAME>CHNL_08a9294c</SHORT-NAME>
+                <ECUC-CONTAINER-VALUE UUID="faf20aae-e900-3501-b630-cd19e0eb2865">
+                  <SHORT-NAME>CHNL_ec2e7cde</SHORT-NAME>
                   <LONG-NAME>
                     <L-4 L="FOR-ALL">CHNL</L-4>
                   </LONG-NAME>
@@ -181,28 +215,12 @@
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMComMNetworkHandleRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_LIN02_5f246578</VALUE-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_HWLIN3_8ac1b423</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="24bcbcaf-a385-3fce-8810-0e9693007604">
-                      <SHORT-NAME>CHNL_08a9294c_f4be7c2c</SHORT-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule/LinSMScheduleIndex</DEFINITION-REF>
-                          <VALUE>0</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule/LinSMScheduleIndexRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_08a9294c/NULLSchedule_CHNL_08a9294c</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="b0041fbb-8cba-3e72-9ac4-a9f5931130a5">
-                      <SHORT-NAME>Vcu_Lin3_Schedule_bdb0899f</SHORT-NAME>
+                    <ECUC-CONTAINER-VALUE UUID="1d55b842-906e-39cf-a776-a4609ec18269">
+                      <SHORT-NAME>Vcu_Lin3_Schedule_a1d48d3a</SHORT-NAME>
                       <LONG-NAME>
                         <L-4 L="FOR-ALL">Vcu_Lin3_Schedule</L-4>
                       </LONG-NAME>
@@ -216,7 +234,23 @@
                       <REFERENCE-VALUES>
                         <ECUC-REFERENCE-VALUE>
                           <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule/LinSMScheduleIndexRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_08a9294c/Vcu_Lin3_Schedule_bdb0899f</VALUE-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_ec2e7cde/Vcu_Lin3_Schedule_a1d48d3a</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="f1ff4447-aa48-3990-be12-afa552b154ce">
+                      <SHORT-NAME>CHNL_ec2e7cde_ba7ec765</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule/LinSMScheduleIndex</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/LinSM/LinSMConfigSet/LinSMChannel/LinSMSchedule/LinSMScheduleIndexRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/LinIf/LinIfGlobalConfig/CHNL_ec2e7cde/NULLSchedule_CHNL_ec2e7cde</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>

@@ -190,8 +190,6 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_AN6_AN6(AN6 data); /* PRQA S 07
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_AN7_AN7(AN7 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_AN8_AN8(AN8 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_AN9_AN9(AN9 data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet(ECC_PMP2_SpdSet data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet(ECC_PMP3_SpdSet data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty(EXT_PWM_IN1_Duty data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period(EXT_PWM_IN1_Period data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty(EXT_PWM_IN2_Duty data); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
@@ -301,7 +299,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_Com_SWC_Ext_IN2_Ext_IN2(Ext_IN2 data); 
 #  define Rte_Write_AN8_AN8 Rte_Write_Com_SWC_AN8_AN8
 #  define Rte_Write_AN9_AN9 Rte_Write_Com_SWC_AN9_AN9
 #  define Rte_Write_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet Rte_Write_Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet
+#  define Rte_Write_Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet(data) (RTE_E_OK)
 #  define Rte_Write_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet Rte_Write_Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet
+#  define Rte_Write_Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet(data) (RTE_E_OK)
 #  define Rte_Write_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty Rte_Write_Com_SWC_EXT_PWM_IN1_Duty_EXT_PWM_IN1_Duty
 #  define Rte_Write_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period Rte_Write_Com_SWC_EXT_PWM_IN1_Period_EXT_PWM_IN1_Period
 #  define Rte_Write_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty Rte_Write_Com_SWC_EXT_PWM_IN2_Duty_EXT_PWM_IN2_Duty

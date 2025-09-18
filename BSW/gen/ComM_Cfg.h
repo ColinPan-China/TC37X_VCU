@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2025-09-17 16:38:17
+ *   Generation Time: 2025-09-18 10:37:18
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -148,10 +148,10 @@
 #define ComMConf_ComMUser_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0 0u 
 #define ComMConf_ComMUser_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79 1u 
 #define ComMConf_ComMUser_CN_ATOM_CAN_XCP_ca35a39e                     2u 
+#define ComMConf_ComMUser_CN_ATOM_HWLIN1_b196509b                      5u 
+#define ComMConf_ComMUser_CN_ATOM_HWLIN3_b56380a6                      6u 
+#define ComMConf_ComMUser_CN_ATOM_HWLIN4_57bf9bdf                      7u 
 #define ComMConf_ComMUser_CN_J1939_bms_d26c50b6                        4u 
-#define ComMConf_ComMUser_CN_LIN00_984dfd9e                            5u 
-#define ComMConf_ComMUser_CN_LIN01_778f96a0                            6u 
-#define ComMConf_ComMUser_CN_LIN02_9cb82da3                            7u 
 #define ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c                  3u 
 
 
@@ -164,9 +164,9 @@
 #define ComMConf_ComMChannel_CN_ATOM_CAN_XCP_f42a46d4                     2u 
 #define ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e                  3u 
 #define ComMConf_ComMChannel_CN_J1939_bms_dea99804                        4u 
-#define ComMConf_ComMChannel_CN_LIN00_b12a0454                            5u 
-#define ComMConf_ComMChannel_CN_LIN01_c62d34c2                            6u 
-#define ComMConf_ComMChannel_CN_LIN02_5f246578                            7u 
+#define ComMConf_ComMChannel_CN_ATOM_HWLIN1_64cfd50f                      5u 
+#define ComMConf_ComMChannel_CN_ATOM_HWLIN3_8ac1b423                      6u 
+#define ComMConf_ComMChannel_CN_ATOM_HWLIN4_14a52180                      7u 
 
 
 /* -----------------------------------------------------------------------------
@@ -404,7 +404,7 @@
 #define COMM_EXISTS_FULL_NMTYPEOFCHANNEL                                                            STD_ON
 #define COMM_EXISTS_PASSIVE_NMTYPEOFCHANNEL                                                         STD_OFF
 #define COMM_EXISTS_LIGHT_NMTYPEOFCHANNEL                                                           STD_ON
-#define COMM_EXISTS_NONE_NMTYPEOFCHANNEL                                                            STD_OFF
+#define COMM_EXISTS_NONE_NMTYPEOFCHANNEL                                                            STD_ON
 #define COMM_EXISTS_LINSLAVE_NMTYPEOFCHANNEL                                                        STD_OFF
 #define COMM_EXISTS_EIRA_RX_TYPEOFPNCSIGNAL                                                         STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define COMM_EXISTS_EIRA_TX_TYPEOFPNCSIGNAL                                                         STD_OFF  /**< Deactivateable: 'ComM_PncSignal.Type' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
@@ -421,6 +421,7 @@
 */ 
 #define COMM_FULL_NMTYPEOFCHANNEL                                                                   0x01u
 #define COMM_LIGHT_NMTYPEOFCHANNEL                                                                  0x03u
+#define COMM_NONE_NMTYPEOFCHANNEL                                                                   0x04u
 /** 
   \}
 */ 

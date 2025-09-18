@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LinIf_Cfg.h
- *   Generation Time: 2025-09-17 16:38:17
+ *   Generation Time: 2025-09-18 10:37:19
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -63,7 +63,7 @@
 #define LINIF_TP_SUPPORTED                                            STD_OFF
 #define LINIF_TRCV_HANDLING                                           STD_ON
 #define LINIF_CANCEL_TRANSMIT_SUPPORTED                               STD_OFF
-#define LINIF_LIN_CHANNEL_WAKEUP_SUPPORT                              STD_ON
+#define LINIF_LIN_CHANNEL_WAKEUP_SUPPORT                              STD_OFF
 #define LINIF_LINTRCV_WAKEUP_SUPPORT                                  STD_OFF
 #define LINIF_MULTIPLE_DRIVER_SUPPORT                                 STD_OFF
 #define LINIF_SPORADIC_FRM_SUPPORTED                                  STD_OFF
@@ -197,9 +197,9 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define LinIfConf_LinIfChannel_CHNL_8e3d5be2                          0u
-#define LinIfConf_LinIfChannel_CHNL_08a9294c                          1u
-#define LinIfConf_LinIfChannel_CHNL_45618847                          2u
+#define LinIfConf_LinIfChannel_CHNL_a1e6ddd5                          0u
+#define LinIfConf_LinIfChannel_CHNL_ec2e7cde                          1u
+#define LinIfConf_LinIfChannel_CHNL_f12b4c66                          2u
 /**\} */
 
 /**********************************************************************************************************************
@@ -215,16 +215,12 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define LinIfConf_LinIfTxPdu_LinIfTxPdu_21a8fa18                      3u
-#define LinIfConf_LinIfTxPdu_LinIfTxPdu_49b2f4e6                      2u
-#define LinIfConf_LinIfTxPdu_LinIfTxPdu_51fe7a72                      4u
-#define LinIfConf_LinIfTxPdu_LinIfTxPdu_76dd5725                      0u
-#define LinIfConf_LinIfTxPdu_LinIfTxPdu_87e9e0e9                      1u
-#define LinIfConf_LinIfTxPdu_LinIfTxPdu_814bac9f                      8u
-#define LinIfConf_LinIfTxPdu_LinIfTxPdu_66470162                      7u
-#define LinIfConf_LinIfTxPdu_LinIfTxPdu_c5fc6a36                      5u
-#define LinIfConf_LinIfTxPdu_LinIfTxPdu_d8f856fb                      6u
-#define LinIfConf_LinIfTxPdu_LinIfTxPdu_d60e946c                      9u
+#define LinIfConf_LinIfTxPdu_LinIfTxPdu_1b32bd0a                      5u
+#define LinIfConf_LinIfTxPdu_LinIfTxPdu_7fea8aa6                      4u
+#define LinIfConf_LinIfTxPdu_LinIfTxPdu_68cd4531                      1u
+#define LinIfConf_LinIfTxPdu_LinIfTxPdu_1259c3aa                      3u
+#define LinIfConf_LinIfTxPdu_LinIfTxPdu_b7981150                      2u
+#define LinIfConf_LinIfTxPdu_LinIfTxPdu_bbec5200                      0u
 /**\} */
 
 /**********************************************************************************************************************
@@ -234,7 +230,33 @@
 
 
 /**
- * \defgroup LinIfHandleIdsCHNL_8e3d5be2 Handle IDs of handle space CHNL_8e3d5be2.
+ * \defgroup LinIfHandleIdsCHNL_a1e6ddd5 Handle IDs of handle space CHNL_a1e6ddd5.
+ * \brief 
+ * \{
+ */
+
+/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
+/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define LinIfConf_LinIfScheduleTable_DiagRequestSchedule_72b11ad9     1u
+#define LinIfConf_LinIfScheduleTable_DiagResponseSchedule_f0e03ba7    2u
+#define LinIfConf_LinIfScheduleTable_NULLSchedule_CHNL_a1e6ddd5       0u
+#define LinIfConf_LinIfScheduleTable_VCU_LIN_Schedule_fbca640b        3u
+/**\} */
+
+/**
+ * \defgroup LinIfHandleIdsCHNL_ec2e7cde Handle IDs of handle space CHNL_ec2e7cde.
+ * \brief 
+ * \{
+ */
+
+/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
+/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define LinIfConf_LinIfScheduleTable_NULLSchedule_CHNL_ec2e7cde       0u
+#define LinIfConf_LinIfScheduleTable_Vcu_Lin3_Schedule_a1d48d3a       1u
+/**\} */
+
+/**
+ * \defgroup LinIfHandleIdsCHNL_f12b4c66 Handle IDs of handle space CHNL_f12b4c66.
  * \brief 
  * \{
  */
@@ -242,31 +264,7 @@
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define LinIfConf_LinIfScheduleTable_NULLSchedule                     0u
-#define LinIfConf_LinIfScheduleTable_Vcu_Lin0_Schedule_0e999bb4       1u
-/**\} */
-
-/**
- * \defgroup LinIfHandleIdsCHNL_08a9294c Handle IDs of handle space CHNL_08a9294c.
- * \brief 
- * \{
- */
-
-/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
-/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define LinIfConf_LinIfScheduleTable_NULLSchedule_CHNL_08a9294c       0u
-#define LinIfConf_LinIfScheduleTable_Vcu_Lin3_Schedule_bdb0899f       1u
-/**\} */
-
-/**
- * \defgroup LinIfHandleIdsCHNL_45618847 Handle IDs of handle space CHNL_45618847.
- * \brief 
- * \{
- */
-
-/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
-/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define LinIfConf_LinIfScheduleTable_NULLSchedule_CHNL_45618847       0u
-#define LinIfConf_LinIfScheduleTable_TCU_LIN_Schedule_740f8639        1u
+#define LinIfConf_LinIfScheduleTable_Vcu_Lin0_Schedule_7bfb014e       1u
 /**\} */
 
 /**********************************************************************************************************************
@@ -319,8 +317,6 @@
 #define LINIF_CHANNELINDTABLE                                                                       STD_ON
 #define LINIF_LINCHANNELINDEXOFCHANNELINDTABLE                                                      STD_ON
 #define LINIF_SYSTEMCHANNELINDEXOFCHANNELINDTABLE                                                   STD_ON
-#define LINIF_CHANNELTODRVWAKEUPINFO                                                                STD_ON
-#define LINIF_LINWAKEUPSOURCEOFCHANNELTODRVWAKEUPINFO                                               STD_ON
 #define LINIF_CONFIGUREDPIDTABLE                                                                    STD_OFF  /**< Deactivateable: 'LinIf_ConfiguredPIDTable' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define LINIF_ENTRY                                                                                 STD_ON
 #define LINIF_DELAYINTIMEBASETICKSOFENTRY                                                           STD_ON
@@ -412,7 +408,6 @@
 #define LINIF_CHANNELCONFIGOFPCCONFIG                                                               STD_ON
 #define LINIF_CHANNELDATAOFPCCONFIG                                                                 STD_ON
 #define LINIF_CHANNELINDTABLEOFPCCONFIG                                                             STD_ON
-#define LINIF_CHANNELTODRVWAKEUPINFOOFPCCONFIG                                                      STD_ON
 #define LINIF_ENTRYOFPCCONFIG                                                                       STD_ON
 #define LINIF_FINALMAGICNUMBEROFPCCONFIG                                                            STD_OFF  /**< Deactivateable: 'LinIf_PCConfig.FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
 #define LINIF_FRAMELENGTHDELAYLISTOFPCCONFIG                                                        STD_ON
@@ -476,7 +471,6 @@
 #define LINIF_ISDEF_WAKEUPDELAYINTERNALOFCHANNELCONFIG                                              STD_OFF
 #define LINIF_ISDEF_LINCHANNELINDEXOFCHANNELINDTABLE                                                STD_OFF
 #define LINIF_ISDEF_SYSTEMCHANNELINDEXOFCHANNELINDTABLE                                             STD_OFF
-#define LINIF_ISDEF_LINWAKEUPSOURCEOFCHANNELTODRVWAKEUPINFO                                         STD_OFF
 #define LINIF_ISDEF_DELAYINTIMEBASETICKSOFENTRY                                                     STD_OFF
 #define LINIF_ISDEF_FRAMELISTIDXOFENTRY                                                             STD_OFF
 #define LINIF_ISDEF_FRAMELENGTHDELAYOFFRAMELENGTHDELAYLIST                                          STD_OFF
@@ -510,7 +504,6 @@
 #define LINIF_ISDEF_CHANNELCONFIGOFPCCONFIG                                                         STD_ON
 #define LINIF_ISDEF_CHANNELDATAOFPCCONFIG                                                           STD_ON
 #define LINIF_ISDEF_CHANNELINDTABLEOFPCCONFIG                                                       STD_ON
-#define LINIF_ISDEF_CHANNELTODRVWAKEUPINFOOFPCCONFIG                                                STD_ON
 #define LINIF_ISDEF_ENTRYOFPCCONFIG                                                                 STD_ON
 #define LINIF_ISDEF_FRAMELENGTHDELAYLISTOFPCCONFIG                                                  STD_ON
 #define LINIF_ISDEF_FRAMELISTOFPCCONFIG                                                             STD_ON
@@ -552,7 +545,6 @@
 #define LINIF_EQ2_WAKEUPDELAYINTERNALOFCHANNELCONFIG                                                
 #define LINIF_EQ2_LINCHANNELINDEXOFCHANNELINDTABLE                                                  
 #define LINIF_EQ2_SYSTEMCHANNELINDEXOFCHANNELINDTABLE                                               
-#define LINIF_EQ2_LINWAKEUPSOURCEOFCHANNELTODRVWAKEUPINFO                                           
 #define LINIF_EQ2_DELAYINTIMEBASETICKSOFENTRY                                                       
 #define LINIF_EQ2_FRAMELISTIDXOFENTRY                                                               
 #define LINIF_EQ2_FRAMELENGTHDELAYOFFRAMELENGTHDELAYLIST                                            
@@ -586,7 +578,6 @@
 #define LINIF_EQ2_CHANNELCONFIGOFPCCONFIG                                                           LinIf_ChannelConfig
 #define LINIF_EQ2_CHANNELDATAOFPCCONFIG                                                             LinIf_ChannelData.raw
 #define LINIF_EQ2_CHANNELINDTABLEOFPCCONFIG                                                         LinIf_ChannelIndTable
-#define LINIF_EQ2_CHANNELTODRVWAKEUPINFOOFPCCONFIG                                                  LinIf_ChannelToDrvWakeupInfo
 #define LINIF_EQ2_ENTRYOFPCCONFIG                                                                   LinIf_Entry
 #define LINIF_EQ2_FRAMELENGTHDELAYLISTOFPCCONFIG                                                    LinIf_FrameLengthDelayList
 #define LINIF_EQ2_FRAMELISTOFPCCONFIG                                                               LinIf_FrameList
@@ -703,7 +694,6 @@
 #define LinIf_GetChannelConfigOfPCConfig()                                                          LinIf_ChannelConfig  /**< the pointer to LinIf_ChannelConfig */
 #define LinIf_GetChannelDataOfPCConfig()                                                            LinIf_ChannelData.raw  /**< the pointer to LinIf_ChannelData */
 #define LinIf_GetChannelIndTableOfPCConfig()                                                        LinIf_ChannelIndTable  /**< the pointer to LinIf_ChannelIndTable */
-#define LinIf_GetChannelToDrvWakeupInfoOfPCConfig()                                                 LinIf_ChannelToDrvWakeupInfo  /**< the pointer to LinIf_ChannelToDrvWakeupInfo */
 #define LinIf_GetEntryOfPCConfig()                                                                  LinIf_Entry  /**< the pointer to LinIf_Entry */
 #define LinIf_GetFrameLengthDelayListOfPCConfig()                                                   LinIf_FrameLengthDelayList  /**< the pointer to LinIf_FrameLengthDelayList */
 #define LinIf_GetFrameListOfPCConfig()                                                              LinIf_FrameList  /**< the pointer to LinIf_FrameList */
@@ -724,7 +714,7 @@
 #define LinIf_GetSizeOfSystemToLinIfChannelOfPCConfig()                                             8u  /**< the number of accomplishable value elements in LinIf_SystemToLinIfChannel */
 #define LinIf_GetSlaveChannelConfigOfPCConfig()                                                     NULL_PTR  /**< the pointer to LinIf_SlaveChannelConfig */
 #define LinIf_GetSystemToLinIfChannelOfPCConfig()                                                   LinIf_SystemToLinIfChannel  /**< the pointer to LinIf_SystemToLinIfChannel */
-#define LinIf_GetUncTxFrmTotalNumberOfPCConfig()                                                    10u  /**< Number of unconditional Tx frames */
+#define LinIf_GetUncTxFrmTotalNumberOfPCConfig()                                                    6u  /**< Number of unconditional Tx frames */
 /** 
   \}
 */ 
@@ -750,7 +740,6 @@
 #define LinIf_GetChannelData(Index)                                                                 (LinIf_GetChannelDataOfPCConfig()[(Index)])
 #define LinIf_GetLinChannelIndexOfChannelIndTable(Index)                                            (LinIf_GetChannelIndTableOfPCConfig()[(Index)].LinChannelIndexOfChannelIndTable)
 #define LinIf_GetSystemChannelIndexOfChannelIndTable(Index)                                         (LinIf_GetChannelIndTableOfPCConfig()[(Index)].SystemChannelIndexOfChannelIndTable)
-#define LinIf_GetLinWakeupSourceOfChannelToDrvWakeupInfo(Index)                                     (LinIf_GetChannelToDrvWakeupInfoOfPCConfig()[(Index)].LinWakeupSourceOfChannelToDrvWakeupInfo)
 #define LinIf_GetDelayInTimebaseTicksOfEntry(Index)                                                 (LinIf_GetEntryOfPCConfig()[(Index)].DelayInTimebaseTicksOfEntry)
 #define LinIf_GetFrameListIdxOfEntry(Index)                                                         (LinIf_GetEntryOfPCConfig()[(Index)].FrameListIdxOfEntry)
 #define LinIf_GetFrameLengthDelayOfFrameLengthDelayList(Index)                                      (LinIf_GetFrameLengthDelayListOfPCConfig()[(Index)].FrameLengthDelayOfFrameLengthDelayList)
@@ -847,8 +836,6 @@
 #define LinIf_HasChannelIndTable()                                                                  (TRUE != FALSE)
 #define LinIf_HasLinChannelIndexOfChannelIndTable()                                                 (TRUE != FALSE)
 #define LinIf_HasSystemChannelIndexOfChannelIndTable()                                              (TRUE != FALSE)
-#define LinIf_HasChannelToDrvWakeupInfo()                                                           (TRUE != FALSE)
-#define LinIf_HasLinWakeupSourceOfChannelToDrvWakeupInfo()                                          (TRUE != FALSE)
 #define LinIf_HasEntry()                                                                            (TRUE != FALSE)
 #define LinIf_HasDelayInTimebaseTicksOfEntry()                                                      (TRUE != FALSE)
 #define LinIf_HasFrameListIdxOfEntry()                                                              (TRUE != FALSE)
@@ -898,7 +885,6 @@
 #define LinIf_HasChannelConfigOfPCConfig()                                                          (TRUE != FALSE)
 #define LinIf_HasChannelDataOfPCConfig()                                                            (TRUE != FALSE)
 #define LinIf_HasChannelIndTableOfPCConfig()                                                        (TRUE != FALSE)
-#define LinIf_HasChannelToDrvWakeupInfoOfPCConfig()                                                 (TRUE != FALSE)
 #define LinIf_HasEntryOfPCConfig()                                                                  (TRUE != FALSE)
 #define LinIf_HasFrameLengthDelayListOfPCConfig()                                                   (TRUE != FALSE)
 #define LinIf_HasFrameListOfPCConfig()                                                              (TRUE != FALSE)
@@ -1040,9 +1026,6 @@ typedef uint8_least LinIf_ChannelDataIterType;
 /**   \brief  type used to iterate LinIf_ChannelIndTable */
 typedef uint8_least LinIf_ChannelIndTableIterType;
 
-/**   \brief  type used to iterate LinIf_ChannelToDrvWakeupInfo */
-typedef uint8_least LinIf_ChannelToDrvWakeupInfoIterType;
-
 /**   \brief  type used to iterate LinIf_Entry */
 typedef uint8_least LinIf_EntryIterType;
 
@@ -1147,9 +1130,6 @@ typedef uint8 LinIf_LinChannelIndexOfChannelIndTableType;
 
 /**   \brief  value based type definition for LinIf_SystemChannelIndexOfChannelIndTable */
 typedef uint8 LinIf_SystemChannelIndexOfChannelIndTableType;
-
-/**   \brief  value based type definition for LinIf_LinWakeupSourceOfChannelToDrvWakeupInfo */
-typedef uint16 LinIf_LinWakeupSourceOfChannelToDrvWakeupInfoType;
 
 /**   \brief  value based type definition for LinIf_DelayInTimebaseTicksOfEntry */
 typedef uint8 LinIf_DelayInTimebaseTicksOfEntryType;
@@ -1273,12 +1253,6 @@ typedef struct sLinIf_ChannelIndTableType
   LinIf_SystemChannelIndexOfChannelIndTableType SystemChannelIndexOfChannelIndTable;  /**< ComM (System) channel index */
 } LinIf_ChannelIndTableType;
 
-/**   \brief  type used in LinIf_ChannelToDrvWakeupInfo */
-typedef struct sLinIf_ChannelToDrvWakeupInfoType
-{
-  LinIf_LinWakeupSourceOfChannelToDrvWakeupInfoType LinWakeupSourceOfChannelToDrvWakeupInfo;  /**< Defines the ID of the wakeup source. Zero means invalid source and that external wakeup is not supported. */
-} LinIf_ChannelToDrvWakeupInfoType;
-
 /**   \brief  type used in LinIf_Entry */
 typedef struct sLinIf_EntryType
 {
@@ -1358,17 +1332,17 @@ typedef struct sLinIf_SystemToLinIfChannelType
 /**   \brief  type to be used as symbolic data element access to LinIf_ChannelData */
 typedef struct LinIf_ChannelDataStructSTag
 {
-  LinIf_ChannelDataType CHNL_8e3d5be2;
-  LinIf_ChannelDataType CHNL_08a9294c;
-  LinIf_ChannelDataType CHNL_45618847;
+  LinIf_ChannelDataType CHNL_a1e6ddd5;
+  LinIf_ChannelDataType CHNL_ec2e7cde;
+  LinIf_ChannelDataType CHNL_f12b4c66;
 } LinIf_ChannelDataStructSType;
 
 /**   \brief  type to be used as symbolic data element access to LinIf_MasterChannelData */
 typedef struct LinIf_MasterChannelDataStructSTag
 {
-  LinIf_MasterChannelDataType CHNL_8e3d5be2;
-  LinIf_MasterChannelDataType CHNL_08a9294c;
-  LinIf_MasterChannelDataType CHNL_45618847;
+  LinIf_MasterChannelDataType CHNL_a1e6ddd5;
+  LinIf_MasterChannelDataType CHNL_ec2e7cde;
+  LinIf_MasterChannelDataType CHNL_f12b4c66;
 } LinIf_MasterChannelDataStructSType;
 
 /** 
@@ -1411,9 +1385,6 @@ typedef P2VAR(LinIf_ChannelDataType, TYPEDEF, LINIF_VAR_NOINIT) LinIf_ChannelDat
 
 /**   \brief  type used to point to LinIf_ChannelIndTable */
 typedef P2CONST(LinIf_ChannelIndTableType, TYPEDEF, LINIF_CONST) LinIf_ChannelIndTablePtrType;
-
-/**   \brief  type used to point to LinIf_ChannelToDrvWakeupInfo */
-typedef P2CONST(LinIf_ChannelToDrvWakeupInfoType, TYPEDEF, LINIF_CONST) LinIf_ChannelToDrvWakeupInfoPtrType;
 
 /**   \brief  type used to point to LinIf_Entry */
 typedef P2CONST(LinIf_EntryType, TYPEDEF, LINIF_CONST) LinIf_EntryPtrType;
@@ -1563,25 +1534,6 @@ extern CONST(LinIf_ChannelIndTableType, LINIF_CONST) LinIf_ChannelIndTable[3];
 /*lint -restore */
 
 /**********************************************************************************************************************
-  LinIf_ChannelToDrvWakeupInfo
-**********************************************************************************************************************/
-/** 
-  \var    LinIf_ChannelToDrvWakeupInfo
-  \details
-  Element            Description
-  LinWakeupSource    Defines the ID of the wakeup source. Zero means invalid source and that external wakeup is not supported.
-*/ 
-#define LINIF_START_SEC_CONST_UNSPECIFIED
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-extern CONST(LinIf_ChannelToDrvWakeupInfoType, LINIF_CONST) LinIf_ChannelToDrvWakeupInfo[3];
-#define LINIF_STOP_SEC_CONST_UNSPECIFIED
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-
-/**********************************************************************************************************************
   LinIf_Entry
 **********************************************************************************************************************/
 /** 
@@ -1595,7 +1547,7 @@ extern CONST(LinIf_ChannelToDrvWakeupInfoType, LINIF_CONST) LinIf_ChannelToDrvWa
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(LinIf_EntryType, LINIF_CONST) LinIf_Entry[22];
+extern CONST(LinIf_EntryType, LINIF_CONST) LinIf_Entry[16];
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1638,7 +1590,7 @@ extern CONST(LinIf_FrameLengthDelayListType, LINIF_CONST) LinIf_FrameLengthDelay
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(LinIf_FrameListType, LINIF_CONST) LinIf_FrameList[28];
+extern CONST(LinIf_FrameListType, LINIF_CONST) LinIf_FrameList[20];
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1786,7 +1738,7 @@ extern CONST(LinIf_MasterChannelConfigType, LINIF_CONST) LinIf_MasterChannelConf
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(LinIf_ScheduleTableListType, LINIF_CONST) LinIf_ScheduleTableList[6];
+extern CONST(LinIf_ScheduleTableListType, LINIF_CONST) LinIf_ScheduleTableList[8];
 #define LINIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1803,7 +1755,7 @@ extern CONST(LinIf_ScheduleTableListType, LINIF_CONST) LinIf_ScheduleTableList[6
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(LinIf_ScheduleTableListIndType, LINIF_CONST) LinIf_ScheduleTableListInd[6];
+extern CONST(LinIf_ScheduleTableListIndType, LINIF_CONST) LinIf_ScheduleTableListInd[8];
 #define LINIF_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
