@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_14.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2025-09-18, 13:51:12  !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2025-09-18, 16:34:22  !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b180321-0610       !!!IGNORE-LINE!!!                  **
 **                                                                            **
@@ -80,7 +80,7 @@
 #define SPI_CHANNEL_BUFFERS_ALLOWED           (1U)
 /* Specifies if the API Spi_Cancel() is available */
 
-#define SPI_CANCEL_API                        (STD_OFF)
+#define SPI_CANCEL_API                        (STD_ON)
 /* Specifies if the API Spi_GetHWUnitStatus() is available */
 
 #define SPI_HW_STATUS_API                     (STD_OFF)

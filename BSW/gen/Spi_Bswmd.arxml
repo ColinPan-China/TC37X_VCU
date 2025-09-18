@@ -17,7 +17,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_23.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2025-09-18, 13:51:12          !!!IGNORE-LINE!!!           **
+**  DATE, TIME: 2025-09-18, 16:34:22          !!!IGNORE-LINE!!!           **
 **                                                                            **
 **  GENERATOR : Build b180321-0610            !!!IGNORE-LINE!!!             **
 **                                                                            **
@@ -79,6 +79,9 @@
                 </BSW-MODULE-ENTRY-REF-CONDITIONAL>
                 <BSW-MODULE-ENTRY-REF-CONDITIONAL>
                   <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Spi/BswModuleEntrys/Spi_SyncTransmit</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Spi/BswModuleEntrys/Spi_Cancel</BSW-MODULE-ENTRY-REF>
                 </BSW-MODULE-ENTRY-REF-CONDITIONAL>
                 <BSW-MODULE-ENTRY-REF-CONDITIONAL>
                   <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Spi/BswModuleEntrys/Spi_SetAsyncMode</BSW-MODULE-ENTRY-REF>
@@ -218,6 +221,14 @@
                       </CAN-ENTER-EXCLUSIVE-AREA-REFS>
                       <REENTRANCY-LEVEL>MULTICORE-REENTRANT</REENTRANCY-LEVEL>
                       <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Spi/BswModuleEntrys/Spi_SyncTransmit</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Spi_Cancel</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Spi/BswModuleDescriptions/Spi/SpiBehavior/Queue_Update</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <REENTRANCY-LEVEL>MULTICORE-REENTRANT</REENTRANCY-LEVEL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Spi/BswModuleEntrys/Spi_Cancel</IMPLEMENTED-ENTRY-REF>
                     </BSW-CALLED-ENTITY>
                     <BSW-CALLED-ENTITY>
                       <SHORT-NAME>Spi_SetAsyncMode</SHORT-NAME>
@@ -575,6 +586,31 @@
                   </SW-DATA-DEF-PROPS-VARIANTS>
                 </SW-DATA-DEF-PROPS>
               </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>Sequence</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST = "IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Spi/ImplementationDataTypes/Spi_SequenceType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Spi_Cancel</SHORT-NAME>
+              <INTRODUCTION>
+                <NOTE SI="Spi_Cancel is reentrant for different channel or core" NOTE-TYPE="HINT" />
+              </INTRODUCTION>
+              <SERVICE-ID>12</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
               <ARGUMENTS>
                 <SW-SERVICE-ARG>
                   <SHORT-NAME>Sequence</SHORT-NAME>

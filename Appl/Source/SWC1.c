@@ -416,7 +416,7 @@ void Lin_DemoFunction(void)
 	 	}
 	 }while(Ret2 != LIN_TX_OK );
 }
-uint16 ShutdownTimer = 0;
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -427,20 +427,7 @@ FUNC(void, SWC1_CODE) SWC1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: SWC1_Runnable10ms
  *********************************************************************************************************************/
-//  Lin_DemoFunction();
-	if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )//( Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_12_KL15) == 0 )  
-  {
-    ShutdownTimer = 0;
-  }
-  else
-  {
-    if( ShutdownTimer < 500 )
-    {
-      ShutdownTimer++;
-    }
-  }
-
-  if( ShutdownTimer < 500 )
+  if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )
   {
     Rte_Call_UR_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0_RequestComMode(COMM_FULL_COMMUNICATION);
     Rte_Call_UR_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79_RequestComMode(COMM_FULL_COMMUNICATION);
