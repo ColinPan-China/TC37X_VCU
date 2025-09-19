@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Scheduler_Cfg.h
- *   Generation Time: 2024-09-03 11:08:40
+ *   Generation Time: 2025-09-19 09:19:30
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -48,7 +48,7 @@
 # define OS_CFG_SCHEDULE_ROUND_ROB_ENABLED       (STD_OFF)
 
 /*! Defines the number of all task queues. */
-# define OS_CFG_NUM_TASKQUEUES                   (6u)
+# define OS_CFG_NUM_TASKQUEUES                   (7u)
 
 /* Number of task queue activation slots: OsCore0 */
 # define OS_CFG_NUM_TASKQUEUE0_OSCORE0_SLOTS     (3u)
@@ -56,7 +56,26 @@
 # define OS_CFG_NUM_TASKQUEUE2_OSCORE0_SLOTS     (2u)
 # define OS_CFG_NUM_TASKQUEUE3_OSCORE0_SLOTS     (2u)
 # define OS_CFG_NUM_TASKQUEUE4_OSCORE0_SLOTS     (2u)
-# define OS_CFG_NUM_TASKQUEUE5_OSCORE0_SLOTS     (2u)
+# define OS_CFG_NUM_TASKQUEUE5_OSCORE0_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE6_OSCORE0_SLOTS     (2u)
+
+/* Number of task queue activation slots: OsCore1 */
+# define OS_CFG_NUM_TASKQUEUE0_OSCORE1_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE1_OSCORE1_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE2_OSCORE1_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE3_OSCORE1_SLOTS     (2u)
+# define OS_CFG_NUM_TASKQUEUE4_OSCORE1_SLOTS     (2u)
+# define OS_CFG_NUM_TASKQUEUE5_OSCORE1_SLOTS     (5u)
+# define OS_CFG_NUM_TASKQUEUE6_OSCORE1_SLOTS     (2u)
+
+/* Number of task queue activation slots: OsCore2 */
+# define OS_CFG_NUM_TASKQUEUE0_OSCORE2_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE1_OSCORE2_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE2_OSCORE2_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE3_OSCORE2_SLOTS     (2u)
+# define OS_CFG_NUM_TASKQUEUE4_OSCORE2_SLOTS     (2u)
+# define OS_CFG_NUM_TASKQUEUE5_OSCORE2_SLOTS     (5u)
+# define OS_CFG_NUM_TASKQUEUE6_OSCORE2_SLOTS     (2u)
 
 
 /**********************************************************************************************************************

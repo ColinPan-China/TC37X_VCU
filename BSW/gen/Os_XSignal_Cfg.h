@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_XSignal_Cfg.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2025-09-19 09:31:43
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -45,10 +45,28 @@
  *********************************************************************************************************************/
 
 /*! Defines whether the X-Signal module is active (STD_ON) or not (STD_OFF). */
-# define OS_CFG_XSIGNAL                          (STD_OFF)
+# define OS_CFG_XSIGNAL                          (STD_ON)
 
 /*! Defines whether cross core calls shall be performed asynchronous (STD_ON) or not (STD_OFF). */
 # define OS_CFG_XSIG_USEASYNC                    (STD_OFF)
+
+/* X-Signal defines for core: OsCore0 */
+# define OS_CFG_NUM_XSIG_OSCORE0_ISRS     (1uL)
+# define OS_CFG_SIZE_OSCORE0_SEND0_XSIGNALISR_OSCORE1_RECV0_BUFFER     (2uL)
+# define OS_CFG_SIZE_OSCORE0_SEND1_XSIGNALISR_OSCORE2_RECV0_BUFFER     (2uL)
+# define OS_CFG_NUM_ISR_XSIGNALISR_OSCORE0_PORTS     (2uL)
+
+/* X-Signal defines for core: OsCore1 */
+# define OS_CFG_NUM_XSIG_OSCORE1_ISRS     (1uL)
+# define OS_CFG_SIZE_OSCORE1_SEND0_XSIGNALISR_OSCORE0_RECV0_BUFFER     (2uL)
+# define OS_CFG_SIZE_OSCORE1_SEND1_XSIGNALISR_OSCORE2_RECV1_BUFFER     (2uL)
+# define OS_CFG_NUM_ISR_XSIGNALISR_OSCORE1_PORTS     (2uL)
+
+/* X-Signal defines for core: OsCore2 */
+# define OS_CFG_NUM_XSIG_OSCORE2_ISRS     (1uL)
+# define OS_CFG_SIZE_OSCORE2_SEND0_XSIGNALISR_OSCORE0_RECV1_BUFFER     (2uL)
+# define OS_CFG_SIZE_OSCORE2_SEND1_XSIGNALISR_OSCORE1_RECV1_BUFFER     (2uL)
+# define OS_CFG_NUM_ISR_XSIGNALISR_OSCORE2_PORTS     (2uL)
 
 
 /**********************************************************************************************************************

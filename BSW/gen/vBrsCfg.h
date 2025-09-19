@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: .\vBrsCfg.h
- *   Generation Time: 2024-09-05 15:06:31
+ *   Generation Time: 2025-09-19 09:19:29
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -74,7 +74,7 @@
 /* SafeContext support is disabled (#define BRS_ENABLE_SAFECTXSUPPORT) */
 
 /* Switch to enable support of MultiCore OS */
-/* MultiCore OS support is disabled (#define BRS_ENABLE_OS_MULTICORESUPPORT) */
+#define BRS_ENABLE_OS_MULTICORESUPPORT
 
 /* Switches to enable support of FlashBootLoader and to define the FBL Type */
 /* FlashBootLoader support is disabled (#define BRS_ENABLE_FBL_SUPPORT) */

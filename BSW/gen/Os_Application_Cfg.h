@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Application_Cfg.h
- *   Generation Time: 2025-09-17 16:38:18
+ *   Generation Time: 2025-09-19 09:31:41
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -44,25 +44,35 @@
  *  GLOBAL CONSTANT MACROS
  *********************************************************************************************************************/
 
-/* Number of application objects: OsApplication */
-# define OS_CFG_NUM_APP_OSAPPLICATION_ALARMS             (7uL)
-# define OS_CFG_NUM_APP_OSAPPLICATION_COUNTERS           (0uL)
-# define OS_CFG_NUM_APP_OSAPPLICATION_HOOKS              (0uL)
-# define OS_CFG_NUM_APP_OSAPPLICATION_ISRS               (31uL)
-# define OS_CFG_NUM_APP_OSAPPLICATION_CAT1ISRS           (0uL)
-# define OS_CFG_NUM_APP_OSAPPLICATION_SCHTS              (0uL)
-# define OS_CFG_NUM_APP_OSAPPLICATION_TASKS              (3uL)
-# define OS_CFG_NUM_APP_OSAPPLICATION_SERVICES           (0uL)
-
 /* Number of application objects: SystemApplication_OsCore0 */
-# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_ALARMS             (0uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_ALARMS             (7uL)
 # define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_COUNTERS           (1uL)
 # define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_HOOKS              (0uL)
-# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_ISRS               (1uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_ISRS               (33uL)
 # define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_CAT1ISRS           (0uL)
 # define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_SCHTS              (0uL)
-# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_TASKS              (3uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_TASKS              (6uL)
 # define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_SERVICES           (0uL)
+
+/* Number of application objects: SystemApplication_OsCore1 */
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE1_ALARMS             (2uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE1_COUNTERS           (1uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE1_HOOKS              (0uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE1_ISRS               (2uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE1_CAT1ISRS           (0uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE1_SCHTS              (0uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE1_TASKS              (6uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE1_SERVICES           (0uL)
+
+/* Number of application objects: SystemApplication_OsCore2 */
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE2_ALARMS             (2uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE2_COUNTERS           (1uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE2_HOOKS              (0uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE2_ISRS               (2uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE2_CAT1ISRS           (0uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE2_SCHTS              (0uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE2_TASKS              (6uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE2_SERVICES           (0uL)
 
 
 /**********************************************************************************************************************

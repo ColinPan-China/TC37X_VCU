@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Task_Lcfg.h
- *   Generation Time: 2024-09-02 17:07:28
+ *   Generation Time: 2025-09-19 09:19:31
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -72,14 +72,14 @@
 # define OS_START_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-/*! Task configuration data: AswTask */
-extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_AswTask;
+/*! Task configuration data: Core0_AswTask */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core0_AswTask;
 
-/*! Task configuration data: Asw_Init */
-extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Asw_Init;
+/*! Task configuration data: Core0_Asw_Init */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core0_Asw_Init;
 
-/*! Task configuration data: Bsw_Task */
-extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Bsw_Task;
+/*! Task configuration data: Core0_Bsw_Task */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core0_Bsw_Task;
 
 /*! Task configuration data: Default_Init_Task */
 extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Default_Init_Task;
@@ -91,6 +91,56 @@ extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Default_Init_Task_Trusted;
 extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_IdleTask_OsCore0;
 
 # define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_CORE1_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Task configuration data: Core1_Asw_Init */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core1_Asw_Init;
+
+/*! Task configuration data: Core1_Asw_Task */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core1_Asw_Task;
+
+/*! Task configuration data: Core1_Bsw_Task */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core1_Bsw_Task;
+
+/*! Task configuration data: Default_Init_Task_Core1 */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Default_Init_Task_Core1;
+
+/*! Task configuration data: Default_Init_Task_Core1_Trusted */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Default_Init_Task_Core1_Trusted;
+
+/*! Task configuration data: IdleTask_OsCore1 */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_IdleTask_OsCore1;
+
+# define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_CORE2_CONST_UNSPECIFIED
+# include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Task configuration data: Core2_Asw_Init */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core2_Asw_Init;
+
+/*! Task configuration data: Core2_Asw_Task */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core2_Asw_Task;
+
+/*! Task configuration data: Core2_Bsw_Task */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core2_Bsw_Task;
+
+/*! Task configuration data: Default_Init_Task_Core2 */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Default_Init_Task_Core2;
+
+/*! Task configuration data: Default_Init_Task_Core2_Trusted */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Default_Init_Task_Core2_Trusted;
+
+/*! Task configuration data: IdleTask_OsCore2 */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_IdleTask_OsCore2;
+
+# define OS_STOP_SEC_CORE2_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: vLinkGen_Cfg.h
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2025-09-19 09:19:27
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -69,12 +69,12 @@
 # define VLINKGEN_CFG_NUM_ZERO_INIT_HARD_RESET_BLOCKS 1uL 
 # define VLINKGEN_CFG_NUM_ZERO_INIT_EARLY_GROUPS      4uL 
 # define VLINKGEN_CFG_NUM_ZERO_INIT_ZERO_GROUPS       1uL 
-# define VLINKGEN_CFG_NUM_ZERO_INIT_ONE_GROUPS        16uL 
+# define VLINKGEN_CFG_NUM_ZERO_INIT_ONE_GROUPS        24uL 
 # define VLINKGEN_CFG_NUM_ZERO_INIT_TWO_GROUPS        1uL 
 # define VLINKGEN_CFG_NUM_ZERO_INIT_THREE_GROUPS      1uL 
 # define VLINKGEN_CFG_NUM_ZERO_INIT_HARD_RESET_GROUPS 1uL 
 # define VLINKGEN_CFG_NUM_INIT_ZERO_GROUPS            1uL 
-# define VLINKGEN_CFG_NUM_INIT_ONE_GROUPS             14uL 
+# define VLINKGEN_CFG_NUM_INIT_ONE_GROUPS             18uL 
 # define VLINKGEN_CFG_NUM_INIT_TWO_GROUPS             1uL 
 # define VLINKGEN_CFG_NUM_INIT_THREE_GROUPS           1uL 
 # define VLINKGEN_CFG_NUM_INIT_HARD_RESET_GROUPS      1uL 

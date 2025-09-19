@@ -28,13 +28,13 @@
  * They are presented as a comment in the corresponding object definition containing a list of all legal values.
  *********************************************************************************************************************/
 
-   TASK AswTask {
+   TASK Core0_AswTask {
       ACTIVATION = 1:"@RO@";
       PRIORITY = 64:"@RO@";
       SCHEDULE = FULL:"@RO@";
 // TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
       AUTOSTART = FALSE:"@RO@";
-      EVENT = Rte_Ev_Cyclic_AswTask_0_10ms:"@RO@";
+      EVENT = Rte_Ev_Cyclic_Core0_AswTask_0_10ms:"@RO@";
       EVENT = Rte_Ev_Run_Com_SWC_Com_Runnable_2ms:"@RO@";
       EVENT = Rte_Ev_Run_Com_SWC_Com_Runnable_500ms:"@RO@";
       EVENT = Rte_Ev_Run_Com_SWC_Rte_Msg10Eh_Rx_Notification:"@RO@";
@@ -45,47 +45,47 @@
       EVENT = Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms:"@RO@";
    }:"@RO@@NR@";
 
-   ALARM Rte_Al_TE_AswTask_0_10ms {
-      COUNTER = SystemTimer;
-      ACTION = SETEVENT
-      {
-         TASK = AswTask;
-         EVENT = Rte_Ev_Cyclic_AswTask_0_10ms;
-      }:"@ROC@";
-      AUTOSTART = FALSE:"@RO@";
-   }:"@RO@@NR@";
-
    ALARM Rte_Al_TE_Com_SWC_Com_Runnable_2ms {
-      COUNTER = SystemTimer;
+      COUNTER = SystemTimer_Core0;
       ACTION = SETEVENT
       {
-         TASK = AswTask;
+         TASK = Core0_AswTask;
          EVENT = Rte_Ev_Run_Com_SWC_Com_Runnable_2ms;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_Com_SWC_Com_Runnable_500ms {
-      COUNTER = SystemTimer;
+      COUNTER = SystemTimer_Core0;
       ACTION = SETEVENT
       {
-         TASK = AswTask;
+         TASK = Core0_AswTask;
          EVENT = Rte_Ev_Run_Com_SWC_Com_Runnable_500ms;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
 
-   ALARM Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms {
-      COUNTER = SystemTimer;
+   ALARM Rte_Al_TE_Core0_AswTask_0_10ms {
+      COUNTER = SystemTimer_Core0;
       ACTION = SETEVENT
       {
-         TASK = AswTask;
+         TASK = Core0_AswTask;
+         EVENT = Rte_Ev_Cyclic_Core0_AswTask_0_10ms;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms {
+      COUNTER = SystemTimer_Core0;
+      ACTION = SETEVENT
+      {
+         TASK = Core0_AswTask;
          EVENT = Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
 
-   TASK Asw_Init {
+   TASK Core0_Asw_Init {
       ACTIVATION = 1:"@RO@";
       PRIORITY = 63:"@RO@";
       SCHEDULE = FULL:"@RO@";
@@ -93,60 +93,146 @@
       AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
 
-   TASK Bsw_Task {
+   TASK Core0_Bsw_Task {
       ACTIVATION = 1:"@RO@";
       PRIORITY = 65:"@RO@";
       SCHEDULE = FULL:"@RO@";
 // TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
       AUTOSTART = FALSE:"@RO@";
-      EVENT = Rte_Ev_Cyclic2_Bsw_Task_0_10ms:"@RO@";
-      EVENT = Rte_Ev_Cyclic2_Bsw_Task_0_20ms:"@RO@";
-      EVENT = Rte_Ev_Cyclic2_Bsw_Task_0_5ms:"@RO@";
+      EVENT = Rte_Ev_Cyclic2_Core0_Bsw_Task_0_10ms:"@RO@";
+      EVENT = Rte_Ev_Cyclic2_Core0_Bsw_Task_0_20ms:"@RO@";
+      EVENT = Rte_Ev_Cyclic2_Core0_Bsw_Task_0_5ms:"@RO@";
    }:"@RO@@NR@";
 
-   ALARM Rte_Al_TE2_Bsw_Task_0_10ms {
-      COUNTER = SystemTimer;
+   ALARM Rte_Al_TE2_Core0_Bsw_Task_0_10ms {
+      COUNTER = SystemTimer_Core0;
       ACTION = SETEVENT
       {
-         TASK = Bsw_Task;
-         EVENT = Rte_Ev_Cyclic2_Bsw_Task_0_10ms;
+         TASK = Core0_Bsw_Task;
+         EVENT = Rte_Ev_Cyclic2_Core0_Bsw_Task_0_10ms;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
 
-   ALARM Rte_Al_TE2_Bsw_Task_0_20ms {
-      COUNTER = SystemTimer;
+   ALARM Rte_Al_TE2_Core0_Bsw_Task_0_20ms {
+      COUNTER = SystemTimer_Core0;
       ACTION = SETEVENT
       {
-         TASK = Bsw_Task;
-         EVENT = Rte_Ev_Cyclic2_Bsw_Task_0_20ms;
+         TASK = Core0_Bsw_Task;
+         EVENT = Rte_Ev_Cyclic2_Core0_Bsw_Task_0_20ms;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
 
-   ALARM Rte_Al_TE2_Bsw_Task_0_5ms {
-      COUNTER = SystemTimer;
+   ALARM Rte_Al_TE2_Core0_Bsw_Task_0_5ms {
+      COUNTER = SystemTimer_Core0;
       ACTION = SETEVENT
       {
-         TASK = Bsw_Task;
-         EVENT = Rte_Ev_Cyclic2_Bsw_Task_0_5ms;
+         TASK = Core0_Bsw_Task;
+         EVENT = Rte_Ev_Cyclic2_Core0_Bsw_Task_0_5ms;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
 
-   EVENT Rte_Ev_Cyclic2_Bsw_Task_0_10ms {
+   TASK Core1_Asw_Init {
+      ACTIVATION = 1:"@RO@";
+      PRIORITY = 0:"@RO@";
+      SCHEDULE = FULL:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   TASK Core1_Asw_Task {
+      ACTIVATION = 1:"@RO@";
+      PRIORITY = 0:"@RO@";
+      SCHEDULE = FULL:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms {
+      COUNTER = SystemTimer_Core1;
+      ACTION = ACTIVATETASK
+      {
+         TASK = Core1_Asw_Task;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
+   }:"@RO@@NR@";
+
+   TASK Core1_Bsw_Task {
+      ACTIVATION = 1:"@RO@";
+      PRIORITY = 0:"@RO@";
+      SCHEDULE = FULL:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE2_EcuM_EcuM_MainFunction {
+      COUNTER = SystemTimer_Core1;
+      ACTION = ACTIVATETASK
+      {
+         TASK = Core1_Bsw_Task;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   TASK Core2_Asw_Init {
+      ACTIVATION = 1:"@RO@";
+      PRIORITY = 0:"@RO@";
+      SCHEDULE = FULL:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   TASK Core2_Asw_Task {
+      ACTIVATION = 1:"@RO@";
+      PRIORITY = 0:"@RO@";
+      SCHEDULE = FULL:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_Core2App_SWC_Core2App_SWC_Runnable_10ms {
+      COUNTER = SystemTimer_Core2;
+      ACTION = ACTIVATETASK
+      {
+         TASK = Core2_Asw_Task;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
+   }:"@RO@@NR@";
+
+   TASK Core2_Bsw_Task {
+      ACTIVATION = 1:"@RO@";
+      PRIORITY = 0:"@RO@";
+      SCHEDULE = FULL:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE3_EcuM_EcuM_MainFunction {
+      COUNTER = SystemTimer_Core2;
+      ACTION = ACTIVATETASK
+      {
+         TASK = Core2_Bsw_Task;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   EVENT Rte_Ev_Cyclic2_Core0_Bsw_Task_0_10ms {
       MASK = AUTO;
    }:"@ROC@@NR@";
 
-   EVENT Rte_Ev_Cyclic2_Bsw_Task_0_20ms {
+   EVENT Rte_Ev_Cyclic2_Core0_Bsw_Task_0_20ms {
       MASK = AUTO;
    }:"@ROC@@NR@";
 
-   EVENT Rte_Ev_Cyclic2_Bsw_Task_0_5ms {
+   EVENT Rte_Ev_Cyclic2_Core0_Bsw_Task_0_5ms {
       MASK = AUTO;
    }:"@ROC@@NR@";
 
-   EVENT Rte_Ev_Cyclic_AswTask_0_10ms {
+   EVENT Rte_Ev_Cyclic_Core0_AswTask_0_10ms {
       MASK = AUTO;
    }:"@ROC@@NR@";
 
@@ -181,3 +267,57 @@
    EVENT Rte_Ev_Run_PowerMng_SWC_Led_Runnable1000ms {
       MASK = AUTO;
    }:"@ROC@@NR@";
+
+
+   APPLICATION SystemApplication_OsCore0 {
+      TRUSTED = TRUE;
+// Add the following four attributes according to your needs.
+// Note: They do not have a default value and are therefore necessary in the configuration.
+//      STARTUPHOOK = FALSE;
+//      SHUTDOWNHOOK = FALSE;
+//      ERRORHOOK = FALSE;
+//      HAS_RESTARTTASK = FALSE;
+      TASK = Core0_AswTask;
+      ALARM = Rte_Al_TE_Com_SWC_Com_Runnable_2ms;
+      ALARM = Rte_Al_TE_Com_SWC_Com_Runnable_500ms;
+      ALARM = Rte_Al_TE_Core0_AswTask_0_10ms;
+      ALARM = Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms;
+      TASK = Core0_Asw_Init;
+      TASK = Core0_Bsw_Task;
+      ALARM = Rte_Al_TE2_Core0_Bsw_Task_0_10ms;
+      ALARM = Rte_Al_TE2_Core0_Bsw_Task_0_20ms;
+      ALARM = Rte_Al_TE2_Core0_Bsw_Task_0_5ms;
+      CORE = 0;
+  };
+
+   APPLICATION SystemApplication_OsCore1 {
+      TRUSTED = TRUE;
+// Add the following four attributes according to your needs.
+// Note: They do not have a default value and are therefore necessary in the configuration.
+//      STARTUPHOOK = FALSE;
+//      SHUTDOWNHOOK = FALSE;
+//      ERRORHOOK = FALSE;
+//      HAS_RESTARTTASK = FALSE;
+      TASK = Core1_Asw_Init;
+      TASK = Core1_Asw_Task;
+      ALARM = Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms;
+      TASK = Core1_Bsw_Task;
+      ALARM = Rte_Al_TE2_EcuM_EcuM_MainFunction;
+      CORE = 1;
+  };
+
+   APPLICATION SystemApplication_OsCore2 {
+      TRUSTED = TRUE;
+// Add the following four attributes according to your needs.
+// Note: They do not have a default value and are therefore necessary in the configuration.
+//      STARTUPHOOK = FALSE;
+//      SHUTDOWNHOOK = FALSE;
+//      ERRORHOOK = FALSE;
+//      HAS_RESTARTTASK = FALSE;
+      TASK = Core2_Asw_Init;
+      TASK = Core2_Asw_Task;
+      ALARM = Rte_Al_TE_Core2App_SWC_Core2App_SWC_Runnable_10ms;
+      TASK = Core2_Bsw_Task;
+      ALARM = Rte_Al_TE3_EcuM_EcuM_MainFunction;
+      CORE = 2;
+  };

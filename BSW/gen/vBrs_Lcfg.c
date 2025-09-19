@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: .\vBrs_Lcfg.c
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2025-09-19 09:19:29
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -51,10 +51,16 @@
 extern Brs_AddressOfConstType BRSHW_DEFINE_STARTUP_STACK(0);
 extern Brs_AddressOfConstType BRSHW_DEFINE_EXCVEC(0);
 extern Brs_AddressOfConstType BRSHW_DEFINE_INTVEC(0);
+extern Brs_AddressOfConstType BRSHW_DEFINE_STARTUP_STACK(1);
+extern Brs_AddressOfConstType BRSHW_DEFINE_EXCVEC(1);
+extern Brs_AddressOfConstType BRSHW_DEFINE_INTVEC(1);
+extern Brs_AddressOfConstType BRSHW_DEFINE_STARTUP_STACK(2);
+extern Brs_AddressOfConstType BRSHW_DEFINE_EXCVEC(2);
+extern Brs_AddressOfConstType BRSHW_DEFINE_INTVEC(2);
 
-const uint32 BrsMain_CoreConfig_Size = 1;
+const uint32 BrsMain_CoreConfig_Size = 3;
 
-const brsMain_CoreType BrsMain_CoreConfig[1u] =
+const brsMain_CoreType BrsMain_CoreConfig[3u] =
 {
   {
     /* .LogicalCoreId     =  */ 0u,
@@ -63,6 +69,22 @@ const brsMain_CoreType BrsMain_CoreConfig[1u] =
     /* .CoreIsAsr         = */ ASR,
     /* .ExcVecLabel       = */ (Brs_AddressOfConstType)(&BRSHW_DEFINE_EXCVEC(0)),
     /* .IntVecLabel       = */ (Brs_AddressOfConstType)(&BRSHW_DEFINE_INTVEC(0))
+  },
+  {
+    /* .LogicalCoreId     =  */ 1u,
+    /* .PhysicalCoreId    =  */ 1u,
+    /* .StartupStackLabel = */ (Brs_AddressOfConstType)(&BRSHW_DEFINE_STARTUP_STACK(1)),
+    /* .CoreIsAsr         = */ ASR,
+    /* .ExcVecLabel       = */ (Brs_AddressOfConstType)(&BRSHW_DEFINE_EXCVEC(1)),
+    /* .IntVecLabel       = */ (Brs_AddressOfConstType)(&BRSHW_DEFINE_INTVEC(1))
+  },
+  {
+    /* .LogicalCoreId     =  */ 2u,
+    /* .PhysicalCoreId    =  */ 2u,
+    /* .StartupStackLabel = */ (Brs_AddressOfConstType)(&BRSHW_DEFINE_STARTUP_STACK(2)),
+    /* .CoreIsAsr         = */ ASR,
+    /* .ExcVecLabel       = */ (Brs_AddressOfConstType)(&BRSHW_DEFINE_EXCVEC(2)),
+    /* .IntVecLabel       = */ (Brs_AddressOfConstType)(&BRSHW_DEFINE_INTVEC(2))
   }
 };
 #endif /*BRSHW_SOURCECODE_TEMPLATE_VERSION>=0x0103u*/

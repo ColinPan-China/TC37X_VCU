@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Barrier_Lcfg.c
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2025-09-19 09:19:29
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -77,6 +77,26 @@ OS_LOCAL VAR(Os_BarrierBaseType, OS_VAR_NOINIT) OsCfg_Barrier_OsCore0_Dyn;
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
+#define OS_START_SEC_BARRIER_CORE1_VAR_NOCACHE_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Dynamic barrier data: OsCore1 */
+OS_LOCAL VAR(Os_BarrierBaseType, OS_VAR_NOINIT) OsCfg_Barrier_OsCore1_Dyn;
+
+#define OS_STOP_SEC_BARRIER_CORE1_VAR_NOCACHE_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_BARRIER_CORE2_VAR_NOCACHE_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Dynamic barrier data: OsCore2 */
+OS_LOCAL VAR(Os_BarrierBaseType, OS_VAR_NOINIT) OsCfg_Barrier_OsCore2_Dyn;
+
+#define OS_STOP_SEC_BARRIER_CORE2_VAR_NOCACHE_NOINIT_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
 /**********************************************************************************************************************
  *  GLOBAL DATA
  *********************************************************************************************************************/
@@ -91,7 +111,9 @@ OS_LOCAL VAR(Os_BarrierBaseType, OS_VAR_NOINIT) OsCfg_Barrier_OsCore0_Dyn;
 /*! Core barrier attendee references. */
 OS_LOCAL CONST(Os_BarrierAttendeeRefType, OS_CONST) OsCfg_Barrier_AttendeeRefs[OS_COREASRCOREIDX_COUNT] =
 {
-  &OsCfg_Barrier_OsCore0
+  &OsCfg_Barrier_OsCore0,
+  &OsCfg_Barrier_OsCore1,
+  &OsCfg_Barrier_OsCore2
 };
 
 #define OS_STOP_SEC_CONST_UNSPECIFIED
@@ -111,6 +133,38 @@ CONST(Os_BarrierBaseConfigType, OS_CONST) OsCfg_Barrier_OsCore0 =
 };
 
 #define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_CORE1_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Barrier configuration data: OsCore1 */
+CONST(Os_BarrierBaseConfigType, OS_CONST) OsCfg_Barrier_OsCore1 =
+{
+  /* .Dyn           = */ &OsCfg_Barrier_OsCore1_Dyn,
+  /* .AttendeeRefs  = */ OsCfg_Barrier_AttendeeRefs,
+  /* .AttendeeCount = */ (Os_BarrierAttendeeIdxType)OS_COREASRCOREIDX_COUNT,
+  /* .TaskPtr       = */ NULL_PTR
+};
+
+#define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_CORE2_CONST_UNSPECIFIED
+#include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/*! Barrier configuration data: OsCore2 */
+CONST(Os_BarrierBaseConfigType, OS_CONST) OsCfg_Barrier_OsCore2 =
+{
+  /* .Dyn           = */ &OsCfg_Barrier_OsCore2_Dyn,
+  /* .AttendeeRefs  = */ OsCfg_Barrier_AttendeeRefs,
+  /* .AttendeeCount = */ (Os_BarrierAttendeeIdxType)OS_COREASRCOREIDX_COUNT,
+  /* .TaskPtr       = */ NULL_PTR
+};
+
+#define OS_STOP_SEC_CORE2_CONST_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
