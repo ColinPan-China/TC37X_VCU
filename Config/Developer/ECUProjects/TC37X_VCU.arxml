@@ -2139,28 +2139,6 @@
               </ADMIN-DATA>
               <TYPE-TREF DEST="NV-BLOCK-SW-COMPONENT-TYPE">/ComponentTypes/NvM_SWC</TYPE-TREF>
             </SW-COMPONENT-PROTOTYPE>
-            <SW-COMPONENT-PROTOTYPE UUID="C0FE9D92-FF59-4055-8330-C5C650BFCCB7">
-              <SHORT-NAME>IoHwAb_SWC</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV">
-                    <SD GID="DV:ImportModePreset">Keep</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <TYPE-TREF DEST="ECU-ABSTRACTION-SW-COMPONENT-TYPE">/ComponentTypes/IoHwAb_SWC</TYPE-TREF>
-            </SW-COMPONENT-PROTOTYPE>
-            <SW-COMPONENT-PROTOTYPE UUID="1CB31672-AB6A-4C7E-9B05-D9EBB78942AD">
-              <SHORT-NAME>IoHwAb</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV">
-                    <SD GID="DV:ImportModePreset">Keep</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <TYPE-TREF DEST="ECU-ABSTRACTION-SW-COMPONENT-TYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb</TYPE-TREF>
-            </SW-COMPONENT-PROTOTYPE>
             <SW-COMPONENT-PROTOTYPE UUID="CCAD51D4-4070-4BAB-91AE-A0E09034B394">
               <SHORT-NAME>Core1App_SWC</SHORT-NAME>
               <ADMIN-DATA>
@@ -2182,6 +2160,17 @@
                 </SDGS>
               </ADMIN-DATA>
               <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/Core2App_SWC</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="37217762-C6C6-4391-9E0E-FAF8D77A96F1">
+              <SHORT-NAME>IoHwAb</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <TYPE-TREF DEST="ECU-ABSTRACTION-SW-COMPONENT-TYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb</TYPE-TREF>
             </SW-COMPONENT-PROTOTYPE>
           </COMPONENTS>
           <CONNECTORS>
@@ -2262,22 +2251,6 @@
                 <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/NvSWC_UserData2_NvMService_AC3_SRBS</TARGET-R-PORT-REF>
               </REQUESTER-IREF>
             </ASSEMBLY-SW-CONNECTOR>
-            <DELEGATION-SW-CONNECTOR UUID="CB49F216-6DA3-4B8E-8A2A-CECD7972DE66">
-              <SHORT-NAME>Com_SWC_ECC_PMP2_SpdSet_ECC_PMP2_SpdSet</SHORT-NAME>
-              <INNER-PORT-IREF>
-                <P-PORT-IN-COMPOSITION-INSTANCE-REF>
-                  <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/Com_SWC</CONTEXT-COMPONENT-REF>
-                </P-PORT-IN-COMPOSITION-INSTANCE-REF>
-              </INNER-PORT-IREF>
-            </DELEGATION-SW-CONNECTOR>
-            <DELEGATION-SW-CONNECTOR UUID="2BDF70A2-C16A-4108-831C-A0466C4A9940">
-              <SHORT-NAME>Com_SWC_ECC_PMP3_SpdSet_ECC_PMP3_SpdSet</SHORT-NAME>
-              <INNER-PORT-IREF>
-                <P-PORT-IN-COMPOSITION-INSTANCE-REF>
-                  <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/Com_SWC</CONTEXT-COMPONENT-REF>
-                </P-PORT-IN-COMPOSITION-INSTANCE-REF>
-              </INNER-PORT-IREF>
-            </DELEGATION-SW-CONNECTOR>
             <DELEGATION-SW-CONNECTOR UUID="2593A219-FA13-41B9-A867-E59838C3EA82">
               <SHORT-NAME>Com_SWC_AN30_AN30</SHORT-NAME>
               <INNER-PORT-IREF>
@@ -2758,17 +2731,6 @@
               </INNER-PORT-IREF>
               <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/AN39</OUTER-PORT-REF>
             </DELEGATION-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="F73D0082-DEB2-49FD-9898-2011CC6F2788">
-              <SHORT-NAME>IoHwAb_IoHwAbCSPortPrototype_PowerMng_SWC_IoHwAbCSPortInterface</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/IoHwAb</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbCSPortPrototype</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/PowerMng_SWC</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/PowerMng_SWC/IoHwAbCSPortInterface</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
             <DELEGATION-SW-CONNECTOR UUID="B24E9CA5-C910-4091-B998-C06098312252">
               <SHORT-NAME>Tle888qk_Out23_En_Com_SWC_Tle888qk_Out23_En</SHORT-NAME>
               <INNER-PORT-IREF>
@@ -3019,6 +2981,17 @@
               </INNER-PORT-IREF>
               <OUTER-PORT-REF DEST="R-PORT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/Tle888qk_Lout16_En</OUTER-PORT-REF>
             </DELEGATION-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR UUID="7E1BFE0B-59C1-4E42-B396-765459CECD75">
+              <SHORT-NAME>IoHwAb_IoHwAbCSPortPrototype_PowerMng_SWC_IoHwAbCSPortInterface</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbCSPortPrototype</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/PowerMng_SWC</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/PowerMng_SWC/IoHwAbCSPortInterface</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
           </CONNECTORS>
         </COMPOSITION-SW-COMPONENT-TYPE>
       </ELEMENTS>

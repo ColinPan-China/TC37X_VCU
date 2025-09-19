@@ -534,21 +534,6 @@ typedef uint8 NvM_Arry4Bytes[4];
 #  define Rte_TypeDef_Dem_OperationCycleIdType
 typedef uint8 Dem_OperationCycleIdType;
 
-#  define Rte_TypeDef_J1939Rm_AckCode
-typedef uint8 J1939Rm_AckCode;
-
-#  define Rte_TypeDef_J1939Rm_ExtIdType
-typedef uint8 J1939Rm_ExtIdType;
-
-#  define Rte_TypeDef_J1939Rm_ExtIdInfoType
-typedef struct
-{
-  J1939Rm_ExtIdType ExtIdType;
-  uint8 ExtId1;
-  uint8 ExtId2;
-  uint8 ExtId3;
-} J1939Rm_ExtIdInfoType;
-
 # endif
 
 

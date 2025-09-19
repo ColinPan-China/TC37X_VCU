@@ -171,22 +171,6 @@
                                     <TARGET-REF DEST="SWC-SERVICE-DEPENDENCY">/ComponentTypes/SWC1/SWC1_InternalBehavior/NvBlockNeed_UserData3</TARGET-REF>
                                   </UPSTREAM-REFERENCE-IREF>
                                 </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="952183fb-12d1-4d83-8e61-21499c00c9b3">
-                                  <SHORT-NAME>IoHwAb_SWC</SHORT-NAME>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/IoHwAb_SWC</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/IoHwAb_SWC</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="8ad5503b-16e8-4a0b-88d8-26230d02138b">
                                   <SHORT-NAME>AN30</SHORT-NAME>
                                   <ADMIN-DATA>
@@ -2347,22 +2331,6 @@
                                     <TARGET-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/AN39</TARGET-REF>
                                   </ECU-EXTRACT-REFERENCE-IREF>
                                 </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="ed053c15-97f9-4635-8f6c-d469a5deacbe">
-                                  <SHORT-NAME>IoHwAb</SHORT-NAME>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/IoHwAb</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/IoHwAb</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="dbce0a06-9997-44a7-aa85-47596cfec40d">
                                   <SHORT-NAME>Tle888qk_Out23_En</SHORT-NAME>
                                   <ADMIN-DATA>
@@ -3518,6 +3486,22 @@
                                   <ECU-EXTRACT-REFERENCE-IREF>
                                     <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
                                     <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Core2App_SWC</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="4858a67d-cd20-488a-91db-62166606a7c0">
+                                  <SHORT-NAME>IoHwAb</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/IoHwAb</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/IoHwAb</TARGET-REF>
                                   </ECU-EXTRACT-REFERENCE-IREF>
                                 </FLAT-INSTANCE-DESCRIPTOR>
                               </INSTANCES>

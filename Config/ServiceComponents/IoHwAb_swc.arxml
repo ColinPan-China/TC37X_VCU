@@ -30,6 +30,11 @@
                             <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSPortInterface/IoHwAb_Dio_WriteChannel</TARGET-PROVIDED-OPERATION-REF>
                           </OPERATION-IREF>
                         </OPERATION-INVOKED-EVENT>
+                        <TIMING-EVENT UUID="666604df-4771-4c81-b4ee-105e39e8bcf3">
+                          <SHORT-NAME>Timer_IoHwAb_IoHwAbRunnable_10ms</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_IoHwAbRunnable_10ms</START-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </TIMING-EVENT>
                       </EVENTS>
                       <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
                       <PORT-API-OPTIONS>
@@ -48,6 +53,12 @@
                           <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
                           <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                           <SYMBOL>IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="c5977b0f-2084-40c5-8916-cca849875903">
+                          <SHORT-NAME>IoHwAb_IoHwAbRunnable_10ms</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>IoHwAb_IoHwAbRunnable_10ms</SYMBOL>
                         </RUNNABLE-ENTITY>
                       </RUNNABLES>
                       <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>

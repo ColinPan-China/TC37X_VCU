@@ -780,65 +780,6 @@
  *********************************************************************************************************************/
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
- * Symbol: RTE_IOHWAB_SWC_APPL
- *********************************************************************************************************************/
-
-/* used for references on application variables */
-# define RTE_IOHWAB_SWC_APPL_VAR
-
-/* used for references on application data (constants or variables) */
-# define RTE_IOHWAB_SWC_APPL_DATA
-
-/* used for references on application functions */
-# define RTE_IOHWAB_SWC_APPL_CODE
-
-/* used for references on application constants */
-# define RTE_IOHWAB_SWC_APPL_CONST
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
- * Symbol: IoHwAb_SWC_CODE
- *********************************************************************************************************************/
-
-/* used for SWC specific code */
-# define IoHwAb_SWC_CODE
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
- * Symbol: IoHwAb_SWC_CONST
- *********************************************************************************************************************/
-
-/* used for global or static SWC specific constants */
-# define IoHwAb_SWC_CONST
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
- * Symbol: IoHwAb_SWC_VAR
- *********************************************************************************************************************/
-
-/* used for all global or static SWC specific variables that are not initialized by the startup code of the compiler */
-# define IoHwAb_SWC_VAR_NOINIT
-
-/* used for global or static SWC specific variables that are initialized by the startup code of the compiler */
-# define IoHwAb_SWC_VAR_INIT
-
-/* used for global or static SWC specific variables that are initialized with zero by the startup code of the compiler */
-# define IoHwAb_SWC_VAR_ZERO_INIT
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
  * Symbol: RTE_NVM_APPL
  *********************************************************************************************************************/
 
@@ -1337,6 +1278,110 @@
 
 /* used for references on application constants */
 # define RTE_DIAG_SWC_APPL_CONST
+
+/***  End of saved code  ************************************************************************************/
+#endif
+
+
+#if 0
+/***  Start of saved code (symbol: compiler abstraction implementation:IoHwAb_SWC_VAR)  *********************/
+
+/* used for all global or static SWC specific variables that are not initialized by the startup code of the compiler */
+# define IoHwAb_SWC_VAR_NOINIT
+
+/* used for global or static SWC specific variables that are initialized by the startup code of the compiler */
+# define IoHwAb_SWC_VAR_INIT
+
+/* used for global or static SWC specific variables that are initialized with zero by the startup code of the compiler */
+# define IoHwAb_SWC_VAR_ZERO_INIT
+
+/***  End of saved code  ************************************************************************************/
+#endif
+
+#if 0
+/***  Start of saved code (symbol: compiler abstraction implementation:IoHwAb_SWC_CODE)  ********************/
+
+/* used for SWC specific code */
+# define IoHwAb_SWC_CODE
+
+/***  End of saved code  ************************************************************************************/
+#endif
+
+#if 0
+/***  Start of saved code (symbol: compiler abstraction implementation:IoHwAb_SWC_CONST)  *******************/
+
+/* used for global or static SWC specific constants */
+# define IoHwAb_SWC_CONST
+
+/***  End of saved code  ************************************************************************************/
+#endif
+
+#if 0
+/***  Start of saved code (symbol: compiler abstraction implementation:RTE_IOHWAB_SWC_APPL)  ****************/
+
+/* used for references on application variables */
+# define RTE_IOHWAB_SWC_APPL_VAR
+
+/* used for references on application data (constants or variables) */
+# define RTE_IOHWAB_SWC_APPL_DATA
+
+/* used for references on application functions */
+# define RTE_IOHWAB_SWC_APPL_CODE
+
+/* used for references on application constants */
+# define RTE_IOHWAB_SWC_APPL_CONST
+
+/***  End of saved code  ************************************************************************************/
+#endif
+
+
+#if 0
+/***  Start of saved code (symbol: compiler abstraction implementation:IoHwAb_CODE)  ************************/
+
+/* used for SWC specific code */
+# define IoHwAb_CODE
+
+/***  End of saved code  ************************************************************************************/
+#endif
+
+#if 0
+/***  Start of saved code (symbol: compiler abstraction implementation:IoHwAb_CONST)  ***********************/
+
+/* used for global or static SWC specific constants */
+# define IoHwAb_CONST
+
+/***  End of saved code  ************************************************************************************/
+#endif
+
+#if 0
+/***  Start of saved code (symbol: compiler abstraction implementation:IoHwAb_VAR)  *************************/
+
+/* used for all global or static SWC specific variables that are not initialized by the startup code of the compiler */
+# define IoHwAb_VAR_NOINIT
+
+/* used for global or static SWC specific variables that are initialized by the startup code of the compiler */
+# define IoHwAb_VAR_INIT
+
+/* used for global or static SWC specific variables that are initialized with zero by the startup code of the compiler */
+# define IoHwAb_VAR_ZERO_INIT
+
+/***  End of saved code  ************************************************************************************/
+#endif
+
+#if 0
+/***  Start of saved code (symbol: compiler abstraction implementation:RTE_IOHWAB_APPL)  ********************/
+
+/* used for references on application variables */
+# define RTE_IOHWAB_APPL_VAR
+
+/* used for references on application data (constants or variables) */
+# define RTE_IOHWAB_APPL_DATA
+
+/* used for references on application functions */
+# define RTE_IOHWAB_APPL_CODE
+
+/* used for references on application constants */
+# define RTE_IOHWAB_APPL_CONST
 
 /***  End of saved code  ************************************************************************************/
 #endif

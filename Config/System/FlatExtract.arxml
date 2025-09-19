@@ -8745,38 +8745,6 @@
                                   <SHORT-NAME>Dcm</SHORT-NAME>
                                   <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm</TYPE-TREF>
                                 </SW-COMPONENT-PROTOTYPE>
-                                <SW-COMPONENT-PROTOTYPE UUID="b7599610-a9d2-49fd-aa65-b43b7038f13c">
-                                  <SHORT-NAME>IoHwAb_SWC</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:DEV">
-                                        <SD GID="DV:ImportModePreset">Keep</SD>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <TYPE-TREF DEST="ECU-ABSTRACTION-SW-COMPONENT-TYPE">/ComponentTypes/IoHwAb_SWC</TYPE-TREF>
-                                </SW-COMPONENT-PROTOTYPE>
-                                <SW-COMPONENT-PROTOTYPE UUID="c2dfb752-e75e-4065-a92f-6d426855a37f">
-                                  <SHORT-NAME>IoHwAb</SHORT-NAME>
-                                  <ADMIN-DATA>
-                                    <SDGS>
-                                      <SDG GID="DV:DEV">
-                                        <SD GID="DV:ImportModePreset">Keep</SD>
-                                      </SDG>
-                                    </SDGS>
-                                  </ADMIN-DATA>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <TYPE-TREF DEST="ECU-ABSTRACTION-SW-COMPONENT-TYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb</TYPE-TREF>
-                                </SW-COMPONENT-PROTOTYPE>
                                 <SW-COMPONENT-PROTOTYPE UUID="e8394ef9-ee7f-42f7-8014-996e3314f1f7">
                                   <SHORT-NAME>Os_OsCore1_swc</SHORT-NAME>
                                   <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/MICROSAR/Os_swc/ComponentTypes/Os_OsCore1_swc</TYPE-TREF>
@@ -8816,6 +8784,22 @@
                                     </ANNOTATION>
                                   </ANNOTATIONS>
                                   <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/Core2App_SWC</TYPE-TREF>
+                                </SW-COMPONENT-PROTOTYPE>
+                                <SW-COMPONENT-PROTOTYPE UUID="a29e455a-20c3-46bc-9649-6c8154c5fffa">
+                                  <SHORT-NAME>IoHwAb</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <TYPE-TREF DEST="ECU-ABSTRACTION-SW-COMPONENT-TYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb</TYPE-TREF>
                                 </SW-COMPONENT-PROTOTYPE>
                               </COMPONENTS>
                               <CONNECTORS>
@@ -10025,28 +10009,6 @@
                                   </INNER-PORT-IREF>
                                   <OUTER-PORT-REF DEST="P-PORT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/AN39</OUTER-PORT-REF>
                                 </DELEGATION-SW-CONNECTOR>
-                                <ASSEMBLY-SW-CONNECTOR UUID="34500e91-37bd-48ac-b0af-b71053726363">
-                                  <SHORT-NAME>IoHwAb_IoHwAbCSPortPrototype_PowerMng_SWC_IoHwAbCSPortInterface</SHORT-NAME>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                    <ANNOTATION>
-                                      <LABEL>
-                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
-                                      </LABEL>
-                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <PROVIDER-IREF>
-                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/IoHwAb</CONTEXT-COMPONENT-REF>
-                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbCSPortPrototype</TARGET-P-PORT-REF>
-                                  </PROVIDER-IREF>
-                                  <REQUESTER-IREF>
-                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/PowerMng_SWC</CONTEXT-COMPONENT-REF>
-                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/PowerMng_SWC/IoHwAbCSPortInterface</TARGET-R-PORT-REF>
-                                  </REQUESTER-IREF>
-                                </ASSEMBLY-SW-CONNECTOR>
                                 <DELEGATION-SW-CONNECTOR UUID="16b90d77-b486-4f6f-ba9b-67e45ab44f68">
                                   <SHORT-NAME>Tle888qk_Out23_En_Com_SWC_Tle888qk_Out23_En</SHORT-NAME>
                                   <ANNOTATIONS>
@@ -10649,6 +10611,28 @@
                                     <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/SWC1/UR_CN_J1939_bms_d26c50b6</TARGET-R-PORT-REF>
                                   </REQUESTER-IREF>
                                 </ASSEMBLY-SW-CONNECTOR>
+                                <ASSEMBLY-SW-CONNECTOR UUID="3c06b9f7-7292-4daa-9d39-e376dcad0f5e">
+                                  <SHORT-NAME>IoHwAb_IoHwAbCSPortPrototype_PowerMng_SWC_IoHwAbCSPortInterface</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                    <ANNOTATION>
+                                      <LABEL>
+                                        <L-4 L="FOR-ALL">UB:Derived from original system description</L-4>
+                                      </LABEL>
+                                      <ANNOTATION-ORIGIN>DV:Readonly</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <PROVIDER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/IoHwAb</CONTEXT-COMPONENT-REF>
+                                    <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbCSPortPrototype</TARGET-P-PORT-REF>
+                                  </PROVIDER-IREF>
+                                  <REQUESTER-IREF>
+                                    <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/PowerMng_SWC</CONTEXT-COMPONENT-REF>
+                                    <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/PowerMng_SWC/IoHwAbCSPortInterface</TARGET-R-PORT-REF>
+                                  </REQUESTER-IREF>
+                                </ASSEMBLY-SW-CONNECTOR>
                               </CONNECTORS>
                             </COMPOSITION-SW-COMPONENT-TYPE>
                             <END-TO-END-PROTECTION-SET UUID="6b248a10-bda1-4823-a61a-739eea608261">
@@ -10807,8 +10791,7 @@
                                     <SD GID="f74884c4-c48c-4d8b-a6e0-9ef0948d0f29">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EXT_PWM_IN2_Period</SD>
                                     <SD GID="3976e9f4-1667-4e85-89f1-31f8167f45a7">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/EcuM</SD>
                                     <SD GID="8172eb72-f2a4-4e1b-95ef-7a0545129450">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Ext_IN2</SD>
-                                    <SD GID="c2dfb752-e75e-4065-a92f-6d426855a37f">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/IoHwAb</SD>
-                                    <SD GID="b7599610-a9d2-49fd-aa65-b43b7038f13c">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/IoHwAb_SWC</SD>
+                                    <SD GID="a29e455a-20c3-46bc-9649-6c8154c5fffa">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/IoHwAb</SD>
                                     <SD GID="bd2d7ed1-0cf5-42f4-a90f-8057441c91be">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM</SD>
                                     <SD GID="05381a4a-06a9-44db-a1e5-fe7ca0afdeab">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/NvM_SWC</SD>
                                     <SD GID="a3c529ec-93af-4763-9e8e-fc9e2e1f0773">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Os_OsCore0_swc</SD>
@@ -10924,10 +10907,6 @@
                                     <SD GID="8DA98ABE-6CC7-4582-806F-C77E1BEE8B9B">/ComponentTypes/Core2App_SWC/Core2App_SWC_InternalBehavior/Core2App_SWC_InitEvent</SD>
                                     <SD GID="870E176D-2794-48D1-BA64-B6CD7BF4179A">/ComponentTypes/Core2App_SWC/Core2App_SWC_InternalBehavior/TMT_Core2App_SWC_Runnable_10ms</SD>
                                     <SD GID="776A1422-8264-4AFE-92E5-5BB890129A55">/ComponentTypes/Core2App_SWC_Implementation</SD>
-                                    <SD GID="131259DF-AC35-4DE4-9686-94C3C6297399">/ComponentTypes/IoHwAb_SWC</SD>
-                                    <SD GID="3BA5A63D-F666-4886-AFA6-FD454CFD7666">/ComponentTypes/IoHwAb_SWC/IoHwAb_SWC_InternalBehavior/IoHwAb_SWC_InitEvent</SD>
-                                    <SD GID="345F9D28-1C42-4083-9465-B901D76C94D1">/ComponentTypes/IoHwAb_SWC/IoHwAb_SWC_InternalBehavior/TMT_IoHwAb_SWC_Runnable</SD>
-                                    <SD GID="BC0DFF7D-5391-424E-9DFB-F588D6FA0F1B">/ComponentTypes/IoHwAb_SWC_Implementation</SD>
                                     <SD GID="F46DC447-48FA-40AC-B556-211DADA7BA16">/ComponentTypes/NvM_SWC</SD>
                                     <SD GID="5E1541CE-CA73-4331-B1E5-015754C9C331">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData1</SD>
                                     <SD GID="D2B51BE5-1BB5-4CC4-87F9-FBDA7005BDEF">/ComponentTypes/NvM_SWC/NVBlockDescriptor_UserData2</SD>
@@ -11037,8 +11016,7 @@
                                     <SD GID="A0F90F5D-F9FF-4B5E-8E21-195B7CC7161B">/ECUCompositionTypes/ECU_Composition/EXT_PWM_IN2_Duty</SD>
                                     <SD GID="1B299100-AB66-492C-B7DD-A6BC6F8DC61E">/ECUCompositionTypes/ECU_Composition/EXT_PWM_IN2_Period</SD>
                                     <SD GID="25ADDC9F-324B-4284-87ED-5C8934F9D389">/ECUCompositionTypes/ECU_Composition/Ext_IN2</SD>
-                                    <SD GID="1CB31672-AB6A-4C7E-9B05-D9EBB78942AD">/ECUCompositionTypes/ECU_Composition/IoHwAb</SD>
-                                    <SD GID="C0FE9D92-FF59-4055-8330-C5C650BFCCB7">/ECUCompositionTypes/ECU_Composition/IoHwAb_SWC</SD>
+                                    <SD GID="37217762-C6C6-4391-9E0E-FAF8D77A96F1">/ECUCompositionTypes/ECU_Composition/IoHwAb</SD>
                                     <SD GID="1C873E85-20CE-48A0-A60A-BB516A3AF1EE">/ECUCompositionTypes/ECU_Composition/NvM_SWC</SD>
                                     <SD GID="7077C59A-EDFF-4EBD-992B-AD0A5D0AD472">/ECUCompositionTypes/ECU_Composition/PowerMng_SWC</SD>
                                     <SD GID="45326E4B-4115-4A85-8FF4-E06F7BAE2F7C">/ECUCompositionTypes/ECU_Composition/SWC1</SD>
@@ -14946,7 +14924,9 @@
                                     <SD GID="b710d0f2-f45b-4f45-b7c0-107c3b87cee1">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbCSPortPrototype</SD>
                                     <SD GID="aee5e28c-7a09-4128-8d76-08ac419f14a3">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior</SD>
                                     <SD GID="9ed7f17c-df3e-4ca2-928e-9836454a7043">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel</SD>
+                                    <SD GID="c5977b0f-2084-40c5-8916-cca849875903">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/IoHwAb_IoHwAbRunnable_10ms</SD>
                                     <SD GID="ebd35407-3cea-4d55-b854-ab364a22b1b9">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/OpEventIoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel_IoHwAb_Dio_WriteChannel_IoHwAbCSPortPrototype</SD>
+                                    <SD GID="666604df-4771-4c81-b4ee-105e39e8bcf3">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAb/IoHwAbInternalBehavior/Timer_IoHwAb_IoHwAbRunnable_10ms</SD>
                                     <SD GID="8fd829f0-9406-443b-8b5c-684289aa72de">/MICROSAR/IoHwAb_swc/ComponentTypes/IoHwAbImplementation</SD>
                                     <SD GID="fbe5aa5c-6044-4444-a141-ccd284898926">/MICROSAR/IoHwAb_swc/DataTypes/DataConstrs/IOHWAB_UINT16_Constr</SD>
                                     <SD GID="ac3642e3-a631-49cb-b4d1-addfc4fe51c6">/MICROSAR/IoHwAb_swc/DataTypes/DataConstrs/IOHWAB_UINT8_Constr</SD>
@@ -14955,8 +14935,6 @@
                                     <SD GID="b3989453-5e8a-423d-9c07-3feaa058e08c">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSPortInterface</SD>
                                     <SD GID="d28dfeea-d662-46dc-98e2-389f3ea87a66">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSPortInterface/IoHwAbApplicationError</SD>
                                     <SD GID="1acf70b9-c790-4f3c-a859-4a083248a0f9">/MICROSAR/IoHwAb_swc/Interfaces/IoHwAbCSPortInterface/IoHwAb_Dio_WriteChannel</SD>
-                                    <SD GID="3b6d7342-06ce-4f2f-b944-56e54c3a59c3">/MICROSAR/J1939Rm_swc/ComponentTypes/J1939Rm</SD>
-                                    <SD GID="90ecf96b-d7f1-41a3-8aac-2925f0858be6">/MICROSAR/J1939Rm_swc/ComponentTypes/J1939Rm/J1939RmInternalBehavior/Timer_J1939Rm_MainFunction</SD>
                                     <SD GID="3897109d-ead5-473e-9d62-21fdb0f2a00b">/MICROSAR/LinTrcv_30_Tle7259_ib_bsmwd/BswModuleDescriptions/LinTrcv/LinTrcv_30_Tle7259Behavior</SD>
                                     <SD GID="a2cdb49f-a785-4018-b48f-11313d528fee">/MICROSAR/LinTrcv_30_Tle7259_ib_bsmwd/BswModuleDescriptions/LinTrcv/LinTrcv_30_Tle7259Behavior/LINTRCV_30_TLE7259_EXCLUSIVE_AREA_0</SD>
                                     <SD GID="ca593378-de69-4dbf-b858-0a90c5e80ffe">/MICROSAR/NvM_ib_bswmd/BswModuleDescriptions/NvM/NvMBehavior</SD>

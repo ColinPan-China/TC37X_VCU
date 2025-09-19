@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2025-09-19 09:31:43
+ *   Generation Time: 2025-09-19 16:14:43
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -127,10 +127,11 @@
 #define Rte_Al_TE3_EcuM_EcuM_MainFunction Rte_Al_TE3_EcuM_EcuM_MainFunction
 #define Rte_Al_TE_Com_SWC_Com_Runnable_2ms Rte_Al_TE_Com_SWC_Com_Runnable_2ms
 #define Rte_Al_TE_Com_SWC_Com_Runnable_500ms Rte_Al_TE_Com_SWC_Com_Runnable_500ms
-#define Rte_Al_TE_Core0_AswTask_0_10ms Rte_Al_TE_Core0_AswTask_0_10ms
 #define Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms
 #define Rte_Al_TE_Core2App_SWC_Core2App_SWC_Runnable_10ms Rte_Al_TE_Core2App_SWC_Core2App_SWC_Runnable_10ms
+#define Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms
 #define Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms
+#define Rte_Al_TE_SWC1_SWC1_Runnable10ms Rte_Al_TE_SWC1_SWC1_Runnable10ms
 
 /* Counter identifiers. */
 #define SystemTimer_Core0 SystemTimer_Core0
@@ -270,11 +271,12 @@ typedef enum
   Rte_Al_TE3_EcuM_EcuM_MainFunction = 4,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_Com_SWC_Com_Runnable_2ms = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_Com_SWC_Com_Runnable_500ms = 6,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Core0_AswTask_0_10ms = 7,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms = 8,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Core2App_SWC_Core2App_SWC_Runnable_10ms = 9,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms = 7,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Core2App_SWC_Core2App_SWC_Runnable_10ms = 8,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms = 9,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_PowerMng_SWC_Led_Runnable1000ms = 10,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ALARMID_COUNT = 11
+  Rte_Al_TE_SWC1_SWC1_Runnable10ms = 11,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ALARMID_COUNT = 12
 } AlarmType;
 
 /*! Counter identifiers. */

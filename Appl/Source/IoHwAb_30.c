@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: IoHwAb_30.c
- *   Generation Time: 2025-08-12 15:47:25
+ *   Generation Time: 2025-09-19 16:08:57
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -51,6 +51,20 @@
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK User Includes>
  *********************************************************************************************************************/
 /* TODO: Add user includes here */
+#include "vstdlib.h"
+#include "Spi.h"
+#include "IfxSrc_reg.h"
+#include "Irq.h"
+#include "TLE8888qk.h"
+#include "Adc_Sample.h"
+#include "TJA1145.h"
+#include "Dio.h"
+#include "PwmIf.h"
+#include "TLE94108ES.h"
+#include "Icu_17_TimerIp.h"
+#include "SensorMng.h"
+#include "TLE9201SG.h"
+#include "Com.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
@@ -103,6 +117,10 @@
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK User Data>
  *********************************************************************************************************************/
 /* TODO: Add user variables here */
+Icu_17_TimerIp_DutyCycleType ICU_Val1;
+Icu_17_TimerIp_DutyCycleType ICU_Val2;
+uint16 MessureFlg = 0;
+static volatile uint8 Txmode = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
@@ -132,7 +150,25 @@ FUNC(void, IOHWAB_CODE) IoHwAb_Init (void)
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
+  Adc_SampleInit();
 
+  /*SPI Irq Init*/
+  IRQ_SFR_MODIFY32 (SRC_QSPI3TX.U,  IRQ_CLEAR_MASK, \
+                    ((uint32)IRQ_QSPI3_TX_TOS | (uint32) IRQ_QSPI3_TX_PRIO));
+  IRQ_SFR_MODIFY32 (SRC_QSPI3RX.U,  IRQ_CLEAR_MASK, \
+                    ((uint32)IRQ_QSPI3_RX_TOS | (uint32) IRQ_QSPI3_RX_PRIO));
+
+  SRC_QSPI3RX.B.SRE 	= 1;
+  SRC_QSPI3TX.B.SRE 	= 1;
+
+  Icu_17_TimerIp_StartSignalMeasurement(IcuConf_IcuChannel_IcuChannel_P34_2);
+  Icu_17_TimerIp_StartSignalMeasurement(IcuConf_IcuChannel_IcuChannel_P34_4);
+  Dio_WriteChannel(DioConf_DioChannel_DioChannel_P23_6_LIN_SLP,1);
+  
+  PwnIf_Start();
+  Tle94108es_Init();
+  Tle9201sg_Init();
+  Tja1145_Init();
   return;
 } /* IoHwAb_Init() */
 
@@ -181,6 +217,60 @@ FUNC(Std_ReturnType, IOHWAB_CODE) IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteC
 /**********************************************************************************************************************
  *  RUNNABLES
  **********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ *  IoHwAb_IoHwAbRunnable_10ms
+ **********************************************************************************************************************/
+/*! \brief      The method IoHwAbRunnable_10ms is a user defined runnable entity function that will be called
+ *              every 10 msec by the RTE.
+ *  \retval     void
+ **********************************************************************************************************************/
+FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_10ms(void)
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           <USERBLOCK IoHwAbRunnable_10ms>
+ *********************************************************************************************************************/
+/* TODO: Add runnable implementation here. */
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
+ *********************************************************************************************************************/
+  Adc_SampleMain();
+  TLE8888qk_Main();
+  PwnIf_Main();
+  Tle94108es_Main();
+  Tle9201sg_Main();
+  SensorMngMain();
+
+  /*ICU Measurement*/
+  MessureFlg++;
+  if(MessureFlg >= 100 )
+  {
+    MessureFlg = 0;
+    Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_2, &ICU_Val1);
+    Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_4, &ICU_Val2);
+    if( ICU_Val2.PeriodTime == 0 && ICU_Val1.PeriodTime == 0 )
+    {
+      NOP();
+    }
+  }
+
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BCL_oJ1939_bms_e5f04d09_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BCP_oJ1939_bms_ece2ed74_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BCS_oJ1939_bms_9b7c3f84_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BEM_oJ1939_bms_deb0debb_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BHM_oJ1939_bms_999cbec5_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BMT_oJ1939_bms_1502dabb_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BMV_oJ1939_bms_f9394424_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BRM_oJ1939_bms_17c47e39_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BRO_oJ1939_bms_fbffe0a6_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BSD_oJ1939_bms_57fb9d2d_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BSM_oJ1939_bms_ca52a7bc_Tx,   Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BSOC_oJ1939_bms_5e951453_Tx,  Txmode );
+  Com_SwitchIpduTxMode( ComConf_ComIPdu_BST_oJ1939_bms_5be370d1_Tx,   Txmode );
+
+  return;
+} /* IoHwAb_IoHwAbRunnable_10ms() */ 
+
 
 
 /**********************************************************************************************************************

@@ -1228,10 +1228,8 @@
  *  Rte_Runnable_EcuM_SelectShutdownTarget_Start
  *  Rte_Runnable_IoHwAb_IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel_Return
  *  Rte_Runnable_IoHwAb_IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel_Start
- *  Rte_Runnable_IoHwAb_SWC_IoHwAb_SWC_Init_Return
- *  Rte_Runnable_IoHwAb_SWC_IoHwAb_SWC_Init_Start
- *  Rte_Runnable_IoHwAb_SWC_IoHwAb_SWC_Runnable_Return
- *  Rte_Runnable_IoHwAb_SWC_IoHwAb_SWC_Runnable_Start
+ *  Rte_Runnable_IoHwAb_IoHwAb_IoHwAbRunnable_10ms_Return
+ *  Rte_Runnable_IoHwAb_IoHwAb_IoHwAbRunnable_10ms_Start
  *  Rte_Runnable_NvM_EraseBlock_Return
  *  Rte_Runnable_NvM_EraseBlock_Start
  *  Rte_Runnable_NvM_GetErrorStatus_Return

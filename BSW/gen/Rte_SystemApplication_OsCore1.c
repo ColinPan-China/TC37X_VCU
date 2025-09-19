@@ -43,7 +43,6 @@
 #include "Rte_Det.h"
 #include "Rte_EcuM.h"
 #include "Rte_IoHwAb.h"
-#include "Rte_IoHwAb_SWC.h"
 #include "Rte_NvM.h"
 #include "Rte_Os_OsCore0_swc.h"
 #include "Rte_Os_OsCore1_swc.h"
