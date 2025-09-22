@@ -84,7 +84,7 @@ void Tle94108es_Init()
 
 void Tle94108es_Main()
 {
-  Tle94108es_ReadReg(CONFIG_CTRL,&RD);
-  Tle94108es_ReadReg(HB_MODE_1_CTRL,&HB1_RD);
-  Tle94108es_ReadReg(HB_ACT_1_CTRL,&ACT1_RD);
+//  Tle94108es_ReadReg(CONFIG_CTRL,&RD);
+//  Tle94108es_ReadReg(HB_MODE_1_CTRL,&HB1_RD);
+//  Tle94108es_ReadReg(HB_ACT_1_CTRL,&ACT1_RD);
 }
