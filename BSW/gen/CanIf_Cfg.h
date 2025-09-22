@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanIf_Cfg.h
- *   Generation Time: 2025-09-17 16:59:57
+ *   Generation Time: 2025-09-22 14:02:52
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -1044,15 +1044,15 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetRxPduConfigOfPCConfig()                                                            CanIf_RxPduConfig  /**< the pointer to CanIf_RxPduConfig */
 #define CanIf_GetSizeOfCanIfCtrlId2MappedTxBuffersConfigOfPCConfig()                                5u  /**< the number of accomplishable value elements in CanIf_CanIfCtrlId2MappedTxBuffersConfig */
 #define CanIf_GetSizeOfCtrlStatesOfPCConfig()                                                       5u  /**< the number of accomplishable value elements in CanIf_CtrlStates */
-#define CanIf_GetSizeOfMailBoxConfigOfPCConfig()                                                    15u  /**< the number of accomplishable value elements in CanIf_MailBoxConfig */
-#define CanIf_GetSizeOfMappedTxBuffersConfigOfPCConfig()                                            3u  /**< the number of accomplishable value elements in CanIf_MappedTxBuffersConfig */
+#define CanIf_GetSizeOfMailBoxConfigOfPCConfig()                                                    22u  /**< the number of accomplishable value elements in CanIf_MailBoxConfig */
+#define CanIf_GetSizeOfMappedTxBuffersConfigOfPCConfig()                                            5u  /**< the number of accomplishable value elements in CanIf_MappedTxBuffersConfig */
 #define CanIf_GetSizeOfRxIndicationFctListOfPCConfig()                                              6u  /**< the number of accomplishable value elements in CanIf_RxIndicationFctList */
 #define CanIf_GetSizeOfRxPduConfigOfPCConfig()                                                      108u  /**< the number of accomplishable value elements in CanIf_RxPduConfig */
-#define CanIf_GetSizeOfTxBufferFifoBaseOfPCConfig()                                                 3u  /**< the number of accomplishable value elements in CanIf_TxBufferFifoBase */
-#define CanIf_GetSizeOfTxBufferFifoConfigOfPCConfig()                                               3u  /**< the number of accomplishable value elements in CanIf_TxBufferFifoConfig */
+#define CanIf_GetSizeOfTxBufferFifoBaseOfPCConfig()                                                 5u  /**< the number of accomplishable value elements in CanIf_TxBufferFifoBase */
+#define CanIf_GetSizeOfTxBufferFifoConfigOfPCConfig()                                               5u  /**< the number of accomplishable value elements in CanIf_TxBufferFifoConfig */
 #define CanIf_GetSizeOfTxConfirmationFctListOfPCConfig()                                            6u  /**< the number of accomplishable value elements in CanIf_TxConfirmationFctList */
-#define CanIf_GetSizeOfTxFifoQueueBaseOfPCConfig()                                                  43u  /**< the number of accomplishable value elements in CanIf_TxFifoQueueBase */
-#define CanIf_GetSizeOfTxFifoQueueDataOfPCConfig()                                                  344u  /**< the number of accomplishable value elements in CanIf_TxFifoQueueData */
+#define CanIf_GetSizeOfTxFifoQueueBaseOfPCConfig()                                                  53u  /**< the number of accomplishable value elements in CanIf_TxFifoQueueBase */
+#define CanIf_GetSizeOfTxFifoQueueDataOfPCConfig()                                                  424u  /**< the number of accomplishable value elements in CanIf_TxFifoQueueData */
 #define CanIf_GetSizeOfTxPduConfigOfPCConfig()                                                      56u  /**< the number of accomplishable value elements in CanIf_TxPduConfig */
 #define CanIf_GetTxBufferFifoBaseOfPCConfig()                                                       CanIf_TxBufferFifoBase.raw  /**< the pointer to CanIf_TxBufferFifoBase */
 #define CanIf_GetTxBufferFifoConfigOfPCConfig()                                                     CanIf_TxBufferFifoConfig  /**< the pointer to CanIf_TxBufferFifoConfig */
@@ -1690,6 +1690,8 @@ typedef struct CanIf_TxBufferFifoBaseStructSTag
 {
   CanIf_TxBufferFifoBaseType CHNL_785eea40;
   CanIf_TxBufferFifoBaseType CHNL_beb59c29;
+  CanIf_TxBufferFifoBaseType CHNL_31a12637;
+  CanIf_TxBufferFifoBaseType CHNL_47d531e5;
   CanIf_TxBufferFifoBaseType CHNL_131d55da;
 } CanIf_TxBufferFifoBaseStructSType;
 
@@ -1698,6 +1700,8 @@ typedef struct CanIf_TxFifoQueueBaseStructSTag
 {
   CanIf_TxFifoQueueBaseType CHNL_785eea40[10];
   CanIf_TxFifoQueueBaseType CHNL_beb59c29[19];
+  CanIf_TxFifoQueueBaseType CHNL_31a12637[2];
+  CanIf_TxFifoQueueBaseType CHNL_47d531e5[8];
   CanIf_TxFifoQueueBaseType CHNL_131d55da[14];
 } CanIf_TxFifoQueueBaseStructSType;
 
@@ -1706,6 +1710,8 @@ typedef struct CanIf_TxFifoQueueDataStructSTag
 {
   CanIf_TxFifoQueueDataType CHNL_785eea40[80];
   CanIf_TxFifoQueueDataType CHNL_beb59c29[152];
+  CanIf_TxFifoQueueDataType CHNL_31a12637[16];
+  CanIf_TxFifoQueueDataType CHNL_47d531e5[64];
   CanIf_TxFifoQueueDataType CHNL_131d55da[112];
 } CanIf_TxFifoQueueDataStructSType;
 
@@ -1728,21 +1734,21 @@ typedef union CanIf_CtrlStatesUTag
 /**   \brief  type to access CanIf_TxBufferFifoBase in an index and symbol based style. */
 typedef union CanIf_TxBufferFifoBaseUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanIf_TxBufferFifoBaseType raw[3];
+  CanIf_TxBufferFifoBaseType raw[5];
   CanIf_TxBufferFifoBaseStructSType str;
 } CanIf_TxBufferFifoBaseUType;
 
 /**   \brief  type to access CanIf_TxFifoQueueBase in an index and symbol based style. */
 typedef union CanIf_TxFifoQueueBaseUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanIf_TxFifoQueueBaseType raw[43];
+  CanIf_TxFifoQueueBaseType raw[53];
   CanIf_TxFifoQueueBaseStructSType str;
 } CanIf_TxFifoQueueBaseUType;
 
 /**   \brief  type to access CanIf_TxFifoQueueData in an index and symbol based style. */
 typedef union CanIf_TxFifoQueueDataUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  CanIf_TxFifoQueueDataType raw[344];
+  CanIf_TxFifoQueueDataType raw[424];
   CanIf_TxFifoQueueDataStructSType str;
 } CanIf_TxFifoQueueDataUType;
 
@@ -1903,7 +1909,7 @@ extern CONST(CanIf_CtrlModeIndicationFctType, CANIF_CONST) CanIf_CtrlModeIndicat
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_MailBoxConfigType, CANIF_CONST) CanIf_MailBoxConfig[15];
+extern CONST(CanIf_MailBoxConfigType, CANIF_CONST) CanIf_MailBoxConfig[22];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1923,7 +1929,7 @@ extern CONST(CanIf_MailBoxConfigType, CANIF_CONST) CanIf_MailBoxConfig[15];
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_MappedTxBuffersConfigType, CANIF_CONST) CanIf_MappedTxBuffersConfig[3];
+extern CONST(CanIf_MappedTxBuffersConfigType, CANIF_CONST) CanIf_MappedTxBuffersConfig[5];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1995,7 +2001,7 @@ extern CONST(CanIf_RxPduConfigType, CANIF_CONST) CanIf_RxPduConfig[108];
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_TxBufferFifoConfigType, CANIF_CONST) CanIf_TxBufferFifoConfig[3];
+extern CONST(CanIf_TxBufferFifoConfigType, CANIF_CONST) CanIf_TxBufferFifoConfig[5];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: IoHwAb_30.c
- *   Generation Time: 2025-09-19 16:08:57
+ *   Generation Time: 2025-09-22 10:22:09
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -147,9 +147,6 @@ FUNC(void, IOHWAB_CODE) IoHwAb_Init (void)
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK Initialization Code>
  *********************************************************************************************************************/
   /* TODO: Add the implementation of the initialization code here */
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
- *********************************************************************************************************************/
   Adc_SampleInit();
 
   /*SPI Irq Init*/
@@ -169,6 +166,10 @@ FUNC(void, IOHWAB_CODE) IoHwAb_Init (void)
   Tle94108es_Init();
   Tle9201sg_Init();
   Tja1145_Init();
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
+ *********************************************************************************************************************/
+
   return;
 } /* IoHwAb_Init() */
 
@@ -231,10 +232,9 @@ FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_10ms(void)
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK IoHwAbRunnable_10ms>
  *********************************************************************************************************************/
 /* TODO: Add runnable implementation here. */
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
- *********************************************************************************************************************/
-  Adc_SampleMain();
+
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, 1 );
+
   TLE8888qk_Main();
   PwnIf_Main();
   Tle94108es_Main();
@@ -267,9 +267,35 @@ FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_10ms(void)
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BSM_oJ1939_bms_ca52a7bc_Tx,   Txmode );
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BSOC_oJ1939_bms_5e951453_Tx,  Txmode );
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BST_oJ1939_bms_5be370d1_Tx,   Txmode );
+  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, 0 );
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
+ *********************************************************************************************************************/
 
   return;
 } /* IoHwAb_IoHwAbRunnable_10ms() */ 
+
+
+/**********************************************************************************************************************
+ *  IoHwAb_IoHwAbRunnable_500ms
+ **********************************************************************************************************************/
+/*! \brief      The method IoHwAbRunnable_500ms is a user defined runnable entity function that will be called
+ *              every 500 msec by the RTE.
+ *  \retval     void
+ **********************************************************************************************************************/
+FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_500ms(void)
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           <USERBLOCK IoHwAbRunnable_500ms>
+ *********************************************************************************************************************/
+/* TODO: Add runnable implementation here. */
+Adc_SampleMain();
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
+ *********************************************************************************************************************/
+
+  return;
+} /* IoHwAb_IoHwAbRunnable_500ms() */ 
 
 
 

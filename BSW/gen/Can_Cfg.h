@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Can_Cfg.h
- *   Generation Time: 2025-09-19 09:19:28
+ *   Generation Time: 2025-09-22 14:02:52
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -369,21 +369,28 @@
 #define CanConf_CanController_CT_J1939_bms_92f0044b                   3u
 #define CanConf_CanController_CT_TC37X_VCU_CAN01_55ccbf7a             4u
 /**\} */
-#define CanConf_CN_ATOM_CANFD_Matrix_CH_V600_202502_64375107_Rx 3u
-#define CanConf_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_Tx 2u
-#define CanConf_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_Tx_94h 0u
-#define CanConf_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_Tx_95h 1u
-#define CanConf_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_Tx 6u
-#define CanConf_CN_ATOM_CAN_Matrix_PT_V600_20250211_bde8b0ce_Rx 7u
-#define CanConf_CN_ATOM_CAN_PT_Tx_95h 4u
-#define CanConf_CN_ATOM_CAN_PT_Tx_96h 5u
-#define CanConf_CN_ATOM_CAN_XCP_bbd3e829_Rx 9u
-#define CanConf_CN_ATOM_CAN_XCP_f42a46d4_Tx 8u
-#define CanConf_CN_J1939_bms_101956F4h_Tx 10u
-#define CanConf_CN_J1939_bms_96c04df9_Rx 12u
-#define CanConf_CN_J1939_bms_dea99804_Tx 11u
-#define CanConf_CN_TC37X_VCU_CAN01_2f90d2fb_Rx 14u
-#define CanConf_CN_TC37X_VCU_CAN01_70b1f95e_Tx 13u
+#define CanConf_CN_ATOM_CANFD_Matrix_CH_Tx_94h 0u
+#define CanConf_CN_ATOM_CANFD_Matrix_CH_Tx_95h 1u
+#define CanConf_CN_ATOM_CANFD_Matrix_CH_Tx_D1h 2u
+#define CanConf_CN_ATOM_CANFD_Matrix_CH_Tx_D2h 3u
+#define CanConf_CN_ATOM_CANFD_Matrix_CH_Tx_D3h 4u
+#define CanConf_CN_ATOM_CANFD_Matrix_CH_V600_202502_64375107_Rx 6u
+#define CanConf_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac_Tx 5u
+#define CanConf_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d_Tx 13u
+#define CanConf_CN_ATOM_CAN_Matrix_PT_V600_20250211_bde8b0ce_Rx 14u
+#define CanConf_CN_ATOM_CAN_PT_Tx_121h 12u
+#define CanConf_CN_ATOM_CAN_PT_Tx_95h 7u
+#define CanConf_CN_ATOM_CAN_PT_Tx_96h 8u
+#define CanConf_CN_ATOM_CAN_PT_Tx_D1h 9u
+#define CanConf_CN_ATOM_CAN_PT_Tx_D2h 10u
+#define CanConf_CN_ATOM_CAN_PT_Tx_D6h 11u
+#define CanConf_CN_ATOM_CAN_XCP_bbd3e829_Rx 16u
+#define CanConf_CN_ATOM_CAN_XCP_f42a46d4_Tx 15u
+#define CanConf_CN_J1939_bms_101956F4h_Tx 17u
+#define CanConf_CN_J1939_bms_96c04df9_Rx 19u
+#define CanConf_CN_J1939_bms_dea99804_Tx 18u
+#define CanConf_CN_TC37X_VCU_CAN01_2f90d2fb_Rx 21u
+#define CanConf_CN_TC37X_VCU_CAN01_70b1f95e_Tx 20u
 
 #define CanConf_ControllerBaudrateConfig_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292_CanControllerBaudrateConfig 0u
 #define CanConf_ControllerBaudrateConfig_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03_CanControllerBaudrateConfig 0u
@@ -1191,7 +1198,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_GetSIDFEOfPCConfig()                                      Can_SIDFE  /**< the pointer to Can_SIDFE */
 #define Can_GetSRN_AddressOfPCConfig()                                Can_SRN_Address  /**< the pointer to Can_SRN_Address */
 #define Can_GetShmAdrOfPCConfig()                                     Can_ShmAdr  /**< the pointer to Can_ShmAdr */
-#define Can_GetSizeOfActiveSendObjectOfPCConfig()                     10u  /**< the number of accomplishable value elements in Can_ActiveSendObject */
+#define Can_GetSizeOfActiveSendObjectOfPCConfig()                     17u  /**< the number of accomplishable value elements in Can_ActiveSendObject */
 #define Can_GetSizeOfBTPOfPCConfig()                                  5u  /**< the number of accomplishable value elements in Can_BTP */
 #define Can_GetSizeOfBufferConfigOfPCConfig()                         5u  /**< the number of accomplishable value elements in Can_BufferConfig */
 #define Can_GetSizeOfCanIfChannelIdOfPCConfig()                       5u  /**< the number of accomplishable value elements in Can_CanIfChannelId */
@@ -1205,7 +1212,7 @@ typedef VAR(Can_ExternalTickType, TYPEDEF) Can_LoopTimeout_dim_type[CAN_LOOP_MAX
 #define Can_GetSizeOfInitObjectFdBrsConfigOfPCConfig()                5u  /**< the number of accomplishable value elements in Can_InitObjectFdBrsConfig */
 #define Can_GetSizeOfInitObjectStartIndexOfPCConfig()                 6u  /**< the number of accomplishable value elements in Can_InitObjectStartIndex */
 #define Can_GetSizeOfIsrOsIdOfPCConfig()                              5u  /**< the number of accomplishable value elements in Can_IsrOsId */
-#define Can_GetSizeOfMailboxOfPCConfig()                              15u  /**< the number of accomplishable value elements in Can_Mailbox */
+#define Can_GetSizeOfMailboxOfPCConfig()                              22u  /**< the number of accomplishable value elements in Can_Mailbox */
 #define Can_GetSizeOfMemorySectionInfoOfPCConfig()                    5u  /**< the number of accomplishable value elements in Can_MemorySectionInfo */
 #define Can_GetSizeOfMemorySectionObjectsOfPCConfig()                 160u  /**< the number of accomplishable value elements in Can_MemorySectionObjects */
 #define Can_GetSizeOfSIDFCOfPCConfig()                                5u  /**< the number of accomplishable value elements in Can_SIDFC */
@@ -2764,7 +2771,7 @@ extern CONST(Can_OsIsrType, CAN_CONST) Can_IsrOsId[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[15];
+extern CONST(Can_MailboxType, CAN_CONST) Can_Mailbox[22];
 #define CAN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2986,7 +2993,7 @@ extern CONST(Can_XIDFEType, CAN_CONST) Can_XIDFE[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[10];
+extern VAR(Can_ActiveSendObjectType, CAN_VAR_NOINIT) Can_ActiveSendObject[17];
 #define CAN_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

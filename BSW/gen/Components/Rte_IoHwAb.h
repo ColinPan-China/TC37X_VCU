@@ -56,10 +56,12 @@ extern "C"
 # ifndef RTE_CORE
 #  define RTE_RUNNABLE_IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel
 #  define RTE_RUNNABLE_IoHwAb_IoHwAbRunnable_10ms IoHwAb_IoHwAbRunnable_10ms
+#  define RTE_RUNNABLE_IoHwAb_IoHwAbRunnable_500ms IoHwAb_IoHwAbRunnable_500ms
 # endif
 
 FUNC(Std_ReturnType, IoHwAb_CODE) IoHwAb_IoHwAbCSPortPrototype_IoHwAb_Dio_WriteChannel(IOHWAB_UINT16 ChannelId, IOHWAB_UINT8 Level); /* PRQA S 0786, 3449, 0624 */ /* MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(void, IoHwAb_CODE) IoHwAb_IoHwAbRunnable_10ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
+FUNC(void, IoHwAb_CODE) IoHwAb_IoHwAbRunnable_500ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 
 # define IoHwAb_STOP_SEC_CODE
 # include "IoHwAb_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
