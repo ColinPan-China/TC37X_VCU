@@ -266,17 +266,18 @@ BO_ 241 EPS_ADCU: 8 EPS
  SG_ EPS_LCA_Active : 17|1@0+ (1,0) [0|1] ""  ADCU_CH,CGW_CH
 
 BO_ 240 EPS_CONV: 8 EPS
- SG_ Checksum_0F0 : 7|8@0+ (1,0) [0|255] ""  IBS_CH,ACU,ADCU_CH,CGW_CH
- SG_ MessageCounter_0F0 : 11|4@0+ (1,0) [0|15] ""  IBS_CH,ACU,ADCU_CH,CGW_CH
- SG_ EPS_SteeringGearAngleSpd : 23|16@0+ (0.1,-540) [-540|540] "degrees/s"  IBS_CH,ADCU_CH,CGW_CH
- SG_ EPS_SteeringGearAngleValid : 39|1@0+ (1,0) [0|1] ""  IBS_CH,ACU,ADCU_CH,CGW_CH
- SG_ EPS_SteeringGearAngleSpdValid : 38|1@0+ (1,0) [0|1] ""  IBS_CH,ADCU_CH,CGW_CH
- SG_ EPS_TorsionBarTorqueValid : 37|1@0+ (1,0) [0|1] ""  ADCU_CH,CGW_CH
- SG_ EPS_ModeChangeEnable : 36|1@0+ (1,0) [0|1] ""  CGW_CH
- SG_ EPS_ModeFb : 35|2@0+ (1,0) [0|3] ""  CGW_CH
- SG_ EPS_WarningLamp : 33|2@0+ (1,0) [0|3] ""  CGW_CH
- SG_ EPS_SteeringGearAngle : 47|16@0+ (0.1,-780) [-780|780] "degrees"  IBS_CH,ACU,ADCU_CH,CGW_CH
- SG_ EPS_TorsionBarTorque : 63|8@0+ (0.1,-10) [-10|10] "Nm"  ADCU_CH,CGW_CH
+ SG_ Checksum_0F0 : 7|8@0+ (1,0) [0|255] ""  IBS_CH,ACU,ADCU_CH,CGW_CH,VCU
+ SG_ MessageCounter_0F0 : 11|4@0+ (1,0) [0|15] ""  IBS_CH,ACU,ADCU_CH,CGW_CH,VCU
+ SG_ EPS_SteeringGearAngleSpd : 23|16@0+ (0.1,-540) [-540|540] "degrees/s"  IBS_CH,ADCU_CH,CGW_CH,VCU
+ SG_ EPS_SteeringGearAngleValid : 39|1@0+ (1,0) [0|1] ""  IBS_CH,ACU,ADCU_CH,CGW_CH,VCU
+ SG_ EPS_SteeringGearAngleSpdValid : 38|1@0+ (1,0) [0|1] ""  IBS_CH,ADCU_CH,CGW_CH,VCU
+ SG_ EPS_TorsionBarTorqueValid : 37|1@0+ (1,0) [0|1] ""  ADCU_CH,CGW_CH,VCU
+ SG_ EPS_ModeChangeEnable : 36|1@0+ (1,0) [0|1] ""  CGW_CH,VCU
+ SG_ EPS_ModeFb : 35|2@0+ (1,0) [0|3] ""  CGW_CH,VCU
+ SG_ EPS_WarningLamp : 33|2@0+ (1,0) [0|3] ""  CGW_CH,VCU
+ SG_ EPS_SteeringGearAngle : 47|16@0+ (0.1,-780) [-780|780] "degrees"  IBS_CH,ACU,ADCU_CH,CGW_CH,VCU
+ SG_ EPS_TorsionBarTorque : 63|8@0+ (0.1,-10) [-10|10] "Nm"  ADCU_CH,CGW_CH,VCU
+ 
 
 BO_ 184 IBS_ACC: 8 IBS_CH
  SG_ Checksum_0B8 : 7|8@0+ (1,0) [0|255] ""  VCU,ADCU_CH,CGW_CH
