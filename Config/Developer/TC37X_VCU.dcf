@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <DCF ARSCHEMA="450_DEV">
 	<Version>1.0</Version>
 	<PROFILESETTINGS>ProfileSettings.xml</PROFILESETTINGS>
@@ -18,187 +18,11 @@
 		<DVG>ECUProjects\TC37X_VCU.dvg</DVG>
 	</FILEREF>
 	<FILEREF>
-		<ARXML>ComponentTypes\YDF_LCS.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_LCS.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_CanHandler.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_CanHandler.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDS_NMHandler.arxml</ARXML>
-		<DVG>ComponentTypes\YDS_NMHandler.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_EthHandler.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_EthHandler.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_DiagHandler.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_DiagHandler.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_ErrorHandler.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_ErrorHandler.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_BIST.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_BIST.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_PerManager.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_PerManager.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\IoHwAb.arxml</ARXML>
-		<DVG>ComponentTypes\IoHwAb.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
 		<ARXML>Constants.arxml</ARXML>
 	</FILEREF>
 	<FILEREF>
 		<ARXML>ComponentTypes\HookCallout.arxml</ARXML>
 		<DVG>ComponentTypes\HookCallout.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_XcpHandler.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_XcpHandler.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_ComplexDriver.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_ComplexDriver.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_FunctionInterface.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_FunctionInterface.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_VBAT_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_VBAT_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_Highpower_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_Highpower_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_5vSensor_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_5vSensor_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_AnalogInput_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_AnalogInput_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_DigitalInput_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_DigitalInput_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_PWMIN_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_PWMIN_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_WakeUp_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_WakeUp_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_Lowout_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_Lowout_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_HighSide_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_HighSide_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_PWMOUT_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_PWMOUT_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_MotorCtr_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_MotorCtr_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_Communication_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_Communication_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_EEPROM_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_EEPROM_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_Bootloader.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_Bootloader.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_RVCU_Swc.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_RVCU_Swc.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_OutPutDriver.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_OutPutDriver.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_SetPowerOffDriver.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_SetPowerOffDriver.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\Lin_Com.arxml</ARXML>
-		<DVG>ComponentTypes\Lin_Com.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\YDF_EEPROMDriver.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_EEPROMDriver.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\Simulink_If_Module.arxml</ARXML>
-		<DVG>ComponentTypes\Simulink_If_Module.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\KAMA_AC_charging.arxml</ARXML>
-		<DVG>ComponentTypes\KAMA_AC_charging.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\KAMA_Charge_Management.arxml</ARXML>
-		<DVG>ComponentTypes\KAMA_Charge_Management.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\KAMA_DC_charging.arxml</ARXML>
-		<DVG>ComponentTypes\KAMA_DC_charging.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\KAMA_Gear_management.arxml</ARXML>
-		<DVG>ComponentTypes\KAMA_Gear_management.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\KAMA_HighVoltageManagement.arxml</ARXML>
-		<DVG>ComponentTypes\KAMA_HighVoltageManagement.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\KAMA_Lowvoltagemanagement.arxml</ARXML>
-		<DVG>ComponentTypes\KAMA_Lowvoltagemanagement.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\KAMA_Mode_management.arxml</ARXML>
-		<DVG>ComponentTypes\KAMA_Mode_management.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\KAMA_Torque_management.arxml</ARXML>
-		<DVG>ComponentTypes\KAMA_Torque_management.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\KAMA_ErrorManagement.arxml</ARXML>
-		<DVG>ComponentTypes\KAMA_ErrorManagement.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\KAMA_RollingCounterManagement.arxml</ARXML>
-		<DVG>ComponentTypes\KAMA_RollingCounterManagement.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\KAMA_RangeEstimation.arxml</ARXML>
-		<DVG>ComponentTypes\KAMA_RangeEstimation.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes\KAMA_ThermalManagement.arxml</ARXML>
-		<DVG>ComponentTypes\KAMA_ThermalManagement.dvg</DVG>
 	</FILEREF>
 	<FILEREF>
 		<ARXML>ComponentTypes\CtAp_CANHandler.arxml</ARXML>
@@ -505,19 +329,15 @@
 		<DVG>ComponentTypes\CtAp_DiagnosisApp.dvg</DVG>
 	</FILEREF>
 	<FILEREF>
-		<ARXML>ComponentTypes\YDF_CtAp_CANHandler_TaskCtrl.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_CtAp_CANHandler_TaskCtrl.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
 		<ARXML>ComponentTypes\CtAp_GearCal.arxml</ARXML>
 		<DVG>ComponentTypes\CtAp_GearCal.dvg</DVG>
 	</FILEREF>
 	<FILEREF>
-		<ARXML>ComponentTypes\YDF_MileageCalculation.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_MileageCalculation.dvg</DVG>
+		<ARXML>ComponentTypes/Core2App_SWC_1.arxml</ARXML>
+		<DVG>ComponentTypes/Core2App_SWC_1.dvg</DVG>
 	</FILEREF>
 	<FILEREF>
-		<ARXML>ComponentTypes\YDF_SecOC.arxml</ARXML>
-		<DVG>ComponentTypes\YDF_SecOC.dvg</DVG>
+		<ARXML>ComponentTypes/Core1App_SWC_1.arxml</ARXML>
+		<DVG>ComponentTypes/Core1App_SWC_1.dvg</DVG>
 	</FILEREF>
 </DCF>
