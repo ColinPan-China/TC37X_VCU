@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Cfg.h
- *   Generation Time: 2025-09-19 09:31:42
+ *   Generation Time: 2025-09-25 10:42:46
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -60,7 +60,7 @@
 # define OS_CFG_NUM_ISRLEVELS                                    (33uL)
 
 /*! Number of all spinlocks. */
-# define OS_CFG_NUM_SYSTEM_SPINLOCKS                             (0uL)
+# define OS_CFG_NUM_SYSTEM_SPINLOCKS                             (212uL)
 
 /*! Number of physical core identifiers. */
 # define OS_CFG_COREPHYSICALID_COUNT                             (3uL)
@@ -86,7 +86,7 @@
 # define OS_CFG_NUM_CORE_OSCORE2_HOOKS            (3uL)
 # define OS_CFG_NUM_CORE_OSCORE2_IOCS             (0uL)
 # define OS_CFG_NUM_CORE_OSCORE2_RESOURCES        (1uL)
-# define OS_CFG_NUM_CORE_OSCORE2_STACKS           (9uL)
+# define OS_CFG_NUM_CORE_OSCORE2_STACKS           (10uL)
 # define OS_CFG_NUM_CORE_OSCORE2_ISRS             (2uL)
 
 

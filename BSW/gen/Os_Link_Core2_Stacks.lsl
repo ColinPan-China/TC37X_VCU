@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Link_Core2_Stacks.lsl
- *   Generation Time: 2025-09-19 09:19:30
+ *   Generation Time: 2025-09-25 10:42:48
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -36,6 +36,15 @@
 #if defined ( OS_LINK_KERNEL_STACKS )
 group OS_CORE2_STACKS_GROUP(ordered, contiguous, fill)
 {
+
+/* Stack: Core2_Asw_Task (1024 Byte) */
+group OS_STACK_CORE2_ASW_TASK_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+{
+  select "[.]bss.OS_STACK_CORE2_ASW_TASK_VAR_NOINIT";
+}
+"_OS_STACK_CORE2_ASW_TASK_VAR_NOINIT_START" = "_lc_gb_OS_STACK_CORE2_ASW_TASK_VAR_NOINIT_GROUP";
+"_OS_STACK_CORE2_ASW_TASK_VAR_NOINIT_END" = "_lc_ge_OS_STACK_CORE2_ASW_TASK_VAR_NOINIT_GROUP" - 1;
+"_OS_STACK_CORE2_ASW_TASK_VAR_NOINIT_LIMIT" = "_lc_ge_OS_STACK_CORE2_ASW_TASK_VAR_NOINIT_GROUP";
 
 /* Stack: OsCore2_Error (1024 Byte) */
 group OS_STACK_OSCORE2_ERROR_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)

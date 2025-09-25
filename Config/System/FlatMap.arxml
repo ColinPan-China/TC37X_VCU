@@ -11717,22 +11717,6 @@
                                     <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CtAp_DCComM</TARGET-REF>
                                   </ECU-EXTRACT-REFERENCE-IREF>
                                 </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="2aba0409-22fe-4a49-8c11-d04e5989b6d5">
-                                  <SHORT-NAME>CtAp_DiagnosisApp</SHORT-NAME>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_DiagnosisApp</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CtAp_DiagnosisApp</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
                               </INSTANCES>
                             </FLAT-MAP>
                           </ELEMENTS>

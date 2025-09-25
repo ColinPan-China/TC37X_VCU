@@ -97,7 +97,6 @@ section_layout mpe:vtc:linear
     {
       section "OS_STACKS_CORE0_VAR_NOINIT_SEC" (blocksize = 2, attributes = rw)
       {
-        select "[.]bss.OS_STACK_CORE0_ASWTASK_VAR_NOINIT";
         select "[.]bss.OS_STACK_CORE0_BSW_TASK_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_ERROR_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_INIT_VAR_NOINIT";
@@ -108,6 +107,7 @@ section_layout mpe:vtc:linear
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO49_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO50_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO63_VAR_NOINIT";
+        select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO64_VAR_NOINIT";
       }
     }
     group OS_STACKS_CORE0_VAR_NOINIT_PAD (align = 1)
@@ -159,6 +159,7 @@ section_layout mpe:vtc:linear
     {
       section "OS_STACKS_CORE2_VAR_NOINIT_SEC" (blocksize = 2, attributes = rw)
       {
+        select "[.]bss.OS_STACK_CORE2_ASW_TASK_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE2_ERROR_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE2_INIT_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE2_ISR_CORE_VAR_NOINIT";
@@ -1093,6 +1094,7 @@ section_layout mpe:vtc:linear
         select "[.]zbss.OS_BARRIER_CORE0_VAR_FAST_NOCACHE_NOINIT";
         select "[.]zbss.OS_BARRIER_CORE1_VAR_FAST_NOCACHE_NOINIT";
         select "[.]zbss.OS_BARRIER_CORE2_VAR_FAST_NOCACHE_NOINIT";
+        select "[.]zbss.OS_CORESHARED_0X00000005_VAR_FAST_NOCACHE_NOINIT";
         select "[.]zbss.OS_CORESTATUS_CORE0_VAR_FAST_NOCACHE_NOINIT";
         select "[.]zbss.OS_CORESTATUS_CORE1_VAR_FAST_NOCACHE_NOINIT";
         select "[.]zbss.OS_CORESTATUS_CORE2_VAR_FAST_NOCACHE_NOINIT";
@@ -1132,6 +1134,7 @@ section_layout mpe:vtc:linear
         select "[.]bss.OS_BARRIER_CORE0_VAR_NOCACHE_NOINIT";
         select "[.]bss.OS_BARRIER_CORE1_VAR_NOCACHE_NOINIT";
         select "[.]bss.OS_BARRIER_CORE2_VAR_NOCACHE_NOINIT";
+        select "[.]bss.OS_CORESHARED_0X00000005_VAR_NOCACHE_NOINIT";
         select "[.]bss.OS_CORESTATUS_CORE0_VAR_NOCACHE_NOINIT";
         select "[.]bss.OS_CORESTATUS_CORE1_VAR_NOCACHE_NOINIT";
         select "[.]bss.OS_CORESTATUS_CORE2_VAR_NOCACHE_NOINIT";

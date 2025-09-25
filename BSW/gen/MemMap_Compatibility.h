@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: MemMap_Compatibility.h
- *   Generation Time: 2025-09-19 16:14:41
+ *   Generation Time: 2025-09-25 10:42:45
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -375,35 +375,6 @@
 
 /* -------------------------------------------------------------------------------- */
 
-#elif defined RTE_START_SEC_SWC1_APPL_CODE
-# ifdef MEMMAP_SECTION_OPEN
-#  error Using RTE_START_SEC_SWC1_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
-# endif
-# define MEMMAP_SECTION_OPEN
-# define RTE_SWC1_APPL_CODE_OPEN
-
-# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-
-# undef RTE_START_SEC_SWC1_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
-# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-#elif defined RTE_STOP_SEC_SWC1_APPL_CODE
-# ifndef MEMMAP_SECTION_OPEN
-#  error Using RTE_STOP_SEC_SWC1_APPL_CODE is not possible as no memory section has been opened.
-# endif
-# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
-# ifndef RTE_SWC1_APPL_CODE_OPEN
-#  error Using RTE_STOP_SEC_SWC1_APPL_CODE is not possible as the corresponding memory section has not been opened.
-# endif
-# undef RTE_SWC1_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
-
-# undef RTE_STOP_SEC_SWC1_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
-# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-/* -------------------------------------------------------------------------------- */
-
 #elif defined RTE_START_SEC_COMM_APPL_CODE
 # ifdef MEMMAP_SECTION_OPEN
 #  error Using RTE_START_SEC_COMM_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
@@ -462,64 +433,6 @@
 
 /* -------------------------------------------------------------------------------- */
 
-#elif defined RTE_START_SEC_POWERMNG_SWC_APPL_CODE
-# ifdef MEMMAP_SECTION_OPEN
-#  error Using RTE_START_SEC_POWERMNG_SWC_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
-# endif
-# define MEMMAP_SECTION_OPEN
-# define RTE_POWERMNG_SWC_APPL_CODE_OPEN
-
-# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-
-# undef RTE_START_SEC_POWERMNG_SWC_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
-# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-#elif defined RTE_STOP_SEC_POWERMNG_SWC_APPL_CODE
-# ifndef MEMMAP_SECTION_OPEN
-#  error Using RTE_STOP_SEC_POWERMNG_SWC_APPL_CODE is not possible as no memory section has been opened.
-# endif
-# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
-# ifndef RTE_POWERMNG_SWC_APPL_CODE_OPEN
-#  error Using RTE_STOP_SEC_POWERMNG_SWC_APPL_CODE is not possible as the corresponding memory section has not been opened.
-# endif
-# undef RTE_POWERMNG_SWC_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
-
-# undef RTE_STOP_SEC_POWERMNG_SWC_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
-# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-/* -------------------------------------------------------------------------------- */
-
-#elif defined RTE_START_SEC_COM_SWC_APPL_CODE
-# ifdef MEMMAP_SECTION_OPEN
-#  error Using RTE_START_SEC_COM_SWC_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
-# endif
-# define MEMMAP_SECTION_OPEN
-# define RTE_COM_SWC_APPL_CODE_OPEN
-
-# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-
-# undef RTE_START_SEC_COM_SWC_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
-# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-#elif defined RTE_STOP_SEC_COM_SWC_APPL_CODE
-# ifndef MEMMAP_SECTION_OPEN
-#  error Using RTE_STOP_SEC_COM_SWC_APPL_CODE is not possible as no memory section has been opened.
-# endif
-# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
-# ifndef RTE_COM_SWC_APPL_CODE_OPEN
-#  error Using RTE_STOP_SEC_COM_SWC_APPL_CODE is not possible as the corresponding memory section has not been opened.
-# endif
-# undef RTE_COM_SWC_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
-
-# undef RTE_STOP_SEC_COM_SWC_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
-# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-/* -------------------------------------------------------------------------------- */
-
 #elif defined RTE_START_SEC_NVM_APPL_CODE
 # ifdef MEMMAP_SECTION_OPEN
 #  error Using RTE_START_SEC_NVM_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
@@ -545,105 +458,6 @@
 # pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
 
 # undef RTE_STOP_SEC_NVM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
-# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-/* -------------------------------------------------------------------------------- */
-
-#elif defined RTE_START_SEC_NVM_SWC_APPL_CODE
-# ifdef MEMMAP_SECTION_OPEN
-#  error Using RTE_START_SEC_NVM_SWC_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
-# endif
-# define MEMMAP_SECTION_OPEN
-# define RTE_NVM_SWC_APPL_CODE_OPEN
-
-# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-
-# undef RTE_START_SEC_NVM_SWC_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
-# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-#elif defined RTE_STOP_SEC_NVM_SWC_APPL_CODE
-# ifndef MEMMAP_SECTION_OPEN
-#  error Using RTE_STOP_SEC_NVM_SWC_APPL_CODE is not possible as no memory section has been opened.
-# endif
-# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
-# ifndef RTE_NVM_SWC_APPL_CODE_OPEN
-#  error Using RTE_STOP_SEC_NVM_SWC_APPL_CODE is not possible as the corresponding memory section has not been opened.
-# endif
-# undef RTE_NVM_SWC_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
-
-# undef RTE_STOP_SEC_NVM_SWC_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
-# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-/* -------------------------------------------------------------------------------- */
-
-#elif defined RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
-# ifdef MEMMAP_SECTION_OPEN
-#  error Using RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED is not possible as a memory section has already been opened. Nesting is not supported.
-# endif
-# define MEMMAP_SECTION_OPEN
-# define RTE_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED_OPEN
-
-# pragma section farrom "MSR_CONST" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section nearrom "MSR_CONST_FAST" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-
-# undef RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
-# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-#elif defined RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
-# ifndef MEMMAP_SECTION_OPEN
-#  error Using RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED is not possible as no memory section has been opened.
-# endif
-# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
-# ifndef RTE_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED_OPEN
-#  error Using RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED is not possible as the corresponding memory section has not been opened.
-# endif
-# undef RTE_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-# pragma section farrom restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section nearrom restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
-
-# undef RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
-# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-/* -------------------------------------------------------------------------------- */
-
-#elif defined RTE_START_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
-# ifdef MEMMAP_SECTION_OPEN
-#  error Using RTE_START_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED is not possible as a memory section has already been opened. Nesting is not supported.
-# endif
-# define MEMMAP_SECTION_OPEN
-# define RTE_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED_OPEN
-
-# pragma section farnoclear "OS_CORE0_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section farbss "OS_CORE0_VAR_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section fardata "OS_CORE0_VAR" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section nearnoclear "OS_CORE0_VAR_FAST_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section nearbss "OS_CORE0_VAR_FAST_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section neardata "OS_CORE0_VAR_FAST" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-
-# undef RTE_START_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
-# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-#elif defined RTE_STOP_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
-# ifndef MEMMAP_SECTION_OPEN
-#  error Using RTE_STOP_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED is not possible as no memory section has been opened.
-# endif
-# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
-# ifndef RTE_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED_OPEN
-#  error Using RTE_STOP_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED is not possible as the corresponding memory section has not been opened.
-# endif
-# undef RTE_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
-
-# pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section fardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section nearnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section nearbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section neardata restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
-
-# undef RTE_STOP_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
 
 /* -------------------------------------------------------------------------------- */
@@ -1890,6 +1704,1659 @@
 # pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
 
 # undef RTE_STOP_SEC_IOHWAB_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_ACCCAL_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_ACCCAL_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_ACCCAL_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_ACCCAL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_ACCCAL_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_ACCCAL_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_ACCCAL_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_ACCCAL_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_ACCCAL_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_ACCCAL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_ACCRPEDLDRV_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_ACCRPEDLDRV_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_ACCRPEDLDRV_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_ACCRPEDLDRV_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_ACCRPEDLDRV_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_ACCRPEDLDRV_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_ACCRPEDLDRV_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_ACCRPEDLDRV_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_ACCRPEDLDRV_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_ACCRPEDLDRV_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_ACPARMGMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_ACPARMGMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_ACPARMGMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_ACPARMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_ACPARMGMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_ACPARMGMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_ACPARMGMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_ACPARMGMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_ACPARMGMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_ACPARMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_BMSMGMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_BMSMGMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_BMSMGMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_BMSMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_BMSMGMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_BMSMGMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_BMSMGMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_BMSMGMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_BMSMGMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_BMSMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_BRKMGMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_BRKMGMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_BRKMGMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_BRKMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_BRKMGMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_BRKMGMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_BRKMGMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_BRKMGMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_BRKMGMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_BRKMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_CANHANDLER_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_CANHANDLER_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_CANHANDLER_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_CANHANDLER_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_CANHANDLER_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CANHANDLER_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_CANHANDLER_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CANHANDLER_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_CANHANDLER_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_CANHANDLER_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_CHRGCOMM_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_CHRGCOMM_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_CHRGCOMM_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_CHRGCOMM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_CHRGCOMM_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGCOMM_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_CHRGCOMM_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGCOMM_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_CHRGCOMM_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_CHRGCOMM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_CHRGEGYCAL_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_CHRGEGYCAL_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_CHRGEGYCAL_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_CHRGEGYCAL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_CHRGEGYCAL_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGEGYCAL_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_CHRGEGYCAL_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGEGYCAL_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_CHRGEGYCAL_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_CHRGEGYCAL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_CHRGMOD_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_CHRGMOD_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_CHRGMOD_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_CHRGMOD_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_CHRGMOD_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGMOD_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_CHRGMOD_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGMOD_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_CHRGMOD_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_CHRGMOD_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_CHRGPREHEAT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_CHRGPREHEAT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_CHRGPREHEAT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_CHRGPREHEAT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_CHRGPREHEAT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGPREHEAT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_CHRGPREHEAT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGPREHEAT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_CHRGPREHEAT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_CHRGPREHEAT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_CHRGSDL_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_CHRGSDL_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_CHRGSDL_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_CHRGSDL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_CHRGSDL_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGSDL_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_CHRGSDL_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGSDL_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_CHRGSDL_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_CHRGSDL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_CHRGSEQCTRL_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_CHRGSEQCTRL_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_CHRGSEQCTRL_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_CHRGSEQCTRL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_CHRGSEQCTRL_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGSEQCTRL_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_CHRGSEQCTRL_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGSEQCTRL_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_CHRGSEQCTRL_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_CHRGSEQCTRL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_CHRGSTAT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_CHRGSTAT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_CHRGSTAT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_CHRGSTAT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_CHRGSTAT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGSTAT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_CHRGSTAT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CHRGSTAT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_CHRGSTAT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_CHRGSTAT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_CNSCALCN_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_CNSCALCN_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_CNSCALCN_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_CNSCALCN_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_CNSCALCN_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CNSCALCN_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_CNSCALCN_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CNSCALCN_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_CNSCALCN_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_CNSCALCN_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_COASTCTRL_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_COASTCTRL_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_COASTCTRL_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_COASTCTRL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_COASTCTRL_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_COASTCTRL_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_COASTCTRL_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_COASTCTRL_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_COASTCTRL_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_COASTCTRL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_COMMERR_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_COMMERR_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_COMMERR_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_COMMERR_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_COMMERR_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_COMMERR_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_COMMERR_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_COMMERR_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_COMMERR_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_COMMERR_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_CRPCTRL_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_CRPCTRL_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_CRPCTRL_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_CRPCTRL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_CRPCTRL_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CRPCTRL_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_CRPCTRL_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_CRPCTRL_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_CRPCTRL_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_CRPCTRL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_DCCOMM_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_DCCOMM_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_DCCOMM_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_DCCOMM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_DCCOMM_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DCCOMM_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_DCCOMM_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DCCOMM_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_DCCOMM_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_DCCOMM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_DCDCMGMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_DCDCMGMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_DCDCMGMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_DCDCMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_DCDCMGMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DCDCMGMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_DCDCMGMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DCDCMGMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_DCDCMGMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_DCDCMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_DCFCMGMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_DCFCMGMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_DCFCMGMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_DCFCMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_DCFCMGMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DCFCMGMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_DCFCMGMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DCFCMGMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_DCFCMGMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_DCFCMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_DCPARMGMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_DCPARMGMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_DCPARMGMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_DCPARMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_DCPARMGMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DCPARMGMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_DCPARMGMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DCPARMGMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_DCPARMGMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_DCPARMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_DRVASSCCTRL_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_DRVASSCCTRL_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_DRVASSCCTRL_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_DRVASSCCTRL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_DRVASSCCTRL_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DRVASSCCTRL_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_DRVASSCCTRL_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DRVASSCCTRL_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_DRVASSCCTRL_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_DRVASSCCTRL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_DRVMOD_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_DRVMOD_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_DRVMOD_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_DRVMOD_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_DRVMOD_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DRVMOD_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_DRVMOD_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DRVMOD_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_DRVMOD_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_DRVMOD_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_DRVTORQCOOR_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_DRVTORQCOOR_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_DRVTORQCOOR_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_DRVTORQCOOR_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_DRVTORQCOOR_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DRVTORQCOOR_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_DRVTORQCOOR_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_DRVTORQCOOR_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_DRVTORQCOOR_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_DRVTORQCOOR_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_ELSSDIAG_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_ELSSDIAG_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_ELSSDIAG_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_ELSSDIAG_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_ELSSDIAG_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_ELSSDIAG_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_ELSSDIAG_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_ELSSDIAG_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_ELSSDIAG_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_ELSSDIAG_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_EMMGMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_EMMGMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_EMMGMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_EMMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_EMMGMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_EMMGMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_EMMGMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_EMMGMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_EMMGMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_EMMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_FCTSFTYGEAR_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_FCTSFTYGEAR_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_FCTSFTYGEAR_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_FCTSFTYGEAR_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_FCTSFTYGEAR_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_FCTSFTYGEAR_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_FCTSFTYGEAR_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_FCTSFTYGEAR_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_FCTSFTYGEAR_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_FCTSFTYGEAR_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_FCTSFTYTORQ_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_FCTSFTYTORQ_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_FCTSFTYTORQ_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_FCTSFTYTORQ_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_FCTSFTYTORQ_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_FCTSFTYTORQ_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_FCTSFTYTORQ_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_FCTSFTYTORQ_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_FCTSFTYTORQ_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_FCTSFTYTORQ_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_FLTREACTN_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_FLTREACTN_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_FLTREACTN_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_FLTREACTN_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_FLTREACTN_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_FLTREACTN_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_FLTREACTN_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_FLTREACTN_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_FLTREACTN_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_FLTREACTN_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_GEARCAL_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_GEARCAL_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_GEARCAL_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_GEARCAL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_GEARCAL_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_GEARCAL_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_GEARCAL_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_GEARCAL_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_GEARCAL_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_GEARCAL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_HVSFTY_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_HVSFTY_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_HVSFTY_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_HVSFTY_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_HVSFTY_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_HVSFTY_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_HVSFTY_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_HVSFTY_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_HVSFTY_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_HVSFTY_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_HWHANDLER_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_HWHANDLER_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_HWHANDLER_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_HWHANDLER_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_HWHANDLER_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_HWHANDLER_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_HWHANDLER_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_HWHANDLER_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_HWHANDLER_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_HWHANDLER_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_LINHANDLER_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_LINHANDLER_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_LINHANDLER_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_LINHANDLER_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_LINHANDLER_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_LINHANDLER_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_LINHANDLER_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_LINHANDLER_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_LINHANDLER_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_LINHANDLER_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_LVBATTMGMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_LVBATTMGMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_LVBATTMGMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_LVBATTMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_LVBATTMGMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_LVBATTMGMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_LVBATTMGMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_LVBATTMGMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_LVBATTMGMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_LVBATTMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_MCUMGMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_MCUMGMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_MCUMGMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_MCUMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_MCUMGMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_MCUMGMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_MCUMGMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_MCUMGMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_MCUMGMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_MCUMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_OBCSTSMGMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_OBCSTSMGMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_OBCSTSMGMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_OBCSTSMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_OBCSTSMGMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_OBCSTSMGMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_OBCSTSMGMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_OBCSTSMGMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_OBCSTSMGMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_OBCSTSMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_ONEPEDCTRL_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_ONEPEDCTRL_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_ONEPEDCTRL_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_ONEPEDCTRL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_ONEPEDCTRL_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_ONEPEDCTRL_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_ONEPEDCTRL_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_ONEPEDCTRL_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_ONEPEDCTRL_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_ONEPEDCTRL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_PDLALYS_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_PDLALYS_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_PDLALYS_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_PDLALYS_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_PDLALYS_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_PDLALYS_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_PDLALYS_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_PDLALYS_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_PDLALYS_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_PDLALYS_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_PWRLIM_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_PWRLIM_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_PWRLIM_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_PWRLIM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_PWRLIM_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_PWRLIM_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_PWRLIM_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_PWRLIM_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_PWRLIM_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_PWRLIM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_RESEST_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_RESEST_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_RESEST_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_RESEST_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_RESEST_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_RESEST_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_RESEST_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_RESEST_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_RESEST_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_RESEST_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_RNGESTIMN_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_RNGESTIMN_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_RNGESTIMN_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_RNGESTIMN_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_RNGESTIMN_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_RNGESTIMN_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_RNGESTIMN_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_RNGESTIMN_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_RNGESTIMN_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_RNGESTIMN_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_S2MGMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_S2MGMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_S2MGMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_S2MGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_S2MGMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_S2MGMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_S2MGMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_S2MGMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_S2MGMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_S2MGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_SLOPEST_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_SLOPEST_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_SLOPEST_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_SLOPEST_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_SLOPEST_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_SLOPEST_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_SLOPEST_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_SLOPEST_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_SLOPEST_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_SLOPEST_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_SPDLMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_SPDLMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_SPDLMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_SPDLMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_SPDLMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_SPDLMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_SPDLMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_SPDLMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_SPDLMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_SPDLMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_TCUMGMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_TCUMGMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_TCUMGMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_TCUMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_TCUMGMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TCUMGMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_TCUMGMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TCUMGMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_TCUMGMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_TCUMGMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_TORQCOOR_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_TORQCOOR_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_TORQCOOR_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_TORQCOOR_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_TORQCOOR_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TORQCOOR_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_TORQCOOR_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TORQCOOR_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_TORQCOOR_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_TORQCOOR_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_TORQCROSSZR_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_TORQCROSSZR_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_TORQCROSSZR_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_TORQCROSSZR_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_TORQCROSSZR_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TORQCROSSZR_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_TORQCROSSZR_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TORQCROSSZR_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_TORQCROSSZR_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_TORQCROSSZR_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_TORQDAMP_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_TORQDAMP_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_TORQDAMP_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_TORQDAMP_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_TORQDAMP_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TORQDAMP_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_TORQDAMP_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TORQDAMP_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_TORQDAMP_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_TORQDAMP_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_TORQFIL_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_TORQFIL_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_TORQFIL_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_TORQFIL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_TORQFIL_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TORQFIL_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_TORQFIL_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TORQFIL_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_TORQFIL_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_TORQFIL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_TORQLMT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_TORQLMT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_TORQLMT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_TORQLMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_TORQLMT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TORQLMT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_TORQLMT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TORQLMT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_TORQLMT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_TORQLMT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_TORQMODMAP_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_TORQMODMAP_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_TORQMODMAP_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_TORQMODMAP_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_TORQMODMAP_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TORQMODMAP_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_TORQMODMAP_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TORQMODMAP_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_TORQMODMAP_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_TORQMODMAP_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_TRSMPROTD_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_TRSMPROTD_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_TRSMPROTD_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_TRSMPROTD_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_TRSMPROTD_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TRSMPROTD_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_TRSMPROTD_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_TRSMPROTD_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_TRSMPROTD_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_TRSMPROTD_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_VEHSPD_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_VEHSPD_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_VEHSPD_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_VEHSPD_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_VEHSPD_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_VEHSPD_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_VEHSPD_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_VEHSPD_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_VEHSPD_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_VEHSPD_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_VEHSTABYCTRL_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_VEHSTABYCTRL_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_VEHSTABYCTRL_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_VEHSTABYCTRL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_VEHSTABYCTRL_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_VEHSTABYCTRL_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_VEHSTABYCTRL_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_VEHSTABYCTRL_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_VEHSTABYCTRL_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_VEHSTABYCTRL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_VEHSTAT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_VEHSTAT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_VEHSTAT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_VEHSTAT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_VEHSTAT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_VEHSTAT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_VEHSTAT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_VEHSTAT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_VEHSTAT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_VEHSTAT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_CTAP_WAKEUPRSN_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_CTAP_WAKEUPRSN_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_CTAP_WAKEUPRSN_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_CTAP_WAKEUPRSN_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_CTAP_WAKEUPRSN_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_CTAP_WAKEUPRSN_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_CTAP_WAKEUPRSN_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_CTAP_WAKEUPRSN_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_CTAP_WAKEUPRSN_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_CTAP_WAKEUPRSN_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_HOOKCALLOUT_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_HOOKCALLOUT_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_HOOKCALLOUT_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_HOOKCALLOUT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_HOOKCALLOUT_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_HOOKCALLOUT_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_HOOKCALLOUT_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_HOOKCALLOUT_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_HOOKCALLOUT_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_HOOKCALLOUT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
 
 /* -------------------------------------------------------------------------------- */
@@ -8554,12 +10021,6 @@
 #ifdef RTE_STOP_SEC_OS_OSCORE0_SWC_APPL_CODE
 # error Using RTE_STOP_SEC_OS_OSCORE0_SWC_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
 #endif
-#ifdef RTE_START_SEC_SWC1_APPL_CODE
-# error Using RTE_START_SEC_SWC1_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
-#endif
-#ifdef RTE_STOP_SEC_SWC1_APPL_CODE
-# error Using RTE_STOP_SEC_SWC1_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
-#endif
 #ifdef RTE_START_SEC_COMM_APPL_CODE
 # error Using RTE_START_SEC_COMM_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
 #endif
@@ -8572,41 +10033,11 @@
 #ifdef RTE_STOP_SEC_DET_APPL_CODE
 # error Using RTE_STOP_SEC_DET_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
 #endif
-#ifdef RTE_START_SEC_POWERMNG_SWC_APPL_CODE
-# error Using RTE_START_SEC_POWERMNG_SWC_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
-#endif
-#ifdef RTE_STOP_SEC_POWERMNG_SWC_APPL_CODE
-# error Using RTE_STOP_SEC_POWERMNG_SWC_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
-#endif
-#ifdef RTE_START_SEC_COM_SWC_APPL_CODE
-# error Using RTE_START_SEC_COM_SWC_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
-#endif
-#ifdef RTE_STOP_SEC_COM_SWC_APPL_CODE
-# error Using RTE_STOP_SEC_COM_SWC_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
-#endif
 #ifdef RTE_START_SEC_NVM_APPL_CODE
 # error Using RTE_START_SEC_NVM_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
 #endif
 #ifdef RTE_STOP_SEC_NVM_APPL_CODE
 # error Using RTE_STOP_SEC_NVM_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
-#endif
-#ifdef RTE_START_SEC_NVM_SWC_APPL_CODE
-# error Using RTE_START_SEC_NVM_SWC_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
-#endif
-#ifdef RTE_STOP_SEC_NVM_SWC_APPL_CODE
-# error Using RTE_STOP_SEC_NVM_SWC_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
-#endif
-#ifdef RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
-# error Using RTE_START_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
-#endif
-#ifdef RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED
-# error Using RTE_STOP_SEC_CONST_DEFAULT_RTE_CDATA_GROUP_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
-#endif
-#ifdef RTE_START_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
-# error Using RTE_START_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
-#endif
-#ifdef RTE_STOP_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED
-# error Using RTE_STOP_SEC_VAR_DEFAULT_RTE_PIM_GROUP_UNSPECIFIED is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
 #endif
 #ifdef RTE_START_SEC_DCM_APPL_CODE
 # error Using RTE_START_SEC_DCM_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
@@ -8811,6 +10242,348 @@
 #endif
 #ifdef RTE_STOP_SEC_IOHWAB_APPL_CODE
 # error Using RTE_STOP_SEC_IOHWAB_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_ACCCAL_APPL_CODE
+# error Using RTE_START_SEC_CTAP_ACCCAL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_ACCCAL_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_ACCCAL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_ACCRPEDLDRV_APPL_CODE
+# error Using RTE_START_SEC_CTAP_ACCRPEDLDRV_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_ACCRPEDLDRV_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_ACCRPEDLDRV_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_ACPARMGMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_ACPARMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_ACPARMGMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_ACPARMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_BMSMGMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_BMSMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_BMSMGMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_BMSMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_BRKMGMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_BRKMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_BRKMGMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_BRKMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_CANHANDLER_APPL_CODE
+# error Using RTE_START_SEC_CTAP_CANHANDLER_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_CANHANDLER_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_CANHANDLER_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_CHRGCOMM_APPL_CODE
+# error Using RTE_START_SEC_CTAP_CHRGCOMM_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_CHRGCOMM_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_CHRGCOMM_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_CHRGEGYCAL_APPL_CODE
+# error Using RTE_START_SEC_CTAP_CHRGEGYCAL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_CHRGEGYCAL_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_CHRGEGYCAL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_CHRGMOD_APPL_CODE
+# error Using RTE_START_SEC_CTAP_CHRGMOD_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_CHRGMOD_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_CHRGMOD_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_CHRGPREHEAT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_CHRGPREHEAT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_CHRGPREHEAT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_CHRGPREHEAT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_CHRGSDL_APPL_CODE
+# error Using RTE_START_SEC_CTAP_CHRGSDL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_CHRGSDL_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_CHRGSDL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_CHRGSEQCTRL_APPL_CODE
+# error Using RTE_START_SEC_CTAP_CHRGSEQCTRL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_CHRGSEQCTRL_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_CHRGSEQCTRL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_CHRGSTAT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_CHRGSTAT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_CHRGSTAT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_CHRGSTAT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_CNSCALCN_APPL_CODE
+# error Using RTE_START_SEC_CTAP_CNSCALCN_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_CNSCALCN_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_CNSCALCN_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_COASTCTRL_APPL_CODE
+# error Using RTE_START_SEC_CTAP_COASTCTRL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_COASTCTRL_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_COASTCTRL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_COMMERR_APPL_CODE
+# error Using RTE_START_SEC_CTAP_COMMERR_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_COMMERR_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_COMMERR_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_CRPCTRL_APPL_CODE
+# error Using RTE_START_SEC_CTAP_CRPCTRL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_CRPCTRL_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_CRPCTRL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_DCCOMM_APPL_CODE
+# error Using RTE_START_SEC_CTAP_DCCOMM_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_DCCOMM_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_DCCOMM_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_DCDCMGMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_DCDCMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_DCDCMGMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_DCDCMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_DCFCMGMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_DCFCMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_DCFCMGMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_DCFCMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_DCPARMGMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_DCPARMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_DCPARMGMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_DCPARMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_DRVASSCCTRL_APPL_CODE
+# error Using RTE_START_SEC_CTAP_DRVASSCCTRL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_DRVASSCCTRL_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_DRVASSCCTRL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_DRVMOD_APPL_CODE
+# error Using RTE_START_SEC_CTAP_DRVMOD_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_DRVMOD_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_DRVMOD_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_DRVTORQCOOR_APPL_CODE
+# error Using RTE_START_SEC_CTAP_DRVTORQCOOR_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_DRVTORQCOOR_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_DRVTORQCOOR_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_ELSSDIAG_APPL_CODE
+# error Using RTE_START_SEC_CTAP_ELSSDIAG_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_ELSSDIAG_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_ELSSDIAG_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_EMMGMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_EMMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_EMMGMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_EMMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_FCTSFTYGEAR_APPL_CODE
+# error Using RTE_START_SEC_CTAP_FCTSFTYGEAR_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_FCTSFTYGEAR_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_FCTSFTYGEAR_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_FCTSFTYTORQ_APPL_CODE
+# error Using RTE_START_SEC_CTAP_FCTSFTYTORQ_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_FCTSFTYTORQ_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_FCTSFTYTORQ_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_FLTREACTN_APPL_CODE
+# error Using RTE_START_SEC_CTAP_FLTREACTN_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_FLTREACTN_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_FLTREACTN_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_GEARCAL_APPL_CODE
+# error Using RTE_START_SEC_CTAP_GEARCAL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_GEARCAL_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_GEARCAL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_HVSFTY_APPL_CODE
+# error Using RTE_START_SEC_CTAP_HVSFTY_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_HVSFTY_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_HVSFTY_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_HWHANDLER_APPL_CODE
+# error Using RTE_START_SEC_CTAP_HWHANDLER_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_HWHANDLER_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_HWHANDLER_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_LINHANDLER_APPL_CODE
+# error Using RTE_START_SEC_CTAP_LINHANDLER_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_LINHANDLER_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_LINHANDLER_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_LVBATTMGMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_LVBATTMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_LVBATTMGMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_LVBATTMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_MCUMGMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_MCUMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_MCUMGMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_MCUMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_OBCSTSMGMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_OBCSTSMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_OBCSTSMGMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_OBCSTSMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_ONEPEDCTRL_APPL_CODE
+# error Using RTE_START_SEC_CTAP_ONEPEDCTRL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_ONEPEDCTRL_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_ONEPEDCTRL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_PDLALYS_APPL_CODE
+# error Using RTE_START_SEC_CTAP_PDLALYS_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_PDLALYS_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_PDLALYS_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_PWRLIM_APPL_CODE
+# error Using RTE_START_SEC_CTAP_PWRLIM_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_PWRLIM_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_PWRLIM_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_RESEST_APPL_CODE
+# error Using RTE_START_SEC_CTAP_RESEST_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_RESEST_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_RESEST_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_RNGESTIMN_APPL_CODE
+# error Using RTE_START_SEC_CTAP_RNGESTIMN_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_RNGESTIMN_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_RNGESTIMN_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_S2MGMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_S2MGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_S2MGMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_S2MGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_SLOPEST_APPL_CODE
+# error Using RTE_START_SEC_CTAP_SLOPEST_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_SLOPEST_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_SLOPEST_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_SPDLMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_SPDLMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_SPDLMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_SPDLMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_TCUMGMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_TCUMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_TCUMGMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_TCUMGMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_TORQCOOR_APPL_CODE
+# error Using RTE_START_SEC_CTAP_TORQCOOR_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_TORQCOOR_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_TORQCOOR_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_TORQCROSSZR_APPL_CODE
+# error Using RTE_START_SEC_CTAP_TORQCROSSZR_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_TORQCROSSZR_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_TORQCROSSZR_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_TORQDAMP_APPL_CODE
+# error Using RTE_START_SEC_CTAP_TORQDAMP_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_TORQDAMP_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_TORQDAMP_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_TORQFIL_APPL_CODE
+# error Using RTE_START_SEC_CTAP_TORQFIL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_TORQFIL_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_TORQFIL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_TORQLMT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_TORQLMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_TORQLMT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_TORQLMT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_TORQMODMAP_APPL_CODE
+# error Using RTE_START_SEC_CTAP_TORQMODMAP_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_TORQMODMAP_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_TORQMODMAP_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_TRSMPROTD_APPL_CODE
+# error Using RTE_START_SEC_CTAP_TRSMPROTD_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_TRSMPROTD_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_TRSMPROTD_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_VEHSPD_APPL_CODE
+# error Using RTE_START_SEC_CTAP_VEHSPD_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_VEHSPD_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_VEHSPD_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_VEHSTABYCTRL_APPL_CODE
+# error Using RTE_START_SEC_CTAP_VEHSTABYCTRL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_VEHSTABYCTRL_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_VEHSTABYCTRL_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_VEHSTAT_APPL_CODE
+# error Using RTE_START_SEC_CTAP_VEHSTAT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_VEHSTAT_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_VEHSTAT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_CTAP_WAKEUPRSN_APPL_CODE
+# error Using RTE_START_SEC_CTAP_WAKEUPRSN_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_CTAP_WAKEUPRSN_APPL_CODE
+# error Using RTE_STOP_SEC_CTAP_WAKEUPRSN_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_HOOKCALLOUT_APPL_CODE
+# error Using RTE_START_SEC_HOOKCALLOUT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_HOOKCALLOUT_APPL_CODE
+# error Using RTE_STOP_SEC_HOOKCALLOUT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
 #endif
 #ifdef PDUR_START_SEC_BUFFER_VAR_FAST_CLEARED_8
 # error Using PDUR_START_SEC_BUFFER_VAR_FAST_CLEARED_8 is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.

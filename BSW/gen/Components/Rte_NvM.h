@@ -54,40 +54,13 @@ extern "C"
  *********************************************************************************************************************/
 
 # ifndef RTE_CORE
-#  define RTE_RUNNABLE_EraseBlock NvM_EraseNvBlock
-#  define RTE_RUNNABLE_GetErrorStatus NvM_GetErrorStatus
-#  define RTE_RUNNABLE_InvalidateNvBlock NvM_InvalidateNvBlock
 #  define RTE_RUNNABLE_NvM_MainFunction NvM_MainFunction
-#  define RTE_RUNNABLE_ReadBlock NvM_ReadBlock
-#  define RTE_RUNNABLE_RestoreBlockDefaults NvM_RestoreBlockDefaults
-#  define RTE_RUNNABLE_SetBlockProtection NvM_SetBlockProtection
-#  define RTE_RUNNABLE_SetRamBlockStatus NvM_SetRamBlockStatus
-#  define RTE_RUNNABLE_WriteBlock NvM_WriteBlock
 # endif
 
-FUNC(Std_ReturnType, NvM_CODE) NvM_EraseNvBlock(NvM_BlockIdType parg0); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, NvM_CODE) NvM_GetErrorStatus(NvM_BlockIdType parg0, P2VAR(NvM_RequestResultType, AUTOMATIC, RTE_NVM_APPL_VAR) ErrorStatus); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, NvM_CODE) NvM_InvalidateNvBlock(NvM_BlockIdType parg0); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(void, NvM_CODE) NvM_MainFunction(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
-FUNC(Std_ReturnType, NvM_CODE) NvM_ReadBlock(NvM_BlockIdType parg0, dtRef_VOID DstPtr); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, NvM_CODE) NvM_RestoreBlockDefaults(NvM_BlockIdType parg0, dtRef_VOID DstPtr); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, NvM_CODE) NvM_SetBlockProtection(NvM_BlockIdType parg0, boolean ProtectionEnabled); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, NvM_CODE) NvM_SetRamBlockStatus(NvM_BlockIdType parg0, boolean RamBlockStatus); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
-FUNC(Std_ReturnType, NvM_CODE) NvM_WriteBlock(NvM_BlockIdType parg0, dtRef_const_VOID SrcPtr); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 
 # define NvM_STOP_SEC_CODE
 # include "NvM_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
-# ifndef RTE_CORE
-/**********************************************************************************************************************
- * Application errors
- *********************************************************************************************************************/
-
-#  define RTE_E_NvMAdministration_E_NOT_OK (1U)
-
-#  define RTE_E_NvMService_AC3_SRBS_Defs_E_NOT_OK (1U)
-# endif /* !defined(RTE_CORE) */
 
 # ifdef __cplusplus
 } /* extern "C" */
@@ -100,20 +73,8 @@ FUNC(Std_ReturnType, NvM_CODE) NvM_WriteBlock(NvM_BlockIdType parg0, dtRef_const
  *********************************************************************************************************************/
 
 /* module specific MISRA deviations:
-   MD_Rte_0624:  MISRA rule: Rule8.3
-     Reason:     This MISRA violation is a consequence from the RTE requirements [SWS_Rte_01007] [SWS_Rte_01150].
-                 The typedefs are never used in the same context.
-     Risk:       No functional risk. Only a cast to uint8* is performed.
-     Prevention: Not required.
-
    MD_Rte_0786:  MISRA rule: Rule5.5
      Reason:     Same macro and idintifier names in first 63 characters are required to meet AUTOSAR spec.
-     Risk:       No functional risk.
-     Prevention: Not required.
-
-   MD_Rte_1330:  MISRA rule: Rule8.3
-     Reason:     The RTE Generator uses default names for parameter identifiers of port defined arguments of service modules.
-                 Therefore the parameter identifiers in the function declaration differs from those of the implementation of the BSW module.
      Risk:       No functional risk.
      Prevention: Not required.
 

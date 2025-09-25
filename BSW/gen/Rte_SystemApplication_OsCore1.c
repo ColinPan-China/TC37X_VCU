@@ -34,21 +34,75 @@
 
 #include "Rte_BswM.h"
 #include "Rte_ComM.h"
-#include "Rte_Com_SWC.h"
 #include "Rte_Core1App_SWC.h"
 #include "Rte_Core2App_SWC.h"
+#include "Rte_CtAp_ACParMgmt.h"
+#include "Rte_CtAp_AccCal.h"
+#include "Rte_CtAp_AccrPedlDrv.h"
+#include "Rte_CtAp_BMSMgmt.h"
+#include "Rte_CtAp_BrkMgmt.h"
+#include "Rte_CtAp_CANHandler.h"
+#include "Rte_CtAp_ChrgComM.h"
+#include "Rte_CtAp_ChrgEgyCal.h"
+#include "Rte_CtAp_ChrgMod.h"
+#include "Rte_CtAp_ChrgPreHeat.h"
+#include "Rte_CtAp_ChrgSdl.h"
+#include "Rte_CtAp_ChrgSeqCtrl.h"
+#include "Rte_CtAp_ChrgStat.h"
+#include "Rte_CtAp_CnsCalcn.h"
+#include "Rte_CtAp_CoastCtrl.h"
+#include "Rte_CtAp_ComMErr.h"
+#include "Rte_CtAp_CrpCtrl.h"
+#include "Rte_CtAp_DCComM.h"
+#include "Rte_CtAp_DCDCMgmt.h"
+#include "Rte_CtAp_DCFCMgmt.h"
+#include "Rte_CtAp_DCParMgmt.h"
+#include "Rte_CtAp_DrvAsscCtrl.h"
+#include "Rte_CtAp_DrvMod.h"
+#include "Rte_CtAp_DrvTorqCoor.h"
+#include "Rte_CtAp_ElSSDiag.h"
+#include "Rte_CtAp_EmMgmt.h"
+#include "Rte_CtAp_FctSftyGear.h"
+#include "Rte_CtAp_FctSftyTorq.h"
+#include "Rte_CtAp_FltReactn.h"
+#include "Rte_CtAp_GearCal.h"
+#include "Rte_CtAp_HVSfty.h"
+#include "Rte_CtAp_HWHandler.h"
+#include "Rte_CtAp_LINHandler.h"
+#include "Rte_CtAp_LvBattMgmt.h"
+#include "Rte_CtAp_MCUMgmt.h"
+#include "Rte_CtAp_OBCStsMgmt.h"
+#include "Rte_CtAp_OnePedCtrl.h"
+#include "Rte_CtAp_PdlAlys.h"
+#include "Rte_CtAp_PwrLim.h"
+#include "Rte_CtAp_ResEst.h"
+#include "Rte_CtAp_RngEstimn.h"
+#include "Rte_CtAp_S2Mgmt.h"
+#include "Rte_CtAp_SlopEst.h"
+#include "Rte_CtAp_SpdLmt.h"
+#include "Rte_CtAp_TCUMgmt.h"
+#include "Rte_CtAp_TorqCoor.h"
+#include "Rte_CtAp_TorqCrossZr.h"
+#include "Rte_CtAp_TorqDamp.h"
+#include "Rte_CtAp_TorqFil.h"
+#include "Rte_CtAp_TorqLmt.h"
+#include "Rte_CtAp_TorqModMap.h"
+#include "Rte_CtAp_TrsmProtd.h"
+#include "Rte_CtAp_VehSpd.h"
+#include "Rte_CtAp_VehStabyCtrl.h"
+#include "Rte_CtAp_VehStat.h"
+#include "Rte_CtAp_WakeUpRsn.h"
 #include "Rte_Dcm.h"
 #include "Rte_DemMaster_0.h"
 #include "Rte_DemSatellite_0.h"
 #include "Rte_Det.h"
 #include "Rte_EcuM.h"
+#include "Rte_HookCallout.h"
 #include "Rte_IoHwAb.h"
 #include "Rte_NvM.h"
 #include "Rte_Os_OsCore0_swc.h"
 #include "Rte_Os_OsCore1_swc.h"
 #include "Rte_Os_OsCore2_swc.h"
-#include "Rte_PowerMng_SWC.h"
-#include "Rte_SWC1.h"
 #include "SchM_Adc.h"
 #include "SchM_BswM.h"
 #include "SchM_Can.h"
@@ -140,6 +194,7 @@
 #define RTE_START_SEC_CODE
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+FUNC(void, RTE_CODE) Rte_MemClr(P2VAR(void, AUTOMATIC, RTE_VAR_NOINIT) ptr, uint32_least num);
 FUNC(void, RTE_CODE) Rte_MemCpy(P2VAR(void, AUTOMATIC, RTE_APPL_VAR) destination, P2CONST(void, AUTOMATIC, RTE_APPL_DATA) source, uint32_least num); /* PRQA S 1505, 3408 */ /* MD_MSR_Rule8.7, MD_Rte_3408 */
 FUNC(void, RTE_CODE) Rte_MemCpy32(P2VAR(void, AUTOMATIC, RTE_APPL_VAR) destination, P2CONST(void, AUTOMATIC, RTE_APPL_DATA) source, uint32_least num); /* PRQA S 1505, 3408 */ /* MD_MSR_Rule8.7, MD_Rte_3408 */
 FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
@@ -212,13 +267,17 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
 #define RTE_CONST_MSEC_SystemTimer_Core0_10 (10UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_10 (10UL)
 #define RTE_CONST_MSEC_SystemTimer_Core2_10 (10UL)
-#define RTE_CONST_MSEC_SystemTimer_Core0_2 (2UL)
+#define RTE_CONST_MSEC_SystemTimer_Core2_100 (100UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_20 (20UL)
+#define RTE_CONST_MSEC_SystemTimer_Core2_20 (20UL)
+#define RTE_CONST_MSEC_SystemTimer_Core2_200 (200UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_5 (5UL)
+#define RTE_CONST_MSEC_SystemTimer_Core2_50 (50UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_500 (500UL)
+#define RTE_CONST_MSEC_SystemTimer_Core2_500 (500UL)
 
-#define RTE_CONST_SEC_SystemTimer_Core0_0 (0UL)
-#define RTE_CONST_SEC_SystemTimer_Core0_1 (1000UL)
+#define RTE_CONST_SEC_SystemTimer_Core2_0 (0UL)
+#define RTE_CONST_SEC_SystemTimer_Core2_1 (1000UL)
 
 
 /**********************************************************************************************************************

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Task_Lcfg.c
- *   Generation Time: 2025-09-19 09:19:31
+ *   Generation Time: 2025-09-25 13:15:49
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -175,7 +175,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core0_AswTask =
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_Core0_AswTask,
     /* .Context               = */ &OsCfg_Hal_Context_Core0_AswTask_Dyn,
-    /* .Stack                 = */ &OsCfg_Stack_Core0_AswTask,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Task_Prio64,
     /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_Core0_AswTask_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore0,
     /* .Core                  = */ &OsCfg_Core_OsCore0,
@@ -198,7 +198,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core0_AswTask =
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
   /* .NumSchEventsRoundRobin = */ 0uL,
   /* .RoundRobinEnabled      = */ FALSE,
-  /* .IsExtended             = */ (boolean)TRUE,
+  /* .IsExtended             = */ (boolean)FALSE,
   /* .StackSharing           = */ OS_TASKSCHEDULE_ALLOWED
 };
 
@@ -644,7 +644,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core2_Asw_Task =
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_Core2_Asw_Task,
     /* .Context               = */ &OsCfg_Hal_Context_Core2_Asw_Task_Dyn,
-    /* .Stack                 = */ &OsCfg_Stack_OsCore2_Task_Prio0,
+    /* .Stack                 = */ &OsCfg_Stack_Core2_Asw_Task,
     /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_Core2_Asw_Task_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore2,
     /* .Core                  = */ &OsCfg_Core_OsCore2,
@@ -667,7 +667,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core2_Asw_Task =
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
   /* .NumSchEventsRoundRobin = */ 0uL,
   /* .RoundRobinEnabled      = */ FALSE,
-  /* .IsExtended             = */ (boolean)FALSE,
+  /* .IsExtended             = */ (boolean)TRUE,
   /* .StackSharing           = */ OS_TASKSCHEDULE_ALLOWED
 };
 
