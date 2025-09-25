@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="A9D4FB8A-5B95-4365-8838-EF9B0CD07D4D">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <SWC-IMPLEMENTATION UUID="5D06F8BE-EBDD-4409-97DE-951F23D6FE98">
+          <SHORT-NAME>YDF_CommDriver_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/YDF_CommDriver/YDF_CommDriver_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+        <COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE UUID="3BB87D79-307E-45BD-A97C-FECBCF123C91">
+          <SHORT-NAME>YDF_CommDriver</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="4A3E7A91-F015-4A3E-BB67-996CB5C9D462">
+              <SHORT-NAME>LinModule</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinA_Master_Send</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinB_Master_Send</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinC_Master_Send</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinA_Slave_Response</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinB_Slave_Response</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinC_Slave_Response</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinARec_GetResult</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinBRec_GetResult</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinCRec_GetResult</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinDRec_GetResult</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinD_Slave_Response</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinD_Master_Send</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/PortInterfaces/LinModule</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="FE986576-A38B-4C9E-8D19-19D3524A1172">
+              <SHORT-NAME>YDF_CommDriver_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <OPERATION-INVOKED-EVENT UUID="9C62FA55-E6D9-4CDA-8F2D-A0DC8200AB26">
+                  <SHORT-NAME>OIT_LinModule_LinDRec_GetResult_LinModule_LinDRec_GetResult</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CommDriver/YDF_CommDriver_InternalBehavior/LinModule_LinDRec_GetResult</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_CommDriver/LinModule</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinDRec_GetResult</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="2E89DBF6-ADBB-488A-9FD8-2BAD44088866">
+                  <SHORT-NAME>OIT_LinModule_LinD_Slave_Response_LinModule_LinD_Slave_Response</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CommDriver/YDF_CommDriver_InternalBehavior/LinModule_LinD_Slave_Response</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_CommDriver/LinModule</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinD_Slave_Response</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="7F24D9A8-8642-49A2-9141-C787045F6BE4">
+                  <SHORT-NAME>OIT_LinModule_LinD_Master_Send_LinModule_LinD_Master_Send</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CommDriver/YDF_CommDriver_InternalBehavior/LinModule_LinD_Master_Send</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_CommDriver/LinModule</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinD_Master_Send</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="E48D243E-559C-4C38-A0EC-B158D396E34E">
+                  <SHORT-NAME>OIT_LinModule_LinCRec_GetResult_LinModule_LinCRec_GetResult</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CommDriver/YDF_CommDriver_InternalBehavior/LinModule_LinCRec_GetResult</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_CommDriver/LinModule</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinCRec_GetResult</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="FED5E6FF-CDCB-4873-A1EE-61638D44C12D">
+                  <SHORT-NAME>OIT_LinModule_LinBRec_GetResult_LinModule_LinBRec_GetResult</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CommDriver/YDF_CommDriver_InternalBehavior/LinModule_LinBRec_GetResult</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_CommDriver/LinModule</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinBRec_GetResult</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="ED00B479-94CE-45FD-973F-BC14428BCC81">
+                  <SHORT-NAME>OIT_LinModule_LinARec_GetResult_LinModule_LinARec_GetResult</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CommDriver/YDF_CommDriver_InternalBehavior/LinModule_LinARec_GetResult</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_CommDriver/LinModule</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinARec_GetResult</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="059E9F32-E4F4-492C-84FC-8B448DDDAB0D">
+                  <SHORT-NAME>OIT_LinModule_LinC_Slave_Response_LinModule_LinC_Slave_Response</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CommDriver/YDF_CommDriver_InternalBehavior/LinModule_LinC_Slave_Response</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_CommDriver/LinModule</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinC_Slave_Response</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="9E438083-8959-42E2-ADE0-3DD13A5EF480">
+                  <SHORT-NAME>OIT_LinModule_LinB_Slave_Response_LinModule_LinB_Slave_Response</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CommDriver/YDF_CommDriver_InternalBehavior/LinModule_LinB_Slave_Response</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_CommDriver/LinModule</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinB_Slave_Response</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="0827E223-2858-4FEC-9664-873C0B305675">
+                  <SHORT-NAME>OIT_LinModule_LinA_Slave_Response_LinModule_LinA_Slave_Response</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CommDriver/YDF_CommDriver_InternalBehavior/LinModule_LinA_Slave_Response</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_CommDriver/LinModule</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinA_Slave_Response</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="1BC04A85-3477-43E4-BF55-D1D4C1134E5B">
+                  <SHORT-NAME>OIT_LinModule_LinC_Master_Send_LinModule_LinC_Master_Send</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CommDriver/YDF_CommDriver_InternalBehavior/LinModule_LinC_Master_Send</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_CommDriver/LinModule</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinC_Master_Send</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="4677B254-01D0-4D90-A191-1BBBCFCBDB36">
+                  <SHORT-NAME>OIT_LinModule_LinB_Master_Send_LinModule_LinB_Master_Send</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CommDriver/YDF_CommDriver_InternalBehavior/LinModule_LinB_Master_Send</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_CommDriver/LinModule</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinB_Master_Send</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="507BC445-400B-4FAD-9D25-8A9F9E829632">
+                  <SHORT-NAME>OIT_LinModule_LinA_Master_Send_LinModule_LinA_Master_Send</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CommDriver/YDF_CommDriver_InternalBehavior/LinModule_LinA_Master_Send</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_CommDriver/LinModule</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LinModule/LinA_Master_Send</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="46BFAFC7-4EEF-4450-BD9E-79B54E96CC90">
+                  <SHORT-NAME>LinModule_LinDRec_GetResult</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="7191446D-027F-4B3A-962A-28259BA5BFDF">
+                  <SHORT-NAME>LinModule_LinD_Slave_Response</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="569F07F3-E781-4BF6-93B5-3B29C4848F13">
+                  <SHORT-NAME>LinModule_LinD_Master_Send</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="D2BCF975-16F7-4CE0-951F-670FA2044076">
+                  <SHORT-NAME>LinModule_LinCRec_GetResult</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="4CAB7006-53CE-4CE3-94A9-321DEAE98D00">
+                  <SHORT-NAME>LinModule_LinBRec_GetResult</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="52BFABFD-C2A4-475B-8A56-C849D5B608F8">
+                  <SHORT-NAME>LinModule_LinARec_GetResult</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="A1FD13D3-93EE-42E5-8FC6-716529535D76">
+                  <SHORT-NAME>LinModule_LinC_Slave_Response</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="45A0F3AD-94D7-4109-9F60-525C2E801EBC">
+                  <SHORT-NAME>LinModule_LinB_Slave_Response</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="0589EC95-123F-45C9-B3DB-713F1F6865A3">
+                  <SHORT-NAME>LinModule_LinA_Slave_Response</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="B09C8441-9E6B-48DB-A9A1-A2101815E3C8">
+                  <SHORT-NAME>LinModule_LinC_Master_Send</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="C74F224A-E23D-4999-AECA-51A45BC1AAA0">
+                  <SHORT-NAME>LinModule_LinB_Master_Send</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="2D1790F6-82CC-4D69-8EA7-2E3F87E8AF79">
+                  <SHORT-NAME>LinModule_LinA_Master_Send</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

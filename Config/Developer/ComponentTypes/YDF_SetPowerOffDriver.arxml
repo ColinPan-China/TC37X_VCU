@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="A9D4FB8A-5B95-4365-8838-EF9B0CD07D4D">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <SWC-IMPLEMENTATION UUID="9362B9A6-5A08-4F4E-BED0-865AD8127942">
+          <SHORT-NAME>YDF_SetPowerOffDriver_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/YDF_SetPowerOffDriver/YDF_SetPowerOffDriver_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+        <COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE UUID="F9135DC9-2671-4F41-A5BA-012DBA7ECE29">
+          <SHORT-NAME>YDF_SetPowerOffDriver</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="3B61C8FD-953C-4BC2-85DE-F11D40B39CBB">
+              <SHORT-NAME>Set_Tsk_CpuSleepOrOff</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Set_Tsk_CpuSleepOrOff/Set_Tsk_CpuSleepOrOff</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/PortInterfaces/Set_Tsk_CpuSleepOrOff</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="F36C3597-73A2-42D4-A592-7D821C90F463">
+              <SHORT-NAME>YDF_SetPowerOffDriver_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <OPERATION-INVOKED-EVENT UUID="09A90AED-2C71-4055-85FD-11768578B5CA">
+                  <SHORT-NAME>OIT_Set_Tsk_CpuSleepOrOff_Set_Tsk_CpuSleepOrOff_Set_Tsk_CpuSleepOrOff_Set_Tsk_CpuSleepOrOff</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_SetPowerOffDriver/YDF_SetPowerOffDriver_InternalBehavior/Set_Tsk_CpuSleepOrOff_Set_Tsk_CpuSleepOrOff</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_SetPowerOffDriver/Set_Tsk_CpuSleepOrOff</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Set_Tsk_CpuSleepOrOff/Set_Tsk_CpuSleepOrOff</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="4AF7E8C4-E114-455F-8B04-3C21FDEDD44E">
+                  <SHORT-NAME>Set_Tsk_CpuSleepOrOff_Set_Tsk_CpuSleepOrOff</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

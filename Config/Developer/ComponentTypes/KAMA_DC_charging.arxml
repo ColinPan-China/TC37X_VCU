@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="A9D4FB8A-5B95-4365-8838-EF9B0CD07D4D">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="3027444B-D8A8-4DD0-B705-CE2F642502E0">
+          <SHORT-NAME>KAMA_DC_charging</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="D10E6E2C-50F2-47DB-A4F7-4C47C274756B">
+              <SHORT-NAME>KAMA_DC_charging_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="0DE1A0F8-3A3A-4446-96C0-88476446BC7F">
+                  <SHORT-NAME>TMT_KAMA_R_DCChrging_Cyclic_50ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/KAMA_DC_charging/KAMA_DC_charging_InternalBehavior/KAMA_R_DCChrging_Cyclic_50ms</START-ON-EVENT-REF>
+                  <PERIOD>0.05</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="D93BFB8D-6C17-47D1-AA95-73EAC49274D8">
+                  <SHORT-NAME>TMT_KAMA_R_DCChrging_Interface_10ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/KAMA_DC_charging/KAMA_DC_charging_InternalBehavior/KAMA_R_DCChrging_Interface_10ms</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+                <INIT-EVENT UUID="0CC6F5D1-385D-4E18-B3F4-4AF7F6286CA7">
+                  <SHORT-NAME>KAMA_DC_charging_InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/KAMA_DC_charging/KAMA_DC_charging_InternalBehavior/KAMA_R_DCChrging_Init</START-ON-EVENT-REF>
+                </INIT-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="957F1413-761F-41B2-BB6F-890077C5C2F7">
+                  <SHORT-NAME>KAMA_R_DCChrging_Cyclic_50ms</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>KAMA_R_DCChrging_Cyclic_50ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="B1AC2BDA-A79C-4C68-B30B-E11AB729DC58">
+                  <SHORT-NAME>KAMA_R_DCChrging_Interface_10ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="64CD7B23-23D7-4B4E-AA93-6F5E3347004D">
+                  <SHORT-NAME>KAMA_R_DCChrging_Init</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:RunnableKind">
+                        <SD>InitRunnable</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="D309A101-4886-4487-B9D3-9AD94E0359BF">
+          <SHORT-NAME>KAMA_DC_charging_Implementation</SHORT-NAME>
+          <CODE-DESCRIPTORS>
+            <CODE UUID="8CE72383-E4B5-4D20-B5A7-6478E72B031E">
+              <SHORT-NAME>Default</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+            </CODE>
+          </CODE-DESCRIPTORS>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/KAMA_DC_charging/KAMA_DC_charging_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

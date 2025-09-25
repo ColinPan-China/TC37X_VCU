@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="A9D4FB8A-5B95-4365-8838-EF9B0CD07D4D">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="075F621F-EA8C-4BE5-BAA8-4DC14625AB08">
+          <SHORT-NAME>KAMA_RollingCounterManagement</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="90285854-BFB8-42B4-BB9A-6564D766A024">
+              <SHORT-NAME>KAMA_RollingCounterManagement_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="CE319C8F-4AAC-4FCB-AB2E-7B6B1997B417">
+                  <SHORT-NAME>TMT_KAMA_RollingCounter_10ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/KAMA_RollingCounterManagement/KAMA_RollingCounterManagement_InternalBehavior/KAMA_RollingCounter_10ms</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="C404A28F-A4F9-470A-BF33-3B7ECED3CB2F">
+                  <SHORT-NAME>TMT_KAMA_RollingCounter_100ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/KAMA_RollingCounterManagement/KAMA_RollingCounterManagement_InternalBehavior/KAMA_RollingCounter_100ms</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="6230273B-A9F4-4911-AAE4-BD6B0C71F8FC">
+                  <SHORT-NAME>TMT_KAMA_RollingCounter_50ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/KAMA_RollingCounterManagement/KAMA_RollingCounterManagement_InternalBehavior/KAMA_RollingCounter_50ms</START-ON-EVENT-REF>
+                  <PERIOD>0.05</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="7ABD0BFB-6E59-4996-BBCB-B4FA775FB817">
+                  <SHORT-NAME>TMT_KAMA_RollingCounter_20ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/KAMA_RollingCounterManagement/KAMA_RollingCounterManagement_InternalBehavior/KAMA_RollingCounter_20ms</START-ON-EVENT-REF>
+                  <PERIOD>0.02</PERIOD>
+                </TIMING-EVENT>
+                <INIT-EVENT UUID="EB569DB9-5671-42BB-B741-A603CA828171">
+                  <SHORT-NAME>KAMA_RollingCounterManagement_InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/KAMA_RollingCounterManagement/KAMA_RollingCounterManagement_InternalBehavior/KAMA_RollingCounter_Init</START-ON-EVENT-REF>
+                </INIT-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="A8C9E59B-2FD2-477A-BA21-08215F25A2BE">
+                  <SHORT-NAME>KAMA_RollingCounter_10ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="5F874284-7883-48D8-89BA-E447C20753F9">
+                  <SHORT-NAME>KAMA_RollingCounter_20ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="EA39B220-8ACC-4DF7-ABFE-D6D445EDE5F7">
+                  <SHORT-NAME>KAMA_RollingCounter_50ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="22643C84-0A97-4E5A-9244-F5A59C23BD48">
+                  <SHORT-NAME>KAMA_RollingCounter_100ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="FBCC4730-453D-4D60-9D84-1A89CDE4CDC1">
+                  <SHORT-NAME>KAMA_RollingCounter_Init</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:RunnableKind">
+                        <SD>InitRunnable</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="36F1BDB8-F3C9-48FF-A725-57246BB3FA2C">
+          <SHORT-NAME>KAMA_RollingCounterManagement_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/KAMA_RollingCounterManagement/KAMA_RollingCounterManagement_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

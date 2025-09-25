@@ -1,0 +1,1590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00046.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="A9D4FB8A-5B95-4365-8838-EF9B0CD07D4D">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <NV-BLOCK-SW-COMPONENT-TYPE UUID="610D566A-AA97-4794-98B1-6FDF0063E530">
+          <SHORT-NAME>CtAp_NvMBlock</SHORT-NAME>
+          <PORTS>
+            <PR-PORT-PROTOTYPE UUID="26139ABA-9033-4C42-BF8B-AD24E10705A0">
+              <SHORT-NAME>RTE_RP_RngEstimnInfo</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NV-PROVIDE-COM-SPEC>
+                  <RAM-BLOCK-INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>RngEstimn_BMSBattIDcIntgl_As</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>RngEstimn_AccuMilg_m</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </RAM-BLOCK-INIT-VALUE>
+                  <ROM-BLOCK-INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>RngEstimn_BMSBattIDcIntgl_As</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>RngEstimn_AccuMilg_m</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </ROM-BLOCK-INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_RngEstimnInfo/tec_RngEstimnInfo</VARIABLE-REF>
+                </NV-PROVIDE-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <REQUIRED-COM-SPECS>
+                <NV-REQUIRE-COM-SPEC>
+                  <INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>RngEstimn_BMSBattIDcIntgl_As</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>RngEstimn_AccuMilg_m</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_RngEstimnInfo/tec_RngEstimnInfo</VARIABLE-REF>
+                </NV-REQUIRE-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/IF_RngEstimnInfo</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+            <PR-PORT-PROTOTYPE UUID="F7E063FA-9CBD-456C-8BB7-F9BB3651B275">
+              <SHORT-NAME>RTE_RP_GearMgmtInfo</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NV-PROVIDE-COM-SPEC>
+                  <RAM-BLOCK-INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>GearMgmt_GearMemInfo_Enum</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>GearMgmt_FillAddress</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </RAM-BLOCK-INIT-VALUE>
+                  <ROM-BLOCK-INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>GearMgmt_GearMemInfo_Enum</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>GearMgmt_FillAddress</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </ROM-BLOCK-INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_GearMgmtInfo/tec_GearMgmtInfo</VARIABLE-REF>
+                </NV-PROVIDE-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <REQUIRED-COM-SPECS>
+                <NV-REQUIRE-COM-SPEC>
+                  <INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>GearMgmt_GearMemInfo_Enum</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>GearMgmt_FillAddress</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_GearMgmtInfo/tec_GearMgmtInfo</VARIABLE-REF>
+                </NV-REQUIRE-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/IF_GearMgmtInfo</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+            <PR-PORT-PROTOTYPE UUID="81BBDEA0-15C1-41C2-9BF5-A65C8A03458A">
+              <SHORT-NAME>RTE_RP_ModMgmtInfo</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NV-PROVIDE-COM-SPEC>
+                  <RAM-BLOCK-INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ModMgmt_DrvModMemInfo_Enum</SHORT-LABEL>
+                          <VALUE>2</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ModMgmt_ActRgnStsMemInfo_Enum</SHORT-LABEL>
+                          <VALUE>3</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </RAM-BLOCK-INIT-VALUE>
+                  <ROM-BLOCK-INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ModMgmt_DrvModMemInfo_Enum</SHORT-LABEL>
+                          <VALUE>2</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ModMgmt_ActRgnStsMemInfo_Enum</SHORT-LABEL>
+                          <VALUE>3</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </ROM-BLOCK-INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ModMgmtInfo/tec_ModMgmtInfo</VARIABLE-REF>
+                </NV-PROVIDE-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <REQUIRED-COM-SPECS>
+                <NV-REQUIRE-COM-SPEC>
+                  <INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ModMgmt_DrvModMemInfo_Enum</SHORT-LABEL>
+                          <VALUE>2</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ModMgmt_ActRgnStsMemInfo_Enum</SHORT-LABEL>
+                          <VALUE>3</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ModMgmtInfo/tec_ModMgmtInfo</VARIABLE-REF>
+                </NV-REQUIRE-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/IF_ModMgmtInfo</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+            <PR-PORT-PROTOTYPE UUID="4C00EBB4-13AF-45B4-AE35-52C4A5814AE2">
+              <SHORT-NAME>RTE_RP_ChrgStatInfo</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NV-PROVIDE-COM-SPEC>
+                  <RAM-BLOCK-INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_ChrgTarSOC_pct</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_ChrgMemFlt_Flg</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_DchaAbortSOC_pct</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_FillAddress</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </RAM-BLOCK-INIT-VALUE>
+                  <ROM-BLOCK-INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_ChrgTarSOC_pct</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_ChrgMemFlt_Flg</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_DchaAbortSOC_pct</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_FillAddress</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </ROM-BLOCK-INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ChrgStatInfo/tec_ChrgStatInfo</VARIABLE-REF>
+                </NV-PROVIDE-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <REQUIRED-COM-SPECS>
+                <NV-REQUIRE-COM-SPEC>
+                  <INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_ChrgTarSOC_pct</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_ChrgMemFlt_Flg</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_DchaAbortSOC_pct</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_FillAddress</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ChrgStatInfo/tec_ChrgStatInfo</VARIABLE-REF>
+                </NV-REQUIRE-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/IF_ChrgStatInfo</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+            <PR-PORT-PROTOTYPE UUID="45899692-06D3-492B-B98A-C0AC042B2AF3">
+              <SHORT-NAME>RTE_RP_ChrgEgyCalInfo</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NV-PROVIDE-COM-SPEC>
+                  <RAM-BLOCK-INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_OBCSideTotDchaEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_PODSideTotChrgEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_BattSideTotChrgEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_DCChrgrSideTotChrgEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_OBCSideTotChrgEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_BattChrgCnt_Tms</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </RAM-BLOCK-INIT-VALUE>
+                  <ROM-BLOCK-INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_OBCSideTotDchaEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_PODSideTotChrgEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_BattSideTotChrgEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_DCChrgrSideTotChrgEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_OBCSideTotChrgEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_BattChrgCnt_Tms</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </ROM-BLOCK-INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ChrgEgyCalInfo/tec_ChrgEgyCalInfo</VARIABLE-REF>
+                </NV-PROVIDE-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <REQUIRED-COM-SPECS>
+                <NV-REQUIRE-COM-SPEC>
+                  <INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_OBCSideTotDchaEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_PODSideTotChrgEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_BattSideTotChrgEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_DCChrgrSideTotChrgEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_OBCSideTotChrgEgy_Wh</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChrMgmt_BattChrgCnt_Tms</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ChrgEgyCalInfo/tec_ChrgEgyCalInfo</VARIABLE-REF>
+                </NV-REQUIRE-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/IF_ChrgEgyCalInfo</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+            <PR-PORT-PROTOTYPE UUID="C823C328-0FA2-4016-9E4E-DD308BA7365C">
+              <SHORT-NAME>RTE_RP_ChassisMgmtInfo</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NV-PROVIDE-COM-SPEC>
+                  <RAM-BLOCK-INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChassisMgmt_BrkCmpStsInfo</SHORT-LABEL>
+                          <VALUE>2</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChassisMgmt_FillAdressInfo</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </RAM-BLOCK-INIT-VALUE>
+                  <ROM-BLOCK-INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChassisMgmt_BrkCmpStsInfo</SHORT-LABEL>
+                          <VALUE>2</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChassisMgmt_FillAdressInfo</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </ROM-BLOCK-INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ChassisMgmtInfo/tec_ChassisMgmtInfo</VARIABLE-REF>
+                </NV-PROVIDE-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <REQUIRED-COM-SPECS>
+                <NV-REQUIRE-COM-SPEC>
+                  <INIT-VALUE>
+                    <RECORD-VALUE-SPECIFICATION>
+                      <FIELDS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChassisMgmt_BrkCmpStsInfo</SHORT-LABEL>
+                          <VALUE>2</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <SHORT-LABEL>ChassisMgmt_FillAdressInfo</SHORT-LABEL>
+                          <VALUE>0</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </FIELDS>
+                    </RECORD-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ChassisMgmtInfo/tec_ChassisMgmtInfo</VARIABLE-REF>
+                </NV-REQUIRE-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/IF_ChassisMgmtInfo</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+            <PR-PORT-PROTOTYPE UUID="2E56E129-A9F0-4AB6-A79F-5CC8BDC33623">
+              <SHORT-NAME>RTE_RP_RngEstimnFormual2</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NV-PROVIDE-COM-SPEC>
+                  <RAM-BLOCK-INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </RAM-BLOCK-INIT-VALUE>
+                  <ROM-BLOCK-INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </ROM-BLOCK-INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_RngEstimnFormual2/tec_RngEstimnFormual2</VARIABLE-REF>
+                </NV-PROVIDE-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <REQUIRED-COM-SPECS>
+                <NV-REQUIRE-COM-SPEC>
+                  <INIT-VALUE>
+                    <ARRAY-VALUE-SPECIFICATION>
+                      <ELEMENTS>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                        <NUMERICAL-VALUE-SPECIFICATION>
+                          <VALUE>3197</VALUE>
+                        </NUMERICAL-VALUE-SPECIFICATION>
+                      </ELEMENTS>
+                    </ARRAY-VALUE-SPECIFICATION>
+                  </INIT-VALUE>
+                  <VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_RngEstimnFormual2/tec_RngEstimnFormual2</VARIABLE-REF>
+                </NV-REQUIRE-COM-SPEC>
+              </REQUIRED-COM-SPECS>
+              <PROVIDED-REQUIRED-INTERFACE-TREF DEST="NV-DATA-INTERFACE">/PortInterfaces/IF_RngEstimnFormual2</PROVIDED-REQUIRED-INTERFACE-TREF>
+            </PR-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="94A1B6AA-681C-4D0A-8334-FA63D5A8DA4B">
+              <SHORT-NAME>CtAp_NvMBlock_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <DATA-RECEIVED-EVENT UUID="103F1C01-D621-4CD1-90DE-E62E8F502374">
+                  <SHORT-NAME>DRT_R_NvMBlock_ASWInfo_RngEstimnInfo_RTE_RP_RngEstimnInfo_tec_RngEstimnInfo</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/CtAp_NvMBlock/CtAp_NvMBlock_InternalBehavior/R_NvMBlock_ASWInfo_RngEstimnInfo</START-ON-EVENT-REF>
+                  <DATA-IREF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/RTE_RP_RngEstimnInfo</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_RngEstimnInfo/tec_RngEstimnInfo</TARGET-DATA-ELEMENT-REF>
+                  </DATA-IREF>
+                </DATA-RECEIVED-EVENT>
+                <DATA-RECEIVED-EVENT UUID="C1AE2B59-A624-4B67-8B63-3B209AD732E9">
+                  <SHORT-NAME>DRT_R_NvMBlock_ASWInfo_ModMgmtInfo_RTE_RP_ModMgmtInfo_tec_ModMgmtInfo</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/CtAp_NvMBlock/CtAp_NvMBlock_InternalBehavior/R_NvMBlock_ASWInfo_ModMgmtInfo</START-ON-EVENT-REF>
+                  <DATA-IREF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/RTE_RP_ModMgmtInfo</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ModMgmtInfo/tec_ModMgmtInfo</TARGET-DATA-ELEMENT-REF>
+                  </DATA-IREF>
+                </DATA-RECEIVED-EVENT>
+                <DATA-RECEIVED-EVENT UUID="64B4908C-6B4B-4A62-9D8C-7391A6B7F13F">
+                  <SHORT-NAME>DRT_R_NvMBlock_ASWInfo_GearMgmtInfo_RTE_RP_GearMgmtInfo_tec_GearMgmtInfo</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/CtAp_NvMBlock/CtAp_NvMBlock_InternalBehavior/R_NvMBlock_ASWInfo_GearMgmtInfo</START-ON-EVENT-REF>
+                  <DATA-IREF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/RTE_RP_GearMgmtInfo</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_GearMgmtInfo/tec_GearMgmtInfo</TARGET-DATA-ELEMENT-REF>
+                  </DATA-IREF>
+                </DATA-RECEIVED-EVENT>
+                <DATA-RECEIVED-EVENT UUID="1EFBB373-06A0-4548-8355-33D4A449C8C2">
+                  <SHORT-NAME>DRT_R_NvMBlock_ASWInfo_ChrgStatInfo_RTE_RP_ChrgStatInfo_tec_ChrgStatInfo</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/CtAp_NvMBlock/CtAp_NvMBlock_InternalBehavior/R_NvMBlock_ASWInfo_ChrgStatInfo</START-ON-EVENT-REF>
+                  <DATA-IREF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/RTE_RP_ChrgStatInfo</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ChrgStatInfo/tec_ChrgStatInfo</TARGET-DATA-ELEMENT-REF>
+                  </DATA-IREF>
+                </DATA-RECEIVED-EVENT>
+                <DATA-RECEIVED-EVENT UUID="8BE43B1C-8718-4995-B319-06E9CDD3E555">
+                  <SHORT-NAME>DRT_R_NvMBlock_ASWInfo_ChrgEgyCalInfo_RTE_RP_ChrgEgyCalInfo_tec_ChrgEgyCalInfo</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/CtAp_NvMBlock/CtAp_NvMBlock_InternalBehavior/R_NvMBlock_ASWInfo_ChrgEgyCalInfo</START-ON-EVENT-REF>
+                  <DATA-IREF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/RTE_RP_ChrgEgyCalInfo</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ChrgEgyCalInfo/tec_ChrgEgyCalInfo</TARGET-DATA-ELEMENT-REF>
+                  </DATA-IREF>
+                </DATA-RECEIVED-EVENT>
+                <DATA-RECEIVED-EVENT UUID="9C452A4A-D116-4CEB-812F-601F4BEE8005">
+                  <SHORT-NAME>DRT_R_NvMBlock_ASWInfo_ChassisMgmtInfo_RTE_RP_ChassisMgmtInfo_tec_ChassisMgmtInfo</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/CtAp_NvMBlock/CtAp_NvMBlock_InternalBehavior/R_NvMBlock_ASWInfo_ChassisMgmtInfo</START-ON-EVENT-REF>
+                  <DATA-IREF>
+                    <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/RTE_RP_ChassisMgmtInfo</CONTEXT-R-PORT-REF>
+                    <TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ChassisMgmtInfo/tec_ChassisMgmtInfo</TARGET-DATA-ELEMENT-REF>
+                  </DATA-IREF>
+                </DATA-RECEIVED-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="5E2503DA-8050-4EF5-9167-06221698A261">
+                  <SHORT-NAME>R_NvMBlock_ASWInfo_ChrgEgyCalInfo</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="053D135C-AD75-4A1D-B9C9-4A0D1C34F19E">
+                  <SHORT-NAME>R_NvMBlock_ASWInfo_RngEstimnInfo</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="5DD5673E-DA70-43C3-9AFB-62451F743DB8">
+                  <SHORT-NAME>R_NvMBlock_ASWInfo_ModMgmtInfo</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="12827D39-CB5E-41F6-8C56-4A5A9BBEC458">
+                  <SHORT-NAME>R_NvMBlock_ASWInfo_GearMgmtInfo</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="CE9D3C80-C818-4FE8-97AB-82FA6BB418C9">
+                  <SHORT-NAME>R_NvMBlock_ASWInfo_ChrgStatInfo</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="712F8AFE-047D-4B67-A786-86441BBD4D93">
+                  <SHORT-NAME>R_NvMBlock_ASWInfo_ChassisMgmtInfo</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+          <NV-BLOCK-DESCRIPTORS>
+            <NV-BLOCK-DESCRIPTOR UUID="86BEA909-F579-44A0-9BED-B5C1F5C9550F">
+              <SHORT-NAME>NVBlockDescriptor_ASWInfo_ModMgmtInfo</SHORT-NAME>
+              <NV-BLOCK-DATA-MAPPINGS>
+                <NV-BLOCK-DATA-MAPPING>
+                  <NV-RAM-BLOCK-ELEMENT>
+                    <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/NVBlockDescriptor_ASWInfo_ModMgmtInfo/RAM_NVBlockDescriptor_ASWInfo_ModMgmtInfo</LOCAL-VARIABLE-REF>
+                  </NV-RAM-BLOCK-ELEMENT>
+                  <WRITTEN-READ-NV-DATA>
+                    <AUTOSAR-VARIABLE-IREF>
+                      <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/RTE_RP_ModMgmtInfo</PORT-PROTOTYPE-REF>
+                      <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ModMgmtInfo/tec_ModMgmtInfo</TARGET-DATA-PROTOTYPE-REF>
+                    </AUTOSAR-VARIABLE-IREF>
+                  </WRITTEN-READ-NV-DATA>
+                </NV-BLOCK-DATA-MAPPING>
+              </NV-BLOCK-DATA-MAPPINGS>
+              <NV-BLOCK-NEEDS UUID="49889660-AC32-4671-B9A1-36FE3932957C">
+                <SHORT-NAME>NVNeed_NVBlockDescriptor_ASWInfo_ModMgmtInfo</SHORT-NAME>
+                <ADMIN-DATA>
+                  <SDGS>
+                    <SDG GID="DV_SDG">
+                      <SD GID="AutoServiceNeedNameHdlg">1</SD>
+                    </SDG>
+                  </SDGS>
+                </ADMIN-DATA>
+                <CALC-RAM-BLOCK-CRC>false</CALC-RAM-BLOCK-CRC>
+                <CHECK-STATIC-BLOCK-ID>false</CHECK-STATIC-BLOCK-ID>
+                <N-DATA-SETS>1</N-DATA-SETS>
+                <N-ROM-BLOCKS>1</N-ROM-BLOCKS>
+                <RAM-BLOCK-STATUS-CONTROL>API</RAM-BLOCK-STATUS-CONTROL>
+                <READONLY>false</READONLY>
+                <RELIABILITY>ERROR-DETECTION</RELIABILITY>
+                <RESTORE-AT-START>true</RESTORE-AT-START>
+                <STORE-AT-SHUTDOWN>true</STORE-AT-SHUTDOWN>
+                <STORE-CYCLIC>false</STORE-CYCLIC>
+                <STORE-EMERGENCY>false</STORE-EMERGENCY>
+                <STORE-IMMEDIATE>false</STORE-IMMEDIATE>
+                <USE-AUTO-VALIDATION-AT-SHUT-DOWN>false</USE-AUTO-VALIDATION-AT-SHUT-DOWN>
+                <USE-CRC-COMP-MECHANISM>false</USE-CRC-COMP-MECHANISM>
+                <WRITE-ONLY-ONCE>false</WRITE-ONLY-ONCE>
+                <WRITE-VERIFICATION>false</WRITE-VERIFICATION>
+              </NV-BLOCK-NEEDS>
+              <RAM-BLOCK UUID="99CAF2A2-E00C-4926-ABE2-33028F9761A8">
+                <SHORT-NAME>RAM_NVBlockDescriptor_ASWInfo_ModMgmtInfo</SHORT-NAME>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_Nv_ModMgmtInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <RECORD-VALUE-SPECIFICATION>
+                    <FIELDS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ModMgmt_DrvModMemInfo_Enum</SHORT-LABEL>
+                        <VALUE>2</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ModMgmt_FillAddress</SHORT-LABEL>
+                        <VALUE>3</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </FIELDS>
+                  </RECORD-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </RAM-BLOCK>
+              <ROM-BLOCK UUID="CE865A10-062B-4C91-9CDF-0549EA4F2C11">
+                <SHORT-NAME>ROM_NVBlockDescriptor_ASWInfo_ModMgmtInfo</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_Nv_ModMgmtInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <RECORD-VALUE-SPECIFICATION>
+                    <FIELDS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ModMgmt_DrvModMemInfo_Enum</SHORT-LABEL>
+                        <VALUE>2</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ModMgmt_FillAddress</SHORT-LABEL>
+                        <VALUE>3</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </FIELDS>
+                  </RECORD-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </ROM-BLOCK>
+            </NV-BLOCK-DESCRIPTOR>
+            <NV-BLOCK-DESCRIPTOR UUID="02EAA97B-E219-4BFA-9835-87A7942B0B30">
+              <SHORT-NAME>NVBlockDescriptor_ASWInfo_GearMgmtInfo</SHORT-NAME>
+              <NV-BLOCK-DATA-MAPPINGS>
+                <NV-BLOCK-DATA-MAPPING>
+                  <NV-RAM-BLOCK-ELEMENT>
+                    <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/NVBlockDescriptor_ASWInfo_GearMgmtInfo/RAM_NVBlockDescriptor_ASWInfo_GearMgmtInfo</LOCAL-VARIABLE-REF>
+                  </NV-RAM-BLOCK-ELEMENT>
+                  <WRITTEN-READ-NV-DATA>
+                    <AUTOSAR-VARIABLE-IREF>
+                      <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/RTE_RP_GearMgmtInfo</PORT-PROTOTYPE-REF>
+                      <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_GearMgmtInfo/tec_GearMgmtInfo</TARGET-DATA-PROTOTYPE-REF>
+                    </AUTOSAR-VARIABLE-IREF>
+                  </WRITTEN-READ-NV-DATA>
+                </NV-BLOCK-DATA-MAPPING>
+              </NV-BLOCK-DATA-MAPPINGS>
+              <NV-BLOCK-NEEDS UUID="8BD0D91A-3B11-45C9-81D8-05E0D0E80831">
+                <SHORT-NAME>NVNeed_NVBlockDescriptor_ASWInfo_GearMgmtInfo</SHORT-NAME>
+                <ADMIN-DATA>
+                  <SDGS>
+                    <SDG GID="DV_SDG">
+                      <SD GID="AutoServiceNeedNameHdlg">1</SD>
+                    </SDG>
+                  </SDGS>
+                </ADMIN-DATA>
+                <CALC-RAM-BLOCK-CRC>false</CALC-RAM-BLOCK-CRC>
+                <CHECK-STATIC-BLOCK-ID>false</CHECK-STATIC-BLOCK-ID>
+                <N-DATA-SETS>1</N-DATA-SETS>
+                <N-ROM-BLOCKS>1</N-ROM-BLOCKS>
+                <RAM-BLOCK-STATUS-CONTROL>API</RAM-BLOCK-STATUS-CONTROL>
+                <READONLY>false</READONLY>
+                <RELIABILITY>ERROR-DETECTION</RELIABILITY>
+                <RESTORE-AT-START>true</RESTORE-AT-START>
+                <STORE-AT-SHUTDOWN>true</STORE-AT-SHUTDOWN>
+                <STORE-CYCLIC>false</STORE-CYCLIC>
+                <STORE-EMERGENCY>false</STORE-EMERGENCY>
+                <STORE-IMMEDIATE>false</STORE-IMMEDIATE>
+                <USE-AUTO-VALIDATION-AT-SHUT-DOWN>false</USE-AUTO-VALIDATION-AT-SHUT-DOWN>
+                <USE-CRC-COMP-MECHANISM>false</USE-CRC-COMP-MECHANISM>
+                <WRITE-ONLY-ONCE>false</WRITE-ONLY-ONCE>
+                <WRITE-VERIFICATION>false</WRITE-VERIFICATION>
+              </NV-BLOCK-NEEDS>
+              <RAM-BLOCK UUID="1A73CC15-6BA1-4BE8-B8BA-C9D5C008490D">
+                <SHORT-NAME>RAM_NVBlockDescriptor_ASWInfo_GearMgmtInfo</SHORT-NAME>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_Nv_GearMgmtInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <RECORD-VALUE-SPECIFICATION>
+                    <FIELDS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>GearMgmt_GearMemInfo_Enum</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>GearMgmt_FillAddress</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </FIELDS>
+                  </RECORD-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </RAM-BLOCK>
+              <ROM-BLOCK UUID="836D8908-06AD-4E80-AED9-F9999A59E3F9">
+                <SHORT-NAME>ROM_NVBlockDescriptor_ASWInfo_GearMgmtInfo</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_Nv_GearMgmtInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <RECORD-VALUE-SPECIFICATION>
+                    <FIELDS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>GearMgmt_GearMemInfo_Enum</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>GearMgmt_FillAddress</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </FIELDS>
+                  </RECORD-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </ROM-BLOCK>
+            </NV-BLOCK-DESCRIPTOR>
+            <NV-BLOCK-DESCRIPTOR UUID="9F47ED08-D3C9-4729-B343-BE43A4AD05E4">
+              <SHORT-NAME>NVBlockDescriptor_ASWInfo_ChrgStatInfo</SHORT-NAME>
+              <NV-BLOCK-DATA-MAPPINGS>
+                <NV-BLOCK-DATA-MAPPING>
+                  <NV-RAM-BLOCK-ELEMENT>
+                    <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/NVBlockDescriptor_ASWInfo_ChrgStatInfo/RAM_NVBlockDescriptor_ASWInfo_ChrgStatInfo</LOCAL-VARIABLE-REF>
+                  </NV-RAM-BLOCK-ELEMENT>
+                  <WRITTEN-READ-NV-DATA>
+                    <AUTOSAR-VARIABLE-IREF>
+                      <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/RTE_RP_ChrgStatInfo</PORT-PROTOTYPE-REF>
+                      <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ChrgStatInfo/tec_ChrgStatInfo</TARGET-DATA-PROTOTYPE-REF>
+                    </AUTOSAR-VARIABLE-IREF>
+                  </WRITTEN-READ-NV-DATA>
+                </NV-BLOCK-DATA-MAPPING>
+              </NV-BLOCK-DATA-MAPPINGS>
+              <NV-BLOCK-NEEDS UUID="0A6E28F6-A2E8-4D84-8BED-1E8A9029810F">
+                <SHORT-NAME>NVNeed_NVBlockDescriptor_ASWInfo_ChrgStatInfo</SHORT-NAME>
+                <ADMIN-DATA>
+                  <SDGS>
+                    <SDG GID="DV_SDG">
+                      <SD GID="AutoServiceNeedNameHdlg">1</SD>
+                    </SDG>
+                  </SDGS>
+                </ADMIN-DATA>
+                <CALC-RAM-BLOCK-CRC>false</CALC-RAM-BLOCK-CRC>
+                <CHECK-STATIC-BLOCK-ID>false</CHECK-STATIC-BLOCK-ID>
+                <N-DATA-SETS>1</N-DATA-SETS>
+                <N-ROM-BLOCKS>1</N-ROM-BLOCKS>
+                <RAM-BLOCK-STATUS-CONTROL>API</RAM-BLOCK-STATUS-CONTROL>
+                <READONLY>false</READONLY>
+                <RELIABILITY>ERROR-DETECTION</RELIABILITY>
+                <RESTORE-AT-START>true</RESTORE-AT-START>
+                <STORE-AT-SHUTDOWN>true</STORE-AT-SHUTDOWN>
+                <STORE-CYCLIC>false</STORE-CYCLIC>
+                <STORE-EMERGENCY>false</STORE-EMERGENCY>
+                <STORE-IMMEDIATE>false</STORE-IMMEDIATE>
+                <USE-AUTO-VALIDATION-AT-SHUT-DOWN>false</USE-AUTO-VALIDATION-AT-SHUT-DOWN>
+                <USE-CRC-COMP-MECHANISM>false</USE-CRC-COMP-MECHANISM>
+                <WRITE-ONLY-ONCE>false</WRITE-ONLY-ONCE>
+                <WRITE-VERIFICATION>false</WRITE-VERIFICATION>
+              </NV-BLOCK-NEEDS>
+              <RAM-BLOCK UUID="FC9E3B12-A651-49E8-ABD1-487D42D4F848">
+                <SHORT-NAME>RAM_NVBlockDescriptor_ASWInfo_ChrgStatInfo</SHORT-NAME>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_Nv_ChrgStatInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <RECORD-VALUE-SPECIFICATION>
+                    <FIELDS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_ChrgTarSOC_pct</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_ChrgMemFlt_Flg</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_DchaAbortSOC_pct</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_FillAddress</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </FIELDS>
+                  </RECORD-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </RAM-BLOCK>
+              <ROM-BLOCK UUID="C94AD05B-FCDF-45B7-951B-F91440ACA47C">
+                <SHORT-NAME>ROM_NVBlockDescriptor_ASWInfo_ChrgStatInfo</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_Nv_ChrgStatInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <RECORD-VALUE-SPECIFICATION>
+                    <FIELDS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_ChrgTarSOC_pct</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_ChrgMemFlt_Flg</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_DchaAbortSOC_pct</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_FillAddress</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </FIELDS>
+                  </RECORD-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </ROM-BLOCK>
+            </NV-BLOCK-DESCRIPTOR>
+            <NV-BLOCK-DESCRIPTOR UUID="E880D1E0-94EC-4FB4-949A-E4991378B96D">
+              <SHORT-NAME>NVBlockDescriptor_ASWInfo_RngEstimnInfo</SHORT-NAME>
+              <NV-BLOCK-DATA-MAPPINGS>
+                <NV-BLOCK-DATA-MAPPING>
+                  <NV-RAM-BLOCK-ELEMENT>
+                    <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/NVBlockDescriptor_ASWInfo_RngEstimnInfo/RAM_NVBlockDescriptor_ASWInfo_RngEstimnInfo</LOCAL-VARIABLE-REF>
+                  </NV-RAM-BLOCK-ELEMENT>
+                  <WRITTEN-READ-NV-DATA>
+                    <AUTOSAR-VARIABLE-IREF>
+                      <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/RTE_RP_RngEstimnInfo</PORT-PROTOTYPE-REF>
+                      <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_RngEstimnInfo/tec_RngEstimnInfo</TARGET-DATA-PROTOTYPE-REF>
+                    </AUTOSAR-VARIABLE-IREF>
+                  </WRITTEN-READ-NV-DATA>
+                </NV-BLOCK-DATA-MAPPING>
+              </NV-BLOCK-DATA-MAPPINGS>
+              <NV-BLOCK-NEEDS UUID="7F78BD4F-1DEB-4365-B036-AC2440D0B91C">
+                <SHORT-NAME>NVNeed_NVBlockDescriptor_ASWInfo_ChrMgmtInfo</SHORT-NAME>
+                <ADMIN-DATA>
+                  <SDGS>
+                    <SDG GID="DV_SDG">
+                      <SD GID="AutoServiceNeedNameHdlg">1</SD>
+                    </SDG>
+                  </SDGS>
+                </ADMIN-DATA>
+                <CALC-RAM-BLOCK-CRC>false</CALC-RAM-BLOCK-CRC>
+                <CHECK-STATIC-BLOCK-ID>false</CHECK-STATIC-BLOCK-ID>
+                <N-DATA-SETS>1</N-DATA-SETS>
+                <N-ROM-BLOCKS>1</N-ROM-BLOCKS>
+                <RAM-BLOCK-STATUS-CONTROL>API</RAM-BLOCK-STATUS-CONTROL>
+                <READONLY>false</READONLY>
+                <RELIABILITY>ERROR-DETECTION</RELIABILITY>
+                <RESTORE-AT-START>true</RESTORE-AT-START>
+                <STORE-AT-SHUTDOWN>true</STORE-AT-SHUTDOWN>
+                <STORE-CYCLIC>false</STORE-CYCLIC>
+                <STORE-EMERGENCY>false</STORE-EMERGENCY>
+                <STORE-IMMEDIATE>true</STORE-IMMEDIATE>
+                <USE-AUTO-VALIDATION-AT-SHUT-DOWN>false</USE-AUTO-VALIDATION-AT-SHUT-DOWN>
+                <USE-CRC-COMP-MECHANISM>false</USE-CRC-COMP-MECHANISM>
+                <WRITE-ONLY-ONCE>false</WRITE-ONLY-ONCE>
+                <WRITE-VERIFICATION>false</WRITE-VERIFICATION>
+              </NV-BLOCK-NEEDS>
+              <RAM-BLOCK UUID="ACC85E7A-A258-4DF2-9829-0C026F857B1F">
+                <SHORT-NAME>RAM_NVBlockDescriptor_ASWInfo_RngEstimnInfo</SHORT-NAME>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_Nv_RngEstimnInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <RECORD-VALUE-SPECIFICATION>
+                    <FIELDS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>RngEstimn_BMSBattIDcIntgl_As</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>RngEstimn_AccuMilg_m</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </FIELDS>
+                  </RECORD-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </RAM-BLOCK>
+              <ROM-BLOCK UUID="7DAA913A-20A4-4B15-A8BD-103542EBD540">
+                <SHORT-NAME>ROM_NVBlockDescriptor_ASWInfo_RngEstimnInfo</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_Nv_RngEstimnInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <RECORD-VALUE-SPECIFICATION>
+                    <FIELDS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>RngEstimn_BMSBattIDcIntgl_As</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>RngEstimn_AccuMilg_m</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </FIELDS>
+                  </RECORD-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </ROM-BLOCK>
+            </NV-BLOCK-DESCRIPTOR>
+            <NV-BLOCK-DESCRIPTOR UUID="35B43EBC-0788-45F2-9C19-54A78BF1A7C5">
+              <SHORT-NAME>NVBlockDescriptor_ASWInfo_ChrgEgyCalInfo</SHORT-NAME>
+              <NV-BLOCK-DATA-MAPPINGS>
+                <NV-BLOCK-DATA-MAPPING>
+                  <NV-RAM-BLOCK-ELEMENT>
+                    <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/NVBlockDescriptor_ASWInfo_ChrgEgyCalInfo/RAM_NVBlockDescriptor_ASWInfo_ChrgEgyCalInfo</LOCAL-VARIABLE-REF>
+                  </NV-RAM-BLOCK-ELEMENT>
+                  <WRITTEN-READ-NV-DATA>
+                    <AUTOSAR-VARIABLE-IREF>
+                      <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/RTE_RP_ChrgEgyCalInfo</PORT-PROTOTYPE-REF>
+                      <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ChrgEgyCalInfo/tec_ChrgEgyCalInfo</TARGET-DATA-PROTOTYPE-REF>
+                    </AUTOSAR-VARIABLE-IREF>
+                  </WRITTEN-READ-NV-DATA>
+                </NV-BLOCK-DATA-MAPPING>
+              </NV-BLOCK-DATA-MAPPINGS>
+              <NV-BLOCK-NEEDS UUID="D86E28B6-4BEC-422F-880C-A3AB01ACB371">
+                <SHORT-NAME>NVNeed_NVBlockDescriptor_ASWInfo_ChrgEgyCalInfo</SHORT-NAME>
+                <ADMIN-DATA>
+                  <SDGS>
+                    <SDG GID="DV_SDG">
+                      <SD GID="AutoServiceNeedNameHdlg">1</SD>
+                    </SDG>
+                  </SDGS>
+                </ADMIN-DATA>
+                <CALC-RAM-BLOCK-CRC>false</CALC-RAM-BLOCK-CRC>
+                <CHECK-STATIC-BLOCK-ID>false</CHECK-STATIC-BLOCK-ID>
+                <N-DATA-SETS>1</N-DATA-SETS>
+                <N-ROM-BLOCKS>1</N-ROM-BLOCKS>
+                <RAM-BLOCK-STATUS-CONTROL>API</RAM-BLOCK-STATUS-CONTROL>
+                <READONLY>false</READONLY>
+                <RELIABILITY>ERROR-DETECTION</RELIABILITY>
+                <RESTORE-AT-START>true</RESTORE-AT-START>
+                <STORE-AT-SHUTDOWN>true</STORE-AT-SHUTDOWN>
+                <STORE-CYCLIC>false</STORE-CYCLIC>
+                <STORE-EMERGENCY>false</STORE-EMERGENCY>
+                <STORE-IMMEDIATE>false</STORE-IMMEDIATE>
+                <USE-AUTO-VALIDATION-AT-SHUT-DOWN>false</USE-AUTO-VALIDATION-AT-SHUT-DOWN>
+                <USE-CRC-COMP-MECHANISM>false</USE-CRC-COMP-MECHANISM>
+                <WRITE-ONLY-ONCE>false</WRITE-ONLY-ONCE>
+                <WRITE-VERIFICATION>false</WRITE-VERIFICATION>
+              </NV-BLOCK-NEEDS>
+              <RAM-BLOCK UUID="82090AF6-6E2B-4AA2-BAED-6F2B9EFAC1DF">
+                <SHORT-NAME>RAM_NVBlockDescriptor_ASWInfo_ChrgEgyCalInfo</SHORT-NAME>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_Nv_ChrgEgyCalInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <RECORD-VALUE-SPECIFICATION>
+                    <FIELDS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_OBCSideTotDchaEgy_Wh</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_PODSideTotChrgEgy_Wh</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_BattSideTotChrgEgy_Wh</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_DCChrgrSideTotChrgEgy_Wh</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_OBCSideTotChrgEgy_Wh</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_BattChrgCnt_Tms</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </FIELDS>
+                  </RECORD-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </RAM-BLOCK>
+              <ROM-BLOCK UUID="404FCC04-7F23-427A-ACB8-03669AD937C7">
+                <SHORT-NAME>ROM_NVBlockDescriptor_ASWInfo_ChrgEgyCalInfo</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_Nv_ChrgEgyCalInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <RECORD-VALUE-SPECIFICATION>
+                    <FIELDS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_OBCSideTotDchaEgy_Wh</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_PODSideTotChrgEgy_Wh</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_BattSideTotChrgEgy_Wh</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_DCChrgrSideTotChrgEgy_Wh</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_OBCSideTotChrgEgy_Wh</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChrMgmt_BattChrgCnt_Tms</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </FIELDS>
+                  </RECORD-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </ROM-BLOCK>
+            </NV-BLOCK-DESCRIPTOR>
+            <NV-BLOCK-DESCRIPTOR UUID="B912274D-066B-4D4D-816D-E9434D52585B">
+              <SHORT-NAME>NVBlockDescriptor_ASWInfo_ChassisMgmtInfo</SHORT-NAME>
+              <NV-BLOCK-DATA-MAPPINGS>
+                <NV-BLOCK-DATA-MAPPING>
+                  <NV-RAM-BLOCK-ELEMENT>
+                    <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/NVBlockDescriptor_ASWInfo_ChassisMgmtInfo/RAM_NVBlockDescriptor_ASWInfo_ChassisMgmtInfo</LOCAL-VARIABLE-REF>
+                  </NV-RAM-BLOCK-ELEMENT>
+                  <WRITTEN-READ-NV-DATA>
+                    <AUTOSAR-VARIABLE-IREF>
+                      <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/RTE_RP_ChassisMgmtInfo</PORT-PROTOTYPE-REF>
+                      <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_ChassisMgmtInfo/tec_ChassisMgmtInfo</TARGET-DATA-PROTOTYPE-REF>
+                    </AUTOSAR-VARIABLE-IREF>
+                  </WRITTEN-READ-NV-DATA>
+                </NV-BLOCK-DATA-MAPPING>
+              </NV-BLOCK-DATA-MAPPINGS>
+              <NV-BLOCK-NEEDS UUID="B0B7BD91-A6E1-4AB3-A808-FB8D170A5F6F">
+                <SHORT-NAME>NVNeed_NVBlockDescriptor_ASWInfo_ChassisMgmtInfo</SHORT-NAME>
+                <ADMIN-DATA>
+                  <SDGS>
+                    <SDG GID="DV_SDG">
+                      <SD GID="AutoServiceNeedNameHdlg">1</SD>
+                    </SDG>
+                  </SDGS>
+                </ADMIN-DATA>
+                <CALC-RAM-BLOCK-CRC>false</CALC-RAM-BLOCK-CRC>
+                <CHECK-STATIC-BLOCK-ID>false</CHECK-STATIC-BLOCK-ID>
+                <N-DATA-SETS>1</N-DATA-SETS>
+                <N-ROM-BLOCKS>1</N-ROM-BLOCKS>
+                <RAM-BLOCK-STATUS-CONTROL>API</RAM-BLOCK-STATUS-CONTROL>
+                <READONLY>false</READONLY>
+                <RELIABILITY>ERROR-DETECTION</RELIABILITY>
+                <RESTORE-AT-START>true</RESTORE-AT-START>
+                <STORE-AT-SHUTDOWN>true</STORE-AT-SHUTDOWN>
+                <STORE-CYCLIC>false</STORE-CYCLIC>
+                <STORE-EMERGENCY>false</STORE-EMERGENCY>
+                <STORE-IMMEDIATE>false</STORE-IMMEDIATE>
+                <USE-AUTO-VALIDATION-AT-SHUT-DOWN>false</USE-AUTO-VALIDATION-AT-SHUT-DOWN>
+                <USE-CRC-COMP-MECHANISM>false</USE-CRC-COMP-MECHANISM>
+                <WRITE-ONLY-ONCE>false</WRITE-ONLY-ONCE>
+                <WRITE-VERIFICATION>false</WRITE-VERIFICATION>
+              </NV-BLOCK-NEEDS>
+              <RAM-BLOCK UUID="365B1D56-754D-480F-A247-4A217AF4B4FA">
+                <SHORT-NAME>RAM_NVBlockDescriptor_ASWInfo_ChassisMgmtInfo</SHORT-NAME>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_Nv_ChassisMgmtInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <RECORD-VALUE-SPECIFICATION>
+                    <FIELDS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChassisMgmt_BrkCmpStsInfo</SHORT-LABEL>
+                        <VALUE>2</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChassisMgmt_FillAdressInfo</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </FIELDS>
+                  </RECORD-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </RAM-BLOCK>
+              <ROM-BLOCK UUID="342F9AA4-EF22-480D-A06A-636538C5B818">
+                <SHORT-NAME>ROM_NVBlockDescriptor_ASWInfo_ChassisMgmtInfo</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <SW-CALIBRATION-ACCESS>READ-WRITE</SW-CALIBRATION-ACCESS>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_Nv_ChassisMgmtInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <RECORD-VALUE-SPECIFICATION>
+                    <FIELDS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChassisMgmt_BrkCmpStsInfo</SHORT-LABEL>
+                        <VALUE>2</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <SHORT-LABEL>ChassisMgmt_FillAdressInfo</SHORT-LABEL>
+                        <VALUE>0</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </FIELDS>
+                  </RECORD-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </ROM-BLOCK>
+            </NV-BLOCK-DESCRIPTOR>
+            <NV-BLOCK-DESCRIPTOR UUID="A2B7DA96-4EEB-47A1-9FF4-545F975C26F5">
+              <SHORT-NAME>NVBlockDescriptor_ASWInfo_RngRstimnFormual2</SHORT-NAME>
+              <NV-BLOCK-DATA-MAPPINGS>
+                <NV-BLOCK-DATA-MAPPING>
+                  <NV-RAM-BLOCK-ELEMENT>
+                    <LOCAL-VARIABLE-REF DEST="VARIABLE-DATA-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/NVBlockDescriptor_ASWInfo_RngRstimnFormual2/RAM_NVBlockDescriptor_ASWInfo_RngRstimnFormual2</LOCAL-VARIABLE-REF>
+                  </NV-RAM-BLOCK-ELEMENT>
+                  <WRITTEN-READ-NV-DATA>
+                    <AUTOSAR-VARIABLE-IREF>
+                      <PORT-PROTOTYPE-REF DEST="PR-PORT-PROTOTYPE">/ComponentTypes/CtAp_NvMBlock/RTE_RP_RngEstimnFormual2</PORT-PROTOTYPE-REF>
+                      <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/PortInterfaces/IF_RngEstimnFormual2/tec_RngEstimnFormual2</TARGET-DATA-PROTOTYPE-REF>
+                    </AUTOSAR-VARIABLE-IREF>
+                  </WRITTEN-READ-NV-DATA>
+                </NV-BLOCK-DATA-MAPPING>
+              </NV-BLOCK-DATA-MAPPINGS>
+              <NV-BLOCK-NEEDS UUID="9DA1A840-D039-4A9C-A376-765965E60CC4">
+                <SHORT-NAME>NVNeed_NVBlockDescriptor_ASWInfo_RngRstimnFormual2</SHORT-NAME>
+                <ADMIN-DATA>
+                  <SDGS>
+                    <SDG GID="DV_SDG">
+                      <SD GID="AutoServiceNeedNameHdlg">1</SD>
+                    </SDG>
+                  </SDGS>
+                </ADMIN-DATA>
+                <CALC-RAM-BLOCK-CRC>false</CALC-RAM-BLOCK-CRC>
+                <CHECK-STATIC-BLOCK-ID>false</CHECK-STATIC-BLOCK-ID>
+                <N-DATA-SETS>1</N-DATA-SETS>
+                <N-ROM-BLOCKS>1</N-ROM-BLOCKS>
+                <RAM-BLOCK-STATUS-CONTROL>API</RAM-BLOCK-STATUS-CONTROL>
+                <READONLY>false</READONLY>
+                <RELIABILITY>ERROR-DETECTION</RELIABILITY>
+                <RESISTANT-TO-CHANGED-SW>true</RESISTANT-TO-CHANGED-SW>
+                <RESTORE-AT-START>true</RESTORE-AT-START>
+                <STORE-AT-SHUTDOWN>true</STORE-AT-SHUTDOWN>
+                <STORE-CYCLIC>false</STORE-CYCLIC>
+                <STORE-EMERGENCY>false</STORE-EMERGENCY>
+                <STORE-IMMEDIATE>false</STORE-IMMEDIATE>
+                <USE-AUTO-VALIDATION-AT-SHUT-DOWN>false</USE-AUTO-VALIDATION-AT-SHUT-DOWN>
+                <USE-CRC-COMP-MECHANISM>false</USE-CRC-COMP-MECHANISM>
+                <WRITE-ONLY-ONCE>false</WRITE-ONLY-ONCE>
+                <WRITE-VERIFICATION>false</WRITE-VERIFICATION>
+              </NV-BLOCK-NEEDS>
+              <RAM-BLOCK UUID="298B5CF4-6CCC-4A5B-A868-BF16ED4F22F2">
+                <SHORT-NAME>RAM_NVBlockDescriptor_ASWInfo_RngRstimnFormual2</SHORT-NAME>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_RngEstimn_BattCurrIntegral2kmArrayInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <ARRAY-VALUE-SPECIFICATION>
+                    <ELEMENTS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </ELEMENTS>
+                  </ARRAY-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </RAM-BLOCK>
+              <ROM-BLOCK UUID="57AC1FE2-46E7-424A-8A9D-CFEEEE963BEC">
+                <SHORT-NAME>ROM_NVBlockDescriptor_ASWInfo_RngRstimnFormual2</SHORT-NAME>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/DataTypes/dt_RngEstimn_BattCurrIntegral2kmArrayInfo</TYPE-TREF>
+                <INIT-VALUE>
+                  <ARRAY-VALUE-SPECIFICATION>
+                    <ELEMENTS>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                      <NUMERICAL-VALUE-SPECIFICATION>
+                        <VALUE>3197</VALUE>
+                      </NUMERICAL-VALUE-SPECIFICATION>
+                    </ELEMENTS>
+                  </ARRAY-VALUE-SPECIFICATION>
+                </INIT-VALUE>
+              </ROM-BLOCK>
+            </NV-BLOCK-DESCRIPTOR>
+          </NV-BLOCK-DESCRIPTORS>
+        </NV-BLOCK-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="4371A5CE-A633-455F-BD63-F21A9DC17C90">
+          <SHORT-NAME>CtAp_NvMBlock_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/CtAp_NvMBlock/CtAp_NvMBlock_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

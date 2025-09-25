@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="A9D4FB8A-5B95-4365-8838-EF9B0CD07D4D">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="EA701C6D-BF8D-4096-B298-C8C91F46FBA7">
+          <SHORT-NAME>YDF_CtAp_CANHandler_TaskCtrl</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="853C517B-FF91-4A83-B7F4-D0C9A9B52A21">
+              <SHORT-NAME>YDF_CtAp_CANHandler_TaskCtrl_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="A748F2BE-C822-46F9-ABB6-54461F9923B8">
+                  <SHORT-NAME>TMT_Runnable</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CtAp_CANHandler_TaskCtrl/YDF_CtAp_CANHandler_TaskCtrl_InternalBehavior/YDF_CtAp_CANHandler_TaskCtrl_Input_100ms</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="7BD3F1CA-8B7C-46A3-A2FD-B24EA2B041B8">
+                  <SHORT-NAME>TMT_YDF_CtAp_CANHandler_TaskCtrl_Output_100ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_CtAp_CANHandler_TaskCtrl/YDF_CtAp_CANHandler_TaskCtrl_InternalBehavior/YDF_CtAp_CANHandler_TaskCtrl_Output_100ms</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="659DF248-9DC8-4F9F-BC4A-B5FC208C1F08">
+                  <SHORT-NAME>YDF_CtAp_CANHandler_TaskCtrl_Input_100ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="F51055C7-B264-4CF8-A014-7126FECBD7A9">
+                  <SHORT-NAME>YDF_CtAp_CANHandler_TaskCtrl_Output_100ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="32023329-03E9-43F3-8B51-E7C6B6AC2112">
+          <SHORT-NAME>YDF_CtAp_CANHandler_TaskCtrl_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/YDF_CtAp_CANHandler_TaskCtrl/YDF_CtAp_CANHandler_TaskCtrl_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

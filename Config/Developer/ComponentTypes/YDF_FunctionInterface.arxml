@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="A9D4FB8A-5B95-4365-8838-EF9B0CD07D4D">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE UUID="AF611EF9-C629-430E-9239-08685B838E09">
+          <SHORT-NAME>YDF_GetIf_Driver</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="EC3F2AAA-0FE5-4E5A-A439-23071D9E45B8">
+              <SHORT-NAME>Get_If</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_Ad_Result</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_io_inResult</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_BTS_OutResult</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_CAN_ActiveInf</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_CH1</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_CH2</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_CH3</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_CH4</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_PWMSCB1</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_PWMSCB2</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_LAMPSCB1</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_LAMPSCB2</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_Bottom_Ver</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_SentData</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_Level_OutResult</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_PwmOrLevel_OutResult</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_Motor_OutResult</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/PortInterfaces/Get_If</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="4F54C1E7-3652-496C-94BB-BD8870D525A6">
+              <SHORT-NAME>YDF_GetIf_Driver_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <OPERATION-INVOKED-EVENT UUID="56C4BD37-021B-4636-85DD-0E84A467E4B5">
+                  <SHORT-NAME>OIT_Get_If_Get_Motor_OutResult_Get_If_Get_Motor_OutResult</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Get_Motor_OutResult</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_Motor_OutResult</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="FF8A59BA-AB2A-4429-BAA6-B12FE333800A">
+                  <SHORT-NAME>OIT_Get_If_Get_PwmOrLevel_OutResult_Get_If_Get_PwmOrLevel_OutResult</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Get_PwmOrLevel_OutResult</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_PwmOrLevel_OutResult</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="F096DC3F-4112-4EB3-B399-79FFB6B18FF6">
+                  <SHORT-NAME>OIT_Get_If_Get_Level_OutResult_Get_If_Get_Level_OutResult</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Get_Level_OutResult</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_Level_OutResult</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="179EA7DC-5F0F-4AA6-9E61-A31B0B42322B">
+                  <SHORT-NAME>OIT_Get_If_Get_SentData_Get_If_Get_SentData</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Get_SentData</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_SentData</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="ED8309AA-F5A6-4236-91AF-38967B8C2914">
+                  <SHORT-NAME>OIT_Get_If_Get_Bottom_Ver_Get_If_Get_Bottom_Ver</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Get_Bottom_Ver</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_Bottom_Ver</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="6F40ACB5-0EB6-423A-9B12-8267345B28C9">
+                  <SHORT-NAME>OIT_Get_If_Icu_17_GtmCcu6_PWMIN_LAMPSCB2_Get_If_Icu_17_GtmCcu6_PWMIN_LAMPSCB2</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Icu_17_GtmCcu6_PWMIN_LAMPSCB2</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_LAMPSCB2</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="C3427A82-FDF4-4871-A150-596DAE2A11C9">
+                  <SHORT-NAME>OIT_Get_If_Icu_17_GtmCcu6_PWMIN_LAMPSCB1_Get_If_Icu_17_GtmCcu6_PWMIN_LAMPSCB1</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Icu_17_GtmCcu6_PWMIN_LAMPSCB1</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_LAMPSCB1</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="64BAAF5C-BB30-4AE9-9F8D-03FFF640128F">
+                  <SHORT-NAME>OIT_Get_If_Icu_17_GtmCcu6_PWMIN_PWMSCB2_Get_If_Icu_17_GtmCcu6_PWMIN_PWMSCB2</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Icu_17_GtmCcu6_PWMIN_PWMSCB2</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_PWMSCB2</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="F0E8A271-2799-4CC3-9546-9A63A91855EA">
+                  <SHORT-NAME>OIT_Get_If_Icu_17_GtmCcu6_PWMIN_PWMSCB1_Get_If_Icu_17_GtmCcu6_PWMIN_PWMSCB1</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Icu_17_GtmCcu6_PWMIN_PWMSCB1</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_PWMSCB1</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="F02A08EF-E7BF-4E89-9336-883593722DFD">
+                  <SHORT-NAME>OIT_Get_If_Icu_17_GtmCcu6_PWMIN_CH4_Get_If_Icu_17_GtmCcu6_PWMIN_CH4</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Icu_17_GtmCcu6_PWMIN_CH4</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_CH4</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="1536954D-917C-4276-BDC2-20ACCDE62F8E">
+                  <SHORT-NAME>OIT_Get_If_Icu_17_GtmCcu6_PWMIN_CH3_Get_If_Icu_17_GtmCcu6_PWMIN_CH3</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Icu_17_GtmCcu6_PWMIN_CH3</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_CH3</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="82618298-614C-4EFF-9742-C16A224BCFC2">
+                  <SHORT-NAME>OIT_Get_If_Icu_17_GtmCcu6_PWMIN_CH2_Get_If_Icu_17_GtmCcu6_PWMIN_CH2</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Icu_17_GtmCcu6_PWMIN_CH2</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_CH2</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="09D1EA62-82C0-4F55-A1C6-D395C5C4EB06">
+                  <SHORT-NAME>OIT_Get_If_Icu_17_GtmCcu6_PWMIN_CH1_Get_If_Icu_17_GtmCcu6_PWMIN_CH1</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Icu_17_GtmCcu6_PWMIN_CH1</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Icu_17_GtmCcu6_PWMIN_CH1</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="8E556C67-B5FF-4816-B083-E0B91675D6AA">
+                  <SHORT-NAME>OIT_Get_If_Get_CAN_ActiveInf_Get_If_Get_CAN_ActiveInf</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Get_CAN_ActiveInf</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_CAN_ActiveInf</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="6FDE126B-F8A3-42BF-8C05-383EA5B949B2">
+                  <SHORT-NAME>OIT_Get_If_Get_BTS_OutResult_Get_If_Get_BTS_OutResult</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Get_BTS_OutResult</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_BTS_OutResult</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="6D230598-3A5C-46E1-A6F6-E312D77CB6EC">
+                  <SHORT-NAME>OIT_Get_If_Get_io_inResult_Get_If_Get_io_inResult</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Get_io_inResult</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_io_inResult</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="3F91F208-509D-4CC8-BF18-BB0DD02BD40C">
+                  <SHORT-NAME>OIT_Get_If_Get_Ad_Result_Get_If_Get_Ad_Result</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior/Get_If_Get_Ad_Result</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_GetIf_Driver/Get_If</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Get_If/Get_Ad_Result</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="5528C9BF-7FBA-4ADE-8260-F5851B27E33F">
+                  <SHORT-NAME>Get_If_Get_Motor_OutResult</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="CAA6ACC8-3F6E-4E5C-9C58-3CE8C48DB8D2">
+                  <SHORT-NAME>Get_If_Get_PwmOrLevel_OutResult</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="C3DF2F0B-D6BC-4A7E-9578-0EBC157EFF4E">
+                  <SHORT-NAME>Get_If_Get_Level_OutResult</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="C5DD1E28-58AC-441C-9598-AD89C02E745A">
+                  <SHORT-NAME>Get_If_Get_SentData</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="C5603BCB-EFD8-47E3-AA58-19596829E61E">
+                  <SHORT-NAME>Get_If_Get_Bottom_Ver</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="111FEE54-8BC4-4820-83B9-32E06A27A73C">
+                  <SHORT-NAME>Get_If_Icu_17_GtmCcu6_PWMIN_LAMPSCB2</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="44FB0B3D-99D0-4560-B779-162DA4050F69">
+                  <SHORT-NAME>Get_If_Icu_17_GtmCcu6_PWMIN_LAMPSCB1</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="04A42631-C0F5-4495-9EE1-61D85C1FABF0">
+                  <SHORT-NAME>Get_If_Icu_17_GtmCcu6_PWMIN_PWMSCB2</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="E1CEF8D9-EBB8-4055-ACD5-A864F24801CA">
+                  <SHORT-NAME>Get_If_Icu_17_GtmCcu6_PWMIN_PWMSCB1</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="DAADF012-32BA-4BA5-A57E-1D152416539E">
+                  <SHORT-NAME>Get_If_Icu_17_GtmCcu6_PWMIN_CH4</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="5329A79E-6FBC-49C7-9A2F-72CC717928AE">
+                  <SHORT-NAME>Get_If_Icu_17_GtmCcu6_PWMIN_CH3</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="39105727-5C83-47AB-B868-C6FEF9F47278">
+                  <SHORT-NAME>Get_If_Icu_17_GtmCcu6_PWMIN_CH2</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="42B167B9-39F8-49B4-A1D8-51B433F01C36">
+                  <SHORT-NAME>Get_If_Icu_17_GtmCcu6_PWMIN_CH1</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="F7797B6E-9DDC-4480-8D43-5F7E599B4F35">
+                  <SHORT-NAME>Get_If_Get_CAN_ActiveInf</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="AC16AEFC-8439-4CF9-B77F-F96E39593334">
+                  <SHORT-NAME>Get_If_Get_BTS_OutResult</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="E97237E1-9DFD-471D-8779-2C4BBA910F1C">
+                  <SHORT-NAME>Get_If_Get_io_inResult</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="A8DAC022-8CFD-4A2C-A305-E9C8D78217BB">
+                  <SHORT-NAME>Get_If_Get_Ad_Result</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="0339B19E-DE56-461E-AFAA-C3A441DC96A9">
+          <SHORT-NAME>YDF_GetIf_Driver_Implementation</SHORT-NAME>
+          <CODE-DESCRIPTORS>
+            <CODE UUID="74D98CBF-B92A-4B6C-A53B-7AF2E04A2798">
+              <SHORT-NAME>Default</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+            </CODE>
+          </CODE-DESCRIPTORS>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/YDF_GetIf_Driver/YDF_GetIf_Driver_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

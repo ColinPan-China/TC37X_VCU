@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="A9D4FB8A-5B95-4365-8838-EF9B0CD07D4D">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="DAB5B757-0953-4182-AFF4-D7FF90C530A4">
+          <SHORT-NAME>KAMA_RangeEstimation</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="17B0DB1C-65DC-4B61-9F4D-1FFC88BAE90B">
+              <SHORT-NAME>KAMA_RangeEstimation_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="447CA791-9E4E-4971-9B64-742BBFF98834">
+                  <SHORT-NAME>TMT_R_RangeEst_Cyclic_100ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/KAMA_RangeEstimation/KAMA_RangeEstimation_InternalBehavior/KAMA_R_RangeEst_Cyclic_100ms</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+                <INIT-EVENT UUID="9C670D6D-0907-477B-964C-D40DB5CA7A0D">
+                  <SHORT-NAME>KAMA_RangeEstimation_InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/KAMA_RangeEstimation/KAMA_RangeEstimation_InternalBehavior/KAMA_R_RangeEst_Init</START-ON-EVENT-REF>
+                </INIT-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="EEB1A977-8427-478F-9E5F-2D5C4078B834">
+                  <SHORT-NAME>KAMA_R_RangeEst_Cyclic_100ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="6E2BAA4A-CB35-4806-B5F7-D7DE3D0CE084">
+                  <SHORT-NAME>KAMA_R_RangeEst_Init</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:RunnableKind">
+                        <SD>InitRunnable</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="2C62D9A8-C634-4404-9282-7AF8D5DBE00C">
+          <SHORT-NAME>KAMA_RangeEstimation_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/KAMA_RangeEstimation/KAMA_RangeEstimation_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

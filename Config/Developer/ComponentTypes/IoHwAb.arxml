@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00046.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="A9D4FB8A-5B95-4365-8838-EF9B0CD07D4D">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="B5E47C09-D2D2-4C3E-9C8A-859AB3F53C24">
+          <SHORT-NAME>IoHwAb</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="4CA07317-20B2-4EEF-A379-F8BD20C32357">
+              <SHORT-NAME>IoHwAb_ServiceType</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/IoHwAb_ServiceType/IoHwAb_DioSetChannelVal</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/IoHwAb_ServiceType/IoHwAb_DioGetChannelVal</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/IoHwAb_ServiceType/IoHwAb_AdcReadValues</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/IoHwAb_ServiceType/IoHwAb_AdcGetChannelValue</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/IoHwAb_ServiceType/IoHwAb_AdcConvert12BitValueTomv</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/PortInterfaces/IoHwAb_ServiceType</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="49722EEB-AB58-4F2F-B66D-986CE6DD0927">
+              <SHORT-NAME>IoHwAb_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <OPERATION-INVOKED-EVENT UUID="63815D3C-B990-441A-BAE1-DC33CD41B902">
+                  <SHORT-NAME>OIT_IoHwAb_ServiceType_IoHwAb_DioSetChannelVal_IoHwAb_ServiceType_IoHwAb_DioSetChannelVal</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/IoHwAb/IoHwAb_InternalBehavior/IoHwAb_ServiceType_IoHwAb_DioSetChannelVal</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/IoHwAb/IoHwAb_ServiceType</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/IoHwAb_ServiceType/IoHwAb_DioSetChannelVal</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="CA60A1DB-B9EA-4067-9CD7-62EF5442ED9C">
+                  <SHORT-NAME>OIT_IoHwAb_ServiceType_IoHwAb_DioGetChannelVal_IoHwAb_ServiceType_IoHwAb_DioGetChannelVal</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/IoHwAb/IoHwAb_InternalBehavior/IoHwAb_ServiceType_IoHwAb_DioGetChannelVal</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/IoHwAb/IoHwAb_ServiceType</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/IoHwAb_ServiceType/IoHwAb_DioGetChannelVal</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="A1EAFBDE-0D48-4DC4-854C-0EF47C294DD8">
+                  <SHORT-NAME>OIT_IoHwAb_ServiceType_IoHwAb_AdcReadValues_IoHwAb_ServiceType_IoHwAb_AdcReadValues</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/IoHwAb/IoHwAb_InternalBehavior/IoHwAb_ServiceType_IoHwAb_AdcReadValues</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/IoHwAb/IoHwAb_ServiceType</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/IoHwAb_ServiceType/IoHwAb_AdcReadValues</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="B7A16827-A6B2-4F9B-9B61-04B7DF1A9B62">
+                  <SHORT-NAME>OIT_IoHwAb_ServiceType_IoHwAb_AdcGetChannelValue_IoHwAb_ServiceType_IoHwAb_AdcGetChannelValue</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/IoHwAb/IoHwAb_InternalBehavior/IoHwAb_ServiceType_IoHwAb_AdcGetChannelValue</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/IoHwAb/IoHwAb_ServiceType</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/IoHwAb_ServiceType/IoHwAb_AdcGetChannelValue</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="7A9C8B6C-564F-4F2C-8251-2542F10DC2F4">
+                  <SHORT-NAME>OIT_IoHwAb_ServiceType_IoHwAb_AdcConvert12BitValueTomv_IoHwAb_ServiceType_IoHwAb_AdcConvert12BitValueTomv</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/IoHwAb/IoHwAb_InternalBehavior/IoHwAb_ServiceType_IoHwAb_AdcConvert12BitValueTomv</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/IoHwAb/IoHwAb_ServiceType</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/IoHwAb_ServiceType/IoHwAb_AdcConvert12BitValueTomv</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <INIT-EVENT UUID="436C15C4-6FD3-41AD-82AD-8B74668630DE">
+                  <SHORT-NAME>IoHwAb_InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/IoHwAb/IoHwAb_InternalBehavior/IoHwAb_Init</START-ON-EVENT-REF>
+                </INIT-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="C6D72B26-9305-4628-8EA3-6234D7012D75">
+                  <SHORT-NAME>IoHwAb_ServiceType_IoHwAb_DioSetChannelVal</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_ServiceType_IoHwAb_DioSetChannelVal</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="B755BA22-93A9-4BC1-B407-0CAB48DB5665">
+                  <SHORT-NAME>IoHwAb_ServiceType_IoHwAb_DioGetChannelVal</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_ServiceType_IoHwAb_DioGetChannelVal</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="0A1B236B-2189-4F43-8E8E-C1BD2D9CCF0B">
+                  <SHORT-NAME>IoHwAb_ServiceType_IoHwAb_AdcReadValues</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_ServiceType_IoHwAb_AdcReadValues</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="0AEDF38C-5CB9-4FA2-B6A6-A9D13DE37429">
+                  <SHORT-NAME>IoHwAb_ServiceType_IoHwAb_AdcGetChannelValue</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_ServiceType_IoHwAb_AdcGetChannelValue</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="DBD86BD5-CA79-4C23-B0E2-4A995009CA9D">
+                  <SHORT-NAME>IoHwAb_ServiceType_IoHwAb_AdcConvert12BitValueTomv</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_ServiceType_IoHwAb_AdcConvert12BitValueTomv</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="2C47950E-A1F0-43D5-B0FE-455CCFE72B2F">
+                  <SHORT-NAME>IoHwAb_Init</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:RunnableKind">
+                        <SD>InitRunnable</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>IoHwAb_Init</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="AD2955ED-8AF3-48AB-8A00-93ACDE3778B1">
+          <SHORT-NAME>IoHwAb_Implementation</SHORT-NAME>
+          <CODE-DESCRIPTORS>
+            <CODE UUID="3A9BDA69-9918-42C7-AF8C-0205550225FB">
+              <SHORT-NAME>Default</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+            </CODE>
+          </CODE-DESCRIPTORS>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/IoHwAb/IoHwAb_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

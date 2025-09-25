@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00046.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="BB46B6D5-C0ED-41B5-A9B5-E6181D76C724">
+      <SHORT-NAME>Constants</SHORT-NAME>
+      <ELEMENTS>
+        <CONSTANT-SPECIFICATION UUID="39EEBFDD-39A4-4FE9-9292-E820787FBF4E">
+          <SHORT-NAME>QCF_SAFETY_REAC_DEFAULT</SHORT-NAME>
+          <VALUE-SPEC>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>255</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="AAA08619-B830-4837-BBD9-C5B813C3E624">
+          <SHORT-NAME>QCF_RECOVERY_REAC_DEFAULT</SHORT-NAME>
+          <VALUE-SPEC>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>255</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="FDA885F1-C4E6-4B13-BBD4-A9907A60F5C7">
+          <SHORT-NAME>COM_STATE_DEFAULT</SHORT-NAME>
+          <VALUE-SPEC>
+            <NUMERICAL-VALUE-SPECIFICATION>
+              <VALUE>255</VALUE>
+            </NUMERICAL-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="F4BAC611-3ED3-4B93-B911-AA054152E3DB">
+          <SHORT-NAME>TorqPahMgmt_DftFwdMaxSpdGearD_CFG</SHORT-NAME>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>170</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="3BF94BCD-D1E3-41FD-9784-333607A7DD57">
+          <SHORT-NAME>TorqPahMgmt_DftFwdMaxSpdGearR_CFG</SHORT-NAME>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>50</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="6D720491-E5BF-4008-9CE7-6496683F4541">
+          <SHORT-NAME>TorqPahMgmt_GrdtMaxVehSpdNeg_CFG</SHORT-NAME>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>200</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="E6E986AE-8F54-4370-9360-37C4F8AA48DC">
+          <SHORT-NAME>TorqPahMgmt_GrdtMaxVehSpdPos_CFG</SHORT-NAME>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>200</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="090C8D36-C941-476F-98CF-518984E54980">
+          <SHORT-NAME>TorqPahMgmt_MaxVehSpdLmPidKiTqMax_CFG</SHORT-NAME>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>300</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="1F2960F7-9D13-4CD2-B578-A22D880DB54E">
+          <SHORT-NAME>TorqPahMgmt_MaxVehSpdLmPidKiTqMin_CFG</SHORT-NAME>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <CATEGORY>STRING</CATEGORY>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <VT>-300</VT>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="85EA507A-EECD-4F09-BD72-7CDD9510401B">
+          <SHORT-NAME>TorqPahMgmt_MaxVehSpdLmPidKpTqMax_CFG</SHORT-NAME>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>300</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="638845ED-61E6-4F62-96A8-D74283614471">
+          <SHORT-NAME>TorqPahMgmt_MaxVehSpdLmPidKpTqMin_CFG</SHORT-NAME>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>-300</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="92CC5F0A-4B62-40CC-A8C2-7058E89D9CFB">
+          <SHORT-NAME>TorqPahMgmt_MaxVehSpdLmtFbTqX_MAP</SHORT-NAME>
+          <VALUE-SPEC>
+            <ARRAY-VALUE-SPECIFICATION>
+              <ELEMENTS>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>0</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>20</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>30</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>40</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>50</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>60</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>70</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>80</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>90</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>100</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>110</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>120</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>130</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>140</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>150</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>160</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>170</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+                <NUMERICAL-VALUE-SPECIFICATION>
+                  <VALUE>180</VALUE>
+                </NUMERICAL-VALUE-SPECIFICATION>
+              </ELEMENTS>
+            </ARRAY-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="D3FB9C7A-4682-4FA1-8D11-86E73AFC26A4">
+          <SHORT-NAME>HvMgmt_BMSBattEnaSOC_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">Smart charging Determines the battery SOC in high-voltage scenarios</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>20</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="6FC471FF-857A-4CFC-8C15-AC2D2C39E1AB">
+          <SHORT-NAME>HvMgmt_BMSBattReqChrgSOCTmr_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">Time to determine whether the battery SOC meets the requirements in the high-voltage scenario of intelligent charging</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>650</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="E53642FA-D12B-43BC-B663-F37ECA08FC45">
+          <SHORT-NAME>HvMgmt_BMSHvOnCnt_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">Determine the number of times HV is used in the scenario of intelligent charging</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>1</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="C45FA3F2-225F-4921-AC42-91FC967D40B6">
+          <SHORT-NAME>HvMgmt_BMSMgmtDTZero_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">Set the time of the BMS DTC reset condition to 0</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>0</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="475A6894-AC37-4262-9060-1DCF94888A5E">
+          <SHORT-NAME>HvMgmt_BMSMgmtMTZero_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">Set the time of the BMS DTC set condition to 0</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>0</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="57EE1FA5-C451-4532-B814-CA79FFF4BCED">
+          <SHORT-NAME>HvMgmt_BMSRlyClsDTCEnaSetTim_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">BMS relay closed fault DTC enable condition time setting</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>1500</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="85A18741-122B-412E-BB67-A445D63BA6C6">
+          <SHORT-NAME>HvMgmt_BMSRlyClsDTCSetTimOne_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">BMS relay closed fault DTC set condition one time setting</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>2000</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="46B5B8F3-4BB8-408C-8A40-A0DE5C48A604">
+          <SHORT-NAME>HvMgmt_BMSRlyClsDTCSetTimTwo_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">BMS relay closed fault DTC set condition two time setting</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>100</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="34EBC1DE-821C-4998-9577-0EE1DCC87C20">
+          <SHORT-NAME>HvMgmt_BMSRlyOpenDTCEnaSetTim_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">BMS relay opened fault DTC enable condition time setting</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>1500</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="3F820B6E-05A5-4C0B-817E-9CDD69B349A1">
+          <SHORT-NAME>HvMgmt_BMSRlyOpenDTCResetTim_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">BMS relay opened fault DTC reset condition time setting</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>1000</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="49E82FF4-1A43-493A-B7FA-64E6773DE84B">
+          <SHORT-NAME>HvMgmt_BMSRlyOpenDTCSetTim_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">BMS relay opened fault DTC set condition time setting</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>300</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="CA1E2893-64AD-419D-8EB3-BFCB0A34D4AA">
+          <SHORT-NAME>HvMgmt_BSBattChrgEndSOC_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">Low voltage battery charging cut-off SOC</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>90</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="83F426BD-480D-40E6-82B1-DF5C77A19DEF">
+          <SHORT-NAME>HvMgmt_BSBattReqChrgSOC_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">SOC judgment of low-voltage battery charging request</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>75</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="DBEB1B31-D364-4ED4-941A-B2EA26AF5B9E">
+          <SHORT-NAME>HvMgmt_BSBattReqChrgSOCTmr_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">Determine the SOC time for charging a low-voltage battery</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>500</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="3E1CDC92-7B30-4EB1-B7E1-7480B14F4560">
+          <SHORT-NAME>HvMgmt_PreheatPosRlyClsDTCEnaSetTim_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">Setting time of enabling condition of BMS relay closed fault DTC in Preheating condition</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>1500</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="376C791D-EB72-4BEF-8C9B-25915272D8F4">
+          <SHORT-NAME>HvMgmt_PreheatPosRlyClsDTCSetTim_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">Setting time of setting condition of BMS relay closed fault DTC in Preheating condition</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>600</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="BF87CC73-F699-47A1-918D-9DD753B1F121">
+          <SHORT-NAME>HvMgmt_PreheatPosRlyOpenDTCEnaSetTim_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">Setting time of enabling condition of BMS relay opened fault DTC in Preheating condition</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>1500</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="C4D9DB84-6CEB-41EF-B2AF-7462DFA27CA8">
+          <SHORT-NAME>HvMgmt_PreheatPosRlyOpenDTCSetTim_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">Setting time of setting condition of BMS relay opened fault DTC in Preheating condition</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>600</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="4E547FE7-97A3-4D35-B1FC-FF6719AACCBA">
+          <SHORT-NAME>HvMgmt_PwrOnFailedTmr_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">Determine the timeout period of high voltage power-on failure</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>10000</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="50767869-01D5-49F4-976F-93657E3FF6D5">
+          <SHORT-NAME>HvMgmt_SmtPwrCompTmr_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">After the intelligent wake up, the high voltage is used to determine the timeout period for the DCDC to enter Buck</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>18000000</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+        <CONSTANT-SPECIFICATION UUID="AD5E301A-3D89-4113-A22B-AA28DA6FD020">
+          <SHORT-NAME>HvMgmt_SmtPwrKeepTmr_CFG</SHORT-NAME>
+          <DESC>
+            <L-2 L="FOR-ALL">After the intelligent wake up, the high voltage determines that the low-voltage battery does not increase by 1% of the timeout period</L-2>
+          </DESC>
+          <VALUE-SPEC>
+            <APPLICATION-VALUE-SPECIFICATION>
+              <SW-VALUE-CONT>
+                <SW-VALUES-PHYS>
+                  <V>1800000</V>
+                </SW-VALUES-PHYS>
+              </SW-VALUE-CONT>
+            </APPLICATION-VALUE-SPECIFICATION>
+          </VALUE-SPEC>
+        </CONSTANT-SPECIFICATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

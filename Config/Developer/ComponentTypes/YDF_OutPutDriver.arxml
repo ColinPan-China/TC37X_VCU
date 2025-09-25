@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="A9D4FB8A-5B95-4365-8838-EF9B0CD07D4D">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <SWC-IMPLEMENTATION UUID="CB7AE1D4-4874-4219-91C3-D285FE61D596">
+          <SHORT-NAME>YDF_OutPutDriver_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+        <COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE UUID="7BEFDD9B-8D50-4A2E-A6CB-0B426900BB2D">
+          <SHORT-NAME>YDF_OutPutDriver</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="083A0DD5-B403-4655-BE02-CCE17313CCDA">
+              <SHORT-NAME>HSoutFunction</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/HSoutFunction/High_Side1_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/HSoutFunction/High_Side2_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/HSoutFunction/High_Side3_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/HSoutFunction/High_Side4_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/PortInterfaces/HSoutFunction</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="B5357F68-ECDF-4E1C-8759-5687FCA7E3DB">
+              <SHORT-NAME>LSoutFunction</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout1_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout2_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout3_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout4_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout20_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout22_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout23_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout24_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout_Lamp1_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout_Lamp2_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout_PWMOUT1_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout_PWMOUT2_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout5_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout6_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout7_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout8_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout9_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout10_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout11_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout12_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout13_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout14_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout15_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout16_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout17_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout18_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout19_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout21_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/PortInterfaces/LSoutFunction</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="D246A1C8-AB24-4F70-91AC-017DBE2391B0">
+              <SHORT-NAME>Motor_OUTPUT_Function</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Motor_OUTPUT_Function/App_Motor_OUTPUT_Function</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/PortInterfaces/Motor_OUTPUT_Function</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="8A9C8BCC-B32F-4C4A-8F40-7F9ED87C3E37">
+              <SHORT-NAME>VBAT_PowerSupplyFunction</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/VBAT_PowerSupplyFunction/D_VBAT_A_OFF</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/VBAT_PowerSupplyFunction/D_VBAT_B_OFF</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/PortInterfaces/VBAT_PowerSupplyFunction</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="365F4CF0-46DC-4590-B8C0-5011906D2493">
+              <SHORT-NAME>Ydf_SensorSupply_Funtion</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Ydf_SensorSupply_Funtion/SensorSupply3_5v_OUT_Enable</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Ydf_SensorSupply_Funtion/SensorSupply4_5v_OUT_Enable</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/PortInterfaces/Ydf_SensorSupply_Funtion</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="DD116269-D226-4964-96B4-395A331D4A00">
+              <SHORT-NAME>Ydf_LINComEn_Funtion</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Ydf_LINComEn_Funtion/LINB_OUT_Enable</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Ydf_LINComEn_Funtion/LINC_OUT_Enable</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Ydf_LINComEn_Funtion/LIND_OUT_Enable</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/PortInterfaces/Ydf_LINComEn_Funtion</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="5FDB6459-3E7D-4E60-AA90-5E47C5426F49">
+              <SHORT-NAME>YDF_OutPutDriver_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <OPERATION-INVOKED-EVENT UUID="1318324B-65A3-461A-AF15-8E06EFEF2DE9">
+                  <SHORT-NAME>OIT_HSoutFunction_High_Side4_Function_HSoutFunction_High_Side4_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/HSoutFunction_High_Side4_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/HSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/HSoutFunction/High_Side4_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="E97BAB6B-DCA6-4B9E-B2A6-39E6A7C0FA81">
+                  <SHORT-NAME>OIT_HSoutFunction_High_Side3_Function_HSoutFunction_High_Side3_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/HSoutFunction_High_Side3_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/HSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/HSoutFunction/High_Side3_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="0065008D-FB07-4662-AD55-C92C15DE5FD1">
+                  <SHORT-NAME>OIT_HSoutFunction_High_Side2_Function_HSoutFunction_High_Side2_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/HSoutFunction_High_Side2_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/HSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/HSoutFunction/High_Side2_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="20DEAA3E-C0BB-443F-9A74-D2AB3D7C16EC">
+                  <SHORT-NAME>OIT_HSoutFunction_High_Side1_Function_HSoutFunction_High_Side1_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/HSoutFunction_High_Side1_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/HSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/HSoutFunction/High_Side1_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="CDCBADB4-4238-4252-8536-CA1F7D127AD4">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout21_Function_LSoutFunction_Lowout21_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout21_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout21_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="BD2643BC-38EE-4BB9-B2F4-4571C2255C54">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout19_Function_LSoutFunction_Lowout19_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout19_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout19_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="414CC489-7694-4103-BCA5-9395534A613E">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout18_Function_LSoutFunction_Lowout18_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout18_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout18_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="A23CA34E-BA3A-4BEB-9342-8BE23711AE16">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout17_Function_LSoutFunction_Lowout17_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout17_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout17_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="B56508C3-862D-48D2-8F8B-3B9E485B1796">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout16_Function_LSoutFunction_Lowout16_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout16_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout16_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="AF1E09DE-3A2D-4A3A-90A4-BFCD282F8263">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout15_Function_LSoutFunction_Lowout15_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout15_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout15_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="DC1A07C2-A43C-4CF2-B847-A7A54DBFC60F">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout14_Function_LSoutFunction_Lowout14_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout14_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout14_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="F134441F-BCE5-4C64-A4A7-B090EC7040BA">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout13_Function_LSoutFunction_Lowout13_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout13_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout13_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="4D004724-1DBA-4DD2-98B8-0DD3DC865998">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout12_Function_LSoutFunction_Lowout12_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout12_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout12_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="AF890415-DD49-4C98-AAA7-8F662B2B6A9B">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout11_Function_LSoutFunction_Lowout11_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout11_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout11_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="14A7B6B0-81CE-443C-92BD-A2FB37BD4E74">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout10_Function_LSoutFunction_Lowout10_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout10_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout10_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="5DE4FB08-0DDC-4D1C-BF30-0F884D3DAAA9">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout9_Function_LSoutFunction_Lowout9_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout9_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout9_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="BC0EEBF7-7555-4121-824C-76F510A6D82F">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout8_Function_LSoutFunction_Lowout8_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout8_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout8_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="4BEED336-55BA-4655-BA18-76CF8455D71E">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout7_Function_LSoutFunction_Lowout7_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout7_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout7_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="60633DB2-0DD4-4BB1-82E3-D637708C520F">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout6_Function_LSoutFunction_Lowout6_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout6_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout6_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="138BA184-CFC2-445E-9E90-A32A8E71CF55">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout5_Function_LSoutFunction_Lowout5_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout5_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout5_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="057718AB-ADDC-40D9-A83C-C5E03FED2D35">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout_PWMOUT2_Function_LSoutFunction_Lowout_PWMOUT2_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout_PWMOUT2_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout_PWMOUT2_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="72D6EBA8-E49E-436E-9C8C-CED9EF55E553">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout_PWMOUT1_Function_LSoutFunction_Lowout_PWMOUT1_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout_PWMOUT1_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout_PWMOUT1_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="B71A3949-4EDD-4D17-B90E-F70D12009091">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout_Lamp2_Function_LSoutFunction_Lowout_Lamp2_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout_Lamp2_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout_Lamp2_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="81EF2321-D62C-47C8-B3E1-CEED641BA7B6">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout_Lamp1_Function_LSoutFunction_Lowout_Lamp1_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout_Lamp1_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout_Lamp1_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="E2A3E79F-BD87-4B7D-A0A7-01C6EACFB995">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout24_Function_LSoutFunction_Lowout24_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout24_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout24_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="D5A478D6-5CDE-4DB9-B5DB-CD728D103A85">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout23_Function_LSoutFunction_Lowout23_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout23_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout23_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="8833FDE3-E09B-49CE-8509-53A580DA8119">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout22_Function_LSoutFunction_Lowout22_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout22_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout22_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="60F3BEF4-85EB-4CAF-A6D5-B60E76C632EA">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout20_Function_LSoutFunction_Lowout20_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout20_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout20_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="B5DC1CEE-41F2-4F57-863F-AD884950D74C">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout4_Function_LSoutFunction_Lowout4_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout4_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout4_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="E31F1E2B-D486-4D87-9ED4-CB04EA34541B">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout3_Function_LSoutFunction_Lowout3_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout3_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout3_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="8D87F09E-2788-4BBA-93C1-42F8250C4ED4">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout2_Function_LSoutFunction_Lowout2_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout2_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout2_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="FDFFD52F-63D6-45CE-A49D-CF5044E5102D">
+                  <SHORT-NAME>OIT_LSoutFunction_Lowout1_Function_LSoutFunction_Lowout1_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/LSoutFunction_Lowout1_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/LSoutFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/LSoutFunction/Lowout1_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="9D7FA159-0CAD-4268-9F86-425CB9087B6D">
+                  <SHORT-NAME>OIT_Motor_OUTPUT_Function_App_Motor_OUTPUT_Function_Motor_OUTPUT_Function_App_Motor_OUTPUT_Function</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/Motor_OUTPUT_Function_App_Motor_OUTPUT_Function</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/Motor_OUTPUT_Function</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Motor_OUTPUT_Function/App_Motor_OUTPUT_Function</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="AA8C262B-1939-41BB-8D72-F646958A62F2">
+                  <SHORT-NAME>OIT_VBAT_PowerSupplyFunction_D_VBAT_B_OFF_VBAT_PowerSupplyFunction_D_VBAT_B_OFF</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/VBAT_PowerSupplyFunction_D_VBAT_B_OFF</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/VBAT_PowerSupplyFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/VBAT_PowerSupplyFunction/D_VBAT_B_OFF</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="83C640A1-CAD9-425A-9C2E-0BF912215043">
+                  <SHORT-NAME>OIT_VBAT_PowerSupplyFunction_D_VBAT_A_OFF_VBAT_PowerSupplyFunction_D_VBAT_A_OFF</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/VBAT_PowerSupplyFunction_D_VBAT_A_OFF</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/VBAT_PowerSupplyFunction</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/VBAT_PowerSupplyFunction/D_VBAT_A_OFF</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="AC4DE43F-8855-47ED-9876-1417CB9B914A">
+                  <SHORT-NAME>OIT_Ydf_SensorSupply_Funtion_SensorSupply4_5v_OUT_Enable_Ydf_SensorSupply_Funtion_SensorSupply4_5v_OUT_Enable</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/Ydf_SensorSupply_Funtion_SensorSupply4_5v_OUT_Enable</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/Ydf_SensorSupply_Funtion</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Ydf_SensorSupply_Funtion/SensorSupply4_5v_OUT_Enable</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="11A1E7FB-9E6E-4FDC-8657-E3DC5A737845">
+                  <SHORT-NAME>OIT_Ydf_SensorSupply_Funtion_SensorSupply3_5v_OUT_Enable_Ydf_SensorSupply_Funtion_SensorSupply3_5v_OUT_Enable</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/Ydf_SensorSupply_Funtion_SensorSupply3_5v_OUT_Enable</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/Ydf_SensorSupply_Funtion</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Ydf_SensorSupply_Funtion/SensorSupply3_5v_OUT_Enable</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="0AF727FC-B71F-49F4-9AF5-41BC3E0B1973">
+                  <SHORT-NAME>OIT_Ydf_LINComEn_Funtion_LIND_OUT_Enable_Ydf_LINComEn_Funtion_LIND_OUT_Enable</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/Ydf_LINComEn_Funtion_LIND_OUT_Enable</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/Ydf_LINComEn_Funtion</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Ydf_LINComEn_Funtion/LIND_OUT_Enable</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="F54F7CFB-4B18-45A2-AFB1-D41A1586604C">
+                  <SHORT-NAME>OIT_Ydf_LINComEn_Funtion_LINC_OUT_Enable_Ydf_LINComEn_Funtion_LINC_OUT_Enable</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/Ydf_LINComEn_Funtion_LINC_OUT_Enable</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/Ydf_LINComEn_Funtion</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Ydf_LINComEn_Funtion/LINC_OUT_Enable</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="5529934D-183B-43F4-90D6-C2141D381CEC">
+                  <SHORT-NAME>OIT_Ydf_LINComEn_Funtion_LINB_OUT_Enable_Ydf_LINComEn_Funtion_LINB_OUT_Enable</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_OutPutDriver/YDF_OutPutDriver_InternalBehavior/Ydf_LINComEn_Funtion_LINB_OUT_Enable</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/YDF_OutPutDriver/Ydf_LINComEn_Funtion</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/PortInterfaces/Ydf_LINComEn_Funtion/LINB_OUT_Enable</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="60F9D761-6742-4E8E-A266-5D5FABE1D594">
+                  <SHORT-NAME>HSoutFunction_High_Side4_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="4A2694DB-F561-4F10-BC64-484147DF31E1">
+                  <SHORT-NAME>HSoutFunction_High_Side3_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="78206398-D7DB-4685-8B3B-0A7E4AEFB076">
+                  <SHORT-NAME>HSoutFunction_High_Side2_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="FF80E960-08DF-4008-BEBF-46AB754EBBC2">
+                  <SHORT-NAME>HSoutFunction_High_Side1_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="AB9D6ACB-C80C-4CCC-9E27-29A0BCCC5E10">
+                  <SHORT-NAME>LSoutFunction_Lowout21_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="21E947D1-0007-422D-A369-4081ED8A5B46">
+                  <SHORT-NAME>LSoutFunction_Lowout19_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="652851D5-261A-4018-AB11-3BBB70E78FAA">
+                  <SHORT-NAME>LSoutFunction_Lowout18_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="4FB02867-13C2-4503-BB0C-A57EB59450D0">
+                  <SHORT-NAME>LSoutFunction_Lowout17_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="DEA60A4A-CC60-4D5B-B6DC-359A2AB689C8">
+                  <SHORT-NAME>LSoutFunction_Lowout16_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="78288C6A-B794-411E-AFA3-3765D6C2F29C">
+                  <SHORT-NAME>LSoutFunction_Lowout15_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="4E45EA1B-695F-4814-80EB-2433646F1398">
+                  <SHORT-NAME>LSoutFunction_Lowout14_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="9EF218D1-C836-48F8-B7A8-E7F694C30CF2">
+                  <SHORT-NAME>LSoutFunction_Lowout13_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="439C8034-5FCB-49AA-ABD7-D95CE7F1EFA8">
+                  <SHORT-NAME>LSoutFunction_Lowout12_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="264A3D10-41F3-482B-907B-2DB9AB786031">
+                  <SHORT-NAME>LSoutFunction_Lowout11_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="C0BAEB36-3F69-4FC1-923C-83ACE9099EB3">
+                  <SHORT-NAME>LSoutFunction_Lowout10_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="E589A556-AF87-4453-B7C9-F2EC7F17904B">
+                  <SHORT-NAME>LSoutFunction_Lowout9_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="F9185F19-F2CF-47D4-B01D-355AF6F680B0">
+                  <SHORT-NAME>LSoutFunction_Lowout8_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="C24F17DD-CE50-4E1E-878A-4C9EA86326A4">
+                  <SHORT-NAME>LSoutFunction_Lowout7_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="9E25F32E-AAE7-4382-A827-9026507C1C2D">
+                  <SHORT-NAME>LSoutFunction_Lowout6_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="4B97F030-5487-48BC-9714-CC06C2BBC9FC">
+                  <SHORT-NAME>LSoutFunction_Lowout5_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="5B6BC97F-C5B1-4502-9214-8F4D9A71AFE9">
+                  <SHORT-NAME>LSoutFunction_Lowout_PWMOUT2_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="3C790829-28C1-4EF1-A667-7476714F4A90">
+                  <SHORT-NAME>LSoutFunction_Lowout_PWMOUT1_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="FE9FDB85-4AFD-4669-B468-C3B8C4E400D0">
+                  <SHORT-NAME>LSoutFunction_Lowout_Lamp2_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="E58F41A2-B97E-4B56-817D-7C2DABC46C83">
+                  <SHORT-NAME>LSoutFunction_Lowout_Lamp1_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="F53FA88F-EB69-472E-8AEE-18D213EF9E56">
+                  <SHORT-NAME>LSoutFunction_Lowout24_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="15CB2B01-6118-4154-82AE-0CD7320FFB1E">
+                  <SHORT-NAME>LSoutFunction_Lowout23_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="38FE1EA9-17E8-4864-B73E-3539560BE6D8">
+                  <SHORT-NAME>LSoutFunction_Lowout22_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="EEFC748A-9D97-423C-94BB-072A03315BD8">
+                  <SHORT-NAME>LSoutFunction_Lowout20_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="172C5C6B-236E-4571-97C2-9A4E8CB30913">
+                  <SHORT-NAME>LSoutFunction_Lowout4_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="BB20B58C-AE80-4AF7-8A61-6C3656DD1291">
+                  <SHORT-NAME>LSoutFunction_Lowout3_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="B530B506-659E-4764-924D-20C1178C1F49">
+                  <SHORT-NAME>LSoutFunction_Lowout2_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="770734F4-2052-40F9-A857-70D916427078">
+                  <SHORT-NAME>LSoutFunction_Lowout1_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="9A6404E7-BBED-48FD-AB92-B26B969437D5">
+                  <SHORT-NAME>Motor_OUTPUT_Function_App_Motor_OUTPUT_Function</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="A83BFBF6-56DA-4B01-95D3-3DA293499718">
+                  <SHORT-NAME>VBAT_PowerSupplyFunction_D_VBAT_B_OFF</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="6D782602-A35C-4CB4-9727-C9F92DA90D9D">
+                  <SHORT-NAME>VBAT_PowerSupplyFunction_D_VBAT_A_OFF</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="331D1719-D642-4604-BD36-8630416EF039">
+                  <SHORT-NAME>Ydf_SensorSupply_Funtion_SensorSupply4_5v_OUT_Enable</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="87981383-6839-4416-A7A1-5FE95D0BA36A">
+                  <SHORT-NAME>Ydf_SensorSupply_Funtion_SensorSupply3_5v_OUT_Enable</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="1863D38B-C4B5-4E59-8E49-56E08EC96C5F">
+                  <SHORT-NAME>Ydf_LINComEn_Funtion_LIND_OUT_Enable</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="9F5DD70B-FAE0-4B47-ACCF-B93A73CE6931">
+                  <SHORT-NAME>Ydf_LINComEn_Funtion_LINC_OUT_Enable</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="F3C75CA8-87AD-40C5-9E3C-F9BEB6E42D56">
+                  <SHORT-NAME>Ydf_LINComEn_Funtion_LINB_OUT_Enable</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

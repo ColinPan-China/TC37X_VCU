@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="A9D4FB8A-5B95-4365-8838-EF9B0CD07D4D">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE UUID="05D5C969-B3AB-4F68-A23D-DA57FD85B267">
+          <SHORT-NAME>YDF_ComplexDriver</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="C829A9CD-47AC-4DBC-87FD-AC568250D09C">
+              <SHORT-NAME>YDF_ComplexDriver_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="F131936E-B747-41C1-8AB2-9FB060809A72">
+                  <SHORT-NAME>TMT_BTS_HSDriver</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_ComplexDriver/YDF_ComplexDriver_InternalBehavior/BTS7200_HSDriver</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="01B17852-2C58-4E9D-83F0-27E7B351F0F3">
+                  <SHORT-NAME>TMT_CAN_WKTrcv</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_ComplexDriver/YDF_ComplexDriver_InternalBehavior/CAN_WKTrcv</START-ON-EVENT-REF>
+                  <PERIOD>0.002</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="DCC4C8EB-D9D6-4E56-B20E-A1F138689D9D">
+                  <SHORT-NAME>TMT_Tle8888_Cyc</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_ComplexDriver/YDF_ComplexDriver_InternalBehavior/TLE8888_Cyc</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="5AA86954-DFCE-4F42-9FC5-4AFB1315960A">
+                  <SHORT-NAME>TMT_TLE9201_HBDriver</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/YDF_ComplexDriver/YDF_ComplexDriver_InternalBehavior/TLE9201_HBDriver</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="7B9E5E50-556D-4107-A26C-EB74115CD1A3">
+                  <SHORT-NAME>BTS7200_HSDriver</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>BTS7200_HSDriver</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="462006A6-765A-4D0F-94F9-6925A81560D0">
+                  <SHORT-NAME>CAN_WKTrcv</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>CAN_WKTrcv</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="F6213A33-ED8A-4E64-BBBF-454CEA24F65A">
+                  <SHORT-NAME>TLE8888_Cyc</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>TLE8888_Cyc</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="04FD61B5-19F5-4176-8E02-01F2C3DEA180">
+                  <SHORT-NAME>TLE9201_HBDriver</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                  <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                  <SYMBOL>TLE9201_HBDriver</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="BA38DDFD-C098-481D-AC1D-77D3C07729FE">
+          <SHORT-NAME>YDF_ComplexDriver_Implementation</SHORT-NAME>
+          <CODE-DESCRIPTORS>
+            <CODE UUID="7F508E5E-84E2-4244-B471-581A1141EDBD">
+              <SHORT-NAME>Default</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+            </CODE>
+          </CODE-DESCRIPTORS>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/YDF_ComplexDriver/YDF_ComplexDriver_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
