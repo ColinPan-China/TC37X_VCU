@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Resource_Lcfg.c
- *   Generation Time: 2025-09-19 09:19:30
+ *   Generation Time: 2025-09-26 10:10:13
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -144,7 +144,7 @@ CONST(Os_ResourceConfigType, OS_CONST) OsCfg_Resource_OsResource_Core1 =
   },
   /* .Core            = */ &OsCfg_Core_OsCore1,
   /* .ResourceId      = */ OsResource_Core1,
-  /* .CeilingPriority = */ 5
+  /* .CeilingPriority = */ 4
 };
 
 #define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
@@ -166,7 +166,7 @@ CONST(Os_ResourceConfigType, OS_CONST) OsCfg_Resource_OsResource_Core2 =
   },
   /* .Core            = */ &OsCfg_Core_OsCore2,
   /* .ResourceId      = */ OsResource_Core2,
-  /* .CeilingPriority = */ 5
+  /* .CeilingPriority = */ 7
 };
 
 #define OS_STOP_SEC_CORE2_CONST_UNSPECIFIED

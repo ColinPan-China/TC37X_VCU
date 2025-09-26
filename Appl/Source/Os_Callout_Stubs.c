@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Callout_Stubs.c
- *   Generation Time: 2024-08-29 16:00:27
+ *   Generation Time: 2025-09-26 10:46:06
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -104,15 +104,20 @@ FUNC(void, OS_SHUTDOWNHOOK_CODE) ShutdownHook(StatusType Fatalerror)
 #if OS_CFG_ERRORHOOK_SYSTEM == STD_ON
 # define OS_START_SEC_ERRORHOOK_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
+Os_ErrorInformationType CurrentError;
+TaskType activatedTask;
 FUNC(void, OS_ERRORHOOK_CODE) ErrorHook(StatusType Error)
 {
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK OS_Callout_Stubs_ErrorHook>
  *********************************************************************************************************************/
-  Os_ErrorInformationType CurrentError;
+
   volatile uint8 endless = 1u;
   (void)Os_GetDetailedError(&CurrentError);
+  if(CurrentError.Error == OS_STATUS_LIMIT)
+  {
+    activatedTask = OSError_ActivateTask_TaskID();
+  }
   while(endless)
   {
     

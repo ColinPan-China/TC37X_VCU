@@ -50,7 +50,7 @@ extern "C"
 /**********************************************************************************************************************
  * extern declaration of RTE buffers for optimized macro implementation
  *********************************************************************************************************************/
-#  define RTE_START_SEC_VAR_SystemApplication_OsCore2_INIT_UNSPECIFIED
+#  define RTE_START_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_ChrgComM_RTE_P_DCChrMgmt_BEMTxReqSts_Enum_tec_DCChrMgmt_BEMTxReqSts_Enum;
@@ -135,7 +135,7 @@ extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_HVSfty_RTE_P_ErrMgmt_VCUHVILErr_Flg_t
 extern VAR(uint16, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_LvBattMgmt_RTE_P_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg;
 
-#  define RTE_STOP_SEC_VAR_SystemApplication_OsCore2_INIT_UNSPECIFIED
+#  define RTE_STOP_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 # endif /* !defined(RTE_CORE) */

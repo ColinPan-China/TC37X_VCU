@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Lcfg.c
- *   Generation Time: 2025-09-25 13:15:47
+ *   Generation Time: 2025-09-26 10:46:06
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -238,6 +238,7 @@ OS_LOCAL CONST(Os_ResourceConfigRefType, OS_CONST) OsCfg_Core_OsCore0_ResourceRe
 /*! Object reference table for core stacks: OsCore0 */
 OS_LOCAL CONST(Os_StackConfigRefType, OS_CONST) OsCfg_Core_OsCore0_StackRefs[OS_CFG_NUM_CORE_OSCORE0_STACKS + 1u] =
 {
+  (Os_StackConfigRefType) &OsCfg_Stack_Core0_AswTask,
   (Os_StackConfigRefType) &OsCfg_Stack_Core0_Bsw_Task,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Error,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Init,
@@ -247,8 +248,6 @@ OS_LOCAL CONST(Os_StackConfigRefType, OS_CONST) OsCfg_Core_OsCore0_StackRefs[OS_
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio4294967295,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio49,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio50,
-  (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio63,
-  (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio64,
   NULL_PTR
 };
 
@@ -387,12 +386,14 @@ OS_LOCAL CONST(Os_ResourceConfigRefType, OS_CONST) OsCfg_Core_OsCore1_ResourceRe
 /*! Object reference table for core stacks: OsCore1 */
 OS_LOCAL CONST(Os_StackConfigRefType, OS_CONST) OsCfg_Core_OsCore1_StackRefs[OS_CFG_NUM_CORE_OSCORE1_STACKS + 1u] =
 {
+  (Os_StackConfigRefType) &OsCfg_Stack_Core1_Bsw_Task,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Error,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Init,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Isr_Core,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Kernel,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Shutdown,
-  (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Task_Prio0,
+  (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Task_Prio40,
+  (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Task_Prio41,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Task_Prio4294967295,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Task_Prio49,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Task_Prio50,
@@ -503,7 +504,6 @@ OS_LOCAL CONST(Os_ResourceConfigRefType, OS_CONST) OsCfg_Core_OsCore2_ResourceRe
 /*! Object reference table for core stacks: OsCore2 */
 OS_LOCAL CONST(Os_StackConfigRefType, OS_CONST) OsCfg_Core_OsCore2_StackRefs[OS_CFG_NUM_CORE_OSCORE2_STACKS + 1u] =
 {
-  (Os_StackConfigRefType) &OsCfg_Stack_Core2_Asw_Task,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore2_Error,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore2_Init,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore2_Isr_Core,

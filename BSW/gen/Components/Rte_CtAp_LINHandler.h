@@ -68,7 +68,7 @@ extern VAR(U_BATT_LIN01, RTE_VAR_INIT_NOCACHE) Rte_U_BATT_oBS_01_oATOM_HWLIN1_cc
 #  define RTE_STOP_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-#  define RTE_START_SEC_VAR_SystemApplication_OsCore2_INIT_UNSPECIFIED
+#  define RTE_START_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_LINHandler_RTE_P_ComM_BS01_IsUpdated_tec_ComM_BS01_IsUpdated;
@@ -115,7 +115,7 @@ extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_FltReactn_RTE_P_ErrMgmt_HvBattFailLamp_
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_LvBattMgmt_RTE_P_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_LvBattMgmt_RTE_P_LvMgmt_IndicatorLightStsInfo_tec_LvMgmt_IndicatorLightStsInfo;
 
-#  define RTE_STOP_SEC_VAR_SystemApplication_OsCore2_INIT_UNSPECIFIED
+#  define RTE_STOP_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 # endif /* !defined(RTE_CORE) */
@@ -388,9 +388,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_LINHandler_VCU_IVI_VrState_LIN00_V
  * Rte_IsUpdated_<p>_<d> (explicit S/R communication with isQueued = false)
  *********************************************************************************************************************/
 #  define Rte_IsUpdated_FRC_ComFtonNet_FRC_ComFtonNet Rte_IsUpdated_CtAp_LINHandler_FRC_ComFtonNet_FRC_ComFtonNet
-#  define Rte_IsUpdated_CtAp_LINHandler_FRC_ComFtonNet_FRC_ComFtonNet() (Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_FRC_ComFtonNet_FRC_ComFtonNet != Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_FRC_ComFtonNet_FRC_ComFtonNet_Sender)
+#  define Rte_IsUpdated_CtAp_LINHandler_FRC_ComFtonNet_FRC_ComFtonNet() (Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_FRC_ComFtonNet_FRC_ComFtonNet != Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_FRC_ComFtonNet_FRC_ComFtonNet_Sender)
 #  define Rte_IsUpdated_Resp_Error_LIN01_Resp_Error_LIN01 Rte_IsUpdated_CtAp_LINHandler_Resp_Error_LIN01_Resp_Error_LIN01
-#  define Rte_IsUpdated_CtAp_LINHandler_Resp_Error_LIN01_Resp_Error_LIN01() (Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_Resp_Error_LIN01_Resp_Error_LIN01 != Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_Resp_Error_LIN01_Resp_Error_LIN01_Sender)
+#  define Rte_IsUpdated_CtAp_LINHandler_Resp_Error_LIN01_Resp_Error_LIN01() (Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_Resp_Error_LIN01_Resp_Error_LIN01 != Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_Resp_Error_LIN01_Resp_Error_LIN01_Sender)
 
 
 /**********************************************************************************************************************

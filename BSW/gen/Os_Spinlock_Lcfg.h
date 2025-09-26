@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Spinlock_Lcfg.h
- *   Generation Time: 2025-09-25 10:42:48
+ *   Generation Time: 2025-09-26 10:46:07
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2

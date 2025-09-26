@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Compiler_Cfg.h
- *   Generation Time: 2025-09-19 09:19:29
+ *   Generation Time: 2025-09-26 09:57:00
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -60,7 +60,6 @@
 # define OS_CANISR_4_CODE
 # define OS_CANISR_6_CODE
 # define OS_CORE0_ASWTASK_CODE
-# define OS_CORE0_ASW_INIT_CODE
 # define OS_CORE0_BSW_TASK_CODE
 # define OS_CORE1_ASW_INIT_CODE
 # define OS_CORE1_ASW_TASK_CODE

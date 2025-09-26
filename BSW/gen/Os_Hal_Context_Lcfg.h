@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Context_Lcfg.h
- *   Generation Time: 2025-09-19 09:31:42
+ *   Generation Time: 2025-09-26 09:57:00
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -181,10 +181,6 @@ extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Leve
 
 /*! HAL dynamic task context data: Core0_AswTask */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Core0_AswTask_Dyn;
-
-
-/*! HAL dynamic task context data: Core0_Asw_Init */
-extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Core0_Asw_Init_Dyn;
 
 
 /*! HAL dynamic task context data: Core0_Bsw_Task */
@@ -425,9 +421,6 @@ extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_XSignalIsr_Os
 
 /*! HAL task context configuration data: Core0_AswTask */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core0_AswTask;
-
-/*! HAL task context configuration data: Core0_Asw_Init */
-extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core0_Asw_Init;
 
 /*! HAL task context configuration data: Core0_Bsw_Task */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core0_Bsw_Task;

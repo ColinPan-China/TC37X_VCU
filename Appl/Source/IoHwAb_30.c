@@ -241,6 +241,16 @@ FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_10ms(void)
   Tle9201sg_Main();
   SensorMngMain();
 
+  ComM_RequestComMode(0,2);
+  ComM_RequestComMode(1,2);
+  ComM_RequestComMode(2,2);
+  ComM_RequestComMode(3,2);
+  ComM_RequestComMode(4,2);
+  ComM_RequestComMode(5,2);
+  ComM_RequestComMode(5,2);
+  ComM_RequestComMode(6,2);
+  ComM_RequestComMode(7,2);
+
   /*ICU Measurement*/
   MessureFlg++;
   if(MessureFlg >= 100 )

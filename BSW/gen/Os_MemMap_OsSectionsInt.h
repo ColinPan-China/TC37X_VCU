@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_MemMap_OsSectionsInt.h
- *   Generation Time: 2025-09-25 10:42:48
+ *   Generation Time: 2025-09-26 10:46:07
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -1140,35 +1140,35 @@
  *  CORESHARED VAR SECTIONS
  *********************************************************************************************************************/
 
-/* Cores: [OsCore0, OsCore2] */
-#ifdef OS_START_SEC_CORESHARED_0X00000005_VAR_NOCACHE_NOINIT_UNSPECIFIED
+/* Cores: [OsCore0, OsCore1] */
+#ifdef OS_START_SEC_CORESHARED_0X00000003_VAR_NOCACHE_NOINIT_UNSPECIFIED
 # ifdef OS_MEMMAP_SECTION_OPEN
 #  error A MemMap section is already open. Nesting is not supported.
 # endif
 # define OS_MEMMAP_SECTION_OPEN
-# define OS_CORESHARED_0X00000005_VAR_NOCACHE_NOINIT_UNSPECIFIED_OPEN
+# define OS_CORESHARED_0X00000003_VAR_NOCACHE_NOINIT_UNSPECIFIED_OPEN
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
-# pragma section farnoclear "OS_CORESHARED_0X00000005_VAR_NOCACHE_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section farbss "OS_CORESHARED_0X00000005_VAR_NOCACHE_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section nearnoclear "OS_CORESHARED_0X00000005_VAR_FAST_NOCACHE_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# pragma section nearbss "OS_CORESHARED_0X00000005_VAR_FAST_NOCACHE_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# undef OS_START_SEC_CORESHARED_0X00000005_VAR_NOCACHE_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section farnoclear "OS_CORESHARED_0X00000003_VAR_NOCACHE_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section farbss "OS_CORESHARED_0X00000003_VAR_NOCACHE_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearnoclear "OS_CORESHARED_0X00000003_VAR_FAST_NOCACHE_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# pragma section nearbss "OS_CORESHARED_0X00000003_VAR_FAST_NOCACHE_NOINIT" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_CORESHARED_0X00000003_VAR_NOCACHE_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
 #endif
 
-#ifdef OS_STOP_SEC_CORESHARED_0X00000005_VAR_NOCACHE_NOINIT_UNSPECIFIED
+#ifdef OS_STOP_SEC_CORESHARED_0X00000003_VAR_NOCACHE_NOINIT_UNSPECIFIED
 # ifndef OS_MEMMAP_SECTION_OPEN
 #  error No MemMap section is currently opened.
 # endif
 # undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
-# ifndef OS_CORESHARED_0X00000005_VAR_NOCACHE_NOINIT_UNSPECIFIED_OPEN
-#  error Section OS_CORESHARED_0X00000005_VAR_NOCACHE_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
+# ifndef OS_CORESHARED_0X00000003_VAR_NOCACHE_NOINIT_UNSPECIFIED_OPEN
+#  error Section OS_CORESHARED_0X00000003_VAR_NOCACHE_NOINIT_UNSPECIFIED is currently not opened and so cannot be closed.
 # endif
-# undef OS_CORESHARED_0X00000005_VAR_NOCACHE_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef OS_CORESHARED_0X00000003_VAR_NOCACHE_NOINIT_UNSPECIFIED_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
 # pragma section farnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
 # pragma section farbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
 # pragma section nearnoclear restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
 # pragma section nearbss restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
-# undef OS_STOP_SEC_CORESHARED_0X00000005_VAR_NOCACHE_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef OS_STOP_SEC_CORESHARED_0X00000003_VAR_NOCACHE_NOINIT_UNSPECIFIED /* PRQA S 0841 */ /* MD_MSR_Undef */
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
 #endif
 

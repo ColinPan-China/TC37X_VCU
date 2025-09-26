@@ -4540,7 +4540,7 @@ FUNC(void, CtAp_CANHandler_CODE) R_CANHandlerInput_Cyclic_100ms(void) /* PRQA S 
  * Symbol: R_CANHandlerInput_Cyclic_10ms_doc
  *********************************************************************************************************************/
 
-
+SG_VCU_IBS_01_SigGroup IBS_01data;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -4551,7 +4551,12 @@ FUNC(void, CtAp_CANHandler_CODE) R_CANHandlerInput_Cyclic_10ms(void) /* PRQA S 0
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: R_CANHandlerInput_Cyclic_10ms
  *********************************************************************************************************************/
-
+IBS_01data.VCU_MotorActualTorque = 2;
+IBS_01data.VCU_MotorActualTorqueValid = 1;
+IBS_01data.VCU_OPStandstillReq = 3;
+IBS_01data.VCU_WheelTrqACT = 4;
+IBS_01data.VCU_WheelTrqACTValid = 1;
+ E2EPW_Write_SG_VCU_IBS_01_SigGroup_SG_VCU_IBS_01_SigGroup(&IBS_01data);
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

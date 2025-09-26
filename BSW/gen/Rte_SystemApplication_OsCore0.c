@@ -1021,17 +1021,17 @@ VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM
 #define RTE_CONST_MSEC_SystemTimer_Core0_10 (10UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_10 (10UL)
 #define RTE_CONST_MSEC_SystemTimer_Core2_10 (10UL)
-#define RTE_CONST_MSEC_SystemTimer_Core2_100 (100UL)
+#define RTE_CONST_MSEC_SystemTimer_Core1_100 (100UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_20 (20UL)
-#define RTE_CONST_MSEC_SystemTimer_Core2_20 (20UL)
-#define RTE_CONST_MSEC_SystemTimer_Core2_200 (200UL)
+#define RTE_CONST_MSEC_SystemTimer_Core1_20 (20UL)
+#define RTE_CONST_MSEC_SystemTimer_Core1_200 (200UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_5 (5UL)
-#define RTE_CONST_MSEC_SystemTimer_Core2_50 (50UL)
+#define RTE_CONST_MSEC_SystemTimer_Core1_50 (50UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_500 (500UL)
-#define RTE_CONST_MSEC_SystemTimer_Core2_500 (500UL)
+#define RTE_CONST_MSEC_SystemTimer_Core1_500 (500UL)
 
-#define RTE_CONST_SEC_SystemTimer_Core2_0 (0UL)
-#define RTE_CONST_SEC_SystemTimer_Core2_1 (1000UL)
+#define RTE_CONST_SEC_SystemTimer_Core1_0 (0UL)
+#define RTE_CONST_SEC_SystemTimer_Core1_1 (1000UL)
 
 
 /**********************************************************************************************************************
@@ -6159,30 +6159,29 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmEcuReset_DcmEcuReset(Dcm_EcuRes
  * Task:     Core0_AswTask
  * Priority: 64
  * Schedule: FULL
- * Alarm:    Cycle Time 0.5 s Alarm Offset 0 s
  *********************************************************************************************************************/
 TASK(Core0_AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 {
+  EventMaskType ev;
 
-  /* call runnable */
-  IoHwAb_IoHwAbRunnable_500ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+  for(;;)
+  {
+    (void)WaitEvent(Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms | Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_500ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)GetEvent(Core0_AswTask, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms | Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_500ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
-  (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+    if ((ev & Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_500ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      IoHwAb_IoHwAbRunnable_500ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
 
-/**********************************************************************************************************************
- * Task:     Core0_Asw_Init
- * Priority: 63
- * Schedule: FULL
- * Alarm:    Cycle Time 0.01 s Alarm Offset 0 s
- *********************************************************************************************************************/
-TASK(Core0_Asw_Init) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
-{
-
-  /* call runnable */
-  IoHwAb_IoHwAbRunnable_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-  (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
+    if ((ev & Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      IoHwAb_IoHwAbRunnable_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+  }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 /**********************************************************************************************************************

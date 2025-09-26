@@ -2122,17 +2122,17 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
 #define RTE_CONST_MSEC_SystemTimer_Core0_10 (10UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_10 (10UL)
 #define RTE_CONST_MSEC_SystemTimer_Core2_10 (10UL)
-#define RTE_CONST_MSEC_SystemTimer_Core2_100 (100UL)
+#define RTE_CONST_MSEC_SystemTimer_Core1_100 (100UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_20 (20UL)
-#define RTE_CONST_MSEC_SystemTimer_Core2_20 (20UL)
-#define RTE_CONST_MSEC_SystemTimer_Core2_200 (200UL)
+#define RTE_CONST_MSEC_SystemTimer_Core1_20 (20UL)
+#define RTE_CONST_MSEC_SystemTimer_Core1_200 (200UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_5 (5UL)
-#define RTE_CONST_MSEC_SystemTimer_Core2_50 (50UL)
+#define RTE_CONST_MSEC_SystemTimer_Core1_50 (50UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_500 (500UL)
-#define RTE_CONST_MSEC_SystemTimer_Core2_500 (500UL)
+#define RTE_CONST_MSEC_SystemTimer_Core1_500 (500UL)
 
-#define RTE_CONST_SEC_SystemTimer_Core2_0 (0UL)
-#define RTE_CONST_SEC_SystemTimer_Core2_1 (1000UL)
+#define RTE_CONST_SEC_SystemTimer_Core1_0 (0UL)
+#define RTE_CONST_SEC_SystemTimer_Core1_1 (1000UL)
 
 
 /**********************************************************************************************************************
@@ -2261,6 +2261,9 @@ FUNC(void, RTE_CODE) SchM_Init(void)
   }
   if (id == OS_CORE_ID_1) /* PRQA S 1843 */ /* MD_Rte_Os */
   {
+    /* activate the tasks */
+    (void)ActivateTask(Core1_Bsw_Task); /* PRQA S 3417 */ /* MD_Rte_Os */
+
     Rte_InitState_1 = RTE_STATE_SCHM_INIT;
   }
   if (id == OS_CORE_ID_2) /* PRQA S 1843 */ /* MD_Rte_Os */
@@ -2314,17 +2317,21 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
   uint32 id = GetCoreID();
   if (id == OS_CORE_ID_0) /* PRQA S 1843 */ /* MD_Rte_Os */
   {
+    /* activate the tasks */
+    (void)ActivateTask(Core0_AswTask); /* PRQA S 3417 */ /* MD_Rte_Os */
+
     /* activate the alarms used for TimingEvents */
-    (void)SetRelAlarm(Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(500)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
-    (void)SetRelAlarm(Rte_Al_TE_Core2_Asw_Task_0_100ms, RTE_MSEC_SystemTimer_Core2(0) + (TickType)1, RTE_MSEC_SystemTimer_Core2(100)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
-    (void)SetRelAlarm(Rte_Al_TE_Core2_Asw_Task_0_10ms, RTE_MSEC_SystemTimer_Core2(0) + (TickType)1, RTE_MSEC_SystemTimer_Core2(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
-    (void)SetRelAlarm(Rte_Al_TE_Core2_Asw_Task_0_200ms, RTE_MSEC_SystemTimer_Core2(0) + (TickType)1, RTE_MSEC_SystemTimer_Core2(200)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
-    (void)SetRelAlarm(Rte_Al_TE_Core2_Asw_Task_0_20ms, RTE_MSEC_SystemTimer_Core2(0) + (TickType)1, RTE_MSEC_SystemTimer_Core2(20)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
-    (void)SetRelAlarm(Rte_Al_TE_Core2_Asw_Task_0_50ms, RTE_MSEC_SystemTimer_Core2(0) + (TickType)1, RTE_MSEC_SystemTimer_Core2(50)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
-    (void)SetRelAlarm(Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms, RTE_SEC_SystemTimer_Core2(0) + (TickType)1, RTE_SEC_SystemTimer_Core2(1)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
-    (void)SetRelAlarm(Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms, RTE_MSEC_SystemTimer_Core2(0) + (TickType)1, RTE_MSEC_SystemTimer_Core2(500)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(500)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_Core1_Bsw_Task_0_100ms, RTE_MSEC_SystemTimer_Core1(0) + (TickType)1, RTE_MSEC_SystemTimer_Core1(100)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_Core1_Bsw_Task_0_10ms, RTE_MSEC_SystemTimer_Core1(0) + (TickType)1, RTE_MSEC_SystemTimer_Core1(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_Core1_Bsw_Task_0_200ms, RTE_MSEC_SystemTimer_Core1(0) + (TickType)1, RTE_MSEC_SystemTimer_Core1(200)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_Core1_Bsw_Task_0_20ms, RTE_MSEC_SystemTimer_Core1(0) + (TickType)1, RTE_MSEC_SystemTimer_Core1(20)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_Core1_Bsw_Task_0_50ms, RTE_MSEC_SystemTimer_Core1(0) + (TickType)1, RTE_MSEC_SystemTimer_Core1(50)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms, RTE_SEC_SystemTimer_Core1(0) + (TickType)1, RTE_SEC_SystemTimer_Core1(1)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms, RTE_MSEC_SystemTimer_Core1(0) + (TickType)1, RTE_MSEC_SystemTimer_Core1(500)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms, RTE_MSEC_SystemTimer_Core1(0) + (TickType)1, RTE_MSEC_SystemTimer_Core1(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_Core2App_SWC_Core2App_SWC_Runnable_10ms, RTE_MSEC_SystemTimer_Core2(0) + (TickType)1, RTE_MSEC_SystemTimer_Core2(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
 
     Rte_StartTiming_InitState = RTE_STATE_INIT;
     Rte_InitState = RTE_STATE_INIT;
@@ -2342,7 +2349,6 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
   {
     /* activate the tasks */
     (void)ActivateTask(Core2_Asw_Init); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ActivateTask(Core2_Asw_Task); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     Rte_InitState_2 = RTE_STATE_INIT;
 
@@ -2357,16 +2363,17 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void)
   {
     Rte_StartTiming_InitState = RTE_STATE_UNINIT;
     /* deactivate alarms */
-    (void)CancelAlarm(Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)CancelAlarm(Rte_Al_TE_Core2_Asw_Task_0_100ms); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)CancelAlarm(Rte_Al_TE_Core2_Asw_Task_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)CancelAlarm(Rte_Al_TE_Core2_Asw_Task_0_200ms); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)CancelAlarm(Rte_Al_TE_Core2_Asw_Task_0_20ms); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)CancelAlarm(Rte_Al_TE_Core2_Asw_Task_0_50ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_Core1_Bsw_Task_0_100ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_Core1_Bsw_Task_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_Core1_Bsw_Task_0_200ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_Core1_Bsw_Task_0_20ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_Core1_Bsw_Task_0_50ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_Core2App_SWC_Core2App_SWC_Runnable_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     Rte_InitState = RTE_STATE_SCHM_INIT;
 
@@ -2986,7 +2993,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_CCS_OutputVoltage_oCCS_oJ1939_bms_e8aa6018_Rx(vo
     {
       (void)Com_ReceiveSignal(ComConf_ComSignal_CCS_OutputVoltage_oCCS_oJ1939_bms_e8aa6018_Rx, (&Rte_CCS_OutputVoltage_oCCS_oJ1939_bms_e8aa6018_Rx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
     }
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CCS_OutputVoltage_CCS_OutputVoltage_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CCS_OutputVoltage_CCS_OutputVoltage; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CCS_OutputVoltage_CCS_OutputVoltage_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CCS_OutputVoltage_CCS_OutputVoltage; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_CCS_OutputVoltage_oCCS_oJ1939_bms_e8aa6018_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3000,7 +3007,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_CEM_BatteryChargeRequireTimeout_oCEM_oJ1939_bms_
     {
       (void)Com_ReceiveSignal(ComConf_ComSignal_CEM_BatteryChargeRequireTimeout_oCEM_oJ1939_bms_5fb156f4_Rx, (&Rte_CEM_BatteryChargeRequireTimeout_oCEM_oJ1939_bms_5fb156f4_Rx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
     }
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CEM_BatteryChargeRequireTimeout_CEM_BatteryChargeRequireTimeout_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CEM_BatteryChargeRequireTimeout_CEM_BatteryChargeRequireTimeout; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CEM_BatteryChargeRequireTimeout_CEM_BatteryChargeRequireTimeout_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CEM_BatteryChargeRequireTimeout_CEM_BatteryChargeRequireTimeout; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_CEM_BatteryChargeRequireTimeout_oCEM_oJ1939_bms_5fb156f4_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3014,7 +3021,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_CHM_ProtocolVersion_oCHM_oJ1939_bms_0a8dbb13_Rx(
     {
       (void)Com_ReceiveSignal(ComConf_ComSignal_CHM_ProtocolVersion_oCHM_oJ1939_bms_0a8dbb13_Rx, (&Rte_CHM_ProtocolVersion_oCHM_oJ1939_bms_0a8dbb13_Rx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
     }
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CHM_ProtocolVersion_CHM_ProtocolVersion_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CHM_ProtocolVersion_CHM_ProtocolVersion; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CHM_ProtocolVersion_CHM_ProtocolVersion_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CHM_ProtocolVersion_CHM_ProtocolVersion; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_CHM_ProtocolVersion_oCHM_oJ1939_bms_0a8dbb13_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3028,7 +3035,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_CML_OutpuVoltageMax_oCML_oJ1939_bms_5dd5d6c5_Rx(
     {
       (void)Com_ReceiveSignal(ComConf_ComSignal_CML_OutpuVoltageMax_oCML_oJ1939_bms_5dd5d6c5_Rx, (&Rte_CML_OutpuVoltageMax_oCML_oJ1939_bms_5dd5d6c5_Rx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
     }
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CML_OutpuVoltageMax_CML_OutpuVoltageMax_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CML_OutpuVoltageMax_CML_OutpuVoltageMax; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CML_OutpuVoltageMax_CML_OutpuVoltageMax_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CML_OutpuVoltageMax_CML_OutpuVoltageMax; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_CML_OutpuVoltageMax_oCML_oJ1939_bms_5dd5d6c5_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3081,7 +3088,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_CRM_RecognitionResult_oCRM_oJ1939_bms_dd9063d0_R
     {
       (void)Com_ReceiveSignal(ComConf_ComSignal_CRM_RecognitionResult_oCRM_oJ1939_bms_dd9063d0_Rx, (&Rte_CRM_RecognitionResult_oCRM_oJ1939_bms_dd9063d0_Rx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
     }
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CRM_RecognitionResult_CRM_RecognitionResult_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CRM_RecognitionResult_CRM_RecognitionResult; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CRM_RecognitionResult_CRM_RecognitionResult_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CRM_RecognitionResult_CRM_RecognitionResult; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_CRM_RecognitionResult_oCRM_oJ1939_bms_dd9063d0_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3095,7 +3102,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_CRO_ChargerReady_oCRO_oJ1939_bms_5ed7a56d_Rx(voi
     {
       (void)Com_ReceiveSignal(ComConf_ComSignal_CRO_ChargerReady_oCRO_oJ1939_bms_5ed7a56d_Rx, (&Rte_CRO_ChargerReady_oCRO_oJ1939_bms_5ed7a56d_Rx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
     }
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CRO_ChargerReady_CRO_ChargerReady_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CRO_ChargerReady_CRO_ChargerReady; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CRO_ChargerReady_CRO_ChargerReady_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CRO_ChargerReady_CRO_ChargerReady; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_CRO_ChargerReady_oCRO_oJ1939_bms_5ed7a56d_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3109,7 +3116,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_CSD_ChargerNo_oCSD_oJ1939_bms_26864bff_Rx(void)
     {
       (void)Com_ReceiveSignal(ComConf_ComSignal_CSD_ChargerNo_oCSD_oJ1939_bms_26864bff_Rx, (&Rte_CSD_ChargerNo_oCSD_oJ1939_bms_26864bff_Rx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
     }
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CSD_ChargerNo_CSD_ChargerNo_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CSD_ChargerNo_CSD_ChargerNo; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CSD_ChargerNo_CSD_ChargerNo_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CSD_ChargerNo_CSD_ChargerNo; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_CSD_ChargerNo_oCSD_oJ1939_bms_26864bff_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3123,7 +3130,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_CST_AbortAchiveCondition_oCST_oJ1939_bms_ed49cd8
     {
       (void)Com_ReceiveSignal(ComConf_ComSignal_CST_AbortAchiveCondition_oCST_oJ1939_bms_ed49cd8a_Rx, (&Rte_CST_AbortAchiveCondition_oCST_oJ1939_bms_ed49cd8a_Rx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
     }
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CST_AbortAchiveCondition_CST_AbortAchiveCondition_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CST_AbortAchiveCondition_CST_AbortAchiveCondition; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CST_AbortAchiveCondition_CST_AbortAchiveCondition_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CST_AbortAchiveCondition_CST_AbortAchiveCondition; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_CST_AbortAchiveCondition_oCST_oJ1939_bms_ed49cd8a_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3137,7 +3144,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_CTS_Year_oCTS_oJ1939_bms_66f2efa9_Rx(void)
     {
       (void)Com_ReceiveSignal(ComConf_ComSignal_CTS_Year_oCTS_oJ1939_bms_66f2efa9_Rx, (&Rte_CTS_Year_oCTS_oJ1939_bms_66f2efa9_Rx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
     }
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CTS_Year_CTS_Year_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CTS_Year_CTS_Year; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CTS_Year_CTS_Year_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_CTS_Year_CTS_Year; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_CTS_Year_oCTS_oJ1939_bms_66f2efa9_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3151,7 +3158,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_FRC_ComFtonNet_oFRC_01_oATOM_HWLIN1_9657f14b_Rx(
     {
       (void)Com_ReceiveSignal(ComConf_ComSignal_FRC_ComFtonNet_oFRC_01_oATOM_HWLIN1_9657f14b_Rx, (&Rte_FRC_ComFtonNet_oFRC_01_oATOM_HWLIN1_9657f14b_Rx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
     }
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_FRC_ComFtonNet_FRC_ComFtonNet_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_FRC_ComFtonNet_FRC_ComFtonNet; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_FRC_ComFtonNet_FRC_ComFtonNet_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_FRC_ComFtonNet_FRC_ComFtonNet; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_FRC_ComFtonNet_oFRC_01_oATOM_HWLIN1_9657f14b_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3230,7 +3237,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_Resp_Error_oBS_01_oATOM_HWLIN1_f35fadbf_Rx(void)
     {
       (void)Com_ReceiveSignal(ComConf_ComSignal_Resp_Error_oBS_01_oATOM_HWLIN1_f35fadbf_Rx, (&Rte_Resp_Error_oBS_01_oATOM_HWLIN1_f35fadbf_Rx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
     }
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_Resp_Error_LIN01_Resp_Error_LIN01_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_Resp_Error_LIN01_Resp_Error_LIN01; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_Resp_Error_LIN01_Resp_Error_LIN01_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_LINHandler_Resp_Error_LIN01_Resp_Error_LIN01; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_Resp_Error_oBS_01_oATOM_HWLIN1_f35fadbf_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3246,7 +3253,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_ACU_01_SigGroup_oACU_01_oATOM_CANFD_Matrix_CH
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_ACU_YawRateStatus_oACU_01_oATOM_CANFD_Matrix_CH_V600_202502_a5dd4854_Rx, &(*(&Rte_SG_ACU_01_SigGroup_oACU_01_oATOM_CANFD_Matrix_CH_V600_202502_0a16dd9e_Rx)).ACU_YawRateStatus); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_Checksum_0F5_oACU_01_oATOM_CANFD_Matrix_CH_V600_202502_21944b83_Rx, &(*(&Rte_SG_ACU_01_SigGroup_oACU_01_oATOM_CANFD_Matrix_CH_V600_202502_0a16dd9e_Rx)).Checksum_0F5); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0F5_oACU_01_oATOM_CANFD_Matrix_CH_V600_202502_e1f37972_Rx, &(*(&Rte_SG_ACU_01_SigGroup_oACU_01_oATOM_CANFD_Matrix_CH_V600_202502_0a16dd9e_Rx)).MessageCounter_0F5); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ACU_01_SigGroup_SG_ACU_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ACU_01_SigGroup_SG_ACU_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ACU_01_SigGroup_SG_ACU_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ACU_01_SigGroup_SG_ACU_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_ACU_01_SigGroup_oACU_01_oATOM_CANFD_Matrix_CH_V600_202502_0a16dd9e_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3264,7 +3271,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_ACU_02_SigGroup_oACU_02_oATOM_CANFD_Matrix_CH
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_ACU_LgtAStatus_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502_8eba5290_Rx, &(*(&Rte_SG_ACU_02_SigGroup_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502_3b90e790_Rx)).ACU_LgtAStatus); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_Checksum_0F6_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502_63736e97_Rx, &(*(&Rte_SG_ACU_02_SigGroup_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502_3b90e790_Rx)).Checksum_0F6); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0F6_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502_a3145c66_Rx, &(*(&Rte_SG_ACU_02_SigGroup_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502_3b90e790_Rx)).MessageCounter_0F6); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ACU_02_SigGroup_SG_ACU_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ACU_02_SigGroup_SG_ACU_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ACU_02_SigGroup_SG_ACU_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ACU_02_SigGroup_SG_ACU_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_ACU_02_SigGroup_oACU_02_oATOM_CANFD_Matrix_CH_V600_202502_3b90e790_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3295,7 +3302,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_ACU_info_SigGroup_oACU_info_oATOM_CANFD_Matri
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_ACU_WarningLampSts_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502_9c596fcb_Rx, &(*(&Rte_SG_ACU_info_SigGroup_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502_5b63ef23_Rx)).ACU_WarningLampSts); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_Checksum_097_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502_591da21b_Rx, &(*(&Rte_SG_ACU_info_SigGroup_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502_5b63ef23_Rx)).Checksum_097); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_097_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502_9c6de300_Rx, &(*(&Rte_SG_ACU_info_SigGroup_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502_5b63ef23_Rx)).MessageCounter_097); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ACU_info_SigGroup_SG_ACU_info_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ACU_info_SigGroup_SG_ACU_info_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ACU_info_SigGroup_SG_ACU_info_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ACU_info_SigGroup_SG_ACU_info_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_ACU_info_SigGroup_oACU_info_oATOM_CANFD_Matrix_CH_V600_202502_5b63ef23_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3312,7 +3319,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_ADCU_ACC_02_SigGroup_oADCU_ACC_02_oATOM_CANFD
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_ADCU_ACC_Mode_oADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502_4b80afee_Rx, &(*(&Rte_SG_ADCU_ACC_02_SigGroup_oADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502_1e479296_Rx)).ADCU_ACC_Mode); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_Checksum_0E0_oADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502_31389c92_Rx, &(*(&Rte_SG_ADCU_ACC_02_SigGroup_oADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502_1e479296_Rx)).Checksum_0E0); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0E0_oADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502_982cdfbe_Rx, &(*(&Rte_SG_ADCU_ACC_02_SigGroup_oADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502_1e479296_Rx)).MessageCounter_0E0); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_ACC_02_SigGroup_SG_ADCU_ACC_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_ACC_02_SigGroup_SG_ADCU_ACC_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_ACC_02_SigGroup_SG_ADCU_ACC_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_ACC_02_SigGroup_SG_ADCU_ACC_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_ADCU_ACC_02_SigGroup_oADCU_ACC_02_oATOM_CANFD_Matrix_CH_V600_202502_1e479296_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3335,7 +3342,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_ADCU_AEB_01_SigGroup_oADCU_AEB_01_oATOM_CANFD
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_ADCU_FCW_State_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502_858628ce_Rx, &(*(&Rte_SG_ADCU_AEB_01_SigGroup_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502_50a93e3a_Rx)).ADCU_FCW_State); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_Checksum_0E2_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502_3047b966_Rx, &(*(&Rte_SG_ADCU_AEB_01_SigGroup_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502_50a93e3a_Rx)).Checksum_0E2); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0E2_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502_9953fa4a_Rx, &(*(&Rte_SG_ADCU_AEB_01_SigGroup_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502_50a93e3a_Rx)).MessageCounter_0E2); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_AEB_01_SigGroup_SG_ADCU_AEB_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_AEB_01_SigGroup_SG_ADCU_AEB_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_AEB_01_SigGroup_SG_ADCU_AEB_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_AEB_01_SigGroup_SG_ADCU_AEB_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_ADCU_AEB_01_SigGroup_oADCU_AEB_01_oATOM_CANFD_Matrix_CH_V600_202502_50a93e3a_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3359,7 +3366,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_ADCU_APS_01_SigGroup_oADCU_APS_01_oATOM_CANFD
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_ADCU_TargetGear_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502_dbe43087_Rx, &(*(&Rte_SG_ADCU_APS_01_SigGroup_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502_c590572d_Rx)).ADCU_TargetGear); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_Checksum_0E4_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502_19b3517b_Rx, &(*(&Rte_SG_ADCU_APS_01_SigGroup_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502_c590572d_Rx)).Checksum_0E4); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0E4_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502_b0a71257_Rx, &(*(&Rte_SG_ADCU_APS_01_SigGroup_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502_c590572d_Rx)).MessageCounter_0E4); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_APS_01_SigGroup_SG_ADCU_APS_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_APS_01_SigGroup_SG_ADCU_APS_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_APS_01_SigGroup_SG_ADCU_APS_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_APS_01_SigGroup_SG_ADCU_APS_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_ADCU_APS_01_SigGroup_oADCU_APS_01_oATOM_CANFD_Matrix_CH_V600_202502_c590572d_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3372,7 +3379,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_ADCU_APS_02_SigGroup_oADCU_APS_02_oATOM_CANFD
     (void)GetSpinlock(Rte_Spinlock_SG_ADCU_APS_02_SigGroup_oADCU_APS_02_oATOM_CANFD_Matrix_CH_V600_202502_67bc1f98_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_ADCU_APS_02_SigGroup_oADCU_APS_02_oATOM_CANFD_Matrix_CH_V600_202502_67bc1f98_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_ADCU_RemoteParkingMode_oADCU_APS_02_oATOM_CANFD_Matrix_CH_V600_202502_262c752a_Rx, &(*(&Rte_SG_ADCU_APS_02_SigGroup_oADCU_APS_02_oATOM_CANFD_Matrix_CH_V600_202502_67bc1f98_Rx)).ADCU_RemoteParkingMode); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_APS_02_SigGroup_SG_ADCU_APS_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_APS_02_SigGroup_SG_ADCU_APS_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_APS_02_SigGroup_SG_ADCU_APS_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_APS_02_SigGroup_SG_ADCU_APS_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_ADCU_APS_02_SigGroup_oADCU_APS_02_oATOM_CANFD_Matrix_CH_V600_202502_67bc1f98_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3387,7 +3394,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_ADCU_DA_SigGroup_oADCU_DA_oATOM_CANFD_Matrix_
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_ADCU_DA_Mode_oADCU_DA_oATOM_CANFD_Matrix_CH_V600_202502_98abcb34_Rx, &(*(&Rte_SG_ADCU_DA_SigGroup_oADCU_DA_oATOM_CANFD_Matrix_CH_V600_202502_4133b6dd_Rx)).ADCU_DA_Mode); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_Checksum_0E6_oADCU_DA_oATOM_CANFD_Matrix_CH_V600_202502_6e918845_Rx, &(*(&Rte_SG_ADCU_DA_SigGroup_oADCU_DA_oATOM_CANFD_Matrix_CH_V600_202502_4133b6dd_Rx)).Checksum_0E6); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0E6_oADCU_DA_oATOM_CANFD_Matrix_CH_V600_202502_a4eb2dfd_Rx, &(*(&Rte_SG_ADCU_DA_SigGroup_oADCU_DA_oATOM_CANFD_Matrix_CH_V600_202502_4133b6dd_Rx)).MessageCounter_0E6); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_DA_SigGroup_SG_ADCU_DA_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_DA_SigGroup_SG_ADCU_DA_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_DA_SigGroup_SG_ADCU_DA_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_ADCU_DA_SigGroup_SG_ADCU_DA_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_ADCU_DA_SigGroup_oADCU_DA_oATOM_CANFD_Matrix_CH_V600_202502_4133b6dd_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3400,7 +3407,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_APTC_TCU_SigGroup_oAPTC_TCU_oATOM_CAN_Matrix_
     (void)GetSpinlock(Rte_Spinlock_SG_APTC_TCU_SigGroup_oAPTC_TCU_oATOM_CAN_Matrix_PT_V600_20250211_467c0275_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_APTC_TCU_SigGroup_oAPTC_TCU_oATOM_CAN_Matrix_PT_V600_20250211_467c0275_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_APTC_PowerConsumption_oAPTC_TCU_oATOM_CAN_Matrix_PT_V600_20250211_1649be11_Rx, &(*(&Rte_SG_APTC_TCU_SigGroup_oAPTC_TCU_oATOM_CAN_Matrix_PT_V600_20250211_467c0275_Rx)).APTC_PowerConsumption); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_APTC_TCU_SigGroup_SG_APTC_TCU_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_APTC_TCU_SigGroup_SG_APTC_TCU_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_APTC_TCU_SigGroup_SG_APTC_TCU_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_APTC_TCU_SigGroup_SG_APTC_TCU_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_APTC_TCU_SigGroup_oAPTC_TCU_oATOM_CAN_Matrix_PT_V600_20250211_467c0275_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3429,7 +3436,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BCM_05_SigGroup_oBCM_05_oATOM_CAN_Matrix_PT_V
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BCM_WiperWorkingSts_oBCM_05_oATOM_CAN_Matrix_PT_V600_20250211_2776ea8d_Rx, &(*(&Rte_SG_BCM_05_SigGroup_oBCM_05_oATOM_CAN_Matrix_PT_V600_20250211_46c76b05_Rx)).BCM_WiperWorkingSts); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_Checksum_33A_oBCM_05_oATOM_CAN_Matrix_PT_V600_20250211_240d647b_Rx, &(*(&Rte_SG_BCM_05_SigGroup_oBCM_05_oATOM_CAN_Matrix_PT_V600_20250211_46c76b05_Rx)).Checksum_33A); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_33A_oBCM_05_oATOM_CAN_Matrix_PT_V600_20250211_e46a568a_Rx, &(*(&Rte_SG_BCM_05_SigGroup_oBCM_05_oATOM_CAN_Matrix_PT_V600_20250211_46c76b05_Rx)).MessageCounter_33A); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BCM_05_SigGroup_SG_BCM_05_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BCM_05_SigGroup_SG_BCM_05_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BCM_05_SigGroup_SG_BCM_05_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BCM_05_SigGroup_SG_BCM_05_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BCM_05_SigGroup_oBCM_05_oATOM_CAN_Matrix_PT_V600_20250211_46c76b05_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3445,7 +3452,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BCM_06_SigGroup_oBCM_06_oATOM_CAN_Matrix_PT_V
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BCM_PowerOffDisplayReq_oBCM_06_oATOM_CAN_Matrix_PT_V600_20250211_9133ccdf_Rx, &(*(&Rte_SG_BCM_06_SigGroup_oBCM_06_oATOM_CAN_Matrix_PT_V600_20250211_7741510b_Rx)).BCM_PowerOffDisplayReq); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_271_oBCM_06_oATOM_CAN_Matrix_PT_V600_20250211_8423cb57_Rx, &(*(&Rte_SG_BCM_06_SigGroup_oBCM_06_oATOM_CAN_Matrix_PT_V600_20250211_7741510b_Rx)).MessageCounter_271); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_checksum_271_oBCM_06_oATOM_CAN_Matrix_PT_V600_20250211_70f1cf66_Rx, &(*(&Rte_SG_BCM_06_SigGroup_oBCM_06_oATOM_CAN_Matrix_PT_V600_20250211_7741510b_Rx)).checksum_271); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BCM_06_SigGroup_SG_BCM_06_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BCM_06_SigGroup_SG_BCM_06_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BCM_06_SigGroup_SG_BCM_06_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BCM_06_SigGroup_SG_BCM_06_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BCM_06_SigGroup_oBCM_06_oATOM_CAN_Matrix_PT_V600_20250211_7741510b_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3462,7 +3469,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_BatInfor_01_SigGroup_oBMS_BatInfor_01_oAT
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_RatBatVoltage_oBMS_BatInfor_01_oATOM_CAN_Matrix_PT_V600_20250211_f1943e5d_Rx, &(*(&Rte_SG_BMS_BatInfor_01_SigGroup_oBMS_BatInfor_01_oATOM_CAN_Matrix_PT_V600_20250211_4fef2501_Rx)).BMS_RatBatVoltage); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_RatCapacity_oBMS_BatInfor_01_oATOM_CAN_Matrix_PT_V600_20250211_a06c3dfc_Rx, &(*(&Rte_SG_BMS_BatInfor_01_SigGroup_oBMS_BatInfor_01_oATOM_CAN_Matrix_PT_V600_20250211_4fef2501_Rx)).BMS_RatCapacity); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_RatEnergy_oBMS_BatInfor_01_oATOM_CAN_Matrix_PT_V600_20250211_92d3972c_Rx, &(*(&Rte_SG_BMS_BatInfor_01_SigGroup_oBMS_BatInfor_01_oATOM_CAN_Matrix_PT_V600_20250211_4fef2501_Rx)).BMS_RatEnergy); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_BatInfor_01_SigGroup_SG_BMS_BatInfor_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_BatInfor_01_SigGroup_SG_BMS_BatInfor_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_BatInfor_01_SigGroup_SG_BMS_BatInfor_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_BatInfor_01_SigGroup_SG_BMS_BatInfor_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_BatInfor_01_SigGroup_oBMS_BatInfor_01_oATOM_CAN_Matrix_PT_V600_20250211_4fef2501_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3475,7 +3482,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_BatInfor_02_SigGroup_oBMS_BatInfor_02_oAT
     (void)GetSpinlock(Rte_Spinlock_SG_BMS_BatInfor_02_SigGroup_oBMS_BatInfor_02_oATOM_CAN_Matrix_PT_V600_20250211_426bcc59_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_BMS_BatInfor_02_SigGroup_oBMS_BatInfor_02_oATOM_CAN_Matrix_PT_V600_20250211_426bcc59_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_BatSupName_oBMS_BatInfor_02_oATOM_CAN_Matrix_PT_V600_20250211_eaf2f758_Rx, &(*(&Rte_SG_BMS_BatInfor_02_SigGroup_oBMS_BatInfor_02_oATOM_CAN_Matrix_PT_V600_20250211_426bcc59_Rx)).BMS_BatSupName); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_BatInfor_02_SigGroup_SG_BMS_BatInfor_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_BatInfor_02_SigGroup_SG_BMS_BatInfor_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_BatInfor_02_SigGroup_SG_BMS_BatInfor_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_BatInfor_02_SigGroup_SG_BMS_BatInfor_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_BatInfor_02_SigGroup_oBMS_BatInfor_02_oATOM_CAN_Matrix_PT_V600_20250211_426bcc59_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3488,7 +3495,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_BatInfor_03_SigGroup_oBMS_BatInfor_03_oAT
     (void)GetSpinlock(Rte_Spinlock_SG_BMS_BatInfor_03_SigGroup_oBMS_BatInfor_03_oATOM_CAN_Matrix_PT_V600_20250211_f03896ae_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_BMS_BatInfor_03_SigGroup_oBMS_BatInfor_03_oATOM_CAN_Matrix_PT_V600_20250211_f03896ae_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_RemainCapacity_oBMS_BatInfor_03_oATOM_CAN_Matrix_PT_V600_20250211_0c2dc68f_Rx, &(*(&Rte_SG_BMS_BatInfor_03_SigGroup_oBMS_BatInfor_03_oATOM_CAN_Matrix_PT_V600_20250211_f03896ae_Rx)).BMS_RemainCapacity); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_BatInfor_03_SigGroup_SG_BMS_BatInfor_03_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_BatInfor_03_SigGroup_SG_BMS_BatInfor_03_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_BatInfor_03_SigGroup_SG_BMS_BatInfor_03_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_BatInfor_03_SigGroup_SG_BMS_BatInfor_03_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_BatInfor_03_SigGroup_oBMS_BatInfor_03_oATOM_CAN_Matrix_PT_V600_20250211_f03896ae_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3506,8 +3513,8 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_CellTemp_SigGroup_oBMS_CellTemp_oATOM_CAN
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_MinCellTemp_oBMS_CellTemp_oATOM_CAN_Matrix_PT_V600_20250211_cb26cda9_Rx, &(*(&Rte_SG_BMS_CellTemp_SigGroup_oBMS_CellTemp_oATOM_CAN_Matrix_PT_V600_20250211_591a267a_Rx)).BMS_MinCellTemp); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_MinCellTempModuleNO_oBMS_CellTemp_oATOM_CAN_Matrix_PT_V600_20250211_5ad1b821_Rx, &(*(&Rte_SG_BMS_CellTemp_SigGroup_oBMS_CellTemp_oATOM_CAN_Matrix_PT_V600_20250211_591a267a_Rx)).BMS_MinCellTempModuleNO); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_MinCellTempNO_oBMS_CellTemp_oATOM_CAN_Matrix_PT_V600_20250211_5aa7be5e_Rx, &(*(&Rte_SG_BMS_CellTemp_SigGroup_oBMS_CellTemp_oATOM_CAN_Matrix_PT_V600_20250211_591a267a_Rx)).BMS_MinCellTempNO); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_CellTemp_SigGroup_SG_BMS_CellTemp_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_CellTemp_SigGroup_SG_BMS_CellTemp_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_SG_BMS_CellTemp_SigGroup_SG_BMS_CellTemp_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_SG_BMS_CellTemp_SigGroup_SG_BMS_CellTemp_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_CellTemp_SigGroup_SG_BMS_CellTemp_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_CellTemp_SigGroup_SG_BMS_CellTemp_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_SG_BMS_CellTemp_SigGroup_SG_BMS_CellTemp_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_SG_BMS_CellTemp_SigGroup_SG_BMS_CellTemp_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_CellTemp_SigGroup_oBMS_CellTemp_oATOM_CAN_Matrix_PT_V600_20250211_591a267a_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3523,8 +3530,8 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_CellVoltage_SigGroup_oBMS_CellVoltage_oAT
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_MaxCellVoltageModuleNO_oBMS_CellVoltage_oATOM_CAN_Matrix_PT_V600_20250211_41af4f62_Rx, &(*(&Rte_SG_BMS_CellVoltage_SigGroup_oBMS_CellVoltage_oATOM_CAN_Matrix_PT_V600_20250211_e26ec140_Rx)).BMS_MaxCellVoltageModuleNO); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_MaxCellVoltageNO_oBMS_CellVoltage_oATOM_CAN_Matrix_PT_V600_20250211_f7be414b_Rx, &(*(&Rte_SG_BMS_CellVoltage_SigGroup_oBMS_CellVoltage_oATOM_CAN_Matrix_PT_V600_20250211_e26ec140_Rx)).BMS_MaxCellVoltageNO); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_MinCellVoltage_oBMS_CellVoltage_oATOM_CAN_Matrix_PT_V600_20250211_d5508559_Rx, &(*(&Rte_SG_BMS_CellVoltage_SigGroup_oBMS_CellVoltage_oATOM_CAN_Matrix_PT_V600_20250211_e26ec140_Rx)).BMS_MinCellVoltage); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_CellVoltage_SigGroup_SG_BMS_CellVoltage_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_CellVoltage_SigGroup_SG_BMS_CellVoltage_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_SG_BMS_CellVoltage_SigGroup_SG_BMS_CellVoltage_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_SG_BMS_CellVoltage_SigGroup_SG_BMS_CellVoltage_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_CellVoltage_SigGroup_SG_BMS_CellVoltage_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_CellVoltage_SigGroup_SG_BMS_CellVoltage_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_SG_BMS_CellVoltage_SigGroup_SG_BMS_CellVoltage_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_DCComM_SG_BMS_CellVoltage_SigGroup_SG_BMS_CellVoltage_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_CellVoltage_SigGroup_oBMS_CellVoltage_oATOM_CAN_Matrix_PT_V600_20250211_e26ec140_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3539,7 +3546,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_Charge_01_SigGroup_oBMS_Charge_01_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_AllowChagCurrent_oBMS_Charge_01_oATOM_CAN_Matrix_PT_V600_20250211_5bdeed04_Rx, &(*(&Rte_SG_BMS_Charge_01_SigGroup_oBMS_Charge_01_oATOM_CAN_Matrix_PT_V600_20250211_216177cb_Rx)).BMS_AllowChagCurrent); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_MaxChagVoltage_oBMS_Charge_01_oATOM_CAN_Matrix_PT_V600_20250211_6cebdb8e_Rx, &(*(&Rte_SG_BMS_Charge_01_SigGroup_oBMS_Charge_01_oATOM_CAN_Matrix_PT_V600_20250211_216177cb_Rx)).BMS_MaxChagVoltage); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_RemChagTime_oBMS_Charge_01_oATOM_CAN_Matrix_PT_V600_20250211_27af82cf_Rx, &(*(&Rte_SG_BMS_Charge_01_SigGroup_oBMS_Charge_01_oATOM_CAN_Matrix_PT_V600_20250211_216177cb_Rx)).BMS_RemChagTime); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_Charge_01_SigGroup_SG_BMS_Charge_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_Charge_01_SigGroup_SG_BMS_Charge_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_Charge_01_SigGroup_SG_BMS_Charge_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_Charge_01_SigGroup_SG_BMS_Charge_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_Charge_01_SigGroup_oBMS_Charge_01_oATOM_CAN_Matrix_PT_V600_20250211_216177cb_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3561,7 +3568,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_Charge_02_SigGroup_oBMS_Charge_02_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_ChagComplete_oBMS_Charge_02_oATOM_CAN_Matrix_PT_V600_20250211_ea7a6697_Rx, &(*(&Rte_SG_BMS_Charge_02_SigGroup_oBMS_Charge_02_oATOM_CAN_Matrix_PT_V600_20250211_116647c1_Rx)).BMS_ChagComplete); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_ChargeRequest_oBMS_Charge_02_oATOM_CAN_Matrix_PT_V600_20250211_1918c4e0_Rx, &(*(&Rte_SG_BMS_Charge_02_SigGroup_oBMS_Charge_02_oATOM_CAN_Matrix_PT_V600_20250211_116647c1_Rx)).BMS_ChargeRequest); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_DCChgMode_oBMS_Charge_02_oATOM_CAN_Matrix_PT_V600_20250211_6d869dd0_Rx, &(*(&Rte_SG_BMS_Charge_02_SigGroup_oBMS_Charge_02_oATOM_CAN_Matrix_PT_V600_20250211_116647c1_Rx)).BMS_DCChgMode); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_Charge_02_SigGroup_SG_BMS_Charge_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_Charge_02_SigGroup_SG_BMS_Charge_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_Charge_02_SigGroup_SG_BMS_Charge_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_Charge_02_SigGroup_SG_BMS_Charge_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_Charge_02_SigGroup_oBMS_Charge_02_oATOM_CAN_Matrix_PT_V600_20250211_116647c1_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3576,7 +3583,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_Charge_03_SigGroup_oBMS_Charge_03_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_BatChagSum_oBMS_Charge_03_oATOM_CAN_Matrix_PT_V600_20250211_acd539d3_Rx, &(*(&Rte_SG_BMS_Charge_03_SigGroup_oBMS_Charge_03_oATOM_CAN_Matrix_PT_V600_20250211_b7b455f8_Rx)).BMS_BatChagSum); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_SingChgkwh_oBMS_Charge_03_oATOM_CAN_Matrix_PT_V600_20250211_015ce54e_Rx, &(*(&Rte_SG_BMS_Charge_03_SigGroup_oBMS_Charge_03_oATOM_CAN_Matrix_PT_V600_20250211_b7b455f8_Rx)).BMS_SingChgkwh); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_SumChgkwh_oBMS_Charge_03_oATOM_CAN_Matrix_PT_V600_20250211_483ef743_Rx, &(*(&Rte_SG_BMS_Charge_03_SigGroup_oBMS_Charge_03_oATOM_CAN_Matrix_PT_V600_20250211_b7b455f8_Rx)).BMS_SumChgkwh); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_Charge_03_SigGroup_SG_BMS_Charge_03_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_Charge_03_SigGroup_SG_BMS_Charge_03_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_Charge_03_SigGroup_SG_BMS_Charge_03_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_Charge_03_SigGroup_SG_BMS_Charge_03_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_Charge_03_SigGroup_oBMS_Charge_03_oATOM_CAN_Matrix_PT_V600_20250211_b7b455f8_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3593,7 +3600,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_DIRelayState_SigGroup_oBMS_DIRelayState_o
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_PTC_VoltageValue_oBMS_DIRelayState_oATOM_CAN_Matrix_PT_V600_20250211_01e2b502_Rx, &(*(&Rte_SG_BMS_DIRelayState_SigGroup_oBMS_DIRelayState_oATOM_CAN_Matrix_PT_V600_20250211_ca554d8c_Rx)).BMS_PTC_VoltageValue); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_PosRelayStatus_oBMS_DIRelayState_oATOM_CAN_Matrix_PT_V600_20250211_0aa0be71_Rx, &(*(&Rte_SG_BMS_DIRelayState_SigGroup_oBMS_DIRelayState_oATOM_CAN_Matrix_PT_V600_20250211_ca554d8c_Rx)).BMS_PosRelayStatus); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_PreRelayStatus_oBMS_DIRelayState_oATOM_CAN_Matrix_PT_V600_20250211_51af39b6_Rx, &(*(&Rte_SG_BMS_DIRelayState_SigGroup_oBMS_DIRelayState_oATOM_CAN_Matrix_PT_V600_20250211_ca554d8c_Rx)).BMS_PreRelayStatus); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_DIRelayState_SigGroup_SG_BMS_DIRelayState_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_DIRelayState_SigGroup_SG_BMS_DIRelayState_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_DIRelayState_SigGroup_SG_BMS_DIRelayState_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_DIRelayState_SigGroup_SG_BMS_DIRelayState_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_DIRelayState_SigGroup_oBMS_DIRelayState_oATOM_CAN_Matrix_PT_V600_20250211_ca554d8c_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3615,7 +3622,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_ErrorInfo_SigGroup_oBMS_ErrorInfo_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_ErrorPreChaFailed_oBMS_ErrorInfo_oATOM_CAN_Matrix_PT_V600_20250211_59a6a965_Rx, &(*(&Rte_SG_BMS_ErrorInfo_SigGroup_oBMS_ErrorInfo_oATOM_CAN_Matrix_PT_V600_20250211_0728f72e_Rx)).BMS_ErrorPreChaFailed); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_ErrorRelay_oBMS_ErrorInfo_oATOM_CAN_Matrix_PT_V600_20250211_117a9031_Rx, &(*(&Rte_SG_BMS_ErrorInfo_SigGroup_oBMS_ErrorInfo_oATOM_CAN_Matrix_PT_V600_20250211_0728f72e_Rx)).BMS_ErrorRelay); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_ThermalRunawayFault_oBMS_ErrorInfo_oATOM_CAN_Matrix_PT_V600_20250211_bc9ae26c_Rx, &(*(&Rte_SG_BMS_ErrorInfo_SigGroup_oBMS_ErrorInfo_oATOM_CAN_Matrix_PT_V600_20250211_0728f72e_Rx)).BMS_ThermalRunawayFault); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_ErrorInfo_SigGroup_SG_BMS_ErrorInfo_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_ErrorInfo_SigGroup_SG_BMS_ErrorInfo_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_ErrorInfo_SigGroup_SG_BMS_ErrorInfo_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_ErrorInfo_SigGroup_SG_BMS_ErrorInfo_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_ErrorInfo_SigGroup_oBMS_ErrorInfo_oATOM_CAN_Matrix_PT_V600_20250211_0728f72e_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3630,7 +3637,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_PRO_SigGroup_oBMS_PRO_oATOM_CAN_Matrix_PT
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_BatProDatDay_oBMS_PRO_oATOM_CAN_Matrix_PT_V600_20250211_7f9a6bc2_Rx, &(*(&Rte_SG_BMS_PRO_SigGroup_oBMS_PRO_oATOM_CAN_Matrix_PT_V600_20250211_21a267c0_Rx)).BMS_BatProDatDay); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_BatProDatMonth_oBMS_PRO_oATOM_CAN_Matrix_PT_V600_20250211_a585932e_Rx, &(*(&Rte_SG_BMS_PRO_SigGroup_oBMS_PRO_oATOM_CAN_Matrix_PT_V600_20250211_21a267c0_Rx)).BMS_BatProDatMonth); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_BatProDatYear_oBMS_PRO_oATOM_CAN_Matrix_PT_V600_20250211_329b6492_Rx, &(*(&Rte_SG_BMS_PRO_SigGroup_oBMS_PRO_oATOM_CAN_Matrix_PT_V600_20250211_21a267c0_Rx)).BMS_BatProDatYear); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_PRO_SigGroup_SG_BMS_PRO_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_PRO_SigGroup_SG_BMS_PRO_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_PRO_SigGroup_SG_BMS_PRO_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_PRO_SigGroup_SG_BMS_PRO_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_PRO_SigGroup_oBMS_PRO_oATOM_CAN_Matrix_PT_V600_20250211_21a267c0_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3646,7 +3653,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_TCU_SigGroup_oBMS_TCU_oATOM_CAN_Matrix_PT
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_KeepWarmRequest_oBMS_TCU_oATOM_CAN_Matrix_PT_V600_20250211_1b8e0c34_Rx, &(*(&Rte_SG_BMS_TCU_SigGroup_oBMS_TCU_oATOM_CAN_Matrix_PT_V600_20250211_541a46a3_Rx)).BMS_KeepWarmRequest); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_KeepWarmStatus_oBMS_TCU_oATOM_CAN_Matrix_PT_V600_20250211_96e48497_Rx, &(*(&Rte_SG_BMS_TCU_SigGroup_oBMS_TCU_oATOM_CAN_Matrix_PT_V600_20250211_541a46a3_Rx)).BMS_KeepWarmStatus); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_RTC_Request_oBMS_TCU_oATOM_CAN_Matrix_PT_V600_20250211_dbff15fc_Rx, &(*(&Rte_SG_BMS_TCU_SigGroup_oBMS_TCU_oATOM_CAN_Matrix_PT_V600_20250211_541a46a3_Rx)).BMS_RTC_Request); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_TCU_SigGroup_SG_BMS_TCU_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_TCU_SigGroup_SG_BMS_TCU_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_TCU_SigGroup_SG_BMS_TCU_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_TCU_SigGroup_SG_BMS_TCU_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_TCU_SigGroup_oBMS_TCU_oATOM_CAN_Matrix_PT_V600_20250211_541a46a3_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3660,7 +3667,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_VersionInfor_SigGroup_oBMS_VersionInfor_o
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_BMS_VersionInfor_SigGroup_oBMS_VersionInfor_oATOM_CAN_Matrix_PT_V600_20250211_3c7841d8_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_BatProRights_oBMS_VersionInfor_oATOM_CAN_Matrix_PT_V600_20250211_65b7c251_Rx, &(*(&Rte_SG_BMS_VersionInfor_SigGroup_oBMS_VersionInfor_oATOM_CAN_Matrix_PT_V600_20250211_3c7841d8_Rx)).BMS_BatProRights); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_ComVersion_oBMS_VersionInfor_oATOM_CAN_Matrix_PT_V600_20250211_a6b9c4fe_Rx, &(*(&Rte_SG_BMS_VersionInfor_SigGroup_oBMS_VersionInfor_oATOM_CAN_Matrix_PT_V600_20250211_3c7841d8_Rx)).BMS_ComVersion); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_VersionInfor_SigGroup_SG_BMS_VersionInfor_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_VersionInfor_SigGroup_SG_BMS_VersionInfor_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_VersionInfor_SigGroup_SG_BMS_VersionInfor_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_VersionInfor_SigGroup_SG_BMS_VersionInfor_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_VersionInfor_SigGroup_oBMS_VersionInfor_oATOM_CAN_Matrix_PT_V600_20250211_3c7841d8_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3686,7 +3693,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_status_01_SigGroup_oBMS_status_01_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_WorkMode_oBMS_status_01_oATOM_CAN_Matrix_PT_V600_20250211_93c719c8_Rx, &(*(&Rte_SG_BMS_status_01_SigGroup_oBMS_status_01_oATOM_CAN_Matrix_PT_V600_20250211_2f7ddbcd_Rx)).BMS_WorkMode); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_Checksum_0C1_oBMS_status_01_oATOM_CAN_Matrix_PT_V600_20250211_2a2c563b_Rx, &(*(&Rte_SG_BMS_status_01_SigGroup_oBMS_status_01_oATOM_CAN_Matrix_PT_V600_20250211_2f7ddbcd_Rx)).Checksum_0C1); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0C1_oBMS_status_01_oATOM_CAN_Matrix_PT_V600_20250211_fcc884ab_Rx, &(*(&Rte_SG_BMS_status_01_SigGroup_oBMS_status_01_oATOM_CAN_Matrix_PT_V600_20250211_2f7ddbcd_Rx)).MessageCounter_0C1); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_01_SigGroup_SG_BMS_status_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_01_SigGroup_SG_BMS_status_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_01_SigGroup_SG_BMS_status_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_01_SigGroup_SG_BMS_status_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_status_01_SigGroup_oBMS_status_01_oATOM_CAN_Matrix_PT_V600_20250211_2f7ddbcd_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3701,7 +3708,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_status_02_SigGroup_oBMS_status_02_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_BattCurr_oBMS_status_02_oATOM_CAN_Matrix_PT_V600_20250211_114279ae_Rx, &(*(&Rte_SG_BMS_status_02_SigGroup_oBMS_status_02_oATOM_CAN_Matrix_PT_V600_20250211_1f7aebc7_Rx)).BMS_BattCurr); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_BattVolt_oBMS_status_02_oATOM_CAN_Matrix_PT_V600_20250211_434721f0_Rx, &(*(&Rte_SG_BMS_status_02_SigGroup_oBMS_status_02_oATOM_CAN_Matrix_PT_V600_20250211_1f7aebc7_Rx)).BMS_BattVolt); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_Heatcurrent_oBMS_status_02_oATOM_CAN_Matrix_PT_V600_20250211_d7161a8d_Rx, &(*(&Rte_SG_BMS_status_02_SigGroup_oBMS_status_02_oATOM_CAN_Matrix_PT_V600_20250211_1f7aebc7_Rx)).BMS_Heatcurrent); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_02_SigGroup_SG_BMS_status_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_02_SigGroup_SG_BMS_status_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_02_SigGroup_SG_BMS_status_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_02_SigGroup_SG_BMS_status_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_status_02_SigGroup_oBMS_status_02_oATOM_CAN_Matrix_PT_V600_20250211_1f7aebc7_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3716,7 +3723,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_status_03_SigGroup_oBMS_status_03_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_DisplaySOC_oBMS_status_03_oATOM_CAN_Matrix_PT_V600_20250211_58348b09_Rx, &(*(&Rte_SG_BMS_status_03_SigGroup_oBMS_status_03_oATOM_CAN_Matrix_PT_V600_20250211_b9a8f9fe_Rx)).BMS_DisplaySOC); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_LinkVoltage_oBMS_status_03_oATOM_CAN_Matrix_PT_V600_20250211_57ffa044_Rx, &(*(&Rte_SG_BMS_status_03_SigGroup_oBMS_status_03_oATOM_CAN_Matrix_PT_V600_20250211_b9a8f9fe_Rx)).BMS_LinkVoltage); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_PackVoltage_oBMS_status_03_oATOM_CAN_Matrix_PT_V600_20250211_4cda4f33_Rx, &(*(&Rte_SG_BMS_status_03_SigGroup_oBMS_status_03_oATOM_CAN_Matrix_PT_V600_20250211_b9a8f9fe_Rx)).BMS_PackVoltage); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_03_SigGroup_SG_BMS_status_03_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_03_SigGroup_SG_BMS_status_03_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_03_SigGroup_SG_BMS_status_03_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_03_SigGroup_SG_BMS_status_03_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_status_03_SigGroup_oBMS_status_03_oATOM_CAN_Matrix_PT_V600_20250211_b9a8f9fe_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3730,7 +3737,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_BMS_status_04_SigGroup_oBMS_status_04_oATOM_C
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_BMS_status_04_SigGroup_oBMS_status_04_oATOM_CAN_Matrix_PT_V600_20250211_7f748bd3_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_DisChgCurr_oBMS_status_04_oATOM_CAN_Matrix_PT_V600_20250211_9054a7c7_Rx, &(*(&Rte_SG_BMS_status_04_SigGroup_oBMS_status_04_oATOM_CAN_Matrix_PT_V600_20250211_7f748bd3_Rx)).BMS_DisChgCurr); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_BMS_FeedbackCurr_oBMS_status_04_oATOM_CAN_Matrix_PT_V600_20250211_adfb81c2_Rx, &(*(&Rte_SG_BMS_status_04_SigGroup_oBMS_status_04_oATOM_CAN_Matrix_PT_V600_20250211_7f748bd3_Rx)).BMS_FeedbackCurr); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_04_SigGroup_SG_BMS_status_04_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_04_SigGroup_SG_BMS_status_04_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_04_SigGroup_SG_BMS_status_04_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_BMS_status_04_SigGroup_SG_BMS_status_04_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_BMS_status_04_SigGroup_oBMS_status_04_oATOM_CAN_Matrix_PT_V600_20250211_7f748bd3_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3745,7 +3752,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_CGW_01_SigGroup_oCGW_01_oATOM_CAN_Matrix_PT_V
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_CGW_VehicleState_oCGW_01_oATOM_CAN_Matrix_PT_V600_20250211_1252b1db_Rx, &(*(&Rte_SG_CGW_01_SigGroup_oCGW_01_oATOM_CAN_Matrix_PT_V600_20250211_9280de14_Rx)).CGW_VehicleState); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_Checksum_278_oCGW_01_oATOM_CAN_Matrix_PT_V600_20250211_d9b09121_Rx, &(*(&Rte_SG_CGW_01_SigGroup_oCGW_01_oATOM_CAN_Matrix_PT_V600_20250211_9280de14_Rx)).Checksum_278); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_278_oCGW_01_oATOM_CAN_Matrix_PT_V600_20250211_19d7a3d0_Rx, &(*(&Rte_SG_CGW_01_SigGroup_oCGW_01_oATOM_CAN_Matrix_PT_V600_20250211_9280de14_Rx)).MessageCounter_278); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_01_SigGroup_SG_CGW_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_01_SigGroup_SG_CGW_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_01_SigGroup_SG_CGW_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_01_SigGroup_SG_CGW_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_CGW_01_SigGroup_oCGW_01_oATOM_CAN_Matrix_PT_V600_20250211_9280de14_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3779,7 +3786,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_CGW_02_SigGroup_oCGW_02_oATOM_CAN_Matrix_PT_V
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_CGW_SWPSts_oCGW_02_oATOM_CAN_Matrix_PT_V600_20250211_1aac9e5f_Rx, &(*(&Rte_SG_CGW_02_SigGroup_oCGW_02_oATOM_CAN_Matrix_PT_V600_20250211_a306e41a_Rx)).CGW_SWPSts); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_CGW_SwichesSts_oCGW_02_oATOM_CAN_Matrix_PT_V600_20250211_c378d64a_Rx, &(*(&Rte_SG_CGW_02_SigGroup_oCGW_02_oATOM_CAN_Matrix_PT_V600_20250211_a306e41a_Rx)).CGW_SwichesSts); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_CGW_VCUSts_oCGW_02_oATOM_CAN_Matrix_PT_V600_20250211_d5f4b0ad_Rx, &(*(&Rte_SG_CGW_02_SigGroup_oCGW_02_oATOM_CAN_Matrix_PT_V600_20250211_a306e41a_Rx)).CGW_VCUSts); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_02_SigGroup_SG_CGW_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_02_SigGroup_SG_CGW_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_02_SigGroup_SG_CGW_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_02_SigGroup_SG_CGW_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_CGW_02_SigGroup_oCGW_02_oATOM_CAN_Matrix_PT_V600_20250211_a306e41a_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3799,7 +3806,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_CGW_VIN1_SigGroup_oCGW_VIN1_oATOM_CAN_Matrix_
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_CGW_VIN5_oCGW_VIN1_oATOM_CAN_Matrix_PT_V600_20250211_06520109_Rx, &(*(&Rte_SG_CGW_VIN1_SigGroup_oCGW_VIN1_oATOM_CAN_Matrix_PT_V600_20250211_49910b51_Rx)).CGW_VIN5); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_CGW_VIN6_oCGW_VIN1_oATOM_CAN_Matrix_PT_V600_20250211_39997f9c_Rx, &(*(&Rte_SG_CGW_VIN1_SigGroup_oCGW_VIN1_oATOM_CAN_Matrix_PT_V600_20250211_49910b51_Rx)).CGW_VIN6); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_CGW_VIN7_oCGW_VIN1_oATOM_CAN_Matrix_PT_V600_20250211_9a0f57d0_Rx, &(*(&Rte_SG_CGW_VIN1_SigGroup_oCGW_VIN1_oATOM_CAN_Matrix_PT_V600_20250211_49910b51_Rx)).CGW_VIN7); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_VIN1_SigGroup_SG_CGW_VIN1_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_VIN1_SigGroup_SG_CGW_VIN1_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_VIN1_SigGroup_SG_CGW_VIN1_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_VIN1_SigGroup_SG_CGW_VIN1_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_CGW_VIN1_SigGroup_oCGW_VIN1_oATOM_CAN_Matrix_PT_V600_20250211_49910b51_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3819,7 +3826,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_CGW_VIN2_SigGroup_oCGW_VIN2_oATOM_CAN_Matrix_
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_CGW_VIN15_oCGW_VIN2_oATOM_CAN_Matrix_PT_V600_20250211_00bcc7c1_Rx, &(*(&Rte_SG_CGW_VIN2_SigGroup_oCGW_VIN2_oATOM_CAN_Matrix_PT_V600_20250211_c0accf92_Rx)).CGW_VIN15); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_CGW_VIN8_oCGW_VIN2_oATOM_CAN_Matrix_PT_V600_20250211_d13aed08_Rx, &(*(&Rte_SG_CGW_VIN2_SigGroup_oCGW_VIN2_oATOM_CAN_Matrix_PT_V600_20250211_c0accf92_Rx)).CGW_VIN8); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_CGW_VIN9_oCGW_VIN2_oATOM_CAN_Matrix_PT_V600_20250211_72acc544_Rx, &(*(&Rte_SG_CGW_VIN2_SigGroup_oCGW_VIN2_oATOM_CAN_Matrix_PT_V600_20250211_c0accf92_Rx)).CGW_VIN9); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_VIN2_SigGroup_SG_CGW_VIN2_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_VIN2_SigGroup_SG_CGW_VIN2_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_VIN2_SigGroup_SG_CGW_VIN2_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_VIN2_SigGroup_SG_CGW_VIN2_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_CGW_VIN2_SigGroup_oCGW_VIN2_oATOM_CAN_Matrix_PT_V600_20250211_c0accf92_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3834,7 +3841,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_CGW_VIN3VER_SigGroup_oCGW_VIN3VER_oATOM_CAN_M
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_CGW_VERSION1_oCGW_VIN3VER_oATOM_CAN_Matrix_PT_V600_20250211_870615dc_Rx, &(*(&Rte_SG_CGW_VIN3VER_SigGroup_oCGW_VIN3VER_oATOM_CAN_Matrix_PT_V600_20250211_7600cd71_Rx)).CGW_VERSION1); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_CGW_VERSION2_oCGW_VIN3VER_oATOM_CAN_Matrix_PT_V600_20250211_c1d420b8_Rx, &(*(&Rte_SG_CGW_VIN3VER_SigGroup_oCGW_VIN3VER_oATOM_CAN_Matrix_PT_V600_20250211_7600cd71_Rx)).CGW_VERSION2); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_CGW_VIN16_oCGW_VIN3VER_oATOM_CAN_Matrix_PT_V600_20250211_e72a7464_Rx, &(*(&Rte_SG_CGW_VIN3VER_SigGroup_oCGW_VIN3VER_oATOM_CAN_Matrix_PT_V600_20250211_7600cd71_Rx)).CGW_VIN16); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_VIN3VER_SigGroup_SG_CGW_VIN3VER_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_VIN3VER_SigGroup_SG_CGW_VIN3VER_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_VIN3VER_SigGroup_SG_CGW_VIN3VER_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_CGW_VIN3VER_SigGroup_SG_CGW_VIN3VER_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_CGW_VIN3VER_SigGroup_oCGW_VIN3VER_oATOM_CAN_Matrix_PT_V600_20250211_7600cd71_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3858,7 +3865,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_DCM_FL_02_SigGroup_oDCM_FL_02_oATOM_CAN_Matri
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_DCM_FL_RRWndSwA_oDCM_FL_02_oATOM_CAN_Matrix_PT_V600_20250211_09de1801_Rx, &(*(&Rte_SG_DCM_FL_02_SigGroup_oDCM_FL_02_oATOM_CAN_Matrix_PT_V600_20250211_46147686_Rx)).DCM_FL_RRWndSwA); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_DCM_FL_RearmirrorHeatingSts_oDCM_FL_02_oATOM_CAN_Matrix_PT_V600_20250211_aa058e71_Rx, &(*(&Rte_SG_DCM_FL_02_SigGroup_oDCM_FL_02_oATOM_CAN_Matrix_PT_V600_20250211_46147686_Rx)).DCM_FL_RearmirrorHeatingSts); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_28A_oDCM_FL_02_oATOM_CAN_Matrix_PT_V600_20250211_4642a9f0_Rx, &(*(&Rte_SG_DCM_FL_02_SigGroup_oDCM_FL_02_oATOM_CAN_Matrix_PT_V600_20250211_46147686_Rx)).MessageCounter_28A); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_FL_02_SigGroup_SG_DCM_FL_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_FL_02_SigGroup_SG_DCM_FL_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_FL_02_SigGroup_SG_DCM_FL_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_FL_02_SigGroup_SG_DCM_FL_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_DCM_FL_02_SigGroup_oDCM_FL_02_oATOM_CAN_Matrix_PT_V600_20250211_46147686_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3872,7 +3879,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_DCM_FR_02_SigGroup_oDCM_FR_02_oATOM_CAN_Matri
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_DCM_FR_02_SigGroup_oDCM_FR_02_oATOM_CAN_Matrix_PT_V600_20250211_f609c275_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_DCM_FR_AmbientTemperature_oDCM_FR_02_oATOM_CAN_Matrix_PT_V600_20250211_cadd082e_Rx, &(*(&Rte_SG_DCM_FR_02_SigGroup_oDCM_FR_02_oATOM_CAN_Matrix_PT_V600_20250211_f609c275_Rx)).DCM_FR_AmbientTemperature); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_DCM_FR_AmbientTemperatureValid_oDCM_FR_02_oATOM_CAN_Matrix_PT_V600_20250211_e90c62bb_Rx, &(*(&Rte_SG_DCM_FR_02_SigGroup_oDCM_FR_02_oATOM_CAN_Matrix_PT_V600_20250211_f609c275_Rx)).DCM_FR_AmbientTemperatureValid); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_FR_02_SigGroup_SG_DCM_FR_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_FR_02_SigGroup_SG_DCM_FR_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_FR_02_SigGroup_SG_DCM_FR_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_FR_02_SigGroup_SG_DCM_FR_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_DCM_FR_02_SigGroup_oDCM_FR_02_oATOM_CAN_Matrix_PT_V600_20250211_f609c275_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3885,7 +3892,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_DCM_FR_SigGroup_oDCM_FR_oATOM_CAN_Matrix_PT_V
     (void)GetSpinlock(Rte_Spinlock_SG_DCM_FR_SigGroup_oDCM_FR_oATOM_CAN_Matrix_PT_V600_20250211_eb540c93_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_DCM_FR_SigGroup_oDCM_FR_oATOM_CAN_Matrix_PT_V600_20250211_eb540c93_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_DCM_FR_DoorFRSts_oDCM_FR_oATOM_CAN_Matrix_PT_V600_20250211_525d6e8b_Rx, &(*(&Rte_SG_DCM_FR_SigGroup_oDCM_FR_oATOM_CAN_Matrix_PT_V600_20250211_eb540c93_Rx)).DCM_FR_DoorFRSts); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_FR_SigGroup_SG_DCM_FR_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_FR_SigGroup_SG_DCM_FR_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_FR_SigGroup_SG_DCM_FR_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_FR_SigGroup_SG_DCM_FR_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_DCM_FR_SigGroup_oDCM_FR_oATOM_CAN_Matrix_PT_V600_20250211_eb540c93_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3898,7 +3905,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_DCM_RL_SigGroup_oDCM_RL_oATOM_CAN_Matrix_PT_V
     (void)GetSpinlock(Rte_Spinlock_SG_DCM_RL_SigGroup_oDCM_RL_oATOM_CAN_Matrix_PT_V600_20250211_a6554e24_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_DCM_RL_SigGroup_oDCM_RL_oATOM_CAN_Matrix_PT_V600_20250211_a6554e24_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_DCM_RL_DoorRLSts_oDCM_RL_oATOM_CAN_Matrix_PT_V600_20250211_9ea56f59_Rx, &(*(&Rte_SG_DCM_RL_SigGroup_oDCM_RL_oATOM_CAN_Matrix_PT_V600_20250211_a6554e24_Rx)).DCM_RL_DoorRLSts); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_RL_SigGroup_SG_DCM_RL_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_RL_SigGroup_SG_DCM_RL_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_RL_SigGroup_SG_DCM_RL_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_RL_SigGroup_SG_DCM_RL_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_DCM_RL_SigGroup_oDCM_RL_oATOM_CAN_Matrix_PT_V600_20250211_a6554e24_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3911,7 +3918,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_DCM_RR_SigGroup_oDCM_RR_oATOM_CAN_Matrix_PT_V
     (void)GetSpinlock(Rte_Spinlock_SG_DCM_RR_SigGroup_oDCM_RR_oATOM_CAN_Matrix_PT_V600_20250211_9219ec09_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_DCM_RR_SigGroup_oDCM_RR_oATOM_CAN_Matrix_PT_V600_20250211_9219ec09_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_DCM_RR_DoorRRSts_oDCM_RR_oATOM_CAN_Matrix_PT_V600_20250211_c830eb38_Rx, &(*(&Rte_SG_DCM_RR_SigGroup_oDCM_RR_oATOM_CAN_Matrix_PT_V600_20250211_9219ec09_Rx)).DCM_RR_DoorRRSts); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_RR_SigGroup_SG_DCM_RR_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_RR_SigGroup_SG_DCM_RR_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_RR_SigGroup_SG_DCM_RR_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_DCM_RR_SigGroup_SG_DCM_RR_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_DCM_RR_SigGroup_oDCM_RR_oATOM_CAN_Matrix_PT_V600_20250211_9219ec09_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3934,7 +3941,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_EPS_CONV_SigGroup_oEPS_CONV_oATOM_CANFD_Matri
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_EPS_TorsionBarTorqueValid_oEPS_CONV_oATOM_CANFD_Matrix_CH_V600_202502_70e0d0fb_Rx, &(*(&Rte_SG_EPS_CONV_SigGroup_oEPS_CONV_oATOM_CANFD_Matrix_CH_V600_202502_42428757_Rx)).EPS_TorsionBarTorqueValid); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_EPS_WarningLamp_oEPS_CONV_oATOM_CANFD_Matrix_CH_V600_202502_1f264a37_Rx, &(*(&Rte_SG_EPS_CONV_SigGroup_oEPS_CONV_oATOM_CANFD_Matrix_CH_V600_202502_42428757_Rx)).EPS_WarningLamp); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0F0_oEPS_CONV_oATOM_CANFD_Matrix_CH_V600_202502_d613f931_Rx, &(*(&Rte_SG_EPS_CONV_SigGroup_oEPS_CONV_oATOM_CANFD_Matrix_CH_V600_202502_42428757_Rx)).MessageCounter_0F0); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_EPS_CONV_SigGroup_SG_EPS_CONV_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_EPS_CONV_SigGroup_SG_EPS_CONV_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_EPS_CONV_SigGroup_SG_EPS_CONV_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_EPS_CONV_SigGroup_SG_EPS_CONV_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_EPS_CONV_SigGroup_oEPS_CONV_oATOM_CANFD_Matrix_CH_V600_202502_42428757_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3948,7 +3955,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_EVCOM_State_01_SigGroup_oEVCOM_State_01_oATOM
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_EVCOM_State_01_SigGroup_oEVCOM_State_01_oATOM_CAN_Matrix_PT_V600_20250211_16f3767b_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_EVCOM_CompActlCnsmpCur_oEVCOM_State_01_oATOM_CAN_Matrix_PT_V600_20250211_a627e94c_Rx, &(*(&Rte_SG_EVCOM_State_01_SigGroup_oEVCOM_State_01_oATOM_CAN_Matrix_PT_V600_20250211_16f3767b_Rx)).EVCOM_CompActlCnsmpCur); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_EVCOM_CompActlPwrCnsmp_oEVCOM_State_01_oATOM_CAN_Matrix_PT_V600_20250211_d741f4fb_Rx, &(*(&Rte_SG_EVCOM_State_01_SigGroup_oEVCOM_State_01_oATOM_CAN_Matrix_PT_V600_20250211_16f3767b_Rx)).EVCOM_CompActlPwrCnsmp); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_EVCOM_State_01_SigGroup_SG_EVCOM_State_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_EVCOM_State_01_SigGroup_SG_EVCOM_State_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_EVCOM_State_01_SigGroup_SG_EVCOM_State_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_EVCOM_State_01_SigGroup_SG_EVCOM_State_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_EVCOM_State_01_SigGroup_oEVCOM_State_01_oATOM_CAN_Matrix_PT_V600_20250211_16f3767b_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3972,7 +3979,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_ACC_SigGroup_oIBS_ACC_oATOM_CANFD_Matrix_
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_WLTorqueVLCReq_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502_e5232329_Rx, &(*(&Rte_SG_IBS_ACC_SigGroup_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502_c31bc8ab_Rx)).IBS_WLTorqueVLCReq); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_WLTorqueVLCReqValid_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502_d640a38d_Rx, &(*(&Rte_SG_IBS_ACC_SigGroup_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502_c31bc8ab_Rx)).IBS_WLTorqueVLCReqValid); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0B8_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502_20387c24_Rx, &(*(&Rte_SG_IBS_ACC_SigGroup_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502_c31bc8ab_Rx)).MessageCounter_0B8); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_ACC_SigGroup_SG_IBS_ACC_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_ACC_SigGroup_SG_IBS_ACC_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_ACC_SigGroup_SG_IBS_ACC_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_ACC_SigGroup_SG_IBS_ACC_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IBS_ACC_SigGroup_oIBS_ACC_oATOM_CANFD_Matrix_CH_V600_202502_c31bc8ab_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -3993,7 +4000,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_APS_SigGroup_oIBS_APS_oATOM_CANFD_Matrix_
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_APS_Avl_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502_912b9c67_Rx, &(*(&Rte_SG_IBS_APS_SigGroup_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502_91bbe9ec_Rx)).IBS_APS_Avl); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_BrakeTypEcho_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502_efa1b54d_Rx, &(*(&Rte_SG_IBS_APS_SigGroup_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502_91bbe9ec_Rx)).IBS_BrakeTypEcho); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0B7_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502_b68b4db2_Rx, &(*(&Rte_SG_IBS_APS_SigGroup_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502_91bbe9ec_Rx)).MessageCounter_0B7); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_APS_SigGroup_SG_IBS_APS_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_APS_SigGroup_SG_IBS_APS_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_APS_SigGroup_SG_IBS_APS_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_APS_SigGroup_SG_IBS_APS_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IBS_APS_SigGroup_oIBS_APS_oATOM_CANFD_Matrix_CH_V600_202502_91bbe9ec_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4012,7 +4019,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_Status_01_SigGroup_oIBS_Status_01_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_MasterCylinderPressure_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502_b339468a_Rx, &(*(&Rte_SG_IBS_Status_01_SigGroup_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502_bdf732ba_Rx)).IBS_MasterCylinderPressure); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_PlungerPressure_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502_1a29f19b_Rx, &(*(&Rte_SG_IBS_Status_01_SigGroup_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502_bdf732ba_Rx)).IBS_PlungerPressure); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0B2_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502_7bc88e71_Rx, &(*(&Rte_SG_IBS_Status_01_SigGroup_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502_bdf732ba_Rx)).MessageCounter_0B2); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_01_SigGroup_SG_IBS_Status_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_01_SigGroup_SG_IBS_Status_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_01_SigGroup_SG_IBS_Status_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_01_SigGroup_SG_IBS_Status_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IBS_Status_01_SigGroup_oIBS_Status_01_oATOM_CANFD_Matrix_CH_V600_202502_bdf732ba_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4042,7 +4049,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_Status_02_SigGroup_oIBS_Status_02_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_TCSActive_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502_a64ac2d8_Rx, &(*(&Rte_SG_IBS_Status_02_SigGroup_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502_8df002b0_Rx)).IBS_TCSActive); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_VDCActive_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502_7ab0d9f3_Rx, &(*(&Rte_SG_IBS_Status_02_SigGroup_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502_8df002b0_Rx)).IBS_VDCActive); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0B3_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502_742aa999_Rx, &(*(&Rte_SG_IBS_Status_02_SigGroup_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502_8df002b0_Rx)).MessageCounter_0B3); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_02_SigGroup_SG_IBS_Status_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_02_SigGroup_SG_IBS_Status_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_02_SigGroup_SG_IBS_Status_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_02_SigGroup_SG_IBS_Status_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IBS_Status_02_SigGroup_oIBS_Status_02_oATOM_CANFD_Matrix_CH_V600_202502_8df002b0_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4070,7 +4077,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_Status_03_SigGroup_oIBS_Status_03_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_VehicleSpeed_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502_5ce10c83_Rx, &(*(&Rte_SG_IBS_Status_03_SigGroup_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502_2b221089_Rx)).IBS_VehicleSpeed); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_VehicleSpeedValid_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502_317a0a26_Rx, &(*(&Rte_SG_IBS_Status_03_SigGroup_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502_2b221089_Rx)).IBS_VehicleSpeedValid); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0B4_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502_91c1ff04_Rx, &(*(&Rte_SG_IBS_Status_03_SigGroup_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502_2b221089_Rx)).MessageCounter_0B4); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_03_SigGroup_SG_IBS_Status_03_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_03_SigGroup_SG_IBS_Status_03_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_03_SigGroup_SG_IBS_Status_03_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_03_SigGroup_SG_IBS_Status_03_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IBS_Status_03_SigGroup_oIBS_Status_03_oATOM_CANFD_Matrix_CH_V600_202502_2b221089_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4087,7 +4094,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_Status_04_SigGroup_oIBS_Status_04_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_CDPAvailable_oIBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502_551f17a8_Rx, &(*(&Rte_SG_IBS_Status_04_SigGroup_oIBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502_edfe62a4_Rx)).IBS_CDPAvailable); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_DTCActive_oIBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502_05637011_Rx, &(*(&Rte_SG_IBS_Status_04_SigGroup_oIBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502_edfe62a4_Rx)).IBS_DTCActive); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0BA_oIBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502_a129f9da_Rx, &(*(&Rte_SG_IBS_Status_04_SigGroup_oIBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502_edfe62a4_Rx)).MessageCounter_0BA); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_04_SigGroup_SG_IBS_Status_04_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_04_SigGroup_SG_IBS_Status_04_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_04_SigGroup_SG_IBS_Status_04_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_04_SigGroup_SG_IBS_Status_04_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IBS_Status_04_SigGroup_oIBS_Status_04_oATOM_CANFD_Matrix_CH_V600_202502_edfe62a4_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4104,7 +4111,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_Status_05_SigGroup_oIBS_Status_05_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_SUBEPBFailureStatus_oIBS_Status_05_oATOM_CAN_Matrix_PT_V600_20250211_85549b8d_Rx, &(*(&Rte_SG_IBS_Status_05_SigGroup_oIBS_Status_05_oATOM_CAN_Matrix_PT_V600_20250211_7471090c_Rx)).IBS_SUBEPBFailureStatus); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_SUBEPBworkingSts_oIBS_Status_05_oATOM_CAN_Matrix_PT_V600_20250211_6b861b0d_Rx, &(*(&Rte_SG_IBS_Status_05_SigGroup_oIBS_Status_05_oATOM_CAN_Matrix_PT_V600_20250211_7471090c_Rx)).IBS_SUBEPBworkingSts); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0BB_oIBS_Status_05_oATOM_CAN_Matrix_PT_V600_20250211_06c8bbd1_Rx, &(*(&Rte_SG_IBS_Status_05_SigGroup_oIBS_Status_05_oATOM_CAN_Matrix_PT_V600_20250211_7471090c_Rx)).MessageCounter_0BB); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_05_SigGroup_SG_IBS_Status_05_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_05_SigGroup_SG_IBS_Status_05_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_05_SigGroup_SG_IBS_Status_05_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_05_SigGroup_SG_IBS_Status_05_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IBS_Status_05_SigGroup_oIBS_Status_05_oATOM_CAN_Matrix_PT_V600_20250211_7471090c_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4136,7 +4143,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_Status_06_SigGroup_oIBS_Status_06_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_TireWarnReLe_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502_6e5db930_Rx, &(*(&Rte_SG_IBS_Status_06_SigGroup_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502_7b2b4097_Rx)).IBS_TireWarnReLe); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_TireWarnReRi_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502_ca07afb6_Rx, &(*(&Rte_SG_IBS_Status_06_SigGroup_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502_7b2b4097_Rx)).IBS_TireWarnReRi); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0BC_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502_3677e5a8_Rx, &(*(&Rte_SG_IBS_Status_06_SigGroup_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502_7b2b4097_Rx)).MessageCounter_0BC); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_06_SigGroup_SG_IBS_Status_06_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_06_SigGroup_SG_IBS_Status_06_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_06_SigGroup_SG_IBS_Status_06_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Status_06_SigGroup_SG_IBS_Status_06_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IBS_Status_06_SigGroup_oIBS_Status_06_oATOM_CANFD_Matrix_CH_V600_202502_7b2b4097_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4157,7 +4164,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_Torque_SigGroup_oIBS_Torque_oATOM_CANFD_M
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_WLTorqueRBSReq_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502_dae1e9b7_Rx, &(*(&Rte_SG_IBS_Torque_SigGroup_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502_5a2dd5ad_Rx)).IBS_WLTorqueRBSReq); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_WLTorqueRBSReqValid_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502_0144d4d4_Rx, &(*(&Rte_SG_IBS_Torque_SigGroup_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502_5a2dd5ad_Rx)).IBS_WLTorqueRBSReqValid); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0B9_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502_683f1d6f_Rx, &(*(&Rte_SG_IBS_Torque_SigGroup_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502_5a2dd5ad_Rx)).MessageCounter_0B9); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Torque_SigGroup_SG_IBS_Torque_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Torque_SigGroup_SG_IBS_Torque_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Torque_SigGroup_SG_IBS_Torque_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_Torque_SigGroup_SG_IBS_Torque_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IBS_Torque_SigGroup_oIBS_Torque_oATOM_CANFD_Matrix_CH_V600_202502_5a2dd5ad_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4175,7 +4182,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_VCU_MotorControl_SigGroup_oIBS_VCU_MotorC
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_WLTorqueRedReq_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502_79bc7664_Rx, &(*(&Rte_SG_IBS_VCU_MotorControl_SigGroup_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502_9a811a5b_Rx)).IBS_WLTorqueRedReq); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_WLTorqueRedReqSts_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502_2655e1fb_Rx, &(*(&Rte_SG_IBS_VCU_MotorControl_SigGroup_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502_9a811a5b_Rx)).IBS_WLTorqueRedReqSts); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_090_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502_db5c1277_Rx, &(*(&Rte_SG_IBS_VCU_MotorControl_SigGroup_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502_9a811a5b_Rx)).MessageCounter_090); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_VCU_MotorControl_SigGroup_CAN_SG_IBS_VCU_MotorControl_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_VCU_MotorControl_SigGroup_CAN_SG_IBS_VCU_MotorControl_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_VCU_MotorControl_SigGroup_CAN_SG_IBS_VCU_MotorControl_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_VCU_MotorControl_SigGroup_CAN_SG_IBS_VCU_MotorControl_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IBS_VCU_MotorControl_SigGroup_oIBS_VCU_MotorControl_oATOM_CANFD_Matrix_CH_V600_202502_9a811a5b_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4197,7 +4204,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_WheelSpeed_01_SigGroup_oIBS_WheelSpeed_01
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_FRWheelSpeed_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502_7a94cc9a_Rx, &(*(&Rte_SG_IBS_WheelSpeed_01_SigGroup_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502_5773aa13_Rx)).IBS_FRWheelSpeed); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_FRWheelSpeed_Fault_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502_2564a038_Rx, &(*(&Rte_SG_IBS_WheelSpeed_01_SigGroup_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502_5773aa13_Rx)).IBS_FRWheelSpeed_Fault); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0B0_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502_895d6141_Rx, &(*(&Rte_SG_IBS_WheelSpeed_01_SigGroup_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502_5773aa13_Rx)).MessageCounter_0B0); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_WheelSpeed_01_SigGroup_SG_IBS_WheelSpeed_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_WheelSpeed_01_SigGroup_SG_IBS_WheelSpeed_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_WheelSpeed_01_SigGroup_SG_IBS_WheelSpeed_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_WheelSpeed_01_SigGroup_SG_IBS_WheelSpeed_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IBS_WheelSpeed_01_SigGroup_oIBS_WheelSpeed_01_oATOM_CANFD_Matrix_CH_V600_202502_5773aa13_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4219,7 +4226,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IBS_WheelSpeed_02_SigGroup_oIBS_WheelSpeed_02
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_RRWheelSpeed_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502_fce5b0f5_Rx, &(*(&Rte_SG_IBS_WheelSpeed_02_SigGroup_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502_2d752b6e_Rx)).IBS_RRWheelSpeed); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IBS_RRWheelSpeed_Fault_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502_be453909_Rx, &(*(&Rte_SG_IBS_WheelSpeed_02_SigGroup_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502_2d752b6e_Rx)).IBS_RRWheelSpeed_Fault); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_0B1_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502_032bf6ee_Rx, &(*(&Rte_SG_IBS_WheelSpeed_02_SigGroup_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502_2d752b6e_Rx)).MessageCounter_0B1); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_WheelSpeed_02_SigGroup_SG_IBS_WheelSpeed_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_WheelSpeed_02_SigGroup_SG_IBS_WheelSpeed_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_WheelSpeed_02_SigGroup_SG_IBS_WheelSpeed_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IBS_WheelSpeed_02_SigGroup_SG_IBS_WheelSpeed_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IBS_WheelSpeed_02_SigGroup_oIBS_WheelSpeed_02_oATOM_CANFD_Matrix_CH_V600_202502_2d752b6e_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4232,7 +4239,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IVI_01_SigGroup_oIVI_01_oATOM_CAN_Matrix_PT_V
     (void)GetSpinlock(Rte_Spinlock_SG_IVI_01_SigGroup_oIVI_01_oATOM_CAN_Matrix_PT_V600_20250211_284cc0c2_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_IVI_01_SigGroup_oIVI_01_oATOM_CAN_Matrix_PT_V600_20250211_284cc0c2_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IVI_GearRequest_oIVI_01_oATOM_CAN_Matrix_PT_V600_20250211_3ae0554e_Rx, &(*(&Rte_SG_IVI_01_SigGroup_oIVI_01_oATOM_CAN_Matrix_PT_V600_20250211_284cc0c2_Rx)).IVI_GearRequest); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IVI_01_SigGroup_SG_IVI_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IVI_01_SigGroup_SG_IVI_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IVI_01_SigGroup_SG_IVI_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IVI_01_SigGroup_SG_IVI_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IVI_01_SigGroup_oIVI_01_oATOM_CAN_Matrix_PT_V600_20250211_284cc0c2_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4261,7 +4268,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_IVI_OdometerInfor_SigGroup_oIVI_OdometerInfor
     (void)GetSpinlock(Rte_Spinlock_SG_IVI_OdometerInfor_SigGroup_oIVI_OdometerInfor_oATOM_CAN_Matrix_PT_V600_20250211_3516238b_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_IVI_OdometerInfor_SigGroup_oIVI_OdometerInfor_oATOM_CAN_Matrix_PT_V600_20250211_3516238b_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IVI_OdometerInfor_oIVI_OdometerInfor_oATOM_CAN_Matrix_PT_V600_20250211_e6e371ee_Rx, &(*(&Rte_SG_IVI_OdometerInfor_SigGroup_oIVI_OdometerInfor_oATOM_CAN_Matrix_PT_V600_20250211_3516238b_Rx)).IVI_OdometerInfor); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IVI_OdometerInfor_SigGroup_SG_IVI_OdometerInfor_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IVI_OdometerInfor_SigGroup_SG_IVI_OdometerInfor_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IVI_OdometerInfor_SigGroup_SG_IVI_OdometerInfor_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_IVI_OdometerInfor_SigGroup_SG_IVI_OdometerInfor_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_IVI_OdometerInfor_SigGroup_oIVI_OdometerInfor_oATOM_CAN_Matrix_PT_V600_20250211_3516238b_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4281,7 +4288,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_MCU_01_SigGroup_oMCU_01_oATOM_CAN_Matrix_PT_V
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MCU_IsCurr_oMCU_01_oATOM_CAN_Matrix_PT_V600_20250211_3f405105_Rx, &(*(&Rte_SG_MCU_01_SigGroup_oMCU_01_oATOM_CAN_Matrix_PT_V600_20250211_3844bc9f_Rx)).MCU_IsCurr); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MCU_UdcCurr_oMCU_01_oATOM_CAN_Matrix_PT_V600_20250211_c9f788aa_Rx, &(*(&Rte_SG_MCU_01_SigGroup_oMCU_01_oATOM_CAN_Matrix_PT_V600_20250211_3844bc9f_Rx)).MCU_UdcCurr); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_098_oMCU_01_oATOM_CAN_Matrix_PT_V600_20250211_fd75949b_Rx, &(*(&Rte_SG_MCU_01_SigGroup_oMCU_01_oATOM_CAN_Matrix_PT_V600_20250211_3844bc9f_Rx)).MessageCounter_098); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_01_SigGroup_2_SG_MCU_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_01_SigGroup_2_SG_MCU_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_01_SigGroup_2_SG_MCU_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_01_SigGroup_2_SG_MCU_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_MCU_01_SigGroup_oMCU_01_oATOM_CAN_Matrix_PT_V600_20250211_3844bc9f_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4295,7 +4302,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_MCU_02_SigGroup_oMCU_02_oATOM_CAN_Matrix_PT_V
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_MCU_02_SigGroup_oMCU_02_oATOM_CAN_Matrix_PT_V600_20250211_09c28691_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MCU_BDmpCActv_oMCU_02_oATOM_CAN_Matrix_PT_V600_20250211_c0586eb8_Rx, &(*(&Rte_SG_MCU_02_SigGroup_oMCU_02_oATOM_CAN_Matrix_PT_V600_20250211_09c28691_Rx)).MCU_BDmpCActv); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MCU_VCUWorkMode_oMCU_02_oATOM_CAN_Matrix_PT_V600_20250211_2a117a8b_Rx, &(*(&Rte_SG_MCU_02_SigGroup_oMCU_02_oATOM_CAN_Matrix_PT_V600_20250211_09c28691_Rx)).MCU_VCUWorkMode); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_02_SigGroup_SG_MCU_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_02_SigGroup_SG_MCU_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_02_SigGroup_SG_MCU_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_02_SigGroup_SG_MCU_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_MCU_02_SigGroup_oMCU_02_oATOM_CAN_Matrix_PT_V600_20250211_09c28691_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4309,7 +4316,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_MCU_DeratingStatus_SigGroup_oMCU_DeratingStat
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_MCU_DeratingStatus_SigGroup_oMCU_DeratingStatus_oATOM_CAN_Matrix_PT_V600_20250211_c60bf9ce_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MCU_TrqAbsMax_oMCU_DeratingStatus_oATOM_CAN_Matrix_PT_V600_20250211_e9a1ec48_Rx, &(*(&Rte_SG_MCU_DeratingStatus_SigGroup_oMCU_DeratingStatus_oATOM_CAN_Matrix_PT_V600_20250211_c60bf9ce_Rx)).MCU_TrqAbsMax); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MCU_TrqAbsMin_oMCU_DeratingStatus_oATOM_CAN_Matrix_PT_V600_20250211_84a8e353_Rx, &(*(&Rte_SG_MCU_DeratingStatus_SigGroup_oMCU_DeratingStatus_oATOM_CAN_Matrix_PT_V600_20250211_c60bf9ce_Rx)).MCU_TrqAbsMin); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_DeratingStatus_SigGroup_SG_MCU_DeratingStatus_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_DeratingStatus_SigGroup_SG_MCU_DeratingStatus_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_DeratingStatus_SigGroup_SG_MCU_DeratingStatus_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_DeratingStatus_SigGroup_SG_MCU_DeratingStatus_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_MCU_DeratingStatus_SigGroup_oMCU_DeratingStatus_oATOM_CAN_Matrix_PT_V600_20250211_c60bf9ce_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4324,7 +4331,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_MCU_FailureCode_SigGroup_oMCU_FailureCode_oAT
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_Checksum_253_oMCU_FailureCode_oATOM_CAN_Matrix_PT_V600_20250211_81801456_Rx, &(*(&Rte_SG_MCU_FailureCode_SigGroup_oMCU_FailureCode_oATOM_CAN_Matrix_PT_V600_20250211_bf11f7cf_Rx)).Checksum_253); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MCU_FaultLevel_oMCU_FailureCode_oATOM_CAN_Matrix_PT_V600_20250211_bf7f5830_Rx, &(*(&Rte_SG_MCU_FailureCode_SigGroup_oMCU_FailureCode_oATOM_CAN_Matrix_PT_V600_20250211_bf11f7cf_Rx)).MCU_FaultLevel); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MessageCounter_253_oMCU_FailureCode_oATOM_CAN_Matrix_PT_V600_20250211_981cfb50_Rx, &(*(&Rte_SG_MCU_FailureCode_SigGroup_oMCU_FailureCode_oATOM_CAN_Matrix_PT_V600_20250211_bf11f7cf_Rx)).MessageCounter_253); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_FailureCode_SigGroup_SG_MCU_FailureCode_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_FailureCode_SigGroup_SG_MCU_FailureCode_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_FailureCode_SigGroup_SG_MCU_FailureCode_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_FailureCode_SigGroup_SG_MCU_FailureCode_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_MCU_FailureCode_SigGroup_oMCU_FailureCode_oATOM_CAN_Matrix_PT_V600_20250211_bf11f7cf_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4337,7 +4344,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_MCU_Temperature_01_SigGroup_oMCU_Temperature_
     (void)GetSpinlock(Rte_Spinlock_SG_MCU_Temperature_01_SigGroup_oMCU_Temperature_01_oATOM_CAN_Matrix_PT_V600_20250211_9ee5905c_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_MCU_Temperature_01_SigGroup_oMCU_Temperature_01_oATOM_CAN_Matrix_PT_V600_20250211_9ee5905c_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MCU_IGBTTempMax_oMCU_Temperature_01_oATOM_CAN_Matrix_PT_V600_20250211_2c994d0d_Rx, &(*(&Rte_SG_MCU_Temperature_01_SigGroup_oMCU_Temperature_01_oATOM_CAN_Matrix_PT_V600_20250211_9ee5905c_Rx)).MCU_IGBTTempMax); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_Temperature_01_SigGroup_SG_MCU_Temperature_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_Temperature_01_SigGroup_SG_MCU_Temperature_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_Temperature_01_SigGroup_SG_MCU_Temperature_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_Temperature_01_SigGroup_SG_MCU_Temperature_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_MCU_Temperature_01_SigGroup_oMCU_Temperature_01_oATOM_CAN_Matrix_PT_V600_20250211_9ee5905c_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4350,7 +4357,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_MCU_Temperature_02_SigGroup_oMCU_Temperature_
     (void)GetSpinlock(Rte_Spinlock_SG_MCU_Temperature_02_SigGroup_oMCU_Temperature_02_oATOM_CAN_Matrix_PT_V600_20250211_5f18debb_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_MCU_Temperature_02_SigGroup_oMCU_Temperature_02_oATOM_CAN_Matrix_PT_V600_20250211_5f18debb_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_MCU_TempStatus_oMCU_Temperature_02_oATOM_CAN_Matrix_PT_V600_20250211_ccf76e7e_Rx, &(*(&Rte_SG_MCU_Temperature_02_SigGroup_oMCU_Temperature_02_oATOM_CAN_Matrix_PT_V600_20250211_5f18debb_Rx)).MCU_TempStatus); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_Temperature_02_SigGroup_SG_MCU_Temperature_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_Temperature_02_SigGroup_SG_MCU_Temperature_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_Temperature_02_SigGroup_SG_MCU_Temperature_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_MCU_Temperature_02_SigGroup_SG_MCU_Temperature_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_MCU_Temperature_02_SigGroup_oMCU_Temperature_02_oATOM_CAN_Matrix_PT_V600_20250211_5f18debb_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4365,7 +4372,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_POD_DCDC_01_SigGroup_oPOD_DCDC_01_oATOM_CAN_M
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_DCDC_HVInputCurrent_oPOD_DCDC_01_oATOM_CAN_Matrix_PT_V600_20250211_135e2f35_Rx, &(*(&Rte_SG_POD_DCDC_01_SigGroup_oPOD_DCDC_01_oATOM_CAN_Matrix_PT_V600_20250211_c0cfae4d_Rx)).POD_DCDC_HVInputCurrent); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_DCDC_HVInputVoltage_oPOD_DCDC_01_oATOM_CAN_Matrix_PT_V600_20250211_9c7a540a_Rx, &(*(&Rte_SG_POD_DCDC_01_SigGroup_oPOD_DCDC_01_oATOM_CAN_Matrix_PT_V600_20250211_c0cfae4d_Rx)).POD_DCDC_HVInputVoltage); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_DCDC_WorkMode_oPOD_DCDC_01_oATOM_CAN_Matrix_PT_V600_20250211_444a4f6b_Rx, &(*(&Rte_SG_POD_DCDC_01_SigGroup_oPOD_DCDC_01_oATOM_CAN_Matrix_PT_V600_20250211_c0cfae4d_Rx)).POD_DCDC_WorkMode); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_DCDC_01_SigGroup_SG_POD_DCDC_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_DCDC_01_SigGroup_SG_POD_DCDC_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_DCDC_01_SigGroup_SG_POD_DCDC_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_DCDC_01_SigGroup_SG_POD_DCDC_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_POD_DCDC_01_SigGroup_oPOD_DCDC_01_oATOM_CAN_Matrix_PT_V600_20250211_c0cfae4d_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4379,7 +4386,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_POD_DCDC_02_SigGroup_oPOD_DCDC_02_oATOM_CAN_M
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_POD_DCDC_02_SigGroup_oPOD_DCDC_02_oATOM_CAN_Matrix_PT_V600_20250211_62e3e6f8_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_DCDC_FaultLevel_oPOD_DCDC_02_oATOM_CAN_Matrix_PT_V600_20250211_eefe3afb_Rx, &(*(&Rte_SG_POD_DCDC_02_SigGroup_oPOD_DCDC_02_oATOM_CAN_Matrix_PT_V600_20250211_62e3e6f8_Rx)).POD_DCDC_FaultLevel); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_DCDC_Side2Overtempfault_oPOD_DCDC_02_oATOM_CAN_Matrix_PT_V600_20250211_52f42506_Rx, &(*(&Rte_SG_POD_DCDC_02_SigGroup_oPOD_DCDC_02_oATOM_CAN_Matrix_PT_V600_20250211_62e3e6f8_Rx)).POD_DCDC_Side2Overtempfault); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_DCDC_02_SigGroup_SG_POD_DCDC_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_DCDC_02_SigGroup_SG_POD_DCDC_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_DCDC_02_SigGroup_SG_POD_DCDC_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_DCDC_02_SigGroup_SG_POD_DCDC_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_POD_DCDC_02_SigGroup_oPOD_DCDC_02_oATOM_CAN_Matrix_PT_V600_20250211_62e3e6f8_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4401,7 +4408,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_POD_OBC_CHRGSTATION_SigGroup_oPOD_OBC_CHRGSTA
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_OBC_OBCMaxPermOutpCrrt_oPOD_OBC_CHRGSTATION_oATOM_CAN_Matrix_PT_V600_20250211_27da1158_Rx, &(*(&Rte_SG_POD_OBC_CHRGSTATION_SigGroup_oPOD_OBC_CHRGSTATION_oATOM_CAN_Matrix_PT_V600_20250211_4d87b474_Rx)).POD_OBC_OBCMaxPermOutpCrrt); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_OBC_S2State_oPOD_OBC_CHRGSTATION_oATOM_CAN_Matrix_PT_V600_20250211_d46756d3_Rx, &(*(&Rte_SG_POD_OBC_CHRGSTATION_SigGroup_oPOD_OBC_CHRGSTATION_oATOM_CAN_Matrix_PT_V600_20250211_4d87b474_Rx)).POD_OBC_S2State); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_OBC_WorkMode_oPOD_OBC_CHRGSTATION_oATOM_CAN_Matrix_PT_V600_20250211_206572d6_Rx, &(*(&Rte_SG_POD_OBC_CHRGSTATION_SigGroup_oPOD_OBC_CHRGSTATION_oATOM_CAN_Matrix_PT_V600_20250211_4d87b474_Rx)).POD_OBC_WorkMode); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_CHRGSTATION_SigGroup_SG_POD_OBC_CHRGSTATION_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_CHRGSTATION_SigGroup_SG_POD_OBC_CHRGSTATION_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_CHRGSTATION_SigGroup_SG_POD_OBC_CHRGSTATION_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_CHRGSTATION_SigGroup_SG_POD_OBC_CHRGSTATION_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_POD_OBC_CHRGSTATION_SigGroup_oPOD_OBC_CHRGSTATION_oATOM_CAN_Matrix_PT_V600_20250211_4d87b474_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4416,7 +4423,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_POD_OBC_STATUS_02_SigGroup_oPOD_OBC_STATUS_02
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_OBC_ChrgOutpPwrAvl_oPOD_OBC_STATUS_02_oATOM_CAN_Matrix_PT_V600_20250211_a1981126_Rx, &(*(&Rte_SG_POD_OBC_STATUS_02_SigGroup_oPOD_OBC_STATUS_02_oATOM_CAN_Matrix_PT_V600_20250211_49c67a09_Rx)).POD_OBC_ChrgOutpPwrAvl); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_OBC_OutputDCChargeCurrent_oPOD_OBC_STATUS_02_oATOM_CAN_Matrix_PT_V600_20250211_9a885370_Rx, &(*(&Rte_SG_POD_OBC_STATUS_02_SigGroup_oPOD_OBC_STATUS_02_oATOM_CAN_Matrix_PT_V600_20250211_49c67a09_Rx)).POD_OBC_OutputDCChargeCurrent); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_OBC_OutputDCChargeVoltage_oPOD_OBC_STATUS_02_oATOM_CAN_Matrix_PT_V600_20250211_249f5302_Rx, &(*(&Rte_SG_POD_OBC_STATUS_02_SigGroup_oPOD_OBC_STATUS_02_oATOM_CAN_Matrix_PT_V600_20250211_49c67a09_Rx)).POD_OBC_OutputDCChargeVoltage); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_STATUS_02_SigGroup_SG_POD_OBC_STATUS_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_STATUS_02_SigGroup_SG_POD_OBC_STATUS_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_STATUS_02_SigGroup_SG_POD_OBC_STATUS_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_STATUS_02_SigGroup_SG_POD_OBC_STATUS_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_POD_OBC_STATUS_02_SigGroup_oPOD_OBC_STATUS_02_oATOM_CAN_Matrix_PT_V600_20250211_49c67a09_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4433,7 +4440,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_POD_OBC_STATUS_03_SigGroup_oPOD_OBC_STATUS_03
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_OBC_SecondarySideTemp_oPOD_OBC_STATUS_03_oATOM_CAN_Matrix_PT_V600_20250211_6ad0dc35_Rx, &(*(&Rte_SG_POD_OBC_STATUS_03_SigGroup_oPOD_OBC_STATUS_03_oATOM_CAN_Matrix_PT_V600_20250211_d6eb071d_Rx)).POD_OBC_SecondarySideTemp); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_OBC_Side1Overtempfault_oPOD_OBC_STATUS_03_oATOM_CAN_Matrix_PT_V600_20250211_180c8c7c_Rx, &(*(&Rte_SG_POD_OBC_STATUS_03_SigGroup_oPOD_OBC_STATUS_03_oATOM_CAN_Matrix_PT_V600_20250211_d6eb071d_Rx)).POD_OBC_Side1Overtempfault); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_OBC_Side2Overtempfault_oPOD_OBC_STATUS_03_oATOM_CAN_Matrix_PT_V600_20250211_54bfa6d5_Rx, &(*(&Rte_SG_POD_OBC_STATUS_03_SigGroup_oPOD_OBC_STATUS_03_oATOM_CAN_Matrix_PT_V600_20250211_d6eb071d_Rx)).POD_OBC_Side2Overtempfault); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_STATUS_03_SigGroup_SG_POD_OBC_STATUS_03_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_STATUS_03_SigGroup_SG_POD_OBC_STATUS_03_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_STATUS_03_SigGroup_SG_POD_OBC_STATUS_03_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_STATUS_03_SigGroup_SG_POD_OBC_STATUS_03_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_POD_OBC_STATUS_03_SigGroup_oPOD_OBC_STATUS_03_oATOM_CAN_Matrix_PT_V600_20250211_d6eb071d_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4451,7 +4458,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_POD_OBC_STATUS_04_SigGroup_oPOD_OBC_STATUS_04
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_OBC_InputACVoltage_R_oPOD_OBC_STATUS_04_oATOM_CAN_Matrix_PT_V600_20250211_779a5b73_Rx, &(*(&Rte_SG_POD_OBC_STATUS_04_SigGroup_oPOD_OBC_STATUS_04_oATOM_CAN_Matrix_PT_V600_20250211_bdcb78f3_Rx)).POD_OBC_InputACVoltage_R); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_OBC_InputACVoltage_S_oPOD_OBC_STATUS_04_oATOM_CAN_Matrix_PT_V600_20250211_763ff2c5_Rx, &(*(&Rte_SG_POD_OBC_STATUS_04_SigGroup_oPOD_OBC_STATUS_04_oATOM_CAN_Matrix_PT_V600_20250211_bdcb78f3_Rx)).POD_OBC_InputACVoltage_S); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_OBC_InputACVoltage_T_oPOD_OBC_STATUS_04_oATOM_CAN_Matrix_PT_V600_20250211_7247aec7_Rx, &(*(&Rte_SG_POD_OBC_STATUS_04_SigGroup_oPOD_OBC_STATUS_04_oATOM_CAN_Matrix_PT_V600_20250211_bdcb78f3_Rx)).POD_OBC_InputACVoltage_T); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_STATUS_04_SigGroup_SG_POD_OBC_STATUS_04_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_STATUS_04_SigGroup_SG_POD_OBC_STATUS_04_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_STATUS_04_SigGroup_SG_POD_OBC_STATUS_04_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_OBC_STATUS_04_SigGroup_SG_POD_OBC_STATUS_04_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_POD_OBC_STATUS_04_SigGroup_oPOD_OBC_STATUS_04_oATOM_CAN_Matrix_PT_V600_20250211_bdcb78f3_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4466,7 +4473,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_POD_Status_01_SigGroup_oPOD_Status_01_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_DCFCVoltage_oPOD_Status_01_oATOM_CAN_Matrix_PT_V600_20250211_b89acdd0_Rx, &(*(&Rte_SG_POD_Status_01_SigGroup_oPOD_Status_01_oATOM_CAN_Matrix_PT_V600_20250211_880c9d5a_Rx)).POD_DCFCVoltage); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_DCInletTempA_oPOD_Status_01_oATOM_CAN_Matrix_PT_V600_20250211_3fbc48fa_Rx, &(*(&Rte_SG_POD_Status_01_SigGroup_oPOD_Status_01_oATOM_CAN_Matrix_PT_V600_20250211_880c9d5a_Rx)).POD_DCInletTempA); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_DCInletTempB_oPOD_Status_01_oATOM_CAN_Matrix_PT_V600_20250211_689e64a8_Rx, &(*(&Rte_SG_POD_Status_01_SigGroup_oPOD_Status_01_oATOM_CAN_Matrix_PT_V600_20250211_880c9d5a_Rx)).POD_DCInletTempB); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_Status_01_SigGroup_SG_POD_Status_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_Status_01_SigGroup_SG_POD_Status_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_Status_01_SigGroup_SG_POD_Status_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_Status_01_SigGroup_SG_POD_Status_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_POD_Status_01_SigGroup_oPOD_Status_01_oATOM_CAN_Matrix_PT_V600_20250211_880c9d5a_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4481,7 +4488,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_POD_Status_02_SigGroup_oPOD_Status_02_oATOM_C
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_DCPortInletTempAValid_oPOD_Status_02_oATOM_CAN_Matrix_PT_V600_20250211_bbc9cc4c_Rx, &(*(&Rte_SG_POD_Status_02_SigGroup_oPOD_Status_02_oATOM_CAN_Matrix_PT_V600_20250211_b80bad50_Rx)).POD_DCPortInletTempAValid); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_DCPortInletTempBValid_oPOD_Status_02_oATOM_CAN_Matrix_PT_V600_20250211_ddcd197c_Rx, &(*(&Rte_SG_POD_Status_02_SigGroup_oPOD_Status_02_oATOM_CAN_Matrix_PT_V600_20250211_b80bad50_Rx)).POD_DCPortInletTempBValid); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_POD_DCPosRelayState_oPOD_Status_02_oATOM_CAN_Matrix_PT_V600_20250211_6f150a52_Rx, &(*(&Rte_SG_POD_Status_02_SigGroup_oPOD_Status_02_oATOM_CAN_Matrix_PT_V600_20250211_b80bad50_Rx)).POD_DCPosRelayState); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_Status_02_SigGroup_SG_POD_Status_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_Status_02_SigGroup_SG_POD_Status_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_Status_02_SigGroup_SG_POD_Status_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_POD_Status_02_SigGroup_SG_POD_Status_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_POD_Status_02_SigGroup_oPOD_Status_02_oATOM_CAN_Matrix_PT_V600_20250211_b80bad50_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4499,7 +4506,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_PRND_SigGroup_oPRND_oATOM_CAN_Matrix_PT_V600_
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_PRND_Pbutton_FaultSts_oPRND_oATOM_CAN_Matrix_PT_V600_20250211_748786ed_Rx, &(*(&Rte_SG_PRND_SigGroup_oPRND_oATOM_CAN_Matrix_PT_V600_20250211_ddf34a23_Rx)).PRND_Pbutton_FaultSts); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_PRND_RNDbutton_oPRND_oATOM_CAN_Matrix_PT_V600_20250211_400cef5e_Rx, &(*(&Rte_SG_PRND_SigGroup_oPRND_oATOM_CAN_Matrix_PT_V600_20250211_ddf34a23_Rx)).PRND_RNDbutton); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_PRND_RNDbutton_FaultSts_oPRND_oATOM_CAN_Matrix_PT_V600_20250211_fe92ca7a_Rx, &(*(&Rte_SG_PRND_SigGroup_oPRND_oATOM_CAN_Matrix_PT_V600_20250211_ddf34a23_Rx)).PRND_RNDbutton_FaultSts); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_PRND_SigGroup_SG_PRND_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_PRND_SigGroup_SG_PRND_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_PRND_SigGroup_SG_PRND_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_PRND_SigGroup_SG_PRND_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_PRND_SigGroup_oPRND_oATOM_CAN_Matrix_PT_V600_20250211_ddf34a23_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4516,7 +4523,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_SGW_01_SigGroup_oSGW_01_oATOM_CAN_Matrix_PT_V
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_SGW_DschrgOnOffSet_oSGW_01_oATOM_CAN_Matrix_PT_V600_20250211_a0a977dd_Rx, &(*(&Rte_SG_SGW_01_SigGroup_oSGW_01_oATOM_CAN_Matrix_PT_V600_20250211_37bbfdeb_Rx)).SGW_DschrgOnOffSet); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_SGW_LockACPlug_oSGW_01_oATOM_CAN_Matrix_PT_V600_20250211_5ade64ae_Rx, &(*(&Rte_SG_SGW_01_SigGroup_oSGW_01_oATOM_CAN_Matrix_PT_V600_20250211_37bbfdeb_Rx)).SGW_LockACPlug); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_SGW_TimingChargeSwitchStatus_oSGW_01_oATOM_CAN_Matrix_PT_V600_20250211_83e61a6c_Rx, &(*(&Rte_SG_SGW_01_SigGroup_oSGW_01_oATOM_CAN_Matrix_PT_V600_20250211_37bbfdeb_Rx)).SGW_TimingChargeSwitchStatus); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_01_SigGroup_SG_SGW_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_01_SigGroup_SG_SGW_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_01_SigGroup_SG_SGW_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_01_SigGroup_SG_SGW_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_SGW_01_SigGroup_oSGW_01_oATOM_CAN_Matrix_PT_V600_20250211_37bbfdeb_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4529,7 +4536,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_SGW_04_SigGroup_oSGW_04_oATOM_CAN_Matrix_PT_V
     (void)GetSpinlock(Rte_Spinlock_SG_SGW_04_SigGroup_oSGW_04_oATOM_CAN_Matrix_PT_V600_20250211_6531b3f9_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_SGW_04_SigGroup_oSGW_04_oATOM_CAN_Matrix_PT_V600_20250211_6531b3f9_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_SGW_RemoteHVCtrlReq_oSGW_04_oATOM_CAN_Matrix_PT_V600_20250211_17e2f736_Rx, &(*(&Rte_SG_SGW_04_SigGroup_oSGW_04_oATOM_CAN_Matrix_PT_V600_20250211_6531b3f9_Rx)).SGW_RemoteHVCtrlReq); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_04_SigGroup_SG_SGW_04_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_04_SigGroup_SG_SGW_04_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_04_SigGroup_SG_SGW_04_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_04_SigGroup_SG_SGW_04_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_SGW_04_SigGroup_oSGW_04_oATOM_CAN_Matrix_PT_V600_20250211_6531b3f9_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4542,7 +4549,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_SGW_16_SigGroup_oSGW_16_oATOM_CAN_Matrix_PT_V
     (void)GetSpinlock(Rte_Spinlock_SG_SGW_16_SigGroup_oSGW_16_oATOM_CAN_Matrix_PT_V600_20250211_194d06e6_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_SGW_16_SigGroup_oSGW_16_oATOM_CAN_Matrix_PT_V600_20250211_194d06e6_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IVI_VrState_oSGW_16_oATOM_CAN_Matrix_PT_V600_20250211_518f75b6_Rx, &(*(&Rte_SG_SGW_16_SigGroup_oSGW_16_oATOM_CAN_Matrix_PT_V600_20250211_194d06e6_Rx)).IVI_VrState); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_16_SigGroup_SG_SGW_16_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_16_SigGroup_SG_SGW_16_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_16_SigGroup_SG_SGW_16_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_16_SigGroup_SG_SGW_16_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_SGW_16_SigGroup_oSGW_16_oATOM_CAN_Matrix_PT_V600_20250211_194d06e6_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4555,7 +4562,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_SGW_17_SigGroup_oSGW_17_oATOM_CANFD_Matrix_CH
     (void)GetSpinlock(Rte_Spinlock_SG_SGW_17_SigGroup_oSGW_17_oATOM_CANFD_Matrix_CH_V600_202502_804294b2_Rx);
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_SGW_17_SigGroup_oSGW_17_oATOM_CANFD_Matrix_CH_V600_202502_804294b2_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_SGW_BLESystemReadyReq_oSGW_17_oATOM_CANFD_Matrix_CH_V600_202502_359ce2fd_Rx, &(*(&Rte_SG_SGW_17_SigGroup_oSGW_17_oATOM_CANFD_Matrix_CH_V600_202502_804294b2_Rx)).SGW_BLESystemReadyReq); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_17_SigGroup_SG_SGW_17_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_17_SigGroup_SG_SGW_17_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_17_SigGroup_SG_SGW_17_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_17_SigGroup_SG_SGW_17_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_SGW_17_SigGroup_oSGW_17_oATOM_CANFD_Matrix_CH_V600_202502_804294b2_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4581,7 +4588,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_SGW_IBS_01_SigGroup_oSGW_IBS_01_oATOM_CAN_Mat
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_SGW_IBS_01_SigGroup_oSGW_IBS_01_oATOM_CAN_Matrix_PT_V600_20250211_0dec95d0_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IVI_BrakeCompensateCmd_oSGW_IBS_01_oATOM_CAN_Matrix_PT_V600_20250211_49b5a1e8_Rx, &(*(&Rte_SG_SGW_IBS_01_SigGroup_oSGW_IBS_01_oATOM_CAN_Matrix_PT_V600_20250211_0dec95d0_Rx)).IVI_BrakeCompensateCmd); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IVI_CRLevelSet_oSGW_IBS_01_oATOM_CAN_Matrix_PT_V600_20250211_8543222f_Rx, &(*(&Rte_SG_SGW_IBS_01_SigGroup_oSGW_IBS_01_oATOM_CAN_Matrix_PT_V600_20250211_0dec95d0_Rx)).IVI_CRLevelSet); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_IBS_01_SigGroup_SG_SGW_IBS_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_IBS_01_SigGroup_SG_SGW_IBS_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_IBS_01_SigGroup_SG_SGW_IBS_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_IBS_01_SigGroup_SG_SGW_IBS_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_SGW_IBS_01_SigGroup_oSGW_IBS_01_oATOM_CAN_Matrix_PT_V600_20250211_0dec95d0_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4597,7 +4604,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_SGW_PT_01_SigGroup_oSGW_PT_01_oATOM_CAN_Matri
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IVI_ForwardVmaxlimitSw_oSGW_PT_01_oATOM_CAN_Matrix_PT_V600_20250211_8d0f6899_Rx, &(*(&Rte_SG_SGW_PT_01_SigGroup_oSGW_PT_01_oATOM_CAN_Matrix_PT_V600_20250211_d1f7f071_Rx)).IVI_ForwardVmaxlimitSw); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IVI_LV_LimitPop_oSGW_PT_01_oATOM_CAN_Matrix_PT_V600_20250211_1112ab7d_Rx, &(*(&Rte_SG_SGW_PT_01_SigGroup_oSGW_PT_01_oATOM_CAN_Matrix_PT_V600_20250211_d1f7f071_Rx)).IVI_LV_LimitPop); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IVI_LockACPlug_oSGW_PT_01_oATOM_CAN_Matrix_PT_V600_20250211_01b87dfd_Rx, &(*(&Rte_SG_SGW_PT_01_SigGroup_oSGW_PT_01_oATOM_CAN_Matrix_PT_V600_20250211_d1f7f071_Rx)).IVI_LockACPlug); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_PT_01_SigGroup_SG_SGW_PT_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_PT_01_SigGroup_SG_SGW_PT_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_PT_01_SigGroup_SG_SGW_PT_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_PT_01_SigGroup_SG_SGW_PT_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_SGW_PT_01_SigGroup_oSGW_PT_01_oATOM_CAN_Matrix_PT_V600_20250211_d1f7f071_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4616,7 +4623,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_SGW_Time_SigGroup_oSGW_Time_oATOM_CAN_Matrix_
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_SGW_TimeInfoSecond_oSGW_Time_oATOM_CAN_Matrix_PT_V600_20250211_ed2116e5_Rx, &(*(&Rte_SG_SGW_Time_SigGroup_oSGW_Time_oATOM_CAN_Matrix_PT_V600_20250211_0ca37593_Rx)).SGW_TimeInfoSecond); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_SGW_TimeInfoYear_oSGW_Time_oATOM_CAN_Matrix_PT_V600_20250211_76136356_Rx, &(*(&Rte_SG_SGW_Time_SigGroup_oSGW_Time_oATOM_CAN_Matrix_PT_V600_20250211_0ca37593_Rx)).SGW_TimeInfoYear); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_SGW_TimeValid_oSGW_Time_oATOM_CAN_Matrix_PT_V600_20250211_4cd83a01_Rx, &(*(&Rte_SG_SGW_Time_SigGroup_oSGW_Time_oATOM_CAN_Matrix_PT_V600_20250211_0ca37593_Rx)).SGW_TimeValid); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_Time_SigGroup_SG_SGW_Time_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_Time_SigGroup_SG_SGW_Time_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_Time_SigGroup_SG_SGW_Time_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_Time_SigGroup_SG_SGW_Time_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_SGW_Time_SigGroup_oSGW_Time_oATOM_CAN_Matrix_PT_V600_20250211_0ca37593_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4633,7 +4640,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_SGW_VCU_01_SigGroup_oSGW_VCU_01_oATOM_CAN_Mat
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IVI_ForwardVmaxAllowed_oSGW_VCU_01_oATOM_CAN_Matrix_PT_V600_20250211_13b9eae3_Rx, &(*(&Rte_SG_SGW_VCU_01_SigGroup_oSGW_VCU_01_oATOM_CAN_Matrix_PT_V600_20250211_899d317b_Rx)).IVI_ForwardVmaxAllowed); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IVI_MaxChrgSocSet_oSGW_VCU_01_oATOM_CAN_Matrix_PT_V600_20250211_99c3e2a8_Rx, &(*(&Rte_SG_SGW_VCU_01_SigGroup_oSGW_VCU_01_oATOM_CAN_Matrix_PT_V600_20250211_899d317b_Rx)).IVI_MaxChrgSocSet); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_IVI_V2LidisSet_oSGW_VCU_01_oATOM_CAN_Matrix_PT_V600_20250211_25a8a73a_Rx, &(*(&Rte_SG_SGW_VCU_01_SigGroup_oSGW_VCU_01_oATOM_CAN_Matrix_PT_V600_20250211_899d317b_Rx)).IVI_V2LidisSet); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_VCU_01_SigGroup_SG_SGW_VCU_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_VCU_01_SigGroup_SG_SGW_VCU_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_VCU_01_SigGroup_SG_SGW_VCU_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_SGW_VCU_01_SigGroup_SG_SGW_VCU_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_SGW_VCU_01_SigGroup_oSGW_VCU_01_oATOM_CAN_Matrix_PT_V600_20250211_899d317b_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4649,7 +4656,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_TCU_01_SigGroup_oTCU_01_oATOM_CAN_Matrix_PT_V
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_TCU_TMSFaultLevel_oTCU_01_oATOM_CAN_Matrix_PT_V600_20250211_0e521934_Rx, &(*(&Rte_SG_TCU_01_SigGroup_oTCU_01_oATOM_CAN_Matrix_PT_V600_20250211_95b4cd9c_Rx)).TCU_TMSFaultLevel); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_TCU_TMSTotalPwrCnsmp_oTCU_01_oATOM_CAN_Matrix_PT_V600_20250211_9dde2d90_Rx, &(*(&Rte_SG_TCU_01_SigGroup_oTCU_01_oATOM_CAN_Matrix_PT_V600_20250211_95b4cd9c_Rx)).TCU_TMSTotalPwrCnsmp); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_TCU_TMSTotoalPwrReq_oTCU_01_oATOM_CAN_Matrix_PT_V600_20250211_247c22c3_Rx, &(*(&Rte_SG_TCU_01_SigGroup_oTCU_01_oATOM_CAN_Matrix_PT_V600_20250211_95b4cd9c_Rx)).TCU_TMSTotoalPwrReq); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_TCU_01_SigGroup_SG_TCU_01_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_TCU_01_SigGroup_SG_TCU_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_TCU_01_SigGroup_SG_TCU_01_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_TCU_01_SigGroup_SG_TCU_01_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_TCU_01_SigGroup_oTCU_01_oATOM_CAN_Matrix_PT_V600_20250211_95b4cd9c_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4663,7 +4670,7 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SG_TCU_02_SigGroup_oTCU_02_oATOM_CAN_Matrix_PT_V
     (void)Com_ReceiveSignalGroup(ComConf_ComSignalGroup_SG_TCU_02_SigGroup_oTCU_02_oATOM_CAN_Matrix_PT_V600_20250211_a432f792_Rx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_TCU_HVCHHVDCCurrent_oTCU_02_oATOM_CAN_Matrix_PT_V600_20250211_400bea9a_Rx, &(*(&Rte_SG_TCU_02_SigGroup_oTCU_02_oATOM_CAN_Matrix_PT_V600_20250211_a432f792_Rx)).TCU_HVCHHVDCCurrent); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_ReceiveSignal(ComConf_ComGroupSignal_TCU_HVCHHighVoltage_oTCU_02_oATOM_CAN_Matrix_PT_V600_20250211_3d196c75_Rx, &(*(&Rte_SG_TCU_02_SigGroup_oTCU_02_oATOM_CAN_Matrix_PT_V600_20250211_a432f792_Rx)).TCU_HVCHHighVoltage); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_TCU_02_SigGroup_SG_TCU_02_SigGroup_Sender = !Rte_SystemApplication_OsCore2_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_TCU_02_SigGroup_SG_TCU_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
+    Rte_SystemApplication_OsCore0_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_TCU_02_SigGroup_SG_TCU_02_SigGroup_Sender = !Rte_SystemApplication_OsCore1_RxUpdateFlags.Rte_RxUpdate_CtAp_CANHandler_SG_TCU_02_SigGroup_SG_TCU_02_SigGroup; /* PRQA S 4116, 4404, 4558 */ /* MD_Rte_4116, MD_MSR_AutosarBoolean, MD_MSR_AutosarBoolean */
     (void)ReleaseSpinlock(Rte_Spinlock_SG_TCU_02_SigGroup_oTCU_02_oATOM_CAN_Matrix_PT_V600_20250211_a432f792_Rx);
   }
 } /* PRQA S 6010, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCAL */
@@ -4754,21 +4761,21 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
 {
   uint8 updateAction;
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BHM_AllowChargeVoltageMax_oBHM_oJ1939_bms_5c3d4762_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BHM_AllowChargeVoltageMax_oBHM_oJ1939_bms_5c3d4762_Tx, (&Rte_BHM_AllowChargeVoltageMax_oBHM_oJ1939_bms_5c3d4762_Tx_0)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax;
     (void)ReleaseSpinlock(Rte_Spinlock_BHM_AllowChargeVoltageMax_oBHM_oJ1939_bms_5c3d4762_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_02_SigGroup_SG_VCU_02_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_02_SigGroup_SG_VCU_02_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_02_SigGroup_SG_VCU_02_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_02_SigGroup_SG_VCU_02_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_02_SigGroup_SG_VCU_02_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_02_SigGroup_SG_VCU_02_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -4785,13 +4792,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_WakeUpStatus_oVCU_02_oATOM_CAN_Matrix_PT_V600_20250211_3647d380_Tx, &(*(&Rte_SG_VCU_02_SigGroup_oVCU_02_oATOM_CANFD_Matrix_CH_V600_202502_2fc20804_Tx)).VCU_WakeUpStatus); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_02_SigGroup_oVCU_02_oATOM_CANFD_Matrix_CH_V600_202502_2fc20804_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_02_SigGroup_oVCU_02_oATOM_CAN_Matrix_PT_V600_20250211_109f7195_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_02_SigGroup_SG_VCU_02_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_02_SigGroup_SG_VCU_02_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_02_SigGroup_SG_VCU_02_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_02_SigGroup_SG_VCU_02_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_02_SigGroup_oVCU_02_oATOM_CANFD_Matrix_CH_V600_202502_2fc20804_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_03_SigGroup_SG_VCU_03_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_03_SigGroup_SG_VCU_03_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_03_SigGroup_SG_VCU_03_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_03_SigGroup_SG_VCU_03_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_03_SigGroup_SG_VCU_03_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_03_SigGroup_SG_VCU_03_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -4802,13 +4809,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_EnergyV2L_oVCU_03_oATOM_CANFD_Matrix_CH_V600_202502_5ef6f2f0_Tx, &(*(&Rte_SG_VCU_03_SigGroup_oVCU_03_oATOM_CANFD_Matrix_CH_V600_202502_8990e3c1_Tx)).VCU_EnergyV2L); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_MemoryChargeFault_oVCU_03_oATOM_CANFD_Matrix_CH_V600_202502_cb765ea4_Tx, &(*(&Rte_SG_VCU_03_SigGroup_oVCU_03_oATOM_CANFD_Matrix_CH_V600_202502_8990e3c1_Tx)).VCU_MemoryChargeFault); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_03_SigGroup_oVCU_03_oATOM_CANFD_Matrix_CH_V600_202502_8990e3c1_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_03_SigGroup_SG_VCU_03_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_03_SigGroup_SG_VCU_03_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_03_SigGroup_SG_VCU_03_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_03_SigGroup_SG_VCU_03_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_03_SigGroup_oVCU_03_oATOM_CANFD_Matrix_CH_V600_202502_8990e3c1_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_04_SigGroup_SG_VCU_04_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_04_SigGroup_SG_VCU_04_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_04_SigGroup_SG_VCU_04_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_04_SigGroup_SG_VCU_04_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_04_SigGroup_SG_VCU_04_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_04_SigGroup_SG_VCU_04_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -4816,13 +4823,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_ForwardVmaxlimitStatus_oVCU_04_oATOM_CANFD_Matrix_CH_V600_202502_beba9b73_Tx, &(*(&Rte_SG_VCU_04_SigGroup_oVCU_04_oATOM_CANFD_Matrix_CH_V600_202502_4cce7c18_Tx)).VCU_ForwardVmaxlimitStatus); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_ManuallyUnlockComment_oVCU_04_oATOM_CANFD_Matrix_CH_V600_202502_3223f100_Tx, &(*(&Rte_SG_VCU_04_SigGroup_oVCU_04_oATOM_CANFD_Matrix_CH_V600_202502_4cce7c18_Tx)).VCU_ManuallyUnlockComment); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_04_SigGroup_oVCU_04_oATOM_CANFD_Matrix_CH_V600_202502_4cce7c18_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_04_SigGroup_SG_VCU_04_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_04_SigGroup_SG_VCU_04_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_04_SigGroup_SG_VCU_04_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_04_SigGroup_SG_VCU_04_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_04_SigGroup_oVCU_04_oATOM_CANFD_Matrix_CH_V600_202502_4cce7c18_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_05_SigGroup_SG_VCU_05_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_05_SigGroup_SG_VCU_05_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_05_SigGroup_SG_VCU_05_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_05_SigGroup_SG_VCU_05_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_05_SigGroup_SG_VCU_05_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_05_SigGroup_SG_VCU_05_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -4832,13 +4839,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_MinimumOutputCurrent_oVCU_05_oATOM_CAN_Matrix_PT_V600_20250211_6eda15dd_Tx, &(*(&Rte_SG_VCU_05_SigGroup_oVCU_05_oATOM_CAN_Matrix_PT_V600_20250211_d5c1ee4c_Tx)).VCU_MinimumOutputCurrent); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_MinimumOutputVoltage_oVCU_05_oATOM_CAN_Matrix_PT_V600_20250211_0cda6ee1_Tx, &(*(&Rte_SG_VCU_05_SigGroup_oVCU_05_oATOM_CAN_Matrix_PT_V600_20250211_d5c1ee4c_Tx)).VCU_MinimumOutputVoltage); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_05_SigGroup_oVCU_05_oATOM_CAN_Matrix_PT_V600_20250211_d5c1ee4c_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_05_SigGroup_SG_VCU_05_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_05_SigGroup_SG_VCU_05_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_05_SigGroup_SG_VCU_05_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_05_SigGroup_SG_VCU_05_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_05_SigGroup_oVCU_05_oATOM_CAN_Matrix_PT_V600_20250211_d5c1ee4c_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_06_SigGroup_SG_VCU_06_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_06_SigGroup_SG_VCU_06_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_06_SigGroup_SG_VCU_06_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_06_SigGroup_SG_VCU_06_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_06_SigGroup_SG_VCU_06_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_06_SigGroup_SG_VCU_06_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -4850,13 +4857,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_MCUPower_oVCU_06_oATOM_CAN_Matrix_PT_V600_20250211_5ed6e72f_Tx, &(*(&Rte_SG_VCU_06_SigGroup_oVCU_06_oATOM_CAN_Matrix_PT_V600_20250211_e447d442_Tx)).VCU_MCUPower); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_PermitPackPTC_oVCU_06_oATOM_CAN_Matrix_PT_V600_20250211_8f94a915_Tx, &(*(&Rte_SG_VCU_06_SigGroup_oVCU_06_oATOM_CAN_Matrix_PT_V600_20250211_e447d442_Tx)).VCU_PermitPackPTC); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_06_SigGroup_oVCU_06_oATOM_CAN_Matrix_PT_V600_20250211_e447d442_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_06_SigGroup_SG_VCU_06_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_06_SigGroup_SG_VCU_06_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_06_SigGroup_SG_VCU_06_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_06_SigGroup_SG_VCU_06_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_06_SigGroup_oVCU_06_oATOM_CAN_Matrix_PT_V600_20250211_e447d442_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_AccPedal_SigGroup_SG_VCU_AccPedal_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_AccPedal_SigGroup_SG_VCU_AccPedal_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_AccPedal_SigGroup_SG_VCU_AccPedal_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_AccPedal_SigGroup_SG_VCU_AccPedal_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_AccPedal_SigGroup_SG_VCU_AccPedal_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_AccPedal_SigGroup_SG_VCU_AccPedal_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -4889,13 +4896,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_VirtualACPedalValid_oVCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_744b6907_Tx, &(*(&Rte_SG_VCU_AccPedal_SigGroup_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_aa50ac8d_Tx)).VCU_VirtualACPedalValid); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_AccPedal_SigGroup_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_aa50ac8d_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_AccPedal_SigGroup_oVCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_950dd51c_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_AccPedal_SigGroup_SG_VCU_AccPedal_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_AccPedal_SigGroup_SG_VCU_AccPedal_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_AccPedal_SigGroup_SG_VCU_AccPedal_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_AccPedal_SigGroup_SG_VCU_AccPedal_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_AccPedal_SigGroup_oVCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_aa50ac8d_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_BMS_SigGroup_SG_VCU_BMS_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_BMS_SigGroup_SG_VCU_BMS_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_BMS_SigGroup_SG_VCU_BMS_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_BMS_SigGroup_SG_VCU_BMS_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_BMS_SigGroup_SG_VCU_BMS_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_BMS_SigGroup_SG_VCU_BMS_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -4928,13 +4935,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_RequestedModeBMS_oVCU_BMS_oATOM_CAN_Matrix_PT_V600_20250211_9c440503_Tx, &(*(&Rte_SG_VCU_BMS_SigGroup_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_d27feb30_Tx)).VCU_RequestedModeBMS); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_BMS_SigGroup_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_d27feb30_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_BMS_SigGroup_oVCU_BMS_oATOM_CAN_Matrix_PT_V600_20250211_ed2292a1_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_BMS_SigGroup_SG_VCU_BMS_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_BMS_SigGroup_SG_VCU_BMS_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_BMS_SigGroup_SG_VCU_BMS_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_BMS_SigGroup_SG_VCU_BMS_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_BMS_SigGroup_oVCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_d27feb30_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_Chassis_01_SigGroup_SG_VCU_Chassis_01_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_Chassis_01_SigGroup_SG_VCU_Chassis_01_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_Chassis_01_SigGroup_SG_VCU_Chassis_01_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_Chassis_01_SigGroup_SG_VCU_Chassis_01_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_Chassis_01_SigGroup_SG_VCU_Chassis_01_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_Chassis_01_SigGroup_SG_VCU_Chassis_01_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -4955,13 +4962,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_TorqueRequestActive_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_24abcc5b_Tx, &(*(&Rte_SG_VCU_Chassis_01_SigGroup_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_52963860_Tx)).VCU_TorqueRequestActive); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_TorqueRequestAvailable_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_22997d3f_Tx, &(*(&Rte_SG_VCU_Chassis_01_SigGroup_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_52963860_Tx)).VCU_TorqueRequestAvailable); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_Chassis_01_SigGroup_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_52963860_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_Chassis_01_SigGroup_SG_VCU_Chassis_01_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_Chassis_01_SigGroup_SG_VCU_Chassis_01_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_Chassis_01_SigGroup_SG_VCU_Chassis_01_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_Chassis_01_SigGroup_SG_VCU_Chassis_01_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_Chassis_01_SigGroup_oVCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_52963860_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_DCDC_SigGroup_SG_VCU_DCDC_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_DCDC_SigGroup_SG_VCU_DCDC_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_DCDC_SigGroup_SG_VCU_DCDC_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_DCDC_SigGroup_SG_VCU_DCDC_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_DCDC_SigGroup_SG_VCU_DCDC_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_DCDC_SigGroup_SG_VCU_DCDC_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -4970,13 +4977,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_RequestedModeDCDC_oVCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_c910d2b3_Tx, &(*(&Rte_SG_VCU_DCDC_SigGroup_oVCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_d0a22af6_Tx)).VCU_RequestedModeDCDC); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_VoltageDemandLV_oVCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_9951a04f_Tx, &(*(&Rte_SG_VCU_DCDC_SigGroup_oVCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_d0a22af6_Tx)).VCU_VoltageDemandLV); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_DCDC_SigGroup_oVCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_d0a22af6_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_DCDC_SigGroup_SG_VCU_DCDC_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_DCDC_SigGroup_SG_VCU_DCDC_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_DCDC_SigGroup_SG_VCU_DCDC_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_DCDC_SigGroup_SG_VCU_DCDC_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_DCDC_SigGroup_oVCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_d0a22af6_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_01_SigGroup_SG_VCU_HMIsignals_01_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_01_SigGroup_SG_VCU_HMIsignals_01_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_01_SigGroup_SG_VCU_HMIsignals_01_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_01_SigGroup_SG_VCU_HMIsignals_01_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_HMIsignals_01_SigGroup_SG_VCU_HMIsignals_01_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_HMIsignals_01_SigGroup_SG_VCU_HMIsignals_01_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -4996,13 +5003,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_PlugStatus_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_250fa71e_Tx, &(*(&Rte_SG_VCU_HMIsignals_01_SigGroup_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_c30c8d8f_Tx)).VCU_PlugStatus); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_ReachLimitStd_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_5cd2e319_Tx, &(*(&Rte_SG_VCU_HMIsignals_01_SigGroup_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_c30c8d8f_Tx)).VCU_ReachLimitStd); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_HMIsignals_01_SigGroup_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_c30c8d8f_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_01_SigGroup_SG_VCU_HMIsignals_01_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_01_SigGroup_SG_VCU_HMIsignals_01_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_01_SigGroup_SG_VCU_HMIsignals_01_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_01_SigGroup_SG_VCU_HMIsignals_01_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_HMIsignals_01_SigGroup_oVCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_c30c8d8f_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_02_SigGroup_SG_VCU_HMIsignals_02_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_02_SigGroup_SG_VCU_HMIsignals_02_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_02_SigGroup_SG_VCU_HMIsignals_02_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_02_SigGroup_SG_VCU_HMIsignals_02_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_HMIsignals_02_SigGroup_SG_VCU_HMIsignals_02_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_HMIsignals_02_SigGroup_SG_VCU_HMIsignals_02_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -5027,13 +5034,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_maxChargeSOC_oVCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_88b4636e_Tx, &(*(&Rte_SG_VCU_HMIsignals_02_SigGroup_oVCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502_b90a0cf2_Tx)).VCU_maxChargeSOC); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_HMIsignals_02_SigGroup_oVCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502_b90a0cf2_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_HMIsignals_02_SigGroup_oVCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_86577563_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_02_SigGroup_SG_VCU_HMIsignals_02_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_02_SigGroup_SG_VCU_HMIsignals_02_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_02_SigGroup_SG_VCU_HMIsignals_02_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_02_SigGroup_SG_VCU_HMIsignals_02_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_HMIsignals_02_SigGroup_oVCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502_b90a0cf2_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_03_SigGroup_1_SG_VCU_HMIsignals_03_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_03_SigGroup_1_SG_VCU_HMIsignals_03_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_03_SigGroup_1_SG_VCU_HMIsignals_03_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_03_SigGroup_1_SG_VCU_HMIsignals_03_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_HMIsignals_03_SigGroup_1_SG_VCU_HMIsignals_03_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_HMIsignals_03_SigGroup_1_SG_VCU_HMIsignals_03_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -5042,13 +5049,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_BS_QuiescentCurrent_oVCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_2f6b45d6_Tx, &(*(&Rte_SG_VCU_HMIsignals_03_SigGroup_oVCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_197a0877_Tx)).VCU_BS_QuiescentCurrent); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_Display_voltage_oVCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_1f4e8320_Tx, &(*(&Rte_SG_VCU_HMIsignals_03_SigGroup_oVCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_197a0877_Tx)).VCU_Display_voltage); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_HMIsignals_03_SigGroup_oVCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_197a0877_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_03_SigGroup_1_SG_VCU_HMIsignals_03_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_03_SigGroup_1_SG_VCU_HMIsignals_03_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_03_SigGroup_1_SG_VCU_HMIsignals_03_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_HMIsignals_03_SigGroup_1_SG_VCU_HMIsignals_03_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_HMIsignals_03_SigGroup_oVCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_197a0877_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_IBS_01_SigGroup_SG_VCU_IBS_01_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_IBS_01_SigGroup_SG_VCU_IBS_01_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_IBS_01_SigGroup_SG_VCU_IBS_01_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_IBS_01_SigGroup_SG_VCU_IBS_01_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_IBS_01_SigGroup_SG_VCU_IBS_01_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_IBS_01_SigGroup_SG_VCU_IBS_01_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -5061,13 +5068,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_WheelTrqACT_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_722027bb_Tx, &(*(&Rte_SG_VCU_IBS_01_SigGroup_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_f0f49d09_Tx)).VCU_WheelTrqACT); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_WheelTrqACTValid_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_0e2031fb_Tx, &(*(&Rte_SG_VCU_IBS_01_SigGroup_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_f0f49d09_Tx)).VCU_WheelTrqACTValid); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_IBS_01_SigGroup_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_f0f49d09_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_IBS_01_SigGroup_SG_VCU_IBS_01_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_IBS_01_SigGroup_SG_VCU_IBS_01_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_IBS_01_SigGroup_SG_VCU_IBS_01_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_IBS_01_SigGroup_SG_VCU_IBS_01_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_IBS_01_SigGroup_oVCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_f0f49d09_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_02_SigGroup_SG_VCU_MCU_02_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_02_SigGroup_SG_VCU_MCU_02_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_02_SigGroup_SG_VCU_MCU_02_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_02_SigGroup_SG_VCU_MCU_02_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_MCU_02_SigGroup_SG_VCU_MCU_02_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_MCU_02_SigGroup_SG_VCU_MCU_02_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -5076,13 +5083,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_MaxSpdLimit_oVCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_1d67c298_Tx, &(*(&Rte_SG_VCU_MCU_02_SigGroup_oVCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_2d530015_Tx)).VCU_MaxSpdLimit); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_MotorSpdReq_oVCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_c5c80260_Tx, &(*(&Rte_SG_VCU_MCU_02_SigGroup_oVCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_2d530015_Tx)).VCU_MotorSpdReq); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_MCU_02_SigGroup_oVCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_2d530015_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_02_SigGroup_SG_VCU_MCU_02_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_02_SigGroup_SG_VCU_MCU_02_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_02_SigGroup_SG_VCU_MCU_02_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_02_SigGroup_SG_VCU_MCU_02_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_MCU_02_SigGroup_oVCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_2d530015_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_03_SigGroup_1_SG_VCU_MCU_03_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_03_SigGroup_1_SG_VCU_MCU_03_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_03_SigGroup_1_SG_VCU_MCU_03_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_03_SigGroup_1_SG_VCU_MCU_03_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_MCU_03_SigGroup_1_SG_VCU_MCU_03_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_MCU_03_SigGroup_1_SG_VCU_MCU_03_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -5111,13 +5118,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_TrqThresholdDampgCtl_oVCU_MCU_03_oATOM_CAN_Matrix_PT_V600_20250211_b9ab6cb7_Tx, &(*(&Rte_SG_VCU_MCU_03_SigGroup_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_c0057d9b_Tx)).VCU_TrqThresholdDampgCtl); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_MCU_03_SigGroup_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_c0057d9b_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_MCU_03_SigGroup_oVCU_MCU_03_oATOM_CAN_Matrix_PT_V600_20250211_ff58040a_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_03_SigGroup_1_SG_VCU_MCU_03_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_03_SigGroup_1_SG_VCU_MCU_03_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_03_SigGroup_1_SG_VCU_MCU_03_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_03_SigGroup_1_SG_VCU_MCU_03_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_MCU_03_SigGroup_oVCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_c0057d9b_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_05_SigGroup_SG_VCU_MCU_05_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_05_SigGroup_SG_VCU_MCU_05_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_05_SigGroup_SG_VCU_MCU_05_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_05_SigGroup_SG_VCU_MCU_05_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_MCU_05_SigGroup_SG_VCU_MCU_05_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_MCU_05_SigGroup_SG_VCU_MCU_05_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -5128,13 +5135,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_MinTorqueLimit_oVCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_d434a6d2_Tx, &(*(&Rte_SG_VCU_MCU_05_SigGroup_oVCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_7ef1168b_Tx)).VCU_MinTorqueLimit); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_SpdLimitActTorque_oVCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_6de9d8ce_Tx, &(*(&Rte_SG_VCU_MCU_05_SigGroup_oVCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_7ef1168b_Tx)).VCU_SpdLimitActTorque); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_MCU_05_SigGroup_oVCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_7ef1168b_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_05_SigGroup_SG_VCU_MCU_05_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_05_SigGroup_SG_VCU_MCU_05_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_05_SigGroup_SG_VCU_MCU_05_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_MCU_05_SigGroup_SG_VCU_MCU_05_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_MCU_05_SigGroup_oVCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_7ef1168b_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_POD_SigGroup_SG_VCU_POD_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_POD_SigGroup_SG_VCU_POD_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_POD_SigGroup_SG_VCU_POD_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_POD_SigGroup_SG_VCU_POD_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_POD_SigGroup_SG_VCU_POD_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_POD_SigGroup_SG_VCU_POD_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -5145,13 +5152,13 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_OBC_Control_of_S2_SW_oVCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_2bbcc657_Tx, &(*(&Rte_SG_VCU_POD_SigGroup_oVCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_c17d64e5_Tx)).VCU_OBC_Control_of_S2_SW); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_OBC_Control_of_em_lock_oVCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_476ced65_Tx, &(*(&Rte_SG_VCU_POD_SigGroup_oVCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_c17d64e5_Tx)).VCU_OBC_Control_of_em_lock); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_POD_SigGroup_oVCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_c17d64e5_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_POD_SigGroup_SG_VCU_POD_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_POD_SigGroup_SG_VCU_POD_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_POD_SigGroup_SG_VCU_POD_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_POD_SigGroup_SG_VCU_POD_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_POD_SigGroup_oVCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_c17d64e5_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_PlugInChrgInfo_SigGroup_SG_VCU_PlugInChrgInfo_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_PlugInChrgInfo_SigGroup_SG_VCU_PlugInChrgInfo_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_PlugInChrgInfo_SigGroup_SG_VCU_PlugInChrgInfo_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_PlugInChrgInfo_SigGroup_SG_VCU_PlugInChrgInfo_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_PlugInChrgInfo_SigGroup_SG_VCU_PlugInChrgInfo_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_PlugInChrgInfo_SigGroup_SG_VCU_PlugInChrgInfo_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -5161,26 +5168,26 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_HVConnectFault_oVCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_ad3614da_Tx, &(*(&Rte_SG_VCU_PlugInChrgInfo_SigGroup_oVCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_c285d340_Tx)).VCU_HVConnectFault); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_RemainChrgTime_oVCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_deed3006_Tx, &(*(&Rte_SG_VCU_PlugInChrgInfo_SigGroup_oVCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_c285d340_Tx)).VCU_RemainChrgTime); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_PlugInChrgInfo_SigGroup_oVCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_c285d340_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_PlugInChrgInfo_SigGroup_SG_VCU_PlugInChrgInfo_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_PlugInChrgInfo_SigGroup_SG_VCU_PlugInChrgInfo_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_PlugInChrgInfo_SigGroup_SG_VCU_PlugInChrgInfo_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_PlugInChrgInfo_SigGroup_SG_VCU_PlugInChrgInfo_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_PlugInChrgInfo_SigGroup_oVCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_c285d340_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_SynReq_01_SigGroup_SG_VCU_SynReq_01_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_SynReq_01_SigGroup_SG_VCU_SynReq_01_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_SynReq_01_SigGroup_SG_VCU_SynReq_01_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_SynReq_01_SigGroup_SG_VCU_SynReq_01_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_SynReq_01_SigGroup_SG_VCU_SynReq_01_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_SynReq_01_SigGroup_SG_VCU_SynReq_01_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_SG_VCU_SynReq_01_SigGroup_oVCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_2ec232a9_Tx);
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_SynRequest_oVCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_c64837e4_Tx, &(*(&Rte_SG_VCU_SynReq_01_SigGroup_oVCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_2ec232a9_Tx)).VCU_SynRequest); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_SynReq_01_SigGroup_oVCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_2ec232a9_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_SynReq_01_SigGroup_SG_VCU_SynReq_01_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_SynReq_01_SigGroup_SG_VCU_SynReq_01_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_SynReq_01_SigGroup_SG_VCU_SynReq_01_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_SynReq_01_SigGroup_SG_VCU_SynReq_01_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_SynReq_01_SigGroup_oVCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_2ec232a9_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_TCU_SigGroup_SG_VCU_TCU_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_TCU_SigGroup_SG_VCU_TCU_SigGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_TCU_SigGroup_SG_VCU_TCU_SigGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_TCU_SigGroup_SG_VCU_TCU_SigGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_TCU_SigGroup_SG_VCU_TCU_SigGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_CANHandler_SG_VCU_TCU_SigGroup_SG_VCU_TCU_SigGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -5188,25 +5195,25 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_RequestedModeTCU_oVCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_ea14d901_Tx, &(*(&Rte_SG_VCU_TCU_SigGroup_oVCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_1a98021d_Tx)).VCU_RequestedModeTCU); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignal(ComConf_ComGroupSignal_VCU_TCUPowerAllowed_oVCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_0cf367b9_Tx, &(*(&Rte_SG_VCU_TCU_SigGroup_oVCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_1a98021d_Tx)).VCU_TCUPowerAllowed); /* PRQA S 0315 */ /* MD_Rte_0315 */
     (void)Com_SendSignalGroup(ComConf_ComSignalGroup_SG_VCU_TCU_SigGroup_oVCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_1a98021d_Tx); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_TCU_SigGroup_SG_VCU_TCU_SigGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_TCU_SigGroup_SG_VCU_TCU_SigGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_TCU_SigGroup_SG_VCU_TCU_SigGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_CANHandler_SG_VCU_TCU_SigGroup_SG_VCU_TCU_SigGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_SG_VCU_TCU_SigGroup_oVCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_1a98021d_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_ChargeMode_BCL_ChargeMode != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_ChargeMode_BCL_ChargeMode)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_ChargeMode_BCL_ChargeMode != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_ChargeMode_BCL_ChargeMode)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCL_ChargeMode_BCL_ChargeMode;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCL_ChargeMode_BCL_ChargeMode;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCL_ChargeMode_oBCL_oJ1939_bms_2f4f0f62_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCL_ChargeMode_oBCL_oJ1939_bms_2f4f0f62_Tx, (&Rte_BCL_ChargeMode_oBCL_oJ1939_bms_2f4f0f62_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_ChargeMode_BCL_ChargeMode = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_ChargeMode_BCL_ChargeMode;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_ChargeMode_BCL_ChargeMode = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_ChargeMode_BCL_ChargeMode;
     (void)ReleaseSpinlock(Rte_Spinlock_BCL_ChargeMode_oBCL_oJ1939_bms_2f4f0f62_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_CurrentRequire_BCL_CurrentRequire != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_CurrentRequire_BCL_CurrentRequire)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_CurrentRequire_BCL_CurrentRequire != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_CurrentRequire_BCL_CurrentRequire)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCL_CurrentRequire_BCL_CurrentRequire;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCL_CurrentRequire_BCL_CurrentRequire;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
@@ -5214,1183 +5221,1183 @@ FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
     (void)GetSpinlock(Rte_Spinlock_BCL_CurrentRequire_oBCL_oJ1939_bms_d7664f08_Tx);
     dataSiguint16 = (uint16)((*(&Rte_BCL_CurrentRequire_oBCL_oJ1939_bms_d7664f08_Tx) * 10.0F) + (4000.0F)); /* RteAnalyzer(DataConversion) */ /* PRQA S 4395, 2983 */ /* MD_Rte_4395, MD_Rte_2983 */
     (void)Com_SendSignal(ComConf_ComSignal_BCL_CurrentRequire_oBCL_oJ1939_bms_d7664f08_Tx, &(dataSiguint16)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_CurrentRequire_BCL_CurrentRequire = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_CurrentRequire_BCL_CurrentRequire;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_CurrentRequire_BCL_CurrentRequire = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_CurrentRequire_BCL_CurrentRequire;
     (void)ReleaseSpinlock(Rte_Spinlock_BCL_CurrentRequire_oBCL_oJ1939_bms_d7664f08_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_VolltageRequire_BCL_VolltageRequire != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_VolltageRequire_BCL_VolltageRequire)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_VolltageRequire_BCL_VolltageRequire != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_VolltageRequire_BCL_VolltageRequire)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCL_VolltageRequire_BCL_VolltageRequire;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCL_VolltageRequire_BCL_VolltageRequire;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCL_VolltageRequire_oBCL_oJ1939_bms_425ed7b1_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCL_VolltageRequire_oBCL_oJ1939_bms_425ed7b1_Tx, (&Rte_BCL_VolltageRequire_oBCL_oJ1939_bms_425ed7b1_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_VolltageRequire_BCL_VolltageRequire = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_VolltageRequire_BCL_VolltageRequire;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_VolltageRequire_BCL_VolltageRequire = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCL_VolltageRequire_BCL_VolltageRequire;
     (void)ReleaseSpinlock(Rte_Spinlock_BCL_VolltageRequire_oBCL_oJ1939_bms_425ed7b1_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowChargeVoltageMax_BCP_AllowChargeVoltageMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowChargeVoltageMax_BCP_AllowChargeVoltageMax)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowChargeVoltageMax_BCP_AllowChargeVoltageMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowChargeVoltageMax_BCP_AllowChargeVoltageMax)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_AllowChargeVoltageMax_BCP_AllowChargeVoltageMax;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_AllowChargeVoltageMax_BCP_AllowChargeVoltageMax;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCP_AllowChargeVoltageMax_oBCP_oJ1939_bms_fc3dfe75_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCP_AllowChargeVoltageMax_oBCP_oJ1939_bms_fc3dfe75_Tx, (&Rte_BCP_AllowChargeVoltageMax_oBCP_oJ1939_bms_fc3dfe75_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowChargeVoltageMax_BCP_AllowChargeVoltageMax = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowChargeVoltageMax_BCP_AllowChargeVoltageMax;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowChargeVoltageMax_BCP_AllowChargeVoltageMax = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowChargeVoltageMax_BCP_AllowChargeVoltageMax;
     (void)ReleaseSpinlock(Rte_Spinlock_BCP_AllowChargeVoltageMax_oBCP_oJ1939_bms_fc3dfe75_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowTempMax_BCP_AllowTempMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowTempMax_BCP_AllowTempMax)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowTempMax_BCP_AllowTempMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowTempMax_BCP_AllowTempMax)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_AllowTempMax_BCP_AllowTempMax;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_AllowTempMax_BCP_AllowTempMax;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCP_AllowTempMax_oBCP_oJ1939_bms_3d5b24f4_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCP_AllowTempMax_oBCP_oJ1939_bms_3d5b24f4_Tx, (&Rte_BCP_AllowTempMax_oBCP_oJ1939_bms_3d5b24f4_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowTempMax_BCP_AllowTempMax = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowTempMax_BCP_AllowTempMax;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowTempMax_BCP_AllowTempMax = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_AllowTempMax_BCP_AllowTempMax;
     (void)ReleaseSpinlock(Rte_Spinlock_BCP_AllowTempMax_oBCP_oJ1939_bms_3d5b24f4_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryChargeVoltageMax_BCP_BatteryChargeVoltageMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryChargeVoltageMax_BCP_BatteryChargeVoltageMax)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryChargeVoltageMax_BCP_BatteryChargeVoltageMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryChargeVoltageMax_BCP_BatteryChargeVoltageMax)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_BatteryChargeVoltageMax_BCP_BatteryChargeVoltageMax;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_BatteryChargeVoltageMax_BCP_BatteryChargeVoltageMax;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCP_BatteryChargeVoltageMax_oBCP_oJ1939_bms_5d02e2aa_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCP_BatteryChargeVoltageMax_oBCP_oJ1939_bms_5d02e2aa_Tx, (&Rte_BCP_BatteryChargeVoltageMax_oBCP_oJ1939_bms_5d02e2aa_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryChargeVoltageMax_BCP_BatteryChargeVoltageMax = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryChargeVoltageMax_BCP_BatteryChargeVoltageMax;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryChargeVoltageMax_BCP_BatteryChargeVoltageMax = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryChargeVoltageMax_BCP_BatteryChargeVoltageMax;
     (void)ReleaseSpinlock(Rte_Spinlock_BCP_BatteryChargeVoltageMax_oBCP_oJ1939_bms_5d02e2aa_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryNominalEnergy_BCP_BatteryNominalEnergy != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryNominalEnergy_BCP_BatteryNominalEnergy)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryNominalEnergy_BCP_BatteryNominalEnergy != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryNominalEnergy_BCP_BatteryNominalEnergy)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_BatteryNominalEnergy_BCP_BatteryNominalEnergy;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_BatteryNominalEnergy_BCP_BatteryNominalEnergy;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCP_BatteryNominalEnergy_oBCP_oJ1939_bms_7dc98c8b_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCP_BatteryNominalEnergy_oBCP_oJ1939_bms_7dc98c8b_Tx, (&Rte_BCP_BatteryNominalEnergy_oBCP_oJ1939_bms_7dc98c8b_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryNominalEnergy_BCP_BatteryNominalEnergy = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryNominalEnergy_BCP_BatteryNominalEnergy;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryNominalEnergy_BCP_BatteryNominalEnergy = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryNominalEnergy_BCP_BatteryNominalEnergy;
     (void)ReleaseSpinlock(Rte_Spinlock_BCP_BatteryNominalEnergy_oBCP_oJ1939_bms_7dc98c8b_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryTotalVoltage_BCP_BatteryTotalVoltage != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryTotalVoltage_BCP_BatteryTotalVoltage)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryTotalVoltage_BCP_BatteryTotalVoltage != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryTotalVoltage_BCP_BatteryTotalVoltage)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_BatteryTotalVoltage_BCP_BatteryTotalVoltage;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_BatteryTotalVoltage_BCP_BatteryTotalVoltage;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCP_BatteryTotalVoltage_oBCP_oJ1939_bms_19a0567e_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCP_BatteryTotalVoltage_oBCP_oJ1939_bms_19a0567e_Tx, (&Rte_BCP_BatteryTotalVoltage_oBCP_oJ1939_bms_19a0567e_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryTotalVoltage_BCP_BatteryTotalVoltage = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryTotalVoltage_BCP_BatteryTotalVoltage;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryTotalVoltage_BCP_BatteryTotalVoltage = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_BatteryTotalVoltage_BCP_BatteryTotalVoltage;
     (void)ReleaseSpinlock(Rte_Spinlock_BCP_BatteryTotalVoltage_oBCP_oJ1939_bms_19a0567e_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_ChargeCurrentMax_BCP_ChargeCurrentMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_ChargeCurrentMax_BCP_ChargeCurrentMax)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_ChargeCurrentMax_BCP_ChargeCurrentMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_ChargeCurrentMax_BCP_ChargeCurrentMax)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_ChargeCurrentMax_BCP_ChargeCurrentMax;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_ChargeCurrentMax_BCP_ChargeCurrentMax;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCP_ChargeCurrentMax_oBCP_oJ1939_bms_7cdaf0d4_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCP_ChargeCurrentMax_oBCP_oJ1939_bms_7cdaf0d4_Tx, (&Rte_BCP_ChargeCurrentMax_oBCP_oJ1939_bms_7cdaf0d4_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_ChargeCurrentMax_BCP_ChargeCurrentMax = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_ChargeCurrentMax_BCP_ChargeCurrentMax;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_ChargeCurrentMax_BCP_ChargeCurrentMax = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_ChargeCurrentMax_BCP_ChargeCurrentMax;
     (void)ReleaseSpinlock(Rte_Spinlock_BCP_ChargeCurrentMax_oBCP_oJ1939_bms_7cdaf0d4_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_SOC_BCP_SOC != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_SOC_BCP_SOC)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_SOC_BCP_SOC != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_SOC_BCP_SOC)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_SOC_BCP_SOC;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCP_SOC_BCP_SOC;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCP_SOC_oBCP_oJ1939_bms_78e6b083_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCP_SOC_oBCP_oJ1939_bms_78e6b083_Tx, (&Rte_BCP_SOC_oBCP_oJ1939_bms_78e6b083_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_SOC_BCP_SOC = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_SOC_BCP_SOC;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_SOC_BCP_SOC = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCP_SOC_BCP_SOC;
     (void)ReleaseSpinlock(Rte_Spinlock_BCP_SOC_oBCP_oJ1939_bms_78e6b083_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMax_BCS_BatteryVoltMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMax_BCS_BatteryVoltMax)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMax_BCS_BatteryVoltMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMax_BCS_BatteryVoltMax)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCS_BatteryVoltMax_BCS_BatteryVoltMax;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCS_BatteryVoltMax_BCS_BatteryVoltMax;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCS_BatteryVoltMax_oBCS_oJ1939_bms_11a53a15_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCS_BatteryVoltMax_oBCS_oJ1939_bms_11a53a15_Tx, (&Rte_BCS_BatteryVoltMax_oBCS_oJ1939_bms_11a53a15_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMax_BCS_BatteryVoltMax = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMax_BCS_BatteryVoltMax;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMax_BCS_BatteryVoltMax = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMax_BCS_BatteryVoltMax;
     (void)ReleaseSpinlock(Rte_Spinlock_BCS_BatteryVoltMax_oBCS_oJ1939_bms_11a53a15_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMaxGroup_BCS_BatteryVoltMaxGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMaxGroup_BCS_BatteryVoltMaxGroup)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMaxGroup_BCS_BatteryVoltMaxGroup != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMaxGroup_BCS_BatteryVoltMaxGroup)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCS_BatteryVoltMaxGroup_BCS_BatteryVoltMaxGroup;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCS_BatteryVoltMaxGroup_BCS_BatteryVoltMaxGroup;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCS_BatteryVoltMaxGroup_oBCS_oJ1939_bms_196f50c9_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCS_BatteryVoltMaxGroup_oBCS_oJ1939_bms_196f50c9_Tx, (&Rte_BCS_BatteryVoltMaxGroup_oBCS_oJ1939_bms_196f50c9_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMaxGroup_BCS_BatteryVoltMaxGroup = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMaxGroup_BCS_BatteryVoltMaxGroup;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMaxGroup_BCS_BatteryVoltMaxGroup = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_BatteryVoltMaxGroup_BCS_BatteryVoltMaxGroup;
     (void)ReleaseSpinlock(Rte_Spinlock_BCS_BatteryVoltMaxGroup_oBCS_oJ1939_bms_196f50c9_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeCurrentMeasure_BCS_ChargeCurrentMeasure != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeCurrentMeasure_BCS_ChargeCurrentMeasure)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeCurrentMeasure_BCS_ChargeCurrentMeasure != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeCurrentMeasure_BCS_ChargeCurrentMeasure)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCS_ChargeCurrentMeasure_BCS_ChargeCurrentMeasure;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCS_ChargeCurrentMeasure_BCS_ChargeCurrentMeasure;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCS_ChargeCurrentMeasure_oBCS_oJ1939_bms_0ae65560_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCS_ChargeCurrentMeasure_oBCS_oJ1939_bms_0ae65560_Tx, (&Rte_BCS_ChargeCurrentMeasure_oBCS_oJ1939_bms_0ae65560_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeCurrentMeasure_BCS_ChargeCurrentMeasure = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeCurrentMeasure_BCS_ChargeCurrentMeasure;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeCurrentMeasure_BCS_ChargeCurrentMeasure = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeCurrentMeasure_BCS_ChargeCurrentMeasure;
     (void)ReleaseSpinlock(Rte_Spinlock_BCS_ChargeCurrentMeasure_oBCS_oJ1939_bms_0ae65560_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeVoltageMeasure_BCS_ChargeVoltageMeasure != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeVoltageMeasure_BCS_ChargeVoltageMeasure)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeVoltageMeasure_BCS_ChargeVoltageMeasure != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeVoltageMeasure_BCS_ChargeVoltageMeasure)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCS_ChargeVoltageMeasure_BCS_ChargeVoltageMeasure;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCS_ChargeVoltageMeasure_BCS_ChargeVoltageMeasure;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCS_ChargeVoltageMeasure_oBCS_oJ1939_bms_abbd1969_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCS_ChargeVoltageMeasure_oBCS_oJ1939_bms_abbd1969_Tx, (&Rte_BCS_ChargeVoltageMeasure_oBCS_oJ1939_bms_abbd1969_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeVoltageMeasure_BCS_ChargeVoltageMeasure = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeVoltageMeasure_BCS_ChargeVoltageMeasure;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeVoltageMeasure_BCS_ChargeVoltageMeasure = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_ChargeVoltageMeasure_BCS_ChargeVoltageMeasure;
     (void)ReleaseSpinlock(Rte_Spinlock_BCS_ChargeVoltageMeasure_oBCS_oJ1939_bms_abbd1969_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_EstimatedTimeRemaining_BCS_EstimatedTimeRemaining != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_EstimatedTimeRemaining_BCS_EstimatedTimeRemaining)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_EstimatedTimeRemaining_BCS_EstimatedTimeRemaining != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_EstimatedTimeRemaining_BCS_EstimatedTimeRemaining)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCS_EstimatedTimeRemaining_BCS_EstimatedTimeRemaining;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCS_EstimatedTimeRemaining_BCS_EstimatedTimeRemaining;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCS_EstimatedTimeRemaining_oBCS_oJ1939_bms_c6383d22_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCS_EstimatedTimeRemaining_oBCS_oJ1939_bms_c6383d22_Tx, (&Rte_BCS_EstimatedTimeRemaining_oBCS_oJ1939_bms_c6383d22_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_EstimatedTimeRemaining_BCS_EstimatedTimeRemaining = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_EstimatedTimeRemaining_BCS_EstimatedTimeRemaining;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_EstimatedTimeRemaining_BCS_EstimatedTimeRemaining = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_EstimatedTimeRemaining_BCS_EstimatedTimeRemaining;
     (void)ReleaseSpinlock(Rte_Spinlock_BCS_EstimatedTimeRemaining_oBCS_oJ1939_bms_c6383d22_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_SOC_BCS_SOC != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_SOC_BCS_SOC)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_SOC_BCS_SOC != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_SOC_BCS_SOC)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCS_SOC_BCS_SOC;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BCS_SOC_BCS_SOC;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BCS_SOC_oBCS_oJ1939_bms_7466e090_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BCS_SOC_oBCS_oJ1939_bms_7466e090_Tx, (&Rte_BCS_SOC_oBCS_oJ1939_bms_7466e090_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_SOC_BCS_SOC = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_SOC_BCS_SOC;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_SOC_BCS_SOC = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BCS_SOC_BCS_SOC;
     (void)ReleaseSpinlock(Rte_Spinlock_BCS_SOC_oBCS_oJ1939_bms_7466e090_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeAbortTimeout_BEM_ChargeAbortTimeout != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeAbortTimeout_BEM_ChargeAbortTimeout)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeAbortTimeout_BEM_ChargeAbortTimeout != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeAbortTimeout_BEM_ChargeAbortTimeout)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_ChargeAbortTimeout_BEM_ChargeAbortTimeout;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_ChargeAbortTimeout_BEM_ChargeAbortTimeout;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BEM_ChargeAbortTimeout_oBEM_oJ1939_bms_4849b46c_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BEM_ChargeAbortTimeout_oBEM_oJ1939_bms_4849b46c_Tx, (&Rte_BEM_ChargeAbortTimeout_oBEM_oJ1939_bms_4849b46c_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeAbortTimeout_BEM_ChargeAbortTimeout = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeAbortTimeout_BEM_ChargeAbortTimeout;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeAbortTimeout_BEM_ChargeAbortTimeout = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeAbortTimeout_BEM_ChargeAbortTimeout;
     (void)ReleaseSpinlock(Rte_Spinlock_BEM_ChargeAbortTimeout_oBEM_oJ1939_bms_4849b46c_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeFinishTimeout_BEM_ChargeFinishTimeout != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeFinishTimeout_BEM_ChargeFinishTimeout)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeFinishTimeout_BEM_ChargeFinishTimeout != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeFinishTimeout_BEM_ChargeFinishTimeout)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_ChargeFinishTimeout_BEM_ChargeFinishTimeout;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_ChargeFinishTimeout_BEM_ChargeFinishTimeout;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BEM_ChargeFinishTimeout_oBEM_oJ1939_bms_2d8e7a9e_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BEM_ChargeFinishTimeout_oBEM_oJ1939_bms_2d8e7a9e_Tx, (&Rte_BEM_ChargeFinishTimeout_oBEM_oJ1939_bms_2d8e7a9e_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeFinishTimeout_BEM_ChargeFinishTimeout = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeFinishTimeout_BEM_ChargeFinishTimeout;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeFinishTimeout_BEM_ChargeFinishTimeout = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeFinishTimeout_BEM_ChargeFinishTimeout;
     (void)ReleaseSpinlock(Rte_Spinlock_BEM_ChargeFinishTimeout_oBEM_oJ1939_bms_2d8e7a9e_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStateTimeout_BEM_ChargeStateTimeout != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStateTimeout_BEM_ChargeStateTimeout)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStateTimeout_BEM_ChargeStateTimeout != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStateTimeout_BEM_ChargeStateTimeout)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_ChargeStateTimeout_BEM_ChargeStateTimeout;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_ChargeStateTimeout_BEM_ChargeStateTimeout;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BEM_ChargeStateTimeout_oBEM_oJ1939_bms_4d32efa5_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BEM_ChargeStateTimeout_oBEM_oJ1939_bms_4d32efa5_Tx, (&Rte_BEM_ChargeStateTimeout_oBEM_oJ1939_bms_4d32efa5_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStateTimeout_BEM_ChargeStateTimeout = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStateTimeout_BEM_ChargeStateTimeout;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStateTimeout_BEM_ChargeStateTimeout = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStateTimeout_BEM_ChargeStateTimeout;
     (void)ReleaseSpinlock(Rte_Spinlock_BEM_ChargeStateTimeout_oBEM_oJ1939_bms_4d32efa5_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStatisticsTimeout_BEM_ChargeStatisticsTimeout != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStatisticsTimeout_BEM_ChargeStatisticsTimeout)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStatisticsTimeout_BEM_ChargeStatisticsTimeout != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStatisticsTimeout_BEM_ChargeStatisticsTimeout)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_ChargeStatisticsTimeout_BEM_ChargeStatisticsTimeout;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_ChargeStatisticsTimeout_BEM_ChargeStatisticsTimeout;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BEM_ChargeStatisticsTimeout_oBEM_oJ1939_bms_d07a3692_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BEM_ChargeStatisticsTimeout_oBEM_oJ1939_bms_d07a3692_Tx, (&Rte_BEM_ChargeStatisticsTimeout_oBEM_oJ1939_bms_d07a3692_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStatisticsTimeout_BEM_ChargeStatisticsTimeout = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStatisticsTimeout_BEM_ChargeStatisticsTimeout;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStatisticsTimeout_BEM_ChargeStatisticsTimeout = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargeStatisticsTimeout_BEM_ChargeStatisticsTimeout;
     (void)ReleaseSpinlock(Rte_Spinlock_BEM_ChargeStatisticsTimeout_oBEM_oJ1939_bms_d07a3692_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout0_BEM_ChargerIdTimeout0 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout0_BEM_ChargerIdTimeout0)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout0_BEM_ChargerIdTimeout0 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout0_BEM_ChargerIdTimeout0)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_ChargerIdTimeout0_BEM_ChargerIdTimeout0;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_ChargerIdTimeout0_BEM_ChargerIdTimeout0;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BEM_ChargerIdTimeout0_oBEM_oJ1939_bms_eb813ae3_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BEM_ChargerIdTimeout0_oBEM_oJ1939_bms_eb813ae3_Tx, (&Rte_BEM_ChargerIdTimeout0_oBEM_oJ1939_bms_eb813ae3_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout0_BEM_ChargerIdTimeout0 = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout0_BEM_ChargerIdTimeout0;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout0_BEM_ChargerIdTimeout0 = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout0_BEM_ChargerIdTimeout0;
     (void)ReleaseSpinlock(Rte_Spinlock_BEM_ChargerIdTimeout0_oBEM_oJ1939_bms_eb813ae3_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout1_BEM_ChargerIdTimeout1 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout1_BEM_ChargerIdTimeout1)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout1_BEM_ChargerIdTimeout1 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout1_BEM_ChargerIdTimeout1)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_ChargerIdTimeout1_BEM_ChargerIdTimeout1;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_ChargerIdTimeout1_BEM_ChargerIdTimeout1;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BEM_ChargerIdTimeout1_oBEM_oJ1939_bms_6c27f1a0_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BEM_ChargerIdTimeout1_oBEM_oJ1939_bms_6c27f1a0_Tx, (&Rte_BEM_ChargerIdTimeout1_oBEM_oJ1939_bms_6c27f1a0_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout1_BEM_ChargerIdTimeout1 = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout1_BEM_ChargerIdTimeout1;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout1_BEM_ChargerIdTimeout1 = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_ChargerIdTimeout1_BEM_ChargerIdTimeout1;
     (void)ReleaseSpinlock(Rte_Spinlock_BEM_ChargerIdTimeout1_oBEM_oJ1939_bms_6c27f1a0_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_TimesyncOrPowerTimeout_BEM_TimesyncOrPowerTimeout != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_TimesyncOrPowerTimeout_BEM_TimesyncOrPowerTimeout)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_TimesyncOrPowerTimeout_BEM_TimesyncOrPowerTimeout != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_TimesyncOrPowerTimeout_BEM_TimesyncOrPowerTimeout)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_TimesyncOrPowerTimeout_BEM_TimesyncOrPowerTimeout;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BEM_TimesyncOrPowerTimeout_BEM_TimesyncOrPowerTimeout;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BEM_TimesyncOrPowerTimeout_oBEM_oJ1939_bms_f132cc4f_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BEM_TimesyncOrPowerTimeout_oBEM_oJ1939_bms_f132cc4f_Tx, (&Rte_BEM_TimesyncOrPowerTimeout_oBEM_oJ1939_bms_f132cc4f_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_TimesyncOrPowerTimeout_BEM_TimesyncOrPowerTimeout = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_TimesyncOrPowerTimeout_BEM_TimesyncOrPowerTimeout;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_TimesyncOrPowerTimeout_BEM_TimesyncOrPowerTimeout = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BEM_TimesyncOrPowerTimeout_BEM_TimesyncOrPowerTimeout;
     (void)ReleaseSpinlock(Rte_Spinlock_BEM_TimesyncOrPowerTimeout_oBEM_oJ1939_bms_f132cc4f_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BHM_AllowChargeVoltageMax_oBHM_oJ1939_bms_5c3d4762_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BHM_AllowChargeVoltageMax_oBHM_oJ1939_bms_5c3d4762_Tx, (&Rte_BHM_AllowChargeVoltageMax_oBHM_oJ1939_bms_5c3d4762_Tx_1)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BHM_AllowChargeVoltageMax_BHM_AllowChargeVoltageMax;
     (void)ReleaseSpinlock(Rte_Spinlock_BHM_AllowChargeVoltageMax_oBHM_oJ1939_bms_5c3d4762_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryChargeTimes_BRM_BatteryChargeTimes != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryChargeTimes_BRM_BatteryChargeTimes)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryChargeTimes_BRM_BatteryChargeTimes != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryChargeTimes_BRM_BatteryChargeTimes)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatteryChargeTimes_BRM_BatteryChargeTimes;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatteryChargeTimes_BRM_BatteryChargeTimes;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_BatteryChargeTimes_oBRM_oJ1939_bms_b699eff3_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_BatteryChargeTimes_oBRM_oJ1939_bms_b699eff3_Tx, (&Rte_BRM_BatteryChargeTimes_oBRM_oJ1939_bms_b699eff3_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryChargeTimes_BRM_BatteryChargeTimes = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryChargeTimes_BRM_BatteryChargeTimes;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryChargeTimes_BRM_BatteryChargeTimes = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryChargeTimes_BRM_BatteryChargeTimes;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_BatteryChargeTimes_oBRM_oJ1939_bms_b699eff3_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductDay_BRM_BatteryProductDay != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductDay_BRM_BatteryProductDay)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductDay_BRM_BatteryProductDay != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductDay_BRM_BatteryProductDay)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatteryProductDay_BRM_BatteryProductDay;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatteryProductDay_BRM_BatteryProductDay;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_BatteryProductDay_oBRM_oJ1939_bms_da11520f_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_BatteryProductDay_oBRM_oJ1939_bms_da11520f_Tx, (&Rte_BRM_BatteryProductDay_oBRM_oJ1939_bms_da11520f_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductDay_BRM_BatteryProductDay = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductDay_BRM_BatteryProductDay;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductDay_BRM_BatteryProductDay = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductDay_BRM_BatteryProductDay;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_BatteryProductDay_oBRM_oJ1939_bms_da11520f_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductMonth_BRM_BatteryProductMonth != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductMonth_BRM_BatteryProductMonth)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductMonth_BRM_BatteryProductMonth != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductMonth_BRM_BatteryProductMonth)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatteryProductMonth_BRM_BatteryProductMonth;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatteryProductMonth_BRM_BatteryProductMonth;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_BatteryProductMonth_oBRM_oJ1939_bms_9ee6c732_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_BatteryProductMonth_oBRM_oJ1939_bms_9ee6c732_Tx, (&Rte_BRM_BatteryProductMonth_oBRM_oJ1939_bms_9ee6c732_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductMonth_BRM_BatteryProductMonth = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductMonth_BRM_BatteryProductMonth;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductMonth_BRM_BatteryProductMonth = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductMonth_BRM_BatteryProductMonth;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_BatteryProductMonth_oBRM_oJ1939_bms_9ee6c732_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductYear_BRM_BatteryProductYear != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductYear_BRM_BatteryProductYear)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductYear_BRM_BatteryProductYear != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductYear_BRM_BatteryProductYear)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatteryProductYear_BRM_BatteryProductYear;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatteryProductYear_BRM_BatteryProductYear;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_BatteryProductYear_oBRM_oJ1939_bms_4f8656a1_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_BatteryProductYear_oBRM_oJ1939_bms_4f8656a1_Tx, (&Rte_BRM_BatteryProductYear_oBRM_oJ1939_bms_4f8656a1_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductYear_BRM_BatteryProductYear = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductYear_BRM_BatteryProductYear;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductYear_BRM_BatteryProductYear = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProductYear_BRM_BatteryProductYear;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_BatteryProductYear_oBRM_oJ1939_bms_4f8656a1_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProperty_BRM_BatteryProperty != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProperty_BRM_BatteryProperty)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProperty_BRM_BatteryProperty != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProperty_BRM_BatteryProperty)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatteryProperty_BRM_BatteryProperty;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatteryProperty_BRM_BatteryProperty;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_BatteryProperty_oBRM_oJ1939_bms_1c53b5e5_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_BatteryProperty_oBRM_oJ1939_bms_1c53b5e5_Tx, (&Rte_BRM_BatteryProperty_oBRM_oJ1939_bms_1c53b5e5_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProperty_BRM_BatteryProperty = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProperty_BRM_BatteryProperty;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProperty_BRM_BatteryProperty = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryProperty_BRM_BatteryProperty;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_BatteryProperty_oBRM_oJ1939_bms_1c53b5e5_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySN_BRM_BatterySN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySN_BRM_BatterySN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySN_BRM_BatterySN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySN_BRM_BatterySN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatterySN_BRM_BatterySN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatterySN_BRM_BatterySN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_BatterySN_oBRM_oJ1939_bms_10b903de_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_BatterySN_oBRM_oJ1939_bms_10b903de_Tx, (&Rte_BRM_BatterySN_oBRM_oJ1939_bms_10b903de_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySN_BRM_BatterySN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySN_BRM_BatterySN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySN_BRM_BatterySN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySN_BRM_BatterySN;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_BatterySN_oBRM_oJ1939_bms_10b903de_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedCapacity_BRM_BatterySystemRatedCapacity != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedCapacity_BRM_BatterySystemRatedCapacity)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedCapacity_BRM_BatterySystemRatedCapacity != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedCapacity_BRM_BatterySystemRatedCapacity)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatterySystemRatedCapacity_BRM_BatterySystemRatedCapacity;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatterySystemRatedCapacity_BRM_BatterySystemRatedCapacity;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_BatterySystemRatedCapacity_oBRM_oJ1939_bms_8c5f9fd1_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_BatterySystemRatedCapacity_oBRM_oJ1939_bms_8c5f9fd1_Tx, (&Rte_BRM_BatterySystemRatedCapacity_oBRM_oJ1939_bms_8c5f9fd1_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedCapacity_BRM_BatterySystemRatedCapacity = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedCapacity_BRM_BatterySystemRatedCapacity;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedCapacity_BRM_BatterySystemRatedCapacity = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedCapacity_BRM_BatterySystemRatedCapacity;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_BatterySystemRatedCapacity_oBRM_oJ1939_bms_8c5f9fd1_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedVoltage_BRM_BatterySystemRatedVoltage != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedVoltage_BRM_BatterySystemRatedVoltage)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedVoltage_BRM_BatterySystemRatedVoltage != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedVoltage_BRM_BatterySystemRatedVoltage)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatterySystemRatedVoltage_BRM_BatterySystemRatedVoltage;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatterySystemRatedVoltage_BRM_BatterySystemRatedVoltage;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_BatterySystemRatedVoltage_oBRM_oJ1939_bms_902f9149_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_BatterySystemRatedVoltage_oBRM_oJ1939_bms_902f9149_Tx, (&Rte_BRM_BatterySystemRatedVoltage_oBRM_oJ1939_bms_902f9149_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedVoltage_BRM_BatterySystemRatedVoltage = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedVoltage_BRM_BatterySystemRatedVoltage;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedVoltage_BRM_BatterySystemRatedVoltage = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatterySystemRatedVoltage_BRM_BatterySystemRatedVoltage;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_BatterySystemRatedVoltage_oBRM_oJ1939_bms_902f9149_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryType_BRM_BatteryType != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryType_BRM_BatteryType)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryType_BRM_BatteryType != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryType_BRM_BatteryType)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatteryType_BRM_BatteryType;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_BatteryType_BRM_BatteryType;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_BatteryType_oBRM_oJ1939_bms_67affdba_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_BatteryType_oBRM_oJ1939_bms_67affdba_Tx, (&Rte_BRM_BatteryType_oBRM_oJ1939_bms_67affdba_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryType_BRM_BatteryType = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryType_BRM_BatteryType;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryType_BRM_BatteryType = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_BatteryType_BRM_BatteryType;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_BatteryType_oBRM_oJ1939_bms_67affdba_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_Manufacturer_BRM_Manufacturer != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_Manufacturer_BRM_Manufacturer)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_Manufacturer_BRM_Manufacturer != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_Manufacturer_BRM_Manufacturer)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_Manufacturer_BRM_Manufacturer;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_Manufacturer_BRM_Manufacturer;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_Manufacturer_oBRM_oJ1939_bms_1506e637_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_Manufacturer_oBRM_oJ1939_bms_1506e637_Tx, (&Rte_BRM_Manufacturer_oBRM_oJ1939_bms_1506e637_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_Manufacturer_BRM_Manufacturer = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_Manufacturer_BRM_Manufacturer;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_Manufacturer_BRM_Manufacturer = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_Manufacturer_BRM_Manufacturer;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_Manufacturer_oBRM_oJ1939_bms_1506e637_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_ProtocolVersion_BRM_ProtocolVersion != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_ProtocolVersion_BRM_ProtocolVersion)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_ProtocolVersion_BRM_ProtocolVersion != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_ProtocolVersion_BRM_ProtocolVersion)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_ProtocolVersion_BRM_ProtocolVersion;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_ProtocolVersion_BRM_ProtocolVersion;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_ProtocolVersion_oBRM_oJ1939_bms_4595b96f_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_ProtocolVersion_oBRM_oJ1939_bms_4595b96f_Tx, (&Rte_BRM_ProtocolVersion_oBRM_oJ1939_bms_4595b96f_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_ProtocolVersion_BRM_ProtocolVersion = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_ProtocolVersion_BRM_ProtocolVersion;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_ProtocolVersion_BRM_ProtocolVersion = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_ProtocolVersion_BRM_ProtocolVersion;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_ProtocolVersion_oBRM_oJ1939_bms_4595b96f_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte17_BRM_VehicleIdByte17 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte17_BRM_VehicleIdByte17)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte17_BRM_VehicleIdByte17 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte17_BRM_VehicleIdByte17)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_VehicleIdByte17_BRM_VehicleIdByte17;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_VehicleIdByte17_BRM_VehicleIdByte17;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_VehicleIdByte17_oBRM_oJ1939_bms_3bcab298_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_VehicleIdByte17_oBRM_oJ1939_bms_3bcab298_Tx, (&Rte_BRM_VehicleIdByte17_oBRM_oJ1939_bms_3bcab298_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte17_BRM_VehicleIdByte17 = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte17_BRM_VehicleIdByte17;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte17_BRM_VehicleIdByte17 = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte17_BRM_VehicleIdByte17;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_VehicleIdByte17_oBRM_oJ1939_bms_3bcab298_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte1_8_BRM_VehicleIdByte1_8 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte1_8_BRM_VehicleIdByte1_8)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte1_8_BRM_VehicleIdByte1_8 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte1_8_BRM_VehicleIdByte1_8)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_VehicleIdByte1_8_BRM_VehicleIdByte1_8;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_VehicleIdByte1_8_BRM_VehicleIdByte1_8;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_VehicleIdByte1_8_oBRM_oJ1939_bms_38f10529_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_VehicleIdByte1_8_oBRM_oJ1939_bms_38f10529_Tx, *(&Rte_BRM_VehicleIdByte1_8_oBRM_oJ1939_bms_38f10529_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte1_8_BRM_VehicleIdByte1_8 = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte1_8_BRM_VehicleIdByte1_8;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte1_8_BRM_VehicleIdByte1_8 = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte1_8_BRM_VehicleIdByte1_8;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_VehicleIdByte1_8_oBRM_oJ1939_bms_38f10529_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte9_16_BRM_VehicleIdByte9_16 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte9_16_BRM_VehicleIdByte9_16)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte9_16_BRM_VehicleIdByte9_16 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte9_16_BRM_VehicleIdByte9_16)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_VehicleIdByte9_16_BRM_VehicleIdByte9_16;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRM_VehicleIdByte9_16_BRM_VehicleIdByte9_16;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRM_VehicleIdByte9_16_oBRM_oJ1939_bms_50f2ed11_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRM_VehicleIdByte9_16_oBRM_oJ1939_bms_50f2ed11_Tx, *(&Rte_BRM_VehicleIdByte9_16_oBRM_oJ1939_bms_50f2ed11_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte9_16_BRM_VehicleIdByte9_16 = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte9_16_BRM_VehicleIdByte9_16;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte9_16_BRM_VehicleIdByte9_16 = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRM_VehicleIdByte9_16_BRM_VehicleIdByte9_16;
     (void)ReleaseSpinlock(Rte_Spinlock_BRM_VehicleIdByte9_16_oBRM_oJ1939_bms_50f2ed11_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRO_BMSChargeReady_BRO_BMSChargeReady != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRO_BMSChargeReady_BRO_BMSChargeReady)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRO_BMSChargeReady_BRO_BMSChargeReady != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRO_BMSChargeReady_BRO_BMSChargeReady)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRO_BMSChargeReady_BRO_BMSChargeReady;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BRO_BMSChargeReady_BRO_BMSChargeReady;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BRO_BMSChargeReady_oBRO_oJ1939_bms_639997bd_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BRO_BMSChargeReady_oBRO_oJ1939_bms_639997bd_Tx, (&Rte_BRO_BMSChargeReady_oBRO_oJ1939_bms_639997bd_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRO_BMSChargeReady_BRO_BMSChargeReady = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRO_BMSChargeReady_BRO_BMSChargeReady;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRO_BMSChargeReady_BRO_BMSChargeReady = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BRO_BMSChargeReady_BRO_BMSChargeReady;
     (void)ReleaseSpinlock(Rte_Spinlock_BRO_BMSChargeReady_oBRO_oJ1939_bms_639997bd_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_AbortSOC_BSD_AbortSOC != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_AbortSOC_BSD_AbortSOC)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_AbortSOC_BSD_AbortSOC != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_AbortSOC_BSD_AbortSOC)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSD_AbortSOC_BSD_AbortSOC;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSD_AbortSOC_BSD_AbortSOC;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSD_AbortSOC_oBSD_oJ1939_bms_1bf4999e_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSD_AbortSOC_oBSD_oJ1939_bms_1bf4999e_Tx, (&Rte_BSD_AbortSOC_oBSD_oJ1939_bms_1bf4999e_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_AbortSOC_BSD_AbortSOC = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_AbortSOC_BSD_AbortSOC;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_AbortSOC_BSD_AbortSOC = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_AbortSOC_BSD_AbortSOC;
     (void)ReleaseSpinlock(Rte_Spinlock_BSD_AbortSOC_oBSD_oJ1939_bms_1bf4999e_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMax_BSD_BatteryTempMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMax_BSD_BatteryTempMax)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMax_BSD_BatteryTempMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMax_BSD_BatteryTempMax)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSD_BatteryTempMax_BSD_BatteryTempMax;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSD_BatteryTempMax_BSD_BatteryTempMax;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSD_BatteryTempMax_oBSD_oJ1939_bms_0a97b3dc_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSD_BatteryTempMax_oBSD_oJ1939_bms_0a97b3dc_Tx, (&Rte_BSD_BatteryTempMax_oBSD_oJ1939_bms_0a97b3dc_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMax_BSD_BatteryTempMax = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMax_BSD_BatteryTempMax;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMax_BSD_BatteryTempMax = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMax_BSD_BatteryTempMax;
     (void)ReleaseSpinlock(Rte_Spinlock_BSD_BatteryTempMax_oBSD_oJ1939_bms_0a97b3dc_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMin_BSD_BatteryTempMin != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMin_BSD_BatteryTempMin)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMin_BSD_BatteryTempMin != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMin_BSD_BatteryTempMin)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSD_BatteryTempMin_BSD_BatteryTempMin;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSD_BatteryTempMin_BSD_BatteryTempMin;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSD_BatteryTempMin_oBSD_oJ1939_bms_ada333a5_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSD_BatteryTempMin_oBSD_oJ1939_bms_ada333a5_Tx, (&Rte_BSD_BatteryTempMin_oBSD_oJ1939_bms_ada333a5_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMin_BSD_BatteryTempMin = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMin_BSD_BatteryTempMin;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMin_BSD_BatteryTempMin = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryTempMin_BSD_BatteryTempMin;
     (void)ReleaseSpinlock(Rte_Spinlock_BSD_BatteryTempMin_oBSD_oJ1939_bms_ada333a5_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMax_BSD_BatteryVoltageMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMax_BSD_BatteryVoltageMax)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMax_BSD_BatteryVoltageMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMax_BSD_BatteryVoltageMax)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSD_BatteryVoltageMax_BSD_BatteryVoltageMax;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSD_BatteryVoltageMax_BSD_BatteryVoltageMax;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSD_BatteryVoltageMax_oBSD_oJ1939_bms_7df654bd_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSD_BatteryVoltageMax_oBSD_oJ1939_bms_7df654bd_Tx, (&Rte_BSD_BatteryVoltageMax_oBSD_oJ1939_bms_7df654bd_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMax_BSD_BatteryVoltageMax = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMax_BSD_BatteryVoltageMax;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMax_BSD_BatteryVoltageMax = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMax_BSD_BatteryVoltageMax;
     (void)ReleaseSpinlock(Rte_Spinlock_BSD_BatteryVoltageMax_oBSD_oJ1939_bms_7df654bd_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMin_BSD_BatteryVoltageMin != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMin_BSD_BatteryVoltageMin)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMin_BSD_BatteryVoltageMin != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMin_BSD_BatteryVoltageMin)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSD_BatteryVoltageMin_BSD_BatteryVoltageMin;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSD_BatteryVoltageMin_BSD_BatteryVoltageMin;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSD_BatteryVoltageMin_oBSD_oJ1939_bms_dac2d4c4_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSD_BatteryVoltageMin_oBSD_oJ1939_bms_dac2d4c4_Tx, (&Rte_BSD_BatteryVoltageMin_oBSD_oJ1939_bms_dac2d4c4_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMin_BSD_BatteryVoltageMin = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMin_BSD_BatteryVoltageMin;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMin_BSD_BatteryVoltageMin = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSD_BatteryVoltageMin_BSD_BatteryVoltageMin;
     (void)ReleaseSpinlock(Rte_Spinlock_BSD_BatteryVoltageMin_oBSD_oJ1939_bms_dac2d4c4_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryCurrentState_BSM_BatteryCurrentState != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryCurrentState_BSM_BatteryCurrentState)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryCurrentState_BSM_BatteryCurrentState != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryCurrentState_BSM_BatteryCurrentState)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryCurrentState_BSM_BatteryCurrentState;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryCurrentState_BSM_BatteryCurrentState;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSM_BatteryCurrentState_oBSM_oJ1939_bms_fbd112e0_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSM_BatteryCurrentState_oBSM_oJ1939_bms_fbd112e0_Tx, (&Rte_BSM_BatteryCurrentState_oBSM_oJ1939_bms_fbd112e0_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryCurrentState_BSM_BatteryCurrentState = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryCurrentState_BSM_BatteryCurrentState;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryCurrentState_BSM_BatteryCurrentState = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryCurrentState_BSM_BatteryCurrentState;
     (void)ReleaseSpinlock(Rte_Spinlock_BSM_BatteryCurrentState_oBSM_oJ1939_bms_fbd112e0_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryOutpuConnectorState_BSM_BatteryOutpuConnectorState != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryOutpuConnectorState_BSM_BatteryOutpuConnectorState)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryOutpuConnectorState_BSM_BatteryOutpuConnectorState != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryOutpuConnectorState_BSM_BatteryOutpuConnectorState)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryOutpuConnectorState_BSM_BatteryOutpuConnectorState;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryOutpuConnectorState_BSM_BatteryOutpuConnectorState;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSM_BatteryOutpuConnectorState_oBSM_oJ1939_bms_505480e6_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSM_BatteryOutpuConnectorState_oBSM_oJ1939_bms_505480e6_Tx, (&Rte_BSM_BatteryOutpuConnectorState_oBSM_oJ1939_bms_505480e6_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryOutpuConnectorState_BSM_BatteryOutpuConnectorState = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryOutpuConnectorState_BSM_BatteryOutpuConnectorState;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryOutpuConnectorState_BSM_BatteryOutpuConnectorState = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryOutpuConnectorState_BSM_BatteryOutpuConnectorState;
     (void)ReleaseSpinlock(Rte_Spinlock_BSM_BatteryOutpuConnectorState_oBSM_oJ1939_bms_505480e6_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMax_BSM_BatteryTempMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMax_BSM_BatteryTempMax)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMax_BSM_BatteryTempMax != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMax_BSM_BatteryTempMax)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryTempMax_BSM_BatteryTempMax;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryTempMax_BSM_BatteryTempMax;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSM_BatteryTempMax_oBSM_oJ1939_bms_85f0b8b3_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSM_BatteryTempMax_oBSM_oJ1939_bms_85f0b8b3_Tx, (&Rte_BSM_BatteryTempMax_oBSM_oJ1939_bms_85f0b8b3_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMax_BSM_BatteryTempMax = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMax_BSM_BatteryTempMax;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMax_BSM_BatteryTempMax = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMax_BSM_BatteryTempMax;
     (void)ReleaseSpinlock(Rte_Spinlock_BSM_BatteryTempMax_oBSM_oJ1939_bms_85f0b8b3_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMaxNo_BSM_BatteryTempMaxNo != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMaxNo_BSM_BatteryTempMaxNo)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMaxNo_BSM_BatteryTempMaxNo != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMaxNo_BSM_BatteryTempMaxNo)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryTempMaxNo_BSM_BatteryTempMaxNo;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryTempMaxNo_BSM_BatteryTempMaxNo;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSM_BatteryTempMaxNo_oBSM_oJ1939_bms_497a5c4e_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSM_BatteryTempMaxNo_oBSM_oJ1939_bms_497a5c4e_Tx, (&Rte_BSM_BatteryTempMaxNo_oBSM_oJ1939_bms_497a5c4e_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMaxNo_BSM_BatteryTempMaxNo = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMaxNo_BSM_BatteryTempMaxNo;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMaxNo_BSM_BatteryTempMaxNo = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMaxNo_BSM_BatteryTempMaxNo;
     (void)ReleaseSpinlock(Rte_Spinlock_BSM_BatteryTempMaxNo_oBSM_oJ1939_bms_497a5c4e_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMin_BSM_BatteryTempMin != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMin_BSM_BatteryTempMin)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMin_BSM_BatteryTempMin != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMin_BSM_BatteryTempMin)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryTempMin_BSM_BatteryTempMin;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryTempMin_BSM_BatteryTempMin;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSM_BatteryTempMin_oBSM_oJ1939_bms_22c438ca_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSM_BatteryTempMin_oBSM_oJ1939_bms_22c438ca_Tx, (&Rte_BSM_BatteryTempMin_oBSM_oJ1939_bms_22c438ca_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMin_BSM_BatteryTempMin = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMin_BSM_BatteryTempMin;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMin_BSM_BatteryTempMin = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMin_BSM_BatteryTempMin;
     (void)ReleaseSpinlock(Rte_Spinlock_BSM_BatteryTempMin_oBSM_oJ1939_bms_22c438ca_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMinNo_BSM_BatteryTempMinNo != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMinNo_BSM_BatteryTempMinNo)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMinNo_BSM_BatteryTempMinNo != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMinNo_BSM_BatteryTempMinNo)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryTempMinNo_BSM_BatteryTempMinNo;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryTempMinNo_BSM_BatteryTempMinNo;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSM_BatteryTempMinNo_oBSM_oJ1939_bms_5a3fbae5_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSM_BatteryTempMinNo_oBSM_oJ1939_bms_5a3fbae5_Tx, (&Rte_BSM_BatteryTempMinNo_oBSM_oJ1939_bms_5a3fbae5_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMinNo_BSM_BatteryTempMinNo = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMinNo_BSM_BatteryTempMinNo;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMinNo_BSM_BatteryTempMinNo = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempMinNo_BSM_BatteryTempMinNo;
     (void)ReleaseSpinlock(Rte_Spinlock_BSM_BatteryTempMinNo_oBSM_oJ1939_bms_5a3fbae5_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempState_BSM_BatteryTempState != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempState_BSM_BatteryTempState)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempState_BSM_BatteryTempState != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempState_BSM_BatteryTempState)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryTempState_BSM_BatteryTempState;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryTempState_BSM_BatteryTempState;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSM_BatteryTempState_oBSM_oJ1939_bms_84506101_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSM_BatteryTempState_oBSM_oJ1939_bms_84506101_Tx, (&Rte_BSM_BatteryTempState_oBSM_oJ1939_bms_84506101_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempState_BSM_BatteryTempState = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempState_BSM_BatteryTempState;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempState_BSM_BatteryTempState = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryTempState_BSM_BatteryTempState;
     (void)ReleaseSpinlock(Rte_Spinlock_BSM_BatteryTempState_oBSM_oJ1939_bms_84506101_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageMaxNo_BSM_BatteryVoltageMaxNo != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageMaxNo_BSM_BatteryVoltageMaxNo)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageMaxNo_BSM_BatteryVoltageMaxNo != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageMaxNo_BSM_BatteryVoltageMaxNo)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryVoltageMaxNo_BSM_BatteryVoltageMaxNo;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryVoltageMaxNo_BSM_BatteryVoltageMaxNo;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSM_BatteryVoltageMaxNo_oBSM_oJ1939_bms_8c4562b4_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSM_BatteryVoltageMaxNo_oBSM_oJ1939_bms_8c4562b4_Tx, (&Rte_BSM_BatteryVoltageMaxNo_oBSM_oJ1939_bms_8c4562b4_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageMaxNo_BSM_BatteryVoltageMaxNo = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageMaxNo_BSM_BatteryVoltageMaxNo;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageMaxNo_BSM_BatteryVoltageMaxNo = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageMaxNo_BSM_BatteryVoltageMaxNo;
     (void)ReleaseSpinlock(Rte_Spinlock_BSM_BatteryVoltageMaxNo_oBSM_oJ1939_bms_8c4562b4_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageState_BSM_BatteryVoltageState != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageState_BSM_BatteryVoltageState)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageState_BSM_BatteryVoltageState != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageState_BSM_BatteryVoltageState)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryVoltageState_BSM_BatteryVoltageState;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_BatteryVoltageState_BSM_BatteryVoltageState;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSM_BatteryVoltageState_oBSM_oJ1939_bms_416f5ffb_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSM_BatteryVoltageState_oBSM_oJ1939_bms_416f5ffb_Tx, (&Rte_BSM_BatteryVoltageState_oBSM_oJ1939_bms_416f5ffb_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageState_BSM_BatteryVoltageState = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageState_BSM_BatteryVoltageState;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageState_BSM_BatteryVoltageState = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_BatteryVoltageState_BSM_BatteryVoltageState;
     (void)ReleaseSpinlock(Rte_Spinlock_BSM_BatteryVoltageState_oBSM_oJ1939_bms_416f5ffb_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_ChargeEnable_BSM_ChargeEnable != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_ChargeEnable_BSM_ChargeEnable)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_ChargeEnable_BSM_ChargeEnable != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_ChargeEnable_BSM_ChargeEnable)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_ChargeEnable_BSM_ChargeEnable;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_ChargeEnable_BSM_ChargeEnable;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSM_ChargeEnable_oBSM_oJ1939_bms_a2bcc681_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSM_ChargeEnable_oBSM_oJ1939_bms_a2bcc681_Tx, (&Rte_BSM_ChargeEnable_oBSM_oJ1939_bms_a2bcc681_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_ChargeEnable_BSM_ChargeEnable = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_ChargeEnable_BSM_ChargeEnable;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_ChargeEnable_BSM_ChargeEnable = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_ChargeEnable_BSM_ChargeEnable;
     (void)ReleaseSpinlock(Rte_Spinlock_BSM_ChargeEnable_oBSM_oJ1939_bms_a2bcc681_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_InsulationState_BSM_InsulationState != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_InsulationState_BSM_InsulationState)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_InsulationState_BSM_InsulationState != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_InsulationState_BSM_InsulationState)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_InsulationState_BSM_InsulationState;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_InsulationState_BSM_InsulationState;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSM_InsulationState_oBSM_oJ1939_bms_7d927ad9_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSM_InsulationState_oBSM_oJ1939_bms_7d927ad9_Tx, (&Rte_BSM_InsulationState_oBSM_oJ1939_bms_7d927ad9_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_InsulationState_BSM_InsulationState = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_InsulationState_BSM_InsulationState;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_InsulationState_BSM_InsulationState = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_InsulationState_BSM_InsulationState;
     (void)ReleaseSpinlock(Rte_Spinlock_BSM_InsulationState_oBSM_oJ1939_bms_7d927ad9_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_SOC_BSM_SOC != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_SOC_BSM_SOC)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_SOC_BSM_SOC != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_SOC_BSM_SOC)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_SOC_BSM_SOC;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BSM_SOC_BSM_SOC;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BSM_SOC_oBSM_oJ1939_bms_14942cb5_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BSM_SOC_oBSM_oJ1939_bms_14942cb5_Tx, (&Rte_BSM_SOC_oBSM_oJ1939_bms_14942cb5_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_SOC_BSM_SOC = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_SOC_BSM_SOC;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_SOC_BSM_SOC = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BSM_SOC_BSM_SOC;
     (void)ReleaseSpinlock(Rte_Spinlock_BSM_SOC_oBSM_oJ1939_bms_14942cb5_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSOC_BST_AbortAchiveSOC != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSOC_BST_AbortAchiveSOC)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSOC_BST_AbortAchiveSOC != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSOC_BST_AbortAchiveSOC)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortAchiveSOC_BST_AbortAchiveSOC;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortAchiveSOC_BST_AbortAchiveSOC;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_AbortAchiveSOC_oBST_oJ1939_bms_c136b77d_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_AbortAchiveSOC_oBST_oJ1939_bms_c136b77d_Tx, (&Rte_BST_AbortAchiveSOC_oBST_oJ1939_bms_c136b77d_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSOC_BST_AbortAchiveSOC = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSOC_BST_AbortAchiveSOC;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSOC_BST_AbortAchiveSOC = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSOC_BST_AbortAchiveSOC;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_AbortAchiveSOC_oBST_oJ1939_bms_c136b77d_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSingleVolt_BST_AbortAchiveSingleVolt != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSingleVolt_BST_AbortAchiveSingleVolt)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSingleVolt_BST_AbortAchiveSingleVolt != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSingleVolt_BST_AbortAchiveSingleVolt)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortAchiveSingleVolt_BST_AbortAchiveSingleVolt;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortAchiveSingleVolt_BST_AbortAchiveSingleVolt;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_AbortAchiveSingleVolt_oBST_oJ1939_bms_eba61cdf_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_AbortAchiveSingleVolt_oBST_oJ1939_bms_eba61cdf_Tx, (&Rte_BST_AbortAchiveSingleVolt_oBST_oJ1939_bms_eba61cdf_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSingleVolt_BST_AbortAchiveSingleVolt = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSingleVolt_BST_AbortAchiveSingleVolt;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSingleVolt_BST_AbortAchiveSingleVolt = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveSingleVolt_BST_AbortAchiveSingleVolt;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_AbortAchiveSingleVolt_oBST_oJ1939_bms_eba61cdf_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveTotalVolt_BST_AbortAchiveTotalVolt != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveTotalVolt_BST_AbortAchiveTotalVolt)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveTotalVolt_BST_AbortAchiveTotalVolt != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveTotalVolt_BST_AbortAchiveTotalVolt)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortAchiveTotalVolt_BST_AbortAchiveTotalVolt;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortAchiveTotalVolt_BST_AbortAchiveTotalVolt;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_AbortAchiveTotalVolt_oBST_oJ1939_bms_e1a7b5c9_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_AbortAchiveTotalVolt_oBST_oJ1939_bms_e1a7b5c9_Tx, (&Rte_BST_AbortAchiveTotalVolt_oBST_oJ1939_bms_e1a7b5c9_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveTotalVolt_BST_AbortAchiveTotalVolt = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveTotalVolt_BST_AbortAchiveTotalVolt;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveTotalVolt_BST_AbortAchiveTotalVolt = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortAchiveTotalVolt_BST_AbortAchiveTotalVolt;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_AbortAchiveTotalVolt_oBST_oJ1939_bms_e1a7b5c9_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortChargparameter_BST_AbortChargparameter != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortChargparameter_BST_AbortChargparameter)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortChargparameter_BST_AbortChargparameter != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortChargparameter_BST_AbortChargparameter)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortChargparameter_BST_AbortChargparameter;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortChargparameter_BST_AbortChargparameter;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_AbortChargparameter_oBST_oJ1939_bms_76c05b72_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_AbortChargparameter_oBST_oJ1939_bms_76c05b72_Tx, (&Rte_BST_AbortChargparameter_oBST_oJ1939_bms_76c05b72_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortChargparameter_BST_AbortChargparameter = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortChargparameter_BST_AbortChargparameter;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortChargparameter_BST_AbortChargparameter = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortChargparameter_BST_AbortChargparameter;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_AbortChargparameter_oBST_oJ1939_bms_76c05b72_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorCurrent_BST_AbortErrorCurrent != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorCurrent_BST_AbortErrorCurrent)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorCurrent_BST_AbortErrorCurrent != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorCurrent_BST_AbortErrorCurrent)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortErrorCurrent_BST_AbortErrorCurrent;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortErrorCurrent_BST_AbortErrorCurrent;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_AbortErrorCurrent_oBST_oJ1939_bms_a1621160_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_AbortErrorCurrent_oBST_oJ1939_bms_a1621160_Tx, (&Rte_BST_AbortErrorCurrent_oBST_oJ1939_bms_a1621160_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorCurrent_BST_AbortErrorCurrent = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorCurrent_BST_AbortErrorCurrent;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorCurrent_BST_AbortErrorCurrent = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorCurrent_BST_AbortErrorCurrent;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_AbortErrorCurrent_oBST_oJ1939_bms_a1621160_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorVoltage_BST_AbortErrorVoltage != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorVoltage_BST_AbortErrorVoltage)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorVoltage_BST_AbortErrorVoltage != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorVoltage_BST_AbortErrorVoltage)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortErrorVoltage_BST_AbortErrorVoltage;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortErrorVoltage_BST_AbortErrorVoltage;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_AbortErrorVoltage_oBST_oJ1939_bms_984fbd12_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_AbortErrorVoltage_oBST_oJ1939_bms_984fbd12_Tx, (&Rte_BST_AbortErrorVoltage_oBST_oJ1939_bms_984fbd12_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorVoltage_BST_AbortErrorVoltage = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorVoltage_BST_AbortErrorVoltage;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorVoltage_BST_AbortErrorVoltage = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortErrorVoltage_BST_AbortErrorVoltage;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_AbortErrorVoltage_oBST_oJ1939_bms_984fbd12_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBMSTemp_BST_AbortFaultBMSTemp != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBMSTemp_BST_AbortFaultBMSTemp)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBMSTemp_BST_AbortFaultBMSTemp != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBMSTemp_BST_AbortFaultBMSTemp)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortFaultBMSTemp_BST_AbortFaultBMSTemp;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortFaultBMSTemp_BST_AbortFaultBMSTemp;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_AbortFaultBMSTemp_oBST_oJ1939_bms_1f548a97_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_AbortFaultBMSTemp_oBST_oJ1939_bms_1f548a97_Tx, (&Rte_BST_AbortFaultBMSTemp_oBST_oJ1939_bms_1f548a97_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBMSTemp_BST_AbortFaultBMSTemp = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBMSTemp_BST_AbortFaultBMSTemp;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBMSTemp_BST_AbortFaultBMSTemp = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBMSTemp_BST_AbortFaultBMSTemp;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_AbortFaultBMSTemp_oBST_oJ1939_bms_1f548a97_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBatteryTemp_BST_AbortFaultBatteryTemp != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBatteryTemp_BST_AbortFaultBatteryTemp)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBatteryTemp_BST_AbortFaultBatteryTemp != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBatteryTemp_BST_AbortFaultBatteryTemp)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortFaultBatteryTemp_BST_AbortFaultBatteryTemp;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortFaultBatteryTemp_BST_AbortFaultBatteryTemp;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_AbortFaultBatteryTemp_oBST_oJ1939_bms_24bc84f9_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_AbortFaultBatteryTemp_oBST_oJ1939_bms_24bc84f9_Tx, (&Rte_BST_AbortFaultBatteryTemp_oBST_oJ1939_bms_24bc84f9_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBatteryTemp_BST_AbortFaultBatteryTemp = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBatteryTemp_BST_AbortFaultBatteryTemp;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBatteryTemp_BST_AbortFaultBatteryTemp = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultBatteryTemp_BST_AbortFaultBatteryTemp;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_AbortFaultBatteryTemp_oBST_oJ1939_bms_24bc84f9_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnector_BST_AbortFaultConnector != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnector_BST_AbortFaultConnector)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnector_BST_AbortFaultConnector != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnector_BST_AbortFaultConnector)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortFaultConnector_BST_AbortFaultConnector;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortFaultConnector_BST_AbortFaultConnector;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_AbortFaultConnector_oBST_oJ1939_bms_c267077a_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_AbortFaultConnector_oBST_oJ1939_bms_c267077a_Tx, (&Rte_BST_AbortFaultConnector_oBST_oJ1939_bms_c267077a_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnector_BST_AbortFaultConnector = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnector_BST_AbortFaultConnector;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnector_BST_AbortFaultConnector = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnector_BST_AbortFaultConnector;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_AbortFaultConnector_oBST_oJ1939_bms_c267077a_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnectorTemp_BST_AbortFaultConnectorTemp != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnectorTemp_BST_AbortFaultConnectorTemp)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnectorTemp_BST_AbortFaultConnectorTemp != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnectorTemp_BST_AbortFaultConnectorTemp)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortFaultConnectorTemp_BST_AbortFaultConnectorTemp;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortFaultConnectorTemp_BST_AbortFaultConnectorTemp;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_AbortFaultConnectorTemp_oBST_oJ1939_bms_5ac8c1a2_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_AbortFaultConnectorTemp_oBST_oJ1939_bms_5ac8c1a2_Tx, (&Rte_BST_AbortFaultConnectorTemp_oBST_oJ1939_bms_5ac8c1a2_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnectorTemp_BST_AbortFaultConnectorTemp = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnectorTemp_BST_AbortFaultConnectorTemp;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnectorTemp_BST_AbortFaultConnectorTemp = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultConnectorTemp_BST_AbortFaultConnectorTemp;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_AbortFaultConnectorTemp_oBST_oJ1939_bms_5ac8c1a2_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultInsulation_BST_AbortFaultInsulation != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultInsulation_BST_AbortFaultInsulation)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultInsulation_BST_AbortFaultInsulation != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultInsulation_BST_AbortFaultInsulation)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortFaultInsulation_BST_AbortFaultInsulation;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortFaultInsulation_BST_AbortFaultInsulation;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_AbortFaultInsulation_oBST_oJ1939_bms_54f72c95_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_AbortFaultInsulation_oBST_oJ1939_bms_54f72c95_Tx, (&Rte_BST_AbortFaultInsulation_oBST_oJ1939_bms_54f72c95_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultInsulation_BST_AbortFaultInsulation = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultInsulation_BST_AbortFaultInsulation;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultInsulation_BST_AbortFaultInsulation = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultInsulation_BST_AbortFaultInsulation;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_AbortFaultInsulation_oBST_oJ1939_bms_54f72c95_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultOther_BST_AbortFaultOther != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultOther_BST_AbortFaultOther)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultOther_BST_AbortFaultOther != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultOther_BST_AbortFaultOther)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortFaultOther_BST_AbortFaultOther;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortFaultOther_BST_AbortFaultOther;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_AbortFaultOther_oBST_oJ1939_bms_bf783560_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_AbortFaultOther_oBST_oJ1939_bms_bf783560_Tx, (&Rte_BST_AbortFaultOther_oBST_oJ1939_bms_bf783560_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultOther_BST_AbortFaultOther = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultOther_BST_AbortFaultOther;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultOther_BST_AbortFaultOther = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortFaultOther_BST_AbortFaultOther;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_AbortFaultOther_oBST_oJ1939_bms_bf783560_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortHVrelayfault_BST_AbortHVrelayfault != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortHVrelayfault_BST_AbortHVrelayfault)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortHVrelayfault_BST_AbortHVrelayfault != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortHVrelayfault_BST_AbortHVrelayfault)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortHVrelayfault_BST_AbortHVrelayfault;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_AbortHVrelayfault_BST_AbortHVrelayfault;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_AbortHVrelayfault_oBST_oJ1939_bms_dd44a377_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_AbortHVrelayfault_oBST_oJ1939_bms_dd44a377_Tx, (&Rte_BST_AbortHVrelayfault_oBST_oJ1939_bms_dd44a377_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortHVrelayfault_BST_AbortHVrelayfault = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortHVrelayfault_BST_AbortHVrelayfault;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortHVrelayfault_BST_AbortHVrelayfault = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_AbortHVrelayfault_BST_AbortHVrelayfault;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_AbortHVrelayfault_oBST_oJ1939_bms_dd44a377_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortdet2Voltexception_BST_Abortdet2Voltexception != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortdet2Voltexception_BST_Abortdet2Voltexception)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortdet2Voltexception_BST_Abortdet2Voltexception != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortdet2Voltexception_BST_Abortdet2Voltexception)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_Abortdet2Voltexception_BST_Abortdet2Voltexception;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_Abortdet2Voltexception_BST_Abortdet2Voltexception;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_Abortdet2Voltexception_oBST_oJ1939_bms_e015929e_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_Abortdet2Voltexception_oBST_oJ1939_bms_e015929e_Tx, (&Rte_BST_Abortdet2Voltexception_oBST_oJ1939_bms_e015929e_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortdet2Voltexception_BST_Abortdet2Voltexception = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortdet2Voltexception_BST_Abortdet2Voltexception;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortdet2Voltexception_BST_Abortdet2Voltexception = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortdet2Voltexception_BST_Abortdet2Voltexception;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_Abortdet2Voltexception_oBST_oJ1939_bms_e015929e_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortmanoperate_BST_Abortmanoperate != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortmanoperate_BST_Abortmanoperate)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortmanoperate_BST_Abortmanoperate != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortmanoperate_BST_Abortmanoperate)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_Abortmanoperate_BST_Abortmanoperate;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_DCComM_BST_Abortmanoperate_BST_Abortmanoperate;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_BST_Abortmanoperate_oBST_oJ1939_bms_b2432717_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_BST_Abortmanoperate_oBST_oJ1939_bms_b2432717_Tx, (&Rte_BST_Abortmanoperate_oBST_oJ1939_bms_b2432717_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortmanoperate_BST_Abortmanoperate = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortmanoperate_BST_Abortmanoperate;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortmanoperate_BST_Abortmanoperate = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_DCComM_BST_Abortmanoperate_BST_Abortmanoperate;
     (void)ReleaseSpinlock(Rte_Spinlock_BST_Abortmanoperate_oBST_oJ1939_bms_b2432717_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Ena_LIN01_ChargeCurrWU_Ena_LIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Ena_LIN01_ChargeCurrWU_Ena_LIN01)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Ena_LIN01_ChargeCurrWU_Ena_LIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Ena_LIN01_ChargeCurrWU_Ena_LIN01)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_ChargeCurrWU_Ena_LIN01_ChargeCurrWU_Ena_LIN01;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_ChargeCurrWU_Ena_LIN01_ChargeCurrWU_Ena_LIN01;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_ChargeCurrWU_Ena_oVCU_BS_01_oATOM_HWLIN1_d9c09dc2_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_ChargeCurrWU_Ena_oVCU_BS_01_oATOM_HWLIN1_d9c09dc2_Tx, (&Rte_ChargeCurrWU_Ena_oVCU_BS_01_oATOM_HWLIN1_d9c09dc2_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Ena_LIN01_ChargeCurrWU_Ena_LIN01 = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Ena_LIN01_ChargeCurrWU_Ena_LIN01;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Ena_LIN01_ChargeCurrWU_Ena_LIN01 = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Ena_LIN01_ChargeCurrWU_Ena_LIN01;
     (void)ReleaseSpinlock(Rte_Spinlock_ChargeCurrWU_Ena_oVCU_BS_01_oATOM_HWLIN1_d9c09dc2_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Treshold_LIN01_ChargeCurrWU_Treshold_LIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Treshold_LIN01_ChargeCurrWU_Treshold_LIN01)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Treshold_LIN01_ChargeCurrWU_Treshold_LIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Treshold_LIN01_ChargeCurrWU_Treshold_LIN01)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_ChargeCurrWU_Treshold_LIN01_ChargeCurrWU_Treshold_LIN01;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_ChargeCurrWU_Treshold_LIN01_ChargeCurrWU_Treshold_LIN01;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_ChargeCurrWU_Treshold_oVCU_BS_01_oATOM_HWLIN1_5e5d12a4_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_ChargeCurrWU_Treshold_oVCU_BS_01_oATOM_HWLIN1_5e5d12a4_Tx, (&Rte_ChargeCurrWU_Treshold_oVCU_BS_01_oATOM_HWLIN1_5e5d12a4_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Treshold_LIN01_ChargeCurrWU_Treshold_LIN01 = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Treshold_LIN01_ChargeCurrWU_Treshold_LIN01;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Treshold_LIN01_ChargeCurrWU_Treshold_LIN01 = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_ChargeCurrWU_Treshold_LIN01_ChargeCurrWU_Treshold_LIN01;
     (void)ReleaseSpinlock(Rte_Spinlock_ChargeCurrWU_Treshold_oVCU_BS_01_oATOM_HWLIN1_5e5d12a4_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Ena_LIN01_DisChargeCurrWU_Ena_LIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Ena_LIN01_DisChargeCurrWU_Ena_LIN01)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Ena_LIN01_DisChargeCurrWU_Ena_LIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Ena_LIN01_DisChargeCurrWU_Ena_LIN01)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_DisChargeCurrWU_Ena_LIN01_DisChargeCurrWU_Ena_LIN01;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_DisChargeCurrWU_Ena_LIN01_DisChargeCurrWU_Ena_LIN01;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_DisChargeCurrWU_Ena_oVCU_BS_01_oATOM_HWLIN1_b8f53272_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_DisChargeCurrWU_Ena_oVCU_BS_01_oATOM_HWLIN1_b8f53272_Tx, (&Rte_DisChargeCurrWU_Ena_oVCU_BS_01_oATOM_HWLIN1_b8f53272_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Ena_LIN01_DisChargeCurrWU_Ena_LIN01 = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Ena_LIN01_DisChargeCurrWU_Ena_LIN01;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Ena_LIN01_DisChargeCurrWU_Ena_LIN01 = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Ena_LIN01_DisChargeCurrWU_Ena_LIN01;
     (void)ReleaseSpinlock(Rte_Spinlock_DisChargeCurrWU_Ena_oVCU_BS_01_oATOM_HWLIN1_b8f53272_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Treshold_LIN01_DisChargeCurrWU_Treshold_LIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Treshold_LIN01_DisChargeCurrWU_Treshold_LIN01)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Treshold_LIN01_DisChargeCurrWU_Treshold_LIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Treshold_LIN01_DisChargeCurrWU_Treshold_LIN01)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_DisChargeCurrWU_Treshold_LIN01_DisChargeCurrWU_Treshold_LIN01;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_DisChargeCurrWU_Treshold_LIN01_DisChargeCurrWU_Treshold_LIN01;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_DisChargeCurrWU_Treshold_oVCU_BS_01_oATOM_HWLIN1_05d46e7e_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_DisChargeCurrWU_Treshold_oVCU_BS_01_oATOM_HWLIN1_05d46e7e_Tx, (&Rte_DisChargeCurrWU_Treshold_oVCU_BS_01_oATOM_HWLIN1_05d46e7e_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Treshold_LIN01_DisChargeCurrWU_Treshold_LIN01 = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Treshold_LIN01_DisChargeCurrWU_Treshold_LIN01;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Treshold_LIN01_DisChargeCurrWU_Treshold_LIN01 = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_DisChargeCurrWU_Treshold_LIN01_DisChargeCurrWU_Treshold_LIN01;
     (void)ReleaseSpinlock(Rte_Spinlock_DisChargeCurrWU_Treshold_oVCU_BS_01_oATOM_HWLIN1_05d46e7e_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Ena_LIN01_SOCWU_Ena_LIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Ena_LIN01_SOCWU_Ena_LIN01)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Ena_LIN01_SOCWU_Ena_LIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Ena_LIN01_SOCWU_Ena_LIN01)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_SOCWU_Ena_LIN01_SOCWU_Ena_LIN01;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_SOCWU_Ena_LIN01_SOCWU_Ena_LIN01;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_SOCWU_Ena_oVCU_BS_01_oATOM_HWLIN1_c1ae10c8_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_SOCWU_Ena_oVCU_BS_01_oATOM_HWLIN1_c1ae10c8_Tx, (&Rte_SOCWU_Ena_oVCU_BS_01_oATOM_HWLIN1_c1ae10c8_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Ena_LIN01_SOCWU_Ena_LIN01 = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Ena_LIN01_SOCWU_Ena_LIN01;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Ena_LIN01_SOCWU_Ena_LIN01 = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Ena_LIN01_SOCWU_Ena_LIN01;
     (void)ReleaseSpinlock(Rte_Spinlock_SOCWU_Ena_oVCU_BS_01_oATOM_HWLIN1_c1ae10c8_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Treshold_LIN01_SOCWU_Treshold_LIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Treshold_LIN01_SOCWU_Treshold_LIN01)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Treshold_LIN01_SOCWU_Treshold_LIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Treshold_LIN01_SOCWU_Treshold_LIN01)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_SOCWU_Treshold_LIN01_SOCWU_Treshold_LIN01;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_SOCWU_Treshold_LIN01_SOCWU_Treshold_LIN01;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_SOCWU_Treshold_oVCU_BS_01_oATOM_HWLIN1_cb8c1a90_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_SOCWU_Treshold_oVCU_BS_01_oATOM_HWLIN1_cb8c1a90_Tx, (&Rte_SOCWU_Treshold_oVCU_BS_01_oATOM_HWLIN1_cb8c1a90_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Treshold_LIN01_SOCWU_Treshold_LIN01 = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Treshold_LIN01_SOCWU_Treshold_LIN01;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Treshold_LIN01_SOCWU_Treshold_LIN01 = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_SOCWU_Treshold_LIN01_SOCWU_Treshold_LIN01;
     (void)ReleaseSpinlock(Rte_Spinlock_SOCWU_Treshold_oVCU_BS_01_oATOM_HWLIN1_cb8c1a90_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_DriverWarningLampSts_LIN00_VCU_ACU_DriverWarningLampSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_DriverWarningLampSts_LIN00_VCU_ACU_DriverWarningLampSts_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_DriverWarningLampSts_LIN00_VCU_ACU_DriverWarningLampSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_DriverWarningLampSts_LIN00_VCU_ACU_DriverWarningLampSts_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_ACU_DriverWarningLampSts_LIN00_VCU_ACU_DriverWarningLampSts_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_ACU_DriverWarningLampSts_LIN00_VCU_ACU_DriverWarningLampSts_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_ACU_DriverWarningLampSts_oVCU_01_oATOM_HWLIN1_42c2b0b9_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_ACU_DriverWarningLampSts_oVCU_01_oATOM_HWLIN1_42c2b0b9_Tx, (&Rte_VCU_ACU_DriverWarningLampSts_oVCU_01_oATOM_HWLIN1_42c2b0b9_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_DriverWarningLampSts_LIN00_VCU_ACU_DriverWarningLampSts_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_DriverWarningLampSts_LIN00_VCU_ACU_DriverWarningLampSts_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_DriverWarningLampSts_LIN00_VCU_ACU_DriverWarningLampSts_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_DriverWarningLampSts_LIN00_VCU_ACU_DriverWarningLampSts_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_ACU_DriverWarningLampSts_oVCU_01_oATOM_HWLIN1_42c2b0b9_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerAirbagSts_LIN00_VCU_ACU_PassengerAirbagSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerAirbagSts_LIN00_VCU_ACU_PassengerAirbagSts_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerAirbagSts_LIN00_VCU_ACU_PassengerAirbagSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerAirbagSts_LIN00_VCU_ACU_PassengerAirbagSts_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_ACU_PassengerAirbagSts_LIN00_VCU_ACU_PassengerAirbagSts_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_ACU_PassengerAirbagSts_LIN00_VCU_ACU_PassengerAirbagSts_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_ACU_PassengerAirbagSts_oVCU_01_oATOM_HWLIN1_a0d9a7b9_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_ACU_PassengerAirbagSts_oVCU_01_oATOM_HWLIN1_a0d9a7b9_Tx, (&Rte_VCU_ACU_PassengerAirbagSts_oVCU_01_oATOM_HWLIN1_a0d9a7b9_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerAirbagSts_LIN00_VCU_ACU_PassengerAirbagSts_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerAirbagSts_LIN00_VCU_ACU_PassengerAirbagSts_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerAirbagSts_LIN00_VCU_ACU_PassengerAirbagSts_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerAirbagSts_LIN00_VCU_ACU_PassengerAirbagSts_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_ACU_PassengerAirbagSts_oVCU_01_oATOM_HWLIN1_a0d9a7b9_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerWarningLampSts_LIN00_VCU_ACU_PassengerWarningLampSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerWarningLampSts_LIN00_VCU_ACU_PassengerWarningLampSts_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerWarningLampSts_LIN00_VCU_ACU_PassengerWarningLampSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerWarningLampSts_LIN00_VCU_ACU_PassengerWarningLampSts_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_ACU_PassengerWarningLampSts_LIN00_VCU_ACU_PassengerWarningLampSts_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_ACU_PassengerWarningLampSts_LIN00_VCU_ACU_PassengerWarningLampSts_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_ACU_PassengerWarningLampSts_oVCU_01_oATOM_HWLIN1_76395bc4_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_ACU_PassengerWarningLampSts_oVCU_01_oATOM_HWLIN1_76395bc4_Tx, (&Rte_VCU_ACU_PassengerWarningLampSts_oVCU_01_oATOM_HWLIN1_76395bc4_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerWarningLampSts_LIN00_VCU_ACU_PassengerWarningLampSts_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerWarningLampSts_LIN00_VCU_ACU_PassengerWarningLampSts_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerWarningLampSts_LIN00_VCU_ACU_PassengerWarningLampSts_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_PassengerWarningLampSts_LIN00_VCU_ACU_PassengerWarningLampSts_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_ACU_PassengerWarningLampSts_oVCU_01_oATOM_HWLIN1_76395bc4_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_WarningLampSts_LIN00_VCU_ACU_WarningLampSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_WarningLampSts_LIN00_VCU_ACU_WarningLampSts_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_WarningLampSts_LIN00_VCU_ACU_WarningLampSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_WarningLampSts_LIN00_VCU_ACU_WarningLampSts_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_ACU_WarningLampSts_LIN00_VCU_ACU_WarningLampSts_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_ACU_WarningLampSts_LIN00_VCU_ACU_WarningLampSts_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_ACU_WarningLampSts_oVCU_01_oATOM_HWLIN1_7751b62b_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_ACU_WarningLampSts_oVCU_01_oATOM_HWLIN1_7751b62b_Tx, (&Rte_VCU_ACU_WarningLampSts_oVCU_01_oATOM_HWLIN1_7751b62b_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_WarningLampSts_LIN00_VCU_ACU_WarningLampSts_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_WarningLampSts_LIN00_VCU_ACU_WarningLampSts_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_WarningLampSts_LIN00_VCU_ACU_WarningLampSts_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_ACU_WarningLampSts_LIN00_VCU_ACU_WarningLampSts_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_ACU_WarningLampSts_oVCU_01_oATOM_HWLIN1_7751b62b_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FLSeatBeltRemindReq_LIN00_VCU_BCM_FLSeatBeltRemindReq_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FLSeatBeltRemindReq_LIN00_VCU_BCM_FLSeatBeltRemindReq_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FLSeatBeltRemindReq_LIN00_VCU_BCM_FLSeatBeltRemindReq_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FLSeatBeltRemindReq_LIN00_VCU_BCM_FLSeatBeltRemindReq_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_BCM_FLSeatBeltRemindReq_LIN00_VCU_BCM_FLSeatBeltRemindReq_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_BCM_FLSeatBeltRemindReq_LIN00_VCU_BCM_FLSeatBeltRemindReq_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_BCM_FLSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_980b8460_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_BCM_FLSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_980b8460_Tx, (&Rte_VCU_BCM_FLSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_980b8460_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FLSeatBeltRemindReq_LIN00_VCU_BCM_FLSeatBeltRemindReq_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FLSeatBeltRemindReq_LIN00_VCU_BCM_FLSeatBeltRemindReq_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FLSeatBeltRemindReq_LIN00_VCU_BCM_FLSeatBeltRemindReq_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FLSeatBeltRemindReq_LIN00_VCU_BCM_FLSeatBeltRemindReq_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_BCM_FLSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_980b8460_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FRSeatBeltRemindReq_LIN00_VCU_BCM_FRSeatBeltRemindReq_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FRSeatBeltRemindReq_LIN00_VCU_BCM_FRSeatBeltRemindReq_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FRSeatBeltRemindReq_LIN00_VCU_BCM_FRSeatBeltRemindReq_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FRSeatBeltRemindReq_LIN00_VCU_BCM_FRSeatBeltRemindReq_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_BCM_FRSeatBeltRemindReq_LIN00_VCU_BCM_FRSeatBeltRemindReq_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_BCM_FRSeatBeltRemindReq_LIN00_VCU_BCM_FRSeatBeltRemindReq_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_BCM_FRSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_ce21434a_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_BCM_FRSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_ce21434a_Tx, (&Rte_VCU_BCM_FRSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_ce21434a_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FRSeatBeltRemindReq_LIN00_VCU_BCM_FRSeatBeltRemindReq_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FRSeatBeltRemindReq_LIN00_VCU_BCM_FRSeatBeltRemindReq_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FRSeatBeltRemindReq_LIN00_VCU_BCM_FRSeatBeltRemindReq_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_FRSeatBeltRemindReq_LIN00_VCU_BCM_FRSeatBeltRemindReq_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_BCM_FRSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_ce21434a_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RLSeatBeltRemindReq_LIN00_VCU_BCM_RLSeatBeltRemindReq_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RLSeatBeltRemindReq_LIN00_VCU_BCM_RLSeatBeltRemindReq_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RLSeatBeltRemindReq_LIN00_VCU_BCM_RLSeatBeltRemindReq_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RLSeatBeltRemindReq_LIN00_VCU_BCM_RLSeatBeltRemindReq_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_BCM_RLSeatBeltRemindReq_LIN00_VCU_BCM_RLSeatBeltRemindReq_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_BCM_RLSeatBeltRemindReq_LIN00_VCU_BCM_RLSeatBeltRemindReq_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_BCM_RLSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_bc6dc441_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_BCM_RLSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_bc6dc441_Tx, (&Rte_VCU_BCM_RLSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_bc6dc441_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RLSeatBeltRemindReq_LIN00_VCU_BCM_RLSeatBeltRemindReq_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RLSeatBeltRemindReq_LIN00_VCU_BCM_RLSeatBeltRemindReq_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RLSeatBeltRemindReq_LIN00_VCU_BCM_RLSeatBeltRemindReq_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RLSeatBeltRemindReq_LIN00_VCU_BCM_RLSeatBeltRemindReq_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_BCM_RLSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_bc6dc441_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RRSeatBeltRemindReq_LIN00_VCU_BCM_RRSeatBeltRemindReq_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RRSeatBeltRemindReq_LIN00_VCU_BCM_RRSeatBeltRemindReq_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RRSeatBeltRemindReq_LIN00_VCU_BCM_RRSeatBeltRemindReq_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RRSeatBeltRemindReq_LIN00_VCU_BCM_RRSeatBeltRemindReq_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_BCM_RRSeatBeltRemindReq_LIN00_VCU_BCM_RRSeatBeltRemindReq_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_BCM_RRSeatBeltRemindReq_LIN00_VCU_BCM_RRSeatBeltRemindReq_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_BCM_RRSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_ea47036b_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_BCM_RRSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_ea47036b_Tx, (&Rte_VCU_BCM_RRSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_ea47036b_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RRSeatBeltRemindReq_LIN00_VCU_BCM_RRSeatBeltRemindReq_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RRSeatBeltRemindReq_LIN00_VCU_BCM_RRSeatBeltRemindReq_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RRSeatBeltRemindReq_LIN00_VCU_BCM_RRSeatBeltRemindReq_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_BCM_RRSeatBeltRemindReq_LIN00_VCU_BCM_RRSeatBeltRemindReq_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_BCM_RRSeatBeltRemindReq_oVCU_01_oATOM_HWLIN1_ea47036b_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_CGW_VehicleState_LIN00_VCU_CGW_VehicleState_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_CGW_VehicleState_LIN00_VCU_CGW_VehicleState_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_CGW_VehicleState_LIN00_VCU_CGW_VehicleState_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_CGW_VehicleState_LIN00_VCU_CGW_VehicleState_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_CGW_VehicleState_LIN00_VCU_CGW_VehicleState_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_CGW_VehicleState_LIN00_VCU_CGW_VehicleState_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_CGW_VehicleState_oVCU_01_oATOM_HWLIN1_77400d2e_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_CGW_VehicleState_oVCU_01_oATOM_HWLIN1_77400d2e_Tx, (&Rte_VCU_CGW_VehicleState_oVCU_01_oATOM_HWLIN1_77400d2e_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_CGW_VehicleState_LIN00_VCU_CGW_VehicleState_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_CGW_VehicleState_LIN00_VCU_CGW_VehicleState_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_CGW_VehicleState_LIN00_VCU_CGW_VehicleState_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_CGW_VehicleState_LIN00_VCU_CGW_VehicleState_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_CGW_VehicleState_oVCU_01_oATOM_HWLIN1_77400d2e_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCDCFail_LIN_LIN00_VCU_DCDCFail_LIN_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCDCFail_LIN_LIN00_VCU_DCDCFail_LIN_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCDCFail_LIN_LIN00_VCU_DCDCFail_LIN_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCDCFail_LIN_LIN00_VCU_DCDCFail_LIN_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_DCDCFail_LIN_LIN00_VCU_DCDCFail_LIN_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_DCDCFail_LIN_LIN00_VCU_DCDCFail_LIN_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_DCDCFail_LIN_oVCU_01_oATOM_HWLIN1_0c50ae50_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_DCDCFail_LIN_oVCU_01_oATOM_HWLIN1_0c50ae50_Tx, (&Rte_VCU_DCDCFail_LIN_oVCU_01_oATOM_HWLIN1_0c50ae50_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCDCFail_LIN_LIN00_VCU_DCDCFail_LIN_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCDCFail_LIN_LIN00_VCU_DCDCFail_LIN_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCDCFail_LIN_LIN00_VCU_DCDCFail_LIN_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCDCFail_LIN_LIN00_VCU_DCDCFail_LIN_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_DCDCFail_LIN_oVCU_01_oATOM_HWLIN1_0c50ae50_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FL_DoorFLSts_LIN00_VCU_DCM_FL_DoorFLSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FL_DoorFLSts_LIN00_VCU_DCM_FL_DoorFLSts_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FL_DoorFLSts_LIN00_VCU_DCM_FL_DoorFLSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FL_DoorFLSts_LIN00_VCU_DCM_FL_DoorFLSts_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_DCM_FL_DoorFLSts_LIN00_VCU_DCM_FL_DoorFLSts_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_DCM_FL_DoorFLSts_LIN00_VCU_DCM_FL_DoorFLSts_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_DCM_FL_DoorFLSts_oVCU_01_oATOM_HWLIN1_c9cb9c36_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_DCM_FL_DoorFLSts_oVCU_01_oATOM_HWLIN1_c9cb9c36_Tx, (&Rte_VCU_DCM_FL_DoorFLSts_oVCU_01_oATOM_HWLIN1_c9cb9c36_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FL_DoorFLSts_LIN00_VCU_DCM_FL_DoorFLSts_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FL_DoorFLSts_LIN00_VCU_DCM_FL_DoorFLSts_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FL_DoorFLSts_LIN00_VCU_DCM_FL_DoorFLSts_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FL_DoorFLSts_LIN00_VCU_DCM_FL_DoorFLSts_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_DCM_FL_DoorFLSts_oVCU_01_oATOM_HWLIN1_c9cb9c36_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FR_DoorFRSts_LIN00_VCU_DCM_FR_DoorFRSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FR_DoorFRSts_LIN00_VCU_DCM_FR_DoorFRSts_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FR_DoorFRSts_LIN00_VCU_DCM_FR_DoorFRSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FR_DoorFRSts_LIN00_VCU_DCM_FR_DoorFRSts_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_DCM_FR_DoorFRSts_LIN00_VCU_DCM_FR_DoorFRSts_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_DCM_FR_DoorFRSts_LIN00_VCU_DCM_FR_DoorFRSts_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_DCM_FR_DoorFRSts_oVCU_01_oATOM_HWLIN1_610e09cb_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_DCM_FR_DoorFRSts_oVCU_01_oATOM_HWLIN1_610e09cb_Tx, (&Rte_VCU_DCM_FR_DoorFRSts_oVCU_01_oATOM_HWLIN1_610e09cb_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FR_DoorFRSts_LIN00_VCU_DCM_FR_DoorFRSts_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FR_DoorFRSts_LIN00_VCU_DCM_FR_DoorFRSts_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FR_DoorFRSts_LIN00_VCU_DCM_FR_DoorFRSts_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_FR_DoorFRSts_LIN00_VCU_DCM_FR_DoorFRSts_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_DCM_FR_DoorFRSts_oVCU_01_oATOM_HWLIN1_610e09cb_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RL_DoorRLSts_LIN00_VCU_DCM_RL_DoorRLSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RL_DoorRLSts_LIN00_VCU_DCM_RL_DoorRLSts_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RL_DoorRLSts_LIN00_VCU_DCM_RL_DoorRLSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RL_DoorRLSts_LIN00_VCU_DCM_RL_DoorRLSts_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_DCM_RL_DoorRLSts_LIN00_VCU_DCM_RL_DoorRLSts_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_DCM_RL_DoorRLSts_LIN00_VCU_DCM_RL_DoorRLSts_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_DCM_RL_DoorRLSts_oVCU_01_oATOM_HWLIN1_4b0c11ee_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_DCM_RL_DoorRLSts_oVCU_01_oATOM_HWLIN1_4b0c11ee_Tx, (&Rte_VCU_DCM_RL_DoorRLSts_oVCU_01_oATOM_HWLIN1_4b0c11ee_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RL_DoorRLSts_LIN00_VCU_DCM_RL_DoorRLSts_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RL_DoorRLSts_LIN00_VCU_DCM_RL_DoorRLSts_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RL_DoorRLSts_LIN00_VCU_DCM_RL_DoorRLSts_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RL_DoorRLSts_LIN00_VCU_DCM_RL_DoorRLSts_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_DCM_RL_DoorRLSts_oVCU_01_oATOM_HWLIN1_4b0c11ee_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RR_DoorRRSts_LIN00_VCU_DCM_RR_DoorRRSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RR_DoorRRSts_LIN00_VCU_DCM_RR_DoorRRSts_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RR_DoorRRSts_LIN00_VCU_DCM_RR_DoorRRSts_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RR_DoorRRSts_LIN00_VCU_DCM_RR_DoorRRSts_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_DCM_RR_DoorRRSts_LIN00_VCU_DCM_RR_DoorRRSts_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_DCM_RR_DoorRRSts_LIN00_VCU_DCM_RR_DoorRRSts_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_DCM_RR_DoorRRSts_oVCU_01_oATOM_HWLIN1_e3c98413_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_DCM_RR_DoorRRSts_oVCU_01_oATOM_HWLIN1_e3c98413_Tx, (&Rte_VCU_DCM_RR_DoorRRSts_oVCU_01_oATOM_HWLIN1_e3c98413_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RR_DoorRRSts_LIN00_VCU_DCM_RR_DoorRRSts_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RR_DoorRRSts_LIN00_VCU_DCM_RR_DoorRRSts_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RR_DoorRRSts_LIN00_VCU_DCM_RR_DoorRRSts_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DCM_RR_DoorRRSts_LIN00_VCU_DCM_RR_DoorRRSts_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_DCM_RR_DoorRRSts_oVCU_01_oATOM_HWLIN1_e3c98413_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DriveMotOvrTemp_LIN_LIN00_VCU_DriveMotOvrTemp_LIN_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DriveMotOvrTemp_LIN_LIN00_VCU_DriveMotOvrTemp_LIN_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DriveMotOvrTemp_LIN_LIN00_VCU_DriveMotOvrTemp_LIN_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DriveMotOvrTemp_LIN_LIN00_VCU_DriveMotOvrTemp_LIN_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_DriveMotOvrTemp_LIN_LIN00_VCU_DriveMotOvrTemp_LIN_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_DriveMotOvrTemp_LIN_LIN00_VCU_DriveMotOvrTemp_LIN_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_DriveMotOvrTemp_LIN_oVCU_01_oATOM_HWLIN1_65d20ded_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_DriveMotOvrTemp_LIN_oVCU_01_oATOM_HWLIN1_65d20ded_Tx, (&Rte_VCU_DriveMotOvrTemp_LIN_oVCU_01_oATOM_HWLIN1_65d20ded_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DriveMotOvrTemp_LIN_LIN00_VCU_DriveMotOvrTemp_LIN_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DriveMotOvrTemp_LIN_LIN00_VCU_DriveMotOvrTemp_LIN_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DriveMotOvrTemp_LIN_LIN00_VCU_DriveMotOvrTemp_LIN_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_DriveMotOvrTemp_LIN_LIN00_VCU_DriveMotOvrTemp_LIN_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_DriveMotOvrTemp_LIN_oVCU_01_oATOM_HWLIN1_65d20ded_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatCriFail_LIN_LIN00_VCU_HVBatCriFail_LIN_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatCriFail_LIN_LIN00_VCU_HVBatCriFail_LIN_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatCriFail_LIN_LIN00_VCU_HVBatCriFail_LIN_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatCriFail_LIN_LIN00_VCU_HVBatCriFail_LIN_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_HVBatCriFail_LIN_LIN00_VCU_HVBatCriFail_LIN_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_HVBatCriFail_LIN_LIN00_VCU_HVBatCriFail_LIN_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_HVBatCriFail_LIN_oVCU_01_oATOM_HWLIN1_2bf2157d_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_HVBatCriFail_LIN_oVCU_01_oATOM_HWLIN1_2bf2157d_Tx, (&Rte_VCU_HVBatCriFail_LIN_oVCU_01_oATOM_HWLIN1_2bf2157d_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatCriFail_LIN_LIN00_VCU_HVBatCriFail_LIN_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatCriFail_LIN_LIN00_VCU_HVBatCriFail_LIN_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatCriFail_LIN_LIN00_VCU_HVBatCriFail_LIN_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatCriFail_LIN_LIN00_VCU_HVBatCriFail_LIN_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_HVBatCriFail_LIN_oVCU_01_oATOM_HWLIN1_2bf2157d_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatOvrTemp_LIN_LIN00_VCU_HVBatOvrTemp_LIN_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatOvrTemp_LIN_LIN00_VCU_HVBatOvrTemp_LIN_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatOvrTemp_LIN_LIN00_VCU_HVBatOvrTemp_LIN_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatOvrTemp_LIN_LIN00_VCU_HVBatOvrTemp_LIN_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_HVBatOvrTemp_LIN_LIN00_VCU_HVBatOvrTemp_LIN_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_HVBatOvrTemp_LIN_LIN00_VCU_HVBatOvrTemp_LIN_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_HVBatOvrTemp_LIN_oVCU_01_oATOM_HWLIN1_7c76df3a_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_HVBatOvrTemp_LIN_oVCU_01_oATOM_HWLIN1_7c76df3a_Tx, (&Rte_VCU_HVBatOvrTemp_LIN_oVCU_01_oATOM_HWLIN1_7c76df3a_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatOvrTemp_LIN_LIN00_VCU_HVBatOvrTemp_LIN_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatOvrTemp_LIN_LIN00_VCU_HVBatOvrTemp_LIN_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatOvrTemp_LIN_LIN00_VCU_HVBatOvrTemp_LIN_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_HVBatOvrTemp_LIN_LIN00_VCU_HVBatOvrTemp_LIN_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_HVBatOvrTemp_LIN_oVCU_01_oATOM_HWLIN1_7c76df3a_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_BrakeFluidWarning_LIN00_VCU_IBS_BrakeFluidWarning_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_BrakeFluidWarning_LIN00_VCU_IBS_BrakeFluidWarning_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_BrakeFluidWarning_LIN00_VCU_IBS_BrakeFluidWarning_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_BrakeFluidWarning_LIN00_VCU_IBS_BrakeFluidWarning_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_IBS_BrakeFluidWarning_LIN00_VCU_IBS_BrakeFluidWarning_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_IBS_BrakeFluidWarning_LIN00_VCU_IBS_BrakeFluidWarning_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_IBS_BrakeFluidWarning_oVCU_01_oATOM_HWLIN1_5bfbc2fa_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_IBS_BrakeFluidWarning_oVCU_01_oATOM_HWLIN1_5bfbc2fa_Tx, (&Rte_VCU_IBS_BrakeFluidWarning_oVCU_01_oATOM_HWLIN1_5bfbc2fa_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_BrakeFluidWarning_LIN00_VCU_IBS_BrakeFluidWarning_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_BrakeFluidWarning_LIN00_VCU_IBS_BrakeFluidWarning_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_BrakeFluidWarning_LIN00_VCU_IBS_BrakeFluidWarning_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_BrakeFluidWarning_LIN00_VCU_IBS_BrakeFluidWarning_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_IBS_BrakeFluidWarning_oVCU_01_oATOM_HWLIN1_5bfbc2fa_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_EBDFault_LIN00_VCU_IBS_EBDFault_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_EBDFault_LIN00_VCU_IBS_EBDFault_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_EBDFault_LIN00_VCU_IBS_EBDFault_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_EBDFault_LIN00_VCU_IBS_EBDFault_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_IBS_EBDFault_LIN00_VCU_IBS_EBDFault_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_IBS_EBDFault_LIN00_VCU_IBS_EBDFault_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_IBS_EBDFault_oVCU_01_oATOM_HWLIN1_7e339715_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_IBS_EBDFault_oVCU_01_oATOM_HWLIN1_7e339715_Tx, (&Rte_VCU_IBS_EBDFault_oVCU_01_oATOM_HWLIN1_7e339715_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_EBDFault_LIN00_VCU_IBS_EBDFault_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_EBDFault_LIN00_VCU_IBS_EBDFault_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_EBDFault_LIN00_VCU_IBS_EBDFault_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_EBDFault_LIN00_VCU_IBS_EBDFault_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_IBS_EBDFault_oVCU_01_oATOM_HWLIN1_7e339715_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_RollerbenchMode_LIN00_VCU_IBS_RollerbenchMode_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_RollerbenchMode_LIN00_VCU_IBS_RollerbenchMode_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_RollerbenchMode_LIN00_VCU_IBS_RollerbenchMode_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_RollerbenchMode_LIN00_VCU_IBS_RollerbenchMode_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_IBS_RollerbenchMode_LIN00_VCU_IBS_RollerbenchMode_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_IBS_RollerbenchMode_LIN00_VCU_IBS_RollerbenchMode_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_IBS_RollerbenchMode_oVCU_01_oATOM_HWLIN1_91a58216_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_IBS_RollerbenchMode_oVCU_01_oATOM_HWLIN1_91a58216_Tx, (&Rte_VCU_IBS_RollerbenchMode_oVCU_01_oATOM_HWLIN1_91a58216_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_RollerbenchMode_LIN00_VCU_IBS_RollerbenchMode_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_RollerbenchMode_LIN00_VCU_IBS_RollerbenchMode_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_RollerbenchMode_LIN00_VCU_IBS_RollerbenchMode_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_RollerbenchMode_LIN00_VCU_IBS_RollerbenchMode_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_IBS_RollerbenchMode_oVCU_01_oATOM_HWLIN1_91a58216_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_SystemStatus_LIN00_VCU_IBS_SystemStatus_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_SystemStatus_LIN00_VCU_IBS_SystemStatus_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_SystemStatus_LIN00_VCU_IBS_SystemStatus_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_SystemStatus_LIN00_VCU_IBS_SystemStatus_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_IBS_SystemStatus_LIN00_VCU_IBS_SystemStatus_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_IBS_SystemStatus_LIN00_VCU_IBS_SystemStatus_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_IBS_SystemStatus_oVCU_01_oATOM_HWLIN1_7138be07_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_IBS_SystemStatus_oVCU_01_oATOM_HWLIN1_7138be07_Tx, (&Rte_VCU_IBS_SystemStatus_oVCU_01_oATOM_HWLIN1_7138be07_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_SystemStatus_LIN00_VCU_IBS_SystemStatus_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_SystemStatus_LIN00_VCU_IBS_SystemStatus_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_SystemStatus_LIN00_VCU_IBS_SystemStatus_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_SystemStatus_LIN00_VCU_IBS_SystemStatus_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_IBS_SystemStatus_oVCU_01_oATOM_HWLIN1_7138be07_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_BulbCheckStsLIN01_VCU_IVI_BulbCheckStsLIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_BulbCheckStsLIN01_VCU_IVI_BulbCheckStsLIN01)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_BulbCheckStsLIN01_VCU_IVI_BulbCheckStsLIN01 != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_BulbCheckStsLIN01_VCU_IVI_BulbCheckStsLIN01)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_IVI_BulbCheckStsLIN01_VCU_IVI_BulbCheckStsLIN01;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_IVI_BulbCheckStsLIN01_VCU_IVI_BulbCheckStsLIN01;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_IVI_BulbCheckSts_oVCU_01_oATOM_HWLIN1_d842011f_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_IVI_BulbCheckSts_oVCU_01_oATOM_HWLIN1_d842011f_Tx, (&Rte_VCU_IVI_BulbCheckSts_oVCU_01_oATOM_HWLIN1_d842011f_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_BulbCheckStsLIN01_VCU_IVI_BulbCheckStsLIN01 = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_BulbCheckStsLIN01_VCU_IVI_BulbCheckStsLIN01;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_BulbCheckStsLIN01_VCU_IVI_BulbCheckStsLIN01 = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_BulbCheckStsLIN01_VCU_IVI_BulbCheckStsLIN01;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_IVI_BulbCheckSts_oVCU_01_oATOM_HWLIN1_d842011f_Tx);
   }
   updateAction = RTE_COM_SENDSIGNALPROXY_NOCHANGE;
-  if (Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_VrState_LIN00_VCU_IVI_VrState_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_VrState_LIN00_VCU_IVI_VrState_LIN)
+  if (Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_VrState_LIN00_VCU_IVI_VrState_LIN != Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_VrState_LIN00_VCU_IVI_VrState_LIN)
   {
-    updateAction = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_IVI_VrState_LIN00_VCU_IVI_VrState_LIN;
+    updateAction = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdate_CtAp_LINHandler_VCU_IVI_VrState_LIN00_VCU_IVI_VrState_LIN;
   }
   if (updateAction == RTE_COM_SENDSIGNALPROXY_SEND)
   {
     (void)GetSpinlock(Rte_Spinlock_VCU_IVI_VrState_oVCU_01_oATOM_HWLIN1_eab73730_Tx);
     (void)Com_SendSignal(ComConf_ComSignal_VCU_IVI_VrState_oVCU_01_oATOM_HWLIN1_eab73730_Tx, (&Rte_VCU_IVI_VrState_oVCU_01_oATOM_HWLIN1_eab73730_Tx)); /* PRQA S 0315 */ /* MD_Rte_0315 */
-    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_VrState_LIN00_VCU_IVI_VrState_LIN = Rte_SystemApplication_OsCore2_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_VrState_LIN00_VCU_IVI_VrState_LIN;
+    Rte_SystemApplication_OsCore0_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_VrState_LIN00_VCU_IVI_VrState_LIN = Rte_SystemApplication_OsCore1_TxUpdateFlags.Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_VrState_LIN00_VCU_IVI_VrState_LIN;
     (void)ReleaseSpinlock(Rte_Spinlock_VCU_IVI_VrState_oVCU_01_oATOM_HWLIN1_eab73730_Tx);
   }
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */

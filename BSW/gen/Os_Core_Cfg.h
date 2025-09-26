@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Cfg.h
- *   Generation Time: 2025-09-25 10:42:46
+ *   Generation Time: 2025-09-26 10:46:06
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -70,7 +70,7 @@
 # define OS_CFG_NUM_CORE_OSCORE0_HOOKS            (3uL)
 # define OS_CFG_NUM_CORE_OSCORE0_IOCS             (0uL)
 # define OS_CFG_NUM_CORE_OSCORE0_RESOURCES        (1uL)
-# define OS_CFG_NUM_CORE_OSCORE0_STACKS           (11uL)
+# define OS_CFG_NUM_CORE_OSCORE0_STACKS           (10uL)
 # define OS_CFG_NUM_CORE_OSCORE0_ISRS             (33uL)
 
 /* Number of core objects: OsCore1 */
@@ -78,7 +78,7 @@
 # define OS_CFG_NUM_CORE_OSCORE1_HOOKS            (3uL)
 # define OS_CFG_NUM_CORE_OSCORE1_IOCS             (0uL)
 # define OS_CFG_NUM_CORE_OSCORE1_RESOURCES        (1uL)
-# define OS_CFG_NUM_CORE_OSCORE1_STACKS           (9uL)
+# define OS_CFG_NUM_CORE_OSCORE1_STACKS           (11uL)
 # define OS_CFG_NUM_CORE_OSCORE1_ISRS             (2uL)
 
 /* Number of core objects: OsCore2 */
@@ -86,7 +86,7 @@
 # define OS_CFG_NUM_CORE_OSCORE2_HOOKS            (3uL)
 # define OS_CFG_NUM_CORE_OSCORE2_IOCS             (0uL)
 # define OS_CFG_NUM_CORE_OSCORE2_RESOURCES        (1uL)
-# define OS_CFG_NUM_CORE_OSCORE2_STACKS           (10uL)
+# define OS_CFG_NUM_CORE_OSCORE2_STACKS           (9uL)
 # define OS_CFG_NUM_CORE_OSCORE2_ISRS             (2uL)
 
 

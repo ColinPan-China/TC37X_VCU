@@ -15277,7 +15277,7 @@ extern VAR(U_BATT_LIN01, RTE_VAR_INIT_NOCACHE) Rte_U_BATT_oBS_01_oATOM_HWLIN1_cc
 #  define RTE_STOP_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-#  define RTE_START_SEC_VAR_SystemApplication_OsCore2_INIT_UNSPECIFIED
+#  define RTE_START_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern VAR(float32, RTE_VAR_INIT) Rte_CtAp_ACParMgmt_RTE_P_OBCMgmt_OBCOutpCpbyIDc_A_tec_OBCMgmt_OBCOutpCpbyIDc_A; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
@@ -15938,10 +15938,10 @@ extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_VehStat_RTE_P_ModMgmt_ReqSleep_Flg_te
 extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_WakeUpRsn_RTE_P_LvMgmt_AppNMReqInfo_tec_LvMgmt_AppNMReqInfo; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_WakeUpRsn_RTE_P_LvMgmt_WakeUpReq_Flg_tec_LvMgmt_WakeUpReq_Flg; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 
-#  define RTE_STOP_SEC_VAR_SystemApplication_OsCore2_INIT_UNSPECIFIED
+#  define RTE_STOP_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-#  define RTE_START_SEC_VAR_SystemApplication_OsCore2_NOCACHE_INIT_UNSPECIFIED
+#  define RTE_START_SEC_VAR_SystemApplication_OsCore1_NOCACHE_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern VAR(BHM_AllowChargeVoltageMax, RTE_VAR_INIT_NOCACHE) Rte_BHM_AllowChargeVoltageMax_oBHM_oJ1939_bms_5c3d4762_Tx_0; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
@@ -16066,7 +16066,7 @@ extern VAR(VCU_IBS_SystemStatus_LIN, RTE_VAR_INIT_NOCACHE) Rte_VCU_IBS_SystemSta
 extern VAR(VCU_IVI_BulbCheckStsLIN01, RTE_VAR_INIT_NOCACHE) Rte_VCU_IVI_BulbCheckSts_oVCU_01_oATOM_HWLIN1_d842011f_Tx; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(VCU_IVI_VrState_LIN, RTE_VAR_INIT_NOCACHE) Rte_VCU_IVI_VrState_oVCU_01_oATOM_HWLIN1_eab73730_Tx; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 
-#  define RTE_STOP_SEC_VAR_SystemApplication_OsCore2_NOCACHE_INIT_UNSPECIFIED
+#  define RTE_STOP_SEC_VAR_SystemApplication_OsCore1_NOCACHE_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 /* TxUpdateFlags for ComSendSignalProxy without IOCs */
 
@@ -16449,14 +16449,14 @@ typedef struct
   Rte_BitType Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IBS_SystemStatus_LIN00_VCU_IBS_SystemStatus_LIN : 1;
   Rte_BitType Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_BulbCheckStsLIN01_VCU_IVI_BulbCheckStsLIN01 : 1;
   Rte_BitType Rte_TxUpdateProxy_CtAp_LINHandler_VCU_IVI_VrState_LIN00_VCU_IVI_VrState_LIN : 1;
-} Rte_SystemApplication_OsCore2_TxUpdateFlagsType;
+} Rte_SystemApplication_OsCore1_TxUpdateFlagsType;
 
-#  define RTE_START_SEC_VAR_SystemApplication_OsCore2_NOCACHE_ZERO_INIT_UNSPECIFIED
+#  define RTE_START_SEC_VAR_SystemApplication_OsCore1_NOCACHE_ZERO_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-extern VAR(Rte_SystemApplication_OsCore2_TxUpdateFlagsType, RTE_VAR_ZERO_INIT_NOCACHE) Rte_SystemApplication_OsCore2_TxUpdateFlags;
+extern VAR(Rte_SystemApplication_OsCore1_TxUpdateFlagsType, RTE_VAR_ZERO_INIT_NOCACHE) Rte_SystemApplication_OsCore1_TxUpdateFlags;
 
-#  define RTE_STOP_SEC_VAR_SystemApplication_OsCore2_NOCACHE_ZERO_INIT_UNSPECIFIED
+#  define RTE_STOP_SEC_VAR_SystemApplication_OsCore1_NOCACHE_ZERO_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -16670,7 +16670,7 @@ typedef struct
   Rte_BitType Rte_RxUpdate_CtAp_DCComM_SG_BMS_CellVoltage_SigGroup_SG_BMS_CellVoltage_SigGroup : 1;
   Rte_BitType Rte_RxUpdate_CtAp_LINHandler_FRC_ComFtonNet_FRC_ComFtonNet : 1;
   Rte_BitType Rte_RxUpdate_CtAp_LINHandler_Resp_Error_LIN01_Resp_Error_LIN01 : 1;
-} Rte_SystemApplication_OsCore2_RxUpdateFlagsType;
+} Rte_SystemApplication_OsCore1_RxUpdateFlagsType;
 
 # define RTE_START_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED
 # include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -16680,12 +16680,12 @@ extern VAR(Rte_SystemApplication_OsCore0_RxUpdateFlagsType, RTE_VAR_ZERO_INIT_NO
 # define RTE_STOP_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED
 # include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-# define RTE_START_SEC_VAR_SystemApplication_OsCore2_NOCACHE_ZERO_INIT_UNSPECIFIED
+# define RTE_START_SEC_VAR_SystemApplication_OsCore1_NOCACHE_ZERO_INIT_UNSPECIFIED
 # include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-extern VAR(Rte_SystemApplication_OsCore2_RxUpdateFlagsType, RTE_VAR_ZERO_INIT_NOCACHE) Rte_SystemApplication_OsCore2_RxUpdateFlags;
+extern VAR(Rte_SystemApplication_OsCore1_RxUpdateFlagsType, RTE_VAR_ZERO_INIT_NOCACHE) Rte_SystemApplication_OsCore1_RxUpdateFlags;
 
-# define RTE_STOP_SEC_VAR_SystemApplication_OsCore2_NOCACHE_ZERO_INIT_UNSPECIFIED
+# define RTE_STOP_SEC_VAR_SystemApplication_OsCore1_NOCACHE_ZERO_INIT_UNSPECIFIED
 # include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
