@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Callout_Stubs.c
- *   Generation Time: 2025-09-26 10:46:06
+ *   Generation Time: 2025-09-28 16:09:40
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -111,6 +111,7 @@ FUNC(void, OS_ERRORHOOK_CODE) ErrorHook(StatusType Error)
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK OS_Callout_Stubs_ErrorHook>
  *********************************************************************************************************************/
+
 
   volatile uint8 endless = 1u;
   (void)Os_GetDetailedError(&CurrentError);

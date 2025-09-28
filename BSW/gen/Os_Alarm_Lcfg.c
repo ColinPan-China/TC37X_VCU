@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Alarm_Lcfg.c
- *   Generation Time: 2025-09-26 10:46:05
+ *   Generation Time: 2025-09-28 16:09:39
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -100,23 +100,20 @@ OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_IoHwAb_IoHwAb_Io
 /*! Dynamic alarm data: Rte_Al_TE2_EcuM_EcuM_MainFunction */
 OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE2_EcuM_EcuM_MainFunction_Dyn;
 
-/*! Dynamic alarm data: Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms */
-OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms_Dyn;
+/*! Dynamic alarm data: Rte_Al_TE_Core1_Asw_Task_0_100ms */
+OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_100ms_Dyn;
 
-/*! Dynamic alarm data: Rte_Al_TE_Core1_Bsw_Task_0_100ms */
-OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_100ms_Dyn;
+/*! Dynamic alarm data: Rte_Al_TE_Core1_Asw_Task_0_10ms */
+OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_10ms_Dyn;
 
-/*! Dynamic alarm data: Rte_Al_TE_Core1_Bsw_Task_0_10ms */
-OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_10ms_Dyn;
+/*! Dynamic alarm data: Rte_Al_TE_Core1_Asw_Task_0_200ms */
+OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_200ms_Dyn;
 
-/*! Dynamic alarm data: Rte_Al_TE_Core1_Bsw_Task_0_200ms */
-OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_200ms_Dyn;
+/*! Dynamic alarm data: Rte_Al_TE_Core1_Asw_Task_0_20ms */
+OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_20ms_Dyn;
 
-/*! Dynamic alarm data: Rte_Al_TE_Core1_Bsw_Task_0_20ms */
-OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_20ms_Dyn;
-
-/*! Dynamic alarm data: Rte_Al_TE_Core1_Bsw_Task_0_50ms */
-OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_50ms_Dyn;
+/*! Dynamic alarm data: Rte_Al_TE_Core1_Asw_Task_0_50ms */
+OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_50ms_Dyn;
 
 /*! Dynamic alarm data: Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms */
 OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms_Dyn;
@@ -291,39 +288,13 @@ CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_IoHwAb_IoHwAb_
 
 
 /*! Alarm configuration data: Rte_Al_TE2_EcuM_EcuM_MainFunction */
-CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_EcuM_EcuM_MainFunction =
+CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_EcuM_EcuM_MainFunction =
 {
   /* .Alarm = */
   {
     /* .Job                   = */
     {
       /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE2_EcuM_EcuM_MainFunction_Dyn),
-      /* .Counter  = */ OS_COUNTER_CASTCONFIG_TIMERPFRT_2_COUNTER(OsCfg_Counter_SystemTimer_Core1),
-      /* .Callback = */ Os_AlarmActionSetEvent
-    },
-    /* .Autostart             = */
-    {
-      /* .AlarmTime        = */ 0uL, /* 0.0 sec */
-      /* .Cycle            = */ 0uL, /* 0.0 sec */
-      /* .ApplicationModes = */ OS_APPMODE_NONE,
-      /* .AlarmMode        = */ OS_ALARMMODE_ABSOLUTE
-    },
-    /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
-    /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1
-  },
-  /* .Task  = */ &OsCfg_Task_Core1_Bsw_Task,
-  /* .Mask  = */ Rte_Ev_RunS2_EcuM_EcuM_MainFunction
-};
-
-
-/*! Alarm configuration data: Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms */
-CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms =
-{
-  /* .Alarm = */
-  {
-    /* .Job                   = */
-    {
-      /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms_Dyn),
       /* .Counter  = */ OS_COUNTER_CASTCONFIG_TIMERPFRT_2_COUNTER(OsCfg_Counter_SystemTimer_Core1),
       /* .Callback = */ Os_AlarmActionActivateTask
     },
@@ -337,18 +308,18 @@ CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1App_S
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1
   },
-  /* .Task  = */ &OsCfg_Task_Core1_Asw_Task
+  /* .Task  = */ &OsCfg_Task_Core1_Bsw_Task
 };
 
 
-/*! Alarm configuration data: Rte_Al_TE_Core1_Bsw_Task_0_100ms */
-CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_100ms =
+/*! Alarm configuration data: Rte_Al_TE_Core1_Asw_Task_0_100ms */
+CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_100ms =
 {
   /* .Alarm = */
   {
     /* .Job                   = */
     {
-      /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_100ms_Dyn),
+      /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_100ms_Dyn),
       /* .Counter  = */ OS_COUNTER_CASTCONFIG_TIMERPFRT_2_COUNTER(OsCfg_Counter_SystemTimer_Core1),
       /* .Callback = */ Os_AlarmActionSetEvent
     },
@@ -362,19 +333,19 @@ CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1
   },
-  /* .Task  = */ &OsCfg_Task_Core1_Bsw_Task,
-  /* .Mask  = */ Rte_Ev_Cyclic_Core1_Bsw_Task_0_100ms
+  /* .Task  = */ &OsCfg_Task_Core1_Asw_Task,
+  /* .Mask  = */ Rte_Ev_Cyclic_Core1_Asw_Task_0_100ms
 };
 
 
-/*! Alarm configuration data: Rte_Al_TE_Core1_Bsw_Task_0_10ms */
-CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_10ms =
+/*! Alarm configuration data: Rte_Al_TE_Core1_Asw_Task_0_10ms */
+CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_10ms =
 {
   /* .Alarm = */
   {
     /* .Job                   = */
     {
-      /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_10ms_Dyn),
+      /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_10ms_Dyn),
       /* .Counter  = */ OS_COUNTER_CASTCONFIG_TIMERPFRT_2_COUNTER(OsCfg_Counter_SystemTimer_Core1),
       /* .Callback = */ Os_AlarmActionSetEvent
     },
@@ -388,19 +359,19 @@ CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1
   },
-  /* .Task  = */ &OsCfg_Task_Core1_Bsw_Task,
-  /* .Mask  = */ Rte_Ev_Cyclic_Core1_Bsw_Task_0_10ms
+  /* .Task  = */ &OsCfg_Task_Core1_Asw_Task,
+  /* .Mask  = */ Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms
 };
 
 
-/*! Alarm configuration data: Rte_Al_TE_Core1_Bsw_Task_0_200ms */
-CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_200ms =
+/*! Alarm configuration data: Rte_Al_TE_Core1_Asw_Task_0_200ms */
+CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_200ms =
 {
   /* .Alarm = */
   {
     /* .Job                   = */
     {
-      /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_200ms_Dyn),
+      /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_200ms_Dyn),
       /* .Counter  = */ OS_COUNTER_CASTCONFIG_TIMERPFRT_2_COUNTER(OsCfg_Counter_SystemTimer_Core1),
       /* .Callback = */ Os_AlarmActionSetEvent
     },
@@ -414,19 +385,19 @@ CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1
   },
-  /* .Task  = */ &OsCfg_Task_Core1_Bsw_Task,
-  /* .Mask  = */ Rte_Ev_Cyclic_Core1_Bsw_Task_0_200ms
+  /* .Task  = */ &OsCfg_Task_Core1_Asw_Task,
+  /* .Mask  = */ Rte_Ev_Cyclic_Core1_Asw_Task_0_200ms
 };
 
 
-/*! Alarm configuration data: Rte_Al_TE_Core1_Bsw_Task_0_20ms */
-CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_20ms =
+/*! Alarm configuration data: Rte_Al_TE_Core1_Asw_Task_0_20ms */
+CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_20ms =
 {
   /* .Alarm = */
   {
     /* .Job                   = */
     {
-      /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_20ms_Dyn),
+      /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_20ms_Dyn),
       /* .Counter  = */ OS_COUNTER_CASTCONFIG_TIMERPFRT_2_COUNTER(OsCfg_Counter_SystemTimer_Core1),
       /* .Callback = */ Os_AlarmActionSetEvent
     },
@@ -440,19 +411,19 @@ CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1
   },
-  /* .Task  = */ &OsCfg_Task_Core1_Bsw_Task,
-  /* .Mask  = */ Rte_Ev_Cyclic_Core1_Bsw_Task_0_20ms
+  /* .Task  = */ &OsCfg_Task_Core1_Asw_Task,
+  /* .Mask  = */ Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms
 };
 
 
-/*! Alarm configuration data: Rte_Al_TE_Core1_Bsw_Task_0_50ms */
-CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_50ms =
+/*! Alarm configuration data: Rte_Al_TE_Core1_Asw_Task_0_50ms */
+CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_50ms =
 {
   /* .Alarm = */
   {
     /* .Job                   = */
     {
-      /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_50ms_Dyn),
+      /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_50ms_Dyn),
       /* .Counter  = */ OS_COUNTER_CASTCONFIG_TIMERPFRT_2_COUNTER(OsCfg_Counter_SystemTimer_Core1),
       /* .Callback = */ Os_AlarmActionSetEvent
     },
@@ -466,8 +437,8 @@ CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1
   },
-  /* .Task  = */ &OsCfg_Task_Core1_Bsw_Task,
-  /* .Mask  = */ Rte_Ev_Cyclic_Core1_Bsw_Task_0_50ms
+  /* .Task  = */ &OsCfg_Task_Core1_Asw_Task,
+  /* .Mask  = */ Rte_Ev_Cyclic_Core1_Asw_Task_0_50ms
 };
 
 
@@ -492,7 +463,7 @@ CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_CtAp_CANHandle
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1
   },
-  /* .Task  = */ &OsCfg_Task_Core1_Bsw_Task,
+  /* .Task  = */ &OsCfg_Task_Core1_Asw_Task,
   /* .Mask  = */ Rte_Ev_Run_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms
 };
 
@@ -518,7 +489,7 @@ CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_CtAp_CANHandle
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1
   },
-  /* .Task  = */ &OsCfg_Task_Core1_Bsw_Task,
+  /* .Task  = */ &OsCfg_Task_Core1_Asw_Task,
   /* .Mask  = */ Rte_Ev_Run_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms
 };
 
@@ -592,14 +563,13 @@ CONSTP2CONST(Os_AlarmConfigType, OS_CONST, OS_CONST) OsCfg_AlarmRefs[OS_ALARMID_
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_Core0_Bsw_Task_0_10ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_Core0_Bsw_Task_0_20ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_Core0_Bsw_Task_0_5ms),
-  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_EcuM_EcuM_MainFunction),
+  OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_EcuM_EcuM_MainFunction),
   OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE3_EcuM_EcuM_MainFunction),
-  OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms),
-  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_100ms),
-  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_10ms),
-  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_200ms),
-  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_20ms),
-  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Core1_Bsw_Task_0_50ms),
+  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_100ms),
+  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_10ms),
+  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_200ms),
+  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_20ms),
+  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Core1_Asw_Task_0_50ms),
   OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Core2App_SWC_Core2App_SWC_Runnable_10ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms),

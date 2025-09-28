@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Stack_Cfg.h
- *   Generation Time: 2025-09-26 10:46:07
+ *   Generation Time: 2025-09-28 16:09:43
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -52,7 +52,7 @@
 /* Configured stack sizes (Total: 30720 Byte) */
 # define OS_CFG_SIZE_CORE0_ASWTASK_STACK     (1024uL)
 # define OS_CFG_SIZE_CORE0_BSW_TASK_STACK     (1024uL)
-# define OS_CFG_SIZE_CORE1_BSW_TASK_STACK     (1024uL)
+# define OS_CFG_SIZE_CORE1_ASW_TASK_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE0_ERROR_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE0_INIT_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE0_ISR_CORE_STACK     (1024uL)
@@ -67,7 +67,7 @@
 # define OS_CFG_SIZE_OSCORE1_KERNEL_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE1_SHUTDOWN_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE1_TASK_PRIO40_STACK     (1024uL)
-# define OS_CFG_SIZE_OSCORE1_TASK_PRIO41_STACK     (1024uL)
+# define OS_CFG_SIZE_OSCORE1_TASK_PRIO42_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE1_TASK_PRIO4294967295_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE1_TASK_PRIO49_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE1_TASK_PRIO50_STACK     (1024uL)

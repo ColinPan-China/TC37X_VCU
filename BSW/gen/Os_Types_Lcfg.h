@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2025-09-26 10:46:07
+ *   Generation Time: 2025-09-28 16:09:43
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -124,12 +124,11 @@
 #define Rte_Al_TE2_Core0_Bsw_Task_0_5ms Rte_Al_TE2_Core0_Bsw_Task_0_5ms
 #define Rte_Al_TE2_EcuM_EcuM_MainFunction Rte_Al_TE2_EcuM_EcuM_MainFunction
 #define Rte_Al_TE3_EcuM_EcuM_MainFunction Rte_Al_TE3_EcuM_EcuM_MainFunction
-#define Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms
-#define Rte_Al_TE_Core1_Bsw_Task_0_100ms Rte_Al_TE_Core1_Bsw_Task_0_100ms
-#define Rte_Al_TE_Core1_Bsw_Task_0_10ms Rte_Al_TE_Core1_Bsw_Task_0_10ms
-#define Rte_Al_TE_Core1_Bsw_Task_0_200ms Rte_Al_TE_Core1_Bsw_Task_0_200ms
-#define Rte_Al_TE_Core1_Bsw_Task_0_20ms Rte_Al_TE_Core1_Bsw_Task_0_20ms
-#define Rte_Al_TE_Core1_Bsw_Task_0_50ms Rte_Al_TE_Core1_Bsw_Task_0_50ms
+#define Rte_Al_TE_Core1_Asw_Task_0_100ms Rte_Al_TE_Core1_Asw_Task_0_100ms
+#define Rte_Al_TE_Core1_Asw_Task_0_10ms Rte_Al_TE_Core1_Asw_Task_0_10ms
+#define Rte_Al_TE_Core1_Asw_Task_0_200ms Rte_Al_TE_Core1_Asw_Task_0_200ms
+#define Rte_Al_TE_Core1_Asw_Task_0_20ms Rte_Al_TE_Core1_Asw_Task_0_20ms
+#define Rte_Al_TE_Core1_Asw_Task_0_50ms Rte_Al_TE_Core1_Asw_Task_0_50ms
 #define Rte_Al_TE_Core2App_SWC_Core2App_SWC_Runnable_10ms Rte_Al_TE_Core2App_SWC_Core2App_SWC_Runnable_10ms
 #define Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms
 #define Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms
@@ -483,18 +482,17 @@ typedef enum
   Rte_Al_TE2_Core0_Bsw_Task_0_5ms = 2,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE2_EcuM_EcuM_MainFunction = 3,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE3_EcuM_EcuM_MainFunction = 4,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Core1App_SWC_Core1App_SWC_Runnable_10ms = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Core1_Bsw_Task_0_100ms = 6,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Core1_Bsw_Task_0_10ms = 7,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Core1_Bsw_Task_0_200ms = 8,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Core1_Bsw_Task_0_20ms = 9,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Core1_Bsw_Task_0_50ms = 10,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Core2App_SWC_Core2App_SWC_Runnable_10ms = 11,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms = 12,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms = 13,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms = 14,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms = 15,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ALARMID_COUNT = 16
+  Rte_Al_TE_Core1_Asw_Task_0_100ms = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Core1_Asw_Task_0_10ms = 6,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Core1_Asw_Task_0_200ms = 7,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Core1_Asw_Task_0_20ms = 8,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Core1_Asw_Task_0_50ms = 9,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Core2App_SWC_Core2App_SWC_Runnable_10ms = 10,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms = 11,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms = 12,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms = 13,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms = 14,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ALARMID_COUNT = 15
 } AlarmType;
 
 /*! Counter identifiers. */

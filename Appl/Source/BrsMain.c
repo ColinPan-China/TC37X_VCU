@@ -436,6 +436,8 @@ TASK(Default_Init_Task_Core1)
 
   EcuM_StartupTwo();
 
+  Rte_Start();
+
   (void)TerminateTask();
 }
 
@@ -474,6 +476,8 @@ TASK(Default_Init_Task_Core2)
 #endif
 
   EcuM_StartupTwo();
+
+  Rte_Start();
 
   (void)TerminateTask();
 }
