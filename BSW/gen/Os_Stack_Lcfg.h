@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Stack_Lcfg.h
- *   Generation Time: 2025-09-28 16:09:43
+ *   Generation Time: 2025-09-28 16:50:05
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -87,14 +87,25 @@ extern OS_STACK_DECLARE(OsCfg_Stack_Core0_Bsw_Task_Dyn, OS_CFG_SIZE_CORE0_BSW_TA
 # include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
-# define OS_START_SEC_STACK_CORE1_ASW_TASK_VAR_NOINIT_UNSPECIFIED
+# define OS_START_SEC_STACK_CORE1_ASW_TASK_QM_VAR_NOINIT_UNSPECIFIED
 # include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-/* Task stack: Core1_Asw_Task */
-/* User: [Core1_Asw_Task] */
-extern OS_STACK_DECLARE(OsCfg_Stack_Core1_Asw_Task_Dyn, OS_CFG_SIZE_CORE1_ASW_TASK_STACK);
+/* Task stack: Core1_Asw_Task_Qm */
+/* User: [Core1_Asw_Task_Qm] */
+extern OS_STACK_DECLARE(OsCfg_Stack_Core1_Asw_Task_Qm_Dyn, OS_CFG_SIZE_CORE1_ASW_TASK_QM_STACK);
 
-# define OS_STOP_SEC_STACK_CORE1_ASW_TASK_VAR_NOINIT_UNSPECIFIED
+# define OS_STOP_SEC_STACK_CORE1_ASW_TASK_QM_VAR_NOINIT_UNSPECIFIED
+# include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_STACK_CORE1_BSW_TASK_VAR_NOINIT_UNSPECIFIED
+# include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/* Task stack: Core1_Bsw_Task */
+/* User: [Core1_Bsw_Task] */
+extern OS_STACK_DECLARE(OsCfg_Stack_Core1_Bsw_Task_Dyn, OS_CFG_SIZE_CORE1_BSW_TASK_STACK);
+
+# define OS_STOP_SEC_STACK_CORE1_BSW_TASK_VAR_NOINIT_UNSPECIFIED
 # include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -249,17 +260,6 @@ extern OS_STACK_DECLARE(OsCfg_Stack_OsCore1_Shutdown_Dyn, OS_CFG_SIZE_OSCORE1_SH
 extern OS_STACK_DECLARE(OsCfg_Stack_OsCore1_Task_Prio40_Dyn, OS_CFG_SIZE_OSCORE1_TASK_PRIO40_STACK);
 
 # define OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO40_VAR_NOINIT_UNSPECIFIED
-# include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
-# define OS_START_SEC_STACK_OSCORE1_TASK_PRIO42_VAR_NOINIT_UNSPECIFIED
-# include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-/* Shared Task stack: OsCore1_Task_Prio42 */
-/* User: [Core1_Bsw_Task] */
-extern OS_STACK_DECLARE(OsCfg_Stack_OsCore1_Task_Prio42_Dyn, OS_CFG_SIZE_OSCORE1_TASK_PRIO42_STACK);
-
-# define OS_STOP_SEC_STACK_OSCORE1_TASK_PRIO42_VAR_NOINIT_UNSPECIFIED
 # include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -439,8 +439,11 @@ extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore0_Task_Prio50;
 # define OS_START_SEC_CORE1_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-/*! Stack configuration data: Core1_Asw_Task */
-extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_Core1_Asw_Task;
+/*! Stack configuration data: Core1_Asw_Task_Qm */
+extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_Core1_Asw_Task_Qm;
+
+/*! Stack configuration data: Core1_Bsw_Task */
+extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_Core1_Bsw_Task;
 
 /*! Stack configuration data: OsCore1_Error */
 extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore1_Error;
@@ -459,9 +462,6 @@ extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore1_Shutdown;
 
 /*! Stack configuration data: OsCore1_Task_Prio40 */
 extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore1_Task_Prio40;
-
-/*! Stack configuration data: OsCore1_Task_Prio42 */
-extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore1_Task_Prio42;
 
 /*! Stack configuration data: OsCore1_Task_Prio4294967295 */
 extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore1_Task_Prio4294967295;

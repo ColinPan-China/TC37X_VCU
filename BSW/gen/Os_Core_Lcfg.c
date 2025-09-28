@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Lcfg.c
- *   Generation Time: 2025-09-28 16:09:40
+ *   Generation Time: 2025-09-28 16:50:03
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -386,14 +386,14 @@ OS_LOCAL CONST(Os_ResourceConfigRefType, OS_CONST) OsCfg_Core_OsCore1_ResourceRe
 /*! Object reference table for core stacks: OsCore1 */
 OS_LOCAL CONST(Os_StackConfigRefType, OS_CONST) OsCfg_Core_OsCore1_StackRefs[OS_CFG_NUM_CORE_OSCORE1_STACKS + 1u] =
 {
-  (Os_StackConfigRefType) &OsCfg_Stack_Core1_Asw_Task,
+  (Os_StackConfigRefType) &OsCfg_Stack_Core1_Asw_Task_Qm,
+  (Os_StackConfigRefType) &OsCfg_Stack_Core1_Bsw_Task,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Error,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Init,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Isr_Core,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Kernel,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Shutdown,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Task_Prio40,
-  (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Task_Prio42,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Task_Prio4294967295,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Task_Prio49,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore1_Task_Prio50,

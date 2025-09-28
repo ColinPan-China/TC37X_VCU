@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Context_Lcfg.c
- *   Generation Time: 2025-09-28 16:09:41
+ *   Generation Time: 2025-09-28 16:50:04
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -234,8 +234,8 @@ VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore1_Isr_Level2_Dyn;
 /*! HAL dynamic task context data: Core1_Asw_Init */
 VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Core1_Asw_Init_Dyn;
 
-/*! HAL dynamic task context data: Core1_Asw_Task */
-VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Core1_Asw_Task_Dyn;
+/*! HAL dynamic task context data: Core1_Asw_Task_Qm */
+VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Core1_Asw_Task_Qm_Dyn;
 
 /*! HAL dynamic task context data: Core1_Bsw_Task */
 VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Core1_Bsw_Task_Dyn;
@@ -884,14 +884,14 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core1_Asw_Init =
   /* .IntStatus        = */ ((uint32)0<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
-/*! HAL task context configuration data: Core1_Asw_Task */
-CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core1_Asw_Task =
+/*! HAL task context configuration data: Core1_Asw_Task_Qm */
+CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core1_Asw_Task_Qm =
 {
-  /* .StackEndAddr     = */ (uint32)(OS_STACK_GETHIGHADDRESS(OsCfg_Stack_Core1_Asw_Task_Dyn)+1),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
-  /* .StackStartAddr   = */ (uint32)OS_STACK_GETLOWADDRESS(OsCfg_Stack_Core1_Asw_Task_Dyn),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
+  /* .StackEndAddr     = */ (uint32)(OS_STACK_GETHIGHADDRESS(OsCfg_Stack_Core1_Asw_Task_Qm_Dyn)+1),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
+  /* .StackStartAddr   = */ (uint32)OS_STACK_GETLOWADDRESS(OsCfg_Stack_Core1_Asw_Task_Qm_Dyn),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
   /* .ProgramStatus    = */ (uint32)OS_HAL_PSW_IS_MASK | OS_HAL_PSW_CDE_MASK | OS_HAL_PSW_IO_SUPERVISOR | OS_HAL_PSW_S_MASK,
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
-  /* .Entry            = */ (uint32)&Os_Task_Core1_Asw_Task,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
+  /* .Entry            = */ (uint32)&Os_Task_Core1_Asw_Task_Qm,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapTaskMissingTerminateTask,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .IntStatus        = */ ((uint32)0<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
@@ -899,8 +899,8 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core1_Asw_Task =
 /*! HAL task context configuration data: Core1_Bsw_Task */
 CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core1_Bsw_Task =
 {
-  /* .StackEndAddr     = */ (uint32)(OS_STACK_GETHIGHADDRESS(OsCfg_Stack_OsCore1_Task_Prio42_Dyn)+1),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
-  /* .StackStartAddr   = */ (uint32)OS_STACK_GETLOWADDRESS(OsCfg_Stack_OsCore1_Task_Prio42_Dyn),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
+  /* .StackEndAddr     = */ (uint32)(OS_STACK_GETHIGHADDRESS(OsCfg_Stack_Core1_Bsw_Task_Dyn)+1),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
+  /* .StackStartAddr   = */ (uint32)OS_STACK_GETLOWADDRESS(OsCfg_Stack_Core1_Bsw_Task_Dyn),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
   /* .ProgramStatus    = */ (uint32)OS_HAL_PSW_IS_MASK | OS_HAL_PSW_CDE_MASK | OS_HAL_PSW_IO_SUPERVISOR | OS_HAL_PSW_S_MASK,
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Task_Core1_Bsw_Task,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */

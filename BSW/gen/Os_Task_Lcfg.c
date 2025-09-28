@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Task_Lcfg.c
- *   Generation Time: 2025-09-28 16:09:43
+ *   Generation Time: 2025-09-28 16:50:05
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -109,8 +109,8 @@ OS_LOCAL VAR(Os_TaskType, OS_VAR_NOINIT) OsCfg_Task_IdleTask_OsCore0_Dyn;
 /*! Dynamic task data: Core1_Asw_Init */
 OS_LOCAL VAR(Os_TaskType, OS_VAR_NOINIT) OsCfg_Task_Core1_Asw_Init_Dyn;
 
-/*! Dynamic task data: Core1_Asw_Task */
-OS_LOCAL VAR(Os_TaskType, OS_VAR_NOINIT) OsCfg_Task_Core1_Asw_Task_Dyn;
+/*! Dynamic task data: Core1_Asw_Task_Qm */
+OS_LOCAL VAR(Os_TaskType, OS_VAR_NOINIT) OsCfg_Task_Core1_Asw_Task_Qm_Dyn;
 
 /*! Dynamic task data: Core1_Bsw_Task */
 OS_LOCAL VAR(Os_TaskType, OS_VAR_NOINIT) OsCfg_Task_Core1_Bsw_Task_Dyn;
@@ -382,15 +382,15 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core1_Asw_Init =
 };
 
 
-/*! Task configuration data: Core1_Asw_Task */
-CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core1_Asw_Task =
+/*! Task configuration data: Core1_Asw_Task_Qm */
+CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core1_Asw_Task_Qm =
 {
   /* .Thread                 = */
   {
-    /* .ContextConfig         = */ &OsCfg_Hal_Context_Core1_Asw_Task,
-    /* .Context               = */ &OsCfg_Hal_Context_Core1_Asw_Task_Dyn,
-    /* .Stack                 = */ &OsCfg_Stack_Core1_Asw_Task,
-    /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_Core1_Asw_Task_Dyn),
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_Core1_Asw_Task_Qm,
+    /* .Context               = */ &OsCfg_Hal_Context_Core1_Asw_Task_Qm_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_Core1_Asw_Task_Qm,
+    /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_Core1_Asw_Task_Qm_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1,
     /* .Core                  = */ &OsCfg_Core_OsCore1,
     /* .IntApiState           = */ &OsCfg_Core_OsCore1_Dyn.IntApiState,
@@ -405,7 +405,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core1_Asw_Task =
     /* .UsesFpu               = */ FALSE
   },
   /* .HomePriority           = */ (Os_TaskPrioType)5uL,
-  /* .TaskId                 = */ Core1_Asw_Task,
+  /* .TaskId                 = */ Core1_Asw_Task_Qm,
   /* .RunningPriority        = */ (Os_TaskPrioType)5uL,
   /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OS_APPMODE_NONE,
@@ -424,7 +424,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core1_Bsw_Task =
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_Core1_Bsw_Task,
     /* .Context               = */ &OsCfg_Hal_Context_Core1_Bsw_Task_Dyn,
-    /* .Stack                 = */ &OsCfg_Stack_OsCore1_Task_Prio42,
+    /* .Stack                 = */ &OsCfg_Stack_Core1_Bsw_Task,
     /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_Core1_Bsw_Task_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore1,
     /* .Core                  = */ &OsCfg_Core_OsCore1,
@@ -447,7 +447,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core1_Bsw_Task =
     /* .AccessingApplications = */ (OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
   /* .NumSchEventsRoundRobin = */ 0uL,
   /* .RoundRobinEnabled      = */ FALSE,
-  /* .IsExtended             = */ (boolean)FALSE,
+  /* .IsExtended             = */ (boolean)TRUE,
   /* .StackSharing           = */ OS_TASKSCHEDULE_ALLOWED
 };
 
@@ -786,7 +786,7 @@ CONSTP2CONST(Os_TaskConfigType, OS_CONST, OS_CONST) OsCfg_TaskRefs[OS_TASKID_COU
   OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Core0_AswTask),
   OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Core0_Bsw_Task),
   OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Core1_Asw_Init),
-  OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Core1_Asw_Task),
+  OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Core1_Asw_Task_Qm),
   OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Core1_Bsw_Task),
   OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Core2_Asw_Init),
   OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_Core2_Asw_Task),

@@ -4253,7 +4253,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_ACU02MsgErrI
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_ACU02MsgErrInfo_Bus_tec_ComM_ACU02TimeoutInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -4901,7 +4903,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_BMSSts01ErrI
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_BMSSts01ErrInfo_Bus_tec_ComM_BMSSts01CRCInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -4910,7 +4914,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_BMSSts01ErrI
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_BMSSts01ErrInfo_Bus_tec_ComM_BMSSts01E2ETimeoutInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -5846,7 +5852,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSSts01MsgE
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSSts01MsgErrInfo_Bus_tec_ComM_IBSSts01CRCInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -5855,7 +5863,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSSts01MsgE
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSSts01MsgErrInfo_Bus_tec_ComM_IBSSts01E2ETimeoutInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -5882,7 +5892,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSSts02MsgE
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSSts02MsgErrInfo_Bus_tec_ComM_IBSSts02CRCInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -5891,7 +5903,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSSts02MsgE
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSSts02MsgErrInfo_Bus_tec_ComM_IBSSts02E2ETimeoutInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -5918,7 +5932,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSSts03MsgE
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSSts03MsgErrInfo_Bus_tec_ComM_IBSSts03CRCInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -5927,7 +5943,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSSts03MsgE
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSSts03MsgErrInfo_Bus_tec_ComM_IBSSts03E2ETimeoutInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -5954,7 +5972,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSSts04MsgE
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSSts04MsgErrInfo_Bus_tec_ComM_IBSSts04CRCInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -5963,7 +5983,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSSts04MsgE
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSSts04MsgErrInfo_Bus_tec_ComM_IBSSts04E2ETimeoutInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -5990,7 +6012,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSSts05MsgE
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSSts05MsgErrInfo_Bus_tec_ComM_IBSSts05CRCInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -5999,7 +6023,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSSts05MsgE
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSSts05MsgErrInfo_Bus_tec_ComM_IBSSts05E2ETimeoutInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -6089,7 +6115,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSTqMsgErrI
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSTqMsgErrInfo_Bus_tec_ComM_IBSTqCRCInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -6098,7 +6126,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSTqMsgErrI
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSTqMsgErrInfo_Bus_tec_ComM_IBSTqE2ETimeoutInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -6125,7 +6155,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSVCUMotCtr
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSVCUMotCtrlMsgErrInfo_Bus_tec_ComM_IBSVCUMotCtrlCRCInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -6134,7 +6166,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IBSVCUMotCtr
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IBSVCUMotCtrlMsgErrInfo_Bus_tec_ComM_IBSVCUMotCtrlE2ETimeoutInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -6251,7 +6285,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IVI01MsgErrI
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IVI01MsgErrInfo_Bus_tec_ComM_IVI01CRCInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -6260,7 +6296,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_IVI01MsgErrI
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_IVI01MsgErrInfo_Bus_tec_ComM_IVI01E2ETimeoutInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -6411,7 +6449,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_MCU01MsgErrI
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_MCU01MsgErrInfo_Bus_tec_ComM_MCU01CRCInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -6420,7 +6460,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_MCU01MsgErrI
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_MCU01MsgErrInfo_Bus_tec_ComM_MCU01E2ETimeoutInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -6474,7 +6516,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_MCUFailrCodM
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_MCUFailrCodMsgErrInfo_Bus_tec_ComM_MCUFailrCodCRCInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -6483,7 +6527,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_MCUFailrCodM
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_MCUFailrCodMsgErrInfo_Bus_tec_ComM_MCUFailrCodE2ETimeoutInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -6852,7 +6898,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_PRNDMsgErrIn
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_PRNDMsgErrInfo_Bus_tec_ComM_PRNDCRCInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -6861,7 +6909,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_CANHandler_RTE_P_ComM_PRNDMsgErrIn
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_CANHandler_RTE_P_ComM_PRNDMsgErrInfo_Bus_tec_ComM_PRNDE2ETimeoutInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -7625,7 +7675,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_ComMErr_RTE_P_ComM_CANBusOffInfo_B
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   Rte_CtAp_ComMErr_RTE_P_ComM_CANBusOffInfo_Bus_tec_ComM_EPTCANBusOffInfo_Bus = *(data); /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -9118,7 +9170,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_AccrPedlDrv_RTE_R_FctSftyMon_AccrPe
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_FctSftyTorq_RTE_P_FctSftyMon_AccrPedlTqOverFltInfo_Bus_tec_FctSftyMon_AccrPedlTqOverFltInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -9127,7 +9181,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_BMSMgmt_RTE_R_ComM_CANBusOffInfo_Bu
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_ComMErr_RTE_P_ComM_CANBusOffInfo_Bus_tec_ComM_EPTCANBusOffInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -9147,7 +9203,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_BrkMgmt_RTE_R_ComM_IBSTqMsgErrInfo_
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_CANHandler_RTE_P_ComM_IBSTqMsgErrInfo_Bus_tec_ComM_IBSTqCRCInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -9156,7 +9214,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_BrkMgmt_RTE_R_ComM_IBSTqMsgErrInfo_
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_CANHandler_RTE_P_ComM_IBSTqMsgErrInfo_Bus_tec_ComM_IBSTqE2ETimeoutInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -9577,7 +9637,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_CANHandler_RTE_R_ComM_CANBusOffInfo
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_ComMErr_RTE_P_ComM_CANBusOffInfo_Bus_tec_ComM_EPTCANBusOffInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -9903,7 +9965,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_CANHandler_RTE_R_ErrMgmt_DrvMotTemp
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_HVSfty_RTE_P_ErrMgmt_DrvMotTempOvrLamp_Bus_tec_ErrMgmt_DrvMotTempOvrLamp_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -9921,7 +9985,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_CANHandler_RTE_R_ErrMgmt_HvBattTemp
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_HVSfty_RTE_P_ErrMgmt_HvBattTempOvrLamp_Bus_tec_ErrMgmt_HvBattTempOvrLamp_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -9930,7 +9996,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_CANHandler_RTE_R_ErrMgmt_InslaFlt_B
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_HVSfty_RTE_P_ErrMgmt_InslaFlt_Bus_tec_ErrMgmt_InslaFlt_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -9975,7 +10043,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_CANHandler_RTE_R_ErrMgmt_VehHVIL_Bu
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_HVSfty_RTE_P_ErrMgmt_VehHVIL_Bus_tec_ErrMgmt_VehHVIL_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -9984,7 +10054,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_CANHandler_RTE_R_FctSftyMon_AccrPed
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_FctSftyTorq_RTE_P_FctSftyMon_AccrPedlTqOverFltInfo_Bus_tec_FctSftyMon_AccrPedlTqOverFltInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -10002,7 +10074,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_CANHandler_RTE_R_FctSftyMon_CrpCtrl
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_FctSftyTorq_RTE_P_FctSftyMon_CrpCtrlTqOverFltInfo_Bus_tec_FctSftyMon_CrpCtrlTqOverFltInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -10011,7 +10085,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_CANHandler_RTE_R_FctSftyMon_DesVehD
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_FctSftyTorq_RTE_P_FctSftyMon_DesVehDecelSpdOverFltInfo_Bus_tec_FctSftyMon_DesVehDecelSpdOverFltInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -12928,7 +13004,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ChrgComM_RTE_R_ComM_CANBusOffInfo_B
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_ComMErr_RTE_P_ComM_CANBusOffInfo_Bus_tec_ComM_EPTCANBusOffInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -12957,7 +13035,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ChrgPreHeat_RTE_R_ComM_CANBusOffInf
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_ComMErr_RTE_P_ComM_CANBusOffInfo_Bus_tec_ComM_EPTCANBusOffInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -12966,7 +13046,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ChrgSeqCtrl_RTE_R_ComM_CANBusOffInf
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_ComMErr_RTE_P_ComM_CANBusOffInfo_Bus_tec_ComM_EPTCANBusOffInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -13013,7 +13095,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ChrgStat_RTE_R_ComM_CANBusOffInfo_B
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_ComMErr_RTE_P_ComM_CANBusOffInfo_Bus_tec_ComM_EPTCANBusOffInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -13058,7 +13142,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ChrgStat_RTE_R_OBCMgmt_CPStsJmpErr_
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_S2Mgmt_RTE_P_OBCMgmt_CPStsJmpErr_Bus_tec_OBCMgmt_CPStsJmpErr_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -13067,7 +13153,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ChrgStat_RTE_R_OBCMgmt_OBCChrgStsEr
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_OBCStsMgmt_RTE_P_OBCMgmt_OBCChrgStsErr_Bus_tec_OBCMgmt_OBCChrgStsErr_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -13076,7 +13164,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ChrgStat_RTE_R_OBCMgmt_OBCDchaStsEr
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_OBCStsMgmt_RTE_P_OBCMgmt_OBCDchaStsErr_Bus_tec_OBCMgmt_OBCDchaStsErr_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -13085,7 +13175,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ChrgStat_RTE_R_OBCMgmt_OBCDiErr_Bus
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_OBCStsMgmt_RTE_P_OBCMgmt_OBCDiErr_Bus_tec_OBCMgmt_OBCDiErr_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -13094,7 +13186,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ChrgStat_RTE_R_OBCMgmt_OBCInpUDcLoE
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_S2Mgmt_RTE_P_OBCMgmt_OBCInpUDcLoErr_Bus_tec_OBCMgmt_OBCInpUDcLoErr_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -13103,7 +13197,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ChrgStat_RTE_R_OBCMgmt_OBCPreheatSt
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_OBCStsMgmt_RTE_P_OBCMgmt_OBCPreheatStsErr_Bus_tec_OBCMgmt_OBCPreheatStsErr_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -13112,7 +13208,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ChrgStat_RTE_R_OBCMgmt_S2SwtClsErr_
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_S2Mgmt_RTE_P_OBCMgmt_S2SwtClsErr_Bus_tec_OBCMgmt_S2SwtClsErr_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -13796,7 +13894,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ComMErr_RTE_R_ComM_MCUFailrCodMsgEr
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_CANHandler_RTE_P_ComM_MCUFailrCodMsgErrInfo_Bus_tec_ComM_MCUFailrCodCRCInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -13805,7 +13905,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ComMErr_RTE_R_ComM_MCUFailrCodMsgEr
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_CANHandler_RTE_P_ComM_MCUFailrCodMsgErrInfo_Bus_tec_ComM_MCUFailrCodE2ETimeoutInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -13985,7 +14087,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_CrpCtrl_RTE_R_FctSftyMon_CrpCtrlTqO
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_FctSftyTorq_RTE_P_FctSftyMon_CrpCtrlTqOverFltInfo_Bus_tec_FctSftyMon_CrpCtrlTqOverFltInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -14297,7 +14401,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_DCDCMgmt_RTE_R_ComM_CANBusOffInfo_B
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_ComMErr_RTE_P_ComM_CANBusOffInfo_Bus_tec_ComM_EPTCANBusOffInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -14306,7 +14412,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_DCFCMgmt_RTE_R_ComM_CANBusOffInfo_B
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_ComMErr_RTE_P_ComM_CANBusOffInfo_Bus_tec_ComM_EPTCANBusOffInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -14342,7 +14450,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_DrvAsscCtrl_RTE_R_ComM_IBSTqMsgErrI
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_CANHandler_RTE_P_ComM_IBSTqMsgErrInfo_Bus_tec_ComM_IBSTqCRCInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -14351,7 +14461,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_DrvAsscCtrl_RTE_R_ComM_IBSTqMsgErrI
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
+  Rte_DisableOSInterrupts(); /* PRQA S 1881, 4558 */ /* MD_Rte_Os, MD_Rte_Os */
   *(data) = Rte_CtAp_CANHandler_RTE_P_ComM_IBSTqMsgErrInfo_Bus_tec_ComM_IBSTqE2ETimeoutInfo_Bus; /* PRQA S 1339, 2982 */ /* MD_Rte_1339, MD_Rte_2982 */
+  Rte_EnableOSInterrupts(); /* PRQA S 1881, 4558, 2983 */ /* MD_Rte_Os, MD_Rte_Os, MD_Rte_2983 */
 
   return ret;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -15056,33 +15168,33 @@ TASK(Core1_Asw_Init) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 /**********************************************************************************************************************
- * Task:     Core1_Asw_Task
+ * Task:     Core1_Asw_Task_Qm
  * Priority: 41
  * Schedule: FULL
  *********************************************************************************************************************/
-TASK(Core1_Asw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
+TASK(Core1_Asw_Task_Qm) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 {
   EventMaskType ev;
 
   for(;;)
   {
-    (void)WaitEvent(Rte_Ev_Cyclic_Core1_Asw_Task_0_100ms | Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms | Rte_Ev_Cyclic_Core1_Asw_Task_0_200ms | Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms | Rte_Ev_Cyclic_Core1_Asw_Task_0_50ms | Rte_Ev_Run_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms | Rte_Ev_Run_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)GetEvent(Core1_Asw_Task, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Cyclic_Core1_Asw_Task_0_100ms | Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms | Rte_Ev_Cyclic_Core1_Asw_Task_0_200ms | Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms | Rte_Ev_Cyclic_Core1_Asw_Task_0_50ms | Rte_Ev_Run_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms | Rte_Ev_Run_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)WaitEvent(Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_100ms | Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_10ms | Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_200ms | Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_20ms | Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_50ms | Rte_Ev_Run_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms | Rte_Ev_Run_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)GetEvent(Core1_Asw_Task_Qm, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_100ms | Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_10ms | Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_200ms | Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_20ms | Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_50ms | Rte_Ev_Run_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms | Rte_Ev_Run_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       Core1App_SWC_Runnable_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_50ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_50ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_ACParMgmt_Cyclic_50ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_AccCal_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
@@ -15091,13 +15203,13 @@ TASK(Core1_Asw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
       R_AccrPedlDrv_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_20ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_BMSMgmt_Cyclic_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_BrkMgmt_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
@@ -15109,25 +15221,25 @@ TASK(Core1_Asw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
       R_CANHandlerInput_Cyclic_1000ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_100ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_100ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_CANHandlerInput_Cyclic_100ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_CANHandlerInput_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_200ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_200ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_CANHandlerInput_Cyclic_200ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_20ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_CANHandlerInput_Cyclic_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
@@ -15139,37 +15251,37 @@ TASK(Core1_Asw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
       R_CANHandlerInput_Cyclic_500ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_50ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_50ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_CANHandlerInput_Cyclic_50ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_100ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_100ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_CANHandlerOutput_Cyclic_100ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_CANHandlerOutput_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_200ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_200ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_CANHandlerOutput_Cyclic_200ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_20ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_CANHandlerOutput_Cyclic_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_50ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_50ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_CANHandlerOutput_Cyclic_50ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
@@ -15196,13 +15308,13 @@ TASK(Core1_Asw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
       R_ChrgStat_Cyclic_50ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_100ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_100ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_CnsCalcn_Cyclic_100ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_CoastCtrl_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
@@ -15217,7 +15329,7 @@ TASK(Core1_Asw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
       R_DCComM_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_20ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_DCDCMgmt_Cyclic_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
@@ -15226,49 +15338,72 @@ TASK(Core1_Asw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
       R_DCFCMgmt_Cyclic_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_50ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_50ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_DCParMgmt_Cyclic_50ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_Qm_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_DrvAsscCtrl_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
+  }
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms) != (EventMaskType)0)
+/**********************************************************************************************************************
+ * Task:     Core1_Bsw_Task
+ * Priority: 42
+ * Schedule: FULL
+ *********************************************************************************************************************/
+TASK(Core1_Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
+{
+  EventMaskType ev;
+
+  for(;;)
+  {
+    (void)WaitEvent(Rte_Ev_Cyclic_Core1_Bsw_Task_0_100ms | Rte_Ev_Cyclic_Core1_Bsw_Task_0_10ms | Rte_Ev_Cyclic_Core1_Bsw_Task_0_20ms | Rte_Ev_Cyclic_Core1_Bsw_Task_0_50ms | Rte_Ev_RunS2_EcuM_EcuM_MainFunction); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)GetEvent(Core1_Bsw_Task, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Cyclic_Core1_Bsw_Task_0_100ms | Rte_Ev_Cyclic_Core1_Bsw_Task_0_10ms | Rte_Ev_Cyclic_Core1_Bsw_Task_0_20ms | Rte_Ev_Cyclic_Core1_Bsw_Task_0_50ms | Rte_Ev_RunS2_EcuM_EcuM_MainFunction)); /* PRQA S 3417 */ /* MD_Rte_Os */
+
+    if ((ev & Rte_Ev_RunS2_EcuM_EcuM_MainFunction) != (EventMaskType)0)
+    {
+      /* call schedulable entity */
+      EcuM_MainFunction();
+    }
+
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_20ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_DrvMod_Cyclic_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_DrvTorqCoor_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_20ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_ElSSDiag_Cyclic_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_50ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_50ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_EmMgmt_Cyclic_50ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_20ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_FctSftyGear_Cyclic_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_FctSftyTorq_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
@@ -15277,13 +15412,13 @@ TASK(Core1_Asw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
       R_FltReactn_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_20ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_GearCal_Cyclic_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_HVSfty_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
@@ -15295,7 +15430,7 @@ TASK(Core1_Asw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
       R_LINHandler_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_20ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_LvBattMgmt_Cyclic_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
@@ -15304,13 +15439,13 @@ TASK(Core1_Asw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
       R_MCUMgmt_Cyclic_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_50ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_50ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_OBCStsMgmt_Cyclic_50ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_OnePedCtrl_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
@@ -15319,31 +15454,31 @@ TASK(Core1_Asw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
       R_PdlAlys_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_100ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_100ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_PwrLim_Cyclic_100ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_ResEst_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_100ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_100ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_RngEstimn_Cyclic_100ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_50ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_50ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_S2Mgmt_Cyclic_50ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_SlopEst_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
@@ -15352,13 +15487,13 @@ TASK(Core1_Asw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
       R_SpdLmt_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_20ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_TCUMgmt_Cyclic_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_TorqCoor_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
@@ -15388,33 +15523,18 @@ TASK(Core1_Asw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
       R_VehStabyCtrl_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_20ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_20ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_VehStat_Cyclic_20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Cyclic_Core1_Asw_Task_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_Core1_Bsw_Task_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
       R_WakeUpRsn_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
-/**********************************************************************************************************************
- * Task:     Core1_Bsw_Task
- * Priority: 42
- * Schedule: FULL
- * Alarm:    Cycle Time 0.01 s Alarm Offset 0 s
- *********************************************************************************************************************/
-TASK(Core1_Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
-{
-
-  /* call schedulable entity */
-  EcuM_MainFunction();
-
-  (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 #define RTE_STOP_SEC_CODE

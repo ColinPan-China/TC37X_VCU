@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Lcfg.h
- *   Generation Time: 2025-09-26 09:57:01
+ *   Generation Time: 2025-09-28 16:50:04
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -112,15 +112,15 @@ extern FUNC(void, OS_CORE1_ASW_INIT_CODE) Os_Task_Core1_Asw_Init(void);
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
-# define OS_START_SEC_Core1_Asw_Task_CODE
+# define OS_START_SEC_Core1_Asw_Task_Qm_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /**********************************************************************************************************************
- *  Core1_Asw_Task()
+ *  Core1_Asw_Task_Qm()
  *********************************************************************************************************************/
-extern FUNC(void, OS_CORE1_ASW_TASK_CODE) Os_Task_Core1_Asw_Task(void);
+extern FUNC(void, OS_CORE1_ASW_TASK_QM_CODE) Os_Task_Core1_Asw_Task_Qm(void);
 
-# define OS_STOP_SEC_Core1_Asw_Task_CODE
+# define OS_STOP_SEC_Core1_Asw_Task_Qm_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

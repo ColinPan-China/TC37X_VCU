@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Context_Lcfg.h
- *   Generation Time: 2025-09-26 09:57:00
+ *   Generation Time: 2025-09-28 16:50:04
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -228,8 +228,8 @@ extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore1_Isr_Leve
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Core1_Asw_Init_Dyn;
 
 
-/*! HAL dynamic task context data: Core1_Asw_Task */
-extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Core1_Asw_Task_Dyn;
+/*! HAL dynamic task context data: Core1_Asw_Task_Qm */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Core1_Asw_Task_Qm_Dyn;
 
 
 /*! HAL dynamic task context data: Core1_Bsw_Task */
@@ -462,8 +462,8 @@ extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_XSignalIsr_Os
 /*! HAL task context configuration data: Core1_Asw_Init */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core1_Asw_Init;
 
-/*! HAL task context configuration data: Core1_Asw_Task */
-extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core1_Asw_Task;
+/*! HAL task context configuration data: Core1_Asw_Task_Qm */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core1_Asw_Task_Qm;
 
 /*! HAL task context configuration data: Core1_Bsw_Task */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core1_Bsw_Task;
