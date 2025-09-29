@@ -1,196 +1,338 @@
-/**********************************************************************************************************************
- *  FILE REQUIRES USER MODIFICATIONS
- *  Template Scope: sections marked with Start and End comments
- *  -------------------------------------------------------------------------------------------------------------------
- *  This file includes template code that must be completed and/or adapted during BSW integration.
- *  The template code is incomplete and only intended for providing a signature and an empty implementation.
- *  It is neither intended nor qualified for use in series production without applying suitable quality measures.
- *  The template code must be completed as described in the instructions given within this file and/or in the.
- *  Technical Reference.
- *  The completed implementation must be tested with diligent care and must comply with all quality requirements which.
- *  are necessary according to the state of the art before its use.
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- *  FILE DESCRIPTION
- *  -------------------------------------------------------------------------------------------------------------------
- *             File:  CtAp_VehStat.c
- *           Config:  TC37X_VCU.dpa
- *        SW-C Type:  CtAp_VehStat
+/*
+ *************************************************************************
+ *                                                                       *
+ *                           ATOM GMBH                                   *
+ *                        VCU SoftWare Team                              *
+ *                                                                       *
+ *                       All rights reserved                             *
+ *                                                                       *
+ *************************************************************************
+ */
+/*******************************************************************************
+ *  FILE INFORMATION:
+ *  Filename:           CtAp_VehStat.c
+ *  File Creation Date: 03-Apr-2025
+ *  Model Name:         CtAp_VehStat
+ *  Model Version:      %<AutoIncrement:3.0.0>
+ *  Model Author:       Hyacinth Ge - Thu Aug 01 13:58:12 2024
+ *  Simulink Coder version         : 9.8 (R2022b) 13-May-2022
+ *  C/C++ source code generated on : Thu Apr  3 13:59:04 2025
  *
- *        Generator:  MICROSAR RTE Generator Version 4.26.0
- *                    RTE Core Version 1.26.0
- *          License:  CBD2101138
+ * Target selection: autosar.tlc
+ * Embedded hardware selection: Infineon->TriCore
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+
+ *  MODIFICATION HISTORY:
+ *  Last Saved Modification:  ATOM-HyacinthGe - Thu Apr 03 13:58:17 2025
  *
- *      Description:  C-Code implementation template for SW-C <CtAp_VehStat>
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of version logging area >>                DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-/* PRQA S 0777, 0779 EOF */ /* MD_MSR_Rule5.1, MD_MSR_Rule5.2 */
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of version logging area >>                  DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-#include "Rte_CtAp_VehStat.h"
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
  *
- * Used AUTOSAR Data Types
- *
- **********************************************************************************************************************
- *
- * Primitive Types:
- * ================
- * boolean: Boolean (standard type)
- * uint8: Integer in interval [0...255] (standard type)
- *
- *********************************************************************************************************************/
+ *******************************************************************************/
+#include "CtAp_VehStat.h"
+#include "rtwtypes.h"
+#include "CtAp_VehStat_Cal.h"
 
+/*  Defines */
 
+/* Named constants for Chart: '<S7>/ModMgmt_HvStatusFlow' */
+#define CtAp_VehSt_IN_HvStatus_DrvReady ((uint8_T)1U)
+#define CtAp_VehSta_IN_HvStatus_HvReady ((uint8_T)2U)
+#define CtAp_VehSta_IN_HvStatus_Standby ((uint8_T)6U)
+#define CtAp_VehStat_IN_HvStatus_Init  ((uint8_T)3U)
+#define CtAp_VehStat_IN_HvStatus_Sleep ((uint8_T)5U)
+#define CtAp_Veh_IN_HvStatus_Preheating ((uint8_T)4U)
+
+/*  Data Types */
+
+/**************************** GLOBAL DATA *************************************/
+/*  Definitions */
+
+/* PublicStructure Variables for Internal Data */
+#define CtAp_VehStat_START_SEC_VAR_NOINIT_8
+#include "CtAp_VehStat_MemMap.h"
+
+ARID_DEF_CtAp_VehStat_T CtAp_VehStat_ARID_DEF;/* '<S7>/ModMgmt_HvStatusFlow' */
+
+#define CtAp_VehStat_STOP_SEC_VAR_NOINIT_8
+#include "CtAp_VehStat_MemMap.h"
+
+/*  Declarations  */
+
+/***************************** FILE SCOPE DATA ********************************/
+
+/*************************** FUNCTIONS ****************************************/
+
+/* Model step function */
+
+/* SwAddrMethod CODE for Runnable */
 #define CtAp_VehStat_START_SEC_CODE
-#include "CtAp_VehStat_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#include "CtAp_VehStat_MemMap.h"
 
-/**********************************************************************************************************************
- *
- * Runnable Entity Name: R_VehStat_Cyclic_20ms
- *
- *---------------------------------------------------------------------------------------------------------------------
- *
- * Executed if at least one of the following trigger conditions occurred:
- *   - triggered on TimingEvent every 20ms
- *
- **********************************************************************************************************************
- *
- * Input Interfaces:
- * =================
- *   Explicit S/R API:
- *   -----------------
- *   Std_ReturnType Rte_Read_RTE_R_HvMgmt_BMSNegRlyActSts_Enum_tec_HvMgmt_BMSNegRlyActSts_Enum(uint8 *data)
- *   Std_ReturnType Rte_Read_RTE_R_HvMgmt_BMSPosRlyActSts_Enum_tec_HvMgmt_BMSPosRlyActSts_Enum(uint8 *data)
- *   Std_ReturnType Rte_Read_RTE_R_HvMgmt_BMSWrkModActSts_Enum_tec_HvMgmt_BMSWrkModActSts_Enum(uint8 *data)
- *   Std_ReturnType Rte_Read_RTE_R_HvMgmt_MCUWrkModActSts_Enum_tec_HvMgmt_MCUWrkModActSts_Enum(uint8 *data)
- *   Std_ReturnType Rte_Read_RTE_R_LvMgmt_LvPwrDwn_Flg_tec_LvMgmt_LvPwrDwn_Flg(boolean *data)
- *   Std_ReturnType Rte_Read_RTE_R_LvMgmt_SelfChkSts_Flg_tec_LvMgmt_SelfChkSts_Flg(boolean *data)
- *   Std_ReturnType Rte_Read_RTE_R_LvMgmt_WakeUpReq_Flg_tec_LvMgmt_WakeUpReq_Flg(boolean *data)
- *   Std_ReturnType Rte_Read_RTE_R_VehMot_VehSpdVld_Flg_tec_VehMot_VehSpdVld_Flg(boolean *data)
- *   Std_ReturnType Rte_Read_RTE_R_VehMot_VehStdl_Flg_tec_VehMot_VehStdl_Flg(boolean *data)
- *
- * Output Interfaces:
- * ==================
- *   Explicit S/R API:
- *   -----------------
- *   Std_ReturnType Rte_Write_RTE_P_ModMgmt_HvSts_Enum_tec_ModMgmt_HvSts_Enum(uint8 data)
- *   Std_ReturnType Rte_Write_RTE_P_ModMgmt_ReqSleep_Flg_tec_ModMgmt_ReqSleep_Flg(boolean data)
- *
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
- * Symbol: R_VehStat_Cyclic_20ms_doc
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-FUNC(void, CtAp_VehStat_CODE) R_VehStat_Cyclic_20ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+void R_VehStat_Cyclic_20ms(void)
 {
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
- * Symbol: R_VehStat_Cyclic_20ms
- *********************************************************************************************************************/
+  uint8_T rtb_ModMgmt_HvSts_Enum;
+  uint8_T tmpRead;
+  uint8_T tmpRead_0;
+  uint8_T tmpRead_1;
+  uint8_T tmpRead_2;
+  boolean_T rtb_ModMgmt_ReqSleep_Flg;
+  boolean_T tmpRead_3;
+  boolean_T tmpRead_4;
+  boolean_T tmpRead_5;
+  boolean_T tmpRead_6;
+  boolean_T tmpRead_7;
 
+  /* Inport: '<Root>/RTE_R_LvMgmt_WakeUpReq_Flg_tec_LvMgmt_WakeUpReq_Flg' */
+  (void)Rte_Read_RTE_R_LvMgmt_WakeUpReq_Flg_tec_LvMgmt_WakeUpReq_Flg(&tmpRead_7);
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
+  /* Inport: '<Root>/RTE_R_VehMot_VehStdl_Flg_tec_VehMot_VehStdl_Flg' */
+  (void)Rte_Read_RTE_R_VehMot_VehStdl_Flg_tec_VehMot_VehStdl_Flg(&tmpRead_6);
+
+  /* Inport: '<Root>/RTE_R_VehMot_VehSpdVld_Flg_tec_VehMot_VehSpdVld_Flg' */
+  (void)Rte_Read_RTE_R_VehMot_VehSpdVld_Flg_tec_VehMot_VehSpdVld_Flg(&tmpRead_5);
+
+  /* Inport: '<Root>/RTE_R_LvMgmt_SelfChkSts_Flg_tec_LvMgmt_SelfChkSts_Flg' */
+  (void)Rte_Read_RTE_R_LvMgmt_SelfChkSts_Flg_tec_LvMgmt_SelfChkSts_Flg
+    (&tmpRead_4);
+
+  /* Inport: '<Root>/RTE_R_LvMgmt_LvPwrDwn_Flg_tec_LvMgmt_LvPwrDwn_Flg' */
+  (void)Rte_Read_RTE_R_LvMgmt_LvPwrDwn_Flg_tec_LvMgmt_LvPwrDwn_Flg(&tmpRead_3);
+
+  /* Inport: '<Root>/RTE_R_HvMgmt_MCUWrkModActSts_Enum_tec_HvMgmt_MCUWrkModActSts_Enum' */
+  (void)
+    Rte_Read_RTE_R_HvMgmt_MCUWrkModActSts_Enum_tec_HvMgmt_MCUWrkModActSts_Enum
+    (&tmpRead_2);
+
+  /* Inport: '<Root>/RTE_R_HvMgmt_BMSWrkModActSts_Enum_tec_HvMgmt_BMSWrkModActSts_Enum' */
+  (void)
+    Rte_Read_RTE_R_HvMgmt_BMSWrkModActSts_Enum_tec_HvMgmt_BMSWrkModActSts_Enum
+    (&tmpRead_1);
+
+  /* Inport: '<Root>/RTE_R_HvMgmt_BMSPosRlyActSts_Enum_tec_HvMgmt_BMSPosRlyActSts_Enum' */
+  (void)
+    Rte_Read_RTE_R_HvMgmt_BMSPosRlyActSts_Enum_tec_HvMgmt_BMSPosRlyActSts_Enum
+    (&tmpRead_0);
+
+  /* Inport: '<Root>/RTE_R_HvMgmt_BMSNegRlyActSts_Enum_tec_HvMgmt_BMSNegRlyActSts_Enum' */
+  (void)
+    Rte_Read_RTE_R_HvMgmt_BMSNegRlyActSts_Enum_tec_HvMgmt_BMSNegRlyActSts_Enum
+    (&tmpRead);
+
+  /* Outputs for Atomic SubSystem: '<Root>/R_VehStat_Cyclic_20ms_sys' */
+  /* Outputs for Atomic SubSystem: '<S2>/CtAp_VehStat_Function' */
+  /* Chart: '<S7>/ModMgmt_HvStatusFlow' incorporates:
+   *  SignalConversion: '<S5>/SignalCopy'
+   *  SignalConversion: '<S5>/SignalCopy1'
+   *  SignalConversion: '<S5>/SignalCopy2'
+   *  SignalConversion: '<S5>/SignalCopy3'
+   *  SignalConversion: '<S5>/SignalCopy4'
+   *  SignalConversion: '<S5>/SignalCopy5'
+   *  SignalConversion: '<S5>/SignalCopy6'
+   *  SignalConversion: '<S5>/SignalCopy7'
+   *  SignalConversion: '<S5>/SignalCopy8'
+   */
+  if ((uint32_T)CtAp_VehStat_ARID_DEF.is_active_c2_CtAp_VehStat == 0U) {
+    CtAp_VehStat_ARID_DEF.is_active_c2_CtAp_VehStat = 1U;
+    CtAp_VehStat_ARID_DEF.is_c2_CtAp_VehStat = CtAp_VehStat_IN_HvStatus_Init;
+    rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_INIT);
+    rtb_ModMgmt_ReqSleep_Flg = VehStat_Active;
+    CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt = ((uint16_T)VehStat_Count_Zero);
+  } else {
+    switch (CtAp_VehStat_ARID_DEF.is_c2_CtAp_VehStat) {
+     case CtAp_VehSt_IN_HvStatus_DrvReady:
+      rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_DrvReady);
+      rtb_ModMgmt_ReqSleep_Flg = VehStat_Inactive;
+
+      /* Outputs for Atomic SubSystem: '<S2>/CtAp_VehStat_Input' */
+      if (tmpRead_2 == ((uint8_T)VehStat_MCUReadyCmpl)) {
+        CtAp_VehStat_ARID_DEF.is_c2_CtAp_VehStat =
+          CtAp_VehSta_IN_HvStatus_HvReady;
+        rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_HvReady);
+        CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt = ((uint16_T)VehStat_Count_Zero);
+      }
+
+      /* End of Outputs for SubSystem: '<S2>/CtAp_VehStat_Input' */
+      break;
+
+     case CtAp_VehSta_IN_HvStatus_HvReady:
+      rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_HvReady);
+      rtb_ModMgmt_ReqSleep_Flg = VehStat_Inactive;
+
+      /* Outputs for Atomic SubSystem: '<S2>/CtAp_VehStat_Input' */
+      if (tmpRead_2 == ((uint8_T)VehStat_MCUStandbyCmpl)) {
+        CtAp_VehStat_ARID_DEF.is_c2_CtAp_VehStat =
+          CtAp_VehSta_IN_HvStatus_Standby;
+        rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_Standby);
+        CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt = ((uint16_T)VehStat_Count_Zero);
+      } else if ((tmpRead_0 == ((uint8_T)VehStat_PreheatPosRlyOpenCmpl)) &&
+                 (tmpRead == ((uint8_T)VehStat_NegRlyClsCmpl))) {
+        CtAp_VehStat_ARID_DEF.is_c2_CtAp_VehStat =
+          CtAp_Veh_IN_HvStatus_Preheating;
+        rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_Preheating);
+        CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt = ((uint16_T)VehStat_Count_Zero);
+      } else if (tmpRead_2 == ((uint8_T)VehStat_MCUEnaCmpl)) {
+        CtAp_VehStat_ARID_DEF.is_c2_CtAp_VehStat =
+          CtAp_VehSt_IN_HvStatus_DrvReady;
+        rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_DrvReady);
+      } else {
+        /* no actions */
+      }
+
+      /* End of Outputs for SubSystem: '<S2>/CtAp_VehStat_Input' */
+      break;
+
+     case CtAp_VehStat_IN_HvStatus_Init:
+      {
+        rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_INIT);
+        rtb_ModMgmt_ReqSleep_Flg = VehStat_Active;
+
+        /* Outputs for Atomic SubSystem: '<S2>/CtAp_VehStat_Input' */
+        if (tmpRead_3 && (CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt >
+                          ModMgmt_Init2SleepTmr_CFG)) {
+          CtAp_VehStat_ARID_DEF.is_c2_CtAp_VehStat =
+            CtAp_VehStat_IN_HvStatus_Sleep;
+          rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_Sleep);
+          CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt = ((uint16_T)VehStat_Count_Zero);
+        } else if (tmpRead_4) {
+          CtAp_VehStat_ARID_DEF.is_c2_CtAp_VehStat =
+            CtAp_VehSta_IN_HvStatus_Standby;
+          rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_Standby);
+          rtb_ModMgmt_ReqSleep_Flg = VehStat_Inactive;
+          CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt = ((uint16_T)VehStat_Count_Zero);
+        } else {
+          int32_T tmp;
+          tmp = (int32_T)CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt + (int32_T)
+            ((uint16_T)VehStat_ModMgmt_RunStep);
+          if (tmp > 65535) {
+            tmp = 65535;
+          }
+
+          CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt = (uint16_T)tmp;
+        }
+
+        /* End of Outputs for SubSystem: '<S2>/CtAp_VehStat_Input' */
+      }
+      break;
+
+     case CtAp_Veh_IN_HvStatus_Preheating:
+      rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_Preheating);
+      rtb_ModMgmt_ReqSleep_Flg = VehStat_Inactive;
+
+      /* Outputs for Atomic SubSystem: '<S2>/CtAp_VehStat_Input' */
+      if ((tmpRead_2 == ((uint8_T)VehStat_MCUStandbyCmpl)) && (tmpRead_0 !=
+           ((uint8_T)VehStat_PosRlyClsCmpl))) {
+        CtAp_VehStat_ARID_DEF.is_c2_CtAp_VehStat =
+          CtAp_VehSta_IN_HvStatus_Standby;
+        rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_Standby);
+        CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt = ((uint16_T)VehStat_Count_Zero);
+      } else if ((tmpRead_0 == ((uint8_T)VehStat_PosRlyClsCmpl)) && (tmpRead ==
+                  ((uint8_T)VehStat_NegRlyClsCmpl))) {
+        CtAp_VehStat_ARID_DEF.is_c2_CtAp_VehStat =
+          CtAp_VehSta_IN_HvStatus_HvReady;
+        rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_HvReady);
+        CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt = ((uint16_T)VehStat_Count_Zero);
+      } else {
+        /* no actions */
+      }
+
+      /* End of Outputs for SubSystem: '<S2>/CtAp_VehStat_Input' */
+      break;
+
+     case CtAp_VehStat_IN_HvStatus_Sleep:
+      rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_Sleep);
+      rtb_ModMgmt_ReqSleep_Flg = VehStat_Active;
+
+      /* Outputs for Atomic SubSystem: '<S2>/CtAp_VehStat_Input' */
+      if ((tmpRead_3 == VehStat_Inactive) && tmpRead_7) {
+        CtAp_VehStat_ARID_DEF.is_c2_CtAp_VehStat = CtAp_VehStat_IN_HvStatus_Init;
+        rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_INIT);
+        CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt = ((uint16_T)VehStat_Count_Zero);
+      }
+
+      /* End of Outputs for SubSystem: '<S2>/CtAp_VehStat_Input' */
+      break;
+
+     default:
+      {
+        /* case IN_HvStatus_Standby: */
+        rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_Standby);
+        rtb_ModMgmt_ReqSleep_Flg = VehStat_Inactive;
+
+        /* Outputs for Atomic SubSystem: '<S2>/CtAp_VehStat_Input' */
+        if ((tmpRead_7 == VehStat_Inactive) && (tmpRead_6 || (tmpRead_5 ==
+              VehStat_Inactive)) && (CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt >
+             ModMgmt_Standby2SleepTmr_CFG)) {
+          CtAp_VehStat_ARID_DEF.is_c2_CtAp_VehStat =
+            CtAp_VehStat_IN_HvStatus_Sleep;
+          rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_Sleep);
+          rtb_ModMgmt_ReqSleep_Flg = VehStat_Active;
+          CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt = ((uint16_T)VehStat_Count_Zero);
+        } else if ((tmpRead_1 == ((uint8_T)VehStat_BMSActiveCmpl)) && (tmpRead_2
+                    == ((uint8_T)VehStat_MCUReadyCmpl))) {
+          CtAp_VehStat_ARID_DEF.is_c2_CtAp_VehStat =
+            CtAp_VehSta_IN_HvStatus_HvReady;
+          rtb_ModMgmt_HvSts_Enum = ((uint8_T)VehStat_HvReady);
+          CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt = ((uint16_T)VehStat_Count_Zero);
+        } else {
+          int32_T tmp;
+          tmp = (int32_T)CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt + (int32_T)
+            ((uint16_T)VehStat_ModMgmt_RunStep);
+          if (tmp > 65535) {
+            tmp = 65535;
+          }
+
+          CtAp_VehStat_ARID_DEF.ModMgmt_HvStsCnt = (uint16_T)tmp;
+        }
+
+        /* End of Outputs for SubSystem: '<S2>/CtAp_VehStat_Input' */
+      }
+      break;
+    }
+  }
+
+  /* End of Chart: '<S7>/ModMgmt_HvStatusFlow' */
+  /* End of Outputs for SubSystem: '<S2>/CtAp_VehStat_Function' */
+
+  /* Outputs for Atomic SubSystem: '<S2>/CtAp_VehStat_Output' */
+  /* Outport: '<Root>/RTE_P_ModMgmt_HvSts_Enum_tec_ModMgmt_HvSts_Enum' incorporates:
+   *  SignalConversion: '<S6>/SignalCopy'
+   */
+  (void)Rte_Write_RTE_P_ModMgmt_HvSts_Enum_tec_ModMgmt_HvSts_Enum
+    (rtb_ModMgmt_HvSts_Enum);
+
+  /* Outport: '<Root>/RTE_P_ModMgmt_ReqSleep_Flg_tec_ModMgmt_ReqSleep_Flg' incorporates:
+   *  SignalConversion: '<S6>/SignalCopy1'
+   */
+  (void)Rte_Write_RTE_P_ModMgmt_ReqSleep_Flg_tec_ModMgmt_ReqSleep_Flg
+    (rtb_ModMgmt_ReqSleep_Flg);
+
+  /* End of Outputs for SubSystem: '<S2>/CtAp_VehStat_Output' */
+  /* End of Outputs for SubSystem: '<Root>/R_VehStat_Cyclic_20ms_sys' */
 }
-
-/**********************************************************************************************************************
- *
- * Runnable Entity Name: R_VehStat_Init
- *
- *---------------------------------------------------------------------------------------------------------------------
- *
- * Executed once after the RTE is started
- *
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
- * Symbol: R_VehStat_Init_doc
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-FUNC(void, CtAp_VehStat_CODE) R_VehStat_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
-{
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
- * Symbol: R_VehStat_Init
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-}
-
 
 #define CtAp_VehStat_STOP_SEC_CODE
-#include "CtAp_VehStat_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#include "CtAp_VehStat_MemMap.h"
 
+/* Model initialize function */
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of function definition area >>            DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
+/* SwAddrMethod VAR_CONST_8 for Runnable */
+#define CtAp_VehStat_START_SEC_VAR_CONST_8
+#include "CtAp_VehStat_MemMap.h"
 
+void R_VehStat_Init(void)
+{
+  /* Registration code */
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of function definition area >>              DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
+  /* Initialize PublicStructure Variables for Internal Data */
+  (void) memset((void *)&CtAp_VehStat_ARID_DEF, 0,
+                sizeof(ARID_DEF_CtAp_VehStat_T));
+}
 
+#define CtAp_VehStat_STOP_SEC_VAR_CONST_8
+#include "CtAp_VehStat_MemMap.h"
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of removed code area >>                   DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of removed code area >>                     DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-/**********************************************************************************************************************
- MISRA 2012 violations and justifications
- *********************************************************************************************************************/
-
-/* module specific MISRA deviations:
-   MD_Rte_0624:  MISRA rule: Rule8.3
-     Reason:     This MISRA violation is a consequence from the RTE requirements [SWS_Rte_01007] [SWS_Rte_01150].
-                 The typedefs are never used in the same context.
-     Risk:       No functional risk. Only a cast to uint8* is performed.
-     Prevention: Not required.
-
-   MD_Rte_3206:  MISRA rule: Rule2.7
-     Reason:     The parameter are not used by the code in all possible code variants.
-     Risk:       No functional risk.
-     Prevention: Not required.
-
-*/
+/*
+ * File trailer for generated code.
+ *
+ * [EOF]
+ */

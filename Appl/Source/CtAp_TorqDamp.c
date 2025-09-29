@@ -1,194 +1,184 @@
-/**********************************************************************************************************************
- *  FILE REQUIRES USER MODIFICATIONS
- *  Template Scope: sections marked with Start and End comments
- *  -------------------------------------------------------------------------------------------------------------------
- *  This file includes template code that must be completed and/or adapted during BSW integration.
- *  The template code is incomplete and only intended for providing a signature and an empty implementation.
- *  It is neither intended nor qualified for use in series production without applying suitable quality measures.
- *  The template code must be completed as described in the instructions given within this file and/or in the.
- *  Technical Reference.
- *  The completed implementation must be tested with diligent care and must comply with all quality requirements which.
- *  are necessary according to the state of the art before its use.
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- *  FILE DESCRIPTION
- *  -------------------------------------------------------------------------------------------------------------------
- *             File:  CtAp_TorqDamp.c
- *           Config:  TC37X_VCU.dpa
- *        SW-C Type:  CtAp_TorqDamp
+/*
+ *************************************************************************
+ *                                                                       *
+ *                           ATOM GMBH                                   *
+ *                        VCU SoftWare Team                              *
+ *                                                                       *
+ *                       All rights reserved                             *
+ *                                                                       *
+ *************************************************************************
+ */
+/*******************************************************************************
+ *  FILE INFORMATION:
+ *  Filename:           CtAp_TorqDamp.c
+ *  File Creation Date: 14-Apr-2025
+ *  Model Name:         CtAp_TorqDamp
+ *  Model Version:      1.23
+ *  Model Author:       Mike Ni - Thu Aug 01 13:57:30 2024
+ *  Simulink Coder version         : 9.8 (R2022b) 13-May-2022
+ *  C/C++ source code generated on : Mon Apr 14 18:18:38 2025
  *
- *        Generator:  MICROSAR RTE Generator Version 4.26.0
- *                    RTE Core Version 1.26.0
- *          License:  CBD2101138
+ * Target selection: autosar.tlc
+ * Embedded hardware selection: Infineon->TriCore
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+
+ *  MODIFICATION HISTORY:
+ *  Last Saved Modification:  Mike Ni - Mon Apr 14 18:17:52 2025
  *
- *      Description:  C-Code implementation template for SW-C <CtAp_TorqDamp>
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of version logging area >>                DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-/* PRQA S 0777, 0779 EOF */ /* MD_MSR_Rule5.1, MD_MSR_Rule5.2 */
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of version logging area >>                  DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-#include "Rte_CtAp_TorqDamp.h"
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
  *
- * Used AUTOSAR Data Types
- *
- **********************************************************************************************************************
- *
- * Primitive Types:
- * ================
- * boolean: Boolean (standard type)
- * float32: Real in interval [-FLT_MAX...FLT_MAX] with single precision (standard type)
- * uint8: Integer in interval [0...255] (standard type)
- *
- *********************************************************************************************************************/
+ *******************************************************************************/
+#include "CtAp_TorqDamp.h"
+#include "rtwtypes.h"
+#include "CtAp_TorqDamp_Glb.h"
+#include "CtAp_TorqDamp_Cal.h"
 
+/*  Defines */
 
+/*  Data Types */
+
+/**************************** GLOBAL DATA *************************************/
+/*  Definitions */
+
+/*  Declarations  */
+
+/***************************** FILE SCOPE DATA ********************************/
+
+/*************************** FUNCTIONS ****************************************/
+
+/* Model step function */
+
+/* SwAddrMethod CODE for Runnable */
 #define CtAp_TorqDamp_START_SEC_CODE
-#include "CtAp_TorqDamp_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#include "CtAp_TorqDamp_MemMap.h"
 
-/**********************************************************************************************************************
- *
- * Runnable Entity Name: R_TorqDamp_Cyclic_10ms
- *
- *---------------------------------------------------------------------------------------------------------------------
- *
- * Executed if at least one of the following trigger conditions occurred:
- *   - triggered on TimingEvent every 10ms
- *
- **********************************************************************************************************************
- *
- * Input Interfaces:
- * =================
- *   Explicit S/R API:
- *   -----------------
- *   Std_ReturnType Rte_Read_RTE_R_ComM_IBSReqIncTqSts_Flg_tec_ComM_IBSReqIncTqSts_Flg(boolean *data)
- *   Std_ReturnType Rte_Read_RTE_R_ComM_IBSReqRednTqSts_Flg_tec_ComM_IBSReqRednTqSts_Flg(boolean *data)
- *   Std_ReturnType Rte_Read_RTE_R_ErrMgmt_ImdtZeroTq_Flg_tec_ErrMgmt_ImdtZeroTq_Flg(boolean *data)
- *   Std_ReturnType Rte_Read_RTE_R_FctSftyMon_ActGear_Enum_tec_FctSftyMon_ActGear_Enum(uint8 *data)
- *   Std_ReturnType Rte_Read_RTE_R_ModMgmt_HvSts_Enum_tec_ModMgmt_HvSts_Enum(uint8 *data)
- *   Std_ReturnType Rte_Read_RTE_R_TorqPahMgmt_MotDftlProtnActv_tec_TorqPahMgmt_MotDftlProtnActv(boolean *data)
- *
- * Output Interfaces:
- * ==================
- *   Explicit S/R API:
- *   -----------------
- *   Std_ReturnType Rte_Write_RTE_P_TorqPahMgmt_MotDampLmtTq_tec_TorqPahMgmt_MotDampLmtTq(float32 data)
- *   Std_ReturnType Rte_Write_RTE_P_TorqPahMgmt_ReqMotDampSts_Enum_tec_TorqPahMgmt_ReqMotDampSts_Enum(uint8 data)
- *
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
- * Symbol: R_TorqDamp_Cyclic_10ms_doc
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-FUNC(void, CtAp_TorqDamp_CODE) R_TorqDamp_Cyclic_10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+void R_TorqDamp_Cyclic_10ms(void)
 {
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
- * Symbol: R_TorqDamp_Cyclic_10ms
- *********************************************************************************************************************/
+  /* local block i/o variables */
+  uint8_T rtb_FctSftyMon_ActGear_Enum;
+  uint8_T tmpRead;
+  boolean_T tmpRead_0;
+  boolean_T tmpRead_1;
+  boolean_T tmpRead_2;
+  boolean_T tmpRead_3;
 
+  /* Inport: '<Root>/RTE_R_TorqPahMgmt_MotDftlProtnActv_tec_TorqPahMgmt_MotDftlProtnActv' */
+  (void)
+    Rte_Read_RTE_R_TorqPahMgmt_MotDftlProtnActv_tec_TorqPahMgmt_MotDftlProtnActv
+    (&tmpRead_3);
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
+  /* Inport: '<Root>/RTE_R_ErrMgmt_ImdtZeroTq_Flg_tec_ErrMgmt_ImdtZeroTq_Flg' */
+  (void)Rte_Read_RTE_R_ErrMgmt_ImdtZeroTq_Flg_tec_ErrMgmt_ImdtZeroTq_Flg
+    (&tmpRead_2);
+
+  /* Inport: '<Root>/RTE_R_ComM_IBSReqRednTqSts_Flg_tec_ComM_IBSReqRednTqSts_Flg' */
+  (void)Rte_Read_RTE_R_ComM_IBSReqRednTqSts_Flg_tec_ComM_IBSReqRednTqSts_Flg
+    (&tmpRead_1);
+
+  /* Inport: '<Root>/RTE_R_ComM_IBSReqIncTqSts_Flg_tec_ComM_IBSReqIncTqSts_Flg' */
+  (void)Rte_Read_RTE_R_ComM_IBSReqIncTqSts_Flg_tec_ComM_IBSReqIncTqSts_Flg
+    (&tmpRead_0);
+
+  /* Inport: '<Root>/RTE_R_ModMgmt_HvSts_Enum_tec_ModMgmt_HvSts_Enum' */
+  (void)Rte_Read_RTE_R_ModMgmt_HvSts_Enum_tec_ModMgmt_HvSts_Enum(&tmpRead);
+
+  /* SignalConversion: '<S4>/SignalCopy3' incorporates:
+   *  Inport: '<Root>/RTE_R_FctSftyMon_ActGear_Enum_tec_FctSftyMon_ActGear_Enum'
+   */
+  (void)Rte_Read_RTE_R_FctSftyMon_ActGear_Enum_tec_FctSftyMon_ActGear_Enum
+    (&rtb_FctSftyMon_ActGear_Enum);
+
+  /* Outputs for Atomic SubSystem: '<Root>/R_TorqDamp_Cyclic_10ms_sys' */
+  /* Outputs for Atomic SubSystem: '<S2>/Function'
+   *
+   * Block requirements for '<S2>/Function':
+   *  1. SWREQ_01893 Motor Active Damping control Active
+   *  2. SWREQ_01894 Motor Active Damping control Inactive
+   *  3. SWREQ_06436 Motor Active Damping Torque
+   */
+  /* Outputs for Atomic SubSystem: '<S2>/CtAp_TorqDamp_Input'
+   *
+   * Block requirements for '<S2>/CtAp_TorqDamp_Input':
+   *  1. SWREQ_01887 The function of "Torque Dampling" has the following inputs:
+   */
+  /* Switch: '<S6>/Switch' incorporates:
+   *  Constant: '<S6>/TorqDamp_DRIVE_READY'
+   *  Logic: '<S6>/LogicalOperator1'
+   *  Logic: '<S6>/LogicalOperator2'
+   *  Logic: '<S6>/LogicalOperator3'
+   *  Logic: '<S6>/LogicalOperator4'
+   *  Logic: '<S6>/LogicalOperator5'
+   *  RelationalOperator: '<S6>/RelationalOperator2'
+   *  SignalConversion: '<S4>/SignalCopy'
+   *  SignalConversion: '<S4>/SignalCopy1'
+   *  SignalConversion: '<S4>/SignalCopy2'
+   *  SignalConversion: '<S4>/SignalCopy4'
+   *  SignalConversion: '<S4>/SignalCopy5'
+   */
+  if (!tmpRead_0 && !tmpRead_1 && !tmpRead_2 && (tmpRead == ((uint8_T)
+        TorqDamp_DRIVE_READY)) && !tmpRead_3) {
+    /* Switch: '<S6>/Switch' incorporates:
+     *  Constant: '<S6>/TorqDamp_DstC_EXT'
+     */
+    TorqPahMgmt_ReqMotDampSts_Enum = ((uint8_T)TorqDamp_DstC_EXT);
+  } else {
+    /* Switch: '<S6>/Switch' incorporates:
+     *  Constant: '<S6>/TorqDamp_DstC_OFF'
+     */
+    TorqPahMgmt_ReqMotDampSts_Enum = ((uint8_T)TorqDamp_DstC_OFF);
+  }
+
+  /* End of Switch: '<S6>/Switch' */
+  /* End of Outputs for SubSystem: '<S2>/CtAp_TorqDamp_Input' */
+  /* End of Outputs for SubSystem: '<S2>/Function' */
+
+  /* Outputs for Atomic SubSystem: '<S2>/CtAp_TorqDamp_Output'
+   *
+   * Block requirements for '<S2>/CtAp_TorqDamp_Output':
+   *  1. SWREQ_01889 The function of "Torque Dampling" has the following outputs:
+   */
+  /* Outport: '<Root>/RTE_P_TorqPahMgmt_ReqMotDampSts_Enum_tec_TorqPahMgmt_ReqMotDampSts_Enum' incorporates:
+   *  SignalConversion: '<S5>/SignalCopy'
+   */
+  (void)
+    Rte_Write_RTE_P_TorqPahMgmt_ReqMotDampSts_Enum_tec_TorqPahMgmt_ReqMotDampSts_Enum
+    (TorqPahMgmt_ReqMotDampSts_Enum);
+
+  /* Outport: '<Root>/RTE_P_TorqPahMgmt_MotDampLmtTq_tec_TorqPahMgmt_MotDampLmtTq' incorporates:
+   *  Constant: '<S6>/TorqPahMgmt_MotDampLmtTq_CFG'
+   *  SignalConversion: '<S5>/SignalCopy1'
+   */
+  (void)Rte_Write_RTE_P_TorqPahMgmt_MotDampLmtTq_tec_TorqPahMgmt_MotDampLmtTq
+    (TorqPahMgmt_MotDampLmtTq_CFG);
+
+  /* End of Outputs for SubSystem: '<S2>/CtAp_TorqDamp_Output' */
+  /* End of Outputs for SubSystem: '<Root>/R_TorqDamp_Cyclic_10ms_sys' */
 }
-
-/**********************************************************************************************************************
- *
- * Runnable Entity Name: R_TorqDamp_Init
- *
- *---------------------------------------------------------------------------------------------------------------------
- *
- * Executed once after the RTE is started
- *
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
- * Symbol: R_TorqDamp_Init_doc
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-FUNC(void, CtAp_TorqDamp_CODE) R_TorqDamp_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
-{
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
- * Symbol: R_TorqDamp_Init
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-}
-
 
 #define CtAp_TorqDamp_STOP_SEC_CODE
-#include "CtAp_TorqDamp_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#include "CtAp_TorqDamp_MemMap.h"
 
+/* Model initialize function */
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of function definition area >>            DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
+/* SwAddrMethod VAR_CONST_8 for Runnable */
+#define CtAp_TorqDamp_START_SEC_VAR_CONST_8
+#include "CtAp_TorqDamp_MemMap.h"
 
+void R_TorqDamp_Init(void)
+{
+  /* Registration code */
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of function definition area >>              DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
+  /* block I/O */
 
+  /* custom signals */
+  TorqPahMgmt_ReqMotDampSts_Enum = ((uint8_T)3U);
+}
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of removed code area >>                   DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
+#define CtAp_TorqDamp_STOP_SEC_VAR_CONST_8
+#include "CtAp_TorqDamp_MemMap.h"
 
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of removed code area >>                     DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-/**********************************************************************************************************************
- MISRA 2012 violations and justifications
- *********************************************************************************************************************/
-
-/* module specific MISRA deviations:
-   MD_Rte_0624:  MISRA rule: Rule8.3
-     Reason:     This MISRA violation is a consequence from the RTE requirements [SWS_Rte_01007] [SWS_Rte_01150].
-                 The typedefs are never used in the same context.
-     Risk:       No functional risk. Only a cast to uint8* is performed.
-     Prevention: Not required.
-
-   MD_Rte_3206:  MISRA rule: Rule2.7
-     Reason:     The parameter are not used by the code in all possible code variants.
-     Risk:       No functional risk.
-     Prevention: Not required.
-
-*/
+/*
+ * File trailer for generated code.
+ *
+ * [EOF]
+ */

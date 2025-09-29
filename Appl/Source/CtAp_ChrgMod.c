@@ -1,190 +1,104 @@
-/**********************************************************************************************************************
- *  FILE REQUIRES USER MODIFICATIONS
- *  Template Scope: sections marked with Start and End comments
- *  -------------------------------------------------------------------------------------------------------------------
- *  This file includes template code that must be completed and/or adapted during BSW integration.
- *  The template code is incomplete and only intended for providing a signature and an empty implementation.
- *  It is neither intended nor qualified for use in series production without applying suitable quality measures.
- *  The template code must be completed as described in the instructions given within this file and/or in the.
- *  Technical Reference.
- *  The completed implementation must be tested with diligent care and must comply with all quality requirements which.
- *  are necessary according to the state of the art before its use.
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- *  FILE DESCRIPTION
- *  -------------------------------------------------------------------------------------------------------------------
- *             File:  CtAp_ChrgMod.c
- *           Config:  TC37X_VCU.dpa
- *        SW-C Type:  CtAp_ChrgMod
- *
- *        Generator:  MICROSAR RTE Generator Version 4.26.0
- *                    RTE Core Version 1.26.0
- *          License:  CBD2101138
- *
- *      Description:  C-Code implementation template for SW-C <CtAp_ChrgMod>
- *********************************************************************************************************************/
+/**
+ *******************************************************************************
+ **  FILE INFORMATION:
+ **  Filename:           CtAp_ChrgMod.c
+ **  File Creation Date: 21-Aug-2024
+ **
+ **  ABSTRACT:
+ **
+ **
+ **  NOTES:
+ **
+ **
+ **  MODEL INFORMATION:
+ **  Model Name:         CtAp_ChrgMod
+ **  Model Description:
+ **  Model Version:      1.001
+ **  Model Author:       Mike Ni - Thu Aug 01 14:00:34 2024
+ **
+ **  MODIFICATION HISTORY:
+ **  Model at Code Generation: TaoWang - Wed Aug 21 16:59:55 2024
+ **
+ **  Last Saved Modification:  TaoWang - Wed Aug 21 14:22:13 2024
+ **
+ **
+ *******************************************************************************
+ **/
 
+#include "CtAp_ChrgMod.h"
+#include "rtwtypes.h"
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of version logging area >>                DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
+/*  Defines */
+#define CtAp_ChrgMod_START_SEC_VAR_FAST_NOINIT_8
+#include "CtAp_ChrgMod_MemMap.h"       /* PRQA S 5087 *//* MD_MSR_MemMap */
+#define CtAp_ChrgMod_STOP_SEC_VAR_FAST_NOINIT_8
+#include "CtAp_ChrgMod_MemMap.h"       /* PRQA S 5087 *//* MD_MSR_MemMap */
 
-/* PRQA S 0777, 0779 EOF */ /* MD_MSR_Rule5.1, MD_MSR_Rule5.2 */
+/*  Data Types */
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of version logging area >>                  DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
+/**************************** GLOBAL DATA *************************************/
+/*  Definitions */
 
-#include "Rte_CtAp_ChrgMod.h"
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- *
- * Used AUTOSAR Data Types
- *
- **********************************************************************************************************************
- *
- * Primitive Types:
- * ================
- * float32: Real in interval [-FLT_MAX...FLT_MAX] with single precision (standard type)
- * uint8: Integer in interval [0...255] (standard type)
- *
- *********************************************************************************************************************/
-
-
+/*  Declarations  */
 #define CtAp_ChrgMod_START_SEC_CODE
-#include "CtAp_ChrgMod_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#include "CtAp_ChrgMod_MemMap.h"       /* PRQA S 5087 *//* MD_MSR_MemMap */
 
-/**********************************************************************************************************************
- *
- * Runnable Entity Name: R_ChrgMod_Cyclic_50ms
- *
- *---------------------------------------------------------------------------------------------------------------------
- *
- * Executed if at least one of the following trigger conditions occurred:
- *   - triggered on TimingEvent every 50ms
- *
- **********************************************************************************************************************
- *
- * Input Interfaces:
- * =================
- *   Explicit S/R API:
- *   -----------------
- *   Std_ReturnType Rte_Read_RTE_R_ChrMgmt_PreheatSts_Enum_tec_ChrMgmt_PreheatSts_Enum(uint8 *data)
- *   Std_ReturnType Rte_Read_RTE_R_ComM_BMSBattDispSOC_pct_tec_ComM_BMSBattDispSOC_pct(float32 *data)
- *   Std_ReturnType Rte_Read_RTE_R_ComM_BattChrgnModReq_Enum_tec_ComM_BattChrgnModReq_Enum(uint8 *data)
- *   Std_ReturnType Rte_Read_RTE_R_DCChrMgmt_DcChrgnSts_Enum_tec_DCChrMgmt_DcChrgnSts_Enum(uint8 *data)
- *
- * Output Interfaces:
- * ==================
- *   Explicit S/R API:
- *   -----------------
- *   Std_ReturnType Rte_Write_RTE_P_DCChrMgmt_DcChrgnMod_Enum_tec_DCChrMgmt_DcChrgnMod_Enum(uint8 data)
- *
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
- * Symbol: R_ChrgMod_Cyclic_50ms_doc
- *********************************************************************************************************************/
+/***************************** FILE SCOPE DATA ********************************/
 
+/*************************** FUNCTIONS ****************************************/
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-FUNC(void, CtAp_ChrgMod_CODE) R_ChrgMod_Cyclic_50ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+/* Model step function */
+void R_ChrgMod_Cyclic_50ms(void)
 {
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
- * Symbol: R_ChrgMod_Cyclic_50ms
- *********************************************************************************************************************/
+  uint8_T tmpRead;
 
+  /* Inport: '<Root>/RTE_R_ComM_BattChrgnModReq_Enum_tec_ComM_BattChrgnModReq_Enum' */
+  (void)Rte_Read_RTE_R_ComM_BattChrgnModReq_Enum_tec_ComM_BattChrgnModReq_Enum
+    (&tmpRead);
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
+  /* Outputs for Atomic SubSystem: '<Root>/R_ChrgMod_Cyclic_50ms_sys' */
+  /* Outputs for Atomic SubSystem: '<S1>/Subsystem' */
+  /* Outport: '<Root>/RTE_P_DCChrMgmt_DcChrgnMod_Enum_tec_DCChrMgmt_DcChrgnMod_Enum' incorporates:
+   *  DataTypeConversion: '<S3>/Data Type Conversion'
+   */
+  (void)Rte_Write_RTE_P_DCChrMgmt_DcChrgnMod_Enum_tec_DCChrMgmt_DcChrgnMod_Enum
+    (tmpRead);
+
+  /* End of Outputs for SubSystem: '<S1>/Subsystem' */
+  /* End of Outputs for SubSystem: '<Root>/R_ChrgMod_Cyclic_50ms_sys' */
 }
 
-/**********************************************************************************************************************
- *
- * Runnable Entity Name: R_ChrgMod_Init
- *
- *---------------------------------------------------------------------------------------------------------------------
- *
- * Executed once after the RTE is started
- *
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
- * Symbol: R_ChrgMod_Init_doc
- *********************************************************************************************************************/
+/* Model initialize function */
 
+/* SwAddrMethod VAR_CONST_8 for Runnable */
+#define CtAp_ChrgMod_START_SEC_VAR_CONST_8
+#include "CtAp_ChrgMod_MemMap.h"
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-FUNC(void, CtAp_ChrgMod_CODE) R_ChrgMod_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+void R_ChrgMod_Init(void)
 {
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
- * Symbol: R_ChrgMod_Init
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
+  /* (no initialization code required) */
 }
 
+#define CtAp_ChrgMod_STOP_SEC_VAR_CONST_8
+#include "CtAp_ChrgMod_MemMap.h"
 
+/*======================== TOOL VERSION INFORMATION ==========================*
+ * MATLAB 9.13 (R2022b)13-May-2022                                            *
+ * Simulink 10.6 (R2022b)13-May-2022                                          *
+ * Simulink Coder 9.8 (R2022b)13-May-2022                                     *
+ * Embedded Coder 7.9 (R2022b)13-May-2022                                     *
+ * Stateflow 10.7 (R2022b)13-May-2022                                         *
+ * Fixed-Point Designer 7.5 (R2022b)13-May-2022                               *
+ *============================================================================*/
+
+/*======================= LICENSE IN USE INFORMATION =========================*
+ * autosar_blockset                                                           *
+ * matlab                                                                     *
+ * matlab_coder                                                               *
+ * real-time_workshop                                                         *
+ * rtw_embedded_coder                                                         *
+ * simulink                                                                   *
+ * stateflow                                                                  *
+ *============================================================================*/
 #define CtAp_ChrgMod_STOP_SEC_CODE
-#include "CtAp_ChrgMod_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of function definition area >>            DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of function definition area >>              DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of removed code area >>                   DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of removed code area >>                     DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-/**********************************************************************************************************************
- MISRA 2012 violations and justifications
- *********************************************************************************************************************/
-
-/* module specific MISRA deviations:
-   MD_Rte_0624:  MISRA rule: Rule8.3
-     Reason:     This MISRA violation is a consequence from the RTE requirements [SWS_Rte_01007] [SWS_Rte_01150].
-                 The typedefs are never used in the same context.
-     Risk:       No functional risk. Only a cast to uint8* is performed.
-     Prevention: Not required.
-
-   MD_Rte_3206:  MISRA rule: Rule2.7
-     Reason:     The parameter are not used by the code in all possible code variants.
-     Risk:       No functional risk.
-     Prevention: Not required.
-
-*/
+#include "CtAp_ChrgMod_MemMap.h"       /* PRQA S 5087 *//* MD_MSR_MemMap */
