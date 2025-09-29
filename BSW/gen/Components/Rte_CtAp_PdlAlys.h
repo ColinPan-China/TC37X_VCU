@@ -67,10 +67,6 @@ extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_IBSBrkSts_Enum_te
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_IBSCdpActv_Flg_tec_ComM_IBSCdpActv_Flg;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_IBSRwuActv_Flg_tec_ComM_IBSRwuActv_Flg;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ComMErr_RTE_P_ComM_NodComFailr_tec_ComM_CHIBSNodComFailr_Flg;
-extern VAR(uint16, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedl1SplyVoltInfo_tec_IOAbs_AccrPedl1SplyVoltInfo;
-extern VAR(uint16, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedl2SplyVoltInfo_tec_IOAbs_AccrPedl2SplyVoltInfo;
-extern VAR(uint16, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV;
-extern VAR(uint16, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_LvBattMgmt_RTE_P_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg;
 
 #  define RTE_STOP_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
@@ -166,13 +162,17 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_PdlAlys_RTE_R_ComM_IBSSts01MsgErrIn
 
 #  define Rte_Read_CtAp_PdlAlys_RTE_R_DiagApp_DisableDCMReqInfo_tec_DiagApp_DisableDCMReqInfo(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED))
 #  define Rte_Read_RTE_R_IOAbs_AccrPedl1SplyVoltInfo_tec_IOAbs_AccrPedl1SplyVoltInfo Rte_Read_CtAp_PdlAlys_RTE_R_IOAbs_AccrPedl1SplyVoltInfo_tec_IOAbs_AccrPedl1SplyVoltInfo
-#  define Rte_Read_CtAp_PdlAlys_RTE_R_IOAbs_AccrPedl1SplyVoltInfo_tec_IOAbs_AccrPedl1SplyVoltInfo(data) (*(data) = Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedl1SplyVoltInfo_tec_IOAbs_AccrPedl1SplyVoltInfo, ((Std_ReturnType)RTE_E_OK))
+
+#  define Rte_Read_CtAp_PdlAlys_RTE_R_IOAbs_AccrPedl1SplyVoltInfo_tec_IOAbs_AccrPedl1SplyVoltInfo(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED))
 #  define Rte_Read_RTE_R_IOAbs_AccrPedl2SplyVoltInfo_tec_IOAbs_AccrPedl2SplyVoltInfo Rte_Read_CtAp_PdlAlys_RTE_R_IOAbs_AccrPedl2SplyVoltInfo_tec_IOAbs_AccrPedl2SplyVoltInfo
-#  define Rte_Read_CtAp_PdlAlys_RTE_R_IOAbs_AccrPedl2SplyVoltInfo_tec_IOAbs_AccrPedl2SplyVoltInfo(data) (*(data) = Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedl2SplyVoltInfo_tec_IOAbs_AccrPedl2SplyVoltInfo, ((Std_ReturnType)RTE_E_OK))
+
+#  define Rte_Read_CtAp_PdlAlys_RTE_R_IOAbs_AccrPedl2SplyVoltInfo_tec_IOAbs_AccrPedl2SplyVoltInfo(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED))
 #  define Rte_Read_RTE_R_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV Rte_Read_CtAp_PdlAlys_RTE_R_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV
-#  define Rte_Read_CtAp_PdlAlys_RTE_R_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV(data) (*(data) = Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV, ((Std_ReturnType)RTE_E_OK))
+
+#  define Rte_Read_CtAp_PdlAlys_RTE_R_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED))
 #  define Rte_Read_RTE_R_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV Rte_Read_CtAp_PdlAlys_RTE_R_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV
-#  define Rte_Read_CtAp_PdlAlys_RTE_R_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV(data) (*(data) = Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV, ((Std_ReturnType)RTE_E_OK))
+
+#  define Rte_Read_CtAp_PdlAlys_RTE_R_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED))
 #  define Rte_Read_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg Rte_Read_CtAp_PdlAlys_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg
 #  define Rte_Read_CtAp_PdlAlys_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg(data) (*(data) = Rte_CtAp_LvBattMgmt_RTE_P_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg, ((Std_ReturnType)RTE_E_OK))
 

@@ -132,7 +132,6 @@ extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ChrgSeqCtrl_RTE_P_DCChrMgmt_TxSts_Flg
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ChrgSeqCtrl_RTE_P_DCChrMgmt_TxSts_Flg_tec_DCChrMgmt_TxBSMSts_Flg;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ChrgSeqCtrl_RTE_P_DCChrMgmt_TxSts_Flg_tec_DCChrMgmt_TxBSTSts_Flg;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_HVSfty_RTE_P_ErrMgmt_VCUHVILErr_Flg_tec_ErrMgmt_VCUHVILErr_Flg;
-extern VAR(uint16, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_LvBattMgmt_RTE_P_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg;
 
 #  define RTE_STOP_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
@@ -372,7 +371,8 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_ChrgComM_RTE_P_DCChrMgmt_DcPortTem
 #  define Rte_Read_RTE_R_ErrMgmt_VCUHVILErr_Flg_tec_ErrMgmt_VCUHVILErr_Flg Rte_Read_CtAp_ChrgComM_RTE_R_ErrMgmt_VCUHVILErr_Flg_tec_ErrMgmt_VCUHVILErr_Flg
 #  define Rte_Read_CtAp_ChrgComM_RTE_R_ErrMgmt_VCUHVILErr_Flg_tec_ErrMgmt_VCUHVILErr_Flg(data) (*(data) = Rte_CtAp_HVSfty_RTE_P_ErrMgmt_VCUHVILErr_Flg_tec_ErrMgmt_VCUHVILErr_Flg, ((Std_ReturnType)RTE_E_OK))
 #  define Rte_Read_RTE_R_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV Rte_Read_CtAp_ChrgComM_RTE_R_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV
-#  define Rte_Read_CtAp_ChrgComM_RTE_R_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV(data) (*(data) = Rte_CtAp_HWHandler_RTE_P_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV, ((Std_ReturnType)RTE_E_OK))
+
+#  define Rte_Read_CtAp_ChrgComM_RTE_R_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED))
 #  define Rte_Read_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg Rte_Read_CtAp_ChrgComM_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg
 #  define Rte_Read_CtAp_ChrgComM_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg(data) (*(data) = Rte_CtAp_LvBattMgmt_RTE_P_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg, ((Std_ReturnType)RTE_E_OK))
 

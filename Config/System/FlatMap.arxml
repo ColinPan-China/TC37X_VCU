@@ -11669,22 +11669,6 @@
                                     <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CtAp_GearCal</TARGET-REF>
                                   </ECU-EXTRACT-REFERENCE-IREF>
                                 </FLAT-INSTANCE-DESCRIPTOR>
-                                <FLAT-INSTANCE-DESCRIPTOR UUID="b00327c3-7737-4dbc-ab19-f6eed5f2922b">
-                                  <SHORT-NAME>CtAp_HWHandler</SHORT-NAME>
-                                  <ANNOTATIONS>
-                                    <ANNOTATION>
-                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
-                                    </ANNOTATION>
-                                  </ANNOTATIONS>
-                                  <UPSTREAM-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/VehicleProject/System/EcuSwComposition</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_HWHandler</TARGET-REF>
-                                  </UPSTREAM-REFERENCE-IREF>
-                                  <ECU-EXTRACT-REFERENCE-IREF>
-                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
-                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/CtAp_HWHandler</TARGET-REF>
-                                  </ECU-EXTRACT-REFERENCE-IREF>
-                                </FLAT-INSTANCE-DESCRIPTOR>
                                 <FLAT-INSTANCE-DESCRIPTOR UUID="0ee6cbaa-7b71-4864-b37d-dd3219796432">
                                   <SHORT-NAME>CtAp_LINHandler</SHORT-NAME>
                                   <ANNOTATIONS>

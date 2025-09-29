@@ -62,7 +62,6 @@ extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_DCDCWrkMod_Enum_t
 extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_MCUWrkMod_Enum_tec_ComM_MCUWrkMod_Enum;
 extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_OBCChrgSts_Enum_tec_ComM_OBCChrgSts_Enum;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_OBCLostSpcInfo_tec_ComM_OBCLostSpcInfo;
-extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg;
 extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_WakeUpRsn_RTE_P_LvMgmt_AppNMReqInfo_tec_LvMgmt_AppNMReqInfo;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_LvBattMgmt_RTE_P_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_WakeUpRsn_RTE_P_LvMgmt_WakeUpReq_Flg_tec_LvMgmt_WakeUpReq_Flg;
@@ -132,7 +131,8 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ElSSDiag_RTE_R_ComM_CANBusOffInfo_B
 
 #  define Rte_Read_CtAp_ElSSDiag_RTE_R_DiagApp_DisableDCMReqInfo_tec_DiagApp_DisableDCMReqInfo(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED))
 #  define Rte_Read_RTE_R_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg Rte_Read_CtAp_ElSSDiag_RTE_R_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg
-#  define Rte_Read_CtAp_ElSSDiag_RTE_R_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg(data) (*(data) = Rte_CtAp_HWHandler_RTE_P_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg, ((Std_ReturnType)RTE_E_OK))
+
+#  define Rte_Read_CtAp_ElSSDiag_RTE_R_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED))
 #  define Rte_Read_RTE_R_LvMgmt_AppNMReqInfo_tec_LvMgmt_AppNMReqInfo Rte_Read_CtAp_ElSSDiag_RTE_R_LvMgmt_AppNMReqInfo_tec_LvMgmt_AppNMReqInfo
 #  define Rte_Read_CtAp_ElSSDiag_RTE_R_LvMgmt_AppNMReqInfo_tec_LvMgmt_AppNMReqInfo(data) (*(data) = Rte_CtAp_WakeUpRsn_RTE_P_LvMgmt_AppNMReqInfo_tec_LvMgmt_AppNMReqInfo, ((Std_ReturnType)RTE_E_OK))
 #  define Rte_Read_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg Rte_Read_CtAp_ElSSDiag_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg

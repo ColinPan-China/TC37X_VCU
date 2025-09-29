@@ -53,7 +53,6 @@ extern "C"
 #  define RTE_START_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_HVSfty_RTE_P_ErrMgmt_HVILPwmFrq_Hz_tec_ErrMgmt_HVILPwmFrq_Hz;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_HVSfty_RTE_P_ErrMgmt_VCUHVILErr_Flg_tec_ErrMgmt_VCUHVILErr_Flg;
 extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_BMSCellHiTempErr_Enum_tec_ComM_BMSCellHiTempErr_Enum;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_BMSHVILSts_Flg_tec_ComM_BMSHVILSts_Flg;
@@ -63,7 +62,6 @@ extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_MCUTempOvrSts_Enu
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ComMErr_RTE_P_ComM_NodComFailr_tec_ComM_BMSNodComFailr_Flg;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_OBCSide1OvrTempFlt_Flg_tec_ComM_OBCSide1OvrTempFlt_Flg;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_OBCSide2OvrTempFlt_Flg_tec_ComM_OBCSide2OvrTempFlt_Flg;
-extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_LvBattMgmt_RTE_P_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg;
 
 #  define RTE_STOP_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
@@ -154,7 +152,8 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_HVSfty_RTE_P_ErrMgmt_VehHVIL_Bus_t
 
 #  define Rte_Read_CtAp_HVSfty_RTE_R_DiagApp_DisableDCMReqInfo_tec_DiagApp_DisableDCMReqInfo(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED))
 #  define Rte_Read_RTE_R_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz Rte_Read_CtAp_HVSfty_RTE_R_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz
-#  define Rte_Read_CtAp_HVSfty_RTE_R_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz(data) (*(data) = Rte_CtAp_HWHandler_RTE_P_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz, ((Std_ReturnType)RTE_E_OK))
+
+#  define Rte_Read_CtAp_HVSfty_RTE_R_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED))
 #  define Rte_Read_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg Rte_Read_CtAp_HVSfty_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg
 #  define Rte_Read_CtAp_HVSfty_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg(data) (*(data) = Rte_CtAp_LvBattMgmt_RTE_P_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg, ((Std_ReturnType)RTE_E_OK))
 
@@ -164,7 +163,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_HVSfty_RTE_P_ErrMgmt_VehHVIL_Bus_t
  *********************************************************************************************************************/
 #  define Rte_Write_RTE_P_ErrMgmt_DrvMotTempOvrLamp_Bus_tec_ErrMgmt_DrvMotTempOvrLamp_Bus Rte_Write_CtAp_HVSfty_RTE_P_ErrMgmt_DrvMotTempOvrLamp_Bus_tec_ErrMgmt_DrvMotTempOvrLamp_Bus
 #  define Rte_Write_RTE_P_ErrMgmt_HVILPwmFrq_Hz_tec_ErrMgmt_HVILPwmFrq_Hz Rte_Write_CtAp_HVSfty_RTE_P_ErrMgmt_HVILPwmFrq_Hz_tec_ErrMgmt_HVILPwmFrq_Hz
-#  define Rte_Write_CtAp_HVSfty_RTE_P_ErrMgmt_HVILPwmFrq_Hz_tec_ErrMgmt_HVILPwmFrq_Hz(data) (Rte_CtAp_HVSfty_RTE_P_ErrMgmt_HVILPwmFrq_Hz_tec_ErrMgmt_HVILPwmFrq_Hz = (data), ((Std_ReturnType)RTE_E_OK))
+#  define Rte_Write_CtAp_HVSfty_RTE_P_ErrMgmt_HVILPwmFrq_Hz_tec_ErrMgmt_HVILPwmFrq_Hz(data) (RTE_E_OK)
 #  define Rte_Write_RTE_P_ErrMgmt_HvBattTempOvrLamp_Bus_tec_ErrMgmt_HvBattTempOvrLamp_Bus Rte_Write_CtAp_HVSfty_RTE_P_ErrMgmt_HvBattTempOvrLamp_Bus_tec_ErrMgmt_HvBattTempOvrLamp_Bus
 #  define Rte_Write_RTE_P_ErrMgmt_InslaFlt_Bus_tec_ErrMgmt_InslaFlt_Bus Rte_Write_CtAp_HVSfty_RTE_P_ErrMgmt_InslaFlt_Bus_tec_ErrMgmt_InslaFlt_Bus
 #  define Rte_Write_RTE_P_ErrMgmt_VCUHVILDTC_Bus_tec_ErrMgmt_VCUHVILDTC_Bus Rte_Write_CtAp_HVSfty_RTE_P_ErrMgmt_VCUHVILDTC_Bus_tec_ErrMgmt_VCUHVILDTC_Bus

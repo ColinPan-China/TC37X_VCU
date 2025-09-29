@@ -67,7 +67,6 @@
 #include "Rte_CtAp_FltReactn.h"
 #include "Rte_CtAp_GearCal.h"
 #include "Rte_CtAp_HVSfty.h"
-#include "Rte_CtAp_HWHandler.h"
 #include "Rte_CtAp_LINHandler.h"
 #include "Rte_CtAp_LvBattMgmt.h"
 #include "Rte_CtAp_MCUMgmt.h"

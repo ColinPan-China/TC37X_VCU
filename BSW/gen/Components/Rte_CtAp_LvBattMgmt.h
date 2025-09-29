@@ -68,7 +68,6 @@ extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_IVILVLimPopInfo_t
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ComMErr_RTE_P_ComM_NodComFailr_tec_ComM_BCMNodComFailr_Flg;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ComMErr_RTE_P_ComM_NodComFailr_tec_ComM_IVINodComFailr_Flg;
 extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_PEPSPwrMod_Enum_tec_ComM_PEPSPwrMod_Enum;
-extern VAR(float32, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_BSBattUDc_V_tec_IOAbs_BSBattUDc_V;
 
 #  define RTE_STOP_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -156,7 +155,8 @@ extern VAR(float32, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_BSBattUDc_V_tec
 
 #  define Rte_Read_CtAp_LvBattMgmt_RTE_R_DiagApp_DisableDCMReqInfo_tec_DiagApp_DisableDCMReqInfo(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED))
 #  define Rte_Read_RTE_R_IOAbs_BSBattUDc_V_tec_IOAbs_BSBattUDc_V Rte_Read_CtAp_LvBattMgmt_RTE_R_IOAbs_BSBattUDc_V_tec_IOAbs_BSBattUDc_V
-#  define Rte_Read_CtAp_LvBattMgmt_RTE_R_IOAbs_BSBattUDc_V_tec_IOAbs_BSBattUDc_V(data) (*(data) = Rte_CtAp_HWHandler_RTE_P_IOAbs_BSBattUDc_V_tec_IOAbs_BSBattUDc_V, ((Std_ReturnType)RTE_E_OK))
+
+#  define Rte_Read_CtAp_LvBattMgmt_RTE_R_IOAbs_BSBattUDc_V_tec_IOAbs_BSBattUDc_V(data) (*(data) = 0.0F, ((Std_ReturnType)RTE_E_UNCONNECTED))
 
 
 /**********************************************************************************************************************

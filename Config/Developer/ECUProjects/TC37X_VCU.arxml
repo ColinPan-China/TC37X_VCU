@@ -12689,17 +12689,6 @@
               </ADMIN-DATA>
               <TYPE-TREF DEST="COMPOSITION-SW-COMPONENT-TYPE">/ComponentTypes/CtAp_GearMgmt</TYPE-TREF>
             </SW-COMPONENT-PROTOTYPE>
-            <SW-COMPONENT-PROTOTYPE UUID="4A3F1166-92EA-49B8-9344-6159E5B4DF28">
-              <SHORT-NAME>CtAp_HWHandler</SHORT-NAME>
-              <ADMIN-DATA>
-                <SDGS>
-                  <SDG GID="DV:DEV">
-                    <SD GID="DV:ImportModePreset">Keep</SD>
-                  </SDG>
-                </SDGS>
-              </ADMIN-DATA>
-              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/CtAp_HWHandler</TYPE-TREF>
-            </SW-COMPONENT-PROTOTYPE>
             <SW-COMPONENT-PROTOTYPE UUID="04930306-5BB6-44D1-8C20-24C7C9DB480F">
               <SHORT-NAME>CtAp_LINHandler</SHORT-NAME>
               <ADMIN-DATA>
@@ -18011,105 +18000,6 @@
                 <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_ChassisMgmt/RTE_R_ComM_IBSRbsReqTqVld_Enum</TARGET-R-PORT-REF>
               </REQUESTER-IREF>
             </ASSEMBLY-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="63F8A4B7-8084-46A7-9A25-A477DBAAF7D1">
-              <SHORT-NAME>CtAp_ErrMgmt_RTE_P_ErrMgmt_HVILPwmFrq_Hz_CtAp_HWHandler_RTE_R_ErrMgmt_HVILPwmFrq_Hz</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_ErrMgmt</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/CtAp_ErrMgmt/RTE_P_ErrMgmt_HVILPwmFrq_Hz</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_HWHandler</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_HWHandler/RTE_R_ErrMgmt_HVILPwmFrq_Hz</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="29C18E23-BD27-417C-B29E-406F43555041">
-              <SHORT-NAME>CtAp_LvMgmt_RTE_P_LvMgmt_KL15CtrlReq_Flg_CtAp_HWHandler_RTE_R_LvMgmt_KL15CtrlReq_Flg</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_LvMgmt</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/CtAp_LvMgmt/RTE_P_LvMgmt_KL15CtrlReq_Flg</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_HWHandler</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_HWHandler/RTE_R_LvMgmt_KL15CtrlReq_Flg</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="9D16E471-02E1-439A-A506-6AAF78FD3F9C">
-              <SHORT-NAME>CtAp_HWHandler_RTE_P_IOAbs_BSBattUDc_V_CtAp_LvMgmt_RTE_R_IOAbs_BSBattUDc_V</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_HWHandler</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/CtAp_HWHandler/RTE_P_IOAbs_BSBattUDc_V</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_LvMgmt</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_LvMgmt/RTE_R_IOAbs_BSBattUDc_V</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="8BA77173-3851-4583-AB40-DE44DF8170E6">
-              <SHORT-NAME>CtAp_HWHandler_RTE_P_IOAbs_KL15eFb_Flg_CtAp_LvMgmt_RTE_R_IOAbs_KL15eFb_Flg</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_HWHandler</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/CtAp_HWHandler/RTE_P_IOAbs_KL15eFb_Flg</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_LvMgmt</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_LvMgmt/RTE_R_IOAbs_KL15eFb_Flg</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="392B2B91-78D4-450A-836F-153861589ACB">
-              <SHORT-NAME>CtAp_HWHandler_RTE_P_IOAbs_HVILPwmFrq_Hz_CtAp_ErrMgmt_RTE_R_IOAbs_HVILPwmFrq_Hz</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_HWHandler</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/CtAp_HWHandler/RTE_P_IOAbs_HVILPwmFrq_Hz</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_ErrMgmt</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_ErrMgmt/RTE_R_IOAbs_HVILPwmFrq_Hz</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="DD95F5FA-8B49-4D7A-9127-4E0E237CDE63">
-              <SHORT-NAME>CtAp_HWHandler_RTE_P_IOAbs_AccrPedlMaiRaw_mV_CtAp_ChassisMgmt_RTE_R_IOAbs_AccrPedlMaiRaw_mV</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_HWHandler</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/CtAp_HWHandler/RTE_P_IOAbs_AccrPedlMaiRaw_mV</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_ChassisMgmt</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_ChassisMgmt/RTE_R_IOAbs_AccrPedlMaiRaw_mV</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="BBDA8218-A5D8-447D-AA88-00B95668173A">
-              <SHORT-NAME>CtAp_HWHandler_RTE_P_IOAbs_AccrPedlRdnRaw_mV_CtAp_ChassisMgmt_RTE_R_IOAbs_AccrPedlRdnRaw_mV</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_HWHandler</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/CtAp_HWHandler/RTE_P_IOAbs_AccrPedlRdnRaw_mV</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_ChassisMgmt</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_ChassisMgmt/RTE_R_IOAbs_AccrPedlRdnRaw_mV</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="C5C27121-3525-4E51-B771-97E345BF9977">
-              <SHORT-NAME>CtAp_HWHandler_RTE_P_IOAbs_CC2SigUDc_mV_CtAp_ChrMgmt_RTE_R_IOAbs_CC2SigUDc_mV</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_HWHandler</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/CtAp_HWHandler/RTE_P_IOAbs_CC2SigUDc_mV</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_ChrMgmt</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_ChrMgmt/RTE_R_IOAbs_CC2SigUDc_mV</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="A48DC56B-F2A3-435D-9020-9DB5AA3E19BA">
-              <SHORT-NAME>CtAp_HWHandler_RTE_P_IOAbs_CC2SigUDc_mV_CtAp_DCChrMgmt_RTE_R_IOAbs_CC2SigUDc_mV</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_HWHandler</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/CtAp_HWHandler/RTE_P_IOAbs_CC2SigUDc_mV</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_DCChrMgmt</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_DCChrMgmt/RTE_R_IOAbs_CC2SigUDc_mV</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
             <ASSEMBLY-SW-CONNECTOR UUID="E149E8FF-B336-4B19-9668-230BA97B777B">
               <SHORT-NAME>CtAp_TorqPahMgmt_RTE_P_TorqPahMgmt_EmacQstyMaxTq_Nm_CtAp_CANHandler_RTE_R_TorqPahMgmt_EmacQstyMaxTq_Nm</SHORT-NAME>
               <PROVIDER-IREF>
@@ -19707,28 +19597,6 @@
               <REQUESTER-IREF>
                 <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_TorqPahMgmt</CONTEXT-COMPONENT-REF>
                 <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_TorqPahMgmt/RTE_R_ChassisMgmt_AccrPedlKdStsInfo</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="75DDF7E2-ECB0-4795-B7B5-EE9A0C488C5D">
-              <SHORT-NAME>CtAp_HWHandler_RTE_R_IOAbs_AccrPedl1SplyVoltInfo_CtAp_ChassisMgmt_RTE_R_IOAbs_AccrPedl1SplyVoltInfo</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_HWHandler</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/CtAp_HWHandler/RTE_P_IOAbs_AccrPedl1SplyVoltInfo</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_ChassisMgmt</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_ChassisMgmt/RTE_R_IOAbs_AccrPedl1SplyVoltInfo</TARGET-R-PORT-REF>
-              </REQUESTER-IREF>
-            </ASSEMBLY-SW-CONNECTOR>
-            <ASSEMBLY-SW-CONNECTOR UUID="76B27E79-82F6-4CEB-B169-0A7F2CA4D5AC">
-              <SHORT-NAME>CtAp_HWHandler_RTE_R_IOAbs_AccrPedl2SplyVoltInfo_CtAp_ChassisMgmt_RTE_R_IOAbs_AccrPedl2SplyVoltInfo</SHORT-NAME>
-              <PROVIDER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_HWHandler</CONTEXT-COMPONENT-REF>
-                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/CtAp_HWHandler/RTE_P_IOAbs_AccrPedl2SplyVoltInfo</TARGET-P-PORT-REF>
-              </PROVIDER-IREF>
-              <REQUESTER-IREF>
-                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/CtAp_ChassisMgmt</CONTEXT-COMPONENT-REF>
-                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/ComponentTypes/CtAp_ChassisMgmt/RTE_R_IOAbs_AccrPedl2SplyVoltInfo</TARGET-R-PORT-REF>
               </REQUESTER-IREF>
             </ASSEMBLY-SW-CONNECTOR>
             <ASSEMBLY-SW-CONNECTOR UUID="6EAADA2B-26C8-4725-98A8-080C1013F0AE">

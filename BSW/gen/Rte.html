@@ -151,7 +151,6 @@ Rte_CtAp_FctSftyTorq.h<br>
 Rte_CtAp_FltReactn.h<br>
 Rte_CtAp_GearCal.h<br>
 Rte_CtAp_HVSfty.h<br>
-Rte_CtAp_HWHandler.h<br>
 Rte_CtAp_LINHandler.h<br>
 Rte_CtAp_LvBattMgmt.h<br>
 Rte_CtAp_MCUMgmt.h<br>
@@ -222,7 +221,6 @@ Rte_CtAp_FctSftyTorq_Type.h<br>
 Rte_CtAp_FltReactn_Type.h<br>
 Rte_CtAp_GearCal_Type.h<br>
 Rte_CtAp_HVSfty_Type.h<br>
-Rte_CtAp_HWHandler_Type.h<br>
 Rte_CtAp_LINHandler_Type.h<br>
 Rte_CtAp_LvBattMgmt_Type.h<br>
 Rte_CtAp_MCUMgmt_Type.h<br>
@@ -301,7 +299,6 @@ CtAp_FctSftyTorq_MemMap.h<br>
 CtAp_FltReactn_MemMap.h<br>
 CtAp_GearCal_MemMap.h<br>
 CtAp_HVSfty_MemMap.h<br>
-CtAp_HWHandler_MemMap.h<br>
 CtAp_LINHandler_MemMap.h<br>
 CtAp_LvBattMgmt_MemMap.h<br>
 CtAp_MCUMgmt_MemMap.h<br>
@@ -420,7 +417,7 @@ Rte_Needs.ecuc.arxml<br>
 Note: This resource usage calculation assumes that the "Boolean" data type is based on uint8 base type.<br>
       Further on padding bytes for structs are not considered, which depends on the compiler settings.<br>
 <br>
-RAM   Size: 2632 Bytes<br>
+RAM   Size: 2615 Bytes<br>
 CONST Size: 1838 Bytes<br>
 <br>
 <P ALIGN=LEFT>
@@ -1568,20 +1565,6 @@ CONST Size: 1838 Bytes<br>
 <TR>
 <TD><B>InitEvent</B></TD>
 <TD>R_HVSfty_Init</TD>
-<TD>Core1_Asw_Init</TD>
-<TD>n/a</TD>
-<TD>n/a</TD>
-</TR>
-<TR>
-<TD><B>TimingEvent</B> Cyclic 10ms</TD>
-<TD>R_HWHandler_Cyclic_10ms</TD>
-<TD>Core1_Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic_Core1_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE_Core1_Bsw_Task_0_10ms</TD>
-</TR>
-<TR>
-<TD><B>InitEvent</B></TD>
-<TD>R_HWHandler_Init</TD>
 <TD>Core1_Asw_Init</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>

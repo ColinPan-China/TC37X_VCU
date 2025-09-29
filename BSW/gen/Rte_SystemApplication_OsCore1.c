@@ -67,7 +67,6 @@
 #include "Rte_CtAp_FltReactn.h"
 #include "Rte_CtAp_GearCal.h"
 #include "Rte_CtAp_HVSfty.h"
-#include "Rte_CtAp_HWHandler.h"
 #include "Rte_CtAp_LINHandler.h"
 #include "Rte_CtAp_LvBattMgmt.h"
 #include "Rte_CtAp_MCUMgmt.h"
@@ -2143,9 +2142,6 @@ VAR(dt_ErrMgmt_DrvMotTempOvrLamp, RTE_VAR_INIT) Rte_CtAp_HVSfty_RTE_P_ErrMgmt_Dr
 };
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(uint8, RTE_VAR_INIT) Rte_CtAp_HVSfty_RTE_P_ErrMgmt_HVILPwmFrq_Hz_tec_ErrMgmt_HVILPwmFrq_Hz = 0U;
-/* PRQA L:L1 */
-/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(dt_ErrMgmt_HvBattTempOvrLamp, RTE_VAR_INIT) Rte_CtAp_HVSfty_RTE_P_ErrMgmt_HvBattTempOvrLamp_Bus_tec_ErrMgmt_HvBattTempOvrLamp_Bus = {
   FALSE, 0U, 0U, FALSE
 };
@@ -2162,30 +2158,6 @@ VAR(boolean, RTE_VAR_INIT) Rte_CtAp_HVSfty_RTE_P_ErrMgmt_VCUHVILErr_Flg_tec_ErrM
 VAR(dt_ErrMgmt_VehHVIL, RTE_VAR_INIT) Rte_CtAp_HVSfty_RTE_P_ErrMgmt_VehHVIL_Bus_tec_ErrMgmt_VehHVIL_Bus = {
   FALSE, 0U, 0U, FALSE
 };
-/* PRQA L:L1 */
-/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(uint16, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedl1SplyVoltInfo_tec_IOAbs_AccrPedl1SplyVoltInfo = 0U;
-/* PRQA L:L1 */
-/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(uint16, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedl2SplyVoltInfo_tec_IOAbs_AccrPedl2SplyVoltInfo = 0U;
-/* PRQA L:L1 */
-/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(uint16, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV = 0U;
-/* PRQA L:L1 */
-/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(uint16, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV = 0U;
-/* PRQA L:L1 */
-/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(float32, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_BSBattUDc_V_tec_IOAbs_BSBattUDc_V = 0.0F;
-/* PRQA L:L1 */
-/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(uint16, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV = 0U;
-/* PRQA L:L1 */
-/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(uint8, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz = 0U;
-/* PRQA L:L1 */
-/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(boolean, RTE_VAR_INIT) Rte_CtAp_HWHandler_RTE_P_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg = FALSE;
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(boolean, RTE_VAR_INIT) Rte_CtAp_LINHandler_RTE_P_ComM_BS01_IsUpdated_tec_ComM_BS01_IsUpdated = FALSE;
@@ -3959,19 +3931,10 @@ FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore1(void)
   Rte_CtAp_GearCal_RTE_P_GearMgmt_TarGear_Enum_tec_GearMgmt_TarGear_Enum = 0U;
   Rte_CtAp_GearCal_RTE_P_GearMgmt_UnCfmdActGear_Enum_tec_GearMgmt_UnCfmdActGear_Enum = 0U;
   Rte_CtAp_HVSfty_RTE_P_ErrMgmt_DrvMotTempOvrLamp_Bus_tec_ErrMgmt_DrvMotTempOvrLamp_Bus = Rte_C_dt_ErrMgmt_DrvMotTempOvrLamp_0;
-  Rte_CtAp_HVSfty_RTE_P_ErrMgmt_HVILPwmFrq_Hz_tec_ErrMgmt_HVILPwmFrq_Hz = 0U;
   Rte_CtAp_HVSfty_RTE_P_ErrMgmt_HvBattTempOvrLamp_Bus_tec_ErrMgmt_HvBattTempOvrLamp_Bus = Rte_C_dt_ErrMgmt_HvBattTempOvrLamp_0;
   Rte_CtAp_HVSfty_RTE_P_ErrMgmt_InslaFlt_Bus_tec_ErrMgmt_InslaFlt_Bus = Rte_C_dt_ErrMgmt_InslaFlt_0;
   Rte_CtAp_HVSfty_RTE_P_ErrMgmt_VCUHVILErr_Flg_tec_ErrMgmt_VCUHVILErr_Flg = FALSE;
   Rte_CtAp_HVSfty_RTE_P_ErrMgmt_VehHVIL_Bus_tec_ErrMgmt_VehHVIL_Bus = Rte_C_dt_ErrMgmt_VehHVIL_0;
-  Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedl1SplyVoltInfo_tec_IOAbs_AccrPedl1SplyVoltInfo = 0U;
-  Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedl2SplyVoltInfo_tec_IOAbs_AccrPedl2SplyVoltInfo = 0U;
-  Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV = 0U;
-  Rte_CtAp_HWHandler_RTE_P_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV = 0U;
-  Rte_CtAp_HWHandler_RTE_P_IOAbs_BSBattUDc_V_tec_IOAbs_BSBattUDc_V = 0.0F;
-  Rte_CtAp_HWHandler_RTE_P_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV = 0U;
-  Rte_CtAp_HWHandler_RTE_P_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz = 0U;
-  Rte_CtAp_HWHandler_RTE_P_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg = FALSE;
   Rte_CtAp_LINHandler_RTE_P_ComM_BS01_IsUpdated_tec_ComM_BS01_IsUpdated = FALSE;
   Rte_CtAp_LINHandler_RTE_P_ComM_BSBatCrnt_tec_ComM_BSBatCrnt = 0.0F;
   Rte_CtAp_LINHandler_RTE_P_ComM_BSBatVltHlResInfo_tec_ComM_BSBatVltHlResInfo = 0.0F;
@@ -15090,9 +15053,6 @@ TASK(Core1_Asw_Init) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
   R_HVSfty_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
   /* call runnable */
-  R_HWHandler_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-  /* call runnable */
   R_LINHandler_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
   /* call runnable */
@@ -15422,9 +15382,6 @@ TASK(Core1_Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
     {
       /* call runnable */
       R_HVSfty_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-      /* call runnable */
-      R_HWHandler_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
       /* call runnable */
       R_LINHandler_Cyclic_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
