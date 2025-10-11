@@ -151,7 +151,7 @@
 							<tool id="com.tasking.ctc.lk.abs.debug.131585423" name="Linker" superClass="com.tasking.ctc.lk.abs.debug">
 								<option id="com.tasking.ctc.lk.lslFile.283257361" name="Linker script file:" superClass="com.tasking.ctc.lk.lslFile" value="D:\TC377_Development\NEW_DCU_Dev\J1939\TC37X_VCU\Appl\Source\vLinkGen_Template.lsl" valueType="string"/>
 								<option id="com.tasking.ctc.lk.outputFormat.ihex.1164688339" name="Generate Intel Hex format file" superClass="com.tasking.ctc.lk.outputFormat.ihex" value="true" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.noDefaultLibraries.2013064119" name="Link default libraries" superClass="com.tasking.ctc.lk.noDefaultLibraries" value="false" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.noDefaultLibraries.2013064119" name="Link default libraries" superClass="com.tasking.ctc.lk.noDefaultLibraries" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.noRescan.1415836324" name="Rescan libraries to solve unresolved externals" superClass="com.tasking.ctc.lk.noRescan" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.mapFile.xml.271320922" name="Generate XML map file format (.mapxml) for map file viewer" superClass="com.tasking.ctc.lk.mapFile.xml" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.mapFile.mapFile.123854181" name="Generate map file (.map)" superClass="com.tasking.ctc.lk.mapFile.mapFile" value="true" valueType="boolean"/>
@@ -168,12 +168,7 @@
 								<option id="com.tasking.ctc.lk.mapFileFormat.overlay.2112135526" name="Include overlay information" superClass="com.tasking.ctc.lk.mapFileFormat.overlay" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.mapFileFormat.nonAlloc.155038625" name="Include information of non-alloc sections" superClass="com.tasking.ctc.lk.mapFileFormat.nonAlloc" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.mapFileFormat.lsl.1824699336" name="Include processor and memory information" superClass="com.tasking.ctc.lk.mapFileFormat.lsl" value="true" valueType="boolean"/>
-								<option id="com.tasking.ctc.lk.library.1398269407" superClass="com.tasking.ctc.lk.library" valueType="stringList">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Appl/Kama_Integration/libc_fpu.a}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Appl/Kama_Integration/libcs_fpu.a}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Appl/Kama_Integration/libfp_fpu.a}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/Appl/Kama_Integration/librt.a}&quot;"/>
-								</option>
+								<option id="com.tasking.ctc.lk.library.1398269407" name="Libraries" superClass="com.tasking.ctc.lk.library" valueType="stringList"/>
 								<inputType id="com.tasking.ctc.lkObjInputType.1764213417" name="OBJ" superClass="com.tasking.ctc.lkObjInputType"/>
 								<inputType id="com.tasking.ctc.lkLibInputType.1973690418" name="LIB" superClass="com.tasking.ctc.lkLibInputType"/>
 							</tool>
