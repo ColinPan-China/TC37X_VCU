@@ -158,7 +158,7 @@ CONST(Os_Hal_CoreConfigType, OS_CONST) OsCfg_Hal_Core_OsCore1 =
 {
   /* .CoreId                  = */ 1, /* Physical id of OsCore1 */
   /* .ProgramCounterRegister  = */ OS_HAL_CORE1_PC,
-  /* .StartLabelAddress       = */ (uint32)&(_start_tc1), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
+  /* .StartLabelAddress       = */ (uint32)(0x80100000), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
   /* .DBGSRRegister           = */ OS_HAL_CORE1_DBGSR,
   /* .SYSCON_CORECON_Register = */ OS_HAL_CORE1_SYSCON_CORECON,
   /* .BOOTCONRegister         = */ OS_HAL_CORE1_BOOTCON
@@ -192,7 +192,7 @@ CONST(Os_Hal_CoreConfigType, OS_CONST) OsCfg_Hal_Core_OsCore2 =
 {
   /* .CoreId                  = */ 2, /* Physical id of OsCore2 */
   /* .ProgramCounterRegister  = */ OS_HAL_CORE2_PC,
-  /* .StartLabelAddress       = */ (uint32)&(_start_tc2), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
+  /* .StartLabelAddress       = */ (uint32)(0x80100000), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
   /* .DBGSRRegister           = */ OS_HAL_CORE2_DBGSR,
   /* .SYSCON_CORECON_Register = */ OS_HAL_CORE2_SYSCON_CORECON,
   /* .BOOTCONRegister         = */ OS_HAL_CORE2_BOOTCON
