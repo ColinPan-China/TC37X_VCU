@@ -689,8 +689,10 @@ BO_ 1282 NM_CGW: 8 CGW_CH
  SG_ RxNM_CGW : 7|64@0+ (1,0) [0|1] "" VCU
 
 BO_ 1324 NM_VCU: 8 VCU
- SG_ TxNM_VCU : 7|64@0+ (1,0) [0|1] "" ADCU_CH,CGW_CH
- 
+ SG_ CH_TxNM_PNCData : 16|48@1+ (1,0) [0|0] ""  ADCU_CH,CGW_CH
+ SG_ CH_TxNM_CBV : 8|8@1+ (1,0) [0|0] ""  ADCU_CH,CGW_CH
+ SG_ CH_TxNM_NodeId : 0|8@1+ (1,0) [0|0] ""  ADCU_CH,CGW_CH
+
 BO_ 2047 DiagReq_ALL: 8 CGW_CH
  SG_ ALL_DiagReq : 7|64@0+ (1,0) [0|1] ""  IBS_CH,ACU,AVAS,EPS
 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cbk.h
- *   Generation Time: 2025-09-25 11:17:43
+ *   Generation Time: 2025-10-13 13:53:05
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -132,36 +132,37 @@
 #define ComConf_ComIPdu_MCU_FailureCode_oATOM_CAN_Matrix_PT_V600_20250211_4a7c4da7_Rx 73u
 #define ComConf_ComIPdu_MCU_Temperature_01_oATOM_CAN_Matrix_PT_V600_20250211_021c1dde_Rx 74u
 #define ComConf_ComIPdu_MCU_Temperature_02_oATOM_CAN_Matrix_PT_V600_20250211_89cf23c7_Rx 75u
-#define ComConf_ComIPdu_POD_DCDC_01_oATOM_CAN_Matrix_PT_V600_20250211_6e196312_Rx 76u
-#define ComConf_ComIPdu_POD_DCDC_02_oATOM_CAN_Matrix_PT_V600_20250211_e5ca5d0b_Rx 77u
-#define ComConf_ComIPdu_POD_OBC_CHRGSTATION_oATOM_CAN_Matrix_PT_V600_20250211_9a75b36b_Rx 78u
-#define ComConf_ComIPdu_POD_OBC_STATUS_02_oATOM_CAN_Matrix_PT_V600_20250211_5da6c285_Rx 79u
-#define ComConf_ComIPdu_POD_OBC_STATUS_03_oATOM_CAN_Matrix_PT_V600_20250211_9238d54d_Rx 80u
-#define ComConf_ComIPdu_POD_OBC_STATUS_04_oATOM_CAN_Matrix_PT_V600_20250211_9171b8f6_Rx 81u
-#define ComConf_ComIPdu_POD_Status_01_oATOM_CAN_Matrix_PT_V600_20250211_ccbeaeb3_Rx 82u
-#define ComConf_ComIPdu_POD_Status_02_oATOM_CAN_Matrix_PT_V600_20250211_476d90aa_Rx 83u
-#define ComConf_ComIPdu_PRND_oATOM_CAN_Matrix_PT_V600_20250211_a04a662c_Rx 84u
-#define ComConf_ComIPdu_SGW_01_oATOM_CAN_Matrix_PT_V600_20250211_fdc48441_Rx 85u
-#define ComConf_ComIPdu_SGW_04_oATOM_CAN_Matrix_PT_V600_20250211_bac0c02b_Rx 86u
-#define ComConf_ComIPdu_SGW_16_oATOM_CAN_Matrix_PT_V600_20250211_6bfd3d6f_Rx 87u
-#define ComConf_ComIPdu_SGW_17_oATOM_CANFD_Matrix_CH_V600_202502_9b3e5336_Rx 88u
-#define ComConf_ComIPdu_SGW_FVSynchronization_01_oATOM_CAN_Matrix_PT_V600_20250211_640f878f_Rx 89u
-#define ComConf_ComIPdu_SGW_IBS_01_oATOM_CAN_Matrix_PT_V600_20250211_afe1198b_Rx 90u
-#define ComConf_ComIPdu_SGW_PT_01_oATOM_CAN_Matrix_PT_V600_20250211_f69035b0_Rx 91u
-#define ComConf_ComIPdu_SGW_Time_oATOM_CAN_Matrix_PT_V600_20250211_2fddccce_Rx 92u
-#define ComConf_ComIPdu_SGW_VCU_01_oATOM_CAN_Matrix_PT_V600_20250211_0e1163ba_Rx 93u
-#define ComConf_ComIPdu_TCU_01_oATOM_CAN_Matrix_PT_V600_20250211_26cca276_Rx 94u
-#define ComConf_ComIPdu_TCU_02_oATOM_CAN_Matrix_PT_V600_20250211_ad1f9c6f_Rx 95u
-#define ComConf_ComIPdu_Uds_EPT_Boot_Request_oATOM_CAN_Matrix_PT_V600_20250211_1c93f757_Rx 96u
-#define ComConf_ComIPdu_VcuRxCtrlMsg0_oTC37X_VCU_CAN01_b24a2ab4_Rx    97u
-#define ComConf_ComIPdu_VcuRxCtrlMsg1_oTC37X_VCU_CAN01_5d189c55_Rx    98u
-#define ComConf_ComIPdu_VcuRxCtrlMsg2_oTC37X_VCU_CAN01_b79e4137_Rx    99u
-#define ComConf_ComIPdu_VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx        100u
-#define ComConf_ComIPdu_VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx        101u
-#define ComConf_ComIPdu_Vcu_Lin0_RxMsg1_oATOM_HWLIN4_1c04db6a_Rx      102u
-#define ComConf_ComIPdu_Vcu_Lin0_RxMsg2_oATOM_HWLIN4_6065feb1_Rx      103u
-#define ComConf_ComIPdu_Vcu_Lin3_RxMsg1_oATOM_HWLIN3_f97ecc2a_Rx      104u
-#define ComConf_ComIPdu_Vcu_Lin3_RxMsg2_oATOM_HWLIN3_851fe9f1_Rx      105u
+#define ComConf_ComIPdu_PNC_ComIPdu_CanNm2Com_Rx                      76u
+#define ComConf_ComIPdu_POD_DCDC_01_oATOM_CAN_Matrix_PT_V600_20250211_6e196312_Rx 77u
+#define ComConf_ComIPdu_POD_DCDC_02_oATOM_CAN_Matrix_PT_V600_20250211_e5ca5d0b_Rx 78u
+#define ComConf_ComIPdu_POD_OBC_CHRGSTATION_oATOM_CAN_Matrix_PT_V600_20250211_9a75b36b_Rx 79u
+#define ComConf_ComIPdu_POD_OBC_STATUS_02_oATOM_CAN_Matrix_PT_V600_20250211_5da6c285_Rx 80u
+#define ComConf_ComIPdu_POD_OBC_STATUS_03_oATOM_CAN_Matrix_PT_V600_20250211_9238d54d_Rx 81u
+#define ComConf_ComIPdu_POD_OBC_STATUS_04_oATOM_CAN_Matrix_PT_V600_20250211_9171b8f6_Rx 82u
+#define ComConf_ComIPdu_POD_Status_01_oATOM_CAN_Matrix_PT_V600_20250211_ccbeaeb3_Rx 83u
+#define ComConf_ComIPdu_POD_Status_02_oATOM_CAN_Matrix_PT_V600_20250211_476d90aa_Rx 84u
+#define ComConf_ComIPdu_PRND_oATOM_CAN_Matrix_PT_V600_20250211_a04a662c_Rx 85u
+#define ComConf_ComIPdu_SGW_01_oATOM_CAN_Matrix_PT_V600_20250211_fdc48441_Rx 86u
+#define ComConf_ComIPdu_SGW_04_oATOM_CAN_Matrix_PT_V600_20250211_bac0c02b_Rx 87u
+#define ComConf_ComIPdu_SGW_16_oATOM_CAN_Matrix_PT_V600_20250211_6bfd3d6f_Rx 88u
+#define ComConf_ComIPdu_SGW_17_oATOM_CANFD_Matrix_CH_V600_202502_9b3e5336_Rx 89u
+#define ComConf_ComIPdu_SGW_FVSynchronization_01_oATOM_CAN_Matrix_PT_V600_20250211_640f878f_Rx 90u
+#define ComConf_ComIPdu_SGW_IBS_01_oATOM_CAN_Matrix_PT_V600_20250211_afe1198b_Rx 91u
+#define ComConf_ComIPdu_SGW_PT_01_oATOM_CAN_Matrix_PT_V600_20250211_f69035b0_Rx 92u
+#define ComConf_ComIPdu_SGW_Time_oATOM_CAN_Matrix_PT_V600_20250211_2fddccce_Rx 93u
+#define ComConf_ComIPdu_SGW_VCU_01_oATOM_CAN_Matrix_PT_V600_20250211_0e1163ba_Rx 94u
+#define ComConf_ComIPdu_TCU_01_oATOM_CAN_Matrix_PT_V600_20250211_26cca276_Rx 95u
+#define ComConf_ComIPdu_TCU_02_oATOM_CAN_Matrix_PT_V600_20250211_ad1f9c6f_Rx 96u
+#define ComConf_ComIPdu_Uds_EPT_Boot_Request_oATOM_CAN_Matrix_PT_V600_20250211_1c93f757_Rx 97u
+#define ComConf_ComIPdu_VcuRxCtrlMsg0_oTC37X_VCU_CAN01_b24a2ab4_Rx    98u
+#define ComConf_ComIPdu_VcuRxCtrlMsg1_oTC37X_VCU_CAN01_5d189c55_Rx    99u
+#define ComConf_ComIPdu_VcuRxCtrlMsg2_oTC37X_VCU_CAN01_b79e4137_Rx    100u
+#define ComConf_ComIPdu_VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx        101u
+#define ComConf_ComIPdu_VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx        102u
+#define ComConf_ComIPdu_Vcu_Lin0_RxMsg1_oATOM_HWLIN4_1c04db6a_Rx      103u
+#define ComConf_ComIPdu_Vcu_Lin0_RxMsg2_oATOM_HWLIN4_6065feb1_Rx      104u
+#define ComConf_ComIPdu_Vcu_Lin3_RxMsg1_oATOM_HWLIN3_f97ecc2a_Rx      105u
+#define ComConf_ComIPdu_Vcu_Lin3_RxMsg2_oATOM_HWLIN3_851fe9f1_Rx      106u
 /**\} */
 
 /**
@@ -185,53 +186,56 @@
 #define ComConf_ComIPdu_BSM_oJ1939_bms_ca52a7bc_Tx                    10u
 #define ComConf_ComIPdu_BSOC_oJ1939_bms_5e951453_Tx                   11u
 #define ComConf_ComIPdu_BST_oJ1939_bms_5be370d1_Tx                    12u
-#define ComConf_ComIPdu_Uds_EPT_Boot_Response_oATOM_CAN_Matrix_PT_V600_20250211_8bdda24d_Tx 13u
-#define ComConf_ComIPdu_VCU_01_oATOM_HWLIN1_a447f974_Tx               14u
-#define ComConf_ComIPdu_VCU_02_oATOM_CANFD_Matrix_CH_V600_202502_17bac731_Tx 15u
-#define ComConf_ComIPdu_VCU_02_oATOM_CAN_Matrix_PT_V600_20250211_28e7bea0_Tx 16u
-#define ComConf_ComIPdu_VCU_03_oATOM_CANFD_Matrix_CH_V600_202502_d824d0f9_Tx 17u
-#define ComConf_ComIPdu_VCU_04_oATOM_CANFD_Matrix_CH_V600_202502_db6dbd42_Tx 18u
-#define ComConf_ComIPdu_VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_2baed31b_Tx 19u
-#define ComConf_ComIPdu_VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_a07ded02_Tx 20u
-#define ComConf_ComIPdu_VCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_0d0df7a0_Tx 21u
-#define ComConf_ComIPdu_VCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_32508e31_Tx 22u
-#define ComConf_ComIPdu_VCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_1208e503_Tx 23u
-#define ComConf_ComIPdu_VCU_BMS_oATOM_CAN_Matrix_PT_V600_20250211_2d559c92_Tx 24u
-#define ComConf_ComIPdu_VCU_BS_01_oATOM_HWLIN1_77dc7aee_Tx            25u
-#define ComConf_ComIPdu_VCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_d7fdb34f_Tx 26u
-#define ComConf_ComIPdu_VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_2c28a723_Tx 27u
-#define ComConf_ComIPdu_VCU_DiagInfor_oATOM_CAN_Matrix_PT_V600_20250211_ad82eb28_Tx 28u
-#define ComConf_ComIPdu_VCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_f29a9fcc_Tx 29u
-#define ComConf_ComIPdu_VCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502_7949a1d5_Tx 30u
-#define ComConf_ComIPdu_VCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_4614d844_Tx 31u
-#define ComConf_ComIPdu_VCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_898acf8c_Tx 32u
-#define ComConf_ComIPdu_VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_4c086bc0_Tx 33u
-#define ComConf_ComIPdu_VCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_fd5e64f0_Tx 34u
-#define ComConf_ComIPdu_VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_0d9d0aa9_Tx 35u
-#define ComConf_ComIPdu_VCU_MCU_03_oATOM_CAN_Matrix_PT_V600_20250211_32c07338_Tx 36u
-#define ComConf_ComIPdu_VCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_fe17094b_Tx 37u
-#define ComConf_ComIPdu_VCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_28db6ecb_Tx 38u
-#define ComConf_ComIPdu_VCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_20405e82_Tx 39u
-#define ComConf_ComIPdu_VCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_9b305e0d_Tx 40u
-#define ComConf_ComIPdu_VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_8e1c824e_Tx 41u
-#define ComConf_ComIPdu_VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_5798df68_Tx   42u
-#define ComConf_ComIPdu_VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_b8ca6989_Tx   43u
-#define ComConf_ComIPdu_VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_40b0bba8_Tx   44u
-#define ComConf_ComIPdu_VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_afe20d49_Tx   45u
-#define ComConf_ComIPdu_VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_79c816e8_Tx   46u
-#define ComConf_ComIPdu_VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_969aa009_Tx   47u
-#define ComConf_ComIPdu_VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_6ee07228_Tx   48u
-#define ComConf_ComIPdu_VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_81b2c4c9_Tx   49u
-#define ComConf_ComIPdu_VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_eedbf968_Tx   50u
-#define ComConf_ComIPdu_VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_01894f89_Tx   51u
-#define ComConf_ComIPdu_VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_eb0f92eb_Tx   52u
-#define ComConf_ComIPdu_VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx   53u
-#define ComConf_ComIPdu_VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx      54u
-#define ComConf_ComIPdu_VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx 55u
-#define ComConf_ComIPdu_Vcu_Lin0_TxMsg1_oATOM_HWLIN4_81d8d079_Tx      56u
-#define ComConf_ComIPdu_Vcu_Lin0_TxMsg2_oATOM_HWLIN4_fdb9f5a2_Tx      57u
-#define ComConf_ComIPdu_Vcu_Lin3_TxMsg1_oATOM_HWLIN3_64a2c739_Tx      58u
-#define ComConf_ComIPdu_Vcu_Lin3_TxMsg2_oATOM_HWLIN3_18c3e2e2_Tx      59u
+#define ComConf_ComIPdu_NM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_00753c97_Tx 13u
+#define ComConf_ComIPdu_NM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_3f284506_Tx 14u
+#define ComConf_ComIPdu_Uds_EPT_Boot_Response_oATOM_CAN_Matrix_PT_V600_20250211_8bdda24d_Tx 15u
+#define ComConf_ComIPdu_VCU_01_oATOM_HWLIN1_a447f974_Tx               16u
+#define ComConf_ComIPdu_VCU_02_oATOM_CANFD_Matrix_CH_V600_202502_17bac731_Tx 17u
+#define ComConf_ComIPdu_VCU_02_oATOM_CAN_Matrix_PT_V600_20250211_28e7bea0_Tx 18u
+#define ComConf_ComIPdu_VCU_03_oATOM_CANFD_Matrix_CH_V600_202502_d824d0f9_Tx 19u
+#define ComConf_ComIPdu_VCU_04_oATOM_CANFD_Matrix_CH_V600_202502_db6dbd42_Tx 20u
+#define ComConf_ComIPdu_VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_2baed31b_Tx 21u
+#define ComConf_ComIPdu_VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_a07ded02_Tx 22u
+#define ComConf_ComIPdu_VCU_AccPedal_oATOM_CANFD_Matrix_CH_V600_202502_0d0df7a0_Tx 23u
+#define ComConf_ComIPdu_VCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_32508e31_Tx 24u
+#define ComConf_ComIPdu_VCU_BMS_oATOM_CANFD_Matrix_CH_V600_202502_1208e503_Tx 25u
+#define ComConf_ComIPdu_VCU_BMS_oATOM_CAN_Matrix_PT_V600_20250211_2d559c92_Tx 26u
+#define ComConf_ComIPdu_VCU_BS_01_oATOM_HWLIN1_77dc7aee_Tx            27u
+#define ComConf_ComIPdu_VCU_Chassis_01_oATOM_CANFD_Matrix_CH_V600_202502_d7fdb34f_Tx 28u
+#define ComConf_ComIPdu_VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_2c28a723_Tx 29u
+#define ComConf_ComIPdu_VCU_DiagInfor_oATOM_CAN_Matrix_PT_V600_20250211_ad82eb28_Tx 30u
+#define ComConf_ComIPdu_VCU_HMIsignals_01_oATOM_CANFD_Matrix_CH_V600_202502_f29a9fcc_Tx 31u
+#define ComConf_ComIPdu_VCU_HMIsignals_02_oATOM_CANFD_Matrix_CH_V600_202502_7949a1d5_Tx 32u
+#define ComConf_ComIPdu_VCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_4614d844_Tx 33u
+#define ComConf_ComIPdu_VCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_898acf8c_Tx 34u
+#define ComConf_ComIPdu_VCU_IBS_01_oATOM_CANFD_Matrix_CH_V600_202502_4c086bc0_Tx 35u
+#define ComConf_ComIPdu_VCU_MCU_02_oATOM_CAN_Matrix_PT_V600_20250211_fd5e64f0_Tx 36u
+#define ComConf_ComIPdu_VCU_MCU_03_oATOM_CANFD_Matrix_CH_V600_202502_0d9d0aa9_Tx 37u
+#define ComConf_ComIPdu_VCU_MCU_03_oATOM_CAN_Matrix_PT_V600_20250211_32c07338_Tx 38u
+#define ComConf_ComIPdu_VCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_fe17094b_Tx 39u
+#define ComConf_ComIPdu_VCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_28db6ecb_Tx 40u
+#define ComConf_ComIPdu_VCU_PlugInChrgInfo_oATOM_CANFD_Matrix_CH_V600_202502_20405e82_Tx 41u
+#define ComConf_ComIPdu_VCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_9b305e0d_Tx 42u
+#define ComConf_ComIPdu_VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_8e1c824e_Tx 43u
+#define ComConf_ComIPdu_VCU_Tx_51Ch_NM_oTC37X_VCU_CAN01_b1a53ae9_Tx   44u
+#define ComConf_ComIPdu_VcuAdcTxG0Msg0_oTC37X_VCU_CAN01_5798df68_Tx   45u
+#define ComConf_ComIPdu_VcuAdcTxG0Msg1_oTC37X_VCU_CAN01_b8ca6989_Tx   46u
+#define ComConf_ComIPdu_VcuAdcTxG1Msg0_oTC37X_VCU_CAN01_40b0bba8_Tx   47u
+#define ComConf_ComIPdu_VcuAdcTxG1Msg1_oTC37X_VCU_CAN01_afe20d49_Tx   48u
+#define ComConf_ComIPdu_VcuAdcTxG2Msg0_oTC37X_VCU_CAN01_79c816e8_Tx   49u
+#define ComConf_ComIPdu_VcuAdcTxG2Msg1_oTC37X_VCU_CAN01_969aa009_Tx   50u
+#define ComConf_ComIPdu_VcuAdcTxG3Msg0_oTC37X_VCU_CAN01_6ee07228_Tx   51u
+#define ComConf_ComIPdu_VcuAdcTxG3Msg1_oTC37X_VCU_CAN01_81b2c4c9_Tx   52u
+#define ComConf_ComIPdu_VcuAdcTxG8Msg0_oTC37X_VCU_CAN01_eedbf968_Tx   53u
+#define ComConf_ComIPdu_VcuAdcTxG8Msg1_oTC37X_VCU_CAN01_01894f89_Tx   54u
+#define ComConf_ComIPdu_VcuAdcTxG8Msg2_oTC37X_VCU_CAN01_eb0f92eb_Tx   55u
+#define ComConf_ComIPdu_VcuAdcTxG8Msg3_oTC37X_VCU_CAN01_045d240a_Tx   56u
+#define ComConf_ComIPdu_VcuCan12TxMsg1_oATOM_CAN_XCP_895c1d63_Tx      57u
+#define ComConf_ComIPdu_VcuMeasurementMsg0_oTC37X_VCU_CAN01_0deb23c3_Tx 58u
+#define ComConf_ComIPdu_Vcu_Lin0_TxMsg1_oATOM_HWLIN4_81d8d079_Tx      59u
+#define ComConf_ComIPdu_Vcu_Lin0_TxMsg2_oATOM_HWLIN4_fdb9f5a2_Tx      60u
+#define ComConf_ComIPdu_Vcu_Lin3_TxMsg1_oATOM_HWLIN3_64a2c739_Tx      61u
+#define ComConf_ComIPdu_Vcu_Lin3_TxMsg2_oATOM_HWLIN3_18c3e2e2_Tx      62u
 /**\} */
 
 /**********************************************************************************************************************
@@ -267,21 +271,6 @@
 **********************************************************************************************************************/
 FUNC(void, COM_CODE) Com_RxIndication(PduIdType RxPduId, P2CONST(PduInfoType, AUTOMATIC, COM_APPL_DATA) PduInfoPtr);
 
-/**********************************************************************************************************************
-  Com_TxConfirmation
-**********************************************************************************************************************/
-/** \brief        This function is called by the lower layer after the PDU has been transmitted on the network.
-                  A confirmation that is received for an I-PDU that does not require a confirmation is silently discarded.
-    \param[in]    TxPduId   ID of AUTOSAR COM I-PDU that has been transmitted.
-                            Range: 0..(maximum number of I-PDU IDs transmitted by AUTOSAR COM) - 1
-    \return       none
-    \context      The function can be called on interrupt and task level. It is not allowed to use CAT1 interrupts with Rte (BSW00326]). Due to this, the interrupt context shall be configured to a CAT2 interrupt if an Rte is used.
-    \synchronous  TRUE
-    \reentrant    TRUE, for different Handles
-    \trace        SPEC-2737028
-    \note         The function is called by the lower layer.
-**********************************************************************************************************************/
-FUNC(void, COM_CODE) Com_TxConfirmation(PduIdType TxPduId);
 
 /**********************************************************************************************************************
   Com_TriggerTransmit

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_CanIf.h
- *   Generation Time: 2025-09-12 10:25:40
+ *   Generation Time: 2025-10-13 13:53:07
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -80,23 +80,7 @@
  *********************************************************************************************************************/
 FUNC(void, PDUR_CODE) PduR_CanIfRxIndication(PduIdType RxPduId, P2CONST(PduInfoType, AUTOMATIC, PDUR_APPL_DATA) info);
 
-/**********************************************************************************************************************
- * PduR_CanIfTxConfirmation
- *********************************************************************************************************************/
-/*!
- * \brief    The function is called by the CanIf to confirm the complete transmission of a CanIf I-PDU.\n
- *           The PDU Router evaluates the CanIf I-PDU handle and identifies the destination(s) of the PDU.\n
- *           The call is routed to an upper IF module using the appropriate I-PDU handle of the destination layer.
- * \param    TxPduId           ID of the transmitted CanIf I-PDU
- * \return   none
- * \pre      PduR_Init() is executed successfully.
- * \context  This function can be called on interrupt and task level and has not to be interrupted by other\n
- *           PduR_CanIfTxConfirmation calls for the same CanIfTxPduId.
- * \trace    DSGN-PduR_IF_Forwarding
- * \trace    SPEC-666, SPEC-38455, SPEC-38450
- * \note     The function is called by CanIf.
- *********************************************************************************************************************/
-FUNC(void, PDUR_CODE) PduR_CanIfTxConfirmation(PduIdType TxPduId);
+/* PduR_CanIfTxConfirmation API disabled due to disabled TxConfirmation in PduRBswModule settings. */
 
 
 

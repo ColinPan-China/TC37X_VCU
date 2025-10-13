@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.h
- *   Generation Time: 2025-09-17 16:38:18
+ *   Generation Time: 2025-10-13 13:53:06
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -62,7 +62,7 @@
 #define NM_STATE_CHANGE_REPORT_ENABLED                 STD_OFF
 
 #define NM_COM_CONTROL_ENABLED                         STD_ON
-#define NM_COM_USER_DATA_SUPPORT                       STD_OFF
+#define NM_COM_USER_DATA_SUPPORT                       STD_ON
 #define NM_NODE_DETECTION_ENABLED                      STD_OFF
 
 #define NM_NODE_ID_ENABLED                             STD_ON
@@ -294,7 +294,7 @@
 #define NM_REPEATMESSAGEREQUESTOFNMFUNCTIONTABLE                                                    STD_OFF  /**< Deactivateable: 'Nm_NmFunctionTable.RepeatMessageRequest' Reason: 'Function is not available due to pre-compile settings' */
 #define NM_REQUESTBUSSYNCHRONIZATIONOFNMFUNCTIONTABLE                                               STD_OFF  /**< Deactivateable: 'Nm_NmFunctionTable.RequestBusSynchronization' Reason: 'Function is not available due to pre-compile settings' */
 #define NM_SETSLEEPREADYBITOFNMFUNCTIONTABLE                                                        STD_OFF  /**< Deactivateable: 'Nm_NmFunctionTable.SetSleepReadyBit' Reason: 'Function is not available due to pre-compile settings' */
-#define NM_SETUSERDATAOFNMFUNCTIONTABLE                                                             STD_ON
+#define NM_SETUSERDATAOFNMFUNCTIONTABLE                                                             STD_OFF  /**< Deactivateable: 'Nm_NmFunctionTable.SetUserData' Reason: 'Function is not available due to pre-compile settings' */
 #define NM_NMPARTECUMAPPING                                                                         STD_OFF  /**< Deactivateable: 'Nm_NmPartEcuMapping' Reason: 'Nm Gw Ext Enabled is turned OFF' */
 #define NM_MAPPARTECUTOACTCHOFNMPARTECUMAPPING                                                      STD_OFF  /**< Deactivateable: 'Nm_NmPartEcuMapping.MapPartEcuToActCh' Reason: 'Nm Gw Ext Enabled is turned OFF' */
 #define NM_OSEKNORMAL                                                                               STD_OFF  /**< Deactivateable: 'Nm_OsekNormal' Reason: 'Wait bus sleep extension is not enabled or Coordinator Support is not enabled' */
@@ -365,7 +365,6 @@
 #define NM_ISDEF_NETWORKRELEASEOFNMFUNCTIONTABLE                                                    STD_OFF
 #define NM_ISDEF_NETWORKREQUESTOFNMFUNCTIONTABLE                                                    STD_OFF
 #define NM_ISDEF_PASSIVESTARTUPOFNMFUNCTIONTABLE                                                    STD_OFF
-#define NM_ISDEF_SETUSERDATAOFNMFUNCTIONTABLE                                                       STD_OFF
 #define NM_ISDEF_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                         STD_OFF
 #define NM_ISDEF_PARTITIONSNVOFPARTITIONIDENTIFIERS                                                 STD_OFF
 #define NM_ISDEF_SYSTONMCHIND                                                                       STD_OFF
@@ -400,7 +399,6 @@
 #define NM_EQ2_NETWORKRELEASEOFNMFUNCTIONTABLE                                                      
 #define NM_EQ2_NETWORKREQUESTOFNMFUNCTIONTABLE                                                      
 #define NM_EQ2_PASSIVESTARTUPOFNMFUNCTIONTABLE                                                      
-#define NM_EQ2_SETUSERDATAOFNMFUNCTIONTABLE                                                         
 #define NM_EQ2_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                           
 #define NM_EQ2_PARTITIONSNVOFPARTITIONIDENTIFIERS                                                   
 #define NM_EQ2_SYSTONMCHIND                                                                         
@@ -545,7 +543,6 @@
 #define Nm_GetNetworkReleaseOfNmFunctionTable(Index)                                                (Nm_GetNmFunctionTableOfPCPartitionConfig()[(Index)].NetworkReleaseOfNmFunctionTable)
 #define Nm_GetNetworkRequestOfNmFunctionTable(Index)                                                (Nm_GetNmFunctionTableOfPCPartitionConfig()[(Index)].NetworkRequestOfNmFunctionTable)
 #define Nm_GetPassiveStartUpOfNmFunctionTable(Index)                                                (Nm_GetNmFunctionTableOfPCPartitionConfig()[(Index)].PassiveStartUpOfNmFunctionTable)
-#define Nm_GetSetUserDataOfNmFunctionTable(Index)                                                   (Nm_GetNmFunctionTableOfPCPartitionConfig()[(Index)].SetUserDataOfNmFunctionTable)
 #define Nm_GetPCPartitionConfigIdxOfPartitionIdentifiers(Index)                                     (Nm_GetPartitionIdentifiersOfPCConfig()[(Index)].PCPartitionConfigIdxOfPartitionIdentifiers)
 #define Nm_GetPartitionSNVOfPartitionIdentifiers(Index)                                             (Nm_GetPartitionIdentifiersOfPCConfig()[(Index)].PartitionSNVOfPartitionIdentifiers)
 #define Nm_IsPostInitialized(Index, partitionIndex)                                                 ((Nm_GetPostInitializedOfPCPartitionConfig(partitionIndex)[(Index)]) != FALSE)
@@ -602,7 +599,6 @@
 #define Nm_HasNetworkReleaseOfNmFunctionTable()                                                     (TRUE != FALSE)
 #define Nm_HasNetworkRequestOfNmFunctionTable()                                                     (TRUE != FALSE)
 #define Nm_HasPassiveStartUpOfNmFunctionTable()                                                     (TRUE != FALSE)
-#define Nm_HasSetUserDataOfNmFunctionTable()                                                        (TRUE != FALSE)
 #define Nm_HasPartitionIdentifiers()                                                                (TRUE != FALSE)
 #define Nm_HasPCPartitionConfigIdxOfPartitionIdentifiers()                                          (TRUE != FALSE)
 #define Nm_HasPartitionSNVOfPartitionIdentifiers()                                                  (TRUE != FALSE)
@@ -807,7 +803,6 @@ typedef struct sNm_NmFunctionTableType
   Nm_CallBusFuncTypeGetData GetPduDataOfNmFunctionTable;
   Nm_CallBusFuncTypeGetData GetUserDataOfNmFunctionTable;
   Nm_CallBusFuncTypeGetState GetStateOfNmFunctionTable;
-  Nm_CallBusFuncTypeSetUserData SetUserDataOfNmFunctionTable;
   Nm_CallBusFuncTypeStandard DisableCommunicationOfNmFunctionTable;
   Nm_CallBusFuncTypeStandard EnableCommunicationOfNmFunctionTable;
   Nm_CallBusFuncTypeStandard NetworkReleaseOfNmFunctionTable;
@@ -971,7 +966,6 @@ extern CONST(Nm_ChannelConfigType, NM_CONST) Nm_ChannelConfig[3];
   GetPduData            
   GetUserData           
   GetState              
-  SetUserData           
   DisableCommunication  
   EnableCommunication   
   NetworkRelease        

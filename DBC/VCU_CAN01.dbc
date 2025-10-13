@@ -158,8 +158,9 @@ BO_ 1280 VCU_Rx_500h_NM: 8 GWM
  SG_ VCU_Rx_500h_NM : 0|64@1+ (1,0) [0|0] ""  VCU
 
 BO_ 1308 VCU_Tx_51Ch_NM: 8 VCU
- SG_ VCU_Rx_51Ch_NM : 0|64@1+ (1,0) [0|0] ""  GWM
-
+ SG_ CAN01_TxNM_PNCData : 16|48@1+ (1,0) [0|0] ""  ADCU_CH,CGW_CH
+ SG_ CAN01_TxNM_CBV : 8|8@1+ (1,0) [0|0] ""  ADCU_CH,CGW_CH
+ SG_ CAN01_TxNM_NodeId : 0|8@1+ (1,0) [0|0] ""  ADCU_CH,CGW_CH
 
 
 BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
