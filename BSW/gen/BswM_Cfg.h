@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2025-10-13 13:53:06
+ *   Generation Time: 2025-10-14 14:41:52
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -142,7 +142,7 @@
 #define BSWM_WAKEUP_SOURCE_COUNT             13u
 #define BSWM_IPDU_GROUP_CONTROL              STD_ON
 #define BSWM_ECUM_MODE_HANDLING              STD_OFF
-#define BSWM_IPDUGROUPVECTORSIZE             3u
+#define BSWM_IPDUGROUPVECTORSIZE             2u
 #define BSWM_MULTIPARTITION                  STD_OFF
 
 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Lcfg.c
- *   Generation Time: 2025-10-13 14:22:20
+ *   Generation Time: 2025-10-14 14:41:52
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -96,6 +96,7 @@
   BusType                   The channel bus type
   NmSupport                 Decides if the channel has NmType FULL or PASSIVE
   SilentSupport             Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration)
+  GwType                    The partial network gateway type, relevant for channels attached to coordinated partial networks
   MinFullComTime            Minimal full communication time for the channel, relevant for NmTypes LIGHT and FULL
   NmLightDuration           Nm Light Timeout
   NmType                    The Network Management type of the channel
@@ -108,15 +109,15 @@
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    BusType            NmSupport  SilentSupport  MinFullComTime  NmLightDuration  NmType                      WakeupState                      GetCurrentBusSMModeApi   RequestBusSMModeApi         Referable Keys */
-  { /*     0 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_0] */
-  { /*     1 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_1] */
-  { /*     2 */ COMM_BUS_TYPE_CAN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_2] */
-  { /*     3 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_3] */
-  { /*     4 */ COMM_BUS_TYPE_CAN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_4] */
-  { /*     5 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode },  /* [ComMChannel_5] */
-  { /*     6 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode },  /* [ComMChannel_6] */
-  { /*     7 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode }   /* [ComMChannel_7] */
+    /* Index    BusType            NmSupport  SilentSupport  GwType                     MinFullComTime  NmLightDuration  NmType                      WakeupState                      GetCurrentBusSMModeApi   RequestBusSMModeApi         Referable Keys */
+  { /*     0 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE, COMM_GATEWAY_TYPE_PASSIVE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_0] */
+  { /*     1 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE, COMM_GATEWAY_TYPE_PASSIVE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_1] */
+  { /*     2 */ COMM_BUS_TYPE_CAN,     FALSE,         FALSE, COMM_GATEWAY_TYPE_NONE   ,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_2] */
+  { /*     3 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE, COMM_GATEWAY_TYPE_NONE   ,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_3] */
+  { /*     4 */ COMM_BUS_TYPE_CAN,     FALSE,         FALSE, COMM_GATEWAY_TYPE_NONE   ,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_4] */
+  { /*     5 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE, COMM_GATEWAY_TYPE_NONE   ,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode },  /* [ComMChannel_5] */
+  { /*     6 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE, COMM_GATEWAY_TYPE_NONE   ,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode },  /* [ComMChannel_6] */
+  { /*     7 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE, COMM_GATEWAY_TYPE_NONE   ,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode }   /* [ComMChannel_7] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -142,14 +143,39 @@ CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[8] = {  /* PRQA S 1514, 1533 */
 /*lint -restore */
 CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    PncPbIndEndIdx                     PncPbIndStartIdx                     UserReqFullComEndIdx  UserReqFullComStartIdx */
-  { /*     0 */ COMM_NO_PNCPBINDENDIDXOFCHANNELPB, COMM_NO_PNCPBINDSTARTIDXOFCHANNELPB,                   1u,                     0u },
-  { /*     1 */                                3u,                                  0u,                   2u,                     1u },
+  { /*     0 */                                3u,                                  0u,                   1u,                     0u },
+  { /*     1 */                                6u,                                  3u,                   2u,                     1u },
   { /*     2 */ COMM_NO_PNCPBINDENDIDXOFCHANNELPB, COMM_NO_PNCPBINDSTARTIDXOFCHANNELPB,                   3u,                     2u },
   { /*     3 */ COMM_NO_PNCPBINDENDIDXOFCHANNELPB, COMM_NO_PNCPBINDSTARTIDXOFCHANNELPB,                   4u,                     3u },
   { /*     4 */ COMM_NO_PNCPBINDENDIDXOFCHANNELPB, COMM_NO_PNCPBINDSTARTIDXOFCHANNELPB,                   5u,                     4u },
   { /*     5 */ COMM_NO_PNCPBINDENDIDXOFCHANNELPB, COMM_NO_PNCPBINDSTARTIDXOFCHANNELPB,                   6u,                     5u },
   { /*     6 */ COMM_NO_PNCPBINDENDIDXOFCHANNELPB, COMM_NO_PNCPBINDSTARTIDXOFCHANNELPB,                   7u,                     6u },
   { /*     7 */ COMM_NO_PNCPBINDENDIDXOFCHANNELPB, COMM_NO_PNCPBINDSTARTIDXOFCHANNELPB,                   8u,                     7u }
+};
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_EiraTxSignalIndirection
+**********************************************************************************************************************/
+/** 
+  \var    ComM_EiraTxSignalIndirection
+  \brief  Indirection of internal signal id to the actual Eira Tx Symbolic Name Value
+  \details
+  Element              Description
+  SymbolicNameValue    SymbolicNameValue of Tx Eira Signal
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(ComM_EiraTxSignalIndirectionType, COMM_CONST) ComM_EiraTxSignalIndirection[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    SymbolicNameValue                                                                       */
+  { /*     0 */ ComConf_ComSignal_PT_TxNM_PNCData_oNM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_5a3fd28e_Tx },
+  { /*     1 */ COMM_NO_SYMBOLICNAMEVALUE                                                               },
+  { /*     2 */ ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx }
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -187,22 +213,44 @@ CONST(ComM_PartitionIdentifiersType, COMM_CONST) ComM_PartitionIdentifiers[1] = 
   \var    ComM_Pnc
   \brief  Contains PreCompile configuration parameters of partial networks
   \details
-  Element      Description
-  ClearMask    Clear mask for the partial network related signals (EIRA, ERA)
-  PncId        System ID of the partial network
-  SetMask      Set mask for the partial network related signals (EIRA, ERA)
+  Element       Description
+  ClearMask     Clear mask for the partial network related signals (EIRA, ERA)
+  PncId         System ID of the partial network
+  SetMask       Set mask for the partial network related signals (EIRA, ERA)
+  SystemUser    System user handle generated for the PNC if it is coordinated (0xFFFF otherwise)
 */ 
 #define COMM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(ComM_PncType, COMM_CONST) ComM_Pnc[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    ClearMask  PncId  SetMask        Referable Keys */
-  { /*     0 */     0xFEu,   24u,   0x01u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
-  { /*     1 */     0xFBu,   26u,   0x04u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
-  { /*     2 */     0x7Fu,   31u,   0x80u }   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+    /* Index    ClearMask  PncId  SetMask  SystemUser        Referable Keys */
+  { /*     0 */     0xFEu,   24u,   0x01u,        11u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
+  { /*     1 */     0xFBu,   26u,   0x04u,        13u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
+  { /*     2 */     0x7Fu,   31u,   0x80u,        12u }   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_PncChannelMapping
+**********************************************************************************************************************/
+#define COMM_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(ComM_PncChannelMappingType, COMM_CONST) ComM_PncChannelMapping[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     PncChannelMapping      Referable Keys */
+  /*     0 */                 1u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
+  /*     1 */                 0u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
+  /*     2 */                 1u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
+  /*     3 */                 0u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
+  /*     4 */                 1u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+  /*     5 */                 0u   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+};
+#define COMM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -228,9 +276,9 @@ CONST(ComM_PncType, COMM_CONST) ComM_Pnc[3] = {  /* PRQA S 1514, 1533 */  /* MD_
 /*lint -restore */
 CONST(ComM_PncPbType, COMM_CONST) ComM_PncPb[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    PncChannelMappingEndIdx  PncChannelMappingStartIdx  PncSignalIndEndIdx  PncSignalIndStartIdx  UserReqPncFullComEndIdx  UserReqPncFullComStartIdx        Referable Keys */
-  { /*     0 */                      1u,                        0u,                 1u,                   0u,                      1u,                        0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, ComMChannel_1] */
-  { /*     1 */                      2u,                        1u,                 2u,                   1u,                      2u,                        1u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, ComMChannel_1] */
-  { /*     2 */                      3u,                        2u,                 3u,                   2u,                      3u,                        2u }   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31, ComMChannel_1] */
+  { /*     0 */                      2u,                        0u,                 4u,                   0u,                      1u,                        0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, ComMChannel_1, ComMChannel_0] */
+  { /*     1 */                      4u,                        2u,                 8u,                   4u,                      2u,                        1u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, ComMChannel_1, ComMChannel_0] */
+  { /*     2 */                      6u,                        4u,                12u,                   8u,                      3u,                        2u }   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31, ComMChannel_1, ComMChannel_0] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -248,11 +296,14 @@ CONST(ComM_PncPbType, COMM_CONST) ComM_PncPb[3] = {  /* PRQA S 1514, 1533 */  /*
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_PncPbIndType, COMM_CONST) ComM_PncPbInd[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(ComM_PncPbIndType, COMM_CONST) ComM_PncPbInd[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     PncPbInd      Referable Keys */
-  /*     0 */        0u,  /* [ComMChannel_1] */
-  /*     1 */        1u,  /* [ComMChannel_1] */
-  /*     2 */        2u   /* [ComMChannel_1] */
+  /*     0 */        0u,  /* [ComMChannel_0] */
+  /*     1 */        1u,  /* [ComMChannel_0] */
+  /*     2 */        2u,  /* [ComMChannel_0] */
+  /*     3 */        0u,  /* [ComMChannel_1] */
+  /*     4 */        1u,  /* [ComMChannel_1] */
+  /*     5 */        2u   /* [ComMChannel_1] */
 };
 #define COMM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -276,12 +327,46 @@ CONST(ComM_PncPbIndType, COMM_CONST) ComM_PncPbInd[3] = {  /* PRQA S 1514, 1533 
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    ChannelIdx                     PncSignalValuesEndIdx  PncSignalValuesStartIdx  Type                                Referable Keys */
   { /*     0 */                            1u,                    6u,                      0u, COMM_EIRA_TX_TYPEOFPNCSIGNAL },  /* [ComM_ComConf_ComSignal_PT_TxNM_PNCData_oNM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_5a3fd28e_Tx, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
-  { /*     1 */ COMM_NO_CHANNELIDXOFPNCSIGNAL,                   12u,                      6u, COMM_EIRA_RX_TYPEOFPNCSIGNAL }   /* [ComM_ComConf_ComSignal_PNC_ComSignal_Rx] */
+  { /*     1 */ COMM_NO_CHANNELIDXOFPNCSIGNAL,                   12u,                      6u, COMM_EIRA_RX_TYPEOFPNCSIGNAL },  /* [ComM_ComConf_ComSignal_PNC_ComSignal_Rx] */
+  { /*     2 */                            0u,                   18u,                     12u, COMM_EIRA_TX_TYPEOFPNCSIGNAL },  /* [ComM_ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+  { /*     3 */                            1u,                   24u,                     18u,  COMM_ERA_RX_TYPEOFPNCSIGNAL },  /* [ComM_ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+  { /*     4 */                            0u,                   30u,                     24u,  COMM_ERA_RX_TYPEOFPNCSIGNAL }   /* [ComM_ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_PncSignalInd
+**********************************************************************************************************************/
+/** 
+  \var    ComM_PncSignalInd
+  \brief  the indexes of the 1:1 sorted relation pointing to ComM_PncSignal
+*/ 
+#define COMM_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(ComM_PncSignalIndType, COMM_CONST) ComM_PncSignalInd[12] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     PncSignalInd      Referable Keys */
+  /*     0 */            0u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
+  /*     1 */            2u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
+  /*     2 */            3u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
+  /*     3 */            4u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
+  /*     4 */            0u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
+  /*     5 */            2u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
+  /*     6 */            3u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
+  /*     7 */            4u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
+  /*     8 */            0u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+  /*     9 */            2u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+  /*    10 */            3u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+  /*    11 */            4u   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+};
+#define COMM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -305,7 +390,7 @@ CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[2] = {  /* PRQA S 1514, 153
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_UserType, COMM_CONST) ComM_User[11] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(ComM_UserType, COMM_CONST) ComM_User[14] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    PncUser  UserByteMaskEndIdx  UserByteMaskStartIdx  UserPncByteMaskEndIdx                UserPncByteMaskLength  UserPncByteMaskStartIdx                      Comment */
   { /*     0 */   FALSE,                 1u,                   0u, COMM_NO_USERPNCBYTEMASKENDIDXOFUSER,                    0u, COMM_NO_USERPNCBYTEMASKSTARTIDXOFUSER },  /* [CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0] */
   { /*     1 */   FALSE,                 2u,                   1u, COMM_NO_USERPNCBYTEMASKENDIDXOFUSER,                    0u, COMM_NO_USERPNCBYTEMASKSTARTIDXOFUSER },  /* [CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79] */
@@ -315,9 +400,12 @@ CONST(ComM_UserType, COMM_CONST) ComM_User[11] = {  /* PRQA S 1514, 1533 */  /* 
   { /*     5 */   FALSE,                 6u,                   5u, COMM_NO_USERPNCBYTEMASKENDIDXOFUSER,                    0u, COMM_NO_USERPNCBYTEMASKSTARTIDXOFUSER },  /* [CN_ATOM_HWLIN1_b196509b] */
   { /*     6 */   FALSE,                 7u,                   6u, COMM_NO_USERPNCBYTEMASKENDIDXOFUSER,                    0u, COMM_NO_USERPNCBYTEMASKSTARTIDXOFUSER },  /* [CN_ATOM_HWLIN3_b56380a6] */
   { /*     7 */   FALSE,                 8u,                   7u, COMM_NO_USERPNCBYTEMASKENDIDXOFUSER,                    0u, COMM_NO_USERPNCBYTEMASKSTARTIDXOFUSER },  /* [CN_ATOM_HWLIN4_57bf9bdf] */
-  { /*     8 */    TRUE,                 9u,                   8u,                                  1u,                    1u,                                    0u },  /* [ComMUser_PNC24] */
-  { /*     9 */    TRUE,                10u,                   9u,                                  2u,                    1u,                                    1u },  /* [ComMUser_PNC26] */
-  { /*    10 */    TRUE,                11u,                  10u,                                  3u,                    1u,                                    2u }   /* [ComMUser_PNC31] */
+  { /*     8 */    TRUE,                10u,                   8u,                                  1u,                    1u,                                    0u },  /* [ComMUser_PNC24] */
+  { /*     9 */    TRUE,                12u,                  10u,                                  2u,                    1u,                                    1u },  /* [ComMUser_PNC26] */
+  { /*    10 */    TRUE,                14u,                  12u,                                  3u,                    1u,                                    2u },  /* [ComMUser_PNC31] */
+  { /*    11 */    TRUE,                16u,                  14u,                                  4u,                    1u,                                    3u },  /* [SystemUser_11] */
+  { /*    12 */    TRUE,                18u,                  16u,                                  5u,                    1u,                                    4u },  /* [SystemUser_12] */
+  { /*    13 */    TRUE,                20u,                  18u,                                  6u,                    1u,                                    5u }   /* [SystemUser_13] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -341,7 +429,7 @@ CONST(ComM_UserType, COMM_CONST) ComM_User[11] = {  /* PRQA S 1514, 1533 */  /* 
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[11] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[20] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Channel  ClearMask  SetMask  UserReqFullComIdx        Referable Keys */
   { /*     0 */      0u,     0xFEu,   0x01u,                0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0] */
   { /*     1 */      1u,     0xFEu,   0x01u,                1u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79] */
@@ -352,8 +440,17 @@ CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[11] = {  /* PRQA S 15
   { /*     6 */      6u,     0xFEu,   0x01u,                6u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_HWLIN3_b56380a6] */
   { /*     7 */      7u,     0xFEu,   0x01u,                7u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_HWLIN4_57bf9bdf] */
   { /*     8 */      1u,     0xFDu,   0x02u,                1u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC24] */
-  { /*     9 */      1u,     0xF7u,   0x08u,                1u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC26] */
-  { /*    10 */      1u,     0xFBu,   0x04u,                1u }   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC31] */
+  { /*     9 */      0u,     0xFDu,   0x02u,                0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC24] */
+  { /*    10 */      1u,     0xDFu,   0x20u,                1u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC26] */
+  { /*    11 */      0u,     0xDFu,   0x20u,                0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC26] */
+  { /*    12 */      1u,     0xF7u,   0x08u,                1u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC31] */
+  { /*    13 */      0u,     0xF7u,   0x08u,                0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC31] */
+  { /*    14 */      1u,     0xFBu,   0x04u,                1u },  /* [SystemUser_11] */
+  { /*    15 */      0u,     0xFBu,   0x04u,                0u },  /* [SystemUser_11] */
+  { /*    16 */      1u,     0xEFu,   0x10u,                1u },  /* [SystemUser_12] */
+  { /*    17 */      0u,     0xEFu,   0x10u,                0u },  /* [SystemUser_12] */
+  { /*    18 */      1u,     0xBFu,   0x40u,                1u },  /* [SystemUser_13] */
+  { /*    19 */      0u,     0xBFu,   0x40u,                0u }   /* [SystemUser_13] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -368,19 +465,24 @@ CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[11] = {  /* PRQA S 15
   \brief  Each partial network user has N entries in this array (N = # pncs attached to this user). Each entry describes a Byte Position and a Mask for storing/clearing the user request in UserReqPncFullCom
   \details
   Element                 Description
+  ClearMask               Clear-mask for clearing the bit which corresponds to this user
   PncID                   System Id of the partial network which is requested by this entry
   PncIdx                  the index of the 1:1 relation pointing to ComM_Pnc
+  SetMask                 Set-mask for setting the bit which corresponds to this user
   UserReqPncFullComIdx    the index of the 1:1 relation pointing to ComM_UserReqPncFullCom
 */ 
 #define COMM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_UserPncByteMaskType, COMM_CONST) ComM_UserPncByteMask[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    PncID  PncIdx  UserReqPncFullComIdx        Referable Keys */
-  { /*     0 */   24u,     0u,                   0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC24] */
-  { /*     1 */   26u,     1u,                   1u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC26] */
-  { /*     2 */   31u,     2u,                   2u }   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC31] */
+CONST(ComM_UserPncByteMaskType, COMM_CONST) ComM_UserPncByteMask[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    ClearMask  PncID  PncIdx  SetMask  UserReqPncFullComIdx        Referable Keys */
+  { /*     0 */     0xFEu,   24u,     0u,   0x01u,                   0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC24] */
+  { /*     1 */     0xFEu,   26u,     1u,   0x01u,                   1u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC26] */
+  { /*     2 */     0xFEu,   31u,     2u,   0x01u,                   2u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC31] */
+  { /*     3 */     0xFDu,   24u,     0u,   0x02u,                   0u },  /* [SystemUser_11] */
+  { /*     4 */     0xFDu,   31u,     2u,   0x02u,                   2u },  /* [SystemUser_12] */
+  { /*     5 */     0xFDu,   26u,     1u,   0x02u,                   1u }   /* [SystemUser_13] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -725,6 +827,15 @@ VAR(ComM_PncSignalValuesUType, COMM_VAR_NOINIT) ComM_PncSignalValues;  /* PRQA S
   /*     6 */  /* [ComM_ComConf_ComSignal_PNC_ComSignal_Rx] */
   /*   ... */  /* [ComM_ComConf_ComSignal_PNC_ComSignal_Rx] */
   /*    11 */  /* [ComM_ComConf_ComSignal_PNC_ComSignal_Rx] */
+  /*    12 */  /* [ComM_ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx] */
+  /*   ... */  /* [ComM_ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx] */
+  /*    17 */  /* [ComM_ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx] */
+  /*    18 */  /* [ComM_ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx] */
+  /*   ... */  /* [ComM_ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx] */
+  /*    23 */  /* [ComM_ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx] */
+  /*    24 */  /* [ComM_ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx] */
+  /*   ... */  /* [ComM_ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx] */
+  /*    29 */  /* [ComM_ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -788,8 +899,8 @@ VAR(ComM_PostInitializedType, COMM_VAR_NOINIT) ComM_PostInitialized[1];  /* PRQA
 /*lint -restore */
 VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[8];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [ComMChannel_0, Channel0_To_User0] */
-  /*     1 */  /* [ComMChannel_1, Channel1_To_User1, Channel1_To_User8, Channel1_To_User10, Channel1_To_User9] */
+  /*     0 */  /* [ComMChannel_0, Channel0_To_User0, Channel0_To_User8, Channel0_To_User11, Channel0_To_User10, Channel0_To_User12, Channel0_To_User9, Channel0_To_User13] */
+  /*     1 */  /* [ComMChannel_1, Channel1_To_User1, Channel1_To_User8, Channel1_To_User11, Channel1_To_User10, Channel1_To_User12, Channel1_To_User9, Channel1_To_User13] */
   /*     2 */  /* [ComMChannel_2, Channel2_To_User2] */
   /*     3 */  /* [ComMChannel_3, Channel3_To_User3] */
   /*     4 */  /* [ComMChannel_4, Channel4_To_User4] */
@@ -815,9 +926,9 @@ VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[8];  /* PRQA S
 /*lint -restore */
 VAR(ComM_UserReqPncFullComType, COMM_VAR_NOINIT) ComM_UserReqPncFullCom[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, Pnc24_To_User8] */
-  /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, Pnc26_To_User9] */
-  /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31, Pnc31_To_User10] */
+  /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, Pnc24_To_User8, Pnc24_To_User11] */
+  /*     1 */  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, Pnc26_To_User9, Pnc26_To_User13] */
+  /*     2 */  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31, Pnc31_To_User10, Pnc31_To_User12] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1026,6 +1137,56 @@ FUNC(void, COMM_CODE) ComM_ComCbk_PNC_ComSignal_Rx(void)
     (void)Com_ReceiveSignal(ComConf_ComSignal_PNC_ComSignal_Rx, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_COM_RECEIVE_SIGNAL */ /* PRQA S 0315 */ /* MD_ComM_0315 */
 
     ComM_PncProcessRxSignalEira(1, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_WITH_PTR_TO_CONST */
+  }
+
+}
+
+/*********************************************************************************************************************
+  FUNCTION: ComM_ComCbk_PNC_ERA_PT_ComSignal_Rx
+*********************************************************************************************************************/
+/*!
+ * \internal
+ * - #10 Notification that an EIRA_RX or ERA signal data has changed. 
+ *       Receive the data of the corresponding signal and trigger signal data processing.
+ * \endinternal
+ */
+FUNC(void, COMM_CODE) ComM_ComCbk_PNC_ERA_PT_ComSignal_Rx(void)
+{
+  /* ----- Local Variables ---------------------------------------------- */
+  uint8 EiraOrEraValuesRx[COMM_PNC_SIGNAL_LENGTH] = {0};
+
+  /* ----- Implementation ----------------------------------------------- */
+  /* - #10 Notification that an EIRA_RX or ERA signal data has changed. 
+   *       Receive the data of the corresponding signal and trigger signal data processing. */
+  {
+    (void)Com_ReceiveSignal(ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_COM_RECEIVE_SIGNAL */ /* PRQA S 0315 */ /* MD_ComM_0315 */
+
+    ComM_PncProcessRxSignalEra(3, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_WITH_PTR_TO_CONST */
+  }
+
+}
+
+/*********************************************************************************************************************
+  FUNCTION: ComM_ComCbk_PNC_ERA_CH_ComSignal_Rx
+*********************************************************************************************************************/
+/*!
+ * \internal
+ * - #10 Notification that an EIRA_RX or ERA signal data has changed. 
+ *       Receive the data of the corresponding signal and trigger signal data processing.
+ * \endinternal
+ */
+FUNC(void, COMM_CODE) ComM_ComCbk_PNC_ERA_CH_ComSignal_Rx(void)
+{
+  /* ----- Local Variables ---------------------------------------------- */
+  uint8 EiraOrEraValuesRx[COMM_PNC_SIGNAL_LENGTH] = {0};
+
+  /* ----- Implementation ----------------------------------------------- */
+  /* - #10 Notification that an EIRA_RX or ERA signal data has changed. 
+   *       Receive the data of the corresponding signal and trigger signal data processing. */
+  {
+    (void)Com_ReceiveSignal(ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_COM_RECEIVE_SIGNAL */ /* PRQA S 0315 */ /* MD_ComM_0315 */
+
+    ComM_PncProcessRxSignalEra(4, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_WITH_PTR_TO_CONST */
   }
 
 }

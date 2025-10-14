@@ -66,6 +66,7 @@
 #include "TLE9201SG.h"
 #include "Com.h"
 #include "ComM.h"
+#include "CanIf.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
@@ -167,6 +168,9 @@ FUNC(void, IOHWAB_CODE) IoHwAb_Init (void)
   Tle94108es_Init();
   Tle9201sg_Init();
   Tja1145_Init();
+
+  CanNm_ConfirmPnAvailability(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292);
+  CanNm_ConfirmPnAvailability(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
@@ -241,17 +245,36 @@ FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_10ms(void)
   Tle94108es_Main();
   Tle9201sg_Main();
   SensorMngMain();
-  ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0,COMM_FULL_COMMUNICATION);
-  ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79,COMM_FULL_COMMUNICATION);
-  ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_XCP_ca35a39e                    ,COMM_FULL_COMMUNICATION);
-  ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN1_b196509b                     ,COMM_FULL_COMMUNICATION);
-  ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN3_b56380a6                     ,COMM_FULL_COMMUNICATION);
-  ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN4_57bf9bdf                     ,COMM_FULL_COMMUNICATION);
-  ComM_RequestComMode(ComMConf_ComMUser_CN_J1939_bms_d26c50b6                       ,COMM_FULL_COMMUNICATION);
-  ComM_RequestComMode(ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c                 ,COMM_FULL_COMMUNICATION);
-  ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC31                              ,COMM_FULL_COMMUNICATION);
-  ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC24                              ,COMM_FULL_COMMUNICATION);
-  ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC26                              ,COMM_FULL_COMMUNICATION);
+
+
+ if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )
+  {
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0, COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79, COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_XCP_ca35a39e                    , COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN1_b196509b                     , COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN3_b56380a6                     , COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN4_57bf9bdf                     , COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_J1939_bms_d26c50b6                       , COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c                 , COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC31                              , COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC24                              , COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC26                              , COMM_FULL_COMMUNICATION);
+  }
+  else
+  {
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0, COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79, COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_XCP_ca35a39e                    , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN1_b196509b                     , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN3_b56380a6                     , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN4_57bf9bdf                     , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_J1939_bms_d26c50b6                       , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c                 , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC31                              , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC24                              , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC26                              , COMM_NO_COMMUNICATION);
+  }
 
   /*ICU Measurement*/
   MessureFlg++;

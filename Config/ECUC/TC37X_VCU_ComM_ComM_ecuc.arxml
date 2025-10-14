@@ -54,6 +54,18 @@
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/ComM/ComMGeneral/ComMSafeBswChecks</DEFINITION-REF>
                   <VALUE>false</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/ComM/ComMGeneral/ComMPncGatewayEnabled</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/ComM/ComMGeneral/ComMPncToChannelRoutingLimitationEnabled</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/ComM/ComMGeneral/ComM0PncVectorAvoidance</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
               </PARAMETER-VALUES>
               <SUB-CONTAINERS>
                 <ECUC-CONTAINER-VALUE UUID="308a96c7-6953-4c93-a0f5-095cc2a670c4">
@@ -214,6 +226,10 @@
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMChannel/ComMNoWakeup</DEFINITION-REF>
                       <VALUE>false</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMChannel/ComMPncGatewayType</DEFINITION-REF>
+                      <VALUE>COMM_GATEWAY_TYPE_PASSIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <SUB-CONTAINERS>
                     <ECUC-CONTAINER-VALUE UUID="266a3481-b4a6-3ead-95a8-c9d329dffb20">
@@ -276,6 +292,10 @@
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMChannel/ComMNoWakeup</DEFINITION-REF>
                       <VALUE>false</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMChannel/ComMPncGatewayType</DEFINITION-REF>
+                      <VALUE>COMM_GATEWAY_TYPE_PASSIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <SUB-CONTAINERS>
                     <ECUC-CONTAINER-VALUE UUID="cc338c44-9132-4ba5-856c-0606dc812f99">
@@ -799,6 +819,10 @@
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMUserPerPnc</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC24</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMChannelPerPnc</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
                     <ECUC-CONTAINER-VALUE UUID="233f1f75-4f14-4fda-850a-05af8ef8294c">
@@ -849,6 +873,78 @@
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="23b42224-795c-425c-8ba6-ed8ba85afd7d">
+                      <SHORT-NAME>ComMPncComSignal</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalDirection</DEFINITION-REF>
+                          <VALUE>TX</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalKind</DEFINITION-REF>
+                          <VALUE>EIRA</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Com/ComConfig/CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalChannelRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="3ad47344-4e15-4558-a593-655e3d728844">
+                      <SHORT-NAME>ComMPncComSignal_001</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalDirection</DEFINITION-REF>
+                          <VALUE>RX</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalKind</DEFINITION-REF>
+                          <VALUE>ERA</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Com/ComConfig/PNC_ERA_PT_ComSignal_Rx</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalChannelRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="71b17843-3e22-41fa-bb7b-cb6df5a27c6d">
+                      <SHORT-NAME>ComMPncComSignal_002</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalDirection</DEFINITION-REF>
+                          <VALUE>RX</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalKind</DEFINITION-REF>
+                          <VALUE>ERA</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Com/ComConfig/PNC_ERA_CH_ComSignal_Rx</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalChannelRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="51fa4dfc-0526-4287-a848-ec4f0eb80abb">
@@ -868,6 +964,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMUserPerPnc</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC31</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMChannelPerPnc</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -919,6 +1019,78 @@
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="e7e135b8-e360-42d5-b070-2b46ad878bd4">
+                      <SHORT-NAME>ComMPncComSignal</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalDirection</DEFINITION-REF>
+                          <VALUE>TX</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalKind</DEFINITION-REF>
+                          <VALUE>EIRA</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Com/ComConfig/CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalChannelRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="3cc970d4-594e-4f11-84e3-a2967d94a0f2">
+                      <SHORT-NAME>ComMPncComSignal_001</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalDirection</DEFINITION-REF>
+                          <VALUE>RX</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalKind</DEFINITION-REF>
+                          <VALUE>ERA</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Com/ComConfig/PNC_ERA_PT_ComSignal_Rx</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalChannelRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="175767c2-9a02-4920-8ae9-f9d22ecf5da7">
+                      <SHORT-NAME>ComMPncComSignal_002</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalDirection</DEFINITION-REF>
+                          <VALUE>RX</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalKind</DEFINITION-REF>
+                          <VALUE>ERA</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Com/ComConfig/PNC_ERA_CH_ComSignal_Rx</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalChannelRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="137f4809-13d4-480e-8154-5246a5877ab7">
@@ -938,6 +1110,10 @@
                     <ECUC-REFERENCE-VALUE>
                       <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMUserPerPnc</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/ComMUser_PNC26</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMChannelPerPnc</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
@@ -986,6 +1162,78 @@
                         <ECUC-REFERENCE-VALUE>
                           <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalChannelRef</DEFINITION-REF>
                           <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="14499712-a173-4e71-aff1-b402a017c084">
+                      <SHORT-NAME>ComMPncComSignal</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalDirection</DEFINITION-REF>
+                          <VALUE>TX</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalKind</DEFINITION-REF>
+                          <VALUE>EIRA</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Com/ComConfig/CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalChannelRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="ebeb3ed2-73f6-43a8-9126-17cb0d10bbc7">
+                      <SHORT-NAME>ComMPncComSignal_001</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalDirection</DEFINITION-REF>
+                          <VALUE>RX</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalKind</DEFINITION-REF>
+                          <VALUE>ERA</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Com/ComConfig/PNC_ERA_PT_ComSignal_Rx</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalChannelRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="91254417-032f-47ae-b84f-a017350eacb7">
+                      <SHORT-NAME>ComMPncComSignal_002</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalDirection</DEFINITION-REF>
+                          <VALUE>RX</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalKind</DEFINITION-REF>
+                          <VALUE>ERA</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Com/ComConfig/PNC_ERA_CH_ComSignal_Rx</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/ComM/ComMConfigSet/ComMPnc/ComMPncComSignal/ComMPncComSignalChannelRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanNm_Cfg.h
- *   Generation Time: 2025-10-13 13:53:07
+ *   Generation Time: 2025-10-14 14:41:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -117,7 +117,7 @@
 #define CANNM_IMMEDIATE_NM_TX_FEATURE_ENABLED           STD_OFF
 #define CANNM_ACTIVE_WUP_BIT_FEATURE_ENABLED            STD_ON
 #define CANNM_PN_FEATURE_ENABLED                        STD_ON
-#define CANNM_PN_ERA_CALC_FEATURE_ENABLED               STD_OFF
+#define CANNM_PN_ERA_CALC_FEATURE_ENABLED               STD_ON
 #define CANNM_PN_EIRA_CALC_FEATURE_ENABLED              STD_ON
 #define CANNM_PN_TX_TIMEOUT_EXCEPTION_FEATURE_ENABLED   STD_OFF
 #define CANNM_BUSNM_SPECIFIC_PDU_RX_INDICATION_ENABLED  STD_OFF
@@ -242,8 +242,8 @@
 #define CANNM_PDUCBVPOSITIONOFCHANNELCONFIG                           STD_ON
 #define CANNM_PDUNIDPOSITIONOFCHANNELCONFIG                           STD_ON
 #define CANNM_PNCALLTXTIMEOUTEXCEPTIONOFCHANNELCONFIG                 STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.PnCallTxTimeoutException' Reason: 'PnTxTimeout Feature is disabled' */
-#define CANNM_PNERACALCENABLEDOFCHANNELCONFIG                         STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.PnEraCalcEnabled' Reason: 'EraCalcFeature is disabled' */
-#define CANNM_PNERARXPDUIDOFCHANNELCONFIG                             STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.PnEraRxPduId' Reason: 'EraCalcFeature is disabled' */
+#define CANNM_PNERACALCENABLEDOFCHANNELCONFIG                         STD_ON
+#define CANNM_PNERARXPDUIDOFCHANNELCONFIG                             STD_ON
 #define CANNM_PNHANDLEMULTIPLENETWORKREQUESTOFCHANNELCONFIG           STD_OFF  /**< Deactivateable: 'CanNm_ChannelConfig.PnHandleMultipleNetworkRequest' Reason: 'the value of CanNm_PnHandleMultipleNetworkRequestOfChannelConfig is always 'false' due to this, the array is deactivated.' */
 #define CANNM_REMOTESLEEPINDTIMEOFCHANNELCONFIG                       STD_ON
 #define CANNM_REPEATMESSAGETIMEOFCHANNELCONFIG                        STD_ON
@@ -271,10 +271,14 @@
 #define CANNM_MSGCYCLEOFFSETOFPBCHANNELCONFIG                         STD_ON
 #define CANNM_MSGREDUCEDTIMEOFPBCHANNELCONFIG                         STD_OFF  /**< Deactivateable: 'CanNm_PbChannelConfig.MsgReducedTime' Reason: 'BusLoadReduction is disabled' */
 #define CANNM_NODEIDOFPBCHANNELCONFIG                                 STD_ON
-#define CANNM_PNCLUSTERREQEXTENDIDXOFPBCHANNELCONFIG                  STD_OFF  /**< Deactivateable: 'CanNm_PbChannelConfig.PnClusterReqExtEndIdx' Reason: 'EraCalcFeature is disabled' */
-#define CANNM_PNCLUSTERREQEXTLENGTHOFPBCHANNELCONFIG                  STD_OFF  /**< Deactivateable: 'CanNm_PbChannelConfig.PnClusterReqExtLength' Reason: 'EraCalcFeature is disabled' */
-#define CANNM_PNCLUSTERREQEXTSTARTIDXOFPBCHANNELCONFIG                STD_OFF  /**< Deactivateable: 'CanNm_PbChannelConfig.PnClusterReqExtStartIdx' Reason: 'EraCalcFeature is disabled' */
-#define CANNM_PNCLUSTERREQEXTUSEDOFPBCHANNELCONFIG                    STD_OFF  /**< Deactivateable: 'CanNm_PbChannelConfig.PnClusterReqExtUsed' Reason: 'EraCalcFeature is disabled' */
+#define CANNM_PNCLUSTERREQEXTENDIDXOFPBCHANNELCONFIG                  STD_ON
+#define CANNM_PNCLUSTERREQEXTLENGTHOFPBCHANNELCONFIG                  STD_ON
+#define CANNM_PNCLUSTERREQEXTSTARTIDXOFPBCHANNELCONFIG                STD_ON
+#define CANNM_PNCLUSTERREQEXTUSEDOFPBCHANNELCONFIG                    STD_ON
+#define CANNM_PNCLUSTERRESETTIMEREXTENDIDXOFPBCHANNELCONFIG           STD_ON
+#define CANNM_PNCLUSTERRESETTIMEREXTLENGTHOFPBCHANNELCONFIG           STD_ON
+#define CANNM_PNCLUSTERRESETTIMEREXTSTARTIDXOFPBCHANNELCONFIG         STD_ON
+#define CANNM_PNCLUSTERRESETTIMEREXTUSEDOFPBCHANNELCONFIG             STD_ON
 #define CANNM_PNENABLEDOFPBCHANNELCONFIG                              STD_ON
 #define CANNM_RXMESSAGEDATAENDIDXOFPBCHANNELCONFIG                    STD_ON
 #define CANNM_RXMESSAGEDATALENGTHOFPBCHANNELCONFIG                    STD_ON
@@ -309,11 +313,11 @@
 #define CANNM_TXUSERDATAPDUIDOFPBCHANNELCONFIG                        STD_ON
 #define CANNM_PDUIDTOCHINDEX                                          STD_OFF  /**< Deactivateable: 'CanNm_PduIdToChIndex' Reason: 'PB-S is not active or channel reference is invariant over all channels' */
 #define CANNM_PNCLUSTERREQ                                            STD_ON
-#define CANNM_PNCLUSTERREQEXT                                         STD_OFF  /**< Deactivateable: 'CanNm_PnClusterReqExt' Reason: 'EraCalcFeature is disabled' */
-#define CANNM_PNCLUSTERREQEXTNEW                                      STD_OFF  /**< Deactivateable: 'CanNm_PnClusterReqExtNew' Reason: 'EraCalcFeature is disabled' */
+#define CANNM_PNCLUSTERREQEXT                                         STD_ON
+#define CANNM_PNCLUSTERREQEXTNEW                                      STD_ON
 #define CANNM_PNCLUSTERREQNEW                                         STD_ON
 #define CANNM_PNCLUSTERRESETTIMER                                     STD_ON
-#define CANNM_PNCLUSTERRESETTIMEREXT                                  STD_OFF  /**< Deactivateable: 'CanNm_PnClusterResetTimerExt' Reason: 'EraCalcFeature is disabled' */
+#define CANNM_PNCLUSTERRESETTIMEREXT                                  STD_ON
 #define CANNM_PNEIRACALCENABLED                                       STD_OFF  /**< Deactivateable: 'CanNm_PnEiraCalcEnabled' Reason: 'ConfigVariant is Pre-Compile or EiraCalcFeature is disabled' */
 #define CANNM_PNEIRARXPDUID                                           STD_ON
 #define CANNM_PNFILTERMASK                                            STD_ON
@@ -341,6 +345,7 @@
 #define CANNM_SIZEOFNMSTATE                                           STD_ON
 #define CANNM_SIZEOFPBCHANNELCONFIG                                   STD_ON
 #define CANNM_SIZEOFPNCLUSTERREQ                                      STD_ON
+#define CANNM_SIZEOFPNCLUSTERREQEXTNEW                                STD_ON
 #define CANNM_SIZEOFPNCLUSTERREQNEW                                   STD_ON
 #define CANNM_SIZEOFPNCLUSTERRESETTIMER                               STD_ON
 #define CANNM_SIZEOFPNFILTERMASK                                      STD_ON
@@ -375,8 +380,11 @@
 #define CANNM_NETWORKRESTARTFLAGOFPCCONFIG                            STD_ON
 #define CANNM_NMSTATEOFPCCONFIG                                       STD_ON
 #define CANNM_PBCHANNELCONFIGOFPCCONFIG                               STD_ON
+#define CANNM_PNCLUSTERREQEXTNEWOFPCCONFIG                            STD_ON
+#define CANNM_PNCLUSTERREQEXTOFPCCONFIG                               STD_ON
 #define CANNM_PNCLUSTERREQNEWOFPCCONFIG                               STD_ON
 #define CANNM_PNCLUSTERREQOFPCCONFIG                                  STD_ON
+#define CANNM_PNCLUSTERRESETTIMEREXTOFPCCONFIG                        STD_ON
 #define CANNM_PNCLUSTERRESETTIMEROFPCCONFIG                           STD_ON
 #define CANNM_PNEIRACALCENABLEDOFPCCONFIG                             STD_OFF  /**< Deactivateable: 'CanNm_PCConfig.PnEiraCalcEnabled' Reason: 'ConfigVariant is Pre-Compile or EiraCalcFeature is disabled' */
 #define CANNM_PNEIRARXPDUIDOFPCCONFIG                                 STD_ON
@@ -399,6 +407,7 @@
 #define CANNM_SIZEOFNETWORKRESTARTFLAGOFPCCONFIG                      STD_ON
 #define CANNM_SIZEOFNMSTATEOFPCCONFIG                                 STD_ON
 #define CANNM_SIZEOFPBCHANNELCONFIGOFPCCONFIG                         STD_ON
+#define CANNM_SIZEOFPNCLUSTERREQEXTNEWOFPCCONFIG                      STD_ON
 #define CANNM_SIZEOFPNCLUSTERREQNEWOFPCCONFIG                         STD_ON
 #define CANNM_SIZEOFPNCLUSTERREQOFPCCONFIG                            STD_ON
 #define CANNM_SIZEOFPNCLUSTERRESETTIMEROFPCCONFIG                     STD_ON
@@ -435,6 +444,8 @@
 #define CANNM_MIN_NETWORKRESTARTFLAG                                  0u
 #define CANNM_MIN_NMSTATE                                             0u
 #define CANNM_MIN_PNCLUSTERREQ                                        0u
+#define CANNM_MIN_PNCLUSTERREQEXT                                     0u
+#define CANNM_MIN_PNCLUSTERREQEXTNEW                                  0u
 #define CANNM_MIN_PNCLUSTERREQNEW                                     0u
 #define CANNM_MIN_REPEATMSGTIMER                                      0u
 #define CANNM_MIN_RXMESSAGEDATA                                       0u
@@ -460,6 +471,8 @@
 #define CANNM_MAX_NETWORKRESTARTFLAG                                  255u
 #define CANNM_MAX_NMSTATE                                             255u
 #define CANNM_MAX_PNCLUSTERREQ                                        255u
+#define CANNM_MAX_PNCLUSTERREQEXT                                     255u
+#define CANNM_MAX_PNCLUSTERREQEXTNEW                                  255u
 #define CANNM_MAX_PNCLUSTERREQNEW                                     255u
 #define CANNM_MAX_REPEATMSGTIMER                                      65535u
 #define CANNM_MAX_RXMESSAGEDATA                                       255u
@@ -477,6 +490,11 @@
   \brief  These defines are used to indicate unused indexes in data relations.
   \{
 */ 
+#define CANNM_NO_PNERARXPDUIDOFCHANNELCONFIG                          255u
+#define CANNM_NO_PNCLUSTERREQEXTENDIDXOFPBCHANNELCONFIG               255u
+#define CANNM_NO_PNCLUSTERREQEXTSTARTIDXOFPBCHANNELCONFIG             255u
+#define CANNM_NO_PNCLUSTERRESETTIMEREXTENDIDXOFPBCHANNELCONFIG        255u
+#define CANNM_NO_PNCLUSTERRESETTIMEREXTSTARTIDXOFPBCHANNELCONFIG      255u
 #define CANNM_NO_RXMESSAGEDATAENDIDXOFPBCHANNELCONFIG                 255u
 #define CANNM_NO_RXMESSAGEDATASTARTIDXOFPBCHANNELCONFIG               255u
 #define CANNM_NO_RXMESSAGEDATA_CBVIDXOFPBCHANNELCONFIG                255u
@@ -511,12 +529,22 @@
 #define CANNM_ISDEF_NODEIDENABLEDOFCHANNELCONFIG                      STD_OFF
 #define CANNM_ISDEF_PDUCBVPOSITIONOFCHANNELCONFIG                     STD_OFF
 #define CANNM_ISDEF_PDUNIDPOSITIONOFCHANNELCONFIG                     STD_OFF
+#define CANNM_ISDEF_PNERACALCENABLEDOFCHANNELCONFIG                   STD_OFF
+#define CANNM_ISDEF_PNERARXPDUIDOFCHANNELCONFIG                       STD_OFF
 #define CANNM_ISDEF_REMOTESLEEPINDTIMEOFCHANNELCONFIG                 STD_OFF
 #define CANNM_ISDEF_REPEATMESSAGETIMEOFCHANNELCONFIG                  STD_OFF
 #define CANNM_ISDEF_TIMEOUTTIMEOFCHANNELCONFIG                        STD_OFF
 #define CANNM_ISDEF_WAITBUSSLEEPTIMEOFCHANNELCONFIG                   STD_OFF
 #define CANNM_ISDEF_MSGCYCLEOFFSETOFPBCHANNELCONFIG                   STD_OFF
 #define CANNM_ISDEF_NODEIDOFPBCHANNELCONFIG                           STD_OFF
+#define CANNM_ISDEF_PNCLUSTERREQEXTENDIDXOFPBCHANNELCONFIG            STD_OFF
+#define CANNM_ISDEF_PNCLUSTERREQEXTLENGTHOFPBCHANNELCONFIG            STD_OFF
+#define CANNM_ISDEF_PNCLUSTERREQEXTSTARTIDXOFPBCHANNELCONFIG          STD_OFF
+#define CANNM_ISDEF_PNCLUSTERREQEXTUSEDOFPBCHANNELCONFIG              STD_OFF
+#define CANNM_ISDEF_PNCLUSTERRESETTIMEREXTENDIDXOFPBCHANNELCONFIG     STD_OFF
+#define CANNM_ISDEF_PNCLUSTERRESETTIMEREXTLENGTHOFPBCHANNELCONFIG     STD_OFF
+#define CANNM_ISDEF_PNCLUSTERRESETTIMEREXTSTARTIDXOFPBCHANNELCONFIG   STD_OFF
+#define CANNM_ISDEF_PNCLUSTERRESETTIMEREXTUSEDOFPBCHANNELCONFIG       STD_OFF
 #define CANNM_ISDEF_PNENABLEDOFPBCHANNELCONFIG                        STD_OFF
 #define CANNM_ISDEF_RXMESSAGEDATAENDIDXOFPBCHANNELCONFIG              STD_OFF
 #define CANNM_ISDEF_RXMESSAGEDATALENGTHOFPBCHANNELCONFIG              STD_OFF
@@ -561,8 +589,11 @@
 #define CANNM_ISDEF_NETWORKRESTARTFLAGOFPCCONFIG                      STD_ON
 #define CANNM_ISDEF_NMSTATEOFPCCONFIG                                 STD_ON
 #define CANNM_ISDEF_PBCHANNELCONFIGOFPCCONFIG                         STD_ON
+#define CANNM_ISDEF_PNCLUSTERREQEXTNEWOFPCCONFIG                      STD_ON
+#define CANNM_ISDEF_PNCLUSTERREQEXTOFPCCONFIG                         STD_ON
 #define CANNM_ISDEF_PNCLUSTERREQNEWOFPCCONFIG                         STD_ON
 #define CANNM_ISDEF_PNCLUSTERREQOFPCCONFIG                            STD_ON
+#define CANNM_ISDEF_PNCLUSTERRESETTIMEREXTOFPCCONFIG                  STD_ON
 #define CANNM_ISDEF_PNCLUSTERRESETTIMEROFPCCONFIG                     STD_ON
 #define CANNM_ISDEF_PNFILTERMASKOFPCCONFIG                            STD_ON
 #define CANNM_ISDEF_PNMESSAGEFILTERDEACTIVATIONINDICATEDOFPCCONFIG    STD_ON
@@ -592,12 +623,22 @@
 #define CANNM_EQ2_NODEIDENABLEDOFCHANNELCONFIG                        
 #define CANNM_EQ2_PDUCBVPOSITIONOFCHANNELCONFIG                       
 #define CANNM_EQ2_PDUNIDPOSITIONOFCHANNELCONFIG                       
+#define CANNM_EQ2_PNERACALCENABLEDOFCHANNELCONFIG                     
+#define CANNM_EQ2_PNERARXPDUIDOFCHANNELCONFIG                         
 #define CANNM_EQ2_REMOTESLEEPINDTIMEOFCHANNELCONFIG                   
 #define CANNM_EQ2_REPEATMESSAGETIMEOFCHANNELCONFIG                    
 #define CANNM_EQ2_TIMEOUTTIMEOFCHANNELCONFIG                          
 #define CANNM_EQ2_WAITBUSSLEEPTIMEOFCHANNELCONFIG                     
 #define CANNM_EQ2_MSGCYCLEOFFSETOFPBCHANNELCONFIG                     
 #define CANNM_EQ2_NODEIDOFPBCHANNELCONFIG                             
+#define CANNM_EQ2_PNCLUSTERREQEXTENDIDXOFPBCHANNELCONFIG              
+#define CANNM_EQ2_PNCLUSTERREQEXTLENGTHOFPBCHANNELCONFIG              
+#define CANNM_EQ2_PNCLUSTERREQEXTSTARTIDXOFPBCHANNELCONFIG            
+#define CANNM_EQ2_PNCLUSTERREQEXTUSEDOFPBCHANNELCONFIG                
+#define CANNM_EQ2_PNCLUSTERRESETTIMEREXTENDIDXOFPBCHANNELCONFIG       
+#define CANNM_EQ2_PNCLUSTERRESETTIMEREXTLENGTHOFPBCHANNELCONFIG       
+#define CANNM_EQ2_PNCLUSTERRESETTIMEREXTSTARTIDXOFPBCHANNELCONFIG     
+#define CANNM_EQ2_PNCLUSTERRESETTIMEREXTUSEDOFPBCHANNELCONFIG         
 #define CANNM_EQ2_PNENABLEDOFPBCHANNELCONFIG                          
 #define CANNM_EQ2_RXMESSAGEDATAENDIDXOFPBCHANNELCONFIG                
 #define CANNM_EQ2_RXMESSAGEDATALENGTHOFPBCHANNELCONFIG                
@@ -642,8 +683,11 @@
 #define CANNM_EQ2_NETWORKRESTARTFLAGOFPCCONFIG                        CanNm_NetworkRestartFlag.raw
 #define CANNM_EQ2_NMSTATEOFPCCONFIG                                   CanNm_NmState.raw
 #define CANNM_EQ2_PBCHANNELCONFIGOFPCCONFIG                           CanNm_PbChannelConfig
+#define CANNM_EQ2_PNCLUSTERREQEXTNEWOFPCCONFIG                        CanNm_PnClusterReqExtNew.raw
+#define CANNM_EQ2_PNCLUSTERREQEXTOFPCCONFIG                           CanNm_PnClusterReqExt.raw
 #define CANNM_EQ2_PNCLUSTERREQNEWOFPCCONFIG                           CanNm_PnClusterReqNew.raw
 #define CANNM_EQ2_PNCLUSTERREQOFPCCONFIG                              CanNm_PnClusterReq.raw
+#define CANNM_EQ2_PNCLUSTERRESETTIMEREXTOFPCCONFIG                    CanNm_PnClusterResetTimerExt.raw
 #define CANNM_EQ2_PNCLUSTERRESETTIMEROFPCCONFIG                       CanNm_PnClusterResetTimer.raw
 #define CANNM_EQ2_PNFILTERMASKOFPCCONFIG                              CanNm_PnFilterMask
 #define CANNM_EQ2_PNMESSAGEFILTERDEACTIVATIONINDICATEDOFPCCONFIG      CanNm_PnMessageFilterDeactivationIndicated.raw
@@ -745,8 +789,11 @@
 #define CanNm_GetNetworkRestartFlagOfPCConfig()                       CanNm_NetworkRestartFlag.raw  /**< the pointer to CanNm_NetworkRestartFlag */
 #define CanNm_GetNmStateOfPCConfig()                                  CanNm_NmState.raw  /**< the pointer to CanNm_NmState */
 #define CanNm_GetPbChannelConfigOfPCConfig()                          CanNm_PbChannelConfig  /**< the pointer to CanNm_PbChannelConfig */
+#define CanNm_GetPnClusterReqExtNewOfPCConfig()                       CanNm_PnClusterReqExtNew.raw  /**< the pointer to CanNm_PnClusterReqExtNew */
+#define CanNm_GetPnClusterReqExtOfPCConfig()                          CanNm_PnClusterReqExt.raw  /**< the pointer to CanNm_PnClusterReqExt */
 #define CanNm_GetPnClusterReqNewOfPCConfig()                          CanNm_PnClusterReqNew.raw  /**< the pointer to CanNm_PnClusterReqNew */
 #define CanNm_GetPnClusterReqOfPCConfig()                             CanNm_PnClusterReq.raw  /**< the pointer to CanNm_PnClusterReq */
+#define CanNm_GetPnClusterResetTimerExtOfPCConfig()                   CanNm_PnClusterResetTimerExt.raw  /**< the pointer to CanNm_PnClusterResetTimerExt */
 #define CanNm_GetPnClusterResetTimerOfPCConfig()                      CanNm_PnClusterResetTimer.raw  /**< the pointer to CanNm_PnClusterResetTimer */
 #define CanNm_GetPnEiraRxPduIdOfPCConfig()                            PduRConf_PduRSrcPdu_PduRSrcPdu  /**< I-PDU handle of Com PDU for EIRA */
 #define CanNm_GetPnFilterMaskOfPCConfig()                             CanNm_PnFilterMask  /**< the pointer to CanNm_PnFilterMask */
@@ -759,6 +806,7 @@
 #define CanNm_GetRxMessageDataOfPCConfig()                            CanNm_RxMessageData  /**< the pointer to CanNm_RxMessageData */
 #define CanNm_GetSizeOfChannelConfigOfPCConfig()                      3u  /**< the number of accomplishable value elements in CanNm_ChannelConfig */
 #define CanNm_GetSizeOfPbChannelConfigOfPCConfig()                    3u  /**< the number of accomplishable value elements in CanNm_PbChannelConfig */
+#define CanNm_GetSizeOfPnClusterReqExtNewOfPCConfig()                 12u  /**< the number of accomplishable value elements in CanNm_PnClusterReqExtNew */
 #define CanNm_GetSizeOfPnFilterMaskOfPCConfig()                       6u  /**< the number of accomplishable value elements in CanNm_PnFilterMask */
 #define CanNm_GetSizeOfSysToNmChIndOfPCConfig()                       8u  /**< the number of accomplishable value elements in CanNm_SysToNmChInd */
 #define CanNm_GetSizeOfTxMessageDataOfPCConfig()                      24u  /**< the number of accomplishable value elements in CanNm_TxMessageData */
@@ -813,6 +861,8 @@
 #define CanNm_IsNodeIdEnabledOfChannelConfig(Index)                   ((CanNm_GetChannelConfigOfPCConfig()[(Index)].NodeIdEnabledOfChannelConfig) != FALSE)
 #define CanNm_GetPduCbvPositionOfChannelConfig(Index)                 (CanNm_GetChannelConfigOfPCConfig()[(Index)].PduCbvPositionOfChannelConfig)
 #define CanNm_GetPduNidPositionOfChannelConfig(Index)                 (CanNm_GetChannelConfigOfPCConfig()[(Index)].PduNidPositionOfChannelConfig)
+#define CanNm_IsPnEraCalcEnabledOfChannelConfig(Index)                ((CanNm_GetChannelConfigOfPCConfig()[(Index)].PnEraCalcEnabledOfChannelConfig) != FALSE)
+#define CanNm_GetPnEraRxPduIdOfChannelConfig(Index)                   (CanNm_GetChannelConfigOfPCConfig()[(Index)].PnEraRxPduIdOfChannelConfig)
 #define CanNm_GetRemoteSleepIndTimeOfChannelConfig(Index)             (CanNm_GetChannelConfigOfPCConfig()[(Index)].RemoteSleepIndTimeOfChannelConfig)
 #define CanNm_GetRepeatMessageTimeOfChannelConfig(Index)              (CanNm_GetChannelConfigOfPCConfig()[(Index)].RepeatMessageTimeOfChannelConfig)
 #define CanNm_GetTimeoutTimeOfChannelConfig(Index)                    (CanNm_GetChannelConfigOfPCConfig()[(Index)].TimeoutTimeOfChannelConfig)
@@ -829,6 +879,12 @@
 #define CanNm_GetNmState(Index)                                       (CanNm_GetNmStateOfPCConfig()[(Index)])
 #define CanNm_GetMsgCycleOffsetOfPbChannelConfig(Index)               (CanNm_GetPbChannelConfigOfPCConfig()[(Index)].MsgCycleOffsetOfPbChannelConfig)
 #define CanNm_GetNodeIdOfPbChannelConfig(Index)                       (CanNm_GetPbChannelConfigOfPCConfig()[(Index)].NodeIdOfPbChannelConfig)
+#define CanNm_GetPnClusterReqExtEndIdxOfPbChannelConfig(Index)        (CanNm_GetPbChannelConfigOfPCConfig()[(Index)].PnClusterReqExtEndIdxOfPbChannelConfig)
+#define CanNm_GetPnClusterReqExtLengthOfPbChannelConfig(Index)        (CanNm_GetPbChannelConfigOfPCConfig()[(Index)].PnClusterReqExtLengthOfPbChannelConfig)
+#define CanNm_GetPnClusterReqExtStartIdxOfPbChannelConfig(Index)      (CanNm_GetPbChannelConfigOfPCConfig()[(Index)].PnClusterReqExtStartIdxOfPbChannelConfig)
+#define CanNm_GetPnClusterResetTimerExtEndIdxOfPbChannelConfig(Index) (CanNm_GetPbChannelConfigOfPCConfig()[(Index)].PnClusterResetTimerExtEndIdxOfPbChannelConfig)
+#define CanNm_GetPnClusterResetTimerExtLengthOfPbChannelConfig(Index) (CanNm_GetPbChannelConfigOfPCConfig()[(Index)].PnClusterResetTimerExtLengthOfPbChannelConfig)
+#define CanNm_GetPnClusterResetTimerExtStartIdxOfPbChannelConfig(Index) (CanNm_GetPbChannelConfigOfPCConfig()[(Index)].PnClusterResetTimerExtStartIdxOfPbChannelConfig)
 #define CanNm_IsPnEnabledOfPbChannelConfig(Index)                     ((CanNm_GetPbChannelConfigOfPCConfig()[(Index)].PnEnabledOfPbChannelConfig) != FALSE)
 #define CanNm_GetRxMessageDataEndIdxOfPbChannelConfig(Index)          (CanNm_GetPbChannelConfigOfPCConfig()[(Index)].RxMessageDataEndIdxOfPbChannelConfig)
 #define CanNm_GetRxMessageDataLengthOfPbChannelConfig(Index)          (CanNm_GetPbChannelConfigOfPCConfig()[(Index)].RxMessageDataLengthOfPbChannelConfig)
@@ -851,8 +907,11 @@
 #define CanNm_GetTxPduIdOfPbChannelConfig(Index)                      (CanNm_GetPbChannelConfigOfPCConfig()[(Index)].TxPduIdOfPbChannelConfig)
 #define CanNm_GetTxUserDataPduIdOfPbChannelConfig(Index)              (CanNm_GetPbChannelConfigOfPCConfig()[(Index)].TxUserDataPduIdOfPbChannelConfig)
 #define CanNm_GetPnClusterReq(Index)                                  (CanNm_GetPnClusterReqOfPCConfig()[(Index)])
+#define CanNm_GetPnClusterReqExt(Index)                               (CanNm_GetPnClusterReqExtOfPCConfig()[(Index)])
+#define CanNm_GetPnClusterReqExtNew(Index)                            (CanNm_GetPnClusterReqExtNewOfPCConfig()[(Index)])
 #define CanNm_GetPnClusterReqNew(Index)                               (CanNm_GetPnClusterReqNewOfPCConfig()[(Index)])
 #define CanNm_GetPnClusterResetTimer(Index)                           (CanNm_GetPnClusterResetTimerOfPCConfig()[(Index)])
+#define CanNm_GetPnClusterResetTimerExt(Index)                        (CanNm_GetPnClusterResetTimerExtOfPCConfig()[(Index)])
 #define CanNm_GetPnFilterMask(Index)                                  (CanNm_GetPnFilterMaskOfPCConfig()[(Index)])
 #define CanNm_IsPnMessageFilterDeactivationIndicated(Index)           ((CanNm_GetPnMessageFilterDeactivationIndicatedOfPCConfig()[(Index)]) != FALSE)
 #define CanNm_IsPnMessageFilterEnabled(Index)                         ((CanNm_GetPnMessageFilterEnabledOfPCConfig()[(Index)]) != FALSE)
@@ -873,6 +932,8 @@
   \brief  These macros can be used to read deduplicated data elements.
   \{
 */ 
+#define CanNm_IsPnClusterReqExtUsedOfPbChannelConfig(Index)           (((boolean)(CanNm_GetPnClusterReqExtLengthOfPbChannelConfig(Index) != 0u)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to CanNm_PnClusterReqExt */
+#define CanNm_IsPnClusterResetTimerExtUsedOfPbChannelConfig(Index)    (((boolean)(CanNm_GetPnClusterResetTimerExtLengthOfPbChannelConfig(Index) != 0u)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to CanNm_PnClusterResetTimerExt */
 #define CanNm_IsRxMessageDataUsedOfPbChannelConfig(Index)             (((boolean)(CanNm_GetRxMessageDataLengthOfPbChannelConfig(Index) != 0u)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to CanNm_RxMessageData */
 #define CanNm_IsRxMessageData_CBVUsedOfPbChannelConfig(Index)         (((boolean)(CanNm_GetRxMessageData_CBVIdxOfPbChannelConfig(Index) != CANNM_NO_RXMESSAGEDATA_CBVIDXOFPBCHANNELCONFIG)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to CanNm_RxMessageData */
 #define CanNm_IsRxMessageData_NIDUsedOfPbChannelConfig(Index)         (((boolean)(CanNm_GetRxMessageData_NIDIdxOfPbChannelConfig(Index) != CANNM_NO_RXMESSAGEDATA_NIDIDXOFPBCHANNELCONFIG)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to CanNm_RxMessageData */
@@ -898,6 +959,7 @@
 #define CanNm_GetSizeOfNmState()                                      CanNm_GetSizeOfNmStateOfPCConfig()
 #define CanNm_GetSizeOfPbChannelConfig()                              CanNm_GetSizeOfPbChannelConfigOfPCConfig()
 #define CanNm_GetSizeOfPnClusterReq()                                 CanNm_GetSizeOfPnClusterReqOfPCConfig()
+#define CanNm_GetSizeOfPnClusterReqExtNew()                           CanNm_GetSizeOfPnClusterReqExtNewOfPCConfig()
 #define CanNm_GetSizeOfPnClusterReqNew()                              CanNm_GetSizeOfPnClusterReqNewOfPCConfig()
 #define CanNm_GetSizeOfPnClusterResetTimer()                          CanNm_GetSizeOfPnClusterResetTimerOfPCConfig()
 #define CanNm_GetSizeOfPnFilterMask()                                 CanNm_GetSizeOfPnFilterMaskOfPCConfig()
@@ -930,8 +992,11 @@
 #define CanNm_SetNetworkRestartFlag(Index, Value)                     CanNm_GetNetworkRestartFlagOfPCConfig()[(Index)] = (Value)
 #define CanNm_SetNmState(Index, Value)                                CanNm_GetNmStateOfPCConfig()[(Index)] = (Value)
 #define CanNm_SetPnClusterReq(Index, Value)                           CanNm_GetPnClusterReqOfPCConfig()[(Index)] = (Value)
+#define CanNm_SetPnClusterReqExt(Index, Value)                        CanNm_GetPnClusterReqExtOfPCConfig()[(Index)] = (Value)
+#define CanNm_SetPnClusterReqExtNew(Index, Value)                     CanNm_GetPnClusterReqExtNewOfPCConfig()[(Index)] = (Value)
 #define CanNm_SetPnClusterReqNew(Index, Value)                        CanNm_GetPnClusterReqNewOfPCConfig()[(Index)] = (Value)
 #define CanNm_SetPnClusterResetTimer(Index, Value)                    CanNm_GetPnClusterResetTimerOfPCConfig()[(Index)] = (Value)
+#define CanNm_SetPnClusterResetTimerExt(Index, Value)                 CanNm_GetPnClusterResetTimerExtOfPCConfig()[(Index)] = (Value)
 #define CanNm_SetPnMessageFilterDeactivationIndicated(Index, Value)   CanNm_GetPnMessageFilterDeactivationIndicatedOfPCConfig()[(Index)] = (Value)
 #define CanNm_SetPnMessageFilterEnabled(Index, Value)                 CanNm_GetPnMessageFilterEnabledOfPCConfig()[(Index)] = (Value)
 #define CanNm_SetRepeatMsgTimer(Index, Value)                         CanNm_GetRepeatMsgTimerOfPCConfig()[(Index)] = (Value)
@@ -952,6 +1017,7 @@
 */ 
 #define CanNm_GetAddrNmState(Index)                                   (&CanNm_GetNmState(Index))
 #define CanNm_GetAddrPnClusterReq(Index)                              (&CanNm_GetPnClusterReq(Index))
+#define CanNm_GetAddrPnClusterReqExt(Index)                           (&CanNm_GetPnClusterReqExt(Index))
 #define CanNm_GetAddrPnClusterReqNew(Index)                           (&CanNm_GetPnClusterReqNew(Index))
 #define CanNm_GetAddrRxMessageData(Index)                             (&CanNm_GetRxMessageData(Index))
 #define CanNm_GetAddrTxMessageData(Index)                             (&CanNm_GetTxMessageData(Index))
@@ -973,6 +1039,8 @@
 #define CanNm_HasNodeIdEnabledOfChannelConfig()                       (TRUE != FALSE)
 #define CanNm_HasPduCbvPositionOfChannelConfig()                      (TRUE != FALSE)
 #define CanNm_HasPduNidPositionOfChannelConfig()                      (TRUE != FALSE)
+#define CanNm_HasPnEraCalcEnabledOfChannelConfig()                    (TRUE != FALSE)
+#define CanNm_HasPnEraRxPduIdOfChannelConfig()                        (TRUE != FALSE)
 #define CanNm_HasRemoteSleepIndTimeOfChannelConfig()                  (TRUE != FALSE)
 #define CanNm_HasRepeatMessageTimeOfChannelConfig()                   (TRUE != FALSE)
 #define CanNm_HasTimeoutTimeOfChannelConfig()                         (TRUE != FALSE)
@@ -990,6 +1058,14 @@
 #define CanNm_HasPbChannelConfig()                                    (TRUE != FALSE)
 #define CanNm_HasMsgCycleOffsetOfPbChannelConfig()                    (TRUE != FALSE)
 #define CanNm_HasNodeIdOfPbChannelConfig()                            (TRUE != FALSE)
+#define CanNm_HasPnClusterReqExtEndIdxOfPbChannelConfig()             (TRUE != FALSE)
+#define CanNm_HasPnClusterReqExtLengthOfPbChannelConfig()             (TRUE != FALSE)
+#define CanNm_HasPnClusterReqExtStartIdxOfPbChannelConfig()           (TRUE != FALSE)
+#define CanNm_HasPnClusterReqExtUsedOfPbChannelConfig()               (TRUE != FALSE)
+#define CanNm_HasPnClusterResetTimerExtEndIdxOfPbChannelConfig()      (TRUE != FALSE)
+#define CanNm_HasPnClusterResetTimerExtLengthOfPbChannelConfig()      (TRUE != FALSE)
+#define CanNm_HasPnClusterResetTimerExtStartIdxOfPbChannelConfig()    (TRUE != FALSE)
+#define CanNm_HasPnClusterResetTimerExtUsedOfPbChannelConfig()        (TRUE != FALSE)
 #define CanNm_HasPnEnabledOfPbChannelConfig()                         (TRUE != FALSE)
 #define CanNm_HasRxMessageDataEndIdxOfPbChannelConfig()               (TRUE != FALSE)
 #define CanNm_HasRxMessageDataLengthOfPbChannelConfig()               (TRUE != FALSE)
@@ -1021,8 +1097,11 @@
 #define CanNm_HasTxPduIdOfPbChannelConfig()                           (TRUE != FALSE)
 #define CanNm_HasTxUserDataPduIdOfPbChannelConfig()                   (TRUE != FALSE)
 #define CanNm_HasPnClusterReq()                                       (TRUE != FALSE)
+#define CanNm_HasPnClusterReqExt()                                    (TRUE != FALSE)
+#define CanNm_HasPnClusterReqExtNew()                                 (TRUE != FALSE)
 #define CanNm_HasPnClusterReqNew()                                    (TRUE != FALSE)
 #define CanNm_HasPnClusterResetTimer()                                (TRUE != FALSE)
+#define CanNm_HasPnClusterResetTimerExt()                             (TRUE != FALSE)
 #define CanNm_HasPnEiraRxPduId()                                      (TRUE != FALSE)
 #define CanNm_HasPnFilterMask()                                       (TRUE != FALSE)
 #define CanNm_HasPnInfoLength()                                       (TRUE != FALSE)
@@ -1044,6 +1123,7 @@
 #define CanNm_HasSizeOfNmState()                                      (TRUE != FALSE)
 #define CanNm_HasSizeOfPbChannelConfig()                              (TRUE != FALSE)
 #define CanNm_HasSizeOfPnClusterReq()                                 (TRUE != FALSE)
+#define CanNm_HasSizeOfPnClusterReqExtNew()                           (TRUE != FALSE)
 #define CanNm_HasSizeOfPnClusterReqNew()                              (TRUE != FALSE)
 #define CanNm_HasSizeOfPnClusterResetTimer()                          (TRUE != FALSE)
 #define CanNm_HasSizeOfPnFilterMask()                                 (TRUE != FALSE)
@@ -1075,8 +1155,11 @@
 #define CanNm_HasNetworkRestartFlagOfPCConfig()                       (TRUE != FALSE)
 #define CanNm_HasNmStateOfPCConfig()                                  (TRUE != FALSE)
 #define CanNm_HasPbChannelConfigOfPCConfig()                          (TRUE != FALSE)
+#define CanNm_HasPnClusterReqExtNewOfPCConfig()                       (TRUE != FALSE)
+#define CanNm_HasPnClusterReqExtOfPCConfig()                          (TRUE != FALSE)
 #define CanNm_HasPnClusterReqNewOfPCConfig()                          (TRUE != FALSE)
 #define CanNm_HasPnClusterReqOfPCConfig()                             (TRUE != FALSE)
+#define CanNm_HasPnClusterResetTimerExtOfPCConfig()                   (TRUE != FALSE)
 #define CanNm_HasPnClusterResetTimerOfPCConfig()                      (TRUE != FALSE)
 #define CanNm_HasPnEiraRxPduIdOfPCConfig()                            (TRUE != FALSE)
 #define CanNm_HasPnFilterMaskOfPCConfig()                             (TRUE != FALSE)
@@ -1098,6 +1181,7 @@
 #define CanNm_HasSizeOfNetworkRestartFlagOfPCConfig()                 (TRUE != FALSE)
 #define CanNm_HasSizeOfNmStateOfPCConfig()                            (TRUE != FALSE)
 #define CanNm_HasSizeOfPbChannelConfigOfPCConfig()                    (TRUE != FALSE)
+#define CanNm_HasSizeOfPnClusterReqExtNewOfPCConfig()                 (TRUE != FALSE)
 #define CanNm_HasSizeOfPnClusterReqNewOfPCConfig()                    (TRUE != FALSE)
 #define CanNm_HasSizeOfPnClusterReqOfPCConfig()                       (TRUE != FALSE)
 #define CanNm_HasSizeOfPnClusterResetTimerOfPCConfig()                (TRUE != FALSE)
@@ -1134,8 +1218,11 @@
 #define CanNm_IncNetworkRestartFlag(Index)                            CanNm_GetNetworkRestartFlag(Index)++
 #define CanNm_IncNmState(Index)                                       CanNm_GetNmState(Index)++
 #define CanNm_IncPnClusterReq(Index)                                  CanNm_GetPnClusterReq(Index)++
+#define CanNm_IncPnClusterReqExt(Index)                               CanNm_GetPnClusterReqExt(Index)++
+#define CanNm_IncPnClusterReqExtNew(Index)                            CanNm_GetPnClusterReqExtNew(Index)++
 #define CanNm_IncPnClusterReqNew(Index)                               CanNm_GetPnClusterReqNew(Index)++
 #define CanNm_IncPnClusterResetTimer(Index)                           CanNm_GetPnClusterResetTimer(Index)++
+#define CanNm_IncPnClusterResetTimerExt(Index)                        CanNm_GetPnClusterResetTimerExt(Index)++
 #define CanNm_IncRepeatMsgTimer(Index)                                CanNm_GetRepeatMsgTimer(Index)++
 #define CanNm_IncRxMessageData(Index)                                 CanNm_GetRxMessageData(Index)++
 #define CanNm_IncTimeoutTimer(Index)                                  CanNm_GetTimeoutTimer(Index)++
@@ -1160,8 +1247,11 @@
 #define CanNm_DecNetworkRestartFlag(Index)                            CanNm_GetNetworkRestartFlag(Index)--
 #define CanNm_DecNmState(Index)                                       CanNm_GetNmState(Index)--
 #define CanNm_DecPnClusterReq(Index)                                  CanNm_GetPnClusterReq(Index)--
+#define CanNm_DecPnClusterReqExt(Index)                               CanNm_GetPnClusterReqExt(Index)--
+#define CanNm_DecPnClusterReqExtNew(Index)                            CanNm_GetPnClusterReqExtNew(Index)--
 #define CanNm_DecPnClusterReqNew(Index)                               CanNm_GetPnClusterReqNew(Index)--
 #define CanNm_DecPnClusterResetTimer(Index)                           CanNm_GetPnClusterResetTimer(Index)--
+#define CanNm_DecPnClusterResetTimerExt(Index)                        CanNm_GetPnClusterResetTimerExt(Index)--
 #define CanNm_DecRepeatMsgTimer(Index)                                CanNm_GetRepeatMsgTimer(Index)--
 #define CanNm_DecRxMessageData(Index)                                 CanNm_GetRxMessageData(Index)--
 #define CanNm_DecTimeoutTimer(Index)                                  CanNm_GetTimeoutTimer(Index)--
@@ -1224,6 +1314,15 @@ typedef uint8_least CanNm_ChannelConfigIterType;
 
 /**   \brief  type used to iterate CanNm_PbChannelConfig */
 typedef uint8_least CanNm_PbChannelConfigIterType;
+
+/**   \brief  type used to iterate CanNm_PnClusterReqExt */
+typedef uint8_least CanNm_PnClusterReqExtIterType;
+
+/**   \brief  type used to iterate CanNm_PnClusterReqExtNew */
+typedef uint8_least CanNm_PnClusterReqExtNewIterType;
+
+/**   \brief  type used to iterate CanNm_PnClusterResetTimerExt */
+typedef uint8_least CanNm_PnClusterResetTimerExtIterType;
 
 /**   \brief  type used to iterate CanNm_PnFilterMask */
 typedef uint8_least CanNm_PnFilterMaskIterType;
@@ -1336,6 +1435,12 @@ typedef uint8 CanNm_PduCbvPositionOfChannelConfigType;
 /**   \brief  value based type definition for CanNm_PduNidPositionOfChannelConfig */
 typedef uint8 CanNm_PduNidPositionOfChannelConfigType;
 
+/**   \brief  value based type definition for CanNm_PnEraCalcEnabledOfChannelConfig */
+typedef boolean CanNm_PnEraCalcEnabledOfChannelConfigType;
+
+/**   \brief  value based type definition for CanNm_PnEraRxPduIdOfChannelConfig */
+typedef uint8 CanNm_PnEraRxPduIdOfChannelConfigType;
+
 /**   \brief  value based type definition for CanNm_RemoteSleepIndTimeOfChannelConfig */
 typedef uint8 CanNm_RemoteSleepIndTimeOfChannelConfigType;
 
@@ -1383,6 +1488,30 @@ typedef uint8 CanNm_MsgCycleOffsetOfPbChannelConfigType;
 
 /**   \brief  value based type definition for CanNm_NodeIdOfPbChannelConfig */
 typedef uint8 CanNm_NodeIdOfPbChannelConfigType;
+
+/**   \brief  value based type definition for CanNm_PnClusterReqExtEndIdxOfPbChannelConfig */
+typedef uint8 CanNm_PnClusterReqExtEndIdxOfPbChannelConfigType;
+
+/**   \brief  value based type definition for CanNm_PnClusterReqExtLengthOfPbChannelConfig */
+typedef uint8 CanNm_PnClusterReqExtLengthOfPbChannelConfigType;
+
+/**   \brief  value based type definition for CanNm_PnClusterReqExtStartIdxOfPbChannelConfig */
+typedef uint8 CanNm_PnClusterReqExtStartIdxOfPbChannelConfigType;
+
+/**   \brief  value based type definition for CanNm_PnClusterReqExtUsedOfPbChannelConfig */
+typedef boolean CanNm_PnClusterReqExtUsedOfPbChannelConfigType;
+
+/**   \brief  value based type definition for CanNm_PnClusterResetTimerExtEndIdxOfPbChannelConfig */
+typedef uint8 CanNm_PnClusterResetTimerExtEndIdxOfPbChannelConfigType;
+
+/**   \brief  value based type definition for CanNm_PnClusterResetTimerExtLengthOfPbChannelConfig */
+typedef uint8 CanNm_PnClusterResetTimerExtLengthOfPbChannelConfigType;
+
+/**   \brief  value based type definition for CanNm_PnClusterResetTimerExtStartIdxOfPbChannelConfig */
+typedef uint8 CanNm_PnClusterResetTimerExtStartIdxOfPbChannelConfigType;
+
+/**   \brief  value based type definition for CanNm_PnClusterResetTimerExtUsedOfPbChannelConfig */
+typedef boolean CanNm_PnClusterResetTimerExtUsedOfPbChannelConfigType;
 
 /**   \brief  value based type definition for CanNm_PnEnabledOfPbChannelConfig */
 typedef boolean CanNm_PnEnabledOfPbChannelConfigType;
@@ -1477,6 +1606,12 @@ typedef uint8 CanNm_TxUserDataPduIdOfPbChannelConfigType;
 /**   \brief  value based type definition for CanNm_PnClusterReq */
 typedef uint8 CanNm_PnClusterReqType;
 
+/**   \brief  value based type definition for CanNm_PnClusterReqExt */
+typedef uint8 CanNm_PnClusterReqExtType;
+
+/**   \brief  value based type definition for CanNm_PnClusterReqExtNew */
+typedef uint8 CanNm_PnClusterReqExtNewType;
+
 /**   \brief  value based type definition for CanNm_PnClusterReqNew */
 typedef uint8 CanNm_PnClusterReqNewType;
 
@@ -1542,6 +1677,9 @@ typedef uint8 CanNm_SizeOfPbChannelConfigType;
 
 /**   \brief  value based type definition for CanNm_SizeOfPnClusterReq */
 typedef uint8 CanNm_SizeOfPnClusterReqType;
+
+/**   \brief  value based type definition for CanNm_SizeOfPnClusterReqExtNew */
+typedef uint8 CanNm_SizeOfPnClusterReqExtNewType;
 
 /**   \brief  value based type definition for CanNm_SizeOfPnClusterReqNew */
 typedef uint8 CanNm_SizeOfPnClusterReqNewType;
@@ -1616,11 +1754,13 @@ typedef struct sCanNm_ChannelConfigType
   CanNm_ActiveWakeUpBitEnabledOfChannelConfigType ActiveWakeUpBitEnabledOfChannelConfig;  /**< Determines if Active WUP Bit Handling is active or not */
   CanNm_ComControlEnabledOfChannelConfigType ComControlEnabledOfChannelConfig;  /**< Determines if Com Control is active or not */
   CanNm_NodeIdEnabledOfChannelConfigType NodeIdEnabledOfChannelConfig;  /**< Determines if Node Ids are enabled or not */
+  CanNm_PnEraCalcEnabledOfChannelConfigType PnEraCalcEnabledOfChannelConfig;  /**< Determines if PN Cluster Calculation is active or not */
   CanNm_ChannelIdOfChannelConfigType ChannelIdOfChannelConfig;  /**< Channel ID configured for the respective instance of the NM. */
   CanNm_MsgCycleTimeOfChannelConfigType MsgCycleTimeOfChannelConfig;  /**< Period of a NM message [ms]. It determines the periodic rate in the periodic transmission mode. */
   CanNm_MsgTimeoutTimeOfChannelConfigType MsgTimeoutTimeOfChannelConfig;  /**< Transmission Timeout [ms] of NM message. If there is no transmission confirmation by the CAN Interface within this timeout, the CAN NM module shall give an error notification. */
   CanNm_PduCbvPositionOfChannelConfigType PduCbvPositionOfChannelConfig;  /**< Control Bit Vector Position in the PDU */
   CanNm_PduNidPositionOfChannelConfigType PduNidPositionOfChannelConfig;  /**< Node ID Position in the PDU */
+  CanNm_PnEraRxPduIdOfChannelConfigType PnEraRxPduIdOfChannelConfig;  /**< I-PDU handle of Com PDU for ERA. */
   CanNm_RemoteSleepIndTimeOfChannelConfigType RemoteSleepIndTimeOfChannelConfig;  /**< Timeout for Remote Sleep Indication [ms]. */
   CanNm_RepeatMessageTimeOfChannelConfigType RepeatMessageTimeOfChannelConfig;  /**< Timeout for Repeat Message State [ms]. */
   CanNm_TimeoutTimeOfChannelConfigType TimeoutTimeOfChannelConfig;  /**< Timeout for the NM messages [ms]. */
@@ -1633,6 +1773,12 @@ typedef struct sCanNm_PbChannelConfigType
   CanNm_PnEnabledOfPbChannelConfigType PnEnabledOfPbChannelConfig;
   CanNm_MsgCycleOffsetOfPbChannelConfigType MsgCycleOffsetOfPbChannelConfig;
   CanNm_NodeIdOfPbChannelConfigType NodeIdOfPbChannelConfig;
+  CanNm_PnClusterReqExtEndIdxOfPbChannelConfigType PnClusterReqExtEndIdxOfPbChannelConfig;  /**< the end index of the 0:n relation pointing to CanNm_PnClusterReqExt */
+  CanNm_PnClusterReqExtLengthOfPbChannelConfigType PnClusterReqExtLengthOfPbChannelConfig;  /**< the number of relations pointing to CanNm_PnClusterReqExt */
+  CanNm_PnClusterReqExtStartIdxOfPbChannelConfigType PnClusterReqExtStartIdxOfPbChannelConfig;  /**< the start index of the 0:n relation pointing to CanNm_PnClusterReqExt */
+  CanNm_PnClusterResetTimerExtEndIdxOfPbChannelConfigType PnClusterResetTimerExtEndIdxOfPbChannelConfig;  /**< the end index of the 0:n relation pointing to CanNm_PnClusterResetTimerExt */
+  CanNm_PnClusterResetTimerExtLengthOfPbChannelConfigType PnClusterResetTimerExtLengthOfPbChannelConfig;  /**< the number of relations pointing to CanNm_PnClusterResetTimerExt */
+  CanNm_PnClusterResetTimerExtStartIdxOfPbChannelConfigType PnClusterResetTimerExtStartIdxOfPbChannelConfig;  /**< the start index of the 0:n relation pointing to CanNm_PnClusterResetTimerExt */
   CanNm_RxMessageDataEndIdxOfPbChannelConfigType RxMessageDataEndIdxOfPbChannelConfig;  /**< the end index of the 0:n relation pointing to CanNm_RxMessageData */
   CanNm_RxMessageDataLengthOfPbChannelConfigType RxMessageDataLengthOfPbChannelConfig;  /**< the number of relations pointing to CanNm_RxMessageData */
   CanNm_RxMessageDataStartIdxOfPbChannelConfigType RxMessageDataStartIdxOfPbChannelConfig;  /**< the start index of the 0:n relation pointing to CanNm_RxMessageData */
@@ -1747,6 +1893,20 @@ typedef struct CanNm_PnClusterReqStructSTag
   CanNm_PnClusterReqType CanNmPnFilterMaskByte5;
 } CanNm_PnClusterReqStructSType;
 
+/**   \brief  type to be used as symbolic data element access to CanNm_PnClusterReqExt */
+typedef struct CanNm_PnClusterReqExtStructSTag
+{
+  CanNm_PnClusterReqExtType ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095[6];
+  CanNm_PnClusterReqExtType ATOM_CAN_Matrix_PT_V600_20250211_CAN_5212fbaf[6];
+} CanNm_PnClusterReqExtStructSType;
+
+/**   \brief  type to be used as symbolic data element access to CanNm_PnClusterReqExtNew */
+typedef struct CanNm_PnClusterReqExtNewStructSTag
+{
+  CanNm_PnClusterReqExtNewType ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095[6];
+  CanNm_PnClusterReqExtNewType ATOM_CAN_Matrix_PT_V600_20250211_CAN_5212fbaf[6];
+} CanNm_PnClusterReqExtNewStructSType;
+
 /**   \brief  type to be used as symbolic data element access to CanNm_PnClusterReqNew */
 typedef struct CanNm_PnClusterReqNewStructSTag
 {
@@ -1768,6 +1928,14 @@ typedef struct CanNm_PnClusterResetTimerStructSTag
   CanNm_PnClusterResetTimerType CanNmPnFilterMaskByte4;
   CanNm_PnClusterResetTimerType CanNmPnFilterMaskByte5;
 } CanNm_PnClusterResetTimerStructSType;
+
+/**   \brief  type to be used as symbolic data element access to CanNm_PnClusterResetTimerExt */
+typedef struct CanNm_PnClusterResetTimerExtStructSTag
+{
+  CanNm_PnClusterResetTimerType ATOM_CANFD_Matrix_CH_V600_202502_CAN_b5bd2095[6];
+  CanNm_PnClusterResetTimerType ATOM_CAN_Matrix_PT_V600_20250211_CAN_5212fbaf[6];
+  CanNm_PnClusterResetTimerType TC37X_VCU_CAN01_CAN_f1ec184a[6];
+} CanNm_PnClusterResetTimerExtStructSType;
 
 /**   \brief  type to be used as symbolic data element access to CanNm_PnMessageFilterDeactivationIndicated */
 typedef struct CanNm_PnMessageFilterDeactivationIndicatedStructSTag
@@ -1904,6 +2072,20 @@ typedef union CanNm_PnClusterReqUTag
   CanNm_PnClusterReqStructSType str;
 } CanNm_PnClusterReqUType;
 
+/**   \brief  type to access CanNm_PnClusterReqExt in an index and symbol based style. */
+typedef union CanNm_PnClusterReqExtUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  CanNm_PnClusterReqExtType raw[12];
+  CanNm_PnClusterReqExtStructSType str;
+} CanNm_PnClusterReqExtUType;
+
+/**   \brief  type to access CanNm_PnClusterReqExtNew in an index and symbol based style. */
+typedef union CanNm_PnClusterReqExtNewUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  CanNm_PnClusterReqExtNewType raw[12];
+  CanNm_PnClusterReqExtNewStructSType str;
+} CanNm_PnClusterReqExtNewUType;
+
 /**   \brief  type to access CanNm_PnClusterReqNew in an index and symbol based style. */
 typedef union CanNm_PnClusterReqNewUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
@@ -1917,6 +2099,13 @@ typedef union CanNm_PnClusterResetTimerUTag
   CanNm_PnClusterResetTimerType raw[6];
   CanNm_PnClusterResetTimerStructSType str;
 } CanNm_PnClusterResetTimerUType;
+
+/**   \brief  type to access CanNm_PnClusterResetTimerExt in an index and symbol based style. */
+typedef union CanNm_PnClusterResetTimerExtUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  CanNm_PnClusterResetTimerType raw[18];
+  CanNm_PnClusterResetTimerExtStructSType str;
+} CanNm_PnClusterResetTimerExtUType;
 
 /**   \brief  type to access CanNm_PnMessageFilterDeactivationIndicated in an index and symbol based style. */
 typedef union CanNm_PnMessageFilterDeactivationIndicatedUTag
@@ -2015,11 +2204,20 @@ typedef P2CONST(CanNm_PbChannelConfigType, TYPEDEF, CANNM_CONST) CanNm_PbChannel
 /**   \brief  type used to point to CanNm_PnClusterReq */
 typedef P2VAR(CanNm_PnClusterReqType, TYPEDEF, CANNM_VAR_NOINIT) CanNm_PnClusterReqPtrType;
 
+/**   \brief  type used to point to CanNm_PnClusterReqExt */
+typedef P2VAR(CanNm_PnClusterReqExtType, TYPEDEF, CANNM_VAR_NOINIT) CanNm_PnClusterReqExtPtrType;
+
+/**   \brief  type used to point to CanNm_PnClusterReqExtNew */
+typedef P2VAR(CanNm_PnClusterReqExtNewType, TYPEDEF, CANNM_VAR_NOINIT) CanNm_PnClusterReqExtNewPtrType;
+
 /**   \brief  type used to point to CanNm_PnClusterReqNew */
 typedef P2VAR(CanNm_PnClusterReqNewType, TYPEDEF, CANNM_VAR_NOINIT) CanNm_PnClusterReqNewPtrType;
 
 /**   \brief  type used to point to CanNm_PnClusterResetTimer */
 typedef P2VAR(CanNm_PnClusterResetTimerType, TYPEDEF, CANNM_VAR_NOINIT) CanNm_PnClusterResetTimerPtrType;
+
+/**   \brief  type used to point to CanNm_PnClusterResetTimerExt */
+typedef P2VAR(CanNm_PnClusterResetTimerType, TYPEDEF, CANNM_VAR_NOINIT) CanNm_PnClusterResetTimerExtPtrType;
 
 /**   \brief  type used to point to CanNm_PnFilterMask */
 typedef P2CONST(CanNm_PnFilterMaskType, TYPEDEF, CANNM_CONST) CanNm_PnFilterMaskPtrType;
@@ -2103,11 +2301,13 @@ typedef CanNm_PCConfigType CanNm_ConfigType;  /**< A structure type is present f
   ActiveWakeUpBitEnabled    Determines if Active WUP Bit Handling is active or not
   ComControlEnabled         Determines if Com Control is active or not
   NodeIdEnabled             Determines if Node Ids are enabled or not
+  PnEraCalcEnabled          Determines if PN Cluster Calculation is active or not
   ChannelId                 Channel ID configured for the respective instance of the NM.
   MsgCycleTime              Period of a NM message [ms]. It determines the periodic rate in the periodic transmission mode.
   MsgTimeoutTime            Transmission Timeout [ms] of NM message. If there is no transmission confirmation by the CAN Interface within this timeout, the CAN NM module shall give an error notification.
   PduCbvPosition            Control Bit Vector Position in the PDU
   PduNidPosition            Node ID Position in the PDU
+  PnEraRxPduId              I-PDU handle of Com PDU for ERA.
   RemoteSleepIndTime        Timeout for Remote Sleep Indication [ms].
   RepeatMessageTime         Timeout for Repeat Message State [ms].
   TimeoutTime               Timeout for the NM messages [ms].
@@ -2133,6 +2333,12 @@ extern CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[3];
   PnEnabled                         
   MsgCycleOffset                    
   NodeId                            
+  PnClusterReqExtEndIdx                 the end index of the 0:n relation pointing to CanNm_PnClusterReqExt
+  PnClusterReqExtLength                 the number of relations pointing to CanNm_PnClusterReqExt
+  PnClusterReqExtStartIdx               the start index of the 0:n relation pointing to CanNm_PnClusterReqExt
+  PnClusterResetTimerExtEndIdx          the end index of the 0:n relation pointing to CanNm_PnClusterResetTimerExt
+  PnClusterResetTimerExtLength          the number of relations pointing to CanNm_PnClusterResetTimerExt
+  PnClusterResetTimerExtStartIdx        the start index of the 0:n relation pointing to CanNm_PnClusterResetTimerExt
   RxMessageDataEndIdx                   the end index of the 0:n relation pointing to CanNm_RxMessageData
   RxMessageDataLength                   the number of relations pointing to CanNm_RxMessageData
   RxMessageDataStartIdx                 the start index of the 0:n relation pointing to CanNm_RxMessageData
@@ -2370,6 +2576,40 @@ extern VAR(CanNm_PnClusterReqUType, CANNM_VAR_NOINIT) CanNm_PnClusterReq;  /* PR
 /*lint -restore */
 
 /**********************************************************************************************************************
+  CanNm_PnClusterReqExt
+**********************************************************************************************************************/
+/** 
+  \var    CanNm_PnClusterReqExt
+  \brief  External Cluster Request Buffer
+*/ 
+#define CANNM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(CanNm_PnClusterReqExtUType, CANNM_VAR_NOINIT) CanNm_PnClusterReqExt;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define CANNM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  CanNm_PnClusterReqExtNew
+**********************************************************************************************************************/
+/** 
+  \var    CanNm_PnClusterReqExtNew
+  \brief  External Cluster Request Buffer
+*/ 
+#define CANNM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(CanNm_PnClusterReqExtNewUType, CANNM_VAR_NOINIT) CanNm_PnClusterReqExtNew;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define CANNM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   CanNm_PnClusterReqNew
 **********************************************************************************************************************/
 /** 
@@ -2394,6 +2634,19 @@ extern VAR(CanNm_PnClusterReqNewUType, CANNM_VAR_NOINIT) CanNm_PnClusterReqNew; 
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern VAR(CanNm_PnClusterResetTimerUType, CANNM_VAR_NOINIT) CanNm_PnClusterResetTimer;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define CANNM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  CanNm_PnClusterResetTimerExt
+**********************************************************************************************************************/
+#define CANNM_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(CanNm_PnClusterResetTimerExtUType, CANNM_VAR_NOINIT) CanNm_PnClusterResetTimerExt;  /* PRQA S 0759 */  /* MD_CSL_Union */
 #define CANNM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

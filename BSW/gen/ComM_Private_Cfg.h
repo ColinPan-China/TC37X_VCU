@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Private_Cfg.h
- *   Generation Time: 2025-10-13 14:22:21
+ *   Generation Time: 2025-10-14 14:41:52
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -88,19 +88,19 @@
 #define ComM_GetSizeOfChannelOfPCPartitionConfig()                                                  8u  /**< the number of accomplishable value elements in ComM_Channel */
 #define ComM_GetSizeOfChannelPbOfPCPartitionConfig()                                                8u  /**< the number of accomplishable value elements in ComM_ChannelPb */
 #define ComM_GetSizeOfEcuMWakeUpIndicatedOfPCPartitionConfig(partitionIndex)                        1u  /**< the number of accomplishable value elements in ComM_EcuMWakeUpIndicated */
-#define ComM_GetSizeOfEiraTxSignalIndirectionOfPCPartitionConfig()                                  1u  /**< the number of accomplishable value elements in ComM_EiraTxSignalIndirection */
+#define ComM_GetSizeOfEiraTxSignalIndirectionOfPCPartitionConfig()                                  3u  /**< the number of accomplishable value elements in ComM_EiraTxSignalIndirection */
 #define ComM_GetSizeOfNmStartUpIndicatedOfPCPartitionConfig(partitionIndex)                         1u  /**< the number of accomplishable value elements in ComM_NmStartUpIndicated */
-#define ComM_GetSizeOfPncChannelMappingOfPCPartitionConfig()                                        3u  /**< the number of accomplishable value elements in ComM_PncChannelMapping */
+#define ComM_GetSizeOfPncChannelMappingOfPCPartitionConfig()                                        6u  /**< the number of accomplishable value elements in ComM_PncChannelMapping */
 #define ComM_GetSizeOfPncOfPCPartitionConfig()                                                      3u  /**< the number of accomplishable value elements in ComM_Pnc */
-#define ComM_GetSizeOfPncPbIndOfPCPartitionConfig()                                                 3u  /**< the number of accomplishable value elements in ComM_PncPbInd */
+#define ComM_GetSizeOfPncPbIndOfPCPartitionConfig()                                                 6u  /**< the number of accomplishable value elements in ComM_PncPbInd */
 #define ComM_GetSizeOfPncPbOfPCPartitionConfig()                                                    3u  /**< the number of accomplishable value elements in ComM_PncPb */
-#define ComM_GetSizeOfPncSignalIndOfPCPartitionConfig()                                             3u  /**< the number of accomplishable value elements in ComM_PncSignalInd */
-#define ComM_GetSizeOfPncSignalOfPCPartitionConfig()                                                2u  /**< the number of accomplishable value elements in ComM_PncSignal */
-#define ComM_GetSizeOfPncSignalValuesOfPCPartitionConfig(partitionIndex)                            12u  /**< the number of accomplishable value elements in ComM_PncSignalValues */
+#define ComM_GetSizeOfPncSignalIndOfPCPartitionConfig()                                             12u  /**< the number of accomplishable value elements in ComM_PncSignalInd */
+#define ComM_GetSizeOfPncSignalOfPCPartitionConfig()                                                5u  /**< the number of accomplishable value elements in ComM_PncSignal */
+#define ComM_GetSizeOfPncSignalValuesOfPCPartitionConfig(partitionIndex)                            30u  /**< the number of accomplishable value elements in ComM_PncSignalValues */
 #define ComM_GetSizeOfPostInitializedOfPCPartitionConfig(partitionIndex)                            1u  /**< the number of accomplishable value elements in ComM_PostInitialized */
-#define ComM_GetSizeOfUserByteMaskOfPCPartitionConfig()                                             11u  /**< the number of accomplishable value elements in ComM_UserByteMask */
-#define ComM_GetSizeOfUserOfPCPartitionConfig()                                                     11u  /**< the number of accomplishable value elements in ComM_User */
-#define ComM_GetSizeOfUserPncByteMaskOfPCPartitionConfig()                                          3u  /**< the number of accomplishable value elements in ComM_UserPncByteMask */
+#define ComM_GetSizeOfUserByteMaskOfPCPartitionConfig()                                             20u  /**< the number of accomplishable value elements in ComM_UserByteMask */
+#define ComM_GetSizeOfUserOfPCPartitionConfig()                                                     14u  /**< the number of accomplishable value elements in ComM_User */
+#define ComM_GetSizeOfUserPncByteMaskOfPCPartitionConfig()                                          6u  /**< the number of accomplishable value elements in ComM_UserPncByteMask */
 #define ComM_GetSizeOfUserReqFullComOfPCPartitionConfig(partitionIndex)                             8u  /**< the number of accomplishable value elements in ComM_UserReqFullCom */
 #define ComM_GetSizeOfUserReqPncFullComOfPCPartitionConfig(partitionIndex)                          3u  /**< the number of accomplishable value elements in ComM_UserReqPncFullCom */
 #define ComM_GetUserByteMaskOfPCPartitionConfig()                                                   ComM_UserByteMask  /**< the pointer to ComM_UserByteMask */
@@ -144,6 +144,7 @@
 #define ComM_GetBusSmState(Index, partitionIndex)                                                   (ComM_GetBusSmStateOfPCPartitionConfig(partitionIndex)[(Index)])
 #define ComM_GetBusTypeOfChannel(Index)                                                             (ComM_GetChannelOfPCPartitionConfig()[(Index)].BusTypeOfChannel)
 #define ComM_GetGetCurrentBusSMModeApiOfChannel(Index)                                              (ComM_GetChannelOfPCPartitionConfig()[(Index)].GetCurrentBusSMModeApiOfChannel)
+#define ComM_GetGwTypeOfChannel(Index)                                                              (ComM_GetChannelOfPCPartitionConfig()[(Index)].GwTypeOfChannel)
 #define ComM_GetMinFullComTimeOfChannel(Index)                                                      (ComM_GetChannelOfPCPartitionConfig()[(Index)].MinFullComTimeOfChannel)
 #define ComM_GetNmLightDurationOfChannel(Index)                                                     (ComM_GetChannelOfPCPartitionConfig()[(Index)].NmLightDurationOfChannel)
 #define ComM_IsNmSupportOfChannel(Index)                                                            ((ComM_GetChannelOfPCPartitionConfig()[(Index)].NmSupportOfChannel) != FALSE)
@@ -158,6 +159,7 @@
 #define ComM_IsComAllowed(Index, partitionIndex)                                                    ((ComM_GetComAllowedOfPCPartitionConfig(partitionIndex)[(Index)]) != FALSE)
 #define ComM_IsDcmRequestActive(Index, partitionIndex)                                              ((ComM_GetDcmRequestActiveOfPCPartitionConfig(partitionIndex)[(Index)]) != FALSE)
 #define ComM_IsEcuMWakeUpIndicated(Index, partitionIndex)                                           ((ComM_GetEcuMWakeUpIndicatedOfPCPartitionConfig(partitionIndex)[(Index)]) != FALSE)
+#define ComM_GetSymbolicNameValueOfEiraTxSignalIndirection(Index)                                   (ComM_GetEiraTxSignalIndirectionOfPCPartitionConfig()[(Index)].SymbolicNameValueOfEiraTxSignalIndirection)
 #define ComM_GetInhibition(partitionIndex)                                                          ((*(ComM_GetInhibitionOfPCPartitionConfig(partitionIndex))))
 #define ComM_GetInitStatus(partitionIndex)                                                          ((*(ComM_GetInitStatusOfPCPartitionConfig(partitionIndex))))
 #define ComM_GetMinFullComModeTimer(Index, partitionIndex)                                          (ComM_GetMinFullComModeTimerOfPCPartitionConfig(partitionIndex)[(Index)])
@@ -168,6 +170,8 @@
 #define ComM_GetClearMaskOfPnc(Index)                                                               (ComM_GetPncOfPCPartitionConfig()[(Index)].ClearMaskOfPnc)
 #define ComM_GetPncIdOfPnc(Index)                                                                   ((PNCHandleType)ComM_GetPncOfPCPartitionConfig()[(Index)].PncIdOfPnc)
 #define ComM_GetSetMaskOfPnc(Index)                                                                 (ComM_GetPncOfPCPartitionConfig()[(Index)].SetMaskOfPnc)
+#define ComM_GetSystemUserOfPnc(Index)                                                              (ComM_GetPncOfPCPartitionConfig()[(Index)].SystemUserOfPnc)
+#define ComM_GetPncChannelMapping(Index)                                                            (ComM_GetPncChannelMappingOfPCPartitionConfig()[(Index)])
 #define ComM_GetPncPSleepTimer(Index, partitionIndex)                                               (ComM_GetPncPSleepTimerOfPCPartitionConfig(partitionIndex)[(Index)])
 #define ComM_GetPncChannelMappingEndIdxOfPncPb(Index)                                               (ComM_GetPncPbOfPCPartitionConfig()[(Index)].PncChannelMappingEndIdxOfPncPb)
 #define ComM_GetPncChannelMappingStartIdxOfPncPb(Index)                                             (ComM_GetPncPbOfPCPartitionConfig()[(Index)].PncChannelMappingStartIdxOfPncPb)
@@ -180,6 +184,7 @@
 #define ComM_GetPncSignalValuesEndIdxOfPncSignal(Index)                                             (ComM_GetPncSignalOfPCPartitionConfig()[(Index)].PncSignalValuesEndIdxOfPncSignal)
 #define ComM_GetPncSignalValuesStartIdxOfPncSignal(Index)                                           (ComM_GetPncSignalOfPCPartitionConfig()[(Index)].PncSignalValuesStartIdxOfPncSignal)
 #define ComM_GetTypeOfPncSignal(Index)                                                              (ComM_GetPncSignalOfPCPartitionConfig()[(Index)].TypeOfPncSignal)
+#define ComM_GetPncSignalInd(Index)                                                                 (ComM_GetPncSignalIndOfPCPartitionConfig()[(Index)])
 #define ComM_GetPncSignalValues(Index, partitionIndex)                                              (ComM_GetPncSignalValuesOfPCPartitionConfig(partitionIndex)[(Index)])
 #define ComM_GetPncToChannelRoutingState(Index, partitionIndex)                                     (ComM_GetPncToChannelRoutingStateOfPCPartitionConfig(partitionIndex)[(Index)])
 #define ComM_IsPostInitialized(Index, partitionIndex)                                               ((ComM_GetPostInitializedOfPCPartitionConfig(partitionIndex)[(Index)]) != FALSE)
@@ -193,8 +198,10 @@
 #define ComM_GetClearMaskOfUserByteMask(Index)                                                      (ComM_GetUserByteMaskOfPCPartitionConfig()[(Index)].ClearMaskOfUserByteMask)
 #define ComM_GetSetMaskOfUserByteMask(Index)                                                        (ComM_GetUserByteMaskOfPCPartitionConfig()[(Index)].SetMaskOfUserByteMask)
 #define ComM_GetUserReqFullComIdxOfUserByteMask(Index)                                              (ComM_GetUserByteMaskOfPCPartitionConfig()[(Index)].UserReqFullComIdxOfUserByteMask)
+#define ComM_GetClearMaskOfUserPncByteMask(Index)                                                   (ComM_GetUserPncByteMaskOfPCPartitionConfig()[(Index)].ClearMaskOfUserPncByteMask)
 #define ComM_GetPncIDOfUserPncByteMask(Index)                                                       ((PNCHandleType)ComM_GetUserPncByteMaskOfPCPartitionConfig()[(Index)].PncIDOfUserPncByteMask)
 #define ComM_GetPncIdxOfUserPncByteMask(Index)                                                      (ComM_GetUserPncByteMaskOfPCPartitionConfig()[(Index)].PncIdxOfUserPncByteMask)
+#define ComM_GetSetMaskOfUserPncByteMask(Index)                                                     (ComM_GetUserPncByteMaskOfPCPartitionConfig()[(Index)].SetMaskOfUserPncByteMask)
 #define ComM_GetUserReqPncFullComIdxOfUserPncByteMask(Index)                                        (ComM_GetUserPncByteMaskOfPCPartitionConfig()[(Index)].UserReqPncFullComIdxOfUserPncByteMask)
 #define ComM_GetUserReqFullCom(Index, partitionIndex)                                               (ComM_GetUserReqFullComOfPCPartitionConfig(partitionIndex)[(Index)])
 #define ComM_GetUserReqPncFullCom(Index, partitionIndex)                                            (ComM_GetUserReqPncFullComOfPCPartitionConfig(partitionIndex)[(Index)])
@@ -207,20 +214,17 @@
   \brief  These macros can be used to read deduplicated data elements.
   \{
 */ 
-#define ComM_GetGwTypeOfChannel(Index)                                                              COMM_GATEWAY_TYPE_NONE  /**< The partial network gateway type, relevant for channels attached to coordinated partial networks */
 #define ComM_GetInhibitionInitValueOfChannel(Index)                                                 0x00u  /**< Initial value of the inhibition status of the channel */
 #define ComM_GetPartitionConfigIdxOfChannel(Index)                                                  0u  /**< the index of the 1:1 relation pointing to ComM_PCPartitionConfig */
 #define ComM_IsPncPbIndUsedOfChannelPb(Index)                                                       (((boolean)(ComM_GetPncPbIndStartIdxOfChannelPb(Index) != COMM_NO_PNCPBINDSTARTIDXOFCHANNELPB)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_PncPbInd */
 #define ComM_IsUserReqFullComUsedOfChannelPb(Index)                                                 (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_UserReqFullCom */
-#define ComM_GetSymbolicNameValueOfEiraTxSignalIndirection(Index)                                   ComConf_ComSignal_PT_TxNM_PNCData_oNM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_5a3fd28e_Tx  /**< SymbolicNameValue of Tx Eira Signal */
-#define ComM_GetPncChannelMapping(Index)                                                            1u
+#define ComM_IsCoordinatedOfPnc(Index)                                                              (((TRUE)) != FALSE)  /**< TRUE if PNC is coordinated */
 #define ComM_IsPncChannelMappingUsedOfPncPb(Index)                                                  (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_PncChannelMapping */
 #define ComM_IsPncSignalIndUsedOfPncPb(Index)                                                       (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_PncSignalInd */
 #define ComM_GetSignalByteIndexOfPncPb(Index)                                                       1u  /**< Byte index in the partial network related signals (EIRA, ERA) */
 #define ComM_GetBusTypeIdOfPncSignal(Index)                                                         0u  /**< For EIRA RX Signals: An internal id for the BusType */
 #define ComM_IsChannelUsedOfPncSignal(Index)                                                        (((boolean)(ComM_GetChannelIdxOfPncSignal(Index) != COMM_NO_CHANNELIDXOFPNCSIGNAL)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to ComM_Channel */
 #define ComM_IsPncSignalValuesUsedOfPncSignal(Index)                                                (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_PncSignalValues */
-#define ComM_GetPncSignalInd(Index)                                                                 0u  /**< the indexes of the 1:1 sorted relation pointing to ComM_PncSignal */
 #define ComM_GetSizeOfActiveComMode(partitionIndex)                                                 ComM_GetSizeOfActiveComModeOfPCPartitionConfig(partitionIndex)
 #define ComM_GetSizeOfActivePncComMode(partitionIndex)                                              ComM_GetSizeOfActivePncComModeOfPCPartitionConfig(partitionIndex)
 #define ComM_GetSizeOfBusComModeReq(partitionIndex)                                                 ComM_GetSizeOfBusComModeReqOfPCPartitionConfig(partitionIndex)
@@ -253,8 +257,6 @@
 #define ComM_GetSizeOfUserReqPncFullCom(partitionIndex)                                             ComM_GetSizeOfUserReqPncFullComOfPCPartitionConfig(partitionIndex)
 #define ComM_IsUserByteMaskUsedOfUser(Index)                                                        (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_UserByteMask */
 #define ComM_IsUserPncByteMaskUsedOfUser(Index)                                                     (((boolean)(ComM_GetUserPncByteMaskLengthOfUser(Index) != 0u)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_UserPncByteMask */
-#define ComM_GetClearMaskOfUserPncByteMask(Index)                                                   0xFEu  /**< Clear-mask for clearing the bit which corresponds to this user */
-#define ComM_GetSetMaskOfUserPncByteMask(Index)                                                     0x01u  /**< Set-mask for setting the bit which corresponds to this user */
 /** 
   \}
 */ 
@@ -342,8 +344,10 @@
 #define ComM_HasPartitionSNVOfPartitionIdentifiers()                                                (TRUE != FALSE)
 #define ComM_HasPnc()                                                                               (TRUE != FALSE)
 #define ComM_HasClearMaskOfPnc()                                                                    (TRUE != FALSE)
+#define ComM_HasCoordinatedOfPnc()                                                                  (TRUE != FALSE)
 #define ComM_HasPncIdOfPnc()                                                                        (TRUE != FALSE)
 #define ComM_HasSetMaskOfPnc()                                                                      (TRUE != FALSE)
+#define ComM_HasSystemUserOfPnc()                                                                   (TRUE != FALSE)
 #define ComM_HasPncChannelMapping()                                                                 (TRUE != FALSE)
 #define ComM_HasPncPSleepTimer(partitionIndex)                                                      (TRUE != FALSE)
 #define ComM_HasPncPb()                                                                             (TRUE != FALSE)
@@ -641,6 +645,7 @@
   BusType                   The channel bus type
   NmSupport                 Decides if the channel has NmType FULL or PASSIVE
   SilentSupport             Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration)
+  GwType                    The partial network gateway type, relevant for channels attached to coordinated partial networks
   MinFullComTime            Minimal full communication time for the channel, relevant for NmTypes LIGHT and FULL
   NmLightDuration           Nm Light Timeout
   NmType                    The Network Management type of the channel
@@ -682,6 +687,26 @@ extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[8];
 /*lint -restore */
 
 /**********************************************************************************************************************
+  ComM_EiraTxSignalIndirection
+**********************************************************************************************************************/
+/** 
+  \var    ComM_EiraTxSignalIndirection
+  \brief  Indirection of internal signal id to the actual Eira Tx Symbolic Name Value
+  \details
+  Element              Description
+  SymbolicNameValue    SymbolicNameValue of Tx Eira Signal
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_EiraTxSignalIndirectionType, COMM_CONST) ComM_EiraTxSignalIndirection[3];
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   ComM_PartitionIdentifiers
 **********************************************************************************************************************/
 /** 
@@ -709,10 +734,11 @@ extern CONST(ComM_PartitionIdentifiersType, COMM_CONST) ComM_PartitionIdentifier
   \var    ComM_Pnc
   \brief  Contains PreCompile configuration parameters of partial networks
   \details
-  Element      Description
-  ClearMask    Clear mask for the partial network related signals (EIRA, ERA)
-  PncId        System ID of the partial network
-  SetMask      Set mask for the partial network related signals (EIRA, ERA)
+  Element       Description
+  ClearMask     Clear mask for the partial network related signals (EIRA, ERA)
+  PncId         System ID of the partial network
+  SetMask       Set mask for the partial network related signals (EIRA, ERA)
+  SystemUser    System user handle generated for the PNC if it is coordinated (0xFFFF otherwise)
 */ 
 #define COMM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -720,6 +746,19 @@ extern CONST(ComM_PartitionIdentifiersType, COMM_CONST) ComM_PartitionIdentifier
 /*lint -restore */
 extern CONST(ComM_PncType, COMM_CONST) ComM_Pnc[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_PncChannelMapping
+**********************************************************************************************************************/
+#define COMM_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_PncChannelMappingType, COMM_CONST) ComM_PncChannelMapping[6];
+#define COMM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -760,7 +799,7 @@ extern CONST(ComM_PncPbType, COMM_CONST) ComM_PncPb[3];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_PncPbIndType, COMM_CONST) ComM_PncPbInd[3];
+extern CONST(ComM_PncPbIndType, COMM_CONST) ComM_PncPbInd[6];
 #define COMM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -783,8 +822,25 @@ extern CONST(ComM_PncPbIndType, COMM_CONST) ComM_PncPbInd[3];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[2];
+extern CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[5];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_PncSignalInd
+**********************************************************************************************************************/
+/** 
+  \var    ComM_PncSignalInd
+  \brief  the indexes of the 1:1 sorted relation pointing to ComM_PncSignal
+*/ 
+#define COMM_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_PncSignalIndType, COMM_CONST) ComM_PncSignalInd[12];
+#define COMM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -808,7 +864,7 @@ extern CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[2];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserType, COMM_CONST) ComM_User[11];
+extern CONST(ComM_UserType, COMM_CONST) ComM_User[14];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -831,7 +887,7 @@ extern CONST(ComM_UserType, COMM_CONST) ComM_User[11];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[11];
+extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[20];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -845,15 +901,17 @@ extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[11];
   \brief  Each partial network user has N entries in this array (N = # pncs attached to this user). Each entry describes a Byte Position and a Mask for storing/clearing the user request in UserReqPncFullCom
   \details
   Element                 Description
+  ClearMask               Clear-mask for clearing the bit which corresponds to this user
   PncID                   System Id of the partial network which is requested by this entry
   PncIdx                  the index of the 1:1 relation pointing to ComM_Pnc
+  SetMask                 Set-mask for setting the bit which corresponds to this user
   UserReqPncFullComIdx    the index of the 1:1 relation pointing to ComM_UserReqPncFullCom
 */ 
 #define COMM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserPncByteMaskType, COMM_CONST) ComM_UserPncByteMask[3];
+extern CONST(ComM_UserPncByteMaskType, COMM_CONST) ComM_UserPncByteMask[6];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
