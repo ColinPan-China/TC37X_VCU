@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanIf_Cfg.h
- *   Generation Time: 2025-10-13 13:53:08
+ *   Generation Time: 2025-10-16 14:17:16
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -241,11 +241,11 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIfTxPduHnd_VCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_ce5997a6_Tx               17u
 #define CanIfTxPduHnd_VCU_02_oATOM_CAN_Matrix_PT_V600_20250211_d64c1292_Tx                          18u
 #define CanIfTxPduHnd_VCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_b18572fb_Tx               19u
-#define CanIfTxPduHnd_VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_91495a4f_Tx                          20u
-#define CanIfTxPduHnd_VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_386e6ea6_Tx                          21u
-#define CanIfTxPduHnd_VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_c350eb20_Tx                         22u
-#define CanIfTxPduHnd_VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_c9a902ae_Tx                        23u
-#define CanIfTxPduHnd_VCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_59ebe7dd_Tx                   24u
+#define CanIfTxPduHnd_VCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_59ebe7dd_Tx                   20u
+#define CanIfTxPduHnd_VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_91495a4f_Tx                          21u
+#define CanIfTxPduHnd_VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_386e6ea6_Tx                          22u
+#define CanIfTxPduHnd_VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_c350eb20_Tx                         23u
+#define CanIfTxPduHnd_VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_c9a902ae_Tx                        24u
 #define CanIfTxPduHnd_VCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_d17423c6_Tx                         25u
 #define CanIfTxPduHnd_VCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_ef1d8001_Tx                      26u
 #define CanIfTxPduHnd_VCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_0136bf08_Tx                    27u
@@ -426,11 +426,11 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIfConf_CanIfTxPduCfg_VCU_HMIsignals_03_oATOM_CAN_Matrix_PT_V600_20250211_ce5997a6_Tx     17u
 #define CanIfConf_CanIfTxPduCfg_VCU_02_oATOM_CAN_Matrix_PT_V600_20250211_d64c1292_Tx                18u
 #define CanIfConf_CanIfTxPduCfg_VCU_HMIsignals_02_oATOM_CAN_Matrix_PT_V600_20250211_b18572fb_Tx     19u
-#define CanIfConf_CanIfTxPduCfg_VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_91495a4f_Tx                20u
-#define CanIfConf_CanIfTxPduCfg_VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_386e6ea6_Tx                21u
-#define CanIfConf_CanIfTxPduCfg_VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_c350eb20_Tx               22u
-#define CanIfConf_CanIfTxPduCfg_VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_c9a902ae_Tx              23u
-#define CanIfConf_CanIfTxPduCfg_VCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_59ebe7dd_Tx         24u
+#define CanIfConf_CanIfTxPduCfg_VCU_SynReq_01_oATOM_CAN_Matrix_PT_V600_20250211_59ebe7dd_Tx         20u
+#define CanIfConf_CanIfTxPduCfg_VCU_06_oATOM_CAN_Matrix_PT_V600_20250211_91495a4f_Tx                21u
+#define CanIfConf_CanIfTxPduCfg_VCU_05_oATOM_CAN_Matrix_PT_V600_20250211_386e6ea6_Tx                22u
+#define CanIfConf_CanIfTxPduCfg_VCU_TCU_oATOM_CAN_Matrix_PT_V600_20250211_c350eb20_Tx               23u
+#define CanIfConf_CanIfTxPduCfg_VCU_DCDC_oATOM_CAN_Matrix_PT_V600_20250211_c9a902ae_Tx              24u
 #define CanIfConf_CanIfTxPduCfg_VCU_POD_oATOM_CAN_Matrix_PT_V600_20250211_d17423c6_Tx               25u
 #define CanIfConf_CanIfTxPduCfg_VCU_MCU_05_oATOM_CAN_Matrix_PT_V600_20250211_ef1d8001_Tx            26u
 #define CanIfConf_CanIfTxPduCfg_VCU_AccPedal_oATOM_CAN_Matrix_PT_V600_20250211_0136bf08_Tx          27u
@@ -1046,7 +1046,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetRxPduConfigOfPCConfig()                                                            CanIf_RxPduConfig  /**< the pointer to CanIf_RxPduConfig */
 #define CanIf_GetSizeOfCanIfCtrlId2MappedTxBuffersConfigOfPCConfig()                                5u  /**< the number of accomplishable value elements in CanIf_CanIfCtrlId2MappedTxBuffersConfig */
 #define CanIf_GetSizeOfCtrlStatesOfPCConfig()                                                       5u  /**< the number of accomplishable value elements in CanIf_CtrlStates */
-#define CanIf_GetSizeOfMailBoxConfigOfPCConfig()                                                    22u  /**< the number of accomplishable value elements in CanIf_MailBoxConfig */
+#define CanIf_GetSizeOfMailBoxConfigOfPCConfig()                                                    32u  /**< the number of accomplishable value elements in CanIf_MailBoxConfig */
 #define CanIf_GetSizeOfMappedTxBuffersConfigOfPCConfig()                                            5u  /**< the number of accomplishable value elements in CanIf_MappedTxBuffersConfig */
 #define CanIf_GetSizeOfRxIndicationFctListOfPCConfig()                                              6u  /**< the number of accomplishable value elements in CanIf_RxIndicationFctList */
 #define CanIf_GetSizeOfRxPduConfigOfPCConfig()                                                      109u  /**< the number of accomplishable value elements in CanIf_RxPduConfig */
@@ -1911,7 +1911,7 @@ extern CONST(CanIf_CtrlModeIndicationFctType, CANIF_CONST) CanIf_CtrlModeIndicat
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_MailBoxConfigType, CANIF_CONST) CanIf_MailBoxConfig[22];
+extern CONST(CanIf_MailBoxConfigType, CANIF_CONST) CanIf_MailBoxConfig[32];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
