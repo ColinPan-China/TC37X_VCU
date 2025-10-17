@@ -275,7 +275,7 @@ uint8 TLE8888qk_WdgFeed()
     TLE8888qk_FwdgFeed();
   }
 
-  if (update_status) 
+  if (update_status && (CfgIndex < TLE8888QK_CFGCNT)) 
   {
     uint16 wwd_reg, fwd_reg, tec_reg;
 
@@ -289,7 +289,7 @@ uint8 TLE8888qk_WdgFeed()
     tot_err_cnt = getDataFromResponse(tec_reg) & 0x7f;
 
     /* No watchdog error occurred */
-    if((wwd_err_cnt == 0) && (fwd_err_cnt == 0) && (tot_err_cnt == 0))
+    if((wwd_err_cnt == 0) && (fwd_err_cnt == 0) && (tot_err_cnt == 0) )
     {
       ret = 0;
       TLE8888qk_Config();
