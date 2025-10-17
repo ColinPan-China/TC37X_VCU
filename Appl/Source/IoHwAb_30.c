@@ -247,7 +247,7 @@ FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_10ms(void)
   SensorMngMain();
 
 
- if( 1 )
+ if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )
   {
     ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0, COMM_FULL_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79, COMM_FULL_COMMUNICATION);
@@ -324,7 +324,7 @@ FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_500ms(void)
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK IoHwAbRunnable_500ms>
  *********************************************************************************************************************/
 /* TODO: Add runnable implementation here. */
-//Adc_SampleMain();
+  Adc_SampleMain();
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
