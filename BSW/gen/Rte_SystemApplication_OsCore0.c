@@ -6158,29 +6158,15 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmEcuReset_DcmEcuReset(Dcm_EcuRes
  * Task:     Core0_AswTask
  * Priority: 64
  * Schedule: FULL
+ * Alarm:    Cycle Time 0.5 s Alarm Offset 0 s
  *********************************************************************************************************************/
 TASK(Core0_AswTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 {
-  EventMaskType ev;
 
-  for(;;)
-  {
-    (void)WaitEvent(Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms | Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_500ms); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)GetEvent(Core0_AswTask, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms | Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_500ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
+  /* call runnable */
+  IoHwAb_IoHwAbRunnable_500ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
-    if ((ev & Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_500ms) != (EventMaskType)0)
-    {
-      /* call runnable */
-      IoHwAb_IoHwAbRunnable_500ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-    }
-
-    if ((ev & Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms) != (EventMaskType)0)
-    {
-      /* call runnable */
-      IoHwAb_IoHwAbRunnable_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-    }
-  }
+  (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 /**********************************************************************************************************************
@@ -6235,9 +6221,6 @@ TASK(Core0_Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
 
       /* call schedulable entity */
       Com_MainFunctionTx_ComMainFunctionTx();
-
-      /* call schedulable entity */
-      Rte_ComSendSignalProxyPeriodic();
 
       /* call schedulable entity */
       Fee_MainFunction();
@@ -6322,8 +6305,38 @@ TASK(Core0_Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
     {
       /* call schedulable entity */
       J1939Tp_MainFunction();
+
+      /* call schedulable entity */
+      Com_MainFunctionTx_ComMainFunctionTx_100ms();
+
+      /* call schedulable entity */
+      Com_MainFunctionTx_ComMainFunctionTx_10ms();
+
+      /* call schedulable entity */
+      Com_MainFunctionTx_ComMainFunctionTx_200ms();
+
+      /* call schedulable entity */
+      Com_MainFunctionTx_ComMainFunctionTx_20ms();
+
+      /* call schedulable entity */
+      Com_MainFunctionTx_ComMainFunctionTx_50ms();
     }
   }
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+/**********************************************************************************************************************
+ * Task:     Core0_CddTask
+ * Priority: 60
+ * Schedule: FULL
+ * Alarm:    Cycle Time 0.01 s Alarm Offset 0 s
+ *********************************************************************************************************************/
+TASK(Core0_CddTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
+{
+
+  /* call runnable */
+  IoHwAb_IoHwAbRunnable_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+  (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 #define RTE_STOP_SEC_CODE

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Interrupt_Cfg.h
- *   Generation Time: 2025-08-06 14:36:34
+ *   Generation Time: 2025-10-17 10:45:28
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -44,13 +44,13 @@
  *********************************************************************************************************************/
 
 /*! Defines the level to lock external category 1, 2 and tp ISRs. */
-# define OS_CFG_HAL_TP_DISABLE_LEVEL             (124)
+# define OS_CFG_HAL_TP_DISABLE_LEVEL             (134)
 
 /*! Defines the level to lock external category 1 and 2 ISRs. */
-# define OS_CFG_HAL_ISR1_DISABLE_LEVEL           (124)
+# define OS_CFG_HAL_ISR1_DISABLE_LEVEL           (134)
 
 /*! Defines the level to lock user category 2 ISRs. */
-# define OS_CFG_HAL_ISR2_DISABLE_LEVEL           (124)
+# define OS_CFG_HAL_ISR2_DISABLE_LEVEL           (134)
 
 
 /**********************************************************************************************************************

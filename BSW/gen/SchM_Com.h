@@ -36,6 +36,11 @@ extern "C" {
 
 FUNC(void, COM_CODE) Com_MainFunctionRx_ComMainFunctionRx(void); /* PRQA S 3451, 3449 */ /* MD_Rte_3451, MD_Rte_3449 */
 FUNC(void, COM_CODE) Com_MainFunctionTx_ComMainFunctionTx(void); /* PRQA S 3451, 3449 */ /* MD_Rte_3451, MD_Rte_3449 */
+FUNC(void, COM_CODE) Com_MainFunctionTx_ComMainFunctionTx_100ms(void); /* PRQA S 3451, 3449 */ /* MD_Rte_3451, MD_Rte_3449 */
+FUNC(void, COM_CODE) Com_MainFunctionTx_ComMainFunctionTx_10ms(void); /* PRQA S 3451, 3449 */ /* MD_Rte_3451, MD_Rte_3449 */
+FUNC(void, COM_CODE) Com_MainFunctionTx_ComMainFunctionTx_200ms(void); /* PRQA S 3451, 3449 */ /* MD_Rte_3451, MD_Rte_3449 */
+FUNC(void, COM_CODE) Com_MainFunctionTx_ComMainFunctionTx_20ms(void); /* PRQA S 3451, 3449 */ /* MD_Rte_3451, MD_Rte_3449 */
+FUNC(void, COM_CODE) Com_MainFunctionTx_ComMainFunctionTx_50ms(void); /* PRQA S 3451, 3449 */ /* MD_Rte_3451, MD_Rte_3449 */
 
 # define COM_STOP_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

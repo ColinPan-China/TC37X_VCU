@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Task_Lcfg.h
- *   Generation Time: 2025-09-28 16:50:05
+ *   Generation Time: 2025-10-17 11:08:01
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -77,6 +77,9 @@ extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core0_AswTask;
 
 /*! Task configuration data: Core0_Bsw_Task */
 extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core0_Bsw_Task;
+
+/*! Task configuration data: Core0_CddTask */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Core0_CddTask;
 
 /*! Task configuration data: Default_Init_Task */
 extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_Default_Init_Task;

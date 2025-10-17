@@ -7266,6 +7266,16 @@
  *  SchM_Schedulable_ComM_ComM_MainFunction_7_Start
  *  SchM_Schedulable_Com_Com_MainFunctionRx_ComMainFunctionRx_Return
  *  SchM_Schedulable_Com_Com_MainFunctionRx_ComMainFunctionRx_Start
+ *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_100ms_Return
+ *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_100ms_Start
+ *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_10ms_Return
+ *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_10ms_Start
+ *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_200ms_Return
+ *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_200ms_Start
+ *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_20ms_Return
+ *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_20ms_Start
+ *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_50ms_Return
+ *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_50ms_Start
  *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_Return
  *  SchM_Schedulable_Com_Com_MainFunctionTx_ComMainFunctionTx_Start
  *  SchM_Schedulable_Dcm_Dcm_MainFunction_Return
@@ -7288,8 +7298,6 @@
  *  SchM_Schedulable_LinSM_LinSM_MainFunction_Start
  *  SchM_Schedulable_NvM_NvM_MainFunction_Return
  *  SchM_Schedulable_NvM_NvM_MainFunction_Start
- *  SchM_Schedulable_Rte_Rte_ComSendSignalProxyPeriodic_Return
- *  SchM_Schedulable_Rte_Rte_ComSendSignalProxyPeriodic_Start
  *  SchM_Schedulable_Spi_Spi_MainFunction_Handling_Return
  *  SchM_Schedulable_Spi_Spi_MainFunction_Handling_Start
  *  SchM_Schedulable_Xcp_CanXcp_MainFunction_Return

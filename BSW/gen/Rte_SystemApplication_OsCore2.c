@@ -143,8 +143,6 @@
 # define RTE_USE_COM_TXSIGNAL_RDACCESS
 #endif
 
-#include "Rte_Cbk.h"
-
 /* AUTOSAR 3.x compatibility */
 #if !defined (RTE_LOCAL)
 # define RTE_LOCAL static

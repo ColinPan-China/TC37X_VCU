@@ -447,19 +447,6 @@
                   <INTERNAL-BEHAVIORS>
                     <BSW-INTERNAL-BEHAVIOR UUID="e014756e-6299-42dc-9bc6-2db672ce6835">
                       <SHORT-NAME>RteBehavior</SHORT-NAME>
-                      <ENTITYS>
-                        <BSW-SCHEDULABLE-ENTITY UUID="0fff2c26-5dfb-414f-850e-a8d6abcf7853">
-                          <SHORT-NAME>Rte_ComSendSignalProxyPeriodic</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte_ComSendSignalProxyPeriodic</IMPLEMENTED-ENTRY-REF>
-                        </BSW-SCHEDULABLE-ENTITY>
-                      </ENTITYS>
-                      <EVENTS>
-                        <BSW-TIMING-EVENT UUID="aeaffa7c-9dac-4c22-891b-0c5327d4d0fb">
-                          <SHORT-NAME>Rte_ComSendSignalProxyPeriodicTimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Rte_ib_bswmd/BswModuleDescriptions/Rte/RteBehavior/Rte_ComSendSignalProxyPeriodic</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.01</PERIOD>
-                        </BSW-TIMING-EVENT>
-                      </EVENTS>
                     </BSW-INTERNAL-BEHAVIOR>
                   </INTERNAL-BEHAVIORS>
                 </BSW-MODULE-DESCRIPTION>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Cfg.h
- *   Generation Time: 2025-09-28 16:50:03
+ *   Generation Time: 2025-10-17 11:11:22
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -126,8 +126,6 @@
 # define Rte_Ev_RunS2_EcuM_EcuM_MainFunction     ((EventMaskType)16uLL)
 # define Rte_Ev_Run_CtAp_CANHandler_R_CANHandlerInput_Cyclic_1000ms     ((EventMaskType)32uLL)
 # define Rte_Ev_Run_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms     ((EventMaskType)64uLL)
-# define Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms     ((EventMaskType)1uLL)
-# define Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_500ms     ((EventMaskType)2uLL)
 
 /* Software counter timing macros */
 

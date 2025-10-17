@@ -110,7 +110,8 @@ FUNC(void, OS_ERRORHOOK_CODE) ErrorHook(StatusType Error)
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK OS_Callout_Stubs_ErrorHook>
  *********************************************************************************************************************/
-
+  Os_ErrorInformationType CurrentError;
+  TaskType activatedTask;
 
   volatile uint8 endless = 1u;
   (void)Os_GetDetailedError(&CurrentError);

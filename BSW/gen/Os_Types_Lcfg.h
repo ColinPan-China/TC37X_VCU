@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2025-09-28 16:50:05
+ *   Generation Time: 2025-10-17 11:08:01
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -63,6 +63,7 @@
 /* Task identifiers. */
 #define Core0_AswTask Core0_AswTask
 #define Core0_Bsw_Task Core0_Bsw_Task
+#define Core0_CddTask Core0_CddTask
 #define Core1_Asw_Init Core1_Asw_Init
 #define Core1_Asw_Task_Qm Core1_Asw_Task_Qm
 #define Core1_Bsw_Task Core1_Bsw_Task
@@ -415,22 +416,23 @@ typedef enum
 {
   Core0_AswTask = 0,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Core0_Bsw_Task = 1,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Core1_Asw_Init = 2,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Core1_Asw_Task_Qm = 3,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Core1_Bsw_Task = 4,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Core2_Asw_Init = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Core2_Asw_Task = 6,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Core2_Bsw_Task = 7,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Default_Init_Task = 8,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Default_Init_Task_Core1 = 9,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Default_Init_Task_Core1_Trusted = 10,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Default_Init_Task_Core2 = 11,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Default_Init_Task_Core2_Trusted = 12,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Default_Init_Task_Trusted = 13,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  IdleTask_OsCore0 = 14,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  IdleTask_OsCore1 = 15,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  IdleTask_OsCore2 = 16,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_TASKID_COUNT = 17,
+  Core0_CddTask = 2,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Core1_Asw_Init = 3,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Core1_Asw_Task_Qm = 4,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Core1_Bsw_Task = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Core2_Asw_Init = 6,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Core2_Asw_Task = 7,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Core2_Bsw_Task = 8,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task = 9,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task_Core1 = 10,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task_Core1_Trusted = 11,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task_Core2 = 12,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task_Core2_Trusted = 13,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Default_Init_Task_Trusted = 14,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  IdleTask_OsCore0 = 15,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  IdleTask_OsCore1 = 16,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  IdleTask_OsCore2 = 17,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_TASKID_COUNT = 18,
   INVALID_TASK = OS_TASKID_COUNT
 } TaskType;
 

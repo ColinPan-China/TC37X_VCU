@@ -34,26 +34,13 @@
       SCHEDULE = FULL:"@RO@";
 // TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
       AUTOSTART = FALSE:"@RO@";
-      EVENT = Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms:"@RO@";
-      EVENT = Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_500ms:"@RO@";
-   }:"@RO@@NR@";
-
-   ALARM Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms {
-      COUNTER = SystemTimer_Core0;
-      ACTION = SETEVENT
-      {
-         TASK = Core0_AswTask;
-         EVENT = Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms;
-      }:"@ROC@";
-      AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms {
       COUNTER = SystemTimer_Core0;
-      ACTION = SETEVENT
+      ACTION = ACTIVATETASK
       {
          TASK = Core0_AswTask;
-         EVENT = Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_500ms;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
@@ -95,6 +82,23 @@
       {
          TASK = Core0_Bsw_Task;
          EVENT = Rte_Ev_Cyclic2_Core0_Bsw_Task_0_5ms;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   TASK Core0_CddTask {
+      ACTIVATION = 1:"@RO@";
+      PRIORITY = 60:"@RO@";
+      SCHEDULE = FULL:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms {
+      COUNTER = SystemTimer_Core0;
+      ACTION = ACTIVATETASK
+      {
+         TASK = Core0_CddTask;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
@@ -369,14 +373,6 @@
       MASK = AUTO;
    }:"@ROC@@NR@";
 
-   EVENT Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms {
-      MASK = AUTO;
-   }:"@ROC@@NR@";
-
-   EVENT Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_500ms {
-      MASK = AUTO;
-   }:"@ROC@@NR@";
-
 
    APPLICATION SystemApplication_OsCore0 {
       TRUSTED = TRUE;
@@ -387,12 +383,13 @@
 //      ERRORHOOK = FALSE;
 //      HAS_RESTARTTASK = FALSE;
       TASK = Core0_AswTask;
-      ALARM = Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms;
       ALARM = Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms;
       TASK = Core0_Bsw_Task;
       ALARM = Rte_Al_TE2_Core0_Bsw_Task_0_10ms;
       ALARM = Rte_Al_TE2_Core0_Bsw_Task_0_20ms;
       ALARM = Rte_Al_TE2_Core0_Bsw_Task_0_5ms;
+      TASK = Core0_CddTask;
+      ALARM = Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms;
       CORE = 0;
   };
 

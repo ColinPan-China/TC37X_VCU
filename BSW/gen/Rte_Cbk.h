@@ -143,12 +143,6 @@ FUNC(void, RTE_CODE) Rte_COMCbk_SOH_oBS_02_oATOM_HWLIN1_022d471e_Rx(void);
 FUNC(void, RTE_CODE) Rte_COMCbk_T_BATT_oBS_01_oATOM_HWLIN1_2bbe4bbe_Rx(void);
 FUNC(void, RTE_CODE) Rte_COMCbk_U_BATT_oBS_01_oATOM_HWLIN1_cca3ed29_Rx(void);
 
-/**********************************************************************************************************************
- * RTE Schedulable entity for COM-Access from different partitions
- *********************************************************************************************************************/
-
-FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void);
-
 # define RTE_STOP_SEC_CODE
 # include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 

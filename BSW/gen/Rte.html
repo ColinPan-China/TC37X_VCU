@@ -432,7 +432,7 @@ CONST Size: 1838 Bytes<br>
 </TR>
 <TR>
 <TD>Core0_AswTask</TD>
-<TD>Extended</TD>
+<TD>Basic</TD>
 <TD>FULL</TD>
 <TD>64</TD>
 </TR>
@@ -441,6 +441,12 @@ CONST Size: 1838 Bytes<br>
 <TD>Extended</TD>
 <TD>FULL</TD>
 <TD>65</TD>
+</TR>
+<TR>
+<TD>Core0_CddTask</TD>
+<TD>Basic</TD>
+<TD>FULL</TD>
+<TD>60</TD>
 </TR>
 <TR>
 <TD>Core1_Asw_Init</TD>
@@ -19450,15 +19456,15 @@ CONST Size: 1838 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>IoHwAb_IoHwAbRunnable_10ms</TD>
-<TD>Core0_AswTask</TD>
-<TD>Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms</TD>
+<TD>Core0_CddTask</TD>
+<TD>n/a</TD>
 <TD>Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 500ms</TD>
 <TD>IoHwAb_IoHwAbRunnable_500ms</TD>
 <TD>Core0_AswTask</TD>
-<TD>Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_500ms</TD>
+<TD>n/a</TD>
 <TD>Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms</TD>
 </TR>
 <TR>
@@ -19579,6 +19585,41 @@ CONST Size: 1838 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>Com_MainFunctionTx_ComMainFunctionTx</TD>
+<TD>Core0_Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Core0_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>Com_MainFunctionTx_ComMainFunctionTx_100ms</TD>
+<TD>Core0_Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Core0_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>Com_MainFunctionTx_ComMainFunctionTx_10ms</TD>
+<TD>Core0_Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Core0_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>Com_MainFunctionTx_ComMainFunctionTx_200ms</TD>
+<TD>Core0_Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Core0_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>Com_MainFunctionTx_ComMainFunctionTx_20ms</TD>
+<TD>Core0_Bsw_Task</TD>
+<TD>Rte_Ev_Cyclic2_Core0_Bsw_Task_0_10ms</TD>
+<TD>Rte_Al_TE2_Core0_Bsw_Task_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 10ms</TD>
+<TD>Com_MainFunctionTx_ComMainFunctionTx_50ms</TD>
 <TD>Core0_Bsw_Task</TD>
 <TD>Rte_Ev_Cyclic2_Core0_Bsw_Task_0_10ms</TD>
 <TD>Rte_Al_TE2_Core0_Bsw_Task_0_10ms</TD>
@@ -19719,13 +19760,6 @@ CONST Size: 1838 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>NvM_MainFunction</TD>
-<TD>Core0_Bsw_Task</TD>
-<TD>Rte_Ev_Cyclic2_Core0_Bsw_Task_0_10ms</TD>
-<TD>Rte_Al_TE2_Core0_Bsw_Task_0_10ms</TD>
-</TR>
-<TR>
-<TD><B>TimingEvent</B> Cyclic 10ms</TD>
-<TD>Rte_ComSendSignalProxyPeriodic</TD>
 <TD>Core0_Bsw_Task</TD>
 <TD>Rte_Ev_Cyclic2_Core0_Bsw_Task_0_10ms</TD>
 <TD>Rte_Al_TE2_Core0_Bsw_Task_0_10ms</TD>
