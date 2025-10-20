@@ -25,7 +25,7 @@
                       <ANNOTATION-ORIGIN>DV:UserDefined</ANNOTATION-ORIGIN>
                     </ANNOTATION>
                   </ANNOTATIONS>
-                  <VALUE>true</VALUE>
+                  <VALUE>false</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanNm/CanNmGlobalConfig/CanNmUserDataEnabled</DEFINITION-REF>
@@ -109,12 +109,6 @@
                   <VALUE>1.5</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
               </PARAMETER-VALUES>
-              <REFERENCE-VALUES>
-                <ECUC-REFERENCE-VALUE>
-                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/CanNm/CanNmGlobalConfig/CanNmPnEiraRxNSduRef</DEFINITION-REF>
-                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/EcuC/EcucPduCollection/PNC_CanNm2PduR_PduRx</VALUE-REF>
-                </ECUC-REFERENCE-VALUE>
-              </REFERENCE-VALUES>
               <SUB-CONTAINERS>
                 <ECUC-CONTAINER-VALUE UUID="f274001c-a6ab-4d47-a07f-22c51567694d">
                   <SHORT-NAME>CanNmGeneration</SHORT-NAME>
@@ -227,6 +221,10 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmCriBitAlwaysEnabled</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmAllNmMessagesKeepAwake</DEFINITION-REF>
                       <VALUE>false</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
@@ -362,7 +360,7 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmActiveWakeupBitEnabled</DEFINITION-REF>
-                      <VALUE>true</VALUE>
+                      <VALUE>false</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmNodeIdEnabled</DEFINITION-REF>
@@ -382,7 +380,7 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmComControlEnabled</DEFINITION-REF>
-                      <VALUE>false</VALUE>
+                      <VALUE>true</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmCriBitAlwaysEnabled</DEFINITION-REF>
@@ -540,7 +538,7 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmActiveWakeupBitEnabled</DEFINITION-REF>
-                      <VALUE>true</VALUE>
+                      <VALUE>false</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/CanNm/CanNmGlobalConfig/CanNmChannelConfig/CanNmNodeIdEnabled</DEFINITION-REF>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Lcfg.c
- *   Generation Time: 2025-10-14 14:41:52
+ *   Generation Time: 2025-10-20 10:42:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -171,11 +171,10 @@ CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[8] = {  /* PRQA S 1514, 153
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_EiraTxSignalIndirectionType, COMM_CONST) ComM_EiraTxSignalIndirection[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(ComM_EiraTxSignalIndirectionType, COMM_CONST) ComM_EiraTxSignalIndirection[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    SymbolicNameValue                                                                       */
   { /*     0 */ ComConf_ComSignal_PT_TxNM_PNCData_oNM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_5a3fd28e_Tx },
-  { /*     1 */ COMM_NO_SYMBOLICNAMEVALUE                                                               },
-  { /*     2 */ ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx }
+  { /*     1 */ ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx }
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -318,6 +317,7 @@ CONST(ComM_PncPbIndType, COMM_CONST) ComM_PncPbInd[6] = {  /* PRQA S 1514, 1533 
   \brief  Information about partial network signals (EIRA, ERA)
   \details
   Element                    Description
+  BusTypeId                  For EIRA RX Signals: An internal id for the BusType
   ChannelIdx                 the index of the 0:1 relation pointing to ComM_Channel
   PncSignalValuesEndIdx      the end index of the 0:n relation pointing to ComM_PncSignalValues
   PncSignalValuesStartIdx    the start index of the 0:n relation pointing to ComM_PncSignalValues
@@ -327,13 +327,12 @@ CONST(ComM_PncPbIndType, COMM_CONST) ComM_PncPbInd[6] = {  /* PRQA S 1514, 1533 
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    ChannelIdx                     PncSignalValuesEndIdx  PncSignalValuesStartIdx  Type                                Referable Keys */
-  { /*     0 */                            1u,                    6u,                      0u, COMM_EIRA_TX_TYPEOFPNCSIGNAL },  /* [ComM_ComConf_ComSignal_PT_TxNM_PNCData_oNM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_5a3fd28e_Tx, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
-  { /*     1 */ COMM_NO_CHANNELIDXOFPNCSIGNAL,                   12u,                      6u, COMM_EIRA_RX_TYPEOFPNCSIGNAL },  /* [ComM_ComConf_ComSignal_PNC_ComSignal_Rx] */
-  { /*     2 */                            0u,                   18u,                     12u, COMM_EIRA_TX_TYPEOFPNCSIGNAL },  /* [ComM_ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
-  { /*     3 */                            1u,                   24u,                     18u,  COMM_ERA_RX_TYPEOFPNCSIGNAL },  /* [ComM_ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
-  { /*     4 */                            0u,                   30u,                     24u,  COMM_ERA_RX_TYPEOFPNCSIGNAL }   /* [ComM_ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    BusTypeId  ChannelIdx  PncSignalValuesEndIdx  PncSignalValuesStartIdx  Type                                Referable Keys */
+  { /*     0 */        0u,         1u,                    6u,                      0u, COMM_EIRA_TX_TYPEOFPNCSIGNAL },  /* [ComM_ComConf_ComSignal_PT_TxNM_PNCData_oNM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_5a3fd28e_Tx, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+  { /*     1 */        0u,         0u,                   12u,                      6u, COMM_EIRA_TX_TYPEOFPNCSIGNAL },  /* [ComM_ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+  { /*     2 */        0u,         1u,                   18u,                     12u,  COMM_ERA_RX_TYPEOFPNCSIGNAL },  /* [ComM_ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+  { /*     3 */        0u,         0u,                   24u,                     18u,  COMM_ERA_RX_TYPEOFPNCSIGNAL }   /* [ComM_ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26, /ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -354,17 +353,17 @@ CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[5] = {  /* PRQA S 1514, 153
 CONST(ComM_PncSignalIndType, COMM_CONST) ComM_PncSignalInd[12] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     PncSignalInd      Referable Keys */
   /*     0 */            0u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
-  /*     1 */            2u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
-  /*     2 */            3u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
-  /*     3 */            4u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
+  /*     1 */            1u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
+  /*     2 */            2u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
+  /*     3 */            3u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_24] */
   /*     4 */            0u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
-  /*     5 */            2u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
-  /*     6 */            3u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
-  /*     7 */            4u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
+  /*     5 */            1u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
+  /*     6 */            2u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
+  /*     7 */            3u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_26] */
   /*     8 */            0u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
-  /*     9 */            2u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
-  /*    10 */            3u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
-  /*    11 */            4u   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+  /*     9 */            1u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+  /*    10 */            2u,  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
+  /*    11 */            3u   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_31] */
 };
 #define COMM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -824,18 +823,15 @@ VAR(ComM_PncSignalValuesUType, COMM_VAR_NOINIT) ComM_PncSignalValues;  /* PRQA S
   /*     0 */  /* [ComM_ComConf_ComSignal_PT_TxNM_PNCData_oNM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_5a3fd28e_Tx] */
   /*   ... */  /* [ComM_ComConf_ComSignal_PT_TxNM_PNCData_oNM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_5a3fd28e_Tx] */
   /*     5 */  /* [ComM_ComConf_ComSignal_PT_TxNM_PNCData_oNM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_5a3fd28e_Tx] */
-  /*     6 */  /* [ComM_ComConf_ComSignal_PNC_ComSignal_Rx] */
-  /*   ... */  /* [ComM_ComConf_ComSignal_PNC_ComSignal_Rx] */
-  /*    11 */  /* [ComM_ComConf_ComSignal_PNC_ComSignal_Rx] */
-  /*    12 */  /* [ComM_ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx] */
+  /*     6 */  /* [ComM_ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx] */
   /*   ... */  /* [ComM_ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx] */
-  /*    17 */  /* [ComM_ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx] */
-  /*    18 */  /* [ComM_ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx] */
+  /*    11 */  /* [ComM_ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx] */
+  /*    12 */  /* [ComM_ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx] */
   /*   ... */  /* [ComM_ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx] */
-  /*    23 */  /* [ComM_ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx] */
-  /*    24 */  /* [ComM_ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx] */
+  /*    17 */  /* [ComM_ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx] */
+  /*    18 */  /* [ComM_ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx] */
   /*   ... */  /* [ComM_ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx] */
-  /*    29 */  /* [ComM_ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx] */
+  /*    23 */  /* [ComM_ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1117,31 +1113,6 @@ FUNC(void, COMM_CODE) ComM_MainFunction_7(void)
 
 
 /*********************************************************************************************************************
-  FUNCTION: ComM_ComCbk_PNC_ComSignal_Rx
-*********************************************************************************************************************/
-/*!
- * \internal
- * - #10 Notification that an EIRA_RX or ERA signal data has changed. 
- *       Receive the data of the corresponding signal and trigger signal data processing.
- * \endinternal
- */
-FUNC(void, COMM_CODE) ComM_ComCbk_PNC_ComSignal_Rx(void)
-{
-  /* ----- Local Variables ---------------------------------------------- */
-  uint8 EiraOrEraValuesRx[COMM_PNC_SIGNAL_LENGTH] = {0};
-
-  /* ----- Implementation ----------------------------------------------- */
-  /* - #10 Notification that an EIRA_RX or ERA signal data has changed. 
-   *       Receive the data of the corresponding signal and trigger signal data processing. */
-  {
-    (void)Com_ReceiveSignal(ComConf_ComSignal_PNC_ComSignal_Rx, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_COM_RECEIVE_SIGNAL */ /* PRQA S 0315 */ /* MD_ComM_0315 */
-
-    ComM_PncProcessRxSignalEira(1, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_WITH_PTR_TO_CONST */
-  }
-
-}
-
-/*********************************************************************************************************************
   FUNCTION: ComM_ComCbk_PNC_ERA_PT_ComSignal_Rx
 *********************************************************************************************************************/
 /*!
@@ -1161,7 +1132,7 @@ FUNC(void, COMM_CODE) ComM_ComCbk_PNC_ERA_PT_ComSignal_Rx(void)
   {
     (void)Com_ReceiveSignal(ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_COM_RECEIVE_SIGNAL */ /* PRQA S 0315 */ /* MD_ComM_0315 */
 
-    ComM_PncProcessRxSignalEra(3, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_WITH_PTR_TO_CONST */
+    ComM_PncProcessRxSignalEra(2, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_WITH_PTR_TO_CONST */
   }
 
 }
@@ -1186,7 +1157,7 @@ FUNC(void, COMM_CODE) ComM_ComCbk_PNC_ERA_CH_ComSignal_Rx(void)
   {
     (void)Com_ReceiveSignal(ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_COM_RECEIVE_SIGNAL */ /* PRQA S 0315 */ /* MD_ComM_0315 */
 
-    ComM_PncProcessRxSignalEra(4, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_WITH_PTR_TO_CONST */
+    ComM_PncProcessRxSignalEra(3, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_WITH_PTR_TO_CONST */
   }
 
 }

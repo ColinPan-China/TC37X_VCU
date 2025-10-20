@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2025-10-14 14:41:51
+ *   Generation Time: 2025-10-20 13:40:33
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -103,16 +103,17 @@
 #define COMM_PNC_ACTIVE_COORD                                           STD_ON
 #define COMM_PNC_PS_TIMER                                               0u
 #define COMM_ACTIVE_PNC                                                 3u
-#define COMM_PNC_EXTENDED_FUNCTIONALITY_ENABLED                         STD_OFF
+#define COMM_PNC_EXTENDED_FUNCTIONALITY_ENABLED                         STD_ON
+#define COMM_PNC_EXISTS_PNC_WITHOUT_CHANNELS                            STD_OFF
 #define COMM_PNC_TO_CHANNEL_ROUTING_LIMITATION_ENABLED                  STD_OFF
 #define COMM_PNC_PASSIVE_GW_SUPPORT                                     STD_ON
 #define COMM_PNC_EXISTS_COORD_PNC_WITH_GW_PASSIVE_AND_MANAGED_CHANNELS  STD_OFF
 #define COMM_PNC_EXISTS_GATEWAY_TYPE_ACTIVE                             STD_OFF
 #define COMM_PNC_EXISTS_GATEWAY_TYPE_NONE                               STD_OFF
 #define COMM_PNC_SIGNAL_LENGTH                                          6u
-#define COMM_PNC_MAX_NUMBER_OF_EIRA_RX                                  1u
+#define COMM_PNC_MAX_NUMBER_OF_EIRA_RX                                  0u
 #define COMM_PNC_CHECK_ENABLED_AT_RUNTIME                               STD_OFF
-#define COMM_PNC_0_VECTOR_AVOIDANCE                                     STD_ON
+#define COMM_PNC_0_VECTOR_AVOIDANCE                                     STD_OFF
 
 #define COMM_NM_GW_EXT_ENABLED                                          STD_OFF
 #define COMM_KEEP_AWAKE_CHANNELS_SUPPORT                                STD_ON
@@ -473,7 +474,7 @@
 #define COMM_EXISTS_LIGHT_NMTYPEOFCHANNEL                                                           STD_ON
 #define COMM_EXISTS_NONE_NMTYPEOFCHANNEL                                                            STD_OFF
 #define COMM_EXISTS_LINSLAVE_NMTYPEOFCHANNEL                                                        STD_OFF
-#define COMM_EXISTS_EIRA_RX_TYPEOFPNCSIGNAL                                                         STD_ON
+#define COMM_EXISTS_EIRA_RX_TYPEOFPNCSIGNAL                                                         STD_OFF
 #define COMM_EXISTS_EIRA_TX_TYPEOFPNCSIGNAL                                                         STD_ON
 #define COMM_EXISTS_ERA_RX_TYPEOFPNCSIGNAL                                                          STD_ON
 #define COMM_EXISTS_NOT_USED_IN_THIS_VARIANT_TYPEOFPNCSIGNAL                                        STD_OFF
@@ -488,7 +489,6 @@
 */ 
 #define COMM_FULL_NMTYPEOFCHANNEL                                                                   0x01u
 #define COMM_LIGHT_NMTYPEOFCHANNEL                                                                  0x03u
-#define COMM_EIRA_RX_TYPEOFPNCSIGNAL                                                                0x00u
 #define COMM_EIRA_TX_TYPEOFPNCSIGNAL                                                                0x01u
 #define COMM_ERA_RX_TYPEOFPNCSIGNAL                                                                 0x02u
 /** 
@@ -537,9 +537,9 @@
 #define COMM_ISDEF_USERREQPNCFULLCOMENDIDXOFPNCPB                                                   STD_OFF
 #define COMM_ISDEF_USERREQPNCFULLCOMSTARTIDXOFPNCPB                                                 STD_OFF
 #define COMM_ISDEF_PNCPBIND                                                                         STD_OFF
-#define COMM_ISDEF_BUSTYPEIDOFPNCSIGNAL                                                             STD_ON
+#define COMM_ISDEF_BUSTYPEIDOFPNCSIGNAL                                                             STD_OFF
 #define COMM_ISDEF_CHANNELIDXOFPNCSIGNAL                                                            STD_OFF
-#define COMM_ISDEF_CHANNELUSEDOFPNCSIGNAL                                                           STD_OFF
+#define COMM_ISDEF_CHANNELUSEDOFPNCSIGNAL                                                           STD_ON
 #define COMM_ISDEF_PNCSIGNALVALUESENDIDXOFPNCSIGNAL                                                 STD_OFF
 #define COMM_ISDEF_PNCSIGNALVALUESSTARTIDXOFPNCSIGNAL                                               STD_OFF
 #define COMM_ISDEF_PNCSIGNALVALUESUSEDOFPNCSIGNAL                                                   STD_ON
@@ -641,9 +641,9 @@
 #define COMM_EQ2_USERREQPNCFULLCOMENDIDXOFPNCPB                                                     
 #define COMM_EQ2_USERREQPNCFULLCOMSTARTIDXOFPNCPB                                                   
 #define COMM_EQ2_PNCPBIND                                                                           
-#define COMM_EQ2_BUSTYPEIDOFPNCSIGNAL                                                               0u
+#define COMM_EQ2_BUSTYPEIDOFPNCSIGNAL                                                               
 #define COMM_EQ2_CHANNELIDXOFPNCSIGNAL                                                              
-#define COMM_EQ2_CHANNELUSEDOFPNCSIGNAL                                                             
+#define COMM_EQ2_CHANNELUSEDOFPNCSIGNAL                                                             TRUE
 #define COMM_EQ2_PNCSIGNALVALUESENDIDXOFPNCSIGNAL                                                   
 #define COMM_EQ2_PNCSIGNALVALUESSTARTIDXOFPNCSIGNAL                                                 
 #define COMM_EQ2_PNCSIGNALVALUESUSEDOFPNCSIGNAL                                                     TRUE
@@ -1269,6 +1269,7 @@ typedef struct sComM_PncPbType
 /**   \brief  type used in ComM_PncSignal */
 typedef struct sComM_PncSignalType
 {
+  ComM_BusTypeIdOfPncSignalType BusTypeIdOfPncSignal;  /**< For EIRA RX Signals: An internal id for the BusType */
   ComM_ChannelIdxOfPncSignalType ChannelIdxOfPncSignal;  /**< the index of the 0:1 relation pointing to ComM_Channel */
   ComM_PncSignalValuesEndIdxOfPncSignalType PncSignalValuesEndIdxOfPncSignal;  /**< the end index of the 0:n relation pointing to ComM_PncSignalValues */
   ComM_PncSignalValuesStartIdxOfPncSignalType PncSignalValuesStartIdxOfPncSignal;  /**< the start index of the 0:n relation pointing to ComM_PncSignalValues */
@@ -1433,7 +1434,6 @@ typedef struct ComM_PncPSleepTimerStructSTag
 typedef struct ComM_PncSignalValuesStructSTag
 {
   ComM_PncSignalValuesType ComM_ComConf_ComSignal_PT_TxNM_PNCData_oNM_VCU_oATOM_CAN_Matrix_PT_V600_20250211_5a3fd28e_Tx[6];
-  ComM_PncSignalValuesType ComM_ComConf_ComSignal_PNC_ComSignal_Rx[6];
   ComM_PncSignalValuesType ComM_ComConf_ComSignal_CH_TxNM_PNCData_oNM_VCU_oATOM_CANFD_Matrix_CH_V600_202502_859d1767_Tx[6];
   ComM_PncSignalValuesType ComM_ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx[6];
   ComM_PncSignalValuesType ComM_ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx[6];
@@ -1534,7 +1534,7 @@ typedef union ComM_PncPSleepTimerUTag
 /**   \brief  type to access ComM_PncSignalValues in an index and symbol based style. */
 typedef union ComM_PncSignalValuesUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_PncSignalValuesType raw[30];
+  ComM_PncSignalValuesType raw[24];
   ComM_PncSignalValuesStructSType str;
 } ComM_PncSignalValuesUType;
 
@@ -1773,7 +1773,7 @@ extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[8];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_EiraTxSignalIndirectionType, COMM_CONST) ComM_EiraTxSignalIndirection[3];
+extern CONST(ComM_EiraTxSignalIndirectionType, COMM_CONST) ComM_EiraTxSignalIndirection[2];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1886,6 +1886,7 @@ extern CONST(ComM_PncPbIndType, COMM_CONST) ComM_PncPbInd[6];
   \brief  Information about partial network signals (EIRA, ERA)
   \details
   Element                    Description
+  BusTypeId                  For EIRA RX Signals: An internal id for the BusType
   ChannelIdx                 the index of the 0:1 relation pointing to ComM_Channel
   PncSignalValuesEndIdx      the end index of the 0:n relation pointing to ComM_PncSignalValues
   PncSignalValuesStartIdx    the start index of the 0:n relation pointing to ComM_PncSignalValues
@@ -1895,7 +1896,7 @@ extern CONST(ComM_PncPbIndType, COMM_CONST) ComM_PncPbInd[6];
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[5];
+extern CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[4];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Lcfg.h
- *   Generation Time: 2025-10-14 14:41:52
+ *   Generation Time: 2025-10-20 10:42:53
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -801,11 +801,11 @@
 #define PduR_GetSizeOfInitializedRamOfPCPartitionConfig(partitionIndex)                             1u  /**< the number of accomplishable value elements in PduR_InitializedRam */
 #define PduR_GetSizeOfLockRomOfPCPartitionConfig()                                                  1u  /**< the number of accomplishable value elements in PduR_LockRom */
 #define PduR_GetSizeOfMmRomOfPCPartitionConfig()                                                    7u  /**< the number of accomplishable value elements in PduR_MmRom */
-#define PduR_GetSizeOfRmDestRomOfPCPartitionConfig()                                                180u  /**< the number of accomplishable value elements in PduR_RmDestRom */
-#define PduR_GetSizeOfRmGDestRomOfPCPartitionConfig()                                               180u  /**< the number of accomplishable value elements in PduR_RmGDestRom */
-#define PduR_GetSizeOfRmSrcRomOfPCPartitionConfig()                                                 180u  /**< the number of accomplishable value elements in PduR_RmSrcRom */
+#define PduR_GetSizeOfRmDestRomOfPCPartitionConfig()                                                179u  /**< the number of accomplishable value elements in PduR_RmDestRom */
+#define PduR_GetSizeOfRmGDestRomOfPCPartitionConfig()                                               179u  /**< the number of accomplishable value elements in PduR_RmGDestRom */
+#define PduR_GetSizeOfRmSrcRomOfPCPartitionConfig()                                                 179u  /**< the number of accomplishable value elements in PduR_RmSrcRom */
 #define PduR_GetSizeOfRmTransmitFctPtrOfPCPartitionConfig()                                         2u  /**< the number of accomplishable value elements in PduR_RmTransmitFctPtr */
-#define PduR_GetSizeOfRxIf2DestOfPCPartitionConfig()                                                109u  /**< the number of accomplishable value elements in PduR_RxIf2Dest */
+#define PduR_GetSizeOfRxIf2DestOfPCPartitionConfig()                                                108u  /**< the number of accomplishable value elements in PduR_RxIf2Dest */
 #define PduR_GetSizeOfRxTp2DestOfPCPartitionConfig()                                                6u  /**< the number of accomplishable value elements in PduR_RxTp2Dest */
 #define PduR_GetSizeOfSrcApplicationRomOfPCPartitionConfig()                                        1u  /**< the number of accomplishable value elements in PduR_SrcApplicationRom */
 #define PduR_GetSizeOfTx2LoOfPCPartitionConfig()                                                    65u  /**< the number of accomplishable value elements in PduR_Tx2Lo */
@@ -885,7 +885,7 @@
 #define PduR_GetConfigId(partitionIndex)                                                            PduR_GetConfigIdOfPCPartitionConfig(partitionIndex)
 #define PduR_GetInitializedIdxOfDestApplicationManagerRom(Index)                                    ((PduR_InitializedIdxOfDestApplicationManagerRomType)((Index)))  /**< the index of the 1:1 relation pointing to one of PduR_InitializedRam */
 #define PduR_GetInitializedPartitionIdxOfDestApplicationManagerRom(Index)                           ((PduR_InitializedPartitionIdxOfDestApplicationManagerRomType)((Index)))  /**< the partition index of the 1:1 relation pointing to one of PduR_InitializedRam */
-#define PduR_GetRmGDestRomEndIdxOfDestApplicationManagerRom(Index)                                  ((PduR_RmGDestRomEndIdxOfDestApplicationManagerRomType)((((PduR_RmGDestRomEndIdxOfDestApplicationManagerRomType)(Index)) + 180u)))  /**< the end index of the 0:n relation pointing to PduR_RmGDestRom */
+#define PduR_GetRmGDestRomEndIdxOfDestApplicationManagerRom(Index)                                  ((PduR_RmGDestRomEndIdxOfDestApplicationManagerRomType)((((PduR_RmGDestRomEndIdxOfDestApplicationManagerRomType)(Index)) + 179u)))  /**< the end index of the 0:n relation pointing to PduR_RmGDestRom */
 #define PduR_IsRmGDestRomUsedOfDestApplicationManagerRom(Index)                                     (((boolean)(PduR_GetRmGDestRomStartIdxOfDestApplicationManagerRom(Index) != PDUR_NO_RMGDESTROMSTARTIDXOFDESTAPPLICATIONMANAGERROM)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to PduR_RmGDestRom */
 #define PduR_GetSrcApplicationRomEndIdxOfDestApplicationManagerRom(Index)                           ((PduR_SrcApplicationRomEndIdxOfDestApplicationManagerRomType)((((PduR_SrcApplicationRomEndIdxOfDestApplicationManagerRomType)(Index)) + 1u)))  /**< the end index of the 1:n relation pointing to PduR_SrcApplicationRom */
 #define PduR_GetSrcApplicationRomStartIdxOfDestApplicationManagerRom(Index)                         ((PduR_SrcApplicationRomStartIdxOfDestApplicationManagerRomType)((Index)))  /**< the start index of the 1:n relation pointing to PduR_SrcApplicationRom */
@@ -902,7 +902,7 @@
 #define PduR_GetRmDestRomEndIdxOfRmSrcRom(Index)                                                    ((PduR_RmDestRomEndIdxOfRmSrcRomType)((PduR_GetRmDestRomStartIdxOfRmSrcRom(Index) + 1u)))  /**< the end index of the 1:n relation pointing to PduR_RmDestRom */
 #define PduR_GetRmDestRomLengthOfRmSrcRom(Index)                                                    ((PduR_RmDestRomLengthOfRmSrcRomType)((PduR_GetLockRomIdxOfRmSrcRom(Index) + 1u)))  /**< the number of relations pointing to PduR_RmDestRom */
 #define PduR_GetRmSrcRomIdxOfRxIf2Dest(Index)                                                       ((PduR_RmSrcRomIdxOfRxIf2DestType)((Index)))  /**< the index of the 1:1 relation pointing to PduR_RmSrcRom */
-#define PduR_GetRmSrcRomIdxOfRxTp2Dest(Index)                                                       ((PduR_RmSrcRomIdxOfRxTp2DestType)((((PduR_RmSrcRomIdxOfRxTp2DestType)(Index)) + 109u)))  /**< the index of the 1:1 relation pointing to PduR_RmSrcRom */
+#define PduR_GetRmSrcRomIdxOfRxTp2Dest(Index)                                                       ((PduR_RmSrcRomIdxOfRxTp2DestType)((((PduR_RmSrcRomIdxOfRxTp2DestType)(Index)) + 108u)))  /**< the index of the 1:1 relation pointing to PduR_RmSrcRom */
 #define PduR_GetSizeOfDestApplicationManagerRom()                                                   PduR_GetSizeOfDestApplicationManagerRomOfPCPartitionConfig()
 #define PduR_GetSizeOfExclusiveAreaRom()                                                            PduR_GetSizeOfExclusiveAreaRomOfPCPartitionConfig()
 #define PduR_GetSizeOfGeneralPropertiesRom()                                                        PduR_GetSizeOfGeneralPropertiesRomOfPCPartitionConfig()
@@ -1888,7 +1888,7 @@ extern CONST(PduR_PartitionIdentifiersType, PDUR_CONST) PduR_PartitionIdentifier
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(PduR_RmDestRomType, PDUR_CONST) PduR_RmDestRom[180];
+extern CONST(PduR_RmDestRomType, PDUR_CONST) PduR_RmDestRom[179];
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1913,7 +1913,7 @@ extern CONST(PduR_RmDestRomType, PDUR_CONST) PduR_RmDestRom[180];
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[180];
+extern CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[179];
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1937,7 +1937,7 @@ extern CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[180];
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(PduR_RmSrcRomType, PDUR_CONST) PduR_RmSrcRom[180];
+extern CONST(PduR_RmSrcRomType, PDUR_CONST) PduR_RmSrcRom[179];
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

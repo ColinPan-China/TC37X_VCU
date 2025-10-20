@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cbk.h
- *   Generation Time: 2025-10-14 14:41:51
+ *   Generation Time: 2025-10-20 10:42:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -132,39 +132,38 @@
 #define ComConf_ComIPdu_MCU_FailureCode_oATOM_CAN_Matrix_PT_V600_20250211_4a7c4da7_Rx 73u
 #define ComConf_ComIPdu_MCU_Temperature_01_oATOM_CAN_Matrix_PT_V600_20250211_021c1dde_Rx 74u
 #define ComConf_ComIPdu_MCU_Temperature_02_oATOM_CAN_Matrix_PT_V600_20250211_89cf23c7_Rx 75u
-#define ComConf_ComIPdu_PNC_ComIPdu_CanNm2Com_Rx                      76u
-#define ComConf_ComIPdu_PNC_ERA_CH_ComIPdu_CanNm2Com_Rx               77u
-#define ComConf_ComIPdu_PNC_ERA_PT_ComIPdu_CanNm2Com_Rx               78u
-#define ComConf_ComIPdu_POD_DCDC_01_oATOM_CAN_Matrix_PT_V600_20250211_6e196312_Rx 79u
-#define ComConf_ComIPdu_POD_DCDC_02_oATOM_CAN_Matrix_PT_V600_20250211_e5ca5d0b_Rx 80u
-#define ComConf_ComIPdu_POD_OBC_CHRGSTATION_oATOM_CAN_Matrix_PT_V600_20250211_9a75b36b_Rx 81u
-#define ComConf_ComIPdu_POD_OBC_STATUS_02_oATOM_CAN_Matrix_PT_V600_20250211_5da6c285_Rx 82u
-#define ComConf_ComIPdu_POD_OBC_STATUS_03_oATOM_CAN_Matrix_PT_V600_20250211_9238d54d_Rx 83u
-#define ComConf_ComIPdu_POD_OBC_STATUS_04_oATOM_CAN_Matrix_PT_V600_20250211_9171b8f6_Rx 84u
-#define ComConf_ComIPdu_POD_Status_01_oATOM_CAN_Matrix_PT_V600_20250211_ccbeaeb3_Rx 85u
-#define ComConf_ComIPdu_POD_Status_02_oATOM_CAN_Matrix_PT_V600_20250211_476d90aa_Rx 86u
-#define ComConf_ComIPdu_PRND_oATOM_CAN_Matrix_PT_V600_20250211_a04a662c_Rx 87u
-#define ComConf_ComIPdu_SGW_01_oATOM_CAN_Matrix_PT_V600_20250211_fdc48441_Rx 88u
-#define ComConf_ComIPdu_SGW_04_oATOM_CAN_Matrix_PT_V600_20250211_bac0c02b_Rx 89u
-#define ComConf_ComIPdu_SGW_16_oATOM_CAN_Matrix_PT_V600_20250211_6bfd3d6f_Rx 90u
-#define ComConf_ComIPdu_SGW_17_oATOM_CANFD_Matrix_CH_V600_202502_9b3e5336_Rx 91u
-#define ComConf_ComIPdu_SGW_FVSynchronization_01_oATOM_CAN_Matrix_PT_V600_20250211_640f878f_Rx 92u
-#define ComConf_ComIPdu_SGW_IBS_01_oATOM_CAN_Matrix_PT_V600_20250211_afe1198b_Rx 93u
-#define ComConf_ComIPdu_SGW_PT_01_oATOM_CAN_Matrix_PT_V600_20250211_f69035b0_Rx 94u
-#define ComConf_ComIPdu_SGW_Time_oATOM_CAN_Matrix_PT_V600_20250211_2fddccce_Rx 95u
-#define ComConf_ComIPdu_SGW_VCU_01_oATOM_CAN_Matrix_PT_V600_20250211_0e1163ba_Rx 96u
-#define ComConf_ComIPdu_TCU_01_oATOM_CAN_Matrix_PT_V600_20250211_26cca276_Rx 97u
-#define ComConf_ComIPdu_TCU_02_oATOM_CAN_Matrix_PT_V600_20250211_ad1f9c6f_Rx 98u
-#define ComConf_ComIPdu_Uds_EPT_Boot_Request_oATOM_CAN_Matrix_PT_V600_20250211_1c93f757_Rx 99u
-#define ComConf_ComIPdu_VcuRxCtrlMsg0_oTC37X_VCU_CAN01_b24a2ab4_Rx    100u
-#define ComConf_ComIPdu_VcuRxCtrlMsg1_oTC37X_VCU_CAN01_5d189c55_Rx    101u
-#define ComConf_ComIPdu_VcuRxCtrlMsg2_oTC37X_VCU_CAN01_b79e4137_Rx    102u
-#define ComConf_ComIPdu_VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx        103u
-#define ComConf_ComIPdu_VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx        104u
-#define ComConf_ComIPdu_Vcu_Lin0_RxMsg1_oATOM_HWLIN4_1c04db6a_Rx      105u
-#define ComConf_ComIPdu_Vcu_Lin0_RxMsg2_oATOM_HWLIN4_6065feb1_Rx      106u
-#define ComConf_ComIPdu_Vcu_Lin3_RxMsg1_oATOM_HWLIN3_f97ecc2a_Rx      107u
-#define ComConf_ComIPdu_Vcu_Lin3_RxMsg2_oATOM_HWLIN3_851fe9f1_Rx      108u
+#define ComConf_ComIPdu_PNC_ERA_CH_ComIPdu_CanNm2Com_Rx               76u
+#define ComConf_ComIPdu_PNC_ERA_PT_ComIPdu_CanNm2Com_Rx               77u
+#define ComConf_ComIPdu_POD_DCDC_01_oATOM_CAN_Matrix_PT_V600_20250211_6e196312_Rx 78u
+#define ComConf_ComIPdu_POD_DCDC_02_oATOM_CAN_Matrix_PT_V600_20250211_e5ca5d0b_Rx 79u
+#define ComConf_ComIPdu_POD_OBC_CHRGSTATION_oATOM_CAN_Matrix_PT_V600_20250211_9a75b36b_Rx 80u
+#define ComConf_ComIPdu_POD_OBC_STATUS_02_oATOM_CAN_Matrix_PT_V600_20250211_5da6c285_Rx 81u
+#define ComConf_ComIPdu_POD_OBC_STATUS_03_oATOM_CAN_Matrix_PT_V600_20250211_9238d54d_Rx 82u
+#define ComConf_ComIPdu_POD_OBC_STATUS_04_oATOM_CAN_Matrix_PT_V600_20250211_9171b8f6_Rx 83u
+#define ComConf_ComIPdu_POD_Status_01_oATOM_CAN_Matrix_PT_V600_20250211_ccbeaeb3_Rx 84u
+#define ComConf_ComIPdu_POD_Status_02_oATOM_CAN_Matrix_PT_V600_20250211_476d90aa_Rx 85u
+#define ComConf_ComIPdu_PRND_oATOM_CAN_Matrix_PT_V600_20250211_a04a662c_Rx 86u
+#define ComConf_ComIPdu_SGW_01_oATOM_CAN_Matrix_PT_V600_20250211_fdc48441_Rx 87u
+#define ComConf_ComIPdu_SGW_04_oATOM_CAN_Matrix_PT_V600_20250211_bac0c02b_Rx 88u
+#define ComConf_ComIPdu_SGW_16_oATOM_CAN_Matrix_PT_V600_20250211_6bfd3d6f_Rx 89u
+#define ComConf_ComIPdu_SGW_17_oATOM_CANFD_Matrix_CH_V600_202502_9b3e5336_Rx 90u
+#define ComConf_ComIPdu_SGW_FVSynchronization_01_oATOM_CAN_Matrix_PT_V600_20250211_640f878f_Rx 91u
+#define ComConf_ComIPdu_SGW_IBS_01_oATOM_CAN_Matrix_PT_V600_20250211_afe1198b_Rx 92u
+#define ComConf_ComIPdu_SGW_PT_01_oATOM_CAN_Matrix_PT_V600_20250211_f69035b0_Rx 93u
+#define ComConf_ComIPdu_SGW_Time_oATOM_CAN_Matrix_PT_V600_20250211_2fddccce_Rx 94u
+#define ComConf_ComIPdu_SGW_VCU_01_oATOM_CAN_Matrix_PT_V600_20250211_0e1163ba_Rx 95u
+#define ComConf_ComIPdu_TCU_01_oATOM_CAN_Matrix_PT_V600_20250211_26cca276_Rx 96u
+#define ComConf_ComIPdu_TCU_02_oATOM_CAN_Matrix_PT_V600_20250211_ad1f9c6f_Rx 97u
+#define ComConf_ComIPdu_Uds_EPT_Boot_Request_oATOM_CAN_Matrix_PT_V600_20250211_1c93f757_Rx 98u
+#define ComConf_ComIPdu_VcuRxCtrlMsg0_oTC37X_VCU_CAN01_b24a2ab4_Rx    99u
+#define ComConf_ComIPdu_VcuRxCtrlMsg1_oTC37X_VCU_CAN01_5d189c55_Rx    100u
+#define ComConf_ComIPdu_VcuRxCtrlMsg2_oTC37X_VCU_CAN01_b79e4137_Rx    101u
+#define ComConf_ComIPdu_VcuRxMsg3_oTC37X_VCU_CAN01_0a530e81_Rx        102u
+#define ComConf_ComIPdu_VcuRxMsg4_oTC37X_VCU_CAN01_eb7d04e5_Rx        103u
+#define ComConf_ComIPdu_Vcu_Lin0_RxMsg1_oATOM_HWLIN4_1c04db6a_Rx      104u
+#define ComConf_ComIPdu_Vcu_Lin0_RxMsg2_oATOM_HWLIN4_6065feb1_Rx      105u
+#define ComConf_ComIPdu_Vcu_Lin3_RxMsg1_oATOM_HWLIN3_f97ecc2a_Rx      106u
+#define ComConf_ComIPdu_Vcu_Lin3_RxMsg2_oATOM_HWLIN3_851fe9f1_Rx      107u
 /**\} */
 
 /**

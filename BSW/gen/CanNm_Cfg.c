@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanNm_Cfg.c
- *   Generation Time: 2025-10-14 14:41:50
+ *   Generation Time: 2025-10-20 10:49:48
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -83,31 +83,30 @@
 /** 
   \var    CanNm_ChannelConfig
   \details
-  Element                   Description
-  ActiveWakeUpBitEnabled    Determines if Active WUP Bit Handling is active or not
-  ComControlEnabled         Determines if Com Control is active or not
-  NodeIdEnabled             Determines if Node Ids are enabled or not
-  PnEraCalcEnabled          Determines if PN Cluster Calculation is active or not
-  ChannelId                 Channel ID configured for the respective instance of the NM.
-  MsgCycleTime              Period of a NM message [ms]. It determines the periodic rate in the periodic transmission mode.
-  MsgTimeoutTime            Transmission Timeout [ms] of NM message. If there is no transmission confirmation by the CAN Interface within this timeout, the CAN NM module shall give an error notification.
-  PduCbvPosition            Control Bit Vector Position in the PDU
-  PduNidPosition            Node ID Position in the PDU
-  PnEraRxPduId              I-PDU handle of Com PDU for ERA.
-  RemoteSleepIndTime        Timeout for Remote Sleep Indication [ms].
-  RepeatMessageTime         Timeout for Repeat Message State [ms].
-  TimeoutTime               Timeout for the NM messages [ms].
-  WaitBusSleepTime          Timeout for bus calm down phase [ms].
+  Element               Description
+  ComControlEnabled     Determines if Com Control is active or not
+  NodeIdEnabled         Determines if Node Ids are enabled or not
+  PnEraCalcEnabled      Determines if PN Cluster Calculation is active or not
+  ChannelId             Channel ID configured for the respective instance of the NM.
+  MsgCycleTime          Period of a NM message [ms]. It determines the periodic rate in the periodic transmission mode.
+  MsgTimeoutTime        Transmission Timeout [ms] of NM message. If there is no transmission confirmation by the CAN Interface within this timeout, the CAN NM module shall give an error notification.
+  PduCbvPosition        Control Bit Vector Position in the PDU
+  PduNidPosition        Node ID Position in the PDU
+  PnEraRxPduId          I-PDU handle of Com PDU for ERA.
+  RemoteSleepIndTime    Timeout for Remote Sleep Indication [ms].
+  RepeatMessageTime     Timeout for Repeat Message State [ms].
+  TimeoutTime           Timeout for the NM messages [ms].
+  WaitBusSleepTime      Timeout for bus calm down phase [ms].
 */ 
 #define CANNM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(CanNm_ChannelConfigType, CANNM_CONST) CanNm_ChannelConfig[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    ActiveWakeUpBitEnabled  ComControlEnabled  NodeIdEnabled  PnEraCalcEnabled  ChannelId                                                            MsgCycleTime  MsgTimeoutTime  PduCbvPosition    PduNidPosition    PnEraRxPduId                          RemoteSleepIndTime  RepeatMessageTime  TimeoutTime  WaitBusSleepTime        Referable Keys */
-  { /*     0 */                   TRUE,             FALSE,          TRUE,             TRUE, NmConf_NmChannelConfig_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0,     PduRConf_PduRSrcPdu_PduRSrcPdu_2,                 0u,              150u,        200u,             201u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
-  { /*     1 */                   TRUE,              TRUE,          TRUE,             TRUE, NmConf_NmChannelConfig_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0,     PduRConf_PduRSrcPdu_PduRSrcPdu_1,                 0u,              150u,        200u,             201u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
-  { /*     2 */                  FALSE,             FALSE,         FALSE,            FALSE,                  NmConf_NmChannelConfig_CN_TC37X_VCU_CAN01_70b1f95e,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0, CANNM_NO_PNERARXPDUIDOFCHANNELCONFIG,                 0u,              150u,        200u,             201u }   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
+    /* Index    ComControlEnabled  NodeIdEnabled  PnEraCalcEnabled  ChannelId                                                            MsgCycleTime  MsgTimeoutTime  PduCbvPosition    PduNidPosition    PnEraRxPduId                          RemoteSleepIndTime  RepeatMessageTime  TimeoutTime  WaitBusSleepTime        Referable Keys */
+  { /*     0 */              TRUE,          TRUE,             TRUE, NmConf_NmChannelConfig_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0,     PduRConf_PduRSrcPdu_PduRSrcPdu_2,                 0u,              150u,        200u,             201u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
+  { /*     1 */              TRUE,          TRUE,             TRUE, NmConf_NmChannelConfig_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0,     PduRConf_PduRSrcPdu_PduRSrcPdu_1,                 0u,              150u,        200u,             201u },  /* [/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
+  { /*     2 */             FALSE,         FALSE,            FALSE,                  NmConf_NmChannelConfig_CN_TC37X_VCU_CAN01_70b1f95e,          50u,             6u, CANNM_PDU_BYTE_1, CANNM_PDU_BYTE_0, CANNM_NO_PNERARXPDUIDOFCHANNELCONFIG,                 0u,              150u,        200u,             201u }   /* [/ActiveEcuC/ComM/ComMConfigSet/CN_TC37X_VCU_CAN01_70b1f95e] */
 };
 #define CANNM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -418,31 +417,6 @@ VAR(CanNm_NmStateUType, CANNM_VAR_NOINIT) CanNm_NmState;  /* PRQA S 0759, 1514, 
 /*lint -restore */
 
 /**********************************************************************************************************************
-  CanNm_PnClusterReq
-**********************************************************************************************************************/
-/** 
-  \var    CanNm_PnClusterReq
-  \brief  Internal Cluster Request Buffer
-*/ 
-#define CANNM_START_SEC_VAR_NOINIT_8BIT
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-VAR(CanNm_PnClusterReqUType, CANNM_VAR_NOINIT) CanNm_PnClusterReq;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte0] */
-  /*     1 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte1] */
-  /*     2 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte2] */
-  /*     3 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte3] */
-  /*     4 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte4] */
-  /*     5 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte5] */
-
-#define CANNM_STOP_SEC_VAR_NOINIT_8BIT
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-
-/**********************************************************************************************************************
   CanNm_PnClusterReqExt
 **********************************************************************************************************************/
 /** 
@@ -488,52 +462,6 @@ VAR(CanNm_PnClusterReqExtNewUType, CANNM_VAR_NOINIT) CanNm_PnClusterReqExtNew;  
   /*    11 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/ATOM_CAN_Matrix_PT_V600_20250211_CAN_5212fbaf] */
 
 #define CANNM_STOP_SEC_VAR_NOINIT_8BIT
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-
-/**********************************************************************************************************************
-  CanNm_PnClusterReqNew
-**********************************************************************************************************************/
-/** 
-  \var    CanNm_PnClusterReqNew
-  \brief  Internal Cluster Request Buffer
-*/ 
-#define CANNM_START_SEC_VAR_NOINIT_8BIT
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-VAR(CanNm_PnClusterReqNewUType, CANNM_VAR_NOINIT) CanNm_PnClusterReqNew;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte0] */
-  /*     1 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte1] */
-  /*     2 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte2] */
-  /*     3 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte3] */
-  /*     4 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte4] */
-  /*     5 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte5] */
-
-#define CANNM_STOP_SEC_VAR_NOINIT_8BIT
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-
-/**********************************************************************************************************************
-  CanNm_PnClusterResetTimer
-**********************************************************************************************************************/
-#define CANNM_START_SEC_VAR_NOINIT_UNSPECIFIED
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-VAR(CanNm_PnClusterResetTimerUType, CANNM_VAR_NOINIT) CanNm_PnClusterResetTimer;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte0] */
-  /*     1 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte1] */
-  /*     2 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte2] */
-  /*     3 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte3] */
-  /*     4 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte4] */
-  /*     5 */  /* [/ActiveEcuC/CanNm/CanNmGlobalConfig/CanNmPnInfo/CanNmPnFilterMaskByte5] */
-
-#define CANNM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Appl_Cbk.h
- *   Generation Time: 2025-10-14 14:41:50
+ *   Generation Time: 2025-10-20 10:42:51
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -66,7 +66,6 @@
 #include "MemMap.h"
 
 /* Configurable notification interface prototypes */
-FUNC(void, COM_APPL_CODE) ComM_ComCbk_PNC_ComSignal_Rx(void);
 FUNC(void, COM_APPL_CODE) ComM_ComCbk_PNC_ERA_CH_ComSignal_Rx(void);
 FUNC(void, COM_APPL_CODE) ComM_ComCbk_PNC_ERA_PT_ComSignal_Rx(void);
 
