@@ -90,6 +90,8 @@
  *********************************************************************************************************************/
 #include "TJA1145.h"
 #include "Dio.h"
+#include "CanIf.h"
+#include "CanSM_EcuM.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -528,7 +530,13 @@ FUNC(void, ECUM_CODE) EcuM_CheckWakeup(EcuM_WakeupSourceType wakeupSource) /* CO
   (void)wakeupSource; /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
 #endif
   /* Add implementation of EcuM_CheckWakeup() */
-
+  if((wakeupSource & ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d ) != 0)
+  {
+//      if (CanIf_CheckWakeup(ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d) == E_NOT_OK)
+//          {
+          /* place ECU depended error handling here */
+//          }
+  }
   return;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
@@ -621,7 +629,15 @@ FUNC(void, ECUM_CODE) EcuM_CheckValidation(EcuM_WakeupSourceType wakeupSource)
   (void)wakeupSource; /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
 #endif
   /* Add implementation of EcuM_CheckValidation() */
-
+  if ((wakeupSource & ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d) != 0)
+  {
+      /* Query the driver if the wake-up event was valid */
+    //if (CanIf_CheckValidation(ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d) == E_NOT_OK)
+    EcuM_ValidateWakeupEvent(ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d);
+    {
+    /* place ECU depended error handling here */
+    }
+  }
   return;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!

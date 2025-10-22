@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanIf_Cfg.h
- *   Generation Time: 2025-10-16 14:17:16
+ *   Generation Time: 2025-10-22 15:36:08
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -65,10 +65,10 @@
 #define CANIF_TRANSMIT_BUFFER_FIFO                         STD_ON
 #define CANIF_BITQUEUE                                     STD_OFF
 #define CANIF_STATIC_FD_TXQUEUE                            STD_OFF
-#define CANIF_WAKEUP_SUPPORT                               STD_OFF
-#define CANIF_WAKEUP_VALIDATION                            STD_OFF
+#define CANIF_WAKEUP_SUPPORT                               STD_ON
+#define CANIF_WAKEUP_VALIDATION                            STD_ON
 #define CANIF_WAKEUP_VALID_ALL_RX_MSGS                     STD_OFF
-#define CANIF_WAKEUP_VALID_ONLY_NM_RX_MSGS                 STD_OFF
+#define CANIF_WAKEUP_VALID_ONLY_NM_RX_MSGS                 STD_ON
 #define CANIF_CHECK_WAKEUP_CAN_RET_TYPE                    STD_OFF
 #define CANIF_DEV_ERROR_DETECT                             STD_ON
 #define CANIF_DEV_ERROR_REPORT                             STD_ON
@@ -667,6 +667,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_CTRLSTATES                                                                            STD_ON
 #define CANIF_CTRLMODEOFCTRLSTATES                                                                  STD_ON
 #define CANIF_PDUMODEOFCTRLSTATES                                                                   STD_ON
+#define CANIF_WAKEUPVALIDATIONSTATEOFCTRLSTATES                                                     STD_ON
 #define CANIF_FINALMAGICNUMBER                                                                      STD_OFF  /**< Deactivateable: 'CanIf_FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
 #define CANIF_GENERATORCOMPATIBILITYVERSION                                                         STD_ON
 #define CANIF_GENERATORVERSION                                                                      STD_ON
@@ -683,6 +684,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_TXBUFFERHANDLINGTYPEOFMAILBOXCONFIG                                                   STD_ON
 #define CANIF_MAPPEDTXBUFFERSCONFIG                                                                 STD_ON
 #define CANIF_MAILBOXCONFIGIDXOFMAPPEDTXBUFFERSCONFIG                                               STD_ON
+#define CANIF_MAXWAKEUPSOURCES                                                                      STD_ON
 #define CANIF_PDURXMODE                                                                             STD_OFF  /**< Deactivateable: 'CanIf_PduRxMode' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define CANIF_RXDHADJUST                                                                            STD_OFF  /**< Deactivateable: 'CanIf_RxDHAdjust' Reason: 'Search algorithm "double hash" is deactivated.' */
 #define CANIF_RXINDICATIONFCTLIST                                                                   STD_ON
@@ -690,7 +692,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_RXINDICATIONLAYOUTOFRXINDICATIONFCTLIST                                               STD_ON
 #define CANIF_RXPDUCONFIG                                                                           STD_ON
 #define CANIF_CANIFRXPDUIDOFRXPDUCONFIG                                                             STD_OFF  /**< Deactivateable: 'CanIf_RxPduConfig.CanIfRxPduId' Reason: '"CanIfDataChecksumRxSupport" is deactivated.' */
-#define CANIF_ISCANNMRXPDUOFRXPDUCONFIG                                                             STD_OFF  /**< Deactivateable: 'CanIf_RxPduConfig.IsCanNmRxPdu' Reason: 'Wakeup validation only by CAN-Nm Rx-PDUs is deactivated.' */
+#define CANIF_ISCANNMRXPDUOFRXPDUCONFIG                                                             STD_ON
 #define CANIF_ISDATACHECKSUMRXPDUOFRXPDUCONFIG                                                      STD_OFF  /**< Deactivateable: 'CanIf_RxPduConfig.IsDataChecksumRxPdu' Reason: '"CanIfDataChecksumRxSupport" is deactivated.' */
 #define CANIF_MSGTYPEOFRXPDUCONFIG                                                                  STD_OFF  /**< Deactivateable: 'CanIf_RxPduConfig.MsgType' Reason: '"CanIfRxSearchConsiderMsgType" is deactivated.' */
 #define CANIF_RXINDICATIONFCTLISTIDXOFRXPDUCONFIG                                                   STD_ON
@@ -711,6 +713,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_SIZEOFTXFIFOQUEUEBASE                                                                 STD_ON
 #define CANIF_SIZEOFTXFIFOQUEUEDATA                                                                 STD_ON
 #define CANIF_SIZEOFTXPDUCONFIG                                                                     STD_ON
+#define CANIF_SIZEOFWAKEUPCONFIG                                                                    STD_ON
 #define CANIF_TRANSCEIVERUPTOLOWMAP                                                                 STD_OFF  /**< Deactivateable: 'CanIf_TransceiverUpToLowMap' Reason: 'CAN transceiver handling and transceiver mapping are deactivated.' */
 #define CANIF_CANTRCVFCTTBLIDXOFTRANSCEIVERUPTOLOWMAP                                               STD_OFF  /**< Deactivateable: 'CanIf_TransceiverUpToLowMap.CanTrcvFctTblIdx' Reason: 'CAN transceiver handling and transceiver mapping are deactivated.' */
 #define CANIF_TRANSCEIVEROFTRANSCEIVERUPTOLOWMAP                                                    STD_OFF  /**< Deactivateable: 'CanIf_TransceiverUpToLowMap.Transceiver' Reason: 'CAN transceiver handling and transceiver mapping are deactivated.' */
@@ -751,11 +754,12 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_RXPDUCONFIGIDXOFULRXPDUID2INTERNALRXPDUID                                             STD_OFF  /**< Deactivateable: 'CanIf_UlRxPduId2InternalRxPduId.RxPduConfigIdx' Reason: 'Configuration variant is Pre-compile and the feature to be able to set the reception mode of a Rx-PDU at runtime is disabled!' */
 #define CANIF_RXPDUCONFIGUSEDOFULRXPDUID2INTERNALRXPDUID                                            STD_OFF  /**< Deactivateable: 'CanIf_UlRxPduId2InternalRxPduId.RxPduConfigUsed' Reason: 'Configuration variant is Pre-compile and the feature to be able to set the reception mode of a Rx-PDU at runtime is disabled!' */
 #define CANIF_ULTXPDUID2INTERNALTXPDUID                                                             STD_OFF  /**< Deactivateable: 'CanIf_UlTxPduId2InternalTxPduId' Reason: 'Configuration variant is Pre-compile!' */
-#define CANIF_WAKEUPCONFIG                                                                          STD_OFF  /**< Deactivateable: 'CanIf_WakeUpConfig' Reason: 'Wake-up support is deactivated.' */
-#define CANIF_CONTROLLERIDOFWAKEUPCONFIG                                                            STD_OFF  /**< Deactivateable: 'CanIf_WakeUpConfig.ControllerId' Reason: 'Wake-up support is deactivated.' */
-#define CANIF_WAKEUPSOURCEOFWAKEUPCONFIG                                                            STD_OFF  /**< Deactivateable: 'CanIf_WakeUpConfig.WakeUpSource' Reason: 'Wake-up support is deactivated.' */
-#define CANIF_WAKEUPTARGETADDRESSOFWAKEUPCONFIG                                                     STD_OFF  /**< Deactivateable: 'CanIf_WakeUpConfig.WakeUpTargetAddress' Reason: 'Wake-up support is deactivated.' */
-#define CANIF_WAKEUPTARGETMODULEOFWAKEUPCONFIG                                                      STD_OFF  /**< Deactivateable: 'CanIf_WakeUpConfig.WakeUpTargetModule' Reason: 'Wake-up support is deactivated.' */
+#define CANIF_WAKEUPCONFIG                                                                          STD_ON
+#define CANIF_CONTROLLERIDOFWAKEUPCONFIG                                                            STD_ON
+#define CANIF_WAKEUPSOURCEOFWAKEUPCONFIG                                                            STD_ON
+#define CANIF_WAKEUPTARGETADDRESSOFWAKEUPCONFIG                                                     STD_ON
+#define CANIF_WAKEUPTARGETMODULEOFWAKEUPCONFIG                                                      STD_ON
+#define CANIF_WAKEUPVALIDATIONFCTPTR                                                                STD_ON
 #define CANIF_PCCONFIG                                                                              STD_ON
 #define CANIF_BUSOFFNOTIFICATIONFCTPTROFPCCONFIG                                                    STD_ON
 #define CANIF_CANIFCTRLID2MAPPEDTXBUFFERSCONFIGOFPCCONFIG                                           STD_ON
@@ -767,6 +771,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_INITDATAHASHCODEOFPCCONFIG                                                            STD_OFF  /**< Deactivateable: 'CanIf_PCConfig.InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
 #define CANIF_MAILBOXCONFIGOFPCCONFIG                                                               STD_ON
 #define CANIF_MAPPEDTXBUFFERSCONFIGOFPCCONFIG                                                       STD_ON
+#define CANIF_MAXWAKEUPSOURCESOFPCCONFIG                                                            STD_ON
 #define CANIF_RXINDICATIONFCTLISTOFPCCONFIG                                                         STD_ON
 #define CANIF_RXPDUCONFIGOFPCCONFIG                                                                 STD_ON
 #define CANIF_SIZEOFCANIFCTRLID2MAPPEDTXBUFFERSCONFIGOFPCCONFIG                                     STD_ON
@@ -781,12 +786,15 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_SIZEOFTXFIFOQUEUEBASEOFPCCONFIG                                                       STD_ON
 #define CANIF_SIZEOFTXFIFOQUEUEDATAOFPCCONFIG                                                       STD_ON
 #define CANIF_SIZEOFTXPDUCONFIGOFPCCONFIG                                                           STD_ON
+#define CANIF_SIZEOFWAKEUPCONFIGOFPCCONFIG                                                          STD_ON
 #define CANIF_TXBUFFERFIFOBASEOFPCCONFIG                                                            STD_ON
 #define CANIF_TXBUFFERFIFOCONFIGOFPCCONFIG                                                          STD_ON
 #define CANIF_TXCONFIRMATIONFCTLISTOFPCCONFIG                                                       STD_ON
 #define CANIF_TXFIFOQUEUEBASEOFPCCONFIG                                                             STD_ON
 #define CANIF_TXFIFOQUEUEDATAOFPCCONFIG                                                             STD_ON
 #define CANIF_TXPDUCONFIGOFPCCONFIG                                                                 STD_ON
+#define CANIF_WAKEUPCONFIGOFPCCONFIG                                                                STD_ON
+#define CANIF_WAKEUPVALIDATIONFCTPTROFPCCONFIG                                                      STD_ON
 /** 
   \}
 */ 
@@ -861,6 +869,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_ISDEF_MAILBOXCONFIGIDXOFMAPPEDTXBUFFERSCONFIG                                         STD_OFF
 #define CANIF_ISDEF_RXINDICATIONFCTOFRXINDICATIONFCTLIST                                            STD_OFF
 #define CANIF_ISDEF_RXINDICATIONLAYOUTOFRXINDICATIONFCTLIST                                         STD_OFF
+#define CANIF_ISDEF_ISCANNMRXPDUOFRXPDUCONFIG                                                       STD_OFF
 #define CANIF_ISDEF_RXINDICATIONFCTLISTIDXOFRXPDUCONFIG                                             STD_OFF
 #define CANIF_ISDEF_RXMETADATALENGTHOFRXPDUCONFIG                                                   STD_OFF
 #define CANIF_ISDEF_RXPDUCANIDOFRXPDUCONFIG                                                         STD_OFF
@@ -884,6 +893,10 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_ISDEF_TXMETADATALENGTHOFTXPDUCONFIG                                                   STD_OFF
 #define CANIF_ISDEF_TXPDULENGTHOFTXPDUCONFIG                                                        STD_OFF
 #define CANIF_ISDEF_UPPERLAYERTXPDUIDOFTXPDUCONFIG                                                  STD_OFF
+#define CANIF_ISDEF_CONTROLLERIDOFWAKEUPCONFIG                                                      STD_OFF
+#define CANIF_ISDEF_WAKEUPSOURCEOFWAKEUPCONFIG                                                      STD_OFF
+#define CANIF_ISDEF_WAKEUPTARGETADDRESSOFWAKEUPCONFIG                                               STD_OFF
+#define CANIF_ISDEF_WAKEUPTARGETMODULEOFWAKEUPCONFIG                                                STD_OFF
 #define CANIF_ISDEF_BUSOFFNOTIFICATIONFCTPTROFPCCONFIG                                              STD_ON
 #define CANIF_ISDEF_CANIFCTRLID2MAPPEDTXBUFFERSCONFIGOFPCCONFIG                                     STD_ON
 #define CANIF_ISDEF_CTRLMODEINDICATIONFCTPTROFPCCONFIG                                              STD_ON
@@ -898,6 +911,8 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_ISDEF_TXFIFOQUEUEBASEOFPCCONFIG                                                       STD_ON
 #define CANIF_ISDEF_TXFIFOQUEUEDATAOFPCCONFIG                                                       STD_ON
 #define CANIF_ISDEF_TXPDUCONFIGOFPCCONFIG                                                           STD_ON
+#define CANIF_ISDEF_WAKEUPCONFIGOFPCCONFIG                                                          STD_ON
+#define CANIF_ISDEF_WAKEUPVALIDATIONFCTPTROFPCCONFIG                                                STD_ON
 /** 
   \}
 */ 
@@ -920,6 +935,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_EQ2_MAILBOXCONFIGIDXOFMAPPEDTXBUFFERSCONFIG                                           
 #define CANIF_EQ2_RXINDICATIONFCTOFRXINDICATIONFCTLIST                                              
 #define CANIF_EQ2_RXINDICATIONLAYOUTOFRXINDICATIONFCTLIST                                           
+#define CANIF_EQ2_ISCANNMRXPDUOFRXPDUCONFIG                                                         
 #define CANIF_EQ2_RXINDICATIONFCTLISTIDXOFRXPDUCONFIG                                               
 #define CANIF_EQ2_RXMETADATALENGTHOFRXPDUCONFIG                                                     
 #define CANIF_EQ2_RXPDUCANIDOFRXPDUCONFIG                                                           
@@ -943,6 +959,10 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_EQ2_TXMETADATALENGTHOFTXPDUCONFIG                                                     
 #define CANIF_EQ2_TXPDULENGTHOFTXPDUCONFIG                                                          
 #define CANIF_EQ2_UPPERLAYERTXPDUIDOFTXPDUCONFIG                                                    
+#define CANIF_EQ2_CONTROLLERIDOFWAKEUPCONFIG                                                        
+#define CANIF_EQ2_WAKEUPSOURCEOFWAKEUPCONFIG                                                        
+#define CANIF_EQ2_WAKEUPTARGETADDRESSOFWAKEUPCONFIG                                                 
+#define CANIF_EQ2_WAKEUPTARGETMODULEOFWAKEUPCONFIG                                                  
 #define CANIF_EQ2_BUSOFFNOTIFICATIONFCTPTROFPCCONFIG                                                (&(CanIf_BusOffNotificationFctPtr))
 #define CANIF_EQ2_CANIFCTRLID2MAPPEDTXBUFFERSCONFIGOFPCCONFIG                                       CanIf_CanIfCtrlId2MappedTxBuffersConfig
 #define CANIF_EQ2_CTRLMODEINDICATIONFCTPTROFPCCONFIG                                                (&(CanIf_CtrlModeIndicationFctPtr))
@@ -957,6 +977,8 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CANIF_EQ2_TXFIFOQUEUEBASEOFPCCONFIG                                                         CanIf_TxFifoQueueBase.raw
 #define CANIF_EQ2_TXFIFOQUEUEDATAOFPCCONFIG                                                         CanIf_TxFifoQueueData.raw
 #define CANIF_EQ2_TXPDUCONFIGOFPCCONFIG                                                             CanIf_TxPduConfig
+#define CANIF_EQ2_WAKEUPCONFIGOFPCCONFIG                                                            CanIf_WakeUpConfig
+#define CANIF_EQ2_WAKEUPVALIDATIONFCTPTROFPCCONFIG                                                  (&(CanIf_WakeUpValidationFctPtr))
 /** 
   \}
 */ 
@@ -1042,6 +1064,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetGeneratorVersionOfPCConfig()                                                       0x00050001u
 #define CanIf_GetMailBoxConfigOfPCConfig()                                                          CanIf_MailBoxConfig  /**< the pointer to CanIf_MailBoxConfig */
 #define CanIf_GetMappedTxBuffersConfigOfPCConfig()                                                  CanIf_MappedTxBuffersConfig  /**< the pointer to CanIf_MappedTxBuffersConfig */
+#define CanIf_GetMaxWakeUpSourcesOfPCConfig()                                                       0u
 #define CanIf_GetRxIndicationFctListOfPCConfig()                                                    CanIf_RxIndicationFctList  /**< the pointer to CanIf_RxIndicationFctList */
 #define CanIf_GetRxPduConfigOfPCConfig()                                                            CanIf_RxPduConfig  /**< the pointer to CanIf_RxPduConfig */
 #define CanIf_GetSizeOfCanIfCtrlId2MappedTxBuffersConfigOfPCConfig()                                5u  /**< the number of accomplishable value elements in CanIf_CanIfCtrlId2MappedTxBuffersConfig */
@@ -1056,12 +1079,15 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetSizeOfTxFifoQueueBaseOfPCConfig()                                                  53u  /**< the number of accomplishable value elements in CanIf_TxFifoQueueBase */
 #define CanIf_GetSizeOfTxFifoQueueDataOfPCConfig()                                                  424u  /**< the number of accomplishable value elements in CanIf_TxFifoQueueData */
 #define CanIf_GetSizeOfTxPduConfigOfPCConfig()                                                      56u  /**< the number of accomplishable value elements in CanIf_TxPduConfig */
+#define CanIf_GetSizeOfWakeUpConfigOfPCConfig()                                                     1u  /**< the number of accomplishable value elements in CanIf_WakeUpConfig */
 #define CanIf_GetTxBufferFifoBaseOfPCConfig()                                                       CanIf_TxBufferFifoBase.raw  /**< the pointer to CanIf_TxBufferFifoBase */
 #define CanIf_GetTxBufferFifoConfigOfPCConfig()                                                     CanIf_TxBufferFifoConfig  /**< the pointer to CanIf_TxBufferFifoConfig */
 #define CanIf_GetTxConfirmationFctListOfPCConfig()                                                  CanIf_TxConfirmationFctList  /**< the pointer to CanIf_TxConfirmationFctList */
 #define CanIf_GetTxFifoQueueBaseOfPCConfig()                                                        CanIf_TxFifoQueueBase.raw  /**< the pointer to CanIf_TxFifoQueueBase */
 #define CanIf_GetTxFifoQueueDataOfPCConfig()                                                        CanIf_TxFifoQueueData.raw  /**< the pointer to CanIf_TxFifoQueueData */
 #define CanIf_GetTxPduConfigOfPCConfig()                                                            CanIf_TxPduConfig  /**< the pointer to CanIf_TxPduConfig */
+#define CanIf_GetWakeUpConfigOfPCConfig()                                                           CanIf_WakeUpConfig  /**< the pointer to CanIf_WakeUpConfig */
+#define CanIf_GetWakeUpValidationFctPtrOfPCConfig()                                                 (&(CanIf_WakeUpValidationFctPtr))  /**< the pointer to CanIf_WakeUpValidationFctPtr */
 /** 
   \}
 */ 
@@ -1077,6 +1103,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetCtrlModeIndicationFctPtr()                                                         ((*(CanIf_GetCtrlModeIndicationFctPtrOfPCConfig())))
 #define CanIf_GetCtrlModeOfCtrlStates(Index)                                                        (CanIf_GetCtrlStatesOfPCConfig()[(Index)].CtrlModeOfCtrlStates)
 #define CanIf_GetPduModeOfCtrlStates(Index)                                                         (CanIf_GetCtrlStatesOfPCConfig()[(Index)].PduModeOfCtrlStates)
+#define CanIf_GetWakeUpValidationStateOfCtrlStates(Index)                                           (CanIf_GetCtrlStatesOfPCConfig()[(Index)].WakeUpValidationStateOfCtrlStates)
 #define CanIf_GetCtrlStatesIdxOfMailBoxConfig(Index)                                                (CanIf_GetMailBoxConfigOfPCConfig()[(Index)].CtrlStatesIdxOfMailBoxConfig)
 #define CanIf_GetMailBoxTypeOfMailBoxConfig(Index)                                                  (CanIf_GetMailBoxConfigOfPCConfig()[(Index)].MailBoxTypeOfMailBoxConfig)
 #define CanIf_GetPduIdFirstOfMailBoxConfig(Index)                                                   (CanIf_GetMailBoxConfigOfPCConfig()[(Index)].PduIdFirstOfMailBoxConfig)
@@ -1087,6 +1114,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetMailBoxConfigIdxOfMappedTxBuffersConfig(Index)                                     (CanIf_GetMappedTxBuffersConfigOfPCConfig()[(Index)].MailBoxConfigIdxOfMappedTxBuffersConfig)
 #define CanIf_GetRxIndicationFctOfRxIndicationFctList(Index)                                        (CanIf_GetRxIndicationFctListOfPCConfig()[(Index)].RxIndicationFctOfRxIndicationFctList)
 #define CanIf_GetRxIndicationLayoutOfRxIndicationFctList(Index)                                     (CanIf_GetRxIndicationFctListOfPCConfig()[(Index)].RxIndicationLayoutOfRxIndicationFctList)
+#define CanIf_IsIsCanNmRxPduOfRxPduConfig(Index)                                                    ((CanIf_GetRxPduConfigOfPCConfig()[(Index)].IsCanNmRxPduOfRxPduConfig) != FALSE)
 #define CanIf_GetRxIndicationFctListIdxOfRxPduConfig(Index)                                         (CanIf_GetRxPduConfigOfPCConfig()[(Index)].RxIndicationFctListIdxOfRxPduConfig)
 #define CanIf_GetRxMetaDataLengthOfRxPduConfig(Index)                                               (CanIf_GetRxPduConfigOfPCConfig()[(Index)].RxMetaDataLengthOfRxPduConfig)
 #define CanIf_GetRxPduCanIdOfRxPduConfig(Index)                                                     (CanIf_GetRxPduConfigOfPCConfig()[(Index)].RxPduCanIdOfRxPduConfig)
@@ -1113,6 +1141,11 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetTxMetaDataLengthOfTxPduConfig(Index)                                               (CanIf_GetTxPduConfigOfPCConfig()[(Index)].TxMetaDataLengthOfTxPduConfig)
 #define CanIf_GetTxPduLengthOfTxPduConfig(Index)                                                    (CanIf_GetTxPduConfigOfPCConfig()[(Index)].TxPduLengthOfTxPduConfig)
 #define CanIf_GetUpperLayerTxPduIdOfTxPduConfig(Index)                                              (CanIf_GetTxPduConfigOfPCConfig()[(Index)].UpperLayerTxPduIdOfTxPduConfig)
+#define CanIf_GetControllerIdOfWakeUpConfig(Index)                                                  (CanIf_GetWakeUpConfigOfPCConfig()[(Index)].ControllerIdOfWakeUpConfig)
+#define CanIf_GetWakeUpSourceOfWakeUpConfig(Index)                                                  ((EcuM_WakeupSourceType)CanIf_GetWakeUpConfigOfPCConfig()[(Index)].WakeUpSourceOfWakeUpConfig)
+#define CanIf_GetWakeUpTargetAddressOfWakeUpConfig(Index)                                           (CanIf_GetWakeUpConfigOfPCConfig()[(Index)].WakeUpTargetAddressOfWakeUpConfig)
+#define CanIf_GetWakeUpTargetModuleOfWakeUpConfig(Index)                                            (CanIf_GetWakeUpConfigOfPCConfig()[(Index)].WakeUpTargetModuleOfWakeUpConfig)
+#define CanIf_GetWakeUpValidationFctPtr()                                                           ((*(CanIf_GetWakeUpValidationFctPtrOfPCConfig())))
 /** 
   \}
 */ 
@@ -1125,6 +1158,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetGeneratorCompatibilityVersion()                                                    CanIf_GetGeneratorCompatibilityVersionOfPCConfig()
 #define CanIf_GetGeneratorVersion()                                                                 CanIf_GetGeneratorVersionOfPCConfig()
 #define CanIf_IsTxBufferCfgUsedOfMailBoxConfig(Index)                                               (((boolean)(CanIf_GetTxBufferCfgIdxOfMailBoxConfig(Index) != CANIF_NO_TXBUFFERCFGIDXOFMAILBOXCONFIG)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to CanIf_TxBufferFifoConfig */
+#define CanIf_GetMaxWakeUpSources()                                                                 CanIf_GetMaxWakeUpSourcesOfPCConfig()
 #define CanIf_GetSizeOfCanIfCtrlId2MappedTxBuffersConfig()                                          CanIf_GetSizeOfCanIfCtrlId2MappedTxBuffersConfigOfPCConfig()
 #define CanIf_GetSizeOfCtrlStates()                                                                 CanIf_GetSizeOfCtrlStatesOfPCConfig()
 #define CanIf_GetSizeOfMailBoxConfig()                                                              CanIf_GetSizeOfMailBoxConfigOfPCConfig()
@@ -1137,6 +1171,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetSizeOfTxFifoQueueBase()                                                            CanIf_GetSizeOfTxFifoQueueBaseOfPCConfig()
 #define CanIf_GetSizeOfTxFifoQueueData()                                                            CanIf_GetSizeOfTxFifoQueueDataOfPCConfig()
 #define CanIf_GetSizeOfTxPduConfig()                                                                CanIf_GetSizeOfTxPduConfigOfPCConfig()
+#define CanIf_GetSizeOfWakeUpConfig()                                                               CanIf_GetSizeOfWakeUpConfigOfPCConfig()
 /** 
   \}
 */ 
@@ -1148,6 +1183,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 */ 
 #define CanIf_SetCtrlModeOfCtrlStates(Index, Value)                                                 CanIf_GetCtrlStatesOfPCConfig()[(Index)].CtrlModeOfCtrlStates = (Value)
 #define CanIf_SetPduModeOfCtrlStates(Index, Value)                                                  CanIf_GetCtrlStatesOfPCConfig()[(Index)].PduModeOfCtrlStates = (Value)
+#define CanIf_SetWakeUpValidationStateOfCtrlStates(Index, Value)                                    CanIf_GetCtrlStatesOfPCConfig()[(Index)].WakeUpValidationStateOfCtrlStates = (Value)
 #define CanIf_SetTxBufferFifoBase(Index, Value)                                                     CanIf_GetTxBufferFifoBaseOfPCConfig()[(Index)] = (Value)
 #define CanIf_SetTxFifoQueueBase(Index, Value)                                                      CanIf_GetTxFifoQueueBaseOfPCConfig()[(Index)] = (Value)
 #define CanIf_SetTxFifoQueueData(Index, Value)                                                      CanIf_GetTxFifoQueueDataOfPCConfig()[(Index)] = (Value)
@@ -1178,6 +1214,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_HasCtrlStates()                                                                       (TRUE != FALSE)
 #define CanIf_HasCtrlModeOfCtrlStates()                                                             (TRUE != FALSE)
 #define CanIf_HasPduModeOfCtrlStates()                                                              (TRUE != FALSE)
+#define CanIf_HasWakeUpValidationStateOfCtrlStates()                                                (TRUE != FALSE)
 #define CanIf_HasGeneratorCompatibilityVersion()                                                    (TRUE != FALSE)
 #define CanIf_HasGeneratorVersion()                                                                 (TRUE != FALSE)
 #define CanIf_HasMailBoxConfig()                                                                    (TRUE != FALSE)
@@ -1191,10 +1228,12 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_HasTxBufferHandlingTypeOfMailBoxConfig()                                              (TRUE != FALSE)
 #define CanIf_HasMappedTxBuffersConfig()                                                            (TRUE != FALSE)
 #define CanIf_HasMailBoxConfigIdxOfMappedTxBuffersConfig()                                          (TRUE != FALSE)
+#define CanIf_HasMaxWakeUpSources()                                                                 (TRUE != FALSE)
 #define CanIf_HasRxIndicationFctList()                                                              (TRUE != FALSE)
 #define CanIf_HasRxIndicationFctOfRxIndicationFctList()                                             (TRUE != FALSE)
 #define CanIf_HasRxIndicationLayoutOfRxIndicationFctList()                                          (TRUE != FALSE)
 #define CanIf_HasRxPduConfig()                                                                      (TRUE != FALSE)
+#define CanIf_HasIsCanNmRxPduOfRxPduConfig()                                                        (TRUE != FALSE)
 #define CanIf_HasRxIndicationFctListIdxOfRxPduConfig()                                              (TRUE != FALSE)
 #define CanIf_HasRxMetaDataLengthOfRxPduConfig()                                                    (TRUE != FALSE)
 #define CanIf_HasRxPduCanIdOfRxPduConfig()                                                          (TRUE != FALSE)
@@ -1213,6 +1252,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_HasSizeOfTxFifoQueueBase()                                                            (TRUE != FALSE)
 #define CanIf_HasSizeOfTxFifoQueueData()                                                            (TRUE != FALSE)
 #define CanIf_HasSizeOfTxPduConfig()                                                                (TRUE != FALSE)
+#define CanIf_HasSizeOfWakeUpConfig()                                                               (TRUE != FALSE)
 #define CanIf_HasTxBufferFifoBase()                                                                 (TRUE != FALSE)
 #define CanIf_HasTxBufferFifoConfig()                                                               (TRUE != FALSE)
 #define CanIf_HasSizeOfOnePayloadElOfTxBufferFifoConfig()                                           (TRUE != FALSE)
@@ -1235,6 +1275,12 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_HasTxMetaDataLengthOfTxPduConfig()                                                    (TRUE != FALSE)
 #define CanIf_HasTxPduLengthOfTxPduConfig()                                                         (TRUE != FALSE)
 #define CanIf_HasUpperLayerTxPduIdOfTxPduConfig()                                                   (TRUE != FALSE)
+#define CanIf_HasWakeUpConfig()                                                                     (TRUE != FALSE)
+#define CanIf_HasControllerIdOfWakeUpConfig()                                                       (TRUE != FALSE)
+#define CanIf_HasWakeUpSourceOfWakeUpConfig()                                                       (TRUE != FALSE)
+#define CanIf_HasWakeUpTargetAddressOfWakeUpConfig()                                                (TRUE != FALSE)
+#define CanIf_HasWakeUpTargetModuleOfWakeUpConfig()                                                 (TRUE != FALSE)
+#define CanIf_HasWakeUpValidationFctPtr()                                                           (TRUE != FALSE)
 #define CanIf_HasPCConfig()                                                                         (TRUE != FALSE)
 #define CanIf_HasBusOffNotificationFctPtrOfPCConfig()                                               (TRUE != FALSE)
 #define CanIf_HasCanIfCtrlId2MappedTxBuffersConfigOfPCConfig()                                      (TRUE != FALSE)
@@ -1244,6 +1290,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_HasGeneratorVersionOfPCConfig()                                                       (TRUE != FALSE)
 #define CanIf_HasMailBoxConfigOfPCConfig()                                                          (TRUE != FALSE)
 #define CanIf_HasMappedTxBuffersConfigOfPCConfig()                                                  (TRUE != FALSE)
+#define CanIf_HasMaxWakeUpSourcesOfPCConfig()                                                       (TRUE != FALSE)
 #define CanIf_HasRxIndicationFctListOfPCConfig()                                                    (TRUE != FALSE)
 #define CanIf_HasRxPduConfigOfPCConfig()                                                            (TRUE != FALSE)
 #define CanIf_HasSizeOfCanIfCtrlId2MappedTxBuffersConfigOfPCConfig()                                (TRUE != FALSE)
@@ -1258,12 +1305,15 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_HasSizeOfTxFifoQueueBaseOfPCConfig()                                                  (TRUE != FALSE)
 #define CanIf_HasSizeOfTxFifoQueueDataOfPCConfig()                                                  (TRUE != FALSE)
 #define CanIf_HasSizeOfTxPduConfigOfPCConfig()                                                      (TRUE != FALSE)
+#define CanIf_HasSizeOfWakeUpConfigOfPCConfig()                                                     (TRUE != FALSE)
 #define CanIf_HasTxBufferFifoBaseOfPCConfig()                                                       (TRUE != FALSE)
 #define CanIf_HasTxBufferFifoConfigOfPCConfig()                                                     (TRUE != FALSE)
 #define CanIf_HasTxConfirmationFctListOfPCConfig()                                                  (TRUE != FALSE)
 #define CanIf_HasTxFifoQueueBaseOfPCConfig()                                                        (TRUE != FALSE)
 #define CanIf_HasTxFifoQueueDataOfPCConfig()                                                        (TRUE != FALSE)
 #define CanIf_HasTxPduConfigOfPCConfig()                                                            (TRUE != FALSE)
+#define CanIf_HasWakeUpConfigOfPCConfig()                                                           (TRUE != FALSE)
+#define CanIf_HasWakeUpValidationFctPtrOfPCConfig()                                                 (TRUE != FALSE)
 /** 
   \}
 */ 
@@ -1275,6 +1325,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 */ 
 #define CanIf_IncCtrlModeOfCtrlStates(Index)                                                        CanIf_GetCtrlModeOfCtrlStates(Index)++
 #define CanIf_IncPduModeOfCtrlStates(Index)                                                         CanIf_GetPduModeOfCtrlStates(Index)++
+#define CanIf_IncWakeUpValidationStateOfCtrlStates(Index)                                           CanIf_GetWakeUpValidationStateOfCtrlStates(Index)++
 #define CanIf_IncTxBufferFifoBase(Index)                                                            CanIf_GetTxBufferFifoBase(Index)++
 #define CanIf_IncTxFifoQueueBase(Index)                                                             CanIf_GetTxFifoQueueBase(Index)++
 #define CanIf_IncTxFifoQueueData(Index)                                                             CanIf_GetTxFifoQueueData(Index)++
@@ -1289,6 +1340,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 */ 
 #define CanIf_DecCtrlModeOfCtrlStates(Index)                                                        CanIf_GetCtrlModeOfCtrlStates(Index)--
 #define CanIf_DecPduModeOfCtrlStates(Index)                                                         CanIf_GetPduModeOfCtrlStates(Index)--
+#define CanIf_DecWakeUpValidationStateOfCtrlStates(Index)                                           CanIf_GetWakeUpValidationStateOfCtrlStates(Index)--
 #define CanIf_DecTxBufferFifoBase(Index)                                                            CanIf_GetTxBufferFifoBase(Index)--
 #define CanIf_DecTxFifoQueueBase(Index)                                                             CanIf_GetTxFifoQueueBase(Index)--
 #define CanIf_DecTxFifoQueueData(Index)                                                             CanIf_GetTxFifoQueueData(Index)--
@@ -1303,6 +1355,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 */ 
 #define CanIf_AddCtrlModeOfCtrlStates(Index, Value)                                                 CanIf_SetCtrlModeOfCtrlStates(Index, (CanIf_GetCtrlModeOfCtrlStates(Index) + Value))
 #define CanIf_AddPduModeOfCtrlStates(Index, Value)                                                  CanIf_SetPduModeOfCtrlStates(Index, (CanIf_GetPduModeOfCtrlStates(Index) + Value))
+#define CanIf_AddWakeUpValidationStateOfCtrlStates(Index, Value)                                    CanIf_SetWakeUpValidationStateOfCtrlStates(Index, (CanIf_GetWakeUpValidationStateOfCtrlStates(Index) + Value))
 #define CanIf_AddTxBufferFifoBase(Index, Value)                                                     CanIf_SetTxBufferFifoBase(Index, (CanIf_GetTxBufferFifoBase(Index) + Value))
 #define CanIf_AddTxFifoQueueBase(Index, Value)                                                      CanIf_SetTxFifoQueueBase(Index, (CanIf_GetTxFifoQueueBase(Index) + Value))
 #define CanIf_AddTxFifoQueueData(Index, Value)                                                      CanIf_SetTxFifoQueueData(Index, (CanIf_GetTxFifoQueueData(Index) + Value))
@@ -1317,6 +1370,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 */ 
 #define CanIf_SubCtrlModeOfCtrlStates(Index, Value)                                                 CanIf_SetCtrlModeOfCtrlStates(Index, (CanIf_GetCtrlModeOfCtrlStates(Index) - Value))
 #define CanIf_SubPduModeOfCtrlStates(Index, Value)                                                  CanIf_SetPduModeOfCtrlStates(Index, (CanIf_GetPduModeOfCtrlStates(Index) - Value))
+#define CanIf_SubWakeUpValidationStateOfCtrlStates(Index, Value)                                    CanIf_SetWakeUpValidationStateOfCtrlStates(Index, (CanIf_GetWakeUpValidationStateOfCtrlStates(Index) - Value))
 #define CanIf_SubTxBufferFifoBase(Index, Value)                                                     CanIf_SetTxBufferFifoBase(Index, (CanIf_GetTxBufferFifoBase(Index) - Value))
 #define CanIf_SubTxFifoQueueBase(Index, Value)                                                      CanIf_SetTxFifoQueueBase(Index, (CanIf_GetTxFifoQueueBase(Index) - Value))
 #define CanIf_SubTxFifoQueueData(Index, Value)                                                      CanIf_SetTxFifoQueueData(Index, (CanIf_GetTxFifoQueueData(Index) - Value))
@@ -1403,6 +1457,9 @@ typedef uint16_least CanIf_TxFifoQueueDataIterType;
 /**   \brief  type used to iterate CanIf_TxPduConfig */
 typedef uint8_least CanIf_TxPduConfigIterType;
 
+/**   \brief  type used to iterate CanIf_WakeUpConfig */
+typedef uint8_least CanIf_WakeUpConfigIterType;
+
 /** 
   \}
 */ 
@@ -1447,6 +1504,12 @@ typedef uint8 CanIf_TxBufferHandlingTypeOfMailBoxConfigType;
 
 /**   \brief  value based type definition for CanIf_MailBoxConfigIdxOfMappedTxBuffersConfig */
 typedef uint8 CanIf_MailBoxConfigIdxOfMappedTxBuffersConfigType;
+
+/**   \brief  value based type definition for CanIf_MaxWakeUpSources */
+typedef uint8 CanIf_MaxWakeUpSourcesType;
+
+/**   \brief  value based type definition for CanIf_IsCanNmRxPduOfRxPduConfig */
+typedef boolean CanIf_IsCanNmRxPduOfRxPduConfigType;
 
 /**   \brief  value based type definition for CanIf_RxIndicationFctListIdxOfRxPduConfig */
 typedef uint8 CanIf_RxIndicationFctListIdxOfRxPduConfigType;
@@ -1502,6 +1565,9 @@ typedef uint16 CanIf_SizeOfTxFifoQueueDataType;
 /**   \brief  value based type definition for CanIf_SizeOfTxPduConfig */
 typedef uint8 CanIf_SizeOfTxPduConfigType;
 
+/**   \brief  value based type definition for CanIf_SizeOfWakeUpConfig */
+typedef uint8 CanIf_SizeOfWakeUpConfigType;
+
 /**   \brief  value based type definition for CanIf_SizeOfOnePayloadElOfTxBufferFifoConfig */
 typedef uint8 CanIf_SizeOfOnePayloadElOfTxBufferFifoConfigType;
 
@@ -1553,6 +1619,15 @@ typedef uint8 CanIf_TxPduLengthOfTxPduConfigType;
 /**   \brief  value based type definition for CanIf_UpperLayerTxPduIdOfTxPduConfig */
 typedef PduIdType CanIf_UpperLayerTxPduIdOfTxPduConfigType;
 
+/**   \brief  value based type definition for CanIf_ControllerIdOfWakeUpConfig */
+typedef uint8 CanIf_ControllerIdOfWakeUpConfigType;
+
+/**   \brief  value based type definition for CanIf_WakeUpSourceOfWakeUpConfig */
+typedef uint8 CanIf_WakeUpSourceOfWakeUpConfigType;
+
+/**   \brief  value based type definition for CanIf_WakeUpTargetAddressOfWakeUpConfig */
+typedef uint8 CanIf_WakeUpTargetAddressOfWakeUpConfigType;
+
 /** 
   \}
 */ 
@@ -1582,6 +1657,7 @@ typedef struct sCanIf_CtrlStatesType
 {
   CanIf_ControllerModeType CtrlModeOfCtrlStates;  /**< Controller mode. */
   CanIf_PduGetModeType PduModeOfCtrlStates;  /**< PDU mode state. */
+  CanIf_WakeUpValidationStateType WakeUpValidationStateOfCtrlStates;  /**< Wake-up validation state. */
 } CanIf_CtrlStatesType;
 
 /**   \brief  type used in CanIf_MailBoxConfig */
@@ -1625,6 +1701,7 @@ typedef struct sCanIf_RxPduConfigType
   CanIf_RxPduCanIdOfRxPduConfigType RxPduCanIdOfRxPduConfig;  /**< Rx-PDU: CAN identifier. */
   CanIf_RxPduMaskOfRxPduConfigType RxPduMaskOfRxPduConfig;  /**< Rx-PDU: CAN identifier mask. */
   CanIf_UpperPduIdOfRxPduConfigType UpperPduIdOfRxPduConfig;  /**< PDU ID defined by upper layer. */
+  CanIf_IsCanNmRxPduOfRxPduConfigType IsCanNmRxPduOfRxPduConfig;  /**< TRUE: CAN-Nm Rx-PDU (for Wakeup validation), FALSE: No CAN-Nm Rx-PDU */
   CanIf_RxIndicationFctListIdxOfRxPduConfigType RxIndicationFctListIdxOfRxPduConfig;  /**< the index of the 1:1 relation pointing to CanIf_RxIndicationFctList */
   CanIf_RxMetaDataLengthOfRxPduConfigType RxMetaDataLengthOfRxPduConfig;  /**< Meta data length. */
   CanIf_RxPduDlcOfRxPduConfigType RxPduDlcOfRxPduConfig;  /**< Rx-PDU length (DLC). */
@@ -1667,6 +1744,15 @@ typedef struct sCanIf_TxPduConfigType
   CanIf_TxMetaDataLengthOfTxPduConfigType TxMetaDataLengthOfTxPduConfig;  /**< Meta data length. */
   CanIf_TxPduLengthOfTxPduConfigType TxPduLengthOfTxPduConfig;  /**< Tx-PDU length. */
 } CanIf_TxPduConfigType;
+
+/**   \brief  type used in CanIf_WakeUpConfig */
+typedef struct sCanIf_WakeUpConfigType
+{
+  CanIf_ControllerIdOfWakeUpConfigType ControllerIdOfWakeUpConfig;  /**< ControllerId of this wake-up source configuration */
+  CanIf_WakeUpSourceOfWakeUpConfigType WakeUpSourceOfWakeUpConfig;  /**< Wake-up source identifier */
+  CanIf_WakeUpTargetAddressOfWakeUpConfigType WakeUpTargetAddressOfWakeUpConfig;  /**< Target address of wake up source (driver independent handle Id): CAN controller (ControllerId)/CAN transceiver (TransceiverId) */
+  CanIf_WakeUpTargetType WakeUpTargetModuleOfWakeUpConfig;  /**< Target module of wake-up source: CAN driver/CAN transceiver driver */
+} CanIf_WakeUpConfigType;
 
 /** 
   \}
@@ -1804,6 +1890,12 @@ typedef P2VAR(CanIf_TxFifoQueueDataType, TYPEDEF, CANIF_VAR_NOINIT_FAST) CanIf_T
 
 /**   \brief  type used to point to CanIf_TxPduConfig */
 typedef P2CONST(CanIf_TxPduConfigType, TYPEDEF, CANIF_CONST) CanIf_TxPduConfigPtrType;
+
+/**   \brief  type used to point to CanIf_WakeUpConfig */
+typedef P2CONST(CanIf_WakeUpConfigType, TYPEDEF, CANIF_CONST) CanIf_WakeUpConfigPtrType;
+
+/**   \brief  type used to point to CanIf_WakeUpValidationFctPtr */
+typedef P2CONST(CanIf_WakeUpValidationFctType, TYPEDEF, CANIF_CONST) CanIf_WakeUpValidationFctPtrPtrType;
 
 /** 
   \}
@@ -1969,6 +2061,7 @@ extern CONST(CanIf_RxIndicationFctListType, CANIF_CONST) CanIf_RxIndicationFctLi
   RxPduCanId                Rx-PDU: CAN identifier.
   RxPduMask                 Rx-PDU: CAN identifier mask.
   UpperPduId                PDU ID defined by upper layer.
+  IsCanNmRxPdu              TRUE: CAN-Nm Rx-PDU (for Wakeup validation), FALSE: No CAN-Nm Rx-PDU
   RxIndicationFctListIdx    the index of the 1:1 relation pointing to CanIf_RxIndicationFctList
   RxMetaDataLength          Meta data length.
   RxPduDlc                  Rx-PDU length (DLC).
@@ -2055,14 +2148,51 @@ extern CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[56];
 /*lint -restore */
 
 /**********************************************************************************************************************
+  CanIf_WakeUpConfig
+**********************************************************************************************************************/
+/** 
+  \var    CanIf_WakeUpConfig
+  \brief  Wake-up source configuration
+  \details
+  Element                Description
+  ControllerId           ControllerId of this wake-up source configuration
+  WakeUpSource           Wake-up source identifier
+  WakeUpTargetAddress    Target address of wake up source (driver independent handle Id): CAN controller (ControllerId)/CAN transceiver (TransceiverId)
+  WakeUpTargetModule     Target module of wake-up source: CAN driver/CAN transceiver driver
+*/ 
+#define CANIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(CanIf_WakeUpConfigType, CANIF_CONST) CanIf_WakeUpConfig[1];
+#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  CanIf_WakeUpValidationFctPtr
+**********************************************************************************************************************/
+#define CANIF_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(CanIf_WakeUpValidationFctType, CANIF_CONST) CanIf_WakeUpValidationFctPtr;
+#define CANIF_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   CanIf_CtrlStates
 **********************************************************************************************************************/
 /** 
   \var    CanIf_CtrlStates
   \details
-  Element     Description
-  CtrlMode    Controller mode.
-  PduMode     PDU mode state.
+  Element                  Description
+  CtrlMode                 Controller mode.
+  PduMode                  PDU mode state.
+  WakeUpValidationState    Wake-up validation state.
 */ 
 #define CANIF_START_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

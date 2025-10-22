@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Cfg.h
- *   Generation Time: 2025-09-19 09:19:28
+ *   Generation Time: 2025-10-22 17:27:10
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -216,23 +216,24 @@ typedef EcuM_CoreStatusType *EcuM_CoreStatusArrayType;
 #define ECUM_SIZEOFCORESTATUS                                         STD_ON
 #define ECUM_SIZEOFDRIVERINITONE                                      STD_ON
 #define ECUM_SIZEOFPARTITIONDATA                                      STD_ON
+#define ECUM_SIZEOFVALIDATIONTIMEOUTTABLE                             STD_ON
 #define ECUM_SIZEOFWAKEUPSOURCELIST                                   STD_ON
 #define ECUM_SLEEPMODELIST                                            STD_OFF  /**< Deactivateable: 'EcuM_SleepModeList' Reason: 'the struct is deactivated because all elements are deactivated.' */
 #define ECUM_MCUMODEOFSLEEPMODELIST                                   STD_OFF  /**< Deactivateable: 'EcuM_SleepModeList.McuMode' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define ECUM_POLLINGOFSLEEPMODELIST                                   STD_OFF  /**< Deactivateable: 'EcuM_SleepModeList.Polling' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define ECUM_VALIDOFSLEEPMODELIST                                     STD_OFF  /**< Deactivateable: 'EcuM_SleepModeList.Valid' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define ECUM_WAKEUPSOURCEOFSLEEPMODELIST                              STD_OFF  /**< Deactivateable: 'EcuM_SleepModeList.WakeupSource' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define ECUM_VALIDATIONTIMEOUTTABLE                                   STD_OFF  /**< Deactivateable: 'EcuM_ValidationTimeoutTable' Reason: 'No validation timeouts configured.' */
+#define ECUM_VALIDATIONTIMEOUTTABLE                                   STD_ON
 #define ECUM_WAKEUPSOURCELIST                                         STD_ON
 #define ECUM_CHANNELOFWAKEUPSOURCELIST                                STD_ON
-#define ECUM_CHECKWAKEUPTIMEOFWAKEUPSOURCELIST                        STD_OFF  /**< Deactivateable: 'EcuM_WakeupSourceList.CheckWakeupTime' Reason: 'the value of EcuM_CheckWakeupTimeOfWakeupSourceList is always '0' due to this, the array is deactivated.' */
+#define ECUM_CHECKWAKEUPTIMEOFWAKEUPSOURCELIST                        STD_ON
 #define ECUM_COMMPNCSENDIDXOFWAKEUPSOURCELIST                         STD_OFF  /**< Deactivateable: 'EcuM_WakeupSourceList.ComMPNCsEndIdx' Reason: 'the optional indirection is deactivated because ComMPNCsUsedOfWakeupSourceList is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
 #define ECUM_COMMPNCSSTARTIDXOFWAKEUPSOURCELIST                       STD_OFF  /**< Deactivateable: 'EcuM_WakeupSourceList.ComMPNCsStartIdx' Reason: 'the optional indirection is deactivated because ComMPNCsUsedOfWakeupSourceList is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
 #define ECUM_COMMPNCSUSEDOFWAKEUPSOURCELIST                           STD_OFF  /**< Deactivateable: 'EcuM_WakeupSourceList.ComMPNCsUsed' Reason: 'the optional indirection is deactivated because ComMPNCsUsedOfWakeupSourceList is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define ECUM_POLLINGOFWAKEUPSOURCELIST                                STD_OFF  /**< Deactivateable: 'EcuM_WakeupSourceList.Polling' Reason: 'the value of EcuM_PollingOfWakeupSourceList is always 'false' due to this, the array is deactivated.' */
+#define ECUM_POLLINGOFWAKEUPSOURCELIST                                STD_ON
 #define ECUM_REASONOFWAKEUPSOURCELIST                                 STD_OFF  /**< Deactivateable: 'EcuM_WakeupSourceList.Reason' Reason: 'No Mcu Reset Reason configured.' */
 #define ECUM_VALIDOFWAKEUPSOURCELIST                                  STD_OFF  /**< Deactivateable: 'EcuM_WakeupSourceList.Valid' Reason: 'the value of EcuM_ValidOfWakeupSourceList is always 'true' due to this, the array is deactivated.' */
-#define ECUM_VALIDATIONTIMEOFWAKEUPSOURCELIST                         STD_OFF  /**< Deactivateable: 'EcuM_WakeupSourceList.ValidationTime' Reason: 'the value of EcuM_ValidationTimeOfWakeupSourceList is always '0' due to this, the array is deactivated.' */
+#define ECUM_VALIDATIONTIMEOFWAKEUPSOURCELIST                         STD_ON
 #define ECUM_PCCONFIG                                                 STD_ON
 #define ECUM_CORESTATUSOFPCCONFIG                                     STD_ON
 #define ECUM_DEFAULTAPPMODEOFPCCONFIG                                 STD_ON
@@ -251,8 +252,30 @@ typedef EcuM_CoreStatusType *EcuM_CoreStatusArrayType;
 #define ECUM_SIZEOFCORESTATUSOFPCCONFIG                               STD_ON
 #define ECUM_SIZEOFDRIVERINITONEOFPCCONFIG                            STD_ON
 #define ECUM_SIZEOFPARTITIONDATAOFPCCONFIG                            STD_ON
+#define ECUM_SIZEOFVALIDATIONTIMEOUTTABLEOFPCCONFIG                   STD_ON
 #define ECUM_SIZEOFWAKEUPSOURCELISTOFPCCONFIG                         STD_ON
+#define ECUM_VALIDATIONTIMEOUTTABLEOFPCCONFIG                         STD_ON
 #define ECUM_WAKEUPSOURCELISTOFPCCONFIG                               STD_ON
+/** 
+  \}
+*/ 
+
+/** 
+  \defgroup  EcuMPCMinNumericValueDefines  EcuM Min Numeric Value Defines (PRE_COMPILE)
+  \brief  These defines are used to implement against the minimum value in numerical based data.
+  \{
+*/ 
+#define ECUM_MIN_VALIDATIONTIMEOUTTABLE                               0u
+/** 
+  \}
+*/ 
+
+/** 
+  \defgroup  EcuMPCMaxNumericValueDefines  EcuM Max Numeric Value Defines (PRE_COMPILE)
+  \brief  These defines are used to implement against the maximum value in numerical based data.
+  \{
+*/ 
+#define ECUM_MAX_VALIDATIONTIMEOUTTABLE                               65535u
 /** 
   \}
 */ 
@@ -268,10 +291,14 @@ typedef EcuM_CoreStatusType *EcuM_CoreStatusArrayType;
 #define ECUM_ISDEF_ECUMPARTITIONOFPARTITIONDATA                       STD_ON
 #define ECUM_ISDEF_RESOURCEOFPARTITIONDATA                            STD_OFF
 #define ECUM_ISDEF_CHANNELOFWAKEUPSOURCELIST                          STD_OFF
+#define ECUM_ISDEF_CHECKWAKEUPTIMEOFWAKEUPSOURCELIST                  STD_OFF
+#define ECUM_ISDEF_POLLINGOFWAKEUPSOURCELIST                          STD_OFF
+#define ECUM_ISDEF_VALIDATIONTIMEOFWAKEUPSOURCELIST                   STD_OFF
 #define ECUM_ISDEF_CORESTATUSOFPCCONFIG                               STD_ON
 #define ECUM_ISDEF_DRIVERINITONEOFPCCONFIG                            STD_ON
 #define ECUM_ISDEF_MODULESTATEOFPCCONFIG                              STD_ON
 #define ECUM_ISDEF_PARTITIONDATAOFPCCONFIG                            STD_ON
+#define ECUM_ISDEF_VALIDATIONTIMEOUTTABLEOFPCCONFIG                   STD_ON
 #define ECUM_ISDEF_WAKEUPSOURCELISTOFPCCONFIG                         STD_ON
 /** 
   \}
@@ -288,10 +315,14 @@ typedef EcuM_CoreStatusType *EcuM_CoreStatusArrayType;
 #define ECUM_EQ2_ECUMPARTITIONOFPARTITIONDATA                         TRUE
 #define ECUM_EQ2_RESOURCEOFPARTITIONDATA                              
 #define ECUM_EQ2_CHANNELOFWAKEUPSOURCELIST                            
+#define ECUM_EQ2_CHECKWAKEUPTIMEOFWAKEUPSOURCELIST                    
+#define ECUM_EQ2_POLLINGOFWAKEUPSOURCELIST                            
+#define ECUM_EQ2_VALIDATIONTIMEOFWAKEUPSOURCELIST                     
 #define ECUM_EQ2_CORESTATUSOFPCCONFIG                                 EcuM_CoreStatus
 #define ECUM_EQ2_DRIVERINITONEOFPCCONFIG                              EcuM_DriverInitOne
 #define ECUM_EQ2_MODULESTATEOFPCCONFIG                                (&(EcuM_ModuleState))
 #define ECUM_EQ2_PARTITIONDATAOFPCCONFIG                              EcuM_PartitionData
+#define ECUM_EQ2_VALIDATIONTIMEOUTTABLEOFPCCONFIG                     EcuM_ValidationTimeoutTable
 #define ECUM_EQ2_WAKEUPSOURCELISTOFPCCONFIG                           EcuM_WakeupSourceList
 /** 
   \}
@@ -375,6 +406,18 @@ typedef uint8_least EcuM_WakeupSourceListIterType;
 */ 
 
 /** 
+  \defgroup  EcuMPCIterableTypesWithSizeRelations  EcuM Iterable Types With Size Relations (PRE_COMPILE)
+  \brief  These type definitions are used to iterate over a VAR based array with the same iterator as the related CONST array.
+  \{
+*/ 
+/**   \brief  type used to iterate EcuM_ValidationTimeoutTable */
+typedef EcuM_WakeupSourceListIterType EcuM_ValidationTimeoutTableIterType;
+
+/** 
+  \}
+*/ 
+
+/** 
   \defgroup  EcuMPCValueTypes  EcuM Value Types (PRE_COMPILE)
   \brief  These type definitions are used for value based data representations.
   \{
@@ -418,11 +461,26 @@ typedef uint8 EcuM_SizeOfDriverInitOneType;
 /**   \brief  value based type definition for EcuM_SizeOfPartitionData */
 typedef uint8 EcuM_SizeOfPartitionDataType;
 
+/**   \brief  value based type definition for EcuM_SizeOfValidationTimeoutTable */
+typedef uint8 EcuM_SizeOfValidationTimeoutTableType;
+
 /**   \brief  value based type definition for EcuM_SizeOfWakeupSourceList */
 typedef uint8 EcuM_SizeOfWakeupSourceListType;
 
+/**   \brief  value based type definition for EcuM_ValidationTimeoutTable */
+typedef uint16 EcuM_ValidationTimeoutTableType;
+
 /**   \brief  value based type definition for EcuM_ChannelOfWakeupSourceList */
 typedef uint8 EcuM_ChannelOfWakeupSourceListType;
+
+/**   \brief  value based type definition for EcuM_CheckWakeupTimeOfWakeupSourceList */
+typedef uint8 EcuM_CheckWakeupTimeOfWakeupSourceListType;
+
+/**   \brief  value based type definition for EcuM_PollingOfWakeupSourceList */
+typedef boolean EcuM_PollingOfWakeupSourceListType;
+
+/**   \brief  value based type definition for EcuM_ValidationTimeOfWakeupSourceList */
+typedef uint8 EcuM_ValidationTimeOfWakeupSourceListType;
 
 /** 
   \}
@@ -453,7 +511,10 @@ typedef struct sEcuM_PartitionDataType
 /**   \brief  type used in EcuM_WakeupSourceList */
 typedef struct sEcuM_WakeupSourceListType
 {
+  EcuM_PollingOfWakeupSourceListType PollingOfWakeupSourceList;  /**< Wakeup source will be polled in polling mode if value is TRUE */
   EcuM_ChannelOfWakeupSourceListType ChannelOfWakeupSourceList;  /**< Mapped ComM channel number - 255 if no ComM channel is assigned. */
+  EcuM_CheckWakeupTimeOfWakeupSourceListType CheckWakeupTimeOfWakeupSourceList;  /**< Timeout for Check Wakeup Validation - if 0 no Validation is performed */
+  EcuM_ValidationTimeOfWakeupSourceListType ValidationTimeOfWakeupSourceList;  /**< Timeout for Wakeup Validation - if 0 no Validation is performed */
 } EcuM_WakeupSourceListType;
 
 /** 
@@ -476,6 +537,9 @@ typedef P2VAR(EcuM_StateType, TYPEDEF, ECUM_VAR_NOINIT) EcuM_ModuleStatePtrType;
 
 /**   \brief  type used to point to EcuM_PartitionData */
 typedef P2CONST(EcuM_PartitionDataType, TYPEDEF, ECUM_CONST) EcuM_PartitionDataPtrType;
+
+/**   \brief  type used to point to EcuM_ValidationTimeoutTable */
+typedef P2VAR(EcuM_ValidationTimeoutTableType, TYPEDEF, ECUM_VAR_NOINIT) EcuM_ValidationTimeoutTablePtrType;
 
 /**   \brief  type used to point to EcuM_WakeupSourceList */
 typedef P2CONST(EcuM_WakeupSourceListType, TYPEDEF, ECUM_CONST) EcuM_WakeupSourceListPtrType;

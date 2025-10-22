@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: IoHwAb_30.c
- *   Generation Time: 2025-09-22 10:22:09
+ *   Generation Time: 2025-10-22 15:16:26
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -123,6 +123,9 @@ Icu_17_TimerIp_DutyCycleType ICU_Val1;
 Icu_17_TimerIp_DutyCycleType ICU_Val2;
 uint16 MessureFlg = 0;
 static volatile uint8 Txmode = 0;
+uint8 CH_RX = 0;
+uint8 PT_RX = 0;
+static volatile WakeUp_En = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
@@ -237,6 +240,16 @@ FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_10ms(void)
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK IoHwAbRunnable_10ms>
  *********************************************************************************************************************/
 /* TODO: Add runnable implementation here. */
+  PT_RX = Dio_ReadChannel(DioConf_DioChannel_DioChannel_P00_3_PT_CAN_RX);
+  CH_RX = Dio_ReadChannel(DioConf_DioChannel_DioChannel_P23_0_CH_CAN_RX);
+
+if( WakeUp_En )
+{
+  if( PT_RX == 0 )
+  {
+    EcuM_SetWakeupEvent(ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d);
+  }
+}
 
   Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, 1 );
 
@@ -265,12 +278,12 @@ FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_10ms(void)
   {
     ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0, COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79, COMM_NO_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_XCP_ca35a39e                    , COMM_NO_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN1_b196509b                     , COMM_NO_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN3_b56380a6                     , COMM_NO_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN4_57bf9bdf                     , COMM_NO_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMUser_CN_J1939_bms_d26c50b6                       , COMM_NO_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c                 , COMM_NO_COMMUNICATION);
+//    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_XCP_ca35a39e                    , COMM_NO_COMMUNICATION);
+//    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN1_b196509b                     , COMM_NO_COMMUNICATION);
+//    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN3_b56380a6                     , COMM_NO_COMMUNICATION);
+//    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN4_57bf9bdf                     , COMM_NO_COMMUNICATION);
+//    ComM_RequestComMode(ComMConf_ComMUser_CN_J1939_bms_d26c50b6                       , COMM_NO_COMMUNICATION);
+//    ComM_RequestComMode(ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c                 , COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC31                              , COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC24                              , COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC26                              , COMM_NO_COMMUNICATION);
