@@ -126,6 +126,22 @@
         </BSW-IMPLEMENTATION>
       </ELEMENTS>
       <AR-PACKAGES>
+        <AR-PACKAGE UUID="456feeac-ab43-4561-acee-1d8e241ac125">
+          <SHORT-NAME>CanTrcv_Tja1040</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-IMPLEMENTATION UUID="d47a5edd-cf56-42c2-8ee2-c5d5d373bc7e">
+              <SHORT-NAME>CanTrcv_Impl</SHORT-NAME>
+              <MC-SUPPORT/>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <SW-VERSION>4.03.00</SW-VERSION>
+              <USED-CODE-GENERATOR>DaVinci Configurator5</USED-CODE-GENERATOR>
+              <VENDOR-ID>30</VENDOR-ID>
+              <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+              <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/MICROSAR/CanTrcv_Tja1040_ib_bswmd/BswModuleDescriptions/CanTrcv/CanTrcv_Tja1040_Behavior</BEHAVIOR-REF>
+              <VENDOR-API-INFIX>Tja1040</VENDOR-API-INFIX>
+            </BSW-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
         <AR-PACKAGE UUID="8ec94b9d-8020-4788-8d3a-df07c2ddc941">
           <SHORT-NAME>BswM_ib_bswmd</SHORT-NAME>
           <AR-PACKAGES>
@@ -1019,6 +1035,55 @@
               </ELEMENTS>
             </AR-PACKAGE>
             <AR-PACKAGE UUID="c76c83a4-8691-446f-b3f6-9f643a08a607">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="8ba8c04f-e3c8-495c-8e31-08cfc70d1c4b">
+          <SHORT-NAME>CanTrcv_Tja1040_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="214a749d-5fc8-4a70-88db-95346f54eaaf">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="401119e6-caa0-4337-bbb7-96f52fc8fd0b">
+                  <SHORT-NAME>CanTrcv</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="feaacb7f-a5f4-492c-89cd-3183fc2a3014">
+                      <SHORT-NAME>CanTrcv_Tja1040_Behavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="2c654c3d-a3fd-4187-9508-a62799c271bd">
+                          <SHORT-NAME>CANTRCV_30_TJA1040_EXCLUSIVE_AREA_0</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="35a74330-3d24-4951-9d44-7495c55ef2ae">
+                          <SHORT-NAME>CanTrcv_30_Tja1040_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/CanTrcv_Tja1040_ib_bswmd/BswModuleDescriptions/CanTrcv_30_Tja1040_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="74115faa-6e40-4dd4-a4e2-8ab528f55faf">
+                          <SHORT-NAME>CanTrcv_30_Tja1040_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/CanTrcv_Tja1040_ib_bswmd/BswModuleDescriptions/CanTrcv/CanTrcv_Tja1040_Behavior/CanTrcv_30_Tja1040_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="4edf4019-85b2-4f72-b180-ae2a3a632a1f">
+                  <SHORT-NAME>CanTrcv_30_Tja1040_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="3f35a012-cc0d-4eeb-a990-d6cbbc8aa157">
+          <SHORT-NAME>CanTrcv_30_Tja1040_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="a11b58e6-745c-4aba-a71a-8ddf8bba51e3">
               <SHORT-NAME>XcpEvents</SHORT-NAME>
             </AR-PACKAGE>
           </AR-PACKAGES>

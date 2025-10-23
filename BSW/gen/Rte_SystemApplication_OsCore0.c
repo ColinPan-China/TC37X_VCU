@@ -109,6 +109,7 @@
 #include "SchM_CanNm.h"
 #include "SchM_CanSM.h"
 #include "SchM_CanTp.h"
+#include "SchM_CanTrcv_30_Tja1040.h"
 #include "SchM_Com.h"
 #include "SchM_ComM.h"
 #include "SchM_Dcm.h"
@@ -6320,6 +6321,9 @@ TASK(Core0_Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
 
       /* call schedulable entity */
       Com_MainFunctionTx_ComMainFunctionTx_50ms();
+
+      /* call schedulable entity */
+      CanTrcv_30_Tja1040_MainFunction();
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

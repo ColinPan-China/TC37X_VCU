@@ -278,12 +278,12 @@ if( WakeUp_En )
   {
     ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0, COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79, COMM_NO_COMMUNICATION);
-//    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_XCP_ca35a39e                    , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_XCP_ca35a39e                    , COMM_NO_COMMUNICATION);
 //    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN1_b196509b                     , COMM_NO_COMMUNICATION);
 //    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN3_b56380a6                     , COMM_NO_COMMUNICATION);
 //    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN4_57bf9bdf                     , COMM_NO_COMMUNICATION);
-//    ComM_RequestComMode(ComMConf_ComMUser_CN_J1939_bms_d26c50b6                       , COMM_NO_COMMUNICATION);
-//    ComM_RequestComMode(ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c                 , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_J1939_bms_d26c50b6                       , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c                 , COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC31                              , COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC24                              , COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC26                              , COMM_NO_COMMUNICATION);

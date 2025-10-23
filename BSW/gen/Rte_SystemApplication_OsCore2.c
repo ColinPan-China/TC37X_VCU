@@ -109,6 +109,7 @@
 #include "SchM_CanNm.h"
 #include "SchM_CanSM.h"
 #include "SchM_CanTp.h"
+#include "SchM_CanTrcv_30_Tja1040.h"
 #include "SchM_Com.h"
 #include "SchM_ComM.h"
 #include "SchM_Dcm.h"

@@ -11,7 +11,7 @@
  *  ---------------------------------------------------------------------------------------------------------------- *
  *             File: McData.a2l                                                                                      *
  *      Description: MICROSAR A2L file                                                                               *
- *     Generated at: 2025-09-10 14:21:57                                                                             *
+ *     Generated at: 2025-10-23 10:39:14                                                                             *
  *        Generator: MICROSAR McDataConverter, Version 1.1.0.0                                                       *
  *  ---------------------------------------------------------------------------------------------------------------- *
  *  CUSTOMER INFORMATION                                                                                             *
@@ -72,6 +72,9 @@
     /end GROUP
 
     /begin GROUP CanTp ""
+    /end GROUP
+
+    /begin GROUP CanTrcv_30_Tja1040 ""
     /end GROUP
 
     /begin GROUP Com ""
