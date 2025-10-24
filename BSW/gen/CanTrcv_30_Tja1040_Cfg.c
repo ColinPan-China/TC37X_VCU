@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanTrcv_30_Tja1040_Cfg.c
- *   Generation Time: 2025-10-23 10:40:42
+ *   Generation Time: 2025-10-23 16:26:29
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -105,9 +105,10 @@
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanTrcv_30_Tja1040_ChannelUsedType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_ChannelUsed[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(CanTrcv_30_Tja1040_ChannelUsedType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_ChannelUsed[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     ChannelUsed  */
-  /*     0 */         TRUE
+  /*     0 */         TRUE,
+  /*     1 */         TRUE
 };
 #define CANTRCV_30_TJA1040_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -128,9 +129,10 @@ CONST(CanTrcv_30_Tja1040_ChannelUsedType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_T
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanTrcv_30_Tja1040_DioConfigurationType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_DioConfiguration[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(CanTrcv_30_Tja1040_DioConfigurationType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_DioConfiguration[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    PinRXD                                         PinSTB                              */
-  { /*     0 */ DioConf_DioChannel_DioChannel_P00_3_PT_CAN_RX, DioConf_DioChannel_DioChannel_P32_2 }
+  { /*     0 */ DioConf_DioChannel_DioChannel_P00_3_PT_CAN_RX, DioConf_DioChannel_DioChannel_P32_2 },
+  { /*     1 */ DioConf_DioChannel_DioChannel_P23_0_CH_CAN_RX, DioConf_DioChannel_DioChannel_P32_3 }
 };
 #define CANTRCV_30_TJA1040_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -144,9 +146,10 @@ CONST(CanTrcv_30_Tja1040_DioConfigurationType, CANTRCV_30_TJA1040_CONST) CanTrcv
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanTrcv_30_Tja1040_WakeupByBusUsedType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_WakeupByBusUsed[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(CanTrcv_30_Tja1040_WakeupByBusUsedType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_WakeupByBusUsed[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     WakeupByBusUsed  */
-  /*     0 */             TRUE
+  /*     0 */             TRUE,
+  /*     1 */             TRUE
 };
 #define CANTRCV_30_TJA1040_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -160,9 +163,10 @@ CONST(CanTrcv_30_Tja1040_WakeupByBusUsedType, CANTRCV_30_TJA1040_CONST) CanTrcv_
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanTrcv_30_Tja1040_WakeupSourceType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_WakeupSource[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(CanTrcv_30_Tja1040_WakeupSourceType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_WakeupSource[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     WakeupSource  */
-  /*     0 */         0x40u
+  /*     0 */         0x40u,
+  /*     1 */         0x20u
 };
 #define CANTRCV_30_TJA1040_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */

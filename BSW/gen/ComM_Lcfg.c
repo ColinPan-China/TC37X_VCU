@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Lcfg.c
- *   Generation Time: 2025-10-20 10:42:51
+ *   Generation Time: 2025-10-23 17:11:20
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -96,7 +96,6 @@
   BusType                   The channel bus type
   NmSupport                 Decides if the channel has NmType FULL or PASSIVE
   SilentSupport             Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration)
-  GwType                    The partial network gateway type, relevant for channels attached to coordinated partial networks
   MinFullComTime            Minimal full communication time for the channel, relevant for NmTypes LIGHT and FULL
   NmLightDuration           Nm Light Timeout
   NmType                    The Network Management type of the channel
@@ -109,15 +108,15 @@
 #include "ComM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    BusType            NmSupport  SilentSupport  GwType                     MinFullComTime  NmLightDuration  NmType                      WakeupState                      GetCurrentBusSMModeApi   RequestBusSMModeApi         Referable Keys */
-  { /*     0 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE, COMM_GATEWAY_TYPE_PASSIVE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_0] */
-  { /*     1 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE, COMM_GATEWAY_TYPE_PASSIVE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_1] */
-  { /*     2 */ COMM_BUS_TYPE_CAN,     FALSE,         FALSE, COMM_GATEWAY_TYPE_NONE   ,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_2] */
-  { /*     3 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE, COMM_GATEWAY_TYPE_NONE   ,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_3] */
-  { /*     4 */ COMM_BUS_TYPE_CAN,     FALSE,         FALSE, COMM_GATEWAY_TYPE_NONE   ,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_4] */
-  { /*     5 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE, COMM_GATEWAY_TYPE_NONE   ,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode },  /* [ComMChannel_5] */
-  { /*     6 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE, COMM_GATEWAY_TYPE_NONE   ,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode },  /* [ComMChannel_6] */
-  { /*     7 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE, COMM_GATEWAY_TYPE_NONE   ,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode }   /* [ComMChannel_7] */
+    /* Index    BusType            NmSupport  SilentSupport  MinFullComTime  NmLightDuration  NmType                      WakeupState                      GetCurrentBusSMModeApi   RequestBusSMModeApi         Referable Keys */
+  { /*     0 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_0] */
+  { /*     1 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_1] */
+  { /*     2 */ COMM_BUS_TYPE_CAN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_2] */
+  { /*     3 */ COMM_BUS_TYPE_CAN,      TRUE,          TRUE,             0u,              0u,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP      , CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_3] */
+  { /*     4 */ COMM_BUS_TYPE_CAN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, CanSM_GetCurrentComMode, CanSM_RequestComMode },  /* [ComMChannel_4] */
+  { /*     5 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode },  /* [ComMChannel_5] */
+  { /*     6 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode },  /* [ComMChannel_6] */
+  { /*     7 */ COMM_BUS_TYPE_LIN,     FALSE,         FALSE,           250u,            100u, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED, LinSM_GetCurrentComMode, LinSM_RequestComMode }   /* [ComMChannel_7] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -1132,7 +1131,6 @@ FUNC(void, COMM_CODE) ComM_ComCbk_PNC_ERA_PT_ComSignal_Rx(void)
   {
     (void)Com_ReceiveSignal(ComConf_ComSignal_PNC_ERA_PT_ComSignal_Rx, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_COM_RECEIVE_SIGNAL */ /* PRQA S 0315 */ /* MD_ComM_0315 */
 
-    ComM_PncProcessRxSignalEra(2, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_WITH_PTR_TO_CONST */
   }
 
 }
@@ -1157,7 +1155,6 @@ FUNC(void, COMM_CODE) ComM_ComCbk_PNC_ERA_CH_ComSignal_Rx(void)
   {
     (void)Com_ReceiveSignal(ComConf_ComSignal_PNC_ERA_CH_ComSignal_Rx, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_COM_RECEIVE_SIGNAL */ /* PRQA S 0315 */ /* MD_ComM_0315 */
 
-    ComM_PncProcessRxSignalEra(3, &EiraOrEraValuesRx[0]); /* SBSW_COMM_CALL_WITH_PTR_TO_CONST */
   }
 
 }

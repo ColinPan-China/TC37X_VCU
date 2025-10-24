@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanTrcv_30_Tja1040_Cfg.h
- *   Generation Time: 2025-10-23 10:40:42
+ *   Generation Time: 2025-10-23 16:26:29
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -61,7 +61,7 @@
 /**********************************************************************************************************************
   SWITCHES (BASE)
 **********************************************************************************************************************/
-#define CANTRCV_30_TJA1040_MAX_CHANNEL                       1u
+#define CANTRCV_30_TJA1040_MAX_CHANNEL                       2u
 #define CANTRCV_30_TJA1040_GENERAL_WAKE_UP_SUPPORT           CANTRCV_30_TJA1040_WAKEUP_BY_POLLING
 #define CANTRCV_30_TJA1040_WAKEUP_BY_BUS_USED                STD_ON
 #define CANTRCV_30_TJA1040_GET_VERSION_INFO                  STD_OFF
@@ -80,6 +80,7 @@
 
 
 #define CanTrcv_30_Tja1040_CanTrcvChannel_PT 0u 
+#define CanTrcv_30_Tja1040_CanTrcvChannel_CH 1u 
 
 
 #ifndef CANTRCV_30_TJA1040_USE_DUMMY_STATEMENT
@@ -304,10 +305,10 @@
 #define CanTrcv_30_Tja1040_GetChannelUsedOfPCConfig()                 CanTrcv_30_Tja1040_ChannelUsed  /**< the pointer to CanTrcv_30_Tja1040_ChannelUsed */
 #define CanTrcv_30_Tja1040_GetDioConfigurationOfPCConfig()            CanTrcv_30_Tja1040_DioConfiguration  /**< the pointer to CanTrcv_30_Tja1040_DioConfiguration */
 #define CanTrcv_30_Tja1040_GetGeneratorCompatibilityVersionOfPCConfig() 0x01050103u
-#define CanTrcv_30_Tja1040_GetSizeOfChannelUsedOfPCConfig()           1u  /**< the number of accomplishable value elements in CanTrcv_30_Tja1040_ChannelUsed */
-#define CanTrcv_30_Tja1040_GetSizeOfDioConfigurationOfPCConfig()      1u  /**< the number of accomplishable value elements in CanTrcv_30_Tja1040_DioConfiguration */
-#define CanTrcv_30_Tja1040_GetSizeOfWakeupByBusUsedOfPCConfig()       1u  /**< the number of accomplishable value elements in CanTrcv_30_Tja1040_WakeupByBusUsed */
-#define CanTrcv_30_Tja1040_GetSizeOfWakeupSourceOfPCConfig()          1u  /**< the number of accomplishable value elements in CanTrcv_30_Tja1040_WakeupSource */
+#define CanTrcv_30_Tja1040_GetSizeOfChannelUsedOfPCConfig()           2u  /**< the number of accomplishable value elements in CanTrcv_30_Tja1040_ChannelUsed */
+#define CanTrcv_30_Tja1040_GetSizeOfDioConfigurationOfPCConfig()      2u  /**< the number of accomplishable value elements in CanTrcv_30_Tja1040_DioConfiguration */
+#define CanTrcv_30_Tja1040_GetSizeOfWakeupByBusUsedOfPCConfig()       2u  /**< the number of accomplishable value elements in CanTrcv_30_Tja1040_WakeupByBusUsed */
+#define CanTrcv_30_Tja1040_GetSizeOfWakeupSourceOfPCConfig()          2u  /**< the number of accomplishable value elements in CanTrcv_30_Tja1040_WakeupSource */
 #define CanTrcv_30_Tja1040_GetWakeupByBusUsedOfPCConfig()             CanTrcv_30_Tja1040_WakeupByBusUsed  /**< the pointer to CanTrcv_30_Tja1040_WakeupByBusUsed */
 #define CanTrcv_30_Tja1040_GetWakeupSourceOfPCConfig()                CanTrcv_30_Tja1040_WakeupSource  /**< the pointer to CanTrcv_30_Tja1040_WakeupSource */
 /** 
@@ -576,7 +577,7 @@ typedef CanTrcv_30_Tja1040_PCConfigType CanTrcv_30_Tja1040_ConfigType;  /**< A s
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanTrcv_30_Tja1040_ChannelUsedType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_ChannelUsed[1];
+extern CONST(CanTrcv_30_Tja1040_ChannelUsedType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_ChannelUsed[2];
 #define CANTRCV_30_TJA1040_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -596,7 +597,7 @@ extern CONST(CanTrcv_30_Tja1040_ChannelUsedType, CANTRCV_30_TJA1040_CONST) CanTr
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanTrcv_30_Tja1040_DioConfigurationType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_DioConfiguration[1];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
+extern CONST(CanTrcv_30_Tja1040_DioConfigurationType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_DioConfiguration[2];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
 #define CANTRCV_30_TJA1040_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -609,7 +610,7 @@ extern CONST(CanTrcv_30_Tja1040_DioConfigurationType, CANTRCV_30_TJA1040_CONST) 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanTrcv_30_Tja1040_WakeupByBusUsedType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_WakeupByBusUsed[1];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
+extern CONST(CanTrcv_30_Tja1040_WakeupByBusUsedType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_WakeupByBusUsed[2];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
 #define CANTRCV_30_TJA1040_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -622,7 +623,7 @@ extern CONST(CanTrcv_30_Tja1040_WakeupByBusUsedType, CANTRCV_30_TJA1040_CONST) C
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanTrcv_30_Tja1040_WakeupSourceType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_WakeupSource[1];
+extern CONST(CanTrcv_30_Tja1040_WakeupSourceType, CANTRCV_30_TJA1040_CONST) CanTrcv_30_Tja1040_WakeupSource[2];
 #define CANTRCV_30_TJA1040_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Private_Cfg.h
- *   Generation Time: 2025-10-20 10:42:52
+ *   Generation Time: 2025-10-23 17:11:21
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -144,7 +144,6 @@
 #define ComM_GetBusSmState(Index, partitionIndex)                                                   (ComM_GetBusSmStateOfPCPartitionConfig(partitionIndex)[(Index)])
 #define ComM_GetBusTypeOfChannel(Index)                                                             (ComM_GetChannelOfPCPartitionConfig()[(Index)].BusTypeOfChannel)
 #define ComM_GetGetCurrentBusSMModeApiOfChannel(Index)                                              (ComM_GetChannelOfPCPartitionConfig()[(Index)].GetCurrentBusSMModeApiOfChannel)
-#define ComM_GetGwTypeOfChannel(Index)                                                              (ComM_GetChannelOfPCPartitionConfig()[(Index)].GwTypeOfChannel)
 #define ComM_GetMinFullComTimeOfChannel(Index)                                                      (ComM_GetChannelOfPCPartitionConfig()[(Index)].MinFullComTimeOfChannel)
 #define ComM_GetNmLightDurationOfChannel(Index)                                                     (ComM_GetChannelOfPCPartitionConfig()[(Index)].NmLightDurationOfChannel)
 #define ComM_IsNmSupportOfChannel(Index)                                                            ((ComM_GetChannelOfPCPartitionConfig()[(Index)].NmSupportOfChannel) != FALSE)
@@ -215,6 +214,7 @@
   \brief  These macros can be used to read deduplicated data elements.
   \{
 */ 
+#define ComM_GetGwTypeOfChannel(Index)                                                              COMM_GATEWAY_TYPE_NONE  /**< The partial network gateway type, relevant for channels attached to coordinated partial networks */
 #define ComM_GetInhibitionInitValueOfChannel(Index)                                                 0x00u  /**< Initial value of the inhibition status of the channel */
 #define ComM_GetPartitionConfigIdxOfChannel(Index)                                                  0u  /**< the index of the 1:1 relation pointing to ComM_PCPartitionConfig */
 #define ComM_IsPncPbIndUsedOfChannelPb(Index)                                                       (((boolean)(ComM_GetPncPbIndStartIdxOfChannelPb(Index) != COMM_NO_PNCPBINDSTARTIDXOFCHANNELPB)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_PncPbInd */
@@ -645,7 +645,6 @@
   BusType                   The channel bus type
   NmSupport                 Decides if the channel has NmType FULL or PASSIVE
   SilentSupport             Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration)
-  GwType                    The partial network gateway type, relevant for channels attached to coordinated partial networks
   MinFullComTime            Minimal full communication time for the channel, relevant for NmTypes LIGHT and FULL
   NmLightDuration           Nm Light Timeout
   NmType                    The Network Management type of the channel

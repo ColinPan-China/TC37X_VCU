@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanIf_Lcfg.c
- *   Generation Time: 2025-10-23 10:40:42
+ *   Generation Time: 2025-10-23 16:26:30
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -449,9 +449,10 @@ CONST(CanIf_TrcvModeIndicationFctType, CANIF_CONST) CanIf_TrcvModeIndicationFctP
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanIf_TrcvToCtrlMapType, CANIF_CONST) CanIf_TrcvToCtrlMap[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(CanIf_TrcvToCtrlMapType, CANIF_CONST) CanIf_TrcvToCtrlMap[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     TrcvToCtrlMap                      */
-  /*     0 */             1u  /* ControllerId */
+  /*     0 */             1u  /* ControllerId */,
+  /*     1 */             0u  /* ControllerId */
 };
 #define CANIF_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -619,9 +620,10 @@ CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[56] = {  /* PRQA S 1
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(CanIf_WakeUpConfigType, CANIF_CONST) CanIf_WakeUpConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(CanIf_WakeUpConfigType, CANIF_CONST) CanIf_WakeUpConfig[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    ControllerId  WakeUpSource  WakeUpTargetAddress  WakeUpTargetModule              Comment */
-  { /*     0 */           1u,          64u,                  0u, CANIF_WAKEUPREQUEST_TRCV }   /* [Only CanTrcvWakeupSource ] */
+  { /*     0 */           0u,          32u,                  1u, CANIF_WAKEUPREQUEST_TRCV },  /* [Only CanTrcvWakeupSource ] */
+  { /*     1 */           1u,          64u,                  0u, CANIF_WAKEUPREQUEST_TRCV }   /* [Only CanTrcvWakeupSource ] */
 };
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2025-10-20 13:40:33
+ *   Generation Time: 2025-10-23 17:11:20
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -106,10 +106,10 @@
 #define COMM_PNC_EXTENDED_FUNCTIONALITY_ENABLED                         STD_ON
 #define COMM_PNC_EXISTS_PNC_WITHOUT_CHANNELS                            STD_OFF
 #define COMM_PNC_TO_CHANNEL_ROUTING_LIMITATION_ENABLED                  STD_OFF
-#define COMM_PNC_PASSIVE_GW_SUPPORT                                     STD_ON
+#define COMM_PNC_PASSIVE_GW_SUPPORT                                     STD_OFF
 #define COMM_PNC_EXISTS_COORD_PNC_WITH_GW_PASSIVE_AND_MANAGED_CHANNELS  STD_OFF
 #define COMM_PNC_EXISTS_GATEWAY_TYPE_ACTIVE                             STD_OFF
-#define COMM_PNC_EXISTS_GATEWAY_TYPE_NONE                               STD_OFF
+#define COMM_PNC_EXISTS_GATEWAY_TYPE_NONE                               STD_ON
 #define COMM_PNC_SIGNAL_LENGTH                                          6u
 #define COMM_PNC_MAX_NUMBER_OF_EIRA_RX                                  0u
 #define COMM_PNC_CHECK_ENABLED_AT_RUNTIME                               STD_OFF
@@ -502,7 +502,7 @@
 */ 
 #define COMM_ISDEF_BUSTYPEOFCHANNEL                                                                 STD_OFF
 #define COMM_ISDEF_GETCURRENTBUSSMMODEAPIOFCHANNEL                                                  STD_OFF
-#define COMM_ISDEF_GWTYPEOFCHANNEL                                                                  STD_OFF
+#define COMM_ISDEF_GWTYPEOFCHANNEL                                                                  STD_ON
 #define COMM_ISDEF_INHIBITIONINITVALUEOFCHANNEL                                                     STD_ON
 #define COMM_ISDEF_MINFULLCOMTIMEOFCHANNEL                                                          STD_OFF
 #define COMM_ISDEF_NMLIGHTDURATIONOFCHANNEL                                                         STD_OFF
@@ -606,7 +606,7 @@
 */ 
 #define COMM_EQ2_BUSTYPEOFCHANNEL                                                                   
 #define COMM_EQ2_GETCURRENTBUSSMMODEAPIOFCHANNEL                                                    
-#define COMM_EQ2_GWTYPEOFCHANNEL                                                                    
+#define COMM_EQ2_GWTYPEOFCHANNEL                                                                    COMM_GATEWAY_TYPE_NONE
 #define COMM_EQ2_INHIBITIONINITVALUEOFCHANNEL                                                       0x00u
 #define COMM_EQ2_MINFULLCOMTIMEOFCHANNEL                                                            
 #define COMM_EQ2_NMLIGHTDURATIONOFCHANNEL                                                           
@@ -1215,7 +1215,6 @@ typedef struct sComM_ChannelType
   ComM_BusType BusTypeOfChannel;  /**< The channel bus type */
   ComM_NmSupportOfChannelType NmSupportOfChannel;  /**< Decides if the channel has NmType FULL or PASSIVE */
   ComM_SilentSupportOfChannelType SilentSupportOfChannel;  /**< Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration) */
-  ComM_GwTypeOfChannelType GwTypeOfChannel;  /**< The partial network gateway type, relevant for channels attached to coordinated partial networks */
   ComM_MinFullComTimeOfChannelType MinFullComTimeOfChannel;  /**< Minimal full communication time for the channel, relevant for NmTypes LIGHT and FULL */
   ComM_NmLightDurationOfChannelType NmLightDurationOfChannel;  /**< Nm Light Timeout */
   ComM_NmTypeOfChannelType NmTypeOfChannel;  /**< The Network Management type of the channel */
@@ -1718,7 +1717,6 @@ typedef ComM_PCConfigType ComM_ConfigType;  /**< A structure type is present for
   BusType                   The channel bus type
   NmSupport                 Decides if the channel has NmType FULL or PASSIVE
   SilentSupport             Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration)
-  GwType                    The partial network gateway type, relevant for channels attached to coordinated partial networks
   MinFullComTime            Minimal full communication time for the channel, relevant for NmTypes LIGHT and FULL
   NmLightDuration           Nm Light Timeout
   NmType                    The Network Management type of the channel

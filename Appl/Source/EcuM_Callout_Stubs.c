@@ -92,6 +92,8 @@
 #include "Dio.h"
 #include "CanIf.h"
 #include "CanSM_EcuM.h"
+
+#define CANSM_CTRL  (0)
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -541,6 +543,10 @@ FUNC(void, ECUM_CODE) EcuM_CheckWakeup(EcuM_WakeupSourceType wakeupSource) /* CO
 	{
 		EcuM_SetWakeupEvent(ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d);
 	}
+  else if (wakeupSource == ECUM_WKSOURCE_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac)
+	{
+		EcuM_SetWakeupEvent(ECUM_WKSOURCE_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac);
+	}
   return;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
@@ -602,11 +608,11 @@ FUNC(void, ECUM_CODE) EcuM_StartWakeupSources(EcuM_WakeupSourceType wakeupSource
 
   if (wakeupSource == ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d) 
   {
-    #if 1
+    #if CANSM_CTRL
     	CanSM_StartWakeupSources(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03);
     #else
     CanIf_ControllerModeType CanIfCtrlMode;
-    (void)CanIf_GetControllerMode(0, &CanIfCtrlMode); 
+    (void)CanIf_GetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03, &CanIfCtrlMode); 
     /* in case the Can Controller is not CANIF_CS_STARTED */ 
     
     if (CANIF_CS_STARTED != CanIfCtrlMode) 
@@ -617,6 +623,25 @@ FUNC(void, ECUM_CODE) EcuM_StartWakeupSources(EcuM_WakeupSourceType wakeupSource
       CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03, CANIF_CS_STARTED);  
     }
     #endif
+  }
+  else if( wakeupSource == ECUM_WKSOURCE_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac )
+  {
+    #if CANSM_CTRL
+    	CanSM_StartWakeupSources(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292);
+    #else
+    CanIf_ControllerModeType CanIfCtrlMode;
+    (void)CanIf_GetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, &CanIfCtrlMode); 
+    /* in case the Can Controller is not CANIF_CS_STARTED */ 
+    
+    if (CANIF_CS_STARTED != CanIfCtrlMode) 
+    { 
+      /* Set the controller and transceiver mode into normal operation mode*/ 
+      CanIf_SetTrcvMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, CANTRCV_TRCVMODE_NORMAL);  
+      CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, CANIF_CS_STOPPED); 
+      CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, CANIF_CS_STARTED);  
+    }
+    #endif
+
   }
     
   return;
@@ -637,13 +662,24 @@ FUNC(void, ECUM_CODE) EcuM_StopWakeupSources(EcuM_WakeupSourceType wakeupSource)
   /* Add implementation of EcuM_StopWakeupSources() */
     if (wakeupSource == ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d) 
     {
-      #if 1
+      #if CANSM_CTRL
     	CanSM_StopWakeupSources(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03, ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d);
       #else
       /* Transceiver back to sleep mode. */ 
       CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03, CANIF_CS_STOPPED); 
       CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03, CANIF_CS_SLEEP); 
       CanIf_SetTrcvMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03, CANTRCV_TRCVMODE_STANDBY);
+      #endif
+    }
+    else if(wakeupSource == ECUM_WKSOURCE_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac)
+    {
+      #if CANSM_CTRL
+    	CanSM_StopWakeupSources(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, ECUM_WKSOURCE_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac);
+      #else
+      /* Transceiver back to sleep mode. */ 
+      CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, CANIF_CS_STOPPED); 
+      CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, CANIF_CS_SLEEP); 
+      CanIf_SetTrcvMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, CANTRCV_TRCVMODE_STANDBY);
       #endif
     }
   return;
@@ -664,12 +700,18 @@ FUNC(void, ECUM_CODE) EcuM_CheckValidation(EcuM_WakeupSourceType wakeupSource)
   /* Add implementation of EcuM_CheckValidation() */
   if ((wakeupSource & ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d) != 0)
   {
-      /* Query the driver if the wake-up event was valid */
     if (CanIf_CheckValidation(ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d) == E_NOT_OK)
-//    EcuM_ValidateWakeupEvent(ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d);
     {
     /* place ECU depended error handling here */
     }
+  }
+  else if((wakeupSource & ECUM_WKSOURCE_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac) != 0)
+  {
+    if (CanIf_CheckValidation(ECUM_WKSOURCE_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac) == E_NOT_OK)
+    {
+    /* place ECU depended error handling here */
+    }
+
   }
   return;
 /**********************************************************************************************************************

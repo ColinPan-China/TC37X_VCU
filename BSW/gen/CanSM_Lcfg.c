@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanSM_Lcfg.c
- *   Generation Time: 2025-10-23 10:40:40
+ *   Generation Time: 2025-10-23 16:26:28
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -66,7 +66,7 @@
 CONST(CanSM_ChannelConfigType, CANSM_CONST) CanSM_ChannelConfig[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Trcv_InActive_AtAll_NonPNCannels  ControllerId  NetworkHandle  TransceiverId                         */
   { /*     0 */                             TRUE,           4u,            3u, CANSM_NO_TRANSCEIVERIDOFCHANNELCONFIG },
-  { /*     1 */                             TRUE,           0u,            0u, CANSM_NO_TRANSCEIVERIDOFCHANNELCONFIG },
+  { /*     1 */                            FALSE,           0u,            0u,                                    1u },
   { /*     2 */                            FALSE,           1u,            1u,                                    0u },
   { /*     3 */                             TRUE,           2u,            2u, CANSM_NO_TRANSCEIVERIDOFCHANNELCONFIG },
   { /*     4 */                             TRUE,           3u,            4u, CANSM_NO_TRANSCEIVERIDOFCHANNELCONFIG }

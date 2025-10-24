@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: CanIf_Cfg.h
- *   Generation Time: 2025-10-23 10:40:42
+ *   Generation Time: 2025-10-23 16:26:29
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -216,6 +216,7 @@ typedef uint8 CanIf_TxBufferSizeType;
 **********************************************************************************************************************/
 
 #define CanIfConf_CanIfTrcvCfg_CanIfTrcvCfg_PT                                                      0u
+#define CanIfConf_CanIfTrcvCfg_CanIfTrcvCfg_CH                                                      1u
 
 
 
@@ -1097,8 +1098,8 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetGeneratorVersionOfPCConfig()                                                       0x00050001u
 #define CanIf_GetMailBoxConfigOfPCConfig()                                                          CanIf_MailBoxConfig  /**< the pointer to CanIf_MailBoxConfig */
 #define CanIf_GetMappedTxBuffersConfigOfPCConfig()                                                  CanIf_MappedTxBuffersConfig  /**< the pointer to CanIf_MappedTxBuffersConfig */
-#define CanIf_GetMaxTrcvHandleIdPlusOneOfPCConfig()                                                 1u
-#define CanIf_GetMaxWakeUpSourcesOfPCConfig()                                                       1u
+#define CanIf_GetMaxTrcvHandleIdPlusOneOfPCConfig()                                                 2u
+#define CanIf_GetMaxWakeUpSourcesOfPCConfig()                                                       2u
 #define CanIf_GetRxIndicationFctListOfPCConfig()                                                    CanIf_RxIndicationFctList  /**< the pointer to CanIf_RxIndicationFctList */
 #define CanIf_GetRxPduConfigOfPCConfig()                                                            CanIf_RxPduConfig  /**< the pointer to CanIf_RxPduConfig */
 #define CanIf_GetSizeOfCanIfCtrlId2MappedTxBuffersConfigOfPCConfig()                                5u  /**< the number of accomplishable value elements in CanIf_CanIfCtrlId2MappedTxBuffersConfig */
@@ -1107,14 +1108,14 @@ typedef uint8 CanIf_TxBufferSizeType;
 #define CanIf_GetSizeOfMappedTxBuffersConfigOfPCConfig()                                            5u  /**< the number of accomplishable value elements in CanIf_MappedTxBuffersConfig */
 #define CanIf_GetSizeOfRxIndicationFctListOfPCConfig()                                              6u  /**< the number of accomplishable value elements in CanIf_RxIndicationFctList */
 #define CanIf_GetSizeOfRxPduConfigOfPCConfig()                                                      109u  /**< the number of accomplishable value elements in CanIf_RxPduConfig */
-#define CanIf_GetSizeOfTrcvToCtrlMapOfPCConfig()                                                    1u  /**< the number of accomplishable value elements in CanIf_TrcvToCtrlMap */
+#define CanIf_GetSizeOfTrcvToCtrlMapOfPCConfig()                                                    2u  /**< the number of accomplishable value elements in CanIf_TrcvToCtrlMap */
 #define CanIf_GetSizeOfTxBufferFifoBaseOfPCConfig()                                                 5u  /**< the number of accomplishable value elements in CanIf_TxBufferFifoBase */
 #define CanIf_GetSizeOfTxBufferFifoConfigOfPCConfig()                                               5u  /**< the number of accomplishable value elements in CanIf_TxBufferFifoConfig */
 #define CanIf_GetSizeOfTxConfirmationFctListOfPCConfig()                                            5u  /**< the number of accomplishable value elements in CanIf_TxConfirmationFctList */
 #define CanIf_GetSizeOfTxFifoQueueBaseOfPCConfig()                                                  53u  /**< the number of accomplishable value elements in CanIf_TxFifoQueueBase */
 #define CanIf_GetSizeOfTxFifoQueueDataOfPCConfig()                                                  424u  /**< the number of accomplishable value elements in CanIf_TxFifoQueueData */
 #define CanIf_GetSizeOfTxPduConfigOfPCConfig()                                                      56u  /**< the number of accomplishable value elements in CanIf_TxPduConfig */
-#define CanIf_GetSizeOfWakeUpConfigOfPCConfig()                                                     1u  /**< the number of accomplishable value elements in CanIf_WakeUpConfig */
+#define CanIf_GetSizeOfWakeUpConfigOfPCConfig()                                                     2u  /**< the number of accomplishable value elements in CanIf_WakeUpConfig */
 #define CanIf_GetTrcvModeIndicationFctPtrOfPCConfig()                                               (&(CanIf_TrcvModeIndicationFctPtr))  /**< the pointer to CanIf_TrcvModeIndicationFctPtr */
 #define CanIf_GetTrcvToCtrlMapOfPCConfig()                                                          CanIf_TrcvToCtrlMap  /**< the pointer to CanIf_TrcvToCtrlMap */
 #define CanIf_GetTxBufferFifoBaseOfPCConfig()                                                       CanIf_TxBufferFifoBase.raw  /**< the pointer to CanIf_TxBufferFifoBase */
@@ -2167,7 +2168,7 @@ extern CONST(CanIf_TrcvModeIndicationFctType, CANIF_CONST) CanIf_TrcvModeIndicat
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_TrcvToCtrlMapType, CANIF_CONST) CanIf_TrcvToCtrlMap[1];
+extern CONST(CanIf_TrcvToCtrlMapType, CANIF_CONST) CanIf_TrcvToCtrlMap[2];
 #define CANIF_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2261,7 +2262,7 @@ extern CONST(CanIf_TxPduConfigType, CANIF_CONST) CanIf_TxPduConfig[56];
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(CanIf_WakeUpConfigType, CANIF_CONST) CanIf_WakeUpConfig[1];
+extern CONST(CanIf_WakeUpConfigType, CANIF_CONST) CanIf_WakeUpConfig[2];
 #define CANIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "CanIf_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

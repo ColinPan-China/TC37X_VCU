@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Cfg.c
- *   Generation Time: 2025-10-22 17:27:09
+ *   Generation Time: 2025-10-23 16:26:28
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -201,9 +201,9 @@ CONST(EcuM_WakeupSourceListType, ECUM_CONST) EcuM_WakeupSourceList[13] = {  /* P
   { /*     2 */   FALSE, 255                                                              ,              0u,             0u },  /* [ECUM_WKSOURCE_INTERNAL_RESET]                 */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/ECUM_WKSOURCE_INTERNAL_RESET, ECUM_WKSOURCE_INTERNAL_RESET] */
   { /*     3 */   FALSE, 255                                                              ,              0u,             0u },  /* [ECUM_WKSOURCE_INTERNAL_WDG]                   */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/ECUM_WKSOURCE_INTERNAL_WDG, ECUM_WKSOURCE_INTERNAL_WDG] */
   { /*     4 */   FALSE, 255                                                              ,              0u,             0u },  /* [ECUM_WKSOURCE_EXTERNAL_WDG]                   */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/ECUM_WKSOURCE_EXTERNAL_WDG, ECUM_WKSOURCE_EXTERNAL_WDG] */
-  { /*     5 */   FALSE, ComMConf_ComMChannel_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac,              0u,             0u },  /* [CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac, CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
+  { /*     5 */   FALSE, ComMConf_ComMChannel_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac,            200u,           200u },  /* [CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac, CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac] */
   { /*     6 */    TRUE, ComMConf_ComMChannel_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d,            200u,           200u },  /* [CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d, CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d] */
-  { /*     7 */   FALSE, ComMConf_ComMChannel_CN_ATOM_CAN_XCP_f42a46d4                    ,              0u,             0u },  /* [CN_ATOM_CAN_XCP_f42a46d4]                     */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_ATOM_CAN_XCP_f42a46d4, CN_ATOM_CAN_XCP_f42a46d4] */
+  { /*     7 */    TRUE, ComMConf_ComMChannel_CN_ATOM_CAN_XCP_f42a46d4                    ,              0u,             0u },  /* [CN_ATOM_CAN_XCP_f42a46d4]                     */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_ATOM_CAN_XCP_f42a46d4, CN_ATOM_CAN_XCP_f42a46d4] */
   { /*     8 */   FALSE, ComMConf_ComMChannel_CN_TC37X_VCU_CAN01_70b1f95e                 ,              0u,             0u },  /* [CN_TC37X_VCU_CAN01_70b1f95e]                  */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_TC37X_VCU_CAN01_70b1f95e, CN_TC37X_VCU_CAN01_70b1f95e] */
   { /*     9 */   FALSE, ComMConf_ComMChannel_CN_J1939_bms_dea99804                       ,              0u,             0u },  /* [CN_J1939_bms_dea99804]                        */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_J1939_bms_dea99804, CN_J1939_bms_dea99804] */
   { /*    10 */   FALSE, ComMConf_ComMChannel_CN_ATOM_HWLIN1_64cfd50f                     ,              0u,             0u },  /* [CN_ATOM_HWLIN1_64cfd50f]                      */  /* [/ActiveEcuC/EcuM/EcuMConfiguration/EcuMCommonConfiguration/CN_ATOM_HWLIN1_64cfd50f, CN_ATOM_HWLIN1_64cfd50f] */

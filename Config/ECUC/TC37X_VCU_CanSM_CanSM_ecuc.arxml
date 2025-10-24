@@ -107,6 +107,10 @@
                       <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/CanSM/CanSMConfiguration/CanSMManagerNetwork/CanSMComMNetworkHandleRef</DEFINITION-REF>
                       <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/ComM/ComMConfigSet/CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac</VALUE-REF>
                     </ECUC-REFERENCE-VALUE>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/CanSM/CanSMConfiguration/CanSMManagerNetwork/CanSMTransceiverId</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/CanIf/CanIfTrcvDrvCfg/CanIfTrcvCfg_CH</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
                     <ECUC-CONTAINER-VALUE UUID="43b9300f-a2a3-33e2-bf55-99f84f2c8523">
