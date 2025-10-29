@@ -37,7 +37,7 @@
 /* ECO_IGNORE_BLOCK_BEGIN */
 /* \trace SPEC-1880, SPEC-3742, SPEC-1915, SPEC-1891, SPEC-1914, SPEC-1932, SPEC-1929 */
 #include "CanIf.h"
-
+#include "CanNm.h"
 #include "CanIf_Cbk.h"
 
 /* \trace SPEC-1225, SPEC-1859, SPEC-1891 */
@@ -4981,9 +4981,26 @@ CANIF_LOCAL FUNC(void, CANIF_CODE) CanIf_HlIndication(CanIf_HwHandleType  Hrh, P
       if(CANIF_ISCANNMRXPDU(PduId)) /* Check if RxPdu is from CAN-Nm to validate wakeup */
 #  endif
       {
-        /* \trace SPEC-21407 */ /* Only ECUs receive list will validate an Rx event / Controller mode: Started, PduMode: Don't care */
-        /* #110 Set wake-up validation state to DETECTED (only if configured) */
-        CanIf_SetWakeUpValidationState(controllerId, CANIF_WUVALIDATION_DETECTED); /* SBSW_CANIF_3 */
+        uint8 rxMsgBytePos = 0;
+        uint8 reqCluster   = 0;
+        if( ((uint8)(CanSduPtr[1]) & 0x40) != 0u )
+        {
+
+          for( rxMsgBytePos = 0u; rxMsgBytePos < (CanDlc - CanNm_GetPnInfoOffset()); rxMsgBytePos++ ) /* SBSW_CANNM_LOCALFUNCTION_CALL */
+          {
+            reqCluster = (uint8)(CanSduPtr[rxMsgBytePos + CanNm_GetPnInfoOffset()] & CanNm_GetPnFilterMask(rxMsgBytePos));
+            if( reqCluster != 0u )
+            {
+              CanIf_SetWakeUpValidationState(controllerId, CANIF_WUVALIDATION_DETECTED); /* SBSW_CANIF_3 */
+              break;
+            }
+          }
+        }
+
+        if( reqCluster == 0u )
+        {
+          return;
+        }
       }
 # endif
 #endif
