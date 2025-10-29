@@ -92,7 +92,7 @@
 #include "Dio.h"
 #include "CanIf.h"
 #include "CanSM_EcuM.h"
-
+#include "CanTrcv_30_Tja1040.h"
 #define CANSM_CTRL  (0)
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
@@ -618,7 +618,7 @@ FUNC(void, ECUM_CODE) EcuM_StartWakeupSources(EcuM_WakeupSourceType wakeupSource
     if (CANIF_CS_STARTED != CanIfCtrlMode) 
     { 
       /* Set the controller and transceiver mode into normal operation mode*/ 
-      CanIf_SetTrcvMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03, CANTRCV_TRCVMODE_NORMAL);  
+      CanIf_SetTrcvMode(CanTrcv_30_Tja1040_CanTrcvChannel_PT, CANTRCV_TRCVMODE_NORMAL);  
       CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03, CANIF_CS_STOPPED); 
       CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03, CANIF_CS_STARTED);  
     }
@@ -636,7 +636,7 @@ FUNC(void, ECUM_CODE) EcuM_StartWakeupSources(EcuM_WakeupSourceType wakeupSource
     if (CANIF_CS_STARTED != CanIfCtrlMode) 
     { 
       /* Set the controller and transceiver mode into normal operation mode*/ 
-      CanIf_SetTrcvMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, CANTRCV_TRCVMODE_NORMAL);  
+      CanIf_SetTrcvMode(CanTrcv_30_Tja1040_CanTrcvChannel_CH, CANTRCV_TRCVMODE_NORMAL);  
       CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, CANIF_CS_STOPPED); 
       CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, CANIF_CS_STARTED);  
     }
@@ -668,7 +668,7 @@ FUNC(void, ECUM_CODE) EcuM_StopWakeupSources(EcuM_WakeupSourceType wakeupSource)
       /* Transceiver back to sleep mode. */ 
       CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03, CANIF_CS_STOPPED); 
       CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03, CANIF_CS_SLEEP); 
-      CanIf_SetTrcvMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CAN_Matrix_PT_V600_20250211_08587b03, CANTRCV_TRCVMODE_STANDBY);
+      CanIf_SetTrcvMode(CanTrcv_30_Tja1040_CanTrcvChannel_PT, CANTRCV_TRCVMODE_STANDBY);
       #endif
     }
     else if(wakeupSource == ECUM_WKSOURCE_CN_ATOM_CANFD_Matrix_CH_V600_202502_a4d436ac)
@@ -679,7 +679,7 @@ FUNC(void, ECUM_CODE) EcuM_StopWakeupSources(EcuM_WakeupSourceType wakeupSource)
       /* Transceiver back to sleep mode. */ 
       CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, CANIF_CS_STOPPED); 
       CanIf_SetControllerMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, CANIF_CS_SLEEP); 
-      CanIf_SetTrcvMode(CanIfConf_CanIfCtrlCfg_CT_ATOM_CANFD_Matrix_CH_V600_202502_37050292, CANTRCV_TRCVMODE_STANDBY);
+      CanIf_SetTrcvMode(CanTrcv_30_Tja1040_CanTrcvChannel_CH, CANTRCV_TRCVMODE_STANDBY);
       #endif
     }
   return;
