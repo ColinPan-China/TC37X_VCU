@@ -254,7 +254,7 @@ if( WakeUp_En )
   }
 }
 
-  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, 1 );
+//  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, 1 );
 
   TLE8888qk_Main();
   PwnIf_Main();
@@ -318,7 +318,7 @@ if( WakeUp_En )
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BSM_oJ1939_bms_ca52a7bc_Tx,   Txmode );
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BSOC_oJ1939_bms_5e951453_Tx,  Txmode );
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BST_oJ1939_bms_5be370d1_Tx,   Txmode );
-  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, 0 );
+//  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, 0 );
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/

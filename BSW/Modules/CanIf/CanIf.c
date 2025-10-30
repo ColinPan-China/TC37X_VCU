@@ -4981,11 +4981,11 @@ CANIF_LOCAL FUNC(void, CANIF_CODE) CanIf_HlIndication(CanIf_HwHandleType  Hrh, P
       if(CANIF_ISCANNMRXPDU(PduId)) /* Check if RxPdu is from CAN-Nm to validate wakeup */
 #  endif
       {
+        #if (1)
         uint8 rxMsgBytePos = 0;
         uint8 reqCluster   = 0;
         if( ((uint8)(CanSduPtr[1]) & 0x40) != 0u )
         {
-
           for( rxMsgBytePos = 0u; rxMsgBytePos < (CanDlc - CanNm_GetPnInfoOffset()); rxMsgBytePos++ ) /* SBSW_CANNM_LOCALFUNCTION_CALL */
           {
             reqCluster = (uint8)(CanSduPtr[rxMsgBytePos + CanNm_GetPnInfoOffset()] & CanNm_GetPnFilterMask(rxMsgBytePos));
@@ -5001,6 +5001,9 @@ CANIF_LOCAL FUNC(void, CANIF_CODE) CanIf_HlIndication(CanIf_HwHandleType  Hrh, P
         {
           return;
         }
+        #else
+        CanIf_SetWakeUpValidationState(controllerId, CANIF_WUVALIDATION_DETECTED); /* SBSW_CANIF_3 */
+        #endif
       }
 # endif
 #endif
