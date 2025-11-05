@@ -152,7 +152,7 @@
 								<inputType id="com.tasking.ctc.asmInputType.586904847" name="ASM" superClass="com.tasking.ctc.asmInputType"/>
 							</tool>
 							<tool id="com.tasking.ctc.lk.abs.debug.131585423" name="Linker" superClass="com.tasking.ctc.lk.abs.debug">
-								<option id="com.tasking.ctc.lk.lslFile.283257361" name="Linker script file:" superClass="com.tasking.ctc.lk.lslFile" value="D:\TC377_Development\NEW_DCU_Dev\J1939\TC37X_VCU\Appl\Source\vLinkGen_Template.lsl" valueType="string"/>
+								<option id="com.tasking.ctc.lk.lslFile.283257361" name="Linker script file:" superClass="com.tasking.ctc.lk.lslFile" value="D:\TC377_Development\NEW_DCU_Dev\TC37X_VCU\Appl\Source\vLinkGen_Template.lsl" valueType="string"/>
 								<option id="com.tasking.ctc.lk.outputFormat.ihex.1164688339" name="Generate Intel Hex format file" superClass="com.tasking.ctc.lk.outputFormat.ihex" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.noDefaultLibraries.2013064119" name="Link default libraries" superClass="com.tasking.ctc.lk.noDefaultLibraries" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.noRescan.1415836324" name="Rescan libraries to solve unresolved externals" superClass="com.tasking.ctc.lk.noRescan" value="true" valueType="boolean"/>
@@ -172,7 +172,7 @@
 								<option id="com.tasking.ctc.lk.mapFileFormat.nonAlloc.155038625" name="Include information of non-alloc sections" superClass="com.tasking.ctc.lk.mapFileFormat.nonAlloc" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.mapFileFormat.lsl.1824699336" name="Include processor and memory information" superClass="com.tasking.ctc.lk.mapFileFormat.lsl" value="true" valueType="boolean"/>
 								<option id="com.tasking.ctc.lk.library.1398269407" name="Libraries" superClass="com.tasking.ctc.lk.library"/>
-								<option id="com.tasking.ctc.lk.optimize.deleteDuplicateData.1903695320" superClass="com.tasking.ctc.lk.optimize.deleteDuplicateData" value="false" valueType="boolean"/>
+								<option id="com.tasking.ctc.lk.optimize.deleteDuplicateData.1903695320" name="Delete duplicate data" superClass="com.tasking.ctc.lk.optimize.deleteDuplicateData" value="false" valueType="boolean"/>
 								<inputType id="com.tasking.ctc.lkObjInputType.1764213417" name="OBJ" superClass="com.tasking.ctc.lkObjInputType"/>
 								<inputType id="com.tasking.ctc.lkLibInputType.1973690418" name="LIB" superClass="com.tasking.ctc.lkLibInputType"/>
 							</tool>

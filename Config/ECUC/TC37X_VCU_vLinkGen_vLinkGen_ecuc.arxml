@@ -5757,6 +5757,42 @@
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="b1aec783-7a98-4606-a152-1b76d33d5449">
+                      <SHORT-NAME>CALIBRATION_CONST</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerConstSection</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerConstSection/vLinkGenLinkerConstSectionName</DEFINITION-REF>
+                          <VALUE>CALIBRATION_CONST</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerConstSection/vLinkGenLinkerConstSectionFast</DEFINITION-REF>
+                          <VALUE>false</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerConstSection/vLinkGenLinkerConstSectionAlignment</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="27a218e0-c6cc-4a29-92d8-2a9363b9b897">
+                      <SHORT-NAME>CALIBRATION_CONST_FAST</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerConstSection</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerConstSection/vLinkGenLinkerConstSectionName</DEFINITION-REF>
+                          <VALUE>CALIBRATION_CONST_FAST</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerConstSection/vLinkGenLinkerConstSectionFast</DEFINITION-REF>
+                          <VALUE>true</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerConstSection/vLinkGenLinkerConstSectionAlignment</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="0c0be22d-4cd5-4acd-937b-7aa7da4fe8bd">
@@ -6627,11 +6663,37 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenMemoryRegion/vLinkGenMemoryRegionBlock/vLinkGenMemoryRegionBlockSize</DEFINITION-REF>
-                          <VALUE>2095616</VALUE>
+                          <VALUE>2030080</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenMemoryRegion/vLinkGenMemoryRegionBlock/vLinkGenMemoryRegionBlockAddress</DEFINITION-REF>
                           <VALUE>2148533760</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenMemoryRegion/vLinkGenMemoryRegionBlock/vLinkGenMemoryRegionBlockBoundary</DEFINITION-REF>
+                          <VALUE>LOWER</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenMemoryRegion/vLinkGenMemoryRegionBlock/vLinkGenMemoryRegionBlockInitStage</DEFINITION-REF>
+                          <VALUE>NONE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="897d1869-c490-4407-ae16-97aacf4fdf5f">
+                      <SHORT-NAME>RegionBlock_PFlash0_Calibration</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenMemoryRegion/vLinkGenMemoryRegionBlock</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenMemoryRegion/vLinkGenMemoryRegionBlock/vLinkGenMemoryRegionBlockPosition</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenMemoryRegion/vLinkGenMemoryRegionBlock/vLinkGenMemoryRegionBlockSize</DEFINITION-REF>
+                          <VALUE>65536</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenMemoryRegion/vLinkGenMemoryRegionBlock/vLinkGenMemoryRegionBlockAddress</DEFINITION-REF>
+                          <VALUE>2150563840</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenMemoryRegion/vLinkGenMemoryRegionBlock/vLinkGenMemoryRegionBlockBoundary</DEFINITION-REF>
@@ -12876,6 +12938,84 @@
                         <ECUC-REFERENCE-VALUE>
                           <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalVarGroup/vLinkGenVarSectionGroup/vLinkGenVarSectionGroupFlag</DEFINITION-REF>
                           <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenPublishedInformation/vLinkGenVarGroupFlags/WRITE</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="8dc1b44a-a144-4aba-bf0b-3f3b60c553d6">
+                  <SHORT-NAME>CALIBRATION_CONST</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstGroupPosition</DEFINITION-REF>
+                      <VALUE>5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstGroupRegion</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/MemRegion_PFlash0_Cached/RegionBlock_PFlash0_Calibration</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="dcdaf85b-3465-4534-af4c-ea46bd33b6c7">
+                      <SHORT-NAME>CALIBRATION_CONST</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupPosition</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupInit</DEFINITION-REF>
+                          <VALUE>NONE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupInitStage</DEFINITION-REF>
+                          <VALUE>ONE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupAlignment</DEFINITION-REF>
+                          <VALUE>32</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupEndAlignment</DEFINITION-REF>
+                          <VALUE>32</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupSize</DEFINITION-REF>
+                          <VALUE>65536</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupFlag</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenPublishedInformation/vLinkGenConstGroupFlags/ORDERED</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupFlag</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenPublishedInformation/vLinkGenConstGroupFlags/CONTIGUOUS</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupFlag</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenPublishedInformation/vLinkGenConstGroupFlags/FILL</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupFlag</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenPublishedInformation/vLinkGenConstGroupFlags/READ</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupFlag</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenPublishedInformation/vLinkGenConstGroupFlags/EXECUTE</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/CALIBRATION_CONST</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/CALIBRATION_CONST_FAST</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>

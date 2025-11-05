@@ -77,8 +77,15 @@ derivative mpe
   {
     mau = 8;
     type = rom;
-    size = 2095616; /* 2 MiB */
-    map (dest=bus:local_bus, dest_offset = 0x80100600, size = 2095616);
+    size = 2030080; /* 2 MiB */
+    map (dest=bus:local_bus, dest_offset = 0x80100600, size = 2030080);
+  }
+  memory RegionBlock_PFlash0_Calibration
+  {
+    mau = 8;
+    type = rom;
+    size = 65536; /* 64 KiB */
+    map (dest=bus:local_bus, dest_offset = 0x802F0000, size = 65536);
   }
   memory RegionBlock_BMHD0
   {
@@ -219,6 +226,29 @@ section_layout mpe:vtc:linear
     "_BMHD0_ALL_START" = "_BMHD0_START";
     "_BMHD0_ALL_END" = "_BMHD0_END";
     "_BMHD0_ALL_LIMIT" = "_BMHD0_LIMIT";
+  }
+
+  group CALIBRATION_CONST_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_PFlash0_Calibration)
+  {
+    group CALIBRATION_CONST (ordered, contiguous, fill, align = 32)
+    {
+      section "CALIBRATION_CONST_SEC" (fill, blocksize = 2, attributes = rx, size = 65536)
+      {
+        select "[.]rodata.CALIBRATION_CONST";
+        select "[.]zrodata.CALIBRATION_CONST_FAST";
+      }
+    }
+    group CALIBRATION_CONST_PAD (align = 32)
+    {
+      reserved "CALIBRATION_CONST_PAD" (size = 0);
+    }
+    "_CALIBRATION_CONST_START" = "_lc_gb_CALIBRATION_CONST";
+    "_CALIBRATION_CONST_END" = ("_lc_ge_CALIBRATION_CONST" == 0) ? 0 : "_lc_ge_CALIBRATION_CONST" - 1;
+    "_CALIBRATION_CONST_LIMIT" = "_lc_ge_CALIBRATION_CONST";
+
+    "_CALIBRATION_CONST_ALL_START" = "_CALIBRATION_CONST_START";
+    "_CALIBRATION_CONST_ALL_END" = "_CALIBRATION_CONST_END";
+    "_CALIBRATION_CONST_ALL_LIMIT" = "_CALIBRATION_CONST_LIMIT";
   }
 
   group CSA_CORE0_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_0_DSPR_Core0)

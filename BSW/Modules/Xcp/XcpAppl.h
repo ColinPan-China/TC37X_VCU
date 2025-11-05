@@ -195,7 +195,7 @@ extern FUNC(Xcp_TimestampType, XCP_CODE)   XcpAppl_GetTimestamp(void);
  *********************************************************************************************************************/
 extern FUNC(void, XCP_CODE)               XcpAppl_MemCpy( P2VAR(uint8, AUTOMATIC, XCP_APPL_VAR) Dst,
                                                           P2CONST(uint8, AUTOMATIC, XCP_APPL_DATA) Src,
-                                                          uint16 Size );
+                                                          uint32 Size );
 
 /**********************************************************************************************************************
  *  XcpAppl_MeasurementRead()

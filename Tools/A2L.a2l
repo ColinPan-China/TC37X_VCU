@@ -73,77 +73,10 @@ ASAP2_VERSION 1 51
             BYTE_ORDER MSB_LAST
         /end MOD_COMMON
 
-        /begin MEASUREMENT SensorMng.c_Ext_D_In2
-            ""
-            UBYTE
-            DEFAULT_CM
-            0
-            0
-            0
-            255
-            BIT_MASK 0x000000FF
-            ECU_ADDRESS 0x7000AA36
-            FORMAT "%0.15"
-        /end MEASUREMENT
-
-        /begin CHARACTERISTIC CDD_MyApp.c_Calib_Sig0_Calib_Sig0._0
-            ""
-            VALUE
-            0x80101C27
-            __UBYTE_S
-            0
-            DEFAULT_CM
-            0
-            255
-            EXTENDED_LIMITS 0 255
-            BIT_MASK 0x000000FF
-            FORMAT "%0.15"
-        /end CHARACTERISTIC
-
-        /begin CHARACTERISTIC CDD_MyApp.c_Calib_Sig1_Calib_Sig1._0
-            ""
-            VALUE
-            0x7000B7E4
-            __UBYTE_S
-            0
-            DEFAULT_CM
-            0
-            255
-            EXTENDED_LIMITS 0 255
-            BIT_MASK 0x000000FF
-            FORMAT "%0.15"
-        /end CHARACTERISTIC
-
-        /begin CHARACTERISTIC PwmIf.c_PwmOutPeriod_Set_Flash1_PwmOutPeriod_Set_Flash1._0
-            ""
-            VALUE
-            0x80100620
-            __ULONG_S
-            0
-            DEFAULT_CM
-            0
-            4294967295
-            EXTENDED_LIMITS 0 4294967295
-            FORMAT "%0.15"
-        /end CHARACTERISTIC
-
-        /begin CHARACTERISTIC PwmIf.c_PwmOutPeriod_Set_Flash1_PwmOutPeriod_Set_Flash1._1
-            ""
-            VALUE
-            0x80100624
-            __ULONG_S
-            0
-            DEFAULT_CM
-            0
-            4294967295
-            EXTENDED_LIMITS 0 4294967295
-            FORMAT "%0.15"
-        /end CHARACTERISTIC
-
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Bts7xx_HS1_En
             ""
             VALUE
-            0x7000A96C
+            0x802F0008
             __UBYTE_S
             0
             DEFAULT_CM
@@ -157,7 +90,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Bts7xx_HS2_En
             ""
             VALUE
-            0x7000A96D
+            0x802F0009
             __UBYTE_S
             0
             DEFAULT_CM
@@ -171,7 +104,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Bts7xx_HS3_En
             ""
             VALUE
-            0x7000A96E
+            0x802F000A
             __UBYTE_S
             0
             DEFAULT_CM
@@ -185,7 +118,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Bts7xx_HS4_En
             ""
             VALUE
-            0x7000A96F
+            0x802F000B
             __UBYTE_S
             0
             DEFAULT_CM
@@ -199,7 +132,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Tle4252d_en
             ""
             VALUE
-            0x7000A973
+            0x802F000F
             __UBYTE_S
             0
             DEFAULT_CM
@@ -213,7 +146,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Tle888qk_Lout01_En
             ""
             VALUE
-            0x7000A968
+            0x802F0004
             __UBYTE_S
             0
             DEFAULT_CM
@@ -227,7 +160,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Tle888qk_Lout08_En
             ""
             VALUE
-            0x7000A969
+            0x802F0005
             __UBYTE_S
             0
             DEFAULT_CM
@@ -241,7 +174,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Tle888qk_Lout14_En
             ""
             VALUE
-            0x7000A96A
+            0x802F0006
             __UBYTE_S
             0
             DEFAULT_CM
@@ -255,7 +188,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Tle888qk_Lout16_En
             ""
             VALUE
-            0x7000A96B
+            0x802F0007
             __UBYTE_S
             0
             DEFAULT_CM
@@ -269,7 +202,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Tle888qk_Out21_En
             ""
             VALUE
-            0x7000A964
+            0x802F0000
             __UBYTE_S
             0
             DEFAULT_CM
@@ -283,7 +216,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Tle888qk_Out22_En
             ""
             VALUE
-            0x7000A965
+            0x802F0001
             __UBYTE_S
             0
             DEFAULT_CM
@@ -297,7 +230,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Tle888qk_Out23_En
             ""
             VALUE
-            0x7000A966
+            0x802F0002
             __UBYTE_S
             0
             DEFAULT_CM
@@ -311,7 +244,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Tle888qk_Out24_En
             ""
             VALUE
-            0x7000A967
+            0x802F0003
             __UBYTE_S
             0
             DEFAULT_CM
@@ -325,7 +258,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Tle9201_Dir
             ""
             VALUE
-            0x7000A970
+            0x802F000C
             __UBYTE_S
             0
             DEFAULT_CM
@@ -339,7 +272,7 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Tle9201_Dis
             ""
             VALUE
-            0x7000A972
+            0x802F000E
             __UBYTE_S
             0
             DEFAULT_CM
@@ -353,7 +286,63 @@ ASAP2_VERSION 1 51
         /begin CHARACTERISTIC SensorMng.c_SensorMngCtrlVal_Tle9201_Pwm
             ""
             VALUE
-            0x7000A971
+            0x802F000D
+            __UBYTE_S
+            0
+            DEFAULT_CM
+            0
+            255
+            EXTENDED_LIMITS 0 255
+            BIT_MASK 0x000000FF
+            FORMAT "%0.15"
+        /end CHARACTERISTIC
+
+        /begin CHARACTERISTIC CtAp_BMSMgmt_Cal.c_HvMgmt_BMSHVPowerOff_CFG
+            ""
+            VALUE
+            0x802F0032
+            __UWORD_S
+            0
+            DEFAULT_CM
+            0
+            65535
+            EXTENDED_LIMITS 0 65535
+            BIT_MASK 0x0000FFFF
+            FORMAT "%0.15"
+        /end CHARACTERISTIC
+
+        /begin CHARACTERISTIC CtAp_BMSMgmt_Cal.c_HvMgmt_BMSHVPowerOn_CFG
+            ""
+            VALUE
+            0x802F0136
+            __UWORD_S
+            0
+            DEFAULT_CM
+            0
+            65535
+            EXTENDED_LIMITS 0 65535
+            BIT_MASK 0x0000FFFF
+            FORMAT "%0.15"
+        /end CHARACTERISTIC
+
+        /begin CHARACTERISTIC CtAp_ChrgComM_Cal.c_DCChrMgmt_DcPortErrRelsTempLv2_CFG
+            ""
+            VALUE
+            0x802F008C
+            __SWORD_S
+            0
+            DEFAULT_CM
+            -32768
+            32767
+            EXTENDED_LIMITS -32768 32767
+            BIT_MASK 0x0000FFFF
+            FORMAT "%0.15"
+        /end CHARACTERISTIC
+
+        /begin CHARACTERISTIC CtAp_SpdLmt_Cal.c_TorqPahMgmt_DftFwdMaxSpd3GearD_CFG
+            ""
+            VALUE
+            0x802F8E02
             __UBYTE_S
             0
             DEFAULT_CM
