@@ -3989,7 +3989,7 @@ void R_CANHandlerOutput_Cyclic_20ms(void)
 
 //   boolean_T tec_ComM_TriggerASWMsgReqInfo;
   (void)Rte_Read_RTE_R_ComM_TriggerASWMsgReqInfo_tec_ComM_TriggerASWMsgReqInfo(&tec_ComM_TriggerASWMsgReqInfo);
-  if(tec_ComM_TriggerASWMsgReqInfo)
+  if(1)//(tec_ComM_TriggerASWMsgReqInfo)
   {
     /**************************************************VCU_MCU_05*******************************************************************/
       SG_VCU_MCU_05_SigGroup VCU_MCU_05_SigGroup;
