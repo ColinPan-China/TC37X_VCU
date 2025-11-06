@@ -90,26 +90,6 @@
                           <SHORT-NAME>Com_MainFunctionTx_ComMainFunctionTx</SHORT-NAME>
                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionTx_ComMainFunctionTx</IMPLEMENTED-ENTRY-REF>
                         </BSW-SCHEDULABLE-ENTITY>
-                        <BSW-SCHEDULABLE-ENTITY UUID="68bad767-e920-4e56-aeef-f0166594927e">
-                          <SHORT-NAME>Com_MainFunctionTx_ComMainFunctionTx_10ms</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionTx_ComMainFunctionTx_10ms</IMPLEMENTED-ENTRY-REF>
-                        </BSW-SCHEDULABLE-ENTITY>
-                        <BSW-SCHEDULABLE-ENTITY UUID="0acd6bfb-6371-4036-9cb9-18d9e5789330">
-                          <SHORT-NAME>Com_MainFunctionTx_ComMainFunctionTx_20ms</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionTx_ComMainFunctionTx_20ms</IMPLEMENTED-ENTRY-REF>
-                        </BSW-SCHEDULABLE-ENTITY>
-                        <BSW-SCHEDULABLE-ENTITY UUID="d46d4453-5fe1-4e9b-a8d3-9791833302b3">
-                          <SHORT-NAME>Com_MainFunctionTx_ComMainFunctionTx_50ms</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionTx_ComMainFunctionTx_50ms</IMPLEMENTED-ENTRY-REF>
-                        </BSW-SCHEDULABLE-ENTITY>
-                        <BSW-SCHEDULABLE-ENTITY UUID="9f30ee1e-9235-476b-9e2b-4a55393a7d35">
-                          <SHORT-NAME>Com_MainFunctionTx_ComMainFunctionTx_100ms</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionTx_ComMainFunctionTx_100ms</IMPLEMENTED-ENTRY-REF>
-                        </BSW-SCHEDULABLE-ENTITY>
-                        <BSW-SCHEDULABLE-ENTITY UUID="59788fe9-f0b8-41f4-ace2-3269e3634d8a">
-                          <SHORT-NAME>Com_MainFunctionTx_ComMainFunctionTx_200ms</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com_MainFunctionTx_ComMainFunctionTx_200ms</IMPLEMENTED-ENTRY-REF>
-                        </BSW-SCHEDULABLE-ENTITY>
                       </ENTITYS>
                       <EVENTS>
                         <BSW-TIMING-EVENT UUID="f0154cf3-78b1-439c-8e4f-9030105fdde1">
@@ -120,31 +100,6 @@
                         <BSW-TIMING-EVENT UUID="f35ebbbc-9d1a-4c28-b0de-53108e73cdf7">
                           <SHORT-NAME>Com_MainFunctionTx_ComMainFunctionTxTimingEvent0</SHORT-NAME>
                           <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionTx_ComMainFunctionTx</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.01</PERIOD>
-                        </BSW-TIMING-EVENT>
-                        <BSW-TIMING-EVENT UUID="d90af94d-2063-46eb-9423-517a43839048">
-                          <SHORT-NAME>Com_MainFunctionTx_ComMainFunctionTx_10msTimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionTx_ComMainFunctionTx_10ms</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.01</PERIOD>
-                        </BSW-TIMING-EVENT>
-                        <BSW-TIMING-EVENT UUID="d7cbfd24-2a83-4494-a14c-ac1c36754c07">
-                          <SHORT-NAME>Com_MainFunctionTx_ComMainFunctionTx_20msTimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionTx_ComMainFunctionTx_20ms</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.01</PERIOD>
-                        </BSW-TIMING-EVENT>
-                        <BSW-TIMING-EVENT UUID="b6dcd76a-f4e0-4090-bdfe-ced58130ccea">
-                          <SHORT-NAME>Com_MainFunctionTx_ComMainFunctionTx_50msTimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionTx_ComMainFunctionTx_50ms</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.01</PERIOD>
-                        </BSW-TIMING-EVENT>
-                        <BSW-TIMING-EVENT UUID="a9328c3c-33f6-4395-8357-b7bbe15b5c43">
-                          <SHORT-NAME>Com_MainFunctionTx_ComMainFunctionTx_100msTimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionTx_ComMainFunctionTx_100ms</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.01</PERIOD>
-                        </BSW-TIMING-EVENT>
-                        <BSW-TIMING-EVENT UUID="30df4d67-89b6-4dae-8d41-544514a1df4e">
-                          <SHORT-NAME>Com_MainFunctionTx_ComMainFunctionTx_200msTimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Com_ib_bswmd/BswModuleDescriptions/Com/ComBehavior/Com_MainFunctionTx_ComMainFunctionTx_200ms</STARTS-ON-EVENT-REF>
                           <PERIOD>0.01</PERIOD>
                         </BSW-TIMING-EVENT>
                       </EVENTS>

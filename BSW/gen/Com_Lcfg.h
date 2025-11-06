@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Lcfg.h
- *   Generation Time: 2025-10-20 10:42:53
+ *   Generation Time: 2025-11-06 14:48:44
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -2085,7 +2085,7 @@
 #define Com_GetSizeOfConstValueUInt8OfPCConfig()                                                    8u  /**< the number of accomplishable value elements in Com_ConstValueUInt8 */
 #define Com_GetSizeOfHandleRxPduDeferredOfPCConfig()                                                108u  /**< the number of accomplishable value elements in Com_HandleRxPduDeferred */
 #define Com_GetSizeOfMainFunctionRxStructOfPCConfig()                                               1u  /**< the number of accomplishable value elements in Com_MainFunctionRxStruct */
-#define Com_GetSizeOfMainFunctionTxStructOfPCConfig()                                               6u  /**< the number of accomplishable value elements in Com_MainFunctionTxStruct */
+#define Com_GetSizeOfMainFunctionTxStructOfPCConfig()                                               1u  /**< the number of accomplishable value elements in Com_MainFunctionTxStruct */
 #define Com_GetSizeOfPartitionsActivatableRxComIPdusStructOfPCConfig()                              1u  /**< the number of accomplishable value elements in Com_PartitionsActivatableRxComIPdusStruct */
 #define Com_GetSizeOfPartitionsActivatableTxComIPdusStructOfPCConfig()                              1u  /**< the number of accomplishable value elements in Com_PartitionsActivatableTxComIPdusStruct */
 #define Com_GetSizeOfPartitionsAlwaysActiveRxComIPdusStructOfPCConfig()                             1u  /**< the number of accomplishable value elements in Com_PartitionsAlwaysActiveRxComIPdusStruct */
@@ -2129,7 +2129,7 @@
 #define Com_GetSizeOfTxPduInfoOfMainFunctionTxIndOfPCConfig()                                       63u  /**< the number of accomplishable value elements in Com_TxPduInfoOfMainFunctionTxInd */
 #define Com_GetSizeOfTxPduInfoOfPCConfig()                                                          63u  /**< the number of accomplishable value elements in Com_TxPduInfo */
 #define Com_GetSizeOfTxPduInitValueOfPCConfig()                                                     1057u  /**< the number of accomplishable value elements in Com_TxPduInitValue */
-#define Com_GetSizeOfTxProcessingISRLockCounterOfPCConfig()                                         6u  /**< the number of accomplishable value elements in Com_TxProcessingISRLockCounter */
+#define Com_GetSizeOfTxProcessingISRLockCounterOfPCConfig()                                         1u  /**< the number of accomplishable value elements in Com_TxProcessingISRLockCounter */
 #define Com_GetSizeOfTxSigGrpInfoIndOfPCConfig()                                                    27u  /**< the number of accomplishable value elements in Com_TxSigGrpInfoInd */
 #define Com_GetSizeOfTxSigGrpInfoOfPCConfig()                                                       27u  /**< the number of accomplishable value elements in Com_TxSigGrpInfo */
 #define Com_GetSizeOfTxSigGrpMaskOfPCConfig()                                                       98u  /**< the number of accomplishable value elements in Com_TxSigGrpMask */
@@ -2217,9 +2217,6 @@
 #define Com_IsCyclicSendRequest(Index)                                                              ((Com_GetCyclicSendRequestOfPCConfig()[(Index)]) != FALSE)
 #define Com_GetHandleRxPduDeferred(Index)                                                           (Com_GetHandleRxPduDeferredOfPCConfig()[(Index)])
 #define Com_IsInitialized()                                                                         (((*(Com_GetInitializedOfPCConfig()))) != FALSE)
-#define Com_GetTxCyclicPduOfMainFunctionTxIndStartIdxOfMainFunctionTxStruct(Index)                  (Com_GetMainFunctionTxStructOfPCConfig()[(Index)].TxCyclicPduOfMainFunctionTxIndStartIdxOfMainFunctionTxStruct)
-#define Com_GetTxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct(Index)                      (Com_GetMainFunctionTxStructOfPCConfig()[(Index)].TxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct)
-#define Com_GetTxPduInfoOfMainFunctionTxIndStartIdxOfMainFunctionTxStruct(Index)                    (Com_GetMainFunctionTxStructOfPCConfig()[(Index)].TxPduInfoOfMainFunctionTxIndStartIdxOfMainFunctionTxStruct)
 #define Com_IsTxPduInfoOfMainFunctionTxIndUsedOfMainFunctionTxStruct(Index)                         ((Com_GetMainFunctionTxStructOfPCConfig()[(Index)].TxPduInfoOfMainFunctionTxIndUsedOfMainFunctionTxStruct) != FALSE)
 #define Com_GetPduGrpVector(Index)                                                                  (Com_GetPduGrpVectorOfPCConfig()[(Index)])
 #define Com_GetApplTypeOfRxAccessInfo(Index)                                                        (Com_GetRxAccessInfoOfPCConfig()[(Index)].ApplTypeOfRxAccessInfo)
@@ -2292,7 +2289,6 @@
 #define Com_IsTransmitRequest(Index)                                                                ((Com_GetTransmitRequestOfPCConfig()[(Index)]) != FALSE)
 #define Com_GetTxBuffer(Index)                                                                      (Com_GetTxBufferOfPCConfig()[(Index)])
 #define Com_GetTxPduInfoIdxOfTxCyclicPdu(Index)                                                     (Com_GetTxCyclicPduOfPCConfig()[(Index)].TxPduInfoIdxOfTxCyclicPdu)
-#define Com_GetTxCyclicPduOfMainFunctionTxInd(Index)                                                (Com_GetTxCyclicPduOfMainFunctionTxIndOfPCConfig()[(Index)])
 #define Com_GetTxDynSignalLength(Index)                                                             (Com_GetTxDynSignalLengthOfPCConfig()[(Index)])
 #define Com_GetTxIPduGroupISRLockCounter(Index)                                                     (Com_GetTxIPduGroupISRLockCounterOfPCConfig()[(Index)])
 #define Com_IsDirectOfTxModeFalse(Index)                                                            ((Com_GetTxModeFalseOfPCConfig()[(Index)].DirectOfTxModeFalse) != FALSE)
@@ -2319,7 +2315,6 @@
 #define Com_GetTxSigGrpInfoIndEndIdxOfTxPduInfo(Index)                                              (Com_GetTxPduInfoOfPCConfig()[(Index)].TxSigGrpInfoIndEndIdxOfTxPduInfo)
 #define Com_GetTxSigGrpInfoIndStartIdxOfTxPduInfo(Index)                                            (Com_GetTxPduInfoOfPCConfig()[(Index)].TxSigGrpInfoIndStartIdxOfTxPduInfo)
 #define Com_GetTxTpInfoIdxOfTxPduInfo(Index)                                                        (Com_GetTxPduInfoOfPCConfig()[(Index)].TxTpInfoIdxOfTxPduInfo)
-#define Com_GetTxPduInfoOfMainFunctionTxInd(Index)                                                  (Com_GetTxPduInfoOfMainFunctionTxIndOfPCConfig()[(Index)])
 #define Com_GetTxPduInitValue(Index)                                                                (Com_GetTxPduInitValueOfPCConfig()[(Index)])
 #define Com_GetTxProcessingISRLockCounter(Index)                                                    (Com_GetTxProcessingISRLockCounterOfPCConfig()[(Index)])
 #define Com_GetTxSduLength(Index)                                                                   (Com_GetTxSduLengthOfPCConfig()[(Index)])
@@ -2370,8 +2365,11 @@
 #define Com_GetRxPduInfoOfMainFunctionRxIndEndIdxOfMainFunctionRxStruct(Index)                      ((Com_RxPduInfoOfMainFunctionRxIndEndIdxOfMainFunctionRxStructType)((((Com_RxPduInfoOfMainFunctionRxIndEndIdxOfMainFunctionRxStructType)(Index)) + 108u)))  /**< the end index of the 0:n relation pointing to Com_RxPduInfoOfMainFunctionRxInd */
 #define Com_GetRxPduInfoOfMainFunctionRxIndStartIdxOfMainFunctionRxStruct(Index)                    ((Com_RxPduInfoOfMainFunctionRxIndStartIdxOfMainFunctionRxStructType)((Index)))  /**< the start index of the 0:n relation pointing to Com_RxPduInfoOfMainFunctionRxInd */
 #define Com_IsRxPduInfoOfMainFunctionRxIndUsedOfMainFunctionRxStruct(Index)                         (((boolean)(Com_GetRxPduInfoOfMainFunctionRxIndStartIdxOfMainFunctionRxStruct(Index) != COM_NO_RXPDUINFOOFMAINFUNCTIONRXINDSTARTIDXOFMAINFUNCTIONRXSTRUCT)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_RxPduInfoOfMainFunctionRxInd */
-#define Com_GetTxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct(Index)                    ((Com_TxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)((Com_GetTxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct(Index) - 11u)))  /**< the end index of the 0:n relation pointing to Com_TxCyclicPduOfMainFunctionTxInd */
+#define Com_GetTxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct(Index)                    ((Com_TxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)((((Com_TxCyclicPduOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)(Index)) + 52u)))  /**< the end index of the 0:n relation pointing to Com_TxCyclicPduOfMainFunctionTxInd */
+#define Com_GetTxCyclicPduOfMainFunctionTxIndStartIdxOfMainFunctionTxStruct(Index)                  ((Com_TxCyclicPduOfMainFunctionTxIndStartIdxOfMainFunctionTxStructType)((Index)))  /**< the start index of the 0:n relation pointing to Com_TxCyclicPduOfMainFunctionTxInd */
 #define Com_IsTxCyclicPduOfMainFunctionTxIndUsedOfMainFunctionTxStruct(Index)                       Com_IsTxPduInfoOfMainFunctionTxIndUsedOfMainFunctionTxStruct(Index)  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_TxCyclicPduOfMainFunctionTxInd */
+#define Com_GetTxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct(Index)                      ((Com_TxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)((((Com_TxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType)(Index)) + 63u)))  /**< the end index of the 0:n relation pointing to Com_TxPduInfoOfMainFunctionTxInd */
+#define Com_GetTxPduInfoOfMainFunctionTxIndStartIdxOfMainFunctionTxStruct(Index)                    ((Com_TxPduInfoOfMainFunctionTxIndStartIdxOfMainFunctionTxStructType)((Index)))  /**< the start index of the 0:n relation pointing to Com_TxPduInfoOfMainFunctionTxInd */
 #define Com_GetTxProcessingISRLockCounterIdxOfMainFunctionTxStruct(Index)                           ((Com_TxProcessingISRLockCounterIdxOfMainFunctionTxStructType)((Index)))  /**< the index of the 1:1 relation pointing to Com_TxProcessingISRLockCounter */
 #define Com_GetRxIPduGroupISRLockCounterIdxOfPartitionsActivatableRxComIPdusStruct(Index)           ((Com_RxIPduGroupISRLockCounterIdxOfPartitionsActivatableRxComIPdusStructType)((Index)))  /**< the index of the 1:1 relation pointing to Com_RxIPduGroupISRLockCounter */
 #define Com_GetTxIPduGroupISRLockCounterIdxOfPartitionsActivatableTxComIPdusStruct(Index)           ((Com_TxIPduGroupISRLockCounterIdxOfPartitionsActivatableTxComIPdusStructType)((Index)))  /**< the index of the 1:1 relation pointing to Com_TxIPduGroupISRLockCounter */
@@ -2480,6 +2478,7 @@
 #define Com_GetSizeOfTxTpInfo()                                                                     Com_GetSizeOfTxTpInfoOfPCConfig()
 #define Com_GetSizeOfTxTpSduLength()                                                                Com_GetSizeOfTxTpSduLengthOfPCConfig()
 #define Com_GetSizeOfTxTpWrittenBytesCounter()                                                      Com_GetSizeOfTxTpWrittenBytesCounterOfPCConfig()
+#define Com_GetTxCyclicPduOfMainFunctionTxInd(Index)                                                ((Com_TxCyclicPduOfMainFunctionTxIndType)((Index)))  /**< the indexes of the 1:1 sorted relation pointing to Com_TxCyclicPdu */
 #define Com_GetTxIPduGroupISRLockThreshold()                                                        Com_GetTxIPduGroupISRLockThresholdOfPCConfig()
 #define Com_IsPeriodicOfTxModeFalse(Index)                                                          (((boolean)(Com_GetTimePeriodOfTxModeFalse(Index) != 0u)) != FALSE)  /**< TRUE if transmission mode contains a cyclic part. */
 #define Com_IsPeriodicOfTxModeTrue(Index)                                                           (((boolean)(Com_GetTimePeriodOfTxModeTrue(Index) != 0u)) != FALSE)  /**< TRUE if transmission mode contains a cyclic part. */
@@ -2494,6 +2493,7 @@
 #define Com_GetTxModeInfoIdxOfTxPduInfo(Index)                                                      ((Com_TxModeInfoIdxOfTxPduInfoType)((Index)))  /**< the index of the 1:1 relation pointing to Com_TxModeInfo */
 #define Com_IsTxSigGrpInfoIndUsedOfTxPduInfo(Index)                                                 (((boolean)(Com_GetTxSigGrpInfoIndStartIdxOfTxPduInfo(Index) != COM_NO_TXSIGGRPINFOINDSTARTIDXOFTXPDUINFO)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_TxSigGrpInfoInd */
 #define Com_IsTxTpInfoUsedOfTxPduInfo(Index)                                                        (((boolean)(Com_GetTxTpInfoIdxOfTxPduInfo(Index) != COM_NO_TXTPINFOIDXOFTXPDUINFO)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to Com_TxTpInfo */
+#define Com_GetTxPduInfoOfMainFunctionTxInd(Index)                                                  ((Com_TxPduInfoOfMainFunctionTxIndType)((Index)))  /**< the indexes of the 1:1 sorted relation pointing to Com_TxPduInfo */
 #define Com_GetTxProcessingISRLockThreshold()                                                       Com_GetTxProcessingISRLockThresholdOfPCConfig()
 #define Com_GetTxBufferLengthOfTxSigGrpInfo(Index)                                                  ((Com_TxBufferLengthOfTxSigGrpInfoType)((Com_GetTxBufferEndIdxOfTxSigGrpInfo(Index) - Com_GetTxBufferStartIdxOfTxSigGrpInfo(Index))))  /**< the number of relations pointing to Com_TxBuffer */
 #define Com_GetTxBufferSigGrpInTxIPDULengthOfTxSigGrpInfo(Index)                                    ((Com_TxBufferSigGrpInTxIPDULengthOfTxSigGrpInfoType)((Com_GetTxBufferSigGrpInTxIPDUEndIdxOfTxSigGrpInfo(Index) - Com_GetTxBufferSigGrpInTxIPDUStartIdxOfTxSigGrpInfo(Index))))  /**< the number of relations pointing to Com_TxBuffer */
@@ -4473,17 +4473,9 @@ typedef struct sCom_MainFunctionRxStructType
 } Com_MainFunctionRxStructType;
 
 /**   \brief  type used in Com_MainFunctionTxStruct */
-/*! \spec weak type invariant () { 
- * (!(self.TxPduInfoOfMainFunctionTxIndUsedOfMainFunctionTxStruct) || (self.TxPduInfoOfMainFunctionTxIndStartIdxOfMainFunctionTxStruct < Com_GetSizeOfTxPduInfoOfMainFunctionTxInd())) &&
- * (!(self.TxPduInfoOfMainFunctionTxIndUsedOfMainFunctionTxStruct) || (self.TxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct < Com_GetSizeOfTxPduInfoOfMainFunctionTxInd())) &&
- * (!(self.TxPduInfoOfMainFunctionTxIndUsedOfMainFunctionTxStruct) || (self.TxCyclicPduOfMainFunctionTxIndStartIdxOfMainFunctionTxStruct < Com_GetSizeOfTxCyclicPduOfMainFunctionTxInd()))
- * } */
 typedef struct sCom_MainFunctionTxStructType
 {
   Com_TxPduInfoOfMainFunctionTxIndUsedOfMainFunctionTxStructType TxPduInfoOfMainFunctionTxIndUsedOfMainFunctionTxStruct;  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_TxPduInfoOfMainFunctionTxInd */
-  Com_TxCyclicPduOfMainFunctionTxIndStartIdxOfMainFunctionTxStructType TxCyclicPduOfMainFunctionTxIndStartIdxOfMainFunctionTxStruct;  /**< the start index of the 0:n relation pointing to Com_TxCyclicPduOfMainFunctionTxInd */
-  Com_TxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStructType TxPduInfoOfMainFunctionTxIndEndIdxOfMainFunctionTxStruct;  /**< the end index of the 0:n relation pointing to Com_TxPduInfoOfMainFunctionTxInd */
-  Com_TxPduInfoOfMainFunctionTxIndStartIdxOfMainFunctionTxStructType TxPduInfoOfMainFunctionTxIndStartIdxOfMainFunctionTxStruct;  /**< the start index of the 0:n relation pointing to Com_TxPduInfoOfMainFunctionTxInd */
 } Com_MainFunctionTxStructType;
 
 /**   \brief  type used in Com_PartitionsActivatableRxComIPdusStruct */
@@ -5296,11 +5288,6 @@ typedef struct Com_TxIPduGroupISRLockCounterStructSTag
 typedef struct Com_TxProcessingISRLockCounterStructSTag
 {
   Com_TxProcessingISRLockCounterType ComMainFunctionTx;
-  Com_TxProcessingISRLockCounterType ComMainFunctionTx_100ms;
-  Com_TxProcessingISRLockCounterType ComMainFunctionTx_10ms;
-  Com_TxProcessingISRLockCounterType ComMainFunctionTx_200ms;
-  Com_TxProcessingISRLockCounterType ComMainFunctionTx_20ms;
-  Com_TxProcessingISRLockCounterType ComMainFunctionTx_50ms;
 } Com_TxProcessingISRLockCounterStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Com_TxTmpTpPduLength */
@@ -5443,7 +5430,7 @@ typedef union Com_TxIPduGroupISRLockCounterUTag
 /**   \brief  type to access Com_TxProcessingISRLockCounter in an index and symbol based style. */
 typedef union Com_TxProcessingISRLockCounterUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  Com_TxProcessingISRLockCounterType raw[6];
+  Com_TxProcessingISRLockCounterType raw[1];
   Com_TxProcessingISRLockCounterStructSType str;
 } Com_TxProcessingISRLockCounterUType;
 
@@ -5962,17 +5949,14 @@ extern CONST(Com_ConstValueUInt8Type, COM_CONST) Com_ConstValueUInt8[8];
 /** 
   \var    Com_MainFunctionTxStruct
   \details
-  Element                                   Description
-  TxPduInfoOfMainFunctionTxIndUsed          TRUE, if the 0:n relation has 1 relation pointing to Com_TxPduInfoOfMainFunctionTxInd
-  TxCyclicPduOfMainFunctionTxIndStartIdx    the start index of the 0:n relation pointing to Com_TxCyclicPduOfMainFunctionTxInd
-  TxPduInfoOfMainFunctionTxIndEndIdx        the end index of the 0:n relation pointing to Com_TxPduInfoOfMainFunctionTxInd
-  TxPduInfoOfMainFunctionTxIndStartIdx      the start index of the 0:n relation pointing to Com_TxPduInfoOfMainFunctionTxInd
+  Element                             Description
+  TxPduInfoOfMainFunctionTxIndUsed    TRUE, if the 0:n relation has 1 relation pointing to Com_TxPduInfoOfMainFunctionTxInd
 */ 
 #define COM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(Com_MainFunctionTxStructType, COM_CONST) Com_MainFunctionTxStruct[6];
+extern CONST(Com_MainFunctionTxStructType, COM_CONST) Com_MainFunctionTxStruct[1];
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6171,23 +6155,6 @@ extern CONST(Com_TxCyclicPduType, COM_CONST) Com_TxCyclicPdu[52];
 /*lint -restore */
 
 /**********************************************************************************************************************
-  Com_TxCyclicPduOfMainFunctionTxInd
-**********************************************************************************************************************/
-/** 
-  \var    Com_TxCyclicPduOfMainFunctionTxInd
-  \brief  the indexes of the 1:1 sorted relation pointing to Com_TxCyclicPdu
-*/ 
-#define COM_START_SEC_CONST_8BIT
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-extern CONST(Com_TxCyclicPduOfMainFunctionTxIndType, COM_CONST) Com_TxCyclicPduOfMainFunctionTxInd[52];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
-#define COM_STOP_SEC_CONST_8BIT
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-
-/**********************************************************************************************************************
   Com_TxModeFalse
 **********************************************************************************************************************/
 /** 
@@ -6282,23 +6249,6 @@ extern CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[9];
 /*lint -restore */
 extern CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[63];
 #define COM_STOP_SEC_CONST_UNSPECIFIED
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-
-/**********************************************************************************************************************
-  Com_TxPduInfoOfMainFunctionTxInd
-**********************************************************************************************************************/
-/** 
-  \var    Com_TxPduInfoOfMainFunctionTxInd
-  \brief  the indexes of the 1:1 sorted relation pointing to Com_TxPduInfo
-*/ 
-#define COM_START_SEC_CONST_8BIT
-/*lint -save -esym(961, 19.1) */
-#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
-/*lint -restore */
-extern CONST(Com_TxPduInfoOfMainFunctionTxIndType, COM_CONST) Com_TxPduInfoOfMainFunctionTxInd[63];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
-#define COM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

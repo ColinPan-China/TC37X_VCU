@@ -6308,22 +6308,10 @@ TASK(Core0_Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
       J1939Tp_MainFunction();
 
       /* call schedulable entity */
-      Com_MainFunctionTx_ComMainFunctionTx_100ms();
-
-      /* call schedulable entity */
-      Com_MainFunctionTx_ComMainFunctionTx_10ms();
-
-      /* call schedulable entity */
-      Com_MainFunctionTx_ComMainFunctionTx_200ms();
-
-      /* call schedulable entity */
-      Com_MainFunctionTx_ComMainFunctionTx_20ms();
-
-      /* call schedulable entity */
-      Com_MainFunctionTx_ComMainFunctionTx_50ms();
-
-      /* call schedulable entity */
       CanTrcv_30_Tja1040_MainFunction();
+
+      /* call schedulable entity */
+      Rte_ComSendSignalProxyPeriodic();
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
