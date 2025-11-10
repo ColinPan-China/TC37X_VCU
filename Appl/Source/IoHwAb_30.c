@@ -282,9 +282,9 @@ if( WakeUp_En )
     ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CANFD_Matrix_CH_V600_202502_15d11ab0, COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_Matrix_PT_V600_20250211_cc0efb79, COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_CAN_XCP_ca35a39e                    , COMM_NO_COMMUNICATION);
-//    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN1_b196509b                     , COMM_NO_COMMUNICATION);
-//    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN3_b56380a6                     , COMM_NO_COMMUNICATION);
-//    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN4_57bf9bdf                     , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN1_b196509b                     , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN3_b56380a6                     , COMM_NO_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_CN_ATOM_HWLIN4_57bf9bdf                     , COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_CN_J1939_bms_d26c50b6                       , COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_CN_TC37X_VCU_CAN01_5e76994c                 , COMM_NO_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_ComMUser_PNC31                              , COMM_NO_COMMUNICATION);
@@ -304,7 +304,7 @@ if( WakeUp_En )
       NOP();
     }
   }
-
+  #if 0
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BCL_oJ1939_bms_e5f04d09_Tx,   Txmode );
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BCP_oJ1939_bms_ece2ed74_Tx,   Txmode );
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BCS_oJ1939_bms_9b7c3f84_Tx,   Txmode );
@@ -318,6 +318,7 @@ if( WakeUp_En )
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BSM_oJ1939_bms_ca52a7bc_Tx,   Txmode );
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BSOC_oJ1939_bms_5e951453_Tx,  Txmode );
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BST_oJ1939_bms_5be370d1_Tx,   Txmode );
+  #endif
 //  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, 0 );
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
