@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Alarm_Lcfg.h
- *   Generation Time: 2025-10-17 11:11:22
+ *   Generation Time: 2025-11-10 14:36:49
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -84,10 +84,13 @@ extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_Core0_
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_Core0_Bsw_Task_0_5ms;
 
 /*! Alarm configuration data: Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms */
-extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms;
+extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms;
 
 /*! Alarm configuration data: Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms */
 extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms;
+
+/*! Alarm configuration data: Rte_Al_TE_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms */
+extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms;
 
 # define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

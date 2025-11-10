@@ -98,6 +98,7 @@
 #include "Rte_EcuM.h"
 #include "Rte_HookCallout.h"
 #include "Rte_IoHwAb.h"
+#include "Rte_IoHwAb_SWC.h"
 #include "Rte_NvM.h"
 #include "Rte_Os_OsCore0_swc.h"
 #include "Rte_Os_OsCore1_swc.h"
@@ -272,6 +273,7 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
 #define RTE_CONST_MSEC_SystemTimer_Core1_20 (20UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_200 (200UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_5 (5UL)
+#define RTE_CONST_MSEC_SystemTimer_Core0_50 (50UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_50 (50UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_500 (500UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_500 (500UL)

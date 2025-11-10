@@ -92,13 +92,26 @@
       SCHEDULE = FULL:"@RO@";
 // TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
       AUTOSTART = FALSE:"@RO@";
+      EVENT = Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms:"@RO@";
+      EVENT = Rte_Ev_Run_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms:"@RO@";
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms {
       COUNTER = SystemTimer_Core0;
-      ACTION = ACTIVATETASK
+      ACTION = SETEVENT
       {
          TASK = Core0_CddTask;
+         EVENT = Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms {
+      COUNTER = SystemTimer_Core0;
+      ACTION = SETEVENT
+      {
+         TASK = Core0_CddTask;
+         EVENT = Rte_Ev_Run_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
    }:"@RO@@NR@";
@@ -373,6 +386,14 @@
       MASK = AUTO;
    }:"@ROC@@NR@";
 
+   EVENT Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
+   EVENT Rte_Ev_Run_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
 
    APPLICATION SystemApplication_OsCore0 {
       TRUSTED = TRUE;
@@ -390,6 +411,7 @@
       ALARM = Rte_Al_TE2_Core0_Bsw_Task_0_5ms;
       TASK = Core0_CddTask;
       ALARM = Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms;
+      ALARM = Rte_Al_TE_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms;
       CORE = 0;
   };
 

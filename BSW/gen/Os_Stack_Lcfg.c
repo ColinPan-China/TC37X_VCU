@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Stack_Lcfg.c
- *   Generation Time: 2025-10-17 11:11:24
+ *   Generation Time: 2025-11-10 14:36:54
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -78,6 +78,17 @@
 OS_STACK_DECLARE(OsCfg_Stack_Core0_Bsw_Task_Dyn, OS_CFG_SIZE_CORE0_BSW_TASK_STACK);
 
 #define OS_STOP_SEC_STACK_CORE0_BSW_TASK_VAR_NOINIT_UNSPECIFIED
+#include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#define OS_START_SEC_STACK_CORE0_CDDTASK_VAR_NOINIT_UNSPECIFIED
+#include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/* Task stack: Core0_CddTask */
+/* User: [Core0_CddTask] */
+OS_STACK_DECLARE(OsCfg_Stack_Core0_CddTask_Dyn, OS_CFG_SIZE_CORE0_CDDTASK_STACK);
+
+#define OS_STOP_SEC_STACK_CORE0_CDDTASK_VAR_NOINIT_UNSPECIFIED
 #include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -188,17 +199,6 @@ OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio49_Dyn, OS_CFG_SIZE_OSCORE0_TASK_P
 OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio50_Dyn, OS_CFG_SIZE_OSCORE0_TASK_PRIO50_STACK);
 
 #define OS_STOP_SEC_STACK_OSCORE0_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED
-#include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
-#define OS_START_SEC_STACK_OSCORE0_TASK_PRIO60_VAR_NOINIT_UNSPECIFIED
-#include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-/* Shared Task stack: OsCore0_Task_Prio60 */
-/* User: [Core0_CddTask] */
-OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio60_Dyn, OS_CFG_SIZE_OSCORE0_TASK_PRIO60_STACK);
-
-#define OS_STOP_SEC_STACK_OSCORE0_TASK_PRIO60_VAR_NOINIT_UNSPECIFIED
 #include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -425,6 +425,13 @@ CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_Core0_Bsw_Task =
   /* .HighAddress = */ OS_STACK_GETHIGHADDRESS(OsCfg_Stack_Core0_Bsw_Task_Dyn)
 };
 
+/*! Stack configuration data: Core0_CddTask */
+CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_Core0_CddTask =
+{
+  /* .LowAddress  = */ OS_STACK_GETLOWADDRESS(OsCfg_Stack_Core0_CddTask_Dyn),
+  /* .HighAddress = */ OS_STACK_GETHIGHADDRESS(OsCfg_Stack_Core0_CddTask_Dyn)
+};
+
 /*! Stack configuration data: OsCore0_Error */
 CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore0_Error =
 {
@@ -479,13 +486,6 @@ CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore0_Task_Prio50 =
 {
   /* .LowAddress  = */ OS_STACK_GETLOWADDRESS(OsCfg_Stack_OsCore0_Task_Prio50_Dyn),
   /* .HighAddress = */ OS_STACK_GETHIGHADDRESS(OsCfg_Stack_OsCore0_Task_Prio50_Dyn)
-};
-
-/*! Stack configuration data: OsCore0_Task_Prio60 */
-CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore0_Task_Prio60 =
-{
-  /* .LowAddress  = */ OS_STACK_GETLOWADDRESS(OsCfg_Stack_OsCore0_Task_Prio60_Dyn),
-  /* .HighAddress = */ OS_STACK_GETHIGHADDRESS(OsCfg_Stack_OsCore0_Task_Prio60_Dyn)
 };
 
 /*! Stack configuration data: OsCore0_Task_Prio64 */

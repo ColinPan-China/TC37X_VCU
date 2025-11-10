@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Rte_MemMap.h
- *   Generation Time: 2025-09-29 15:03:03
+ *   Generation Time: 2025-11-10 14:36:52
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -3331,6 +3331,35 @@
 
 # undef RTE_STOP_SEC_HOOKCALLOUT_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+/* -------------------------------------------------------------------------------- */
+
+#elif defined RTE_START_SEC_IOHWAB_SWC_APPL_CODE
+# ifdef MEMMAP_SECTION_OPEN
+#  error Using RTE_START_SEC_IOHWAB_SWC_APPL_CODE is not possible as a memory section has already been opened. Nesting is not supported.
+# endif
+# define MEMMAP_SECTION_OPEN
+# define RTE_IOHWAB_SWC_APPL_CODE_OPEN
+
+# pragma section code "MSR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_START_SEC_IOHWAB_SWC_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+#elif defined RTE_STOP_SEC_IOHWAB_SWC_APPL_CODE
+# ifndef MEMMAP_SECTION_OPEN
+#  error Using RTE_STOP_SEC_IOHWAB_SWC_APPL_CODE is not possible as no memory section has been opened.
+# endif
+# undef MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef RTE_IOHWAB_SWC_APPL_CODE_OPEN
+#  error Using RTE_STOP_SEC_IOHWAB_SWC_APPL_CODE is not possible as the corresponding memory section has not been opened.
+# endif
+# undef RTE_IOHWAB_SWC_APPL_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+
+# undef RTE_STOP_SEC_IOHWAB_SWC_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
 #endif
 
 /* -------------------------------------------------------------------------------- */
@@ -3957,6 +3986,12 @@
 #endif
 #ifdef RTE_STOP_SEC_HOOKCALLOUT_APPL_CODE
 # error Using RTE_STOP_SEC_HOOKCALLOUT_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_START_SEC_IOHWAB_SWC_APPL_CODE
+# error Using RTE_START_SEC_IOHWAB_SWC_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
+#endif
+#ifdef RTE_STOP_SEC_IOHWAB_SWC_APPL_CODE
+# error Using RTE_STOP_SEC_IOHWAB_SWC_APPL_CODE is not possible as multiple memory allocation keywords are defined. Include the MemMap separately for each one.
 #endif
 
 #ifdef MEMMAP_ERROR

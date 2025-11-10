@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2025-10-17 11:08:01
+ *   Generation Time: 2025-11-10 14:36:54
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -139,6 +139,7 @@
 #define Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms
 #define Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms
 #define Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms
+#define Rte_Al_TE_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms Rte_Al_TE_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms
 
 /* Counter identifiers. */
 #define SystemTimer_Core0 SystemTimer_Core0
@@ -502,7 +503,8 @@ typedef enum
   Rte_Al_TE_CtAp_CANHandler_R_CANHandlerInput_Cyclic_500ms = 16,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms = 17,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms = 18,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ALARMID_COUNT = 19
+  Rte_Al_TE_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms = 19,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ALARMID_COUNT = 20
 } AlarmType;
 
 /*! Counter identifiers. */

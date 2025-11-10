@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Application_Cfg.h
- *   Generation Time: 2025-10-17 11:07:59
+ *   Generation Time: 2025-11-10 14:36:49
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -45,7 +45,7 @@
  *********************************************************************************************************************/
 
 /* Number of application objects: SystemApplication_OsCore0 */
-# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_ALARMS             (5uL)
+# define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_ALARMS             (6uL)
 # define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_COUNTERS           (1uL)
 # define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_HOOKS              (0uL)
 # define OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_ISRS               (33uL)

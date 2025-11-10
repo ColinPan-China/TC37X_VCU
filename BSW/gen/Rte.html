@@ -182,6 +182,7 @@ Rte_Det.h<br>
 Rte_EcuM.h<br>
 Rte_HookCallout.h<br>
 Rte_IoHwAb.h<br>
+Rte_IoHwAb_SWC.h<br>
 Rte_NvM.h<br>
 Rte_Os_OsCore0_swc.h<br>
 Rte_Os_OsCore1_swc.h<br>
@@ -252,6 +253,7 @@ Rte_Det_Type.h<br>
 Rte_EcuM_Type.h<br>
 Rte_HookCallout_Type.h<br>
 Rte_IoHwAb_Type.h<br>
+Rte_IoHwAb_SWC_Type.h<br>
 Rte_NvM_Type.h<br>
 Rte_Os_OsCore0_swc_Type.h<br>
 Rte_Os_OsCore1_swc_Type.h<br>
@@ -329,6 +331,7 @@ DemSatellite_0_MemMap.h<br>
 EcuM_MemMap.h<br>
 HookCallout_MemMap.h<br>
 IoHwAb_MemMap.h<br>
+IoHwAb_SWC_MemMap.h<br>
 Os_OsCore0_swc_MemMap.h<br>
 Os_OsCore1_swc_MemMap.h<br>
 Os_OsCore2_swc_MemMap.h<br>
@@ -419,7 +422,7 @@ Rte_Needs.ecuc.arxml<br>
 Note: This resource usage calculation assumes that the "Boolean" data type is based on uint8 base type.<br>
       Further on padding bytes for structs are not considered, which depends on the compiler settings.<br>
 <br>
-RAM   Size: 2615 Bytes<br>
+RAM   Size: 2616 Bytes<br>
 CONST Size: 1838 Bytes<br>
 <br>
 <P ALIGN=LEFT>
@@ -446,7 +449,7 @@ CONST Size: 1838 Bytes<br>
 </TR>
 <TR>
 <TD>Core0_CddTask</TD>
-<TD>Basic</TD>
+<TD>Extended</TD>
 <TD>FULL</TD>
 <TD>60</TD>
 </TR>
@@ -19459,7 +19462,7 @@ CONST Size: 1838 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>IoHwAb_IoHwAbRunnable_10ms</TD>
 <TD>Core0_CddTask</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms</TD>
 <TD>Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms</TD>
 </TR>
 <TR>
@@ -19468,6 +19471,13 @@ CONST Size: 1838 Bytes<br>
 <TD>Core0_AswTask</TD>
 <TD>n/a</TD>
 <TD>Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 50ms</TD>
+<TD>IoHwAb_SWC_Runnable_50ms</TD>
+<TD>Core0_CddTask</TD>
+<TD>Rte_Ev_Run_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms</TD>
+<TD>Rte_Al_TE_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>

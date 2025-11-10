@@ -5737,26 +5737,6 @@
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="b6ddd3a3-1056-4b51-af1a-7bbc6799d4ed">
-                      <SHORT-NAME>OS_STACK_OSCORE0_TASK_PRIO60_VAR_NOINIT</SHORT-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerStackSection</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerStackSection/vLinkGenLinkerStackSectionName</DEFINITION-REF>
-                          <VALUE>OS_STACK_OSCORE0_TASK_PRIO60_VAR_NOINIT</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerStackSection/vLinkGenLinkerStackSectionAlignment</DEFINITION-REF>
-                          <VALUE>8</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerStackSection/vLinkGenLinkerStackSectionModule</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/ActiveEcuC/Os</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                    </ECUC-CONTAINER-VALUE>
                     <ECUC-CONTAINER-VALUE UUID="b1aec783-7a98-4606-a152-1b76d33d5449">
                       <SHORT-NAME>CALIBRATION_CONST</SHORT-NAME>
                       <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerConstSection</DEFINITION-REF>
@@ -5792,6 +5772,26 @@
                           <VALUE>0</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="70f41c5c-7993-4b7d-b85d-d63712b3d4d4">
+                      <SHORT-NAME>OS_STACK_CORE0_CDDTASK_VAR_NOINIT</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerStackSection</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerStackSection/vLinkGenLinkerStackSectionName</DEFINITION-REF>
+                          <VALUE>OS_STACK_CORE0_CDDTASK_VAR_NOINIT</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerStackSection/vLinkGenLinkerStackSectionAlignment</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerStackSection/vLinkGenLinkerStackSectionModule</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/ActiveEcuC/Os</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
@@ -8835,7 +8835,7 @@
                         </ECUC-REFERENCE-VALUE>
                         <ECUC-REFERENCE-VALUE>
                           <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalVarGroup/vLinkGenVarSectionGroup/vLinkGenVarSectionGroupRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/OS_STACK_OSCORE0_TASK_PRIO60_VAR_NOINIT</VALUE-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/OS_STACK_CORE0_CDDTASK_VAR_NOINIT</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>

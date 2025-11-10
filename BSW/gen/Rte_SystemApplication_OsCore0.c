@@ -98,6 +98,7 @@
 #include "Rte_EcuM.h"
 #include "Rte_HookCallout.h"
 #include "Rte_IoHwAb.h"
+#include "Rte_IoHwAb_SWC.h"
 #include "Rte_NvM.h"
 #include "Rte_Os_OsCore0_swc.h"
 #include "Rte_Os_OsCore1_swc.h"
@@ -676,6 +677,9 @@ VAR(T_BATT_LIN01, RTE_VAR_INIT_NOCACHE) Rte_T_BATT_oBS_01_oATOM_HWLIN1_2bbe4bbe_
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(U_BATT_LIN01, RTE_VAR_INIT_NOCACHE) Rte_U_BATT_oBS_01_oATOM_HWLIN1_cca3ed29_Rx = 16383U;
 /* PRQA L:L1 */
+/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
+VAR(boolean, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg = FALSE;
+/* PRQA L:L1 */
 
 #define RTE_STOP_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
 #include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -1026,6 +1030,7 @@ VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM
 #define RTE_CONST_MSEC_SystemTimer_Core1_20 (20UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_200 (200UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_5 (5UL)
+#define RTE_CONST_MSEC_SystemTimer_Core0_50 (50UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_50 (50UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_500 (500UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_500 (500UL)
@@ -1058,6 +1063,7 @@ FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore0(void)
   Rte_SystemApplication_OsCore0_RxUpdateFlagsInit(); /* PRQA S 0315 */ /* MD_Rte_0315 */
 
   /* set default values for internal data */
+  Rte_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg = FALSE;
   Rte_CCS_OutputCurrent_oCCS_oJ1939_bms_d187cc6a_Rx = 0U;
   Rte_CCS_OutputVoltage_oCCS_oJ1939_bms_e8aa6018_Rx = 0U;
   Rte_CEM_BatteryChargeRequireTimeout_oCEM_oJ1939_bms_5fb156f4_Rx = 0U;
@@ -6320,15 +6326,29 @@ TASK(Core0_Bsw_Task) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable 
  * Task:     Core0_CddTask
  * Priority: 60
  * Schedule: FULL
- * Alarm:    Cycle Time 0.01 s Alarm Offset 0 s
  *********************************************************************************************************************/
 TASK(Core0_CddTask) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 {
+  EventMaskType ev;
 
-  /* call runnable */
-  IoHwAb_IoHwAbRunnable_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+  for(;;)
+  {
+    (void)WaitEvent(Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms | Rte_Ev_Run_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)GetEvent(Core0_CddTask, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms | Rte_Ev_Run_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
-  (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
+    if ((ev & Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      IoHwAb_IoHwAbRunnable_10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Run_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      IoHwAb_SWC_Runnable_50ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+  }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 #define RTE_STOP_SEC_CODE

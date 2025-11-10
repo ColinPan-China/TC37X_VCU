@@ -50,11 +50,18 @@ extern "C"
 /**********************************************************************************************************************
  * extern declaration of RTE buffers for optimized macro implementation
  *********************************************************************************************************************/
+#  define RTE_START_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(boolean, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg;
+
+#  define RTE_STOP_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 #  define RTE_START_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ElSSDiag_RTE_P_LvMgmt_KL15ActSts_Flg_tec_LvMgmt_KL15ActSts_Flg;
-extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ElSSDiag_RTE_P_LvMgmt_KL15CtrlReq_Flg_tec_LvMgmt_KL15CtrlReq_Flg;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ElSSDiag_RTE_P_LvMgmt_LvPwrDwn_Flg_tec_LvMgmt_LvPwrDwn_Flg;
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ElSSDiag_RTE_P_LvMgmt_SelfChkSts_Flg_tec_LvMgmt_SelfChkSts_Flg;
 extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_CANHandler_RTE_P_ComM_BMSWrkMod_Enum_tec_ComM_BMSWrkMod_Enum;
@@ -69,6 +76,14 @@ extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_VehStat_RTE_P_ModMgmt_HvSts_Enum_tec_Mo
 extern VAR(boolean, RTE_VAR_INIT) Rte_CtAp_VehStat_RTE_P_ModMgmt_ReqSleep_Flg_tec_ModMgmt_ReqSleep_Flg;
 
 #  define RTE_STOP_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#  define RTE_START_SEC_VAR_SystemApplication_OsCore1_NOCACHE_INIT_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(boolean, RTE_VAR_INIT_NOCACHE) Rte_CtAp_ElSSDiag_RTE_P_LvMgmt_KL15CtrlReq_Flg_tec_LvMgmt_KL15CtrlReq_Flg;
+
+#  define RTE_STOP_SEC_VAR_SystemApplication_OsCore1_NOCACHE_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 # endif /* !defined(RTE_CORE) */
@@ -131,8 +146,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_CtAp_ElSSDiag_RTE_R_ComM_CANBusOffInfo_B
 
 #  define Rte_Read_CtAp_ElSSDiag_RTE_R_DiagApp_DisableDCMReqInfo_tec_DiagApp_DisableDCMReqInfo(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED))
 #  define Rte_Read_RTE_R_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg Rte_Read_CtAp_ElSSDiag_RTE_R_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg
-
-#  define Rte_Read_CtAp_ElSSDiag_RTE_R_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED))
+#  define Rte_Read_CtAp_ElSSDiag_RTE_R_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg(data) (*(data) = Rte_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg, ((Std_ReturnType)RTE_E_OK))
 #  define Rte_Read_RTE_R_LvMgmt_AppNMReqInfo_tec_LvMgmt_AppNMReqInfo Rte_Read_CtAp_ElSSDiag_RTE_R_LvMgmt_AppNMReqInfo_tec_LvMgmt_AppNMReqInfo
 #  define Rte_Read_CtAp_ElSSDiag_RTE_R_LvMgmt_AppNMReqInfo_tec_LvMgmt_AppNMReqInfo(data) (*(data) = Rte_CtAp_WakeUpRsn_RTE_P_LvMgmt_AppNMReqInfo_tec_LvMgmt_AppNMReqInfo, ((Std_ReturnType)RTE_E_OK))
 #  define Rte_Read_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg Rte_Read_CtAp_ElSSDiag_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg

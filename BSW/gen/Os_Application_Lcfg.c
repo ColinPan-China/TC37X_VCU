@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Application_Lcfg.c
- *   Generation Time: 2025-10-17 11:11:22
+ *   Generation Time: 2025-11-10 14:36:50
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -126,8 +126,9 @@ OS_LOCAL CONST(Os_AlarmConfigRefType, OS_CONST) OsCfg_App_SystemApplication_OsCo
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_Core0_Bsw_Task_0_10ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_Core0_Bsw_Task_0_20ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_Core0_Bsw_Task_0_5ms),
-  OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms),
+  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms),
   OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms),
+  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms),
   NULL_PTR
 };
 

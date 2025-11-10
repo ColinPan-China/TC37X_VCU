@@ -98,6 +98,7 @@
 #include "Rte_EcuM.h"
 #include "Rte_HookCallout.h"
 #include "Rte_IoHwAb.h"
+#include "Rte_IoHwAb_SWC.h"
 #include "Rte_NvM.h"
 #include "Rte_Os_OsCore0_swc.h"
 #include "Rte_Os_OsCore1_swc.h"
@@ -1993,9 +1994,6 @@ VAR(boolean, RTE_VAR_INIT) Rte_CtAp_DrvTorqCoor_RTE_P_ChassisMgmt_DrvDmdHiPrio_F
 VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ElSSDiag_RTE_P_LvMgmt_KL15ActSts_Flg_tec_LvMgmt_KL15ActSts_Flg = FALSE;
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
-VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ElSSDiag_RTE_P_LvMgmt_KL15CtrlReq_Flg_tec_LvMgmt_KL15CtrlReq_Flg = FALSE;
-/* PRQA L:L1 */
-/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(boolean, RTE_VAR_INIT) Rte_CtAp_ElSSDiag_RTE_P_LvMgmt_LvPwrDwn_Flg_tec_LvMgmt_LvPwrDwn_Flg = FALSE;
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
@@ -2789,6 +2787,9 @@ VAR(BST_Abortdet2Voltexception, RTE_VAR_INIT_NOCACHE) Rte_BST_Abortdet2Voltexcep
 VAR(BST_Abortmanoperate, RTE_VAR_INIT_NOCACHE) Rte_BST_Abortmanoperate_oBST_oJ1939_bms_b2432717_Tx = 0U;
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
+VAR(boolean, RTE_VAR_INIT_NOCACHE) Rte_CtAp_ElSSDiag_RTE_P_LvMgmt_KL15CtrlReq_Flg_tec_LvMgmt_KL15CtrlReq_Flg = FALSE;
+/* PRQA L:L1 */
+/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(ChargeCurrWU_Ena_LIN01, RTE_VAR_INIT_NOCACHE) Rte_ChargeCurrWU_Ena_oVCU_BS_01_oATOM_HWLIN1_d9c09dc2_Tx = TRUE;
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
@@ -3355,6 +3356,7 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
 #define RTE_CONST_MSEC_SystemTimer_Core1_20 (20UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_200 (200UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_5 (5UL)
+#define RTE_CONST_MSEC_SystemTimer_Core0_50 (50UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_50 (50UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_500 (500UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_500 (500UL)

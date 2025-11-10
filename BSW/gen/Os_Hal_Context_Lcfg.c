@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Context_Lcfg.c
- *   Generation Time: 2025-10-17 11:11:23
+ *   Generation Time: 2025-11-10 14:36:52
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -768,8 +768,8 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core0_Bsw_Task =
 /*! HAL task context configuration data: Core0_CddTask */
 CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Core0_CddTask =
 {
-  /* .StackEndAddr     = */ (uint32)(OS_STACK_GETHIGHADDRESS(OsCfg_Stack_OsCore0_Task_Prio60_Dyn)+1),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
-  /* .StackStartAddr   = */ (uint32)OS_STACK_GETLOWADDRESS(OsCfg_Stack_OsCore0_Task_Prio60_Dyn),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
+  /* .StackEndAddr     = */ (uint32)(OS_STACK_GETHIGHADDRESS(OsCfg_Stack_Core0_CddTask_Dyn)+1),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
+  /* .StackStartAddr   = */ (uint32)OS_STACK_GETLOWADDRESS(OsCfg_Stack_Core0_CddTask_Dyn),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
   /* .ProgramStatus    = */ (uint32)OS_HAL_PSW_IS_MASK | OS_HAL_PSW_CDE_MASK | OS_HAL_PSW_IO_SUPERVISOR | OS_HAL_PSW_S_MASK,
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Task_Core0_CddTask,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */

@@ -123,11 +123,6 @@ Icu_17_TimerIp_DutyCycleType ICU_Val1;
 Icu_17_TimerIp_DutyCycleType ICU_Val2;
 uint16 MessureFlg = 0;
 static volatile uint8 Txmode = 0;
-uint8 CH_RX = 0;
-uint8 PT_RX = 0;
-uint8 CH_STB = 0;
-uint8 PT_STB = 0;
-static volatile WakeUp_En = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/
@@ -242,25 +237,11 @@ FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_10ms(void)
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK IoHwAbRunnable_10ms>
  *********************************************************************************************************************/
 /* TODO: Add runnable implementation here. */
-  PT_RX = Dio_ReadChannel(DioConf_DioChannel_DioChannel_P00_3_PT_CAN_RX);
-  CH_RX = Dio_ReadChannel(DioConf_DioChannel_DioChannel_P23_0_CH_CAN_RX);
-  PT_STB = Dio_ReadChannel(DioConf_DioChannel_DioChannel_P32_2);
-  CH_STB = Dio_ReadChannel(DioConf_DioChannel_DioChannel_P32_3);
-if( WakeUp_En )
-{
-  if( PT_RX == 0 )
-  {
-    EcuM_SetWakeupEvent(ECUM_WKSOURCE_CN_ATOM_CAN_Matrix_PT_V600_20250211_9b894f3d);
-  }
-}
-
-//  Dio_WriteChannel( DioConf_DioChannel_DioChannel_P00_8_IN1, 1 );
-
   TLE8888qk_Main();
   PwnIf_Main();
   Tle94108es_Main();
   Tle9201sg_Main();
-  SensorMngMain();
+//  SensorMngMain();
 
 
  if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )

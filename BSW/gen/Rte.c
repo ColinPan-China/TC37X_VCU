@@ -98,6 +98,7 @@
 #include "Rte_EcuM.h"
 #include "Rte_HookCallout.h"
 #include "Rte_IoHwAb.h"
+#include "Rte_IoHwAb_SWC.h"
 #include "Rte_NvM.h"
 #include "Rte_Os_OsCore0_swc.h"
 #include "Rte_Os_OsCore1_swc.h"
@@ -2127,6 +2128,7 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
 #define RTE_CONST_MSEC_SystemTimer_Core1_20 (20UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_200 (200UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_5 (5UL)
+#define RTE_CONST_MSEC_SystemTimer_Core0_50 (50UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_50 (50UL)
 #define RTE_CONST_MSEC_SystemTimer_Core0_500 (500UL)
 #define RTE_CONST_MSEC_SystemTimer_Core1_500 (500UL)
@@ -2317,9 +2319,13 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
   uint32 id = GetCoreID();
   if (id == OS_CORE_ID_0) /* PRQA S 1843 */ /* MD_Rte_Os */
   {
+    /* activate the tasks */
+    (void)ActivateTask(Core0_CddTask); /* PRQA S 3417 */ /* MD_Rte_Os */
+
     /* activate the alarms used for TimingEvents */
     (void)SetRelAlarm(Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(500)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms, RTE_MSEC_SystemTimer_Core0(0) + (TickType)1, RTE_MSEC_SystemTimer_Core0(50)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Core1_Bsw_Task_0_100ms, RTE_MSEC_SystemTimer_Core1(0) + (TickType)1, RTE_MSEC_SystemTimer_Core1(100)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Core1_Bsw_Task_0_10ms, RTE_MSEC_SystemTimer_Core1(0) + (TickType)1, RTE_MSEC_SystemTimer_Core1(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Core1_Bsw_Task_0_20ms, RTE_MSEC_SystemTimer_Core1(0) + (TickType)1, RTE_MSEC_SystemTimer_Core1(20)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
@@ -2366,6 +2372,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void)
     /* deactivate alarms */
     (void)CancelAlarm(Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_500ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_IoHwAb_IoHwAb_IoHwAbRunnable_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Core1_Asw_Task_Qm_0_100ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Core1_Asw_Task_Qm_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Core1_Asw_Task_Qm_0_200ms); /* PRQA S 3417 */ /* MD_Rte_Os */

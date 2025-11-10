@@ -1083,8 +1083,8 @@
                         </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="ab83e26e-022d-46eb-a35a-ccd3f5ae18c9">
-                      <SHORT-NAME>OsCore0_Task_Prio60</SHORT-NAME>
+                    <ECUC-CONTAINER-VALUE UUID="ce765239-b99a-4291-8393-7a0281ee1d6b">
+                      <SHORT-NAME>Core0_CddTask</SHORT-NAME>
                       <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsOS/OsStackSummary/OsStack</DEFINITION-REF>
                       <PARAMETER-VALUES>
                         <ECUC-NUMERICAL-PARAM-VALUE>
@@ -1093,7 +1093,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Os/OsOS/OsStackSummary/OsStack/OsStackType</DEFINITION-REF>
-                          <VALUE>TASK_SHARED_PRIORITY_STACK</VALUE>
+                          <VALUE>TASK_EXTENDED_STACK</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                       <REFERENCE-VALUES>
@@ -2366,6 +2366,15 @@ TC37X_ts_appx_V2.5.1.pdf 2018.04</VALUE>
                 <ECUC-REFERENCE-VALUE>
                   <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsApplication/OsAppTaskRef</DEFINITION-REF>
                   <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Core0_CddTask</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsApplication/OsAppAlarmRef</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Rte_Al_TE_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms</VALUE-REF>
                 </ECUC-REFERENCE-VALUE>
               </REFERENCE-VALUES>
               <SUB-CONTAINERS>
@@ -6428,17 +6437,26 @@ TC37X_ts_appx_V2.5.1.pdf 2018.04</VALUE>
                   </ANNOTATIONS>
                   <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/Os/OsAlarm/OsAlarmAction</DEFINITION-REF>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="651dda8b-2dd9-4fa6-aa86-cc39826a89ac">
-                      <SHORT-NAME>OsAlarmActivateTask</SHORT-NAME>
+                    <ECUC-CONTAINER-VALUE UUID="36566eb4-da9c-40f9-a1f5-a85eb49a49b0">
+                      <SHORT-NAME>OsAlarmSetEvent</SHORT-NAME>
                       <ANNOTATIONS>
                         <ANNOTATION>
                           <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
                         </ANNOTATION>
                       </ANNOTATIONS>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsAlarm/OsAlarmAction/OsAlarmActivateTask</DEFINITION-REF>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent</DEFINITION-REF>
                       <REFERENCE-VALUES>
                         <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsAlarm/OsAlarmAction/OsAlarmActivateTask/OsAlarmActivateTaskRef</DEFINITION-REF>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventRef</DEFINITION-REF>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventTaskRef</DEFINITION-REF>
                           <ANNOTATIONS>
                             <ANNOTATION>
                               <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
@@ -15878,7 +15896,117 @@ TC37X_ts_appx_V2.5.1.pdf 2018.04</VALUE>
                   <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsTask/OsTaskAccessingApplication</DEFINITION-REF>
                   <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/SystemApplication_OsCore2</VALUE-REF>
                 </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsTask/OsTaskEventRef</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsTask/OsTaskEventRef</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Rte_Ev_Run_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
               </REFERENCE-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="6365b3fc-3d40-4191-8cbf-8ad5caa0c373">
+              <SHORT-NAME>Rte_Al_TE_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms</SHORT-NAME>
+              <ANNOTATIONS>
+                <ANNOTATION>
+                  <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                </ANNOTATION>
+              </ANNOTATIONS>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsAlarm</DEFINITION-REF>
+              <REFERENCE-VALUES>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsAlarm/OsAlarmCounterRef</DEFINITION-REF>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/SystemTimer_Core0</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsAlarm/OsAlarmAccessingApplication</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/SystemApplication_OsCore0</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsAlarm/OsAlarmAccessingApplication</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/SystemApplication_OsCore1</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+                <ECUC-REFERENCE-VALUE>
+                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsAlarm/OsAlarmAccessingApplication</DEFINITION-REF>
+                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/SystemApplication_OsCore2</VALUE-REF>
+                </ECUC-REFERENCE-VALUE>
+              </REFERENCE-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="673fb4b2-aaf4-4f72-bd20-5a08716e9a0f">
+                  <SHORT-NAME>OsAlarmAction</SHORT-NAME>
+                  <ANNOTATIONS>
+                    <ANNOTATION>
+                      <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                    </ANNOTATION>
+                  </ANNOTATIONS>
+                  <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/Os/OsAlarm/OsAlarmAction</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="81e61f91-eeb4-4fd7-b2d0-4533d07d98c1">
+                      <SHORT-NAME>OsAlarmSetEvent</SHORT-NAME>
+                      <ANNOTATIONS>
+                        <ANNOTATION>
+                          <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                        </ANNOTATION>
+                      </ANNOTATIONS>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent</DEFINITION-REF>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventRef</DEFINITION-REF>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Rte_Ev_Run_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventTaskRef</DEFINITION-REF>
+                          <ANNOTATIONS>
+                            <ANNOTATION>
+                              <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                            </ANNOTATION>
+                          </ANNOTATIONS>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Os/Core0_CddTask</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="65dd4f2e-debd-4602-8c6c-4d476824c9d0">
+              <SHORT-NAME>Rte_Ev_Run_IoHwAb_IoHwAb_IoHwAbRunnable_10ms</SHORT-NAME>
+              <ANNOTATIONS>
+                <ANNOTATION>
+                  <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                </ANNOTATION>
+              </ANNOTATIONS>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsEvent</DEFINITION-REF>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="26be930f-0f54-45c2-904c-f71bf5d71652">
+              <SHORT-NAME>Rte_Ev_Run_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms</SHORT-NAME>
+              <ANNOTATIONS>
+                <ANNOTATION>
+                  <ANNOTATION-ORIGIN>DV:RTE</ANNOTATION-ORIGIN>
+                </ANNOTATION>
+              </ANNOTATIONS>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Os/OsEvent</DEFINITION-REF>
             </ECUC-CONTAINER-VALUE>
           </CONTAINERS>
         </ECUC-MODULE-CONFIGURATION-VALUES>

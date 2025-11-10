@@ -4453,6 +4453,8 @@
  *  Rte_ReadHook_CtAp_WakeUpRsn_RTE_R_Ecu_SelfWakeStatus_SelfWake_tec_Ecu_SelfWakeStatus_SelfWake_Start
  *  Rte_ReadHook_CtAp_WakeUpRsn_RTE_R_ModMgmt_HvSts_Enum_tec_ModMgmt_HvSts_Enum_Return
  *  Rte_ReadHook_CtAp_WakeUpRsn_RTE_R_ModMgmt_HvSts_Enum_tec_ModMgmt_HvSts_Enum_Start
+ *  Rte_ReadHook_IoHwAb_SWC_IF_LvMgmt_KL15CtrlReq_Flg_tec_LvMgmt_KL15CtrlReq_Flg_Return
+ *  Rte_ReadHook_IoHwAb_SWC_IF_LvMgmt_KL15CtrlReq_Flg_tec_LvMgmt_KL15CtrlReq_Flg_Start
  *  Rte_Runnable_BswM_BswM_MainFunction_Return
  *  Rte_Runnable_BswM_BswM_MainFunction_Start
  *  Rte_Runnable_ComM_ComM_MainFunction_0_Return
@@ -4857,6 +4859,8 @@
  *  Rte_Runnable_IoHwAb_IoHwAb_IoHwAbRunnable_10ms_Start
  *  Rte_Runnable_IoHwAb_IoHwAb_IoHwAbRunnable_500ms_Return
  *  Rte_Runnable_IoHwAb_IoHwAb_IoHwAbRunnable_500ms_Start
+ *  Rte_Runnable_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms_Return
+ *  Rte_Runnable_IoHwAb_SWC_IoHwAb_SWC_Runnable_50ms_Start
  *  Rte_Runnable_NvM_NvM_MainFunction_Return
  *  Rte_Runnable_NvM_NvM_MainFunction_Start
  *  Rte_Runnable_Os_OsCore0_swc_GetCounterValue_Return
@@ -6738,6 +6742,8 @@
  *  Rte_WriteHook_CtAp_WakeUpRsn_RTE_P_LvMgmt_AppNMReqInfo_tec_LvMgmt_AppNMReqInfo_Start
  *  Rte_WriteHook_CtAp_WakeUpRsn_RTE_P_LvMgmt_WakeUpReq_Flg_tec_LvMgmt_WakeUpReq_Flg_Return
  *  Rte_WriteHook_CtAp_WakeUpRsn_RTE_P_LvMgmt_WakeUpReq_Flg_tec_LvMgmt_WakeUpReq_Flg_Start
+ *  Rte_WriteHook_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg_Return
+ *  Rte_WriteHook_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg_Start
  *  SchM_EnterHook_Adc_KernelData_Return
  *  SchM_EnterHook_Adc_KernelData_Start
  *  SchM_EnterHook_Adc_SrcRegAccess_Return
