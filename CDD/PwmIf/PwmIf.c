@@ -1,4 +1,3 @@
-#include "Pwm_17_GtmCcu6.h"
 #include "PwmIf.h"
 
 #define PWM_DEFAULT_PERIOD1  (10U)//unit:MS

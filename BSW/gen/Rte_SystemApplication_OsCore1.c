@@ -2790,6 +2790,9 @@ VAR(BST_Abortmanoperate, RTE_VAR_INIT_NOCACHE) Rte_BST_Abortmanoperate_oBST_oJ19
 VAR(boolean, RTE_VAR_INIT_NOCACHE) Rte_CtAp_ElSSDiag_RTE_P_LvMgmt_KL15CtrlReq_Flg_tec_LvMgmt_KL15CtrlReq_Flg = FALSE;
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
+VAR(uint8, RTE_VAR_INIT_NOCACHE) Rte_CtAp_HVSfty_RTE_P_ErrMgmt_HVILPwmFrq_Hz_tec_ErrMgmt_HVILPwmFrq_Hz = 0U;
+/* PRQA L:L1 */
+/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(ChargeCurrWU_Ena_LIN01, RTE_VAR_INIT_NOCACHE) Rte_ChargeCurrWU_Ena_oVCU_BS_01_oATOM_HWLIN1_d9c09dc2_Tx = TRUE;
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
@@ -3934,6 +3937,7 @@ FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore1(void)
   Rte_CtAp_GearCal_RTE_P_GearMgmt_TarGear_Enum_tec_GearMgmt_TarGear_Enum = 0U;
   Rte_CtAp_GearCal_RTE_P_GearMgmt_UnCfmdActGear_Enum_tec_GearMgmt_UnCfmdActGear_Enum = 0U;
   Rte_CtAp_HVSfty_RTE_P_ErrMgmt_DrvMotTempOvrLamp_Bus_tec_ErrMgmt_DrvMotTempOvrLamp_Bus = Rte_C_dt_ErrMgmt_DrvMotTempOvrLamp_0;
+  Rte_CtAp_HVSfty_RTE_P_ErrMgmt_HVILPwmFrq_Hz_tec_ErrMgmt_HVILPwmFrq_Hz = 0U;
   Rte_CtAp_HVSfty_RTE_P_ErrMgmt_HvBattTempOvrLamp_Bus_tec_ErrMgmt_HvBattTempOvrLamp_Bus = Rte_C_dt_ErrMgmt_HvBattTempOvrLamp_0;
   Rte_CtAp_HVSfty_RTE_P_ErrMgmt_InslaFlt_Bus_tec_ErrMgmt_InslaFlt_Bus = Rte_C_dt_ErrMgmt_InslaFlt_0;
   Rte_CtAp_HVSfty_RTE_P_ErrMgmt_VCUHVILErr_Flg_tec_ErrMgmt_VCUHVILErr_Flg = FALSE;

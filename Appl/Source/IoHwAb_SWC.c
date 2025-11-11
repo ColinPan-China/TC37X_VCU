@@ -44,6 +44,7 @@
 #include "Dio.h"
 #include "TLE8888qk.h"
 #include "Adc_Sample.h"
+#include "PwmIf.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -58,6 +59,7 @@
  * Primitive Types:
  * ================
  * boolean: Boolean (standard type)
+ * uint8: Integer in interval [0...255] (standard type)
  *
  *********************************************************************************************************************/
 
@@ -80,6 +82,7 @@
  * =================
  *   Explicit S/R API:
  *   -----------------
+ *   Std_ReturnType Rte_Read_IF_ErrMgmt_HVILPwmFrq_Hz_tec_ErrMgmt_HVILPwmFrq_Hz(uint8 *data)
  *   Std_ReturnType Rte_Read_IF_LvMgmt_KL15CtrlReq_Flg_tec_LvMgmt_KL15CtrlReq_Flg(boolean *data)
  *
  * Output Interfaces:
@@ -87,6 +90,7 @@
  *   Explicit S/R API:
  *   -----------------
  *   Std_ReturnType Rte_Write_Ecu_KeyWakeStatus_Keywake(boolean data)
+ *   Std_ReturnType Rte_Write_IF_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz(uint8 data)
  *   Std_ReturnType Rte_Write_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg(boolean data)
  *
  *********************************************************************************************************************/
@@ -94,7 +98,7 @@
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: IoHwAb_SWC_Runnable_50ms_doc
  *********************************************************************************************************************/
-
+uint8 HVILPwmFrq_Hz = 0;
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
@@ -108,22 +112,22 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable_50ms(void) /* PRQA S 0624, 3206 
  *********************************************************************************************************************/
   boolean KL15CtrlReq_Flg = FALSE;
   boolean KL15eFb_Flg     = FALSE;
+  uint32 periodtick = 0;
 
   Rte_Read_IF_LvMgmt_KL15CtrlReq_Flg_tec_LvMgmt_KL15CtrlReq_Flg(&KL15CtrlReq_Flg);
 
-    if( KL15CtrlReq_Flg == TRUE )
-    {
-        TLE8888qk_SpiTransmit(CMD_CONT(0,0x80), NULL_PTR);
-    }
-    else
-    {
-        TLE8888qk_SpiTransmit(CMD_CONT(0,0x00), NULL_PTR);
-    }
+  if( KL15CtrlReq_Flg == TRUE )
+  {
+      TLE8888qk_SpiTransmit(CMD_CONT(0,0x80), NULL_PTR);
+  }
+  else
+  {
+      TLE8888qk_SpiTransmit(CMD_CONT(0,0x00), NULL_PTR);
+  }
 
 
   KL15eFb_Flg = Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_0_EXT_D_IN2);
   Rte_Write_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg(KL15eFb_Flg);
-
 
  if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )
   {
@@ -133,6 +137,13 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable_50ms(void) /* PRQA S 0624, 3206 
   {
     Rte_Write_Ecu_KeyWakeStatus_Keywake(0);
   }
+
+  Rte_Read_IF_ErrMgmt_HVILPwmFrq_Hz_tec_ErrMgmt_HVILPwmFrq_Hz(&HVILPwmFrq_Hz);
+  periodtick = HVILPwmFrq_Hz*390625/1000;
+  Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_P00_4,periodtick,0x4000);
+
+
+  Rte_Write_IF_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz(100);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
