@@ -678,6 +678,9 @@ VAR(T_BATT_LIN01, RTE_VAR_INIT_NOCACHE) Rte_T_BATT_oBS_01_oATOM_HWLIN1_2bbe4bbe_
 VAR(U_BATT_LIN01, RTE_VAR_INIT_NOCACHE) Rte_U_BATT_oBS_01_oATOM_HWLIN1_cca3ed29_Rx = 16383U;
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
+VAR(boolean, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_Ecu_KeyWakeStatus_Keywake = FALSE;
+/* PRQA L:L1 */
+/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(boolean, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg = FALSE;
 /* PRQA L:L1 */
 
@@ -1063,6 +1066,7 @@ FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore0(void)
   Rte_SystemApplication_OsCore0_RxUpdateFlagsInit(); /* PRQA S 0315 */ /* MD_Rte_0315 */
 
   /* set default values for internal data */
+  Rte_IoHwAb_SWC_Ecu_KeyWakeStatus_Keywake = FALSE;
   Rte_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg = FALSE;
   Rte_CCS_OutputCurrent_oCCS_oJ1939_bms_d187cc6a_Rx = 0U;
   Rte_CCS_OutputVoltage_oCCS_oJ1939_bms_e8aa6018_Rx = 0U;

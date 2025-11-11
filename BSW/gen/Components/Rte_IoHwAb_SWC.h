@@ -53,6 +53,7 @@ extern "C"
 #  define RTE_START_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+extern VAR(boolean, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_Ecu_KeyWakeStatus_Keywake;
 extern VAR(boolean, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg;
 
 #  define RTE_STOP_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
@@ -81,6 +82,8 @@ extern VAR(boolean, RTE_VAR_INIT_NOCACHE) Rte_CtAp_ElSSDiag_RTE_P_LvMgmt_KL15Ctr
 /**********************************************************************************************************************
  * Rte_Write_<p>_<d> (explicit S/R communication with isQueued = false)
  *********************************************************************************************************************/
+#  define Rte_Write_Ecu_KeyWakeStatus_Keywake Rte_Write_IoHwAb_SWC_Ecu_KeyWakeStatus_Keywake
+#  define Rte_Write_IoHwAb_SWC_Ecu_KeyWakeStatus_Keywake(data) (Rte_IoHwAb_SWC_Ecu_KeyWakeStatus_Keywake = (data), ((Std_ReturnType)RTE_E_OK))
 #  define Rte_Write_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg Rte_Write_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg
 #  define Rte_Write_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg(data) (Rte_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg = (data), ((Std_ReturnType)RTE_E_OK))
 

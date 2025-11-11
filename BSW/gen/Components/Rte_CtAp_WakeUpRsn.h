@@ -50,6 +50,14 @@ extern "C"
 /**********************************************************************************************************************
  * extern declaration of RTE buffers for optimized macro implementation
  *********************************************************************************************************************/
+#  define RTE_START_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(boolean, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_Ecu_KeyWakeStatus_Keywake;
+
+#  define RTE_STOP_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 #  define RTE_START_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -129,8 +137,7 @@ extern VAR(uint8, RTE_VAR_INIT) Rte_CtAp_VehStat_RTE_P_ModMgmt_HvSts_Enum_tec_Mo
 
 #  define Rte_Read_CtAp_WakeUpRsn_RTE_R_Ecu_CHCANWakeStatus_CHCANwake(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED))
 #  define Rte_Read_RTE_R_Ecu_KeyWakeStatus_Keywake Rte_Read_CtAp_WakeUpRsn_RTE_R_Ecu_KeyWakeStatus_Keywake
-
-#  define Rte_Read_CtAp_WakeUpRsn_RTE_R_Ecu_KeyWakeStatus_Keywake(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED))
+#  define Rte_Read_CtAp_WakeUpRsn_RTE_R_Ecu_KeyWakeStatus_Keywake(data) (*(data) = Rte_IoHwAb_SWC_Ecu_KeyWakeStatus_Keywake, ((Std_ReturnType)RTE_E_OK))
 #  define Rte_Read_RTE_R_Ecu_LinWakeStatus_Linwake Rte_Read_CtAp_WakeUpRsn_RTE_R_Ecu_LinWakeStatus_Linwake
 
 #  define Rte_Read_CtAp_WakeUpRsn_RTE_R_Ecu_LinWakeStatus_Linwake(data) (*(data) = FALSE, ((Std_ReturnType)RTE_E_UNCONNECTED))

@@ -43,6 +43,7 @@
  *********************************************************************************************************************/
 #include "Dio.h"
 #include "TLE8888qk.h"
+#include "Adc_Sample.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -85,6 +86,7 @@
  * ==================
  *   Explicit S/R API:
  *   -----------------
+ *   Std_ReturnType Rte_Write_Ecu_KeyWakeStatus_Keywake(boolean data)
  *   Std_ReturnType Rte_Write_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg(boolean data)
  *
  *********************************************************************************************************************/
@@ -122,6 +124,15 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable_50ms(void) /* PRQA S 0624, 3206 
   KL15eFb_Flg = Dio_ReadChannel(DioConf_DioChannel_DioChannel_P33_0_EXT_D_IN2);
   Rte_Write_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg(KL15eFb_Flg);
 
+
+ if( IoHwGetKL15Level() == KL15_HIGH_LEVEL )
+  {
+    Rte_Write_Ecu_KeyWakeStatus_Keywake(1);
+  }
+  else
+  {
+    Rte_Write_Ecu_KeyWakeStatus_Keywake(0);
+  }
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
