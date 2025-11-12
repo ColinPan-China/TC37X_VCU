@@ -119,8 +119,8 @@
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK User Data>
  *********************************************************************************************************************/
 /* TODO: Add user variables here */
-Icu_17_TimerIp_DutyCycleType ICU_Val1;
-Icu_17_TimerIp_DutyCycleType ICU_Val2;
+//Icu_17_TimerIp_DutyCycleType ICU_Val1;
+//Icu_17_TimerIp_DutyCycleType ICU_Val2;
 uint16 MessureFlg = 0;
 static volatile uint8 Txmode = 0;
 /**********************************************************************************************************************
@@ -164,7 +164,7 @@ FUNC(void, IOHWAB_CODE) IoHwAb_Init (void)
   Icu_17_TimerIp_StartSignalMeasurement(IcuConf_IcuChannel_IcuChannel_P34_4);
   Dio_WriteChannel(DioConf_DioChannel_DioChannel_P23_6_LIN_SLP,1);
   
-  PwnIf_Start();
+//  PwnIf_Start();
   Tle94108es_Init();
   Tle9201sg_Init();
   Tja1145_Init();
@@ -238,7 +238,7 @@ FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_10ms(void)
  *********************************************************************************************************************/
 /* TODO: Add runnable implementation here. */
   TLE8888qk_Main();
-  PwnIf_Main();
+//  PwnIf_Main();
   Tle94108es_Main();
   Tle9201sg_Main();
 //  SensorMngMain();
@@ -274,6 +274,7 @@ FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_10ms(void)
   }
 
   /*ICU Measurement*/
+  #if 0
   MessureFlg++;
   if(MessureFlg >= 100 )
   {
@@ -285,6 +286,7 @@ FUNC(void, IOHWAB_APPL_CODE) IoHwAb_IoHwAbRunnable_10ms(void)
       NOP();
     }
   }
+  #endif
   #if 0
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BCL_oJ1939_bms_e5f04d09_Tx,   Txmode );
   Com_SwitchIpduTxMode( ComConf_ComIPdu_BCP_oJ1939_bms_ece2ed74_Tx,   Txmode );

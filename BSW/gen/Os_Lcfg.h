@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Lcfg.h
- *   Generation Time: 2025-10-17 11:08:00
+ *   Generation Time: 2025-11-12 10:22:44
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -553,6 +553,18 @@ extern FUNC(void, OS_DMACH10SR_ISR_CODE) Os_Isr_DMACH10SR_ISR(void);
 extern FUNC(void, OS_DMACH11SR_ISR_CODE) Os_Isr_DMACH11SR_ISR(void);
 
 # define OS_STOP_SEC_DMACH11SR_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_GTMTOM0SR2_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  GTMTOM0SR2_ISR()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_GTMTOM0SR2_ISR_CODE) Os_Isr_GTMTOM0SR2_ISR(void);
+
+# define OS_STOP_SEC_GTMTOM0SR2_ISR_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

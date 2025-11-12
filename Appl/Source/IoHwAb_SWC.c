@@ -45,6 +45,7 @@
 #include "TLE8888qk.h"
 #include "Adc_Sample.h"
 #include "PwmIf.h"
+#include "Icu_17_TimerIp.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -99,7 +100,7 @@
  * Symbol: IoHwAb_SWC_Runnable_50ms_doc
  *********************************************************************************************************************/
 uint8 HVILPwmFrq_Hz = 0;
-
+Icu_17_TimerIp_DutyCycleType ICU_Val1;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -113,7 +114,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable_50ms(void) /* PRQA S 0624, 3206 
   boolean KL15CtrlReq_Flg = FALSE;
   boolean KL15eFb_Flg     = FALSE;
   uint32 periodtick = 0;
-
+  uint32 fre_ipwm = 0;
   Rte_Read_IF_LvMgmt_KL15CtrlReq_Flg_tec_LvMgmt_KL15CtrlReq_Flg(&KL15CtrlReq_Flg);
 
   if( KL15CtrlReq_Flg == TRUE )
@@ -139,11 +140,21 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable_50ms(void) /* PRQA S 0624, 3206 
   }
 
   Rte_Read_IF_ErrMgmt_HVILPwmFrq_Hz_tec_ErrMgmt_HVILPwmFrq_Hz(&HVILPwmFrq_Hz);
-  periodtick = HVILPwmFrq_Hz*390625/1000;
-  Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_P00_4,periodtick,0x4000);
+  periodtick = HVILPwmFrq_Hz*390625/10000;
+//  Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_P00_4,periodtick,0x4000);
+  Pwm_17_GtmCcu6_SetOutputToIdle(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_P00_4);
+//  Pwm_17_GtmCcu6_SetOutputToIdle(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_P02_5_IN7_IGN3);
+  Pwm_17_GtmCcu6_SetPeriodAndDuty(Pwm_17_GtmCcu6Conf_PwmChannel_PwmChannel_PWM_P02_5_IN7_IGN3,periodtick,0x4000);
 
 
-  Rte_Write_IF_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz(100);
+  Icu_17_TimerIp_GetDutyCycleValues(IcuConf_IcuChannel_IcuChannel_P34_4, &ICU_Val1);
+  if( ICU_Val1.PeriodTime != 0 )
+  {
+//    NOP();
+    fre_ipwm = 100000000/16/ICU_Val1.PeriodTime;
+  }
+
+  Rte_Write_IF_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz(fre_ipwm);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

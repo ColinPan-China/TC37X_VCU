@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2025-11-10 14:36:54
+ *   Generation Time: 2025-11-12 10:22:44
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -109,6 +109,7 @@
 #define CounterIsr_SystemTimer_Core2 CounterIsr_SystemTimer_Core2
 #define DMACH10SR_ISR DMACH10SR_ISR
 #define DMACH11SR_ISR DMACH11SR_ISR
+#define GTMTOM0SR2_ISR GTMTOM0SR2_ISR
 #define GTMTOM1SR0_ISR GTMTOM1SR0_ISR
 #define GTMTOM1SR1_ISR GTMTOM1SR1_ISR
 #define GTMTOM1SR3_ISR GTMTOM1SR3_ISR
@@ -468,16 +469,17 @@ typedef enum
   CounterIsr_SystemTimer_Core2 = 25,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   DMACH10SR_ISR = 26,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   DMACH11SR_ISR = 27,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  GTMTOM1SR0_ISR = 28,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  GTMTOM1SR1_ISR = 29,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  GTMTOM1SR3_ISR = 30,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  GTMTOM1SR4_ISR = 31,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  QSPI3ERR_ISR = 32,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  QSPI3PT_ISR = 33,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  XSignalIsr_OsCore0 = 34,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  XSignalIsr_OsCore1 = 35,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  XSignalIsr_OsCore2 = 36,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ISRID_COUNT = 37,
+  GTMTOM0SR2_ISR = 28,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  GTMTOM1SR0_ISR = 29,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  GTMTOM1SR1_ISR = 30,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  GTMTOM1SR3_ISR = 31,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  GTMTOM1SR4_ISR = 32,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  QSPI3ERR_ISR = 33,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  QSPI3PT_ISR = 34,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore0 = 35,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore1 = 36,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore2 = 37,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ISRID_COUNT = 38,
   INVALID_ISR = OS_ISRID_COUNT
 } ISRType;
 

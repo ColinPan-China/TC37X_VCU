@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 1.30.0_11.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2025-11-11, 15:02:43          !!!IGNORE-LINE !!!              **
+**  DATE, TIME: 2025-11-12, 10:26:34          !!!IGNORE-LINE !!!              **
 **                                                                            **
 **  GENERATOR : Build b180321-0610            !!!IGNORE-LINE !!!              **
 **                                                                            **
@@ -733,7 +733,7 @@ static const Port_n_ConfigType Port_kConfiguration[] =
     ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_GPIO),/*Pin 4*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
-    ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_GPIO),/*Pin 5*/
+    ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_ALT1),/*Pin 5*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
     ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_GPIO),/*Pin 6*/
@@ -859,7 +859,7 @@ static const Port_n_ConfigType Port_kConfiguration[] =
       ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_GPIO),/*Pin4*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
-      ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_GPIO),/*Pin5*/
+      ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_ALT1),/*Pin5*/
     /* MISRA2012_RULE_10_3_JUSTIFICATION: Union is needed to access data 
     per port pin and as a 32 Bit Value*/
       ((uint8)PORT_PIN_OUT | PORT_PIN_OUT_PUSHPULL | PORT_PIN_MODE_GPIO),/*Pin6*/

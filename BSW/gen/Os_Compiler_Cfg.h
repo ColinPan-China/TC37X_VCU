@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Compiler_Cfg.h
- *   Generation Time: 2025-10-17 11:07:59
+ *   Generation Time: 2025-11-12 10:21:31
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -76,6 +76,7 @@
 # define OS_DEFAULT_INIT_TASK_CORE2_CODE
 # define OS_DEFAULT_INIT_TASK_CORE2_TRUSTED_CODE
 # define OS_DEFAULT_INIT_TASK_TRUSTED_CODE
+# define OS_GTMTOM0SR2_ISR_CODE
 # define OS_GTMTOM1SR0_ISR_CODE
 # define OS_GTMTOM1SR1_ISR_CODE
 # define OS_GTMTOM1SR3_ISR_CODE

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Interrupt_Lcfg.c
- *   Generation Time: 2025-10-17 10:45:28
+ *   Generation Time: 2025-11-12 10:21:32
  *           Project: TC37X_VCU - Version 1.0
  *          Delivery: CBD2101138_D00
  *      Tool Version: DaVinci Configurator  5.24.40 SP2
@@ -413,6 +413,19 @@ CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_DMACH11SR_ISR =
 };
 
 CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_DMACH11SR_ISR =
+{
+  /* .Dummy         = */ (uint32)0
+};
+
+/*! HAL ISR configuration data: GTMTOM0SR2_ISR */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_GTMTOM0SR2_ISR =
+{
+  /* .Level          = */ 120,
+  /* .Source         = */ 0xe18uL,
+  /* .CoreAssignment = */ 0
+};
+
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_GTMTOM0SR2_ISR =
 {
   /* .Dummy         = */ (uint32)0
 };
