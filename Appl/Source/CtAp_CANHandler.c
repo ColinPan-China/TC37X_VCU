@@ -564,7 +564,7 @@ void R_CANHandlerOutput_Cyclic_10ms(void)
 //   boolean_T tec_ComM_TriggerASWMsgReqInfo;
   (void)Rte_Read_RTE_R_ComM_TriggerASWMsgReqInfo_tec_ComM_TriggerASWMsgReqInfo(&tec_ComM_TriggerASWMsgReqInfo);
   /**************************************************TxFlg*************************************************************** */
-  if(tec_ComM_TriggerASWMsgReqInfo_Last)
+  if(1)//(tec_ComM_TriggerASWMsgReqInfo_Last)
   {
 
     /******************************************VCU_MCU_02********************************************************* */
