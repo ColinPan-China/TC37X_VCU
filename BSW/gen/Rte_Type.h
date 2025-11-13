@@ -15278,6 +15278,7 @@ extern VAR(uint16, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_AccrPedl1SplyVo
 extern VAR(uint16, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_AccrPedl2SplyVoltInfo_tec_IOAbs_AccrPedl2SplyVoltInfo; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(uint16, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(uint16, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
+extern VAR(uint16, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(uint8, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 extern VAR(boolean, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 

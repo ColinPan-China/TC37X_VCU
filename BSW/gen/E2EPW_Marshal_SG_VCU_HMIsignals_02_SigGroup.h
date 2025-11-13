@@ -1,7 +1,7 @@
 /** Generated code, do not change!
  ** Written by Protection Wrapper Generator (V 2.0.1)
  ** Module: E2EPW_Marshal_SG_VCU_HMIsignals_02_SigGroup.h
- ** Wed, 12-Nov-2025, 17:02:39
+ ** Thu, 13-Nov-2025, 13:27:49
  **/
 
 #ifndef E2EPW_Marshal_SG_VCU_HMIsignals_02_SigGroup_h

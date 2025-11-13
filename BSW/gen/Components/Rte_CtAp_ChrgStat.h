@@ -50,6 +50,14 @@ extern "C"
 /**********************************************************************************************************************
  * extern declaration of RTE buffers for optimized macro implementation
  *********************************************************************************************************************/
+#  define RTE_START_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(uint16, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV;
+
+#  define RTE_STOP_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
+#  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
 #  define RTE_START_SEC_VAR_SystemApplication_OsCore1_INIT_UNSPECIFIED
 #  include "Rte_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -358,8 +366,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Write_CtAp_ChrgStat_RTE_RP_ChrgStatInfo_tec_C
 #  define Rte_Read_RTE_R_HvMgmt_TCUWrkModActSts_Enum_tec_HvMgmt_TCUWrkModActSts_Enum Rte_Read_CtAp_ChrgStat_RTE_R_HvMgmt_TCUWrkModActSts_Enum_tec_HvMgmt_TCUWrkModActSts_Enum
 #  define Rte_Read_CtAp_ChrgStat_RTE_R_HvMgmt_TCUWrkModActSts_Enum_tec_HvMgmt_TCUWrkModActSts_Enum(data) (*(data) = Rte_CtAp_TCUMgmt_RTE_P_HvMgmt_TCUWrkModActSts_Enum_tec_HvMgmt_TCUWrkModActSts_Enum, ((Std_ReturnType)RTE_E_OK))
 #  define Rte_Read_RTE_R_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV Rte_Read_CtAp_ChrgStat_RTE_R_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV
-
-#  define Rte_Read_CtAp_ChrgStat_RTE_R_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV(data) (*(data) = 0U, ((Std_ReturnType)RTE_E_UNCONNECTED))
+#  define Rte_Read_CtAp_ChrgStat_RTE_R_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV(data) (*(data) = Rte_IoHwAb_SWC_IF_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV, ((Std_ReturnType)RTE_E_OK))
 #  define Rte_Read_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg Rte_Read_CtAp_ChrgStat_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg
 #  define Rte_Read_CtAp_ChrgStat_RTE_R_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg(data) (*(data) = Rte_CtAp_LvBattMgmt_RTE_P_LvMgmt_BSBattUDcNorm_Flg_tec_LvMgmt_BSBattUDcNorm_Flg, ((Std_ReturnType)RTE_E_OK))
 #  define Rte_Read_RTE_R_ModMgmt_HvSts_Enum_tec_ModMgmt_HvSts_Enum Rte_Read_CtAp_ChrgStat_RTE_R_ModMgmt_HvSts_Enum_tec_ModMgmt_HvSts_Enum

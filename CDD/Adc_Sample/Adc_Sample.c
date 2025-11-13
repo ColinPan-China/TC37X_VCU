@@ -408,3 +408,12 @@ uint32 IoHwGet_AccrPedlRdnRaw()
   
   return Pedl2SplyVolt;
 }
+
+uint32 IoHwGet_EXT_A_IN15_CC2()
+{
+  /* AN7 */
+  uint32 EXT_A_IN15 = 0;
+  EXT_A_IN15 = AdcValSampleInfo_Table[0].AdcChannelResult[7]*5*1000/4095;
+  
+  return EXT_A_IN15;
+}

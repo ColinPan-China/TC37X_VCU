@@ -96,6 +96,7 @@
  *   Std_ReturnType Rte_Write_IF_IOAbs_AccrPedl2SplyVoltInfo_tec_IOAbs_AccrPedl2SplyVoltInfo(uint16 data)
  *   Std_ReturnType Rte_Write_IF_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV(uint16 data)
  *   Std_ReturnType Rte_Write_IF_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV(uint16 data)
+ *   Std_ReturnType Rte_Write_IF_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV(uint16 data)
  *   Std_ReturnType Rte_Write_IF_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz(uint8 data)
  *   Std_ReturnType Rte_Write_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg(boolean data)
  *
@@ -122,7 +123,7 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable_50ms(void) /* PRQA S 0624, 3206 
   uint32 fre_ipwm = 0;
   uint32 ad1 = 0;
   uint32 ad2 = 0;
-
+  uint32 Ext_A_In5 = 0;
   Rte_Read_IF_LvMgmt_KL15CtrlReq_Flg_tec_LvMgmt_KL15CtrlReq_Flg(&KL15CtrlReq_Flg);
 
   if( KL15CtrlReq_Flg == TRUE )
@@ -172,6 +173,9 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable_50ms(void) /* PRQA S 0624, 3206 
 
   Rte_Write_IF_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV(ad1);
   Rte_Write_IF_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV(ad2);
+
+  Ext_A_In5 = IoHwGet_EXT_A_IN15_CC2();
+  Rte_Write_IF_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV(Ext_A_In5);
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

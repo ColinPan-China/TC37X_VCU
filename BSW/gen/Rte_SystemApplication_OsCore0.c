@@ -693,6 +693,9 @@ VAR(uint16, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_AccrPedlMaiRaw_mV_tec_
 VAR(uint16, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV = 0U;
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
+VAR(uint16, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV = 0U;
+/* PRQA L:L1 */
+/* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(uint8, RTE_VAR_INIT_NOCACHE) Rte_IoHwAb_SWC_IF_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz = 0U;
 /* PRQA L:L1 */
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
@@ -1086,6 +1089,7 @@ FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore0(void)
   Rte_IoHwAb_SWC_IF_IOAbs_AccrPedl2SplyVoltInfo_tec_IOAbs_AccrPedl2SplyVoltInfo = 0U;
   Rte_IoHwAb_SWC_IF_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV = 0U;
   Rte_IoHwAb_SWC_IF_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV = 0U;
+  Rte_IoHwAb_SWC_IF_IOAbs_CC2SigUDc_mV_tec_IOAbs_CC2SigUDc_mV = 0U;
   Rte_IoHwAb_SWC_IF_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz = 0U;
   Rte_IoHwAb_SWC_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg = FALSE;
   Rte_CCS_OutputCurrent_oCCS_oJ1939_bms_d187cc6a_Rx = 0U;
