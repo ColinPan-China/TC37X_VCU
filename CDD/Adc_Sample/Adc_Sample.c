@@ -363,11 +363,7 @@ uint16 AdcResultAve[8];
 void Adc_SampleMain()
 {
   uint8 index = 0;
-  uint32 tmpX = 0;
-  uint32 tmpY = 0;
-  uint32 tmpZ = 0;
-  uint16 CurAdVal = 0x00u;
-  uint8 index_Filt;
+
   /*Get ADC result from ADC Driver  */
   for(index = 0; index < (sizeof(AdcValSampleInfo_Table)/sizeof(AdcValSampleInfo_Table[0]));index++ )
   {
@@ -393,4 +389,22 @@ uint8 IoHwGetKL15Level()
   {
     return KL15_LOW_LEVEL;
   }
+}
+
+uint32 IoHwGet_AccrPedlMaiRaw()
+{
+  /* AN18 */
+  uint32 Pedl1SplyVolt = 0;
+
+  Pedl1SplyVolt = AdcValSampleInfo_Table[2].AdcChannelResult[2]*5*1000/4095;
+  return Pedl1SplyVolt;
+}
+
+uint32 IoHwGet_AccrPedlRdnRaw()
+{
+  /* AN10 */
+  uint32 Pedl2SplyVolt = 0;
+  Pedl2SplyVolt = AdcValSampleInfo_Table[1].AdcChannelResult[2]*5*1000/4095;
+  
+  return Pedl2SplyVolt;
 }

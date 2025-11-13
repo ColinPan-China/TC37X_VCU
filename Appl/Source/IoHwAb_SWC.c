@@ -60,6 +60,7 @@
  * Primitive Types:
  * ================
  * boolean: Boolean (standard type)
+ * uint16: Integer in interval [0...65535] (standard type)
  * uint8: Integer in interval [0...255] (standard type)
  *
  *********************************************************************************************************************/
@@ -91,6 +92,10 @@
  *   Explicit S/R API:
  *   -----------------
  *   Std_ReturnType Rte_Write_Ecu_KeyWakeStatus_Keywake(boolean data)
+ *   Std_ReturnType Rte_Write_IF_IOAbs_AccrPedl1SplyVoltInfo_tec_IOAbs_AccrPedl1SplyVoltInfo(uint16 data)
+ *   Std_ReturnType Rte_Write_IF_IOAbs_AccrPedl2SplyVoltInfo_tec_IOAbs_AccrPedl2SplyVoltInfo(uint16 data)
+ *   Std_ReturnType Rte_Write_IF_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV(uint16 data)
+ *   Std_ReturnType Rte_Write_IF_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV(uint16 data)
  *   Std_ReturnType Rte_Write_IF_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz(uint8 data)
  *   Std_ReturnType Rte_Write_IF_IOAbs_KL15eFb_Flg_tec_IOAbs_KL15eFb_Flg(boolean data)
  *
@@ -115,6 +120,9 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable_50ms(void) /* PRQA S 0624, 3206 
   boolean KL15eFb_Flg     = FALSE;
   uint32 periodtick = 0;
   uint32 fre_ipwm = 0;
+  uint32 ad1 = 0;
+  uint32 ad2 = 0;
+
   Rte_Read_IF_LvMgmt_KL15CtrlReq_Flg_tec_LvMgmt_KL15CtrlReq_Flg(&KL15CtrlReq_Flg);
 
   if( KL15CtrlReq_Flg == TRUE )
@@ -155,6 +163,16 @@ FUNC(void, IoHwAb_SWC_CODE) IoHwAb_SWC_Runnable_50ms(void) /* PRQA S 0624, 3206 
   }
 
   Rte_Write_IF_IOAbs_HVILPwmFrq_Hz_tec_IOAbs_HVILPwmFrq_Hz(fre_ipwm);
+
+  ad1 = IoHwGet_AccrPedlMaiRaw();
+  ad2 = IoHwGet_AccrPedlRdnRaw();
+
+  Rte_Write_IF_IOAbs_AccrPedl1SplyVoltInfo_tec_IOAbs_AccrPedl1SplyVoltInfo( 5000 );
+  Rte_Write_IF_IOAbs_AccrPedl2SplyVoltInfo_tec_IOAbs_AccrPedl2SplyVoltInfo( 5000 );
+
+  Rte_Write_IF_IOAbs_AccrPedlMaiRaw_mV_tec_IOAbs_AccrPedlMaiRaw_mV(ad1);
+  Rte_Write_IF_IOAbs_AccrPedlRdnRaw_mV_tec_IOAbs_AccrPedlRdnRaw_mV(ad2);
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

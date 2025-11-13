@@ -29,4 +29,9 @@ extern void Adc_SampleInit();
 extern void Adc_SampleMain();
 
 extern void IoHwGetExtTemp( uint8 ch, sint16 *temp, boolean *ValidFlg );
+
+extern uint32 IoHwGet_AccrPedlMaiRaw();
+
+extern uint32 IoHwGet_AccrPedlRdnRaw();
+
 #endif /* ADC_SAMPLE_H */
